@@ -1,0 +1,799 @@
+{
+ "id": "cp-calc",
+ "module": "t2-cp-wprime",
+ "title": "Estimating CP and W′ from a few hard efforts",
+ "goal": "Calculate CP and W′ from two to four maximal efforts with the work–time and 1/time models, and choose test durations that give trustworthy numbers.",
+ "requires": [
+  "cp-model"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "linear-regression"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cpc-protocol",
+   "title": "Testing: 3–5 hard efforts of 2–15 min",
+   "text": "To find CP and W′ you need several points on the curve. The classic protocol is 3–5 rides to exhaustion at different constant powers, each chosen to last about 2–15 min, done on separate days [[c:cp-protocol]]. Each ride gives one pair of numbers: a power and its [time to exhaustion](g:time-to-exhaustion).\n\nA friendlier version uses fixed-time all-out efforts, such as 3, 7 and 12 min, which are easier to pace than riding until you fail [[c:cp-tt]].\n\nThe details matter. How many efforts, how long they last, how much rest between them and which maths you use to fit them all change the CP and W′ you get [[c:cp-protocol-matters]].",
+   "claims": [
+    {
+     "id": "cp-protocol",
+     "text": "CP and W′ are classically found from about 3–5 constant-power efforts to exhaustion lasting about 2–15 min.",
+     "grade": "strong",
+     "sources": [
+      "jones2017",
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "This relationship is typically established by having a subject complete between three and five separate high-intensity exercise tests on different days, during which they are asked to sustain a fixed external power output for as long as possible.",
+       "level": "full-text"
+      },
+      {
+       "source": "chorley2020",
+       "quote": "TTE trials at differing intensities above CP intended to elicit exhaustion after 2–15 min",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cp-tt",
+     "text": "CP and W′ can also be found from fixed-time trials (e.g. 12, 7 and 3 min), though the validity of time-trial methods has been questioned.",
+     "grade": "moderate",
+     "sources": [
+      "karsten2020",
+      "munizpumares2019"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2020",
+       "quote": "CP was determined using a time-trial (TT) protocol of three durations (12, 7, and 3 min) interspersed by 30 min passive rest.",
+       "level": "abstract"
+      },
+      {
+       "source": "munizpumares2019",
+       "quote": "Recently, CP and W' have been determined in field and laboratory settings using time trials, but the validity of these methods has raised concerns.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-protocol-matters",
+     "text": "The number and duration of the efforts, the rest between them and the model used all affect the CP and W′ obtained.",
+     "grade": "moderate",
+     "sources": [
+      "munizpumares2019"
+     ],
+     "evidence": [
+      {
+       "source": "munizpumares2019",
+       "quote": "However, the duration, number, and recovery between predictive CWR and the mathematical model (hyperbolic or derived linear models) are known to affect CP and W'.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpc-why-range"
+  },
+  {
+   "type": "concept",
+   "id": "cpc-worktime",
+   "title": "The work–time line",
+   "text": "Turn each effort into total work: work = power × time (J = W × s). Plot work against time and the points fall on a straight line:\n\n**work = CP × t + W′**\n\nFit it with [linear regression](g:linear-regression). The **slope** is CP (J per s, so W); the **intercept**, the work at t = 0, is W′ [[c:worktime]].\n\nWhy it works: every effort holds CP for its whole length, plus all of W′ on top. Longer efforts add more CP work; W′ is the same in each.\n\nWith two efforts the slope is rise ÷ run, as in the units module: CP = (work₂ − work₁) ÷ (t₂ − t₁). Then W′ = work₁ − CP × t₁.",
+   "claims": [
+    {
+     "id": "worktime",
+     "text": "Plotting work done against time to exhaustion gives a straight line whose slope is CP and whose intercept is W′.",
+     "grade": "strong",
+     "sources": [
+      "jones2017",
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "This results in a more ‘user-friendly’ linear relationship that can be described with the regression equation y = mx + c, where the slope m is CP and the intercept c is W′",
+       "level": "full-text"
+      },
+      {
+       "source": "chorley2020",
+       "quote": "Three mathematical derivations exist of plotting the power-duration data in order to determine CP and W′; non-linear power-time (Equation (2)), linear work-time (Equation (3)) and linear power-time −1 (Equation (4)).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cpc-example",
+   "title": "CP and W′ from two efforts",
+   "problem": "A rider lasts 3 min at 400 W and 12 min at 300 W. Find CP and W′ with the work–time line.",
+   "steps": [
+    "Work of each effort: 400 W × 180 s = 72,000 J; 300 W × 720 s = 216,000 J.",
+    "Slope = CP = (216,000 − 72,000) ÷ (720 − 180) = 144,000 ÷ 540 ≈ 267 W.",
+    "Intercept = W′ = 72,000 − 266.7 × 180 = 72,000 − 48,000 = 24,000 J = 24 kJ.",
+    "Check with the other effort: 216,000 − 266.7 × 720 = 216,000 − 192,000 = 24,000 J. Same W′, so the sums are right."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpc-worktime-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpc-wprime-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cpc-inverse",
+   "title": "The 1/time line, and the curve itself",
+   "text": "Divide the work equation by t and you get a second straight line:\n\n**P = W′ × (1/t) + CP**\n\nPlot power against 1/time. Now the **intercept** is CP (the power when 1/t = 0, an endless effort) and the **slope** is W′.\n\nA third option fits the [hyperbola](g:hyperbola) t = W′ ÷ (P − CP) directly, by computer.\n\nWith perfect efforts all three give the same answer. Real efforts are noisy, and each model weighs the misfit differently, so with three or more points they give different CP and W′ [[c:models-differ]]. A common rule is to report the model whose points sit closest to its line (the smallest standard error) [[c:smallest-see]].",
+   "claims": [
+    {
+     "id": "models-differ",
+     "text": "The hyperbolic and the two linear models give different CP and W′ from the same data.",
+     "grade": "moderate",
+     "sources": [
+      "sreedhara2019"
+     ],
+     "evidence": [
+      {
+       "source": "sreedhara2019",
+       "quote": "The models yield different CP and W' estimates for the same data depending on the regression fit and rounding off approximations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "smallest-see",
+     "text": "When no model fits perfectly, it is often advised to use the one with the smallest standard error of the estimate.",
+     "grade": "weak",
+     "sources": [
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "chorley2020",
+       "quote": "The three models should produce the same measurements of CP and W′ if all trials are truly completed to exhaustion and a perfect fit is obtained.",
+       "level": "full-text"
+      },
+      {
+       "source": "chorley2020",
+       "quote": "However, it is argued that, where the perfect fit does not exist, the model producing the smallest standard error of estimate be used",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpc-inverse-read"
+  },
+  {
+   "type": "question",
+   "item": "cpc-inverse-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpc-models-differ"
+  },
+  {
+   "type": "concept",
+   "id": "cpc-choose",
+   "title": "Choosing good efforts",
+   "text": "Three rules for a good test:\n\n- **Spread the durations.** Efforts of 3, 7 and 12 min pin the line down. Efforts of 3, 4 and 5 min bunch the points, so a small error in one swings the slope, CP, a lot.\n- **Go to real exhaustion.** If a long effort stops early, it plots too little work for its time. The line comes out too flat: CP too low and W′ too high [[c:early-stop]].\n- **Rest enough** between efforts, or later ones start with W′ not fully back.\n\nEach effort also carries day-to-day noise, its [typical error](g:typical-error), so the numbers you get are estimates with error bars.",
+   "claims": [
+    {
+     "id": "early-stop",
+     "text": "Stopping an effort before true exhaustion leads the fitted line to underestimate CP and may overestimate W′.",
+     "grade": "weak",
+     "sources": [
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "chorley2020",
+       "quote": "Moreover, given such a scenario the best fit methods would lead to an underestimation of CP and potential overestimation of W′.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpc-bunched"
+  },
+  {
+   "type": "question",
+   "item": "cpc-early-stop"
+  },
+  {
+   "type": "concept",
+   "id": "cpc-3mt",
+   "title": "One visit: the 3-min all-out test",
+   "text": "The [3-min all-out test](g:three-minute-all-out-test) gives both numbers from one effort. You go flat out from the start and never pace. Power falls and, after about 2 min, settles. The end-test power estimates CP, and the work done above it estimates W′ [[c:3mt]].\n\nIt is practical, but it may set CP too high, and it needs a [ramp test](g:ramp-test) first to set the test bike's resistance [[c:3mt-limits]].\n\nField option: take your best 3-, 7- and 12-min powers from training files and fit them as above. This only works if those really were all-out efforts.",
+   "claims": [
+    {
+     "id": "3mt",
+     "text": "In a 3-min all-out test, power settles after about 2 min; end-test power estimates CP and work above it estimates W′.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "during which power falls to attain a stable value after ~2 min",
+       "level": "full-text"
+      },
+      {
+       "source": "jones2017",
+       "quote": "has been shown to provide valid and reliable estimates of CP (based on the end-test power) and W′ (based on the total work done above the end-test power) during cycle exercise",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "3mt-limits",
+     "text": "The 3-min all-out test needs a prior ramp test and may overestimate CP.",
+     "grade": "moderate",
+     "sources": [
+      "munizpumares2019"
+     ],
+     "evidence": [
+      {
+       "source": "munizpumares2019",
+       "quote": "However, the 3MT still requires an initial incremental test and may overestimate CP.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpc-3mt-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpc-3mt-risk"
+  },
+  {
+   "type": "question",
+   "item": "cpc-worktime-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "CP and W′ come from 3–5 efforts to exhaustion (or all-out efforts) lasting about 2–15 min.",
+    "Work–time line: work = CP × t + W′; slope CP, intercept W′. With two efforts: CP = Δwork ÷ Δtime.",
+    "Power–1/time line: P = W′ ÷ t + CP; intercept CP, slope W′. The hyperbola can also be fitted directly; with noisy data the three disagree a little.",
+    "Spread durations, go to true exhaustion and rest enough: stopping early gives too low a CP and too high a W′.",
+    "The 3-min all-out test is quick (end power ≈ CP, work above it ≈ W′) but may set CP too high."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cpc-why-range",
+   "concept": "cpc-protocol",
+   "bloom": "understand",
+   "sources": [
+    "jones2017",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why are CP test efforts chosen to last between about 2 and 15 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The two-number hyperbola fits the data well there",
+       "correct": true,
+       "why": "Right: the model is fitted to, and holds best for, severe efforts of about 2–15 min."
+      },
+      {
+       "id": "b",
+       "text": "Efforts shorter than 2 min use no W′",
+       "why": "Short efforts spend W′ very fast; they are left out because sprint power follows other limits, not because W′ is untouched."
+      },
+      {
+       "id": "c",
+       "text": "Efforts longer than 15 min are below CP, so they never end",
+       "why": "An effort above CP that lasts 20 min still ends in exhaustion; it is just close to CP and sensitive to small errors and fatigue."
+      },
+      {
+       "id": "d",
+       "text": "Blood lactate can only be measured in that window",
+       "why": "CP tests need only power and time, no blood samples."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpc-worktime-calc",
+   "concept": "cpc-worktime",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider lasts 3 min at 380 W and 10 min at 300 W. What is her CP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "266 W",
+       "correct": true,
+       "why": "Right: CP is the slope of work against time."
+      },
+      {
+       "id": "b",
+       "text": "340 W",
+       "why": "That is the average of the two powers. CP must sit below both, since both efforts were above it."
+      },
+      {
+       "id": "c",
+       "text": "300 W",
+       "why": "That is the power of the longer effort. It was above CP too, or it would never have ended."
+      }
+     ],
+     "solution": "Work: 380 × 180 = 68,400 J; 300 × 600 = 180,000 J. CP = (180,000 − 68,400) ÷ (600 − 180) = 111,600 ÷ 420 ≈ 266 W."
+    },
+    {
+     "id": "b",
+     "stem": "A rider lasts 4 min at 360 W and 12 min at 290 W. What is his CP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "255 W",
+       "correct": true,
+       "why": "Right: CP is the slope of work against time."
+      },
+      {
+       "id": "b",
+       "text": "325 W",
+       "why": "That is the average of the two powers. CP must sit below both, since both efforts were above it."
+      },
+      {
+       "id": "c",
+       "text": "290 W",
+       "why": "That is the power of the longer effort. It was above CP too, or it would never have ended."
+      }
+     ],
+     "solution": "Work: 360 × 240 = 86,400 J; 290 × 720 = 208,800 J. CP = (208,800 − 86,400) ÷ (720 − 240) = 122,400 ÷ 480 = 255 W."
+    }
+   ]
+  },
+  {
+   "id": "cpc-wprime-calc",
+   "concept": "cpc-worktime",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's work–time line gives CP 265 W. In her 3-min effort she averaged 380 W. What is her W′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20.7 kJ",
+       "correct": true,
+       "why": "Right: W′ = work − CP × t = (P − CP) × t."
+      },
+      {
+       "id": "b",
+       "text": "68.4 kJ",
+       "why": "That is all the work of the effort. Take away the part done at CP."
+      },
+      {
+       "id": "c",
+       "text": "47.7 kJ",
+       "why": "That is the CP part of the work (CP × t), the part that is not W′."
+      },
+      {
+       "id": "d",
+       "text": "115 J",
+       "why": "This is P − CP without multiplying by time: a power, not an amount of work."
+      }
+     ],
+     "solution": "W′ = (380 − 265) × 180 = 115 × 180 = 20,700 J = 20.7 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A rider's CP is 255 W. In his 4-min effort he averaged 360 W. What is his W′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25.2 kJ",
+       "correct": true,
+       "why": "Right: W′ = work − CP × t = (P − CP) × t."
+      },
+      {
+       "id": "b",
+       "text": "86.4 kJ",
+       "why": "That is all the work of the effort. Take away the part done at CP."
+      },
+      {
+       "id": "c",
+       "text": "61.2 kJ",
+       "why": "That is the CP part of the work (CP × t), the part that is not W′."
+      },
+      {
+       "id": "d",
+       "text": "105 J",
+       "why": "This is P − CP without multiplying by time: a power, not an amount of work."
+      }
+     ],
+     "solution": "W′ = (360 − 255) × 240 = 105 × 240 = 25,200 J = 25.2 kJ."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's CP is 300 W. She lasted 5 min at 370 W. What is her W′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "21 kJ",
+       "correct": true,
+       "why": "Right: W′ = work − CP × t = (P − CP) × t."
+      },
+      {
+       "id": "b",
+       "text": "111 kJ",
+       "why": "That is all the work of the effort. Take away the part done at CP."
+      },
+      {
+       "id": "c",
+       "text": "90 kJ",
+       "why": "That is the CP part of the work (CP × t), the part that is not W′."
+      },
+      {
+       "id": "d",
+       "text": "70 J",
+       "why": "This is P − CP without multiplying by time: a power, not an amount of work."
+      }
+     ],
+     "solution": "W′ = (370 − 300) × 300 = 70 × 300 = 21,000 J = 21 kJ."
+    }
+   ]
+  },
+  {
+   "id": "cpc-inverse-read",
+   "concept": "cpc-inverse",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a plot of power against 1/time, what is the intercept, where the line meets the power axis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Critical power",
+       "correct": true,
+       "why": "Right: 1/t = 0 means an endless effort, and the power you could hold for ever is CP."
+      },
+      {
+       "id": "b",
+       "text": "W′",
+       "why": "W′ is the slope of this line (and the intercept of the work–time line). Easy to swap."
+      },
+      {
+       "id": "c",
+       "text": "Peak sprint power",
+       "why": "Peak power belongs to the shortest efforts, far to the right of the plot (large 1/t), not at 1/t = 0."
+      },
+      {
+       "id": "d",
+       "text": "FTP",
+       "why": "FTP is a separate field estimate; nothing on this plot defines it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpc-inverse-calc",
+   "concept": "cpc-inverse",
+   "bloom": "apply",
+   "sources": [
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider has CP 260 W and W′ 21 kJ. What power could she hold for 5 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "330 W",
+       "correct": true,
+       "why": "Right: P = W′ ÷ t + CP, with W′ in J and t in s."
+      },
+      {
+       "id": "b",
+       "text": "4,460 W",
+       "why": "Time left in minutes: W′ in J must be divided by seconds."
+      },
+      {
+       "id": "c",
+       "text": "264 W",
+       "why": "Both units slipped: W′ in kJ and t in minutes (21 ÷ 5 = 4.2 W). The part above CP should be 21,000 J ÷ 300 s = 70 W."
+      },
+      {
+       "id": "d",
+       "text": "70 W",
+       "why": "This is only the part above CP. Add CP back on."
+      }
+     ],
+     "solution": "P = 21,000 ÷ 300 + 260 = 70 + 260 = 330 W."
+    },
+    {
+     "id": "b",
+     "stem": "A rider has CP 300 W and W′ 18 kJ. What power could he hold for 8 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 338 W",
+       "correct": true,
+       "why": "Right: P = W′ ÷ t + CP, with W′ in J and t in s."
+      },
+      {
+       "id": "b",
+       "text": "2,550 W",
+       "why": "Time left in minutes: W′ in J must be divided by seconds."
+      },
+      {
+       "id": "c",
+       "text": "about 302 W",
+       "why": "Both units slipped: W′ in kJ and t in minutes (18 ÷ 8 ≈ 2 W). The part above CP should be 18,000 J ÷ 480 s ≈ 38 W."
+      },
+      {
+       "id": "d",
+       "text": "about 38 W",
+       "why": "This is only the part above CP. Add CP back on."
+      }
+     ],
+     "solution": "P = 18,000 ÷ 480 + 300 = 37.5 + 300 ≈ 338 W."
+    }
+   ]
+  },
+  {
+   "id": "cpc-models-differ",
+   "concept": "cpc-inverse",
+   "bloom": "analyse",
+   "sources": [
+    "sreedhara2019",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's three test rides give CP of 251, 255 and 259 W from the hyperbolic, work–time and 1/time models. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rides miss the curve a little; each model weighs that differently",
+       "correct": true,
+       "why": "Right: with perfect data the three agree; noisy efforts make them differ."
+      },
+      {
+       "id": "b",
+       "text": "One of the three models uses a wrong equation",
+       "why": "All three are rearrangements of the same equation; none is wrong."
+      },
+      {
+       "id": "c",
+       "text": "Her real CP changed from one model to the next",
+       "why": "The models were fitted to the same three rides, so her CP did not change."
+      },
+      {
+       "id": "d",
+       "text": "The 1/time model always reads about 4 W high",
+       "why": "There is no fixed offset: which model is higher depends on where the misfit lies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpc-bunched",
+   "concept": "cpc-choose",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2017",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which set of four test efforts will give the most trustworthy CP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2, 5, 9 and 14 min",
+       "correct": true,
+       "why": "Right: spread across the 2–15 min range, so small errors in one effort barely move the slope."
+      },
+      {
+       "id": "b",
+       "text": "3, 3.5, 4 and 4.5 min",
+       "why": "Bunched points: a small error in one effort swings the slope a lot."
+      },
+      {
+       "id": "c",
+       "text": "30 s, 1, 2 and 3 min",
+       "why": "Mostly too short: sprint-length efforts follow peak-power limits, not the CP hyperbola."
+      },
+      {
+       "id": "d",
+       "text": "12, 14, 16 and 18 min",
+       "why": "Bunched and near CP, where small changes in power make big changes in time; some lie outside the usual range."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpc-early-stop",
+   "concept": "cpc-choose",
+   "bloom": "analyse",
+   "sources": [
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a three-effort test, a triathlete quits her longest ride 2 min early because she is bored, not exhausted. How does this change the fitted CP and W′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "CP comes out too low and W′ too high",
+       "correct": true,
+       "why": "Right: the long effort plots too little work for its time, flattening the line (lower slope) and raising its intercept."
+      },
+      {
+       "id": "b",
+       "text": "CP comes out too high and W′ too low",
+       "why": "The opposite: the short, true efforts sit where they should, and the long one drags the slope down."
+      },
+      {
+       "id": "c",
+       "text": "Both come out too high",
+       "why": "A lower right-hand point can't raise the slope."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: fitting a line averages the error away",
+       "why": "With only three points, one bad point moves the line a lot."
+      }
+     ],
+     "solution": "Work–time line: the long effort sits too low on the work axis. A line through a low right-hand point and correct left-hand points is flatter (lower CP) and crosses the work axis higher (higher W′)."
+    }
+   ]
+  },
+  {
+   "id": "cpc-3mt-calc",
+   "concept": "cpc-3mt",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 3-min all-out test a rider's power settles at 290 W. Her total work in the 3 min is 69.2 kJ. Estimate her W′.",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.0 kJ",
+       "correct": true,
+       "why": "Right: W′ = total work − end-test power × 180 s."
+      },
+      {
+       "id": "b",
+       "text": "69.2 kJ",
+       "why": "That is all the work of the test, including the part at end-test power."
+      },
+      {
+       "id": "c",
+       "text": "52.2 kJ",
+       "why": "That is the part done at end-test power, the CP part, not W′."
+      },
+      {
+       "id": "d",
+       "text": "384 W",
+       "why": "That is the mean power of the test, a power, not an amount of work."
+      }
+     ],
+     "solution": "Work at end-test power: 290 × 180 = 52,200 J. W′ = 69,200 − 52,200 = 17,000 J = 17.0 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "In a 3-min all-out test a rider's power settles at 320 W. His total work is 75.6 kJ. Estimate his W′.",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.0 kJ",
+       "correct": true,
+       "why": "Right: W′ = total work − end-test power × 180 s."
+      },
+      {
+       "id": "b",
+       "text": "75.6 kJ",
+       "why": "That is all the work of the test, including the part at end-test power."
+      },
+      {
+       "id": "c",
+       "text": "57.6 kJ",
+       "why": "That is the part done at end-test power, the CP part, not W′."
+      },
+      {
+       "id": "d",
+       "text": "420 W",
+       "why": "That is the mean power of the test, a power, not an amount of work."
+      }
+     ],
+     "solution": "Work at end-test power: 320 × 180 = 57,600 J. W′ = 75,600 − 57,600 = 18,000 J = 18.0 kJ."
+    }
+   ]
+  },
+  {
+   "id": "cpc-3mt-risk",
+   "concept": "cpc-3mt",
+   "bloom": "understand",
+   "sources": [
+    "munizpumares2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Compared with several separate efforts to exhaustion, what is a known weakness of the 3-min all-out test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It may set CP too high",
+       "correct": true,
+       "why": "Right: the 3-min test may overestimate CP, and it needs a ramp test beforehand."
+      },
+      {
+       "id": "b",
+       "text": "It can't estimate W′ at all",
+       "why": "It does: W′ is the work done above the end-test power."
+      },
+      {
+       "id": "c",
+       "text": "It always sets CP far too low",
+       "why": "The reported error is the other way: it may overestimate CP."
+      },
+      {
+       "id": "d",
+       "text": "It takes 3 days of testing",
+       "why": "Its appeal is the opposite: one effort, after a ramp test to set it up."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,661 @@
+{
+ "id": "dur-training",
+ "module": "t2-durability",
+ "title": "Can durability be trained?",
+ "goal": "Judge the evidence on training durability (long sessions, intensity mix, carbohydrate during exercise) and apply it to marathons, long road races and ultra events.",
+ "requires": [
+  "dur-mechanisms"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "polarised-training"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dt-long",
+   "title": "Long sessions: what snapshots show",
+   "text": "Do long sessions build durability? The best running data compare two groups of 13 male runners matched for 10 km time (about 39 min). One group did regular long runs of 90 min or more; the other never ran longer than 70 min. In a 90 min run at [lactate threshold](g:lactate-threshold), [running economy](g:running-economy) worsened **6.0%** in the short-run group and **3.1%** in the long-run group. Economy durability tracked each runner's longest weekly run (r = −0.67) [[c:dt-zanini]].\n\nIn 30 under-23 pros followed through a season, more time below [VT1](g:vt1), and a shift towards [polarised training](g:polarised-training), went with better power when fatigued (a later correction removed their findings on the size of the drop) [[c:dt-spragg]].\n\nBoth are [cross-sectional](g:cross-sectional-study) or observational: they show what goes together, not cause.",
+   "claims": [
+    {
+     "id": "dt-zanini",
+     "text": "In performance-matched male runners, those doing regular long runs had smaller and later deterioration of running economy over 90 min (+3.1% vs +6.0%); economy durability correlated with the weekly longest run.",
+     "grade": "weak",
+     "sources": [
+      "zanini2026"
+     ],
+     "evidence": [
+      {
+       "source": "zanini2026",
+       "quote": "Changes in RE occurred earlier and were larger for SDT than LDT, reaching +6.0% versus +3.1% at 90 min, respectively ( P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "zanini2026",
+       "quote": "although intervention studies are needed to confirm these cross-sectional findings.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dt-spragg",
+     "text": "In 30 under-23 professional cyclists over a season, time below VT1 and a shift towards a polarised intensity distribution were associated with improvements in the fatigued power profile. (A 2022 correction removed the paper's related findings on the drop in power; this point is about fatigued power itself.)",
+     "grade": "weak",
+     "sources": [
+      "spragg2023b"
+     ],
+     "evidence": [
+      {
+       "source": "spragg2023b",
+       "quote": "A significant relationship was found between training time below the first ventilatory threshold (Time < VT1) and improvements in absolute and relative 2MMP",
+       "level": "abstract"
+      },
+      {
+       "source": "spragg2023b",
+       "quote": "A tendency towards a polarized training intensity distribution is associated with an improvement in the fatigue power profile.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dt-zanini-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "dt-long-run-apply"
+  },
+  {
+   "type": "concept",
+   "id": "dt-trial",
+   "title": "The training trial",
+   "text": "Training trials on durability are rare. In one of the first, an [RCT](g:rct), 35 sedentary or recreationally active men and women were randomised to 10 weeks of easy cycling (about 6.8 h per week) or interval training (about 1.6 h per week). Durability was judged in a 3 h ride at 48% of [VO2max](g:vo2max), from drifts in heart rate, energy use and breathing.\n\nBoth groups improved durability by a similar amount; only the interval group raised VO₂max. But the drifts themselves changed little in 10 weeks [[c:dt-matomaki]].\n\nThree limits: the participants were untrained, and untrained people improve at almost anything; there was no group that didn't train, so part of the gain may come from simply repeating the test; and 48% of VO₂max is gentle. Whether the result holds for trained athletes is unknown.",
+   "claims": [
+    {
+     "id": "dt-matomaki",
+     "text": "In 35 untrained adults, with no non-training control group, 10 weeks of low- or high-intensity cycling improved durability similarly, but drifts and their onset changed only modestly.",
+     "grade": "weak",
+     "sources": [
+      "matomaki2023"
+     ],
+     "evidence": [
+      {
+       "source": "matomaki2023",
+       "quote": "Durability improved similarly by both LIT and HIT based on reduced physiological drifts, their postponed onsets, and changes in physiological strain.",
+       "level": "abstract"
+      },
+      {
+       "source": "matomaki2023",
+       "quote": "Despite durability enhanced among untrained people, a 10-week intervention did not alter drifts and their onsets in a large amount, even though it attenuated physiological strain.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dt-matomaki-read"
+  },
+  {
+   "type": "question",
+   "item": "dt-matomaki-limit"
+  },
+  {
+   "type": "concept",
+   "id": "dt-cho",
+   "title": "Carbohydrate during exercise: the best-supported lever",
+   "text": "Feeding is the one lever tested in several controlled [crossover studies](g:crossover-study):\n\n- 60 g·h⁻¹ during 2 h of heavy cycling stopped the fall in CP [[c:dt-clark]].\n- After 150 min of riding, VT1 power fell 3% with carbohydrate and 6% without [[c:dt-dudley]].\n- After 3 h at moderate intensity, CP fell less the more was eaten [[c:dt-norte]]:\n\n| intake | CP after 3 h (fresh 277 W) |\n|---|---|\n| water | 236 W |\n| 60 g·h⁻¹ | 257 W |\n| 120 g·h⁻¹ | 266 W |\n\nThis changes the athlete's durability on the day, not their training. The samples are small and mostly men.",
+   "claims": [
+    {
+     "id": "dt-clark",
+     "text": "Carbohydrate ingestion (60 g·h⁻¹) negated the reduction in end-test power (CP estimate) after 2 h of heavy-intensity cycling.",
+     "grade": "weak",
+     "sources": [
+      "clark2019a"
+     ],
+     "evidence": [
+      {
+       "source": "clark2019a",
+       "quote": "Compared with placebo, CHO ingestion negated the reduction of EP following 2 h of heavy-intensity exercise (254 ± 49 W) but had no effect on WEP (13.5 ± 3.4 kJ).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dt-dudley",
+     "text": "After 150 min of moderate cycling, power at VT1 fell about 3% with carbohydrate ingestion and about 6% without.",
+     "grade": "weak",
+     "sources": [
+      "dudleyrode2025"
+     ],
+     "evidence": [
+      {
+       "source": "dudleyrode2025",
+       "quote": "Power output at the first ventilatory threshold (VT1) was lower in POSTCHO (225 ± 36 W, ∆ -3 ± 2%, P = 0.027, n = 11) and POSTCON (216 ± 35 W, ∆ -6 ± 4%, P = 0.001, n = 12) than PRE (229 ± 37 W, n = 12)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dt-norte",
+     "text": "After 3 h of moderate cycling, CP fell from 277 W to 236 W with water, 257 W with 60 g·h⁻¹ and 266 W with 120 g·h⁻¹ of carbohydrate: a dose-dependent attenuation.",
+     "grade": "weak",
+     "sources": [
+      "norte2026"
+     ],
+     "evidence": [
+      {
+       "source": "norte2026",
+       "quote": "CP was significantly reduced (p < 0.001) after the 3-h exercise in all experimental conditions (water: 236 ± 30 W; 60 g·h-1: 257 ± 28 W; 120 g·h-1: 266 ± 29 W) compared to the non-fatigued state (277 ± 27 W).",
+       "level": "abstract"
+      },
+      {
+       "source": "norte2026",
+       "quote": "However, this reduction in CP was attenuated with increasing CHO intake during exercise in a dose-dependent manner",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "dt-cho-example",
+   "title": "How much of the CP fall did feeding prevent?",
+   "problem": "In the 3 h study, fresh CP was 277 W. It was 236 W after 3 h with water and 266 W with 120 g·h⁻¹. Work out the percent fall in each case.",
+   "steps": [
+    "Water: fall = 277 − 236 = 41 W; 41 ÷ 277 = 0.148, so 14.8%.",
+    "120 g·h⁻¹: fall = 277 − 266 = 11 W; 11 ÷ 277 = 0.040, so 4.0%.",
+    "Share of the fall prevented: (41 − 11) ÷ 41 = 30 ÷ 41 = 0.73, so about three quarters.",
+    "As always, divide by the fresh value for a percent fall, and by the unfed fall for the share prevented."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dt-cho-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dt-cho-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "dt-test-fuel"
+  },
+  {
+   "type": "concept",
+   "id": "dt-ultra",
+   "title": "Ultra-endurance: durability is the event",
+   "text": "In events of 10 to 30 hours the pace is far below [VO2max](g:vo2max), so how slowly the profile drifts is likely to matter more than how high it starts.\n\nA case study of one world-class runner in a 100-mile (161 km) mountain race: the runner averaged about 85% of the predicted [critical speed](g:critical-speed), slowed by 15% across the race, and ate about 86 g of carbohydrate per hour [[c:dt-mougin]]. One athlete, one race: it shows what's possible, not what's typical.\n\nSex may matter too. In trained cyclists after 90 min of heavy riding, power at the [gas exchange threshold](g:gas-exchange-threshold) fell 16% in men but only 2% in women [[c:dt-sex]].",
+   "claims": [
+    {
+     "id": "dt-mougin",
+     "text": "A world-class ultramarathon runner held a mean 84.8% of predicted critical speed in a 100-mile race with a 15% decline, while eating about 86 g carbohydrate per hour.",
+     "grade": "weak",
+     "sources": [
+      "mougin2026"
+     ],
+     "evidence": [
+      {
+       "source": "mougin2026",
+       "quote": "Pacing analysis showed a mean normalized speed of 84.8% of predicted critical speed, with a 15% decline across the race, demonstrating exceptional fatigue resistance.",
+       "level": "abstract"
+      },
+      {
+       "source": "mougin2026",
+       "quote": "Energy intake totaled 6,720 kcal (∼86 g carbohydrate·h-1).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dt-sex",
+     "text": "After 90 min of heavy-intensity cycling, power at the gas exchange threshold fell more in trained men (−16%) than women (−2%).",
+     "grade": "weak",
+     "sources": [
+      "pastorio2026"
+     ],
+     "evidence": [
+      {
+       "source": "pastorio2026",
+       "quote": "Power at GET (-16% ± 15% vs. -2% ± 13%) and respiratory compensation point (-13% ± 10% vs. -6% ± 9%) decreased more in males than females (p ≤ 0.049)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dt-ultra-apply"
+  },
+  {
+   "type": "concept",
+   "id": "dt-practice",
+   "title": "What to do with this now",
+   "text": "Putting it together, by strength of evidence:\n\n- **Fuel long sessions and races** with carbohydrate: several crossover studies agree [[c:dt-fuel-test]].\n- **Do regular long sessions**: supported by snapshots in runners and pro cyclists, not yet by a trial in trained athletes.\n- **Test fatigued, not only fresh**: for example 5 and 20 min efforts after a set amount of kJ·kg⁻¹, with the same food and drink each time.\n\nIs it the long session itself that trains durability, or any training that makes you fitter? The data so far can't separate them.",
+   "claims": [
+    {
+     "id": "dt-fuel-test",
+     "text": "Because carbohydrate intake changes durability, carbohydrate ingestion before and during exercise should be kept consistent between durability tests.",
+     "grade": "moderate",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "It is recommended that carbohydrate ingestion, both before and during exercise, remains consistent between testing sessions.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does durability need specific long sessions, or does any training that raises fitness improve it?",
+    "sides": [
+     {
+      "position": "Volume and long sessions: runners who did long runs, and pros with more easy time, had better durability.",
+      "sources": [
+       "zanini2026",
+       "spragg2023b"
+      ]
+     },
+     {
+      "position": "Any training: in untrained adults, short intervals improved durability as much as long easy rides.",
+      "sources": [
+       "matomaki2023"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "dt-debate"
+  },
+  {
+   "type": "question",
+   "item": "dt-cho-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Runners who do long runs, and pros with more easy time, show better durability, but these are snapshots, not proof.",
+    "The one trial (untrained adults, 10 weeks, no non-training control) found easy riding and intervals improved durability equally, and modestly.",
+    "Carbohydrate during exercise is the best-supported lever: CP and VT1 fall less, more so with more carbohydrate.",
+    "Keep fueling the same between durability tests, or the result measures your drink, not your training.",
+    "In ultra events durability is the event; one world-class runner slowed just 15% over 100 miles."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dt-zanini-appraisal",
+   "concept": "dt-long",
+   "bloom": "evaluate",
+   "sources": [
+    "zanini2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Runners who do long runs lose less economy in a 90 min run than matched runners who don't. Why can't we conclude that long runs cause the better durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cross-sectional: durable runners may pick long runs, or something else drives both",
+       "correct": true,
+       "why": "Right: self-selection and confounders; the authors call for intervention studies."
+      },
+      {
+       "id": "b",
+       "text": "The two groups weren't matched for 10 km performance",
+       "why": "They were matched (about 39 min each); that's a strength of the study."
+      },
+      {
+       "id": "c",
+       "text": "Running economy can't be measured reliably after 90 min",
+       "why": "It was measured every 15 min with gas analysis."
+      },
+      {
+       "id": "d",
+       "text": "The difference between groups was too small to be real",
+       "why": "6.0% vs 3.1% was clear (P < 0.001); the design, not the size, is the problem."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-long-run-apply",
+   "concept": "dt-long",
+   "bloom": "apply",
+   "sources": [
+    "zanini2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner never runs longer than 60 min. On current evidence, what is the most reasonable advice for her durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Add a regular long run, knowing the support is observational",
+       "correct": true,
+       "why": "Right: long runs went with better economy durability; a trial is still missing."
+      },
+      {
+       "id": "b",
+       "text": "Keep it as is: run length doesn't matter",
+       "why": "Longest weekly run was clearly linked to economy durability."
+      },
+      {
+       "id": "c",
+       "text": "Only do intervals: they are proven to train durability in runners",
+       "why": "No trial in trained runners shows that."
+      },
+      {
+       "id": "d",
+       "text": "Focus on raising VO₂max; durability follows",
+       "why": "VO₂max and durability aren't the same thing; matched runners differed in durability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-matomaki-read",
+   "concept": "dt-trial",
+   "bloom": "analyse",
+   "sources": [
+    "matomaki2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 10 week trial, easy riding (6.8 h a week) and intervals (1.6 h a week) improved durability equally, but only intervals raised VO₂max. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In untrained people, durability can improve without a VO₂max gain",
+       "correct": true,
+       "why": "Right: the easy group improved durability with no change in VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Intervals are the only way to train durability",
+       "why": "Easy riding improved it just as much."
+      },
+      {
+       "id": "c",
+       "text": "Durability is just VO₂max under another name",
+       "why": "Durability rose in a group whose VO₂max didn't."
+      },
+      {
+       "id": "d",
+       "text": "Training can't change durability",
+       "why": "Both groups improved it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-matomaki-limit",
+   "concept": "dt-trial",
+   "bloom": "evaluate",
+   "sources": [
+    "matomaki2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach of elite cyclists cites this trial to drop long rides in favour of short intervals. What is the main flaw?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Untrained people, no non-training control, and 3 h at 48% of VO₂max",
+       "correct": true,
+       "why": "Right: untrained people improve at almost anything, a group that didn't train is missing, and gentle riding is far from racing."
+      },
+      {
+       "id": "b",
+       "text": "The trial wasn't randomised, so the groups may differ",
+       "why": "It was randomised (minimisation method)."
+      },
+      {
+       "id": "c",
+       "text": "Durability can't change in only 10 weeks of training",
+       "why": "It did change in both groups."
+      },
+      {
+       "id": "d",
+       "text": "Intervals lowered VO₂max in the trial's interval group",
+       "why": "Intervals raised VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-cho-calc",
+   "concept": "dt-cho",
+   "bloom": "apply",
+   "sources": [
+    "norte2026",
+    "clark2019a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Fresh CP was 277 W. After 3 h of riding with 60 g·h⁻¹ of carbohydrate it was 257 W. What is the percent fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.2%",
+       "correct": true,
+       "why": "Right: (277 − 257) ÷ 277 = 20 ÷ 277 = 7.2%."
+      },
+      {
+       "id": "b",
+       "text": "7.8%",
+       "why": "That divides by the fatigued value (20 ÷ 257)."
+      },
+      {
+       "id": "c",
+       "text": "20%",
+       "why": "20 is the fall in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "14.8%",
+       "why": "That's the fall with water only."
+      }
+     ],
+     "solution": "Fall = 277 − 257 = 20 W. Percent fall = 20 ÷ 277 = 0.072 = 7.2%."
+    },
+    {
+     "id": "b",
+     "stem": "A rider's CP is 320 W fresh. After 3 h with water it is 280 W; with carbohydrate, 305 W. What share of the fall did feeding prevent?",
+     "options": [
+      {
+       "id": "a",
+       "text": "62.5%",
+       "correct": true,
+       "why": "Right: unfed fall 40 W, fed fall 15 W; (40 − 15) ÷ 40 = 62.5%."
+      },
+      {
+       "id": "b",
+       "text": "37.5%",
+       "why": "That's the share of the fall that still happened (15 ÷ 40)."
+      },
+      {
+       "id": "c",
+       "text": "7.8%",
+       "why": "That's the 25 W saved as a share of fresh CP, not of the fall."
+      },
+      {
+       "id": "d",
+       "text": "8.9%",
+       "why": "That divides the 25 W saved by the unfed CP (280 W)."
+      }
+     ],
+     "solution": "Unfed fall = 320 − 280 = 40 W. Fed fall = 320 − 305 = 15 W. Prevented = (40 − 15) ÷ 40 = 0.625 = 62.5%."
+    },
+    {
+     "id": "c",
+     "stem": "Fresh end-test power was 260 W. After 2 h of heavy riding it was 236 W with placebo and 254 W with carbohydrate. What was the percent fall with carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.3%",
+       "correct": true,
+       "why": "Right: (260 − 254) ÷ 260 = 6 ÷ 260 = 2.3%."
+      },
+      {
+       "id": "b",
+       "text": "2.4%",
+       "why": "That divides by the fatigued value (6 ÷ 254)."
+      },
+      {
+       "id": "c",
+       "text": "9.2%",
+       "why": "That's the fall with placebo (24 ÷ 260)."
+      },
+      {
+       "id": "d",
+       "text": "6%",
+       "why": "6 is the fall in watts, not a percentage."
+      }
+     ],
+     "solution": "Fall = 260 − 254 = 6 W. Percent fall = 6 ÷ 260 = 0.023 = 2.3%."
+    }
+   ]
+  },
+  {
+   "id": "dt-test-fuel",
+   "concept": "dt-cho",
+   "bloom": "apply",
+   "sources": [
+    "hunter2025",
+    "norte2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete retests her power after 3 h of riding. In March she drank water; in June she took 90 g·h⁻¹ of carbohydrate. Her fatigued power is 5% higher in June. What can she conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little about training: the change in fueling alone could explain it",
+       "correct": true,
+       "why": "Right: feeding changes durability on the day, so tests must use the same intake."
+      },
+      {
+       "id": "b",
+       "text": "Her durability training has clearly worked",
+       "why": "The fueling changed, so training can't be credited."
+      },
+      {
+       "id": "c",
+       "text": "Carbohydrate has no effect, so the test is valid",
+       "why": "Feeding raised CP after 3 h in a dose-dependent way."
+      },
+      {
+       "id": "d",
+       "text": "The June test must be wrong",
+       "why": "It may be right; it just measured something different."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-ultra-apply",
+   "concept": "dt-ultra",
+   "bloom": "apply",
+   "sources": [
+    "mougin2026",
+    "jones2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners enter a 100-mile race. A has the higher VO₂max; B's pace drifts much less in long training runs. Who is favoured, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: in very long, low-intensity events, slow drift matters more than VO₂max",
+       "correct": true,
+       "why": "Right: ultra pace is far below VO₂max, so holding the profile up decides more."
+      },
+      {
+       "id": "b",
+       "text": "A: VO₂max predicts every endurance event best, ultras included",
+       "why": "At ultra pace VO₂max is far from limiting; durability weighs more."
+      },
+      {
+       "id": "c",
+       "text": "Neither: only fueling decides the result in ultras",
+       "why": "Fueling matters, but physiological drift does too."
+      },
+      {
+       "id": "d",
+       "text": "A: a higher VO₂max always means less drift later on",
+       "why": "Durability and VO₂max don't move in lockstep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dt-debate",
+   "concept": "dt-practice",
+   "bloom": "evaluate",
+   "sources": [
+    "zanini2026",
+    "spragg2023b",
+    "matomaki2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the strongest current evidence on how to train durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Observational links with long sessions, plus one trial in untrained adults",
+       "correct": true,
+       "why": "Right: no trial yet in trained athletes; the picture is promising but thin."
+      },
+      {
+       "id": "b",
+       "text": "Several RCTs in elite athletes showing long rides work",
+       "why": "No such trials exist yet."
+      },
+      {
+       "id": "c",
+       "text": "A meta-analysis showing intervals beat long sessions",
+       "why": "No meta-analysis exists; the one trial found them equal, in untrained people."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: durability can't be trained",
+       "why": "Both training groups improved in the one trial."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

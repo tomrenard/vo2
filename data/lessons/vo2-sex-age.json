@@ -1,0 +1,971 @@
+{
+ "id": "vo2-sex-age",
+ "module": "t2-vo2max",
+ "title": "VO₂max across sex and age",
+ "goal": "Explain why women's VO₂max is on average lower than men's (haemoglobin, heart size, body composition), how VO₂max falls with age and what masters athletes keep, and judge how strong each piece of evidence is.",
+ "requires": [
+  "vo2-trainability"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "fat-free-mass",
+    "masters-athlete"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sa-gap",
+   "title": "A gap of about 10%",
+   "text": "Men typically outperform women of similar age and training by 10–30%, depending on the event. The gap opens at puberty, when [testosterone](g:testosterone) rises about 30-fold in boys and stays low in girls [[c:hunter-gap]].\n\nIn endurance events the gap is at the low end: about **10–12%** across running distances [[c:sant-gap]]. VO₂max shows a similar gap. Even elite women's values are about 10% below those of elite men, per kg of body mass [[c:sant-elite]].\n\nIn absolute terms (L·min⁻¹) the gap is much bigger, because men are on average larger. Whatever the unit, these are averages: many trained women have a higher VO₂max than most men.",
+   "claims": [
+    {
+     "id": "hunter-gap",
+     "text": "Men typically outperform women by 10–30% in endurance, strength, speed and power events; the gap emerges at puberty as testosterone rises about 30-fold in males.",
+     "grade": "strong",
+     "sources": [
+      "hunter2023b"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2023b",
+       "quote": "Thus, for athletic events and sports relying on endurance, muscle strength, speed, and power, males typically outperform females by 10%-30% depending on the requirements of the event.",
+       "level": "abstract"
+      },
+      {
+       "source": "hunter2023b",
+       "quote": "These sex differences in performance emerge with the onset of puberty and coincide with the increase in endogenous sex steroid hormones, in particular testosterone in males, which increases 30-fold by adulthood, but remains low in females.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sant-gap",
+     "text": "A 10–12% performance gap between men and women remains in all running distance events.",
+     "grade": "moderate",
+     "sources": [
+      "santisteban2022"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "there remains a 10-12% performance gap in all distance events",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sant-elite",
+     "text": "Elite women's VO₂max is about 10% lower than that of elite men, per kg of body mass.",
+     "grade": "moderate",
+     "sources": [
+      "santisteban2022",
+      "joyner2008"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "Even truly elite women have VO2max values ~10% lower than those seen in men of similar elite status when expressed as mL/kg/min",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2008",
+       "quote": "with values in women typically averaging about 10% lower due to lower haemoglobin concentrations and higher levels of body fat",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-gap-value"
+  },
+  {
+   "type": "concept",
+   "id": "sa-why",
+   "title": "Blood, heart and body composition",
+   "text": "Three differences explain most of the gap [[c:sant-central]]:\n\n| factor | women compared with men |\n|---|---|\n| [haemoglobin](g:haemoglobin) | about 12% lower concentration, and lower total mass |\n| heart | smaller; lower maximal [stroke volume](g:stroke-volume), similar [HRmax](g:hrmax), so lower maximal cardiac output |\n| body composition | more fat, so less muscle per kg |\n\nThe heart difference is partly body size: in college athletes, scaling heart mass to lean mass shrank much of it, though not fully in endurance athletes [[c:sant-lv]].\n\nHow much does blood explain? Blood was taken from men to bring their haemoglobin down to the women's level (153 to 134 g·L⁻¹). Their VO₂max fell about 7%, leaving most of the 47% absolute gap. Per kg of [fat-free mass](g:fat-free-mass), the sexes hadn't differed to begin with [[c:cureton]].",
+   "claims": [
+    {
+     "id": "sant-central",
+     "text": "Women typically have smaller hearts and lungs and lower haemoglobin than men, a mean haemoglobin about 12% lower, and lower maximal stroke volume with similar maximal heart rate.",
+     "grade": "moderate",
+     "sources": [
+      "santisteban2022"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "women typically have smaller hearts, lungs, and lower hemoglobin mass than men",
+       "level": "full-text"
+      },
+      {
+       "source": "santisteban2022",
+       "quote": "Independent of iron status, women have mean hemoglobin levels of 12% lower than age and race-matched men",
+       "level": "full-text"
+      },
+      {
+       "source": "santisteban2022",
+       "quote": "During high-intensity exercise, women reach lower maximal stroke volumes compared to men, resulting in a lower maximal cardiac output as maximal heart rate is similar across sexes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sant-lv",
+     "text": "In college athletes, sex differences in left ventricular mass shrank or disappeared when scaled to lean body mass; in endurance athletes the difference remained significant after scaling.",
+     "grade": "weak",
+     "sources": [
+      "santisteban2022"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "They found that the gender-related differences in left ventricular mass tended to decrease significantly or disappear, leading them to conclude that differences in left ventricular mass appear to be, to a large extent, related to differences in body composition",
+       "level": "full-text"
+      },
+      {
+       "source": "santisteban2022",
+       "quote": "they found that in athletes from high intensity, or more endurance-driven sports, the differences between males and females remained significant despite scaling to lean body mass",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cureton",
+     "text": "Lowering men's haemoglobin to the women's level reduced their VO₂max by about 7%: the haemoglobin difference explains a significant but relatively small part of the sex difference in absolute VO₂max; per kg of fat-free mass the sexes did not differ.",
+     "grade": "weak",
+     "sources": [
+      "cureton1986"
+     ],
+     "evidence": [
+      {
+       "source": "cureton1986",
+       "quote": "Prior to blood withdrawal, VO2max expressed in L X min-1 and relative to body weight and ride time on the cycle ergometer test were greater (p less than .01) in men by 1.11 L X min-1 (47%), 4.8 ml X kg-1 min-1 (11.5%) and 5.9 min (67%), respectively, whereas VO2max expressed relative to fat-free weight (FFW) was not significantly different.",
+       "level": "abstract"
+      },
+      {
+       "source": "cureton1986",
+       "quote": "It was concluded that the sex difference in [Hb] accounts for a significant, but relatively small portion of the sex difference in VO2max (L X min-1).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-why-factor",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sa-cureton-interpret"
+  },
+  {
+   "type": "example",
+   "id": "sa-ffm-example",
+   "title": "VO₂max per kg of fat-free mass",
+   "problem": "A cyclist weighs 60 kg, of which 12 kg is fat, and her VO₂max is 3.3 L·min⁻¹. What is her VO₂max per kg of fat-free mass?",
+   "steps": [
+    "Fat-free mass = body mass − fat mass = 60 − 12 = 48 kg.",
+    "3.3 L·min⁻¹ × 1000 = 3,300 mL·min⁻¹; 3,300 ÷ 48 = 68.8 mL·kg⁻¹·min⁻¹ of fat-free mass.",
+    "Per kg of body mass it is 3,300 ÷ 60 = 55: the fat she carries lowers the usual figure, not her engine."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-perkg-ffm",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sa-trainability",
+   "title": "Do women gain as much from training?",
+   "text": "A meta-analysis pooled 8 studies that gave untrained men and women the same training (175 people). Men's VO₂max rose more: by about 190 mL·min⁻¹ more in absolute terms, and about 2 mL·kg⁻¹·min⁻¹ more per kg [[c:dc-sex]].\n\nOne proposed reason is the heart. In one year-long study, women's heart mass stopped growing after about three months of training, while men's kept rising [[c:sant-lv-training]].\n\nThis is debated. The studies were few and small, all in untrained people. In the year-long study the women may have eaten too little for the training, and a plan matched for volume and intensity may simply suit men better [[c:sant-alt]]. Both sexes improve a lot: the reported difference is a fraction of the typical gain of about 5 mL·kg⁻¹·min⁻¹.",
+   "claims": [
+    {
+     "id": "dc-sex",
+     "text": "In 8 studies of sex-matched endurance training (175 untrained people), VO₂max rose more in men than in women: by about 191 mL·min⁻¹ more in absolute terms and 1.95 mL·kg⁻¹·min⁻¹ more per kg.",
+     "grade": "weak",
+     "sources": [
+      "diazcanestro2019"
+     ],
+     "evidence": [
+      {
+       "source": "diazcanestro2019",
+       "quote": "All studies implemented common modalities of ET in healthy untrained individuals, comprising a total of 175 men and women (90 ♂, 85 ♀).",
+       "level": "abstract"
+      },
+      {
+       "source": "diazcanestro2019",
+       "quote": "After data pooling, ET induced substantially larger increases in absolute VO2max in men compared with women (mean difference = + 191 ml·min-1, 95% CI 99, 283; P < 0.001). A greater effect of ET on relative VO2max was also observed in men versus women (mean difference = + 1.95 ml·min-1·kg-1, 95% CI 0.76, 3.15; P = 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "diazcanestro2019",
+       "quote": "Pooled evidence demonstrates greater improvements in VO2max in healthy men compared with women in response to a given dose of ET, suggesting the presence of sexual dimorphism in the trainability of aerobic capacity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sant-lv-training",
+     "text": "In a year of matched training, women's left ventricular mass reached its maximum after three months, while men's hypertrophy was more pronounced throughout.",
+     "grade": "weak",
+     "sources": [
+      "santisteban2022"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "Females reached maximal left ventricular mass after only three months of training and did not show any further improvements.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sant-alt",
+     "text": "The smaller gains in women in the year-long study may partly reflect too little energy intake, and training plans matched for volume and intensity may suit men better than women.",
+     "grade": "weak",
+     "sources": [
+      "santisteban2022"
+     ],
+     "evidence": [
+      {
+       "source": "santisteban2022",
+       "quote": "Thus, a possibility is that the lack of effect on VO 2max and cardiac mass could be due (in part) to a suboptimal energy intake in the female subjects",
+       "level": "full-text"
+      },
+      {
+       "source": "santisteban2022",
+       "quote": "As the participants were matched for volume and intensity, there is also the possibility that the training protocol better suited the needs of the male vs. female subjects.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do men gain more VO₂max than women from the same training?",
+    "sides": [
+     {
+      "position": "Yes: pooled trials of matched training show larger gains in men, perhaps because men's hearts keep growing for longer.",
+      "sources": [
+       "diazcanestro2019",
+       "santisteban2022"
+      ]
+     },
+     {
+      "position": "Not clearly: the trials are few, small and in untrained people, and under-fuelling or plans built around men could explain the gap.",
+      "sources": [
+       "santisteban2022"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "sa-trainability-appraise",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sa-age",
+   "title": "Ageing: about 10% per decade",
+   "text": "After about age 25–30, VO₂max falls by roughly **10% per decade** in healthy sedentary adults of both sexes [[c:ts-10pct]]. US reference data agree: from the 20s to the 70s, the median fell from 48.0 to 24.4 mL·kg⁻¹·min⁻¹ in men and from 37.6 to 18.3 in women [[c:friend-decline]].\n\nThe fall isn't steady, though. A [cohort study](g:cohort-study) followed 810 healthy adults for a median of 8 years. The loss sped up from 3–6% per decade in the 20s and 30s to more than 20% per decade in the 70s, at every level of reported leisure-time activity [[c:fleg]].\n\n[Cross-sectional](g:cross-sectional-study) comparisons of age groups, which most of the older estimates come from, miss that acceleration and give a rosier picture.",
+   "claims": [
+    {
+     "id": "ts-10pct",
+     "text": "VO₂max declines by about 10% per decade after age 25–30 in healthy sedentary adults of both sexes.",
+     "grade": "strong",
+     "sources": [
+      "tanaka2008",
+      "kaminsky2015"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "declines approximately 10% per decade after age 25–30 years in healthy sedentary adults of both sexes",
+       "level": "full-text"
+      },
+      {
+       "source": "kaminsky2015",
+       "quote": "The rate of decline in this cohort during a 5-decade period was approximately 10% per decade.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "friend-decline",
+     "text": "In FRIEND, median VO₂max fell from 48.0 to 24.4 mL·kg⁻¹·min⁻¹ in men and from 37.6 to 18.3 in women between ages 20–29 and 70–79.",
+     "grade": "strong",
+     "sources": [
+      "kaminsky2015"
+     ],
+     "evidence": [
+      {
+       "source": "kaminsky2015",
+       "quote": "In FRIEND, the 50th percentile VO 2max of men and women aged 20 to 29 years decreased from 48.0 and 37.6 mLO2 · kg(-1) · min(-1) to 24.4 and 18.3 mLO2 · kg(-1) · min(-1) for ages 70 to 79 years, respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fleg",
+     "text": "Followed over time, VO₂peak decline accelerated from 3–6% per decade in the 20s and 30s to over 20% per decade in the 70s, at all levels of self-reported leisure-time activity; cross-sectional estimates may be overly optimistic.",
+     "grade": "moderate",
+     "sources": [
+      "fleg2005"
+     ],
+     "evidence": [
+      {
+       "source": "fleg2005",
+       "quote": "the rate of decline accelerated from 3% to 6% per 10 years in the 20s and 30s to >20% per 10 years in the 70s and beyond",
+       "level": "abstract"
+      },
+      {
+       "source": "fleg2005",
+       "quote": "Similar longitudinal rates of decline prevailed when peak VO2 was indexed per kilogram of body weight or per kilogram of fat-free mass and in all quartiles of self-reported leisure-time physical activity.",
+       "level": "abstract"
+      },
+      {
+       "source": "fleg2005",
+       "quote": "its rate of decline has been estimated primarily from cross-sectional studies that may provide misleading, overly optimistic estimates of aging changes",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-age-cross-vs-long",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sa-masters",
+   "title": "Masters athletes: higher, not slower to fall",
+   "text": "[Masters athletes](g:masters-athlete) keep far higher VO₂max values than sedentary people of their age. But their *percentage* loss per decade is not smaller, and in mL·kg⁻¹·min⁻¹ it is larger, because they start higher [[c:ts-masters]].\n\nWhat falls is every term of the [Fick equation](g:fick-principle): maximal heart rate, maximal stroke volume (to 80–90% of young athletes') and the [a-vO₂ difference](g:a-vo2-difference) [[c:ts-mech]]. Peak race performance holds until about 35, eases until 50–60, then drops faster [[c:ts-performance]].\n\nPart of the fall is training: older athletes tend to train less and slower, and that explains much of the decline [[c:ts-training]]. People who keep training hard can hold VO₂max fairly steady for up to a decade in mid-life [[c:ts-maintain]].",
+   "claims": [
+    {
+     "id": "ts-masters",
+     "text": "In habitually trained adults the percentage decline in VO₂max with age is not smaller than in sedentary adults, and the absolute decline (mL·kg⁻¹·min⁻¹) is larger.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "However, we and others subsequently established that when expressed as per cent decrease from early adulthood, the rate of decline in [V̇O2max] with age is not reduced in healthy adults who habitually perform aerobic exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "tanaka2008",
+       "quote": "In fact, endurance exercise-trained men and women demonstrate greater ‘absolute’ (ml kg−1 min−1) rates of decline in [V̇O2max] with age than healthy sedentary adults",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ts-mech",
+     "text": "Falls in maximal stroke volume (to 80–90% of young trained adults), maximal heart rate and a-vO₂ difference all contribute to the lower VO₂max of older endurance athletes.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Decreases in maximal stroke volume, heart rate and arterio-venous O(2) difference all appear to contribute to the age-related reductions in [V̇O2max] in endurance-trained athletes.",
+       "level": "abstract"
+      },
+      {
+       "source": "tanaka2008",
+       "quote": "In older endurance exercise-trained adults, maximal stroke volume is reduced modestly to 80–90% of that observed in young endurance-trained adults",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ts-performance",
+     "text": "Peak endurance performance is maintained until about 35 years, declines modestly until 50–60, then more steeply.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Peak endurance performance is maintained until approximately 35 years of age, followed by modest decreases until 50-60 years of age, with progressively steeper declines thereafter.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ts-training",
+     "text": "Age-related declines in endurance performance and its determinants appear largely mediated by lower training intensity and volume.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Declines in endurance exercise performance and its physiological determinants with ageing appear to be mediated in large part by a reduction in the intensity (velocity) and volume of the exercise that can be performed during training sessions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ts-maintain",
+     "text": "Longitudinal studies suggest VO₂max can be fairly well maintained for up to 10 years in middle age by people who keep training vigorously.",
+     "grade": "weak",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "the results of longitudinal studies suggest that [V̇O2max] can be fairly well maintained over phases of middle-age lasting up to 10 years in men and women who continue to train vigorously",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-age-mech"
+  },
+  {
+   "type": "question",
+   "item": "sa-masters-pct",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sa-masters-training",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Men outperform women by about 10–12% in endurance events, and elite women's VO₂max is about 10% lower per kg.",
+    "Lower haemoglobin, a smaller heart and more body fat explain most of the gap; per kg of fat-free mass it shrinks or vanishes.",
+    "Men may gain somewhat more VO₂max from the same training, but the evidence is small and both sexes gain a lot.",
+    "VO₂max falls about 10% per decade from age 25–30, faster in old age; following people over time shows the acceleration.",
+    "Masters athletes stay far above sedentary peers but lose a similar percentage; keeping training volume and intensity up slows the fall."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sa-gap-value",
+   "concept": "sa-gap",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "santisteban2022",
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Per kg of body mass, about how much lower is the VO₂max of elite female endurance athletes than that of elite men?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 10%",
+       "correct": true,
+       "why": "Right: elite women's values average about 10% lower in mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 30%",
+       "why": "30% is the top of the range of sex gaps across all sports, mostly strength and power events."
+      },
+      {
+       "id": "c",
+       "text": "About 47%",
+       "why": "A gap of that size appears in absolute L·min⁻¹, where body size counts, not per kg."
+      },
+      {
+       "id": "d",
+       "text": "No difference once trained",
+       "why": "Even at the elite level a gap of about 10% remains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-why-factor",
+   "concept": "sa-why",
+   "bloom": "understand",
+   "sources": [
+    "santisteban2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which difference helps explain why women's maximal cardiac output is lower than men's?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A smaller heart giving a lower maximal stroke volume",
+       "correct": true,
+       "why": "Right: maximal heart rate is similar, so the lower cardiac output comes from stroke volume."
+      },
+      {
+       "id": "b",
+       "text": "A much lower maximal heart rate",
+       "why": "Maximal heart rate is similar in women and men."
+      },
+      {
+       "id": "c",
+       "text": "A higher haemoglobin concentration",
+       "why": "Women's haemoglobin is about 12% lower, not higher; it lowers O₂ per litre, not cardiac output."
+      },
+      {
+       "id": "d",
+       "text": "More capillaries per muscle fibre",
+       "why": "Capillaries are a peripheral factor; they don't set cardiac output."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which difference lowers how much O₂ each litre of a woman's blood carries, compared with a man's?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 12% less haemoglobin per litre",
+       "correct": true,
+       "why": "Right: less haemoglobin per litre means less O₂ per litre."
+      },
+      {
+       "id": "b",
+       "text": "A lower maximal heart rate in women",
+       "why": "Maximal heart rate is similar, and it affects flow, not O₂ per litre."
+      },
+      {
+       "id": "c",
+       "text": "A smaller stroke volume",
+       "why": "Stroke volume sets how much blood is pumped, not how much O₂ each litre holds."
+      },
+      {
+       "id": "d",
+       "text": "More body fat",
+       "why": "Body fat lowers VO₂ per kg of body mass, not the O₂ in each litre of blood."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-cureton-interpret",
+   "concept": "sa-why",
+   "bloom": "analyse",
+   "sources": [
+    "cureton1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When men's haemoglobin was lowered to the women's level, their VO₂max fell about 7%, but most of the 47% gap in absolute VO₂max remained. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hb explains a small part; body and heart size matter more",
+       "correct": true,
+       "why": "Right: equalising Hb closed only a small share of the gap."
+      },
+      {
+       "id": "b",
+       "text": "Haemoglobin explains all of the sex difference in VO₂max",
+       "why": "If it did, matching Hb would have closed the gap."
+      },
+      {
+       "id": "c",
+       "text": "Haemoglobin has no effect on VO₂max",
+       "why": "VO₂max did fall 7% when Hb was lowered, so it matters, just not most."
+      },
+      {
+       "id": "d",
+       "text": "Women have a higher VO₂max once Hb is matched",
+       "why": "The men still had a much higher absolute VO₂max after matching."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-perkg-ffm",
+   "concept": "sa-why",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cureton1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A female triathlete: VO₂max 3.0 L·min⁻¹, 60 kg, 15 kg of fat. A male triathlete: 4.2 L·min⁻¹, 75 kg, 12 kg of fat. What is each one's VO₂max per kg of fat-free mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both about 67 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 3,000 ÷ 45 = 66.7 and 4,200 ÷ 63 = 66.7. The gap per kg of body mass (50 vs 56) disappears."
+      },
+      {
+       "id": "b",
+       "text": "Hers 50, his 56",
+       "why": "These are per kg of body mass (3,000 ÷ 60 and 4,200 ÷ 75); subtract the fat first."
+      },
+      {
+       "id": "c",
+       "text": "Hers 200, his 350",
+       "why": "This divides by fat mass instead of fat-free mass."
+      },
+      {
+       "id": "d",
+       "text": "Hers 67, his 56",
+       "why": "This mixes the two: fat-free mass for her, body mass for him."
+      }
+     ],
+     "solution": "Her fat-free mass = 60 − 15 = 45 kg; 3,000 ÷ 45 = 66.7. His = 75 − 12 = 63 kg; 4,200 ÷ 63 = 66.7 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A female runner: VO₂max 2.8 L·min⁻¹, 55 kg, 14 kg of fat. A male runner: 3.9 L·min⁻¹, 70 kg, 10 kg of fat. What is each one's VO₂max per kg of fat-free mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hers about 68, his 65",
+       "correct": true,
+       "why": "Right: 2,800 ÷ 41 = 68.3 and 3,900 ÷ 60 = 65.0. Per kg of body mass she is lower (51 vs 56)."
+      },
+      {
+       "id": "b",
+       "text": "Hers about 51, his 56",
+       "why": "These are per kg of body mass; subtract the fat first."
+      },
+      {
+       "id": "c",
+       "text": "Hers 200, his 390",
+       "why": "This divides by fat mass instead of fat-free mass."
+      },
+      {
+       "id": "d",
+       "text": "Hers 65, his 68",
+       "why": "The values are swapped: her fat-free mass is 41 kg, his 60 kg."
+      }
+     ],
+     "solution": "Her fat-free mass = 55 − 14 = 41 kg; 2,800 ÷ 41 = 68.3. His = 70 − 10 = 60 kg; 3,900 ÷ 60 = 65.0 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "sa-trainability-appraise",
+   "concept": "sa-trainability",
+   "bloom": "evaluate",
+   "sources": [
+    "diazcanestro2019",
+    "milanovic2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach reads that men gained more VO₂max than women from the same training, and concludes that VO₂max work is not worth it for his female runners. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong: women gain a lot too, and the extra gain in men is small and uncertain",
+       "correct": true,
+       "why": "Right: the pooled difference was about 2 mL·kg⁻¹·min⁻¹ against gains of about 5, from 8 small studies."
+      },
+      {
+       "id": "b",
+       "text": "Right: women barely respond to endurance training",
+       "why": "Women improved substantially in these studies; the difference was in how much."
+      },
+      {
+       "id": "c",
+       "text": "Right: the meta-analysis proves women can't raise VO₂max",
+       "why": "It compared the size of gains; it didn't find women's gains to be zero."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: women gain more than men",
+       "why": "The pooled studies found the opposite, though the evidence is limited."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A meta-analysis of 8 studies (175 untrained people) finds that men's VO₂max rose more than women's with the same training. What most limits how far this can be generalised?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few, small studies, all in untrained people",
+       "correct": true,
+       "why": "Right: whether it holds in trained athletes, or with other training, isn't known."
+      },
+      {
+       "id": "b",
+       "text": "Meta-analyses can never be trusted",
+       "why": "Meta-analyses are high on the evidence ladder; the issue is what they pool."
+      },
+      {
+       "id": "c",
+       "text": "Men and women can't be given the same training",
+       "why": "The studies matched duration and intensity; that's what makes them comparable."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max can't be compared between the sexes",
+       "why": "It can, in absolute or relative units; the issue is the evidence base."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-age-cross-vs-long",
+   "concept": "sa-age",
+   "bloom": "evaluate",
+   "sources": [
+    "fleg2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study compares cyclists aged 30, 50 and 70 at one point in time and concludes that VO₂max falls at a steady rate with age. What is the main weakness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A snapshot misses that the decline speeds up",
+       "correct": true,
+       "why": "Right: longitudinal data found 3–6% per decade early on, over 20% in the 70s."
+      },
+      {
+       "id": "b",
+       "text": "Cyclists don't lose any VO₂max with age",
+       "why": "Trained people lose VO₂max with age too, by a similar percentage."
+      },
+      {
+       "id": "c",
+       "text": "It should have used a placebo group",
+       "why": "A placebo doesn't apply; the issue is the design, comparing different people once."
+      },
+      {
+       "id": "d",
+       "text": "Age groups can't be compared at all",
+       "why": "They can, but the snapshot mixes different generations and misses how the rate changes."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running magazine shows VO₂max by age group from one survey and says each person will lose the same amount every decade. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A snapshot can't show how the decline speeds up",
+       "correct": true,
+       "why": "Right: followed over time, the loss accelerates with age."
+      },
+      {
+       "id": "b",
+       "text": "Runners were all measured on a treadmill",
+       "why": "The test mode isn't the issue; the design is."
+      },
+      {
+       "id": "c",
+       "text": "Women and men were pooled",
+       "why": "Pooling may blur things, but the key flaw is the cross-sectional design."
+      },
+      {
+       "id": "d",
+       "text": "The survey is too large to be reliable",
+       "why": "A large sample isn't a weakness; the design is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-age-mech",
+   "concept": "sa-masters",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In endurance-trained athletes, what explains the fall in VO₂max with age?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower HRmax, stroke volume and a-vO₂ difference",
+       "correct": true,
+       "why": "Right: every term of the Fick equation falls a little."
+      },
+      {
+       "id": "b",
+       "text": "Only the fall in maximal heart rate (HRmax)",
+       "why": "HRmax was long seen as the main cause, but stroke volume and extraction fall too."
+      },
+      {
+       "id": "c",
+       "text": "Only a smaller a-vO₂ difference",
+       "why": "Extraction falls, but so do heart rate and stroke volume."
+      },
+      {
+       "id": "d",
+       "text": "Worse running or cycling economy",
+       "why": "Economy doesn't change with age in endurance-trained adults, and it doesn't set VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-masters-pct",
+   "concept": "sa-masters",
+   "bloom": "apply",
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 45-year-old masters runner has a VO₂max of 60 mL·kg⁻¹·min⁻¹; his sedentary brother has 35. Both keep their habits for 10 years. What is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both lose about 10%: about 6 for him, about 3.5 for his brother",
+       "correct": true,
+       "why": "Right: the percentage loss is similar, so the fitter brother loses more mL·kg⁻¹·min⁻¹, yet stays far higher."
+      },
+      {
+       "id": "b",
+       "text": "The runner loses half as much percentage as his brother",
+       "why": "Early studies suggested this, but later work found the percentage decline is not reduced in trained people."
+      },
+      {
+       "id": "c",
+       "text": "The runner loses nothing while he keeps training",
+       "why": "Training can hold VO₂max for a while in mid-life, but the age decline doesn't vanish."
+      },
+      {
+       "id": "d",
+       "text": "Both lose exactly 6 mL·kg⁻¹·min⁻¹",
+       "why": "The loss scales with the starting value; from 35, 10% is about 3.5."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A 50-year-old masters cyclist has a VO₂max of 55 mL·kg⁻¹·min⁻¹; an inactive friend of the same age has 30. Over the next decade, which is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Similar % losses, so the cyclist loses more units",
+       "correct": true,
+       "why": "Right: about 10% each, so about 5.5 vs 3 mL·kg⁻¹·min⁻¹; the cyclist stays far higher."
+      },
+      {
+       "id": "b",
+       "text": "The cyclist's VO₂max stays the same as now",
+       "why": "Even hard-training people lose VO₂max with age, though training slows it in mid-life."
+      },
+      {
+       "id": "c",
+       "text": "The friend loses a much larger percentage",
+       "why": "Percentage losses are similar in trained and sedentary adults."
+      },
+      {
+       "id": "d",
+       "text": "Both end at the same value",
+       "why": "The cyclist starts 25 higher; similar percentage losses keep most of that gap."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-masters-training",
+   "concept": "sa-masters",
+   "bloom": "analyse",
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 62-year-old triathlete's VO₂max fell 15% in 5 years, more than expected for her age. Over the same time she dropped her interval sessions and cut her weekly hours by half. What is the best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Much of it may be the lighter training, which she can change",
+       "correct": true,
+       "why": "Right: in masters athletes, falling training volume and intensity explain much of the decline."
+      },
+      {
+       "id": "b",
+       "text": "It is all ageing, and nothing at all can be done",
+       "why": "Ageing explains part, but reduced training is a large and changeable factor."
+      },
+      {
+       "id": "c",
+       "text": "Her heart must be diseased",
+       "why": "A faster fall with much less training doesn't point to disease; still, a doctor should check any worrying symptoms."
+      },
+      {
+       "id": "d",
+       "text": "Her economy got worse, lowering her VO₂max",
+       "why": "Economy doesn't set VO₂max and doesn't change with age in trained adults."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A 58-year-old runner who still trains hard and races every week kept his VO₂max almost unchanged between ages 48 and 56. What best explains this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hard training can hold VO₂max for years in mid-life",
+       "correct": true,
+       "why": "Right: in men and women who keep training vigorously, VO₂max can be fairly well maintained in middle age."
+      },
+      {
+       "id": "b",
+       "text": "Runners simply don't age like other people",
+       "why": "The age decline still comes; hard training delays it."
+      },
+      {
+       "id": "c",
+       "text": "The tests must have been wrong",
+       "why": "Holding VO₂max in mid-life is reported in longitudinal studies of hard-training adults."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max only starts to fall after 70",
+       "why": "The decline usually starts at 25–30; it is just slow in mid-life for those who keep training."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

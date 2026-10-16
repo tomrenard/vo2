@@ -27,7 +27,7 @@ export function SourceLine({ id }: { id: string }) {
       <span className="font-semibold">{cite(source)}</span>
       <span>{source.title}</span>
       <span className="muted">
-        {source.type.replace("-", " ")}
+        {source.type.replaceAll("-", " ")}
         {source.n ? ` · n = ${source.n}` : ""}
         {source.sample ? ` · ${source.sample}` : ""}
         {source.industryFunded ? " · industry funded" : ""}

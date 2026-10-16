@@ -1,0 +1,916 @@
+{
+ "id": "vo2-define",
+ "module": "t2-vo2max",
+ "title": "VO₂max: what it is and how it's measured",
+ "goal": "Explain what VO₂max and VO₂peak are, why the VO₂ plateau and secondary criteria are debated and what a verification bout adds, and convert between absolute and relative VO₂max.",
+ "requires": [
+  "fat-recovery"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "incremental-test",
+    "vo2-plateau",
+    "secondary-criteria",
+    "verification-bout"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "def-ceiling",
+   "title": "A ceiling on oxygen uptake",
+   "text": "[VO₂max](g:vo2max) is the highest rate at which your body can take up and use oxygen, in exercise with a lot of muscle, such as running or cycling.\n\nThe lab uses an [incremental test](g:incremental-test): speed or power rises every minute or so, or smoothly in a ramp, until you can't go on. VO₂ climbs with the work.\n\nClassically, near the top VO₂ stops climbing while the work keeps rising: a [plateau](g:vo2-plateau). That flat top is VO₂max. When labs repeated tests at ever higher work, day after day, only 7 of 115 young people failed to show it [[c:def-plateau]].\n\nThe highest value one test reaches, plateau or not, is the [VO₂peak](g:vo2peak). If the test drew out your maximum, the two are the same.",
+   "claims": [
+    {
+     "id": "def-plateau",
+     "text": "VO₂max is classically identified by a plateau in VO₂ despite rising work rate; in Taylor's 1955 study of repeated near-maximal tests, only 7 of 115 subjects failed to reach the plateau criterion.",
+     "grade": "strong",
+     "sources": [
+      "poole2017",
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "poole2017",
+       "quote": "the discontinuous progressive maximal exercise test (that produced an unambiguous V̇o2-work rate plateau definitive for V̇o2max)",
+       "level": "abstract"
+      },
+      {
+       "source": "levine2008",
+       "quote": "Only 7 of 115 subjects failed to achieve this criterion",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "def-max-vs-peak",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "def-plateau-read",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "def-plateau-rare",
+   "title": "The missing plateau",
+   "text": "Most tests today are short ramps, measured breath by breath. Many people stop before VO₂ flattens.\n\nIn 71 people riding a ramp to exhaustion, only 12 showed a plateau; in 40 the data couldn't tell either way [[c:day-plateau]]. Yet on average the ramp peak matched the VO₂ reached in separate all-out tests at a constant power (done by 38 of them). So a missing plateau doesn't mean the test fell short; it means the ramp alone can't prove it didn't [[c:day-valid]].\n\nWho stops early? Experienced, healthy young athletes rarely do. People new to all-out tests, patients and less motivated people may stop before they reach their VO₂max [[c:poole-naive]].",
+   "claims": [
+    {
+     "id": "day-plateau",
+     "text": "In 71 people doing a ramp cycle test to exhaustion, only 12 showed a VO₂ plateau; in 40 no difference could be discerned.",
+     "grade": "weak",
+     "sources": [
+      "day2003"
+     ],
+     "evidence": [
+      {
+       "source": "day2003",
+       "quote": "In 12 of these subjects, the V(O2 peak) was less than the extrapolated value by 0.1-0.4 l/min (i.e., a \"plateau\"), and in 19 subjects, V(O2 peak) was higher by 0.05-0.4 l/min. In the remaining 40 subjects, we could not discriminate a difference.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "day-valid",
+     "text": "A ramp-test VO₂peak without a plateau is likely a valid index of VO₂max, but without extra tests one cannot be certain.",
+     "grade": "moderate",
+     "sources": [
+      "day2003",
+      "schaun2017"
+     ],
+     "evidence": [
+      {
+       "source": "day2003",
+       "quote": "the V(O2 peak) attained on a maximum-effort incremental test is likely to be a valid index of V(O2 max), despite no evidence of a plateau in the data themselves. However, without additional tests, one cannot be certain.",
+       "level": "abstract"
+      },
+      {
+       "source": "schaun2017",
+       "quote": "the plateau in oxygen uptake (V̇O2) is inconsistent in its frequency, reducing its usefulness as a robust method to determine \"true\" V̇O2max",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "poole-naive",
+     "text": "People new to maximal testing, patients and less motivated people may stop before reaching their VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "poole2017"
+     ],
+     "evidence": [
+      {
+       "source": "poole2017",
+       "quote": "exercise test naïve subjects, patient populations, and less motivated subjects may stop exercising before their V̇o2max is reached",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "def-no-plateau-meaning",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "def-who-stops-early"
+  },
+  {
+   "type": "concept",
+   "id": "def-secondary",
+   "title": "Secondary criteria, and their flaw",
+   "text": "Without a plateau, many labs accept a test as maximal if [secondary criteria](g:secondary-criteria) are met: an [RER](g:rer) above a set value, a heart rate close to the age-predicted [HRmax](g:hrmax), or a high blood lactate. A large US reference database, for example, counted every test with an RER of 1.0 or more as maximal [[c:friend-rer]].\n\nThe trouble: the cut-offs are chosen arbitrarily, they depend on the protocol, and they are often reached well below VO₂max [[c:secondary-flawed]]. A high RER tells you the effort was hard, not that oxygen uptake hit its ceiling. And an age-predicted HRmax typically misses a person's true value by about 11 beats·min⁻¹ (*Heart rate* lesson).",
+   "claims": [
+    {
+     "id": "friend-rer",
+     "text": "The FRIEND registry accepted treadmill tests with an RER of 1.0 or more as maximal.",
+     "grade": "strong",
+     "sources": [
+      "kaminsky2015"
+     ],
+     "evidence": [
+      {
+       "source": "kaminsky2015",
+       "quote": "7783 maximal (respiratory exchange ratio, ≥ 1.0) treadmill tests from men and women (aged 20-79 years) without cardiovascular disease (CVD)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "secondary-flawed",
+     "text": "Secondary criteria (RER, maximal heart rate, blood lactate) use arbitrary cut-offs, depend on the protocol and are often reached well below VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "poole2017",
+      "schaun2017",
+      "midgley2007"
+     ],
+     "evidence": [
+      {
+       "source": "poole2017",
+       "quote": "so-called secondary criteria such as respiratory exchange ratio, maximal heart rate, and/or maximal blood lactate concentration, the acceptable values of which may be selected arbitrarily and result in grossly inaccurate V̇o2max estimation",
+       "level": "abstract"
+      },
+      {
+       "source": "schaun2017",
+       "quote": "secondary criteria previously suggested, such as expiratory exchange ratios or percentages of maximal heart rate, are highly dependent on protocol design and often are achieved at V̇O2 percentages well below V̇O2max",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "def-rer-criterion",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "def-verification",
+   "title": "The verification bout",
+   "text": "Poole and Jones argue that a ramp-test VO₂peak on its own 'is no longer acceptable' when VO₂max is a study's main result. Their fix is a [verification bout](g:verification-bout) [[c:verification]]:\n\n1. Do the ramp test as usual.\n2. Rest a little.\n3. Ride or run to exhaustion at a constant power or speed of about **110%** of the ramp's peak.\n\nThe work is now 10% higher. If VO₂ still goes no higher than the ramp peak (within the measuring noise, about 2%), the ramp peak was the true VO₂max [[c:verif-2pct]].\n\nNot everyone thinks it must be routine: the bout's intensity, rest and length are not yet standardised [[c:verif-not-standard]].",
+   "claims": [
+    {
+     "id": "verification",
+     "text": "A constant work rate bout at about 110% of the ramp's peak work rate can confirm VO₂max, and has been used in children, adults of varying fitness, obese people and patients.",
+     "grade": "moderate",
+     "sources": [
+      "poole2017"
+     ],
+     "evidence": [
+      {
+       "source": "poole2017",
+       "quote": "This CORP presents the rationale for incorporation of a second, constant work rate test performed at ~110% of the work rate achieved on the initial ramp test to resolve the classic V̇o2-work rate plateau that is the unambiguous validation of V̇o2max",
+       "level": "abstract"
+      },
+      {
+       "source": "poole2017",
+       "quote": "The broad utility of this procedure has been established for children, adults of varying fitness, obese individuals, and patient populations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "verif-2pct",
+     "text": "A verification-bout VO₂peak within measurement error (e.g. within 2%) of the incremental value indicates that a true VO₂max was elicited.",
+     "grade": "moderate",
+     "sources": [
+      "midgley2007"
+     ],
+     "evidence": [
+      {
+       "source": "midgley2007",
+       "quote": "A peak oxygen uptake (V-dotO(2peak)) in the verification phase that is similar (within the tolerance of measurement error, e.g. within 2%) to the V-dotO(2max) value attained in the incremental phase would indicate that a true V-dotO(2max) has been elicited.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "verif-not-standard",
+     "text": "Procedures for the verification phase (intensity, duration, recovery) are not standardised across studies.",
+     "grade": "moderate",
+     "sources": [
+      "schaun2017"
+     ],
+     "evidence": [
+      {
+       "source": "schaun2017",
+       "quote": "procedures to conduct it are not standardized across the literature and no previous research tried to summarize how it has been employed",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Should a VO₂max test always include a verification bout?",
+    "sides": [
+     {
+      "position": "Yes: secondary criteria are arbitrary, so only a verification bout proves a ramp peak was the maximum.",
+      "sources": [
+       "poole2017",
+       "midgley2007"
+      ]
+     },
+     {
+      "position": "Not always: a hard ramp's peak is usually the maximum in experienced people, and verification protocols are not yet standardised.",
+      "sources": [
+       "day2003",
+       "schaun2017"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "def-verif-why-110"
+  },
+  {
+   "type": "question",
+   "item": "def-verif-read",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "def-units-values",
+   "title": "Units and typical values",
+   "text": "VO₂max comes in two forms (*Units* lesson):\n\n- **absolute**, in L·min⁻¹: the size of the engine;\n- **relative**, in mL·kg⁻¹·min⁻¹: the engine per kg you carry. Absolute × 1000 ÷ body mass.\n\nTypical relative values:\n\n| group | men | women |\n|---|---|---|\n| US adults aged 20–29 (median) | 48 | 38 |\n| champion endurance athletes | 70–85 | about 10% lower |\n\n[[c:friend-values]] [[c:elite-values]]\n\nChampions' values are 50–100% above those of active young people. The FRIEND figures are for US adults without heart disease, not specifically untrained people.",
+   "claims": [
+    {
+     "id": "friend-values",
+     "text": "In the FRIEND registry, median VO₂max at age 20–29 was 48.0 mL·kg⁻¹·min⁻¹ in men and 37.6 in women.",
+     "grade": "strong",
+     "sources": [
+      "kaminsky2015"
+     ],
+     "evidence": [
+      {
+       "source": "kaminsky2015",
+       "quote": "In FRIEND, the 50th percentile VO 2max of men and women aged 20 to 29 years decreased from 48.0 and 37.6 mLO2 · kg(-1) · min(-1) to 24.4 and 18.3 mLO2 · kg(-1) · min(-1) for ages 70 to 79 years, respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "elite-values",
+     "text": "Champion endurance athletes have VO₂max values of 70–85 mL·kg⁻¹·min⁻¹, about 50–100% above active young people; women's values average about 10% lower.",
+     "grade": "strong",
+     "sources": [
+      "joyner2008"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "Champion endurance athletes have [V̇O2max] values of between 70 and 85 ml kg−1 min−1, with values in women typically averaging about 10% lower due to lower haemoglobin concentrations and higher levels of body fat",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2008",
+       "quote": "values 50–100% greater than those seen in normally active healthy young subjects are seen in champion endurance athletes",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "def-convert-example",
+   "title": "From L·min⁻¹ to mL·kg⁻¹·min⁻¹",
+   "problem": "A cyclist's VO₂max is 4.2 L·min⁻¹ and she weighs 70 kg. What is her relative VO₂max?",
+   "steps": [
+    "Turn litres into millilitres: 4.2 L·min⁻¹ × 1000 = 4,200 mL·min⁻¹.",
+    "Divide by body mass: 4,200 ÷ 70 = 60 mL·kg⁻¹·min⁻¹.",
+    "Check the unit recipe: mL per minute, per kg. Going back: 60 × 70 ÷ 1000 = 4.2 L·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "def-convert-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "def-abs-vs-rel"
+  },
+  {
+   "type": "question",
+   "item": "def-values"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "VO₂max is the ceiling on oxygen uptake; VO₂peak is the highest value one test reached. They match only if the test drew out the maximum.",
+    "The classic proof is a VO₂ plateau, but many ramp tests end without one; a peak without a plateau is often still the maximum.",
+    "Secondary criteria (RER, % of predicted HRmax, lactate) use arbitrary cut-offs and can be met below VO₂max.",
+    "A verification bout at about 110% of the ramp's peak work confirms VO₂max if VO₂ goes no higher.",
+    "Absolute VO₂max (L·min⁻¹) × 1000 ÷ body mass gives relative VO₂max: about 48 (men) and 38 (women) in young US adults, 70–85 in male champions."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "def-max-vs-peak",
+   "concept": "def-ceiling",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2017",
+    "day2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ramp test ends at 4.2 L·min⁻¹ of oxygen uptake, and VO₂ was still rising in the last 30 s. What is the right name for 4.2 L·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her VO₂peak for this test",
+       "correct": true,
+       "why": "Right: it is the highest value this test reached. Without a plateau or other check, you can't be sure it was her VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Her VO₂max, since it was the highest value",
+       "why": "The highest value of one test is the VO₂peak by definition. It equals VO₂max only if the test drew out her maximum, which this test doesn't show."
+      },
+      {
+       "id": "c",
+       "text": "Her VO₂max, since she rode to exhaustion",
+       "why": "Riding to exhaustion is needed, but people can stop before their ceiling. Exhaustion alone doesn't prove the maximum."
+      },
+      {
+       "id": "d",
+       "text": "Her VO₂ plateau value",
+       "why": "A plateau means VO₂ stopped rising. Here it was still rising at the end, so there was no plateau."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's treadmill test ends at 62 mL·kg⁻¹·min⁻¹, with VO₂ still climbing at the last stage. What is the right name for 62?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His VO₂peak for this test",
+       "correct": true,
+       "why": "Right: it is the highest value this test reached; it may or may not be his VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "His VO₂max, since it was the highest value",
+       "why": "The highest value of one test is the VO₂peak by definition; calling it VO₂max assumes the test reached his ceiling."
+      },
+      {
+       "id": "c",
+       "text": "His VO₂max, since he ran until he couldn't go on",
+       "why": "Exhaustion is needed but not proof: people can stop before their ceiling."
+      },
+      {
+       "id": "d",
+       "text": "His VO₂ plateau value",
+       "why": "VO₂ was still climbing, so there was no plateau."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-plateau-read",
+   "concept": "def-ceiling",
+   "bloom": "apply",
+   "sources": [
+    "poole2017",
+    "levine2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a stepped treadmill test, each 1 km·h⁻¹ step has so far raised a runner's VO₂ by about 3.4 mL·kg⁻¹·min⁻¹. The last four stages: 14 km·h⁻¹, 52.0; 15, 55.4; 16, 58.8; 17, 59.2. What do the data show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plateau: VO₂max is about 59 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: the last step added only 0.4 instead of about 3.4, so VO₂ stopped rising while the work kept rising."
+      },
+      {
+       "id": "b",
+       "text": "No plateau: VO₂ rose at every stage",
+       "why": "A plateau doesn't need VO₂ to stay exactly flat; a rise far smaller than the step needs (0.4 against about 3.4) is the plateau."
+      },
+      {
+       "id": "c",
+       "text": "A plateau at 55.4, where the rise first slowed",
+       "why": "Up to 58.8 each step added the full 3.4. The rise only fell short at the last step."
+      },
+      {
+       "id": "d",
+       "text": "No plateau, since speed was still rising",
+       "why": "A plateau is exactly that: work still rising while VO₂ no longer follows."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a stepped cycling test, each 30 W step has so far raised a rider's VO₂ by about 0.35 L·min⁻¹. The last four stages: 300 W, 3.85; 330 W, 4.20; 360 W, 4.55; 390 W, 4.61 L·min⁻¹. What do the data show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plateau: VO₂max is about 4.6 L·min⁻¹",
+       "correct": true,
+       "why": "Right: the last 30 W added only 0.06 instead of about 0.35 L·min⁻¹, so VO₂ stopped following the work."
+      },
+      {
+       "id": "b",
+       "text": "No plateau: VO₂ rose at every stage",
+       "why": "VO₂ needn't be exactly flat; a rise far below what the step needs is the plateau."
+      },
+      {
+       "id": "c",
+       "text": "A plateau at 4.20, where the test got hard",
+       "why": "Up to 4.55 each step added the full 0.35. The shortfall only appears at the last step."
+      },
+      {
+       "id": "d",
+       "text": "No plateau, since power was still rising",
+       "why": "That is the definition of a plateau: power rising while VO₂ no longer keeps up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-no-plateau-meaning",
+   "concept": "def-plateau-rare",
+   "bloom": "evaluate",
+   "sources": [
+    "day2003",
+    "schaun2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's ramp test on the bike ends without a VO₂ plateau. Her coach says: \"No plateau, so the test is invalid: she didn't reach her VO₂max.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too strong: a peak without a plateau is often the maximum, but a check would settle it",
+       "correct": true,
+       "why": "Right: in a large study most ramp peaks without a plateau matched all-out constant-load tests, but the ramp alone can't prove it."
+      },
+      {
+       "id": "b",
+       "text": "Right: without a plateau the test is always below VO₂max",
+       "why": "Many people reach VO₂max without showing a plateau in ramp data; the plateau is not obligatory."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: a ramp to exhaustion always gives VO₂max",
+       "why": "Some people, especially those new to testing, stop before their maximum. Exhaustion doesn't guarantee it."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: plateaus only happen in untrained people",
+       "why": "Plateaus appear in trained and untrained people alike; their absence is more common in people who stop early."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's ramp test shows no plateau. A lab report says: \"VO₂max not reached; test invalid.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too strong: his peak may well be his VO₂max, but only an extra test can confirm it",
+       "correct": true,
+       "why": "Right: a plateau is not obligatory, and peaks without one are often valid; certainty needs another test."
+      },
+      {
+       "id": "b",
+       "text": "Right: no plateau always means a submaximal test",
+       "why": "In one study only 12 of 71 people showed a plateau, yet their peaks matched separate maximal tests."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: running tests can't show plateaus anyway",
+       "why": "Plateaus can appear on a treadmill or a bike; the mode doesn't rule them out."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: a missing plateau proves the lungs limited him",
+       "why": "A missing plateau tells you nothing about which system limits VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-who-stops-early",
+   "concept": "def-plateau-rare",
+   "bloom": "understand",
+   "sources": [
+    "poole2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which person is most likely to stop a ramp test before reaching their true VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A sedentary adult doing an all-out test for the first time",
+       "correct": true,
+       "why": "Right: people new to maximal testing (and patients, or the poorly motivated) often stop before their ceiling."
+      },
+      {
+       "id": "b",
+       "text": "A trained cyclist who does a ramp test every season",
+       "why": "Experienced, healthy athletes used to all-out efforts are the group least likely to stop early."
+      },
+      {
+       "id": "c",
+       "text": "A runner with a very high VO₂max",
+       "why": "A high VO₂max doesn't make stopping early more likely; experience and motivation matter more."
+      },
+      {
+       "id": "d",
+       "text": "A triathlete tested on a treadmill instead of a bike",
+       "why": "Running uses more muscle than cycling, and usually gives a slightly higher VO₂peak, not an early stop."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-rer-criterion",
+   "concept": "def-secondary",
+   "bloom": "analyse",
+   "sources": [
+    "poole2017",
+    "schaun2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab ends a runner's VO₂max test as soon as his RER reaches 1.10 and reports the VO₂ at that moment as his VO₂max. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "RER can pass 1.10 well below VO₂max, so it may be underestimated",
+       "correct": true,
+       "why": "Right: secondary criteria are often met at VO₂ well below the maximum. Stopping there cuts the test short."
+      },
+      {
+       "id": "b",
+       "text": "RER can't exceed 1.0, so the reading is a measuring error",
+       "why": "RER often exceeds 1.0 in hard exercise, as extra CO₂ is breathed off when lactate is buffered."
+      },
+      {
+       "id": "c",
+       "text": "An RER of 1.10 means he was burning fat, so the effort was easy",
+       "why": "An RER near 1.0 or above means mostly carbohydrate and a hard effort, not fat."
+      },
+      {
+       "id": "d",
+       "text": "RER is fine; the only problem is that no heart rate was taken",
+       "why": "Adding another secondary criterion doesn't fix the issue: these cut-offs are arbitrary and can be met below VO₂max."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cycling study accepts each test as maximal once heart rate reaches 95% of 220 − age. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Predicted HRmax is only an estimate, and such cut-offs can be met below VO₂max",
+       "correct": true,
+       "why": "Right: secondary criteria are arbitrary and often reached before VO₂ hits its ceiling."
+      },
+      {
+       "id": "b",
+       "text": "Heart rate always plateaus before VO₂, so the cut-off is too late",
+       "why": "There is no rule that HR plateaus first; the problem is that the cut-off can be passed too early."
+      },
+      {
+       "id": "c",
+       "text": "Heart rate has nothing to do with oxygen uptake",
+       "why": "HR rises with VO₂ in a test; the problem is using an estimated maximum as proof of a true one."
+      },
+      {
+       "id": "d",
+       "text": "95% is fine, but it should be 220 − age exactly",
+       "why": "Using 100% of a prediction doesn't help: the prediction itself can be off by a lot for any one rider."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-verif-why-110",
+   "concept": "def-verification",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2017",
+    "midgley2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is a verification bout done at about 110% of the ramp's peak power, rather than at 90%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "To show that more work no longer brings more VO₂",
+       "correct": true,
+       "why": "Right: if VO₂ stays at the ramp's peak while work is 10% higher, oxygen uptake has hit its ceiling."
+      },
+      {
+       "id": "b",
+       "text": "To make the bout short enough to avoid fatigue",
+       "why": "The bout is short, but the point is the higher work rate; a 90% bout would not test the ceiling."
+      },
+      {
+       "id": "c",
+       "text": "Because 110% is where the lactate threshold sits",
+       "why": "The lactate threshold lies well below VO₂max power, not above the ramp's peak."
+      },
+      {
+       "id": "d",
+       "text": "To get a higher VO₂ to report as VO₂max",
+       "why": "The aim is to check, not to raise, the value. If VO₂ does go higher, the ramp fell short."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-verif-read",
+   "concept": "def-verification",
+   "bloom": "analyse",
+   "sources": [
+    "midgley2007",
+    "poole2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ramp test peaks at 4.10 L·min⁻¹. After a rest, a verification bout at 110% of the ramp's peak power reaches 4.06 L·min⁻¹. What do you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.10 L·min⁻¹ was her VO₂max",
+       "correct": true,
+       "why": "Right: 10% more work gave no more VO₂ (4.06 is within about 1%, inside the noise). The ramp reached her ceiling."
+      },
+      {
+       "id": "b",
+       "text": "Her VO₂max is 4.06 L·min⁻¹, the later value",
+       "why": "The bout confirms the ramp peak; it doesn't replace it. The two agree within noise."
+      },
+      {
+       "id": "c",
+       "text": "The ramp fell short of her VO₂max",
+       "why": "If it had, the harder bout would have driven VO₂ clearly higher."
+      },
+      {
+       "id": "d",
+       "text": "The test failed, since VO₂ fell in the second bout",
+       "why": "A slightly lower value in a short bout is expected noise; what matters is that it went no higher."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's ramp test peaks at 58.0 mL·kg⁻¹·min⁻¹. A verification run at 110% of the peak speed reaches 62.5. What do you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The ramp fell short: his VO₂max is at least 62.5",
+       "correct": true,
+       "why": "Right: 62.5 is about 8% higher, far beyond 2% of noise, so the ramp didn't draw out his maximum."
+      },
+      {
+       "id": "b",
+       "text": "His VO₂max is 58.0, as the ramp is the standard",
+       "why": "A verification bout that clearly beats the ramp shows the ramp was submaximal."
+      },
+      {
+       "id": "c",
+       "text": "The verification bout is invalid because it went higher",
+       "why": "Going higher is exactly the information the bout is meant to give."
+      },
+      {
+       "id": "d",
+       "text": "His VO₂max is the average, about 60",
+       "why": "Averaging hides the point: the higher value shows his ceiling is at least 62.5."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-convert-calc",
+   "concept": "def-units-values",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kaminsky2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighs 55 kg and has an absolute VO₂max of 3.6 L·min⁻¹. What is her relative VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "65.5 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.6 × 1000 = 3,600 mL·min⁻¹; 3,600 ÷ 55 = 65.5."
+      },
+      {
+       "id": "b",
+       "text": "0.065 mL·kg⁻¹·min⁻¹",
+       "why": "This divides litres by kg without turning litres into mL first (3.6 ÷ 55)."
+      },
+      {
+       "id": "c",
+       "text": "198 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by mass instead of dividing (3.6 × 55)."
+      },
+      {
+       "id": "d",
+       "text": "15.3 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO₂ (55 ÷ 3.6): upside down."
+      }
+     ],
+     "solution": "3.6 L·min⁻¹ × 1000 = 3,600 mL·min⁻¹. 3,600 ÷ 55 kg = 65.5 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist weighs 80 kg and has an absolute VO₂max of 5.2 L·min⁻¹. What is his relative VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "65 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 5,200 mL·min⁻¹ ÷ 80 kg = 65."
+      },
+      {
+       "id": "b",
+       "text": "0.065 mL·kg⁻¹·min⁻¹",
+       "why": "This forgets to turn litres into mL (5.2 ÷ 80)."
+      },
+      {
+       "id": "c",
+       "text": "416 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by mass instead of dividing (5.2 × 80)."
+      },
+      {
+       "id": "d",
+       "text": "15.4 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO₂ (80 ÷ 5.2): upside down."
+      }
+     ],
+     "solution": "5.2 L·min⁻¹ × 1000 = 5,200 mL·min⁻¹. 5,200 ÷ 80 kg = 65 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete weighs 64 kg and has an absolute VO₂max of 4.0 L·min⁻¹. What is her relative VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "62.5 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 4,000 mL·min⁻¹ ÷ 64 kg = 62.5."
+      },
+      {
+       "id": "b",
+       "text": "0.0625 mL·kg⁻¹·min⁻¹",
+       "why": "This forgets to turn litres into mL (4.0 ÷ 64)."
+      },
+      {
+       "id": "c",
+       "text": "256 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by mass instead of dividing (4.0 × 64)."
+      },
+      {
+       "id": "d",
+       "text": "16 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO₂ (64 ÷ 4.0): upside down."
+      }
+     ],
+     "solution": "4.0 L·min⁻¹ × 1000 = 4,000 mL·min⁻¹. 4,000 ÷ 64 kg = 62.5 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "def-abs-vs-rel",
+   "concept": "def-units-values",
+   "bloom": "analyse",
+   "sources": [
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Rider A: VO₂max 5.0 L·min⁻¹, 80 kg. Rider B: 4.2 L·min⁻¹, 60 kg. Which statement is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A has the bigger engine; B has more per kg (70 vs 62.5 mL·kg⁻¹·min⁻¹)",
+       "correct": true,
+       "why": "Right: absolute VO₂max is A's, but per kg B is higher, which counts when body mass must be lifted, as on a long climb."
+      },
+      {
+       "id": "b",
+       "text": "A is fitter in every way, since 5.0 is more than 4.2",
+       "why": "Absolute VO₂max ignores the mass each rider must carry; per kg, B is ahead."
+      },
+      {
+       "id": "c",
+       "text": "B has the bigger engine, since 70 is more than 62.5",
+       "why": "70 vs 62.5 is per kg; the engine itself (L·min⁻¹) is A's."
+      },
+      {
+       "id": "d",
+       "text": "They are equal once you divide by mass",
+       "why": "5,000 ÷ 80 = 62.5 and 4,200 ÷ 60 = 70: not equal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "def-values",
+   "concept": "def-units-values",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "joyner2008",
+    "kaminsky2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A male runner's VO₂max is 78 mL·kg⁻¹·min⁻¹. Which group is that typical of?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Champion endurance athletes",
+       "correct": true,
+       "why": "Right: champions are typically 70–85 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Healthy young men",
+       "why": "The median for US men in their 20s is about 48, far below 78."
+      },
+      {
+       "id": "c",
+       "text": "Trained club runners in general",
+       "why": "Many club runners are in the 50s and 60s; 78 is champion territory."
+      },
+      {
+       "id": "d",
+       "text": "Any active man under 30",
+       "why": "Champions' values are 50–100% above those of active young men, so 78 is far beyond a typical active man."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

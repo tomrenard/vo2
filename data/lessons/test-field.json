@@ -1,0 +1,801 @@
+{
+ "id": "test-field",
+ "module": "t2-testing",
+ "title": "Field tests: time trials, all-out efforts and running tests",
+ "goal": "Choose and run a field test (time trial, 3-min all-out test, critical-power efforts, Cooper or Yo-Yo), and control the power meter and the weather so the result means something.",
+ "requires": [
+  "test-gas"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "three-minute-all-out-test",
+    "end-test-power",
+    "w-prime",
+    "cooper-test",
+    "yo-yo-test",
+    "zero-offset"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "field-tt",
+   "title": "Time trials in the field",
+   "text": "A time trial (TT) is the test closest to racing, and among the most repeatable (*Noise, worthwhile changes and non-responders*). Field TTs can be short. In 8 trained male cyclists, both 4-min and 20-min TTs repeated well, the 20-min one to within 4.6 W, and 20-min power accounted for 92% of the differences in 60-min power between riders [[c:short-tt]].\n\nFor runners the same idea is a 3 km or 5 km TT on a track; for triathletes, a TT in each sport, on separate days.\n\nWhat turns a hard ride into a test:\n\n- the same course, warm-up and time of day;\n- even pacing, rehearsed in a practice trial;\n- no drafting, and similar weather.",
+   "claims": [
+    {
+     "id": "short-tt",
+     "text": "In 8 trained male cyclists, 4-min and 20-min time trials were reliable (20-min typical error 4.6 W, ICC 0.99), and 20-min power was strongly associated with 60-min power (R² 0.92).",
+     "grade": "weak",
+     "sources": [
+      "macinnis2019"
+     ],
+     "evidence": [
+      {
+       "source": "macinnis2019",
+       "quote": "20-min TTs (342 [36] W vs 344 [33] W, P = .41; TEM = 4.6 W; ICC = .99)",
+       "level": "abstract"
+      },
+      {
+       "source": "macinnis2019",
+       "quote": "The 4-min MPO (R2 = .95), 20-min MPO (R2 = .92), estimated CP (R2 = .82), and combination of the 4- and 20-min MPO (adjusted R2 = .98) were strongly associated with the 60-min MPO",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "field-tt-choose"
+  },
+  {
+   "type": "concept",
+   "id": "field-3mt",
+   "title": "The 3-minute all-out test",
+   "text": "The [3-min all-out test](g:three-minute-all-out-test) (3MT) needs no pacing: go flat out from the start and keep going. Power falls, then levels off. The mean power over the last 30 s is the [end-test power](g:end-test-power) (EP), and the work done above it estimates [W′](g:w-prime).\n\nIn the original study of 10 active people, EP (287 W) matched [critical power](g:critical-power) (287 W) from five rides to exhaustion [[c:3mt-original]]. A 2026 [meta-analysis](g:meta-analysis) of 20 studies found EP repeatable, but on average **higher** than CP, more so in highly trained athletes, while the W′ estimate ran low [[c:3mt-meta]].\n\nTo get a usable result: a full practice trial first, strong encouragement, and no clock in view [[c:3mt-rules]].",
+   "claims": [
+    {
+     "id": "3mt-original",
+     "text": "In 10 habitually active adults, 3-min all-out end-test power (287 ± 55 W) did not differ from critical power (287 ± 56 W), agreeing within 5 W in 8 of 10.",
+     "grade": "weak",
+     "sources": [
+      "vanhatalo2007"
+     ],
+     "evidence": [
+      {
+       "source": "vanhatalo2007",
+       "quote": "The EP was 287 +/- 55 W, which was not significantly different from, and highly correlated with, CP (287 +/- 56 W; P = 0.37, r = 0.99).",
+       "level": "abstract"
+      },
+      {
+       "source": "vanhatalo2007",
+       "quote": "in 8 of 10 cases, EP agreed with CP to within 5 W.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "3mt-meta",
+     "text": "Across 20 small studies, end-test power was reliable (ICC 0.89–0.99) but systematically overestimated CP, especially in highly trained athletes, while work above EP underestimated W′.",
+     "grade": "moderate",
+     "sources": [
+      "quittmann2026"
+     ],
+     "evidence": [
+      {
+       "source": "quittmann2026",
+       "quote": "Test-retest reliability demonstrated 'good' to 'excellent' agreement for EP (ICC = 0.89-0.99) and WEP (ICC = 0.76-0.98). EP systematically overestimates CP",
+       "level": "abstract"
+      },
+      {
+       "source": "quittmann2026",
+       "quote": "Especially in PL4/5 athletes, EP seems to largely overestimate CP.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "3mt-rules",
+     "text": "A full familiarisation trial and strong verbal encouragement are needed for a usable 3-min all-out test, with no time-based feedback.",
+     "grade": "moderate",
+     "sources": [
+      "quittmann2026"
+     ],
+     "evidence": [
+      {
+       "source": "quittmann2026",
+       "quote": "Familiarisation trials and proper verbal encouragement during the 3-min test are mandatory.",
+       "level": "abstract"
+      },
+      {
+       "source": "quittmann2026",
+       "quote": "additional aspects, such as high motivational state, appropriate cadence throughout the test, and the absence of any time-based feedback should be considered.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can the 3-min all-out test stand in for critical power?",
+    "sides": [
+     {
+      "position": "Roughly, yes: in its first test EP matched CP within about 5 W in 8 of 10 people, from a single visit.",
+      "sources": [
+       "vanhatalo2007"
+      ]
+     },
+     {
+      "position": "Not reliably: EP overestimates CP by an amount that depends on the protocol and the athlete, so use EP as a marker in its own right.",
+      "sources": [
+       "quittmann2026",
+       "munizpumares2019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "field-3mt-what"
+  },
+  {
+   "type": "question",
+   "item": "field-3mt-appraise"
+  },
+  {
+   "type": "question",
+   "item": "field-3mt-pacing"
+  },
+  {
+   "type": "concept",
+   "id": "field-cp",
+   "title": "Critical power from a few field efforts",
+   "text": "Critical power can also come from several maximal efforts of different lengths, fitted with the models of the next module. The choices matter: the duration and number of efforts, the rest between them and the model all change the CP you get [[c:cp-choices]].\n\nIn the field, cyclists did maximal efforts of 3, 7 and 12 min: in one session with 30 min rest between, or on separate days, or taken as their best 3, 7 and 12 min from training and racing. Against lab CP the error was about 4.5–6%, and repeat tests varied by 2.4–6.5% [[c:field-cp]].\n\nSo field CP is usable, but the protocol is part of the number: keep it the same each time.",
+   "claims": [
+    {
+     "id": "cp-choices",
+     "text": "The duration, number and recovery of the efforts, and the model used, all affect the CP and W′ obtained.",
+     "grade": "moderate",
+     "sources": [
+      "munizpumares2019"
+     ],
+     "evidence": [
+      {
+       "source": "munizpumares2019",
+       "quote": "However, the duration, number, and recovery between predictive CWR and the mathematical model (hyperbolic or derived linear models) are known to affect CP and W'.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "field-cp",
+     "text": "Field CP from 3-, 7- and 12-min maximal efforts (same day, separate days or from training data) had a standard error against lab CP of 4.5–5.8% and a test–retest CV of 2.4–6.5%.",
+     "grade": "weak",
+     "sources": [
+      "karsten2015"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2015",
+       "quote": "Standard error of the estimate of CP was 4.5, 5.8 and 5.2 % for experiments 1-3, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "karsten2015",
+       "quote": "Mean coefficient of variation in field CP was 2.4, 6.5 and 3.5 % for experiments 1-3, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "field-cp-design"
+  },
+  {
+   "type": "concept",
+   "id": "field-running",
+   "title": "Running tests: Cooper and Yo-Yo",
+   "text": "Running has two classic field tests.\n\nThe [Cooper test](g:cooper-test) estimates [VO2max](g:vo2max) from the distance run in 12 min. In a meta-analysis of 123 studies, the 12-min run [correlated](g:correlation) r = 0.78 with measured VO2max, among the best of the walk and run tests. It gives an estimate, not a measurement [[c:cooper]].\n\nThe [Yo-Yo intermittent recovery test](g:yo-yo-test) measures repeated hard running with short rests. It tracks changes in performance better than VO2max does, but it was built for intermittent sports such as football [[c:yoyo]]. For a road runner, a TT is closer to the race.\n\nHow good is r = 0.78? Square it: r² is the share of the differences between people that the test accounts for.",
+   "claims": [
+    {
+     "id": "cooper",
+     "text": "Walk/run field tests estimate VO2max with low to moderate validity (r 0.42–0.79); the 12-min run (r 0.78) and 1.5-mile run (r 0.79) were best, and the score is only an estimate.",
+     "grade": "strong",
+     "sources": [
+      "mayorgavega2016"
+     ],
+     "evidence": [
+      {
+       "source": "mayorgavega2016",
+       "quote": "The overall results showed that the criterion-related validity of the walk/run tests for estimating maximum oxygen uptake ranged from low to moderate (rp = 0.42-0.79), with the 1.5 mile (rp = 0.79, 0.73-0.85) and 12 min walk/run tests (rp = 0.78, 0.72-0.83) having the higher criterion-related validity for distance- and time-based field tests, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "mayorgavega2016",
+       "quote": "evaluators must be aware that the performance score of the walk/run field tests is simply an estimation and not a direct measure of cardiorespiratory fitness.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "yoyo",
+     "text": "The Yo-Yo intermittent recovery tests assess repeated intense exercise in intermittent sports and are more sensitive to changes in performance than VO2max.",
+     "grade": "weak",
+     "sources": [
+      "bangsbo2008"
+     ],
+     "evidence": [
+      {
+       "source": "bangsbo2008",
+       "quote": "The two Yo-Yo intermittent recovery (IR) tests evaluate an individual's ability to repeatedly perform intense exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "bangsbo2008",
+       "quote": "The Yo-Yo IR tests have shown to be a more sensitive measure of changes in performance than maximum oxygen uptake.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "field-r2-example",
+   "title": "What does r = 0.78 explain?",
+   "problem": "The 12-min run correlates r = 0.78 with lab VO2max. What share of the differences in VO2max between people does it account for?",
+   "steps": [
+    "Square the correlation: r² = 0.78 × 0.78 = 0.61.",
+    "The run accounts for about 61% of the differences in VO2max between people; the other 39% comes from things it doesn't capture, such as [running economy](g:running-economy), pacing, motivation and measurement error.",
+    "Good enough to rank a group; rough for predicting one runner's VO2max."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "field-r2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "field-yoyo-choose"
+  },
+  {
+   "type": "concept",
+   "id": "field-kit",
+   "title": "Power meters and the weather",
+   "text": "**Power meters.** Against a reference, 54 meters were off by −0.9 ± 3.2% on average, and 6 by more than 5%; repeat readings varied by only about 1.2% [[c:pm-trueness]]. So a meter can track you well and still disagree with your friend's, or your next one.\n\n**[Zero offset](g:zero-offset).** Temperature shifted readings by 5.2% (SRM) and 8.4% (PowerTap) [[c:pm-temp]]. Zero the meter with the cranks unloaded, after it has had time to reach the outside temperature, just before the test.\n\n**Weather.** In a 15-min time trial at 40 °C, cyclists did about 17% less work than at 21 °C [[c:heat-tt]]. Wind, rain and gradient matter too: same course, similar weather, or test indoors.",
+   "claims": [
+    {
+     "id": "pm-trueness",
+     "text": "54 power meters deviated from a first-principles reference by −0.9 ± 3.2% (6 by more than ±5%), with high precision (CV 1.2 ± 0.9%); some brands read about 5% lower than an SRM in some conditions.",
+     "grade": "moderate",
+     "sources": [
+      "maier2017",
+      "bouillod2017"
+     ],
+     "evidence": [
+      {
+       "source": "maier2017",
+       "quote": "The mean deviations of the power meters were -0.9±3.2% (mean±SD) with 6 power meters deviating by more than±5%. The coefficients of variation of the power meters were 1.2±0.9% (mean±SD)",
+       "level": "abstract"
+      },
+      {
+       "source": "bouillod2017",
+       "quote": "The STG PO was significantly lower than the SRM PO in the heavy-exercise-intensity zone (zone 2, -5.1%) and the low part of the severe-intensity zone (zone 3, -4.9%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pm-temp",
+     "text": "Power meter readings were noticeably affected by temperature (5.2% for SRM, 8.4% for PowerTap); calibration matching test conditions, including temperature, is advised.",
+     "grade": "weak",
+     "sources": [
+      "gardner2004"
+     ],
+     "evidence": [
+      {
+       "source": "gardner2004",
+       "quote": "power output readings were noticeably influenced by temperature (5.2% for SRM and 8.4% for PT).",
+       "level": "abstract"
+      },
+      {
+       "source": "gardner2004",
+       "quote": "Calibration procedures matching performance tests (duration, power, cadence, and temperature) are, however, advised as the error associated with each unit may vary.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heat-tt",
+     "text": "In 8 men, total work in a 15-min cycling time trial was about 17% lower at 40 °C than at 21 °C.",
+     "grade": "weak",
+     "sources": [
+      "ely2010"
+     ],
+     "evidence": [
+      {
+       "source": "ely2010",
+       "quote": "Total work performed in HOT (147.7 +/- 23.9 kJ) was approximately 17% less",
+       "level": "abstract"
+      },
+      {
+       "source": "ely2010",
+       "quote": "total work is significantly reduced by heat stress because of a gradual slowing of pace over time.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "field-zero"
+  },
+  {
+   "type": "question",
+   "item": "field-two-meters",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "field-heat"
+  },
+  {
+   "type": "question",
+   "item": "field-r2-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Field time trials (4 or 20 min on the bike, 3 or 5 km running) are repeatable and close to racing if course, warm-up, pacing and timing stay the same.",
+    "The 3-min all-out test gives end-test power and an estimate of W′ in one visit; EP is repeatable but tends to sit above CP, especially in trained athletes.",
+    "Field CP from 3-, 7- and 12-min maximal efforts is usable (CV 2.4–6.5%); the protocol is part of the number.",
+    "The Cooper test only estimates VO2max (r = 0.78, so r² ≈ 0.61); the Yo-Yo test suits intermittent sports more than road running.",
+    "Power meters can be precise yet several % off: zero them at outside temperature and retest on the same meter, on the same course, in similar weather."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "field-tt-choose",
+   "concept": "field-tt",
+   "bloom": "apply",
+   "sources": [
+    "macinnis2019",
+    "currell2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner wants to track her aerobic fitness every 6 weeks in the field, with as little noise as possible. Which test should she use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 5 km time trial on the same track, after a practice run",
+       "correct": true,
+       "why": "Right: a time trial on a fixed course is repeatable and close to racing, and the practice run removes the learning effect."
+      },
+      {
+       "id": "b",
+       "text": "Running to exhaustion at her goal 10 km pace",
+       "why": "Time-to-exhaustion tests vary by more than 10% from try to try: far too noisy."
+      },
+      {
+       "id": "c",
+       "text": "A parkrun on a different course each time",
+       "why": "Changing the course changes hills, surface and turns, so times can't be compared."
+      },
+      {
+       "id": "d",
+       "text": "Her heart rate during an easy jog",
+       "why": "Easy-run heart rate swings with sleep, heat and hydration and says little about race fitness."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-3mt-what",
+   "concept": "field-3mt",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "vanhatalo2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 3-min all-out test, what is the power over the last 30 s meant to estimate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Critical power",
+       "correct": true,
+       "why": "Right: once W′ is spent, the power you can still hold is close to CP."
+      },
+      {
+       "id": "b",
+       "text": "W′",
+       "why": "W′ is the work done above end-test power, an amount in kJ, not a power."
+      },
+      {
+       "id": "c",
+       "text": "Peak sprint power",
+       "why": "Peak power comes in the first seconds of the test, not the last 30 s."
+      },
+      {
+       "id": "d",
+       "text": "VO2max",
+       "why": "The 3MT is a power test; VO2max needs gas measurements."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-3mt-appraise",
+   "concept": "field-3mt",
+   "bloom": "evaluate",
+   "sources": [
+    "vanhatalo2007",
+    "quittmann2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 2007 study that proposed end-test power = critical power tested 10 habitually active people. A coach wants to use EP as CP for national-level cyclists. What most limits that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small, less-trained sample; later data show EP overshoots CP in trained riders",
+       "correct": true,
+       "why": "Right: 10 active people can't show how the test behaves in elite riders, and the 2026 meta-analysis found EP above CP, most in highly trained athletes."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: r = 0.99 proves EP equals CP for anyone",
+       "why": "A high correlation shows the two rise together, not that they are equal in every person or group."
+      },
+      {
+       "id": "c",
+       "text": "It had no placebo group, so its results are invalid",
+       "why": "A placebo isn't needed to compare two measures in the same people; the problem is who was tested."
+      },
+      {
+       "id": "d",
+       "text": "It was published too long ago to be trusted",
+       "why": "Age alone doesn't make a study wrong; what matters is its sample and whether later work agrees."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-3mt-pacing",
+   "concept": "field-3mt",
+   "bloom": "analyse",
+   "sources": [
+    "vanhatalo2007",
+    "quittmann2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider holds back in the first minute of her 3-min all-out test and finishes with a strong last 30 s. What happens to her end-test power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It comes out too high, above her CP",
+       "correct": true,
+       "why": "Right: W′ wasn't spent early, so the last 30 s still include work above CP."
+      },
+      {
+       "id": "b",
+       "text": "It comes out too low, below her CP",
+       "why": "Pacing saves W′ for the end, which raises the final power, not lowers it."
+      },
+      {
+       "id": "c",
+       "text": "It is unchanged: EP doesn't depend on pacing",
+       "why": "The test only works if W′ is used up before the last 30 s; pacing breaks that."
+      },
+      {
+       "id": "d",
+       "text": "It becomes a better estimate of W′",
+       "why": "EP is a power; and holding back makes the work-above-EP estimate of W′ worse, not better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-cp-design",
+   "concept": "field-cp",
+   "bloom": "apply",
+   "sources": [
+    "karsten2015",
+    "munizpumares2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants a field CP for her bike without a lab. Which plan follows a protocol that was tested against lab CP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Maximal 3-, 7- and 12-min efforts, 30 min rest between",
+       "correct": true,
+       "why": "Right: this field protocol gave CP within about 5% of lab values and repeated within 2.4%."
+      },
+      {
+       "id": "b",
+       "text": "One 20-min all-out effort, then take 95% of it",
+       "why": "That is the FTP protocol; FTP and CP are different numbers."
+      },
+      {
+       "id": "c",
+       "text": "Maximal 30-s, 1-min and 2-min efforts",
+       "why": "No field protocol tested against lab CP used efforts this short; they lean mostly on W′, which skews the fitted CP."
+      },
+      {
+       "id": "d",
+       "text": "One evenly paced 3-min effort",
+       "why": "One effort gives one point on the curve; a paced 3 min isn't the all-out 3MT either."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-r2-calc",
+   "concept": "field-running",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mayorgavega2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 1.5-mile run correlates r = 0.79 with lab VO2max. What share of the differences in VO2max between people does it account for?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 62%",
+       "correct": true,
+       "why": "Right: r² = 0.79 × 0.79 = 0.62."
+      },
+      {
+       "id": "b",
+       "text": "About 79%",
+       "why": "This uses r itself; the share accounted for is r², which is smaller."
+      },
+      {
+       "id": "c",
+       "text": "About 89%",
+       "why": "This takes the square root of r (√0.79 = 0.89) instead of squaring it."
+      },
+      {
+       "id": "d",
+       "text": "About 21%",
+       "why": "This takes 1 − r; that isn't the share accounted for (and 1 − r² would be the unexplained share, 38%)."
+      }
+     ],
+     "solution": "Share accounted for = r² = 0.79 × 0.79 = 0.62, about 62%."
+    },
+    {
+     "id": "b",
+     "stem": "The weakest walk/run test in the meta-analysis correlated r = 0.42 with lab VO2max. What share of the differences in VO2max between people does it account for?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 18%",
+       "correct": true,
+       "why": "Right: r² = 0.42 × 0.42 = 0.18."
+      },
+      {
+       "id": "b",
+       "text": "About 42%",
+       "why": "This uses r itself; the share accounted for is r², which is smaller."
+      },
+      {
+       "id": "c",
+       "text": "About 65%",
+       "why": "This takes the square root of r (√0.42 = 0.65) instead of squaring it."
+      },
+      {
+       "id": "d",
+       "text": "About 58%",
+       "why": "This takes 1 − r; that isn't the share accounted for (1 − r² = 82% would be the unexplained share)."
+      }
+     ],
+     "solution": "Share accounted for = r² = 0.42 × 0.42 = 0.18, about 18%."
+    }
+   ]
+  },
+  {
+   "id": "field-yoyo-choose",
+   "concept": "field-running",
+   "bloom": "apply",
+   "sources": [
+    "bangsbo2008",
+    "currell2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathon runner's club offers a monthly Yo-Yo intermittent recovery test. Is it the best way to track her marathon fitness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: it targets intermittent sports; a time trial fits her event better",
+       "correct": true,
+       "why": "Right: the Yo-Yo measures repeated hard running with short rests, the demand of football, not of a steady marathon."
+      },
+      {
+       "id": "b",
+       "text": "Yes: it is more sensitive than VO2max, so it beats any test",
+       "why": "More sensitive than VO2max isn't the same as best for her event; a steady time trial matches the marathon's demand."
+      },
+      {
+       "id": "c",
+       "text": "Yes: any running test tracks any running event equally",
+       "why": "Tests track what they demand: short, repeated sprints aren't marathon running."
+      },
+      {
+       "id": "d",
+       "text": "No: field tests can't track fitness; only lab tests can",
+       "why": "Field time trials are repeatable and valid; the issue is which field test fits the event."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-zero",
+   "concept": "field-kit",
+   "bloom": "apply",
+   "sources": [
+    "gardner2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider keeps his bike in a 20 °C flat, rides out into 4 °C air, zeroes the power meter at the door and starts a 20-min test 5 min later. What's the problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He zeroed it before it cooled to the outside temperature",
+       "correct": true,
+       "why": "Right: temperature shifts readings, so zero after the meter has settled to outside air, just before the test."
+      },
+      {
+       "id": "b",
+       "text": "None: zeroing indoors is the most accurate",
+       "why": "Indoor zeroing sets the meter for 20 °C; at 4 °C its readings drift."
+      },
+      {
+       "id": "c",
+       "text": "He should zero it while pedalling hard",
+       "why": "Zeroing needs the cranks unloaded: it sets the reading for zero force."
+      },
+      {
+       "id": "d",
+       "text": "Cold makes power meters read exactly zero",
+       "why": "Cold shifts readings by several %, it doesn't zero them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-two-meters",
+   "concept": "field-kit",
+   "bloom": "analyse",
+   "sources": [
+    "maier2017",
+    "bouillod2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's 20-min power was 300 W on her old crank meter and 315 W on a new pedal meter a month later. Is the 5% gain real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't tell: meters can disagree by more than 5%",
+       "correct": true,
+       "why": "Right: meters were off by −0.9 ± 3.2% on average and some by over 5%, so a meter change alone can explain 15 W."
+      },
+      {
+       "id": "b",
+       "text": "Yes: both meters repeat to about 1%",
+       "why": "Repeating well (precision) isn't agreeing with each other (trueness); each can be steady and still differ."
+      },
+      {
+       "id": "c",
+       "text": "Yes: newer meters are always more accurate",
+       "why": "Newness doesn't guarantee accuracy; meters of all ages vary in trueness."
+      },
+      {
+       "id": "d",
+       "text": "No: pedal meters always read high",
+       "why": "There's no fixed rule by meter type; you only know by testing both against a reference."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's FTP is 250 W on her road bike's meter and 262 W on her time-trial bike's meter, tested a week apart. Best reading of the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mostly the meters: they can differ by about 5%",
+       "correct": true,
+       "why": "Right: 12 W is about 5%, within the spread between meters; test both bikes on one meter to know."
+      },
+      {
+       "id": "b",
+       "text": "She is 5% fitter on the time-trial bike",
+       "why": "This assumes the two meters agree, which they often don't."
+      },
+      {
+       "id": "c",
+       "text": "She gained 12 W of fitness in a week",
+       "why": "A week is too short for a 5% gain, and the meters changed too."
+      },
+      {
+       "id": "d",
+       "text": "The road bike meter must be broken",
+       "why": "A 5% gap is ordinary between working meters; neither needs to be faulty."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field-heat",
+   "concept": "field-kit",
+   "bloom": "apply",
+   "sources": [
+    "ely2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's 5 km time trial on the same track took 19:00 in April at 12 °C and 19:40 in July at 31 °C. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The heat can explain the slower time",
+       "correct": true,
+       "why": "Right: heat cut work by about 17% in a 15-min time trial; compare tests run in similar conditions."
+      },
+      {
+       "id": "b",
+       "text": "She has lost fitness since April",
+       "why": "Possible, but the 19 °C hotter day can explain a 3.5% slower time by itself."
+      },
+      {
+       "id": "c",
+       "text": "Heat only matters in races over an hour",
+       "why": "Performance fell in a 15-min time trial in the heat, without large rises in core temperature."
+      },
+      {
+       "id": "d",
+       "text": "Warm muscles are faster, so she lost even more",
+       "why": "A good warm-up helps, but hot weather slows endurance efforts; it doesn't speed them up."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

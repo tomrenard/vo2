@@ -1,0 +1,684 @@
+{
+ "id": "thr-domains",
+ "module": "t2-thresholds",
+ "title": "Intensity domains: moderate, heavy, severe, extreme",
+ "goal": "Explain the four exercise intensity domains, what marks their boundaries, and how oxygen uptake and lactate behave in each, including the VO₂ slow component.",
+ "requires": [
+  "vo2-sex-age"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "intensity-domain",
+    "moderate-domain",
+    "severe-domain",
+    "extreme-domain",
+    "vo2-slow-component"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dom-map",
+   "title": "Same percentage, different worlds",
+   "text": "Two riders at 75% of [VO₂max](g:vo2max) can be in very different states: one rides steadily for an hour, the other is done in 20 minutes. A fixed share of a maximum (VO₂max, max heart rate) does not put people in the same physiological state [[c:fixed-percent-poor]].\n\nSo physiologists split intensity into four [domains](g:intensity-domain), each bounded by the athlete's own markers [[c:domain-boundaries]]:\n\n| domain | from | to |\n|---|---|---|\n| [moderate](g:moderate-domain) | rest | [lactate threshold](g:lactate-threshold) (LT1) or [gas exchange threshold](g:gas-exchange-threshold) |\n| [heavy](g:heavy-domain) | LT1 / GET | [critical power](g:critical-power) (CP) |\n| [severe](g:severe-domain) | CP | highest power at which VO₂max can still be reached |\n| [extreme](g:extreme-domain) | above that | all-out |\n\nThe rest of this module is about finding those boundaries.",
+   "claims": [
+    {
+     "id": "fixed-percent-poor",
+     "text": "Prescribing intensity as a fixed percentage of VO₂max, HRmax or maximal power does not reliably place people in the same intensity domain.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2020"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2020",
+       "quote": "However, despite their common use, it is apparent that prescribing exercise intensity based on a fixed percentage of these maximal anchors has little merit for eliciting distinct or domain-specific homeostatic perturbations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "domain-boundaries",
+     "text": "The lactate or gas exchange threshold separates the moderate and heavy domains; critical power separates the heavy and severe domains.",
+     "grade": "moderate",
+     "sources": [
+      "jones2019",
+      "hill2002"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "The boundary between the moderate‐ and heavy‐intensity domains is given by the lactate or gas exchange threshold (GET), and the boundary between the heavy‐ and severe‐intensity domains is given by the critical power (CP).",
+       "level": "full-text"
+      },
+      {
+       "source": "hill2002",
+       "quote": "The severe exercise intensity domain may be defined as that range of work rates over which .VO(2max) can be elicited during constant-load exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dom-fixed-percent"
+  },
+  {
+   "type": "question",
+   "item": "dom-classify",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "dom-moderate-heavy",
+   "title": "Moderate and heavy: steady, then steady later",
+   "text": "In the moderate domain, VO₂ reaches a [steady state](g:steady-state) within a few minutes and blood lactate stays close to rest. In the heavy domain a steady state still comes, but late: VO₂ creeps up for several minutes, and lactate rises, then levels off at a raised value. Above CP, no steady state comes at all [[c:steady-by-domain]].\n\nThe creep is the [VO₂ slow component](g:vo2-slow-component): an extra oxygen cost on top of what the moderate-domain VO₂–power line predicts [[c:slow-component-def]]. It appears only above the lactate threshold and means the muscle is getting less efficient: it is linked to fatigue and to recruiting extra, less efficient fast-twitch fibres [[c:slow-component-mech]].\n\nIn long heavy efforts, fatigue often goes with running low on muscle [glycogen](g:glycogen) [[c:heavy-glycogen]].",
+   "claims": [
+    {
+     "id": "steady-by-domain",
+     "text": "Steady states in VO₂ and lactate are reached quickly in the moderate domain, late in the heavy domain, and not at all in the severe domain.",
+     "grade": "strong",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "These profiles indicate that the achievement of steady‐state values in these variables is markedly different in these discrete exercise domains (i.e., rapid in the moderate‐intensity domain, delayed in the heavy‐intensity domain, and not possible in the severe‐intensity domain).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "slow-component-def",
+     "text": "In the heavy and severe domains, VO₂ rises above the value predicted from the moderate-domain VO₂–power relationship: the VO₂ slow component.",
+     "grade": "strong",
+     "sources": [
+      "jones2019",
+      "jones2011"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "During heavy‐ and severe‐intensity exercise, there is an additional oxygen cost (termed V ˙ O 2 slow component) above that expected from the extrapolation of the moderate‐intensity V ˙ O 2 ‐power output relationship.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "slow-component-mech",
+     "text": "The slow component appears above the lactate threshold, reflects a progressive loss of muscle efficiency linked to fatigue, and is associated with recruitment of additional, less efficient type II fibres.",
+     "grade": "moderate",
+     "sources": [
+      "jones2011"
+     ],
+     "evidence": [
+      {
+       "source": "jones2011",
+       "quote": "The V·O₂ slow component, a slowly developing increase in V·O₂ during constant-work-rate exercise performed above the lactate threshold, represents a progressive loss of skeletal muscle contractile efficiency and is associated with the fatigue process.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2011",
+       "quote": "There is strong evidence that, during constant-work-rate exercise, the development of the V·O₂ slow component is associated with the progressive recruitment of additional (type II) muscle fibers that are presumed to have lower efficiency.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heavy-glycogen",
+     "text": "In the heavy domain, fatigue is often correlated with muscle glycogen depletion.",
+     "grade": "moderate",
+     "sources": [
+      "burnley2016"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2016",
+       "quote": "In the heavy domain (above LT but below CP), both central and peripheral (muscle) fatigue are observed. In this domain, fatigue is frequently correlated with the depletion of muscle glycogen.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dom-slow-component"
+  },
+  {
+   "type": "question",
+   "item": "dom-lactate-profile",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "dom-severe",
+   "title": "Severe: a countdown to VO₂max",
+   "text": "Above critical power there is no steady state. VO₂ keeps climbing until it reaches VO₂max, and the effort ends soon after: that is what defines the severe domain [[c:severe-vo2max]].\n\nIn the muscle, [phosphocreatine](g:pcr), [pH](g:ph) and lactate drift towards the same 'limiting' values at [task failure](g:task-failure), whatever the power within the domain. Below CP, fatigue has other causes, such as fuel running low or a weaker drive from the nervous system [[c:severe-milieu]].\n\nOnly powers below CP are truly sustainable, a remarkably small range [[c:small-sustainable]]. CP itself can be held for only about 20–30 minutes [[c:cp-duration]], so efforts lasting from about 2 to 30 minutes to exhaustion are severe: a 4 km pursuit, a 3,000 m race, a hard 10-minute climb.",
+   "claims": [
+    {
+     "id": "severe-vo2max",
+     "text": "The severe domain is the range of constant work rates at which VO₂ rises to VO₂max before the effort ends.",
+     "grade": "strong",
+     "sources": [
+      "hill2002",
+      "burnley2016"
+     ],
+     "evidence": [
+      {
+       "source": "hill2002",
+       "quote": "The severe exercise intensity domain may be defined as that range of work rates over which .VO(2max) can be elicited during constant-load exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "burnley2016",
+       "quote": "Severe-intensity exercise (above the CP) is associated with progressive derangements of muscle metabolic homeostasis and consequent peripheral fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "severe-milieu",
+     "text": "Above CP, task failure comes with similar 'limiting' muscle metabolite values at any power; below CP, fuel availability and limits to muscle activation matter more.",
+     "grade": "weak",
+     "sources": [
+      "black2017"
+     ],
+     "evidence": [
+      {
+       "source": "black2017",
+       "quote": "Fatigue development during exercise greater than critical power is associated with the attainment of consistent \"limiting\" values of muscle metabolites, whereas substrate availability and limitations to muscle activation may constrain performance at lower intensities.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "small-sustainable",
+     "text": "Only a small range of power outputs, those below CP, is sustainable.",
+     "grade": "moderate",
+     "sources": [
+      "burnley2016"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2016",
+       "quote": "We also show that a remarkably small range of power outputs is sustainable (power outputs below the critical power, CP).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-duration",
+     "text": "Exercise at CP can typically be sustained for no more than about 20–30 minutes.",
+     "grade": "moderate",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "However, while perhaps having similarities in principle, methodological differences in the assessment of these parameters typically result in MLSS occurring at a somewhat lower power output or running speed and exercise at CP being sustainable for no more than approximately 20-30 min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dom-severe-vo2"
+  },
+  {
+   "type": "question",
+   "item": "dom-fatigue-cause"
+  },
+  {
+   "type": "question",
+   "item": "dom-lactate-profile",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "dom-extreme",
+   "title": "Extreme: over before VO₂max",
+   "text": "At the top end, efforts are so hard that you are exhausted before VO₂ can climb all the way to VO₂max. In one study of 11 university students, this upper edge of the severe domain sat at about **136%** of the peak power of a ramp test, where exhaustion came after about **136 s** [[c:extreme-boundary]]. Above it is the extreme domain: a 200 m sprint on the track, a 500 m kayak burst, the last all-out minute of a criterium.\n\nThe four domains at a glance:\n\n| domain | VO₂ | blood lactate |\n|---|---|---|\n| moderate | steady within minutes | near rest |\n| heavy | slow component, then steady | raised, then flat |\n| severe | rises to VO₂max | keeps rising |\n| extreme | ends below VO₂max | rises fast (peaks after) |",
+   "claims": [
+    {
+     "id": "extreme-boundary",
+     "text": "In 11 university students, the upper boundary of the severe domain was about 136% of ramp-test peak power, with exhaustion after about 136 s; above it VO₂max is not reached.",
+     "grade": "weak",
+     "sources": [
+      "hill2002"
+     ],
+     "evidence": [
+      {
+       "source": "hill2002",
+       "quote": "These data suggest that, for this population of male and female university students, the upper boundary of the severe exercise intensity domain is approximately 136% P(max). This upper boundary is the highest work rate for which exercise duration is prolonged sufficiently (in this study, 136 +/- 17 s) to allow .VO(2) to rise to its maximal value.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dom-extreme-vo2"
+  },
+  {
+   "type": "question",
+   "item": "dom-classify",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "dom-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "dom-classify",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A fixed % of VO₂max or max heart rate doesn't put people in the same state; intensity domains do, because they are set by each athlete's own markers.",
+    "Moderate: below LT1/GET, VO₂ steady within minutes, lactate near rest. Heavy: LT1/GET to CP, a VO₂ slow component, then a late steady state.",
+    "The VO₂ slow component is an extra oxygen cost above LT1: falling muscle efficiency, linked to fatigue and to recruiting less efficient fibres.",
+    "Severe: above CP, VO₂ climbs to VO₂max and the effort ends, usually within about 2–30 minutes; muscle metabolites reach similar limiting values.",
+    "Extreme: so hard that exhaustion comes before VO₂max is reached, roughly all-out efforts under about 2 minutes."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dom-fixed-percent",
+   "concept": "dom-map",
+   "bloom": "analyse",
+   "sources": [
+    "jamnick2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes ride 40 minutes at 75% of their own VO₂max. One finishes steady; the other has to stop at 25 minutes. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75% of VO₂max falls in a different domain for each",
+       "correct": true,
+       "why": "Right: a fixed % of a maximum doesn't line up with each person's thresholds. For one it is below CP (heavy), for the other above it (severe)."
+      },
+      {
+       "id": "b",
+       "text": "The one who stopped has a lower VO₂max",
+       "why": "Using a % of each rider's own VO₂max already scales for VO₂max. The difference is where their thresholds sit within that range."
+      },
+      {
+       "id": "c",
+       "text": "75% of VO₂max is always in the severe domain",
+       "why": "There is no fixed % for any domain: the same 75% is heavy for some people and severe for others."
+      },
+      {
+       "id": "d",
+       "text": "The one who stopped paced the first minutes badly",
+       "why": "At a constant power pacing is fixed; the different outcomes come from different physiology at the same % of VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-classify",
+   "concept": "dom-map",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2019",
+    "hill2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's gas exchange threshold is at 210 W and her critical power is 290 W. In which domain is a 30-minute ride at 260 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heavy",
+       "correct": true,
+       "why": "Right: 260 W is above GET (210 W) and below CP (290 W), so it lies in the heavy domain."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "why": "Moderate is below GET; 260 W is 50 W above it."
+      },
+      {
+       "id": "c",
+       "text": "Severe",
+       "why": "Severe starts above CP; 260 W is 30 W below CP. Feeling hard doesn't make it severe."
+      },
+      {
+       "id": "d",
+       "text": "Extreme",
+       "why": "Extreme is far above CP, so hard that VO₂max can't be reached before exhaustion."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's lactate threshold on the bike is at 180 W and his critical power is 250 W. In which domain is an interval at 265 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Severe",
+       "correct": true,
+       "why": "Right: 265 W is above CP (250 W), so VO₂ will climb towards VO₂max and the effort has a time limit."
+      },
+      {
+       "id": "b",
+       "text": "Heavy",
+       "why": "Heavy ends at CP; 265 W is 15 W above it, so no steady state is possible."
+      },
+      {
+       "id": "c",
+       "text": "Moderate",
+       "why": "Moderate is below the lactate threshold (180 W); 265 W is far above it."
+      },
+      {
+       "id": "d",
+       "text": "Extreme",
+       "why": "Only 6% above CP is not extreme: exhaustion takes minutes, long enough for VO₂ to reach VO₂max."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A runner's first lactate threshold is at 12.5 km·h⁻¹ and the speed matching her critical power is 15.0 km·h⁻¹. In which domain is an easy run at 12.0 km·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Moderate",
+       "correct": true,
+       "why": "Right: 12.0 km·h⁻¹ is below LT1 (12.5 km·h⁻¹), so it is moderate."
+      },
+      {
+       "id": "b",
+       "text": "Heavy",
+       "why": "Heavy starts at LT1; 12.0 km·h⁻¹ is just below it."
+      },
+      {
+       "id": "c",
+       "text": "Severe",
+       "why": "Severe is above CP (15.0 km·h⁻¹); 12.0 km·h⁻¹ is far below it."
+      },
+      {
+       "id": "d",
+       "text": "Extreme",
+       "why": "Extreme is the all-out end of the scale; an easy run is the opposite."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-slow-component",
+   "concept": "dom-moderate-heavy",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2011",
+    "jones2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner holds a constant 14 km·h⁻¹ in the heavy domain. Her VO₂ is 3.2 L·min⁻¹ at minute 3 and 3.5 L·min⁻¹ at minute 20. What is this rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The VO₂ slow component: the same speed costs more O₂",
+       "correct": true,
+       "why": "Right: above LT1, VO₂ keeps creeping up at a constant load as the muscle gets less efficient."
+      },
+      {
+       "id": "b",
+       "text": "Faster VO₂ kinetics as she warms up",
+       "why": "Kinetics describe the first minutes of the rise. A climb from minute 3 to 20 is extra cost, not a faster response."
+      },
+      {
+       "id": "c",
+       "text": "Better efficiency as her stride settles",
+       "why": "Better efficiency would lower VO₂ at the same speed; here it rises."
+      },
+      {
+       "id": "d",
+       "text": "A sign she is in the moderate domain",
+       "why": "In the moderate domain VO₂ is steady within a few minutes; a slow climb shows she is above LT1."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-lactate-profile",
+   "concept": "dom-moderate-heavy",
+   "bloom": "apply",
+   "sources": [
+    "jones2019",
+    "hill2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 30 minutes at constant power. Blood lactate is 3.1, 3.4 and 3.5 mmol·L⁻¹ at minutes 10, 20 and 30, and VO₂ creeps up for 10 minutes, then holds. Which domain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heavy",
+       "correct": true,
+       "why": "Right: raised lactate that levels off, with a delayed VO₂ steady state, is the heavy-domain pattern."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "why": "In the moderate domain lactate stays near rest (about 1 mmol·L⁻¹) and VO₂ is steady within minutes."
+      },
+      {
+       "id": "c",
+       "text": "Severe",
+       "why": "In the severe domain lactate and VO₂ keep rising; here both levelled off."
+      },
+      {
+       "id": "d",
+       "text": "Extreme",
+       "why": "An extreme effort couldn't last 30 minutes; it ends in under about 2 minutes."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On a treadmill, a triathlete runs at a constant speed. Lactate is 4.8 mmol·L⁻¹ at minute 6 and 7.0 at minute 12; at minute 16 VO₂ reaches his VO₂max and he stops. Which domain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Severe",
+       "correct": true,
+       "why": "Right: lactate keeps rising, VO₂ climbs to VO₂max and the run ends within minutes."
+      },
+      {
+       "id": "b",
+       "text": "Heavy",
+       "why": "In the heavy domain VO₂ and lactate level off, late; here they never did."
+      },
+      {
+       "id": "c",
+       "text": "Extreme",
+       "why": "In the extreme domain exhaustion comes before VO₂max is reached; he reached it after 16 minutes."
+      },
+      {
+       "id": "d",
+       "text": "Moderate",
+       "why": "Moderate efforts keep lactate near rest and can last for hours."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-severe-vo2",
+   "concept": "dom-severe",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hill2002",
+    "burnley2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider holds a constant power 20 W above her critical power until she has to stop. What does her VO₂ do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keeps rising until it reaches VO₂max",
+       "correct": true,
+       "why": "Right: above CP there is no steady state; the slow component keeps going until VO₂max is reached."
+      },
+      {
+       "id": "b",
+       "text": "Levels off at about 90% of VO₂max",
+       "why": "Levelling off is the heavy-domain pattern, below CP."
+      },
+      {
+       "id": "c",
+       "text": "Is steady after about three minutes",
+       "why": "A quick steady state is the moderate-domain pattern, below LT1."
+      },
+      {
+       "id": "d",
+       "text": "Falls as her pedalling gets more efficient",
+       "why": "Above LT1 efficiency falls, not rises, so VO₂ climbs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-fatigue-cause",
+   "concept": "dom-severe",
+   "bloom": "analyse",
+   "sources": [
+    "black2017",
+    "burnley2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One cyclist stops after 8 minutes above critical power; another stops after 2 h 40 min below it. Which explanation fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Above CP metabolites hit limits; below CP fuel and drive run low",
+       "correct": true,
+       "why": "Right: fatigue above CP comes with consistent 'limiting' metabolite values; below CP, glycogen availability and muscle activation limit performance."
+      },
+      {
+       "id": "b",
+       "text": "Both stop because muscle phosphocreatine runs out",
+       "why": "PCr falls a lot above CP, but the long ride ends for other reasons, such as glycogen running low."
+      },
+      {
+       "id": "c",
+       "text": "Both stop because VO₂ reaches VO₂max",
+       "why": "Only efforts above CP drive VO₂ to VO₂max; a ride below CP never gets there."
+      },
+      {
+       "id": "d",
+       "text": "Both stop because lactate keeps rising",
+       "why": "Below CP lactate levels off; a steady rise in lactate is a sign of the severe domain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-extreme-vo2",
+   "concept": "dom-extreme",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hill2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist does an all-out 45 s effort. At the end, her VO₂ is well below her VO₂max. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The effort ends before VO₂ can rise to its maximum",
+       "correct": true,
+       "why": "Right: this is the extreme domain; exhaustion comes before VO₂ has time to reach VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "The aerobic system switches off in sprints",
+       "why": "Aerobic supply starts at once and keeps rising; it is just too slow to reach its maximum in 45 s."
+      },
+      {
+       "id": "c",
+       "text": "VO₂max can only be reached in the moderate domain",
+       "why": "VO₂max is reached in the severe domain; in the moderate domain VO₂ stays well below it."
+      },
+      {
+       "id": "d",
+       "text": "Lactate stops the lungs taking up oxygen",
+       "why": "Lactate does not block oxygen uptake; the limit is the time VO₂ needs to rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dom-appraisal",
+   "concept": "dom-extreme",
+   "bloom": "evaluate",
+   "sources": [
+    "hill2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Hill and colleagues put the severe–extreme boundary at about 136% of ramp-test peak power, from 11 university students. What most limits using 136% to plan a professional track cyclist's efforts?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small sample of students, not trained athletes",
+       "correct": true,
+       "why": "Right: 11 students may not represent elite riders, whose fitness and VO₂ kinetics differ; the value also depends on the ramp protocol."
+      },
+      {
+       "id": "b",
+       "text": "Power–duration curves can't be fitted in cycling",
+       "why": "The study fitted cycling power and time to exhaustion well; the method isn't the problem."
+      },
+      {
+       "id": "c",
+       "text": "VO₂max can't be measured on a cycle ergometer",
+       "why": "VO₂max is routinely measured on cycle ergometers."
+      },
+      {
+       "id": "d",
+       "text": "Men and women can never be tested together",
+       "why": "A mixed sample is a choice, not a fatal flaw; the bigger issue is its small size and untrained level."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

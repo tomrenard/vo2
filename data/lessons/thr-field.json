@@ -1,0 +1,754 @@
+{
+ "id": "thr-field",
+ "module": "t2-thresholds",
+ "title": "Thresholds in the field",
+ "goal": "Estimate thresholds without a lab, from FTP, longer time trials, heart rate, the talk test and RPE, and judge how close each comes to the lab markers.",
+ "requires": [
+  "thr-vent-vs-lactate"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hr-deflection-point",
+    "talk-test",
+    "rpe"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "fld-ftp",
+   "title": "FTP: 95% of 20 minutes",
+   "text": "[FTP](g:ftp) is meant to be the power you can hold for about an hour. An all-out hour is hard to do and hard to repeat, so the usual field test is a **20-min time trial** after a set warm-up, and FTP = **95%** of its average power [[c:ftp-reliable]].\n\nIn 25 trained cyclists, that 20-min test repeated well: [coefficient of variation](g:coefficient-of-variation) 2.9% between two tests a week apart.\n\nRepeatable is not the same as accurate. A test can give the same answer every time and still miss the lab threshold it is meant to stand in for. That comes next.",
+   "claims": [
+    {
+     "id": "ftp-reliable",
+     "text": "FTP is taken as 95% of mean power in a 20-min time trial; in 25 trained cyclists that test was reliable (CV 2.9%).",
+     "grade": "weak",
+     "sources": [
+      "borszcz2020"
+     ],
+     "evidence": [
+      {
+       "source": "borszcz2020",
+       "quote": "To improve practicality, a 20-minute time-trial test was proposed, where FTP is represented by 95% of the mean power produced.",
+       "level": "abstract"
+      },
+      {
+       "source": "borszcz2020",
+       "quote": "The results show that the 20-min time-trial was reliable (CV=2.9%, ICC=0.97), despite a less reliable warm-up (CV=5.5%, ICC=0.84).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "fld-ftp-example",
+   "title": "FTP from a 20-minute test",
+   "problem": "A 70 kg rider averages 280 W for a 20-min time trial. What is her FTP, in W and in W·kg⁻¹?",
+   "steps": [
+    "FTP = 0.95 × 20-min average power = 0.95 × 280 = 266 W.",
+    "Per kg of body mass: 266 ÷ 70 = 3.8 W·kg⁻¹.",
+    "Don't skip the 0.95: 20-min power is higher than what she could hold for longer."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fld-ftp-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "fld-ftp-valid",
+   "title": "Is FTP a lab threshold?",
+   "text": "Against lab markers, FTP is close but not the same:\n\n- **Lactate threshold:** in 20 male cyclists, FTP matched the LT in trained riders but **underestimated** it in recreational ones [[c:ftp-lt]].\n- **MLSS:** in 11 trained cyclists and triathletes, 95% of 20-min power overshot MLSS by about 12 W; 91% fitted better [[c:ftp-mlss]].\n- **Heavy/severe boundary:** in 13 cyclists, riding at FTP lasted 33.7 ± 7.6 min, not an hour. The authors conclude FTP is not that boundary [[c:ftp-not-mmss]].\n\nTreat FTP as a good, repeatable fitness marker and a rough guide to the threshold zone, not as an exact domain boundary.",
+   "claims": [
+    {
+     "id": "ftp-lt",
+     "text": "In 20 male cyclists, FTP was close to the lactate threshold in trained cyclists but underestimated it in recreational cyclists.",
+     "grade": "weak",
+     "sources": [
+      "valenzuela2018"
+     ],
+     "evidence": [
+      {
+       "source": "valenzuela2018",
+       "quote": "Whereas FTP provides a good estimate of LT in trained cyclists, in recreational cyclists, it may underestimate LT.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-mlss",
+     "text": "In 11 trained cyclists and triathletes, the 95% factor overestimated MLSS by about 12 W; an individual factor of about 91% fitted.",
+     "grade": "weak",
+     "sources": [
+      "lillobevia2019"
+     ],
+     "evidence": [
+      {
+       "source": "lillobevia2019",
+       "quote": "The maximal lactate steady state was then estimated from the traditional 95% factor (bias = 12 ± 7 W) and a novel individual correction factor (ICF% = MLSS/TT20), resulting in 91% (bias = 1 ± 6 W).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-not-mmss",
+     "text": "In 13 cyclists, time to task failure at FTP was about 34 min, and FTP did not mark the heavy/severe boundary.",
+     "grade": "weak",
+     "sources": [
+      "wong2022"
+     ],
+     "evidence": [
+      {
+       "source": "wong2022",
+       "quote": "The time to task failure at FTP and FTP+15W were 33.7 ± 7.6 and 22.0 ± 5.7 minutes (p < 0.001), respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "wong2022",
+       "quote": "The VO2 response corresponding to FTP and FTP+15W suggests that FTP should not be considered a threshold marker between heavy and severe intensity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is FTP a valid stand-in for lab thresholds?",
+    "sides": [
+     {
+      "position": "Yes, as a field marker: in trained cyclists it is close to the lactate threshold and strongly correlated with it (r = 0.95).",
+      "sources": [
+       "valenzuela2018"
+      ]
+     },
+     {
+      "position": "Only roughly: it doesn't mark the heavy/severe boundary, can't be held for an hour, and the 95% factor overshoots MLSS.",
+      "sources": [
+       "wong2022",
+       "lillobevia2019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fld-ftp-hour"
+  },
+  {
+   "type": "question",
+   "item": "fld-ftp-recreational"
+  },
+  {
+   "type": "question",
+   "item": "fld-ftp-judge"
+  },
+  {
+   "type": "concept",
+   "id": "fld-tt",
+   "title": "Longer time trials",
+   "text": "The longer the time trial, the closer it sits to the steady-state ceiling. In 9 trained cyclists, a 40-km time trial (about an hour) was ridden at the same speed, lactate and heart rate as MLSS; MLSS speed was about 92% of 5-km time-trial speed [[c:tt-mlss]].\n\nA 30-min all-out effort lands higher: critical power can be held for only about 20–30 min [[c:tt-cp]], so a well-paced 30-min trial sits near CP, above MLSS.\n\nRough guide for cyclists: about 1 h of racing ≈ MLSS; about 30 min ≈ CP. Evidence in runners and triathletes is thinner. Working out CP itself, from several all-out efforts, is the *Critical power and W′* module.",
+   "claims": [
+    {
+     "id": "tt-mlss",
+     "text": "In 9 trained cyclists, 40-km time-trial speed, lactate and heart rate did not differ from MLSS, and MLSS speed was about 92% of 5-km time-trial speed.",
+     "grade": "weak",
+     "sources": [
+      "harnish2001"
+     ],
+     "evidence": [
+      {
+       "source": "harnish2001",
+       "quote": "MLSS speed was 36.8 +/- 1.0 km.h-1, which corresponded to 92.1 +/- 1.2% of 5 km average speed (AVS5km).",
+       "level": "abstract"
+      },
+      {
+       "source": "harnish2001",
+       "quote": "Mean AVS, HLa, and HR during the 40-km TT were 36.6 +/- 0.9 km.h-1, 6.3 +/- 0.7 mM, and 174.1 +/- 2.1 b.min-1, respectively, and did not differ from those at MLSS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tt-cp",
+     "text": "Exercise at CP can typically be sustained for no more than about 20–30 min.",
+     "grade": "moderate",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "However, while perhaps having similarities in principle, methodological differences in the assessment of these parameters typically result in MLSS occurring at a somewhat lower power output or running speed and exercise at CP being sustainable for no more than approximately 20-30 min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fld-tt-pick"
+  },
+  {
+   "type": "question",
+   "item": "fld-30min"
+  },
+  {
+   "type": "concept",
+   "id": "fld-conconi",
+   "title": "Heart-rate deflection: the Conconi test",
+   "text": "In 1982 Conconi claimed that in a step test heart rate rises in a straight line with running speed until a [deflection point](g:hr-deflection-point), which he said marks the lactate threshold.\n\nIn 14 trained male runners, a deflection appeared in only 9, and at a much higher speed than the lactate turnpoint (an LT2 marker): 5.08 against 4.39 m·s⁻¹, about 95% of maximal heart rate. Runs just below that speed lasted only 15.9 min. The authors judged the test invalid: the 'deflection' is the start of the heart-rate plateau near the maximum [[c:conconi-invalid]].\n\nThat verdict rests on one small study of trained men. Heart rate is still useful for staying in a zone, but on this evidence it can't find the threshold.",
+   "claims": [
+    {
+     "id": "conconi-invalid",
+     "text": "In 14 trained male runners, the heart-rate deflection appeared in only 9, came well above the lactate turnpoint at about 95% of HRmax, and the Conconi test was judged invalid.",
+     "grade": "weak",
+     "sources": [
+      "jones1997"
+     ],
+     "evidence": [
+      {
+       "source": "jones1997",
+       "quote": "A deviation from linearity in heart rate was observed in nine subjects.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones1997",
+       "quote": "When deviation of heart rate from linearity was evident, it occurred at a systematically higher intensity than the lactate turnpoint and at approximately 95% of maximum heart rate.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones1997",
+       "quote": "We concluded that the Conconi test is invalid for the non-invasive determination of the lactate turnpoint and that the deviation of heart rate from linearity represents the start of the plateau at maximal heart rate",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fld-conconi-q"
+  },
+  {
+   "type": "concept",
+   "id": "fld-talk-rpe",
+   "title": "Talk test and RPE",
+   "text": "Two tools that cost nothing. In the [talk test](g:talk-test) you read a short passage aloud: 'comfortable', 'not sure', or 'not able to speak comfortably'. [RPE](g:rpe) is how hard the effort feels, usually on Borg's 6–20 scale.\n\nA review finds that 'not sure' and an RPE of about 10–11 reflect the first ventilatory threshold, and 'can't speak comfortably' and an RPE of 13–15 the second [[c:talk-rpe-domains]].\n\nNot every study agrees: in 15 young adults (13 men), all talk stages came above VT1; 'comfortable' and 'not sure' matched their lactate threshold, which sat above VT1 [[c:talk-lt]]. Use these tools to stay inside a domain, not to pin down a wattage.",
+   "claims": [
+    {
+     "id": "talk-rpe-domains",
+     "text": "The talk test and RPE track the ventilatory and respiratory compensation thresholds: the equivocal talk stage and RPE 10–11 near VT1; the negative stage and RPE 13–15 near the second threshold.",
+     "grade": "moderate",
+     "sources": [
+      "bok2022"
+     ],
+     "evidence": [
+      {
+       "source": "bok2022",
+       "quote": "The TT and RPE appear to be valid measures of both the ventilatory threshold and the respiratory compensation threshold.",
+       "level": "abstract"
+      },
+      {
+       "source": "bok2022",
+       "quote": "Equivocal stage of the TT, RPE of 10-11, and FS ratings between fairly good (+ 1) and good (+ 3) are reflective of the ventilatory threshold, while negative stage of the TT, RPE of 13-15, and FS ratings around neutral (0) are reflective of the respiratory compensation threshold.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "talk-lt",
+     "text": "In 15 young adults, all talk-test stages came above the ventilatory threshold; lactate threshold values were similar to the positive and equivocal stages, and the equivocal stage came at about 71% of VO₂max and 90% of HRmax.",
+     "grade": "weak",
+     "sources": [
+      "quinn2011"
+     ],
+     "evidence": [
+      {
+       "source": "quinn2011",
+       "quote": "The heart rate, VO2, and %VO2max recorded at all levels of the Talk Test were significantly higher than similar measurements recorded at the ventilatory threshold (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "quinn2011",
+       "quote": "Lactate threshold measurements were similar to the +Talk Test and +/-Talk Test.",
+       "level": "abstract"
+      },
+      {
+       "source": "quinn2011",
+       "quote": "Participants were exercising at 64 ± 5% VO2max, 82 ± 7% maximal heart rate, and 12 ± 2% RPE (rating of perceived exertion) at the +Talk Test, and 71 ± 6% VO2max, 90 ± 6% maximal heart rate, and 15 ± 2% RPE at the +/-Talk Test, with all values being within ACSM exercise intensity guidelines.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fld-talk"
+  },
+  {
+   "type": "question",
+   "item": "fld-rpe"
+  },
+  {
+   "type": "question",
+   "item": "fld-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "fld-ftp-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "FTP = 95% of a 20-min time trial: repeatable (CV about 3%), close to LT in trained riders, but it underestimates LT in recreational riders and overshoots MLSS a little.",
+    "FTP is not the heavy/severe boundary and often lasts well under an hour (about 34 min in one study).",
+    "A well-paced ~1 h time trial ≈ MLSS for cyclists; a 30-min all-out effort sits nearer CP.",
+    "In one study of trained male runners, the Conconi heart-rate deflection failed as a threshold test: when it showed up at all, it sat near maximal heart rate.",
+    "Talk test and RPE track the domains roughly (talk 'not sure' and RPE 10–11 near VT1; RPE 13–15 near the second threshold): fine for staying in a zone, not for exact numbers."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fld-ftp-calc",
+   "concept": "fld-ftp",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "borszcz2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist averages 300 W in a 20-min time trial. What is his FTP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "285 W",
+       "correct": true,
+       "why": "Right: 0.95 × 300 = 285 W."
+      },
+      {
+       "id": "b",
+       "text": "315 W",
+       "why": "This multiplies by 1.05 instead of 0.95. FTP is lower than 20-min power, not higher."
+      },
+      {
+       "id": "c",
+       "text": "300 W",
+       "why": "This forgets the 95% factor; 20-min power is more than he could hold for longer."
+      },
+      {
+       "id": "d",
+       "text": "270 W",
+       "why": "This uses 90% instead of 95%."
+      }
+     ],
+     "solution": "FTP = 0.95 × 300 W = 285 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete averages 240 W in a 20-min test on her bike. What is her FTP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "228 W",
+       "correct": true,
+       "why": "Right: 0.95 × 240 = 228 W."
+      },
+      {
+       "id": "b",
+       "text": "252 W",
+       "why": "This multiplies by 1.05 instead of 0.95."
+      },
+      {
+       "id": "c",
+       "text": "240 W",
+       "why": "This forgets the 95% factor."
+      },
+      {
+       "id": "d",
+       "text": "216 W",
+       "why": "This uses 90% instead of 95%."
+      }
+     ],
+     "solution": "FTP = 0.95 × 240 W = 228 W."
+    },
+    {
+     "id": "c",
+     "stem": "An 80 kg cyclist averages 320 W in a 20-min time trial. What is his FTP in W·kg⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.8 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 0.95 × 320 = 304 W; 304 ÷ 80 = 3.8 W·kg⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "4.0 W·kg⁻¹",
+       "why": "This divides 20-min power by mass and forgets the 95% factor (320 ÷ 80)."
+      },
+      {
+       "id": "c",
+       "text": "4.2 W·kg⁻¹",
+       "why": "This multiplies by 1.05 instead of 0.95 (336 ÷ 80)."
+      },
+      {
+       "id": "d",
+       "text": "3.6 W·kg⁻¹",
+       "why": "This uses 90% instead of 95% (288 ÷ 80)."
+      }
+     ],
+     "solution": "FTP = 0.95 × 320 W = 304 W. Per kg: 304 ÷ 80 = 3.8 W·kg⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "fld-ftp-hour",
+   "concept": "fld-ftp-valid",
+   "bloom": "analyse",
+   "sources": [
+    "wong2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with an FTP of 280 W tries to ride a full hour at 280 W and cracks after 35 minutes. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "FTP often can't be held for an hour",
+       "correct": true,
+       "why": "Right: in one study riders lasted about 34 min at FTP. The 'one hour' in its definition is a label, not a measurement."
+      },
+      {
+       "id": "b",
+       "text": "His 20-min test must have been wrong",
+       "why": "The 20-min test is very repeatable; the problem is the assumption that FTP lasts an hour."
+      },
+      {
+       "id": "c",
+       "text": "He must have been ill, since FTP lasts an hour",
+       "why": "Many healthy riders can't hold FTP for an hour; illness isn't needed to explain it."
+      },
+      {
+       "id": "d",
+       "text": "He started too easy and lost time",
+       "why": "Starting easy would make the hour more likely, not less; he failed at the target power."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-ftp-recreational",
+   "concept": "fld-ftp-valid",
+   "bloom": "apply",
+   "sources": [
+    "valenzuela2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recreational cyclist (peak ramp power 3.8 W·kg⁻¹) uses her FTP to set her lactate-threshold intervals. What bias is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "FTP sits below her LT, so the intervals are a bit easy",
+       "correct": true,
+       "why": "Right: FTP underestimated LT in recreational cyclists (below about 4.5 W·kg⁻¹ peak power)."
+      },
+      {
+       "id": "b",
+       "text": "FTP sits above her LT, so the intervals are too hard",
+       "why": "The bias in recreational riders went the other way: FTP was lower than LT."
+      },
+      {
+       "id": "c",
+       "text": "FTP equals her LT exactly",
+       "why": "FTP matched LT in trained riders; in recreational riders it ran low."
+      },
+      {
+       "id": "d",
+       "text": "FTP has no relation to her LT",
+       "why": "The two were strongly correlated (r = 0.95); the issue is a systematic bias, not no link."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-ftp-judge",
+   "concept": "fld-ftp-valid",
+   "bloom": "evaluate",
+   "sources": [
+    "valenzuela2018",
+    "wong2022",
+    "lillobevia2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement about FTP is best supported by the studies?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Repeatable and near LT in trained riders, but not a domain boundary",
+       "correct": true,
+       "why": "Right: the 20-min test repeats well and tracks LT in trained cyclists, but FTP doesn't mark the heavy/severe boundary."
+      },
+      {
+       "id": "b",
+       "text": "Identical to critical power for every rider",
+       "why": "FTP lasted about 34 min, and CP is a separate model (next module); they are not the same thing."
+      },
+      {
+       "id": "c",
+       "text": "Useless, since it doesn't match any lab marker",
+       "why": "It correlates strongly with LT and is close to it in trained riders; it is useful, just not exact."
+      },
+      {
+       "id": "d",
+       "text": "Always equal to MLSS with the 95% factor",
+       "why": "The 95% factor overshot MLSS by about 12 W in one study; 91% fitted better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-tt-pick",
+   "concept": "fld-tt",
+   "bloom": "apply",
+   "sources": [
+    "harnish2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants a field estimate of her MLSS power on the bike. On the evidence, which effort fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Average power of a well-paced 40-km time trial",
+       "correct": true,
+       "why": "Right: 40-km time-trial speed, lactate and heart rate matched MLSS in trained cyclists."
+      },
+      {
+       "id": "b",
+       "text": "Average power of a 5-km time trial",
+       "why": "A 5-km trial is too short and too hard: MLSS speed was only about 92% of 5-km speed."
+      },
+      {
+       "id": "c",
+       "text": "Average power of a 20-min test, uncorrected",
+       "why": "Uncorrected 20-min power sits above FTP and above MLSS."
+      },
+      {
+       "id": "d",
+       "text": "Power at her maximal heart rate",
+       "why": "Maximal heart rate comes near the end of an all-out effort, far above MLSS."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-30min",
+   "concept": "fld-tt",
+   "bloom": "analyse",
+   "sources": [
+    "jones2019",
+    "harnish2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's best all-out 30-minute effort averages 15.0 km·h⁻¹. Which lab picture is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15.0 km·h⁻¹ is near his critical speed, above his MLSS",
+       "correct": true,
+       "why": "Right: CP or critical speed can be held for only about 20–30 min, so a 30-min all-out pace sits near it, above MLSS."
+      },
+      {
+       "id": "b",
+       "text": "15.0 km·h⁻¹ is well below his MLSS",
+       "why": "An all-out 30-min effort is above the hour-long MLSS pace, not below it."
+      },
+      {
+       "id": "c",
+       "text": "15.0 km·h⁻¹ equals his first lactate threshold",
+       "why": "LT1 is the top of the moderate domain; it can be held for hours, far longer than 30 min all-out."
+      },
+      {
+       "id": "d",
+       "text": "15.0 km·h⁻¹ is in his extreme domain",
+       "why": "The extreme domain ends efforts in under about 2 minutes; 30 minutes is far too long."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-conconi-q",
+   "concept": "fld-conconi",
+   "bloom": "analyse",
+   "sources": [
+    "jones1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner finds a heart-rate deflection at 172 beats·min⁻¹ in a Conconi test (her maximum is 181) and sets her threshold runs at that heart rate. What is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runs are too hard: the deflection sits near max HR",
+       "correct": true,
+       "why": "Right: the deflection came well above the lactate turnpoint, at about 95% of max HR; runs just below that speed lasted about 16 min."
+      },
+      {
+       "id": "b",
+       "text": "The runs are about right for threshold training",
+       "why": "The deflection was systematically above the lactate turnpoint, not at it."
+      },
+      {
+       "id": "c",
+       "text": "The runs are too easy: the deflection marks LT1",
+       "why": "LT1 is far lower; the deflection sits near the top of the heart-rate range."
+      },
+      {
+       "id": "d",
+       "text": "The runs are fine because every runner has a deflection",
+       "why": "Only 9 of 14 trained runners showed a deflection at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-talk",
+   "concept": "fld-talk-rpe",
+   "bloom": "apply",
+   "sources": [
+    "bok2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner can read a passage comfortably at her easy pace, but at 10 s·km⁻¹ faster she is 'not sure' she can speak comfortably. Using the review's mapping, where is she at the faster pace?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Near her first ventilatory threshold",
+       "correct": true,
+       "why": "Right: the equivocal ('not sure') stage reflects the first ventilatory threshold."
+      },
+      {
+       "id": "b",
+       "text": "Near her second threshold",
+       "why": "The second threshold matches the stage where she can't speak comfortably."
+      },
+      {
+       "id": "c",
+       "text": "At her VO₂max",
+       "why": "At VO₂max she couldn't speak at all; 'not sure' comes much earlier."
+      },
+      {
+       "id": "d",
+       "text": "Deep in the moderate domain",
+       "why": "Deep in the moderate domain talking is comfortable; 'not sure' marks its upper edge."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-rpe",
+   "concept": "fld-talk-rpe",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bok2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On Borg's 6–20 scale, which RPE range does the review link to the second (respiratory compensation) threshold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13–15",
+       "correct": true,
+       "why": "Right: RPE of about 13–15 reflects the respiratory compensation threshold."
+      },
+      {
+       "id": "b",
+       "text": "10–11",
+       "why": "RPE 10–11 reflects the first ventilatory threshold."
+      },
+      {
+       "id": "c",
+       "text": "18–20",
+       "why": "18–20 is near maximal effort, above the second threshold."
+      },
+      {
+       "id": "d",
+       "text": "6–8",
+       "why": "6–8 means little or no exertion, near rest."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fld-appraisal",
+   "concept": "fld-ftp-valid",
+   "bloom": "evaluate",
+   "sources": [
+    "valenzuela2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The FTP–lactate threshold study tested 20 male cyclists. For a female recreational triathlete using FTP, which limit matters most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Men only, and the bias changed with fitness",
+       "correct": true,
+       "why": "Right: no women were tested, and FTP already ran low in recreational riders, so her bias is unknown and may be larger."
+      },
+      {
+       "id": "b",
+       "text": "A correlation of r = 0.95 is too weak",
+       "why": "0.95 is a very strong correlation; the problem is who was tested and the bias, not r."
+      },
+      {
+       "id": "c",
+       "text": "The 20-min test can't be repeated",
+       "why": "The 20-min test is very repeatable (CV about 3%)."
+      },
+      {
+       "id": "d",
+       "text": "FTP is only valid for running",
+       "why": "FTP is a cycling test; it was developed and tested on the bike."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

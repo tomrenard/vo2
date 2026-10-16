@@ -1,0 +1,612 @@
+{
+ "id": "bc-risks",
+ "module": "t2-body-comp",
+ "title": "When race weight backfires: REDs at a glance",
+ "goal": "Calculate energy availability, name the main health and performance costs of chronic low energy availability (IOC 2023), and explain why bone is at risk in runners and road cyclists chasing race weight.",
+ "requires": [
+  "bc-performance"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "low-energy-availability",
+    "female-athlete-triad",
+    "amenorrhoea",
+    "bone-stress-injury",
+    "z-score",
+    "dietary-restraint",
+    "bmi"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "bcr-lea",
+   "title": "Energy availability, briefly",
+   "text": "[Energy availability](g:energy-availability) (EA) is what is left for the rest of the body after training is paid for:\n\n**EA = (energy intake − exercise energy) ÷ fat-free mass**, per day.\n\nWhen it is too low for too long, the body saves energy by turning down growth, repair and reproduction. The IOC calls the result [REDs](g:reds), in women and men alike [[c:reds-2023]]. Its 2023 update separates *problematic* [low energy availability](g:low-energy-availability) from *adaptable* LEA: a short, mild deficit (a hard training camp, a planned cut) may cause no harm, while a long or deep one does.\n\nA useful marker: in untrained women, [LH](g:lh) pulses were disrupted below about 125 kJ (30 kcal) per kg lean mass per day [[c:lea-threshold]].",
+   "claims": [
+    {
+     "id": "reds-2023",
+     "text": "REDs is a syndrome of harmful health and performance outcomes in female and male athletes exposed to low energy availability; the 2023 IOC statement distinguishes problematic from adaptable LEA exposure.",
+     "grade": "strong",
+     "sources": [
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "Relative Energy Deficiency in Sport (REDs) was first introduced in 2014 by the International Olympic Committee's expert writing panel, identifying a syndrome of deleterious health and performance outcomes experienced by female and male athletes exposed to low energy availability (LEA; inadequate energy intake in relation to exercise energy expenditure).",
+       "level": "abstract"
+      },
+      {
+       "source": "mountjoy2023",
+       "quote": "This Physiological Model is designed to demonstrate the complexity of either problematic or adaptable LEA exposure, coupled with individual moderating factors, leading to changes in health and performance outcomes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lea-threshold",
+     "text": "In regularly menstruating sedentary women, LH pulsatility was unaffected at 30 kcal (125 kJ) per kg lean body mass per day but disrupted below it.",
+     "grade": "weak",
+     "sources": [
+      "loucks2003"
+     ],
+     "evidence": [
+      {
+       "source": "loucks2003",
+       "quote": "LH pulsatility was unaffected by an energy availability of 30 kcal/kg LBM.d (P > 0.3), but below this threshold LH pulse frequency decreased, whereas LH pulse amplitude increased (all P < 0.04).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bcr-ea-example",
+   "title": "Working out energy availability",
+   "problem": "A triathlete eats 11,000 kJ a day. Her training uses 3,500 kJ a day. A skinfold-based estimate puts her fat-free mass at 55 kg. What is her energy availability, and how does it compare with 125 kJ (30 kcal) per kg FFM per day?",
+   "steps": [
+    "Energy left after training: 11,000 − 3,500 = 7,500 kJ.",
+    "Per kg of fat-free mass: 7,500 ÷ 55 ≈ 136 kJ·kg⁻¹ FFM·day⁻¹ (136 ÷ 4.184 ≈ 33 kcal).",
+    "That is just above 125 kJ (30 kcal). But each input is an estimate: food diaries under-report, and exercise energy and FFM both carry error, so treat a value near the line as 'close to low', not 'safe'."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcr-ea-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcr-adaptable"
+  },
+  {
+   "type": "concept",
+   "id": "bcr-costs",
+   "title": "What chronic low energy availability costs",
+   "text": "In 1,000 female athletes, those with signs of low energy availability were more likely to have menstrual problems, poor bone health, metabolic, blood, gut and psychological problems. They also more often reported a weaker training response, poorer coordination and concentration, and lower endurance performance [[c:ackerman-lea]].\n\nThat last list is the point for anyone chasing race weight: the deficit that makes you lighter can also make you slower and stop you adapting.\n\nMeasuring EA itself is hard and error-prone. In elite distance runners, current reproductive function (periods in women, [testosterone](g:testosterone) in men) was a more objective marker than food and training diaries [[c:heikura-markers]].",
+   "claims": [
+    {
+     "id": "ackerman-lea",
+     "text": "In 1,000 female athletes, low energy availability was associated with menstrual, bone, metabolic, haematological, psychological, cardiovascular and gut problems, and with decreased training response and endurance performance.",
+     "grade": "weak",
+     "sources": [
+      "ackerman2019",
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "ackerman2019",
+       "quote": "Athletes with low EA were more likely to be classified as having increased risk of menstrual dysfunction, poor bone health, metabolic issues, haematological detriments, psychological disorders, cardiovascular impairment and gastrointestinal dysfunction than those with adequate EA.",
+       "level": "abstract"
+      },
+      {
+       "source": "ackerman2019",
+       "quote": "Performance variables associated with low EA included decreased training response, impaired judgement, decreased coordination, decreased concentration, irritability, depression and decreased endurance performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heikura-markers",
+     "text": "In elite distance athletes, current reproductive function (questionnaires or blood hormones) was a more objective marker of adequate energy than estimating EA from food and training diaries.",
+     "grade": "weak",
+     "sources": [
+      "heikura2018"
+     ],
+     "evidence": [
+      {
+       "source": "heikura2018",
+       "quote": "Based on the cross-sectional analysis, current reproductive function (questionnaires/blood hormone concentrations) appears to provide a more objective and accurate marker of optimal energy for health than the more error-prone and time-consuming dietary and training estimation of EA.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcr-marker"
+  },
+  {
+   "type": "question",
+   "item": "bcr-ea-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "bcr-bone",
+   "title": "Bone pays first",
+   "text": "Sex hormones help keep bone strong, so when low energy turns them down, bone suffers. The older [female athlete triad](g:female-athlete-triad) linked low energy, missed periods and low bone density; REDs widened it to men.\n\nIn national to world-class distance runners, [bone stress injuries](g:bone-stress-injury) were about 4.5 times more common in women with [amenorrhoea](g:amenorrhoea) and in men with low testosterone [[c:heikura-bone]].\n\nRisks add up. In 259 active girls and young women followed forward, one risk factor (12 h or more of exercise a week, a [BMI](g:bmi) under 21, or a low BMD Z-score) brought bone stress injury rates of about 15–20%. Combinations brought 30–50% [[c:barrack-bsi]].",
+   "claims": [
+    {
+     "id": "heikura-bone",
+     "text": "In elite distance athletes, bone injuries were about 4.5-fold more prevalent in amenorrhoeic women and low-testosterone men than in others.",
+     "grade": "weak",
+     "sources": [
+      "heikura2018"
+     ],
+     "evidence": [
+      {
+       "source": "heikura2018",
+       "quote": "bone injuries were ∼4.5-fold more prevalent in amenorrheic (effect size = 0.85, large) and low testosterone (effect size = 0.52, moderate) groups compared with others.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "barrack-bsi",
+     "text": "In 259 exercising girls and young women followed prospectively, bone stress injury risk rose from about 15–20% with single triad risk factors to 30–50% with combined risk factors.",
+     "grade": "weak",
+     "sources": [
+      "barrack2014"
+     ],
+     "evidence": [
+      {
+       "source": "barrack2014",
+       "quote": "In the sample, which included female adolescents and young adults participating in competitive or recreational exercise activities, the risk of BSIs increased from approximately 15% to 20% for significant single risk factors to 30% to 50% for significant combined female athlete triad-related risk factor variables.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcr-bsi-risk"
+  },
+  {
+   "type": "concept",
+   "id": "bcr-cyclists",
+   "title": "Road cyclists: a double hit on bone",
+   "text": "Bone grows stronger with impact. Running gives it; cycling, sitting on a saddle for hours, doesn't. A systematic review found that adult road cyclists in regular training have low bone mineral density in key sites such as the lumbar spine, and that road cycling gives no clear bone benefit [[c:cycling-bmd]]. Mountain biking or mixing in other sports may reduce the effect.\n\nAdd race-weight thinking. One study followed 10 competitive cyclists (road and off-road, men and women), all with a BMD [Z-score](g:z-score) below 0. Nine had low energy availability in at least one part of the season. Seven showed [dietary restraint](g:dietary-restraint), and carbohydrate intake was below recommendations all year [[c:viner-lea]].\n\nA triathlete's running helps bone; a pure road cyclist needs to add impact on purpose.",
+   "claims": [
+    {
+     "id": "cycling-bmd",
+     "text": "Adult road cyclists in regular training have low bone mineral density at key sites such as the lumbar spine; road cycling does not appear to give a significant bone benefit.",
+     "grade": "moderate",
+     "sources": [
+      "olmedillas2012"
+     ],
+     "evidence": [
+      {
+       "source": "olmedillas2012",
+       "quote": "Despite some controversial results, it has been observed that adult road cyclists participating in regular training have low bone mineral density in key regions (for example, lumbar spine). Conversely, other types of cycling (such as mountain biking), or combination with other sports could reduce this unsafe effect.",
+       "level": "abstract"
+      },
+      {
+       "source": "olmedillas2012",
+       "quote": "From our comprehensive survey of the current available literature it can be concluded that road cycling does not appear to confer any significant osteogenic benefit.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "viner-lea",
+     "text": "In 10 competitive cyclists with lower than expected BMD, 90% had low energy availability in at least one training period, 70% were restrained eaters, and carbohydrate intake was below recommendations.",
+     "grade": "weak",
+     "sources": [
+      "viner2015"
+     ],
+     "evidence": [
+      {
+       "source": "viner2015",
+       "quote": "Ninety percent of cyclists had LEA during ≥ 1 training period, and 70% had LEA across the season. Seventy percent of cyclists were identified as restrained eaters who consciously restrict EI as a means of weight control.",
+       "level": "abstract"
+      },
+      {
+       "source": "viner2015",
+       "quote": "Low EI, and specifically low carbohydrate intake, appears to be the main contributor to chronic LEA in these cyclists.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcr-cyclist-bone"
+  },
+  {
+   "type": "question",
+   "item": "bcr-viner-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "bcr-backfire",
+   "title": "Why race-weight thinking backfires",
+   "text": "Put the module together. Mass costs runners and climbers, so lighter looks faster. But the gain assumes power, training and health stay the same, and a long energy deficit attacks all three: hormones turn down, training response weakens, bone weakens, and injuries and lost training weeks follow.\n\nMeasurement makes it worse. A scan or a scale can swing by more than the change you're chasing, so athletes chase noise.\n\nThe IOC 2023 statement therefore includes guidelines for safe body composition assessment, to help prevent REDs [[c:bc-assessment-safe]]. In practice: measure rarely and privately, report a sum of skinfolds rather than % fat, watch periods, testosterone, mood and injuries, and periodise.\n\nThe nutrition module (t4-red-s) covers REDs in depth: screening, treatment and return to sport.",
+   "claims": [
+    {
+     "id": "bc-assessment-safe",
+     "text": "The 2023 IOC REDs consensus outlines guidelines for safe and effective body composition assessment to help prevent REDs.",
+     "grade": "strong",
+     "sources": [
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "Guidelines for safe and effective body composition assessment to help prevent REDs are also outlined.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcr-backfire-case"
+  },
+  {
+   "type": "question",
+   "item": "bcr-warning-sign"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "EA = (energy intake − exercise energy) ÷ fat-free mass; in untrained women LH pulses were disrupted below about 125 kJ (30 kcal) per kg per day.",
+    "REDs (IOC 2023) affects women and men; short, mild deficits can be adaptable, long or deep ones are problematic.",
+    "Chronic low energy availability is linked to hormone, bone, metabolic and mental health problems and to weaker training response and endurance performance.",
+    "Bone stress injuries were about 4.5 times more common in amenorrhoeic women and low-testosterone men; risk factors add up.",
+    "Road cycling gives bone little load, and many cyclists under-eat: add impact, fuel the work, and periodise body composition instead of chasing a number."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bcr-ea-calc",
+   "concept": "bcr-lea",
+   "bloom": "apply",
+   "sources": [
+    "mountjoy2023",
+    "loucks2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg male cyclist with 62 kg of fat-free mass eats 13,000 kJ a day and his training uses 5,500 kJ a day. What is his energy availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 121 kJ·kg⁻¹ FFM·day⁻¹, just under 125",
+       "correct": true,
+       "why": "Right: (13,000 − 5,500) ÷ 62 = 7,500 ÷ 62 ≈ 121 kJ (about 29 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "About 107 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "This divides by body mass (70 kg); EA is per kg of fat-free mass."
+      },
+      {
+       "id": "c",
+       "text": "About 210 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "This forgets to subtract the training energy: 13,000 ÷ 62."
+      },
+      {
+       "id": "d",
+       "text": "About 7,500 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "7,500 kJ is what's left per day for the whole body; it still has to be divided by FFM."
+      }
+     ],
+     "solution": "EA = (13,000 − 5,500) ÷ 62 = 7,500 ÷ 62 ≈ 121 kJ·kg⁻¹ FFM·day⁻¹ (121 ÷ 4.184 ≈ 29 kcal), just below 125 kJ (30 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A 55 kg runner with 45 kg of fat-free mass eats 8,400 kJ a day; her running uses 2,100 kJ a day. Is her energy availability above or below 125 kJ (30 kcal) per kg FFM per day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Above: about 140 kJ·kg⁻¹ FFM·day⁻¹",
+       "correct": true,
+       "why": "Right: (8,400 − 2,100) ÷ 45 = 6,300 ÷ 45 = 140 kJ (about 33 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "Below: about 115 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "This divides by body mass (55 kg); EA uses fat-free mass, which makes the value higher."
+      },
+      {
+       "id": "c",
+       "text": "Above: about 187 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "Right side of the line, wrong working: this forgets to subtract the running energy (8,400 ÷ 45)."
+      },
+      {
+       "id": "d",
+       "text": "Below: about 33 kJ·kg⁻¹ FFM·day⁻¹",
+       "why": "33 is the value in kcal, not kJ; 33 kcal is above the 30 kcal line."
+      }
+     ],
+     "solution": "EA = (8,400 − 2,100) ÷ 45 = 140 kJ·kg⁻¹ FFM·day⁻¹ = 140 ÷ 4.184 ≈ 33 kcal: above 125 kJ (30 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "bcr-adaptable",
+   "concept": "bcr-lea",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mountjoy2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist under-eats for 4 days during a hilly training camp, then eats normally again. How does the 2023 IOC model see that kind of exposure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Possibly adaptable: short, mild LEA need not cause harm",
+       "correct": true,
+       "why": "Right: the 2023 model separates adaptable from problematic LEA; how long and how deep the deficit is, and the individual, decide the outcome."
+      },
+      {
+       "id": "b",
+       "text": "REDs: any day of low energy availability is REDs",
+       "why": "REDs is a syndrome of health and performance harm; a short deficit is an exposure, not a diagnosis."
+      },
+      {
+       "id": "c",
+       "text": "No risk at all, because he is a man",
+       "why": "REDs affects men too; the IOC statement covers female and male athletes."
+      },
+      {
+       "id": "d",
+       "text": "Harmless whatever its length, since it happens in training",
+       "why": "Length matters: repeated or long deficits are what turn adaptable LEA into problematic LEA."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-marker",
+   "concept": "bcr-costs",
+   "bloom": "analyse",
+   "sources": [
+    "heikura2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants to check if her distance runners are eating enough for their training. Based on the study of elite distance athletes, which check is most reliable?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Current reproductive function: periods, or testosterone in men",
+       "correct": true,
+       "why": "Right: reproductive function was a more objective marker of adequate energy than EA estimated from diaries."
+      },
+      {
+       "id": "b",
+       "text": "A 7-day food and training diary to calculate EA",
+       "why": "Diaries are error-prone: food is under-reported and exercise energy is estimated; the study found them less reliable."
+      },
+      {
+       "id": "c",
+       "text": "Weekly body-mass checks: stable mass means enough energy",
+       "why": "The body can hold mass steady by turning down energy use (hormones, metabolism), so stable mass doesn't rule out LEA."
+      },
+      {
+       "id": "d",
+       "text": "Their race results: fast times mean enough energy",
+       "why": "Performance can hold for a while, or even improve as mass drops, before health costs appear."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-bsi-risk",
+   "concept": "bcr-bone",
+   "bloom": "analyse",
+   "sources": [
+    "barrack2014",
+    "heikura2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Three runners each train 14 h a week. A has regular periods and normal bone density. B has amenorrhoea. C has amenorrhoea, a low BMI and a BMD Z-score of −1.3. Rank their bone stress injury risk.",
+     "options": [
+      {
+       "id": "a",
+       "text": "C highest, then B, then A",
+       "correct": true,
+       "why": "Right: risk factors add up. Amenorrhoea went with about 4.5 times more bone injuries in elite runners, and combined triad factors brought 30–50% injury rates against about 15–20% for single ones."
+      },
+      {
+       "id": "b",
+       "text": "All the same: they train the same hours",
+       "why": "Training hours are one risk factor, but menstrual status, BMI and bone density add to it."
+      },
+      {
+       "id": "c",
+       "text": "B highest, then C, then A",
+       "why": "C has amenorrhoea plus two more risk factors, so her risk is higher than B's, not lower."
+      },
+      {
+       "id": "d",
+       "text": "A highest, because she has the most bone to load",
+       "why": "Normal bone density and periods protect; they don't add risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-cyclist-bone",
+   "concept": "bcr-cyclists",
+   "bloom": "apply",
+   "sources": [
+    "olmedillas2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 45-year-old road cyclist rides 12 h a week and does no other sport. A DXA scan shows low lumbar spine BMD. Which change best targets the cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Add impact or weight-bearing work and make sure he eats enough",
+       "correct": true,
+       "why": "Right: road cycling loads bone very little; impact (running, jumping, strength work) or other sports, plus enough energy, target the problem."
+      },
+      {
+       "id": "b",
+       "text": "Ride more hours, since exercise always strengthens bone",
+       "why": "Not on a road bike: the review found no clear bone benefit from road cycling, and more hours can deepen an energy deficit."
+      },
+      {
+       "id": "c",
+       "text": "Lose weight so his bones carry less load",
+       "why": "Backwards: bone needs load to stay strong, and a deficit lowers the hormones that protect it."
+      },
+      {
+       "id": "d",
+       "text": "Switch to a lighter bike to cut stress on the spine",
+       "why": "Bike mass is not the issue; the problem is too little impact loading, not too much."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-viner-appraisal",
+   "concept": "bcr-cyclists",
+   "bloom": "evaluate",
+   "sources": [
+    "viner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post says: \"A study found 90% of cyclists have low energy availability.\" What is the biggest problem with that summary?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The 10 cyclists were chosen for low bone density, so they aren't typical",
+       "correct": true,
+       "why": "Right: they were selected for low BMD, a group likely to be short of energy; the result can't be applied to all cyclists. Ten people also gives a wide margin of error."
+      },
+      {
+       "id": "b",
+       "text": "Energy availability can't be measured in cyclists",
+       "why": "It can be estimated, with error (diaries under-report); the main problem here is who was studied."
+      },
+      {
+       "id": "c",
+       "text": "Men and women were mixed, which cancels the effect",
+       "why": "Mixing sexes doesn't cancel an effect, and the study found no EA difference between them."
+      },
+      {
+       "id": "d",
+       "text": "It measured the whole season rather than race day",
+       "why": "Measuring across a season is a strength: it shows deficits were common in every period, not a one-off."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-backfire-case",
+   "concept": "bcr-backfire",
+   "bloom": "evaluate",
+   "sources": [
+    "mountjoy2023",
+    "ackerman2019",
+    "stellingwerff2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete drops 4 kg in 6 weeks to reach a \"race weight\". Her 5 km run is no faster, her bike power is down 5% and she has had two colds. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The deficit cost power, training response and health, outweighing the lower mass",
+       "correct": true,
+       "why": "Right: lower mass only helps if power holds. Low energy availability is linked to weaker training response, lower endurance performance and health problems."
+      },
+      {
+       "id": "b",
+       "text": "She lost muscle only, so the lighter mass did nothing",
+       "why": "Some lean loss is likely, but lost mass of any kind lowers the cost of carrying it; the problem is the power and health cost of the deficit."
+      },
+      {
+       "id": "c",
+       "text": "4 kg is too little to matter, so she should cut more",
+       "why": "4 kg is about 6% for many triathletes: enough to matter if power held. Cutting deeper would deepen the deficit that caused the problem."
+      },
+      {
+       "id": "d",
+       "text": "The colds were bad luck, unrelated to the diet",
+       "why": "Possible, but low energy availability is linked to health problems; together with the power drop, the deficit is the likelier common cause."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcr-warning-sign",
+   "concept": "bcr-backfire",
+   "bloom": "apply",
+   "sources": [
+    "mountjoy2023",
+    "heikura2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 24-year-old runner hasn't had a period for 4 months since raising her mileage and \"cleaning up\" her diet. She feels fine and is racing well. What is the sensible next step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "See a sports doctor: amenorrhoea is a REDs warning sign, even if she feels fine",
+       "correct": true,
+       "why": "Right: amenorrhoea signals that the body is short of energy and is linked to bone stress injuries; it needs assessment, not waiting."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: missed periods are normal in hard training",
+       "why": "Common is not normal. Amenorrhoea in athletes usually signals low energy availability and puts bone at risk."
+      },
+      {
+       "id": "c",
+       "text": "Get a BIA reading to check her body fat",
+       "why": "Body fat isn't the question, and BIA is unreliable in athletes; the warning sign is the hormone change."
+      },
+      {
+       "id": "d",
+       "text": "Cut mileage but keep the diet, since racing is going well",
+       "why": "Less training may help, but the core issue is energy: intake also needs checking, and the cause needs assessment."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

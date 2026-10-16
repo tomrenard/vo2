@@ -1,0 +1,968 @@
+{
+ "id": "eco-define",
+ "module": "t2-economy",
+ "title": "Economy and efficiency: two different questions",
+ "goal": "Tell economy (what a speed or power costs) from efficiency (work out ÷ energy in), choose units that compare fairly, and explain why energy cost beats oxygen cost and why both fail above the threshold.",
+ "requires": [
+  "cp-running"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "economy",
+    "energy-cost",
+    "allometric-scaling"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "eco-two",
+   "title": "Two questions, two words",
+   "text": "[Economy](g:economy) asks: **what does this speed or power cost?** It counts only the input, the oxygen or energy used once [VO₂](g:vo2) is steady, so any sport can measure it [[c:eco-def]]. [Running economy](g:running-economy) is the best-known case.\n\nEfficiency asks: **how much of that energy became work?** It needs the mechanical output too. On a bike the power meter gives it, so cyclists report [gross efficiency](g:gross-efficiency), as in the calorimetry module. In running, the work goes into lifting and swinging body and limbs, with tendons storing and returning energy, and no one can measure that well yet [[c:run-work]]. So runners talk economy, cyclists efficiency.\n\nOne ride can give both: 24.5% GE and 85 W per L·min⁻¹ of O₂ in world-class pros [[c:lucia-ce]].",
+   "claims": [
+    {
+     "id": "eco-def",
+     "text": "Economy is the steady-state oxygen (or energy) demand of moving at a given submaximal speed.",
+     "grade": "strong",
+     "sources": [
+      "saunders2004a",
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "saunders2004a",
+       "quote": "Running economy (RE) is typically defined as the energy demand for a given velocity of submaximal running, and is determined by measuring the steady-state consumption of oxygen (VO2) and the respiratory exchange ratio.",
+       "level": "abstract"
+      },
+      {
+       "source": "barnes2015",
+       "quote": "reflects the energy demand of running at a constant submaximal speed",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "run-work",
+     "text": "Running does little work against the environment: muscles and tendons lift and accelerate the body and limbs, and the storage and return of elastic energy in tendons can't yet be quantified, so running efficiency is hard to measure.",
+     "grade": "moderate",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "Running involves little work against the environment; work is done by muscles and tendons to lift and accelerate the body and limbs.",
+       "level": "full-text"
+      },
+      {
+       "source": "barnes2015",
+       "quote": "nor has there been a method devised to differentiate true eccentric contractions from tendon stretching or to quantify the storage and release of elastic energy",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lucia-ce",
+     "text": "In 11 world-class professional cyclists riding at about 385 W, cycling economy averaged 85.2 W per L·min⁻¹ of O₂ and gross efficiency 24.5%.",
+     "grade": "weak",
+     "sources": [
+      "lucia2002"
+     ],
+     "evidence": [
+      {
+       "source": "lucia2002",
+       "quote": "CE and GE averaged 85.2 +/- 2.3 W x L(-1) x min(-1) and 24.5 +/- 0.7%, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eco-kind",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eco-run-no-ge"
+  },
+  {
+   "type": "concept",
+   "id": "eco-units",
+   "title": "Per minute, per km, per kg",
+   "text": "Economy can be written several ways, and the choice changes the verdict.\n\n- **mL·kg⁻¹·min⁻¹ at a set speed**: depends on the test speed, so runners tested at different speeds can't be compared directly.\n- **mL·kg⁻¹·km⁻¹**, oxygen per km: takes speed out, because below threshold the cost per km hardly changes with speed. Divide VO₂ by speed in km per minute.\n- **Per kg, or per kg^0.75?** VO₂ doesn't rise one-to-one with body mass, so a classic review recommends [allometric scaling](g:allometric-scaling) with mass^0.75 [[c:scale-075]]. In 172 trained runners, plain per-kg scaling fitted slightly better [[c:scale-linear]].\n\nWhichever you pick, keep it the same from test to test.",
+   "claims": [
+    {
+     "id": "scale-075",
+     "text": "Because submaximal VO₂ does not rise in proportion to body mass, expressing running economy per kg^0.75 has been recommended.",
+     "grade": "disputed",
+     "sources": [
+      "saunders2004a"
+     ],
+     "evidence": [
+      {
+       "source": "saunders2004a",
+       "quote": "As VO2 during submaximal exercise does not, in general, increase linearly with BM, reporting RE with respect to the 0.75 power of BM has been recommended.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scale-linear",
+     "text": "In 172 highly trained runners, plain per-kg (linear ratio) scaling removed the influence of body mass slightly better than a power function.",
+     "grade": "weak",
+     "sources": [
+      "shaw2014"
+     ],
+     "evidence": [
+      {
+       "source": "shaw2014",
+       "quote": "Comparisons between models revealed linear ratio scaling to be a more suitable method than power function scaling for removing the influence of body mass",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Should running economy be divided by body mass, or by body mass to the power 0.75?",
+    "sides": [
+     {
+      "position": "By mass^0.75: oxygen use rises less than in proportion to mass, so plain per-kg values flatter heavier runners.",
+      "sources": [
+       "saunders2004a"
+      ]
+     },
+     {
+      "position": "By mass: in a large sample of trained runners, plain per-kg scaling fitted as well or better.",
+      "sources": [
+       "shaw2014"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "eco-units-example",
+   "title": "Two runners, two speeds",
+   "problem": "Runner A uses 45.0 mL·kg⁻¹·min⁻¹ at 14 km·h⁻¹. Runner B uses 52.0 mL·kg⁻¹·min⁻¹ at 16 km·h⁻¹. Both speeds are below their thresholds. Who is more economical?",
+   "steps": [
+    "Per minute, B uses more oxygen, but B is also running faster: the two numbers can't be compared as they stand.",
+    "Turn speed into km per minute: 14 ÷ 60 = 0.233 km·min⁻¹ and 16 ÷ 60 = 0.267 km·min⁻¹.",
+    "Oxygen per km = VO₂ ÷ km per minute. A: 45.0 ÷ 0.233 = 193 mL·kg⁻¹·km⁻¹. B: 52.0 ÷ 0.267 = 195 mL·kg⁻¹·km⁻¹.",
+    "Shortcut: VO₂ × 60 ÷ speed in km·h⁻¹. A is slightly more economical (about 1%), the opposite of the first impression."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eco-perkm-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eco-scale"
+  },
+  {
+   "type": "concept",
+   "id": "eco-energy",
+   "title": "Count kilojoules, not just litres",
+   "text": "A litre of O₂ releases about 19.6 kJ when burning fat and 21.1 kJ when burning carbohydrate. So the same oxygen can mean different energy, and the [RER](g:rer) tells you which.\n\nIn 172 trained runners, oxygen cost per km stayed flat across four speeds below threshold, while energy cost and RER rose step by step [[c:ec-rises]]. The authors concluded that [energy cost](g:energy-cost), in kJ (or kcal) per kg per km, should be the main measure [[c:ec-best]].\n\nThis matters whenever the fuel mix changes. Elite race walkers on a ketogenic high-fat diet burned far more fat, and their oxygen cost at race pace went up [[c:lchf-o2]]. Part of that 'worse economy' is simply fat needing more O₂ per kJ.",
+   "claims": [
+    {
+     "id": "ec-rises",
+     "text": "Below threshold, the oxygen cost of running per km does not change with speed, while energy cost per km and RER rise with speed.",
+     "grade": "moderate",
+     "sources": [
+      "shaw2014",
+      "fletcher2009"
+     ],
+     "evidence": [
+      {
+       "source": "shaw2014",
+       "quote": "There were stepwise increases in EC and RER with increments in running speed (both, P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "shaw2014",
+       "quote": "However, no differences were observed for OC across the four monitored speeds (P = 0.54).",
+       "level": "abstract"
+      },
+      {
+       "source": "fletcher2009",
+       "quote": "There was no difference in oxygen cost with respect to speed (P = 0.657)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-best",
+     "text": "Energy cost, which accounts for the fuel being used, should be the primary measure of running economy.",
+     "grade": "weak",
+     "sources": [
+      "shaw2014",
+      "fletcher2009"
+     ],
+     "evidence": [
+      {
+       "source": "shaw2014",
+       "quote": "Therefore, EC should be used as the primary measure of running economy, and for runners, an appropriate scaling with body mass is recommended.",
+       "level": "abstract"
+      },
+      {
+       "source": "fletcher2009",
+       "quote": "It was concluded that expression of running economy in terms of caloric unit cost is more sensitive to changes in speed and is a more valuable expression of running economy than oxygen uptake, even when normalized per distance traveled.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lchf-o2",
+     "text": "In elite race walkers, adapting to a ketogenic low-carbohydrate, high-fat diet raised fat oxidation and the oxygen cost of walking at race speeds.",
+     "grade": "weak",
+     "sources": [
+      "burke2017b"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017b",
+       "quote": "The increased rates of fat oxidation result in reduced economy (increased oxygen demand for a given speed) at velocities that translate to real-life race performance in elite race walkers.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eco-fuel-shift"
+  },
+  {
+   "type": "question",
+   "item": "eco-unit-choice",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "eco-threshold",
+   "title": "Above the threshold, the numbers stop working",
+   "text": "Economy is measured at a [steady state](g:steady-state): VO₂ flat after a few minutes, blood [lactate](g:lactate) near baseline and RER below 1. That is why it is tested below the [lactate threshold](g:lactate-threshold) [[c:ss-below]].\n\nAbove it, two things break:\n\n- The [VO₂ slow component](g:vo2-slow-component) keeps oxygen rising at a constant speed, so the reading depends on the minute you take it [[c:ss-below]].\n- Part of the energy now comes from [glycolysis](g:glycolysis) without oxygen, which VO₂ doesn't see: oxygen uptake no longer covers the whole cost [[c:aer-anaer]].\n\nAnd with RER above 1, extra CO₂ from buffering acid makes the fuel and energy sums wrong. So economy and efficiency are below-threshold measures.",
+   "claims": [
+    {
+     "id": "ss-below",
+     "text": "Running economy is measured at a steady state (stable VO₂, lactate near baseline, RER below 1) at speeds below the ventilatory or lactate threshold, because above it a slow component of VO₂ appears.",
+     "grade": "strong",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "if the speed is below the ventilatory/lactate threshold",
+       "level": "full-text"
+      },
+      {
+       "source": "barnes2015",
+       "quote": "since above this intensity, a slow component of VO",
+       "level": "full-text"
+      },
+      {
+       "source": "barnes2015",
+       "quote": "the steady-state condition is verified by considering other physiological parameters such as verifying that blood lactate concentration are similar to baseline levels",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "aer-anaer",
+     "text": "The energy cost of running is the sum of aerobic and anaerobic metabolism, so oxygen uptake alone does not necessarily account for it.",
+     "grade": "strong",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "The energy cost of running reflects the sum of both aerobic and anaerobic metabolism",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eco-above-lt",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eco-rer-check"
+  },
+  {
+   "type": "concept",
+   "id": "eco-matter",
+   "title": "Why economy matters",
+   "text": "Sustained speed = the VO₂ you can hold ÷ what each km costs. So two runners with the same [VO₂max](g:vo2max) can race very differently.\n\nAmong elite runners with similar VO₂max, running economy predicts performance better than VO₂max does [[c:re-predicts]]. In cycling, 11 world-class pros showed an inverse link: those with the lowest VO₂max had the highest GE (r = −0.64 to −0.72) [[c:lucia-inverse]]. A high efficiency seemed to make up for a smaller engine.\n\nRead that second finding with care. All 11 riders were already world-class: anyone with both a low VO₂max and a low efficiency would never have reached that level, so choosing the sample this way can create an inverse link by itself (a form of [bias](g:bias)).",
+   "claims": [
+    {
+     "id": "re-predicts",
+     "text": "In elite runners with similar VO₂max, running economy predicts distance-running performance better than VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "saunders2004a"
+     ],
+     "evidence": [
+      {
+       "source": "saunders2004a",
+       "quote": "There is a strong association between RE and distance running performance, with RE being a better predictor of performance than maximal oxygen uptake (VO2max) in elite runners who have a similar VO2max).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lucia-inverse",
+     "text": "In 11 world-class professional cyclists, VO₂max was inversely correlated with cycling economy and gross efficiency.",
+     "grade": "weak",
+     "sources": [
+      "lucia2002"
+     ],
+     "evidence": [
+      {
+       "source": "lucia2002",
+       "quote": "An inverse, significant correlation was found between 1) VO2max (mL x kg(-0.32) x min(-1)) and both CE (r = -0.71; P = 0.01) and GE (-0.72; P = 0.01), and 2) VO2max (mL x kg(-1) x min(-1)) and both CE (r = -0.65; P = 0.03) and GE (-0.64; P = 0.03).",
+       "level": "abstract"
+      },
+      {
+       "source": "lucia2002",
+       "quote": "A high CE/GE seems to compensate for a relatively low VO2max in professional cyclists.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "eco-speed-example",
+   "title": "Speed from VO₂ and cost",
+   "problem": "Two marathoners can each hold 63 mL·kg⁻¹·min⁻¹ for the race. Runner A's oxygen cost is 190 mL·kg⁻¹·km⁻¹, runner B's is 210. How fast can each run?",
+   "steps": [
+    "Speed in km per minute = VO₂ ÷ cost per km. A: 63 ÷ 190 = 0.332 km·min⁻¹; × 60 = 19.9 km·h⁻¹.",
+    "B: 63 ÷ 210 = 0.300 km·min⁻¹; × 60 = 18.0 km·h⁻¹.",
+    "A is 10.5% faster (19.9 ÷ 18.0), the same as the ratio of their costs (210 ÷ 190 = 1.105).",
+    "Over 42.2 km: A takes 42.2 ÷ 19.9 = 2.12 h (2:07), B takes 42.2 ÷ 18.0 = 2.34 h (2:21), with the same VO₂."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eco-speed-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eco-predict"
+  },
+  {
+   "type": "question",
+   "item": "eco-lucia-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Economy = what a speed or power costs (O₂ or energy, at steady state). Efficiency = work out ÷ energy in; it needs mechanical power, so it is a cycling measure.",
+    "Compare runners per km, not per minute at different speeds: oxygen per km = VO₂ × 60 ÷ speed in km·h⁻¹. Keep the mass scaling (per kg or per kg^0.75) the same.",
+    "Energy cost (kJ per kg per km) allows for fuel: oxygen cost stays flat with speed while energy cost rises, and a high-fat diet raises O₂ cost partly because fat needs more O₂ per kJ.",
+    "Economy only works below threshold: above it, the VO₂ slow component and unmeasured anaerobic energy make gas data understate the cost.",
+    "Speed = sustainable VO₂ ÷ cost: among runners with similar VO₂max, economy separates them. Correlations from elite-only samples can be created by who gets selected."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "eco-kind",
+   "concept": "eco-two",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "saunders2004a",
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab report gives a runner's 'oxygen cost: 205 mL·kg⁻¹·km⁻¹ at 14 km·h⁻¹'. What does this number describe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her running economy",
+       "correct": true,
+       "why": "Right: it is the oxygen used per kg per km at a set submaximal speed, an input-only measure of cost."
+      },
+      {
+       "id": "b",
+       "text": "Her gross efficiency",
+       "why": "Efficiency needs the mechanical work done as well; the report gives only the oxygen used."
+      },
+      {
+       "id": "c",
+       "text": "Her delta efficiency",
+       "why": "Delta efficiency needs the change in work and energy between two workloads; this is a single cost figure."
+      },
+      {
+       "id": "d",
+       "text": "Her VO₂max",
+       "why": "VO₂max is the highest oxygen uptake at maximal effort, not the cost of a submaximal speed."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's swim test reports 'energy cost: 0.75 kJ per metre at 1.2 m·s⁻¹'. What does this number describe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His swimming economy",
+       "correct": true,
+       "why": "Right: energy used per distance at a set speed is an economy (cost) measure."
+      },
+      {
+       "id": "b",
+       "text": "His gross efficiency",
+       "why": "Efficiency would be mechanical work ÷ energy; this figure gives only the energy used."
+      },
+      {
+       "id": "c",
+       "text": "His propelling power",
+       "why": "Power is energy per second; this figure is energy per metre, and it says nothing about how much work was useful."
+      },
+      {
+       "id": "d",
+       "text": "His VO₂max in the water",
+       "why": "VO₂max is a maximal oxygen uptake, not the cost of a set submaximal speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-run-no-ge",
+   "concept": "eco-two",
+   "bloom": "understand",
+   "sources": [
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a bike test and a run test in the same lab. The bike report gives gross efficiency; the run report gives only economy. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The bike's mechanical power is measured; running work can't be measured well",
+       "correct": true,
+       "why": "Right: efficiency needs work out. The ergometer measures it, but in running the work of lifting and swinging limbs and of tendon springs can't be quantified well."
+      },
+      {
+       "id": "b",
+       "text": "Running has no steady state, so no measure of efficiency exists",
+       "why": "Running reaches a steady state below threshold; that's how economy is measured. The problem is the work, not the steady state."
+      },
+      {
+       "id": "c",
+       "text": "Running efficiency is always 100%, so it isn't worth reporting",
+       "why": "No muscle work is 100% efficient: most energy becomes heat in any sport."
+      },
+      {
+       "id": "d",
+       "text": "Efficiency only applies to the muscles used in cycling",
+       "why": "Efficiency applies to any muscle work; it just needs the work to be measured."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-perkm-calc",
+   "concept": "eco-units",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "shaw2014",
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete runs at 12 km·h⁻¹ with a steady VO₂ of 40.0 mL·kg⁻¹·min⁻¹. What is her oxygen cost per km?",
+     "options": [
+      {
+       "id": "a",
+       "text": "200 mL·kg⁻¹·km⁻¹",
+       "correct": true,
+       "why": "Right: 40.0 × 60 ÷ 12 = 200."
+      },
+      {
+       "id": "b",
+       "text": "480 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies VO₂ by speed (40 × 12). Cost per km = VO₂ ÷ km per minute."
+      },
+      {
+       "id": "c",
+       "text": "3.3 mL·kg⁻¹·km⁻¹",
+       "why": "This divides by the speed in km·h⁻¹ without turning it into km per minute (40 ÷ 12)."
+      },
+      {
+       "id": "d",
+       "text": "2,400 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies by 60 but forgets to divide by the speed: that's oxygen per hour, not per km."
+      }
+     ],
+     "solution": "Cost per km = VO₂ × 60 ÷ speed = 40.0 × 60 ÷ 12 = 200 mL·kg⁻¹·km⁻¹ (12 km·h⁻¹ is 0.2 km per minute; 40.0 ÷ 0.2 = 200)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner holds a steady VO₂ of 56.0 mL·kg⁻¹·min⁻¹ at 16 km·h⁻¹. What is his oxygen cost per km?",
+     "options": [
+      {
+       "id": "a",
+       "text": "210 mL·kg⁻¹·km⁻¹",
+       "correct": true,
+       "why": "Right: 56.0 × 60 ÷ 16 = 210."
+      },
+      {
+       "id": "b",
+       "text": "896 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies VO₂ by speed (56 × 16). Cost per km = VO₂ ÷ km per minute."
+      },
+      {
+       "id": "c",
+       "text": "3.5 mL·kg⁻¹·km⁻¹",
+       "why": "This divides by the speed in km·h⁻¹ without turning it into km per minute (56 ÷ 16)."
+      },
+      {
+       "id": "d",
+       "text": "3,360 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies by 60 but forgets to divide by the speed: that's oxygen per hour, not per km."
+      }
+     ],
+     "solution": "Cost per km = VO₂ × 60 ÷ speed = 56.0 × 60 ÷ 16 = 210 mL·kg⁻¹·km⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist trying running holds a steady VO₂ of 61.2 mL·kg⁻¹·min⁻¹ at 18 km·h⁻¹. What is his oxygen cost per km?",
+     "options": [
+      {
+       "id": "a",
+       "text": "204 mL·kg⁻¹·km⁻¹",
+       "correct": true,
+       "why": "Right: 61.2 × 60 ÷ 18 = 204."
+      },
+      {
+       "id": "b",
+       "text": "1,102 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies VO₂ by speed (61.2 × 18). Cost per km = VO₂ ÷ km per minute."
+      },
+      {
+       "id": "c",
+       "text": "3.4 mL·kg⁻¹·km⁻¹",
+       "why": "This divides by the speed in km·h⁻¹ without turning it into km per minute (61.2 ÷ 18)."
+      },
+      {
+       "id": "d",
+       "text": "3,672 mL·kg⁻¹·km⁻¹",
+       "why": "This multiplies by 60 but forgets to divide by the speed: that's oxygen per hour, not per km."
+      }
+     ],
+     "solution": "Cost per km = VO₂ × 60 ÷ speed = 61.2 × 60 ÷ 18 = 204 mL·kg⁻¹·km⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "eco-scale",
+   "concept": "eco-units",
+   "bloom": "analyse",
+   "sources": [
+    "saunders2004a",
+    "shaw2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 50 kg and a 75 kg runner compare economy in mL·kg⁻¹·km⁻¹. If VO₂ rises less than in proportion to body mass, how does plain per-kg scaling bias the comparison?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It makes the lighter runner look less economical than she is",
+       "correct": true,
+       "why": "Right: if VO₂ grows less than mass, dividing by kg leaves the lighter runner with a higher value per kg, which is the case for using mass^0.75."
+      },
+      {
+       "id": "b",
+       "text": "It makes the lighter runner look more economical than she is",
+       "why": "The bias runs the other way: dividing by mass flatters the heavier runner when VO₂ grows less than mass."
+      },
+      {
+       "id": "c",
+       "text": "No bias: dividing by kg removes every effect of mass",
+       "why": "Only if VO₂ grows exactly in proportion to mass. That assumption is what the per-kg versus mass^0.75 debate is about."
+      },
+      {
+       "id": "d",
+       "text": "It biases the result only above the lactate threshold",
+       "why": "Scaling for mass is a separate issue from the threshold; the bias, if any, applies at every speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-fuel-shift",
+   "concept": "eco-energy",
+   "bloom": "analyse",
+   "sources": [
+    "shaw2014",
+    "burke2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 3 weeks on a high-fat diet, a runner's RER at 15 km·h⁻¹ falls from 0.92 to 0.82, and her oxygen cost per km rises by 2.5%. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The extra O₂ may just reflect fat needing more oxygen per kJ: check energy cost",
+       "correct": true,
+       "why": "Right: at RER 0.82 each litre of O₂ yields about 2.5% less energy than at 0.92, so her energy cost per km may not have changed at all."
+      },
+      {
+       "id": "b",
+       "text": "Her running mechanics have clearly got worse",
+       "why": "A change in fuel alone can raise O₂ cost with no change in mechanics. You need the energy cost to tell."
+      },
+      {
+       "id": "c",
+       "text": "Her economy improved, because fat is the larger fuel store",
+       "why": "A bigger fuel store doesn't lower the cost per km; her oxygen cost actually rose."
+      },
+      {
+       "id": "d",
+       "text": "Oxygen cost and energy cost always change by the same %",
+       "why": "They differ when RER changes: the energy per litre of O₂ depends on the fuel mix."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-unit-choice",
+   "concept": "eco-energy",
+   "bloom": "apply",
+   "sources": [
+    "shaw2014",
+    "hoogkamer2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A shoe study tests runners at 14, 16 and 18 km·h⁻¹. Which measure gives the fairest comparison of economy across shoes and speeds?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Energy cost per kg, from VO₂ and RER",
+       "correct": true,
+       "why": "Right: it accounts for both body mass and the fuel being burned, which changes with speed."
+      },
+      {
+       "id": "b",
+       "text": "VO₂ in L·min⁻¹",
+       "why": "This ignores body mass and fuel, and it rises with speed, so the speeds can't be compared."
+      },
+      {
+       "id": "c",
+       "text": "VO₂ in mL·kg⁻¹·min⁻¹",
+       "why": "Per-minute VO₂ rises with speed and ignores the fuel mix, so different speeds can't be compared."
+      },
+      {
+       "id": "d",
+       "text": "Heart rate at each speed",
+       "why": "Heart rate drifts with heat, hydration and fatigue; it is not a measure of energy cost."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cycling lab compares riders' efficiency at 250 W after two weeks on a high-carbohydrate diet and two weeks on a high-fat diet. Which measure should they use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gross efficiency worked out from VO₂ and RER",
+       "correct": true,
+       "why": "Right: the energy per litre of O₂ depends on fuel, so the energy (not just the oxygen) must be computed from VO₂ and RER."
+      },
+      {
+       "id": "b",
+       "text": "VO₂ at 250 W, without the RER",
+       "why": "On the high-fat diet VO₂ rises partly because fat needs more O₂ per kJ; oxygen alone would mix up fuel and efficiency."
+      },
+      {
+       "id": "c",
+       "text": "Average heart rate at 250 W",
+       "why": "Heart rate isn't an energy measure and shifts with many things besides efficiency."
+      },
+      {
+       "id": "d",
+       "text": "Power output at 4 mmol·L⁻¹ lactate",
+       "why": "That is a threshold marker, not a measure of efficiency at 250 W."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-above-lt",
+   "concept": "eco-threshold",
+   "bloom": "evaluate",
+   "sources": [
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach measures a runner's economy at 19 km·h⁻¹, above her lactate threshold, using VO₂ from minutes 3–4. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO₂ is still rising and misses the anaerobic share, so the cost is underestimated",
+       "correct": true,
+       "why": "Right: above threshold there is no steady state, and part of the energy comes from glycolysis that VO₂ doesn't capture."
+      },
+      {
+       "id": "b",
+       "text": "None: oxygen cost per km is the same at all speeds",
+       "why": "That holds only below threshold, where a steady state exists."
+      },
+      {
+       "id": "c",
+       "text": "VO₂ overestimates the cost, because lactate is burned as fuel",
+       "why": "Lactate is a fuel, but the problem is the opposite: VO₂ misses energy, it doesn't add any."
+      },
+      {
+       "id": "d",
+       "text": "None, as long as she is a well-trained runner",
+       "why": "Training moves the threshold, but above it the same problems apply to anyone."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's gross efficiency is measured at 320 W, above his threshold, from VO₂ in minutes 3–4. How will that GE be misleading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It will read too high, because rising VO₂ and anaerobic energy are missed",
+       "correct": true,
+       "why": "Right: GE = work ÷ energy. If the energy is underestimated, GE comes out too high."
+      },
+      {
+       "id": "b",
+       "text": "It will read too low, because lactate wastes energy",
+       "why": "Unmeasured energy makes the denominator too small, so GE reads high, not low."
+      },
+      {
+       "id": "c",
+       "text": "It will be exact, because the power is measured directly",
+       "why": "The power is exact, but the energy side (from VO₂) is not above threshold."
+      },
+      {
+       "id": "d",
+       "text": "It will only be wrong if his cadence changes",
+       "why": "Cadence changes GE, but above threshold the gas data are wrong even at a fixed cadence."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-rer-check",
+   "concept": "eco-threshold",
+   "bloom": "analyse",
+   "sources": [
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a triathlete's run test, the 16 km·h⁻¹ stage shows RER 1.04 and blood lactate 5.8 mmol·L⁻¹. What should you do with that stage's economy value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Leave it out: this stage is not a below-threshold steady state",
+       "correct": true,
+       "why": "Right: RER above 1 and raised lactate show buffering and anaerobic energy, so the gas data don't give the true cost."
+      },
+      {
+       "id": "b",
+       "text": "Use it, converting with 21.1 kJ per litre of O₂",
+       "why": "RER above 1 includes CO₂ from buffering, not just fuel, and the anaerobic energy is still missing."
+      },
+      {
+       "id": "c",
+       "text": "Use it: a high RER means carbohydrate, the most economical fuel",
+       "why": "Carbohydrate gives more energy per litre of O₂, but this stage is above threshold, so the reading isn't valid."
+      },
+      {
+       "id": "d",
+       "text": "Average it with the slower stages",
+       "why": "Averaging mixes a valid steady-state value with an invalid one; it hides the problem."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-speed-calc",
+   "concept": "eco-matter",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "saunders2004a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners can each hold 56 mL·kg⁻¹·min⁻¹ in a half marathon. Runner A's oxygen cost is 200 mL·kg⁻¹·km⁻¹. How fast can A run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16.8 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 56 ÷ 200 = 0.28 km per minute; × 60 = 16.8 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.28 km·h⁻¹",
+       "why": "This is km per minute; multiply by 60 for km·h⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "3.6 km·h⁻¹",
+       "why": "This divides cost by VO₂ (200 ÷ 56). Speed = VO₂ ÷ cost."
+      },
+      {
+       "id": "d",
+       "text": "11.2 km·h⁻¹",
+       "why": "This multiplies VO₂ by cost (56 × 200 ÷ 1,000). Speed = VO₂ ÷ cost."
+      }
+     ],
+     "solution": "Speed = VO₂ ÷ cost per km × 60 = 56 ÷ 200 × 60 = 16.8 km·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "Off the bike, a triathlete can hold 48 mL·kg⁻¹·min⁻¹ for the run. Her oxygen cost is 210 mL·kg⁻¹·km⁻¹. How fast can she run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13.7 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 48 ÷ 210 = 0.229 km per minute; × 60 = 13.7 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.23 km·h⁻¹",
+       "why": "This is km per minute; multiply by 60 for km·h⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "4.4 km·h⁻¹",
+       "why": "This divides cost by VO₂ (210 ÷ 48). Speed = VO₂ ÷ cost."
+      },
+      {
+       "id": "d",
+       "text": "10.1 km·h⁻¹",
+       "why": "This multiplies VO₂ by cost (48 × 210 ÷ 1,000). Speed = VO₂ ÷ cost."
+      }
+     ],
+     "solution": "Speed = VO₂ ÷ cost per km × 60 = 48 ÷ 210 × 60 = 13.7 km·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "eco-predict",
+   "concept": "eco-matter",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "saunders2004a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Among elite distance runners with similar VO₂max, which measure best predicts who is fastest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Running economy",
+       "correct": true,
+       "why": "Right: when VO₂max is similar, the cost of each km separates the runners."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max",
+       "why": "VO₂max separates trained from untrained runners well, but among elites with similar values it predicts less than economy."
+      },
+      {
+       "id": "c",
+       "text": "Maximal heart rate",
+       "why": "Maximal heart rate depends mostly on age and varies between people without predicting performance."
+      },
+      {
+       "id": "d",
+       "text": "Resting metabolic rate",
+       "why": "Resting metabolism is a tiny part of the energy used in racing and doesn't predict speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eco-lucia-appraisal",
+   "concept": "eco-matter",
+   "bloom": "evaluate",
+   "sources": [
+    "lucia2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 11 world-class pros, riders with a lower VO₂max had a higher gross efficiency (r ≈ −0.7). What most limits the conclusion that high efficiency makes up for low VO₂max in cyclists in general?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only pros were sampled, which can create an inverse link by itself",
+       "correct": true,
+       "why": "Right: riders with both a low VO₂max and a low GE never reach world-class level, so selecting on performance builds in an inverse correlation."
+      },
+      {
+       "id": "b",
+       "text": "The correlation was not statistically significant",
+       "why": "It was significant (P = 0.01 to 0.03). The issue is who was sampled, not the P value."
+      },
+      {
+       "id": "c",
+       "text": "Gross efficiency can't be measured validly at 385 W",
+       "why": "GE can be measured at any power below threshold; the riders were at 80% of VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "A correlation of −0.7 is too weak to mean anything",
+       "why": "−0.7 is a strong correlation; the problem is what it can mean given the sample."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

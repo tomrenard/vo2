@@ -1,0 +1,874 @@
+{
+ "id": "eco-cycling",
+ "module": "t2-economy",
+ "title": "Cycling efficiency: what moves it",
+ "goal": "Place cyclists' gross efficiency (about 18–24%), weigh the debate on whether training raises it, and predict how cadence, position and fatigue change it and what one point of GE is worth.",
+ "requires": [
+  "eco-running"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "force-effectiveness",
+    "torso-angle"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cyc-range",
+   "title": "18 to 24%: where riders sit",
+   "text": "Most lab studies put cyclists' [gross efficiency](g:gross-efficiency) between about 18% and 24%. In 69 men from recreational to world-class it was about 18–19% at 165 W [[c:moseley-ge]]. In 11 world-class pros riding at about 385 W it averaged 24.5% [[c:lucia-ge]].\n\nPart of that gap is the power itself. As the calorimetry module showed, GE rises with power because the resting baseline is spread over more watts. So a GE is only comparable at the same power (or the same % of maximum) and with the same method.\n\nBefore believing that one rider 'is more efficient' than another, check where and how each number was measured.",
+   "claims": [
+    {
+     "id": "moseley-ge",
+     "text": "In 69 male cyclists from recreational to world-class, mean gross efficiency at 165 W was about 18–19%.",
+     "grade": "weak",
+     "sources": [
+      "moseley2004"
+     ],
+     "evidence": [
+      {
+       "source": "moseley2004",
+       "quote": "Mean GE (165) was 18.6 +/- 0.3 %, 18.8 +/- 0.4 % and 17.9 +/- 0.3 % while mean DE was 22.4 +/- 0.4 %, 21.6 +/- 0.4 % and 21.2 +/- 0.5 % (for Low, Medium and High, respectively).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lucia-ge",
+     "text": "In 11 world-class professional road cyclists riding at about 385 W (80% of VO₂max), gross efficiency averaged 24.5%.",
+     "grade": "weak",
+     "sources": [
+      "lucia2002"
+     ],
+     "evidence": [
+      {
+       "source": "lucia2002",
+       "quote": "CE and GE averaged 85.2 +/- 2.3 W x L(-1) x min(-1) and 24.5 +/- 0.7%, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cyc-ge-range"
+  },
+  {
+   "type": "question",
+   "item": "cyc-compare-power",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "cyc-debate",
+   "title": "Can training raise GE?",
+   "text": "Here researchers disagree. Comparing groups, several studies found no difference: recreational and world-class cyclists had the same efficiency [[c:moseley-same]], as did competitive and recreational riders in an older study of 12 men [[c:nick-same]].\n\nHopker's group argues that such snapshots miss the answer because of weak methods [[c:hopker-review]]. Following the same 14 riders, they found GE rose from 19.6% to 20.6% before the racing season and fell to 19.4% after it [[c:hopker-season]]. In a randomised 12-week trial, 6 weeks of high-intensity training raised GE by 1.6 [percentage points](g:percentage-point) [[c:hopker-hit]].\n\nAnd the link between type I fibres and efficiency from the muscle module didn't hold in a study of 40 men [[c:fibre-no]].",
+   "claims": [
+    {
+     "id": "moseley-same",
+     "text": "Cross-sectional data show no differences in efficiency between elite and recreational cyclists.",
+     "grade": "weak",
+     "sources": [
+      "moseley2004"
+     ],
+     "evidence": [
+      {
+       "source": "moseley2004",
+       "quote": "Based on these data, we conclude that there are no differences in efficiency and economy between elite cyclists and recreational level cyclists.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nick-same",
+     "text": "In 12 men, cycle ergometer efficiency did not differ between competitive and recreational cyclists.",
+     "grade": "weak",
+     "sources": [
+      "nickleberry1996"
+     ],
+     "evidence": [
+      {
+       "source": "nickleberry1996",
+       "quote": "Our results suggested that previous cycling experience was of minor importance when comparing cycle ergometer efficiency between these two groups.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hopker-review",
+     "text": "A review argues that methodological weaknesses explain why most cross-sectional studies found no training effect on gross efficiency, and that well-controlled studies show a positive effect.",
+     "grade": "disputed",
+     "sources": [
+      "hopker2009a"
+     ],
+     "evidence": [
+      {
+       "source": "hopker2009a",
+       "quote": "Reviewing this literature provides evidence to suggest that methodological inadequacies may have played a crucial role in the conclusions drawn from the majority of these studies.",
+       "level": "abstract"
+      },
+      {
+       "source": "hopker2009a",
+       "quote": "We present an overview of these studies and their relative shortcomings and conclude that in well-controlled and rigorously designed studies, training has a positive influence upon gross efficiency.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hopker-season",
+     "text": "In 14 trained cyclists, gross efficiency rose from 19.6% to 20.6% before the competitive season and fell to 19.4% after it.",
+     "grade": "weak",
+     "sources": [
+      "hopker2009b"
+     ],
+     "evidence": [
+      {
+       "source": "hopker2009b",
+       "quote": "increasing over the precompetition phase of the season (19.6% vs 20.6%; P < 0.05)",
+       "level": "abstract"
+      },
+      {
+       "source": "hopker2009b",
+       "quote": "then decreased during the postcompetitive phase to 19.4% (P < 0.05)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hopker-hit",
+     "text": "In competitive male cyclists, 6 weeks of high-intensity training raised gross efficiency by about 1.6 percentage points, while restricted-intensity training did not.",
+     "grade": "weak",
+     "sources": [
+      "hopker2010"
+     ],
+     "evidence": [
+      {
+       "source": "hopker2010",
+       "quote": "Gross efficiency (GE) increased in group A (+1.6 +/- 1.4%; p < 0.05) following the high-intensity training, whereas no significant change was seen in group B (+0.1 +/- 0.7%; p > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fibre-no",
+     "text": "In 40 men, muscle fibre type did not affect cycling efficiency, while training status did.",
+     "grade": "weak",
+     "sources": [
+      "hopker2013"
+     ],
+     "evidence": [
+      {
+       "source": "hopker2013",
+       "quote": "These data demonstrate that muscle fiber type does not affect cycling efficiency and was not influenced by the aging process.",
+       "level": "abstract"
+      },
+      {
+       "source": "hopker2013",
+       "quote": "Cycling efficiency and the percentage of type I muscle fibers were influenced by training status",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does training raise cycling gross efficiency?",
+    "sides": [
+     {
+      "position": "No clear effect: elite and recreational, or competitive and recreational, cyclists have similar efficiency.",
+      "sources": [
+       "moseley2004",
+       "nickleberry1996"
+      ]
+     },
+     {
+      "position": "Yes, modestly: followed over time, GE rises with training (especially hard training) and falls when training drops; cross-sectional studies miss this.",
+      "sources": [
+       "hopker2009a",
+       "hopker2009b",
+       "hopker2010"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cyc-design"
+  },
+  {
+   "type": "question",
+   "item": "cyc-hit-result"
+  },
+  {
+   "type": "concept",
+   "id": "cyc-worth",
+   "title": "What one point of GE is worth",
+   "text": "A change of 1 percentage point sounds tiny. It isn't: GE sits near 20%, so one point is about 5% of the whole energy bill.\n\nAt a fixed power, **metabolic power = power ÷ GE**. Raise GE and the same watts cost less energy and less carbohydrate. Or spend the same energy and make more watts: **power = metabolic power × GE**.\n\nSo a seasonal swing from 19.6% to 20.6% is worth having, and a fall of the same size costs as much.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "cyc-worth-example",
+   "title": "One point of GE on a long ride",
+   "problem": "A cyclist rides 3 hours at 220 W. Over a pre-season his GE rises from 19.6% to 20.6%. How much less energy does the same ride cost, and what power could he hold for the old energy?",
+   "steps": [
+    "Metabolic power before: 220 ÷ 0.196 = 1,122 W. After: 220 ÷ 0.206 = 1,068 W.",
+    "Saving: 1,122 − 1,068 = 54 W (54.5 W before rounding), about 4.9% of the energy.",
+    "Over 3 hours (10,800 s): 54.5 W × 10,800 s ≈ 588 kJ (141 kcal) less.",
+    "Or, for the old metabolic power: 1,122 × 0.206 = 231 W, 11 W more for the same energy."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cyc-ge-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "cyc-cadence",
+   "title": "Cadence: spinning costs, technique doesn't fix it",
+   "text": "The muscle module showed that VO₂ is lowest at a lower [cadence](g:cadence) than riders choose. Here is the efficiency side.\n\nIn 10 well-trained cyclists riding at about 75% of VO₂max, GE fell as cadence rose, within every rider. [Force effectiveness](g:force-effectiveness), the share of pedal force that turns the crank, fell too, but it was not the cause of the GE change. Moving the seat forward or back, and riding level or uphill, changed neither [[c:leirdal]].\n\nSo practising 'pedalling circles' to raise force effectiveness is not a proven route to higher efficiency.",
+   "claims": [
+    {
+     "id": "leirdal",
+     "text": "In 10 well-trained cyclists, gross efficiency and force effectiveness fell as cadence rose, but force effectiveness did not explain the link between cadence and energy use; seat position and inclination did not affect them.",
+     "grade": "weak",
+     "sources": [
+      "leirdal2011"
+     ],
+     "evidence": [
+      {
+       "source": "leirdal2011",
+       "quote": "Within subjects, FE, DC and GE decreased as cadence increased (p < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "leirdal2011",
+       "quote": "Energy expenditure is strongly coupled to cadence, but force effectiveness, as a measure for pedalling technique, is not likely the cause of this relationship.",
+       "level": "abstract"
+      },
+      {
+       "source": "leirdal2011",
+       "quote": "FE, DC and GE are not affected by body orientation or seat adjustments",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cyc-cadence-trend"
+  },
+  {
+   "type": "question",
+   "item": "cyc-circles"
+  },
+  {
+   "type": "concept",
+   "id": "cyc-position",
+   "title": "Aero position: a trade-off",
+   "text": "Lowering the [torso angle](g:torso-angle) cuts air resistance but cramps the hips and breathing. In 19 well-trained cyclists tested at five torso angles, lower angles reduced peak power and the other maximal values, and the flat-back 0° position hurt most [[c:fint-cost]].\n\nA model built from those riders found that the air savings outweigh the power losses only above about 46 km·h⁻¹. Below about 30 km·h⁻¹ a more upright time-trial position was better, and a fully flat back was never best [[c:fint-model]].\n\nFor most age-group triathletes, who ride well under 40 km·h⁻¹, the lowest position isn't automatically the fastest.",
+   "claims": [
+    {
+     "id": "fint-cost",
+     "text": "In 19 well-trained male cyclists, lower torso angles reduced peak power and maximal physiological values, showing a trade-off between aerodynamic drag and physiological function.",
+     "grade": "weak",
+     "sources": [
+      "fintelman2015"
+     ],
+     "evidence": [
+      {
+       "source": "fintelman2015",
+       "quote": "Maximal values of all variables, attained in the incremental test, decreased with lower torso angles (P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "fintelman2015",
+       "quote": "This study shows that for trained cyclists there should be a trade-off between the aerodynamic drag and physiological functioning.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fint-model",
+     "text": "Modelled from 19 time-trial cyclists, aerodynamic savings outweigh power losses only above about 46 km·h⁻¹; below 30 km·h⁻¹ a more upright position is better, and a fully horizontal torso is never optimal.",
+     "grade": "weak",
+     "sources": [
+      "fintelman2014"
+     ],
+     "evidence": [
+      {
+       "source": "fintelman2014",
+       "quote": "The aerodynamic losses outweigh the power losses at cycling speeds above 46km/h. However, a fully horizontal torso is not optimal. For speeds below 30km/h, it is beneficial to ride in a more upright TT position.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cyc-position-speed"
+  },
+  {
+   "type": "concept",
+   "id": "cyc-fatigue",
+   "title": "Efficiency fades on long rides",
+   "text": "GE isn't fixed during a ride. In 14 well-trained cyclists riding 2 hours at a constant moderate power, GE fell from 18.4% to 17.4%, while oxygen use in the thigh muscle rose; the authors suggest the [mitochondria](g:mitochondria) or the contraction itself became less efficient [[c:hopker-2h]].\n\nIn another study, an hour at about 60% of VO₂peak lowered GE, and the fall tracked the loss of 5-minute performance closely (r = 0.91) [[c:passfield]].\n\nA falling GE means each watt late in a race costs more energy and more carbohydrate. It is one strand of [durability](g:durability), the next module.",
+   "claims": [
+    {
+     "id": "hopker-2h",
+     "text": "In 14 well-trained cyclists, gross efficiency fell from 18.4% to 17.4% over 2 hours of constant-load cycling, with rising muscle oxygen uptake suggesting mitochondrial or contractile inefficiency.",
+     "grade": "weak",
+     "sources": [
+      "hopker2017"
+     ],
+     "evidence": [
+      {
+       "source": "hopker2017",
+       "quote": "GE significantly declined during the 2-h cycling bout (18.4 ± 1.6 to 17.4 ± 1.4%; P < 0.01).",
+       "level": "abstract"
+      },
+      {
+       "source": "hopker2017",
+       "quote": "suggestive of progressive mitochondrial or contractile inefficiency",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "passfield",
+     "text": "After about an hour of moderate cycling, gross efficiency fell, and the fall correlated closely with the drop in 5-minute performance.",
+     "grade": "weak",
+     "sources": [
+      "passfield2000"
+     ],
+     "evidence": [
+      {
+       "source": "passfield2000",
+       "quote": "Gross efficiency decreased significantly with exercise in both EXP1 and EXP2.",
+       "level": "abstract"
+      },
+      {
+       "source": "passfield2000",
+       "quote": "Moreover, the change in gross efficiency was correlated with the change in 5-min performance (r = 0.91, P < 0.01)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cyc-fade-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cyc-passfield-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Cycling GE is usually about 18–24%; it rises with power, so compare riders only at the same power and with the same method.",
+    "Whether training raises GE is debated: group comparisons say no, studies following the same riders say yes, by about 1–1.6 points.",
+    "One point of GE is about 5% of the energy bill: metabolic power = power ÷ GE.",
+    "GE falls as cadence rises, and pedal-force technique doesn't explain it. Aero positions trade power for drag, worth it mainly at high speed.",
+    "GE falls by about a point over 2 hours of riding, so late watts cost more: part of durability."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cyc-ge-range",
+   "concept": "cyc-range",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "moseley2004",
+    "lucia2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In lab tests of trained cyclists, gross efficiency usually falls in which range?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 18–24%",
+       "correct": true,
+       "why": "Right: from about 18–19% at modest power to about 24% in pros at high power."
+      },
+      {
+       "id": "b",
+       "text": "About 40–50%",
+       "why": "That is far above any measured whole-body cycling efficiency; most energy becomes heat."
+      },
+      {
+       "id": "c",
+       "text": "About 5–10%",
+       "why": "That is far below measured cycling GE; it would mean over 90% of the energy became heat."
+      },
+      {
+       "id": "d",
+       "text": "About 70–80%",
+       "why": "Muscle can't turn that much chemical energy into work; about four-fifths becomes heat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-compare-power",
+   "concept": "cyc-range",
+   "bloom": "analyse",
+   "sources": [
+    "ettema2009",
+    "lucia2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Rider A's report says GE 19.0% at 150 W. Rider B's says GE 22.5% at 350 W. What can you conclude about who is more efficient?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing yet: GE rises with power, so they must be compared at the same power",
+       "correct": true,
+       "why": "Right: part of B's higher GE is simply the higher power spreading the baseline cost."
+      },
+      {
+       "id": "b",
+       "text": "B is more efficient by 3.5 percentage points",
+       "why": "The gap may be mostly the power difference, not the riders."
+      },
+      {
+       "id": "c",
+       "text": "A is more efficient, because lower power wastes less energy",
+       "why": "Lower power actually gives a lower GE, because the baseline is a bigger share."
+      },
+      {
+       "id": "d",
+       "text": "B, because riders who produce more watts are always more efficient",
+       "why": "Producing more watts doesn't make a rider more efficient; at the same power the two might be equal."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's GE was 19.5% at 160 W last spring and 21.0% at 260 W this autumn. Has her efficiency improved?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unclear: the higher power alone raises GE; test at the same power",
+       "correct": true,
+       "why": "Right: GE rises with power, so the two tests can't show a training effect."
+      },
+      {
+       "id": "b",
+       "text": "Yes, by 1.5 percentage points",
+       "why": "The change in power could account for most or all of that rise."
+      },
+      {
+       "id": "c",
+       "text": "No, it has fallen, because she now needs more energy",
+       "why": "She needs more energy because she makes more power; that says nothing about efficiency."
+      },
+      {
+       "id": "d",
+       "text": "Yes, because GE never changes with power",
+       "why": "GE does change with power, which is exactly why the tests can't be compared."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-design",
+   "concept": "cyc-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "hopker2009a",
+    "moseley2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can't a cross-sectional comparison of elite and recreational cyclists settle whether training raises gross efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The groups differ in more than training, and no rider is followed as they train",
+       "correct": true,
+       "why": "Right: a snapshot can't separate training from selection, body size or method, and it never measures change in the same person."
+      },
+      {
+       "id": "b",
+       "text": "Because GE can't be measured in elite riders",
+       "why": "GE can be measured in anyone on an ergometer."
+      },
+      {
+       "id": "c",
+       "text": "Because cross-sectional studies always have too many riders",
+       "why": "Sample size isn't the problem; the design can't show change over time."
+      },
+      {
+       "id": "d",
+       "text": "Because GE only changes in untrained people",
+       "why": "That is the question being studied, not a known fact."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-hit-result",
+   "concept": "cyc-debate",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hopker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Hopker's 12-week trial, what happened to gross efficiency in the group that did high-intensity training first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rose by about 1.6 percentage points",
+       "correct": true,
+       "why": "Right: GE rose by 1.6 points after the high-intensity block, while the restricted group didn't change."
+      },
+      {
+       "id": "b",
+       "text": "It fell, because hard training causes fatigue",
+       "why": "GE rose, not fell, after the high-intensity block."
+      },
+      {
+       "id": "c",
+       "text": "It rose by about 16 percentage points",
+       "why": "That would take GE from 20% to 36%, far beyond anything measured; the rise was 1.6 points."
+      },
+      {
+       "id": "d",
+       "text": "It didn't change: GE is fixed by fibre type",
+       "why": "It did change, and fibre type didn't predict efficiency in Hopker's later study."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-ge-calc",
+   "concept": "cyc-worth",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "ettema2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider holds 250 W. If her GE rises from 20.0% to 21.0%, how much metabolic power does she save?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60 W (about 5%)",
+       "correct": true,
+       "why": "Right: 250 ÷ 0.20 = 1,250 W and 250 ÷ 0.21 = 1,190 W; the difference is about 60 W."
+      },
+      {
+       "id": "b",
+       "text": "About 2.5 W (1% of 250 W)",
+       "why": "This takes 1% of the mechanical power; the saving is on the much larger metabolic power."
+      },
+      {
+       "id": "c",
+       "text": "About 12.5 W (1% of 1,250 W)",
+       "why": "One percentage point of GE is about 5% of the energy, not 1%."
+      },
+      {
+       "id": "d",
+       "text": "About 250 W",
+       "why": "This confuses the mechanical power with the saving."
+      }
+     ],
+     "solution": "Metabolic power = power ÷ GE. 250 ÷ 0.20 = 1,250 W; 250 ÷ 0.21 = 1,190 W. Saving ≈ 60 W, about 4.8%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist holds 300 W. If his GE rises from 21.0% to 22.0%, how much metabolic power does he save?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 65 W (about 4.5%)",
+       "correct": true,
+       "why": "Right: 300 ÷ 0.21 = 1,429 W and 300 ÷ 0.22 = 1,364 W; the difference is about 65 W."
+      },
+      {
+       "id": "b",
+       "text": "About 3 W (1% of 300 W)",
+       "why": "This takes 1% of the mechanical power; the saving is on the much larger metabolic power."
+      },
+      {
+       "id": "c",
+       "text": "About 14 W (1% of 1,429 W)",
+       "why": "One percentage point of GE is about 4.5% of the energy here, not 1%."
+      },
+      {
+       "id": "d",
+       "text": "About 300 W",
+       "why": "This confuses the mechanical power with the saving."
+      }
+     ],
+     "solution": "300 ÷ 0.21 = 1,429 W; 300 ÷ 0.22 = 1,364 W. Saving ≈ 65 W, about 4.5%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete rides at 180 W with a GE of 19.0%. If training raises his GE to 20.0%, what power can he hold for the same metabolic power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 189 W",
+       "correct": true,
+       "why": "Right: 180 ÷ 0.19 = 947 W of metabolic power; 947 × 0.20 = 189 W."
+      },
+      {
+       "id": "b",
+       "text": "About 182 W",
+       "why": "This adds 1% of 180 W; a 1-point rise in GE is about a 5% rise in power."
+      },
+      {
+       "id": "c",
+       "text": "About 360 W",
+       "why": "Doubling would need GE to double, not to rise by one point."
+      },
+      {
+       "id": "d",
+       "text": "180 W: GE doesn't change the power you can hold",
+       "why": "For the same energy, a higher GE gives more watts."
+      }
+     ],
+     "solution": "Metabolic power = 180 ÷ 0.19 = 947 W. New power = 947 × 0.20 = 189 W."
+    }
+   ]
+  },
+  {
+   "id": "cyc-cadence-trend",
+   "concept": "cyc-cadence",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "leirdal2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Within one rider at a fixed power, what happens to gross efficiency as cadence rises from about 80 to 100 rpm?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls",
+       "correct": true,
+       "why": "Right: within riders, GE fell as cadence rose."
+      },
+      {
+       "id": "b",
+       "text": "It rises",
+       "why": "Higher cadence costs more energy at the same power, so GE falls."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same",
+       "why": "GE is strongly coupled to cadence; it doesn't stay the same."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-circles",
+   "concept": "cyc-cadence",
+   "bloom": "evaluate",
+   "sources": [
+    "leirdal2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a triathlete to practise 'pedalling circles', pulling up on the upstroke, to raise his gross efficiency. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unlikely to help: pedal-force technique didn't explain changes in GE",
+       "correct": true,
+       "why": "Right: force effectiveness was not the cause of the link between cadence and energy use."
+      },
+      {
+       "id": "b",
+       "text": "Sound: a higher force effectiveness always raises GE",
+       "why": "Force effectiveness and GE moved together with cadence, but force effectiveness didn't cause the GE change."
+      },
+      {
+       "id": "c",
+       "text": "Sound, but only at cadences above 110 rpm",
+       "why": "No study shows a cadence above which pulling up raises GE."
+      },
+      {
+       "id": "d",
+       "text": "Harmful: any pull on the upstroke halves GE",
+       "why": "No such effect has been shown; the point is only that it isn't a proven way to raise GE."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-position-speed",
+   "concept": "cyc-position",
+   "bloom": "apply",
+   "sources": [
+    "fintelman2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An age-group triathlete averages 29 km·h⁻¹ and a pro time-trialist 50 km·h⁻¹. Who gains more from riding with a very low torso angle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The pro: air savings outweigh power losses only at high speed",
+       "correct": true,
+       "why": "Right: the model put the crossover above about 46 km·h⁻¹; below 30, a more upright position was better."
+      },
+      {
+       "id": "b",
+       "text": "The triathlete: slower riders gain most from aerodynamics",
+       "why": "Air resistance rises steeply with speed, so the aero gain is smallest for slow riders."
+      },
+      {
+       "id": "c",
+       "text": "Both equally: aero savings don't depend on speed",
+       "why": "Drag rises steeply with speed, so the trade-off depends on it."
+      },
+      {
+       "id": "d",
+       "text": "Both: a fully flat back is best at any speed",
+       "why": "A fully horizontal torso was never optimal in the model."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cyc-fade-calc",
+   "concept": "cyc-fatigue",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopker2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider holds 200 W for 2 hours, and her GE falls from 18.4% to 17.4%, as in one study. How much more metabolic power does the end of the ride cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 62 W more (about 6%)",
+       "correct": true,
+       "why": "Right: 200 ÷ 0.184 = 1,087 W; 200 ÷ 0.174 = 1,149 W; the difference is about 62 W."
+      },
+      {
+       "id": "b",
+       "text": "About 2 W more (1% of 200 W)",
+       "why": "The extra cost falls on the metabolic power, which is about five times the mechanical power."
+      },
+      {
+       "id": "c",
+       "text": "About 11 W more (1% of 1,087 W)",
+       "why": "A 1-point fall in GE is about a 6% rise in energy here, not 1%."
+      },
+      {
+       "id": "d",
+       "text": "About 62 W less",
+       "why": "A lower GE means each watt costs more energy, not less."
+      }
+     ],
+     "solution": "Metabolic power = power ÷ GE. 200 ÷ 0.184 = 1,087 W; 200 ÷ 0.174 = 1,149 W. Extra ≈ 62 W, about 5.7%."
+    },
+    {
+     "id": "b",
+     "stem": "In the last hour of an Ironman bike leg at 160 W, a triathlete's GE falls from 19.5% to 18.5%. How much more metabolic power does that hour cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 44 W more (about 5%)",
+       "correct": true,
+       "why": "Right: 160 ÷ 0.195 = 821 W; 160 ÷ 0.185 = 865 W; the difference is about 44 W."
+      },
+      {
+       "id": "b",
+       "text": "About 1.6 W more (1% of 160 W)",
+       "why": "The extra cost falls on the metabolic power, which is about five times the mechanical power."
+      },
+      {
+       "id": "c",
+       "text": "About 8 W more (1% of 821 W)",
+       "why": "A 1-point fall in GE is about a 5% rise in energy here, not 1%."
+      },
+      {
+       "id": "d",
+       "text": "About 44 W less",
+       "why": "A lower GE means each watt costs more energy, not less."
+      }
+     ],
+     "solution": "160 ÷ 0.195 = 821 W; 160 ÷ 0.185 = 865 W. Extra ≈ 44 W, about 5.4%."
+    }
+   ]
+  },
+  {
+   "id": "cyc-passfield-appraisal",
+   "concept": "cyc-fatigue",
+   "bloom": "evaluate",
+   "sources": [
+    "passfield2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In one study, the fall in GE after an hour of riding correlated r = 0.91 with the fall in 5-minute power. What is the most careful reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A strong link that suggests, but doesn't prove, that the GE loss slowed the riders",
+       "correct": true,
+       "why": "Right: a correlation, even a strong one, can't show cause; both could follow from the same fatigue."
+      },
+      {
+       "id": "b",
+       "text": "Proof that the GE loss caused 91% of the performance loss",
+       "why": "r is not a percentage of cause, and correlation doesn't prove cause."
+      },
+      {
+       "id": "c",
+       "text": "No real link, because r is below 1",
+       "why": "r = 0.91 is a very strong correlation; it doesn't need to be 1."
+      },
+      {
+       "id": "d",
+       "text": "Proof that GE never changes in fresh riders",
+       "why": "The study says nothing about fresh riders' day-to-day GE."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

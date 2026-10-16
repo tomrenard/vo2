@@ -1,0 +1,834 @@
+{
+ "id": "dur-measure",
+ "module": "t2-durability",
+ "title": "Measuring durability",
+ "goal": "Describe how durability is measured in the lab and the field, calculate prior work in kJ·kg⁻¹ and percent decline, and judge what each method can and can't show.",
+ "requires": [
+  "dur-concept"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "kj-per-kg",
+    "mean-maximal-power",
+    "record-power-profile",
+    "decoupling"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dm-designs",
+   "title": "Two ways to measure it",
+   "text": "A durability test needs a fatiguing bout and a measurement. A review found two main designs [[c:dm-two-designs]]:\n\n1. **Before and after**: test fresh, do a long bout (for example 2 h of steady riding), test again.\n2. **During**: track a variable all the way through a long effort, such as efficiency every 30 min, or heart rate against pace.\n\nThey can be combined. The fatiguing bout matters a lot: the harder and longer it is relative to the athlete, the more the numbers fall [[c:dm-protocol]]. Food, drink and heat also change the result, so they must be the same each time if you want to compare athletes, or one athlete over a season.",
+   "claims": [
+    {
+     "id": "dm-two-designs",
+     "text": "Durability has been measured in two main ways: profiling before and after a prolonged bout, or tracking physiological responses during prolonged exercise.",
+     "grade": "moderate",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "We identified two main methods by which this has been administered: (1) profiling before and after a prolonged bout of exercise; and (2) assessment of changes in physiological responses during prolonged exercise.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dm-protocol",
+     "text": "Greater relative intensity and duration of the fatiguing protocol cause larger deterioration; nutrition and environment must be controlled for repeatable results.",
+     "grade": "moderate",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "The construction of the fatiguing protocol affects durability profiles, with greater relative intensity and duration resulting in more marked deterioration of baseline measures.",
+       "level": "abstract"
+      },
+      {
+       "source": "hunter2025",
+       "quote": "The design of durability assessments should control for factors that could impact durability measurements, such as nutrition and environmental characteristics, to ensure that outcomes are repeatable and can be compared between athletes or over time in the same athlete.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dm-protocol-compare"
+  },
+  {
+   "type": "concept",
+   "id": "dm-kj",
+   "title": "Work done as a fatigue clock",
+   "text": "In cycling, a power meter records every ride, so field data are plentiful. To ask 'how tired was the rider?', researchers use the work already done, per kg of body mass: [kJ·kg⁻¹](g:kj-per-kg).\n\nWork (kJ) = mean power (W) × time (s) ÷ 1,000. Divide by body mass for kJ·kg⁻¹.\n\nVan Erp's group took the [mean maximal power](g:mean-maximal-power) (MMP) of 26 professionals over 85 seasons, for 10 s to 20 min, after rising amounts of work already done. Prior work lowered MMP in everyone, but the more successful climbers lost less of their 5 and 20 min power after a lot of work [[c:dm-vanerp]].",
+   "claims": [
+    {
+     "id": "dm-vanerp",
+     "text": "In 26 professional cyclists, prior work lowered maximal mean power; more successful climbers had smaller declines in 20 and 5 min power after high amounts of work done.",
+     "grade": "weak",
+     "sources": [
+      "vanerp2021"
+     ],
+     "evidence": [
+      {
+       "source": "vanerp2021",
+       "quote": "However, CAT.1 climbers have a smaller decline in 20- and 5-min MMP after high amounts of work done compared with CAT.2 climbers.",
+       "level": "abstract"
+      },
+      {
+       "source": "vanerp2021",
+       "quote": "It seems that the ability to maintain high MMP (corresponding with the specialization of a cyclist) after high amounts of work done (i.e., fatigue) is an important parameter for success in professional cyclists.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "dm-kj-example",
+   "title": "How tired is 2 h 30 min at 220 W?",
+   "problem": "A 70 kg rider averages 220 W for 2 h 30 min, then attacks. How much work per kg has she done before the attack?",
+   "steps": [
+    "Time in seconds: 2.5 h × 3,600 s = 9,000 s.",
+    "Work = 220 W × 9,000 s = 1,980,000 J = 1,980 kJ.",
+    "Per kg: 1,980 ÷ 70 = 28.3 kJ·kg⁻¹.",
+    "So her attack counts as an effort 'after about 28 kJ·kg⁻¹', between 20 and 30 kJ·kg⁻¹ of work done."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dm-kj-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dm-vanerp-what"
+  },
+  {
+   "type": "concept",
+   "id": "dm-rpp",
+   "title": "The fatigued record power profile",
+   "text": "A rider's [record power profile](g:record-power-profile) is the best MMP for each duration. Mateo-March's group built it at rising levels of prior work in 112 professionals [[c:dm-rpp-drop]]:\n\n| work already done | fall in MMP (10 s to 120 min) |\n|---|---|\n| 15 kJ·kg⁻¹ | 1.6–3.0% |\n| 45 kJ·kg⁻¹ | 6.0–9.7% |\n\nThe *kind* of work matters too. Counting only work done above CP, under-23 riders lost power for efforts of 1 min and longer after 5 kJ·kg⁻¹; ProTeam and WorldTour riders held on until 7.5 kJ·kg⁻¹ [[c:dm-leo]]. Hard work tires faster than the same amount of easy work.",
+   "claims": [
+    {
+     "id": "dm-rpp-drop",
+     "text": "In 112 professional cyclists, all MMP values from 10 s to 120 min fell progressively: by 1.6–3.0% after 15 kJ·kg⁻¹ and 6.0–9.7% after 45 kJ·kg⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "mateomarch2022"
+     ],
+     "evidence": [
+      {
+       "source": "mateomarch2022",
+       "quote": "A significant (P < .001) and progressive deterioration of all MMP values was observed from the lowest levels of fatigue assessed (ie, -1.6% to -3.0% decline after 15 kJ·kg-1, and -6.0% to -9.7% after 45 kJ·kg-1).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dm-leo",
+     "text": "Under-23 cyclists lost power for efforts of 1 min or longer after 5 kJ·kg⁻¹ of work above CP, ProTeam and WorldTour cyclists only after 7.5 kJ·kg⁻¹; work above CP lowers power more than work-matched riding below CP.",
+     "grade": "weak",
+     "sources": [
+      "leo2024",
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "Likewise, Mateo‐March et al. (2024), found that even small amounts of work above CP (2.5 kJ kg−1) resulted in greater decreases of maximal mean power and CP when compared with work‐matched exercise performed below CP.",
+       "level": "full-text"
+      },
+      {
+       "source": "leo2024",
+       "quote": "U23 cyclists showed a significant reduction of all relative MMP values for durations ≥1 minute after ≥5 kJ·kg-1 above CP compared with the \"fresh\" state (0 kJ·kg-1), whereas in Pro Team and World Tour cyclists, a significant reduction was not observed until 7.5 kJ·kg-1 above CP.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "dm-decline-example",
+   "title": "Percent decline in a fatigued effort",
+   "problem": "A rider's fresh 20 min MMP is 360 W. His best 20 min after 30 kJ·kg⁻¹ is 333 W. By what percentage has it fallen?",
+   "steps": [
+    "Fall in watts: 360 − 333 = 27 W.",
+    "Divide by the **fresh** value: 27 ÷ 360 = 0.075, so a 7.5% decline.",
+    "A common slip: dividing by the fatigued value (27 ÷ 333 = 8.1%). The reference is always the fresh value."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dm-decline-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dm-rpp-recall"
+  },
+  {
+   "type": "question",
+   "item": "dm-high-intensity"
+  },
+  {
+   "type": "concept",
+   "id": "dm-lab",
+   "title": "Thresholds after a long ride",
+   "text": "Lab tests can measure thresholds directly before and after a long bout. In 14 trained cyclists and triathletes, 2 h at 90% of their [VT1](g:vt1) power cut power at VT1 from **217 to 196 W**. Heart rate at VT1 *rose*, from 142 to 151 beats·min⁻¹ [[c:dm-vt1]]. Two smaller studies from the same lab, with 2.5 h of riding, found a 6% fall [[c:dm-vt1-others]].\n\nSo a power zone set fresh is too high late on, and a heart rate zone set fresh is too low: both mislead.\n\nTiming matters. With a 3 min all-out test, CP held after 40 and 80 min of heavy cycling, then was 9% lower at 2 h [[c:dm-clark-time]]. Power at VT1 fell along a curve, not a straight line [[c:dm-nonlinear]].",
+   "claims": [
+    {
+     "id": "dm-vt1",
+     "text": "After 2 h of cycling at 90% of VT1 power, power at VT1 fell from 217 to 196 W while the heart rate at VT1 increased.",
+     "grade": "weak",
+     "sources": [
+      "stevenson2022"
+     ],
+     "evidence": [
+      {
+       "source": "stevenson2022",
+       "quote": "Power output at the moderate-to-heavy intensity transition significantly decreased following acute prolonged exercise when determined using expired gases (VT1, 217 ± 42 W vs. 196 ± 42 W, P < 0.0001)",
+       "level": "abstract"
+      },
+      {
+       "source": "stevenson2022",
+       "quote": "These results demonstrate the external work output at the moderate-to-heavy intensity transition decreases during prolonged exercise due to decreased efficiency and rates of metabolic energy expenditure, but the associated heart rate increases.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dm-vt1-others",
+     "text": "Power at VT1 also fell, by about 6%, after 150 min of moderate-intensity cycling in two other small groups of trained cyclists and triathletes.",
+     "grade": "weak",
+     "sources": [
+      "hamilton2024",
+      "dudleyrode2025"
+     ],
+     "evidence": [
+      {
+       "source": "hamilton2024",
+       "quote": "Prolonged exercise reduced power output at VT1 (211 ± 40 vs. 198 ± 39 W, ∆ -13 ± 16 W, ∆ -6 ± 7%, P = 0.013)",
+       "level": "abstract"
+      },
+      {
+       "source": "dudleyrode2025",
+       "quote": "Power output at the first ventilatory threshold (VT1) was lower in POSTCHO (225 ± 36 W, ∆ -3 ± 2%, P = 0.027, n = 11) and POSTCON (216 ± 35 W, ∆ -6 ± 4%, P = 0.001, n = 12) than PRE (229 ± 37 W, n = 12)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dm-clark-time",
+     "text": "End-test power from a 3 min all-out test was unchanged after 40 and 80 min of heavy-intensity cycling but 9% lower after 2 h.",
+     "grade": "weak",
+     "sources": [
+      "clark2019a"
+     ],
+     "evidence": [
+      {
+       "source": "clark2019a",
+       "quote": "There was no difference in EP measured without prior exercise (260 ± 37 W) compared with EP after 40 min (268 ± 39 W) or 80 min (260 ± 40 W) of heavy-intensity exercise; however, after 2 h EP was 9% lower compared with control (236 ± 47 W; P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dm-nonlinear",
+     "text": "Power at VT1 fell along a second-order polynomial (curved) time course in 11 of 12 cyclists.",
+     "grade": "weak",
+     "sources": [
+      "gallo2024"
+     ],
+     "evidence": [
+      {
+       "source": "gallo2024",
+       "quote": "Power output at VT1 decreased according to a second-order polynomial function in 11 of 12 participants.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dm-hr-zone"
+  },
+  {
+   "type": "question",
+   "item": "dm-clark-timing"
+  },
+  {
+   "type": "concept",
+   "id": "dm-field",
+   "title": "Field markers: cheap but noisy",
+   "text": "Not everyone has a lab. Three field options:\n\n- **Race and training files**: MMP after set kJ·kg⁻¹, as in the pro studies.\n- **A home test**: in 20 amateurs, 5 and 20 min tests were done fresh and again after 1,000 kJ at 80% of fresh 20 min power; both fell about 10% [[c:dm-home]].\n- **[Decoupling](g:decoupling)**: heart rate rising at a fixed power. In 51 cyclists, more heart rate decoupling went with a bigger fall in VT1 power [[c:dm-decoupling]].\n\nThe trade-off: field data are realistic and free, but heat, terrain, food and tactics aren't controlled. A rider who sits in the bunch for the last hour doesn't produce a 'best' effort, so fatigued MMP can underestimate what he could do.",
+   "claims": [
+    {
+     "id": "dm-home",
+     "text": "In 20 amateur road cyclists, 20 and 5 min power fell by about 10% after 1,000 kJ at 80% of fresh 20 min power.",
+     "grade": "weak",
+     "sources": [
+      "barsumyan2025"
+     ],
+     "evidence": [
+      {
+       "source": "barsumyan2025",
+       "quote": "The performance significantly decreased with 10,1 ± 6,5% in the 20-minutes test and with 10,8 ± 7,8% in 5-minutes in fatigue state in compare with fresh state.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dm-decoupling",
+     "text": "In 51 trained cyclists, heart rate decoupling correlated with the exercise-induced fall in power at VT1 and may be a practical durability measure.",
+     "grade": "weak",
+     "sources": [
+      "rothschild2025"
+     ],
+     "evidence": [
+      {
+       "source": "rothschild2025",
+       "quote": "Negative correlations were observed between exercise-induced change in power output at VT1 and HR (rrm = -0.76, P < 0.001)",
+       "level": "abstract"
+      },
+      {
+       "source": "rothschild2025",
+       "quote": "HR and/or FR decoupling during controlled training sessions may be a practically useful durability assessment.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dm-decoupling-run"
+  },
+  {
+   "type": "question",
+   "item": "dm-field-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "dm-kj-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "dm-decline-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Durability is measured before and after a fatiguing bout, or by tracking a variable during it; the bout's intensity and length change the result.",
+    "Prior work is a fatigue clock: kJ = W × s ÷ 1,000, then ÷ body mass for kJ·kg⁻¹.",
+    "Pro best powers fell 1.6–3.0% after 15 kJ·kg⁻¹ and 6.0–9.7% after 45 kJ·kg⁻¹; work above CP tires faster.",
+    "After about 2 h, power at VT1 falls about 6–10% while the heart rate at VT1 rises; CP held to 80 min, then fell.",
+    "Field options (race files, home tests, decoupling) are realistic but uncontrolled; percent decline is always relative to the fresh value."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dm-protocol-compare",
+   "concept": "dm-designs",
+   "bloom": "analyse",
+   "sources": [
+    "hunter2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Lab A tests riders after 2 h at 90% of VT1 power; lab B after 2 h at 110% of the gas exchange threshold. Lab B's riders lose more threshold power. What can you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing about the riders yet: lab B's bout was harder relative to the athletes",
+       "correct": true,
+       "why": "Right: higher relative intensity causes more decline, so the protocols, not the riders, may explain it."
+      },
+      {
+       "id": "b",
+       "text": "Lab B's riders are simply less durable than lab A's riders",
+       "why": "The bouts differ in intensity, so the riders can't be compared directly."
+      },
+      {
+       "id": "c",
+       "text": "Lab A's measurements must have been done wrongly",
+       "why": "Both can be right; they measured after different bouts."
+      },
+      {
+       "id": "d",
+       "text": "Durability can't be measured reliably in any lab",
+       "why": "Both labs measured it; they just used different fatiguing bouts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-kj-calc",
+   "concept": "dm-kj",
+   "bloom": "apply",
+   "sources": [
+    "vanerp2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 75 kg rider averages 250 W for 3 h. How much work per kg has he done?",
+     "options": [
+      {
+       "id": "a",
+       "text": "36 kJ·kg⁻¹",
+       "correct": true,
+       "why": "Right: 250 × 10,800 s = 2,700 kJ; 2,700 ÷ 75 = 36 kJ·kg⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "2,700 kJ·kg⁻¹",
+       "why": "2,700 is the total work in kJ; you still have to divide by 75 kg."
+      },
+      {
+       "id": "c",
+       "text": "10 kJ·kg⁻¹",
+       "why": "That uses hours (250 × 3 ÷ 75) instead of seconds and skips the J → kJ step."
+      },
+      {
+       "id": "d",
+       "text": "0.6 kJ·kg⁻¹",
+       "why": "That uses minutes (180) instead of seconds."
+      }
+     ],
+     "solution": "Work = 250 W × (3 × 3,600 s) = 2,700,000 J = 2,700 kJ. Per kg: 2,700 ÷ 75 = 36 kJ·kg⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A 60 kg triathlete rides 4 h at an average of 200 W. How much work per kg has she done by the end of the bike?",
+     "options": [
+      {
+       "id": "a",
+       "text": "48 kJ·kg⁻¹",
+       "correct": true,
+       "why": "Right: 200 × 14,400 s = 2,880 kJ; 2,880 ÷ 60 = 48 kJ·kg⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "2,880 kJ·kg⁻¹",
+       "why": "2,880 is the total in kJ; divide by 60 kg."
+      },
+      {
+       "id": "c",
+       "text": "13.3 kJ·kg⁻¹",
+       "why": "That uses hours (200 × 4 ÷ 60) instead of seconds."
+      },
+      {
+       "id": "d",
+       "text": "0.8 kJ·kg⁻¹",
+       "why": "That uses minutes (240) instead of seconds."
+      }
+     ],
+     "solution": "Work = 200 W × (4 × 3,600 s) = 2,880,000 J = 2,880 kJ. Per kg: 2,880 ÷ 60 = 48 kJ·kg⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "An 80 kg rider averages 240 W for 1 h 30 min before a time check. How much work per kg so far?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16.2 kJ·kg⁻¹",
+       "correct": true,
+       "why": "Right: 240 × 5,400 s = 1,296 kJ; 1,296 ÷ 80 = 16.2 kJ·kg⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1,296 kJ·kg⁻¹",
+       "why": "1,296 is the total in kJ; divide by 80 kg."
+      },
+      {
+       "id": "c",
+       "text": "4.5 kJ·kg⁻¹",
+       "why": "That uses hours (240 × 1.5 ÷ 80) instead of seconds."
+      },
+      {
+       "id": "d",
+       "text": "0.27 kJ·kg⁻¹",
+       "why": "That uses minutes (90) instead of seconds."
+      }
+     ],
+     "solution": "Work = 240 W × (1.5 × 3,600 s) = 1,296,000 J = 1,296 kJ. Per kg: 1,296 ÷ 80 = 16.2 kJ·kg⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "dm-vanerp-what",
+   "concept": "dm-kj",
+   "bloom": "understand",
+   "sources": [
+    "vanerp2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In van Erp's data from professional cyclists, what set the more successful climbers apart?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They lost less 5 and 20 min power after a lot of work already done",
+       "correct": true,
+       "why": "Right: holding power after high kJ·kg⁻¹ went with success."
+      },
+      {
+       "id": "b",
+       "text": "They lost no power at all after prior work",
+       "why": "Prior work lowered power in all groups; the successful ones lost less."
+      },
+      {
+       "id": "c",
+       "text": "They had higher 10 s sprint power when fresh",
+       "why": "Sprint power after work set apart the successful sprinters, not the climbers."
+      },
+      {
+       "id": "d",
+       "text": "They did less work before the decisive climbs",
+       "why": "The study compared power at matched levels of prior work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-decline-calc",
+   "concept": "dm-rpp",
+   "bloom": "apply",
+   "sources": [
+    "mateomarch2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's fresh 5 min MMP is 420 W. After 40 kJ·kg⁻¹ his best 5 min is 391 W. What is the percent decline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6.9%",
+       "correct": true,
+       "why": "Right: (420 − 391) ÷ 420 = 29 ÷ 420 = 6.9%."
+      },
+      {
+       "id": "b",
+       "text": "7.4%",
+       "why": "That divides by the fatigued value (29 ÷ 391); the reference is the fresh value."
+      },
+      {
+       "id": "c",
+       "text": "29%",
+       "why": "29 is the fall in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "93.1%",
+       "why": "That's the share of fresh power he kept, not the decline."
+      }
+     ],
+     "solution": "Fall = 420 − 391 = 29 W. Decline = 29 ÷ 420 = 0.069 = 6.9%."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's fresh 20 min power is 300 W. After 2,000 kJ of riding she manages 276 W for 20 min. What is the percent decline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8.0%",
+       "correct": true,
+       "why": "Right: (300 − 276) ÷ 300 = 24 ÷ 300 = 8.0%."
+      },
+      {
+       "id": "b",
+       "text": "8.7%",
+       "why": "That divides by the fatigued value (24 ÷ 276)."
+      },
+      {
+       "id": "c",
+       "text": "24%",
+       "why": "24 is the fall in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "92.0%",
+       "why": "That's the share she kept, not the decline."
+      }
+     ],
+     "solution": "Fall = 300 − 276 = 24 W. Decline = 24 ÷ 300 = 0.080 = 8.0%."
+    },
+    {
+     "id": "c",
+     "stem": "A rider's fresh 20 min MMP is 255 W. After 30 kJ·kg⁻¹ it is 232 W. What is the percent decline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9.0%",
+       "correct": true,
+       "why": "Right: (255 − 232) ÷ 255 = 23 ÷ 255 = 9.0%."
+      },
+      {
+       "id": "b",
+       "text": "9.9%",
+       "why": "That divides by the fatigued value (23 ÷ 232)."
+      },
+      {
+       "id": "c",
+       "text": "23%",
+       "why": "23 is the fall in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "91.0%",
+       "why": "That's the share kept, not the decline."
+      }
+     ],
+     "solution": "Fall = 255 − 232 = 23 W. Decline = 23 ÷ 255 = 0.090 = 9.0%."
+    }
+   ]
+  },
+  {
+   "id": "dm-rpp-recall",
+   "concept": "dm-rpp",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mateomarch2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 112 professional cyclists, roughly how much did best powers (10 s to 120 min) fall after 45 kJ·kg⁻¹ of prior work?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 6–10%",
+       "correct": true,
+       "why": "Right: 6.0–9.7% after 45 kJ·kg⁻¹ (1.6–3.0% after 15)."
+      },
+      {
+       "id": "b",
+       "text": "About 1–3%",
+       "why": "That was after only 15 kJ·kg⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "About 25–30%",
+       "why": "Far too large for the group averages."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: pros don't fatigue",
+       "why": "All MMP values fell, even after the lowest level of work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-high-intensity",
+   "concept": "dm-rpp",
+   "bloom": "analyse",
+   "sources": [
+    "leo2024",
+    "hunter2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders have done 30 kJ·kg⁻¹. Rider A did it all steady below CP; rider B did a third of it in attacks above CP. Who probably has lower 5 min power now, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: work above CP tires more than the same work below it",
+       "correct": true,
+       "why": "Right: even 2.5 kJ·kg⁻¹ above CP lowered power more than the same work done below CP."
+      },
+      {
+       "id": "b",
+       "text": "A: steady riding drains more glycogen than attacks",
+       "why": "Hard efforts use glycogen faster, not slower."
+      },
+      {
+       "id": "c",
+       "text": "Neither: equal kJ·kg⁻¹ means equal fatigue",
+       "why": "kJ·kg⁻¹ counts the amount of work, not how hard it was; intensity matters too."
+      },
+      {
+       "id": "d",
+       "text": "A: B's attacks act as a warm-up",
+       "why": "A warm-up helps fresh efforts; repeated work above CP adds fatigue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-hr-zone",
+   "concept": "dm-lab",
+   "bloom": "apply",
+   "sources": [
+    "stevenson2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's fresh VT1 is at 220 W and 142 beats·min⁻¹. In hour 3 of a long ride she wants to ride as close to VT1 as she can without going over. Which target fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 200 W, since VT1 power has likely fallen by about 10%",
+       "correct": true,
+       "why": "Right: after 2 h, VT1 power fell about 10% while the heart rate at VT1 rose."
+      },
+      {
+       "id": "b",
+       "text": "142 beats·min⁻¹, her fresh heart rate at VT1",
+       "why": "Heart rate at VT1 rises in long rides (142 → 151 in one study), so 142 now keeps her well under VT1, not close to it."
+      },
+      {
+       "id": "c",
+       "text": "220 W, her fresh VT1 power",
+       "why": "VT1 power fell by about 20 W in 2 h; 220 W would now be above it."
+      },
+      {
+       "id": "d",
+       "text": "240 W, since VT1 rises as she warms up",
+       "why": "VT1 power falls in prolonged exercise, it doesn't rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-clark-timing",
+   "concept": "dm-lab",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "clark2019a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Riders did a 3 min all-out test fresh, and after 40 min, 80 min and 2 h of heavy-intensity cycling. When was their end-test power (an estimate of CP) lower?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only after 2 h",
+       "correct": true,
+       "why": "Right: unchanged at 40 and 80 min, 9% lower at 2 h."
+      },
+      {
+       "id": "b",
+       "text": "Already after 40 min, then steadily lower",
+       "why": "It held at 40 and 80 min; the fall came later."
+      },
+      {
+       "id": "c",
+       "text": "Never: CP is fixed",
+       "why": "It fell 9% after 2 h."
+      },
+      {
+       "id": "d",
+       "text": "Only after 40 min, then it recovered",
+       "why": "There was no fall at 40 min."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-decoupling-run",
+   "concept": "dm-field",
+   "bloom": "apply",
+   "sources": [
+    "rothschild2025",
+    "smyth2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does the same 2 h route every month at the same pace. This month her heart rate in the second hour is 8 beats·min⁻¹ higher than in the first; last month it was 4. What does that suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More decoupling: her durability on this run is worse this month",
+       "correct": true,
+       "why": "Right: a bigger heart rate drift at the same pace is a field sign of poorer durability (if heat and fueling were similar)."
+      },
+      {
+       "id": "b",
+       "text": "Her VO₂max has gone up",
+       "why": "A rising heart rate at the same pace doesn't show a higher VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: heart rate drift is pure noise",
+       "why": "Decoupling tracked VT1 loss in the lab; it carries real information, though heat and fueling must match."
+      },
+      {
+       "id": "d",
+       "text": "She should run the route faster next time",
+       "why": "The drift suggests she's coping worse, not that she has more in reserve."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dm-field-appraisal",
+   "concept": "dm-field",
+   "bloom": "evaluate",
+   "sources": [
+    "mateomarch2022",
+    "vanerp2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study builds pros' fatigued power profiles from race files only. What is the main problem with treating late-race MMP as their true fatigued capacity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Riders often don't go all-out late on, so late MMP can underestimate capacity",
+       "correct": true,
+       "why": "Right: tactics decide efforts; a rider sheltering in the bunch doesn't produce a maximal effort."
+      },
+      {
+       "id": "b",
+       "text": "Power meters stop being accurate after about 3 h of riding",
+       "why": "Power meters don't lose accuracy over time in a ride."
+      },
+      {
+       "id": "c",
+       "text": "Work in kJ·kg⁻¹ can't be calculated from race files",
+       "why": "Work done is easy to compute from power and time."
+      },
+      {
+       "id": "d",
+       "text": "Pros are too few to study",
+       "why": "Samples of 26 to 112 riders over many seasons are fair for observational work."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

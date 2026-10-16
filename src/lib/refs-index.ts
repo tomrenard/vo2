@@ -15,6 +15,14 @@ import g_t1b_fatigue from "../../data/glossary/t1b-fatigue.json";
 import g_t1b_oxygen_transport from "../../data/glossary/t1b-oxygen-transport.json";
 import g_t1b_respiratory from "../../data/glossary/t1b-respiratory.json";
 import g_t1b_thermo from "../../data/glossary/t1b-thermo.json";
+import g_t2_body_comp from "../../data/glossary/t2-body-comp.json";
+import g_t2_cp_wprime from "../../data/glossary/t2-cp-wprime.json";
+import g_t2_durability from "../../data/glossary/t2-durability.json";
+import g_t2_economy from "../../data/glossary/t2-economy.json";
+import g_t2_pacing from "../../data/glossary/t2-pacing.json";
+import g_t2_testing from "../../data/glossary/t2-testing.json";
+import g_t2_thresholds from "../../data/glossary/t2-thresholds.json";
+import g_t2_vo2max from "../../data/glossary/t2-vo2max.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -31,6 +39,14 @@ import s_t1b_fatigue from "../../data/sources/t1b-fatigue.json";
 import s_t1b_oxygen_transport from "../../data/sources/t1b-oxygen-transport.json";
 import s_t1b_respiratory from "../../data/sources/t1b-respiratory.json";
 import s_t1b_thermo from "../../data/sources/t1b-thermo.json";
+import s_t2_body_comp from "../../data/sources/t2-body-comp.json";
+import s_t2_cp_wprime from "../../data/sources/t2-cp-wprime.json";
+import s_t2_durability from "../../data/sources/t2-durability.json";
+import s_t2_economy from "../../data/sources/t2-economy.json";
+import s_t2_pacing from "../../data/sources/t2-pacing.json";
+import s_t2_testing from "../../data/sources/t2-testing.json";
+import s_t2_thresholds from "../../data/sources/t2-thresholds.json";
+import s_t2_vo2max from "../../data/sources/t2-vo2max.json";
 import type { Glossary, Source } from "./content";
 
 export const GLOSSARY = {
@@ -49,6 +65,14 @@ export const GLOSSARY = {
   ...g_t1b_oxygen_transport,
   ...g_t1b_respiratory,
   ...g_t1b_thermo,
+  ...g_t2_body_comp,
+  ...g_t2_cp_wprime,
+  ...g_t2_durability,
+  ...g_t2_economy,
+  ...g_t2_pacing,
+  ...g_t2_testing,
+  ...g_t2_thresholds,
+  ...g_t2_vo2max,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -67,4 +91,12 @@ export const SOURCES = {
   ...s_t1b_oxygen_transport,
   ...s_t1b_respiratory,
   ...s_t1b_thermo,
+  ...s_t2_body_comp,
+  ...s_t2_cp_wprime,
+  ...s_t2_durability,
+  ...s_t2_economy,
+  ...s_t2_pacing,
+  ...s_t2_testing,
+  ...s_t2_thresholds,
+  ...s_t2_vo2max,
 } as Record<string, Source>;

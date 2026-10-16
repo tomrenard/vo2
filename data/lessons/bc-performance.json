@@ -1,0 +1,630 @@
+{
+ "id": "bc-performance",
+ "module": "t2-body-comp",
+ "title": "Body mass, fat and performance",
+ "goal": "Estimate what extra mass costs a runner and a climbing cyclist, weigh what body-fat studies in triathletes can and can't show, and explain why losing mass only helps if power and health hold.",
+ "requires": [
+  "bc-power-weight"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "body-weight",
+    "periodisation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "bcp-weight",
+   "title": "Running: you pay to hold yourself up",
+   "text": "Each stride, your legs push down hard enough to hold up your [body weight](g:body-weight) and send you back into the air. Is that what costs the energy, or is it speeding up and slowing down your mass?\n\nTeunissen and colleagues separated the two in 10 runners at 3 m·s⁻¹. A harness took away part of their weight; lead added weight; a mix added mass without weight. Removing weight cut the cost, though less than in proportion; adding load raised it slightly more than in proportion; extra mass alone changed little [[c:teunissen-weight]].\n\nSo supporting body weight is the main cost of running, at most about 74% of it. Extra kilos, fat or not, cost a runner roughly their share of body mass.",
+   "claims": [
+    {
+     "id": "teunissen-weight",
+     "text": "In 10 runners, reducing weight lowered metabolic rate less than proportionally, adding load raised it slightly more than proportionally, and adding mass alone had little effect: supporting body weight is the main cost of running (at most about 74% of net cost).",
+     "grade": "weak",
+     "sources": [
+      "teunissen2007"
+     ],
+     "evidence": [
+      {
+       "source": "teunissen2007",
+       "quote": "We found that net metabolic rate decreased in less than direct proportion to reduced body weight, increased in slightly more than direct proportion to added load (added mass and weight), and was not substantially different from normal running with added mass alone.",
+       "level": "abstract"
+      },
+      {
+       "source": "teunissen2007",
+       "quote": "Our results show that generating force to support body weight is the primary determinant of the metabolic cost of running. Extrapolating our reduced weight data to zero weight suggests that supporting body weight comprises at most 74% of the net cost of running.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcp-weight-support"
+  },
+  {
+   "type": "question",
+   "item": "bcp-harness"
+  },
+  {
+   "type": "concept",
+   "id": "bcp-extra-mass",
+   "title": "What 5% extra costs on the track",
+   "text": "What does that mean for a race? In a classic study, six people ran with 5, 10 and 15% of their body mass added to the trunk, standing in for extra fat. Each extra 5% cut the 12-minute run by about **89 m** and [VO2max](g:vo2max) per kg of total mass by 2.4 mL·kg⁻¹·min⁻¹, while VO2max in L·min⁻¹ didn't change [[c:cureton-excess]]. The heart and lungs were the same; there was just more to carry.\n\nWhere the mass sits matters too. Each 100 g added to each foot raised oxygen uptake by about 1% [[c:shoe-mass]]; the same 200 g on the trunk of a 70 kg runner would cost only about 0.3%. Feet swing fast and far on every stride, so light shoes are cheap speed.",
+   "claims": [
+    {
+     "id": "cureton-excess",
+     "text": "Adding 5% of body mass as external weight decreased VO2max per kg of total weight by 2.4 mL·kg⁻¹·min⁻¹ and 12-min run distance by 89 m, without changing VO2max in L·min⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "cureton1978"
+     ],
+     "evidence": [
+      {
+       "source": "cureton1978",
+       "quote": "An increase of 5% AW was found, on the average, to decrease Vo2 max (ml/min.kg TW) 2.4 ml, the TM run time 35 sec and the 12-min run distance 89 m.",
+       "level": "abstract"
+      },
+      {
+       "source": "cureton1978",
+       "quote": "It was concluded that changes in excess body weight can influence Vo2 max expressed relative to body weight and distance run performance independent of any change in cardiovascular capacity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "shoe-mass",
+     "text": "Adding mass to the feet raises oxygen uptake by about 1% per 100 g per foot, barefoot or shod.",
+     "grade": "moderate",
+     "sources": [
+      "franz2012"
+     ],
+     "evidence": [
+      {
+       "source": "franz2012",
+       "quote": "Numerous studies have shown that adding mass to shoes increases submaximal oxygen uptake (V˙O(2)) by approximately 1% per 100 g per shoe.",
+       "level": "abstract"
+      },
+      {
+       "source": "franz2012",
+       "quote": "V˙O(2) increased by approximately 1% for each 100 g added per foot, whether barefoot or shod (P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bcp-cureton-example",
+   "title": "Extra kilos in a 12-minute run",
+   "problem": "A 60 kg runner covers 3,200 m in a 12-minute test. Over the winter she gains 3 kg of fat. Using about 89 m lost per 5% of body mass added, how far might she run now, if nothing else changed?",
+   "steps": [
+    "Extra mass as a share of body mass: 3 ÷ 60 = 5%.",
+    "5% costs about 89 m, so she runs about 3,200 − 89 ≈ 3,110 m.",
+    "This assumes her heart, lungs and legs are unchanged, as in the study where the weight was strapped on. Real fat gain usually comes with other changes, so treat it as an estimate."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcp-cureton-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcp-shoe"
+  },
+  {
+   "type": "concept",
+   "id": "bcp-climb",
+   "title": "Cycling: seconds per kilo on a climb",
+   "text": "On a steep climb, with gravity taking about 90% of the power, climbing time is roughly proportional to **total mass ÷ power**. Across realistic changes in mass, power and drag, speed in a road-cycling model changed in a straight line [[c:linear-speed]], so simple ratios give fair estimates.\n\nThe catch is the word *power*. Losing 2 kg helps only if you keep your watts. Lose them too, and you can climb slower at a lower mass. The rule of thumb:\n\n**new time ≈ old time × (new total mass ÷ old total mass) × (old power ÷ new power)**\n\nIt ignores air drag, so it overstates the gain: on an 8% climb the full model gives about 85% of the predicted saving, and less on gentler climbs.",
+   "claims": [
+    {
+     "id": "linear-speed",
+     "text": "In a validated model of road cycling power, cycling velocity varied linearly over the range of parameter changes tested.",
+     "grade": "moderate",
+     "sources": [
+      "martin1998"
+     ],
+     "evidence": [
+      {
+       "source": "martin1998",
+       "quote": "The model was also used to estimate the effects of changes in several model parameters on cycling velocity. Over the range of parameter values evaluated, velocity varied linearly",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bcp-climb-example",
+   "title": "What is 2 kg worth on a 30-minute climb?",
+   "problem": "A 70 kg rider on an 8 kg bike climbs a steep pass in 30 minutes at 300 W. He loses 2 kg and keeps his 300 W. Roughly how much faster is he?",
+   "steps": [
+    "Old total mass 78 kg, new 76 kg. Power is unchanged.",
+    "New time ≈ 30 × (76 ÷ 78) = 30 × 0.974 = 29.2 minutes.",
+    "Saving ≈ 0.8 min ≈ 46 s by the rule. With air drag included (8% climb, CdA 0.35 m²), the full model gives about 39 s, so treat the rule as an upper estimate."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcp-climb-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcp-lose-power"
+  },
+  {
+   "type": "concept",
+   "id": "bcp-triathlon",
+   "title": "Triathletes: does lower fat mean faster?",
+   "text": "Triathlon mixes both cases: the run and hilly bike courses reward low mass, the swim and flat bike don't punish it much.\n\nIn non-professional Ironman triathletes, % body fat explained 57% of the spread in race time among men, but showed no link in women, whose race time went with weekly training volume [[c:knechtle-fat]].\n\nThis is a [cross-sectional study](g:cross-sectional-study): one snapshot. Leaner men may be faster because they train more, have trained for longer, or are simply more talented: classic [confounders](g:confounder). It can't show that losing fat would make any one athlete faster.\n\nThe experiment with added weight shows mass costs a runner; it doesn't show how lean is lean enough, or what dieting costs.",
+   "claims": [
+    {
+     "id": "knechtle-fat",
+     "text": "In male non-professional Ironman triathletes, % body fat was related to race time (r² = 0.57); in women it wasn't, and weekly training volume was.",
+     "grade": "weak",
+     "sources": [
+      "knechtle2010"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2010",
+       "quote": "For male athletes, percent body fat (r2 = 0.57, p < .001) was related to total race time but not average weekly training.",
+       "level": "abstract"
+      },
+      {
+       "source": "knechtle2010",
+       "quote": "For women, percent body fat showed no association with total race time; howeven average weekly training volume was related to total race time (r = .43, p < .01).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is getting leaner a reliable way for an endurance athlete to get faster?",
+    "sides": [
+     {
+      "position": "Yes, within limits: extra mass costs runners and climbers directly, and leaner athletes tend to race faster.",
+      "sources": [
+       "cureton1978",
+       "knechtle2010"
+      ]
+     },
+     {
+      "position": "Not reliably: the link is observational and absent in some groups, and the energy deficit needed to get there can cost health, training and performance.",
+      "sources": [
+       "knechtle2010",
+       "mountjoy2023",
+       "stellingwerff2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "bcp-knechtle-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "bcp-periodise",
+   "title": "Lean for the peak, not all year",
+   "text": "One Olympic 1,500 m runner was tracked for 9 years. She raced faster when her sum of 8 skinfolds and body mass were lower [[c:stellingwerff-periodise]]. But her plan was not to stay lean. She spent September to April about 2–4% above her race weight, eating enough to train well, and only cut down, slowly and with a set time frame, for the summer racing. She had only two injuries in her career.\n\nThis is [periodisation](g:periodisation) of body composition, and it is one athlete: weak evidence, but a useful model. Staying at peak leanness all year, the authors argue, isn't sustainable for health or performance. The next lesson shows why: chronic [low energy availability](g:energy-availability) is the price.",
+   "claims": [
+    {
+     "id": "stellingwerff-periodise",
+     "text": "In one Olympic-level 1,500 m runner over 9 years, slower race times correlated with higher skinfolds and body mass; she spent the general preparation phase about 2–4% above competition weight and had only two career injuries.",
+     "grade": "weak",
+     "sources": [
+      "stellingwerff2018"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2018",
+       "quote": "There were also significant positive correlations between slower 1,500-m race times and increasing So8 (r = .437; p < .01), estimated fat mass (r = .445; p < .01), and BW (r = .511; p < .0001).",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2018",
+       "quote": "General preparation phase (September to April) featured the athlete at ∼2-4% over ideal competition phase body weight (BW) and body fat (%), with optimal energy availability being prioritized.",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2018",
+       "quote": "Data are emerging to suggest that it is not sustainable from a health and/or performance perspective to be at peak body composition year-round, so body composition needs to be strategically periodized.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcp-periodise-plan"
+  },
+  {
+   "type": "question",
+   "item": "bcp-cureton-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "bcp-climb-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Running cost is mostly the cost of supporting body weight: extra load raises it about in proportion, so extra kilos, fat or not, cost a runner.",
+    "Adding 5% of body mass cut a 12-minute run by about 89 m without changing VO2max in L·min⁻¹; mass on the feet costs about 1% per 100 g per foot.",
+    "On steep climbs, roughly, time ≈ old time × mass ratio × power ratio (it ignores air, so it overstates mass gains): losing mass helps only if power holds.",
+    "Leaner male Ironman triathletes were faster, but that is a cross-sectional link with confounders, and it didn't hold in women.",
+    "Elite practice periodises body composition: a few % heavier in training, leaner only for peak races, with enough energy all year."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bcp-weight-support",
+   "concept": "bcp-weight",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "teunissen2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to the harness and lead experiments, what is the main energy cost of running at a steady speed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Producing force to support body weight",
+       "correct": true,
+       "why": "Right: changing weight changed cost about in proportion, while adding mass without weight changed little."
+      },
+      {
+       "id": "b",
+       "text": "Speeding up and slowing down body mass each stride",
+       "why": "Adding mass alone (without weight) barely changed cost, so braking and propelling mass is not the main cost."
+      },
+      {
+       "id": "c",
+       "text": "Swinging the arms for balance",
+       "why": "Arm swing costs something, but the experiments pointed to supporting body weight as the primary cost."
+      },
+      {
+       "id": "d",
+       "text": "Pushing against air resistance",
+       "why": "At 3 m·s⁻¹ air resistance is a small share of a runner's cost, unlike a cyclist's at 40 km/h."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcp-harness",
+   "concept": "bcp-weight",
+   "bloom": "analyse",
+   "sources": [
+    "teunissen2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An injured runner trains on an anti-gravity treadmill that removes 20% of her body weight, at her usual speed. What happens to her net metabolic cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls, but by less than 20%",
+       "correct": true,
+       "why": "Right: reducing weight lowered cost less than in direct proportion; supporting weight is at most about 74% of the cost."
+      },
+      {
+       "id": "b",
+       "text": "It falls by exactly 20%",
+       "why": "That would be true only if supporting weight were the whole cost; part of it (swinging legs, moving forward) doesn't shrink with weight."
+      },
+      {
+       "id": "c",
+       "text": "It falls by more than 20%",
+       "why": "The effect went the other way: less than in proportion when weight was removed."
+      },
+      {
+       "id": "d",
+       "text": "It stays the same, because her mass hasn't changed",
+       "why": "Mass alone matters little; it's the weight the legs must hold up that sets most of the cost."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcp-cureton-calc",
+   "concept": "bcp-extra-mass",
+   "bloom": "apply",
+   "sources": [
+    "cureton1978"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg runner covers 3,000 m in 12 minutes. He then carries 7 kg extra. Using about 89 m lost per 5% of body mass added, roughly how far will he run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2,820 m",
+       "correct": true,
+       "why": "Right: 7 ÷ 70 = 10%, twice 5%, so about 2 × 89 = 178 m less: 3,000 − 178 ≈ 2,820 m."
+      },
+      {
+       "id": "b",
+       "text": "About 2,910 m",
+       "why": "This uses 89 m for the whole 7 kg; 7 kg is 10% of his mass, so twice the 5% effect."
+      },
+      {
+       "id": "c",
+       "text": "About 2,700 m",
+       "why": "This takes 10% off the distance; distance fell by much less than the share of mass added (about 89 m per 5%)."
+      },
+      {
+       "id": "d",
+       "text": "About 2,380 m",
+       "why": "This uses 89 m per kg (7 × 89 = 623 m); the figure is per 5% of body mass, not per kg."
+      }
+     ],
+     "solution": "Added mass = 7 ÷ 70 = 10% = 2 × 5%. Loss ≈ 2 × 89 = 178 m. Distance ≈ 3,000 − 178 ≈ 2,820 m."
+    },
+    {
+     "id": "b",
+     "stem": "A 56 kg triathlete runs 2,800 m in 12 minutes. If she gained 1.4 kg of fat with nothing else changing, about how many metres would she lose, using 89 m per 5% of body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 45 m",
+       "correct": true,
+       "why": "Right: 1.4 ÷ 56 = 2.5%, half of 5%, so about 89 ÷ 2 ≈ 45 m."
+      },
+      {
+       "id": "b",
+       "text": "About 89 m",
+       "why": "That is the figure for a 5% gain; 1.4 kg is only 2.5% of 56 kg."
+      },
+      {
+       "id": "c",
+       "text": "About 125 m",
+       "why": "This uses 89 m per kg (1.4 × 89); the figure is per 5% of body mass."
+      },
+      {
+       "id": "d",
+       "text": "About 70 m",
+       "why": "This takes 2.5% off the 2,800 m distance; the study found distance fell by less than the mass rose."
+      }
+     ],
+     "solution": "1.4 ÷ 56 = 0.025 = 2.5% = half of 5%. Loss ≈ 89 × 0.5 ≈ 45 m."
+    }
+   ]
+  },
+  {
+   "id": "bcp-shoe",
+   "concept": "bcp-extra-mass",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "franz2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg triathlete swaps 330 g training shoes for 230 g racing shoes (per shoe). At the same pace, about how much does her oxygen uptake change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1% lower",
+       "correct": true,
+       "why": "Right: about 1% per 100 g per foot, and each shoe is 100 g lighter."
+      },
+      {
+       "id": "b",
+       "text": "About 2% lower, since both shoes lose 100 g",
+       "why": "The 1% figure is per 100 g on each foot, so it already counts both feet."
+      },
+      {
+       "id": "c",
+       "text": "About 0.3% lower, the share of 200 g in her body mass",
+       "why": "Mass on the feet costs much more than its share of body mass, because the feet swing fast on every stride."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcp-climb-calc",
+   "concept": "bcp-climb",
+   "bloom": "apply",
+   "sources": [
+    "martin1998",
+    "padilla1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 63 kg rider on an 8 kg bike climbs in 40 minutes. She loses 1.5 kg and keeps her power. Using the rule of thumb (time ∝ total mass ÷ power), roughly how much faster is she?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 50 s",
+       "correct": true,
+       "why": "Right: 40 × (69.5 ÷ 71) = 39.15 min, a saving of about 0.85 min ≈ 51 s."
+      },
+      {
+       "id": "b",
+       "text": "About 57 s",
+       "why": "This uses body mass only (61.5 ÷ 63); the bike is lifted too, so use total mass."
+      },
+      {
+       "id": "c",
+       "text": "About 85 s",
+       "why": "Unit slip: the saving is 0.85 min, which is about 51 s, not 85 s."
+      },
+      {
+       "id": "d",
+       "text": "About 5 s",
+       "why": "Far too small: on a steep climb time scales almost directly with total mass, so 2% less mass saves about 2% of the time."
+      }
+     ],
+     "solution": "Old total 63 + 8 = 71 kg; new 69.5 kg. New time ≈ 40 × 69.5 ÷ 71 = 39.15 min. Saving ≈ 0.85 min ≈ 51 s."
+    },
+    {
+     "id": "b",
+     "stem": "A 60 kg rider on an 8 kg bike climbs at 280 W. A crash diet takes off 3 kg, but his climbing power falls 6%, to 263 W. On the same steep climb, using the rule of thumb, is he faster or slower?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1.7% slower",
+       "correct": true,
+       "why": "Right: time factor = (65 ÷ 68) × (1 ÷ 0.94) = 0.956 × 1.064 ≈ 1.017: he lost more power than mass."
+      },
+      {
+       "id": "b",
+       "text": "About 4.4% faster",
+       "why": "This counts the mass loss (65 ÷ 68) and forgets the 6% drop in power."
+      },
+      {
+       "id": "c",
+       "text": "About 5% faster",
+       "why": "This uses body mass only (57 ÷ 60 = 0.95) and forgets the drop in power."
+      },
+      {
+       "id": "d",
+       "text": "Exactly the same",
+       "why": "The mass ratio (0.956) and power ratio (1.064) don't cancel: the power loss is bigger."
+      }
+     ],
+     "solution": "Total mass 68 → 65 kg; power 280 → 263 W. New time ÷ old time ≈ (65 ÷ 68) × (1 ÷ 0.94) = 0.956 × 1.064 ≈ 1.017, about 1.7% slower."
+    }
+   ]
+  },
+  {
+   "id": "bcp-lose-power",
+   "concept": "bcp-climb",
+   "bloom": "evaluate",
+   "sources": [
+    "martin1998",
+    "stellingwerff2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's coach says: \"Every kilo you lose is worth 20 seconds on the big climb.\" What is the most important condition for that to be true?",
+     "options": [
+      {
+       "id": "a",
+       "text": "That his climbing power stays the same as he loses mass",
+       "correct": true,
+       "why": "Right: time scales with mass ÷ power. If power falls by a bigger share than mass, he gets slower."
+      },
+      {
+       "id": "b",
+       "text": "That the mass he loses is fat rather than water",
+       "why": "Fat or water, a kilo is a kilo to gravity. What matters is whether power holds; water loss usually costs power, which is part of why it fails."
+      },
+      {
+       "id": "c",
+       "text": "That his bike is the lightest legal bike",
+       "why": "Bike mass changes the total, but it doesn't change whether each body kilo saves time: power does."
+      },
+      {
+       "id": "d",
+       "text": "That the climb is shorter than 10 minutes",
+       "why": "Longer climbs make the saving bigger in seconds; climb length isn't the condition."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcp-knechtle-appraisal",
+   "concept": "bcp-triathlon",
+   "bloom": "evaluate",
+   "sources": [
+    "knechtle2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog cites the Ironman study (body fat explained 57% of race-time spread in men) as proof that \"cutting body fat will make you faster\". What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A snapshot: training or talent may drive both",
+       "correct": true,
+       "why": "Right: a snapshot shows what goes together, not cause; confounders like training history could explain the link."
+      },
+      {
+       "id": "b",
+       "text": "An r² of 0.57 is too weak to matter",
+       "why": "An r² of 0.57 is a strong association; the problem is what it can't show (cause), not its size."
+      },
+      {
+       "id": "c",
+       "text": "Body fat can't be measured well enough",
+       "why": "It can, with error; measurement noise would weaken the link, not create it."
+      },
+      {
+       "id": "d",
+       "text": "The women in the study were faster",
+       "why": "The study doesn't say that; it found no fat–time link in women, which itself warns against a general rule."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcp-periodise-plan",
+   "concept": "bcp-periodise",
+   "bloom": "apply",
+   "sources": [
+    "stellingwerff2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 10 km runner races twice a year, in June and September. Which body-mass plan follows the periodisation model from the Olympic runner case?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A few % above race weight in winter, a slow, time-limited cut for summer",
+       "correct": true,
+       "why": "Right: about 2–4% above competition weight during general preparation, eating enough to train, and a planned cut only for the racing phase."
+      },
+      {
+       "id": "b",
+       "text": "Race weight held all year so there is never a cut to make",
+       "why": "The case argues the opposite: holding peak leanness all year isn't sustainable for health or performance."
+      },
+      {
+       "id": "c",
+       "text": "A fast cut in the last week before each race",
+       "why": "The cut was gradual and planned over weeks, with feedback from body weight, performance and hunger; a crash cut costs power."
+      },
+      {
+       "id": "d",
+       "text": "As light as possible in winter, regain mass for racing",
+       "why": "Backwards: winter is when training load is high and energy is most needed."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

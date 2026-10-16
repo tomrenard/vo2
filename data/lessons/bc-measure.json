@@ -1,0 +1,725 @@
+{
+ "id": "bc-measure",
+ "module": "t2-body-comp",
+ "title": "Measuring body composition",
+ "goal": "Explain what DXA, underwater weighing, air displacement, BIA and skinfolds actually measure, why none is a gold standard, and how to standardise a measurement so a change can be trusted.",
+ "requires": [
+  "pace-racing"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "body-composition",
+    "fat-mass",
+    "fat-free-mass",
+    "two-compartment-model",
+    "body-density",
+    "hydrostatic-weighing",
+    "air-displacement-plethysmography",
+    "dxa",
+    "bone-mineral-density",
+    "bia",
+    "skinfold",
+    "accuracy",
+    "precision"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "bcm-models",
+   "title": "Every method measures something else",
+   "text": "[Body composition](g:body-composition) is usually split into [fat mass](g:fat-mass) and [fat-free mass](g:fat-free-mass) (FFM): the [two-compartment model](g:two-compartment-model). Measure one, subtract it from body mass, and you have the other. Three- and four-compartment models also count bone mineral and body water.\n\nOnly dissecting a body measures fat directly. Every living method measures something else (volume, X-ray absorption, electrical resistance, skin thickness) and converts it to fat with assumptions. Some add a second step, a prediction equation, so they are \"doubly indirect\".\n\nThat is why the IOC working group found no universally applicable gold standard method [[c:no-gold-standard]]. Each method has its own errors, and two methods on the same athlete can disagree by several % body fat.",
+   "claims": [
+    {
+     "id": "no-gold-standard",
+     "text": "There is no universally applicable criterion or gold standard method for body composition; every method has problems in its measurement or assumptions.",
+     "grade": "strong",
+     "sources": [
+      "ackland2012",
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "ackland2012",
+       "quote": "To date, there is no universally applicable criterion or 'gold standard' methodology for body composition assessment.",
+       "level": "abstract"
+      },
+      {
+       "source": "ackland2012",
+       "quote": "Over the past century, a myriad of techniques and equations have been proposed, but all have some inherent problems, whether in measurement methodology or in the assumptions they make.",
+       "level": "abstract"
+      },
+      {
+       "source": "kasper2021",
+       "quote": "Despite the importance placed upon optimising and assessing body composition in elite sport, there is no universally accepted measurement method",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-indirect"
+  },
+  {
+   "type": "concept",
+   "id": "bcm-density",
+   "title": "Underwater weighing and the BOD POD: body density",
+   "text": "[Hydrostatic weighing](g:hydrostatic-weighing) and [air displacement plethysmography](g:air-displacement-plethysmography) (ADP, the BOD POD) both measure body volume, so [body density](g:body-density). Fat is less dense than FFM, so a denser body is read as leaner.\n\nThe weak link is the conversion: it assumes every athlete's FFM has the same density. That may not hold in athletes, and air left in the lungs, gut or swimsuit adds error [[c:density-assumptions]]. Someone with heavier-than-assumed bone and muscle comes out denser, so the method reads them as leaner than they are.\n\nOn average the BOD POD and underwater weighing agree within 1% body fat, but individuals can differ by more [[c:adp-agreement]].",
+   "claims": [
+    {
+     "id": "density-assumptions",
+     "text": "Underwater weighing assumes tissue densities that may differ in elite athletes, and residual air in the lungs, gut or clothing adds error.",
+     "grade": "moderate",
+     "sources": [
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "kasper2021",
+       "quote": "limitations include (1) assumption of specific tissue densities, which may differ in elite athletic populations; (2) residual lung volume can be a source of error",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "adp-agreement",
+     "text": "On average, the BOD POD agrees with underwater weighing and DXA within about 1% body fat in adults, with wide differences between individuals.",
+     "grade": "moderate",
+     "sources": [
+      "fields2002"
+     ],
+     "evidence": [
+      {
+       "source": "fields2002",
+       "quote": "The average of the study means indicates that the BOD POD and HW agree within 1% body fat (BF) for adults and children, whereas the BOD POD and DXA agree within 1% BF for adults and 2% BF for children.",
+       "level": "abstract"
+      },
+      {
+       "source": "fields2002",
+       "quote": "Wide intersubject variations between methods are partly attributed to technical precision and biological error but to a large extent remain unexplained.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-density-direction"
+  },
+  {
+   "type": "concept",
+   "id": "bcm-dxa",
+   "title": "DXA: three compartments, and easily fooled",
+   "text": "[DXA](g:dxa) passes X-rays at two energies through the body. Bone, fat and lean tissue absorb them differently, so one scan gives fat, lean mass and bone ([bone mineral density](g:bone-mineral-density)), arm by arm and leg by leg. The dose is tiny: a few µSv, less than a day of natural background radiation in the UK.\n\nBut \"lean\" in DXA includes water and [glycogen](g:glycogen). A meal raised measured fat mass by up to 2.6%, and loading glycogen raised lean mass by 2.5% [[c:dxa-confounds]]. A rider who \"lost muscle\" in a hard block may just be low on glycogen.\n\nScanning athletes fasted and rested, in a set position, roughly halved the noise compared with scanning them as they came [[c:dxa-protocol]].",
+   "claims": [
+    {
+     "id": "dxa-confounds",
+     "text": "DXA results shift with food and glycogen: a meal can raise measured fat mass by up to 2.6% and glycogen loading raised lean mass by 2.5%. The dose of a scan is less than a day of UK background radiation.",
+     "grade": "moderate",
+     "sources": [
+      "kasper2021",
+      "nana2015"
+     ],
+     "evidence": [
+      {
+       "source": "kasper2021",
+       "quote": "Indeed, studies have suggested that eating a meal can lead to as much as a 2.6% increase in FM",
+       "level": "full-text"
+      },
+      {
+       "source": "kasper2021",
+       "quote": "Glycogen depletion significantly affects DXA results, with a 2.5% increase in LM when glycogen super compensated",
+       "level": "full-text"
+      },
+      {
+       "source": "kasper2021",
+       "quote": "the effective dose of two of the most widely used commercially available DXA systems (Hologic Discovery A system and GE-Lunar iDXA), which are relatively similar in radiation exposure (4–5 µSy), is less than the average natural daily background radiation experienced (5–8 µSy per day) in the United Kingdom",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dxa-protocol",
+     "text": "In 21 male cyclists, scans taken at random times gave change scores about twice as variable (2–3%) as scans taken fasted and rested (1–2%).",
+     "grade": "weak",
+     "sources": [
+      "nana2016",
+      "nana2015"
+     ],
+     "evidence": [
+      {
+       "source": "nana2016",
+       "quote": "The standard deviations of change scores for total and fat-free soft tissue mass (FFST) from Random scans (2-3%) were approximately double those observed in the Best (1-2%), owing to extra random errors associated with Random scans at baseline.",
+       "level": "abstract"
+      },
+      {
+       "source": "nana2015",
+       "quote": "Components of this protocol include standardization of subject presentation (subjects rested, overnight-fasted and in minimal clothing) and positioning on the scanning bed",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-dxa-glycogen"
+  },
+  {
+   "type": "question",
+   "item": "bcm-dxa-protocol"
+  },
+  {
+   "type": "concept",
+   "id": "bcm-bia",
+   "title": "BIA: really a water meter",
+   "text": "[BIA](g:bia), the method in body-fat scales, sends a tiny current through you. FFM holds a lot of water and conducts well; fat holds little and resists. So BIA really measures body water, and an equation turns that into FFM and then fat.\n\nThat makes it sensitive to anything that moves water: hydration, skin temperature, electrode placement [[c:bia-hydration]]. A dehydrated athlete has less water, so the scale reads less FFM and more fat. Fat didn't change.\n\nThe ESPEN guidelines say BIA works in healthy people with stable water balance, using an equation validated for their age, sex and ethnicity [[c:bia-validity]]. Athletes after training, in heat, or with low glycogen are exactly the people whose water is not stable.",
+   "claims": [
+    {
+     "id": "bia-hydration",
+     "text": "BIA estimates body water from resistance to a current; its output is affected by temperature, hydration status and electrode placement.",
+     "grade": "moderate",
+     "sources": [
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "kasper2021",
+       "quote": "Based on the resistance to current flow observed within the body, FFM has more water and is less resistant than FM, which contains less water and is therefore more resistant.",
+       "level": "full-text"
+      },
+      {
+       "source": "kasper2021",
+       "quote": "this method has several limitations including (1) outputs that can be affected by temperature and hydration status [28]; (2) sensitivity to conductive surface of electrodes and electrode placement",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bia-validity",
+     "text": "BIA works well in healthy people with stable water and electrolyte balance, using an equation validated for their age, sex and race.",
+     "grade": "strong",
+     "sources": [
+      "kyle2004"
+     ],
+     "evidence": [
+      {
+       "source": "kyle2004",
+       "quote": "The data suggests that BIA works well in healthy subjects and in patients with stable water and electrolytes balance with a validated BIA equation that is appropriate with regard to age, sex and race.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-bia-dehydrated"
+  },
+  {
+   "type": "concept",
+   "id": "bcm-skinfolds",
+   "title": "Skinfolds: report the millimetres",
+   "text": "A [skinfold](g:skinfold) caliper measures the thickness of skin plus the fat just under it, at set sites. Turning the sum into % body fat needs a prediction equation, and there are many, each made in a different group. That step adds most of the error.\n\nSo sport practitioners now report the **sum of 8 sites in mm** (the ISAK method) and track that number [[c:skinfold-sum]]. Skinfolds are also the method least thrown off by a meal, hydration or the day's training [[c:skinfold-robust]]. The catch is the tester: a trained, accredited measurer, and ideally the same one each time.\n\n| method | measures | thrown off by |\n|---|---|---|\n| underwater, BOD POD | volume → density | FFM density, trapped air |\n| DXA | X-ray absorption | food, glycogen, water |\n| BIA | resistance → water | hydration, temperature |\n| skinfolds | fat under skin, mm | tester skill |",
+   "claims": [
+    {
+     "id": "skinfold-sum",
+     "text": "Converting skinfolds to % body fat should be discouraged; a sum of 8 sites in mm (ISAK) is more accurate and reliable for tracking.",
+     "grade": "moderate",
+     "sources": [
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "kasper2021",
+       "quote": "Therefore, the conversion of skinfold thickness into a BF% should be discouraged with data presented as a sum of the 8 skinfold sites providing a more accurate and reliable outcome of body composition assessment",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "skinfold-robust",
+     "text": "Skinfolds are the method least affected by everyday activity, a meal and changes in hydration.",
+     "grade": "moderate",
+     "sources": [
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "kasper2021",
+       "quote": "However, skinfold assessment has also been shown to be the least affected method by everyday activities, ingestion of a meal and changes in hydration status",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-skinfold-report"
+  },
+  {
+   "type": "question",
+   "item": "bcm-method-choice"
+  },
+  {
+   "type": "concept",
+   "id": "bcm-precision",
+   "title": "Accuracy, precision and a change you can trust",
+   "text": "[Accuracy](g:accuracy) is how close a result is to the truth. [Precision](g:precision) is how close repeat results are when nothing changed: the [typical error](g:typical-error). For an athlete tracking change, precision matters more. A method that always reads 3% fat too high still shows a real drop.\n\nPrecision comes from doing it the same way each time [[c:bc-standardise]]:\n\n- same method, same device, same tester;\n- morning, overnight-fasted, rested, bladder emptied;\n- normal hydration, no hard training the day before, same clothing.\n\nThen compare the change with the noise. As in the evidence module: the noise on a difference is √2 × the typical error, and a change needs to clear about 2 × that before you call it real.",
+   "claims": [
+    {
+     "id": "bc-standardise",
+     "text": "Reliable body composition data need control of food intake, prior exercise, hydration and time of day; for DXA, scans rested, overnight-fasted and in minimal clothing.",
+     "grade": "moderate",
+     "sources": [
+      "nana2015",
+      "kasper2021"
+     ],
+     "evidence": [
+      {
+       "source": "nana2015",
+       "quote": "Body composition assessment implemented with such protocol ensures a high level of precision, while still being practical in an athletic setting.",
+       "level": "abstract"
+      },
+      {
+       "source": "kasper2021",
+       "quote": "Other factors to consider include time of day, hydration status and previous exercise activity",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bcm-change-example",
+   "title": "Did she really gain lean mass?",
+   "problem": "A triathlete's DXA lean mass goes from 50.0 kg to 50.8 kg over a winter strength block. Both scans were done fasted in the morning. Suppose the typical error for lean mass with this protocol is 1%. Is the 0.8 kg gain real?",
+   "steps": [
+    "Typical error in kg: 1% of 50 kg = 0.5 kg.",
+    "Noise on a difference of two scans: √2 × 0.5 = 1.41 × 0.5 ≈ 0.71 kg.",
+    "About 95% of changes from noise alone fall within ±1.96 × 0.71 ≈ ±1.4 kg.",
+    "0.8 kg is inside that band: the scans can't tell this gain from noise. A repeat scan, or a longer block, would help. (Had one scan been taken after a carbohydrate-heavy day, the 2.5% glycogen effect alone could explain it.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcm-change-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcm-accuracy-precision"
+  },
+  {
+   "type": "question",
+   "item": "bcm-change-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No method measures fat directly: each measures volume, X-ray absorption, resistance or skin thickness and converts it with assumptions. There is no gold standard.",
+    "Underwater weighing and the BOD POD give body density; they assume a fixed FFM density, which athletes may not have.",
+    "DXA gives fat, lean and bone by region, but lean mass includes water and glycogen, so food and fuelling shift it; scan fasted and rested.",
+    "BIA is a water meter: dehydration reads as more fat. Skinfolds, reported as a sum of 8 sites in mm, are the least affected by meals and hydration.",
+    "To track change, precision beats accuracy: same method, tester and conditions, and a change bigger than about 2 × √2 × the typical error."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bcm-indirect",
+   "concept": "bcm-models",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "ackland2012",
+    "kasper2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sports lab offers a \"gold standard\" body fat test. Why is that claim too strong?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Every living method measures a stand-in for fat and converts it with assumptions",
+       "correct": true,
+       "why": "Right: volume, X-ray absorption, resistance or skinfold thickness are converted to fat using assumptions that don't hold for everyone, so no method is a universal gold standard."
+      },
+      {
+       "id": "b",
+       "text": "Only DXA counts as a gold standard, and the lab may use another device",
+       "why": "DXA is widely treated as a reference, but it too makes assumptions and is shifted by food, glycogen and water. The IOC group named no gold standard."
+      },
+      {
+       "id": "c",
+       "text": "Fat can only be measured directly with a muscle biopsy",
+       "why": "A biopsy samples a tiny piece of one muscle; it can't give whole-body fat. Only dissection of a body measures fat directly."
+      },
+      {
+       "id": "d",
+       "text": "Gold standards exist but are banned for athletes because of radiation",
+       "why": "No method is banned; DXA's dose is a few µSv. The problem is assumptions, not safety."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-density-direction",
+   "concept": "bcm-density",
+   "bloom": "analyse",
+   "sources": [
+    "kasper2021",
+    "fields2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sprinter-built track cyclist has denser bone and muscle than the fat-free mass density the BOD POD equation assumes. How will her % body fat be read?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too low: her extra density is read as less fat",
+       "correct": true,
+       "why": "Right: the method only sees total density. Denser-than-assumed FFM makes the whole body denser, which the equation can only explain as less fat."
+      },
+      {
+       "id": "b",
+       "text": "Too high: heavy bone and muscle are read as extra fat",
+       "why": "Direction error: fat is the less dense tissue, so extra density pushes the estimate down, not up."
+      },
+      {
+       "id": "c",
+       "text": "Correctly: the BOD POD measures fat directly",
+       "why": "The BOD POD measures volume, then density; fat is inferred with an assumed FFM density."
+      },
+      {
+       "id": "d",
+       "text": "Correctly: density errors cancel out in the equation",
+       "why": "They don't cancel: the equation assumes one FFM density for everyone, so a different real density moves the result one way."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A distance runner is weighed under water but can't breathe out fully, leaving extra air in his lungs that the calculation doesn't account for. Which way is his % fat likely to be wrong?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too high: the trapped air makes him look less dense",
+       "correct": true,
+       "why": "Right: air adds volume and buoyancy, so he seems less dense, and the equation reads low density as more fat."
+      },
+      {
+       "id": "b",
+       "text": "Too low: extra air makes him heavier under water",
+       "why": "Air makes a body float more, so it weighs less under water, not more."
+      },
+      {
+       "id": "c",
+       "text": "Not at all: lung air doesn't affect body volume",
+       "why": "Residual lung volume is a known error source in underwater weighing for exactly this reason."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-dxa-glycogen",
+   "concept": "bcm-dxa",
+   "bloom": "apply",
+   "sources": [
+    "kasper2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A road cyclist's DXA shows 1.2 kg less lean mass after a week of hard, low-carbohydrate training than in a scan taken after a race-week carbohydrate load. Most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower glycogen and the water stored with it, read by DXA as lean mass",
+       "correct": true,
+       "why": "Right: DXA's lean mass includes glycogen and water. Glycogen loading raised measured lean mass by about 2.5%, about 1.2 kg on a 50 kg lean mass."
+      },
+      {
+       "id": "b",
+       "text": "A real loss of muscle protein from the hard training week",
+       "why": "Losing over a kilo of muscle in a week is very unlikely; the scans were taken in different fuelling states, which DXA can't separate from muscle."
+      },
+      {
+       "id": "c",
+       "text": "Radiation from the first scan breaking down muscle",
+       "why": "The dose is a few µSv, less than a day of background radiation; it has no effect on muscle."
+      },
+      {
+       "id": "d",
+       "text": "Fat replacing muscle because of the low-carbohydrate diet",
+       "why": "Nothing suggests fat rose; the change is in lean mass, which tracks glycogen and water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-dxa-protocol",
+   "concept": "bcm-dxa",
+   "bloom": "apply",
+   "sources": [
+    "nana2015",
+    "nana2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlon squad gets two DXA scans, 12 weeks apart, to track changes. Which plan gives the most precise comparison?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both scans early morning, fasted, rested, same position and clothing",
+       "correct": true,
+       "why": "Right: a best-practice protocol (rested, overnight-fasted, minimal clothing, set position) roughly halved the noise of change scores compared with random-timed scans."
+      },
+      {
+       "id": "b",
+       "text": "Each scan straight after that day's training, when the body is warm",
+       "why": "Prior exercise shifts water and glycogen, adding noise; it also won't match from one scan to the next."
+      },
+      {
+       "id": "c",
+       "text": "Whenever suits each athlete, but on the same machine",
+       "why": "Same machine helps, but random timing doubled the variability of change scores in cyclists."
+      },
+      {
+       "id": "d",
+       "text": "After a big breakfast, so athletes aren't hungry and fidgety",
+       "why": "A meal can raise measured fat mass by up to 2.6%; fasting is part of the standard protocol."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-bia-dehydrated",
+   "concept": "bcm-bia",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kasper2021",
+    "kyle2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner steps on a body-fat scale (BIA) right after a 2 h run in the heat, having lost 2% of body mass in sweat. Compared with the morning, the % fat reading will most likely be:",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher, because less body water reads as less fat-free mass",
+       "correct": true,
+       "why": "Right: BIA measures water through resistance; with less water, resistance rises and the equation reports less FFM and more fat."
+      },
+      {
+       "id": "b",
+       "text": "Lower, because the run burned fat",
+       "why": "A 2 h run burns some fat, a few hundred grams at most; BIA can't see that, and the water loss dominates the reading in the other direction."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged, because BIA measures fat directly",
+       "why": "BIA never measures fat; it measures resistance, which mainly reflects water."
+      },
+      {
+       "id": "d",
+       "text": "Lower, because sweat on the skin conducts the current",
+       "why": "Wet skin can change contact, but the main effect of losing body water is a higher resistance, read as more fat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-skinfold-report",
+   "concept": "bcm-skinfolds",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kasper2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do sport practitioners now report skinfolds as a sum of 8 sites in mm rather than as % body fat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The equation turning mm into % fat adds error the raw sum doesn't have",
+       "correct": true,
+       "why": "Right: each prediction equation was built in a different group and adds error; the sum in mm is the actual measurement."
+      },
+      {
+       "id": "b",
+       "text": "Calipers measure in mm and can't be converted",
+       "why": "They can be converted, with many equations; the point is that the conversion makes it less accurate."
+      },
+      {
+       "id": "c",
+       "text": "The sum of 8 sites measures internal fat around the organs too",
+       "why": "Skinfolds only reach fat under the skin; internal fat is invisible to calipers whatever the number of sites."
+      },
+      {
+       "id": "d",
+       "text": "Athletes prefer mm because it hides their fat percentage",
+       "why": "The reason is measurement quality, not hiding; a sum in mm tracks change better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-method-choice",
+   "concept": "bcm-skinfolds",
+   "bloom": "evaluate",
+   "sources": [
+    "kasper2021",
+    "ackland2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling team wants to track riders' fatness every month through a stage-race season, on the road. Which choice fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ISAK sum of 8 skinfolds in mm, same accredited tester each month",
+       "correct": true,
+       "why": "Right: portable, cheap, least affected by meals and hydration, and tracked in mm it avoids equation error. A consistent tester keeps it precise."
+      },
+      {
+       "id": "b",
+       "text": "Monthly DXA scans at whatever hospital is near the race",
+       "why": "Different machines, travel and race fuelling would add lots of noise; DXA needs tight control of food, glycogen and hydration."
+      },
+      {
+       "id": "c",
+       "text": "A hotel body-fat scale each evening after the stage",
+       "why": "BIA after a stage reads hydration, not fat: the exact situation where its water balance is least stable."
+      },
+      {
+       "id": "d",
+       "text": "Underwater weighing, the most accurate method",
+       "why": "It needs a tank and is impractical on the road, and its FFM-density assumption may not fit athletes, so it isn't 'the most accurate' either."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-accuracy-precision",
+   "concept": "bcm-precision",
+   "bloom": "analyse",
+   "sources": [
+    "nana2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Device A reads every athlete 3% body fat too high, but repeat readings vary by only 0.3%. Device B is right on average, but repeats vary by 2%. Which is better for tracking one athlete's change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: it is precise, and a fixed offset cancels when you compare two readings",
+       "correct": true,
+       "why": "Right: tracking change needs precision. A constant bias is the same in both readings, so the difference is still right."
+      },
+      {
+       "id": "b",
+       "text": "B: it is accurate, so its changes are accurate too",
+       "why": "Accuracy on average doesn't help when each reading wobbles by 2%: small real changes vanish in that noise."
+      },
+      {
+       "id": "c",
+       "text": "Neither: only a device that is both accurate and precise can track change",
+       "why": "Accuracy matters for comparing with other people or norms; for one person's change, precision is what counts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcm-change-calc",
+   "concept": "bcm-precision",
+   "bloom": "apply",
+   "sources": [
+    "nana2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's sum of 8 skinfolds goes from 60 mm to 55 mm. Suppose the tester's typical error is 2% (1.2 mm at 60 mm). Using the 95% band on a change, is the 5 mm drop bigger than noise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: the noise band is about ±3.3 mm",
+       "correct": true,
+       "why": "Right: √2 × 1.2 ≈ 1.7 mm; × 1.96 ≈ 3.3 mm. 5 mm is outside the band."
+      },
+      {
+       "id": "b",
+       "text": "No: the noise band is about ±6.8 mm",
+       "why": "This doubles the band twice: 1.96 × 1.7 is 3.3, not 6.8."
+      },
+      {
+       "id": "c",
+       "text": "Yes: any change bigger than 1.2 mm is real",
+       "why": "This compares the change with one test's typical error and forgets that both tests carry noise (√2) and the 95% factor (1.96)."
+      },
+      {
+       "id": "d",
+       "text": "No: a 2% error means only changes above 20% count",
+       "why": "Confuses percent with percentage of a percent; the error is 2% of 60 mm, 1.2 mm."
+      }
+     ],
+     "solution": "Typical error = 1.2 mm. Noise on a difference = √2 × 1.2 ≈ 1.7 mm. 95% band = ±1.96 × 1.7 ≈ ±3.3 mm. The drop of 5 mm is bigger, so it is likely real."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's DXA fat mass falls from 10.0 kg to 9.4 kg. Suppose that with a strict protocol the typical error for fat mass is 3% (0.3 kg). Is the 0.6 kg drop bigger than the 95% noise band on a change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: the band is about ±0.83 kg",
+       "correct": true,
+       "why": "Right: √2 × 0.3 ≈ 0.42 kg; × 1.96 ≈ 0.83 kg. A 0.6 kg drop is inside it."
+      },
+      {
+       "id": "b",
+       "text": "Yes: the drop is twice the typical error",
+       "why": "Forgets that both scans carry noise (√2) and the 95% factor (1.96)."
+      },
+      {
+       "id": "c",
+       "text": "Yes: the band is about ±0.42 kg",
+       "why": "That is √2 × typical error, the SD of the difference; the 95% band multiplies it by 1.96."
+      },
+      {
+       "id": "d",
+       "text": "No: the band is about ±1.7 kg",
+       "why": "Multiplied by 2 twice (or by 4): 1.96 × 0.42 is about 0.83 kg."
+      }
+     ],
+     "solution": "Typical error = 0.3 kg. Noise on a difference = 1.41 × 0.3 ≈ 0.42 kg. 95% band = ±1.96 × 0.42 ≈ ±0.83 kg. The 0.6 kg drop is inside it: not clearly real."
+    }
+   ]
+  }
+ ]
+}

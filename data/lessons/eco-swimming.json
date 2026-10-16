@@ -1,0 +1,786 @@
+{
+ "id": "eco-swimming",
+ "module": "t2-economy",
+ "title": "Swimming economy: a fight with water",
+ "goal": "Explain why swimming costs far more energy per metre than running, name the three kinds of drag, and show why technique and body position set a swimmer's economy more than fitness does.",
+ "requires": [
+  "eco-cycling"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "drag",
+    "friction-drag",
+    "pressure-drag",
+    "wave-drag",
+    "propelling-efficiency",
+    "distance-per-stroke"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sw-cost",
+   "title": "Water is expensive",
+   "text": "Moving through water costs far more energy per metre than moving on land. Water's [drag](g:drag) is much larger than air resistance at the same speed, and arms and legs push on a fluid that gives way, so less of their work moves you forward [[c:zam-land]].\n\nNumbers from front crawl: at 1.0–1.4 m·s⁻¹ (1:40 to 1:11 per 100 m), the energy cost was 600–800 J per metre, from a metabolic power of 600–1,200 W [[c:zam-cost]].\n\nA 70 kg runner, at about 4.1 kJ·kg⁻¹·km⁻¹, spends about 290 J per metre. So swimming costs two to three times as much energy per metre, at well under half the speed.",
+   "claims": [
+    {
+     "id": "zam-land",
+     "text": "At any speed, the energy cost per distance is lower on land than in water, because drag in water is far larger and propelling efficiency in water is lower.",
+     "grade": "strong",
+     "sources": [
+      "zamparo2020"
+     ],
+     "evidence": [
+      {
+       "source": "zamparo2020",
+       "quote": "At any given speed, C is lower on land (e.g., running or cycling) than in water (e.g., swimming or kayaking) and this difference can be easily understood when one considers that energy should be expended (among the others) to overcome resistive forces since these, at any given speed, are far larger in water (hydrodynamic resistance, drag) than on land (aerodynamic resistance).",
+       "level": "abstract"
+      },
+      {
+       "source": "zamparo2020",
+       "quote": "Another reason for the differences in C between water and land locomotion is the lower capability to exert useful forces in water than on land (e.g., a lower propelling efficiency in the former case).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "zam-cost",
+     "text": "In front crawl at 1.0–1.4 m·s⁻¹, metabolic power rose from 600 to 1,200 W and energy cost from 600 to 800 J per metre.",
+     "grade": "weak",
+     "sources": [
+      "zamparo2005a"
+     ],
+     "evidence": [
+      {
+       "source": "zamparo2005a",
+       "quote": "In the same range of speeds E increases from 600 to 1,200 W and C from 600 to 800 J m(-1).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "sw-cost-example",
+   "title": "Energy for a triathlon swim",
+   "problem": "A triathlete swims 1,500 m at 1.25 m·s⁻¹ with an energy cost of 700 J per metre. How much energy does the swim take, how long, and at what metabolic power?",
+   "steps": [
+    "Energy = cost × distance = 700 J·m⁻¹ × 1,500 m = 1,050,000 J = 1,050 kJ (251 kcal).",
+    "Time = 1,500 m ÷ 1.25 m·s⁻¹ = 1,200 s (20 min).",
+    "Metabolic power = energy ÷ time = 1,050,000 J ÷ 1,200 s = 875 W. Shortcut: cost × speed = 700 × 1.25 = 875 W.",
+    "For comparison, a 70 kg runner's 10 km takes about 2,870 kJ: the swim costs over a third of that for less than a sixth of the distance."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-energy-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sw-land-water"
+  },
+  {
+   "type": "concept",
+   "id": "sw-drag",
+   "title": "Three kinds of drag",
+   "text": "Water resists a swimmer in three ways:\n\n- [Friction drag](g:friction-drag): water rubbing along skin and suit.\n- [Pressure drag](g:pressure-drag): the low-pressure wake behind the body, set by its shape and the area it presents to the water. Sinking hips and a raised head make it bigger.\n- [Wave drag](g:wave-drag): energy spent making waves at the surface.\n\nDrag rises with speed, and the mix of the three changes with speed and the way of moving [[c:pend-types]]. Wave drag can be the largest: on a mannequin towed at the surface at 1.7 m·s⁻¹ it was 50–60% of the total, but under 5% when towed deeper than about 0.5–0.7 m [[c:vennell]]. That's why swimmers glide deep after a start or turn.",
+   "claims": [
+    {
+     "id": "pend-types",
+     "text": "Drag in water rises with speed, and the dominant type (friction, pressure or wave) depends on the speed and the form of locomotion.",
+     "grade": "weak",
+     "sources": [
+      "pendergast2005"
+     ],
+     "evidence": [
+      {
+       "source": "pendergast2005",
+       "quote": "D while locomotoring increased as a function of V",
+       "level": "abstract"
+      },
+      {
+       "source": "pendergast2005",
+       "quote": "To minimize C or maximize V, D has to be minimized by tailoring D type (friction, pressure or wave) to the form of locomotion and velocity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vennell",
+     "text": "On a towed mannequin, wave drag was up to 50–60% of total drag at the surface at 1.7 m·s⁻¹, but less than 5% below about 0.5–0.7 m depth.",
+     "grade": "weak",
+     "sources": [
+      "vennell2006"
+     ],
+     "evidence": [
+      {
+       "source": "vennell2006",
+       "quote": "The measurements show that passive wave drag is the largest drag, comprising up to 50-60% of the total at 1.7 m s(-1), much higher than any previous estimates.",
+       "level": "abstract"
+      },
+      {
+       "source": "vennell2006",
+       "quote": "wave drag on the mannequin is less than 5% of total drag for tows deeper than 0.5 m at 1 m s(-1) and 0.7 m at 2 m s(-1).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-drag-type",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sw-underwater"
+  },
+  {
+   "type": "concept",
+   "id": "sw-technique",
+   "title": "Technique sets the bill",
+   "text": "[Propelling efficiency](g:propelling-efficiency) is the share of the arms' and legs' work that pushes the swimmer forward rather than just setting water moving. In one classic analysis it was about 61% in elite swimmers and 44% in triathletes, and [distance per stroke](g:distance-per-stroke) was a fair guide to it [[c:tous-61]].\n\nA model of swimming performance asked what helps most: a 10% gain in propelling efficiency improved both short and long races more than a 10% gain in aerobic or anaerobic power [[c:tous-model]].\n\nFor a triathlete with a weak stroke, that suggests technique work is likely to buy more speed in the water than the same time spent on fitness alone.",
+   "claims": [
+    {
+     "id": "tous-61",
+     "text": "Propelling efficiency was much higher in elite swimmers (61%) than in triathletes (44%), and distance per stroke is a fair indicator of it.",
+     "grade": "weak",
+     "sources": [
+      "toussaint1992"
+     ],
+     "evidence": [
+      {
+       "source": "toussaint1992",
+       "quote": "(c) propelling efficiency seems to be important since it is much higher in elite swimmers (61%) than in triathletes (44%); and (d) distance per stroke gives a fairly good indication of propelling efficiency and may be used to evaluate individual progress in technical ability.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tous-model",
+     "text": "In a performance model, a 10% rise in propelling efficiency improved short- and long-distance swimming more than a 10% rise in maximal aerobic or anaerobic power.",
+     "grade": "weak",
+     "sources": [
+      "toussaint1994"
+     ],
+     "evidence": [
+      {
+       "source": "toussaint1994",
+       "quote": "The 10% increase in propelling efficiency resulted in both a reduction in time over the short distance as well as an improvement in performance over the long distance which was superior to the gains found when increasing the maximal aerobic or anaerobic power by 10%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-triathlete-gap"
+  },
+  {
+   "type": "question",
+   "item": "sw-train-what"
+  },
+  {
+   "type": "concept",
+   "id": "sw-body",
+   "title": "Body position, buoyancy and suits",
+   "text": "Legs tend to sink: the air in the lungs floats the chest, while the legs are dense. In eight elite swimmers, a tube at the waist was filled with air, water or 2 kg of lead to change how strongly the legs sank. From air to lead, drag rose by about 35% and energy cost by about 20% [[c:zam-torque]].\n\nSo anything that floats the hips and smooths the body helps. Full-body racing suits cut passive drag by about 6% and energy cost by about 4.5% [[c:chatard]]. In 13 triathletes, a wetsuit lowered energy cost by 14% at a slow pace and 7.5% at a faster one [[c:tomikawa]].",
+   "claims": [
+    {
+     "id": "zam-torque",
+     "text": "In eight elite swimmers, making the legs sink more (raising the underwater torque) raised energy cost by about 20% and active drag by about 35%.",
+     "grade": "weak",
+     "sources": [
+      "zamparo1996"
+     ],
+     "evidence": [
+      {
+       "source": "zamparo1996",
+       "quote": "It was found that, between the two extremes of this study (tube filled with air and with 2-kg lead), T' increased by 73% and that Cs, Db and eta /d increased linearly with T'.",
+       "level": "abstract"
+      },
+      {
+       "source": "zamparo1996",
+       "quote": "The increase of Cs between the two extremes was intermediate (approximately 20%) between that of Db (approximately 35%) and of eta /d (approximately 16%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "chatard",
+     "text": "In 14 competitive swimmers, full-body suits reduced passive drag by about 6% and the energy cost of swimming by about 4.5%.",
+     "grade": "weak",
+     "sources": [
+      "chatard2008"
+     ],
+     "evidence": [
+      {
+       "source": "chatard2008",
+       "quote": "There was a significant reduction in drag when wearing FB and L of 6.2% +/- 7.9% and 4.7% +/- 4.4%, respectively (P < 0.01), whereas the energy cost of swimming was significantly reduced when wearing FB and L by 4.5% +/- 5.4% and 5.5% +/- 3.1%, respectively (P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tomikawa",
+     "text": "In 13 triathletes, a wetsuit lowered the energy cost of swimming by 14.4% at 60% and 7.5% at 80% of the speed at VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "tomikawa2008"
+     ],
+     "evidence": [
+      {
+       "source": "tomikawa2008",
+       "quote": "Cs with a WS was lower by 14.4% at V(60%) and 7.5% at V(80%) than with a SS.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-legs-sink"
+  },
+  {
+   "type": "question",
+   "item": "sw-wetsuit",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sw-vary",
+   "title": "Why swimmers differ so much",
+   "text": "Put together, a swimmer's energy expenditure depends on speed, on drag, and on how efficiently the strokes overcome it (gross and propelling efficiency) [[c:tous-factors]]. Differences in drag and efficiency explain why the energy cost differs between strokes, and between swimmers of different age, sex and skill [[c:zam-explain]].\n\nBoth can also change within one swim. After a 2 km effort at 10 km race pace, elite long-distance swimmers paid on average 21% more energy per metre at the same speed, with a faster stroke rate; the authors put it down to a fall in propelling efficiency [[c:zam-fatigue]]. Distance per stroke shrinking late in a triathlon swim is a warning sign.",
+   "claims": [
+    {
+     "id": "tous-factors",
+     "text": "The rate of energy expenditure in swimming is related to velocity, gross efficiency, propelling efficiency and a drag factor.",
+     "grade": "strong",
+     "sources": [
+      "toussaint1994",
+      "zamparo2020"
+     ],
+     "evidence": [
+      {
+       "source": "toussaint1994",
+       "quote": "It appears that the rate of energy expenditure is related to the velocity, the gross efficiency, the propelling efficiency and a drag factor.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "zam-explain",
+     "text": "Drag and efficiency explain differences in the energy cost of swimming between strokes and between swimmers of different age, sex and technical level.",
+     "grade": "moderate",
+     "sources": [
+      "zamparo2020"
+     ],
+     "evidence": [
+      {
+       "source": "zamparo2020",
+       "quote": "These two parameters (drag and efficiency) not only can explain the differences in C between land and water locomotion but can also explain the differences in C within a given form of locomotion (swimming at the surface, which is the topic of this review): e.g., differences between strokes or between swimmers of different age, sex, and technical level.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "zam-fatigue",
+     "text": "In 10 elite long-distance swimmers, energy cost at the same speed was 21 ± 26% higher after a 2 km trial, likely from a fall in propelling efficiency.",
+     "grade": "weak",
+     "sources": [
+      "zamparo2005b"
+     ],
+     "evidence": [
+      {
+       "source": "zamparo2005b",
+       "quote": "C(s) assessed at the end of the 2-km trial (v2km) turned out to be 21 +/- 26% larger than that assessed at v2 and v6 (P<0.05)",
+       "level": "abstract"
+      },
+      {
+       "source": "zamparo2005b",
+       "quote": "These data suggest that the increase of C(s) found after the 2-km trial was likely related to a decrease in propelling efficiency, since the latter is related to the distance per stroke.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-fatigue-dps"
+  },
+  {
+   "type": "question",
+   "item": "sw-sd-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Swimming costs two to three times more energy per metre than running (about 600–800 J per metre in front crawl), because water's drag is huge and much of the stroke just moves water.",
+    "Drag comes as friction, pressure (shape and frontal area) and wave drag; wave drag can be half the total at the surface and almost vanishes about 0.5–0.7 m down.",
+    "Technique dominates: propelling efficiency was about 61% in elite swimmers and 44% in triathletes, and gains in it beat equal gains in aerobic power.",
+    "Sinking legs raise drag and cost; suits and wetsuits cut energy cost by about 4–14%.",
+    "Cost varies a lot between swimmers and within a swim; a shrinking distance per stroke signals falling economy."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sw-energy-calc",
+   "concept": "sw-cost",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "zamparo2005a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A swimmer covers 400 m at an energy cost of 750 J per metre. How much energy does it take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 kJ",
+       "correct": true,
+       "why": "Right: 750 × 400 = 300,000 J = 300 kJ."
+      },
+      {
+       "id": "b",
+       "text": "300 J",
+       "why": "750 × 400 is 300,000 J; dividing by 1,000 gives kJ, not J."
+      },
+      {
+       "id": "c",
+       "text": "3,000 kJ",
+       "why": "An extra zero: 300,000 J is 300 kJ."
+      },
+      {
+       "id": "d",
+       "text": "0.53 J",
+       "why": "This divides distance by cost. Energy = cost × distance."
+      }
+     ],
+     "solution": "Energy = cost × distance = 750 J·m⁻¹ × 400 m = 300,000 J = 300 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "In a half-Ironman, a triathlete swims 1,900 m at an energy cost of 650 J per metre. How much energy does the swim take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,235 kJ",
+       "correct": true,
+       "why": "Right: 650 × 1,900 = 1,235,000 J = 1,235 kJ (295 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "1,235 J",
+       "why": "650 × 1,900 is 1,235,000 J; dividing by 1,000 gives kJ, not J."
+      },
+      {
+       "id": "c",
+       "text": "12,350 kJ",
+       "why": "An extra zero: 1,235,000 J is 1,235 kJ."
+      },
+      {
+       "id": "d",
+       "text": "2.9 J",
+       "why": "This divides distance by cost. Energy = cost × distance."
+      }
+     ],
+     "solution": "Energy = 650 J·m⁻¹ × 1,900 m = 1,235,000 J = 1,235 kJ (295 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "sw-land-water",
+   "concept": "sw-cost",
+   "bloom": "understand",
+   "sources": [
+    "zamparo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does swimming cost more energy per metre than running, at any given speed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Far larger drag, and less of each stroke moves you forward",
+       "correct": true,
+       "why": "Right: high drag and low propelling efficiency both raise the cost in water."
+      },
+      {
+       "id": "b",
+       "text": "Swimmers have a lower VO₂max than runners",
+       "why": "VO₂max limits how fast you can go, not what each metre costs."
+      },
+      {
+       "id": "c",
+       "text": "Cold water raises the cost of breathing",
+       "why": "Water temperature has some effect, but the main reasons are drag and propelling efficiency."
+      },
+      {
+       "id": "d",
+       "text": "Arm muscles have fewer type I fibres",
+       "why": "Fibre type is not what makes water locomotion expensive; the physics of drag is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-drag-type",
+   "concept": "sw-drag",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "pendergast2005",
+    "vennell2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When a swimmer lifts her head to breathe, her hips sink and her body slopes in the water. Which kind of drag rises most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pressure drag",
+       "correct": true,
+       "why": "Right: a sloping body presents a bigger area to the water and leaves a bigger low-pressure wake."
+      },
+      {
+       "id": "b",
+       "text": "Friction drag",
+       "why": "Friction depends on the surface rubbing along the water, which barely changes."
+      },
+      {
+       "id": "c",
+       "text": "Wave drag",
+       "why": "Wave drag comes from making surface waves; the main change here is the body's shape in the water."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which kind of drag does a swimmer mostly avoid by gliding about 1 m under the surface after a turn?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wave drag",
+       "correct": true,
+       "why": "Right: wave drag falls to under 5% of the total below about 0.5–0.7 m."
+      },
+      {
+       "id": "b",
+       "text": "Friction drag",
+       "why": "Water still rubs along the skin under the surface; friction doesn't disappear with depth."
+      },
+      {
+       "id": "c",
+       "text": "Pressure drag",
+       "why": "The wake behind the body exists at any depth; it depends on shape, not depth."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-underwater",
+   "concept": "sw-drag",
+   "bloom": "apply",
+   "sources": [
+    "vennell2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete pushes off the wall and glides just 20 cm under the surface at 1.7 m·s⁻¹. What change would most cut her drag during the glide?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gliding deeper, below about 0.7 m",
+       "correct": true,
+       "why": "Right: near the surface, wave drag can be half the total; below about 0.7 m it almost disappears."
+      },
+      {
+       "id": "b",
+       "text": "Gliding nearer the surface",
+       "why": "That is where wave drag is largest."
+      },
+      {
+       "id": "c",
+       "text": "Kicking hard at the surface",
+       "why": "Kicking adds propulsion but also adds waves; it doesn't reduce drag."
+      },
+      {
+       "id": "d",
+       "text": "Gliding at the same depth but faster",
+       "why": "Drag rises with speed; going faster at the same depth raises it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-triathlete-gap",
+   "concept": "sw-technique",
+   "bloom": "analyse",
+   "sources": [
+    "toussaint1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete and a club swimmer have the same VO₂max, but the swimmer is much faster at the same oxygen uptake. What is the most likely main reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A higher propelling efficiency",
+       "correct": true,
+       "why": "Right: propelling efficiency was about 61% in elite swimmers and 44% in triathletes."
+      },
+      {
+       "id": "b",
+       "text": "A higher lactate threshold",
+       "why": "At the same oxygen uptake, a threshold difference doesn't explain a large speed gap; the cost of each metre does."
+      },
+      {
+       "id": "c",
+       "text": "More type IIx fibres in the arms",
+       "why": "Fast fibres don't make swimming cheaper; technique and drag do."
+      },
+      {
+       "id": "d",
+       "text": "A lower body mass",
+       "why": "Mass matters little in water, where the body is mostly supported; drag and technique dominate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-train-what",
+   "concept": "sw-technique",
+   "bloom": "evaluate",
+   "sources": [
+    "toussaint1994",
+    "toussaint1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete with a short, choppy stroke gains 2 extra pool hours a week. Based on the swimming performance model, which use of the time is likely to help most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Technique work to lengthen her distance per stroke",
+       "correct": true,
+       "why": "Right: gains in propelling efficiency beat equal gains in aerobic or anaerobic power in the model."
+      },
+      {
+       "id": "b",
+       "text": "Hard intervals to raise her VO₂max",
+       "why": "VO₂max helps, but in the model a 10% gain in it was worth less than a 10% gain in propelling efficiency."
+      },
+      {
+       "id": "c",
+       "text": "Longer steady swims with the same stroke",
+       "why": "More volume with a poor stroke mostly rehearses the same inefficiency."
+      },
+      {
+       "id": "d",
+       "text": "Sprint sets to raise her anaerobic power",
+       "why": "Anaerobic power gains were worth less than propelling-efficiency gains, especially over long distances."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-legs-sink",
+   "concept": "sw-body",
+   "bloom": "apply",
+   "sources": [
+    "zamparo1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes swim at the same speed. One has heavy legs that sink; the other floats level. Which statement fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The sinking-leg swimmer pays more drag and more energy per metre",
+       "correct": true,
+       "why": "Right: making the legs sink raised drag by about 35% and energy cost by about 20%."
+      },
+      {
+       "id": "b",
+       "text": "They pay the same: only speed sets the energy cost",
+       "why": "At the same speed, body position changes drag and so the cost."
+      },
+      {
+       "id": "c",
+       "text": "The sinking-leg swimmer pays less, because the legs push down on the water",
+       "why": "Sinking legs present more area to the water and raise drag."
+      },
+      {
+       "id": "d",
+       "text": "The level swimmer pays more, because more of her is near the surface",
+       "why": "Floating level reduces the area facing the water; that lowers drag."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-wetsuit",
+   "concept": "sw-body",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tomikawa2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's energy cost is 800 J per metre without a wetsuit at an easy pace. Using the 14% saving measured in triathletes at that pace, what is it with a wetsuit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 688 J per metre",
+       "correct": true,
+       "why": "Right: 800 × 0.86 = 688."
+      },
+      {
+       "id": "b",
+       "text": "About 786 J per metre",
+       "why": "This subtracts 14 J instead of 14%."
+      },
+      {
+       "id": "c",
+       "text": "About 912 J per metre",
+       "why": "This adds 14% instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "About 112 J per metre",
+       "why": "That is the saving itself (14% of 800), not the new cost."
+      }
+     ],
+     "solution": "New cost = 800 × (1 − 0.14) = 688 J per metre."
+    },
+    {
+     "id": "b",
+     "stem": "At race pace, a triathlete's energy cost without a wetsuit is 900 J per metre. Using the 7.5% saving measured at the faster pace, what is it with a wetsuit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 833 J per metre",
+       "correct": true,
+       "why": "Right: 900 × 0.925 = 832.5."
+      },
+      {
+       "id": "b",
+       "text": "About 893 J per metre",
+       "why": "This subtracts 7.5 J instead of 7.5%."
+      },
+      {
+       "id": "c",
+       "text": "About 968 J per metre",
+       "why": "This adds 7.5% instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "About 68 J per metre",
+       "why": "That is the saving itself (7.5% of 900), not the new cost."
+      }
+     ],
+     "solution": "New cost = 900 × (1 − 0.075) = 832.5, about 833 J per metre."
+    }
+   ]
+  },
+  {
+   "id": "sw-fatigue-dps",
+   "concept": "sw-vary",
+   "bloom": "analyse",
+   "sources": [
+    "zamparo2005b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Late in an Ironman swim, a triathlete holds her pace, but her stroke rate rises and her distance per stroke falls. What does this most likely mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her propelling efficiency is falling, so each metre costs more energy",
+       "correct": true,
+       "why": "Right: after a long effort, cost rose with a faster stroke rate and shorter strokes, pointing to lower propelling efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Her economy is improving, because she takes more strokes",
+       "why": "More strokes for the same speed means each stroke does less useful work."
+      },
+      {
+       "id": "c",
+       "text": "Her drag has fallen",
+       "why": "Holding the same speed with more strokes signals lost efficiency, not lower drag."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: only speed changes the energy cost",
+       "why": "At the same speed, the cost rose by about a fifth after a 2 km effort in elite swimmers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-sd-appraisal",
+   "concept": "sw-vary",
+   "bloom": "evaluate",
+   "sources": [
+    "zamparo2005b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 10 elite swimmers reports that energy cost rose by 21 ± 26% (mean ± SD) after a 2 km effort. What should you take from the ± 26%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Swimmers responded very differently: the average hides a wide spread",
+       "correct": true,
+       "why": "Right: an SD larger than the mean means some swimmers' cost barely changed (or even fell) while others' rose a lot."
+      },
+      {
+       "id": "b",
+       "text": "The result must be wrong, because the SD is larger than the mean",
+       "why": "A large SD signals wide individual variation, not an error."
+      },
+      {
+       "id": "c",
+       "text": "Every swimmer's cost rose by between 21% and 26%",
+       "why": "The SD describes the spread around the mean, not a range from 21 to 26."
+      },
+      {
+       "id": "d",
+       "text": "The largest rise was 26%",
+       "why": "The SD is not a maximum; individual rises could be well above 26%."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

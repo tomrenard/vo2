@@ -1,0 +1,846 @@
+{
+ "id": "vo2-performance",
+ "module": "t2-vo2max",
+ "title": "VO₂max and performance: the three-factor model",
+ "goal": "Use Joyner and Coyle's model (VO₂max × fractional utilisation × economy) to predict race speed or power, and explain why VO₂max predicts performance poorly among elite athletes.",
+ "requires": [
+  "vo2-limits"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "performance-vo2",
+    "fractional-utilisation",
+    "range-restriction"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "perf-model",
+   "title": "Three numbers make a speed",
+   "text": "Joyner and Coyle put endurance performance into one model built from three factors [[c:jc-model]]:\n\n**[performance VO₂](g:performance-vo2) = VO₂max × [fractional utilisation](g:fractional-utilisation)**\n\n**speed or power = performance VO₂ × economy**\n\n- **VO₂max**: the ceiling.\n- **Fractional utilisation**: the share of that ceiling you can hold for the race. Your [lactate threshold](g:lactate-threshold) sets most of it.\n- **Economy**: how much speed ([running economy](g:running-economy)) or power ([gross efficiency](g:gross-efficiency)) each litre of O₂ buys.\n\nPerformance VO₂ is the oxygen you can keep using for the race; economy turns it into speed. Raise any of the three and you go faster.",
+   "claims": [
+    {
+     "id": "jc-model",
+     "text": "VO₂max and the lactate threshold together set the performance VO₂ that can be sustained; efficiency (economy) sets the speed or power produced at that VO₂.",
+     "grade": "strong",
+     "sources": [
+      "joyner2008",
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "Efficiency interacts with the performance .VO(2) to establish the speed or power that can be generated at this oxygen consumption.",
+       "level": "abstract"
+      },
+      {
+       "source": "bassett2000",
+       "quote": "Running economy and fractional utilization of VO2max also affect endurance performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-model-identify",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "perf-fraction",
+   "title": "How much of the ceiling you can use",
+   "text": "The longer the race, the smaller the share of VO₂max you can hold: about 75–85% in a marathon, 90–100% over 10 km, close to 100% over 5 km [[c:jc-fractions]].\n\nThe share depends mostly on where blood lactate starts to climb. Untrained people see the upturn at about 60% of VO₂max; trained people can usually work at 75–85% before a marked rise [[c:jc-lt]].\n\nThis can separate riders whose VO₂max is the same. Fifteen cyclists, all near 70 mL·kg⁻¹·min⁻¹, rode an hour as hard as they could in the lab. Their 1 h power tracked the VO₂ at their lactate threshold (r = 0.93), and the elite group rode 40 km on the road 10% faster than the state-level group [[c:coyle1991]].",
+   "claims": [
+    {
+     "id": "jc-fractions",
+     "text": "Events beyond 10–15 min are raced below VO₂max: a marathon at about 75–85%, 10 km at 90–100% and 5 km close to VO₂max.",
+     "grade": "strong",
+     "sources": [
+      "joyner2008",
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "with much of the 42 km marathon run at approximately 75–85% while 10 km is performed at 90–100% and 5 km at close to",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "jc-lt",
+     "text": "Blood lactate starts to rise at about 60% of VO₂max in untrained people; trained people can usually work at 75–85% of VO₂max before a marked rise.",
+     "grade": "strong",
+     "sources": [
+      "joyner2008"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "In untrained subjects the upturn in lactic acid concentrations is seen at about 60% of",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2008",
+       "quote": "Trained subjects can usually exercise at 75–85% of before there is a marked increase in blood lactate concentration.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "coyle1991",
+     "text": "In cyclists with similar VO₂max (about 70 mL·kg⁻¹·min⁻¹), 1 h power related closely to VO₂ at the lactate threshold, and elite riders were 10% faster over 40 km than good state-level riders.",
+     "grade": "weak",
+     "sources": [
+      "coyle1991"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1991",
+       "quote": "In turn, 1 h power output was related to each cyclists' VO2 at the blood lactate threshold (r = 0.93; P less than 0.001). Group 1 was not different from group 2 regarding VO2max (approximately 70 ml.kg-1.min-1 and 5.01 l.min-1) or lean body weight. However, group 1 bicycled 40 km on the road 10% faster than group 2",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-fraction-race",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "perf-coyle-interpret"
+  },
+  {
+   "type": "example",
+   "id": "perf-run-example",
+   "title": "From VO₂max to race speed",
+   "problem": "A runner has a VO₂max of 60 mL·kg⁻¹·min⁻¹. She can hold 85% of it for a 10 km race, and her running costs 200 mL·kg⁻¹ per km. How fast can she run?",
+   "steps": [
+    "Performance VO₂ = VO₂max × fraction = 60 × 0.85 = 51 mL·kg⁻¹·min⁻¹.",
+    "Speed = performance VO₂ ÷ cost per km = 51 ÷ 200 = 0.255 km per minute. The mL·kg⁻¹ cancel, leaving km·min⁻¹.",
+    "× 60 for km·h⁻¹: 0.255 × 60 = 15.3 km·h⁻¹, about 39 min 13 s for 10 km."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-speed-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "perf-economy",
+   "title": "Economy: how far each litre goes",
+   "text": "At the same running speed, the oxygen cost can differ by about 30–40% between people [[c:jc-economy-range]].\n\nThat difference shows most when VO₂max is similar. Conley and Krahenbuhl tested 12 men who all placed in the top 19 of a national 10 km race. Their VO₂max averaged 71.7 mL·kg⁻¹·min⁻¹ and did not predict their times (r = −0.12). Running economy did: it explained 65% of the spread in 10 km time [[c:conley]].\n\nCycling shows the same trade-off. In 11 world-class road cyclists, those with the lowest VO₂max had the highest efficiency (r about −0.7): a high efficiency seemed to make up for a lower ceiling [[c:lucia]].",
+   "claims": [
+    {
+     "id": "jc-economy-range",
+     "text": "The oxygen cost of running at a given speed varies by about 30–40% between individuals.",
+     "grade": "moderate",
+     "sources": [
+      "joyner2008"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "The oxygen cost of endurance running (ml kg min −1 ) at a given speed can vary about 30–40% among individuals",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "conley",
+     "text": "Among 12 highly trained runners of similar ability, VO₂max was unrelated to 10 km time (r = −0.12) while running economy explained 65% of the variation.",
+     "grade": "weak",
+     "sources": [
+      "conley1980"
+     ],
+     "evidence": [
+      {
+       "source": "conley1980",
+       "quote": "The relationship between Vo2max and distance running performance was r = -0.12 (p = 0.35).",
+       "level": "abstract"
+      },
+      {
+       "source": "conley1980",
+       "quote": "Within this elite cluster of finishers, 65.4% of the variation observed in race performance time on the 10 km run could be explained by variation in running economy.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lucia",
+     "text": "In world-class cyclists, VO₂max correlated inversely with cycling economy and gross efficiency: a high efficiency seems to compensate for a relatively low VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "lucia2002"
+     ],
+     "evidence": [
+      {
+       "source": "lucia2002",
+       "quote": "A high CE/GE seems to compensate for a relatively low VO2max in professional cyclists.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-economy-scenario",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "perf-lucia-interpret"
+  },
+  {
+   "type": "concept",
+   "id": "perf-range",
+   "title": "Why VO₂max predicts poorly among elites",
+   "text": "So does VO₂max hardly matter? No. A runner with a VO₂max of 80 will beat one with 40 over 5,000 m. Across a wide range of people VO₂max is tied closely to endurance performance; the link only blurs when everyone tested has a similar, high value [[c:levine-range]].\n\nThat blur is [range restriction](g:range-restriction). Pick only people with a high VO₂max, and VO₂max hardly differs between them, so what still varies, threshold and economy, decides the result. VO₂max sets the upper limit: you can't race above 100% of it for long. It is the entry ticket; the other two settle the race.\n\nThe speed at the lactate threshold combines all three factors, which is why it is the best single lab predictor of distance-running performance [[c:bh-vlt]].",
+   "claims": [
+    {
+     "id": "levine-range",
+     "text": "VO₂max is closely tied to endurance performance across a wide range of people; the relationship is obscured when only elite athletes with similar values are compared.",
+     "grade": "strong",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "Sometimes this relationship may be obscure when only elite athletes with similar",
+       "level": "full-text"
+      },
+      {
+       "source": "levine2008",
+       "quote": "so this characteristic is clearly closely tied to endurance performance",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bh-vlt",
+     "text": "VO₂max sets the upper limit for endurance performance; the speed at the lactate threshold integrates VO₂max, economy and fractional utilisation and is the best physiological predictor of distance-running performance.",
+     "grade": "moderate",
+     "sources": [
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "VO2max is an important variable that sets the upper limit for endurance performance (an athlete cannot operate above 100% VO2max, for extended periods).",
+       "level": "abstract"
+      },
+      {
+       "source": "bassett2000",
+       "quote": "The speed at lactate threshold (LT) integrates all three of these variables and is the best physiological predictor of distance running performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-appraise-conley",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "perf-best-predictor"
+  },
+  {
+   "type": "concept",
+   "id": "perf-bike",
+   "title": "The same model on the bike",
+   "text": "On a bike, economy is [gross efficiency](g:gross-efficiency): the share of the energy from each litre of O₂ that reaches the pedals. One litre of O₂ releases about 20.5 kJ (*Energy expenditure* module). So:\n\n**power (W) = performance VO₂ (L·min⁻¹) × 20,500 ÷ 60 × GE**\n\nThe ÷ 60 turns J per minute into J per second, which is watts.\n\nThe model explains why two riders with the same VO₂max can be far apart in a time trial. A rider who holds 90% instead of 80%, or rides at 23% efficiency instead of 21%, gains about 10–13% in power (90 ÷ 80 = 1.125; 23 ÷ 21 = 1.095): worth a minute or two over 40 km [[c:jc-model-bike]].",
+   "claims": [
+    {
+     "id": "jc-model-bike",
+     "text": "VO₂max and the lactate threshold set the sustainable performance VO₂; efficiency sets the cycling power produced at that VO₂.",
+     "grade": "strong",
+     "sources": [
+      "joyner2008"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2008",
+       "quote": "and lactate threshold interact to determine the ‘performance .VO(2)’ which is the oxygen consumption that can be sustained for a given period of time.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "perf-bike-example",
+   "title": "From VO₂max to time-trial power",
+   "problem": "A cyclist has a VO₂max of 4.5 L·min⁻¹, holds 85% of it for a 40 km time trial and rides at a gross efficiency of 22%. What power can he hold?",
+   "steps": [
+    "Performance VO₂ = 4.5 × 0.85 = 3.825 L·min⁻¹.",
+    "Metabolic power = 3.825 × 20,500 J per L ÷ 60 s = about 1,307 W.",
+    "Power at the pedals = 1,307 × 0.22 = about 288 W."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "perf-power-calc",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Joyner and Coyle: performance VO₂ = VO₂max × fractional utilisation; speed or power = performance VO₂ × economy.",
+    "Fractional utilisation falls with race length (marathon about 75–85% of VO₂max) and is set mostly by the lactate threshold.",
+    "Economy differs by 30–40% between runners; among athletes of similar VO₂max, economy and threshold decide the result.",
+    "VO₂max predicts poorly among elites because of range restriction, not because it doesn't matter; it sets the upper limit.",
+    "Speed at the lactate threshold combines all three factors and is the best single lab predictor of distance-running performance."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "perf-model-identify",
+   "concept": "perf-model",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Over a winter, a runner's VO₂max stays the same, but the pace he can hold for an hour rises because his lactate threshold moves from 80% to 86% of VO₂max. Which factor of Joyner and Coyle's model changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fractional utilisation",
+       "correct": true,
+       "why": "Right: he can now hold a bigger share of the same ceiling, raising his performance VO₂."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max",
+       "why": "The stem says VO₂max stayed the same."
+      },
+      {
+       "id": "c",
+       "text": "Economy",
+       "why": "Economy is the O₂ cost of a given speed; nothing here says it changed."
+      },
+      {
+       "id": "d",
+       "text": "None: pace can't rise without a higher VO₂max",
+       "why": "Pace can rise through either of the other two factors, as here."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO₂max and threshold are unchanged after a bike fit, but she now holds 8 W more at the same oxygen uptake. Which factor of the model changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Economy (gross efficiency)",
+       "correct": true,
+       "why": "Right: more watts from the same litres of O₂ is better efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Fractional utilisation",
+       "why": "Her threshold, and so the share of VO₂max she can hold, didn't change."
+      },
+      {
+       "id": "c",
+       "text": "VO₂max",
+       "why": "The stem says VO₂max is unchanged."
+      },
+      {
+       "id": "d",
+       "text": "Performance VO₂",
+       "why": "Performance VO₂ (VO₂max × fraction) is the same; it now buys more watts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-fraction-race",
+   "concept": "perf-fraction",
+   "bloom": "apply",
+   "sources": [
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner with a VO₂max of 60 mL·kg⁻¹·min⁻¹ races a marathon. What average oxygen uptake can she most likely sustain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 45–51 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: a marathon is run at about 75–85% of VO₂max: 0.75–0.85 × 60."
+      },
+      {
+       "id": "b",
+       "text": "About 57–60 mL·kg⁻¹·min⁻¹",
+       "why": "That is 95–100% of VO₂max, a 5 km intensity; it can't be held for over 2 hours."
+      },
+      {
+       "id": "c",
+       "text": "About 30–36 mL·kg⁻¹·min⁻¹",
+       "why": "50–60% is an easy run; trained runners race marathons well above that."
+      },
+      {
+       "id": "d",
+       "text": "60 mL·kg⁻¹·min⁻¹, her whole VO₂max",
+       "why": "No one can work at 100% of VO₂max for long; the marathon is raced below it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete with a VO₂max of 70 mL·kg⁻¹·min⁻¹ runs a stand-alone 10 km race all-out. What average oxygen uptake can he most likely sustain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 63–70 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 10 km is raced at about 90–100% of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "About 52–60 mL·kg⁻¹·min⁻¹",
+       "why": "75–85% is marathon intensity, too low for an all-out 10 km."
+      },
+      {
+       "id": "c",
+       "text": "About 35–42 mL·kg⁻¹·min⁻¹",
+       "why": "50–60% would be an easy training run."
+      },
+      {
+       "id": "d",
+       "text": "More than 70, since racing raises VO₂max",
+       "why": "Racing can't take VO₂ above its maximum."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-coyle-interpret",
+   "concept": "perf-fraction",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1991"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two groups of cyclists have the same VO₂max (about 70 mL·kg⁻¹·min⁻¹), yet one rides a 40 km time trial 10% faster. Their 1 h power tracks the VO₂ at their lactate threshold. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The faster group can hold a bigger share of the same VO₂max",
+       "correct": true,
+       "why": "Right: with equal ceilings, a higher threshold raises the performance VO₂, and with it power."
+      },
+      {
+       "id": "b",
+       "text": "The faster group must really have a higher VO₂max",
+       "why": "The stem says VO₂max was the same; the gap comes from what they can sustain."
+      },
+      {
+       "id": "c",
+       "text": "The slower group was less motivated on the day",
+       "why": "Their 1 h power tracked a physiological measure, the VO₂ at the threshold, not just effort."
+      },
+      {
+       "id": "d",
+       "text": "The faster group is lighter",
+       "why": "Lean body mass didn't differ, and on flat time trials absolute watts matter most."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-speed-calc",
+   "concept": "perf-fraction",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO₂max is 55 mL·kg⁻¹·min⁻¹. She can hold 80% of it for a half marathon, and her running costs 200 mL·kg⁻¹·km⁻¹. What speed can she hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13.2 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 55 × 0.80 = 44; 44 ÷ 200 = 0.22 km·min⁻¹; × 60 = 13.2 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "16.5 km·h⁻¹",
+       "why": "This uses the whole VO₂max (55 ÷ 200 × 60), forgetting the 80%."
+      },
+      {
+       "id": "c",
+       "text": "0.22 km·h⁻¹",
+       "why": "This is km per minute; multiply by 60 for km·h⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "10.6 km·h⁻¹",
+       "why": "This applies the 80% twice (55 × 0.8 × 0.8)."
+      }
+     ],
+     "solution": "Performance VO₂ = 55 × 0.80 = 44 mL·kg⁻¹·min⁻¹. Speed = 44 ÷ 200 = 0.22 km·min⁻¹ = 13.2 km·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO₂max is 70 mL·kg⁻¹·min⁻¹. He can hold 90% of it for 10 km, and his running costs 210 mL·kg⁻¹·km⁻¹. What speed can he hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.0 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 70 × 0.90 = 63; 63 ÷ 210 = 0.30 km·min⁻¹; × 60 = 18.0 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "20.0 km·h⁻¹",
+       "why": "This uses the whole VO₂max (70 ÷ 210 × 60), forgetting the 90%."
+      },
+      {
+       "id": "c",
+       "text": "0.30 km·h⁻¹",
+       "why": "This is km per minute; multiply by 60 for km·h⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "16.2 km·h⁻¹",
+       "why": "This applies the 90% twice (70 × 0.9 × 0.9)."
+      }
+     ],
+     "solution": "Performance VO₂ = 70 × 0.90 = 63 mL·kg⁻¹·min⁻¹. Speed = 63 ÷ 210 = 0.30 km·min⁻¹ = 18.0 km·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO₂max is 65 mL·kg⁻¹·min⁻¹. She can hold 85% of it for a stand-alone 10 km run, and her running costs 190 mL·kg⁻¹·km⁻¹. What speed can she hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.4 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 65 × 0.85 = 55.25; 55.25 ÷ 190 = 0.291 km·min⁻¹; × 60 = 17.4 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "20.5 km·h⁻¹",
+       "why": "This uses the whole VO₂max (65 ÷ 190 × 60), forgetting the 85%."
+      },
+      {
+       "id": "c",
+       "text": "0.29 km·h⁻¹",
+       "why": "This is km per minute; multiply by 60 for km·h⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "14.8 km·h⁻¹",
+       "why": "This applies the 85% twice (65 × 0.85 × 0.85)."
+      }
+     ],
+     "solution": "Performance VO₂ = 65 × 0.85 = 55.25 mL·kg⁻¹·min⁻¹. Speed = 55.25 ÷ 190 = 0.291 km·min⁻¹ = 17.4 km·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "perf-economy-scenario",
+   "concept": "perf-economy",
+   "bloom": "apply",
+   "sources": [
+    "joyner2008",
+    "conley1980"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners can both sustain 54 mL·kg⁻¹·min⁻¹ for a race. Runner A's running costs 190 mL·kg⁻¹·km⁻¹, runner B's 210. Who is faster, and by about how much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A, by about 10%",
+       "correct": true,
+       "why": "Right: speed = 54 ÷ cost. 54 ÷ 190 × 60 = 17.1 km·h⁻¹ and 54 ÷ 210 × 60 = 15.4 km·h⁻¹: 210 ÷ 190 = 1.105."
+      },
+      {
+       "id": "b",
+       "text": "B, as using more O₂ means a bigger engine",
+       "why": "B uses more O₂ per km, so the same O₂ supply carries him less far."
+      },
+      {
+       "id": "c",
+       "text": "Neither, since their performance VO₂ is equal",
+       "why": "Equal O₂ supply gives equal speed only if economy is equal too."
+      },
+      {
+       "id": "d",
+       "text": "A, by about 20%",
+       "why": "The costs differ by 20 out of about 200, which is about 10%, not 20%."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two cyclists can both sustain 4.0 L·min⁻¹ of VO₂ for a time trial. Rider A's gross efficiency is 23%, rider B's 21%. Who holds more power, and by about how much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A, by about 10%",
+       "correct": true,
+       "why": "Right: power is proportional to efficiency at the same VO₂: 23 ÷ 21 = 1.095, about 314 vs 287 W."
+      },
+      {
+       "id": "b",
+       "text": "B, as a lower efficiency means more O₂ used",
+       "why": "Both use the same O₂; A turns more of it into power."
+      },
+      {
+       "id": "c",
+       "text": "Neither, since their performance VO₂ is equal",
+       "why": "The same O₂ gives more watts at a higher efficiency."
+      },
+      {
+       "id": "d",
+       "text": "A, by about 2%",
+       "why": "Two percentage points out of 21% is a 9.5% relative difference, not 2%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-lucia-interpret",
+   "concept": "perf-economy",
+   "bloom": "analyse",
+   "sources": [
+    "lucia2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 11 world-class road cyclists, those with the lowest VO₂max had the highest efficiency. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Among pros, high efficiency can make up for a lower VO₂max",
+       "correct": true,
+       "why": "Right: to reach world class you need enough of the product; riders get there with different mixes."
+      },
+      {
+       "id": "b",
+       "text": "A high VO₂max makes a cyclist less efficient",
+       "why": "A correlation in 11 selected riders can't show that one causes the other."
+      },
+      {
+       "id": "c",
+       "text": "Efficiency matters more than VO₂max for everyone",
+       "why": "This is a narrow, selected group; across all riders VO₂max varies hugely and matters a lot."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max doesn't matter in professional cycling",
+       "why": "All of them had high values (about 72); the trade-off shows only within that high range."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-appraise-conley",
+   "concept": "perf-range",
+   "bloom": "evaluate",
+   "sources": [
+    "conley1980",
+    "levine2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog cites a study of 12 elite 10 km runners in which VO₂max didn't predict race time (r = −0.12), and concludes: \"VO₂max doesn't matter for running.\" What is the best critique?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Range restriction: all had similar, high VO₂max values, so it couldn't show its effect",
+       "correct": true,
+       "why": "Right: across a wide range of runners VO₂max is closely tied to performance; within a narrow elite band it can't separate them."
+      },
+      {
+       "id": "b",
+       "text": "Correlation can't show cause, so no conclusion is possible",
+       "why": "True in general, but the key flaw is the narrow range, which hides a real relationship."
+      },
+      {
+       "id": "c",
+       "text": "10 km is too short a race for VO₂max to matter",
+       "why": "A 10 km is run at 90–100% of VO₂max; VO₂max matters there."
+      },
+      {
+       "id": "d",
+       "text": "An r of −0.12 means VO₂max slows runners down",
+       "why": "It is close to zero and not significant; it shows no link in this group, not a harmful one."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A paper on 10 professional cyclists finds that VO₂max doesn't predict time-trial results. A coach concludes that VO₂max tests are pointless for his club riders. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Flawed: pros all have similar VO₂max; club riders vary widely",
+       "correct": true,
+       "why": "Right: range restriction in a pro sample doesn't carry over to a varied club."
+      },
+      {
+       "id": "b",
+       "text": "Sound: what is true for pros is true for everyone",
+       "why": "Results in a narrow, selected group don't generalise to a much wider range."
+      },
+      {
+       "id": "c",
+       "text": "Sound: only economy matters in cycling",
+       "why": "Economy matters, but VO₂max sets the ceiling all the factors work within."
+      },
+      {
+       "id": "d",
+       "text": "Flawed: the study should have used runners",
+       "why": "The sport isn't the problem; the narrow range of VO₂max is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-best-predictor",
+   "concept": "perf-range",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to Bassett and Howley, which single lab measure best predicts distance-running performance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The running speed at the lactate threshold",
+       "correct": true,
+       "why": "Right: it combines VO₂max, fractional utilisation and economy in one number."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max in mL·kg⁻¹·min⁻¹",
+       "why": "VO₂max sets the ceiling but leaves out how much of it you can use and at what cost."
+      },
+      {
+       "id": "c",
+       "text": "Maximal heart rate",
+       "why": "HRmax says nothing about the ceiling's use or the cost of running."
+      },
+      {
+       "id": "d",
+       "text": "Blood lactate at the end of a ramp test",
+       "why": "Peak lactate reflects anaerobic effort at the end, not sustainable speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perf-power-calc",
+   "concept": "perf-bike",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "joyner2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has a VO₂max of 5.0 L·min⁻¹, can hold 85% of it for an hour, and rides at 22% gross efficiency. Using 20,500 J per litre of O₂, what power can he hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 320 W",
+       "correct": true,
+       "why": "Right: 5.0 × 0.85 = 4.25 L·min⁻¹; × 20,500 ÷ 60 = 1,452 W; × 0.22 = 320 W."
+      },
+      {
+       "id": "b",
+       "text": "About 376 W",
+       "why": "This uses the whole VO₂max (5.0 L·min⁻¹), forgetting the 85%."
+      },
+      {
+       "id": "c",
+       "text": "About 1,450 W",
+       "why": "This is the metabolic power; only 22% of it reaches the pedals."
+      },
+      {
+       "id": "d",
+       "text": "About 19,200 W",
+       "why": "This forgets to divide by 60: J per minute aren't watts."
+      }
+     ],
+     "solution": "Performance VO₂ = 5.0 × 0.85 = 4.25 L·min⁻¹. 4.25 × 20,500 ÷ 60 = 1,452 W metabolic. × 0.22 = about 320 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete has a VO₂max of 4.0 L·min⁻¹, can hold 80% of it for the bike leg, and rides at 21% gross efficiency. Using 20,500 J per litre of O₂, what power can she hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 230 W",
+       "correct": true,
+       "why": "Right: 4.0 × 0.80 = 3.2 L·min⁻¹; × 20,500 ÷ 60 = 1,093 W; × 0.21 = 230 W."
+      },
+      {
+       "id": "b",
+       "text": "About 287 W",
+       "why": "This uses the whole VO₂max (4.0 L·min⁻¹), forgetting the 80%."
+      },
+      {
+       "id": "c",
+       "text": "About 1,090 W",
+       "why": "This is the metabolic power; only 21% of it reaches the pedals."
+      },
+      {
+       "id": "d",
+       "text": "About 13,800 W",
+       "why": "This forgets to divide by 60: J per minute aren't watts."
+      }
+     ],
+     "solution": "Performance VO₂ = 4.0 × 0.80 = 3.2 L·min⁻¹. 3.2 × 20,500 ÷ 60 = 1,093 W metabolic. × 0.21 = about 230 W."
+    }
+   ]
+  }
+ ]
+}

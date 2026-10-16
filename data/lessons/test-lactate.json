@@ -1,0 +1,789 @@
+{
+ "id": "test-lactate",
+ "module": "t2-testing",
+ "title": "Running a lactate profile test",
+ "goal": "Design a lactate step test (stage length, sampling, analyser), read a threshold off it, explain how glycogen and the method shift the result, and judge whether two tests can be compared.",
+ "requires": [
+  "test-ramp"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "concept",
+   "id": "lac-stages",
+   "title": "Stages long enough to settle",
+   "text": "In a lactate [step test](g:step-test) you hold each load, take a drop of blood at the end, then step up. Blood [lactate](g:lactate) lags behind the muscle, so stages must be long enough to settle: at least 3 min is the usual advice, and some argue for 8 min [[c:stage-length]].\n\nStage length changes the answer. In 17 trained male cyclists tested with 3-, 4-, 7- and 10-min stages, the longer the stage, the lower the threshold power [[c:stage-inverse]].\n\nAnd one test can't do everything. In the same cyclists, [VO2max](g:vo2max) and the [lactate threshold](g:lactate-threshold) couldn't both be measured validly in a single test, even with a [verification bout](g:verification-bout) [[c:one-test]]. Use a step test for lactate and a ramp for VO2max.",
+   "claims": [
+    {
+     "id": "stage-length",
+     "text": "Stages of at least 3 min are recommended for lactate threshold tests; 8-min stages have also been suggested for blood lactate to stabilise.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2018"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2018",
+       "quote": "A stage length of at least 3 minutes has been recommended [ 13 ], although an 8-minute stage length has also been suggested for blood lactate concentrations to stabilize [ 14 ].",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "stage-inverse",
+     "text": "In 17 trained male cyclists, threshold power fell as stage length rose, across the threshold methods tested.",
+     "grade": "weak",
+     "sources": [
+      "jamnick2018"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2018",
+       "quote": "There was an inverse relationship between the power calculated for each of the 14 LTs and stage length",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "one-test",
+     "text": "VO2max and the lactate threshold cannot both be validly determined in a single incremental test, even with a verification bout.",
+     "grade": "weak",
+     "sources": [
+      "jamnick2018"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2018",
+       "quote": "It is also apparent that V˙⁢O2⁢max and LT cannot be determined in a single GXT, even with the inclusion of a VEB.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-stage-change",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lac-one-visit"
+  },
+  {
+   "type": "concept",
+   "id": "lac-method",
+   "title": "Pick one method, and say which",
+   "text": "*LT1, LT2 and the threshold zoo* showed many ways to read a threshold off one curve. Applied to the same blood samples, they give different powers. In the 17 cyclists, many traditional methods didn't match the measured [MLSS](g:mlss); a modified [Dmax](g:dmax) from 4-min stages came closest, about 1 W off on average [[c:moddmax]].\n\nSo a threshold always comes with a method and a protocol. Report both, and reuse both at the retest.\n\nFixed-value methods, such as [OBLA](g:obla) at 4 mmol·L⁻¹, rarely land exactly on a sample. You read the power by drawing a straight line between the two samples either side of the value.",
+   "claims": [
+    {
+     "id": "moddmax",
+     "text": "Many traditional lactate threshold methods were not valid estimates of MLSS; a modified Dmax method from 4-min stages gave the best estimate (mean difference 1.1 W).",
+     "grade": "weak",
+     "sources": [
+      "jamnick2018"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2018",
+       "quote": "Many of the traditional LT methods were not valid and a newly developed Modified Dmax method derived from GXT4 provided the most valid estimate of the MLSS (MD = 1.1 W; ICC = 0.96).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-methods-differ"
+  },
+  {
+   "type": "example",
+   "id": "lac-interp-example",
+   "title": "Reading the power at 4 mmol·L⁻¹",
+   "problem": "In a step test, blood lactate was 3.2 mmol·L⁻¹ at 260 W and 5.0 mmol·L⁻¹ at 290 W. At what power did it pass 4.0 mmol·L⁻¹?",
+   "steps": [
+    "Between the two samples lactate rose 5.0 − 3.2 = 1.8 mmol·L⁻¹ over 30 W.",
+    "4.0 is 4.0 − 3.2 = 0.8 mmol·L⁻¹ above the lower sample: 0.8 ÷ 1.8 = 0.44 of the way up.",
+    "Power = 260 + 0.44 × 30 = 260 + 13 = 273 W.",
+    "The straight line is an approximation: the real curve bends upward, so it sits below the line between samples and the true crossing is a little later, at a slightly higher power."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-interp-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lac-interp-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "lac-glycogen",
+   "title": "Glycogen moves the curve",
+   "text": "Lactate comes from breaking down carbohydrate, so the muscle's [glycogen](g:glycogen) shifts the curve.\n\nIn six trained athletes, a low-carbohydrate diet with training gave **higher** powers at 2 and 4 mmol·L⁻¹: the curve moved right, as if they were fitter. Yet at 65% of maximal power they lasted significantly longer after a high-carbohydrate diet and rest [[c:low-cho-right]]. In five men, diet didn't move the first rise above baseline but did move OBLA [[c:diet-obla]].\n\nSo a right shift can mean empty glycogen stores, not fitness. Before every test: the same diet for 1–2 days, no hard session the day before, the same last meal and the same time of day.",
+   "claims": [
+    {
+     "id": "low-cho-right",
+     "text": "In six trained athletes, a low-carbohydrate diet with training raised the work load at 2 and 4 mmol·L⁻¹, while a high-carbohydrate diet with rest lowered it; yet the abstract says they worked significantly longer at 65% of maximal work load after the high-carbohydrate diet. Its times (23 and 49 min, 'respectively') are listed in an order that contradicts that sentence, and the full text couldn't be checked, so the lesson gives no times.",
+     "grade": "weak",
+     "sources": [
+      "maassen1989"
+     ],
+     "evidence": [
+      {
+       "source": "maassen1989",
+       "quote": "In six TR a low carbohydrate diet (LCD) combined with training led to high absolute (WLabs) and WLrel at [Lac] at 2 and 4 mmol.l-1; an HCD combined with 3 days without training led to low WLabs and WLrel at the same [Lac] and to higher WLmax.",
+       "level": "abstract"
+      },
+      {
+       "source": "maassen1989",
+       "quote": "In spite of the apparently lower endurance capacities TR were able to work significantly longer after HCD than after LCD (23 +/- 10.5 min and 49 +/- 16.2 min, respectively) at 65% of their WLmax.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "diet-obla",
+     "text": "In five men, low- and high-carbohydrate diets didn't change the lactate threshold (first rise above rest) but did change the point of OBLA.",
+     "grade": "weak",
+     "sources": [
+      "yoshida1984"
+     ],
+     "evidence": [
+      {
+       "source": "yoshida1984",
+       "quote": "It was concluded that the dietary modifications used in this study had no influence on lactate threshold but did affect the point of OBLA.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-glycogen-shift",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lac-diet-marker"
+  },
+  {
+   "type": "concept",
+   "id": "lac-device",
+   "title": "Same drop, same device",
+   "text": "*Reading blood lactate* showed that the sampling site, whole blood against [plasma](g:plasma), and the analyser all change the number. For a retest that gives one rule: change nothing. Same site, same device, sample at the same point of each stage.\n\nDevices also differ from each other. Across about 1–18 mmol·L⁻¹, a Lactate Scout read up to 0.9 mmol·L⁻¹ higher than a Lactate Pro, while a Lactate Plus stayed within 0.1 mmol·L⁻¹ of it [[c:device-offset]].\n\nThat matters most on the steep part of the curve. In the example above, lactate rose 1.8 mmol·L⁻¹ per 30 W: a device reading 0.9 higher would put the 4 mmol·L⁻¹ point about 15 W lower.",
+   "claims": [
+    {
+     "id": "device-offset",
+     "text": "Across about 1–18 mmol·L⁻¹, the Lactate Scout read up to 0.9 mmol·L⁻¹ higher than the Lactate Pro, while the Lactate Plus was within ±0.1 mmol·L⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "tanner2010"
+     ],
+     "evidence": [
+      {
+       "source": "tanner2010",
+       "quote": "At BLa approximately 1.0-18.0 mM, the LS produced values that were up to 0.9 mM higher than the LP; the L(+) produced BLa that were within +/-0.1 mM.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-device-switch"
+  },
+  {
+   "type": "question",
+   "item": "lac-offset-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lac-compare",
+   "title": "Comparing two tests",
+   "text": "A right shift of the whole curve shows better endurance, but many factors move overall lactate levels [[c:curve-factors]]. So first check the test was the same:\n\n| keep the same | because |\n|---|---|\n| start, step size, stage length | stage length moves thresholds |\n| ergometer, treadmill grade | the cost per W or km·h⁻¹ changes |\n| analyser, site, sample timing | devices and sites differ |\n| diet, training, rest before | glycogen moves the curve |\n| time of day, room temperature | heat raises heart rate |\n\nThen read more than one marker: after a 13-day camp, eight cyclists had the same lactate curve but a lower heart rate at the same loads [[c:camp-hr]].",
+   "claims": [
+    {
+     "id": "curve-factors",
+     "text": "A shift of the lactate curve indicates a change in endurance capacity, but several factors can influence overall lactate levels.",
+     "grade": "moderate",
+     "sources": [
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "faude2009",
+       "quote": "A shift of such lactate curves indicates changes in endurance capacity. This very global approach, however, is hindered by several factors that may influence overall lactate levels.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "camp-hr",
+     "text": "In eight cyclists, a 13-day training camp didn't change the lactate–work load relationship, but heart rate was lower afterwards.",
+     "grade": "weak",
+     "sources": [
+      "maassen1989"
+     ],
+     "evidence": [
+      {
+       "source": "maassen1989",
+       "quote": "In eight cyclists the relationship between [Lac] and WL was not influenced by a 13-day training camp; however, heart rate was lower after the training camp.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lac-fair-retest"
+  },
+  {
+   "type": "question",
+   "item": "lac-curve-shift"
+  },
+  {
+   "type": "question",
+   "item": "lac-interp-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Lactate stages need time to settle: at least 3 min. Longer stages give lower threshold powers, so keep the stage length the same.",
+    "One test can't give both a valid VO2max and a valid lactate threshold: use a step test for lactate and a ramp for VO2max.",
+    "A threshold always comes with a method; read fixed values such as 4 mmol·L⁻¹ by straight-line interpolation between the samples either side.",
+    "Low glycogen shifts the curve right and makes an athlete look fitter; standardise diet, training and timing before every test.",
+    "Compare tests only with the same protocol, analyser, site and conditions, and read more than one marker (lactate and heart rate)."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lac-stage-change",
+   "concept": "lac-stages",
+   "bloom": "analyse",
+   "sources": [
+    "jamnick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In March a cyclist's lactate threshold was 255 W from a test with 3-min stages. In June a new lab uses 5-min stages and finds 245 W. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The longer stages alone could explain the drop",
+       "correct": true,
+       "why": "Right: longer stages give lower threshold powers, so the protocol change can account for 10 W with no fitness change."
+      },
+      {
+       "id": "b",
+       "text": "He has lost about 4% of his threshold fitness",
+       "why": "This ignores the change of protocol, which moves the threshold by itself."
+      },
+      {
+       "id": "c",
+       "text": "Longer stages should give a higher value, so he lost more",
+       "why": "It's the other way round: holding each load longer gives a lower threshold power."
+      },
+      {
+       "id": "d",
+       "text": "Stage length doesn't matter once it's over 3 min",
+       "why": "Threshold power kept falling from 3- to 4-, 7- and 10-min stages: there is no point where it stops mattering."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's threshold speed was 15.5 km·h⁻¹ from 3-min stages. A retest with 6-min stages gives 15.1 km·h⁻¹. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The longer stages alone could explain the drop",
+       "correct": true,
+       "why": "Right: longer stages give a lower threshold, so the change of protocol may be the whole story."
+      },
+      {
+       "id": "b",
+       "text": "He has lost about 3% of his threshold fitness",
+       "why": "This ignores the change of protocol, which moves the threshold by itself."
+      },
+      {
+       "id": "c",
+       "text": "Longer stages should give a faster value, so he lost more",
+       "why": "It's the other way round: longer stages give a lower threshold speed."
+      },
+      {
+       "id": "d",
+       "text": "Stage length only matters on a bike, not a treadmill",
+       "why": "Lactate needs time to settle at each load whatever the sport; the stage length matters on both."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-one-visit",
+   "concept": "lac-stages",
+   "bloom": "apply",
+   "sources": [
+    "jamnick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants a valid VO2max and a valid lactate threshold for her bike. Which plan fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A step test for lactate and a separate ramp for VO2max",
+       "correct": true,
+       "why": "Right: no single test gave both validly, so each gets its own protocol, ideally on different days."
+      },
+      {
+       "id": "b",
+       "text": "One ramp with 1-min stages and blood every minute",
+       "why": "1-min stages are too short for lactate to settle, so the threshold would be off."
+      },
+      {
+       "id": "c",
+       "text": "One step test with 5-min stages, using its peak VO₂",
+       "why": "Long-stage tests underestimated VO2peak by about 1–5 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "One step test followed by a verification bout",
+       "why": "Even with a verification bout, a single test couldn't give both values validly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-methods-differ",
+   "concept": "lac-method",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jamnick2018",
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two coaches analyse the same step test. One reports a lactate threshold of 265 W, the other 290 W. Most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They used different threshold methods",
+       "correct": true,
+       "why": "Right: different methods applied to the same samples give different powers."
+      },
+      {
+       "id": "b",
+       "text": "The analyser drifted between the two readings",
+       "why": "They read the same samples, so the analyser can't explain a difference between them."
+      },
+      {
+       "id": "c",
+       "text": "The athlete got fitter between the analyses",
+       "why": "It is one test, analysed twice: the athlete didn't change."
+      },
+      {
+       "id": "d",
+       "text": "One of them must have made an arithmetic error",
+       "why": "Possible, but a 25 W gap is just what different methods produce on one curve."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-interp-calc",
+   "concept": "lac-method",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a cyclist's step test, lactate was 3.4 mmol·L⁻¹ at 240 W and 5.2 mmol·L⁻¹ at 270 W. By straight-line interpolation, at what power did it pass 4.0 mmol·L⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "250 W",
+       "correct": true,
+       "why": "Right: (4.0 − 3.4) ÷ (5.2 − 3.4) = 0.33; 240 + 0.33 × 30 = 250 W."
+      },
+      {
+       "id": "b",
+       "text": "260 W",
+       "why": "This measures the gap from the upper sample (5.2 − 4.0 = 1.2) but adds it from the lower one."
+      },
+      {
+       "id": "c",
+       "text": "255 W",
+       "why": "This just takes the midpoint of the two stages, ignoring where 4.0 lies between the samples."
+      },
+      {
+       "id": "d",
+       "text": "270 W",
+       "why": "This takes the first stage above 4.0 instead of interpolating between the two samples."
+      }
+     ],
+     "solution": "Lactate rose 5.2 − 3.4 = 1.8 mmol·L⁻¹ over 30 W. 4.0 lies (4.0 − 3.4) ÷ 1.8 = 0.33 of the way. Power = 240 + 0.33 × 30 = 250 W."
+    },
+    {
+     "id": "b",
+     "stem": "In a runner's step test, lactate was 3.6 mmol·L⁻¹ at 14 km·h⁻¹ and 4.6 mmol·L⁻¹ at 15 km·h⁻¹. By straight-line interpolation, at what speed did it pass 4.0 mmol·L⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.4 km·h⁻¹",
+       "correct": true,
+       "why": "Right: (4.0 − 3.6) ÷ (4.6 − 3.6) = 0.4; 14 + 0.4 × 1 = 14.4 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "14.6 km·h⁻¹",
+       "why": "This measures the gap from the upper sample (4.6 − 4.0 = 0.6) but adds it from the lower one."
+      },
+      {
+       "id": "c",
+       "text": "14.5 km·h⁻¹",
+       "why": "This just takes the midpoint of the two stages, ignoring where 4.0 lies between the samples."
+      },
+      {
+       "id": "d",
+       "text": "15.0 km·h⁻¹",
+       "why": "This takes the first stage above 4.0 instead of interpolating between the two samples."
+      }
+     ],
+     "solution": "Lactate rose 4.6 − 3.6 = 1.0 mmol·L⁻¹ over 1 km·h⁻¹. 4.0 lies (4.0 − 3.6) ÷ 1.0 = 0.4 of the way. Speed = 14 + 0.4 × 1 = 14.4 km·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "In a triathlete's bike test, lactate was 2.8 mmol·L⁻¹ at 200 W and 4.4 mmol·L⁻¹ at 225 W. By straight-line interpolation, at what power did it pass 4.0 mmol·L⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "219 W",
+       "correct": true,
+       "why": "Right: (4.0 − 2.8) ÷ (4.4 − 2.8) = 0.75; 200 + 0.75 × 25 = 218.75 ≈ 219 W."
+      },
+      {
+       "id": "b",
+       "text": "206 W",
+       "why": "This measures the gap from the upper sample (4.4 − 4.0 = 0.4) but adds it from the lower one."
+      },
+      {
+       "id": "c",
+       "text": "213 W",
+       "why": "This just takes the midpoint of the two stages, ignoring where 4.0 lies between the samples."
+      },
+      {
+       "id": "d",
+       "text": "225 W",
+       "why": "This takes the first stage above 4.0 instead of interpolating between the two samples."
+      }
+     ],
+     "solution": "Lactate rose 4.4 − 2.8 = 1.6 mmol·L⁻¹ over 25 W. 4.0 lies (4.0 − 2.8) ÷ 1.6 = 0.75 of the way. Power = 200 + 0.75 × 25 ≈ 219 W."
+    }
+   ]
+  },
+  {
+   "id": "lac-glycogen-shift",
+   "concept": "lac-glycogen",
+   "bloom": "analyse",
+   "sources": [
+    "maassen1989",
+    "yoshida1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a heavy training week on few carbohydrates, a runner's lactate curve sits 0.5 km·h⁻¹ further right than a month ago. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low glycogen may explain it, not fitness",
+       "correct": true,
+       "why": "Right: with less glycogen, less lactate is made at each speed, so the curve moves right without any gain in endurance."
+      },
+      {
+       "id": "b",
+       "text": "A clear gain: a right shift always means fitter",
+       "why": "A right shift means fitter only when glycogen, diet and training before the test were the same."
+      },
+      {
+       "id": "c",
+       "text": "A loss: low glycogen moves the curve left",
+       "why": "Low glycogen moves it right, not left: less carbohydrate breakdown, less lactate."
+      },
+      {
+       "id": "d",
+       "text": "No effect: diet changes only VO2max, not lactate",
+       "why": "Diet changed powers at fixed lactate values in trained athletes; lactate is very sensitive to carbohydrate."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Before a retest, a cyclist rested 3 days and ate lots of carbohydrate. His curve now sits 15 W further left than last time. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Full glycogen stores may explain it, not lost fitness",
+       "correct": true,
+       "why": "Right: a high-carbohydrate diet with rest lowered the powers at fixed lactate values, while endurance was actually better."
+      },
+      {
+       "id": "b",
+       "text": "A clear loss: a left shift always means less fit",
+       "why": "A left shift means less fit only when glycogen and the days before the test were the same."
+      },
+      {
+       "id": "c",
+       "text": "A gain: full glycogen moves the curve right",
+       "why": "Full glycogen moves it left: more carbohydrate breakdown, more lactate at each power."
+      },
+      {
+       "id": "d",
+       "text": "Rest has no effect on a lactate test",
+       "why": "Rest and diet before a test changed the lactate–power relationship in trained athletes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-diet-marker",
+   "concept": "lac-glycogen",
+   "bloom": "understand",
+   "sources": [
+    "yoshida1984",
+    "maassen1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach can't control what her athletes eat before tests. Which lactate marker was least affected by diet?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The first rise above baseline",
+       "correct": true,
+       "why": "Right: in Yoshida's study diet didn't move the first rise above resting lactate."
+      },
+      {
+       "id": "b",
+       "text": "The power at 4 mmol·L⁻¹ (OBLA)",
+       "why": "Diet did move OBLA: fixed values shift with the whole curve."
+      },
+      {
+       "id": "c",
+       "text": "The power at 2 mmol·L⁻¹",
+       "why": "Powers at both 2 and 4 mmol·L⁻¹ shifted with diet in trained athletes."
+      },
+      {
+       "id": "d",
+       "text": "The peak lactate at the end of the test",
+       "why": "Peak lactate depends on glycogen too: with little carbohydrate there's less to turn into lactate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-device-switch",
+   "concept": "lac-device",
+   "bloom": "evaluate",
+   "sources": [
+    "tanner2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's first test used analyser A; the retest used analyser B, which reads about 0.6 mmol·L⁻¹ higher. Her power at 4 mmol·L⁻¹ fell by 10 W. Best response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Don't judge it: retest with analyser A",
+       "correct": true,
+       "why": "Right: a device that reads higher reaches 4 mmol·L⁻¹ at a lower power, so the switch alone could explain the drop."
+      },
+      {
+       "id": "b",
+       "text": "She has lost fitness: her threshold fell 10 W",
+       "why": "This ignores the device switch, which by itself lowers the power at a fixed lactate value."
+      },
+      {
+       "id": "c",
+       "text": "Subtract 0.6 from every B value; that settles it",
+       "why": "Device offsets aren't constant ('up to' 0.9 mmol·L⁻¹, varying with concentration), so a fixed correction is only a rough fix."
+      },
+      {
+       "id": "d",
+       "text": "She improved: B reads higher, so the true change is a gain",
+       "why": "The 0.6 mmol·L⁻¹ offset could explain the whole 10 W drop, which points to no change, not a gain; only a retest on A can tell."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-offset-calc",
+   "concept": "lac-device",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tanner2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Near 4 mmol·L⁻¹, a runner's lactate rises 1.5 mmol·L⁻¹ for each 1 km·h⁻¹ of speed. A new analyser reads 0.6 mmol·L⁻¹ higher. How far does the speed at 4 mmol·L⁻¹ appear to move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.4 km·h⁻¹ slower",
+       "correct": true,
+       "why": "Right: 0.6 ÷ 1.5 = 0.4 km·h⁻¹, and higher readings reach 4.0 earlier, so at a slower speed."
+      },
+      {
+       "id": "b",
+       "text": "About 0.4 km·h⁻¹ faster",
+       "why": "Right size, wrong direction: a device that reads higher hits 4 mmol·L⁻¹ at a slower speed."
+      },
+      {
+       "id": "c",
+       "text": "About 0.6 km·h⁻¹ slower",
+       "why": "This takes the 0.6 mmol·L⁻¹ offset as a speed, without dividing by the slope of 1.5 mmol·L⁻¹ per km·h⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "About 0.9 km·h⁻¹ slower",
+       "why": "This multiplies the offset by the slope (0.6 × 1.5) instead of dividing by it."
+      }
+     ],
+     "solution": "Slope = 1.5 mmol·L⁻¹ per km·h⁻¹. An offset of 0.6 mmol·L⁻¹ = 0.6 ÷ 1.5 = 0.4 km·h⁻¹. The higher-reading device reaches 4.0 mmol·L⁻¹ 0.4 km·h⁻¹ earlier, so the threshold looks 0.4 km·h⁻¹ slower."
+    },
+    {
+     "id": "b",
+     "stem": "Near 4 mmol·L⁻¹, a cyclist's lactate rises 2.0 mmol·L⁻¹ for each 30 W. A new analyser reads 0.5 mmol·L⁻¹ higher. By how much does the power at 4 mmol·L⁻¹ appear to move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7.5 W lower",
+       "correct": true,
+       "why": "Right: 0.5 ÷ 2.0 = 0.25 of a 30 W step = 7.5 W, and higher readings reach 4.0 earlier, so lower."
+      },
+      {
+       "id": "b",
+       "text": "About 7.5 W higher",
+       "why": "Right size, wrong direction: a device that reads higher hits 4 mmol·L⁻¹ at a lower power."
+      },
+      {
+       "id": "c",
+       "text": "About 15 W lower",
+       "why": "This uses 0.5 ÷ 1.0 instead of ÷ 2.0: the slope here is 2.0 mmol·L⁻¹ per 30 W."
+      },
+      {
+       "id": "d",
+       "text": "About 0.25 W lower",
+       "why": "0.25 is the fraction of a step; it still has to be multiplied by the 30 W step."
+      }
+     ],
+     "solution": "Slope = 2.0 mmol·L⁻¹ per 30 W. An offset of 0.5 mmol·L⁻¹ = 0.5 ÷ 2.0 = 0.25 of a step = 0.25 × 30 = 7.5 W. The higher-reading device reaches 4.0 mmol·L⁻¹ 7.5 W earlier."
+    }
+   ]
+  },
+  {
+   "id": "lac-fair-retest",
+   "concept": "lac-compare",
+   "bloom": "evaluate",
+   "sources": [
+    "faude2009",
+    "jamnick2018",
+    "maassen1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants to compare a runner's lactate curve with last season's. Which retest plan allows the fairest comparison?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same protocol, analyser, site and pre-test diet, at the same time of day",
+       "correct": true,
+       "why": "Right: holding everything that moves lactate constant leaves fitness as the main reason for a shift."
+      },
+      {
+       "id": "b",
+       "text": "Same protocol, but the morning after his hardest session",
+       "why": "Low glycogen after a hard day shifts the curve right and flatters the runner."
+      },
+      {
+       "id": "c",
+       "text": "A newer, more accurate analyser, everything else the same",
+       "why": "Swapping devices adds an offset of up to about 1 mmol·L⁻¹, even if the new one is better."
+      },
+      {
+       "id": "d",
+       "text": "Longer stages this time, to give a more settled curve",
+       "why": "Longer stages lower the threshold power, so the two tests would no longer match."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lac-curve-shift",
+   "concept": "lac-compare",
+   "bloom": "analyse",
+   "sources": [
+    "faude2009",
+    "maassen1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Same protocol, analyser and pre-test diet as before. A cyclist's whole lactate curve has moved 15 W to the right, and heart rate is lower at every stage. Best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Probably a real endurance gain, if bigger than test noise",
+       "correct": true,
+       "why": "Right: with the test kept the same, a right shift backed by lower heart rate points to fitness; the last lesson checks it against noise."
+      },
+      {
+       "id": "b",
+       "text": "Probably low glycogen, which shifts curves right",
+       "why": "The pre-test diet was the same, which makes glycogen an unlikely explanation."
+      },
+      {
+       "id": "c",
+       "text": "Only heart rate counts; the lactate shift means nothing",
+       "why": "Both markers count; here they agree, which strengthens the case."
+      },
+      {
+       "id": "d",
+       "text": "Impossible: trained cyclists' curves don't shift",
+       "why": "Curves do shift with training; in one camp the curve didn't, but that's not a rule."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

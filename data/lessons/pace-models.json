@@ -1,0 +1,833 @@
+{
+ "id": "pace-models",
+ "module": "t2-pacing",
+ "title": "How athletes pace: the brain's plan",
+ "goal": "Explain how athletes set and adjust their pace from the expected endpoint, experience and perceived effort, and what deception studies show about a kept reserve.",
+ "requires": [
+  "pace-strategies"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "feedforward",
+    "afferent-feedback",
+    "teleoanticipation",
+    "rpe-template",
+    "anticipatory-regulation",
+    "hazard-score",
+    "psychobiological-model"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pmo-plan",
+   "title": "A plan made before the start",
+   "text": "Nobody starts a marathon at 5 km pace. Pacing is planned before the gun, and the most important input seems to be knowing where the finish is [[c:endpoint-key]]. The brain combines that endpoint with memories of similar races and the day's conditions to set a starting pace: a [feedforward](g:feedforward) plan.\n\nDuring the race the plan is adjusted with [afferent feedback](g:afferent-feedback): signals from muscles, heart, lungs and skin.\n\nRegulating pace from these signals with the end of the task in mind is called [teleoanticipation](g:teleoanticipation). Its aim is to finish the task within the body's limits [[c:teleo-def]].",
+   "claims": [
+    {
+     "id": "endpoint-key",
+     "text": "Knowing the endpoint of an event may be the most important factor in setting a pacing strategy.",
+     "grade": "weak",
+     "sources": [
+      "stclairgibson2006"
+     ],
+     "evidence": [
+      {
+       "source": "stclairgibson2006",
+       "quote": "Perhaps the most important factor allowing the establishment of a pacing strategy is knowledge of the endpoint of a particular event.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "teleo-def",
+     "text": "In teleoanticipation, feedforward and feedback signals regulate exercise so that the task is completed within the body's limits.",
+     "grade": "weak",
+     "sources": [
+      "hampson2001",
+      "roelands2013"
+     ],
+     "evidence": [
+      {
+       "source": "hampson2001",
+       "quote": "In a process defined as teleoanticipation, the changes in perceived exertion that result from these afferent signals may allow exercise performance to be precisely regulated such that a task can be completed within the biomechanical and metabolic limits of the body.",
+       "level": "abstract"
+      },
+      {
+       "source": "roelands2013",
+       "quote": "Apparently, both feedforward and feedback mechanisms, based on the principle of teleoanticipation, regulate power output (e.g., speed) during a performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pmo-teleo"
+  },
+  {
+   "type": "question",
+   "item": "pmo-endpoint"
+  },
+  {
+   "type": "concept",
+   "id": "pmo-rpe",
+   "title": "Effort rises on schedule",
+   "text": "[RPE](g:rpe), the rating of perceived exertion, is how hard an effort feels, as a number on a scale. In a self-paced event, RPE rises roughly in a straight line with the share of the event completed [[c:rpe-linear]], reaching near maximal at the finish. The expected curve of 'how hard it should feel by now', built from experience, is the [RPE template](g:rpe-template) [[c:template-exp]].\n\nA test: 10 trained men rode a 15 km time trial believing it was 10 km, and were told the truth at 7.5 km. Up to then their RPE ran above that of a planned 15 km ride; after a short transition it settled onto the 15 km curve [[c:template-switch]]. The template followed the expected distance.",
+   "claims": [
+    {
+     "id": "rpe-linear",
+     "text": "RPE rises approximately linearly with the proportion of an event completed.",
+     "grade": "weak",
+     "sources": [
+      "dekoning2011"
+     ],
+     "evidence": [
+      {
+       "source": "dekoning2011",
+       "quote": "It has been shown that RPE increases in an approximately linear manner as a function of the proportion of an event completed",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "template-exp",
+     "text": "Pacing depends largely on the expected duration and on a performance template built from experience.",
+     "grade": "weak",
+     "sources": [
+      "roelands2013"
+     ],
+     "evidence": [
+      {
+       "source": "roelands2013",
+       "quote": "It is believed that the pacing selected by athletes is largely dependent on the anticipated exercise duration and on the presence of an experientially developed performance template.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "template-switch",
+     "text": "When the race distance was changed mid-trial, riders switched from one RPE template to another.",
+     "grade": "weak",
+     "sources": [
+      "schallig2018"
+     ],
+     "evidence": [
+      {
+       "source": "schallig2018",
+       "quote": "This novel distance-endpoint manipulation demonstrates that it is possible to switch between RPE templates.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pmo-template"
+  },
+  {
+   "type": "question",
+   "item": "pmo-switch"
+  },
+  {
+   "type": "concept",
+   "id": "pmo-anticip",
+   "title": "RPE steers the pace",
+   "text": "Tucker's [anticipatory regulation](g:anticipatory-regulation) model puts RPE at the centre: body signals generate RPE, the athlete compares it with the template, and speeds up or backs off to stay on it [[c:tucker-model]].\n\nRPE isn't only physiology. 16 trained runners ran at a fixed treadmill speed. Expecting to stop at 10 min, they were told then to run 10 min more: their RPE jumped between minutes 10 and 11, though speed hadn't changed [[c:baden-rpe]].\n\nThe [hazard score](g:hazard-score) turns the model into a number:\n\n**hazard score = RPE (0–10 scale) × fraction of the race still to go**\n\nIn simulated races, athletes tended to speed up when it was below 1.5 and to slow down when it was above 3 [[c:hazard]].",
+   "claims": [
+    {
+     "id": "tucker-model",
+     "text": "Tucker proposed a model in which RPE mediates feedforward, anticipatory regulation of exercise performance.",
+     "grade": "weak",
+     "sources": [
+      "tucker2009"
+     ],
+     "evidence": [
+      {
+       "source": "tucker2009",
+       "quote": "A conceptual model for how the RPE mediates feedforward, anticipatory regulation of exercise performance is proposed",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "baden-rpe",
+     "text": "RPE rose when runners were told mid-run that the run would last longer, though speed was unchanged.",
+     "grade": "weak",
+     "sources": [
+      "baden2005"
+     ],
+     "evidence": [
+      {
+       "source": "baden2005",
+       "quote": "The change in RPE between 10 and 11 minutes in the 10 MIN trial suggests that RPE is not purely a measure of physical exertion, as treadmill speed was maintained at a constant pace both before and after the unexpected increase in exercise duration.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hazard",
+     "text": "The hazard score (RPE × fraction of distance remaining) predicted speeding up below 1.5 and slowing above 3.",
+     "grade": "weak",
+     "sources": [
+      "dekoning2011"
+     ],
+     "evidence": [
+      {
+       "source": "dekoning2011",
+       "quote": "Here we demonstrate that a simple index, the product of the momentary Rating of Perceived Exertion (RPE) and the fraction of race distance remaining, the Hazard Score, defines the likelihood that athletes will change their velocity during simulated competitions",
+       "level": "abstract"
+      },
+      {
+       "source": "dekoning2011",
+       "quote": "There was a significant likelihood that the change in velocity would be positive (acceleration) when the Hazard Score was less than 1.5, negative when the Hazard Score was greater than 3 and unchanged when the Hazard Score was between 1–3.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pmo-hazard-example",
+   "title": "A hazard score in a 10 km run",
+   "problem": "At 6 km of a 10 km race a runner rates her effort 5 on the 0–10 scale. What is her hazard score, and what does the model predict? And at 9 km, with RPE 8?",
+   "steps": [
+    "Fraction still to go at 6 km = (10 − 6) ÷ 10 = 0.4.",
+    "Hazard score = RPE × fraction to go = 5 × 0.4 = 2.0. That is between 1.5 and 3: she is likely to hold her pace.",
+    "At 9 km: fraction to go = 1 ÷ 10 = 0.1, so hazard = 8 × 0.1 = 0.8.",
+    "Below 1.5: she is likely to speed up. Little race is left, so a high RPE is affordable: this is the end spurt."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pmo-hazard-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pmo-baden"
+  },
+  {
+   "type": "question",
+   "item": "pmo-hazard-read"
+  },
+  {
+   "type": "question",
+   "item": "pmo-hazard-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pmo-deception",
+   "title": "Fooling the athlete",
+   "text": "If expectations set the pace, changing them should change the pace. 9 trained male cyclists raced a 4 km time trial against an on-screen avatar they were told was their own earlier (baseline) ride. Secretly it rode at 102% of that power. They beat their baseline: even a 'maximal' trial held a reserve, which they used once deceived [[c:stone-deception]].\n\nA parallel-group study of 20 cyclists over 16.1 km found that racing an avatar of their own baseline ride made them faster, but a secretly 2% faster avatar added nothing more, and made the ride feel harder and less pleasant [[c:jones-deception]].\n\nDeception studies support a kept reserve, but the gains are small and don't always appear.",
+   "claims": [
+    {
+     "id": "stone-deception",
+     "text": "Cyclists deceived by an avatar 2% faster than their best finished a 4 km time trial faster, suggesting a reserve during maximal trials.",
+     "grade": "weak",
+     "sources": [
+      "stone2012"
+     ],
+     "evidence": [
+      {
+       "source": "stone2012",
+       "quote": "This suggests that cyclists operate with a metabolic reserve even during maximal time trials and that this reserve can be accessed after deception.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "jones-deception",
+     "text": "A visual pacer improved 16.1 km time-trial performance, but deceptive feedback had no additional effect.",
+     "grade": "weak",
+     "sources": [
+      "jones2016"
+     ],
+     "evidence": [
+      {
+       "source": "jones2016",
+       "quote": "The presence of a visual pacer acutely facilitated time trial performance, but deceptive feedback had no additional effect on performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can deceiving athletes about their pace unlock extra performance?",
+    "sides": [
+     {
+      "position": "Yes: cyclists racing an avatar secretly 2% faster than their baseline ride beat it, and beat an accurate avatar too, so a reserve exists and can be accessed.",
+      "sources": [
+       "stone2012"
+      ]
+     },
+     {
+      "position": "Not beyond what a pacer gives: a 2% faster avatar added nothing over an accurate one, and raised RPE and negative feelings.",
+      "sources": [
+       "jones2016"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pmo-deceive"
+  },
+  {
+   "type": "question",
+   "item": "pmo-deceive-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "pmo-governor",
+   "title": "Who decides: a governor or you?",
+   "text": "Why keep a reserve at all? Two models answer differently (the *Brain and psychology* tier covers them in depth).\n\n- **[Central governor](g:central-governor)** (Noakes): the brain regulates effort, partly without awareness, to protect the body from harm [[c:governor-protect]]. Tucker's model grew from this idea.\n- **[Psychobiological model](g:psychobiological-model)** (Marcora): pacing is a conscious decision, based mainly on perceived effort and motivation. 10 fit men cycled to exhaustion at 242 W, yet straight after could still produce 731 W in a short maximal test: muscle fatigue alone hadn't forced them to stop; effort that felt unbearable had [[c:marcora-mind]].\n\nBoth give perceived effort a central role; they disagree on who is in charge, and neither is settled.",
+   "claims": [
+    {
+     "id": "governor-protect",
+     "text": "In the central governor model, fatigue is mainly an emotion that is part of a regulation protecting the body from harm.",
+     "grade": "disputed",
+     "sources": [
+      "noakes2012"
+     ],
+     "evidence": [
+      {
+       "source": "noakes2012",
+       "quote": "fatigue is predominantly an emotion, part of a complex regulation, the goal of which is to protect the body from harm.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "marcora-mind",
+     "text": "After exhaustive cycling at 242 W, subjects could still produce 731 W, suggesting exercise tolerance is limited by perception of effort.",
+     "grade": "disputed",
+     "sources": [
+      "marcora2010"
+     ],
+     "evidence": [
+      {
+       "source": "marcora2010",
+       "quote": "We tested the validity of this assumption by measuring maximal voluntary cycling power before (mean +/- SD, 1,075 +/- 214 W) and immediately after (731 +/- 206 W) (P < 0.001) exhaustive cycling exercise at 242 +/- 24 W",
+       "level": "abstract"
+      },
+      {
+       "source": "marcora2010",
+       "quote": "These results challenge the long-standing assumption that muscle fatigue causes exhaustion during high-intensity aerobic exercise, and suggest that exercise tolerance in highly motivated subjects is ultimately limited by perception of effort.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is pace regulated by a subconscious governor protecting the body, or by conscious, effort-based decisions?",
+    "sides": [
+     {
+      "position": "A central governor: the brain regulates effort, partly without awareness, so exercise stops before harm; RPE mediates this anticipatory regulation.",
+      "sources": [
+       "noakes2012",
+       "tucker2009"
+      ]
+     },
+     {
+      "position": "A psychobiological model: exhaustion comes when effort feels too high to go on, even though the muscles can still produce far more power.",
+      "sources": [
+       "marcora2010"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pmo-models",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pmo-hazard-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Pace is planned before the start (feedforward), from the known endpoint, past races and conditions, then adjusted with feedback: teleoanticipation.",
+    "RPE rises roughly linearly with the share of the race done; the expected curve is the RPE template, and it follows the expected distance.",
+    "RPE carries expectation and emotion as well as physiology; Tucker's model uses it to steer pace. Hazard score = RPE × fraction to go: below 1.5 speed up, above 3 slow down.",
+    "Deception studies suggest a reserve exists even in maximal trials, but extra gains from deception are small and not consistent.",
+    "Central governor (subconscious protection) and psychobiological model (conscious, effort-based decision) explain why the reserve is kept."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pmo-teleo",
+   "concept": "pmo-plan",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "stclairgibson2006",
+    "hampson2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to the teleoanticipation idea, what sets a runner's pace in a race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plan from the known finish, past races and conditions, adjusted along the way by body signals",
+       "correct": true,
+       "why": "Right: feedforward planning plus feedback, with the endpoint in mind."
+      },
+      {
+       "id": "b",
+       "text": "Signals from tired muscles alone, once fatigue has started",
+       "why": "That leaves out the plan made before the start; pace is set before any fatigue."
+      },
+      {
+       "id": "c",
+       "text": "The highest heart rate the runner can hold, read from a watch",
+       "why": "Heart rate is one signal among many, and the plan comes first."
+      },
+      {
+       "id": "d",
+       "text": "A fixed share of maximal speed that is the same in every race",
+       "why": "Pace depends on the expected distance and conditions, so it changes from race to race."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-endpoint",
+   "concept": "pmo-plan",
+   "bloom": "apply",
+   "sources": [
+    "stclairgibson2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist is told to ride \"as hard as you can until we say stop\", with no distance or time given. Compared with a known 20 km time trial, what is she missing for pacing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The endpoint, the main input for planning her pace",
+       "correct": true,
+       "why": "Right: without a known finish she can't set a pace for the distance left."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: pacing depends only on fitness, which is unchanged",
+       "why": "Fitness sets the limits, but the plan needs a known endpoint."
+      },
+      {
+       "id": "c",
+       "text": "Feedback from her muscles, which stops without a known distance",
+       "why": "Afferent feedback still arrives; what's missing is the plan's target."
+      },
+      {
+       "id": "d",
+       "text": "A reason to hold a reserve, so she will ride all-out",
+       "why": "Without an endpoint she can't know how much to hold back, so all-out is a guess too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-template",
+   "concept": "pmo-rpe",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "dekoning2011",
+    "roelands2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a well-paced 10 km run, how does RPE usually change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises roughly steadily with the share of the race done, peaking near the finish",
+       "correct": true,
+       "why": "Right: an approximately linear rise with the proportion completed."
+      },
+      {
+       "id": "b",
+       "text": "It jumps to near maximal in the first kilometre and stays there",
+       "why": "That would leave nothing in reserve; RPE builds over the race."
+      },
+      {
+       "id": "c",
+       "text": "It stays flat until the last kilometre, then shoots up",
+       "why": "RPE climbs throughout, not only at the end."
+      },
+      {
+       "id": "d",
+       "text": "It follows heart rate exactly and nothing else",
+       "why": "RPE combines many signals and expectations, not heart rate alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-switch",
+   "concept": "pmo-rpe",
+   "bloom": "analyse",
+   "sources": [
+    "schallig2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Riders start a time trial thinking it is 10 km. At 7.5 km they are told it is 15 km. What happened to their RPE in the study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "After a short transition it settled onto the curve of a planned 15 km ride",
+       "correct": true,
+       "why": "Right: they switched templates, showing RPE follows the expected distance."
+      },
+      {
+       "id": "b",
+       "text": "It kept rising as planned for 10 km, so they had to stop at 10 km",
+       "why": "They finished 15 km; RPE shifted onto the 15 km curve."
+      },
+      {
+       "id": "c",
+       "text": "It fell back to the starting value and rose again from there",
+       "why": "It didn't reset; it moved across to the 15 km template."
+      },
+      {
+       "id": "d",
+       "text": "It didn't change at all, because RPE depends only on power",
+       "why": "RPE did change with the news, as the template idea predicts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-baden",
+   "concept": "pmo-anticip",
+   "bloom": "analyse",
+   "sources": [
+    "baden2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Runners at a constant treadmill speed are told at 10 min that they must run 10 min more. Their RPE jumps within a minute. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "RPE includes expectation and emotion, not only physical strain",
+       "correct": true,
+       "why": "Right: speed was unchanged, yet RPE rose with the news."
+      },
+      {
+       "id": "b",
+       "text": "The news raised their oxygen uptake sharply",
+       "why": "Speed was constant, so the oxygen cost stayed the same."
+      },
+      {
+       "id": "c",
+       "text": "RPE scales are too unreliable to be used for pacing",
+       "why": "The jump was consistent; it shows what RPE contains, not that it is noise."
+      },
+      {
+       "id": "d",
+       "text": "They had just gone above critical power",
+       "why": "The speed didn't change, so their position relative to critical power didn't either."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-hazard-calc",
+   "concept": "pmo-anticip",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "dekoning2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 10 km of a 40 km cycling time trial, a rider rates RPE 6 (0–10 scale). What is her hazard score?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.5",
+       "correct": true,
+       "why": "Right: fraction to go = 30 ÷ 40 = 0.75; 6 × 0.75 = 4.5. Above 3, so she is likely to slow."
+      },
+      {
+       "id": "b",
+       "text": "1.5",
+       "why": "This uses the fraction completed (10 ÷ 40 = 0.25): 6 × 0.25. The score uses the fraction still to go."
+      },
+      {
+       "id": "c",
+       "text": "8.0",
+       "why": "This divides RPE by the fraction to go (6 ÷ 0.75); the score multiplies them."
+      },
+      {
+       "id": "d",
+       "text": "6.75",
+       "why": "This adds the fraction to RPE (6 + 0.75); the score is a product."
+      }
+     ],
+     "solution": "Fraction to go = (40 − 10) ÷ 40 = 0.75. Hazard score = RPE × fraction to go = 6 × 0.75 = 4.5."
+    },
+    {
+     "id": "b",
+     "stem": "At 4 km of a 5 km run, a runner rates RPE 7 (0–10 scale). What is his hazard score?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.4",
+       "correct": true,
+       "why": "Right: fraction to go = 1 ÷ 5 = 0.2; 7 × 0.2 = 1.4. Below 1.5, so he is likely to speed up."
+      },
+      {
+       "id": "b",
+       "text": "5.6",
+       "why": "This uses the fraction completed (4 ÷ 5 = 0.8): 7 × 0.8. The score uses the fraction still to go."
+      },
+      {
+       "id": "c",
+       "text": "35",
+       "why": "This divides RPE by the fraction to go (7 ÷ 0.2); the score multiplies them."
+      },
+      {
+       "id": "d",
+       "text": "7.2",
+       "why": "This adds the fraction to RPE (7 + 0.2); the score is a product."
+      }
+     ],
+     "solution": "Fraction to go = (5 − 4) ÷ 5 = 0.2. Hazard score = 7 × 0.2 = 1.4."
+    },
+    {
+     "id": "c",
+     "stem": "At 3 km of the 10 km run of a triathlon, a triathlete rates RPE 4 (0–10 scale). What is her hazard score?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.8",
+       "correct": true,
+       "why": "Right: fraction to go = 7 ÷ 10 = 0.7; 4 × 0.7 = 2.8. Between 1.5 and 3, so she is likely to hold pace."
+      },
+      {
+       "id": "b",
+       "text": "1.2",
+       "why": "This uses the fraction completed (3 ÷ 10 = 0.3): 4 × 0.3. The score uses the fraction still to go."
+      },
+      {
+       "id": "c",
+       "text": "5.7",
+       "why": "This divides RPE by the fraction to go (4 ÷ 0.7); the score multiplies them."
+      },
+      {
+       "id": "d",
+       "text": "4.7",
+       "why": "This adds the fraction to RPE (4 + 0.7); the score is a product."
+      }
+     ],
+     "solution": "Fraction to go = (10 − 3) ÷ 10 = 0.7. Hazard score = 4 × 0.7 = 2.8."
+    }
+   ]
+  },
+  {
+   "id": "pmo-hazard-read",
+   "concept": "pmo-anticip",
+   "bloom": "analyse",
+   "sources": [
+    "dekoning2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "With 40% of a race left, a runner's hazard score is 1.2 while his rivals' scores are above 3. What does the model predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He is likely to speed up while they slow down",
+       "correct": true,
+       "why": "Right: below 1.5 athletes tend to accelerate; above 3 they tend to slow."
+      },
+      {
+       "id": "b",
+       "text": "He is likely to slow, because a low score signals fatigue",
+       "why": "A low score means low risk for the distance left, which goes with speeding up."
+      },
+      {
+       "id": "c",
+       "text": "Everyone holds pace, because scores only matter early in a race",
+       "why": "The score applies throughout; late in a race it often drives the end spurt."
+      },
+      {
+       "id": "d",
+       "text": "They will speed up, because a high score means they feel strong",
+       "why": "A high score means high effort with much left, which goes with slowing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-deceive",
+   "concept": "pmo-deception",
+   "bloom": "analyse",
+   "sources": [
+    "stone2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclists beat their baseline 4 km time when racing an avatar secretly set 2% faster than that baseline. What does this suggest about the earlier 'maximal' baseline ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They had kept a reserve, which the deception let them use",
+       "correct": true,
+       "why": "Right: the authors concluded that a metabolic reserve exists even in maximal time trials."
+      },
+      {
+       "id": "b",
+       "text": "It was at their true physiological limit",
+       "why": "If it had been, they couldn't have gone faster when deceived."
+      },
+      {
+       "id": "c",
+       "text": "The avatar raised their VO2max for the day",
+       "why": "VO2max doesn't change within a session; the extra came from a larger anaerobic contribution late in the trial."
+      },
+      {
+       "id": "d",
+       "text": "It was a timing error by the researchers",
+       "why": "Time and power came from the ergometer, and the deceived ride was clearly faster than both the baseline and an accurate-avatar ride."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-deceive-appraisal",
+   "concept": "pmo-deception",
+   "bloom": "evaluate",
+   "sources": [
+    "stone2012",
+    "jones2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog says deception studies prove every athlete can go 2% faster by being tricked. What most limits this claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small studies of trained cyclists, and one found no extra gain from deception",
+       "correct": true,
+       "why": "Right: 9 trained men in one study; 20 cyclists in the other showed no added effect."
+      },
+      {
+       "id": "b",
+       "text": "Deception studies only use untrained people, who pace badly",
+       "why": "Both tested cyclists who race time trials; Stone's 9 were trained men."
+      },
+      {
+       "id": "c",
+       "text": "Lab results never apply to real races at all",
+       "why": "Too strong: lab time trials do carry over, though with caveats."
+      },
+      {
+       "id": "d",
+       "text": "The studies tested runners, not cyclists",
+       "why": "Both studies tested cyclists."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pmo-models",
+   "concept": "pmo-governor",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "noakes2012",
+    "marcora2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which model says pacing is a conscious decision based mainly on how hard the effort feels and on motivation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The psychobiological model",
+       "correct": true,
+       "why": "Right: Marcora's model puts perceived effort and motivation in charge."
+      },
+      {
+       "id": "b",
+       "text": "The central governor model",
+       "why": "The governor works partly without awareness, to protect the body."
+      },
+      {
+       "id": "c",
+       "text": "The critical power model",
+       "why": "Critical power describes the power–duration relationship, not how decisions are made."
+      },
+      {
+       "id": "d",
+       "text": "The RPE template",
+       "why": "The template is the expected rise of RPE; it doesn't say who decides."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which model says the brain limits effort, partly without awareness, so that exercise ends before the body is harmed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The central governor model",
+       "correct": true,
+       "why": "Right: Noakes' idea, in which fatigue is an emotion that protects the body."
+      },
+      {
+       "id": "b",
+       "text": "The psychobiological model",
+       "why": "That model makes pacing a conscious, effort-based decision."
+      },
+      {
+       "id": "c",
+       "text": "The critical power model",
+       "why": "Critical power describes the power–duration relationship, not brain control."
+      },
+      {
+       "id": "d",
+       "text": "The hazard score",
+       "why": "The hazard score is an index of RPE and distance left, not a model of what protects the body."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

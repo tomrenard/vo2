@@ -1,0 +1,792 @@
+{
+ "id": "eco-running",
+ "module": "t2-economy",
+ "title": "What makes a runner economical",
+ "goal": "Explain what sets running economy (tendon and leg stiffness, technique, where the mass sits, fibre type, shoes) and how strong the evidence is for each.",
+ "requires": [
+  "eco-define"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "tendon-stiffness",
+    "leg-stiffness",
+    "vertical-oscillation",
+    "super-shoes"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "run-range",
+   "title": "Same engine, different fuel bills",
+   "text": "Running economy differs a lot between people. Among trained runners with similar VO₂max, it can vary by as much as 30% [[c:re-30]].\n\nThe best are remarkable. In Nike's Breaking2 project, seven world-class men who reached a steady state at 21.1 km·h⁻¹ (2-hour marathon pace) used 191 mL·kg⁻¹·km⁻¹, about 4.0 L·min⁻¹ or 94% of their [VO₂peak](g:vo2peak) [[c:breaking2]]. That is about 13% less than the 220 typical of trained men in the calorimetry module, at a far higher speed.\n\nWhat makes one runner cheaper than another? The next cards go through the candidates: springs, technique, where the mass sits, fibres and shoes.",
+   "claims": [
+    {
+     "id": "re-30",
+     "text": "Running economy can vary by as much as 30% among trained runners with similar VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "It has been reported that RE can vary by as much as 30% among trained runners with similar",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "breaking2",
+     "text": "World-class male runners who reached a steady state at 21.1 km·h⁻¹ had a mean oxygen cost of 191 mL·kg⁻¹·km⁻¹, about 4.0 L·min⁻¹ or 94% of VO₂peak.",
+     "grade": "weak",
+     "sources": [
+      "jones2021"
+     ],
+     "evidence": [
+      {
+       "source": "jones2021",
+       "quote": "The mean O2 cost for these athletes was 191 ± 19 mL/kg/km such that running at 21.1 km/h required an absolute V̇O2 of ∼4.0 L/min and represented 94 ± 3% V̇O2peak.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "run-breaking2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "run-range-mean"
+  },
+  {
+   "type": "concept",
+   "id": "run-springs",
+   "title": "Tendons as springs",
+   "text": "Each landing stretches the Achilles tendon and the arch of the foot, and they recoil at push-off, giving back energy that muscle didn't have to make. A [tendon](g:tendon) works as a spring.\n\nHow springy matters. In 28 distance runners, the most economical had stronger calf muscles and a stiffer calf tendon ([tendon stiffness](g:tendon-stiffness)) [[c:aramp]].\n\nAcross 51 studies, higher [leg stiffness](g:leg-stiffness) and less [vertical oscillation](g:vertical-oscillation) went with a lower oxygen or energy cost, with moderate [correlations](g:correlation) of about 0.3 [[c:vh-stiff]]. Moderate links, measured at one point in time: they show who is economical, not that changing your stiffness or bounce will make you so.",
+   "claims": [
+    {
+     "id": "aramp",
+     "text": "In 28 long-distance runners, the most economical had higher calf (triceps surae) strength and a stiffer calf tendon.",
+     "grade": "weak",
+     "sources": [
+      "arampatzis2006"
+     ],
+     "evidence": [
+      {
+       "source": "arampatzis2006",
+       "quote": "The most economical runners showed a higher contractile strength and a higher normalised tendon stiffness (relationship between tendon force and tendon strain) in the triceps surae MTU",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vh-stiff",
+     "text": "Across observational studies, smaller vertical displacement and higher vertical and leg stiffness were moderately associated with a lower oxygen or energy cost of running.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2024b"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2024b",
+       "quote": "A smaller vertical displacement and higher vertical and leg stiffness showed significant moderate associations with lower oxygen/energy cost (r = 0.35, - 0.31, - 0.28, respectively).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "run-spring-why"
+  },
+  {
+   "type": "question",
+   "item": "run-stiff-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "run-technique",
+   "title": "Technique: smaller than it looks",
+   "text": "Coaches love to fix running form, but the data are humbling. A [meta-analysis](g:meta-analysis) of 51 studies (1,115 runners) found that contact time, flight time and stride length had trivial links with economy. A higher [cadence](g:cadence) had a small one (r = −0.20) [[c:vh-trivial]]. Taken one at a time, running mechanics explained only 4–12% of the differences in economy between runners [[c:vh-4-12]].\n\nA review of changeable technique factors warned that a single 'economical technique' can't yet be recommended: most studies compare different runners, test one factor at a time or run for a few weeks at most [[c:moore-caution]].\n\nThis fits the stride study in the muscle module: trained runners already settle close to their own cheapest stride.",
+   "claims": [
+    {
+     "id": "vh-trivial",
+     "text": "Most spatiotemporal measures (contact time, flight time, stride length) had trivial associations with running economy; a higher cadence had a small association with a lower cost.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2024b"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2024b",
+       "quote": "Most spatiotemporal outcomes showed trivial and non-significant associations with RE",
+       "level": "abstract"
+      },
+      {
+       "source": "vanhooren2024b",
+       "quote": "A higher cadence showed a small significant association with a lower oxygen/energy cost (r = - 0.20 [- 0.35 to - 0.05]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vh-4-12",
+     "text": "Considered in isolation, running biomechanics explain 4–12% of the between-runner variation in running economy.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2024b"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2024b",
+       "quote": "Running biomechanics can explain 4-12% of the between-individual variation in RE when considered in isolation, with this magnitude potentially increasing when combining different variables.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "moore-caution",
+     "text": "Because of recurring design problems (cross-comparisons, single variables, short interventions), a general economical running technique should be recommended with caution.",
+     "grade": "moderate",
+     "sources": [
+      "moore2016"
+     ],
+     "evidence": [
+      {
+       "source": "moore2016",
+       "quote": "Recurring methodological problems exist within the literature, such as cross-comparisons, assessing variables in isolation, and acute to short-term interventions.",
+       "level": "abstract"
+      },
+      {
+       "source": "moore2016",
+       "quote": "Therefore, recommending a general economical running technique should be approached with caution.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "run-technique-size"
+  },
+  {
+   "type": "question",
+   "item": "run-4-12-meaning"
+  },
+  {
+   "type": "concept",
+   "id": "run-mass",
+   "title": "Where the mass sits",
+   "text": "Mass on the legs costs more than mass on the trunk, because legs are swung back and forth every stride. In a classic experiment, loading runners' limbs cost more oxygen than the same load at the waist, and the further down the leg, the more it cost [[c:myers-limb]]. This is one reason shoe mass matters.\n\nSlim lower legs, with the mass kept high on the thigh, have been suggested as a main reason many East African runners are so economical. But at least one study of 31 runners found no link between economy and leg lengths or masses [[c:slender-legs]].\n\nThe share of [type I fibres](g:type-i-fibre) is no clearer: findings on fibre type and running economy are mixed [[c:re-fibres]].",
+   "claims": [
+    {
+     "id": "myers-limb",
+     "text": "Adding mass to the limbs raises the energy cost of running more than adding it to the trunk, and more so the further down the limb it sits.",
+     "grade": "weak",
+     "sources": [
+      "myers1985"
+     ],
+     "evidence": [
+      {
+       "source": "myers1985",
+       "quote": "We found that the cost of adding a given mass to the limbs is significantly greater than adding it to the centre of mass and that this effect becomes more pronounced as the limb loads are moved distally.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "slender-legs",
+     "text": "Slender legs with mass kept high on the thigh have been suggested to explain the economy of African runners, but a study of 31 runners found no link with leg lengths and masses.",
+     "grade": "disputed",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "particularly a low body mass index and long slender legs where the majority of mass is distributed higher on the thigh, have been suggested to be the primary reason for the extraordinary RE of African runners",
+       "level": "full-text"
+      },
+      {
+       "source": "barnes2015",
+       "quote": "there were no differences associated with segmental leg lengths and masses.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "re-fibres",
+     "text": "Findings on the link between muscle fibre type and running economy are mixed.",
+     "grade": "disputed",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "Current results suggest there are mixed findings between muscle fiber type and RE",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "run-limb-mass",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "run-slender-evidence"
+  },
+  {
+   "type": "concept",
+   "id": "run-shoes",
+   "title": "Super shoes: about 4%",
+   "text": "Shoes can change economy overnight. In a lab study, 18 high-level male runners ran at 14, 16 and 18 km·h⁻¹ in a prototype shoe with a thick, soft, springy foam and a stiff carbon plate, and in two top racing shoes of the same mass. The prototype, an early [super shoe](g:super-shoes), lowered energy cost in every runner, by about 4% on average [[c:hoog-4]]. Note the unit: energy (W·kg⁻¹), not just oxygen.\n\nTwo cautions. The study was paid for by the shoe's maker. And a 4% cheaper stride doesn't by itself mean racing 4% faster: how much speed it buys has to be worked out, not assumed. The tier 7 running module looks at shoes in detail.",
+   "claims": [
+    {
+     "id": "hoog-4",
+     "text": "In 18 high-level runners, prototype racing shoes with a compliant, resilient midsole and a stiff plate lowered the energy cost of running by about 4% in every runner, compared with established racing shoes of matched mass.",
+     "grade": "weak",
+     "sources": [
+      "hoogkamer2018"
+     ],
+     "evidence": [
+      {
+       "source": "hoogkamer2018",
+       "quote": "Compared with the established racing shoes, the new shoes reduced the energetic cost of running in all 18 subjects tested.",
+       "level": "abstract"
+      },
+      {
+       "source": "hoogkamer2018",
+       "quote": "The prototype shoes lowered the energetic cost of running by 4% on average.",
+       "level": "abstract"
+      },
+      {
+       "source": "hoogkamer2018",
+       "quote": "This study was supported by a contract from Nike, Inc. with the University of Colorado, Boulder.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "run-shoe-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "run-shoe-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Running economy varies by up to 30% among runners with similar VO₂max; world-class marathoners used about 191 mL·kg⁻¹·km⁻¹ at 21.1 km·h⁻¹.",
+    "Stiffer calf tendons and legs, and less vertical bounce, go with better economy (moderate links, not proof that changing them helps).",
+    "Single technique measures explain only 4–12% of differences between runners; contact time and stride length barely matter, and no general 'economical technique' can be prescribed.",
+    "Mass far down the leg costs the most; the slender-leg and fibre-type explanations are unproven.",
+    "Super shoes lowered energy cost by about 4% in one industry-funded study of 18 men; a 4% saving is not the same as 4% faster."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "run-breaking2-calc",
+   "concept": "run-range",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 59 kg runner with an oxygen cost of 191 mL·kg⁻¹·km⁻¹ runs at 21.1 km·h⁻¹ (2-hour marathon pace). What VO₂ does that need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "67 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 191 × 21.1 ÷ 60 = 67.2."
+      },
+      {
+       "id": "b",
+       "text": "4,030 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies cost by speed but forgets to divide by 60: that's per hour, not per minute."
+      },
+      {
+       "id": "c",
+       "text": "9.1 mL·kg⁻¹·min⁻¹",
+       "why": "This divides cost by speed. VO₂ = cost × km per minute."
+      },
+      {
+       "id": "d",
+       "text": "3.2 mL·kg⁻¹·min⁻¹",
+       "why": "This divides the cost by 60 and leaves out the speed."
+      }
+     ],
+     "solution": "VO₂ = cost × speed ÷ 60 = 191 × 21.1 ÷ 60 = 67.2 mL·kg⁻¹·min⁻¹ (about 4.0 L·min⁻¹ for 59 kg)."
+    },
+    {
+     "id": "b",
+     "stem": "A club runner with an oxygen cost of 215 mL·kg⁻¹·km⁻¹ races 10 km at 15 km·h⁻¹. What VO₂ does that need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "53.8 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 215 × 15 ÷ 60 = 53.75."
+      },
+      {
+       "id": "b",
+       "text": "3,225 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies cost by speed but forgets to divide by 60: that's per hour, not per minute."
+      },
+      {
+       "id": "c",
+       "text": "14.3 mL·kg⁻¹·min⁻¹",
+       "why": "This divides cost by speed. VO₂ = cost × km per minute."
+      },
+      {
+       "id": "d",
+       "text": "3.6 mL·kg⁻¹·min⁻¹",
+       "why": "This divides the cost by 60 and leaves out the speed."
+      }
+     ],
+     "solution": "VO₂ = cost × speed ÷ 60 = 215 × 15 ÷ 60 = 53.8 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete with an oxygen cost of 205 mL·kg⁻¹·km⁻¹ runs off the bike at 12 km·h⁻¹. What VO₂ does that need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41.0 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 205 × 12 ÷ 60 = 41.0."
+      },
+      {
+       "id": "b",
+       "text": "2,460 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies cost by speed but forgets to divide by 60: that's per hour, not per minute."
+      },
+      {
+       "id": "c",
+       "text": "17.1 mL·kg⁻¹·min⁻¹",
+       "why": "This divides cost by speed. VO₂ = cost × km per minute."
+      },
+      {
+       "id": "d",
+       "text": "3.4 mL·kg⁻¹·min⁻¹",
+       "why": "This divides the cost by 60 and leaves out the speed."
+      }
+     ],
+     "solution": "VO₂ = cost × speed ÷ 60 = 205 × 12 ÷ 60 = 41.0 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "run-range-mean",
+   "concept": "run-range",
+   "bloom": "understand",
+   "sources": [
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners have the same VO₂max and race 10 km at the same % of it, yet one is 8% faster. What is the most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Different running economy",
+       "correct": true,
+       "why": "Right: economy can differ by up to 30% between runners with similar VO₂max, and speed = sustainable VO₂ ÷ cost."
+      },
+      {
+       "id": "b",
+       "text": "Different maximal heart rate",
+       "why": "Maximal heart rate varies between people without setting race speed; the oxygen they can use is already the same."
+      },
+      {
+       "id": "c",
+       "text": "Different stores of phosphocreatine",
+       "why": "PCr matters for seconds-long efforts, not for a 10 km race."
+      },
+      {
+       "id": "d",
+       "text": "Measurement error: their speeds must really be the same",
+       "why": "Error in a VO₂max test is a few percent; economy differences are a far more likely cause of an 8% gap."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-spring-why",
+   "concept": "run-springs",
+   "bloom": "understand",
+   "sources": [
+    "arampatzis2006",
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can a stiffer Achilles tendon lower the oxygen cost of running?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It works as a firmer spring, so muscle has to do less work",
+       "correct": true,
+       "why": "Right: the tendon acts as a spring, and energy it gives back is energy the muscle didn't have to make. In the most economical runners a stiffer calf tendon came with stronger calf muscles; a stiffer tendon may also let the muscle work at a better length."
+      },
+      {
+       "id": "b",
+       "text": "It makes the calf muscle bigger and more powerful",
+       "why": "Tendon stiffness is a property of the tendon, not of muscle size."
+      },
+      {
+       "id": "c",
+       "text": "It raises VO₂max by improving blood flow",
+       "why": "Tendons don't change oxygen delivery; economy is the cost side, not the VO₂max side."
+      },
+      {
+       "id": "d",
+       "text": "It makes the foot stay longer on the ground",
+       "why": "Contact time had almost no link with economy; the benefit is the spring, not the timing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-stiff-scenario",
+   "concept": "run-springs",
+   "bloom": "evaluate",
+   "sources": [
+    "vanhooren2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis found that runners with less vertical oscillation tend to be more economical (r = 0.35). A coach now tells all his athletes to 'run flatter'. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Premature: a link between runners doesn't show that changing bounce helps",
+       "correct": true,
+       "why": "Right: these are moderate links between people, measured once. They don't show that an individual who changes the trait will benefit."
+      },
+      {
+       "id": "b",
+       "text": "Sound: r = 0.35 proves that bounce causes a higher oxygen cost",
+       "why": "A correlation, especially a moderate one from observational studies, doesn't prove cause."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: vertical bounce has no link with running economy at all",
+       "why": "There is a moderate link; the problem is reading it as advice for individuals."
+      },
+      {
+       "id": "d",
+       "text": "Sound, but only for sprinters, not for distance runners",
+       "why": "The data come from steady submaximal running, not sprinting."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-technique-size",
+   "concept": "run-technique",
+   "bloom": "apply",
+   "sources": [
+    "vanhooren2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A gait analysis flags a runner's 'long ground contact time'. Based on the meta-analysis of 51 studies, how much is shortening it likely to help her economy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little: contact time had a trivial link with economy",
+       "correct": true,
+       "why": "Right: contact time showed a trivial, non-significant association (r = −0.02)."
+      },
+      {
+       "id": "b",
+       "text": "A lot: contact time is the main driver of economy",
+       "why": "In the meta-analysis contact time was one of the weakest factors."
+      },
+      {
+       "id": "c",
+       "text": "It will cut her oxygen cost by about 10%",
+       "why": "No such effect was found; the link was close to zero."
+      },
+      {
+       "id": "d",
+       "text": "Exactly 4–12%",
+       "why": "4–12% is the share of between-runner differences explained by mechanics, not a gain from changing one factor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-4-12-meaning",
+   "concept": "run-technique",
+   "bloom": "understand",
+   "sources": [
+    "vanhooren2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review says running mechanics 'explain 4–12% of the between-individual variation in running economy'. What does this mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Most of the differences between runners come from other factors",
+       "correct": true,
+       "why": "Right: 88–96% of the spread between runners is left to other things, such as tendons, fibres and mass."
+      },
+      {
+       "id": "b",
+       "text": "Changing technique improves economy by 4–12%",
+       "why": "This is about explaining differences between people, not the gain from a change."
+      },
+      {
+       "id": "c",
+       "text": "4–12% of runners have a poor technique",
+       "why": "It describes variation in economy, not how many runners have any trait."
+      },
+      {
+       "id": "d",
+       "text": "Economy varies by only 4–12% between runners",
+       "why": "Economy varies by up to 30%; the 4–12% is the share explained by mechanics."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-limb-mass",
+   "concept": "run-mass",
+   "bloom": "apply",
+   "sources": [
+    "myers1985"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner can carry a 300 g bottle in a waist belt, or 150 g strapped to each ankle. Which costs more energy, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The ankles: mass far down the leg is swung every stride",
+       "correct": true,
+       "why": "Right: limb mass costs more than trunk mass, and the more so the further down the limb it is."
+      },
+      {
+       "id": "b",
+       "text": "The waist: mass at the centre has to be lifted more",
+       "why": "The whole body rises and falls together; the extra cost of limb mass comes from swinging it back and forth."
+      },
+      {
+       "id": "c",
+       "text": "Neither: only total mass matters",
+       "why": "Where the mass sits matters: the same load on the limbs cost more than at the waist."
+      },
+      {
+       "id": "d",
+       "text": "The ankles, because ankle weights lower VO₂max",
+       "why": "Ankle mass raises the cost of running; it doesn't change VO₂max."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete chooses between racing shoes that are 100 g heavier per pair and carrying an extra 100 g gel flask on her race belt. Which adds more to her running cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The heavier shoes: mass on the feet is swung every stride",
+       "correct": true,
+       "why": "Right: mass at the far end of the leg costs more than the same mass at the waist."
+      },
+      {
+       "id": "b",
+       "text": "The race belt: mass at the waist must be carried further",
+       "why": "Both travel the same distance; the feet are also swung back and forth, which costs more."
+      },
+      {
+       "id": "c",
+       "text": "Neither: 100 g is 100 g wherever it is",
+       "why": "Where mass sits matters: the same load costs more on the limbs."
+      },
+      {
+       "id": "d",
+       "text": "The race belt, because it sits on the centre of mass",
+       "why": "Being at the centre of mass is what makes it cheaper, not dearer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-slender-evidence",
+   "concept": "run-mass",
+   "bloom": "evaluate",
+   "sources": [
+    "barnes2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A running magazine says East African runners are economical 'because of their slender calves'. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plausible idea with mixed support, not an established cause",
+       "correct": true,
+       "why": "Right: it has been suggested, but at least one study found no link with leg lengths and masses."
+      },
+      {
+       "id": "b",
+       "text": "Proven: limb mass is the main cause of their economy",
+       "why": "Limb mass does affect cost, but that it explains these runners' economy hasn't been shown."
+      },
+      {
+       "id": "c",
+       "text": "Disproven: limb mass has no effect on the cost of running",
+       "why": "Added limb mass clearly raises the cost; the open question is whether natural leg shape explains group differences."
+      },
+      {
+       "id": "d",
+       "text": "True, but only at sprint speeds",
+       "why": "The economy data come from submaximal distance running, not sprints."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "run-shoe-calc",
+   "concept": "run-shoes",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hoogkamer2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's energy cost at 16 km·h⁻¹ is 17.2 W·kg⁻¹ in her old racing shoes. If new shoes lower it by 4%, what is it now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16.5 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 17.2 × 0.96 = 16.5."
+      },
+      {
+       "id": "b",
+       "text": "13.2 W·kg⁻¹",
+       "why": "This subtracts 4 W·kg⁻¹ instead of 4%."
+      },
+      {
+       "id": "c",
+       "text": "17.9 W·kg⁻¹",
+       "why": "This adds 4% instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "16.8 W·kg⁻¹",
+       "why": "This subtracts 0.4 W·kg⁻¹: 4% of 17.2 is 0.69."
+      }
+     ],
+     "solution": "New cost = 17.2 × (1 − 0.04) = 17.2 × 0.96 = 16.5 W·kg⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's energy cost at 18 km·h⁻¹ is 20.0 W·kg⁻¹. If new shoes lower it by 4%, what is it now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "19.2 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 20.0 × 0.96 = 19.2."
+      },
+      {
+       "id": "b",
+       "text": "16.0 W·kg⁻¹",
+       "why": "This subtracts 4 W·kg⁻¹ instead of 4%."
+      },
+      {
+       "id": "c",
+       "text": "20.8 W·kg⁻¹",
+       "why": "This adds 4% instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "19.6 W·kg⁻¹",
+       "why": "This subtracts 0.4 W·kg⁻¹: 4% of 20.0 is 0.80."
+      }
+     ],
+     "solution": "New cost = 20.0 × (1 − 0.04) = 20.0 × 0.96 = 19.2 W·kg⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "run-shoe-appraisal",
+   "concept": "run-shoes",
+   "bloom": "evaluate",
+   "sources": [
+    "hoogkamer2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 2018 study found that prototype racing shoes lowered the energy cost of running by about 4%. What is the most important limit of that study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It was funded by the shoe's maker and tested one prototype in 18 men",
+       "correct": true,
+       "why": "Right: industry funding and a small, all-male sample mean the result needs independent replication before it is generalised."
+      },
+      {
+       "id": "b",
+       "text": "It measured energy cost rather than oxygen cost",
+       "why": "Energy cost is the better measure; that is a strength, not a limit."
+      },
+      {
+       "id": "c",
+       "text": "The shoes were not matched for mass",
+       "why": "Mass was matched, so the gain wasn't simply from a lighter shoe."
+      },
+      {
+       "id": "d",
+       "text": "It tested only speeds below 12 km·h⁻¹",
+       "why": "It tested 14, 16 and 18 km·h⁻¹."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

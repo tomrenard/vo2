@@ -1,0 +1,673 @@
+{
+ "id": "thr-lt1-lt2",
+ "module": "t2-thresholds",
+ "title": "LT1, LT2 and the threshold zoo",
+ "goal": "Sort the many lactate threshold names into a two-threshold model, and explain why a fixed lactate value such as 4 mmol·L⁻¹ can mislead for an individual athlete.",
+ "requires": [
+  "thr-domains"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "aerobic-threshold",
+    "anaerobic-threshold",
+    "obla",
+    "dmax"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "lt-zoo",
+   "title": "25 names for two bends",
+   "text": "A review of the literature found **25** different [lactate threshold](g:lactate-threshold) concepts. They fall into three groups: fixed lactate values; the first rise above baseline; and methods aimed at MLSS or at a sharp change in the slope of the [lactate curve](g:lactate-curve) [[c:lt-25-concepts]].\n\nMost names point to one of two bends:\n\n| bend | names you'll meet |\n|---|---|\n| first rise (LT1) | LT, LT1, [aerobic threshold](g:aerobic-threshold) |\n| steep climb (LT2) | LT2, [anaerobic threshold](g:anaerobic-threshold), lactate turn point, individual anaerobic threshold, [OBLA](g:obla), [Dmax](g:dmax) |\n\n'Anaerobic' is a leftover from an old theory. As the *Lactate* module showed, lactate rises because [glycolysis](g:glycolysis) speeds up, not because the muscle runs out of oxygen [[c:anaerobic-misnomer]].",
+   "claims": [
+    {
+     "id": "lt-25-concepts",
+     "text": "A review located 25 different lactate threshold concepts, which fall into three categories.",
+     "grade": "moderate",
+     "sources": [
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "faude2009",
+       "quote": "A total of 25 different LT concepts were located. All concepts were divided into three categories.",
+       "level": "abstract"
+      },
+      {
+       "source": "faude2009",
+       "quote": "The third category consists of threshold concepts that aim at detecting either the MLSS or a rapid/distinct change in the inclination of the blood lactate curve (category 3).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "anaerobic-misnomer",
+     "text": "A lack of oxygen in muscle is not the main reason blood lactate rises during incremental exercise.",
+     "grade": "strong",
+     "sources": [
+      "poole2021"
+     ],
+     "evidence": [
+      {
+       "source": "poole2021",
+       "quote": "It is now recognized that insufficient O2 is not the primary basis for lactataemia.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lt-names"
+  },
+  {
+   "type": "question",
+   "item": "lt-anaerobic-name"
+  },
+  {
+   "type": "concept",
+   "id": "lt-obla",
+   "title": "OBLA: one number for everyone",
+   "text": "The oldest shortcut is a fixed value: the power or speed at which blood lactate reaches **4 mmol·L⁻¹**, called [OBLA](g:obla). It comes from German work of the 1970s, and in 15 runners the steady lactate at the highest sustainable speed did average about 4 mmol·L⁻¹ [[c:obla-origin]].\n\nBut lactate at MLSS ranges from about **1.5 to 7 mmol·L⁻¹** between people [[c:mlss-spread]]. The test also moves the answer: the faster the power rises in a step test, the higher the power at which 4 mmol·L⁻¹ is reached [[c:obla-protocol]]. And other factors can shift the whole curve up or down [[c:curve-factors]].\n\nSo 4 mmol·L⁻¹ is easy to read off, but for one athlete it can sit well above or below the steady-state ceiling.",
+   "claims": [
+    {
+     "id": "obla-origin",
+     "text": "In Heck's early experiments in 15 participants, lactate stayed constant at intensities where it averaged about 4.0 ± 0.7 mmol·L⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "heck2024"
+     ],
+     "evidence": [
+      {
+       "source": "heck2024",
+       "quote": "These experiments on 15 participants revealed to us that the lactate concentration remained constant over time at intensities where the participants reached a blood lactate concentration of 4.0 ± 0.7 mmol/L from the 10th to the 25th minute of the trial",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mlss-spread",
+     "text": "Blood lactate at MLSS ranges from about 1.5 to almost 7 mmol·L⁻¹ between people, averaging about 3.7.",
+     "grade": "moderate",
+     "sources": [
+      "goodwin2007",
+      "billat2003"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "a wide range of [La−]b values at MLSS has been reported for different subjects, from as low as 1.5 mM to almost 7 mM. However, the average value is ≈3.7 mM.",
+       "level": "full-text"
+      },
+      {
+       "source": "billat2003",
+       "quote": "However, MLSSc has been reported to demonstrate a great variability between individuals (from 2-8 mmol/L) in capillary blood and not to be related to MLSSw.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "obla-protocol",
+     "text": "The steeper the rise in power during a step test, the higher the power at which 4 mmol·L⁻¹ is reached.",
+     "grade": "moderate",
+     "sources": [
+      "heck2024"
+     ],
+     "evidence": [
+      {
+       "source": "heck2024",
+       "quote": "Note that the steeper the increase of power over time, the higher the workload where a lactate concentration of 4 mmol.L − 1 is reached.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "curve-factors",
+     "text": "Several factors besides fitness can shift overall blood lactate levels in a step test.",
+     "grade": "moderate",
+     "sources": [
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "faude2009",
+       "quote": "This very global approach, however, is hindered by several factors that may influence overall lactate levels.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lt-obla-example",
+   "title": "Reading OBLA off two steps",
+   "problem": "In a step test, a runner's lactate is 3.1 mmol·L⁻¹ at 14 km·h⁻¹ and 4.9 mmol·L⁻¹ at 15 km·h⁻¹. At what speed does she reach 4 mmol·L⁻¹?",
+   "steps": [
+    "Treat the curve between the two steps as a straight line (interpolation).",
+    "How far up the gap is 4 mmol·L⁻¹? (4 − 3.1) ÷ (4.9 − 3.1) = 0.9 ÷ 1.8 = 0.5.",
+    "Go the same share of the way between the speeds: 14 + 0.5 × (15 − 14) = 14.5 km·h⁻¹.",
+    "The real curve bends upwards, so the straight line is a small approximation; small steps keep the error small."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lt-obla-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lt-obla-mislead",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lt-ramp-effect"
+  },
+  {
+   "type": "concept",
+   "id": "lt-dmax",
+   "title": "Reading the shape: Dmax",
+   "text": "Other methods use the shape of the curve instead of one value. [Dmax](g:dmax) draws a straight line from the first to the last point of the test and takes the point of the curve farthest from that line. In 8 male cyclists tested twice a week apart, it gave values similar to established methods and repeated well [[c:dmax-reliable]].\n\nIt takes the guesswork out of 'eyeballing' a bend. But it depends on the end points: the last point is wherever the athlete stopped. Stop the test early and the line, and so the threshold, moves.\n\nAll curve methods share that weakness: the number of steps, their length and their size change the curve they are read from.",
+   "claims": [
+    {
+     "id": "dmax-reliable",
+     "text": "In 8 male cyclists, the Dmax method gave thresholds similar to conventional methods and was reproducible.",
+     "grade": "weak",
+     "sources": [
+      "cheng1992"
+     ],
+     "evidence": [
+      {
+       "source": "cheng1992",
+       "quote": "Thus, the Dmax method appears to be an objective and reliable method for threshold determination, which can be applied to various ventilatory or metabolic variables yet yield similar results.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lt-dmax-endpoint"
+  },
+  {
+   "type": "question",
+   "item": "lt-obla-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "lt-two-model",
+   "title": "A two-threshold model",
+   "text": "Sort the zoo and two bends remain, the frame of the 'aerobic–anaerobic transition': the intensity at which lactate first rises above baseline, and the highest intensity at which lactate production and removal still balance, the [MLSS](g:mlss) [[c:two-thresholds]].\n\nOn the domain map:\n\n- **LT1** (or the gas exchange threshold) marks the moderate/heavy boundary; the evidence for this is reasonable [[c:lt1-boundary]].\n- **LT2** methods aim at the heavy/severe boundary, but few of them hit it reliably; of the common methods, only critical power held up [[c:lt2-weak]].\n\nSo treat LT1 as a real boundary and any LT2 number as an estimate, and check it against how a long steady effort actually behaves.",
+   "claims": [
+    {
+     "id": "two-thresholds",
+     "text": "The aerobic–anaerobic transition can be described by two breakpoints: the first rise in lactate above baseline and the MLSS.",
+     "grade": "moderate",
+     "sources": [
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "faude2009",
+       "quote": "This model consists of two typical breakpoints that are passed during incremental exercise: the intensity at which bLa begin to rise above baseline levels and the highest intensity at which lactate production and elimination are in equilibrium (maximal lactate steady state [MLSS]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lt1-boundary",
+     "text": "LT1, GET and VT have some evidence for marking the moderate/heavy boundary.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2020"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2020",
+       "quote": "There is some evidence to support the validity of LT1, GET, and VT to delineate the moderate and heavy domains of exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lt2-weak",
+     "text": "Apart from critical power and critical speed, there is little evidence that common methods mark the heavy/severe boundary.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2020"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2020",
+       "quote": "However, there is little evidence to support the validity of most commonly used methods, with exception of CP and CS, to delineate the heavy and severe domains of exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lt-map-domain"
+  },
+  {
+   "type": "question",
+   "item": "lt-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "lt-obla-mislead",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lt-obla-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "There are about 25 lactate threshold concepts, but most point to one of two bends: LT1 (first rise, 'aerobic threshold') and LT2 (steep climb, 'anaerobic threshold', OBLA, Dmax).",
+    "'Anaerobic threshold' is a misleading name: lactate rises because glycolysis speeds up, not because muscle lacks oxygen.",
+    "OBLA (4 mmol·L⁻¹) is easy to read off, but MLSS lactate ranges about 1.5–7 mmol·L⁻¹ and faster step tests push the 4 mmol·L⁻¹ power up.",
+    "Curve-shape methods like Dmax avoid eyeballing but depend on the test's steps and end point.",
+    "Two-threshold model: LT1 ≈ moderate/heavy boundary (reasonable evidence); LT2 methods only estimate the heavy/severe boundary."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lt-names",
+   "concept": "lt-zoo",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab report gives a runner's 'aerobic threshold' and 'anaerobic threshold'. Which bends of the lactate curve do these names most likely mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The first rise (LT1) and the steep climb (LT2)",
+       "correct": true,
+       "why": "Right: 'aerobic threshold' is an older name for LT1 and 'anaerobic threshold' for LT2."
+      },
+      {
+       "id": "b",
+       "text": "Two different estimates of the same bend",
+       "why": "The two names were coined for two separate bends, one low and one high on the curve."
+      },
+      {
+       "id": "c",
+       "text": "LT1 and the peak lactate at exhaustion",
+       "why": "Peak lactate is the highest value reached, not a threshold; 'anaerobic threshold' means LT2."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max and the first rise in lactate",
+       "why": "VO₂max is a maximal value, not a bend in the lactate curve."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-anaerobic-name",
+   "concept": "lt-zoo",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do physiologists call the name 'anaerobic threshold' misleading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lactate rises from faster glycolysis, not lack of oxygen",
+       "correct": true,
+       "why": "Right: insufficient oxygen is not the main cause of the rise in blood lactate."
+      },
+      {
+       "id": "b",
+       "text": "Blood lactate doesn't change at that intensity",
+       "why": "Lactate does rise steeply there; the problem is the explanation in the name, not the bend."
+      },
+      {
+       "id": "c",
+       "text": "Aerobic ATP supply stops completely above it",
+       "why": "Aerobic supply keeps rising above LT2; it supplies most of the energy in efforts of a few minutes or more."
+      },
+      {
+       "id": "d",
+       "text": "It only happens above VO₂max",
+       "why": "LT2 sits well below VO₂max, typically in the upper part of the heavy domain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-obla-calc",
+   "concept": "lt-obla",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "heck2024",
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a step test, a cyclist's lactate is 3.2 mmol·L⁻¹ at 240 W and 4.4 mmol·L⁻¹ at 270 W. At what power does he reach 4 mmol·L⁻¹ (OBLA)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "260 W",
+       "correct": true,
+       "why": "Right: (4 − 3.2) ÷ (4.4 − 3.2) = 0.67 of the gap; 240 + 0.67 × 30 = 260 W."
+      },
+      {
+       "id": "b",
+       "text": "250 W",
+       "why": "This measures from the wrong end: (4.4 − 4) ÷ 1.2 = 0.33, added to 240 W. The fraction belongs to the distance up from the lower step."
+      },
+      {
+       "id": "c",
+       "text": "270 W",
+       "why": "This just takes the nearest step. OBLA lies between the two steps, so interpolate."
+      },
+      {
+       "id": "d",
+       "text": "245 W",
+       "why": "This scales the top step by 4 ÷ 4.4. Lactate isn't proportional to power; use the two steps on either side."
+      }
+     ],
+     "solution": "Fraction of the gap = (4 − 3.2) ÷ (4.4 − 3.2) = 0.8 ÷ 1.2 = 0.67. Power = 240 + 0.67 × (270 − 240) = 240 + 20 = 260 W."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's lactate is 3.1 mmol·L⁻¹ at 15 km·h⁻¹ and 4.6 mmol·L⁻¹ at 16 km·h⁻¹. At what speed does she reach 4 mmol·L⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15.6 km·h⁻¹",
+       "correct": true,
+       "why": "Right: (4 − 3.1) ÷ (4.6 − 3.1) = 0.6; 15 + 0.6 × 1 = 15.6 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "15.4 km·h⁻¹",
+       "why": "This measures from the wrong end: (4.6 − 4) ÷ 1.5 = 0.4, added to 15 km·h⁻¹. The fraction belongs to the distance up from the lower step."
+      },
+      {
+       "id": "c",
+       "text": "16.0 km·h⁻¹",
+       "why": "This takes the nearest step above. OBLA lies between the two steps."
+      },
+      {
+       "id": "d",
+       "text": "13.9 km·h⁻¹",
+       "why": "This scales the top speed by 4 ÷ 4.6. Lactate isn't proportional to speed; interpolate between the two steps."
+      }
+     ],
+     "solution": "Fraction of the gap = (4 − 3.1) ÷ (4.6 − 3.1) = 0.9 ÷ 1.5 = 0.6. Speed = 15 + 0.6 × (16 − 15) = 15.6 km·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike, a triathlete's lactate is 2.5 mmol·L⁻¹ at 200 W and 4.5 mmol·L⁻¹ at 225 W. At what power does she reach 4 mmol·L⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "219 W",
+       "correct": true,
+       "why": "Right: (4 − 2.5) ÷ (4.5 − 2.5) = 0.75; 200 + 0.75 × 25 ≈ 219 W."
+      },
+      {
+       "id": "b",
+       "text": "206 W",
+       "why": "This measures from the wrong end: (4.5 − 4) ÷ 2 = 0.25, added to 200 W."
+      },
+      {
+       "id": "c",
+       "text": "225 W",
+       "why": "This takes the nearest step. OBLA lies between the two steps."
+      },
+      {
+       "id": "d",
+       "text": "200 W",
+       "why": "This scales the top step by 4 ÷ 4.5 (= 200 W). Lactate isn't proportional to power."
+      }
+     ],
+     "solution": "Fraction of the gap = (4 − 2.5) ÷ (4.5 − 2.5) = 1.5 ÷ 2.0 = 0.75. Power = 200 + 0.75 × (225 − 200) = 200 + 18.75 ≈ 219 W."
+    }
+   ]
+  },
+  {
+   "id": "lt-obla-mislead",
+   "concept": "lt-obla",
+   "bloom": "analyse",
+   "sources": [
+    "goodwin2007",
+    "billat2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's MLSS, measured with 30-minute rides, comes with a lactate of only 2.4 mmol·L⁻¹. His coach sets 'threshold' intervals at his 4 mmol·L⁻¹ power from a step test. What is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The intervals sit above his MLSS and lactate keeps rising",
+       "correct": true,
+       "why": "Right: his steady-state ceiling comes at 2.4 mmol·L⁻¹, so the 4 mmol·L⁻¹ power is higher than MLSS power."
+      },
+      {
+       "id": "b",
+       "text": "The intervals sit below his MLSS and feel easy",
+       "why": "That would be true for someone whose MLSS lactate is above 4 mmol·L⁻¹, not 2.4."
+      },
+      {
+       "id": "c",
+       "text": "The intervals sit exactly at his MLSS",
+       "why": "Only if his MLSS lactate were 4 mmol·L⁻¹; it ranges about 1.5–7 between people."
+      },
+      {
+       "id": "d",
+       "text": "The intervals sit at his first lactate threshold",
+       "why": "LT1 is where lactate first rises above rest, usually around 1–2 mmol·L⁻¹, well below 4."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's MLSS comes with a lactate of 6.5 mmol·L⁻¹. She sets her tempo runs at her 4 mmol·L⁻¹ speed. What is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runs sit below her MLSS, easier than she meant",
+       "correct": true,
+       "why": "Right: she only reaches her steady-state ceiling at 6.5 mmol·L⁻¹, so 4 mmol·L⁻¹ comes at a lower speed."
+      },
+      {
+       "id": "b",
+       "text": "The runs sit above her MLSS, so lactate keeps rising",
+       "why": "That fits someone whose MLSS lactate is below 4 mmol·L⁻¹, not 6.5."
+      },
+      {
+       "id": "c",
+       "text": "The runs sit exactly at her MLSS",
+       "why": "Only if her MLSS lactate were 4 mmol·L⁻¹; hers is 6.5."
+      },
+      {
+       "id": "d",
+       "text": "The runs sit in the severe domain",
+       "why": "Severe starts above the steady-state ceiling; she is below it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-ramp-effect",
+   "concept": "lt-obla",
+   "bloom": "analyse",
+   "sources": [
+    "heck2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does two step tests on the bike: one with 5-minute steps, one with 1-minute steps of the same size. Where does the 4 mmol·L⁻¹ power land in the faster test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher, because blood lactate lags behind power",
+       "correct": true,
+       "why": "Right: the steeper power rises, the higher the power at which 4 mmol·L⁻¹ is reached."
+      },
+      {
+       "id": "b",
+       "text": "Lower, because she tires sooner",
+       "why": "A faster test ends sooner, and lactate has less time to build at each power, so the value moves up, not down."
+      },
+      {
+       "id": "c",
+       "text": "The same, because 4 mmol·L⁻¹ is fixed",
+       "why": "The lactate value is fixed; the power at which it appears depends on the protocol."
+      },
+      {
+       "id": "d",
+       "text": "It can't be found with 1-minute steps",
+       "why": "It can be read off; it just won't match a test with longer steps."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-dmax-endpoint",
+   "concept": "lt-dmax",
+   "bloom": "analyse",
+   "sources": [
+    "cheng1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner stops a step test two stages early because she feels unwell. What happens to her Dmax threshold compared with a full test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It probably moves lower, since the line's end point moved",
+       "correct": true,
+       "why": "Right: with the last point lower on the curve, the line is flatter and the farthest point shifts to a lower speed."
+      },
+      {
+       "id": "b",
+       "text": "It stays the same, since Dmax uses only the first rise",
+       "why": "Dmax uses the whole curve, including the last point; that is what makes it sensitive to the end of the test."
+      },
+      {
+       "id": "c",
+       "text": "It moves higher, since fewer points are averaged",
+       "why": "Dmax doesn't average points; the farthest point moves down, not up, when the curve is cut short."
+      },
+      {
+       "id": "d",
+       "text": "It can't be found without a lactate at exhaustion",
+       "why": "Dmax uses the last point reached, whatever it is; the problem is that the answer changes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-map-domain",
+   "concept": "lt-two-model",
+   "bloom": "understand",
+   "sources": [
+    "jamnick2020",
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab report gives a cyclist LT1 = 190 W and 'LT2' = 265 W, the second from a fixed 4 mmol·L⁻¹. Which reading is best supported?",
+     "options": [
+      {
+       "id": "a",
+       "text": "190 W marks moderate/heavy; 265 W only estimates heavy/severe",
+       "correct": true,
+       "why": "Right: LT1 has reasonable evidence as the moderate/heavy boundary; fixed-value LT2s are rough estimates of the heavy/severe boundary."
+      },
+      {
+       "id": "b",
+       "text": "265 W is exactly his critical power",
+       "why": "Few LT2 methods match CP; a fixed 4 mmol·L⁻¹ can sit well above or below it."
+      },
+      {
+       "id": "c",
+       "text": "Both are exact domain boundaries",
+       "why": "Only LT1 (or GET) has good support as a boundary; LT2 methods are estimates."
+      },
+      {
+       "id": "d",
+       "text": "Neither relates to the intensity domains",
+       "why": "LT1 is one of the accepted markers of the moderate/heavy boundary."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lt-appraisal",
+   "concept": "lt-two-model",
+   "bloom": "evaluate",
+   "sources": [
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Most studies in a review found strong correlations between lactate thresholds and endurance performance. Why doesn't that alone show a threshold method is good for setting one athlete's training power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A strong correlation can hide large individual errors",
+       "correct": true,
+       "why": "Right: thresholds can rank people well and still miss one person's MLSS by a lot; the review notes these individual differences are rarely reported."
+      },
+      {
+       "id": "b",
+       "text": "Correlations below 0.95 mean nothing",
+       "why": "Strong correlations do mean something: they show the threshold ranks athletes well. The issue is the error for one person."
+      },
+      {
+       "id": "c",
+       "text": "Correlations prove the threshold causes performance",
+       "why": "Correlation doesn't show cause, and cause isn't the question here: accuracy for one athlete is."
+      },
+      {
+       "id": "d",
+       "text": "Correlations only hold for running events",
+       "why": "They were strongest in running, but the problem with individual accuracy applies to any sport."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,714 @@
+{
+ "id": "test-gas",
+ "module": "t2-testing",
+ "title": "Metabolic carts: trusting a VO₂ number",
+ "goal": "Explain how Douglas bag, mixing-chamber and breath-by-breath systems differ, why calibration and the averaging interval change VO2max, and how far portable systems can be trusted for VO₂ and for fuel use.",
+ "requires": [
+  "test-lactate"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "douglas-bag",
+    "mixing-chamber",
+    "breath-by-breath",
+    "calibration",
+    "averaging-interval",
+    "validity"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gas-modes",
+   "title": "Three ways to collect breath",
+   "text": "*Measuring energy* showed what a [metabolic cart](g:metabolic-cart) computes. How it collects the gas matters too:\n\n- **[Douglas bag](g:douglas-bag):** every breath out over a set time goes into a big bag; then its volume and gas content are measured. Slow and manual, but the reference other systems are checked against. Some labs have gone back to it for more control over the measurement [[c:douglas]].\n- **[Mixing chamber](g:mixing-chamber):** breaths mix in a small box and the analyser samples the blend. Smooth, but it can't follow fast changes.\n- **[Breath-by-breath](g:breath-by-breath):** a flow sensor and fast analysers measure every breath. It shows fast changes, such as VO₂ at the start of an interval, but each breath differs, so the raw trace is noisy.",
+   "claims": [
+    {
+     "id": "douglas",
+     "text": "The manual Douglas bag method preceded automated carts; some scientists have returned to it for lower cost and greater control over the measurement, and it serves as the criterion for validating other systems.",
+     "grade": "moderate",
+     "sources": [
+      "macfarlane2001",
+      "crouter2019"
+     ],
+     "evidence": [
+      {
+       "source": "macfarlane2001",
+       "quote": "Yet, recently some scientists are returning back to the traditional Douglas bag or Tissot-spirometer methods, or are using less complex automated systems to not only save capital costs, but also to have greater control over the measurement process.",
+       "level": "abstract"
+      },
+      {
+       "source": "crouter2019",
+       "quote": "The purpose of this study was to assess the accuracy of the Cosmed K5 portable metabolic system dynamic mixing chamber (MC) and breath-by-breath (BxB) modes against the criterion Douglas bag (DB) method.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gas-mode"
+  },
+  {
+   "type": "question",
+   "item": "gas-breath-noise"
+  },
+  {
+   "type": "concept",
+   "id": "gas-calibration",
+   "title": "Calibrate, then stick to one cart",
+   "text": "Before each test the cart is [calibrated](g:calibration): the gas analysers with a gas of known O₂ and CO₂; the flow sensor with a 3 L syringe pumped through it; and room temperature, pressure and humidity entered.\n\nCalibration is needed but not enough. In 57 carts in everyday use, accuracy differed even between identical models that had all passed the maker's calibration checks, and most units differed from each other by more than they varied from test to test [[c:cal-not-enough]]. Compare an athlete's tests on the same cart.\n\nFlow errors pass straight into VO₂, because VO₂ is the airflow times the share of O₂ taken out of it. A flow sensor reading 3% high gives a VO₂ about 3% high.",
+   "claims": [
+    {
+     "id": "cal-not-enough",
+     "text": "Validity varied significantly even between identical carts that passed the manufacturers' calibration checks, and inter-unit variability exceeded test–retest variability for most systems.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2026"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2026",
+       "quote": "The validity of metabolic carts for measuring respiratory gas variables varied significantly even between identical systems, despite passing manufacturers' calibration checks.",
+       "level": "abstract"
+      },
+      {
+       "source": "vanhooren2026",
+       "quote": "Furthermore, inter-unit variability of most systems exceeded intra-unit test-retest variability, thus necessitating caution when using devices interchangeably, as this may increase measurement noise, even within the same laboratory.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "gas-cal-example",
+   "title": "Correcting for a flow error",
+   "problem": "A 3 L calibration syringe pumped through a cart's flow sensor reads 3.09 L. If nobody corrects it, the cart reports a VO2max of 4.12 L·min⁻¹. What is the corrected value?",
+   "steps": [
+    "The sensor reads 3.09 ÷ 3.00 = 1.03 times the true volume: 3% high.",
+    "VO₂ scales with flow, so it is 3% high too.",
+    "Corrected VO₂ = 4.12 ÷ 1.03 = 4.00 L·min⁻¹. Divide by the error factor; don't subtract the 0.09 L.",
+    "Running the calibration makes the cart apply this correction itself. Skipped, a 3% error can fake or hide a 3% change in fitness."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gas-cal-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gas-two-carts"
+  },
+  {
+   "type": "concept",
+   "id": "gas-averaging",
+   "title": "The averaging interval sets the peak",
+   "text": "Raw breaths are averaged before the peak is read, and labs disagree on the [averaging interval](g:averaging-interval). Surveyed labs used 30 s (38%), 60 s (18%), 20 s (11%), 15 s (8%) or 5–11 breaths [[c:avg-survey]].\n\nThe choice changes [VO2max](g:vo2max). In 22 runners, VO2max rose as the interval shortened from 60 s to 10 s. In 108 people, breath-by-breath, 15 s and 30 s values all beat 60 s, and showed a plateau more often [[c:avg-shorter]]. A short window can catch a lucky run of big breaths; a long one smooths over the final rise.\n\nA 30 s average or a 15-breath rolling average removes most of the breath-to-breath noise [[c:avg-30s]]. Report the interval, and keep it.",
+   "claims": [
+    {
+     "id": "avg-survey",
+     "text": "Exercise physiologists process VO₂ data with widely varying averages: 30 s (38%), 60 s (18%), 20 s (11%), 15 s (8%) or breath-based averages.",
+     "grade": "moderate",
+     "sources": [
+      "robergs2010"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2010",
+       "quote": "consisted of time averages (30 sec [38%], 60 sec [18%], 20 sec [11%], 15 sec [8%]), a moving average of five to 11 breaths (10%), and the middle five of seven breaths (7%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "avg-shorter",
+     "text": "Shorter averaging intervals give a higher VO2max: in runners VO2max tended to rise as the interval shortened from 60 to 10 s, and in 108 adults breath-by-breath, 15 s and 30 s values exceeded 60 s values, with more plateaus.",
+     "grade": "moderate",
+     "sources": [
+      "midgley2007b",
+      "astorino2009"
+     ],
+     "evidence": [
+      {
+       "source": "midgley2007b",
+       "quote": "There was a tendency for VO2max to significantly increase as the time-averaging interval became shorter.",
+       "level": "abstract"
+      },
+      {
+       "source": "astorino2009",
+       "quote": "More frequent data acquisition revealed higher VO(2)max and incidence of the VO(2) plateau compared to 60 s time averaging.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "avg-30s",
+     "text": "A 30 s time average, a 15-breath running average or a 0.04 Hz digital filter reduces residual breath-by-breath error to about 10% of the raw variability.",
+     "grade": "weak",
+     "sources": [
+      "robergs2010"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2010",
+       "quote": "Correction of residual error in (.)VO2 datasets to 10% of the raw variability results from application of a 30-second time average, 15-breath running average, or a 0.04 Hz low cut-off digital filter.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "gas-avg-example",
+   "title": "One minute, three VO2max values",
+   "problem": "The last minute of a ramp test, in 15 s blocks, reads 4.30, 4.42, 4.51 and 4.47 L·min⁻¹. What is VO2max with a 15 s average, a rolling 30 s average and a 60 s average?",
+   "steps": [
+    "15 s: the highest block, 4.51 L·min⁻¹.",
+    "Rolling 30 s: average each pair of neighbouring blocks: 4.36, 4.47 and 4.49. The highest is 4.49 L·min⁻¹.",
+    "60 s: average all four: (4.30 + 4.42 + 4.51 + 4.47) ÷ 4 = 4.43 L·min⁻¹.",
+    "Same breaths, three answers about 2% apart: the interval is part of the result."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gas-avg-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gas-avg-compare"
+  },
+  {
+   "type": "concept",
+   "id": "gas-portable",
+   "title": "Portable systems and fuel use",
+   "text": "How far can you trust a portable cart on the road or track? That's its [validity](g:validity): how well it agrees with a reference.\n\n- A Cosmed K5, in mixing-chamber and breath-by-breath modes, was within 0.08 L·min⁻¹ of the Douglas bag for VO₂ from rest to 250 W. But its RER ran 0.03–0.08 low from 100 W up [[c:k5]].\n- In 15 lab and portable systems tested on a gas simulator, VO₂ errors ranged from about 1% to 13%, and energy from fat from about 5% to 133% [[c:cpet15]].\n\nFat use is fragile because it comes from the [RER](g:rer), a ratio of two measured gases: small errors in each add up. Trust VO₂ before fuel use.",
+   "claims": [
+    {
+     "id": "k5",
+     "text": "Against the Douglas bag, both K5 modes measured VO₂ within 0.08 L·min⁻¹ from rest to 250 W cycling, but RER was 0.03–0.08 low from 100 W up and VCO₂ was underestimated in breath-by-breath mode from 150 W.",
+     "grade": "weak",
+     "sources": [
+      "crouter2019"
+     ],
+     "evidence": [
+      {
+       "source": "crouter2019",
+       "quote": "For ventilation (VE) and oxygen uptake (VO2), the K5 MC and BxB modes were within 2.1 l/min (VE) and 0.08 l/min (VO2) of the DB (p≥0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "crouter2019",
+       "quote": "K5 MC and BxB respiratory exchange ratio values were significantly lower than DB at cycling work rates ≥100W by 0.03-0.08 (p<0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cpet15",
+     "text": "Across 15 gas analysis systems on a metabolic simulator, VO₂ errors ranged from 1.1% to 13.3% and energy from fat from 5.1% to 133%; only a few systems were consistently acceptable.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2024"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2024",
+       "quote": "Absolute percentage errors during the simulations ranged from 1.15%-44.3% for V̇E, 1.05-3.79% for BF, 1.10%-13.3% for V̇O2 , 1.07%-18.3% for V̇CO2 , 0.62%-14.8% for RER, 5.52%-99.0% for Kcal from carbs, 5.13%-133% for Kcal from fats",
+       "level": "abstract"
+      },
+      {
+       "source": "vanhooren2024",
+       "quote": "The error of respiratory gas variables, substrate, and energy use differed substantially between systems, with only a few systems demonstrating a consistent acceptable error.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gas-fuel-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gas-valid-precise",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gas-cal-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "gas-avg-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Douglas bags are the slow reference; mixing chambers give smooth values; breath-by-breath shows fast changes but is noisy breath to breath.",
+    "Calibrate before every test (gases, 3 L syringe, room conditions), but even calibrated identical carts differ: compare an athlete's tests on one cart.",
+    "A flow error passes straight into VO₂: correct by dividing by the error factor (3.09 L on a 3 L syringe → ÷ 1.03).",
+    "Shorter averaging intervals give a higher VO2max; a 30 s or 15-breath average removes most breath noise. Report the interval and keep it.",
+    "Portable systems can measure VO₂ well, but RER and fuel use are far more error-prone, because RER is a ratio of two measured gases."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gas-mode",
+   "concept": "gas-modes",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "macfarlane2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You want to see how fast a runner's VO₂ rises in the first 30 s of a hard interval. Which way of collecting breath suits that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breath-by-breath",
+       "correct": true,
+       "why": "Right: it measures every breath, so it can follow changes within seconds."
+      },
+      {
+       "id": "b",
+       "text": "A mixing chamber",
+       "why": "Mixing several breaths smooths the signal and blurs a change that lasts seconds."
+      },
+      {
+       "id": "c",
+       "text": "A Douglas bag",
+       "why": "A bag gives one average over the whole collection time, not a second-by-second trace."
+      },
+      {
+       "id": "d",
+       "text": "A lactate analyser",
+       "why": "Blood lactate isn't a gas measure and lags minutes behind what the muscle does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gas-breath-noise",
+   "concept": "gas-modes",
+   "bloom": "understand",
+   "sources": [
+    "robergs2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At a steady 200 W, a cyclist's breath-by-breath VO₂ jumps between 2.6 and 3.1 L·min⁻¹ from one breath to the next. Most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Normal breath-to-breath variation, to be averaged out",
+       "correct": true,
+       "why": "Right: each breath differs in depth and timing, so raw breath data are noisy and need averaging."
+      },
+      {
+       "id": "b",
+       "text": "A faulty cart that needs repair",
+       "why": "Swings like this are normal in raw breath-by-breath data; they aren't a sign of a fault."
+      },
+      {
+       "id": "c",
+       "text": "His muscles' O₂ use really changes that fast",
+       "why": "At a steady power, muscle O₂ use is steady; what varies is how each breath delivers the gas to the mouth."
+      },
+      {
+       "id": "d",
+       "text": "He must be riding above his threshold",
+       "why": "Breath noise is present at any intensity, below threshold too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gas-cal-calc",
+   "concept": "gas-calibration",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "vanhooren2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 3 L syringe pumped through a cart's flow sensor reads 2.94 L. Uncorrected, the cart reports a cyclist's VO2max as 3.92 L·min⁻¹. What is the corrected value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.00 L·min⁻¹",
+       "correct": true,
+       "why": "Right: the sensor reads 2.94 ÷ 3.00 = 0.98 of the truth, so 3.92 ÷ 0.98 = 4.00 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "3.84 L·min⁻¹",
+       "why": "This multiplies by 0.98, correcting in the wrong direction: a sensor that reads low needs the value raised."
+      },
+      {
+       "id": "c",
+       "text": "3.86 L·min⁻¹",
+       "why": "This subtracts the 0.06 L syringe error from VO₂; the error is a proportion, not a fixed amount."
+      },
+      {
+       "id": "d",
+       "text": "3.92 L·min⁻¹",
+       "why": "This assumes flow errors don't affect VO₂; VO₂ scales directly with the measured flow."
+      }
+     ],
+     "solution": "Error factor = 2.94 ÷ 3.00 = 0.98 (2% low). Corrected VO₂ = 3.92 ÷ 0.98 = 4.00 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A 3 L syringe reads 3.06 L on a cart's flow sensor. Uncorrected, the cart reports a runner's VO2max as 4.59 L·min⁻¹. What is the corrected value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.50 L·min⁻¹",
+       "correct": true,
+       "why": "Right: the sensor reads 3.06 ÷ 3.00 = 1.02 of the truth, so 4.59 ÷ 1.02 = 4.50 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "4.68 L·min⁻¹",
+       "why": "This multiplies by 1.02, correcting in the wrong direction: a sensor that reads high needs the value lowered."
+      },
+      {
+       "id": "c",
+       "text": "4.53 L·min⁻¹",
+       "why": "This subtracts the 0.06 L syringe error from VO₂; the error is a proportion, not a fixed amount."
+      },
+      {
+       "id": "d",
+       "text": "4.59 L·min⁻¹",
+       "why": "This assumes flow errors don't affect VO₂; VO₂ scales directly with the measured flow."
+      }
+     ],
+     "solution": "Error factor = 3.06 ÷ 3.00 = 1.02 (2% high). Corrected VO₂ = 4.59 ÷ 1.02 = 4.50 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A 3 L syringe reads 3.12 L on a cart's flow sensor. Uncorrected, the cart reports a triathlete's VO2max as 3.64 L·min⁻¹. What is the corrected value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.50 L·min⁻¹",
+       "correct": true,
+       "why": "Right: the sensor reads 3.12 ÷ 3.00 = 1.04 of the truth, so 3.64 ÷ 1.04 = 3.50 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "3.79 L·min⁻¹",
+       "why": "This multiplies by 1.04, correcting in the wrong direction: a sensor that reads high needs the value lowered."
+      },
+      {
+       "id": "c",
+       "text": "3.52 L·min⁻¹",
+       "why": "This subtracts the 0.12 L syringe error from VO₂; the error is a proportion, not a fixed amount."
+      },
+      {
+       "id": "d",
+       "text": "3.64 L·min⁻¹",
+       "why": "This assumes flow errors don't affect VO₂; VO₂ scales directly with the measured flow."
+      }
+     ],
+     "solution": "Error factor = 3.12 ÷ 3.00 = 1.04 (4% high). Corrected VO₂ = 3.64 ÷ 1.04 = 3.50 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "gas-two-carts",
+   "concept": "gas-calibration",
+   "bloom": "analyse",
+   "sources": [
+    "vanhooren2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO2max was 4.60 L·min⁻¹ on lab A's cart in spring and 4.80 L·min⁻¹ on lab B's cart, the same model, in autumn. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't tell: identical carts can differ by more than this",
+       "correct": true,
+       "why": "Right: units of the same model differed by more than their own test-to-test noise, even after passing calibration checks."
+      },
+      {
+       "id": "b",
+       "text": "A real 4% gain: both carts were calibrated",
+       "why": "Calibrated, identical carts still disagreed in the 57-cart study; calibration doesn't make them interchangeable."
+      },
+      {
+       "id": "c",
+       "text": "A real gain: same model means same readings",
+       "why": "Accuracy varied between identical units, so the model name doesn't guarantee matching readings."
+      },
+      {
+       "id": "d",
+       "text": "A real loss: autumn carts read high",
+       "why": "There's no seasonal rule for carts; the problem is that two different units can't be compared."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gas-avg-calc",
+   "concept": "gas-averaging",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "robergs2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The last minute of a runner's ramp test, in 15 s blocks, reads 3.80, 3.95, 4.05 and 3.99 L·min⁻¹. What is VO2max with a rolling 30 s average?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.02 L·min⁻¹",
+       "correct": true,
+       "why": "Right: the pairs average 3.88, 4.00 and 4.02; the highest is 4.02."
+      },
+      {
+       "id": "b",
+       "text": "4.05 L·min⁻¹",
+       "why": "That is the single highest 15 s block, not a 30 s average."
+      },
+      {
+       "id": "c",
+       "text": "3.95 L·min⁻¹",
+       "why": "That is the 60 s average of all four blocks: (3.80 + 3.95 + 4.05 + 3.99) ÷ 4."
+      },
+      {
+       "id": "d",
+       "text": "4.00 L·min⁻¹",
+       "why": "This averages only the middle pair; a rolling average checks every neighbouring pair and keeps the highest."
+      }
+     ],
+     "solution": "Neighbouring pairs: (3.80 + 3.95) ÷ 2 = 3.88; (3.95 + 4.05) ÷ 2 = 4.00; (4.05 + 3.99) ÷ 2 = 4.02. Highest rolling 30 s value = 4.02 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "The last minute of a cyclist's ramp test, in 15 s blocks, reads 4.88, 5.02, 5.10 and 4.96 L·min⁻¹. What is VO2max with a 60 s average?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.99 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (4.88 + 5.02 + 5.10 + 4.96) ÷ 4 = 19.96 ÷ 4 = 4.99."
+      },
+      {
+       "id": "b",
+       "text": "5.10 L·min⁻¹",
+       "why": "That is the single highest 15 s block, not a 60 s average."
+      },
+      {
+       "id": "c",
+       "text": "5.06 L·min⁻¹",
+       "why": "That is the highest rolling 30 s average, (5.02 + 5.10) ÷ 2, not the 60 s one."
+      },
+      {
+       "id": "d",
+       "text": "4.88 L·min⁻¹",
+       "why": "That is just the first block of the minute."
+      }
+     ],
+     "solution": "60 s average = (4.88 + 5.02 + 5.10 + 4.96) ÷ 4 = 19.96 ÷ 4 = 4.99 L·min⁻¹. The 15 s peak (5.10) would be 2% higher."
+    }
+   ]
+  },
+  {
+   "id": "gas-avg-compare",
+   "concept": "gas-averaging",
+   "bloom": "analyse",
+   "sources": [
+    "midgley2007b",
+    "astorino2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Study A reports VO2max from 10 s averages, study B from 60 s averages, in similar triathletes. A's mean is 3% higher. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Part or all of the gap may come from the averaging",
+       "correct": true,
+       "why": "Right: shorter averages give higher VO2max values from the same breaths."
+      },
+      {
+       "id": "b",
+       "text": "A's triathletes are fitter",
+       "why": "Possible, but the two studies read their peak differently, which by itself raises A's values."
+      },
+      {
+       "id": "c",
+       "text": "B's lower values are more accurate",
+       "why": "Neither is 'true'; a 60 s average simply smooths more and gives a lower peak."
+      },
+      {
+       "id": "d",
+       "text": "Averaging can't matter: it uses the same breaths",
+       "why": "The same breaths give different peaks with different windows, as the worked example showed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gas-fuel-calc",
+   "concept": "gas-portable",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "crouter2019",
+    "vanhooren2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A portable system reads RER 0.82 when the true value is 0.85. Using carbohydrate share ≈ (RER − 0.70) ÷ 0.30 from *Bioenergetics by numbers*, what fat share does it report instead of the true one?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60% fat instead of 50%",
+       "correct": true,
+       "why": "Right: true carbohydrate share (0.85 − 0.70) ÷ 0.30 = 50%, so fat 50%; reported (0.82 − 0.70) ÷ 0.30 = 40%, so fat 60%."
+      },
+      {
+       "id": "b",
+       "text": "53% fat instead of 50%",
+       "why": "This treats the 0.03 RER error as 3 percentage points; the formula divides by 0.30, so 0.03 is 10 points."
+      },
+      {
+       "id": "c",
+       "text": "40% fat instead of 50%",
+       "why": "Wrong direction: a lower RER means more fat, not less. 40% is the reported carbohydrate share."
+      },
+      {
+       "id": "d",
+       "text": "50% fat: RER errors only affect VO₂",
+       "why": "RER is the fuel estimate; an RER error goes straight into the fat and carbohydrate shares."
+      }
+     ],
+     "solution": "True: (0.85 − 0.70) ÷ 0.30 = 0.50 carbohydrate, so 50% fat. Reported: (0.82 − 0.70) ÷ 0.30 = 0.40 carbohydrate, so 60% fat. A 0.03 RER error makes fat use look 20% higher."
+    },
+    {
+     "id": "b",
+     "stem": "A portable system reads RER 0.83 when the true value is 0.88. Using carbohydrate share ≈ (RER − 0.70) ÷ 0.30, what fat share does it report instead of the true one?",
+     "options": [
+      {
+       "id": "a",
+       "text": "57% fat instead of 40%",
+       "correct": true,
+       "why": "Right: true carbohydrate (0.88 − 0.70) ÷ 0.30 = 60%, so fat 40%; reported (0.83 − 0.70) ÷ 0.30 = 43%, so fat 57%."
+      },
+      {
+       "id": "b",
+       "text": "45% fat instead of 40%",
+       "why": "This treats the 0.05 RER error as 5 percentage points; the formula divides by 0.30, so 0.05 is about 17 points."
+      },
+      {
+       "id": "c",
+       "text": "23% fat instead of 40%",
+       "why": "Wrong direction: a lower RER means more fat, not less."
+      },
+      {
+       "id": "d",
+       "text": "40% fat: RER errors only affect VO₂",
+       "why": "RER is the fuel estimate; an RER error goes straight into the fat and carbohydrate shares."
+      }
+     ],
+     "solution": "True: (0.88 − 0.70) ÷ 0.30 = 0.60 carbohydrate, so 40% fat. Reported: (0.83 − 0.70) ÷ 0.30 = 0.43 carbohydrate, so 57% fat."
+    }
+   ]
+  },
+  {
+   "id": "gas-valid-precise",
+   "concept": "gas-portable",
+   "bloom": "analyse",
+   "sources": [
+    "crouter2019",
+    "vanhooren2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In three identical steady rides, a portable unit reads 3.95, 3.96 and 3.94 L·min⁻¹, while a Douglas bag gives 3.70 L·min⁻¹ each time. How would you describe the unit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Repeatable, but not valid: reads about 7% high",
+       "correct": true,
+       "why": "Right: its readings barely vary, but they all disagree with the reference by about 0.25 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Valid, but too noisy to repeat well",
+       "why": "It repeats very well (within 0.01 L·min⁻¹); what it lacks is agreement with the reference."
+      },
+      {
+       "id": "c",
+       "text": "Both valid and repeatable for testing",
+       "why": "Repeatable yes, but 7% away from the Douglas bag isn't valid."
+      },
+      {
+       "id": "d",
+       "text": "Neither valid nor repeatable at all",
+       "why": "Three readings within 0.01 L·min⁻¹ of each other are very repeatable."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In three identical steady rides, a portable unit reads 3.50, 3.90 and 3.70 L·min⁻¹, while a Douglas bag gives 3.70 L·min⁻¹ each time. How would you describe the unit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Right on average, but too noisy for one reading",
+       "correct": true,
+       "why": "Right: its mean matches the reference, but single readings swing by ±0.20 L·min⁻¹ (about 5%)."
+      },
+      {
+       "id": "b",
+       "text": "Repeatable, but biased away from the bag",
+       "why": "It's the other way round: the average agrees with the reference, but the readings don't repeat."
+      },
+      {
+       "id": "c",
+       "text": "Both valid and repeatable for testing",
+       "why": "A ±5% swing between identical rides isn't repeatable enough to track one athlete."
+      },
+      {
+       "id": "d",
+       "text": "Biased: it reads about 5% low on average",
+       "why": "Its mean is 3.70, the same as the reference: no bias, just noise."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

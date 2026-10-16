@@ -1,0 +1,716 @@
+{
+ "id": "thr-mlss",
+ "module": "t2-thresholds",
+ "title": "Maximal lactate steady state",
+ "goal": "Explain how MLSS is defined and tested, where it typically sits, and why researchers argue over whether it or critical power better marks the maximal metabolic steady state.",
+ "requires": [
+  "thr-lt1-lt2"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "maximal-metabolic-steady-state",
+    "critical-speed"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mlss-define",
+   "title": "MLSS: a test, not a curve point",
+   "text": "[MLSS](g:mlss) is measured directly, not read off a step test. The classic protocol: typically **4–5 constant-power (or constant-pace) bouts of 30 min**, on separate days, with blood lactate every 5 min. MLSS is the highest power at which lactate rises by **no more than 1 mmol·L⁻¹ between minute 10 and minute 30** [[c:mlss-protocol]].\n\nWhy start at minute 10? Lactate climbs at the start of any hard effort, so the first minutes are ignored. Tests shorter than 30 min don't always agree with the 30-min version, which is why at least 30 min is recommended [[c:mlss-30min]].\n\nHeck, who designed the test, calls it impractical for routine testing, since it needs so many bouts, but the gold standard for checking quicker methods [[c:mlss-impractical]].",
+   "claims": [
+    {
+     "id": "mlss-protocol",
+     "text": "MLSS is conventionally found from 4–5 separate 30-min constant-load bouts as the highest load with a lactate rise of no more than 1 mmol·L⁻¹ between minutes 10 and 30.",
+     "grade": "strong",
+     "sources": [
+      "jones2019",
+      "beneke2003"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "The MLSS is conventionally derived from a series (typically 4–5) of 30 min continuous exercise bouts, completed on separate days, at different but constant running speeds or power outputs; blood [lactate] is measured at rest and after every 5 min of exercise and the MLSS is defined as the highest speed or power output that does not result in a rise of blood [lactate] of greater than 1 mmol/L between 10 and 30 min",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mlss-30min",
+     "text": "In 26 men, 20-min methods gave MLSS values that differed from the 30-min method; constant-load tests of at least 30 min with a rise of no more than 1.0 mmol·L⁻¹ after minute 10 are recommended.",
+     "grade": "weak",
+     "sources": [
+      "beneke2003"
+     ],
+     "evidence": [
+      {
+       "source": "beneke2003",
+       "quote": "Based on the present findings, constant-load tests lasting at least 30 min and a BLC increase of no more than 1.0 mmol x l(-1) after the 10th testing minute appear to be the most reasonable with respect to valid testing results.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-impractical",
+     "text": "The direct MLSS protocol needs too many bouts for routine testing but is a gold standard for validating indirect tests.",
+     "grade": "moderate",
+     "sources": [
+      "heck2024"
+     ],
+     "evidence": [
+      {
+       "source": "heck2024",
+       "quote": "This MLSS protocol is impractical for performance testing as it requires too many exercise bouts, but it is a gold standard to determine the real MLSS. It is especially useful to validate indirect tests that seek to estimate the MLSS.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mlss-example",
+   "title": "Finding MLSS from three runs",
+   "problem": "A runner does three 30-min runs on different days. Lactate at minute 10 → minute 30: 13 km·h⁻¹: 2.1 → 2.4; 14 km·h⁻¹: 3.3 → 4.1; 15 km·h⁻¹: 4.6 → 6.9 mmol·L⁻¹. What is her MLSS among the speeds tested?",
+   "steps": [
+    "Work out each rise from minute 10 to 30: 2.4 − 2.1 = 0.3; 4.1 − 3.3 = 0.8; 6.9 − 4.6 = 2.3 mmol·L⁻¹.",
+    "Apply the rule (rise ≤ 1 mmol·L⁻¹): 13 and 14 km·h⁻¹ pass, 15 km·h⁻¹ fails.",
+    "MLSS is the highest speed that passes: 14 km·h⁻¹. The absolute value (4.1 mmol·L⁻¹) doesn't matter, only the rise.",
+    "Her true MLSS lies somewhere between 14 and 15 km·h⁻¹; a run at 14.5 km·h⁻¹ would narrow it down."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mlss-classify-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mlss-classify-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "mlss-where",
+   "title": "Where MLSS sits",
+   "text": "In 9 trained cyclists, MLSS came at about **80% of peak VO₂** (measured in 8 of them), and a 40-km time trial was ridden at the same speed, lactate and heart rate as MLSS [[c:mlss-80]]. In 33 men, MLSS power averaged about **71% of the peak power of a step test**, with lactate at 4.9 ± 1.4 mmol·L⁻¹, and neither number was related to how fit they were [[c:mlss-71]]. Note that % of peak power and % of VO₂max are not the same scale.\n\nMore broadly, the heavy/severe boundary typically sits at about **75–90% of [VO₂max](g:vo2max)** [[c:mmss-range]].\n\nHow long can you hold it? Usually **30 to 60 min** [[c:mlss-duration]]; well-trained runners lasted 68 ± 11 min at their MLSS speed [[c:mlss-tte-run]].",
+   "claims": [
+    {
+     "id": "mlss-80",
+     "text": "In 9 trained cyclists, VO₂ at MLSS was about 80% of VO₂peak, and 40-km time-trial speed, lactate and heart rate did not differ from MLSS.",
+     "grade": "weak",
+     "sources": [
+      "harnish2001"
+     ],
+     "evidence": [
+      {
+       "source": "harnish2001",
+       "quote": "Mean VO2peak was 4.42 +/- 0.13 L.min-1, whereas VO2 at MLSS (N = 8) was 3.54 +/- 0.15 L.min-1, representing 80.1 +/- 4.1% of VO2peak.",
+       "level": "abstract"
+      },
+      {
+       "source": "harnish2001",
+       "quote": "Mean AVS, HLa, and HR during the 40-km TT were 36.6 +/- 0.9 km.h-1, 6.3 +/- 0.7 mM, and 174.1 +/- 2.1 b.min-1, respectively, and did not differ from those at MLSS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-71",
+     "text": "In 33 men, MLSS power averaged 71% of peak workload, MLSS lactate 4.9 ± 1.4 mmol·L⁻¹, and both were independent of performance.",
+     "grade": "weak",
+     "sources": [
+      "beneke2000"
+     ],
+     "evidence": [
+      {
+       "source": "beneke2000",
+       "quote": "MLSS (4.9 +/- 1.4 mmol x L(-1)) was independent of MLSS workload (3.4 +/- 0.6 W x kg(-1)) and peak workload (4.8 +/- 0.6 W x kg(-1)). MLSS intensity (71.1 +/- 6.7%) did not correlate with peak workload or MLSS (P > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mmss-range",
+     "text": "The heavy/severe boundary typically occurs at about 75–90% of VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "However, it is the definition, evaluation, and application of the second boundary, which typically occurs at 75–90% V̇O₂max and is therefore more relevant to most types of high‐level endurance exercise performance",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mlss-duration",
+     "text": "MLSS intensity is usually sustainable for 30 to 60 min.",
+     "grade": "moderate",
+     "sources": [
+      "beneke2011"
+     ],
+     "evidence": [
+      {
+       "source": "beneke2011",
+       "quote": "It detects the highest aerobic power without metabolic energy from continuing net lactate production, which is usually sustainable for 30 to 60 min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-tte-run",
+     "text": "Ten well-trained runners lasted 68 ± 11 min at continuous MLSS speed.",
+     "grade": "weak",
+     "sources": [
+      "dittrich2014"
+     ],
+     "evidence": [
+      {
+       "source": "dittrich2014",
+       "quote": "while the TE at MLSScon was longer than MLSSint (68 ± 11 min and 58 ± 15 min, P < .05)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mlss-pct-example",
+   "title": "MLSS as a share of VO₂max",
+   "problem": "A cyclist's VO₂ in the last minutes of an MLSS ride is 3.6 L·min⁻¹. His VO₂max is 4.5 L·min⁻¹. What % of VO₂max is his MLSS?",
+   "steps": [
+    "Share = VO₂ at MLSS ÷ VO₂max = 3.6 ÷ 4.5 = 0.80.",
+    "As a percentage: 0.80 × 100 = 80% of VO₂max, inside the usual 75–90% band.",
+    "Keep units the same top and bottom: both in L·min⁻¹, or both in mL·kg⁻¹·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mlss-pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mlss-not-hour"
+  },
+  {
+   "type": "question",
+   "item": "mlss-lactate-value"
+  },
+  {
+   "type": "concept",
+   "id": "mlss-cp",
+   "title": "MLSS and critical power: the same line?",
+   "text": "Both MLSS and [critical power](g:critical-power) claim to mark the [maximal metabolic steady state](g:maximal-metabolic-steady-state) (MMSS), the top of the heavy domain. MLSS usually lands lower: by about **11%** in a meta-analysis of 9 studies [[c:mlss-below-cp]]. In 10 well-trained runners, [critical speed](g:critical-speed) was 16.4 km·h⁻¹ against an MLSS of 15.2 km·h⁻¹, and VO₂ still settled above MLSS [[c:vo2-above-mlss]].\n\nJones and colleagues conclude that MLSS, as defined, sits inside the heavy domain, so CP is the better gold standard [[c:cp-gold]]. Others reply that it depends on method: with later lactate windows (15–30 or 20–30 min) and some CP models, both landed on average within a few watts of the MMSS, and CP's model error counts too [[c:reconcile]]. CP itself is the *Critical power and W′* module.",
+   "claims": [
+    {
+     "id": "mlss-below-cp",
+     "text": "In a meta-analysis of 9 studies (104 participants), MLSS underestimated CP by about 11%.",
+     "grade": "moderate",
+     "sources": [
+      "galanrioja2020"
+     ],
+     "evidence": [
+      {
+       "source": "galanrioja2020",
+       "quote": "Despite the significant correlations between CP and VT1, MLSS and RCP these variables and VT2 under- (VT1, 30%; MLSS, 11%) or over-estimated (RCP, 6%; VT2, 21%) CP.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vo2-above-mlss",
+     "text": "In 10 well-trained male runners, critical speed was above MLSS speed, and VO₂ was still stable at a speed above MLSS.",
+     "grade": "weak",
+     "sources": [
+      "nixon2021"
+     ],
+     "evidence": [
+      {
+       "source": "nixon2021",
+       "quote": "The running speeds at CS and MLSS were significantly different (16.4 ± 1.3 vs. 15.2 ± 0.9 km/h, respectively; P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "nixon2021",
+       "quote": "The stability of V˙O2 at a speed exceeding MLSS suggests that MLSS underestimates the maximal metabolic steady state.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-gold",
+     "text": "Jones and colleagues argue CP, not MLSS, is the genuine boundary of the maximal metabolic steady state.",
+     "grade": "disputed",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "CP represents the genuine boundary separating exercise in which physiological homeostasis can be maintained from exercise in which it cannot, and should be considered the gold standard when the goal is to determine the maximal metabolic steady state.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2019",
+       "quote": "Indeed, it is crucial to appreciate that, as presently defined and measured, MLSS must reside within the heavy‐intensity domain rather than at the boundary of the heavy‐ and severe‐intensity domains.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "reconcile",
+     "text": "With optimal methods, CP and MLSS estimates agreed closely on average with the MMSS in 10 men, though all methods showed some inaccuracy and CP estimates carry a model error.",
+     "grade": "disputed",
+     "sources": [
+      "iannetta2022"
+     ],
+     "evidence": [
+      {
+       "source": "iannetta2022",
+       "quote": "Differences between CP and MLSS can be reconciled with optimal methods of determination.",
+       "level": "abstract"
+      },
+      {
+       "source": "iannetta2022",
+       "quote": "Nevertheless, all CP models and MLSS criteria demonstrated some degree of inaccuracies with respect to MV˙O2ss.",
+       "level": "abstract"
+      },
+      {
+       "source": "iannetta2022",
+       "quote": "When estimating MMSS, from CP the error margin of the model estimate should be considered.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is critical power or MLSS the better marker of the maximal metabolic steady state?",
+    "sides": [
+     {
+      "position": "Critical power: MLSS, as defined, sits inside the heavy domain and underestimates the MMSS; VO₂ can still settle above MLSS.",
+      "sources": [
+       "jones2019",
+       "nixon2021"
+      ]
+     },
+     {
+      "position": "Both, if measured carefully: with suitable lactate windows and CP models they converge on the MMSS; each carries some error, and CP shifts with the model used to fit it.",
+      "sources": [
+       "iannetta2022",
+       "keir2015"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "mlss-cp-runner"
+  },
+  {
+   "type": "question",
+   "item": "mlss-debate"
+  },
+  {
+   "type": "question",
+   "item": "mlss-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "mlss-classify-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "mlss-pct-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "MLSS: the highest constant load at which lactate rises by no more than 1 mmol·L⁻¹ from minute 10 to 30, found from 4–5 separate 30-min bouts.",
+    "Only the rise counts, not the absolute lactate value, which differs widely between people and isn't linked to fitness.",
+    "MLSS typically sits around 70–80% of peak power or VO₂ in the studies here; the heavy/severe boundary is usually 75–90% of VO₂max.",
+    "MLSS can usually be held for about 30–60 min, not a fixed hour.",
+    "MLSS usually lands below CP (about 11%); whether CP or MLSS better marks the maximal metabolic steady state is debated, and careful methods narrow the gap."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mlss-classify-calc",
+   "concept": "mlss-define",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2019",
+    "beneke2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist does three 30-min rides. Lactate at minute 10 → 30: 250 W: 2.6 → 2.9; 265 W: 3.4 → 4.3; 280 W: 4.4 → 5.8 mmol·L⁻¹. Which power is his MLSS among those tested?",
+     "options": [
+      {
+       "id": "a",
+       "text": "265 W",
+       "correct": true,
+       "why": "Right: the rises are 0.3, 0.9 and 1.4 mmol·L⁻¹; 265 W is the highest with a rise of 1 or less."
+      },
+      {
+       "id": "b",
+       "text": "250 W",
+       "why": "This treats any rise as a failure. The rule allows up to 1 mmol·L⁻¹ from minute 10 to 30."
+      },
+      {
+       "id": "c",
+       "text": "280 W",
+       "why": "At 280 W lactate rose 1.4 mmol·L⁻¹, more than the 1 mmol·L⁻¹ allowed."
+      },
+      {
+       "id": "d",
+       "text": "None of these powers",
+       "why": "Lactate may rise a little; 250 and 265 W both stay within 1 mmol·L⁻¹."
+      }
+     ],
+     "solution": "Rises: 2.9 − 2.6 = 0.3; 4.3 − 3.4 = 0.9; 5.8 − 4.4 = 1.4 mmol·L⁻¹. Highest power with rise ≤ 1: 265 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete does three 30-min runs. Lactate at minute 10 → 30: 12.5 km·h⁻¹: 1.9 → 2.2; 13.5 km·h⁻¹: 2.8 → 3.7; 14.5 km·h⁻¹: 3.9 → 4.8 mmol·L⁻¹. Which speed is her MLSS among those tested?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.5 km·h⁻¹",
+       "correct": true,
+       "why": "Right: the rises are 0.3, 0.9 and 0.9 mmol·L⁻¹, all within 1, so the highest speed passes."
+      },
+      {
+       "id": "b",
+       "text": "13.5 km·h⁻¹",
+       "why": "This rejects 14.5 km·h⁻¹ because lactate passed 4 mmol·L⁻¹. MLSS depends on the rise, not on a fixed value."
+      },
+      {
+       "id": "c",
+       "text": "12.5 km·h⁻¹",
+       "why": "This treats any rise as a failure; up to 1 mmol·L⁻¹ is allowed."
+      }
+     ],
+     "solution": "Rises: 2.2 − 1.9 = 0.3; 3.7 − 2.8 = 0.9; 4.8 − 3.9 = 0.9 mmol·L⁻¹. All ≤ 1, so the highest speed tested, 14.5 km·h⁻¹, is her MLSS among these."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist does three 30-min rides. Lactate at minute 10 → 30: 220 W: 1.8 → 2.0; 235 W: 2.5 → 3.4; 250 W: 3.6 → 4.7 mmol·L⁻¹. Which power is her MLSS among those tested?",
+     "options": [
+      {
+       "id": "a",
+       "text": "235 W",
+       "correct": true,
+       "why": "Right: the rises are 0.2, 0.9 and 1.1 mmol·L⁻¹; 250 W just fails the 1 mmol·L⁻¹ rule."
+      },
+      {
+       "id": "b",
+       "text": "250 W",
+       "why": "A rise of 1.1 mmol·L⁻¹ is above the 1 mmol·L⁻¹ limit, even if only just."
+      },
+      {
+       "id": "c",
+       "text": "220 W",
+       "why": "This treats any rise as a failure; 235 W rose 0.9, within the limit."
+      },
+      {
+       "id": "d",
+       "text": "None of these powers",
+       "why": "220 and 235 W both stay within 1 mmol·L⁻¹."
+      }
+     ],
+     "solution": "Rises: 2.0 − 1.8 = 0.2; 3.4 − 2.5 = 0.9; 4.7 − 3.6 = 1.1 mmol·L⁻¹. Highest power with rise ≤ 1: 235 W."
+    }
+   ]
+  },
+  {
+   "id": "mlss-pct-calc",
+   "concept": "mlss-where",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "harnish2001",
+    "jones2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO₂ at MLSS is 48 mL·kg⁻¹·min⁻¹ and her VO₂max is 60 mL·kg⁻¹·min⁻¹. What % of VO₂max is her MLSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "80%",
+       "correct": true,
+       "why": "Right: 48 ÷ 60 = 0.80."
+      },
+      {
+       "id": "b",
+       "text": "125%",
+       "why": "This divides VO₂max by MLSS VO₂ (60 ÷ 48). MLSS can't be above VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "20%",
+       "why": "This is the gap left to VO₂max (1 − 0.80), not the share used."
+      },
+      {
+       "id": "d",
+       "text": "12%",
+       "why": "This takes the difference (60 − 48 = 12) and calls it a percentage."
+      }
+     ],
+     "solution": "48 ÷ 60 = 0.80, so 80% of VO₂max."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO₂ at MLSS is 3.15 L·min⁻¹ and his VO₂max is 4.2 L·min⁻¹. What % of VO₂max is his MLSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75%",
+       "correct": true,
+       "why": "Right: 3.15 ÷ 4.2 = 0.75."
+      },
+      {
+       "id": "b",
+       "text": "133%",
+       "why": "This divides VO₂max by MLSS VO₂ (4.2 ÷ 3.15). MLSS can't be above VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "25%",
+       "why": "This is the gap left to VO₂max (1 − 0.75), not the share used."
+      }
+     ],
+     "solution": "3.15 ÷ 4.2 = 0.75, so 75% of VO₂max."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO₂ at MLSS on the bike is 3.4 L·min⁻¹ and his VO₂max is 4.0 L·min⁻¹. What % of VO₂max is his MLSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85%",
+       "correct": true,
+       "why": "Right: 3.4 ÷ 4.0 = 0.85."
+      },
+      {
+       "id": "b",
+       "text": "118%",
+       "why": "This divides VO₂max by MLSS VO₂ (4.0 ÷ 3.4). MLSS can't be above VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "15%",
+       "why": "This is the gap left to VO₂max (1 − 0.85), not the share used."
+      }
+     ],
+     "solution": "3.4 ÷ 4.0 = 0.85, so 85% of VO₂max."
+    }
+   ]
+  },
+  {
+   "id": "mlss-not-hour",
+   "concept": "mlss-where",
+   "bloom": "analyse",
+   "sources": [
+    "beneke2011",
+    "dittrich2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"MLSS is the power you can hold for exactly one hour.\" Which reply fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is defined by stable lactate, and lasts about 30–60 min",
+       "correct": true,
+       "why": "Right: MLSS is defined by lactate staying flat, not by time; it is usually sustainable for 30–60 min, and runners averaged 68 min."
+      },
+      {
+       "id": "b",
+       "text": "Yes: MLSS is defined as one-hour power",
+       "why": "MLSS is defined by the 1 mmol·L⁻¹ lactate rule over 30 min; the time it can be held varies."
+      },
+      {
+       "id": "c",
+       "text": "No: MLSS can be held for three hours or more",
+       "why": "MLSS is the top of the heavy domain; holding it for hours is far beyond the 30–60 min usually reported."
+      },
+      {
+       "id": "d",
+       "text": "No: MLSS can't be held for more than 30 min",
+       "why": "30 min is the test length, not the limit; runners lasted 68 ± 11 min at MLSS."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mlss-lactate-value",
+   "concept": "mlss-where",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "beneke2000",
+    "billat2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists have their MLSS measured. Rider A's lactate at MLSS is 2.5 mmol·L⁻¹, rider B's is 6.0 mmol·L⁻¹. What does this tell you about who is fitter?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing on its own: MLSS lactate isn't linked to fitness",
+       "correct": true,
+       "why": "Right: in 33 men, the lactate value at MLSS was unrelated to MLSS power or peak power. Compare power at MLSS instead."
+      },
+      {
+       "id": "b",
+       "text": "Rider A is fitter, since lower lactate is better",
+       "why": "Lower lactate at the same power can mean better fitness, but the value at each rider's own MLSS isn't linked to performance."
+      },
+      {
+       "id": "c",
+       "text": "Rider B is fitter, since he tolerates more lactate",
+       "why": "Higher MLSS lactate doesn't mean higher MLSS power; the two were unrelated."
+      },
+      {
+       "id": "d",
+       "text": "Rider A has the higher VO₂max",
+       "why": "MLSS lactate says nothing about VO₂max; you would need to measure it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mlss-cp-runner",
+   "concept": "mlss-cp",
+   "bloom": "analyse",
+   "sources": [
+    "nixon2021",
+    "jones2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's MLSS is 15.2 km·h⁻¹ and her critical speed 16.4 km·h⁻¹. She runs 30 min at 15.8 km·h⁻¹: lactate rises 1.6 mmol·L⁻¹ from minute 10 to 30, but her VO₂ is flat from minute 10. Which reading fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Above MLSS but likely still in the heavy domain",
+       "correct": true,
+       "why": "Right: by the lactate rule she is above MLSS, but a stable VO₂ below critical speed shows a steady state, as in Nixon's runners."
+      },
+      {
+       "id": "b",
+       "text": "In the severe domain: VO₂ will soon hit VO₂max",
+       "why": "Severe exercise has no VO₂ steady state; hers is flat, and she is below critical speed."
+      },
+      {
+       "id": "c",
+       "text": "In the moderate domain, since VO₂ is flat",
+       "why": "A flat VO₂ alone doesn't make it moderate; her lactate is raised and rising, so she is above LT1."
+      },
+      {
+       "id": "d",
+       "text": "The test is invalid, since lactate must stay flat",
+       "why": "The test is valid: it just classes this speed as above MLSS, which isn't the same as above the MMSS."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mlss-debate",
+   "concept": "mlss-cp",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2019",
+    "iannetta2022",
+    "galanrioja2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post says: \"MLSS is the gold standard; critical power overestimates what you can sustain.\" What is the best judgement on the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Disputed: some evidence favours CP, and careful methods narrow the gap",
+       "correct": true,
+       "why": "Right: this is a live debate, not settled. CP usually sits above MLSS, and VO₂ can settle above MLSS, so one side says MLSS underestimates the ceiling; others find both converge with careful methods, each with some error."
+      },
+      {
+       "id": "b",
+       "text": "Settled: MLSS is the only valid marker",
+       "why": "This is a live debate; one side argues CP is the better gold standard."
+      },
+      {
+       "id": "c",
+       "text": "Settled: CP and MLSS are always the same power",
+       "why": "On average MLSS lands about 11% below CP; they are only close with particular methods."
+      },
+      {
+       "id": "d",
+       "text": "Neither has anything to do with steady states",
+       "why": "Both are estimates of the maximal metabolic steady state; the question is which is closer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mlss-appraisal",
+   "concept": "mlss-cp",
+   "bloom": "evaluate",
+   "sources": [
+    "nixon2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Nixon and colleagues found VO₂ was stable above MLSS in 10 well-trained male runners. What most limits applying 'MLSS underestimates the steady-state ceiling' to all athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small sample of trained men in one sport",
+       "correct": true,
+       "why": "Right: 10 male runners can't show the result holds for women, cyclists or less-trained athletes."
+      },
+      {
+       "id": "b",
+       "text": "VO₂ can't be measured on a treadmill",
+       "why": "Treadmill VO₂ is measured routinely with a metabolic cart."
+      },
+      {
+       "id": "c",
+       "text": "Runs of 30 min are too long to show anything",
+       "why": "30 min is the standard MLSS test length and long enough to see a steady state."
+      },
+      {
+       "id": "d",
+       "text": "Critical speed is not valid in running",
+       "why": "Critical speed is the running form of CP and is widely used."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

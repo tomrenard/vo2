@@ -1,0 +1,750 @@
+{
+ "id": "dur-mechanisms",
+ "module": "t2-durability",
+ "title": "Why the numbers drift",
+ "goal": "Weigh the candidate causes of declining durability (efficiency, carbohydrate, fibre recruitment, fat oxidation, heat) and say which are shown and which are only hypotheses.",
+ "requires": [
+  "dur-measure"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "emg"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dmech-efficiency",
+   "title": "Efficiency slips: well shown",
+   "text": "The most direct finding: you get fewer watts per unit of energy as a long effort goes on.\n\nAfter about 60 min of riding at about 60% of [VO2peak](g:vo2peak), trained cyclists' [gross efficiency](g:gross-efficiency) fell and their 5 min test power dropped 12 W. The fall in efficiency tracked the fall in performance closely (r = 0.91) [[c:dmech-passfield]].\n\nThe VT1 study from *Measuring durability* split its 21 W loss in two: about **8 W** from lower efficiency and about **14 W** from a lower rate of [metabolic energy](g:metabolic-energy) use at the threshold itself [[c:dmech-split]]. So efficiency is part of the story, not all of it. In runners, [running economy](g:running-economy) also worsens over a long run [[c:dmech-re]].",
+   "claims": [
+    {
+     "id": "dmech-passfield",
+     "text": "After about 60 min of moderate cycling, gross efficiency and 5 min performance fell, and the change in efficiency correlated with the change in performance (r = 0.91).",
+     "grade": "weak",
+     "sources": [
+      "passfield2000"
+     ],
+     "evidence": [
+      {
+       "source": "passfield2000",
+       "quote": "Average 5-min performance power output was significantly reduced (12 W) after exercise in EXP1",
+       "level": "abstract"
+      },
+      {
+       "source": "passfield2000",
+       "quote": "Moreover, the change in gross efficiency was correlated with the change in 5-min performance (r = 0.91, P < 0.01), but not with the change in mean or peak 30-s sprint power output.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-split",
+     "text": "The fall in power at VT1 after 2 h of cycling came partly from lost efficiency (about −8 W) and partly from a lower rate of metabolic energy expenditure at the transition (about −14 W).",
+     "grade": "weak",
+     "sources": [
+      "stevenson2022"
+     ],
+     "evidence": [
+      {
+       "source": "stevenson2022",
+       "quote": "This was attributable to loss of efficiency (VT1, -8 ± 10 W; LoglogLT, - 7 ± 9 W) and rates of metabolic energy expenditure at the transition (VT1, - 14 ± 11 W; LoglogLT, - 15 ± 22 W).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-re",
+     "text": "Running economy deteriorates during prolonged running; in a 90 min run at lactate threshold it worsened by 3.1–6.0%.",
+     "grade": "weak",
+     "sources": [
+      "zanini2026"
+     ],
+     "evidence": [
+      {
+       "source": "zanini2026",
+       "quote": "Running economy (RE) deteriorates during prolonged running (i.e., RE durability)",
+       "level": "abstract"
+      },
+      {
+       "source": "zanini2026",
+       "quote": "Changes in RE occurred earlier and were larger for SDT than LDT, reaching +6.0% versus +3.1% at 90 min, respectively",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dmech-passfield-q"
+  },
+  {
+   "type": "question",
+   "item": "dmech-split-q"
+  },
+  {
+   "type": "concept",
+   "id": "dmech-glycogen",
+   "title": "Carbohydrate: important, but not simply muscle glycogen",
+   "text": "Running low on [glycogen](g:glycogen) is the obvious suspect. The data are more subtle.\n\nAfter 2 h of heavy cycling, CP (estimated with a 3 min all-out test) was about 11% lower, but the size of each rider's fall in muscle glycogen (from biopsies) did not predict the size of the fall in CP (r = 0.19) [[c:dmech-glycogen-cp]].\n\nYet carbohydrate *does* matter. Drinking 60 g·h⁻¹ during the 2 h prevented the fall in CP, without sparing muscle glycogen [[c:dmech-cho-cp]]. And in 9 female cyclists, starting with low carbohydrate stores lowered power at [VT1](g:vt1) from 152 to 133 W [[c:dmech-low-cho]].\n\nOne reading: blood glucose and liver glycogen matter too, not only the muscle's own stores, as in *Fatigue in long efforts*.",
+   "claims": [
+    {
+     "id": "dmech-glycogen-cp",
+     "text": "After 2 h of heavy cycling, CP fell about 11%, but the change in muscle glycogen did not correlate with the change in CP; changes were not primarily determined by muscle glycogen.",
+     "grade": "weak",
+     "sources": [
+      "clark2019b"
+     ],
+     "evidence": [
+      {
+       "source": "clark2019b",
+       "quote": "The change in muscle [glycogen] was not significantly correlated with the changes in either EP (r = 0.19) or WEP (r = 0.07).",
+       "level": "abstract"
+      },
+      {
+       "source": "clark2019b",
+       "quote": "The 3MT provides valid estimates of CP and W' following 2 h of heavy-intensity exercise, but the changes in these parameters are not primarily determined by changes in muscle [glycogen].",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-cho-cp",
+     "text": "Carbohydrate ingestion (60 g·h⁻¹) during 2 h of heavy cycling preserved CP without altering muscle glycogen depletion.",
+     "grade": "weak",
+     "sources": [
+      "clark2019a"
+     ],
+     "evidence": [
+      {
+       "source": "clark2019a",
+       "quote": "We also show that carbohydrate ingestion during exercise preserves CP, but not W', without altering muscle glycogen depletion.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-low-cho",
+     "text": "In 9 well-trained female cyclists, low carbohydrate availability reduced power at VT1 (133 vs 152 W) and gross efficiency.",
+     "grade": "weak",
+     "sources": [
+      "main2026"
+     ],
+     "evidence": [
+      {
+       "source": "main2026",
+       "quote": "Power output at the first ventilatory threshold was reduced in LOW (133 ± 24 vs. 152 ± 28 W, ∆ - 19 ± 14 W, P = 0.011), with no between-trial difference in power output at the lactate threshold.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is running down muscle glycogen the main cause of the loss of durability?",
+    "sides": [
+     {
+      "position": "Carbohydrate availability is central: low stores cut VT1 power and efficiency, and feeding carbohydrate blunts the fall in VT1 and CP.",
+      "sources": [
+       "main2026",
+       "dudleyrode2025",
+       "norte2026"
+      ]
+     },
+     {
+      "position": "Not muscle glycogen as such: the fall in CP didn't track the fall in muscle glycogen, and feeding protected CP without sparing it, pointing to blood glucose or other factors.",
+      "sources": [
+       "clark2019b",
+       "clark2019a"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "dmech-cho-interpret"
+  },
+  {
+   "type": "question",
+   "item": "dmech-glycogen-debate"
+  },
+  {
+   "type": "concept",
+   "id": "dmech-recruitment",
+   "title": "Recruiting less efficient fibres: a hypothesis",
+   "text": "A neat idea links glycogen and efficiency. By the [size principle](g:size-principle), easy riding uses mainly small [motor units](g:motor-unit) with [type I fibres](g:type-i-fibre). As those fibres tire or run low on glycogen, the nervous system may call up bigger units with [type II fibres](g:type-iia-fibre) to hold the same power. Type II fibres are thought to use more energy per watt, so efficiency falls and the threshold arrives sooner.\n\nThe evidence is indirect. With low carbohydrate stores, the [EMG](g:emg) signal of the thigh muscles changed in a way the authors read as *possibly* more higher-threshold units being recruited [[c:dmech-recruit]]. Muscle markers measured at rest, such as mitochondrial enzyme activity, didn't predict who was durable [[c:dmech-no-marker]].",
+   "claims": [
+    {
+     "id": "dmech-recruit",
+     "text": "Lower carbohydrate availability may reduce VT1 power and efficiency through increased recruitment of higher-threshold motor units to compensate for glycogen-depleted fibres (interpretation of EMG data).",
+     "grade": "weak",
+     "sources": [
+      "main2026"
+     ],
+     "evidence": [
+      {
+       "source": "main2026",
+       "quote": "These data suggest lowered carbohydrate availability reduced power output at the moderate-to-heavy transition, possibly due to increased recruitment of higher-threshold motor units to compensate for glycogen-depleted fibres, impairing gross cycling efficiency.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-no-marker",
+     "text": "Durability of VT1 was not related to resting vastus lateralis carnosine content, citrate synthase activity or complex I activity.",
+     "grade": "weak",
+     "sources": [
+      "hamilton2024"
+     ],
+     "evidence": [
+      {
+       "source": "hamilton2024",
+       "quote": "Durability of VT1 was not related to vastus lateralis carnosine content, citrate synthase activity, or complex I activity (P > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dmech-recruit-chain"
+  },
+  {
+   "type": "question",
+   "item": "dmech-recruit-grade"
+  },
+  {
+   "type": "concept",
+   "id": "dmech-fat",
+   "title": "Burning more fat: a mixed picture",
+   "text": "If more of the energy comes from [fat oxidation](g:beta-oxidation), glycogen should last longer and the profile hold up better. Some data fit:\n\n- In 12 cyclists, higher fat oxidation rates measured fresh went with a later 5% fall in VT1 power [[c:dmech-gallo]].\n- In 10 pros, burning more carbohydrate at 200 W went with a bigger fall in CP (r = −0.70) [[c:dmech-spragg-cho]].\n\nOther data don't fit. A 2024 study of elite cyclists, as reported in a 2025 review, found only weak links between peak fat oxidation (the rate at [Fatmax](g:fatmax)) and durability, and *higher* fat oxidation in the fourth hour went with a *bigger* drop in 6 min time-trial power [[c:dmech-ortenblad]]. Late in a ride, burning lots of fat may be a sign that carbohydrate has run short.",
+   "claims": [
+    {
+     "id": "dmech-gallo",
+     "text": "In 12 trained cyclists, time to a 5% fall in VT1 power correlated with time to task failure, and both related strongly to fat oxidation rates measured in the rested state.",
+     "grade": "weak",
+     "sources": [
+      "gallo2024"
+     ],
+     "evidence": [
+      {
+       "source": "gallo2024",
+       "quote": "suggest durability of the moderate-to-heavy intensity transition is related to fat oxidation rates.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-spragg-cho",
+     "text": "In 10 professional cyclists, carbohydrate oxidation at 200 W correlated negatively with the share of CP kept after fatiguing intervals (r = −0.70).",
+     "grade": "weak",
+     "sources": [
+      "spragg2023a"
+     ],
+     "evidence": [
+      {
+       "source": "spragg2023a",
+       "quote": "Significant negative relationships were found between ∆CP and carbohydrate oxidation at 200 W ( r = -0.702, P = 0.024).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dmech-ortenblad",
+     "text": "A 2024 study reported by Hunter et al. (2025): in elite cyclists, peak fat oxidation and early fat oxidation were only weakly related to durability, and higher fat oxidation in the fourth hour went with a larger fall in 6 min time-trial power.",
+     "grade": "weak",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "More recently, Ørtenblad et al. (2024) demonstrated weak associations between peak fat oxidation or fat oxidation over the first 3 h of exercise and durability in elite cyclists.",
+       "level": "full-text"
+      },
+      {
+       "source": "hunter2025",
+       "quote": "However, higher fat oxidation rates in the fourth hour of exercise were associated with greater reduction of mean power output during a 6 min maximal TT following 4 h of cycling",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does a high capacity to burn fat make an athlete more durable?",
+    "sides": [
+     {
+      "position": "Yes: higher fat oxidation (and lower carbohydrate oxidation) at set intensities went with better durability of VT1 and CP.",
+      "sources": [
+       "gallo2024",
+       "spragg2023a"
+      ]
+     },
+     {
+      "position": "Not clearly: in elite cyclists the links were weak, and high late-ride fat oxidation went with a bigger loss of power, perhaps a sign of carbohydrate running out.",
+      "sources": [
+       "hunter2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "dmech-fat-debate"
+  },
+  {
+   "type": "question",
+   "item": "dmech-fat-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "dmech-heat",
+   "title": "Heat: plausible, barely tested",
+   "text": "*Heat and the heart* showed that a rising [core temperature](g:core-temperature) brings [cardiovascular drift](g:cardiovascular-drift): heart rate climbs at the same work. That should speed up the loss of durability.\n\nThe direct evidence is thin. A 2025 review states that it isn't yet known whether durability itself is sensitive to the environment [[c:dmech-heat-unknown]]. One finding points that way: cycling and running at 35 °C, the fall in VO₂max was larger after 45 min than after 15 min, but without a cool-air comparison [[c:dmech-heat-vo2]].\n\n| mechanism | status |\n|---|---|\n| efficiency loss | shown |\n| carbohydrate supply | shown, route unclear |\n| fibre recruitment | hypothesis |\n| fat oxidation | disputed |\n| heat | plausible, untested |",
+   "claims": [
+    {
+     "id": "dmech-heat-unknown",
+     "text": "It is not yet known whether durability is sensitive to environmental conditions such as heat.",
+     "grade": "weak",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "There is currently a lack of information regarding whether durability is also sensitive to environmental conditions and whether compromised durability plays a role in the decrease in performance observed during exercise in challenging environments.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dmech-heat-vo2",
+     "text": "At 35 °C, cardiovascular strain was greater and the reduction in VO2max larger after 45 min than after 15 min of cycling or running; controlled comparisons with temperate conditions are lacking.",
+     "grade": "weak",
+     "sources": [
+      "hunter2025"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2025",
+       "quote": "When cycling and running in 35°C, greater cardiovascular strain and a larger reduction of V̇O2max was observed after 45 min compared with 15 min (Wingo et al., 2020).",
+       "level": "full-text"
+      },
+      {
+       "source": "hunter2025",
+       "quote": "However, similar repeated‐measures studies with a control condition in temperate environments are needed to evaluate the effects of thermal stress on durability.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dmech-heat-tri"
+  },
+  {
+   "type": "question",
+   "item": "dmech-status"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Efficiency falls in long efforts and tracks the loss of performance; it explains part of the fall in VT1 power.",
+    "Carbohydrate matters (low stores hurt, feeding helps), but CP's fall doesn't simply follow muscle glycogen.",
+    "Recruiting less efficient type II fibres is a plausible link between glycogen and efficiency, with only indirect support.",
+    "Fat oxidation and durability: some studies link them, others don't; late-ride high fat use may signal carbohydrate running short.",
+    "Heat should worsen durability through cardiovascular strain, but it has barely been tested."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dmech-passfield-q",
+   "concept": "dmech-efficiency",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "passfield2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After an hour of steady riding, cyclists' 5 min power fell. What tracked that fall most closely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The fall in gross efficiency",
+       "correct": true,
+       "why": "Right: the change in efficiency correlated with the change in 5 min power (r = 0.91)."
+      },
+      {
+       "id": "b",
+       "text": "The fall in 30 s sprint power",
+       "why": "Sprint power fell too, but its change wasn't related to the change in efficiency."
+      },
+      {
+       "id": "c",
+       "text": "A rise in maximal heart rate",
+       "why": "Maximal heart rate doesn't rise with fatigue, and it wasn't the measure here."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: 5 min power didn't change",
+       "why": "It fell by 12 W after the hour of riding."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-split-q",
+   "concept": "dmech-efficiency",
+   "bloom": "analyse",
+   "sources": [
+    "stevenson2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 2 h of riding, power at VT1 fell by about 21 W. About 8 W of that came from lower efficiency. What does the rest mainly reflect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The threshold now occurs at a lower rate of metabolic energy use",
+       "correct": true,
+       "why": "Right: about 14 W came from a lower metabolic rate at the transition, not from efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Measurement error, since efficiency explains all of it",
+       "why": "Efficiency explained only about 8 of the 21 W."
+      },
+      {
+       "id": "c",
+       "text": "A higher VO₂max after the warm-up",
+       "why": "A higher VO₂max would move the threshold up, not down."
+      },
+      {
+       "id": "d",
+       "text": "The riders' power meters drifting over 2 h",
+       "why": "The split was computed from gas exchange, and power meters don't drift like that."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-cho-interpret",
+   "concept": "dmech-glycogen",
+   "bloom": "analyse",
+   "sources": [
+    "clark2019a",
+    "clark2019b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Drinking 60 g·h⁻¹ of carbohydrate during 2 h of hard riding kept CP from falling, but riders used the same amount of muscle glycogen as with placebo. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate protects CP by a route other than sparing muscle glycogen",
+       "correct": true,
+       "why": "Right: e.g. keeping blood glucose and liver glycogen up; the muscle's stores fell the same."
+      },
+      {
+       "id": "b",
+       "text": "Carbohydrate drinks have no effect on durability",
+       "why": "CP was protected, so they had an effect."
+      },
+      {
+       "id": "c",
+       "text": "Muscle glycogen is the only thing that sets CP",
+       "why": "If it were, the same glycogen use would have meant the same fall in CP."
+      },
+      {
+       "id": "d",
+       "text": "The biopsies must have been taken wrongly",
+       "why": "The results fit other data showing CP changes don't track muscle glycogen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-glycogen-debate",
+   "concept": "dmech-glycogen",
+   "bloom": "evaluate",
+   "sources": [
+    "clark2019b",
+    "main2026",
+    "dudleyrode2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says 'riders lose durability because their muscles run out of glycogen, full stop.' What is the best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate matters, but the loss doesn't simply track muscle glycogen",
+       "correct": true,
+       "why": "Right: feeding helps and low stores hurt, but CP's fall didn't follow muscle glycogen."
+      },
+      {
+       "id": "b",
+       "text": "Correct: muscle glycogen fully explains it",
+       "why": "The change in muscle glycogen didn't correlate with the change in CP."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: carbohydrate has nothing to do with durability",
+       "why": "Low stores cut VT1 power, and feeding blunted the fall in VT1 and CP."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: durability is all in the mind",
+       "why": "Measured changes in efficiency and thresholds show physiological causes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-recruit-chain",
+   "concept": "dmech-recruitment",
+   "bloom": "understand",
+   "sources": [
+    "main2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the recruitment hypothesis, why would calling up more type II fibres late in a long ride lower efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Type II fibres use more energy for the same power",
+       "correct": true,
+       "why": "Right: so more energy per watt, and the threshold comes sooner."
+      },
+      {
+       "id": "b",
+       "text": "Type II fibres can't use oxygen at all",
+       "why": "Type IIa fibres are quite oxidative; the point is their higher energy cost."
+      },
+      {
+       "id": "c",
+       "text": "Type II fibres are recruited first by the size principle",
+       "why": "The size principle puts small, type I units first; type II are added later."
+      },
+      {
+       "id": "d",
+       "text": "Type II fibres store no glycogen",
+       "why": "They store glycogen; they use it fast."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-recruit-grade",
+   "concept": "dmech-recruitment",
+   "bloom": "evaluate",
+   "sources": [
+    "main2026",
+    "hamilton2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How strong is the evidence that recruiting less efficient fibres causes the loss of durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak: only indirect EMG data, read as 'possibly' more recruitment",
+       "correct": true,
+       "why": "Right: a plausible mechanism, not yet shown."
+      },
+      {
+       "id": "b",
+       "text": "Strong: biopsies show it directly in many studies",
+       "why": "No study has shown it directly; the resting muscle markers measured didn't predict durability."
+      },
+      {
+       "id": "c",
+       "text": "Disproven: EMG showed no change at all",
+       "why": "EMG frequency did change in the low-carbohydrate study."
+      },
+      {
+       "id": "d",
+       "text": "Strong: it is textbook physiology",
+       "why": "The size principle is textbook, but its role in durability isn't."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-fat-debate",
+   "concept": "dmech-fat",
+   "bloom": "evaluate",
+   "sources": [
+    "gallo2024",
+    "spragg2023a",
+    "hunter2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider burns a lot of fat at her Fatmax in a fresh test. Does that mean she will be durable in a 5 h race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not necessarily: links between fat oxidation and durability are mixed",
+       "correct": true,
+       "why": "Right: some small studies find a link, but a study of elite riders found it weak."
+      },
+      {
+       "id": "b",
+       "text": "Yes: fat oxidation fully predicts durability",
+       "why": "The evidence is mixed and mostly correlations in small groups."
+      },
+      {
+       "id": "c",
+       "text": "No: high fat oxidation always means poor durability",
+       "why": "Only late-ride high fat oxidation went with bigger losses; fresh values sometimes predicted better durability."
+      },
+      {
+       "id": "d",
+       "text": "Yes, as long as she eats no carbohydrate in the race",
+       "why": "Feeding carbohydrate helps durability, so avoiding it is a bad bet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-fat-appraisal",
+   "concept": "dmech-fat",
+   "bloom": "evaluate",
+   "sources": [
+    "gallo2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 12 cyclists, higher fresh fat oxidation correlated with a later fall in VT1 power. What most limits the claim that fat oxidation causes durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A correlation in 12 people: training history could drive both",
+       "correct": true,
+       "why": "Right: small n, and fitness or training could raise both fat oxidation and durability."
+      },
+      {
+       "id": "b",
+       "text": "Fat oxidation can't be measured during exercise",
+       "why": "It is routinely measured from gas exchange (RER)."
+      },
+      {
+       "id": "c",
+       "text": "The correlation means durability causes fat oxidation",
+       "why": "A correlation shows neither direction; that's the point."
+      },
+      {
+       "id": "d",
+       "text": "Cyclists can't be studied for durability in a lab",
+       "why": "This study did exactly that, to exhaustion."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-heat-tri",
+   "concept": "dmech-heat",
+   "bloom": "apply",
+   "sources": [
+    "hunter2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete races a hot Ironman. Based on what's known, what should she expect for her durability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Probably worse than in cool racing, though durability in heat is barely studied",
+       "correct": true,
+       "why": "Right: heat adds cardiovascular strain, but direct durability data are lacking."
+      },
+      {
+       "id": "b",
+       "text": "The same as in cool racing, as shown in many studies",
+       "why": "No such body of evidence exists; it simply hasn't been tested well."
+      },
+      {
+       "id": "c",
+       "text": "Better, because warm muscles are more efficient",
+       "why": "Warm-up helps short efforts; prolonged heat adds strain."
+      },
+      {
+       "id": "d",
+       "text": "It can't change: durability is fixed",
+       "why": "Durability depends on conditions such as fueling, and probably heat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dmech-status",
+   "concept": "dmech-heat",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "passfield2000",
+    "stevenson2022",
+    "main2026",
+    "gallo2024",
+    "hunter2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which mechanism of declining durability is best supported by direct measurements?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Loss of efficiency",
+       "correct": true,
+       "why": "Right: measured directly, it falls in long efforts and tracks performance."
+      },
+      {
+       "id": "b",
+       "text": "Recruitment of type II fibres",
+       "why": "Still a hypothesis built on indirect EMG data."
+      },
+      {
+       "id": "c",
+       "text": "Low fat oxidation capacity",
+       "why": "Disputed: studies point in different directions."
+      },
+      {
+       "id": "d",
+       "text": "Rising core temperature",
+       "why": "Plausible, but durability in heat is barely tested."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

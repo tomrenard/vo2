@@ -1,0 +1,773 @@
+{
+ "id": "pace-strategies",
+ "module": "t2-pacing",
+ "title": "Pacing strategies: how to spread the effort",
+ "goal": "Name the six pacing profiles and explain which one wins in short, middle and long events, using world-record and race data.",
+ "requires": [
+  "dur-training"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "pacing-strategy",
+    "all-out-pacing",
+    "positive-pacing",
+    "negative-pacing",
+    "even-pacing",
+    "parabolic-pacing",
+    "variable-pacing",
+    "end-spurt"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pst-profiles",
+   "title": "Six shapes of a race",
+   "text": "Your [pacing strategy](g:pacing-strategy) is how you spread work and energy over a race, and it can make a large difference to the result [[c:pacing-matters]]. Plot speed or power against distance and six shapes turn up [[c:six-profiles]]:\n\n| profile | shape |\n|---|---|\n| [all-out](g:all-out-pacing) | flat out from the gun, fading to the line |\n| [positive](g:positive-pacing) | fastest early, then slowing |\n| [negative](g:negative-pacing) | speeding up over the race |\n| [even](g:even-pacing) | the same all the way |\n| [parabolic](g:parabolic-pacing) | U, J or reverse J: fast start, slower middle, fast finish |\n| [variable](g:variable-pacing) | ups and downs with the course, wind or rivals |\n\nA burst of speed near the finish is an [end spurt](g:end-spurt).",
+   "claims": [
+    {
+     "id": "pacing-matters",
+     "text": "How an athlete spreads work and energy over an event can have a large effect on performance.",
+     "grade": "moderate",
+     "sources": [
+      "abbiss2008"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2008",
+       "quote": "It is widely recognized that an athlete's 'pacing strategy', or how an athlete distributes work and energy throughout an exercise task, can have a significant impact on performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "six-profiles",
+     "text": "Six pacing profiles are described: negative, all-out, positive, even, parabolic and variable.",
+     "grade": "moderate",
+     "sources": [
+      "abbiss2008"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2008",
+       "quote": "These include the negative, all-out, positive, even, parabolic-shaped and variable pacing strategies.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pst-profile-name",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pst-profile-shape",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "pst-short",
+   "title": "Short events: go from the gun",
+   "text": "In very short events the start matters most. For efforts of about 30 s or less, an explosive [all-out](g:all-out-pacing) start seems best [[c:short-allout]].\n\nWhy? At the start you are slow: you must get the body (and the bike) up to speed from nothing, and in a short race those seconds are a big share of the total. The time saved by a hard start outweighs the speed lost to fatigue in the last metres.\n\nModelling of cycling time trials gives a rule of thumb: for 2 min or less, start maximally; up to about 10 min, start harder than the average power, but not flat out [[c:tt-start-rule]]. The longer the race, the more a fast start costs later.",
+   "claims": [
+    {
+     "id": "short-allout",
+     "text": "Events of about 30 s or less may benefit from an all-out start; in events over about 2 min, more even pacing may improve times.",
+     "grade": "weak",
+     "sources": [
+      "abbiss2008"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2008",
+       "quote": "Research suggests that extremely short-duration events (< or =30 seconds) may benefit from an explosive 'all-out' strategy, whereas during prolonged events (>2 minutes), performance times may be improved if athletes distribute their pace more evenly.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tt-start-rule",
+     "text": "In cycling time trials of 2 min or less the start should be maximal; up to about 10 min the starting effort should be raised.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2007a"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2007a",
+       "quote": "For a shorter TT (< or = 10 minutes), work rate should be increased during the starting effort because this proportion of total race time is significant.",
+       "level": "abstract"
+      },
+      {
+       "source": "atkinson2007a",
+       "quote": "For a very short TT (< or = 2 minutes), the starting effort should be maximal, since the time saved during the starting phase is predicted to outweigh any time lost during the final metres because of fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pst-short-why"
+  },
+  {
+   "type": "question",
+   "item": "pst-start-length",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "pst-long",
+   "title": "Longer events: even wins, but few start even",
+   "text": "In a time trial longer than about 10 min in steady conditions (a velodrome, no wind), an [even](g:even-pacing) spread of power is best [[c:long-even]].\n\nYet riders start too hard. In a 16.1 km lab time trial (headwind for the first half, tailwind for the second), 7 cyclists chose 267 W for the first 1.6 km: 14% above their race average of 235 W. Then they fell below it [[c:start-too-fast]].\n\nRidden again at the same average power, held steady, the course took about 10 s less [[c:constant-faster]].\n\nWhy? Air resistance rises steeply with speed, so the extra watts of a hard start buy little speed, while riding far above [critical power](g:critical-power) early brings fatigue that costs more later.",
+   "claims": [
+    {
+     "id": "long-even",
+     "text": "In time trials over about 10 min in stable conditions, an even distribution of power is optimal.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2007a"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2007a",
+       "quote": "When environmental conditions are relatively stable (e.g. in a velodrome) and the TT is >10 minutes, then an even distribution of work rate is optimal.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "start-too-fast",
+     "text": "In a self-paced 16.1 km time trial, riders' power over the first 1.61 km was 14% above their race average.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2000"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2000",
+       "quote": "In the ITT, riders chose a mean +/- SD power output of 267 +/- 56 W in the first 1.61 km which was 14% higher than the overall race mean +/- SD of 235 +/- 41 W.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "constant-faster",
+     "text": "Riding the same average power at a constant level was about 10 s faster than the self-paced ride.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2000"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2000",
+       "quote": "riders habitually set off too fast in the first few kilometres and will benefit (10 s improvement) from a constant pacing strategy",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pst-fast-start"
+  },
+  {
+   "type": "concept",
+   "id": "pst-records",
+   "title": "What world records look like",
+   "text": "World records show pacing that worked at the top. Men's track records from 1912 to 2004 show [[c:wr-800]]:\n\n- **800 m:** the first lap is faster than the second (on average about 52 s against 54 s); only 2 of 26 records had a faster second lap. A [positive](g:positive-pacing) profile.\n- **5,000 and 10,000 m:** the first and last kilometres are faster than the middle ones: an even pace with an [end spurt](g:end-spurt) [[c:wr-endspurt]].\n\nAn end spurt means a reserve was kept through the middle: even in a record, the runner wasn't at the limit until the end.\n\nIn the 2008 and 2011 marathon world records, neither runner held an even pace once hills and wind were allowed for [[c:marathon-wr]].",
+   "claims": [
+    {
+     "id": "wr-800",
+     "text": "In men's 800 m world records the second lap was slower than the first, and faster in only 2 records.",
+     "grade": "weak",
+     "sources": [
+      "tucker2006a"
+     ],
+     "evidence": [
+      {
+       "source": "tucker2006a",
+       "quote": "The second lap in the 800-m event was significantly slower than the first lap (52.0 + or - 1.7 vs 54.4 + or - 4.9 seconds, P < .00005).",
+       "level": "abstract"
+      },
+      {
+       "source": "tucker2006a",
+       "quote": "In only 2 world records was the second lap faster than the first lap.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wr-endspurt",
+     "text": "In 5,000 and 10,000 m world records an end spurt occurs because a reserve is kept in the middle part of the race.",
+     "grade": "weak",
+     "sources": [
+      "tucker2006a"
+     ],
+     "evidence": [
+      {
+       "source": "tucker2006a",
+       "quote": "In the 5000-m and 10,000-m events, an end spurt occurs because of the maintenance of a reserve during the middle part of the race.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "marathon-wr",
+     "text": "In two marathon world records, neither runner followed even pacing after adjusting for gradient and headwind.",
+     "grade": "weak",
+     "sources": [
+      "angus2014"
+     ],
+     "evidence": [
+      {
+       "source": "angus2014",
+       "quote": "After adjusting for these responses, neither runner followed the (optimal) 'even' power pacing principle",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pst-wr-profile",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pst-reserve"
+  },
+  {
+   "type": "question",
+   "item": "pst-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "pst-tactics",
+   "title": "Races are not record attempts",
+   "text": "Records are run against the clock, championships against rivals. In the 2008 Olympic finals from 800 to 10,000 m, the pacing of 133 finalists differed from world-record patterns in 6 of 8 races. In the long finals, pace changed every 100 m by 1.6–2.7% on average, and every race was decided in the last lap [[c:olympic-variable]]. Contenders used [variable](g:variable-pacing) pace to break the field.\n\nFor middle distances (1.5–2 min) and the longest events (over about 4 h), nobody yet knows the best pacing; well-trained athletes tend to pace positively, slowing gradually after an early peak [[c:ultra-positive]].\n\nSo 'even is best' is a rule for the clock. To win, you may have to pace against people.",
+   "claims": [
+    {
+     "id": "olympic-variable",
+     "text": "In the 2008 Olympic long-distance track finals pace varied every 100 m by 1.6–2.7%, and all races were decided in the final lap.",
+     "grade": "weak",
+     "sources": [
+      "thiel2012"
+     ],
+     "evidence": [
+      {
+       "source": "thiel2012",
+       "quote": "In the long distance finals, runners varied their pace every 100 m by a mean 1.6-2.7%.",
+       "level": "abstract"
+      },
+      {
+       "source": "thiel2012",
+       "quote": "All races were decided during the final lap.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ultra-positive",
+     "text": "In middle-distance and ultra-endurance events the optimal pacing is unknown; well-trained athletes tend to pace positively.",
+     "grade": "weak",
+     "sources": [
+      "abbiss2008"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2008",
+       "quote": "However, evidence suggests that during these events well trained athletes tend to adopt a positive pacing strategy, whereby after peak speed is reached, the athlete progressively slows.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pst-tactics"
+  },
+  {
+   "type": "question",
+   "item": "pst-profile-name",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pst-profile-shape",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pst-start-length",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Six pacing profiles: all-out, positive, negative, even, parabolic (U, J or reverse J) and variable.",
+    "About 30 s or less: all-out. Cycling time trials up to about 2 min: maximal start; up to about 10 min: a start harder than average.",
+    "Longer, in steady conditions: even pacing is best, yet even trained riders start too hard.",
+    "World records: the 800 m is run positive; the 5,000 and 10,000 m even with an end spurt, a sign of a kept reserve.",
+    "Championship races are paced against rivals: variable, decided in the last lap. Records only show pacing that succeeded."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pst-profile-name",
+   "concept": "pst-profiles",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "abbiss2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner covers the first half of a half marathon in 52 min and the second half in 49 min. Which pacing profile is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Negative",
+       "correct": true,
+       "why": "Right: the second half is faster, so speed rises over the race."
+      },
+      {
+       "id": "b",
+       "text": "Positive",
+       "why": "Positive pacing means slowing down: the first half would be the faster one."
+      },
+      {
+       "id": "c",
+       "text": "Even",
+       "why": "3 min over about 50 min is about 6%: too big a change to call even."
+      },
+      {
+       "id": "d",
+       "text": "All-out",
+       "why": "All-out means flat out from the start and fading; it suits only very short events."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist averages 310 W over the first 10 km of a 40 km time trial, then 295, 285 and 270 W over the next three 10 km blocks. Which pacing profile is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Positive",
+       "correct": true,
+       "why": "Right: power is highest early and falls steadily."
+      },
+      {
+       "id": "b",
+       "text": "Negative",
+       "why": "Negative pacing would mean power rising over the race; here it falls."
+      },
+      {
+       "id": "c",
+       "text": "Parabolic",
+       "why": "A parabolic profile needs a fast finish; this one only declines."
+      },
+      {
+       "id": "d",
+       "text": "Variable",
+       "why": "Variable means ups and downs; this is a steady fall, not swings."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-profile-shape",
+   "concept": "pst-profiles",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "abbiss2008",
+    "tucker2006a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 10,000 m runner's kilometre splits: 2:38 for the first, then eight between 2:42 and 2:44, then 2:33 for the last. Which profile is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Parabolic (U-shaped)",
+       "correct": true,
+       "why": "Right: fast start, even middle, fastest finish: the U shape seen in 10,000 m world records."
+      },
+      {
+       "id": "b",
+       "text": "Positive (slowing)",
+       "why": "Positive means slowing to the end, but the last kilometre is the fastest."
+      },
+      {
+       "id": "c",
+       "text": "Negative (speeding up)",
+       "why": "The first kilometre is faster than the middle ones, so speed doesn't rise throughout."
+      },
+      {
+       "id": "d",
+       "text": "All-out (flat out)",
+       "why": "All-out is flat out from the start for very short events; this is a 27 min race with a steady middle."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a draft-legal triathlon, a triathlete's bike power swings between about 150 W through corners and 450 W out of them and on climbs, with no upward or downward trend over the 40 km. Which profile is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Variable",
+       "correct": true,
+       "why": "Right: repeated ups and downs set by the course and the pack, with no overall trend."
+      },
+      {
+       "id": "b",
+       "text": "Even",
+       "why": "Even pacing means steady power; swings from 150 to 450 W are the opposite."
+      },
+      {
+       "id": "c",
+       "text": "Positive",
+       "why": "Positive pacing needs a downward trend over the race; there is none here."
+      },
+      {
+       "id": "d",
+       "text": "Parabolic",
+       "why": "Parabolic means one fast start and one fast finish around a slower middle, not repeated swings."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-short-why",
+   "concept": "pst-short",
+   "bloom": "understand",
+   "sources": [
+    "abbiss2008",
+    "atkinson2007a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does an all-out start suit a 30 s track sprint but not a 10 km run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In a short race, time spent getting up to speed is a large share of the total, and little time is left for fatigue to cost you",
+       "correct": true,
+       "why": "Right: the time saved early outweighs the speed lost at the end in short events only."
+      },
+      {
+       "id": "b",
+       "text": "Short sprints use no energy from oxygen, so fatigue can't build up during them",
+       "why": "Fatigue builds very fast in sprints (phosphocreatine falls within seconds), and even 30 s has an aerobic share."
+      },
+      {
+       "id": "c",
+       "text": "Muscles can't change speed once a short race has begun, so the first second fixes the pace",
+       "why": "Speed changes all through a sprint; it rises and then fades."
+      },
+      {
+       "id": "d",
+       "text": "Long races need a slow start because muscles only work well once they are warm",
+       "why": "Warming up happens before the start; the reason to hold back is the cost of fatigue later."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-start-length",
+   "concept": "pst-short",
+   "bloom": "apply",
+   "sources": [
+    "atkinson2007a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist rides a 1 km time trial lasting about 65 s. Based on the modelling evidence, how should she start?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Maximally, accepting that power fades at the end",
+       "correct": true,
+       "why": "Right: for time trials of 2 min or less the start should be maximal."
+      },
+      {
+       "id": "b",
+       "text": "At even power from start to finish",
+       "why": "Even power is the rule for time trials over about 10 min in steady conditions."
+      },
+      {
+       "id": "c",
+       "text": "Easy for the first lap, then build up",
+       "why": "A slow start wastes time while the bike is slow; nothing at the end can win it back in 65 s."
+      },
+      {
+       "id": "d",
+       "text": "At average power, saving a sprint for the last 200 m",
+       "why": "In a 65 s effort the time saved at the start is worth more than a late sprint."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A 4 km individual pursuit on the track lasts about 4.5 min. How should the start compare with the average power for the race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Harder than average, but short of maximal",
+       "correct": true,
+       "why": "Right: up to about 10 min the starting effort should be raised; only at 2 min or less is it maximal."
+      },
+      {
+       "id": "b",
+       "text": "Maximal, as in a 1 km time trial",
+       "why": "The maximal start is for efforts of 2 min or less; over 4.5 min it would cost too much later."
+      },
+      {
+       "id": "c",
+       "text": "Exactly at average power from the gun",
+       "why": "Even pacing from the gun is the rule for efforts over about 10 min."
+      },
+      {
+       "id": "d",
+       "text": "Easier than average, saving energy for the finish",
+       "why": "That is a negative split; it loses time while the bike accelerates."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-fast-start",
+   "concept": "pst-long",
+   "bloom": "analyse",
+   "sources": [
+    "atkinson2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab 16.1 km time trial, a rider rides the first 1.6 km 14% above his race average and then drops below it. Ridden again at the same average power but held constant, he is about 10 s faster. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His chosen start was too hard: the time it bought was less than the later slowdown cost",
+       "correct": true,
+       "why": "Right: same average power, better spread, faster time."
+      },
+      {
+       "id": "b",
+       "text": "The constant ride used more energy in total",
+       "why": "Average power, and so total work, was the same in both rides."
+      },
+      {
+       "id": "c",
+       "text": "A fast start always pays, because time banked early is never lost",
+       "why": "Here the fast start was the slower ride overall."
+      },
+      {
+       "id": "d",
+       "text": "Riding by feel gives better pacing than riding to a set power",
+       "why": "He rode by feel in the first trial, and that was the slower one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-wr-profile",
+   "concept": "pst-records",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tucker2006a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How were men's 800 m world records usually paced?",
+     "options": [
+      {
+       "id": "a",
+       "text": "First lap faster than the second",
+       "correct": true,
+       "why": "Right: about 52 s against 54 s on average; only 2 of 26 had a faster second lap."
+      },
+      {
+       "id": "b",
+       "text": "Second lap faster than the first",
+       "why": "That happened in only 2 of 26 records."
+      },
+      {
+       "id": "c",
+       "text": "Two laps run to within a tenth of a second",
+       "why": "The laps differed by about 2 s on average."
+      },
+      {
+       "id": "d",
+       "text": "A slow first lap, then a long end spurt",
+       "why": "That describes no 800 m pattern; the end spurt belongs to the 5,000 and 10,000 m records."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "How were men's 5,000 and 10,000 m world records usually paced?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fast first kilometre, even middle, fastest last kilometre",
+       "correct": true,
+       "why": "Right: an even pace with an end spurt, a U shape."
+      },
+      {
+       "id": "b",
+       "text": "Fastest early, then slowing steadily to the finish",
+       "why": "That is the positive pattern of the 800 m, not of the longer records."
+      },
+      {
+       "id": "c",
+       "text": "Each kilometre faster than the one before",
+       "why": "The middle kilometres were even, not getting faster all the time."
+      },
+      {
+       "id": "d",
+       "text": "All-out from the start, holding on to the finish",
+       "why": "All-out pacing suits efforts of about 30 s or less, not 13 or 27 min races."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-reserve",
+   "concept": "pst-records",
+   "bloom": "analyse",
+   "sources": [
+    "tucker2006a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 10,000 m world-record runner runs his last kilometre faster than any before it. What does this end spurt suggest about the middle of the race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He kept a reserve: he could have run faster there but held back",
+       "correct": true,
+       "why": "Right: an end spurt is possible only if something was kept back."
+      },
+      {
+       "id": "b",
+       "text": "He was at his absolute limit in the middle, and the spurt came from a second wind",
+       "why": "At a true limit he couldn't speed up; a 'second wind' doesn't explain a faster last kilometre."
+      },
+      {
+       "id": "c",
+       "text": "His muscle glycogen had run out, so he switched to fat for the finish",
+       "why": "Running on fat would make him slower, not faster."
+      },
+      {
+       "id": "d",
+       "text": "The spurt was only possible because the pacemakers did the work",
+       "why": "Pacemakers drop out before the end; the spurt comes from the runner's own reserve."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-appraisal",
+   "concept": "pst-records",
+   "bloom": "evaluate",
+   "sources": [
+    "tucker2006a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"World records show the optimal pacing, so copy their splits.\" What most limits that conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Records include only the runs that worked; failed attempts with the same pacing are never counted",
+       "correct": true,
+       "why": "Right: selecting only successes is a bias; observational records can't show that a pacing caused the result."
+      },
+      {
+       "id": "b",
+       "text": "Records are too old to say anything about today's athletes",
+       "why": "The analysis ran to 2004 and the patterns were consistent over decades; age isn't the main problem."
+      },
+      {
+       "id": "c",
+       "text": "Lap times in records are measured too roughly to show any pattern",
+       "why": "Lap and kilometre splits are timed well enough to show 2 s differences."
+      },
+      {
+       "id": "d",
+       "text": "World records are set by too few countries to generalise",
+       "why": "Nationality isn't the issue; the problem is that only successful runs are analysed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pst-tactics",
+   "concept": "pst-tactics",
+   "bloom": "evaluate",
+   "sources": [
+    "thiel2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Olympic 5,000 m finalists vary their pace far more than world-record runners do. Which explanation fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They race to win, not for time: surges break the field and the race is decided in the last lap",
+       "correct": true,
+       "why": "Right: all 2008 finals were decided in the final lap, with top contenders using variable pace."
+      },
+      {
+       "id": "b",
+       "text": "Olympic finalists are less fit than record holders, so they can't hold an even pace",
+       "why": "Finalists include record holders; the difference comes from tactics, not fitness."
+      },
+      {
+       "id": "c",
+       "text": "Championship tracks are slower, so the pace has to change",
+       "why": "Track surfaces are similar; the swings follow rivals' moves."
+      },
+      {
+       "id": "d",
+       "text": "Even pacing can't be sustained beyond 5 km",
+       "why": "World records at 10,000 m show an even middle pace."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

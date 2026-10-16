@@ -1,0 +1,757 @@
+{
+ "id": "cp-vs-ftp",
+ "module": "t2-cp-wprime",
+ "title": "FTP vs CP vs MLSS",
+ "goal": "Explain what FTP, CP and MLSS each measure, the evidence that they differ, and both sides of the CP–MLSS debate.",
+ "requires": [
+  "cp-wbal"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "limits-of-agreement"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cvf-three",
+   "title": "Three numbers, three definitions",
+   "text": "Three numbers are often treated as one, but each is found a different way:\n\n| | what it is | how it's found |\n|---|---|---|\n| [FTP](g:ftp) | power for about an hour | usually 95% of a 20-min all-out effort |\n| CP | where the power–duration curve levels off | 3–5 efforts of 2–15 min |\n| [MLSS](g:mlss) | top power with steady [lactate](g:lactate) | 4–5 rides of 30 min on different days; lactate may rise no more than 1 mmol·L⁻¹ from min 10 to 30 |\n\n[[c:ftp-def]] [[c:mlss-def]]\n\nFTP is a performance number. CP and MLSS are each meant to mark the [maximal metabolic steady state](g:maximal-metabolic-steady-state), the top of the [heavy domain](g:heavy-domain).",
+   "claims": [
+    {
+     "id": "ftp-def",
+     "text": "FTP is defined as the power a cyclist can hold in a quasi-steady state for about 60 min, and is usually taken as 95% of a 20-min time trial.",
+     "grade": "strong",
+     "sources": [
+      "borszcz2018"
+     ],
+     "evidence": [
+      {
+       "source": "borszcz2018",
+       "quote": "Functional threshold power is defined as the highest power output a cyclist can maintain in a quasi-steady state for approximately 60 min",
+       "level": "abstract"
+      },
+      {
+       "source": "borszcz2018",
+       "quote": "could theoretically be determined as 95% of the mean power output in a 20-min time trial",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-def",
+     "text": "MLSS is found from about 4–5 constant 30-min rides on separate days: the highest one at which blood lactate rises no more than 1 mmol·L⁻¹ between minutes 10 and 30.",
+     "grade": "strong",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "The MLSS is conventionally derived from a series (typically 4–5) of 30 min continuous exercise bouts, completed on separate days",
+       "level": "full-text"
+      },
+      {
+       "source": "jones2019",
+       "quote": "the MLSS is defined as the highest speed or power output that does not result in a rise of blood [lactate] of greater than 1 mmol/L between 10 and 30 min",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvf-define"
+  },
+  {
+   "type": "question",
+   "item": "cvf-ftp-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cvf-ftp-hour",
+   "title": "Is FTP really one-hour power?",
+   "text": "In 23 trained men, 95% of 20-min power (FTP20) matched 60-min power on average: the mean gap was only 1–5 W. But the [limits of agreement](g:limits-of-agreement) were wide, roughly ±40–60 W, so for one rider the two could differ a lot. Riding to exhaustion at FTP20 lasted 51 ± 16 min, not 60 [[c:ftp20-60]].\n\nTime at FTP also depends on level: a median of 35 min in recreational riders, rising to 51 min in professionals [[c:ftp-tte]].\n\nA review of 15 studies, mostly of trained men, found FTP20 repeatable, but not interchangeable with other markers [[c:ftp-scoping]]. So FTP is a fair group estimate, yet for many riders not a power they can hold for an hour.",
+   "claims": [
+    {
+     "id": "ftp20-60",
+     "text": "FTP20 and 60-min power agreed on average (bias 1–5 W) but with wide limits of agreement, and time to exhaustion at FTP20 was about 51 min.",
+     "grade": "weak",
+     "sources": [
+      "borszcz2018"
+     ],
+     "evidence": [
+      {
+       "source": "borszcz2018",
+       "quote": "Bland-Altman plots between FTP20, FTP60 and IAT showed small bias (-1 to -5 W), but large limits of agreement ([-40 to 32 W] to [-62 to 60 W]).",
+       "level": "abstract"
+      },
+      {
+       "source": "borszcz2018",
+       "quote": "Time to exhaustion at FTP20 was 50.9±15.7 min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-tte",
+     "text": "Median time to exhaustion at FTP rose from 35 min in recreational cyclists to 51 min in professionals.",
+     "grade": "weak",
+     "sources": [
+      "sitko2022"
+     ],
+     "evidence": [
+      {
+       "source": "sitko2022",
+       "quote": "The median (interquartile range) time to exhaustion at the functional threshold power was 35 (31-38) minutes for recreationally trained cyclists, 42 (38-51) for trained ones, 47 (41-56) for well-trained ones and 51 (44-59) for professional level cyclists.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-scoping",
+     "text": "FTP20 is reliable, but it shows wide limits of agreement with other markers, so they cannot be swapped.",
+     "grade": "moderate",
+     "sources": [
+      "mackey2021"
+     ],
+     "evidence": [
+      {
+       "source": "mackey2021",
+       "quote": "The FTP20 test was reported as a reliable test.",
+       "level": "abstract"
+      },
+      {
+       "source": "mackey2021",
+       "quote": "Studies investigating the relationship of FTP20 with other physiological markers and power-related concepts reported large limits of agreement suggesting parameters cannot be used interchangeably.",
+       "level": "abstract"
+      },
+      {
+       "source": "mackey2021",
+       "quote": "The majority of studies involved trained male cyclists.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvf-ftp-hour"
+  },
+  {
+   "type": "question",
+   "item": "cvf-loa"
+  },
+  {
+   "type": "concept",
+   "id": "cvf-ftp-cp",
+   "title": "FTP and CP: close, not the same",
+   "text": "In 17 trained cyclists and triathletes, CP was 7 W higher than FTP on average, with limits of agreement from −19 to +33 W: too wide to swap one for the other [[c:cp-ftp-agree]].\n\nThe physiology points the same way. In 13 cyclists, time to exhaustion was about 34 min at FTP and 22 min at FTP + 15 W, with end lactate of 6.7 against 9.2 mmol·L⁻¹. The authors concluded that FTP should not be read as the heavy–severe boundary [[c:ftp-not-mmss]].\n\nThe two numbers correlated almost perfectly (r = 0.97) [[c:cp-ftp-r]], yet still disagreed for single riders. A tight [correlation](g:correlation) says riders rank the same; it doesn't say their watts match.",
+   "claims": [
+    {
+     "id": "cp-ftp-agree",
+     "text": "CP was on average 7 W above FTP, with limits of agreement of −19 to +33 W, so they should not be used interchangeably.",
+     "grade": "weak",
+     "sources": [
+      "karsten2020"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2020",
+       "quote": "The mean bias between CP and FTP was 7 ± 13 W and LoA were -19 to 33 W.",
+       "level": "abstract"
+      },
+      {
+       "source": "karsten2020",
+       "quote": "With relatively large ranges for LoA between variables, these values generally should not be used interchangeably.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-not-mmss",
+     "text": "Time to task failure was about 34 min at FTP and 22 min at FTP + 15 W; FTP should not be taken as the heavy–severe boundary.",
+     "grade": "weak",
+     "sources": [
+      "wong2022"
+     ],
+     "evidence": [
+      {
+       "source": "wong2022",
+       "quote": "The time to task failure at FTP and FTP +15W were 33.7 ± 7.6 and 22.0 ± 5.7 minutes",
+       "level": "abstract"
+      },
+      {
+       "source": "wong2022",
+       "quote": "the end test blood lactate corresponding to FTP and FTP +15W was significantly different (6.7 ± 2.1 mM vs 9.2 ± 2.9 mM",
+       "level": "abstract"
+      },
+      {
+       "source": "wong2022",
+       "quote": "suggests that FTP should not be considered a threshold marker between heavy and severe intensity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-ftp-r",
+     "text": "CP and FTP were strongly correlated (r = 0.969) despite the wide limits of agreement.",
+     "grade": "weak",
+     "sources": [
+      "karsten2020"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2020",
+       "quote": "Even though strong correlations exist between CP and FTP ( r  = 0.969;  P  < 0.001)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvf-cp-ftp"
+  },
+  {
+   "type": "question",
+   "item": "cvf-correlation"
+  },
+  {
+   "type": "concept",
+   "id": "cvf-mlss",
+   "title": "CP or MLSS: which marks the steady-state limit?",
+   "text": "MLSS usually comes out lower than CP: a [meta-analysis](g:meta-analysis) of 9 studies (104 people) found it about 11% below [[c:mlss-below-cp]]. Two readings:\n\n- **CP is too high.** People hold CP for only 20–30 min, which hardly looks steady [[c:cp-unsteady]].\n- **MLSS is too low.** MLSS rides go up in steps, and the answer is the last step that passed, so it sits below the true limit: with 30 W steps, about 15 W too low on average [[c:mlss-steps]].\n\nWith strict methods for both, one group found the gap shrank to a few watts [[c:few-watts]]. The debate is live; for training, what matters most is using one anchor consistently.",
+   "claims": [
+    {
+     "id": "mlss-below-cp",
+     "text": "MLSS was on average about 11% below CP in a meta-analysis.",
+     "grade": "moderate",
+     "sources": [
+      "galanrioja2020"
+     ],
+     "evidence": [
+      {
+       "source": "galanrioja2020",
+       "quote": "Despite the significant correlations between CP and VT1, MLSS and RCP these variables and VT2 under- (VT1, 30%; MLSS, 11%) or over-estimated (RCP, 6%; VT2, 21%) CP.",
+       "level": "abstract"
+      },
+      {
+       "source": "galanrioja2020",
+       "quote": "This resulted in 104 participants.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-unsteady",
+     "text": "Critics argue CP is too high to be a true steady state, since it can be held only for about 20–30 min.",
+     "grade": "disputed",
+     "sources": [
+      "dotan2022",
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "dotan2022",
+       "quote": "Much more than a critical mass of the extensive accumulated evidence, however, has persistently shown the determined intensity of critical power and its variants as being too high to maintain for extended periods.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2019",
+       "quote": "exercise at CP being sustainable for no more than approximately 20-30 min",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-steps",
+     "text": "Because MLSS is tested in steps, it underestimates the true limit: by about 15 W on average with 30 W steps.",
+     "grade": "disputed",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "On average, with differences of 1 km/h or 30 W between discrete tests, the MLSS will be underestimated by 0.5 km/h for running or 15 W for cycling, respectively.",
+       "level": "full-text"
+      },
+      {
+       "source": "jones2019",
+       "quote": "as presently defined, MLSS naturally underestimates the actual maximal metabolic steady state",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "few-watts",
+     "text": "With strict determination criteria, CP and MLSS may differ by only a few watts.",
+     "grade": "disputed",
+     "sources": [
+      "caen2024"
+     ],
+     "evidence": [
+      {
+       "source": "caen2024",
+       "quote": "we demonstrate that differences between critical power and the maximal lactate steady state may be reconciled to only a few Watts when applying appropriate and strict determination criteria",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does CP or MLSS mark the maximal metabolic steady state?",
+    "sides": [
+     {
+      "position": "CP is the real boundary: above it nothing settles, and MLSS sits below it partly because of how it is tested.",
+      "sources": [
+       "jones2019",
+       "poole2016"
+      ]
+     },
+     {
+      "position": "CP is set too high to be a steady state: it can be held only briefly, so MLSS is the better marker.",
+      "sources": [
+       "dotan2022"
+      ]
+     },
+     {
+      "position": "With strict methods for both, the two agree within a few watts and either can be used.",
+      "sources": [
+       "caen2024"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cvf-steps"
+  },
+  {
+   "type": "question",
+   "item": "cvf-debate-eval"
+  },
+  {
+   "type": "question",
+   "item": "cvf-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "FTP is a performance number (about an hour, usually 0.95 × 20-min power); CP is the asymptote of the power–duration curve; MLSS is the top power with steady lactate.",
+    "FTP20 matches hour power on average, but limits of agreement are wide and many riders last only 35–55 min at it.",
+    "CP and FTP correlate closely yet differ by up to about 30 W in single riders: correlation is not agreement.",
+    "MLSS usually sits about 11% below CP. Whether CP is too high or MLSS too low is debated; strict methods shrink the gap.",
+    "For training, pick one anchor, measure it the same way each time and know what it means."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cvf-define",
+   "concept": "cvf-three",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2019",
+    "borszcz2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which marker is defined by blood lactate across 30-min rides at constant power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "MLSS",
+       "correct": true,
+       "why": "Right: MLSS is the highest power where lactate rises no more than 1 mmol·L⁻¹ from minute 10 to 30."
+      },
+      {
+       "id": "b",
+       "text": "FTP",
+       "why": "FTP is a power-only field test: 95% of a 20-min effort, no blood needed."
+      },
+      {
+       "id": "c",
+       "text": "CP",
+       "why": "CP comes from power and time to exhaustion in 2–15 min efforts, no lactate needed."
+      },
+      {
+       "id": "d",
+       "text": "VO2max",
+       "why": "VO2max is the top of oxygen uptake, measured with a gas analyser in a ramp test."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-ftp-calc",
+   "concept": "cvf-three",
+   "bloom": "apply",
+   "sources": [
+    "borszcz2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider averages 300 W in a 20-min all-out test. What FTP does the usual rule give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "285 W",
+       "correct": true,
+       "why": "Right: FTP = 0.95 × 20-min mean power."
+      },
+      {
+       "id": "b",
+       "text": "300 W",
+       "why": "That is the 20-min power itself; FTP takes 5% off, since an hour is longer than 20 min."
+      },
+      {
+       "id": "c",
+       "text": "315 W",
+       "why": "This adds 5% instead of taking it off."
+      },
+      {
+       "id": "d",
+       "text": "270 W",
+       "why": "This takes off 10%; the usual rule is 5%."
+      }
+     ],
+     "solution": "0.95 × 300 = 285 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete averages 260 W in a 20-min test. What FTP does the usual rule give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "247 W",
+       "correct": true,
+       "why": "Right: FTP = 0.95 × 20-min mean power."
+      },
+      {
+       "id": "b",
+       "text": "260 W",
+       "why": "That is the 20-min power itself; FTP takes 5% off, since an hour is longer than 20 min."
+      },
+      {
+       "id": "c",
+       "text": "273 W",
+       "why": "This adds 5% instead of taking it off."
+      },
+      {
+       "id": "d",
+       "text": "234 W",
+       "why": "This takes off 10%; the usual rule is 5%."
+      }
+     ],
+     "solution": "0.95 × 260 = 247 W."
+    },
+    {
+     "id": "c",
+     "stem": "A rider averages 320 W in a 20-min test. What FTP does the usual rule give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "304 W",
+       "correct": true,
+       "why": "Right: FTP = 0.95 × 20-min mean power."
+      },
+      {
+       "id": "b",
+       "text": "320 W",
+       "why": "That is the 20-min power itself; FTP takes 5% off, since an hour is longer than 20 min."
+      },
+      {
+       "id": "c",
+       "text": "336 W",
+       "why": "This adds 5% instead of taking it off."
+      },
+      {
+       "id": "d",
+       "text": "288 W",
+       "why": "This takes off 10%; the usual rule is 5%."
+      }
+     ],
+     "solution": "0.95 × 320 = 304 W."
+    }
+   ]
+  },
+  {
+   "id": "cvf-ftp-hour",
+   "concept": "cvf-ftp-hour",
+   "bloom": "analyse",
+   "sources": [
+    "borszcz2018",
+    "sitko2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recreational rider's FTP from a 20-min test is 285 W. She tries to hold 285 W for an hour and cracks at 40 min. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Common: many riders last well under an hour at FTP",
+       "correct": true,
+       "why": "Right: median time at FTP was 35 min in recreational riders, and the mean was about 51 min even in trained men."
+      },
+      {
+       "id": "b",
+       "text": "Her 20-min test must have been done wrong",
+       "why": "A correct test still gives an FTP that many riders can't hold for 60 min."
+      },
+      {
+       "id": "c",
+       "text": "Poor fuelling is the only possible explanation",
+       "why": "Fuel rarely limits a 40-min effort; the FTP rule itself overestimates hour power for many."
+      },
+      {
+       "id": "d",
+       "text": "Her FTP must be above her VO2max",
+       "why": "FTP sits well below VO2max power; the issue is the 95% rule, not VO2max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-loa",
+   "concept": "cvf-ftp-hour",
+   "bloom": "understand",
+   "sources": [
+    "borszcz2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "FTP20 and 60-min power differed by only 1–5 W on average, but the limits of agreement ran from about −60 to +60 W. What does this mean for one rider?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The averages match, but her two numbers could be tens of watts apart",
+       "correct": true,
+       "why": "Right: limits of agreement describe single riders; wide limits mean one can't stand in for the other."
+      },
+      {
+       "id": "b",
+       "text": "The two are the same for everyone, give or take 5 W",
+       "why": "The 1–5 W is the group average; single riders scattered far more widely."
+      },
+      {
+       "id": "c",
+       "text": "FTP20 always reads 5 W too high",
+       "why": "The bias is an average, not a fixed offset for each rider."
+      },
+      {
+       "id": "d",
+       "text": "The two must be unrelated",
+       "why": "They correlated well; agreement and correlation are different questions."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-cp-ftp",
+   "concept": "cvf-ftp-cp",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "karsten2020",
+    "borszcz2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement describes CP, and not FTP or MLSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The level the power–duration curve flattens towards, from several 2–15 min efforts",
+       "correct": true,
+       "why": "Right: CP is the asymptote of the hyperbola, fitted from several severe efforts."
+      },
+      {
+       "id": "b",
+       "text": "The power a rider is meant to hold for about an hour",
+       "why": "That is the definition of FTP."
+      },
+      {
+       "id": "c",
+       "text": "95% of the mean power of one 20-min all-out test",
+       "why": "That is how FTP is usually estimated."
+      },
+      {
+       "id": "d",
+       "text": "The top power at which lactate rises ≤1 mmol·L⁻¹ over 20 min",
+       "why": "That is how MLSS is defined."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-correlation",
+   "concept": "cvf-ftp-cp",
+   "bloom": "analyse",
+   "sources": [
+    "karsten2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach reads that CP and FTP correlate at r = 0.97 and decides he can set any rider's zones from either. What is wrong with his reasoning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Correlation shows riders rank alike, not that their watts agree",
+       "correct": true,
+       "why": "Right: despite r = 0.97, single riders' CP and FTP differed by up to about 33 W."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: r = 0.97 means the two are the same number",
+       "why": "A high r allows a large, varying gap between two measures; it is not agreement."
+      },
+      {
+       "id": "c",
+       "text": "The correlation is too weak to mean anything",
+       "why": "0.97 is a very strong correlation; the problem is what it measures."
+      },
+      {
+       "id": "d",
+       "text": "Correlations can't be computed between two powers",
+       "why": "They can; it just answers a different question from agreement."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-steps",
+   "concept": "cvf-mlss",
+   "bloom": "analyse",
+   "sources": [
+    "jones2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "MLSS rides are done at 240, 270 and 300 W. Lactate passes the test at 270 W but rises 2.5 mmol·L⁻¹ from minute 10 to 30 at 300 W. What can you say about the true MLSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It lies somewhere from 270 W up to just under 300 W",
+       "correct": true,
+       "why": "Right: 270 W passed and 300 W failed, so the true limit lies between; calling it 270 W is a floor."
+      },
+      {
+       "id": "b",
+       "text": "It is exactly 270 W",
+       "why": "270 W is just the highest step tested that passed; the real limit can be higher."
+      },
+      {
+       "id": "c",
+       "text": "It is exactly 285 W, halfway between",
+       "why": "Halfway is a guess; the test only brackets the limit."
+      },
+      {
+       "id": "d",
+       "text": "It is above 300 W",
+       "why": "300 W failed the lactate test, so the limit is below it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-debate-eval",
+   "concept": "cvf-mlss",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2019",
+    "dotan2022",
+    "caen2024",
+    "galanrioja2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post says: \"CP overestimates the steady state, so MLSS is the gold standard.\" Best evaluation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Disputed: each side has evidence, and strict methods narrow the gap",
+       "correct": true,
+       "why": "Right: the step test biases MLSS low, yet CP lasts only 20–30 min; with strict methods the two come close."
+      },
+      {
+       "id": "b",
+       "text": "Settled: the meta-analysis proved MLSS is the true limit",
+       "why": "The meta-analysis showed MLSS is lower, not which one is the true limit."
+      },
+      {
+       "id": "c",
+       "text": "Settled the other way: CP comes from maths, so it can't be wrong",
+       "why": "CP is fitted to noisy efforts, and its meaning is exactly what is debated."
+      },
+      {
+       "id": "d",
+       "text": "Pointless: CP and MLSS are just two names for one number",
+       "why": "They are found differently and usually differ, which is why the debate exists."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvf-appraisal",
+   "concept": "cvf-ftp-hour",
+   "bloom": "evaluate",
+   "sources": [
+    "borszcz2018",
+    "sitko2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The study showing FTP20 lasts about 51 min tested 23 trained men. A recreational woman wants to use it to plan her hour. What most limits the finding for her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only trained men were tested, and less-trained riders last even less at FTP",
+       "correct": true,
+       "why": "Right: the sample doesn't match her, and another study found time at FTP shorter in recreational riders."
+      },
+      {
+       "id": "b",
+       "text": "23 people is too many for a lab study",
+       "why": "A bigger sample is a strength, not a limit; 23 is if anything small."
+      },
+      {
+       "id": "c",
+       "text": "Limits of agreement are not a valid way to compare tests",
+       "why": "They are the standard way to judge whether two measures can be swapped."
+      },
+      {
+       "id": "d",
+       "text": "Power meters can't measure 20-min power",
+       "why": "Power meters measure it well; the issue is who was studied."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

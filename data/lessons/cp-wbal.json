@@ -1,0 +1,826 @@
+{
+ "id": "cp-wbal",
+ "module": "t2-cp-wprime",
+ "title": "W′ balance in intervals, attacks and crits",
+ "goal": "Track W′ balance through intermittent efforts with the Skiba model, and explain why its refill rate is personal and only roughly right.",
+ "requires": [
+  "cp-calc"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "w-prime-balance",
+    "criterium"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cpw-rules",
+   "title": "Spend above CP, refill below",
+   "text": "Races and intervals don't hold one power. The CP model handles this with two rules [[c:wbal-rules]]:\n\n- **Above CP**, W′ is spent at P − CP joules each second, in a straight line.\n- **Below CP**, W′ refills: fast at first, then ever more slowly, like the exponential curves of the units module. How fast varies a lot between people.\n\nWhat is left at any moment is your [W′ balance](g:w-prime-balance). Intervals end in exhaustion when it reaches zero.\n\nSo four things set how long a session lasts: the power and length of the work bouts, and the power and length of the recoveries. Longer recoveries extend it; raising any of the other three shortens it [[c:four-factors]].",
+   "claims": [
+    {
+     "id": "wbal-rules",
+     "text": "W′ is assumed to be spent linearly above CP and refilled along a curve below CP, at rates that vary a lot between people.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "However, while the utilization of W′ may be assumed to be linear, studies indicate that the reconstitution of W′ may be curvilinear with kinetics that are highly variable between individuals.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "four-factors",
+     "text": "Tolerance in intervals depends on work power and duration and recovery power and duration: longer recoveries extend it, raising any of the other three shortens it.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "it can be shown that performance during intermittent exercise is related to four factors: the intensity and duration of the work intervals and the intensity and duration of the recovery intervals.",
+       "level": "full-text"
+      },
+      {
+       "source": "jones2017",
+       "quote": "if one of PW, DW, or PR is increased while the other variables are held constant, exercise tolerance is reduced; however, if DR is increased while the other variables are held constant, exercise tolerance is increased.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpw-four-factors"
+  },
+  {
+   "type": "question",
+   "item": "cpw-spend-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cpw-skiba",
+   "title": "Skiba's refill formula",
+   "text": "Skiba and colleagues (2012) turned the refill rule into numbers. W′ comes back exponentially, with a [time constant](g:time-constant) τ that is shorter the further below CP you recover. DCP is CP minus recovery power [[c:skiba-tau]]:\n\n**τ = 546 × e^(−0.01 × DCP) + 316** (s)\n\n| recovery power | DCP | τ |\n|---|---|---|\n| 20 W below CP | 20 W | ≈ 763 s |\n| 100 W below CP | 100 W | ≈ 517 s |\n| 250 W below CP | 250 W | ≈ 361 s |\n\nEven very easy spinning gives τ of about 6 min, and after one τ only 63% of the spent W′ is back. A later version updates the balance second by second; this is what head units and training apps show [[c:skiba-realtime]].",
+   "claims": [
+    {
+     "id": "skiba-tau",
+     "text": "In Skiba's model the W′ refill time constant gets shorter the further recovery power is below CP: τ = 546 × e^(−0.01 × DCP) + 316 s.",
+     "grade": "weak",
+     "sources": [
+      "skiba2012",
+      "jones2017",
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2012",
+       "quote": "The time constants of W' recharge were negatively correlated with the difference between sub-CP recovery power and CP.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2017",
+       "quote": "W′ was reconstituted more rapidly when PR was smaller",
+       "level": "full-text"
+      },
+      {
+       "source": "chorley2020",
+       "quote": "τW′ = 546 × e(−0.01 DCP) + 316",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "skiba-realtime",
+     "text": "A differential form of the W′ balance model updates the balance continuously and is used in software and wrist-worn devices.",
+     "grade": "moderate",
+     "sources": [
+      "chorley2020",
+      "skiba2021"
+     ],
+     "evidence": [
+      {
+       "source": "chorley2020",
+       "quote": "The Skiba2 model allows reconstitution to be calculated continuously, ultimately allowing a cyclist to view an estimation of their current W′ balance in real time",
+       "level": "full-text"
+      },
+      {
+       "source": "skiba2021",
+       "quote": "it has been adapted for popular use both in desktop computer software and on wrist-worn devices.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cpw-example",
+   "title": "How much W′ is back after 2 min?",
+   "problem": "A rider has CP 280 W. An attack spent 8 kJ of her W′. She then recovers for 2 min at 180 W. How much of the 8 kJ is back?",
+   "steps": [
+    "DCP = 280 − 180 = 100 W, so τ = 546 × e^(−1) + 316 = 546 × 0.368 + 316 ≈ 517 s.",
+    "Fraction refilled after t = 120 s: 1 − e^(−120/517) = 1 − e^(−0.232) = 1 − 0.793 = 0.207.",
+    "W′ back = 0.207 × 8 kJ ≈ 1.7 kJ. About a fifth: 6.3 kJ is still missing.",
+    "A straight-line guess (120 ÷ 517 of the 8 kJ ≈ 1.9 kJ) gives too much: the refill curve is steepest at the start and keeps flattening."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpw-tau-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpw-refill-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cpw-race",
+   "title": "Attacks, intervals and crits",
+   "text": "- **Attacks.** Each surge above CP takes a bite of W′; a rider who answers every move empties it. In Skiba's study, a racer's modelled W′ balance hit almost zero just as he dropped out [[c:wbal-race]].\n- **Intervals.** Choose work and rest so that W′ is nearly empty on the last rep, not the third.\n- **[Criteriums](g:criterium).** Every corner means a sprint out of it, with only seconds before the next. Recovering just below CP refills little (τ ≈ 763 s at 20 W below). 'Recovering' above CP refills nothing; W′ just drains more slowly [[c:no-refill-above]]. Sitting in the draft (in another rider's slipstream), well below CP between corners, is what saves W′.",
+   "claims": [
+    {
+     "id": "wbal-race",
+     "text": "Applied to a competitive cyclist's race file, the W′ balance model predicted exhaustion at the point he abandoned the race.",
+     "grade": "weak",
+     "sources": [
+      "skiba2012",
+      "chorley2020"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2012",
+       "quote": "The model accurately predicted exhaustion of the W' in a competitive cyclist during a road race.",
+       "level": "abstract"
+      },
+      {
+       "source": "chorley2020",
+       "quote": "with the competitor abandoning the race when predicted W′ bal was approximately 1.5 kJ",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "no-refill-above",
+     "text": "When recovery power stays above CP there is no net refill of W′, only slower spending.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "The W′ reconstitution time constant increased to non-physiological values (~7056 s) when the PR remained above CP, indicating no net recharge of W′ but merely a slower rate of W′ utilization in the recovery intervals compared with the work intervals.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpw-above-cp"
+  },
+  {
+   "type": "question",
+   "item": "cpw-crit-plan"
+  },
+  {
+   "type": "question",
+   "item": "cpw-interval-design"
+  },
+  {
+   "type": "concept",
+   "id": "cpw-limits",
+   "title": "How far to trust W′ balance",
+   "text": "The model is useful but rough; it has had mixed results so far [[c:wbal-mixed]].\n\n- **τ is personal.** In elite cyclists, W′ came back faster than the formula predicts (τ about 112 s shorter), so it would call them empty too soon [[c:elite-faster]].\n- **Two speeds of refill.** Recovery has a fast phase (τ about 20 s) and a slow one (about 6–7 min). One exponential misses the fast part and underrates short recoveries [[c:two-phase]].\n- **It slows with repeats.** After hard bouts, refill gets slower, so a model fitted to fresh legs can overrate recovery late in a race [[c:repeat-slower]].\n\nErrors run both ways. Read the balance as a guide for comparing efforts, not as a fuel gauge to the last joule.",
+   "claims": [
+    {
+     "id": "wbal-mixed",
+     "text": "The W′ balance model has had mixed results so far.",
+     "grade": "moderate",
+     "sources": [
+      "skiba2021"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2021",
+       "quote": "Despite the model's intuitive appeal, it has achieved mixed results thus far, in part due to a lack of clarity in its basis and calculation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "elite-faster",
+     "text": "In elite cyclists W′ recovered faster than Skiba's model predicts, with a time constant about 112 s shorter.",
+     "grade": "weak",
+     "sources": [
+      "bartram2018"
+     ],
+     "evidence": [
+      {
+       "source": "bartram2018",
+       "quote": "Comparing modified τW' values against the SKIBA 2 τW' values showed a negative bias of 112 (46) s (mean ± 95% confidence limits), suggesting that athletes recovered W' faster than predicted by SKIBA 2",
+       "level": "abstract"
+      },
+      {
+       "source": "bartram2018",
+       "quote": "The current SKIBA 2 model is not appropriate for use in elite cyclists, as it underpredicts the recovery rate of W'.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "two-phase",
+     "text": "W′ recovery follows two phases, a fast one (τ about 20 s) and a slow one (τ about 6–7 min); a single exponential underestimates short recoveries.",
+     "grade": "weak",
+     "sources": [
+      "chorley2021",
+      "caen2021"
+     ],
+     "evidence": [
+      {
+       "source": "chorley2021",
+       "quote": "W' reconstitution kinetics were best described by a bi-exponential model consisting of distinct fast and slow phases.",
+       "level": "abstract"
+      },
+      {
+       "source": "chorley2021",
+       "quote": "time constant (τ) FC = 21.5 s; τ SC = 388 s",
+       "level": "abstract"
+      },
+      {
+       "source": "caen2021",
+       "quote": "We showed that W' recovery from exhaustion follows a two-phase exponential time course that is dependent on aerobic fitness.",
+       "level": "abstract"
+      },
+      {
+       "source": "caen2021",
+       "quote": "underestimated W' recovery for all durations below 5 min",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "repeat-slower",
+     "text": "After a second exhausting bout, W′ refill was slower, through a longer slow-phase time constant.",
+     "grade": "weak",
+     "sources": [
+      "chorley2021"
+     ],
+     "evidence": [
+      {
+       "source": "chorley2021",
+       "quote": "Following the second recovery, W' reconstitution reduced by 9.1 ± 7.3%, at 180 s and 8.2 ± 9.8% at 240 s resulting in an increase in the modelled τ SC to 716 s with τ FC unchanged.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is one exponential with a group-average τ good enough to track W′ in training and racing?",
+    "sides": [
+     {
+      "position": "Yes, as a working tool: it tracked a real race and the rise in VO2, and improved versions can fix its known weak points.",
+      "sources": [
+       "skiba2012",
+       "skiba2021"
+      ]
+     },
+     {
+      "position": "No: refill has two phases, differs between people and slows with repeated efforts, so a single group τ can mislead in either direction.",
+      "sources": [
+       "chorley2021",
+       "caen2021",
+       "bartram2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cpw-elite"
+  },
+  {
+   "type": "question",
+   "item": "cpw-repeat"
+  },
+  {
+   "type": "question",
+   "item": "cpw-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "W′ is spent at P − CP above CP and refills along a curve below it; what is left is the W′ balance.",
+    "Longer recoveries extend an interval session; harder or longer efforts, or harder recoveries, shorten it.",
+    "Skiba: τ = 546 × e^(−0.01 × DCP) + 316 s, about 6 min for very easy spinning and much longer just below CP.",
+    "\"Recovering\" above CP refills nothing: in crits and bunch rides, get well below CP between efforts.",
+    "Refill is personal, two-phase and slows with repeats: use W′ balance as a guide, not a precise gauge."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cpw-four-factors",
+   "concept": "cpw-rules",
+   "bloom": "understand",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with CP 280 W repeats 1-min efforts at 400 W with 1-min recoveries at 150 W until she can't. Which single change lets her do more repeats?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Make the recoveries 90 s long",
+       "correct": true,
+       "why": "Right: a longer recovery is the one change that increases tolerance; W′ has more time to refill."
+      },
+      {
+       "id": "b",
+       "text": "Raise the recovery power to 200 W",
+       "why": "A harder recovery is closer to CP, so W′ refills more slowly."
+      },
+      {
+       "id": "c",
+       "text": "Make the efforts 70 s long",
+       "why": "Each longer effort spends more W′, so she empties it sooner."
+      },
+      {
+       "id": "d",
+       "text": "Raise the effort power to 410 W",
+       "why": "More power above CP spends W′ faster each second."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpw-spend-calc",
+   "concept": "cpw-rules",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider has W′ 22 kJ and CP 300 W. She attacks at 420 W for 40 s. What is her W′ balance at the end of the attack?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.2 kJ",
+       "correct": true,
+       "why": "Right: balance = W′ − (P − CP) × time."
+      },
+      {
+       "id": "b",
+       "text": "5.2 kJ",
+       "why": "This takes away the whole work of the attack. Only the part above CP comes out of W′."
+      },
+      {
+       "id": "c",
+       "text": "4.8 kJ",
+       "why": "That is what the attack spent, not what is left."
+      },
+      {
+       "id": "d",
+       "text": "21.9 kJ",
+       "why": "This takes away P − CP in kJ without multiplying by the time."
+      }
+     ],
+     "solution": "Spent: (420 − 300) × 40 = 120 × 40 = 4,800 J = 4.8 kJ. Balance: 22 − 4.8 = 17.2 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A rider has W′ 18 kJ and CP 250 W. He sprints at 550 W for 20 s. What is his W′ balance at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12 kJ",
+       "correct": true,
+       "why": "Right: balance = W′ − (P − CP) × time."
+      },
+      {
+       "id": "b",
+       "text": "7 kJ",
+       "why": "This takes away the whole work of the attack. Only the part above CP comes out of W′."
+      },
+      {
+       "id": "c",
+       "text": "6 kJ",
+       "why": "That is what the attack spent, not what is left."
+      },
+      {
+       "id": "d",
+       "text": "17.7 kJ",
+       "why": "This takes away P − CP in kJ without multiplying by the time."
+      }
+     ],
+     "solution": "Spent: (550 − 250) × 20 = 300 × 20 = 6,000 J = 6 kJ. Balance: 18 − 6 = 12 kJ."
+    }
+   ]
+  },
+  {
+   "id": "cpw-tau-calc",
+   "concept": "cpw-skiba",
+   "bloom": "apply",
+   "sources": [
+    "jones2017",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with CP 300 W recovers at 200 W. What W′ refill time constant does Skiba's formula give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 517 s",
+       "correct": true,
+       "why": "Right: τ = 546 × e^(−0.01 × DCP) + 316."
+      },
+      {
+       "id": "b",
+       "text": "862 s",
+       "why": "That is 546 + 316: it treats e^(−0.01 × DCP) as 1, as if recovery were at CP."
+      },
+      {
+       "id": "c",
+       "text": "316 s",
+       "why": "That is only the constant 316; the exponential part was left out."
+      },
+      {
+       "id": "d",
+       "text": "about 201 s",
+       "why": "That is only the exponential part; 316 s still has to be added."
+      }
+     ],
+     "solution": "DCP = 100 W. τ = 546 × e^(−1) + 316 = 546 × 0.368 + 316 ≈ 201 + 316 = 517 s."
+    },
+    {
+     "id": "b",
+     "stem": "A rider with CP 250 W soft-pedals at 100 W. What τ does Skiba's formula give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 438 s",
+       "correct": true,
+       "why": "Right: τ = 546 × e^(−0.01 × DCP) + 316."
+      },
+      {
+       "id": "b",
+       "text": "862 s",
+       "why": "That is 546 + 316: it treats e^(−0.01 × DCP) as 1, as if recovery were at CP."
+      },
+      {
+       "id": "c",
+       "text": "316 s",
+       "why": "That is only the constant 316; the exponential part was left out."
+      },
+      {
+       "id": "d",
+       "text": "about 122 s",
+       "why": "That is only the exponential part; 316 s still has to be added."
+      }
+     ],
+     "solution": "DCP = 150 W. τ = 546 × e^(−1.5) + 316 = 546 × 0.223 + 316 ≈ 122 + 316 = 438 s."
+    },
+    {
+     "id": "c",
+     "stem": "A rider with CP 320 W \"recovers\" in the bunch at 300 W. What τ does Skiba's formula give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 763 s",
+       "correct": true,
+       "why": "Right: τ = 546 × e^(−0.01 × DCP) + 316."
+      },
+      {
+       "id": "b",
+       "text": "862 s",
+       "why": "That is 546 + 316: it treats e^(−0.01 × DCP) as 1, as if recovery were at CP."
+      },
+      {
+       "id": "c",
+       "text": "316 s",
+       "why": "That is only the constant 316; the exponential part was left out."
+      },
+      {
+       "id": "d",
+       "text": "about 447 s",
+       "why": "That is only the exponential part; 316 s still has to be added."
+      }
+     ],
+     "solution": "DCP = 20 W. τ = 546 × e^(−0.2) + 316 = 546 × 0.819 + 316 ≈ 447 + 316 = 763 s."
+    }
+   ]
+  },
+  {
+   "id": "cpw-refill-calc",
+   "concept": "cpw-skiba",
+   "bloom": "apply",
+   "sources": [
+    "jones2017",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider has spent 10 kJ of W′. With τ = 500 s, how much is back after 2 min of recovery?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 2.1 kJ",
+       "correct": true,
+       "why": "Right: refilled = spent × (1 − e^(−t/τ))."
+      },
+      {
+       "id": "b",
+       "text": "about 7.9 kJ",
+       "why": "That is the part still missing (spent × e^(−t/τ)), not the part refilled."
+      },
+      {
+       "id": "c",
+       "text": "2.4 kJ",
+       "why": "This treats refill as a straight line (t ÷ τ × spent). The curve flattens, so the true value is lower."
+      },
+      {
+       "id": "d",
+       "text": "6.3 kJ",
+       "why": "63% is what is back after one full τ; far less time has passed."
+      }
+     ],
+     "solution": "1 − e^(−120/500) = 1 − e^(−0.24) = 1 − 0.787 = 0.213. Back: 0.213 × 10 ≈ 2.1 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A rider has spent 8 kJ of W′. With τ = 400 s, how much is back after 60 s of recovery?",
+     "options": [
+      {
+       "id": "a",
+       "text": "about 1.1 kJ",
+       "correct": true,
+       "why": "Right: refilled = spent × (1 − e^(−t/τ))."
+      },
+      {
+       "id": "b",
+       "text": "about 6.9 kJ",
+       "why": "That is the part still missing (spent × e^(−t/τ)), not the part refilled."
+      },
+      {
+       "id": "c",
+       "text": "1.2 kJ",
+       "why": "This treats refill as a straight line (t ÷ τ × spent). The curve flattens, so the true value is lower."
+      },
+      {
+       "id": "d",
+       "text": "5.0 kJ",
+       "why": "63% is what is back after one full τ; far less time has passed."
+      }
+     ],
+     "solution": "1 − e^(−60/400) = 1 − e^(−0.15) = 1 − 0.861 = 0.139. Back: 0.139 × 8 ≈ 1.1 kJ."
+    }
+   ]
+  },
+  {
+   "id": "cpw-above-cp",
+   "concept": "cpw-race",
+   "bloom": "analyse",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Between corners in a crit, a rider with CP 300 W holds 310 W \"to recover\" after each sprint. What happens to her W′ balance between corners?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It keeps falling, only more slowly than in the sprints",
+       "correct": true,
+       "why": "Right: 310 W is still above CP, so W′ is spent at 10 J each second; there is no refill."
+      },
+      {
+       "id": "b",
+       "text": "It refills slowly, since 310 W is far below sprint power",
+       "why": "Refill needs power below CP, not just below the last sprint."
+      },
+      {
+       "id": "c",
+       "text": "It refills fast, as in the steep start of the curve",
+       "why": "The fast early refill happens only below CP."
+      },
+      {
+       "id": "d",
+       "text": "It stays the same until the next sprint",
+       "why": "At 310 W she is 10 W above CP, so W′ keeps draining."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpw-crit-plan",
+   "concept": "cpw-race",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2017",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A crit racer with CP 300 W wants to have W′ left for the final sprint. Which plan best saves it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sit deep in the draft so power drops well below CP between corners",
+       "correct": true,
+       "why": "Right: the further below CP she recovers, the shorter τ and the faster W′ comes back."
+      },
+      {
+       "id": "b",
+       "text": "Ride a smooth 305 W all race; 5 W over CP costs nearly nothing",
+       "why": "5 J each second for an hour is 18 kJ, a whole W′, and there is never any refill."
+      },
+      {
+       "id": "c",
+       "text": "Recover at 290 W: just below CP refills nearly as fast as soft-pedalling",
+       "why": "At 10–20 W below CP, τ is about 760–810 s, far slower than the roughly 360 s of very easy spinning."
+      },
+      {
+       "id": "d",
+       "text": "Never go above CP out of the corners",
+       "why": "In a crit that means being dropped; the aim is to refill between efforts, not to avoid them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpw-interval-design",
+   "concept": "cpw-race",
+   "bloom": "apply",
+   "sources": [
+    "skiba2012",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete with CP 240 W and W′ 15 kJ plans 4 × 2 min at 300 W. Each rep spends 7.2 kJ. To finish the 4th rep with W′ just at zero, how much must her three recoveries put back in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13.8 kJ",
+       "correct": true,
+       "why": "Right: she needs 4 × 7.2 = 28.8 kJ but has 15 kJ, so recoveries must return 28.8 − 15 = 13.8 kJ."
+      },
+      {
+       "id": "b",
+       "text": "28.8 kJ",
+       "why": "That is the total the reps spend; it forgets the 15 kJ she starts with."
+      },
+      {
+       "id": "c",
+       "text": "7.2 kJ",
+       "why": "That is one rep's cost, not the shortfall over four reps."
+      },
+      {
+       "id": "d",
+       "text": "21.6 kJ",
+       "why": "This assumes each recovery must fully refill one rep; she only needs to cover the shortfall."
+      }
+     ],
+     "solution": "Per rep: (300 − 240) × 120 = 7,200 J. Four reps: 28.8 kJ. Start: 15 kJ. Needed from recoveries: 28.8 − 15 = 13.8 kJ, about 4.6 kJ per recovery."
+    }
+   ]
+  },
+  {
+   "id": "cpw-elite",
+   "concept": "cpw-limits",
+   "bloom": "analyse",
+   "sources": [
+    "bartram2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An elite rider's head unit shows her W′ balance at 0 kJ, yet 2 min later she wins the sprint. Most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her W′ refills faster than the default formula assumes",
+       "correct": true,
+       "why": "Right: elite cyclists recovered W′ faster than Skiba's model predicts, so it called her empty too soon."
+      },
+      {
+       "id": "b",
+       "text": "She sprinted on CP alone, with no W′",
+       "why": "A sprint is far above CP, so it must spend W′."
+      },
+      {
+       "id": "c",
+       "text": "Her CP must be lower than the unit thinks",
+       "why": "A lower CP would make her look even emptier, not fresher."
+      },
+      {
+       "id": "d",
+       "text": "Sprints use only PCr, which W′ doesn't include",
+       "why": "PCr is part of what W′ represents; any power above CP spends W′."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpw-repeat",
+   "concept": "cpw-limits",
+   "bloom": "understand",
+   "sources": [
+    "chorley2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Late in a hard race, after several exhausting efforts, how does W′ refill compare with the start of the race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is slower",
+       "correct": true,
+       "why": "Right: after repeated exhausting bouts the slow phase of refill took longer."
+      },
+      {
+       "id": "b",
+       "text": "It is faster, because the rider is warmed up",
+       "why": "Warming up helps early efforts, but refill after repeated exhausting bouts slowed."
+      },
+      {
+       "id": "c",
+       "text": "It is the same, since τ depends only on recovery power",
+       "why": "In Skiba's formula it does, but measured refill slowed with repeats."
+      },
+      {
+       "id": "d",
+       "text": "It stops altogether",
+       "why": "Refill slowed by about 8–9% at 3–4 min, not to zero."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpw-appraisal",
+   "concept": "cpw-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "skiba2012",
+    "chorley2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Skiba's τ formula came from 7 recreationally active men doing 60-s efforts with 30-s recoveries on a lab ergometer. What most limits using it for an elite crit racer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Seven non-elite men and one interval pattern: elite crit racing differs",
+       "correct": true,
+       "why": "Right: τ varies between people and protocols, and elite riders were shown to refill faster."
+      },
+      {
+       "id": "b",
+       "text": "Lab ergometers measure power wrongly, so the numbers are invalid",
+       "why": "Lab ergometers measure power well; the issue is who was tested and how."
+      },
+      {
+       "id": "c",
+       "text": "It had no placebo group, so the formula can't be trusted",
+       "why": "This was a modelling study; a placebo group would not answer its question."
+      },
+      {
+       "id": "d",
+       "text": "It was published in 2012, so it must be out of date",
+       "why": "Age alone doesn't make a study wrong; what limits it is the sample and the protocol."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

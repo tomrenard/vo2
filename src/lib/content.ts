@@ -32,9 +32,13 @@ export const Source = z.object({
     "umbrella-review",
     "meta-analysis",
     "rct",
+    /** A controlled trial without random allocation. */
+    "non-randomised-trial",
     "crossover",
     "cohort",
     "cross-sectional",
+    /** One athlete (or a handful) described in detail. */
+    "case-study",
     /** Test–retest: how much a measure varies when nothing changed. */
     "reliability",
     "mechanistic",
@@ -48,6 +52,8 @@ export const Source = z.object({
   /** Set only when the declarations show industry funding or ties. */
   industryFunded: z.literal(true).optional(),
   url: z.string().url().optional(),
+  /** A correction notice was read: what it changed and why our use still stands. */
+  correctionChecked: z.string().optional(),
 });
 export type Source = z.infer<typeof Source>;
 

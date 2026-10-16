@@ -5,16 +5,30 @@ const words = (text: string) =>
     text
       .toLowerCase()
       .normalize("NFD")
-      .replace(/<[^>]+>|[^a-z0-9 ]/g, " ")
+      .replace(/[^a-z0-9 ]/g, " ")
       .split(/\s+/)
       .filter((w) => w.length > 2),
   );
 
-/** Share of our title's words found in Crossref's (case, accents, punctuation ignored). */
+/**
+ * Crossref's title with its markup removed, read two ways: a tag sitting inside a word
+ * (V<sub>2</sub>, often pretty-printed on its own line) joins up, while a tag between words
+ * (Five <scp>CPET</scp> Systems) is a gap. Text alone can't tell which, so both are tried.
+ */
+const readings = (theirs: string) => [
+  theirs.replace(/\s*<[^>]+>\s*/g, (tag) => (/\n/.test(tag) ? "" : tag)).replace(/<[^>]+>/g, ""),
+  theirs.replace(/<[^>]+>/g, " "),
+];
+
+/** Share of our title's words found in Crossref's (case, accents, punctuation, markup ignored). */
 export function titleMatch(ours: string, theirs: string) {
   const a = words(ours);
-  const b = words(theirs);
-  return [...a].filter((w) => b.has(w)).length / Math.max(a.size, 1);
+  return Math.max(
+    ...readings(theirs).map((reading) => {
+      const b = words(reading);
+      return [...a].filter((w) => b.has(w)).length / Math.max(a.size, 1);
+    }),
+  );
 }
 
 /** Lowercase letters only; accents dropped, and letters NFD can't split spelled out (ø → o). */

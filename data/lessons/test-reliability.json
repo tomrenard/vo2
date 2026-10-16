@@ -1,0 +1,807 @@
+{
+ "id": "test-reliability",
+ "module": "t2-testing",
+ "title": "Is the change real? Test noise in practice",
+ "goal": "Use the typical errors of common tests and the smallest worthwhile change to decide whether an athlete's result really changed, and plan testing so that real change can be seen.",
+ "requires": [
+  "test-field"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "icc"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "rel-table",
+   "title": "How noisy is each test?",
+   "text": "*Noise, worthwhile changes and non-responders* gave the tools; here are the [typical errors](g:typical-error) of this module's tests:\n\n| test | typical error (CV) |\n|---|---|\n| ramp peak power or speed | ~0.9% [[c:ppo-cv]] |\n| 20-min TT ([FTP](g:ftp)) | 1.3–2.9% [[c:ftp-cv]] |\n| lactate-threshold power | ~1.5% pooled; 3.4–3.7% in one cyclist study, Dmax 10.3% [[c:lt-cv]] |\n| field CP from 3 efforts | 2.4–6.5% (last lesson) |\n| [VO2max](g:vo2max) | ~5.6% (evidence module) |\n\nPower worked out from gas was 1.4–1.6 times noisier than ergometer power [[c:resp-noisier]].\n\nWhy is Dmax so noisy? A likely reason: its line runs to the last point of the test, so it moves with how hard the athlete pushes the final stage.",
+   "claims": [
+    {
+     "id": "ppo-cv",
+     "text": "Peak power in an incremental test on a treadmill or cycle ergometer has a typical error of about 0.9%.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2001"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2001",
+       "quote": "peak power in an incremental test on a treadmill or cycle ergometer (approximately 0.9%)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ftp-cv",
+     "text": "A 20-min time trial for FTP repeated with a CV of 2.9% in 25 trained cyclists; in 8 trained men, its typical error was 4.6 W at about 343 W (about 1.3%). Pooled across studies, mean power in tests of 1 min to 3 h has a typical error of 0.9–2.0%.",
+     "grade": "moderate",
+     "sources": [
+      "borszcz2020",
+      "macinnis2019",
+      "hopkins2001"
+     ],
+     "evidence": [
+      {
+       "source": "borszcz2020",
+       "quote": "The results show that the 20-min time-trial was reliable (CV=2.9%, ICC=0.97), despite a less reliable warm-up (CV=5.5%, ICC=0.84).",
+       "level": "abstract"
+      },
+      {
+       "source": "macinnis2019",
+       "quote": "20-min TTs (342 [36] W vs 344 [33] W, P = .41; TEM = 4.6 W; ICC = .99)",
+       "level": "abstract"
+      },
+      {
+       "source": "hopkins2001",
+       "quote": "equivalent mean power in a constant-power test lasting 1 minute to 3 hours on a treadmill or cycle ergometer (0.9 to 2.0%)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lt-cv",
+     "text": "Pooled across studies, lactate-threshold power has a typical error of about 1.5%; in 14 trained male cyclists it repeated with a CV of 3.4–3.7%, except for the Dmax method (CV 10.3%).",
+     "grade": "weak",
+     "sources": [
+      "hopkins2001",
+      "pallares2016"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2001",
+       "quote": "lactate-threshold power (approximately 1.5%)",
+       "level": "abstract"
+      },
+      {
+       "source": "pallares2016",
+       "quote": "Lactate threshold tests had high reliability (CV = 3.4-3.7%; r = 0.85-0.89; Bias = -2.1-3.0) except for DMAX method (CV = 10.3%; r = 0.57; Bias = 15.4).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "resp-noisier",
+     "text": "Respiratory-based measures of power had CVs 1.4–1.6 times larger than ergometer-based measures.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2001"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2001",
+       "quote": "respiratory- versus ergometer-based measures of power (1.4 to 1.6 x)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rel-dmax-why"
+  },
+  {
+   "type": "question",
+   "item": "rel-pick-test"
+  },
+  {
+   "type": "concept",
+   "id": "rel-icc",
+   "title": "A high ICC, and still noisy",
+   "text": "Many reliability papers report an [ICC](g:icc), a retest [correlation](g:correlation). The 20-min FTP test above had an ICC of **0.97** and a CV of **2.9%** [[c:ftp-icc]]. The ICC looks almost perfect; the CV says a 280 W rider can swing by about 8 W with no real change.\n\nThe ICC depends on how different the people in the study are. A group mixing novices and pros gives a high ICC even with a noisy test, because the gaps between people dwarf the noise [[c:icc-spread]].\n\nSo the ICC tells you whether a test ranks a group; the typical error tells you whether one athlete changed.",
+   "claims": [
+    {
+     "id": "ftp-icc",
+     "text": "The 20-min FTP time trial had an ICC of 0.97 with a CV of 2.9% in 25 trained cyclists.",
+     "grade": "weak",
+     "sources": [
+      "borszcz2020"
+     ],
+     "evidence": [
+      {
+       "source": "borszcz2020",
+       "quote": "The results show that the 20-min time-trial was reliable (CV=2.9%, ICC=0.97)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "icc-spread",
+     "text": "Retest correlation is hard to interpret because it is sensitive to how heterogeneous the sample is; the typical error is the better standard measure of reliability.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2000"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2000",
+       "quote": "Retest correlation is difficult to interpret, mainly because its value is sensitive to the heterogeneity of the sample of participants.",
+       "level": "abstract"
+      },
+      {
+       "source": "hopkins2000",
+       "quote": "A wider understanding of reliability and adoption of the typical error as the standard measure of reliability would improve the assessment of tests and equipment in our disciplines.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rel-icc-vs-cv",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rel-icc-spread"
+  },
+  {
+   "type": "concept",
+   "id": "rel-decide",
+   "title": "Noise band first, then the SWC",
+   "text": "For one athlete, start with the 95% noise band from the evidence module: about **±2.8 × typical error** for a single retest. A change outside it is probably real.\n\nThen ask whether it matters: is it bigger than the [smallest worthwhile change](g:smallest-worthwhile-change)? For an elite athlete's race result, the SWC is about 0.3 of race-to-race variation [[c:swc-03]]. For team-sport tests, with no direct link to a result, the default is **0.2 × the between-athlete [SD](g:standard-deviation)**, a small [Cohen's d](g:cohens-d) [[c:swc-02]]. This course borrows that default for lab markers such as threshold power: an assumption, not a tested rule.\n\nIn most performance tests the noise is bigger than the SWC [[c:noise-bigger]], so one retest rarely settles a small change.",
+   "claims": [
+    {
+     "id": "swc-03",
+     "text": "For elite athletes competing as individuals, the smallest worthwhile enhancement is about 0.3 of an athlete's typical competition-to-competition variation (~0.3–1% of power output, depending on the sport).",
+     "grade": "moderate",
+     "sources": [
+      "hopkins2004"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2004",
+       "quote": "the required change in performance is 0.3 of the typical variation in an athlete's performance from competition to competition, or ~0.3-1% when expressed as a change in power output, depending on the sport.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "swc-02",
+     "text": "Where test performance has no direct relationship with competition performance, a default smallest worthwhile change is 0.2 of the between-athlete SD (Cohen effect size 0.20).",
+     "grade": "moderate",
+     "sources": [
+      "hopkins2004"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2004",
+       "quote": "In team sports, where there is no direct relationship between team and test performance, an appropriate default for the smallest change in test performance is one-fifth of the between-athlete standard deviation (a standardized or Cohen effect size of 0.20).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "noise-bigger",
+     "text": "The noise in most performance tests is greater than the smallest worthwhile change, which makes assessing changes problematic.",
+     "grade": "moderate",
+     "sources": [
+      "hopkins2004"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2004",
+       "quote": "The noise in most performance tests is greater than the smallest worthwhile difference, so assessments of changes in performance can be problematic.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rel-decide-example",
+   "title": "Is a threshold gain real, and does it matter?",
+   "problem": "A cyclist's lactate-threshold power rises from 250 W to 265 W (+6%). The test's typical error is 3.5%. In her squad, the between-athlete SD of threshold power is 30 W.",
+   "steps": [
+    "Noise band for one retest: 2.8 × 3.5% ≈ ±9.8%. A 6% change sits inside it: this pair of tests can't confirm it.",
+    "SWC, using the 0.2 × SD default borrowed from team sports: 0.2 × 30 W = 6 W. The change, 15 W, is bigger than the SWC: if it is real, it matters.",
+    "Verdict: worth having, not yet proven. Retest, or average two tests (next card)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rel-band-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rel-band-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "rel-swc-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rel-design",
+   "title": "Making change visible",
+   "text": "When the noise beats the SWC, change the testing, not the verdict:\n\n- **Average repeats.** The typical error of the mean of n tests is TE ÷ √n: two 20-min tests cut 2.9% to 2.1%.\n- **Practise first.** A familiarisation trial before the baseline (evidence module).\n- **Standardise.** Everything in this module: protocol, device, [averaging interval](g:averaging-interval), diet, weather.\n- **Know where the noise lives.** In repeated cart tests of trained cyclists, about 60–70% of the VO₂ variability came from the athlete and 30–40% from the equipment, in one small study [[c:bio-tech]]. Better kit helps, but much of the noise is you.\n\nPerformance and physiological measures were also far steadier than hormonal ones: critical differences of about 12% against 60% [[c:bagger]].",
+   "claims": [
+    {
+     "id": "bio-tech",
+     "text": "In repeated human testing, biological variability accounted for about 60–70% of VO₂ variability and technological variability for about 30–40%.",
+     "grade": "weak",
+     "sources": [
+      "vanhooren2026b"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2026b",
+       "quote": "Biological and technological V̇O2 and V̇CO2 variability, respectively, accounted for ~60%-70% and 40%-30% of the variability in repeated human testing.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bagger",
+     "text": "In 15 moderately trained male runners, performance and physiological variables had the lowest critical difference (11.9%), metabolic and hormonal variables the highest (59.9%).",
+     "grade": "weak",
+     "sources": [
+      "bagger2003"
+     ],
+     "evidence": [
+      {
+       "source": "bagger2003",
+       "quote": "In the performance and physiological variables, 78.9 % of the variance was due to variation between subjects and they had the lowest critical difference (11.9 %). In contrast, the metabolic and hormonal variables had the highest critical difference (59.9 %)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rel-avg-example",
+   "title": "Three time trials instead of one",
+   "problem": "A runner's 5 km time trial has a typical error of 1.5%. How noisy is the average of 3 time trials, and what noise band does a change between two such averages carry?",
+   "steps": [
+    "Typical error of a mean of 3 = 1.5% ÷ √3 = 1.5 ÷ 1.73 = 0.87%.",
+    "Noise band for a change between two averages = ±2.8 × 0.87% ≈ ±2.4%.",
+    "For single time trials it would be ±2.8 × 1.5% = ±4.2%. Three tests each time cut the band by about 40% (÷ √3)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rel-avg-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rel-bio-tech"
+  },
+  {
+   "type": "question",
+   "item": "rel-appraise"
+  },
+  {
+   "type": "question",
+   "item": "rel-band-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Typical errors differ a lot: ramp peak power ~0.9%, 20-min TT 1.3–2.9%, lactate-threshold power ~1.5% pooled to 3.7% (Dmax 10%), field CP 2.4–6.5%, VO2max ~5.6%.",
+    "A high ICC can hide a noisy test: it rises with the spread between people. For one athlete, use the typical error.",
+    "Decide in two steps: is the change outside ±2.8 × typical error, and is it bigger than the SWC (here 0.2 × between-athlete SD, a default borrowed from team sports)?",
+    "Averaging n tests divides the typical error by √n; practice trials and strict standardisation cut noise further.",
+    "In one small study most VO₂ test noise came from the athlete, not the equipment, so even a perfect cart can't make one retest decisive."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "rel-dmax-why",
+   "concept": "rel-table",
+   "bloom": "analyse",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In trained cyclists, Dmax threshold power repeated far worse (CV 10.3%) than other lactate thresholds (about 3.5%). Most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its line ends at the last point, set by how hard the athlete pushes",
+       "correct": true,
+       "why": "Right: Dmax uses the line from the first to the last point, so a stronger or weaker final stage moves the threshold."
+      },
+      {
+       "id": "b",
+       "text": "It needs far more blood samples than other methods",
+       "why": "Dmax uses the same samples as the other methods; it just reads them differently."
+      },
+      {
+       "id": "c",
+       "text": "It uses a fixed 4 mmol·L⁻¹ value for everyone",
+       "why": "That is OBLA; Dmax uses the shape of the curve, not a fixed value."
+      },
+      {
+       "id": "d",
+       "text": "It can only be measured with a lab analyser",
+       "why": "Any analyser works; the noise comes from the method's dependence on the end of the test."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rel-pick-test",
+   "concept": "rel-table",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins2001",
+    "borszcz2020",
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You want to detect a 3% gain in a trained cyclist from a single retest. Which test gives you a chance? (Noise band ≈ ±2.8 × typical error.)",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ramp peak power, same protocol",
+       "correct": true,
+       "why": "Right: 2.8 × 0.9% ≈ ±2.5%, so a 3% change can stand out."
+      },
+      {
+       "id": "b",
+       "text": "A 20-min FTP test",
+       "why": "With a 2.9% typical error, the band is about ±8%: a 3% gain hides inside it."
+      },
+      {
+       "id": "c",
+       "text": "Lactate-threshold power",
+       "why": "With about 3.5% typical error, the band is about ±10%."
+      },
+      {
+       "id": "d",
+       "text": "A VO2max test",
+       "why": "With about 5.6% typical error, the band is about ±16%."
+      }
+     ],
+     "solution": "Noise band = 2.8 × typical error: peak power 2.8 × 0.9 ≈ 2.5%; FTP 2.8 × 2.9 ≈ 8.1%; lactate threshold 2.8 × 3.5 ≈ 9.8%; VO2max 2.8 × 5.6 ≈ 16%. Only peak power's band is smaller than 3%."
+    }
+   ]
+  },
+  {
+   "id": "rel-icc-vs-cv",
+   "concept": "rel-icc",
+   "bloom": "analyse",
+   "sources": [
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Test A has an ICC of 0.98 and a CV of 4%. Test B has an ICC of 0.90 and a CV of 1.5%. Which is better for tracking one triathlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Test B, because its typical error is smaller",
+       "correct": true,
+       "why": "Right: for one athlete, the noise that matters is the typical error, and B's is less than half of A's."
+      },
+      {
+       "id": "b",
+       "text": "Test A, because its ICC is higher",
+       "why": "A higher ICC can come from a more varied study group, not a less noisy test."
+      },
+      {
+       "id": "c",
+       "text": "Either: both have an ICC above 0.9",
+       "why": "An ICC above 0.9 says nothing about whether a test can track one athlete's small changes."
+      },
+      {
+       "id": "d",
+       "text": "Neither: only an ICC of 1.0 is good enough",
+       "why": "No real test reaches 1.0; the question is whether the typical error is small enough."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two running tests: X has an ICC of 0.99 and a CV of 3%; Y has an ICC of 0.92 and a CV of 1%. Which is better for spotting a 2% change in one runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Y, because its typical error is smaller",
+       "correct": true,
+       "why": "Right: Y's noise band is about ±2.8%, X's about ±8.4%; only Y comes close to a 2% change."
+      },
+      {
+       "id": "b",
+       "text": "X, because its ICC is higher",
+       "why": "A higher ICC can come from a more varied study group, not a less noisy test."
+      },
+      {
+       "id": "c",
+       "text": "Either: both have an ICC above 0.9",
+       "why": "An ICC above 0.9 says nothing about whether a test can track one runner's small changes."
+      },
+      {
+       "id": "d",
+       "text": "Neither: only lab tests can spot 2%",
+       "why": "What matters is a test's typical error, not where it is run."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rel-icc-spread",
+   "concept": "rel-icc",
+   "bloom": "understand",
+   "sources": [
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of club riders and professionals together reports an ICC of 0.99 for a new test. Why might that flatter the test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The big gaps between riders inflate the ICC",
+       "correct": true,
+       "why": "Right: the ICC rises with how different the people are, so a mixed group makes even a noisy test look reliable."
+      },
+      {
+       "id": "b",
+       "text": "Professionals make every test more accurate",
+       "why": "Athletes are less noisy than non-athletes, but that isn't why a mixed group inflates the ICC."
+      },
+      {
+       "id": "c",
+       "text": "An ICC above 0.95 is always a statistical error",
+       "why": "High ICCs are common and can be correct; the issue is what they measure."
+      },
+      {
+       "id": "d",
+       "text": "The ICC measures the average gain, not the noise",
+       "why": "The ICC is a retest correlation, not a measure of change; it isn't about gains at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rel-band-calc",
+   "concept": "rel-decide",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2000",
+    "borszcz2020",
+    "hopkins2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's 20-min test (typical error 2.9%) goes from 270 to 290 W (+7.4%). Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't confirm it: the noise band is about ±8.1%",
+       "correct": true,
+       "why": "Right: 2.8 × 2.9% ≈ 8.1%, and 7.4% sits just inside."
+      },
+      {
+       "id": "b",
+       "text": "Real: 7.4% is bigger than the 2.9% typical error",
+       "why": "This compares the change with one test's noise; a change between two tests carries √2 more, and a 95% band × 1.96."
+      },
+      {
+       "id": "c",
+       "text": "Real: 7.4% beats the 4.1% noise on a change",
+       "why": "√2 × 2.9% = 4.1% is one SD of the change; the 95% band also needs × 1.96."
+      },
+      {
+       "id": "d",
+       "text": "Can't confirm it: any change under 10% is noise",
+       "why": "There's no fixed cut-off: the band depends on the test's typical error."
+      }
+     ],
+     "solution": "Noise band = 2.8 × typical error = 2.8 × 2.9% ≈ ±8.1% (that is 1.96 × √2 × 2.9%). +7.4% is inside it, so one retest can't confirm the gain."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's treadmill ramp peak speed (typical error 0.9%) rises by 4% with the same protocol. Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Probably real: outside the ±2.5% noise band",
+       "correct": true,
+       "why": "Right: 2.8 × 0.9% ≈ 2.5%, and 4% is outside it."
+      },
+      {
+       "id": "b",
+       "text": "Can't confirm it: inside the ±8% noise band",
+       "why": "That band belongs to a test with a 2.9% typical error, such as the 20-min test, not to ramp peak speed."
+      },
+      {
+       "id": "c",
+       "text": "Can't confirm it: inside the ±14% noise band",
+       "why": "That band belongs to a test with a 5% typical error, close to VO2max's, not to peak speed."
+      },
+      {
+       "id": "d",
+       "text": "Can't confirm it: one retest can never show change",
+       "why": "One retest can show a change when it is clearly bigger than the noise, as here."
+      }
+     ],
+     "solution": "Noise band = 2.8 × 0.9% ≈ ±2.5%. A 4% rise is outside it, so it is probably real."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2max (typical error 5%) goes from 4.0 to 4.3 L·min⁻¹ (+7.5%). Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't confirm it: the noise band is about ±14%",
+       "correct": true,
+       "why": "Right: 2.8 × 5% = 14%, and 7.5% is well inside."
+      },
+      {
+       "id": "b",
+       "text": "Real: 7.5% is bigger than the 5% typical error",
+       "why": "This compares the change with one test's noise; a change between two tests carries √2 more, and a 95% band × 1.96."
+      },
+      {
+       "id": "c",
+       "text": "Real: 7.5% beats the 7.1% noise on a change",
+       "why": "√2 × 5% = 7.1% is one SD of the change; the 95% band also needs × 1.96."
+      },
+      {
+       "id": "d",
+       "text": "Real: a lab cart has almost no noise",
+       "why": "VO2max varies about 5–6% between tests, mostly from the athlete, not the cart."
+      }
+     ],
+     "solution": "Noise band = 2.8 × 5% = ±14%. +7.5% is inside it, so this pair of tests can't confirm the gain."
+    }
+   ]
+  },
+  {
+   "id": "rel-swc-calc",
+   "concept": "rel-decide",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a squad of runners, threshold speed has a between-athlete SD of 1.0 km·h⁻¹. Using the 0.2 × SD default, what is the smallest worthwhile change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.2 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 0.2 × 1.0 = 0.2 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.3 km·h⁻¹",
+       "why": "0.3 is the factor for race-to-race variation, applied here to the between-athlete SD by mistake."
+      },
+      {
+       "id": "c",
+       "text": "0.5 km·h⁻¹",
+       "why": "0.5 SD is Cohen's 'medium' effect, not the smallest worthwhile one."
+      },
+      {
+       "id": "d",
+       "text": "1.0 km·h⁻¹",
+       "why": "That is the SD itself, five times the default SWC."
+      }
+     ],
+     "solution": "SWC = 0.2 × between-athlete SD = 0.2 × 1.0 km·h⁻¹ = 0.2 km·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "In a group of cyclists, VO2max has a between-athlete SD of 6 mL·kg⁻¹·min⁻¹. Using the 0.2 × SD default, what is the smallest worthwhile change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.2 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.2 × 6 = 1.2 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.8 mL·kg⁻¹·min⁻¹",
+       "why": "This uses 0.3, the factor for race-to-race variation, on the between-athlete SD."
+      },
+      {
+       "id": "c",
+       "text": "3.0 mL·kg⁻¹·min⁻¹",
+       "why": "0.5 SD is Cohen's 'medium' effect, not the smallest worthwhile one."
+      },
+      {
+       "id": "d",
+       "text": "6.0 mL·kg⁻¹·min⁻¹",
+       "why": "That is the SD itself, five times the default SWC."
+      }
+     ],
+     "solution": "SWC = 0.2 × between-athlete SD = 0.2 × 6 = 1.2 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "rel-avg-calc",
+   "concept": "rel-design",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's 20-min test has a typical error of 2.9%. What is the typical error of the average of two such tests?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.1%",
+       "correct": true,
+       "why": "Right: 2.9 ÷ √2 = 2.9 ÷ 1.41 ≈ 2.1%."
+      },
+      {
+       "id": "b",
+       "text": "About 1.45%",
+       "why": "This divides by n (2) instead of √n: averaging helps, but less than that."
+      },
+      {
+       "id": "c",
+       "text": "About 4.1%",
+       "why": "This multiplies by √2, which is the noise on a change between two tests, not on their average."
+      },
+      {
+       "id": "d",
+       "text": "2.9%, unchanged",
+       "why": "Averaging cancels some of the random noise, so the mean is less noisy than one test."
+      }
+     ],
+     "solution": "Typical error of a mean of n tests = TE ÷ √n = 2.9% ÷ √2 = 2.9 ÷ 1.41 ≈ 2.1%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO2max test has a typical error of 5%. What is the typical error of the average of four tests?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.5%",
+       "correct": true,
+       "why": "Right: 5 ÷ √4 = 5 ÷ 2 = 2.5%."
+      },
+      {
+       "id": "b",
+       "text": "1.25%",
+       "why": "This divides by n (4) instead of √n (2)."
+      },
+      {
+       "id": "c",
+       "text": "10%",
+       "why": "This multiplies by √4 instead of dividing."
+      },
+      {
+       "id": "d",
+       "text": "5%, unchanged",
+       "why": "Averaging cancels some of the random noise, so the mean is less noisy than one test."
+      }
+     ],
+     "solution": "Typical error of a mean of n tests = TE ÷ √n = 5% ÷ √4 = 5% ÷ 2 = 2.5%."
+    }
+   ]
+  },
+  {
+   "id": "rel-bio-tech",
+   "concept": "rel-design",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "vanhooren2026b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When trained cyclists repeat a steady-ride VO₂ test on a lab cart, where does most of the variation between days come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The athlete's own day-to-day variation",
+       "correct": true,
+       "why": "Right: about 60–70% of the VO₂ variability was biological, 30–40% technological."
+      },
+      {
+       "id": "b",
+       "text": "The cart's sensors and analysers",
+       "why": "The equipment adds about 30–40%: real, but the smaller share."
+      },
+      {
+       "id": "c",
+       "text": "Errors in typing up the results",
+       "why": "Transcription errors aren't the source studied; the split was between body and kit."
+      },
+      {
+       "id": "d",
+       "text": "None: VO₂ is the same every day",
+       "why": "Repeated tests always vary; the question is how much and why."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rel-appraise",
+   "concept": "rel-design",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins2000",
+    "currell2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study reports that a supplement raised VO2max by 3% in 10 cyclists, from one test before and one after, with no control group, on a test with a 5% typical error. What most limits it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 3% change against 5% noise, and no control for learning or chance",
+       "correct": true,
+       "why": "Right: a 3% mean change is small for a 5% test with 10 people, and without a control group a learning effect or regression to the mean could produce it."
+      },
+      {
+       "id": "b",
+       "text": "VO2max should have been reported in mL·kg⁻¹·min⁻¹",
+       "why": "Units don't change whether the effect is real; the design does."
+      },
+      {
+       "id": "c",
+       "text": "Nothing, as long as the result reached p < 0.05",
+       "why": "A p-value doesn't remove the need for a control group or for familiarisation."
+      },
+      {
+       "id": "d",
+       "text": "It tested cyclists, so it says nothing about runners",
+       "why": "The sport limits who the result applies to, but the bigger problem is the design."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

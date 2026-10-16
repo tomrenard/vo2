@@ -1,0 +1,728 @@
+{
+ "id": "pace-racing",
+ "module": "t2-pacing",
+ "title": "Pacing in real races",
+ "goal": "Apply pacing evidence to the marathon, the cycling time trial, triathlon and ultras, and judge what race data can and can't show.",
+ "requires": [
+  "pace-physiology"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "split-time",
+    "hitting-the-wall",
+    "maximal-aerobic-power",
+    "drafting"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pra-marathon",
+   "title": "Marathons: most runners slow down",
+   "text": "Big race data show how amateurs pace. Across 14 US marathons and 91,929 finishes, the second half was on average 15.6% slower than the first for men and 11.7% for women [[c:deaner-slow]]. Women's odds of keeping their pace (slowing less than 10%) were 1.46 times men's. Slower finishers slowed more, and more racing experience went with less slowing.\n\nTo measure your own pacing, compare the two halves' [split times](g:split-time):\n\n**pace change (%) = (second-half time − first-half time) ÷ first-half time × 100**\n\nA positive number means you slowed (a [positive](g:positive-pacing) split); a negative one means you sped up.",
+   "claims": [
+    {
+     "id": "deaner-slow",
+     "text": "In 91,929 US marathon performances, second-half pace slowed by 15.6% in men and 11.7% in women; women were more likely to maintain pace.",
+     "grade": "weak",
+     "sources": [
+      "deaner2015"
+     ],
+     "evidence": [
+      {
+       "source": "deaner2015",
+       "quote": "The mean change in pace was 15.6% and 11.7% for men and women, respectively (P < 0.0001).",
+       "level": "abstract"
+      },
+      {
+       "source": "deaner2015",
+       "quote": "The odds for women were 1.46 (95% confidence interval, 1.41-1.50; P < 0.0001) times higher than men to maintain the pace",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pra-split-example",
+   "title": "How much did she slow?",
+   "problem": "A runner passes halfway in 1:45:00 and finishes in 3:45:00. What is her pace change?",
+   "steps": [
+    "Times in minutes: halfway 105 min, finish 225 min.",
+    "Second-half time = 225 − 105 = 120 min.",
+    "Pace change = (120 − 105) ÷ 105 × 100 = 14.3%.",
+    "Positive: she slowed by 14.3%, between the average for women and for men in the big US data set."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pra-split-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pra-who-slows"
+  },
+  {
+   "type": "concept",
+   "id": "pra-wall",
+   "title": "Hitting the wall",
+   "text": "[Hitting the wall](g:hitting-the-wall) is a large, lasting slowdown late in a marathon, typically after about 32 km (20 miles), usually because the body's energy stores run low [[c:wall-def]]. In more than 4 million race records, 28% of men and 17% of women hit it, and it was more common in the 3 years either side of a runner's personal best [[c:wall-rate]].\n\nPace and fuel are linked: running faster burns [glycogen](g:glycogen) faster, and muscles hold only about 400 g (*Fatigue in long efforts*). So the two defences are a start no faster than goal pace and carbohydrate taken during the race (the fueling module covers how much).",
+   "claims": [
+    {
+     "id": "wall-def",
+     "text": "Hitting the wall is a significant late-race slowdown in the marathon, typically after 20 miles and usually from depleted energy stores.",
+     "grade": "weak",
+     "sources": [
+      "smyth2021"
+     ],
+     "evidence": [
+      {
+       "source": "smyth2021",
+       "quote": "The phenomenon known as hitting the wall (HTW) refers to the iconic hazard of the marathon distance, in which runners experience a significant slowing of pace late in the race, typically after the 20-mile mark, and usually because of a depletion of the body's energy stores.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wall-rate",
+     "text": "In over 4 million records, 28% of male and 17% of female recreational marathoners hit the wall; slowdowns were more frequent around a personal best.",
+     "grade": "weak",
+     "sources": [
+      "smyth2021"
+     ],
+     "evidence": [
+      {
+       "source": "smyth2021",
+       "quote": "We find male runners more likely to slow significantly (hit the wall) than female runners; 28% of male runners hit the wall compared with 17% of female runners",
+       "level": "abstract"
+      },
+      {
+       "source": "smyth2021",
+       "quote": "Such slowdowns are more frequent in the 3 years immediately before and after a recent personal-best (PB) time",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pra-wall-case"
+  },
+  {
+   "type": "question",
+   "item": "pra-split-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pra-tt",
+   "title": "The cycling time trial",
+   "text": "On a flat course in steady conditions, a time trial longer than about 10 min is best ridden at [even](g:even-pacing) power, yet even experienced riders tend to start too hard [[c:tt-start]]. With hills or changing wind, vary power with the course: harder uphill and into the wind (*Pacing by physiology*).\n\nPace by power, not by feel or heart rate. Planned changes of about ±5% are too small for RPE or heart rate to track reliably [[c:tt-power]], and heart rate also creeps up over a long ride ([cardiovascular drift](g:cardiovascular-drift)).\n\nFor a flat 40 km: hold target power from the start even though it feels easy, and spend what's left in the last few kilometres.",
+   "claims": [
+    {
+     "id": "tt-start",
+     "text": "Even experienced cyclists tend to choose too high a power at the start of a longer time trial.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2007a"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2007a",
+       "quote": "It seems that even experienced cyclists naturally select a supraoptimal work rate at the start of a longer TT.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tt-power",
+     "text": "Variable pacing is best monitored with power meters, because heart rate and perceived effort are insensitive to small changes in power.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2000"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2000",
+       "quote": "This strategy would be best monitored with 'power-measuring devices' rather than heart rate or subjective feelings as the sensitivity of these variables to small but meaningful changes in power during a race is low.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pra-tt-gauge"
+  },
+  {
+   "type": "question",
+   "item": "pra-tt-plan"
+  },
+  {
+   "type": "concept",
+   "id": "pra-tri",
+   "title": "Triathlon: ride for the run",
+   "text": "The bike leg sets up the run. 10 triathletes ran 5 km faster after a 20 km ride at constant power (1118 s) than after rides of the same average at self-chosen (1134 s) or varying power (1168 s) [[c:bernard-even]]. 12 triathletes ran 9.3 km 42 s slower after an hour of highly variable cycling (40–140% of [maximal aerobic power](g:maximal-aerobic-power)) than after steady cycling at the same average [[c:etx-var]].\n\nElite draft-legal races differ. [Drafting](g:drafting) saves energy on the bike for the run [[c:draft-save]], and power swings with the pack: in a World Cup race, 17% of the bike leg was above maximal aerobic power [[c:bernard-wc]].",
+   "claims": [
+    {
+     "id": "bernard-even",
+     "text": "A 5 km run was faster after constant-power cycling than after self-paced or variable-power cycling of the same average.",
+     "grade": "weak",
+     "sources": [
+      "bernard2007"
+     ],
+     "evidence": [
+      {
+       "source": "bernard2007",
+       "quote": "Running performance was significantly improved after CI ride (1118 +/- 72 s) compared to those after FCI ride (1134 +/- 64 s) or VI ride (1168 +/- 73 s) despite similar metabolic responses and performances reported during the three cycling bouts.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "etx-var",
+     "text": "A 9.3 km run was 42 s slower after highly variable cycling than after constant cycling at the same mean power.",
+     "grade": "weak",
+     "sources": [
+      "etxebarria2013"
+     ],
+     "evidence": [
+      {
+       "source": "etxebarria2013",
+       "quote": "The 9.3-km run time was 42 ± 37 s slower (mean ± 90% confidence limits [CL]) after VAR (35:32 ± 3:18 min:s, mean ± SD) compared with CON cycling (34:50 ± 2:49 min:s).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "draft-save",
+     "text": "Drafting on the bike saves energy and improves the following run.",
+     "grade": "weak",
+     "sources": [
+      "hausswirth1999"
+     ],
+     "evidence": [
+      {
+       "source": "hausswirth1999",
+       "quote": "These results showed that drafting allows triathletes to save significantly on energy during the bike leg of a triathlon and creates the conditions for an improved running performance, with higher benefits for the strong runners.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bernard-wc",
+     "text": "In a Triathlon World Cup bike leg, 17% of the time was spent above maximal aerobic power.",
+     "grade": "weak",
+     "sources": [
+      "bernard2009"
+     ],
+     "evidence": [
+      {
+       "source": "bernard2009",
+       "quote": "The distribution of time was 51 +/- 9% for zone 1, 17 +/- 6% for zone 2, 15 +/- 3% for zone 3, and 17 +/- 6% was performed at workloads higher than MAP (zone 4).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does variable bike power hurt the run that follows?",
+    "sides": [
+     {
+      "position": "Yes: 5 km and 9.3 km run times were slower after variable than after constant cycling at the same average power.",
+      "sources": [
+       "bernard2007",
+       "etxebarria2013"
+      ]
+     },
+     {
+      "position": "Not always: after 30 min of cycling alternating ±20% every 5 min, a high-intensity run to exhaustion lasted longer than after constant cycling.",
+      "sources": [
+       "suriano2007"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pra-tri-bike"
+  },
+  {
+   "type": "question",
+   "item": "pra-tri-conflict"
+  },
+  {
+   "type": "concept",
+   "id": "pra-ultra",
+   "title": "Ultras: start slower than you think",
+   "text": "In ultras almost everyone slows, but by how much differs. In a 100 km race that included the World Masters Championships, the fastest quarter of finishers ran the first 30 km at lower speeds *relative to their own average* than everyone else, and were relatively faster later; women started relatively slower and finished relatively faster than men [[c:renfree-ultra]]. In 13,829 finishes of the Ultra-Trail du Mont-Blanc (UTMB), a steadier pace went with faster finishing times [[c:suter-utmb]].\n\nCareful with cause and effect: these are observational data. Fitter, more experienced runners may pace evenly *because* they are strong, rather than being fast because they pace evenly.",
+   "claims": [
+    {
+     "id": "renfree-ultra",
+     "text": "In a 100 km race, the fastest quarter of finishers ran at lower relative speeds early; women started relatively slower and finished faster than men.",
+     "grade": "weak",
+     "sources": [
+      "renfree2016"
+     ],
+     "evidence": [
+      {
+       "source": "renfree2016",
+       "quote": "Group 1 ran at significantly lower relative speeds than all other groups in the first three 10-km segments (all P < 0.01)",
+       "level": "abstract"
+      },
+      {
+       "source": "renfree2016",
+       "quote": "Females showed lower relative starting speeds and higher finishing speeds than males.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "suter-utmb",
+     "text": "Across 13,829 UTMB results, even pacing correlated with faster finishing times.",
+     "grade": "weak",
+     "sources": [
+      "suter2020"
+     ],
+     "evidence": [
+      {
+       "source": "suter2020",
+       "quote": "Even pacing throughout the UTMB® correlated with faster finishing times.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pra-ultra-pattern"
+  },
+  {
+   "type": "question",
+   "item": "pra-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "pra-split-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Most amateur marathoners slow: about 16% (men) and 12% (women) in the second half. Pace change % = (second half − first half) ÷ first half × 100.",
+    "Hitting the wall (about 28% of men, 17% of women) is a late collapse, usually from low energy stores: don't start faster than goal pace, and fuel.",
+    "Time trials: even power on flat, steady courses; vary with hills and wind; pace by power, because RPE and heart rate miss ±5% changes.",
+    "Triathlon: steady bike power usually gives the faster run, though one study disagrees; elite draft-legal racing is variable by nature.",
+    "Ultras: the best finishers start relatively slower. Race data are observational, so they show links, not causes."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pra-split-calc",
+   "concept": "pra-marathon",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "deaner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner passes halfway in 1:50:00 and finishes in 3:52:00. What is his pace change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10.9% slower",
+       "correct": true,
+       "why": "Right: second half 122 min; (122 − 110) ÷ 110 × 100 = 10.9%."
+      },
+      {
+       "id": "b",
+       "text": "9.8% slower",
+       "why": "This divides by the second-half time (12 ÷ 122). Divide by the first half."
+      },
+      {
+       "id": "c",
+       "text": "5.2% slower",
+       "why": "This divides by the finish time (12 ÷ 232). Divide by the first half."
+      },
+      {
+       "id": "d",
+       "text": "10.9% faster",
+       "why": "Right size, wrong sign: the second half took longer, so he slowed."
+      }
+     ],
+     "solution": "Second half = 232 − 110 = 122 min. Pace change = (122 − 110) ÷ 110 × 100 = 10.9%: a positive split, he slowed."
+    },
+    {
+     "id": "b",
+     "stem": "A runner passes halfway in 1:25:00 and finishes in 2:58:00. What is her pace change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9.4% slower",
+       "correct": true,
+       "why": "Right: second half 93 min; (93 − 85) ÷ 85 × 100 = 9.4%."
+      },
+      {
+       "id": "b",
+       "text": "8.6% slower",
+       "why": "This divides by the second-half time (8 ÷ 93). Divide by the first half."
+      },
+      {
+       "id": "c",
+       "text": "4.5% slower",
+       "why": "This divides by the finish time (8 ÷ 178). Divide by the first half."
+      },
+      {
+       "id": "d",
+       "text": "9.4% faster",
+       "why": "Right size, wrong sign: the second half took longer, so she slowed."
+      }
+     ],
+     "solution": "Second half = 178 − 85 = 93 min. Pace change = (93 − 85) ÷ 85 × 100 = 9.4%: she slowed, but under 10%, so she 'kept the pace' by Deaner's definition."
+    },
+    {
+     "id": "c",
+     "stem": "In the marathon of an Ironman, a triathlete passes halfway in 1:40:00 and finishes the run in 3:35:00. What is his pace change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15.0% slower",
+       "correct": true,
+       "why": "Right: second half 115 min; (115 − 100) ÷ 100 × 100 = 15.0%."
+      },
+      {
+       "id": "b",
+       "text": "13.0% slower",
+       "why": "This divides by the second-half time (15 ÷ 115). Divide by the first half."
+      },
+      {
+       "id": "c",
+       "text": "7.0% slower",
+       "why": "This divides by the run time (15 ÷ 215). Divide by the first half."
+      },
+      {
+       "id": "d",
+       "text": "15.0% faster",
+       "why": "Right size, wrong sign: the second half took longer, so he slowed."
+      }
+     ],
+     "solution": "Second half = 215 − 100 = 115 min. Pace change = (115 − 100) ÷ 100 × 100 = 15.0%."
+    }
+   ]
+  },
+  {
+   "id": "pra-who-slows",
+   "concept": "pra-marathon",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "deaner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In large marathon data sets, who tends to slow most in the second half?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Men, and slower finishers",
+       "correct": true,
+       "why": "Right: men slowed more than women in all 14 races, and slower finishers slowed more."
+      },
+      {
+       "id": "b",
+       "text": "Women, because their VO2max is lower",
+       "why": "Women slowed less, and the gap shrank but remained after adjusting women's times for men's higher VO2max."
+      },
+      {
+       "id": "c",
+       "text": "The fastest finishers, who start most aggressively",
+       "why": "Faster finishers slowed less, not more."
+      },
+      {
+       "id": "d",
+       "text": "Nobody in particular: everyone slows by about the same amount",
+       "why": "Slowing differed clearly by sex, finish time and experience."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-wall-case",
+   "concept": "pra-wall",
+   "bloom": "analyse",
+   "sources": [
+    "smyth2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recreational runner holds 5:00 per km to 30 km, then over a few kilometres slows to 7:00 per km and stays there. She took no carbohydrate during the race. What is the most likely cause, and the best prevention?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low glycogen: start no faster than goal pace and take carbohydrate during the race",
+       "correct": true,
+       "why": "Right: a sudden, lasting late slowdown is the classic wall, usually from depleted energy stores."
+      },
+      {
+       "id": "b",
+       "text": "Lactic acid build-up: stretch more and warm up longer before the race",
+       "why": "Lactate doesn't cause a late, lasting collapse at marathon pace, and stretching doesn't change fuel."
+      },
+      {
+       "id": "c",
+       "text": "Low VO2max: add more sprint intervals to her training",
+       "why": "Her pace was fine for 30 km; the collapse came from fuel, not from aerobic capacity."
+      },
+      {
+       "id": "d",
+       "text": "Worn-out shoes: switch to a softer, more cushioned pair",
+       "why": "Shoes don't explain a sudden, lasting slowdown after 30 km without fuel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-tt-gauge",
+   "concept": "pra-tt",
+   "bloom": "apply",
+   "sources": [
+    "atkinson2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist plans to ride 5% above her average power into a headwind and 5% below it with the tailwind. What should she pace by?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A power meter",
+       "correct": true,
+       "why": "Right: power shows a 5% change at once and exactly."
+      },
+      {
+       "id": "b",
+       "text": "Heart rate",
+       "why": "Heart rate responds too little to small changes of power, and drifts upward over long rides."
+      },
+      {
+       "id": "c",
+       "text": "How hard it feels (RPE)",
+       "why": "RPE is too insensitive to small but meaningful changes in power."
+      },
+      {
+       "id": "d",
+       "text": "Speed",
+       "why": "Speed changes with the wind: the same power is slower into a headwind, so speed can't show effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-tt-plan",
+   "concept": "pra-tt",
+   "bloom": "apply",
+   "sources": [
+    "atkinson2007a",
+    "atkinson2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider has a flat 40 km time trial on a still day. Which plan does the evidence support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hold target power from the start, resisting the urge to go harder early",
+       "correct": true,
+       "why": "Right: even power is optimal here, and the usual mistake is a start that is too hard."
+      },
+      {
+       "id": "b",
+       "text": "Start about 15% above target to bank time while fresh",
+       "why": "Riders who start well above average lose more time later than they bank."
+      },
+      {
+       "id": "c",
+       "text": "Ride the first half easy and the second half hard",
+       "why": "A slow first half loses time that a hard second half can't recover in steady conditions."
+      },
+      {
+       "id": "d",
+       "text": "Vary power by ±10% every kilometre to spread the load",
+       "why": "With no hills or wind, variation buys no time and costs extra effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-tri-bike",
+   "concept": "pra-tri",
+   "bloom": "analyse",
+   "sources": [
+    "bernard2007",
+    "etxebarria2013",
+    "wu2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An age-group triathlete in a non-drafting sprint race wants the fastest 5 km run after the 20 km bike. How should she spread her bike power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As evenly as the course allows",
+       "correct": true,
+       "why": "Right: in two of three studies, runs were faster after constant than after variable or self-paced cycling."
+      },
+      {
+       "id": "b",
+       "text": "In hard surges to drop rivals, recovering in between",
+       "why": "Highly variable cycling slowed the following run by 42 s over 9.3 km."
+      },
+      {
+       "id": "c",
+       "text": "Easy for the first half, very hard for the last 5 km",
+       "why": "That is a large power swing at the worst moment, just before the run; if anything, an easy last 5 min of cycling was suggested to help the run."
+      },
+      {
+       "id": "d",
+       "text": "Any way she likes: only average power matters",
+       "why": "With the same average power, the run time still depended on the spread."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-tri-conflict",
+   "concept": "pra-tri",
+   "bloom": "evaluate",
+   "sources": [
+    "suriano2007",
+    "bernard2007",
+    "etxebarria2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One study found variable bike power improved the following run; two found it made the run slower. What best explains the disagreement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Different run tests and swing patterns, in small groups of 8–12 athletes",
+       "correct": true,
+       "why": "Right: one used a run to exhaustion after mild ±20% swings ending on an easy 5 min, the others run time trials after other patterns; small groups give wide uncertainty."
+      },
+      {
+       "id": "b",
+       "text": "The study that found a benefit must contain a calculation error",
+       "why": "Nothing suggests an error; different designs can give different answers."
+      },
+      {
+       "id": "c",
+       "text": "Variable cycling always helps; the other two studies timed the runs wrongly",
+       "why": "Run time trials are a valid measure; the disagreement comes from design."
+      },
+      {
+       "id": "d",
+       "text": "Running after cycling can't be measured reliably in any study",
+       "why": "All three measured runs; the question is what each design tests."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-ultra-pattern",
+   "concept": "pra-ultra",
+   "bloom": "understand",
+   "sources": [
+    "renfree2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 100 km race, how did the fastest quarter of finishers pace compared with slower runners?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Relatively slower early, relatively faster late",
+       "correct": true,
+       "why": "Right: lower relative speeds in the first 30 km, higher later."
+      },
+      {
+       "id": "b",
+       "text": "Faster early to bank time, then holding on",
+       "why": "That was the pattern of the slowest group, which started relatively fast."
+      },
+      {
+       "id": "c",
+       "text": "Exactly the same relative pattern as everyone else",
+       "why": "The groups differed clearly in the first three 10 km segments."
+      },
+      {
+       "id": "d",
+       "text": "All-out start, then walking the second half",
+       "why": "All-out pacing suits efforts of seconds, not 100 km."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pra-appraisal",
+   "concept": "pra-ultra",
+   "bloom": "evaluate",
+   "sources": [
+    "suter2020",
+    "renfree2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Even pacing went with faster UTMB finishing times across 13,829 results. A coach concludes: \"Even pacing will make any runner faster.\" What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Race data can't show cause: fitter runners may simply pace more evenly",
+       "correct": true,
+       "why": "Right: a link in race data doesn't show that changing pacing changes the result."
+      },
+      {
+       "id": "b",
+       "text": "13,829 results are too few to show anything about pacing",
+       "why": "That is a large sample; the problem is the design, not the size."
+      },
+      {
+       "id": "c",
+       "text": "Mountain races are too hilly to be paced evenly by anyone",
+       "why": "Runners do pace mountain races; the study measured how steady they were."
+      },
+      {
+       "id": "d",
+       "text": "The data come only from women, so they don't apply to men",
+       "why": "Most of the results were from men (12,681 of 13,829)."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

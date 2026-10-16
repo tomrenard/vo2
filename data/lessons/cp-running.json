@@ -1,0 +1,792 @@
+{
+ "id": "cp-running",
+ "module": "t2-cp-wprime",
+ "title": "Critical speed and D′ for runners",
+ "goal": "Calculate critical speed and D′ from race times and use them, with their limits, to pace track races and marathons and to judge race predictions such as Riegel's.",
+ "requires": [
+  "cp-vs-ftp"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "d-prime",
+    "riegel-formula"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cpr-cs",
+   "title": "Critical speed and D′",
+   "text": "Runners use the same model with speed. [Critical speed](g:critical-speed) (CS, m·s⁻¹) is the asymptote, and [D′](g:d-prime) (\"D prime\", m) is a fixed distance you can run above CS [[c:cs-def]].\n\nThe work–time line becomes a distance–time line:\n\n**distance = CS × t + D′**\n\nPlot race or trial distances against their times: the slope is CS and the intercept D′. For Haile Gebrselassie's best times from 2 to 15 km the line was almost perfect (R² > 0.999, where 1 is a perfect line), giving CS 5.91 m·s⁻¹ and D′ 351 m [[c:geb]].\n\nCS from training data, time trials or a 3-min all-out test agreed and repeated well; D′ did not [[c:dprime-noisy]].",
+   "claims": [
+    {
+     "id": "cs-def",
+     "text": "In running the CP model uses critical speed (m·s⁻¹) and D′ (m) in place of CP and W′.",
+     "grade": "strong",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "Here though, the terms critical speed (CS)—or critical velocity (CV), as appropriate—and D′, measured in units of m s−1 and m, respectively, are used instead of CP and W′.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "geb",
+     "text": "Distance against time for Gebrselassie's 2–15 km bests was almost perfectly linear (R² > 0.999): CS 5.91 m·s⁻¹, D′ 351 m.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "When distance (between 2 and 15 km) is plotted against time taken to complete the distance, it can be seen that the relationship is highly linear (R2 > 0.999), with CS being estimated as 5.91 m s−1 and D′ estimated as 351 m.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dprime-noisy",
+     "text": "In recreational runners, CS from training data, time trials and 3-min all-out tests agreed, and repeat 3-min tests gave excellent reliability for CS; D′ agreed poorly and was only moderately reliable.",
+     "grade": "weak",
+     "sources": [
+      "hunter2023"
+     ],
+     "evidence": [
+      {
+       "source": "hunter2023",
+       "quote": "These data suggest that estimations of CS/CP can be derived remotely, from either HAB, TT, or 3MT, although the lower agreement between D'/W' warrants caution when using these measures interchangeably.",
+       "level": "abstract"
+      },
+      {
+       "source": "hunter2023",
+       "quote": "Limited agreement existed between estimates of D'/W'. Moderate reliability of D'/W' was demonstrated between the first and second 3MTs, whereas excellent reliability was demonstrated for CS/CP.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cpr-example",
+   "title": "CS and D′ from two races",
+   "problem": "A runner's best 1500 m is 4:00 and her best 5000 m is 17:00. Find her CS and D′.",
+   "steps": [
+    "Times in seconds: 4:00 = 240 s; 17:00 = 1,020 s.",
+    "CS = slope = (5,000 − 1,500) ÷ (1,020 − 240) = 3,500 ÷ 780 ≈ 4.49 m·s⁻¹.",
+    "D′ = intercept = 1,500 − 4.487 × 240 = 1,500 − 1,077 ≈ 423 m. Check: 5,000 − 4.487 × 1,020 ≈ 423 m.",
+    "As a pace: 1,000 ÷ 4.49 ≈ 223 s per km, about 3:43 per km."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpr-units"
+  },
+  {
+   "type": "question",
+   "item": "cpr-cs-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpr-dprime-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cpr-marathon",
+   "title": "Marathon pace and CS",
+   "text": "The marathon is run below CS, at a fraction that depends on how good you are:\n\n| runners | marathon speed |\n|---|---|\n| 12 elite men (2:03–2:08) | 96 ± 2% of CS |\n| recreational, 2:30 finish | about 93% of CS |\n| recreational, 6:00 finish | about 79% of CS |\n\n[[c:elite-96]] [[c:rec-cs]]\n\nIn over 25,000 recreational runners, CS came from their best training efforts (400 m to 5 km). Those who ran the first half above about 94% of CS were more likely to slow by over 25% in the second half [[c:fade]].\n\nSo estimate CS, pick a fraction that fits your level, and don't run the first half above it.",
+   "claims": [
+    {
+     "id": "elite-96",
+     "text": "In 12 elite men, marathon speed was 96 ± 2% of critical speed estimated from their 1500 m to 15 km bests.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "The key result of this analysis is that, on average, the elite athletes completed the marathon distance at 96 ± 2% of their CS.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rec-cs",
+     "text": "Recreational runners ran marathons at about 85% of CS on average, faster runners closer to CS (93% at 2:30, 79% at 6:00).",
+     "grade": "moderate",
+     "sources": [
+      "smyth2020"
+     ],
+     "evidence": [
+      {
+       "source": "smyth2020",
+       "quote": "Runners completed the marathon at 84.8% ± 13.6% CS, with faster runners competing at speeds closer to CS (93.0% CS for 150 min marathon times vs 78.9% CS for 360 min marathon times).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fade",
+     "text": "Running the first half of a marathon above about 94% of CS made a large second-half slowdown more likely.",
+     "grade": "moderate",
+     "sources": [
+      "smyth2020"
+     ],
+     "evidence": [
+      {
+       "source": "smyth2020",
+       "quote": "Runners who completed the first half of the marathon at >94% of their CS, and particularly faster than CS, were more likely to slowdown by more than 25% in the second half of race.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpr-marathon-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpr-fade"
+  },
+  {
+   "type": "concept",
+   "id": "cpr-track",
+   "title": "Track races and the finishing kick",
+   "text": "For races of about 2–15 min (about 1500 m to 5000 m for trained runners), the line predicts the time:\n\n**t = (distance − D′) ÷ CS**\n\nWith CS 5.0 m·s⁻¹ and D′ 250 m, 3000 m takes (3,000 − 250) ÷ 5.0 = 550 s, or 9:10.\n\nD′ is the budget for running faster than CS. Spend it in early surges and the finish has nothing left; it makes sense to stay near CS and use D′ only when tactics demand it or in the sprint finish [[c:kick]].\n\nIn highly trained runners, CS from 3–15 min track runs matched 10-km race speed, while a treadmill test overestimated it [[c:track-cs]].",
+   "claims": [
+    {
+     "id": "kick",
+     "text": "Avoiding frequent or long excursions above CS, except when tactics demand or in a sprint finish, saves D′.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "From a bioenergetic perspective, avoiding frequent or protracted excursions beyond CS, except perhaps when tactically necessary or in a sprint finish, would seem sensible to prevent utilization of D′",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "track-cs",
+     "text": "In highly trained runners, track-determined CS equalled 10-km race speed, while treadmill CS overpredicted it.",
+     "grade": "weak",
+     "sources": [
+      "kranenburg1996"
+     ],
+     "evidence": [
+      {
+       "source": "kranenburg1996",
+       "quote": "Track critical speed (293 m*min(-1)) was correlated (r = 0.92, P < 0.001) with race speed (293 m*min(-1)), whereas treadmill critical speed (300 m*min(-1)) had the same correlation but over predicted race performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpr-predict"
+  },
+  {
+   "type": "question",
+   "item": "cpr-kick"
+  },
+  {
+   "type": "concept",
+   "id": "cpr-riegel",
+   "title": "Riegel's formula and its limits",
+   "text": "The [Riegel formula](g:riegel-formula) predicts a longer race from a shorter one:\n\n**T₂ = T₁ × (D₂ ÷ D₁)^1.06**\n\nThe exponent above 1 means you slow a little each time the distance grows. From 10 km in 45:00, the marathon comes out at 45 × 4.2195^1.06 ≈ 45 × 4.60 = 207 min (3:27).\n\nIn 2,303 recreational runners it worked well up to the half marathon but gave marathon times at least 10 min too fast for half of them [[c:riegel-marathon]]. Riegel himself gave 1.08 for elites and 1.05–1.06 for older recreational men, so one exponent can't fit everyone [[c:riegel-k]].\n\nCS models do worse when stretched: for long races they overestimate speed [[c:extrapolate]].",
+   "claims": [
+    {
+     "id": "riegel-marathon",
+     "text": "Riegel's formula was well calibrated up to the half marathon but gave marathon times at least 10 min too fast for half of recreational runners.",
+     "grade": "moderate",
+     "sources": [
+      "vickers2016"
+     ],
+     "evidence": [
+      {
+       "source": "vickers2016",
+       "quote": "The commonly used Riegel formula for race time prediction was well-calibrated for races up to a half-marathon, but dramatically underestimated marathon time, giving times at least 10 min too fast for half of runners.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "riegel-k",
+     "text": "Riegel reported an exponent of about 1.08 for elite runners and 1.05–1.06 for recreational men aged 40–70.",
+     "grade": "weak",
+     "sources": [
+      "vickers2016"
+     ],
+     "evidence": [
+      {
+       "source": "vickers2016",
+       "quote": "Riegel cited a k of 1.08 for elite runners and 1.05 to 1.06 for male recreational runners aged 40 to 70",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "extrapolate",
+     "text": "For long races, power-law and logarithmic models extrapolated better than asymptotic (CS-type) models, which overestimated performance.",
+     "grade": "weak",
+     "sources": [
+      "vandewalle2018"
+     ],
+     "evidence": [
+      {
+       "source": "vandewalle2018",
+       "quote": "The predictions of long-distance performances (maximal running speeds for 30 and 60 min and marathon) by extrapolation of the logarithmic and power-law models were more accurate than the predictions by extrapolation in all the asymptotic models.",
+       "level": "abstract"
+      },
+      {
+       "source": "vandewalle2018",
+       "quote": "The overestimations of these long-distance performances by Morton's model were less important than the overestimations by the other asymptotic models.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cpr-riegel-example",
+   "title": "Half marathon from 10 km",
+   "problem": "A runner runs 10 km in 45:00. What half-marathon time does Riegel predict?",
+   "steps": [
+    "Distance ratio: 21.0975 ÷ 10 = 2.110.",
+    "Raise it to 1.06 (calculator: 2.110 ^ 1.06) = 2.206.",
+    "T₂ = 45 min × 2.206 = 99.3 min ≈ 1:39:17.",
+    "Without the exponent (45 × 2.110 = 94.9 min) you would assume no slowing at all, about 4 min too fast."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpr-riegel-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpr-riegel-eval"
+  },
+  {
+   "type": "question",
+   "item": "cpr-model-limits"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Critical speed (m·s⁻¹) and D′ (m) are the running forms of CP and W′: distance = CS × t + D′.",
+    "Track races of about 2–15 min: t = (distance − D′) ÷ CS. Save D′ for when tactics demand it or the kick.",
+    "Marathons are run below CS: about 96% for elites, 79–93% for recreational runners; a first half above about 94% of CS invites a fade.",
+    "Riegel (T₂ = T₁ × (D₂ ÷ D₁)^1.06) works to the half marathon but is often 10+ min too fast for recreational marathoners.",
+    "Every model is safest inside the range it was fitted on; stretched to long races, CS models overestimate speed."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cpr-units",
+   "concept": "cpr-cs",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In what units are critical speed and D′ given?",
+     "options": [
+      {
+       "id": "a",
+       "text": "CS in m·s⁻¹, D′ in m",
+       "correct": true,
+       "why": "Right: CS is a speed and D′ a distance, the running forms of a power and an amount of work."
+      },
+      {
+       "id": "b",
+       "text": "CS in W, D′ in kJ",
+       "why": "Those are the cycling units, for CP and W′."
+      },
+      {
+       "id": "c",
+       "text": "CS in m, D′ in m·s⁻¹",
+       "why": "Swapped: the asymptote is a speed and the budget above it is a distance."
+      },
+      {
+       "id": "d",
+       "text": "CS in min per km, D′ in s",
+       "why": "Pace is a common way to show CS, but D′ is a distance, not a time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpr-cs-calc",
+   "concept": "cpr-cs",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's best 1500 m is 5:00 and her best 5000 m is 20:00. What is her CS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.89 m·s⁻¹",
+       "correct": true,
+       "why": "Right: CS = (d₂ − d₁) ÷ (t₂ − t₁)."
+      },
+      {
+       "id": "b",
+       "text": "4.17 m·s⁻¹",
+       "why": "That is the mean speed of the longer race. It was run above CS too, so it overestimates CS."
+      },
+      {
+       "id": "c",
+       "text": "5.00 m·s⁻¹",
+       "why": "That is the mean speed of the shorter race, the fastest of all, far above CS."
+      },
+      {
+       "id": "d",
+       "text": "4.33 m·s⁻¹",
+       "why": "This divides total distance by total time: a mean speed, not the slope of the line."
+      }
+     ],
+     "solution": "CS = (5,000 − 1,500) ÷ (1,200 − 300) = 3,500 ÷ 900 ≈ 3.89 m·s⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's best 1000 m is 3:00 and his best 5000 m is 18:00. What is his CS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.44 m·s⁻¹",
+       "correct": true,
+       "why": "Right: CS = (d₂ − d₁) ÷ (t₂ − t₁)."
+      },
+      {
+       "id": "b",
+       "text": "4.63 m·s⁻¹",
+       "why": "That is the mean speed of the longer race. It was run above CS too, so it overestimates CS."
+      },
+      {
+       "id": "c",
+       "text": "5.56 m·s⁻¹",
+       "why": "That is the mean speed of the shorter race, the fastest of all, far above CS."
+      },
+      {
+       "id": "d",
+       "text": "4.76 m·s⁻¹",
+       "why": "This divides total distance by total time: a mean speed, not the slope of the line."
+      }
+     ],
+     "solution": "CS = (5,000 − 1,000) ÷ (1,080 − 180) = 4,000 ÷ 900 ≈ 4.44 m·s⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "cpr-dprime-calc",
+   "concept": "cpr-cs",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's CS is 4.0 m·s⁻¹. Her best 1500 m is 5:00. What is her D′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 m",
+       "correct": true,
+       "why": "Right: D′ = distance − CS × time."
+      },
+      {
+       "id": "b",
+       "text": "1,200 m",
+       "why": "That is the distance covered at CS (CS × t). D′ is what is left over."
+      },
+      {
+       "id": "c",
+       "text": "1,500 m",
+       "why": "That is the whole race distance; most of it was run at CS."
+      },
+      {
+       "id": "d",
+       "text": "5 m",
+       "why": "This divides distance by time: a speed, not a distance."
+      }
+     ],
+     "solution": "D′ = 1,500 − 4.0 × 300 = 1,500 − 1,200 = 300 m."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's CS is 4.5 m·s⁻¹. His best 1000 m is 3:00. What is his D′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "190 m",
+       "correct": true,
+       "why": "Right: D′ = distance − CS × time."
+      },
+      {
+       "id": "b",
+       "text": "810 m",
+       "why": "That is the distance covered at CS (CS × t). D′ is what is left over."
+      },
+      {
+       "id": "c",
+       "text": "1,000 m",
+       "why": "That is the whole race distance; most of it was run at CS."
+      },
+      {
+       "id": "d",
+       "text": "5.6 m",
+       "why": "This divides distance by time: a speed, not a distance."
+      }
+     ],
+     "solution": "D′ = 1,000 − 4.5 × 180 = 1,000 − 810 = 190 m."
+    }
+   ]
+  },
+  {
+   "id": "cpr-marathon-calc",
+   "concept": "cpr-marathon",
+   "bloom": "apply",
+   "sources": [
+    "smyth2020",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's CS is 4.2 m·s⁻¹. She plans her marathon at 90% of CS. What finish time does that give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3:06:03",
+       "correct": true,
+       "why": "Right: race speed = fraction × CS; time = 42,195 m ÷ speed."
+      },
+      {
+       "id": "b",
+       "text": "2:47:26",
+       "why": "That is the time at 100% of CS, which almost nobody holds for a marathon."
+      },
+      {
+       "id": "c",
+       "text": "2:30:42",
+       "why": "This divides CS by the fraction instead of multiplying, giving a speed above CS."
+      }
+     ],
+     "solution": "Speed = 0.90 × 4.2 = 3.78 m·s⁻¹. Time = 42,195 ÷ 3.78 ≈ 11,163 s = 3 h 6 min 3 s."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's CS is 3.6 m·s⁻¹. He plans a stand-alone marathon at 85% of CS. What finish time does that give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3:49:49",
+       "correct": true,
+       "why": "Right: race speed = fraction × CS; time = 42,195 m ÷ speed."
+      },
+      {
+       "id": "b",
+       "text": "3:15:21",
+       "why": "That is the time at 100% of CS, which almost nobody holds for a marathon."
+      },
+      {
+       "id": "c",
+       "text": "2:46:03",
+       "why": "This divides CS by the fraction instead of multiplying, giving a speed above CS."
+      }
+     ],
+     "solution": "Speed = 0.85 × 3.6 = 3.06 m·s⁻¹. Time = 42,195 ÷ 3.06 ≈ 13,789 s = 3 h 49 min 49 s."
+    }
+   ]
+  },
+  {
+   "id": "cpr-fade",
+   "concept": "cpr-marathon",
+   "bloom": "analyse",
+   "sources": [
+    "smyth2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner with CS 4.0 m·s⁻¹ targets a 3:15 marathon, an average of 3.61 m·s⁻¹. Feeling good, she runs the first half at 3.9 m·s⁻¹. What does the CS evidence predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A high risk of a big slowdown: she ran the first half at 97.5% of CS",
+       "correct": true,
+       "why": "Right: first halves above about 94% of CS made a slowdown of over 25% more likely."
+      },
+      {
+       "id": "b",
+       "text": "A faster finish: banking time early pays off",
+       "why": "Time banked above about 94% of CS was usually lost, and more, in the second half."
+      },
+      {
+       "id": "c",
+       "text": "No problem: she stayed below CS, so D′ was never touched",
+       "why": "Below CS spends no D′, but marathon fatigue builds below CS too; the fraction of CS still matters."
+      },
+      {
+       "id": "d",
+       "text": "No problem, since 3.9 m·s⁻¹ is only 8% above goal pace",
+       "why": "The problem is her speed relative to CS, 97.5%, not relative to goal pace."
+      }
+     ],
+     "solution": "3:15 = 11,700 s; 42,195 ÷ 11,700 ≈ 3.61 m·s⁻¹ (90% of CS). First half: 3.9 ÷ 4.0 = 97.5% of CS, above the 94% danger line."
+    }
+   ]
+  },
+  {
+   "id": "cpr-predict",
+   "concept": "cpr-track",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has CS 5.0 m·s⁻¹ and D′ 250 m. What 3000 m time does the model predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9:10",
+       "correct": true,
+       "why": "Right: t = (distance − D′) ÷ CS."
+      },
+      {
+       "id": "b",
+       "text": "10:00",
+       "why": "This runs the whole distance at CS and forgets that D′ lets you go faster."
+      },
+      {
+       "id": "c",
+       "text": "10:50",
+       "why": "This adds D′ instead of taking it away, as if D′ were extra distance to cover."
+      }
+     ],
+     "solution": "t = (3,000 − 250) ÷ 5.0 = 2,750 ÷ 5.0 = 550 s = 9:10."
+    },
+    {
+     "id": "b",
+     "stem": "A runner has CS 4.2 m·s⁻¹ and D′ 220 m. What 5000 m time does the model predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18:58",
+       "correct": true,
+       "why": "Right: t = (distance − D′) ÷ CS."
+      },
+      {
+       "id": "b",
+       "text": "19:50",
+       "why": "This runs the whole distance at CS and forgets that D′ lets you go faster."
+      },
+      {
+       "id": "c",
+       "text": "20:43",
+       "why": "This adds D′ instead of taking it away, as if D′ were extra distance to cover."
+      }
+     ],
+     "solution": "t = (5,000 − 220) ÷ 4.2 = 4,780 ÷ 4.2 ≈ 1,138 s = 18:58."
+    }
+   ]
+  },
+  {
+   "id": "cpr-kick",
+   "concept": "cpr-track",
+   "bloom": "analyse",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 5000 m, a runner can either surge at 2 km to break up the pack or sit just under CS and kick over the last 300 m. Which does the CS model favour, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sitting in: just under CS spends no D′, so all of it is there for the kick",
+       "correct": true,
+       "why": "Right: D′ is a fixed budget above CS; early surges spend it and it refills only slowly near CS."
+      },
+      {
+       "id": "b",
+       "text": "Surging: D′ refills quickly once she drops back under CS",
+       "why": "Near CS, refill is very slow; a surge mostly just spends D′."
+      },
+      {
+       "id": "c",
+       "text": "Either: the same D′ is spent in the end anyway",
+       "why": "Surge plus kick spends more than the kick alone, and she can't spend more than D′."
+      },
+      {
+       "id": "d",
+       "text": "Surging: D′ is larger when fresh, so use it early",
+       "why": "D′ is a fixed amount at the start, not a reserve that shrinks unless used."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpr-riegel-calc",
+   "concept": "cpr-riegel",
+   "bloom": "apply",
+   "sources": [
+    "vickers2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner runs 10 km in 50:00. What half-marathon time does Riegel predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1:50:19",
+       "correct": true,
+       "why": "Right: T₂ = T₁ × (D₂ ÷ D₁)^1.06."
+      },
+      {
+       "id": "b",
+       "text": "1:45:29",
+       "why": "This scales time by distance alone, as if you could hold the same speed over the longer race."
+      },
+      {
+       "id": "c",
+       "text": "1:51:49",
+       "why": "This multiplies the ratio by 1.06 instead of raising it to the power 1.06."
+      }
+     ],
+     "solution": "(21.0975 ÷ 10)^1.06 = 2.110^1.06 ≈ 2.206. 50 × 2.206 ≈ 110.3 min = 1:50:19."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete runs a stand-alone 5 km in 20:00. What 10 km time does Riegel predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41:42",
+       "correct": true,
+       "why": "Right: T₂ = T₁ × (D₂ ÷ D₁)^1.06."
+      },
+      {
+       "id": "b",
+       "text": "40:00",
+       "why": "This scales time by distance alone, as if you could hold the same speed over the longer race."
+      },
+      {
+       "id": "c",
+       "text": "42:24",
+       "why": "This multiplies the ratio by 1.06 instead of raising it to the power 1.06."
+      }
+     ],
+     "solution": "2^1.06 ≈ 2.085. 20 × 2.085 ≈ 41.7 min = 41:42."
+    }
+   ]
+  },
+  {
+   "id": "cpr-riegel-eval",
+   "concept": "cpr-riegel",
+   "bloom": "evaluate",
+   "sources": [
+    "vickers2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recreational runner's half marathon is 1:40:00, so Riegel predicts a 3:28:30 marathon. What is the best advice for her race plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Treat 3:28:30 as optimistic and start a little slower",
+       "correct": true,
+       "why": "Right: for recreational runners Riegel was often 10+ min too fast in the marathon, so starting at its pace risks a fade."
+      },
+      {
+       "id": "b",
+       "text": "Trust it: Riegel is well calibrated at every distance",
+       "why": "It was well calibrated only up to the half marathon."
+      },
+      {
+       "id": "c",
+       "text": "Aim faster: Riegel is too cautious for recreational runners",
+       "why": "The error ran the other way: predicted marathon times were too fast."
+      },
+      {
+       "id": "d",
+       "text": "Use an exponent of 1.00, since marathons are steady",
+       "why": "An exponent of 1 assumes no slowing at all, making the prediction even faster."
+      }
+     ],
+     "solution": "2^1.06 ≈ 2.085; 100 min × 2.085 ≈ 208.5 min = 3:28:30."
+    }
+   ]
+  },
+  {
+   "id": "cpr-model-limits",
+   "concept": "cpr-riegel",
+   "bloom": "analyse",
+   "sources": [
+    "vandewalle2018",
+    "smyth2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A CS model fitted to a runner's 1500 m to 5 km races overestimates her marathon speed. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It treats CS as holdable for ever, but marathons are run well below CS",
+       "correct": true,
+       "why": "Right: asymptotic models overestimate long races; marathoners run at about 79–96% of CS."
+      },
+      {
+       "id": "b",
+       "text": "D′ grows during long races, so the fit is too small",
+       "why": "D′ is a fixed budget; in a marathon it hardly matters."
+      },
+      {
+       "id": "c",
+       "text": "The distance–time line is not straight for 1500 m to 5 km",
+       "why": "Over that range the line is almost perfectly straight; the problem is stretching it far beyond."
+      },
+      {
+       "id": "d",
+       "text": "CS is a cycling idea that doesn't apply to running",
+       "why": "CS works well for running inside its range; extrapolating is the problem."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,570 @@
+{
+ "id": "thr-vent-vs-lactate",
+ "module": "t2-thresholds",
+ "title": "Ventilatory vs lactate thresholds",
+ "goal": "Explain why ventilatory and lactate thresholds usually agree, the conditions under which they come apart, and how far each lies from MLSS and critical power.",
+ "requires": [
+  "thr-mlss"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "mcardle-disease"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "vl-chain",
+   "title": "Why they usually agree",
+   "text": "The *Ventilatory thresholds* lesson showed the chain: as lactate and H⁺ rise, bicarbonate [buffers](g:buffer) the H⁺ and frees extra CO₂, and breathing follows CO₂. That is why [VT1](g:vt1) and the [gas exchange threshold](g:gas-exchange-threshold) usually land near LT1, and the [respiratory compensation point](g:respiratory-compensation-point) (RCP, VT2) near a higher lactate point.\n\nSo the gas exchange threshold remains the standard way to estimate the lactate threshold without taking blood [[c:get-estimate]].\n\nBut 'usually near' is a correlation, not an identity: the two are linked by a chain, and a chain can be pulled at more than one point. This lesson is about when they part ways, and what that means for your test results.",
+   "claims": [
+    {
+     "id": "get-estimate",
+     "text": "The gas exchange threshold remains an important non-invasive estimate of the lactate threshold.",
+     "grade": "strong",
+     "sources": [
+      "poole2021"
+     ],
+     "evidence": [
+      {
+       "source": "poole2021",
+       "quote": "Non-invasive estimation of LT using the gas exchange threshold (non-linear increase of V̇CO2 versus V̇O2 ) remains important in exercise training and in the clinic",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vl-why-agree"
+  },
+  {
+   "type": "concept",
+   "id": "vl-dissociate",
+   "title": "When they come apart",
+   "text": "Researchers have pulled the two thresholds apart on purpose:\n\n- **Low glycogen.** After glycogen-depleting exercise, the ventilatory threshold moved to a *lower* work rate and the lactate threshold to a *higher* one. Across 9 men, the two [correlated](g:correlation) at only r = 0.71 [[c:glycogen-split]].\n- **Caffeine.** After 7 mg·kg⁻¹, VT came at a higher VO₂ than LT, which didn't change [[c:caffeine-split]].\n- **[McArdle disease](g:mcardle-disease).** Five patients whose blood lactate doesn't rise still showed a ventilatory threshold at about 71% of VO₂max, like healthy controls [[c:mcardle-vt]].\n\nSo the rise in breathing has drivers besides lactate-linked CO₂. A VT *estimates* the lactate threshold; it doesn't measure it.",
+   "claims": [
+    {
+     "id": "glycogen-split",
+     "text": "Glycogen depletion shifted the ventilatory threshold to a lower and the lactate threshold to a higher work rate; across subjects the two correlated at r = 0.71.",
+     "grade": "weak",
+     "sources": [
+      "hughes1982"
+     ],
+     "evidence": [
+      {
+       "source": "hughes1982",
+       "quote": "The GD protocol elicited a significant divergence between the two thresholds shifting the T(vent) to a lesser and the T(lac) to a greater work rate relative to the NG state.",
+       "level": "abstract"
+      },
+      {
+       "source": "hughes1982",
+       "quote": "A correlation of only 0.71 was obtained between subjects' T(vent) and T(lac).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caffeine-split",
+     "text": "After caffeine ingestion, the ventilatory and lactate thresholds occurred at different VO₂ values.",
+     "grade": "weak",
+     "sources": [
+      "berry1991"
+     ],
+     "evidence": [
+      {
+       "source": "berry1991",
+       "quote": "These data demonstrate a dissociation between the VT and LT following caffeine ingestion and suggest that the use of the VT as an indicator of the LT may be inappropriate following ingestion of moderate dosages of caffeine.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mcardle-vt",
+     "text": "McArdle patients showed a ventilatory threshold at the same relative intensity as controls despite no rise in blood lactate.",
+     "grade": "weak",
+     "sources": [
+      "hagberg1990"
+     ],
+     "evidence": [
+      {
+       "source": "hagberg1990",
+       "quote": "The McArdle's patients' ventilatory threshold occurred at the same relative exercise intensity [71 +/- 7% (SD) VO2max] as in the control groups (60 +/- 13 and 70 +/- 10% VO2max) despite no increase and a 20% decrease in the McArdle's patients' arterialized blood lactate and H+ levels, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vl-glycogen"
+  },
+  {
+   "type": "question",
+   "item": "vl-mcardle"
+  },
+  {
+   "type": "question",
+   "item": "vl-caffeine"
+  },
+  {
+   "type": "concept",
+   "id": "vl-second",
+   "title": "The second thresholds, MLSS and CP",
+   "text": "At the top end, no ramp-test threshold lands exactly on MLSS. In 12 amateur cyclists, VT1 sat about 31 W below MLSS and VT2 about 86 W above it. The midpoint between them came closest, still about 28 W above MLSS [[c:midpoint]]. (VT1 200 W and VT2 300 W give a midpoint of 250 W.)\n\nAcross 9 studies, VT1 underestimated critical power by about 30%, while VT2 overestimated it by about 21% and RCP by 6% [[c:vt-cp-gap]].\n\nRCP can sit at the same VO₂ as CP and MLSS, but its ramp power depends on how fast the ramp rises, as *Ventilatory thresholds* showed. Whether it can stand in for the maximal metabolic steady state is argued.",
+   "claims": [
+    {
+     "id": "midpoint",
+     "text": "In 12 amateur cyclists, VT1 was about 31 W below and VT2 about 86 W above MLSS; the midpoint between them was closest, about 28 W above.",
+     "grade": "weak",
+     "sources": [
+      "peinado2016"
+     ],
+     "evidence": [
+      {
+       "source": "peinado2016",
+       "quote": "The difference between workload at MLSS and VT1, VT2, RER=1.00 and Maximum was 31.1 ± 20.0, -86.0 ± 18.3, -63.6 ± 26.3 and -192.3 ± 48.6 W, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "peinado2016",
+       "quote": "The smallest difference (-27.5 ± 15.1 W) between workload at MLSS and MPVT was in better agreement than other analysed parameters of intensity in cycling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vt-cp-gap",
+     "text": "In a meta-analysis, VT1 underestimated CP by about 30%, and VT2 and RCP overestimated it by about 21% and 6%.",
+     "grade": "moderate",
+     "sources": [
+      "galanrioja2020"
+     ],
+     "evidence": [
+      {
+       "source": "galanrioja2020",
+       "quote": "Despite the significant correlations between CP and VT1, MLSS and RCP these variables and VT2 under- (VT1, 30%; MLSS, 11%) or over-estimated (RCP, 6%; VT2, 21%) CP.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can the respiratory compensation point stand in for the maximal metabolic steady state?",
+    "sides": [
+     {
+      "position": "Yes, as a metabolic rate: RCP matches the VO₂ of CP and MLSS, and can be used for prescription once ramp effects are corrected.",
+      "sources": [
+       "keir2024",
+       "keir2015"
+      ]
+     },
+     {
+      "position": "No: RCP power shifts with the ramp protocol, agrees poorly with CP in individuals, and overestimates it on average.",
+      "sources": [
+       "leo2017",
+       "galanrioja2020"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "vl-midpoint",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "vl-rcp-judge"
+  },
+  {
+   "type": "concept",
+   "id": "vl-which",
+   "title": "Which to use, and for what",
+   "text": "For predicting performance, both work. In 15 male cyclists, ventilatory thresholds predicted 40-km time-trial power at least as well as lactate thresholds (r² about 0.63–0.65 against 0.52 at best), and power at the V̇E/V̇O₂ breakpoint, like power at 4 mmol·L⁻¹, didn't differ from 40-km power [[c:vt-predict]].\n\nThe practical trade-off:\n\n| | lactate | gas exchange |\n|---|---|---|\n| needs | blood drops and an analyser | a [metabolic cart](g:metabolic-cart) |\n| test | steps of several minutes | a ramp works |\n| shifted by | glycogen, step length | glycogen, caffeine, ramp speed |\n\nThe rule that matters most: compare like with like. A lactate threshold in spring and a ventilatory threshold in autumn can't tell you whether you improved.",
+   "claims": [
+    {
+     "id": "vt-predict",
+     "text": "In 15 male cyclists, VT-based variables predicted 40-km time-trial power at least as well as LT variables; power at the VE/VO₂ breakpoint and at 4 mmol·L⁻¹ did not differ from 40-km power.",
+     "grade": "weak",
+     "sources": [
+      "amann2004"
+     ],
+     "evidence": [
+      {
+       "source": "amann2004",
+       "quote": "We conclude that VT-based variables are generally superior to LT variables relative to predicting 40K(avgwatts), the simplest of several valid measures appears to be VE/VO2.",
+       "level": "abstract"
+      },
+      {
+       "source": "amann2004",
+       "quote": "Paired t-tests between these variables and the 40K(avgwatts) indicated that absolute power outputs at VE/VO2 (P=0.33), RER(0.95) (P=0.93), and 4 mmol L(-1) (P=0.39) were not significantly different from 40K(avgwatts).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vl-retest"
+  },
+  {
+   "type": "question",
+   "item": "vl-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "vl-midpoint",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "VT1/GET and LT1 usually line up because buffering lactate-linked H⁺ releases extra CO₂, and breathing follows CO₂.",
+    "They can come apart: low glycogen and caffeine shift them differently, and McArdle patients show a VT with no lactate rise. A VT estimates LT; it doesn't measure it.",
+    "No ramp threshold equals MLSS: VT1 sits below it, VT2 well above; the midpoint between them comes closest but still runs high.",
+    "Against CP, VT1 runs about 30% low and VT2 about 21% high; whether RCP can stand in for the maximal metabolic steady state is debated.",
+    "Both kinds of threshold predict performance; pick one method and keep it when you retest."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "vl-why-agree",
+   "concept": "vl-chain",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does the first ventilatory threshold usually fall close to the first lactate threshold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Buffering the extra H⁺ frees CO₂, and breathing follows CO₂",
+       "correct": true,
+       "why": "Right: bicarbonate buffering adds CO₂, which drives breathing up just as lactate starts to rise."
+      },
+      {
+       "id": "b",
+       "text": "The muscles run short of oxygen at both points",
+       "why": "Neither threshold marks a lack of oxygen in muscle; lactate rises from faster glycolysis."
+      },
+      {
+       "id": "c",
+       "text": "Lactate acts directly on the lungs to widen the airways",
+       "why": "The link runs through H⁺ buffering and CO₂, not a direct effect of lactate on the airways."
+      },
+      {
+       "id": "d",
+       "text": "The breathing muscles start making most of the lactate",
+       "why": "Most lactate comes from the working leg muscles; the breathing muscles are a small part."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-glycogen",
+   "concept": "vl-dissociate",
+   "bloom": "analyse",
+   "sources": [
+    "hughes1982"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does her lab test the morning after a long, hard ride with little carbohydrate, so her muscle glycogen is low. Compared with a test when fresh, what is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT comes at a lower power and LT at a higher one",
+       "correct": true,
+       "why": "Right: with low glycogen the two thresholds moved apart, VT to a lower and LT to a higher work rate."
+      },
+      {
+       "id": "b",
+       "text": "Both thresholds fall by the same amount",
+       "why": "They moved in opposite directions; that is why low glycogen pulls them apart."
+      },
+      {
+       "id": "c",
+       "text": "Neither threshold changes",
+       "why": "Glycogen depletion shifted both, in opposite directions."
+      },
+      {
+       "id": "d",
+       "text": "LT comes at a lower power and VT at a higher one",
+       "why": "This is the reverse: with less glycogen, less lactate is made, so LT moves up while VT moves down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-mcardle",
+   "concept": "vl-dissociate",
+   "bloom": "analyse",
+   "sources": [
+    "hagberg1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "People with McArdle disease show a ventilatory threshold at a normal intensity, even though their blood lactate doesn't rise. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breathing can rise sharply without a rise in lactate",
+       "correct": true,
+       "why": "Right: something besides lactate-linked CO₂ can drive the threshold rise in breathing, so VT and LT are not the same event."
+      },
+      {
+       "id": "b",
+       "text": "Lactate is the only cause of the ventilatory threshold",
+       "why": "If lactate were the only cause, patients with no lactate rise would have no VT."
+      },
+      {
+       "id": "c",
+       "text": "Their tests must have been measured wrongly",
+       "why": "The VT was found at the same relative intensity as in controls; there is no sign of a test error."
+      },
+      {
+       "id": "d",
+       "text": "These patients burn more glycogen than others",
+       "why": "It is the reverse: their muscles can't break down glycogen, which is why lactate doesn't rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-caffeine",
+   "concept": "vl-dissociate",
+   "bloom": "apply",
+   "sources": [
+    "berry1991"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner takes a large dose of caffeine (about 7 mg·kg⁻¹) before a gas-exchange test and uses his VT1 to set his LT1 pace. What is the main risk?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT1 may come later than LT1, so the pace is set too fast",
+       "correct": true,
+       "why": "Right: after caffeine, VT came at a higher VO₂ than LT, so using VT would overestimate his LT1 pace."
+      },
+      {
+       "id": "b",
+       "text": "VT1 may come earlier than LT1, so the pace is set too slow",
+       "why": "In the caffeine study VT moved up, not down, relative to LT."
+      },
+      {
+       "id": "c",
+       "text": "No risk: caffeine moves both thresholds together",
+       "why": "Caffeine moved VT but not LT; that is the dissociation."
+      },
+      {
+       "id": "d",
+       "text": "Caffeine lowers his VO₂max, so all paces drop",
+       "why": "VO₂max didn't differ between caffeine and placebo in that study."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-midpoint",
+   "concept": "vl-second",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "peinado2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ramp test gives VT1 = 190 W and VT2 = 290 W. Based on the study of amateur cyclists, what is the best single estimate of his MLSS from these, and which way is it likely off?",
+     "options": [
+      {
+       "id": "a",
+       "text": "240 W, probably a little above his MLSS",
+       "correct": true,
+       "why": "Right: the midpoint is (190 + 290) ÷ 2 = 240 W, which came closest to MLSS but ran about 28 W high on average."
+      },
+      {
+       "id": "b",
+       "text": "290 W, which equals his MLSS",
+       "why": "VT2 ran about 86 W above MLSS in that study."
+      },
+      {
+       "id": "c",
+       "text": "190 W, which equals his MLSS",
+       "why": "VT1 ran about 31 W below MLSS; it marks the moderate/heavy boundary instead."
+      },
+      {
+       "id": "d",
+       "text": "240 W, probably a little below his MLSS",
+       "why": "The midpoint is right, but it overestimated MLSS on average (about 28 W too high), not underestimated it."
+      }
+     ],
+     "solution": "Midpoint = (VT1 + VT2) ÷ 2 = (190 + 290) ÷ 2 = 240 W. In the study it sat about 28 W above MLSS, so MLSS is likely a little below 240 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's ramp test on the bike gives VT1 = 160 W and VT2 = 250 W. What is the midpoint estimate of her MLSS, and which way is it likely off?",
+     "options": [
+      {
+       "id": "a",
+       "text": "205 W, probably a little above her MLSS",
+       "correct": true,
+       "why": "Right: (160 + 250) ÷ 2 = 205 W; the midpoint tended to run above MLSS."
+      },
+      {
+       "id": "b",
+       "text": "250 W, which equals her MLSS",
+       "why": "VT2 ran well above MLSS (about 86 W in that study)."
+      },
+      {
+       "id": "c",
+       "text": "205 W, probably a little below her MLSS",
+       "why": "The midpoint is right, but on average it overestimated MLSS, not underestimated it."
+      },
+      {
+       "id": "d",
+       "text": "410 W, the sum of both",
+       "why": "This adds the two thresholds and forgets to divide by 2."
+      }
+     ],
+     "solution": "Midpoint = (160 + 250) ÷ 2 = 205 W. It tended to sit above MLSS, so MLSS is likely a little below 205 W."
+    }
+   ]
+  },
+  {
+   "id": "vl-rcp-judge",
+   "concept": "vl-second",
+   "bloom": "evaluate",
+   "sources": [
+    "keir2024",
+    "leo2017",
+    "galanrioja2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach sets a runner's 'steady-state ceiling' intervals at her RCP speed from a fast ramp test. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Risky: ramp RCP tends to sit above CP, so check it with steady runs",
+       "correct": true,
+       "why": "Right: RCP may match the VO₂ of the MMSS, but its ramp speed or power runs high and depends on the ramp; constant-pace checks are needed."
+      },
+      {
+       "id": "b",
+       "text": "Sound: RCP from any ramp equals her critical speed",
+       "why": "RCP power changes with ramp speed and overestimated CP on average."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: RCP has nothing to do with steady states",
+       "why": "RCP does relate to the MMSS as a metabolic rate (VO₂); the problem is turning it into a speed or power."
+      },
+      {
+       "id": "d",
+       "text": "Too easy: RCP always sits below MLSS",
+       "why": "On average RCP and VT2 sit above CP and MLSS, not below."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-retest",
+   "concept": "vl-which",
+   "bloom": "apply",
+   "sources": [
+    "amann2004",
+    "peinado2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's 'threshold' was 14.0 km·h⁻¹ from a lactate test in spring and 14.5 km·h⁻¹ from a gas-exchange test in autumn. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unclear: different methods; retest with the same one",
+       "correct": true,
+       "why": "Right: lactate and ventilatory thresholds don't sit at the same intensity, so a change of method can create a change on paper."
+      },
+      {
+       "id": "b",
+       "text": "She improved by 0.5 km·h⁻¹",
+       "why": "Part or all of the 0.5 km·h⁻¹ may come from switching methods, not from fitness."
+      },
+      {
+       "id": "c",
+       "text": "She got worse, since gas tests read low",
+       "why": "There is no fixed rule that gas tests read lower; the methods simply differ."
+      },
+      {
+       "id": "d",
+       "text": "She improved, since gas tests are more accurate",
+       "why": "Neither method is a gold standard for MLSS; the issue is comparing two different measures."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vl-appraisal",
+   "concept": "vl-which",
+   "bloom": "evaluate",
+   "sources": [
+    "hughes1982",
+    "hagberg1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Studies in 9 men with low glycogen and in 5 McArdle patients show the two thresholds can separate. What do they leave open for a healthy, trained cyclist's testing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How often, and how far, they separate in people like him",
+       "correct": true,
+       "why": "Right: small, special samples show the link isn't fixed, but not the size of the gap in healthy trained athletes on a normal day."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: they prove VT never tracks LT",
+       "why": "VT usually does track LT; these studies show exceptions, not that the link never holds."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: studies before 2000 are invalid",
+       "why": "Age alone doesn't make a study invalid; the limits are sample size and who was tested."
+      },
+      {
+       "id": "d",
+       "text": "Whether the results apply to running",
+       "why": "Sport matters less here than sample: the bigger gap is how often this happens in healthy athletes."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

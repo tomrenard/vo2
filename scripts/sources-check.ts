@@ -17,6 +17,7 @@ const sources: Record<string, Source> = Object.assign(
 
 type Work = {
   title?: string[];
+  subtitle?: string[];
   author?: { family?: string; sequence?: string }[];
   issued?: { "date-parts"?: number[][] };
   "updated-by"?: { type?: string }[];
@@ -42,7 +43,8 @@ for (const [id, source] of entries) {
     errors.push(`${id}: DOI ${source.doi} does not exist`);
     continue;
   }
-  const title = work.title?.[0] ?? "";
+  // Crossref often keeps the subtitle apart: compare against both together.
+  const title = [work.title?.[0], work.subtitle?.[0]].filter(Boolean).join(": ");
   if (titleMatch(source.title, title) < 0.8)
     errors.push(`${id}: title doesn't match Crossref: "${title}"`);
   const first = work.author?.find((a) => a.sequence === "first") ?? work.author?.[0];
@@ -53,8 +55,14 @@ for (const [id, source] of entries) {
   // Online-first and print years can differ by one.
   if (year && Math.abs(year - source.year) > 1)
     errors.push(`${id}: year is ${year}, not ${source.year}`);
-  const notice = work["updated-by"]?.find((u) => /retraction|withdrawal/i.test(u.type ?? ""));
+  const notice = work["updated-by"]?.find((u) => /retraction|withdrawal|removal|expression.of.concern/i.test(u.type ?? ""));
   if (notice) errors.push(`${id}: ${notice.type} notice on this paper`);
+  // A correction may change a number we quote: someone reads it before relying on the paper.
+  const correction = work["updated-by"]?.find((u) =>
+    /correction|erratum|corrigendum/i.test(u.type ?? ""),
+  );
+  if (correction && !source.correctionChecked)
+    console.warn(`warn  ${id}: has a ${correction.type} notice: check what it changed`);
 }
 for (const error of errors) console.error(`error ${error}`);
 console.log(`${entries.length - errors.length}/${entries.length} DOIs ok`);

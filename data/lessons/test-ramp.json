@@ -1,0 +1,924 @@
+{
+ "id": "test-ramp",
+ "module": "t2-testing",
+ "title": "Graded exercise tests: ramps, steps and VO2max",
+ "goal": "Explain how ramp and step tests differ, why the ramp rate changes peak power, why a test to VO2max should last 8–12 min, what a verification bout proves, and why treadmill and bike give different numbers.",
+ "requires": [
+  "thr-field"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "ramp-test",
+    "step-test",
+    "peak-power-output"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ramp-shapes",
+   "title": "Ramps and steps",
+   "text": "An [incremental test](g:incremental-test) raises the load until you can't go on. It comes in two shapes:\n\n- **[Ramp test](g:ramp-test):** power climbs smoothly, e.g. 25 W·min⁻¹ added in small steps every few seconds. Fast gas analysers made the ramp the usual lab test for [VO2max](g:vo2max) [[c:ramp-standard]].\n- **[Step test](g:step-test):** each load is held for minutes before the next rise, so blood [lactate](g:lactate) and heart rate can settle. That suits lactate profiles (next lesson).\n\nBoth end at a [peak power output](g:peak-power-output) (PPO) or a peak speed, and the highest VO₂ measured is the [VO2peak](g:vo2peak). Whether that peak really is VO2max is the question of this lesson.",
+   "claims": [
+    {
+     "id": "ramp-standard",
+     "text": "Rapid-response gas analysers, measuring breath by breath, allowed the ramp protocol to replace the older discontinuous maximal test.",
+     "grade": "moderate",
+     "sources": [
+      "poole2017"
+     ],
+     "evidence": [
+      {
+       "source": "poole2017",
+       "quote": "The development of rapid-response gas analyzers, enabling measurement of breath-by-breath pulmonary gas exchange, has facilitated replacement of the discontinuous progressive maximal exercise test (that produced an unambiguous V̇o2-work rate plateau definitive for V̇o2max) with the rapidly incremented or ramp testing protocol.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ramp-vs-step",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ramp-rate",
+   "title": "Ramp rate changes peak power",
+   "text": "Peak power isn't a fixed property of the athlete: it depends on the protocol.\n\n- In 20 active men, a ramp of 0.556 W·s⁻¹ (about 33 W·min⁻¹) gave a peak power **52 W higher** than a ramp of 0.278 W·s⁻¹ (about 17 W·min⁻¹) [[c:ramp-rate-ppo]].\n- With 25 W steps, peak power fell as each step lasted longer (from 15 s to 3 min), while VO2max stayed the same [[c:step-ppo]].\n\nWhy: the last minutes of any ramp run above [critical power](g:critical-power), on a limited reserve of extra work. A fast ramp spends that reserve at higher powers before you fail.\n\nSo compare peak power only between tests with the same protocol, and set zones from the protocol you'll use again.",
+   "claims": [
+    {
+     "id": "ramp-rate-ppo",
+     "text": "In 20 active men, a 0.556 W·s⁻¹ ramp gave a peak power about 52 W higher than a 0.278 W·s⁻¹ ramp.",
+     "grade": "weak",
+     "sources": [
+      "michalik2019"
+     ],
+     "evidence": [
+      {
+       "source": "michalik2019",
+       "quote": "Peak power output was significantly higher by 51.69 W (p < 0.001; t = 13.10; ES = 1.13) in the 0.556 W·s-1 group.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "step-ppo",
+     "text": "With 25 W increments, longer steps (15 s to 180 s) gave a lower peak power while VO2max was unchanged; peak power depends on the protocol, but its difference from critical power does not.",
+     "grade": "weak",
+     "sources": [
+      "adami2013"
+     ],
+     "evidence": [
+      {
+       "source": "adami2013",
+       "quote": "was significantly lower the longer the step duration",
+       "level": "abstract"
+      },
+      {
+       "source": "adami2013",
+       "quote": "whereas [Formula: see text] is a protocol-dependent variable, the difference between [Formula: see text] and CP is a constant, so that their values do not depend on the protocol applied.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ramp-rate-compare",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ramp-step-length"
+  },
+  {
+   "type": "concept",
+   "id": "ramp-duration",
+   "title": "Aim for 8–12 minutes",
+   "text": "How long should a test to VO2max last?\n\n- In 5 healthy men, VO2max was higher when the increment ended the test in 8–17 min; the authors advised about 10 min, on treadmill or bike [[c:ten-min]].\n- In 16 men and women, the men's VO2max was highest with an 8-min protocol, and the advice was 8–10 min [[c:eight-ten]].\n\nThe usual recommendation is **8–12 min** [[c:eight-twelve]]. Too short, and leg power gives out before VO₂ has caught up with the load. Too long, and heat, boredom and fatigue stop you below your ceiling.\n\nTo land in the window, pick the ramp rate from the power you expect to reach:\n\n**test time = (peak power − starting power) ÷ ramp rate**",
+   "claims": [
+    {
+     "id": "ten-min",
+     "text": "In 5 healthy men (a subset of the 12 tested), VO2max was higher when the work-rate increment brought the test to 8–17 min; a test of about 10 min was advised for treadmill and cycle.",
+     "grade": "weak",
+     "sources": [
+      "buchfuhrer1983"
+     ],
+     "evidence": [
+      {
+       "source": "buchfuhrer1983",
+       "quote": "The VO2 max was significantly higher on tests where the increment magnitude was large enough to induce test durations of 8-17 min, but the AT was independent of test duration.",
+       "level": "abstract"
+      },
+      {
+       "source": "buchfuhrer1983",
+       "quote": "we suggest selecting a work rate increment to bring the subject to the limit of his tolerance in about 10 min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eight-ten",
+     "text": "In 16 moderately to highly fit adults, men's VO2max was highest with an 8-min protocol; tests to VO2max should last 8–10 min.",
+     "grade": "weak",
+     "sources": [
+      "yoon2007"
+     ],
+     "evidence": [
+      {
+       "source": "yoon2007",
+       "quote": "For men, VO2max for the 8-min protocol (4.44 +/- 0.39 L.min(-1)) was significantly higher than for all other protocol durations.",
+       "level": "abstract"
+      },
+      {
+       "source": "yoon2007",
+       "quote": "The protocol duration of tests to VO2max should be between 8 and 10 min for healthy, moderately to highly trained subjects.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eight-twelve",
+     "text": "The recommended duration of a incremental test to VO2max is 8–12 minutes.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2018"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2018",
+       "quote": "The recommended duration of a GXT to assess V ˙ O 2 max is 8 to 12 minutes",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ramp-too-long"
+  },
+  {
+   "type": "example",
+   "id": "ramp-design-example",
+   "title": "Choosing a ramp rate",
+   "problem": "A cyclist's last ramp test peaked at about 380 W. The new test starts at 100 W. What ramp rate ends it in about 10 minutes?",
+   "steps": [
+    "Rearrange test time = (peak − start) ÷ ramp rate to ramp rate = (peak − start) ÷ test time.",
+    "Power to climb: 380 − 100 = 280 W.",
+    "Ramp rate = 280 W ÷ 10 min = 28 W·min⁻¹. A round 30 W·min⁻¹ gives 280 ÷ 30 ≈ 9.3 min: inside 8–12 min.",
+    "Keep that rate for every retest: as the last card showed, a different ramp rate changes peak power by itself."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ramp-design-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ramp-design-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ramp-verify",
+   "title": "Fitting in a verification bout",
+   "text": "*VO₂max: what it is* showed why a ramp without a [VO2 plateau](g:vo2-plateau) can't prove itself, and how a [verification bout](g:verification-bout) settles it. Fitting one into the session:\n\n- **Load:** studies have used 90–130% of the ramp's peak, with no agreed best; about 110% is usual [[c:verify-load]]. A 360 W peak gives about 1.10 × 360 ≈ 396 W.\n- **Rest:** 10 min is most common; 5–10 min seem enough for healthy people [[c:verify-rest]].\n- **Length:** about 2–3 min is enough for most people [[c:verify-length]].\n\nThen compare peaks. Within about 2%, inside measurement error, the ramp reached VO2max [[c:verify-match]]; clearly higher, and the ramp gave only a VO2peak.",
+   "claims": [
+    {
+     "id": "verify-load",
+     "text": "Verification bouts in the literature have used 90–130% of the intensity at VO2max, with no consensus on the best one; a methods paper proposes about 110% of the ramp peak work rate.",
+     "grade": "moderate",
+     "sources": [
+      "schaun2017",
+      "poole2017"
+     ],
+     "evidence": [
+      {
+       "source": "schaun2017",
+       "quote": "Specifically, intensities between 90 and 130% of those associated with",
+       "level": "full-text"
+      },
+      {
+       "source": "schaun2017",
+       "quote": "have already been used (Table 1), and there is still no consensus as to the correct option, if there is one.",
+       "level": "full-text"
+      },
+      {
+       "source": "poole2017",
+       "quote": "This CORP presents the rationale for incorporation of a second, constant work rate test performed at ~110% of the work rate achieved on the initial ramp test",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "verify-rest",
+     "text": "Recovery of 10 min before the verification bout is most common; 5–10 min may suffice in healthy people.",
+     "grade": "moderate",
+     "sources": [
+      "schaun2017"
+     ],
+     "evidence": [
+      {
+       "source": "schaun2017",
+       "quote": "Recovery periods of 10 min were the most frequently employed, although 5, 15, 20 and 60 min were also used",
+       "level": "full-text"
+      },
+      {
+       "source": "schaun2017",
+       "quote": "Recently, it has been suggested that for healthy individuals, shorter recovery intervals (i.e. 5 or 10 min) would already be sufficient",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "verify-length",
+     "text": "Verification bouts lasting 2–3 min should be adequate to confirm VO2max in most people.",
+     "grade": "moderate",
+     "sources": [
+      "schaun2017"
+     ],
+     "evidence": [
+      {
+       "source": "schaun2017",
+       "quote": "it seems plausible to suggest that durations between 2 and 3 min should be adequate to confirm V̇O2max during verification phases, although some clinical populations may require longer periods.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "verify-match",
+     "text": "A verification peak VO₂ similar to the incremental value, within measurement error (e.g. within 2%), would indicate that a true VO2max was reached. This is a suggested criterion from a review, not a tested cut-off.",
+     "grade": "weak",
+     "sources": [
+      "midgley2007a"
+     ],
+     "evidence": [
+      {
+       "source": "midgley2007a",
+       "quote": "A peak oxygen uptake (V-dotO(2peak)) in the verification phase that is similar (within the tolerance of measurement error, e.g. within 2%) to the V-dotO(2max) value attained in the incremental phase would indicate that a true V-dotO(2max) has been elicited.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does every VO2max test need a verification bout?",
+    "sides": [
+     {
+      "position": "Yes, whenever VO2max is the main outcome: a ramp plateau isn't guaranteed, and secondary criteria can badly misjudge it.",
+      "sources": [
+       "poole2017",
+       "midgley2007a"
+      ]
+     },
+     {
+      "position": "It helps, but isn't standardised: studies use 90–130% loads and different rests, and it can't rescue a test built for something else, such as long lactate stages.",
+      "sources": [
+       "schaun2017",
+       "jamnick2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ramp-verify-read",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ramp-verify-load"
+  },
+  {
+   "type": "concept",
+   "id": "ramp-mode",
+   "title": "Treadmill or bike?",
+   "text": "The same person can get different numbers on different machines.\n\n- In 12 healthy men, VO2max was 6% higher on the treadmill than on the bike [[c:treadmill-higher]].\n- Runners reach a higher VO2max on the treadmill; cyclists reach about the same on a bike as running; triathletes usually show no difference. VO2max is specific to the exercise you train [[c:mode-specific]].\n\nSo test in the sport you want zones for: a bike test won't set run zones. On a treadmill, set a **1% grade**: with no air to push through, a flat belt costs less energy than the road, and 1% matched road running in 5-min runs at 10.5–18 km·h⁻¹ [[c:one-percent]].",
+   "claims": [
+    {
+     "id": "treadmill-higher",
+     "text": "In 12 healthy men, VO2max was about 6% higher on the treadmill than on the cycle ergometer.",
+     "grade": "weak",
+     "sources": [
+      "buchfuhrer1983"
+     ],
+     "evidence": [
+      {
+       "source": "buchfuhrer1983",
+       "quote": "The maximal O2 uptake (VO2 max) and anaerobic threshold (AT) were higher (6 and 13%, respectively) on the treadmill than the cycle",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mode-specific",
+     "text": "Runners reach a higher VO2max on the treadmill, cyclists a similar value on the bike, and triathletes generally no difference: VO2max is specific to the exercise mode.",
+     "grade": "moderate",
+     "sources": [
+      "millet2009"
+     ],
+     "evidence": [
+      {
+       "source": "millet2009",
+       "quote": "The majority of studies indicate that runners achieve a higher V O(2max) on treadmill whereas cyclists can achieve a V O(2max) value in cycle ergometry similar to that in treadmill running. Hence, V O(2max) is specific to the exercise modality.",
+       "level": "abstract"
+      },
+      {
+       "source": "millet2009",
+       "quote": "In triathletes, there is generally no difference in V O(2max) measured in cycle ergometry and treadmill running.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "one-percent",
+     "text": "A 1% treadmill grade matches the energy cost of level outdoor running over about 5 min at 2.92–5.0 m·s⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "jones1996"
+     ],
+     "evidence": [
+      {
+       "source": "jones1996",
+       "quote": "This study demonstrates equality of the energetic cost of treadmill and outdoor running with the use of a 1% treadmill grade over a duration of approximately 5 min and at velocities between 2.92 and 5.0 m s-1.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ramp-mode-specific",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ramp-treadmill-grade"
+  },
+  {
+   "type": "question",
+   "item": "ramp-verify-read",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "An incremental test can be a ramp (power rises smoothly; the usual lab test for VO2max) or a step test (each load held for minutes; suits lactate profiles).",
+    "Peak power depends on the protocol: a faster ramp or shorter steps give a higher peak with the same VO2max, so compare only like with like.",
+    "A test to VO2max should last 8–12 min: ramp rate = (expected peak − start) ÷ target time.",
+    "A verification bout fits in the same visit: about 110% of the ramp's peak (90–130% used), after 5–10 min rest, lasting 2–3 min; a peak within about 2% of the ramp's confirms VO2max.",
+    "VO2max is mode-specific (runners score higher running), so test in your sport; use a 1% treadmill grade to match road running."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ramp-vs-step",
+   "concept": "ramp-shapes",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants a settled blood lactate value at each of six cycling powers, to draw a lactate curve. Which test suits that best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A step test, each power held for a few minutes",
+       "correct": true,
+       "why": "Right: holding each load for minutes lets blood lactate settle before each sample."
+      },
+      {
+       "id": "b",
+       "text": "A ramp test rising 30 W every minute",
+       "why": "In a ramp the load never stays put, so lactate never settles at any one power."
+      },
+      {
+       "id": "c",
+       "text": "A 3-minute all-out sprint test",
+       "why": "An all-out effort gives one peak value, not a lactate value at each of several powers."
+      },
+      {
+       "id": "d",
+       "text": "A verification bout at 110% of peak power",
+       "why": "That is a single supramaximal load to confirm VO2max, not a series of powers."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner wants the quickest lab test that drives her to VO2max with fine-grained gas data. Which protocol is the usual choice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A ramp test lasting about 10 minutes",
+       "correct": true,
+       "why": "Right: with fast gas analysers the ramp became the standard test to VO2max."
+      },
+      {
+       "id": "b",
+       "text": "A step test with 5-minute stages",
+       "why": "Long stages suit lactate; they make the test long, and long tests tend to underestimate VO2max."
+      },
+      {
+       "id": "c",
+       "text": "A 30-minute run at constant pace",
+       "why": "A steady run below maximum never pushes VO₂ to its ceiling."
+      },
+      {
+       "id": "d",
+       "text": "A 12-minute run for distance on a track",
+       "why": "That is the Cooper field test: it estimates VO2max from distance, with no gas data."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-rate-compare",
+   "concept": "ramp-rate",
+   "bloom": "analyse",
+   "sources": [
+    "michalik2019",
+    "adami2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In spring a cyclist's ramp test (20 W·min⁻¹) peaked at 380 W. In autumn a new lab uses 30 W·min⁻¹ and he peaks at 405 W. What can you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not much: the faster ramp alone raises peak power",
+       "correct": true,
+       "why": "Right: a faster ramp gives a higher peak power with no change in fitness, so the two tests aren't comparable."
+      },
+      {
+       "id": "b",
+       "text": "He is fitter: peak power rose by 25 W",
+       "why": "This ignores the protocol: in one study a faster ramp alone added about 50 W."
+      },
+      {
+       "id": "c",
+       "text": "He is less fit: a faster ramp should add more",
+       "why": "No rule says how much a given ramp change must add for one rider; the tests just can't be compared."
+      },
+      {
+       "id": "d",
+       "text": "His VO2max must have risen by about 7%",
+       "why": "Peak power can change with the ramp while VO2max stays the same; power isn't a stand-in for VO₂ here."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's treadmill test, with speed rising 0.5 km·h⁻¹ per minute, peaked at 19.0 km·h⁻¹. A retest at 1.0 km·h⁻¹ per minute peaks at 20.0 km·h⁻¹. What can you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not much: the faster ramp alone raises peak speed",
+       "correct": true,
+       "why": "Right: like peak power, peak speed depends on how fast the load rises; the two tests aren't comparable."
+      },
+      {
+       "id": "b",
+       "text": "She is fitter: peak speed rose by 1 km·h⁻¹",
+       "why": "This ignores the protocol change, which can raise the peak by itself."
+      },
+      {
+       "id": "c",
+       "text": "She is less fit: faster ramps should add more",
+       "why": "There is no fixed amount a faster ramp must add for one runner; the tests just can't be compared."
+      },
+      {
+       "id": "d",
+       "text": "Her VO2max must have risen by about 5%",
+       "why": "Peak speed can change with the protocol while VO2max stays the same."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-step-length",
+   "concept": "ramp-rate",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "adami2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab keeps its 25 W steps but makes each step last 3 min instead of 1 min. What happens to peak power and VO2max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Peak power falls; VO2max stays about the same",
+       "correct": true,
+       "why": "Right: longer steps lowered peak power, while VO2max was the same in all tests."
+      },
+      {
+       "id": "b",
+       "text": "Both peak power and VO2max fall",
+       "why": "In that study VO2max didn't change with step length; only peak power did."
+      },
+      {
+       "id": "c",
+       "text": "Peak power rises, because each step is held longer",
+       "why": "Longer steps mean more time and fatigue at each load, so you fail at a lower power."
+      },
+      {
+       "id": "d",
+       "text": "Neither changes: the steps are still 25 W",
+       "why": "Step size isn't all that matters; how long each step lasts changes the ramp's slope."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-too-long",
+   "concept": "ramp-duration",
+   "bloom": "analyse",
+   "sources": [
+    "buchfuhrer1983",
+    "yoon2007",
+    "jamnick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's treadmill test lasts 22 min because speed rises only 0.25 km·h⁻¹ per minute. Her VO2peak is 4% below last year's 10-minute test. Most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The long test stopped her before her ceiling",
+       "correct": true,
+       "why": "Right: tests well beyond 8–12 min tend to give a lower VO2max, as heat and fatigue end them early."
+      },
+      {
+       "id": "b",
+       "text": "She has lost aerobic fitness since last year",
+       "why": "Possible, but the protocol changed: a 22-minute test can explain a lower value by itself."
+      },
+      {
+       "id": "c",
+       "text": "A longer test should give a higher value, so the cart erred",
+       "why": "More time doesn't push VO₂ higher; tests that are too long give lower values, not higher ones."
+      },
+      {
+       "id": "d",
+       "text": "Slow ramps raise VO₂ too fast for the cart to follow",
+       "why": "A slow ramp changes VO₂ slowly; it is fast changes that are hard to track."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-design-calc",
+   "concept": "ramp-duration",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "buchfuhrer1983",
+    "jamnick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist expects to peak at about 340 W. The ramp starts at 100 W. Which ramp rate ends the test in about 10 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "24 W·min⁻¹",
+       "correct": true,
+       "why": "Right: (340 − 100) ÷ 10 = 24 W·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "34 W·min⁻¹",
+       "why": "This divides the whole peak by the time (340 ÷ 10) and forgets the ramp starts at 100 W."
+      },
+      {
+       "id": "c",
+       "text": "44 W·min⁻¹",
+       "why": "This adds the starting power instead of subtracting it: (340 + 100) ÷ 10."
+      },
+      {
+       "id": "d",
+       "text": "240 W·min⁻¹",
+       "why": "This is the power to climb (340 − 100) without dividing by the 10 minutes."
+      }
+     ],
+     "solution": "Ramp rate = (peak − start) ÷ test time = (340 − 100) W ÷ 10 min = 24 W·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's treadmill test starts at 10 km·h⁻¹ and she expects to peak at 19 km·h⁻¹. By how much should speed rise each minute for a 9-minute test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.0 km·h⁻¹ per minute",
+       "correct": true,
+       "why": "Right: (19 − 10) ÷ 9 = 1.0 km·h⁻¹ per minute."
+      },
+      {
+       "id": "b",
+       "text": "2.1 km·h⁻¹ per minute",
+       "why": "This divides the whole peak by the time (19 ÷ 9) and forgets the start speed."
+      },
+      {
+       "id": "c",
+       "text": "3.2 km·h⁻¹ per minute",
+       "why": "This adds the start speed instead of subtracting it: (19 + 10) ÷ 9."
+      },
+      {
+       "id": "d",
+       "text": "9.0 km·h⁻¹ per minute",
+       "why": "This is the speed to climb (19 − 10) without dividing by the 9 minutes."
+      }
+     ],
+     "solution": "Rise per minute = (peak − start) ÷ test time = (19 − 10) km·h⁻¹ ÷ 9 min = 1.0 km·h⁻¹ per minute."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's bike ramp starts at 80 W and she expects to peak at about 320 W. Which ramp rate ends the test in about 8 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 W·min⁻¹",
+       "correct": true,
+       "why": "Right: (320 − 80) ÷ 8 = 30 W·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "40 W·min⁻¹",
+       "why": "This divides the whole peak by the time (320 ÷ 8) and forgets the ramp starts at 80 W."
+      },
+      {
+       "id": "c",
+       "text": "50 W·min⁻¹",
+       "why": "This adds the starting power instead of subtracting it: (320 + 80) ÷ 8."
+      },
+      {
+       "id": "d",
+       "text": "240 W·min⁻¹",
+       "why": "This is the power to climb (320 − 80) without dividing by the 8 minutes."
+      }
+     ],
+     "solution": "Ramp rate = (peak − start) ÷ test time = (320 − 80) W ÷ 8 min = 30 W·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "ramp-verify-read",
+   "concept": "ramp-verify",
+   "bloom": "analyse",
+   "sources": [
+    "poole2017",
+    "midgley2007a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ramp test gives a peak VO₂ of 4.50 L·min⁻¹. After 10 min rest, a verification bout at 110% of his peak power gives 4.46 L·min⁻¹. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The ramp reached his VO2max",
+       "correct": true,
+       "why": "Right: 4.46 is within 1% of 4.50, inside measurement error, so a harder load couldn't raise VO₂: that is the plateau."
+      },
+      {
+       "id": "b",
+       "text": "The ramp fell short: the bout should read higher",
+       "why": "A bout above the ramp's peak load only reads clearly higher if the ramp missed VO2max; a match confirms it."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: a bout above peak power can't be valid",
+       "why": "Riding above ramp peak power is the point: a short supramaximal bout tests whether VO₂ can go any higher."
+      },
+      {
+       "id": "d",
+       "text": "His VO2max is the average, 4.48 L·min⁻¹",
+       "why": "The bout is a check, not a second sample to average; it confirms the ramp value."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's ramp test gives a peak VO₂ of 3.60 L·min⁻¹ with no plateau. Her verification run at 110% of peak speed gives 3.85 L·min⁻¹. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The ramp gave a VO2peak below her VO2max",
+       "correct": true,
+       "why": "Right: 3.85 is about 7% higher, well beyond measurement error, so the ramp didn't reach her ceiling."
+      },
+      {
+       "id": "b",
+       "text": "The ramp reached VO2max; the bout is noise",
+       "why": "A 7% gap is far beyond the roughly 2% margin suggested for judging a match."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: a bout above peak speed can't be valid",
+       "why": "A bout above the ramp's peak is exactly how the check works: VO₂ can't rise above a true VO2max."
+      },
+      {
+       "id": "d",
+       "text": "Her VO2max is the average, 3.73 L·min⁻¹",
+       "why": "Averaging hides the finding: the higher value shows the ramp stopped short."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-verify-load",
+   "concept": "ramp-verify",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "poole2017",
+    "schaun2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ramp test peaked at 340 W. At what power should his verification bout be set, using the usual 110%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 375 W",
+       "correct": true,
+       "why": "Right: 1.10 × 340 = 374 W, a load above the ramp's peak."
+      },
+      {
+       "id": "b",
+       "text": "About 309 W",
+       "why": "This divides by 1.10 (340 ÷ 1.10) instead of multiplying: the bout would sit below the peak."
+      },
+      {
+       "id": "c",
+       "text": "340 W, the same as the peak",
+       "why": "The usual protocol goes 10% above the peak, so the bout demands more than the ramp ever did."
+      },
+      {
+       "id": "d",
+       "text": "About 250 W, near his threshold",
+       "why": "A bout near threshold could be held for a long time and would never test the VO₂ ceiling."
+      }
+     ],
+     "solution": "Verification load = 1.10 × ramp peak = 1.10 × 340 W = 374 W, about 375 W."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's ramp test peaked at 18.0 km·h⁻¹. At what speed should her verification run be set, using the usual 110%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 19.8 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 1.10 × 18.0 = 19.8 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 16.4 km·h⁻¹",
+       "why": "This divides by 1.10 (18.0 ÷ 1.10) instead of multiplying: the run would sit below the peak."
+      },
+      {
+       "id": "c",
+       "text": "18.0 km·h⁻¹, the same as the peak",
+       "why": "The usual protocol goes 10% above the peak, so the run demands more than the ramp ever did."
+      },
+      {
+       "id": "d",
+       "text": "About 28.0 km·h⁻¹",
+       "why": "This adds 10 km·h⁻¹ instead of 10%: far faster than anyone could run for 2–3 min."
+      }
+     ],
+     "solution": "Verification speed = 1.10 × ramp peak = 1.10 × 18.0 km·h⁻¹ = 19.8 km·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "ramp-mode-specific",
+   "concept": "ramp-mode",
+   "bloom": "apply",
+   "sources": [
+    "millet2009",
+    "buchfuhrer1983"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trained runner who rarely cycles gets a VO2max of 58 mL·kg⁻¹·min⁻¹ on a bike and 64 mL·kg⁻¹·min⁻¹ on a treadmill. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO2max is specific to the exercise she trains",
+       "correct": true,
+       "why": "Right: runners reach a higher VO2max running; cyclists reach similar values on both."
+      },
+      {
+       "id": "b",
+       "text": "The bike test must have been faulty",
+       "why": "A lower bike value in a runner is expected, not a sign of error."
+      },
+      {
+       "id": "c",
+       "text": "Cycling uses more muscle mass than running",
+       "why": "It's the other way round: running uses more muscle, and her running muscles are the trained ones."
+      },
+      {
+       "id": "d",
+       "text": "Her true VO2max is the average, 61 mL·kg⁻¹·min⁻¹",
+       "why": "Each mode has its own value; averaging gives a number that fits neither sport."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete trains equally on bike and run and does a VO2max test on each. What should you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same VO2max on both",
+       "correct": true,
+       "why": "Right: in triathletes there is generally no difference between cycle and treadmill VO2max."
+      },
+      {
+       "id": "b",
+       "text": "About 6% higher on the treadmill, as in everyone",
+       "why": "That gap was seen in 12 healthy men; in triathletes, trained in both, it generally disappears."
+      },
+      {
+       "id": "c",
+       "text": "A clearly higher value on the bike",
+       "why": "Cycling rarely beats running for VO2max; at best trained cyclists match their running value."
+      },
+      {
+       "id": "d",
+       "text": "Wildly different values, as the modes share nothing",
+       "why": "The heart and blood are shared; the mode effect comes from the muscles used and how trained they are."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ramp-treadmill-grade",
+   "concept": "ramp-mode",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab wants its treadmill runs at 15 km·h⁻¹ to cost the same energy as running on a flat road. How should it set the treadmill?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At a 1% uphill grade",
+       "correct": true,
+       "why": "Right: a 1% grade makes up for the missing air resistance and matched road running at 10.5–18 km·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Flat, at 0% grade",
+       "why": "A flat belt costs less than the road, because there's no air to push through."
+      },
+      {
+       "id": "c",
+       "text": "At a 3% uphill grade",
+       "why": "3% cost more than road running in that study: too steep."
+      },
+      {
+       "id": "d",
+       "text": "Flat, with the speed set 1 km·h⁻¹ faster",
+       "why": "Changing speed changes the test pace itself; the studied fix for the missing air resistance is a slight grade."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

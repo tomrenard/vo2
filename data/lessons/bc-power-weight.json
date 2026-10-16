@@ -1,0 +1,642 @@
+{
+ "id": "bc-power-weight",
+ "module": "t2-body-comp",
+ "title": "Power-to-weight: when it matters",
+ "goal": "Split a cyclist's power into gravity, rolling and air drag, and use that to decide when W·kg⁻¹, W per CdA or a scaled ratio like W·kg⁻⁰·³² predicts performance.",
+ "requires": [
+  "bc-measure"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "rolling-resistance",
+    "frontal-area",
+    "cda",
+    "allometric-scaling"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "bcpw-forces",
+   "title": "Three forces to push against",
+   "text": "On a bike at steady speed, your power goes into three forces. Power = force × speed (W = N × m·s⁻¹):\n\n| force | formula | grows with |\n|---|---|---|\n| gravity | m·g·gradient | total mass, gradient |\n| [rolling resistance](g:rolling-resistance) | Crr·m·g | total mass |\n| air drag | ½·ρ·[CdA](g:cda)·v² | drag area, speed squared |\n\nHere m is rider plus bike, g = 9.81 m·s⁻², ρ is air density (about 1.2 kg·m⁻³) and v is speed. For gentle slopes, the gradient (7% = 0.07) stands in for the sine of the angle.\n\nTowing tests found exactly this shape: a constant rolling term plus a term growing with v² [[c:resistance-shape]]. A model built this way predicted measured road power with a standard error of only 2.7 W [[c:power-model]].",
+   "claims": [
+    {
+     "id": "resistance-shape",
+     "text": "Towing cyclists on a flat track showed total resistance = a constant (rolling) + a term rising with the square of air speed.",
+     "grade": "strong",
+     "sources": [
+      "diprampero1979"
+     ],
+     "evidence": [
+      {
+       "source": "diprampero1979",
+       "quote": "RT increased with the air velocity (v, m/s): RT = 3.2 + 0.19 V2. The constant 3.2 N is interpreted as the rolling resistance and the term increasing with v2 as the air resistance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "power-model",
+     "text": "A mathematical model of road cycling power matched measured power closely (R² = 0.97, standard error 2.7 W).",
+     "grade": "strong",
+     "sources": [
+      "martin1998"
+     ],
+     "evidence": [
+      {
+       "source": "martin1998",
+       "quote": "The standard error between the modeled and measured power (2.7 W) was very small.",
+       "level": "abstract"
+      },
+      {
+       "source": "martin1998",
+       "quote": "The results demonstrated that cycling power can be accurately predicted by a mathematical model.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcpw-mass-free-force"
+  },
+  {
+   "type": "example",
+   "id": "bcpw-climb-example",
+   "title": "Where do the watts go on a 7% climb?",
+   "problem": "A 70 kg rider on an 8 kg bike climbs a 7% road at 18 km/h. Take Crr = 0.004, CdA = 0.35 m² and ρ = 1.2 kg·m⁻³. How much power, and what share goes to gravity?",
+   "steps": [
+    "Speed in SI: 18 km/h ÷ 3.6 = 5 m·s⁻¹. Total mass m = 70 + 8 = 78 kg, so m·g = 78 × 9.81 = 765 N.",
+    "Gravity: 765 × 0.07 = 53.6 N; × 5 m·s⁻¹ = 268 W.",
+    "Rolling: 765 × 0.004 = 3.06 N; × 5 = 15 W.",
+    "Air: ½ × 1.2 × 0.35 × 5² = 5.25 N; × 5 = 26 W.",
+    "Total ≈ 268 + 15 + 26 = 309 W. Gravity is 268 ÷ 309 ≈ 87% of it."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcpw-climb-power",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcpw-climb-power",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "bcpw-climb",
+   "title": "Climbs: watts per kilo rules",
+   "text": "When gravity takes about 85–90% of the power, speed is set almost entirely by power ÷ total mass. That is why W·kg⁻¹ predicts climbing so well. Among world-class pros, climbing specialists had the highest maximal power per kg (6.47 W·kg⁻¹), while flat specialists had the highest absolute power (481 W) [[c:padilla-specialists]].\n\nTwo details:\n\n- **Total mass counts.** The bike is lifted too, and a fixed 8 kg bike is a bigger share of a light rider's load.\n- **Air still matters a little.** On a real 5.4% hill, the best-fitting mass exponent for power was about 1.0–1.1, close to plain W·kg⁻¹, and air resistance was still part of the picture [[c:uphill-exponent]].\n\nThe steeper and slower the climb, the closer plain W·kg⁻¹ gets to the whole story.",
+   "claims": [
+    {
+     "id": "padilla-specialists",
+     "text": "In 24 world-class road cyclists, uphill specialists had the highest maximal power per kg (6.47 W·kg⁻¹) and flat-terrain specialists the highest absolute maximal power (481 W); a mass exponent of 1 best described uphill ability.",
+     "grade": "weak",
+     "sources": [
+      "padilla1999"
+     ],
+     "evidence": [
+      {
+       "source": "padilla1999",
+       "quote": "FT showed the highest absolute Wmax (481 +/- 18 W), and UH the highest Wmax relative to BM (6.47 +/- 0.33 W x kg(-1)).",
+       "level": "abstract"
+      },
+      {
+       "source": "padilla1999",
+       "quote": "mass exponents of 0.32 and 1 were the most appropriate to evaluate level and uphill cycling ability, respectively",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "uphill-exponent",
+     "text": "In a 5.3 km, 5.4% road hill-climb, speed was best predicted by power divided by mass to an exponent of about 1.04–1.10, and air resistance remained influential.",
+     "grade": "weak",
+     "sources": [
+      "jobson2008"
+     ],
+     "evidence": [
+      {
+       "source": "jobson2008",
+       "quote": "The optimal power function models predicting mean cycle speed during a 5.3 km, 5.4% road hill-climb time-trial were (VO(2max) x m(-1.24))(0.55) and (RMP(max) x m(-1.04))(0.54), explained variance being 84.6% and 70.5%, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "jobson2008",
+       "quote": "suggesting that air resistance remains influential when cycling up a gradient of 5.4%",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcpw-climb-compare"
+  },
+  {
+   "type": "question",
+   "item": "bcpw-bike-mass"
+  },
+  {
+   "type": "concept",
+   "id": "bcpw-flat",
+   "title": "Flat time trials: watts per drag area",
+   "text": "On the flat there is no gravity term, and above about 50 km·h⁻¹ air drag takes about 90% of the power [[c:aero-flat]]. Mass only enters through rolling resistance, so what counts is power per drag area: **W·m⁻² of CdA**.\n\nHere big riders gain. [Frontal area](g:frontal-area) grows more slowly than mass: in 21 cyclists it rose with mass^0.76, and drag area with only about mass^0.31 [[c:frontal-scaling]]. On a flat road, large cyclists used 22% less oxygen per kg than small ones at the same speed [[c:swain-flat]].\n\nSo a heavy rider with more absolute watts often wins the flat time trial and loses the mountain stage, even with the same W·kg⁻¹.",
+   "claims": [
+    {
+     "id": "aero-flat",
+     "text": "On flat ground above about 14 m·s⁻¹ (50 km·h⁻¹), aerodynamic drag is the main resistance and takes about 90% of the power.",
+     "grade": "strong",
+     "sources": [
+      "debraux2011"
+     ],
+     "evidence": [
+      {
+       "source": "debraux2011",
+       "quote": "When cycling on level ground at a speed greater than 14 m/s, aerodynamic drag is the most important resistive force. About 90% of the total mechanical power output is necessary to overcome it.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "frontal-scaling",
+     "text": "In 21 competitive male cyclists, projected frontal area rose with body mass^0.76; combined with wind-tunnel data, drag area scales with about mass^0.31.",
+     "grade": "weak",
+     "sources": [
+      "heil2001"
+     ],
+     "evidence": [
+      {
+       "source": "heil2001",
+       "quote": "This equation indicates that after allowing for the independent influence of STA and TA on AP, AP was proportional to mb raised to the +0.762 power",
+       "level": "abstract"
+      },
+      {
+       "source": "heil2001",
+       "quote": "it is suggested that the drag area (CD x AP), which should be proportional to Ws at submaximal cycling velocities, is proportional to mb to the +0.312 power",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "swain-flat",
+     "text": "On a flat road, large cyclists (84 kg) used 22% less oxygen per kg body weight than small cyclists (59 kg) at the same speeds, mainly because of a lower frontal area per kg.",
+     "grade": "weak",
+     "sources": [
+      "swain1987"
+     ],
+     "evidence": [
+      {
+       "source": "swain1987",
+       "quote": "The large cyclists had a 22% lower VO2/BW than the small cyclists at all speeds.",
+       "level": "abstract"
+      },
+      {
+       "source": "swain1987",
+       "quote": "We conclude that large cyclists are at a distinct advantage, in terms of VO2/BW, while bicycling on level roads, and this advantage is principally due to their lower FA/BW ratio.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bcpw-flat-example",
+   "title": "Power for 40 km/h on the flat",
+   "problem": "A triathlete (70 kg, 8 kg bike) on aero bars has a CdA of 0.25 m². Crr = 0.004, ρ = 1.2 kg·m⁻³. What power holds 40 km/h on a flat, windless road, and what is it per m² of CdA?",
+   "steps": [
+    "Speed: 40 ÷ 3.6 = 11.1 m·s⁻¹. No gravity term on the flat.",
+    "Air: ½ × 1.2 × 0.25 × 11.1² = 0.15 × 123 = 18.5 N; × 11.1 = 206 W.",
+    "Rolling: 78 × 9.81 × 0.004 = 3.06 N; × 11.1 = 34 W.",
+    "Total ≈ 240 W, 86% of it air. Per drag area: 240 ÷ 0.25 = 960 W·m⁻².",
+    "Note that air power grows with v³: going 10% faster costs about 33% more air power (1.1³ = 1.33)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcpw-flat-compare"
+  },
+  {
+   "type": "question",
+   "item": "bcpw-speed-cube"
+  },
+  {
+   "type": "concept",
+   "id": "bcpw-scaling",
+   "title": "Between the two: scaled ratios",
+   "text": "In the units module you saw that VO2max rises with about mass^0.7, so plain per-kg ratios can mislead. Cycling makes the same point with terrain. [Allometric scaling](g:allometric-scaling) divides by mass raised to a power b that fits the task:\n\n| task | best ratio |\n|---|---|\n| steep climb | W·kg⁻¹ (b ≈ 1) |\n| flat time trial | W·kg⁻⁰·³² (b ≈ 0.32), or W per m² CdA |\n| short flat effort | absolute W (b = 0) |\n\nThe 0.32 exponent came from world-class pros, and it matches the mass^0.31 scaling of drag area [[c:flat-exponent]]. Even after scaling, time-trial specialists came out best on every terrain: being good at both is possible.\n\nAll these exponents come from small groups of men, so treat them as guides, not laws.",
+   "claims": [
+    {
+     "id": "flat-exponent",
+     "text": "Mass exponents of 0.32 (level) and 1 (uphill) best described professional cyclists' ability; after scaling, time-trial specialists had an advantage on all terrains.",
+     "grade": "weak",
+     "sources": [
+      "padilla1999",
+      "heil2001"
+     ],
+     "evidence": [
+      {
+       "source": "padilla1999",
+       "quote": "Scaling of maximal and submaximal physiological values showed a performance advantage of TT over FT, AT, and UH in all cycling terrains and conditions",
+       "level": "abstract"
+      },
+      {
+       "source": "padilla1999",
+       "quote": "mass exponents of 0.32 and 1 were the most appropriate to evaluate level and uphill cycling ability, respectively, whereas absolute Wmax values are recommended for performance-prediction in short events on level terrain",
+       "level": "abstract"
+      },
+      {
+       "source": "heil2001",
+       "quote": "which is consistent with the +0.32 exponent for Ws in the literature",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bcpw-scaled-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bcpw-ratio-choice"
+  },
+  {
+   "type": "question",
+   "item": "bcpw-scaled-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Cycling power = (gravity + rolling + air drag) × speed: m·g·gradient, Crr·m·g and ½·ρ·CdA·v².",
+    "On a 7% climb at 18 km/h gravity takes about 87% of the power, so speed tracks power ÷ total mass (rider plus bike).",
+    "On the flat, air drag takes 85–90%; what counts is power per drag area (W·m⁻² CdA), and big riders gain because drag area grows only with about mass^0.31.",
+    "Air power grows with v³: 10% faster costs about a third more air power.",
+    "Match the ratio to the task: W·kg⁻¹ for climbs, W·kg⁻⁰·³² or W per CdA for flat time trials, absolute watts for short flat efforts."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bcpw-mass-free-force",
+   "concept": "bcpw-forces",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "diprampero1979",
+    "martin1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner-turned-triathlete is 10 kg heavier than her training partner but has the same position and CdA on the bike. Which resistive force is the same for both at the same speed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Air drag",
+       "correct": true,
+       "why": "Right: air drag is ½·ρ·CdA·v²; mass doesn't appear in it, so the same CdA and speed give the same drag."
+      },
+      {
+       "id": "b",
+       "text": "Rolling resistance",
+       "why": "Rolling resistance is Crr·m·g: it rises with total mass, so the heavier rider has more."
+      },
+      {
+       "id": "c",
+       "text": "Gravity on a climb",
+       "why": "Gravity's pull along the road is m·g·gradient, in direct proportion to mass."
+      },
+      {
+       "id": "d",
+       "text": "Total resistance on a climb",
+       "why": "On a climb gravity and rolling both scale with mass, so the total is bigger for the heavier rider; only air drag is independent of mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcpw-climb-power",
+   "concept": "bcpw-forces",
+   "bloom": "apply",
+   "sources": [
+    "martin1998",
+    "diprampero1979"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The same rider (70 kg, 8 kg bike, Crr 0.004, CdA 0.35 m², ρ 1.2 kg·m⁻³) climbs the 7% road a little slower, at 4.5 m·s⁻¹. About how much power does that take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 274 W",
+       "correct": true,
+       "why": "Right: gravity 765 × 0.07 × 4.5 = 241 W, rolling 3.06 × 4.5 = 14 W, air 0.21 × 4.5³ = 19 W; total ≈ 274 W."
+      },
+      {
+       "id": "b",
+       "text": "About 248 W",
+       "why": "This leaves out the 8 kg bike: gravity and rolling have to lift and roll rider plus bike."
+      },
+      {
+       "id": "c",
+       "text": "About 259 W",
+       "why": "This uses the air drag force (∝ v²) as if it were the power; air power is force × speed, so it grows with v³."
+      },
+      {
+       "id": "d",
+       "text": "About 241 W",
+       "why": "That is gravity alone; rolling and air still take about 12% on this climb."
+      }
+     ],
+     "solution": "m·g = 78 × 9.81 = 765 N. Gravity: 765 × 0.07 × 4.5 = 241 W. Rolling: 765 × 0.004 × 4.5 = 14 W. Air: ½ × 1.2 × 0.35 × 4.5³ = 0.21 × 91 = 19 W. Total ≈ 274 W."
+    },
+    {
+     "id": "b",
+     "stem": "The same rider and bike (78 kg total, Crr 0.004, CdA 0.35 m²) rides a 5% climb at 6 m·s⁻¹ (21.6 km/h). About what share of the power goes to gravity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 78%",
+       "correct": true,
+       "why": "Right: gravity 765 × 0.05 × 6 = 230 W, rolling 18 W, air 0.21 × 6³ = 45 W; 230 ÷ 293 ≈ 78%."
+      },
+      {
+       "id": "b",
+       "text": "About 93%",
+       "why": "This leaves out air drag, which at 6 m·s⁻¹ is already about 45 W."
+      },
+      {
+       "id": "c",
+       "text": "About 100%",
+       "why": "Gravity dominates climbs, but rolling and air never vanish; here they take about a fifth."
+      },
+      {
+       "id": "d",
+       "text": "About 50%",
+       "why": "Air takes half only at much higher speeds or on very gentle slopes; at 5% and 21.6 km/h gravity still dominates."
+      }
+     ],
+     "solution": "Gravity: 765 × 0.05 × 6 = 230 W. Rolling: 765 × 0.004 × 6 = 18 W. Air: ½ × 1.2 × 0.35 × 6³ = 0.21 × 216 = 45 W. Total ≈ 293 W; gravity share = 230 ÷ 293 ≈ 78%."
+    }
+   ]
+  },
+  {
+   "id": "bcpw-climb-compare",
+   "concept": "bcpw-climb",
+   "bloom": "analyse",
+   "sources": [
+    "padilla1999",
+    "jobson2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders on 8 kg bikes race up an 8% climb. A: 60 kg, 300 W. B: 75 kg, 340 W. Who is likely faster, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: 4.4 vs 4.1 W per kg of rider plus bike",
+       "correct": true,
+       "why": "Right: on a steep climb gravity dominates, so speed tracks power ÷ total mass: 300 ÷ 68 = 4.4 vs 340 ÷ 83 = 4.1 W·kg⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "B: 40 W more power wins on any road",
+       "why": "Absolute watts win short flat efforts; on a climb every extra kg must be lifted, and B carries 15 kg more."
+      },
+      {
+       "id": "c",
+       "text": "Equal: both ride at about 4.5 W·kg⁻¹",
+       "why": "Only B is near 4.5 W·kg⁻¹ (body mass); A is at 5.0. And total mass gives 4.4 vs 4.1, still not equal."
+      },
+      {
+       "id": "d",
+       "text": "B: heavier riders gain more momentum on climbs",
+       "why": "Momentum helps on descents and rollers, not on a steady climb, where extra mass only adds gravity force."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcpw-bike-mass",
+   "concept": "bcpw-climb",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "padilla1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "W·kg⁻¹ is quoted per kg of body mass. Why does this slightly flatter a light climber against a heavy one on a real climb?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same bike mass is a bigger share of a light rider's total load",
+       "correct": true,
+       "why": "Right: an 8 kg bike adds 13% to a 60 kg rider but 10% to an 80 kg rider, so per kg of total mass the gap shrinks."
+      },
+      {
+       "id": "b",
+       "text": "Heavy riders lose more watts per kg to rolling resistance",
+       "why": "Rolling resistance is Crr·m·g, so per kg it is the same for every rider: it can't favour either one."
+      },
+      {
+       "id": "c",
+       "text": "Heavy riders' bikes are lighter in proportion",
+       "why": "That is the same idea backwards: bikes weigh about the same, so it's the light rider whose load grows most."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcpw-flat-compare",
+   "concept": "bcpw-flat",
+   "bloom": "analyse",
+   "sources": [
+    "debraux2011",
+    "heil2001",
+    "swain1987"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Flat 40 km time trial. Rider C: 80 kg, 360 W, CdA 0.27 m². Rider D: 62 kg, 300 W, CdA 0.24 m². Who is likely faster?",
+     "options": [
+      {
+       "id": "a",
+       "text": "C: about 1,330 vs 1,250 W per m² of drag area",
+       "correct": true,
+       "why": "Right: on the flat air takes most of the power, so W per CdA decides: 360 ÷ 0.27 ≈ 1,333; 300 ÷ 0.24 = 1,250."
+      },
+      {
+       "id": "b",
+       "text": "D: 4.8 vs 4.5 W·kg⁻¹",
+       "why": "W·kg⁻¹ decides climbs; on the flat, mass only enters through rolling resistance, a small share."
+      },
+      {
+       "id": "c",
+       "text": "D: a smaller CdA always wins",
+       "why": "A smaller CdA helps, but it has to be weighed against power: C's extra watts more than make up for his bigger CdA."
+      },
+      {
+       "id": "d",
+       "text": "Equal: their extra mass and extra power cancel",
+       "why": "There is no gravity term on the flat, so C's extra mass costs little while his extra watts go into beating air."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bcpw-speed-cube",
+   "concept": "bcpw-flat",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "diprampero1979",
+    "debraux2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a flat road, a cyclist wants to go 10% faster. If air drag takes nearly all the power, about how much more power does she need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 33% more",
+       "correct": true,
+       "why": "Right: drag force grows with v², and power = force × speed, so air power grows with v³: 1.1³ = 1.33."
+      },
+      {
+       "id": "b",
+       "text": "About 21% more",
+       "why": "That is 1.1², the rise in drag force; power also multiplies by speed, giving v³."
+      },
+      {
+       "id": "c",
+       "text": "About 10% more",
+       "why": "Power would rise in step with speed only if resistance were constant, as rolling resistance nearly is; air drag is not."
+      }
+     ],
+     "solution": "Air power = ½·ρ·CdA·v³. Speed × 1.1 gives power × 1.1³ = 1.331, about 33% more."
+    }
+   ]
+  },
+  {
+   "id": "bcpw-scaled-calc",
+   "concept": "bcpw-scaling",
+   "bloom": "apply",
+   "sources": [
+    "padilla1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Rider B holds 340 W and weighs 75 kg. What is that in W·kg⁻⁰·³²? (75^0.32 ≈ 3.98)",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 85 W·kg⁻⁰·³²",
+       "correct": true,
+       "why": "Right: 340 ÷ 75^0.32 = 340 ÷ 3.98 ≈ 85."
+      },
+      {
+       "id": "b",
+       "text": "About 4.5 W·kg⁻⁰·³²",
+       "why": "That is plain W·kg⁻¹ (340 ÷ 75): an exponent of 1, not 0.32."
+      },
+      {
+       "id": "c",
+       "text": "About 14 W·kg⁻⁰·³²",
+       "why": "This divides by 75 × 0.32 = 24: multiplying by the exponent instead of raising to its power."
+      },
+      {
+       "id": "d",
+       "text": "About 1,353 W·kg⁻⁰·³²",
+       "why": "This multiplies by 3.98 instead of dividing."
+      }
+     ],
+     "solution": "W·kg⁻⁰·³² = power ÷ mass^0.32 = 340 ÷ 3.98 ≈ 85.4."
+    },
+    {
+     "id": "b",
+     "stem": "For a flat time trial, compare A (300 W, 60 kg) and B (340 W, 75 kg) in W·kg⁻⁰·³². (60^0.32 ≈ 3.71, 75^0.32 ≈ 3.98) Which ranks higher?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: about 85 vs 81",
+       "correct": true,
+       "why": "Right: A = 300 ÷ 3.71 ≈ 81, B = 340 ÷ 3.98 ≈ 85. On the flat the heavier, more powerful rider ranks higher."
+      },
+      {
+       "id": "b",
+       "text": "A: about 5.0 vs 4.5",
+       "why": "These are plain W·kg⁻¹ values, the climbing ratio; the flat-terrain ratio uses mass^0.32."
+      },
+      {
+       "id": "c",
+       "text": "Equal: scaling removes all differences between riders",
+       "why": "Scaling removes the size effect, not real differences in fitness; here B still comes out ahead."
+      }
+     ],
+     "solution": "A: 300 ÷ 60^0.32 = 300 ÷ 3.71 ≈ 81. B: 340 ÷ 75^0.32 = 340 ÷ 3.98 ≈ 85. B ranks higher on the flat, though A wins the climb (5.0 vs 4.5 W·kg⁻¹)."
+    }
+   ]
+  },
+  {
+   "id": "bcpw-ratio-choice",
+   "concept": "bcpw-scaling",
+   "bloom": "evaluate",
+   "sources": [
+    "padilla1999",
+    "heil2001",
+    "jobson2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlon coach wants one number to rank her athletes for a flat, non-drafting 180 km Ironman bike leg. Which is the best choice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Power per m² of CdA (or W·kg⁻⁰·³²)",
+       "correct": true,
+       "why": "Right: a flat, non-drafting ride is mostly air drag, so power per drag area fits; W·kg⁻⁰·³² is the next best when CdA isn't measured."
+      },
+      {
+       "id": "b",
+       "text": "Sustainable power in W·kg⁻¹",
+       "why": "W·kg⁻¹ fits steep climbs, where gravity dominates; on the flat it unfairly penalises heavier, more powerful athletes."
+      },
+      {
+       "id": "c",
+       "text": "Peak 5-second sprint power in W",
+       "why": "Absolute power suits short flat efforts; a 4–6 h ride depends on sustainable power and drag, not sprint power."
+      },
+      {
+       "id": "d",
+       "text": "VO2max in mL·kg⁻¹·min⁻¹",
+       "why": "A per-kg measure of aerobic capacity: it ignores both drag area and what share of VO2max can be held for hours."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

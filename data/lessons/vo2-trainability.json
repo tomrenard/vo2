@@ -1,0 +1,799 @@
+{
+ "id": "vo2-trainability",
+ "module": "t2-vo2max",
+ "title": "How trainable is VO₂max?",
+ "goal": "Explain how much and how fast training raises VO₂max, what HIIT adds over continuous training according to meta-analyses, how quickly VO₂max is lost when training stops, and why averages hide individual differences.",
+ "requires": [
+  "vo2-performance"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "continuous-training",
+    "hiit"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "tr-how-much",
+   "title": "How much does training add?",
+   "text": "A [meta-analysis](g:meta-analysis) pooled 28 controlled trials: 723 healthy adults aged 18–45, starting at about 41 mL·kg⁻¹·min⁻¹. Endurance training raised VO₂max by about **4.9 mL·kg⁻¹·min⁻¹** more than in controls who didn't train [[c:mil-et]]: roughly +12% for a typical starter.\n\nWho gains more? Gains were larger in younger people, in people less fit at the start, and in longer programmes [[c:mil-mods]]. So the fitter you already are, the less room is left: a trained cyclist can't expect a beginner's jump.\n\nWhere the gain comes from you know from the *Fick equation* lesson: mostly a bigger maximal [cardiac output](g:cardiac-output).",
+   "claims": [
+    {
+     "id": "mil-et",
+     "text": "In 28 controlled trials (723 healthy adults aged 18–45, baseline about 41 mL·kg⁻¹·min⁻¹), endurance training raised VO₂max by about 4.9 mL·kg⁻¹·min⁻¹ compared with no-exercise controls.",
+     "grade": "strong",
+     "sources": [
+      "milanovic2015"
+     ],
+     "evidence": [
+      {
+       "source": "milanovic2015",
+       "quote": "The meta-analysed effect of endurance training on VO2max was a possibly large beneficial effect (4.9 mL·kg(-1)·min(-1); 95 % confidence limits ±1.4 mL·kg(-1)·min(-1)), when compared with no-exercise controls.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mil-mods",
+     "text": "VO₂max gains with endurance training were larger in younger people, in longer programmes and in people with lower starting fitness.",
+     "grade": "moderate",
+     "sources": [
+      "milanovic2015"
+     ],
+     "evidence": [
+      {
+       "source": "milanovic2015",
+       "quote": "A possibly moderate additional increase was observed for typically younger subjects (2.4 mL·kg(-1)·min(-1); ±2.1 mL·kg(-1)·min(-1)) and interventions of longer duration (2.2 mL·kg(-1)·min(-1); ±3.0 mL·kg(-1)·min(-1)), and a small additional improvement for subjects with lower baseline fitness (1.4 mL·kg(-1)·min(-1); ±2.0 mL·kg(-1)·min(-1)).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tr-gain-example",
+   "title": "Turning a gain into a percentage",
+   "problem": "A beginner's VO₂max rises from 40.8 to 45.7 mL·kg⁻¹·min⁻¹ over 12 weeks. What is the relative gain?",
+   "steps": [
+    "Absolute change: 45.7 − 40.8 = 4.9 mL·kg⁻¹·min⁻¹.",
+    "Relative change = change ÷ **old** value × 100 = 4.9 ÷ 40.8 × 100 = 12.0%.",
+    "Dividing by the new value (4.9 ÷ 45.7 = 10.7%) is the common slip (*Percentages, ratios and change*)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-relative-gain-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-who-gains",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "tr-time-course",
+   "title": "How fast it rises",
+   "text": "VO₂max moves within weeks. Eight young and eight older men (about 68 years) cycled three times a week, 45 min at about 70% of VO₂max. VO₂max was already up after **3 weeks** and kept rising to 12 weeks: +18% in the young, +31% in the older men [[c:murias-time]].\n\nThe source of the gain changed over time. In this study, in the first 3 weeks, about two thirds of it came from a wider [a-vO₂ difference](g:a-vo2-difference); after that, all further gains came from a higher maximal cardiac output [[c:murias-mech]].\n\nTreat that split as a hint: one study of 16 men, no control group, and extraction calculated from a gas-method cardiac output, so an error in one lands in the other.",
+   "claims": [
+    {
+     "id": "murias-time",
+     "text": "VO₂max rose within 3 weeks of cycling training and kept rising to 12 weeks: +18% in young and +31% in older men.",
+     "grade": "weak",
+     "sources": [
+      "murias2010"
+     ],
+     "evidence": [
+      {
+       "source": "murias2010",
+       "quote": "Vo(2 max) increased within 3 wk with further increases observed posttraining in both O (+31%) and Y (+18%), (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "murias-mech",
+     "text": "Early VO₂max gains (first 3 weeks) came mainly from a wider a-vO₂ difference; later gains came only from a higher maximal cardiac output.",
+     "grade": "weak",
+     "sources": [
+      "murias2010"
+     ],
+     "evidence": [
+      {
+       "source": "murias2010",
+       "quote": "Early adaptations (first 3 wk) mainly relied on a widened maximal a-vO(2 diff) (approximately 66%) whereas further increases in Vo(2 max) were exclusively explained by a greater Q(max).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-early-mech",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-appraise-murias"
+  },
+  {
+   "type": "concept",
+   "id": "tr-hiit",
+   "title": "Intervals or steady?",
+   "text": "[Continuous training](g:continuous-training) means steady riding or running at a moderate intensity. [HIIT](g:hiit) means repeated hard bouts near or above the intensity that draws out VO₂max, with easy recovery between.\n\nBoth work. Head to head, HIIT raised VO₂max a little more than continuous training: about **1.2 mL·kg⁻¹·min⁻¹** extra [[c:mil-hit]]. In 40 moderately trained men, running 4 × 4 min at 90–95% of HRmax for 8 weeks raised VO₂max more than the same total work at 70% or 85% of HRmax [[c:helgerud]].\n\nAcross interval studies in untrained and recreational people, VO₂max rose by about 0.51 L·min⁻¹ on average, and by 0.8–0.9 L·min⁻¹ in the studies with longer intervals [[c:bacon]].",
+   "claims": [
+    {
+     "id": "mil-hit",
+     "text": "Both endurance training and HIIT raise VO₂max a lot; compared head to head, HIIT gave a small extra gain of about 1.2 mL·kg⁻¹·min⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "milanovic2015"
+     ],
+     "evidence": [
+      {
+       "source": "milanovic2015",
+       "quote": "When compared with endurance training, there was a possibly small beneficial effect for HIT (1.2 mL·kg(-1)·min(-1); ±0.9 mL·kg(-1)·min(-1))",
+       "level": "abstract"
+      },
+      {
+       "source": "milanovic2015",
+       "quote": "Endurance training and HIT both elicit large improvements in the VO2max of healthy, young to middle-aged adults, with the gains in VO2max being greater following HIT when compared with endurance training.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "helgerud",
+     "text": "In moderately trained men, high-intensity intervals (such as 4 × 4 min at 90–95% HRmax) raised VO₂max more than the same total work at 70% or 85% HRmax.",
+     "grade": "weak",
+     "sources": [
+      "helgerud2007"
+     ],
+     "evidence": [
+      {
+       "source": "helgerud2007",
+       "quote": "High-aerobic intensity endurance interval training is significantly more effective than performing the same total work at either lactate threshold or at 70% HRmax, in improving VO2max.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bacon",
+     "text": "Interval training studies raised VO₂max by about 0.51 L·min⁻¹ on average, and by about 0.8–0.9 L·min⁻¹ in studies with longer intervals.",
+     "grade": "moderate",
+     "sources": [
+      "bacon2013"
+     ],
+     "evidence": [
+      {
+       "source": "bacon2013",
+       "quote": "An increase in VO2max of 0.51 L · min(-1) (95% CI: 0.43 to 0.60 L · min(-1)) was observed. A subset of 9 studies, with 72 subjects, that featured longer intervals showed even larger (~0.8-0.9 L · min(-1)) changes in VO2max with evidence of a marked response in all subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-hiit-vs-ct",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-hiit-size",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "tr-detraining",
+   "title": "Detraining at a glance",
+   "text": "Gains fade fast when training stops. Eight endurance-trained men stopped for 2–4 weeks. Blood volume fell 9% (plasma 12%), [stroke volume](g:stroke-volume) 12% and VO₂max 6%. When their blood volume was topped up again with an infusion, stroke volume and VO₂max came back to within 2–4% of their trained values [[c:coyle86]].\n\nSo the first loss is mostly blood volume: less filling, smaller stroke volume, lower maximal cardiac output. The quick early loss is typical of highly trained athletes; in recently trained people it is more moderate [[c:mujika-short]]. Over longer breaks the muscle's mitochondria follow (*What training changes in muscle*). The module *Detraining and retraining* covers this in full.",
+   "claims": [
+    {
+     "id": "coyle86",
+     "text": "After 2–4 weeks without training, endurance-trained men lost 9% of blood volume, 12% of stroke volume and 6% of VO₂max; restoring blood volume largely reversed the losses.",
+     "grade": "weak",
+     "sources": [
+      "coyle1986b"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1986b",
+       "quote": "Detraining produced a 9% decline in blood volume (5,177 to 4,692 ml; P less than 0.01) during upright exercise, due primarily to a 12% lowering (P less than 0.01) of plasma volume (PV; Evans blue dye technique). SV was reduced by 12% (P less than 0.05) and VO2max declined 6% (P less than 0.01)",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1986b",
+       "quote": "SV and VO2max were increased (P less than 0.05) by PV expansion in the detrained state to within 2-4% of trained values.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mujika-short",
+     "text": "Short-term detraining in highly trained athletes brings a rapid fall in VO₂max and blood volume, with lower stroke volume and maximal cardiac output; the changes are more moderate in recently trained people.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2000"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2000",
+       "quote": "Short term cardiorespiratory detraining is characterised in highly trained athletes by a rapid decline in maximal oxygen uptake (VO2max) and blood volume. Exercise heart rate increases insufficiently to counterbalance the decreased stroke volume, and maximal cardiac output is thus reduced.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2000",
+       "quote": "These changes are more moderate in recently trained individuals.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-detrain-mech",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-detrain-who"
+  },
+  {
+   "type": "concept",
+   "id": "tr-spread",
+   "title": "Averages hide the spread",
+   "text": "Every number so far is an average, and people spread widely around it. Studies of continuous training often show modest gains on average, and very small ones in some people. Yet in the interval studies with longer intervals, every participant showed a clear gain [[c:bacon-spread]]. So part of a 'poor response' may be the dose, not the person.\n\nThe evidence module showed why a spread of results doesn't prove that non-responders exist (*Noise, worthwhile changes and non-responders*). For VO₂max this bites hard: repeat tests vary by about 5.6% with no real change, about half of a typical training gain.\n\nHow much of the real spread comes from genes is the subject of *Genetics, trainability and individual response*.",
+   "claims": [
+    {
+     "id": "bacon-spread",
+     "text": "Endurance training studies often show modest VO₂max changes and very limited responses in some subjects, while studies with longer intervals showed a marked response in all subjects.",
+     "grade": "moderate",
+     "sources": [
+      "bacon2013"
+     ],
+     "evidence": [
+      {
+       "source": "bacon2013",
+       "quote": "Endurance exercise training studies frequently show modest changes in VO2max with training and very limited responses in some subjects.",
+       "level": "abstract"
+      },
+      {
+       "source": "bacon2013",
+       "quote": "A subset of 9 studies, with 72 subjects, that featured longer intervals showed even larger (~0.8-0.9 L · min(-1)) changes in VO2max with evidence of a marked response in all subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-nonresponder",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Endurance training raises VO₂max by about 5 mL·kg⁻¹·min⁻¹ (about 12%) in healthy young adults; younger and less fit people gain more.",
+    "In one small study, VO₂max rose within 3 weeks: mostly through wider extraction at first, then through a bigger maximal cardiac output.",
+    "HIIT gives a small extra gain over continuous training (about 1 mL·kg⁻¹·min⁻¹), not a doubling; in one meta-analysis, longer intervals gave the largest gains.",
+    "Two to four weeks off cost about 6% of VO₂max, mostly through lost blood volume and stroke volume.",
+    "Averages hide wide individual differences, and one test before and after can't separate a small gain from noise."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "tr-relative-gain-calc",
+   "concept": "tr-how-much",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "milanovic2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a winter of base training, a runner's VO₂max rises from 50 to 54 mL·kg⁻¹·min⁻¹. What is the relative gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8%",
+       "correct": true,
+       "why": "Right: 4 ÷ 50 × 100 = 8%."
+      },
+      {
+       "id": "b",
+       "text": "7.4%",
+       "why": "This divides by the new value (4 ÷ 54). Always divide by the old one."
+      },
+      {
+       "id": "c",
+       "text": "4%",
+       "why": "4 is the absolute change in mL·kg⁻¹·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "108%",
+       "why": "This is the new value as a share of the old (54 ÷ 50 × 100), not the change."
+      }
+     ],
+     "solution": "Change = 54 − 50 = 4 mL·kg⁻¹·min⁻¹. Relative change = 4 ÷ 50 × 100 = 8%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO₂max rises from 3.50 to 3.92 L·min⁻¹ in 10 weeks. What is the relative gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12%",
+       "correct": true,
+       "why": "Right: 0.42 ÷ 3.50 × 100 = 12%."
+      },
+      {
+       "id": "b",
+       "text": "10.7%",
+       "why": "This divides by the new value (0.42 ÷ 3.92)."
+      },
+      {
+       "id": "c",
+       "text": "0.42%",
+       "why": "0.42 is the absolute change in L·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "112%",
+       "why": "This is the new value as a share of the old (3.92 ÷ 3.50 × 100), not the change."
+      }
+     ],
+     "solution": "Change = 3.92 − 3.50 = 0.42 L·min⁻¹. Relative change = 0.42 ÷ 3.50 × 100 = 12%."
+    },
+    {
+     "id": "c",
+     "stem": "A new triathlete's VO₂max rises from 44 to 49.5 mL·kg⁻¹·min⁻¹ in her first season. What is the relative gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.5%",
+       "correct": true,
+       "why": "Right: 5.5 ÷ 44 × 100 = 12.5%."
+      },
+      {
+       "id": "b",
+       "text": "11.1%",
+       "why": "This divides by the new value (5.5 ÷ 49.5)."
+      },
+      {
+       "id": "c",
+       "text": "5.5%",
+       "why": "5.5 is the absolute change in mL·kg⁻¹·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "112.5%",
+       "why": "This is the new value as a share of the old (49.5 ÷ 44 × 100), not the change."
+      }
+     ],
+     "solution": "Change = 49.5 − 44 = 5.5 mL·kg⁻¹·min⁻¹. Relative change = 5.5 ÷ 44 × 100 = 12.5%."
+    }
+   ]
+  },
+  {
+   "id": "tr-who-gains",
+   "concept": "tr-how-much",
+   "bloom": "understand",
+   "sources": [
+    "milanovic2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Four people start the same 12-week endurance programme. Who is likely to gain the most VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A sedentary 25-year-old with a low starting VO₂max",
+       "correct": true,
+       "why": "Right: younger people and those less fit at the start gained more in the pooled trials."
+      },
+      {
+       "id": "b",
+       "text": "A 40-year-old club cyclist with years of training",
+       "why": "Trained people have less room left to improve."
+      },
+      {
+       "id": "c",
+       "text": "A 24-year-old elite runner at 75 mL·kg⁻¹·min⁻¹",
+       "why": "Near the top of the range, gains from a standard programme are small."
+      },
+      {
+       "id": "d",
+       "text": "All four will gain the same percentage",
+       "why": "Starting fitness and age changed the size of the gain in the pooled trials."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-early-mech",
+   "concept": "tr-time-course",
+   "bloom": "analyse",
+   "sources": [
+    "murias2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 3 weeks of new training, a cyclist's VO₂max is up 5%, but his maximal cardiac output has barely changed. What most likely explains the early gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wider a-vO₂ difference: his muscles take more O₂ from each litre",
+       "correct": true,
+       "why": "Right: in the first 3 weeks about two thirds of the gain came from extraction; cardiac output caught up later."
+      },
+      {
+       "id": "b",
+       "text": "A higher maximal heart rate",
+       "why": "Training doesn't raise maximal heart rate, and cardiac output didn't change."
+      },
+      {
+       "id": "c",
+       "text": "Better cycling efficiency",
+       "why": "Efficiency changes the O₂ cost of a given power, not VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "A measuring error, since VO₂max can't change without cardiac output",
+       "why": "VO₂ = Q × a-vO₂ difference: it can rise through either term."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A new runner's VO₂max rises 4% in her first 3 weeks; her maximal cardiac output is unchanged. Which Fick term most likely grew?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The a-vO₂ difference",
+       "correct": true,
+       "why": "Right: early gains came mostly from wider extraction; cardiac output rose later."
+      },
+      {
+       "id": "b",
+       "text": "Maximal stroke volume",
+       "why": "Stroke volume is part of cardiac output, which didn't change."
+      },
+      {
+       "id": "c",
+       "text": "Maximal heart rate",
+       "why": "Heart rate is part of cardiac output, which didn't change."
+      },
+      {
+       "id": "d",
+       "text": "Running economy",
+       "why": "Economy isn't a term of the Fick equation; it changes the cost of running, not VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-appraise-murias",
+   "concept": "tr-time-course",
+   "bloom": "evaluate",
+   "sources": [
+    "murias2010",
+    "montero2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The finding that early VO₂max gains come mostly from wider extraction rests on 16 men, with cardiac output measured by a gas method. What most limits it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few men, and a-vO₂ difference was calculated from Q, so Q errors land in it",
+       "correct": true,
+       "why": "Right: a small error in cardiac output becomes an error in the calculated extraction, and 16 men can't speak for everyone."
+      },
+      {
+       "id": "b",
+       "text": "It didn't measure VO₂max directly in the men",
+       "why": "VO₂max was measured; the weak points are the sample and the calculated a-vO₂ difference."
+      },
+      {
+       "id": "c",
+       "text": "Older men can't adapt to training, so the data are suspect",
+       "why": "The older men gained the most (+31%); age isn't the problem here."
+      },
+      {
+       "id": "d",
+       "text": "Three weeks is too short for VO₂max to change at all",
+       "why": "VO₂max did rise within 3 weeks; the question is which term explains it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-hiit-vs-ct",
+   "concept": "tr-hiit",
+   "bloom": "apply",
+   "sources": [
+    "milanovic2015",
+    "helgerud2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has 4 hours a week to train and wants to raise her VO₂max. Which plan has the best evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mostly steady work plus a session of intervals such as 4 × 4 min hard",
+       "correct": true,
+       "why": "Right: both raise VO₂max, and intervals near VO₂max add a small extra gain."
+      },
+      {
+       "id": "b",
+       "text": "Only steady work at 70% HRmax, since intensity doesn't matter",
+       "why": "With total work matched, 4 × 4 min intervals raised VO₂max more than 70% HRmax training."
+      },
+      {
+       "id": "c",
+       "text": "Only 30 s all-out sprints, which double the gains",
+       "why": "No meta-analysis shows a doubling; HIIT's extra gain is small."
+      },
+      {
+       "id": "d",
+       "text": "Only threshold rides at 85% HRmax, the best for VO₂max",
+       "why": "Threshold training raised VO₂max less than 4 × 4 min intervals for the same work."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner wants to raise his VO₂max over 8 weeks, with total training fixed. Which change has the best evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Replace some steady running with intervals such as 4 × 4 min at 90–95% HRmax",
+       "correct": true,
+       "why": "Right: for the same total work, such intervals raised VO₂max more than 70% or 85% HRmax running."
+      },
+      {
+       "id": "b",
+       "text": "Run everything at 70% HRmax, as volume is all that counts",
+       "why": "With work matched, the steady group gained less VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "Run everything at threshold, 85% HRmax",
+       "why": "Threshold running raised VO₂max less than the intervals."
+      },
+      {
+       "id": "d",
+       "text": "Stop running and only lift weights",
+       "why": "Strength training doesn't raise VO₂max like endurance training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-hiit-size",
+   "concept": "tr-hiit",
+   "bloom": "evaluate",
+   "sources": [
+    "milanovic2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An app advert says: \"HIIT doubles your VO₂max gains compared with steady training.\" What does the meta-analysis evidence say?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: HIIT adds about 1 mL·kg⁻¹·min⁻¹ over gains of about 5",
+       "correct": true,
+       "why": "Right: both give large gains; HIIT's edge is small, about 1.2 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Right: HIIT gains are twice as large",
+       "why": "Steady training gave about 4.9 and HIIT about 5.5 mL·kg⁻¹·min⁻¹ over controls: nowhere near double."
+      },
+      {
+       "id": "c",
+       "text": "Wrong the other way: steady training gives larger gains",
+       "why": "In head-to-head trials HIIT gave slightly more, not less."
+      },
+      {
+       "id": "d",
+       "text": "Unknown: no trials have compared them",
+       "why": "28 controlled trials were pooled in one meta-analysis alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-detrain-mech",
+   "concept": "tr-detraining",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1986b",
+    "mujika2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained runner has 3 weeks off with an injury. His VO₂max is 6% down. What is the main cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less blood volume, so the heart fills less and stroke volume falls",
+       "correct": true,
+       "why": "Right: after 2–4 weeks off, blood volume and stroke volume fell, and topping up blood volume largely restored VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "His mitochondria have all gone",
+       "why": "Mitochondria fall more slowly, and they don't explain why restoring blood volume brought VO₂max back."
+      },
+      {
+       "id": "c",
+       "text": "His maximal heart rate has dropped",
+       "why": "Heart rate tends to rise, not fall, when training stops; it just doesn't rise enough to make up for the smaller stroke volume."
+      },
+      {
+       "id": "d",
+       "text": "He has gained fat, so relative VO₂max fell",
+       "why": "The 6% fall was in a few weeks with blood volume lost; it is not a body-mass effect."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rests completely for 3 weeks after her season. Her VO₂max falls by about 6%. Which change explains most of it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fall in plasma and blood volume, lowering stroke volume",
+       "correct": true,
+       "why": "Right: this is the first and largest early change."
+      },
+      {
+       "id": "b",
+       "text": "Loss of capillaries around her muscle fibres",
+       "why": "Capillaries change slowly; they don't explain the fast early fall."
+      },
+      {
+       "id": "c",
+       "text": "Weaker breathing muscles",
+       "why": "Breathing muscles don't limit VO₂max in most riders, and they weren't the measured change."
+      },
+      {
+       "id": "d",
+       "text": "A lower maximal heart rate",
+       "why": "HR doesn't fall with detraining; at a given workload it rises."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-detrain-who",
+   "concept": "tr-detraining",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mujika2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Who loses VO₂max faster in the first few weeks off: a highly trained athlete or someone who trained for only a few months?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The highly trained athlete",
+       "correct": true,
+       "why": "Right: the rapid early fall is typical of highly trained athletes; it is more moderate in the recently trained."
+      },
+      {
+       "id": "b",
+       "text": "The recently trained person",
+       "why": "Their changes were more moderate in short-term detraining."
+      },
+      {
+       "id": "c",
+       "text": "Both lose at exactly the same rate",
+       "why": "The review describes a faster fall in the highly trained."
+      },
+      {
+       "id": "d",
+       "text": "Neither loses anything in under a month",
+       "why": "VO₂max fell about 6% in 2–4 weeks in trained men."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-nonresponder",
+   "concept": "tr-spread",
+   "bloom": "evaluate",
+   "sources": [
+    "bacon2013",
+    "katch1982"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 10-week club programme, 3 of 20 riders show no VO₂max gain on a single test before and after. The coach labels them 'non-responders'. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Premature: test noise and the training dose could explain it",
+       "correct": true,
+       "why": "Right: VO₂max varies about 5.6% between repeat tests, and longer intervals produced gains in everyone."
+      },
+      {
+       "id": "b",
+       "text": "Correct: some people's VO₂max can't be trained",
+       "why": "One test before and one after can't separate a small real gain from noise."
+      },
+      {
+       "id": "c",
+       "text": "Correct: they must have the wrong fibre types",
+       "why": "Nothing in the data points to fibre type; noise and dose are simpler explanations."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: VO₂max always rises by 12% with training",
+       "why": "12% is an average; individual results vary widely around it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running study finds that 4 of 25 people improved VO₂max by less than 2%. A headline calls them \"genetic non-responders\". What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too strong: under 2% is within noise, and genes weren't tested",
+       "correct": true,
+       "why": "Right: repeat tests vary by about 5.6%, so small changes can't be called; genes weren't measured."
+      },
+      {
+       "id": "b",
+       "text": "Fair: anyone below 2% is a true non-responder",
+       "why": "A 2% cut-off is well inside the measurement noise."
+      },
+      {
+       "id": "c",
+       "text": "Fair: low gains always mean genes",
+       "why": "Dose, sleep, illness and noise can all explain small gains; the study didn't test genes."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: everybody gains exactly the same amount",
+       "why": "Real individual differences exist; the issue is how to show them."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

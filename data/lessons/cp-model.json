@@ -1,0 +1,739 @@
+{
+ "id": "cp-model",
+ "module": "t2-cp-wprime",
+ "title": "Critical power and W′: the power–duration hyperbola",
+ "goal": "Explain why best power against time is a hyperbola, what critical power marks in the body, and why W′ is a fixed budget of work above it.",
+ "requires": [
+  "test-reliability"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "power-duration-curve",
+    "hyperbola",
+    "asymptote",
+    "time-to-exhaustion"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cpm-curve",
+   "title": "Best power falls along a hyperbola",
+   "text": "Plot the highest power you can hold against how long you can hold it: the [power–duration curve](g:power-duration-curve) from the units module. For efforts of about 2–15 min it is a [hyperbola](g:hyperbola) that levels off at an [asymptote](g:asymptote), [critical power](g:critical-power) (CP) [[c:cp-hyperbola]].\n\nTwo numbers set the curve: CP (W), where it flattens, and [W′](g:w-prime) (\"W prime\", kJ), how far it bends above CP. [Time to exhaustion](g:time-to-exhaustion) is:\n\n**t = W′ ÷ (P − CP)**\n\n| power (CP 250 W, W′ 20 kJ) | P − CP | t |\n|---|---|---|\n| 450 W | 200 W | 100 s |\n| 350 W | 100 W | 200 s |\n| 300 W | 50 W | 400 s |\n\nHalve the gap above CP and the time doubles. The shape holds across species and muscle groups [[c:cp-conserved]].",
+   "claims": [
+    {
+     "id": "cp-hyperbola",
+     "text": "Between about 2 and 15 min, time to exhaustion rises as a hyperbola as power falls towards CP: t = W′ ÷ (P − CP).",
+     "grade": "strong",
+     "sources": [
+      "jones2010",
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2010",
+       "quote": "For high-intensity muscular exercise, the time-to-exhaustion (t) increases as a predictable and hyperbolic function of decreasing power (P) or velocity",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2010",
+       "quote": "the curvature constant (W') of the relationship such that t = W'/(P - CP)",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2017",
+       "quote": "The power outputs are selected to result in ‘exhaustion’ in a minimum of ~2 min and a maximum of ~15 min.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cp-conserved",
+     "text": "The hyperbolic power–duration relationship holds across species, types of exercise and single muscle groups.",
+     "grade": "strong",
+     "sources": [
+      "poole2016"
+     ],
+     "evidence": [
+      {
+       "source": "poole2016",
+       "quote": "The hyperbolic form of the power-duration relationship is rigorous and highly conserved across species, forms of exercise, and individual muscles/muscle groups.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpm-asymptote"
+  },
+  {
+   "type": "concept",
+   "id": "cpm-wprime",
+   "title": "W′: a fixed budget of work above CP",
+   "text": "[W′](g:w-prime) is not a power but an amount of work, in kJ, that you can do above CP. Every second above CP spends P − CP joules of it, and you reach exhaustion when it is gone [[c:wprime-def]].\n\nHow you spend it barely matters. In one small study, riders did about the same work above CP (15–17 kJ) whether they went all-out, rode a ramp, held a constant power or paced themselves over 3 min [[c:wprime-fixed]].\n\nWhat is it in the body? Partly the anaerobic energy from [PCr](g:pcr) and [glycolysis](g:glycolysis), but as W′ is spent [VO2](g:vo2) also climbs [[c:wprime-vo2]]. Treat W′ as a measured budget, not one fuel tank.",
+   "claims": [
+    {
+     "id": "wprime-def",
+     "text": "W′ is a fixed amount of work above CP, partly from anaerobic sources; exhaustion comes when it is used up.",
+     "grade": "strong",
+     "sources": [
+      "jones2010"
+     ],
+     "evidence": [
+      {
+       "source": "jones2010",
+       "quote": "CP represents the highest rate of energy transduction (oxidative ATP production, V˙O2) that can be sustained without continuously drawing on the energy store W' (composed in part of anaerobic energy sources and expressed in kilojoules).",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2010",
+       "quote": "The limit of tolerance (time t) occurs when W' is depleted.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wprime-fixed",
+     "text": "In one small study, work done above CP in about 3 min was similar (15–17 kJ) whether the effort was all-out, a ramp, constant power or self-paced.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "The total work done above CP did not significantly differ between conditions, being 16.5 ± 4.0 kJ for 3AOT, 16.4 ± 4.0 kJ for incremental exercise, 16.6 ± 7.4 kJ for constant power output exercise, and 15.3 ± 5.6 kJ for self-paced exercise.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "wprime-vo2",
+     "text": "As W′ is spent in intermittent exercise, VO2 rises: the modelled W′ balance tracked the rise in VO2.",
+     "grade": "weak",
+     "sources": [
+      "skiba2012"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2012",
+       "quote": "The model-predicted W' balance correlated with the temporal course of the rise in V˙O(2) (r = 0.82-0.96).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cpm-example",
+   "title": "How long can she hold 300 W?",
+   "problem": "A cyclist has CP 250 W and W′ 20 kJ. How long can she hold 300 W before she must slow down?",
+   "steps": [
+    "Gap above CP: 300 − 250 = 50 W, so she spends 50 J of W′ each second.",
+    "Put W′ in joules: 20 kJ = 20,000 J.",
+    "Time = W′ ÷ (P − CP) = 20,000 ÷ 50 = 400 s, or 6 min 40 s.",
+    "Check with the table: at 350 W the gap doubles to 100 W, so the time halves to 200 s."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpm-tlim-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpm-spend-calc"
+  },
+  {
+   "type": "question",
+   "item": "cpm-wprime-fixed"
+  },
+  {
+   "type": "concept",
+   "id": "cpm-domains",
+   "title": "Below CP things settle, above CP they don't",
+   "text": "CP matters because the body behaves differently on each side of it.\n\n- **Just below CP** ([heavy domain](g:heavy-domain)): muscle PCr and [pH](g:ph), blood [lactate](g:lactate) and VO2 rise, then level off at a [steady state](g:steady-state).\n- **Above CP** ([severe domain](g:severe-domain)): at a constant power none of them settle. The [VO2 slow component](g:vo2-slow-component) drives VO2 up to [VO2max](g:vo2max), PCr and pH keep falling and lactate keeps rising until you stop [[c:cp-boundary]].\n\nExhaustion comes at about the same muscle state whether the effort lasts 3 or 12 min [[c:cp-endpoint]]. CP sits at about 70–90% of VO2max, higher in trained athletes [[c:cp-fraction]].",
+   "claims": [
+    {
+     "id": "cp-boundary",
+     "text": "Below CP, PCr, pH, blood lactate and VO2 reach a steady state; above CP they do not, and VO2 rises to VO2max.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017",
+      "poole2016"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "However, above CP, in the ‘severe’ intensity domain, these variables do not demonstrate steady-state behavior.",
+       "level": "full-text"
+      },
+      {
+       "source": "poole2016",
+       "quote": "CP may be regarded as a \"fatigue threshold\" in the sense that it separates exercise intensity domains within which the physiological responses to exercise can (<CP) or cannot (>CP) be stabilized.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-endpoint",
+     "text": "At exhaustion above CP, muscle PCr, pH and VO2 reach similar limits whether the bout lasts 2–3 or 12–15 min.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "It is interesting that these respective minimum and maximum values are similar irrespective of whether the severe-intensity exercise bout is relatively short (2–3 min) or relatively long (12–15 min)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cp-fraction",
+     "text": "CP occurs at about 70–90% of VO2max, depending on training status.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "may occur at 70–90% V̇O2max, depending on training status",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpm-domain-runner"
+  },
+  {
+   "type": "question",
+   "item": "cpm-domain-bike"
+  },
+  {
+   "type": "question",
+   "item": "cpm-endpoint"
+  },
+  {
+   "type": "concept",
+   "id": "cpm-limits",
+   "title": "Where the two-number model breaks",
+   "text": "The model is fitted to efforts of about 2–15 min and works best there.\n\n- **Very short efforts.** It predicts ever higher power as time shrinks; real sprints are capped by peak muscle power.\n- **At CP.** In theory CP lasts for ever. In practice people hold it for only about 20–30 min [[c:cp-20-30]].\n- **Long events.** Over hours, fuel, heat and fatigue lower the power you can hold, which two numbers can't capture.\n\nCritics read the 20–30 min finding as proof that CP is set too high to be a true steady state [[c:cp-too-high]]. Its defenders say the boundary is real and that fatigue below it simply comes more slowly. Lesson 4 comes back to this debate.",
+   "claims": [
+    {
+     "id": "cp-20-30",
+     "text": "Exercise at CP can usually be sustained for only about 20–30 min.",
+     "grade": "moderate",
+     "sources": [
+      "jones2019"
+     ],
+     "evidence": [
+      {
+       "source": "jones2019",
+       "quote": "methodological differences in the assessment of these parameters typically result in MLSS occurring at a somewhat lower power output or running speed and exercise at CP being sustainable for no more than approximately 20-30 min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cp-too-high",
+     "text": "A critic argues that the evidence shows CP is too high an intensity to keep up for long.",
+     "grade": "disputed",
+     "sources": [
+      "dotan2022"
+     ],
+     "evidence": [
+      {
+       "source": "dotan2022",
+       "quote": "Much more than a critical mass of the extensive accumulated evidence, however, has persistently shown the determined intensity of critical power and its variants as being too high to maintain for extended periods.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cpm-at-cp"
+  },
+  {
+   "type": "question",
+   "item": "cpm-limits-eval"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Best power against time is a hyperbola between about 2 and 15 min: t = W′ ÷ (P − CP).",
+    "CP (W) is the asymptote; W′ (kJ) is a fixed amount of work above it, spent at P − CP each second.",
+    "Below CP (heavy domain) lactate, PCr and VO2 settle; above it (severe domain) VO2 climbs to VO2max and the effort ends when W′ is gone.",
+    "CP sits at about 70–90% of VO2max, but in practice it can be held for only about 20–30 min.",
+    "Trust the model inside 2–15 min; outside it, sprints and long events follow other limits."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cpm-asymptote",
+   "concept": "cpm-curve",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On the power–duration curve, what is critical power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The power the curve levels off towards as efforts get longer",
+       "correct": true,
+       "why": "Right: CP is the asymptote of the hyperbola, the power it approaches but never reaches."
+      },
+      {
+       "id": "b",
+       "text": "The best power a rider can hold for exactly one hour",
+       "why": "That is the idea behind FTP: a fixed duration. CP is defined by the shape of the curve, not by one duration."
+      },
+      {
+       "id": "c",
+       "text": "The peak power of a short all-out sprint",
+       "why": "That is the other, steep end of the curve. CP is where it flattens."
+      },
+      {
+       "id": "d",
+       "text": "The power at which blood lactate first starts to rise",
+       "why": "That is the first lactate threshold, the top of the moderate domain, well below CP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpm-tlim-calc",
+   "concept": "cpm-wprime",
+   "bloom": "apply",
+   "sources": [
+    "jones2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has CP 250 W and W′ 20 kJ. How long can she hold 300 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "400 s (6 min 40 s)",
+       "correct": true,
+       "why": "Right: t = W′ ÷ (P − CP), with W′ in joules."
+      },
+      {
+       "id": "b",
+       "text": "80 s",
+       "why": "This divides W′ by CP. Only the power above CP spends W′, so divide by P − CP."
+      },
+      {
+       "id": "c",
+       "text": "67 s",
+       "why": "This divides W′ by the whole power. Only the part above CP spends W′."
+      },
+      {
+       "id": "d",
+       "text": "As long as she likes: the power is close to CP",
+       "why": "Any power above CP spends W′ and ends in exhaustion; being close to CP only makes it take longer."
+      }
+     ],
+     "solution": "P − CP = 300 − 250 = 50 W. t = 20,000 J ÷ 50 W = 400 s = 6 min 40 s."
+    },
+    {
+     "id": "b",
+     "stem": "A rider has CP 280 W and W′ 18 kJ. How long can he hold 340 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 s (5 min)",
+       "correct": true,
+       "why": "Right: t = W′ ÷ (P − CP), with W′ in joules."
+      },
+      {
+       "id": "b",
+       "text": "64 s",
+       "why": "This divides W′ by CP. Only the power above CP spends W′, so divide by P − CP."
+      },
+      {
+       "id": "c",
+       "text": "53 s",
+       "why": "This divides W′ by the whole power. Only the part above CP spends W′."
+      },
+      {
+       "id": "d",
+       "text": "As long as he likes: the power is close to CP",
+       "why": "Any power above CP spends W′ and ends in exhaustion; being close to CP only makes it take longer."
+      }
+     ],
+     "solution": "P − CP = 340 − 280 = 60 W. t = 18,000 J ÷ 60 W = 300 s = 5 min."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete has CP 220 W and W′ 15 kJ. How long can she hold 245 W up a climb?",
+     "options": [
+      {
+       "id": "a",
+       "text": "600 s (10 min)",
+       "correct": true,
+       "why": "Right: t = W′ ÷ (P − CP), with W′ in joules."
+      },
+      {
+       "id": "b",
+       "text": "68 s",
+       "why": "This divides W′ by CP. Only the power above CP spends W′, so divide by P − CP."
+      },
+      {
+       "id": "c",
+       "text": "61 s",
+       "why": "This divides W′ by the whole power. Only the part above CP spends W′."
+      },
+      {
+       "id": "d",
+       "text": "As long as she likes: the power is close to CP",
+       "why": "Any power above CP spends W′ and ends in exhaustion; being close to CP only makes it take longer."
+      }
+     ],
+     "solution": "P − CP = 245 − 220 = 25 W. t = 15,000 J ÷ 25 W = 600 s = 10 min."
+    }
+   ]
+  },
+  {
+   "id": "cpm-spend-calc",
+   "concept": "cpm-wprime",
+   "bloom": "apply",
+   "sources": [
+    "jones2010",
+    "skiba2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with CP 270 W surges at 400 W for 60 s. How much W′ does the surge cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.8 kJ",
+       "correct": true,
+       "why": "Right: W′ spent = (P − CP) × time."
+      },
+      {
+       "id": "b",
+       "text": "24 kJ",
+       "why": "That is the total work of the surge. The first CP watts of it are \"free\"; only the part above CP comes out of W′."
+      },
+      {
+       "id": "c",
+       "text": "16.2 kJ",
+       "why": "That is the work done at CP during the surge, the part that does not touch W′."
+      },
+      {
+       "id": "d",
+       "text": "Almost none: a short surge runs on PCr alone",
+       "why": "W′ is spent at P − CP from the first second above CP, whatever the fuel; PCr is part of what W′ is."
+      }
+     ],
+     "solution": "(400 − 270) × 60 = 130 × 60 = 7,800 J = 7.8 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A rider with CP 300 W attacks at 500 W for 30 s. How much W′ does the attack cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 kJ",
+       "correct": true,
+       "why": "Right: W′ spent = (P − CP) × time."
+      },
+      {
+       "id": "b",
+       "text": "15 kJ",
+       "why": "That is the total work of the surge. The first CP watts of it are \"free\"; only the part above CP comes out of W′."
+      },
+      {
+       "id": "c",
+       "text": "9 kJ",
+       "why": "That is the work done at CP during the surge, the part that does not touch W′."
+      },
+      {
+       "id": "d",
+       "text": "Almost none: a short surge runs on PCr alone",
+       "why": "W′ is spent at P − CP from the first second above CP, whatever the fuel; PCr is part of what W′ is."
+      }
+     ],
+     "solution": "(500 − 300) × 30 = 200 × 30 = 6,000 J = 6 kJ."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete with CP 300 W rides 2 min at 330 W to close a gap. How much W′ does it cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.6 kJ",
+       "correct": true,
+       "why": "Right: W′ spent = (P − CP) × time."
+      },
+      {
+       "id": "b",
+       "text": "39.6 kJ",
+       "why": "That is the total work of the surge. The first CP watts of it are \"free\"; only the part above CP comes out of W′."
+      },
+      {
+       "id": "c",
+       "text": "36 kJ",
+       "why": "That is the work done at CP during the surge, the part that does not touch W′."
+      },
+      {
+       "id": "d",
+       "text": "Almost none: a short surge runs on PCr alone",
+       "why": "W′ is spent at P − CP from the first second above CP, whatever the fuel; PCr is part of what W′ is."
+      }
+     ],
+     "solution": "(330 − 300) × 120 = 30 × 120 = 3,600 J = 3.6 kJ."
+    }
+   ]
+  },
+  {
+   "id": "cpm-wprime-fixed",
+   "concept": "cpm-wprime",
+   "bloom": "understand",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with W′ 18 kJ does two 3-min tests to exhaustion: once flat out from the start, once at an even power. Roughly how much work above CP does she do in each?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 18 kJ in both",
+       "correct": true,
+       "why": "Right: the work above CP came out about the same however a 3-min effort was paced."
+      },
+      {
+       "id": "b",
+       "text": "Much more in the flat-out test",
+       "why": "Going hard early spends W′ faster, but the total budget is the same."
+      },
+      {
+       "id": "c",
+       "text": "Much more in the even-paced test",
+       "why": "Even pacing feels better but doesn't enlarge the budget: the work above CP was the same."
+      },
+      {
+       "id": "d",
+       "text": "Almost none in the even test, if she paces it well",
+       "why": "Any 3-min test to exhaustion is above CP, so it uses W′ whatever the pacing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpm-domain-runner",
+   "concept": "cpm-domains",
+   "bloom": "analyse",
+   "sources": [
+    "jones2017",
+    "poole2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner holds one constant pace on a treadmill. From minute 5 to minute 12 her VO2 climbs from 85% to 100% of VO2max and blood lactate rises from 6 to 10 mmol·L⁻¹; then she stops. Which domain was she in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Severe: above the running equivalent of CP",
+       "correct": true,
+       "why": "Right: at a constant pace nothing levelled off and VO2 was driven to its maximum, the mark of the severe domain."
+      },
+      {
+       "id": "b",
+       "text": "Heavy: lactate is high, but it was about to level off",
+       "why": "In the heavy domain lactate and VO2 settle within minutes. Here they kept climbing until she stopped."
+      },
+      {
+       "id": "c",
+       "text": "Moderate: she was fine until she reached VO2max",
+       "why": "In the moderate domain lactate stays near resting levels; 6–10 mmol·L⁻¹ rules it out."
+      },
+      {
+       "id": "d",
+       "text": "A steady state at VO2max",
+       "why": "Reaching VO2max is the end point of severe exercise, not a steady state: she lasted only seconds there."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpm-domain-bike",
+   "concept": "cpm-domains",
+   "bloom": "analyse",
+   "sources": [
+    "jones2010",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with CP 260 W and W′ 18 kJ rides 30 min at 250 W one day and tries 30 min at 275 W the next. What best describes the second ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO2 keeps rising and she stops after about 20 min",
+       "correct": true,
+       "why": "Right: 275 W is in the severe domain. t = 18,000 ÷ (275 − 260) = 1,200 s = 20 min."
+      },
+      {
+       "id": "b",
+       "text": "Lactate settles at a higher plateau and she finishes",
+       "why": "A plateau is what happens below CP. At 275 W she is 15 W above it, so nothing settles."
+      },
+      {
+       "id": "c",
+       "text": "Much like the first ride: 25 W hardly matters",
+       "why": "The two rides sit on opposite sides of CP, so the body behaves differently even though the gap is small."
+      },
+      {
+       "id": "d",
+       "text": "She stops within about 2 min",
+       "why": "That would need a far bigger gap above CP: 2 min at 275 W would mean W′ of only 1.8 kJ."
+      }
+     ],
+     "solution": "Second ride: 275 − 260 = 15 W above CP. t = 18,000 J ÷ 15 W = 1,200 s = 20 min, short of 30 min. The first ride, 10 W below CP, can settle."
+    }
+   ]
+  },
+  {
+   "id": "cpm-endpoint",
+   "concept": "cpm-domains",
+   "bloom": "understand",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two rides to exhaustion above CP: one at a power that ends in 3 min, one that ends in 12 min. At the moment of stopping, how do the two compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle PCr, pH and VO2 reach about the same limits",
+       "correct": true,
+       "why": "Right: the end-of-exercise muscle state is similar for short and long severe efforts."
+      },
+      {
+       "id": "b",
+       "text": "Much more W′ is left at the end of the 12-min ride",
+       "why": "Both end because W′ is used up, so neither has much left."
+      },
+      {
+       "id": "c",
+       "text": "Muscle pH is much lower after the 3-min ride",
+       "why": "The fall is faster in the short ride but ends at a similar low point."
+      },
+      {
+       "id": "d",
+       "text": "VO2 is lower at the end of the 12-min ride",
+       "why": "Over 12 min the slow component carries VO2 up to its maximum too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpm-at-cp",
+   "concept": "cpm-limits",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In theory a rider can hold exactly CP for ever. How long do people actually last at CP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 20–30 min",
+       "correct": true,
+       "why": "Right: exercise at CP is typically sustainable for no more than about 20–30 min."
+      },
+      {
+       "id": "b",
+       "text": "About 60 min, which is why CP equals FTP",
+       "why": "FTP is meant to be hour power; people last far less than an hour at CP, and the two numbers differ."
+      },
+      {
+       "id": "c",
+       "text": "Several hours, if they eat enough",
+       "why": "Fuel matters for long rides, but even fed, time at CP is about 20–30 min."
+      },
+      {
+       "id": "d",
+       "text": "Only about 2–3 min",
+       "why": "That is how long efforts well above CP last. At CP itself W′ is spent very slowly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cpm-limits-eval",
+   "concept": "cpm-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2019",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach has a triathlete's CP (240 W) and W′ (18 kJ) from 3-, 7- and 12-min tests. Which use of the model is safest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Predict how long she can hold 280 W on a 5–8 min climb",
+       "correct": true,
+       "why": "Right: 280 W gives 18,000 ÷ 40 = 450 s (7.5 min), inside the 2–15 min range the model was fitted on."
+      },
+      {
+       "id": "b",
+       "text": "Predict her 10-s sprint power as 240 + 18,000 ÷ 10 = 2,040 W",
+       "why": "Far outside the fitted range: sprint power is capped by peak muscle power, not by the hyperbola."
+      },
+      {
+       "id": "c",
+       "text": "Pace her 90-km bike leg at 240 W, since CP can be held for ever",
+       "why": "In practice CP lasts about 20–30 min; a 2–3 h leg must be well below it."
+      },
+      {
+       "id": "d",
+       "text": "Predict her hour power as exactly CP",
+       "why": "An hour at CP is unlikely: time at CP is typically 20–30 min."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

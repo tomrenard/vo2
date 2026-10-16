@@ -1,0 +1,821 @@
+{
+ "id": "vo2-limits",
+ "module": "t2-vo2max",
+ "title": "What limits VO₂max?",
+ "goal": "Weigh the evidence that oxygen delivery (central) rather than the muscle (peripheral) sets VO₂max in whole-body exercise, using blood doping, hyperoxia and added muscle mass, and judge Noakes' central governor objection.",
+ "requires": [
+  "vo2-define"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "central-limit",
+    "peripheral-limit",
+    "blood-doping",
+    "hyperoxia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "lim-chain",
+   "title": "Which link sets the ceiling?",
+   "text": "Oxygen reaches the mitochondria through a chain you have already met: breathing, lungs to blood, the heart's output, blood to muscle, diffusion into the fibre, use in the [mitochondria](g:mitochondria). VO₂max is the most that chain can pass per minute. Which link is tightest?\n\nTwo answers compete:\n\n- a [central limit](g:central-limit): delivery, mainly maximal [cardiac output](g:cardiac-output) and the O₂ each litre of blood carries;\n- a [peripheral limit](g:peripheral-limit): the muscle's ability to take O₂ out of the blood and use it.\n\nBassett and Howley's classic review sided with delivery for whole-body exercise [[c:bh-delivery]]. Levine adds a caution: the links are not independent, so where the limit sits depends on how the question is asked [[c:limits-interact]].",
+   "claims": [
+    {
+     "id": "bh-delivery",
+     "text": "In whole-body exercise, O₂ delivery rather than muscle O₂ extraction is viewed as the primary limit to VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "bassett2000",
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "Thus, O2 delivery, not skeletal muscle O2 extraction, is viewed as the primary limiting factor for VO2max in exercising humans.",
+       "level": "abstract"
+      },
+      {
+       "source": "levine2008",
+       "quote": "maximal rates of oxygen utilization (and sustainable rates of oxidative ATP production) in skeletal muscle are limited under most circumstances by the ability of the heart to deliver oxygen to and be accommodated by the working muscle",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "limits-interact",
+     "text": "The factors that set oxygen uptake are not independent, so where the limit lies depends on how the question is asked.",
+     "grade": "strong",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "Of course the factors determining oxygen uptake are not independent",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-central-or-peripheral",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lim-more-o2",
+   "title": "Add oxygen to the blood, and VO₂max rises",
+   "text": "If delivery is the limit, putting more O₂ into the blood should raise VO₂max. It does.\n\n**[Blood doping](g:blood-doping).** Five people gave 800 mL of blood. VO₂max fell from 4.27 to 4.03 L·min⁻¹; a month later their red cells were put back, and it rose to 4.61. Maximal cardiac output stayed the same throughout [[c:ekblom]]. A review of 28 transfusion studies found VO₂peak rising in line with the volume put back [[c:solheim]].\n\n**[Hyperoxia](g:hyperoxia).** Breathing 26% O₂ instead of 21% raised VO₂max from 70.1 to 74.7 mL·kg⁻¹·min⁻¹ in 7 highly trained men whose blood left the lungs with 92% or less of its haemoglobin loaded with O₂ at maximum ([EIAH](g:eiah)). In 13 less trained men without that fall, it made no difference [[c:powers]].",
+   "claims": [
+    {
+     "id": "ekblom",
+     "text": "Removing 800 mL of blood lowered VO₂max (4.27 to 4.03 L·min⁻¹) and reinfusing the red cells raised it (to 4.61), with maximal cardiac output unchanged.",
+     "grade": "weak",
+     "sources": [
+      "ekblom1976"
+     ],
+     "evidence": [
+      {
+       "source": "ekblom1976",
+       "quote": "Maximal oxygen uptake (VO2 max) decreased from 4.27 l-min-1) at control to 4.03 l-min-1 after venesection (P less than 0.05) and increased to 4.61 l-min-1 after reinfusion (P less than 0.05). Maximal values on cardiac output (Q), heart rate (HR), and stroke volume (SV) were the same in the three situations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "solheim",
+     "text": "Across transfusion studies, VO₂peak rises in proportion to the volume of red cells reinfused, mainly through higher arterial O₂ content.",
+     "grade": "moderate",
+     "sources": [
+      "solheim2019"
+     ],
+     "evidence": [
+      {
+       "source": "solheim2019",
+       "quote": "A linear relationship exists between ABT volume and change in VO2peak.",
+       "level": "abstract"
+      },
+      {
+       "source": "solheim2019",
+       "quote": "Red blood cell reinfusion increases endurance performance by elevating arterial oxygen content (CaO2).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "powers",
+     "text": "Mild hyperoxia (26% O₂) raised VO₂max in highly trained men with exercise-induced hypoxaemia (70.1 to 74.7 mL·kg⁻¹·min⁻¹) but not in trained men without it.",
+     "grade": "weak",
+     "sources": [
+      "powers1989"
+     ],
+     "evidence": [
+      {
+       "source": "powers1989",
+       "quote": "Mean VO2max was significantly elevated (P less than 0.05) during hyperoxia compared with normoxia in the HT group (74.7 vs. 70.1 ml.kg-1.min-1). In contrast, in the T group, no mean difference (P less than 0.05) existed between treatments in VO2max (56.5 vs. 57.1 ml.kg-1.min-1).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-doping-mech",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lim-hyperoxia-who",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lim-ekblom-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "lim-muscle-mass",
+   "title": "More muscle than the heart can feed",
+   "text": "The Fick lesson showed that one thigh working alone takes up far more O₂ per kg than in cycling, because it gets far more blood per kg. Muscle can open its vessels further than the heart can fill them while still holding blood pressure up [[c:vasodilatory-reserve]].\n\nSo what happens when more muscle joins in? Ten men cranked hard with their arms, then added leg cycling on top. With the legs working, blood flow to the arms fell by 19% and arm VO₂ by about 10%, as [sympathetic](g:sympathetic) nerves narrowed the arm vessels [[c:volianitis]].\n\nThat is what a central limit predicts: the extra muscle could use more O₂, but there isn't enough cardiac output to go round.",
+   "claims": [
+    {
+     "id": "vasodilatory-reserve",
+     "text": "The maximal vasodilatory capacity of skeletal muscle exceeds the heart's ability to deliver blood while keeping perfusion pressure up.",
+     "grade": "strong",
+     "sources": [
+      "levine2008",
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "the maximal vasodilatory capacity of skeletal muscle clearly exceeds the ability of the heart to deliver blood and still maintain adequate arterial perfusion pressure",
+       "level": "full-text"
+      },
+      {
+       "source": "bassett2000",
+       "quote": "when a small muscle mass is overperfused during exercise, it has an extremely high capacity for consuming oxygen",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "volianitis",
+     "text": "Adding leg cycling to hard arm cranking cut arm blood flow by about 19% and arm VO₂ by about 10%, with more sympathetic activity in the arm.",
+     "grade": "weak",
+     "sources": [
+      "volianitis2002"
+     ],
+     "evidence": [
+      {
+       "source": "volianitis2002",
+       "quote": "During the combined trial, Y(arm) was reduced by 0.58 +/- 0.25 l min(-1) (19.1 +/- 3.0 %, P < 0.05) from the value during arm cranking (3.00 +/- 0.46 l min(-1)).",
+       "level": "abstract"
+      },
+      {
+       "source": "volianitis2002",
+       "quote": "Thus, V(O(2))(,arm) (0.45 +/- 0.06 l min(-1)) was reduced by 9.6 +/- 6.3 % (P < 0.05)",
+       "level": "abstract"
+      },
+      {
+       "source": "volianitis2002",
+       "quote": "The data suggest that during maximal whole body exercise in humans, arm vasoconstriction is established to an extent that affects oxygen delivery to and utilisation by working skeletal muscles.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-arm-leg",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lim-governor",
+   "title": "The governor objection",
+   "text": "Noakes rejected this picture. He argued that A. V. Hill never believed in a VO₂ plateau (the idea came from Taylor in 1955), and proposed a [central governor](g:central-governor). In his model, the brain caps how much muscle it recruits so that the heart never runs short of its own O₂ supply. Exercise would then end *before* any true plateau in cardiac output or VO₂ [[c:noakes-model]].\n\nCritics reply that the model ignores the evidence that cardiac output limits VO₂max [[c:bergh]]. And it struggles with verification bouts: people work at a higher rate than at the end of the ramp, yet VO₂ goes no higher and no shortage of O₂ to the heart appears [[c:levine-verif]].\n\nWhen the brain decides to *stop* is a separate, live question (*Fatigue* module).",
+   "claims": [
+    {
+     "id": "noakes-model",
+     "text": "Noakes proposed that a central governor regulates muscle recruitment to prevent myocardial ischaemia, so that maximal exercise ends before a plateau in cardiac output or VO₂.",
+     "grade": "disputed",
+     "sources": [
+      "noakes1998"
+     ],
+     "evidence": [
+      {
+       "source": "noakes1998",
+       "quote": "This governor would cause maximal exercise to terminate before the development of a plateau in either coronary flow, CO, or VO2, or the onset of skeletal muscle anaerobiosis.",
+       "level": "abstract"
+      },
+      {
+       "source": "noakes1998",
+       "quote": "But the evidence presented in this rebuttal shows that Hill neither sought nor believed in either the \"plateau phenomenon\" or the concept of the individual maximum oxygen consumption.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bergh",
+     "text": "Critics argued that Noakes ignored the data showing that cardiac output limits maximal aerobic power in large-muscle exercise.",
+     "grade": "moderate",
+     "sources": [
+      "bergh2000",
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bergh2000",
+       "quote": "we argue that Noakes has ignored data supporting the existing hypothesis that under normal conditions cardiac output is limiting maximal aerobic power during dynamic exercise engaging large muscle groups",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "levine-verif",
+     "text": "In verification bouts people exercise at higher work rates than at the end of the incremental test without signs of myocardial ischaemia, against a governor stopping the test to protect the heart.",
+     "grade": "moderate",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "because the subjects were quite capable of exercising on a separate effort at a much higher external work rate yet no such ischaemia occurred",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is VO₂max set by oxygen delivery, or does the brain stop exercise before delivery runs out?",
+    "sides": [
+     {
+      "position": "Delivery: changing O₂ delivery changes VO₂max, and the heart's output is the tightest link in whole-body exercise.",
+      "sources": [
+       "bassett2000",
+       "bergh2000",
+       "levine2008"
+      ]
+     },
+     {
+      "position": "The brain: a central governor limits muscle recruitment to protect the heart, so exercise ends before any plateau in cardiac output or VO₂.",
+      "sources": [
+       "noakes1998"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "lim-noakes-claim"
+  },
+  {
+   "type": "question",
+   "item": "lim-governor-test",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lim-periphery",
+   "title": "Where the muscle end matters",
+   "text": "Central doesn't mean the muscle end never counts.\n\n- **At high altitude**, the pressure pushing O₂ from blood into muscle is so low that diffusion becomes the tight link: there, even extra red cells don't raise VO₂max [[c:altitude-diffusion]].\n- **Below the maximum**, the muscle matters most. More mitochondria let you burn more fat and make less lactate at a given VO₂, so you can work closer to your ceiling for longer [[c:bh-submax]]. At the maximum itself the muscle has room to spare: the muscle module showed that in cycling, mitochondria could use more O₂ than the blood brought.\n\nIn short: at sea level, delivery sets most of the ceiling in whole-body exercise; the muscle decides how much of it you can use (next lesson).",
+   "claims": [
+    {
+     "id": "altitude-diffusion",
+     "text": "At high altitude, peripheral diffusion is so limited that raising blood O₂ content by transfusion or EPO does not raise VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "Indeed maximal rates of diffusion in the periphery are so limited at high altitude that even increasing oxygen content of the blood by transfusion",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bh-submax",
+     "text": "Muscle metabolic adaptations, such as more mitochondrial enzymes, are critical for submaximal endurance performance: they raise fat oxidation and lower lactate at a given VO₂.",
+     "grade": "strong",
+     "sources": [
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "Metabolic adaptations in skeletal muscle are, however, critical for improving submaximal endurance performance. Endurance training causes an increase in mitochondrial enzyme activities, which improves performance by enhancing fat oxidation and decreasing lactic acid accumulation at a given VO2.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-altitude"
+  },
+  {
+   "type": "question",
+   "item": "lim-submax",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "VO₂max is set by a chain of steps; the question is which link is tightest.",
+    "Delivery (central) is seen as the main limit in whole-body exercise: more O₂ in the blood (transfusion, hyperoxia in athletes with EIAH) raises VO₂max.",
+    "Muscle can take more blood than the heart can supply; when more muscle joins in, flow is rationed.",
+    "Noakes' central governor says the brain stops exercise first; verification bouts and the delivery evidence argue against it.",
+    "The muscle end matters at altitude and, above all, for how much of VO₂max you can sustain."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lim-central-or-peripheral",
+   "concept": "lim-chain",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these is a peripheral factor in VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How many mitochondria the working muscle has",
+       "correct": true,
+       "why": "Right: what the muscle can take up and use is the peripheral side."
+      },
+      {
+       "id": "b",
+       "text": "The heart's maximal stroke volume",
+       "why": "Stroke volume sets cardiac output: delivery, the central side."
+      },
+      {
+       "id": "c",
+       "text": "Total haemoglobin mass",
+       "why": "Haemoglobin sets how much O₂ each litre of blood carries: delivery, the central side."
+      },
+      {
+       "id": "d",
+       "text": "Maximal heart rate",
+       "why": "Heart rate is part of cardiac output: the central side."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which of these is a central factor in VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Maximal cardiac output",
+       "correct": true,
+       "why": "Right: how much blood the heart pumps per minute is delivery, the central side."
+      },
+      {
+       "id": "b",
+       "text": "Capillaries around each muscle fibre",
+       "why": "Capillaries set how easily O₂ leaves the blood in the muscle: the peripheral side."
+      },
+      {
+       "id": "c",
+       "text": "Mitochondrial enzyme activity in the thigh",
+       "why": "This is the muscle's ability to use O₂: the peripheral side."
+      },
+      {
+       "id": "d",
+       "text": "Myoglobin content of the fibres",
+       "why": "Myoglobin works inside the fibre: the peripheral side."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-doping-mech",
+   "concept": "lim-more-o2",
+   "bloom": "analyse",
+   "sources": [
+    "ekblom1976",
+    "solheim2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After red cells were reinfused, a cyclist's VO₂max rose while maximal cardiac output stayed the same. Through which term of the Fick equation did VO₂max rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wider a-vO₂ difference, from richer arterial blood",
+       "correct": true,
+       "why": "Right: VO₂ = Q × (CaO₂ − CvO₂). Q was unchanged, so the gain came from a higher CaO₂ and more O₂ taken out per litre."
+      },
+      {
+       "id": "b",
+       "text": "A higher maximal cardiac output from the heart",
+       "why": "The stem says maximal cardiac output did not change."
+      },
+      {
+       "id": "c",
+       "text": "A higher maximal heart rate",
+       "why": "Heart rate is part of cardiac output, which did not change."
+      },
+      {
+       "id": "d",
+       "text": "Less O₂ used by the breathing muscles",
+       "why": "Reinfusion changes the blood, not the cost of breathing."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO₂max rises after a (banned) transfusion, though his maximal cardiac output doesn't change. Which Fick term explains the gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The a-vO₂ difference, as each litre of arterial blood carries more O₂",
+       "correct": true,
+       "why": "Right: with Q fixed, a higher CaO₂ lets each litre give up more O₂."
+      },
+      {
+       "id": "b",
+       "text": "Cardiac output, through a bigger stroke volume",
+       "why": "Cardiac output didn't change here."
+      },
+      {
+       "id": "c",
+       "text": "Cardiac output, through a higher heart rate",
+       "why": "Cardiac output didn't change here."
+      },
+      {
+       "id": "d",
+       "text": "Neither: the gain must come from better economy",
+       "why": "Economy affects the O₂ cost of running, not VO₂max in the Fick equation."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-hyperoxia-who",
+   "concept": "lim-more-o2",
+   "bloom": "apply",
+   "sources": [
+    "powers1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Breathing 26% O₂ in a lab, which athlete is most likely to reach a higher VO₂max than in normal air?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An elite cyclist whose arterial saturation falls to 90% at maximum",
+       "correct": true,
+       "why": "Right: hyperoxia raised VO₂max in highly trained men whose saturation fell to 92% or less, by refilling their haemoglobin."
+      },
+      {
+       "id": "b",
+       "text": "A club cyclist whose saturation stays at 96% at maximum",
+       "why": "Without a fall in saturation, extra O₂ in the air adds little to the blood; VO₂max didn't change in such men."
+      },
+      {
+       "id": "c",
+       "text": "Any cyclist, since extra O₂ always raises VO₂max",
+       "why": "In trained men without EIAH, VO₂max was unchanged (56.5 vs 57.1)."
+      },
+      {
+       "id": "d",
+       "text": "A sedentary adult, since the unfit gain most",
+       "why": "Unfit people rarely show EIAH, so there is little unfilled haemoglobin to top up."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a sea-level lab, which runner is most likely to gain VO₂max from breathing O₂-enriched air?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A highly trained runner whose saturation drops to 91% at maximum",
+       "correct": true,
+       "why": "Right: the gain shows up where the lungs fail to fully load the blood at maximum (EIAH)."
+      },
+      {
+       "id": "b",
+       "text": "A recreational runner whose saturation stays at 97%",
+       "why": "Her blood is already nearly fully loaded; extra O₂ adds little."
+      },
+      {
+       "id": "c",
+       "text": "Any runner, since VO₂max is limited by breathing",
+       "why": "In trained men without EIAH, hyperoxia didn't change VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "No runner, since VO₂max is set only by the heart",
+       "why": "Hyperoxia did raise VO₂max in athletes with EIAH, a sign the lungs can be a link in the chain too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-ekblom-appraise",
+   "concept": "lim-more-o2",
+   "bloom": "evaluate",
+   "sources": [
+    "ekblom1976",
+    "solheim2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 1976 reinfusion study tested 5 people, who knew when blood had been taken out and put back. What most limits the conclusion that more red cells raise VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Very few people and no blinding, so chance and expectation could play a part",
+       "correct": true,
+       "why": "Right: n = 5, unblinded. That is why the review of 28 studies, some placebo-controlled and double-blind, matters more."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max can't be measured after a transfusion",
+       "why": "VO₂max can be measured as usual; the issue is how few people were tested and that they knew their condition."
+      },
+      {
+       "id": "c",
+       "text": "Taking blood out can't affect VO₂max",
+       "why": "Taking blood out did lower VO₂max, as delivery predicts."
+      },
+      {
+       "id": "d",
+       "text": "The cardiac output was measured, which spoils the result",
+       "why": "Measuring cardiac output is a strength: it showed the gain wasn't from the heart."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-arm-leg",
+   "concept": "lim-muscle-mass",
+   "bloom": "analyse",
+   "sources": [
+    "volianitis2002",
+    "levine2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab, men crank hard with their arms. When they add leg cycling on top, blood flow to the arms falls by about a fifth. What does this best suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The heart can't supply all the muscle that wants blood, so flow is rationed",
+       "correct": true,
+       "why": "Right: muscle can take more blood than the heart can pump while holding pressure up. Adding muscle forces sharing."
+      },
+      {
+       "id": "b",
+       "text": "The arm muscles stop needing O₂ once the legs start",
+       "why": "Arm O₂ uptake fell with flow; the arms still needed O₂ but got less."
+      },
+      {
+       "id": "c",
+       "text": "Arm mitochondria limit VO₂max",
+       "why": "The fall in arm VO₂ followed a fall in blood flow, a delivery effect."
+      },
+      {
+       "id": "d",
+       "text": "Leg exercise lowers blood pressure, so the arms get less",
+       "why": "Blood pressure is defended; the arm vessels were narrowed by sympathetic nerves to protect it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-noakes-claim",
+   "concept": "lim-governor",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "noakes1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Noakes' central governor model, why does maximal exercise end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The brain limits muscle recruitment before the heart runs short of O₂",
+       "correct": true,
+       "why": "Right: the governor stops exercise to protect the heart, before any true plateau."
+      },
+      {
+       "id": "b",
+       "text": "The heart's output reaches its ceiling and VO₂ plateaus",
+       "why": "That is the classical view that Noakes rejected."
+      },
+      {
+       "id": "c",
+       "text": "The muscles run out of glycogen",
+       "why": "Glycogen depletion ends long events, not a short VO₂max test."
+      },
+      {
+       "id": "d",
+       "text": "The lungs can no longer move enough air",
+       "why": "Noakes' model is about the brain protecting the heart, not about breathing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-governor-test",
+   "concept": "lim-governor",
+   "bloom": "evaluate",
+   "sources": [
+    "levine2008",
+    "poole2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which finding argues most strongly against the idea that a central governor ends a VO₂max test to protect the heart?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Harder verification bouts bring no more VO₂ and no heart O₂ shortage",
+       "correct": true,
+       "why": "Right: if a governor had stopped the ramp early, a harder bout should have pushed VO₂ higher or stressed the heart."
+      },
+      {
+       "id": "b",
+       "text": "Many ramp tests end without any clear VO₂ plateau",
+       "why": "A missing plateau is what Noakes uses as evidence for his model, not against it."
+      },
+      {
+       "id": "c",
+       "text": "Athletes often speed up in the last minutes of a race",
+       "why": "The end spurt is an observation Noakes cites in favour of a governor."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max is higher in trained athletes",
+       "why": "Both camps agree on that; it doesn't decide between them."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's ramp peak is confirmed by a verification run at 110% of the ramp's top speed: VO₂ doesn't go higher. How does this bear on the central governor debate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It counts against it: working harder brought no more VO₂, so a real ceiling was reached",
+       "correct": true,
+       "why": "Right: a governor stopping the ramp early would leave room for a higher VO₂ at higher work."
+      },
+      {
+       "id": "b",
+       "text": "It supports it: the brain stopped him again at the same VO₂",
+       "why": "A governor protecting the heart doesn't explain why 10% more work brought no more VO₂ and no sign of O₂ shortage in the heart; a real ceiling is the simpler reading."
+      },
+      {
+       "id": "c",
+       "text": "It's irrelevant: verification bouts measure economy",
+       "why": "Verification bouts measure VO₂ at a higher work rate, which is exactly what the debate turns on."
+      },
+      {
+       "id": "d",
+       "text": "It proves the lungs limit VO₂max",
+       "why": "It shows a ceiling exists, not which link of the chain sets it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-altitude",
+   "concept": "lim-periphery",
+   "bloom": "understand",
+   "sources": [
+    "levine2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At high altitude, why does adding red cells by transfusion not raise VO₂max as it does at sea level?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The low pressure gradient makes diffusion from blood to muscle the tight link",
+       "correct": true,
+       "why": "Right: with so little pressure pushing O₂ out of the capillaries, more haemoglobin doesn't get more O₂ into the fibres."
+      },
+      {
+       "id": "b",
+       "text": "The heart pumps more at altitude, so blood is already plentiful",
+       "why": "Maximal cardiac output doesn't rise at altitude; the limit moves to diffusion."
+      },
+      {
+       "id": "c",
+       "text": "Red cells are destroyed faster at altitude",
+       "why": "The point is the pressure gradient for diffusion, not red-cell lifespan."
+      },
+      {
+       "id": "d",
+       "text": "The muscles need less O₂ at altitude",
+       "why": "The same work needs about the same O₂; it just can't diffuse in fast enough."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-submax",
+   "concept": "lim-periphery",
+   "bloom": "apply",
+   "sources": [
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes have the same VO₂max. One has much more mitochondrial enzyme activity in her leg muscles. What is the most likely difference on the bike?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She can ride at a higher share of her VO₂max with less lactate",
+       "correct": true,
+       "why": "Right: muscle adaptations matter most below the maximum, letting her use more of the same ceiling."
+      },
+      {
+       "id": "b",
+       "text": "She will have a higher VO₂max next time it's tested",
+       "why": "Mitochondria mainly change what you can sustain below VO₂max, not the ceiling set by delivery."
+      },
+      {
+       "id": "c",
+       "text": "No difference, since VO₂max is the same",
+       "why": "Equal ceilings don't mean equal sustainable intensity; the muscle decides that."
+      },
+      {
+       "id": "d",
+       "text": "She will rely more on carbohydrate at the same power",
+       "why": "More mitochondria shift fuel use towards fat at a given VO₂, not carbohydrate."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners have the same VO₂max; one has many more mitochondria in his calf and thigh muscles. What is the most likely difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He can hold a higher share of his VO₂max for an hour",
+       "correct": true,
+       "why": "Right: more mitochondria mean less lactate and more fat use at a given VO₂."
+      },
+      {
+       "id": "b",
+       "text": "His VO₂max must be higher, despite the test",
+       "why": "The test result stands; mitochondria mostly act below the ceiling."
+      },
+      {
+       "id": "c",
+       "text": "He will make more lactate at the same pace",
+       "why": "More mitochondria mean less lactate at a given VO₂."
+      },
+      {
+       "id": "d",
+       "text": "No difference in any race or training session",
+       "why": "The same ceiling can be used to a very different extent."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,786 @@
+{
+ "id": "pace-physiology",
+ "module": "t2-pacing",
+ "title": "Pacing by physiology: W′, hills, wind and heat",
+ "goal": "Use W′ to budget efforts above critical power, explain why varying power with hills and wind saves time, and describe how heat changes pacing.",
+ "requires": [
+  "pace-models"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "heat-acclimatisation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pph-wprime",
+   "title": "W′: a fixed budget above critical power",
+   "text": "Below [critical power](g:critical-power) (CP) an effort can settle into a steady state. Above it, you draw on [W′](g:w-prime) ('W prime'): a fixed amount of work that can be done above CP, spent faster the further you are above it [[c:wprime-fixed]]. When W′ is used up, you are exhausted [[c:wprime-zero]].\n\nThe spending is simple arithmetic. Each second at a power P above CP uses (P − CP) joules, since 1 W for 1 s is 1 J:\n\n**W′ used = (P − CP) × time in seconds**\n\nSo W′ is a budget: in a 4 km pursuit or a 10 min climb, aim to empty it at the line. Empty it earlier and you slow before the finish.",
+   "claims": [
+    {
+     "id": "wprime-fixed",
+     "text": "The work that can be done above CP (W′) is constant, but can be used at different rates depending on how far power is above CP.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "The amount of work that can be done during exercise above CP (the so-called W') is constant but may be utilized at different rates depending on the proximity of the exercise power output to CP.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wprime-zero",
+     "text": "Power above CP depletes W′, and complete depletion of W′ results in exhaustion.",
+     "grade": "moderate",
+     "sources": [
+      "skiba2012"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2012",
+       "quote": "Power output above CP results in depletion of the W' complete depletion of the W' results in exhaustion.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pph-wprime-example",
+   "title": "How much W′ does a climb cost?",
+   "problem": "A rider has a CP of 280 W and a W′ of 20 kJ. She climbs at 340 W for 4 min. How much W′ does she use, and how long could she have held 340 W from a full W′?",
+   "steps": [
+    "Power above CP: 340 − 280 = 60 W, so she spends 60 J every second.",
+    "Time in seconds: 4 × 60 = 240 s.",
+    "W′ used = 60 × 240 = 14,400 J = 14.4 kJ: 72% of her 20 kJ, leaving 5.6 kJ.",
+    "Time to empty a full W′ at 340 W: 20,000 J ÷ 60 W ≈ 333 s, about 5.6 min. A climb longer than that at 340 W would end in exhaustion before the top."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pph-wprime-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pph-wprime-below"
+  },
+  {
+   "type": "question",
+   "item": "pph-wprime-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pph-wbal",
+   "title": "W′ refills: spending it with a plan",
+   "text": "W′ isn't spent only once. Below CP it refills, quickly at first and then more slowly; the further below CP you recover, the faster it comes back [[c:wbal-recharge]]. Tracked second by second, it is [W′ balance](g:w-prime-balance) (W′bal; see the critical power module). In field trials of athletes doing irregular efforts, the model predicted when W′ was nearly empty and exhaustion close [[c:wbal-predict]].\n\nFor pacing this turns a feeling into a plan:\n\n- every surge, attack or climb above CP draws on the same budget;\n- after going deep to close a gap, you need time well below CP before the next effort;\n- on a hilly course the climbs are the best place to spend it (next card).",
+   "claims": [
+    {
+     "id": "wbal-recharge",
+     "text": "W′ recovers faster the further recovery power is below CP; recovery is curvilinear and varies between people.",
+     "grade": "weak",
+     "sources": [
+      "skiba2012",
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "skiba2012",
+       "quote": "The time constants of W' recharge were negatively correlated with the difference between sub-CP recovery power and CP.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2017",
+       "quote": "However, while the utilization of W' may be assumed to be linear, studies indicate that the reconstitution of W' may be curvilinear with kinetics that are highly variable between individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wbal-predict",
+     "text": "In field trials the W′ balance model predicted when W′ approached zero and exhaustion was near.",
+     "grade": "weak",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "Field trials of athletes performing stochastic exercise indicate that this [Formula: see text] model can accurately predict the time at which W' tends to zero and exhaustion is imminent.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pph-recover"
+  },
+  {
+   "type": "question",
+   "item": "pph-pursuit"
+  },
+  {
+   "type": "concept",
+   "id": "pph-terrain",
+   "title": "Hills and wind: push where you are slow",
+   "text": "On hills or in wind, a computer model of a 70 kg rider, a prediction rather than a measurement, found varying effort 10% around the same average would save 1 min 33 s over 10 km of steep 10% climbs and descents, and 29 s over 40 km of alternating head- and tailwinds [[c:swain-model]].\n\nWhy? You spend more *time* climbing or into the wind, so extra watts act longer there; when fast, air resistance soaks them up.\n\nReal riders: 5% above average into a headwind was 12 s faster over 16.1 km than riding by feel, but only 2 s faster than even power [[c:atk-wind]]. On a hilly course ±5% saved time, though 2 of 7 riders couldn't hold it to the end [[c:atk-hills]].",
+   "claims": [
+    {
+     "id": "swain-model",
+     "text": "Modelling predicts significant time savings on hilly and windy courses from raising power uphill or into a headwind and lowering it downhill or with a tailwind.",
+     "grade": "weak",
+     "sources": [
+      "swain1997b"
+     ],
+     "evidence": [
+      {
+       "source": "swain1997b",
+       "quote": "For the conditions of 4 L.min-1, 10% variation, and 10% grade, results were as follows: finishing time of 22:47.2 with varied power, versus 24:20.3 at constant power, for a time savings of 1 min 33.1 s.",
+       "level": "abstract"
+      },
+      {
+       "source": "swain1997b",
+       "quote": "In conclusion, the model predicts that significantly time savings could be realized on hilly and windy courses by slightly increasing power on uphill or headwind segments while compensating with reduced power on downhill or tailwind segments.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "atk-wind",
+     "text": "Varying power ±5% with headwind and tailwind sections improved a 16.1 km time trial by 12 s over self-paced riding.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2000"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2000",
+       "quote": "to a slightly greater degree (12 s improvement), from a variable (5% +/- mean) pacing strategy in line with the variations in wind direction during the race.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "atk-hills",
+     "text": "Varying power with gradient made a simulated hilly time trial faster, but some riders could not hold the variation to the end.",
+     "grade": "weak",
+     "sources": [
+      "atkinson2007b"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2007b",
+       "quote": "Nevertheless, mean +/- SD finish time for the variable power trial (3670 +/- 589 s) was significantly faster than that for the constant power TT (3758 +/- 645 s), the 95 % confidence interval for the percentage improvement being 0.4 to 4.3 %.",
+       "level": "abstract"
+      },
+      {
+       "source": "atkinson2007b",
+       "quote": "All participants maintained this variable power strategy during the first half of the TT, but two riders could not adhere to the power variations during the final 400 kJ.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pph-terrain-plan",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pph-terrain-why"
+  },
+  {
+   "type": "concept",
+   "id": "pph-heat",
+   "title": "Heat: the pace drops early",
+   "text": "Heat lowers self-paced power before the body is dangerously hot. 11 elite road cyclists rode 30 min time trials at 32 °C and 23 °C: power was 6.5% lower in the heat, yet rectal temperature was almost the same in both [[c:tatterson]].\n\nIn 20 km trials at 35 °C against 15 °C, power and quadriceps [EMG](g:emg) began to fall early in the heat, while [core temperature](g:core-temperature), heart rate and RPE were still the same as in the cool [[c:tucker-emg]]. Riding at a fixed RPE, power fell faster in the heat, tied to the rate of [heat storage](g:heat-storage) in the first minutes [[c:tucker-storage]].\n\nTucker's reading: the brain anticipates the heat load and cuts the pace early.",
+   "claims": [
+    {
+     "id": "tatterson",
+     "text": "In elite cyclists, 30 min time-trial power was 6.5% lower at 32 °C than at 23 °C, while rectal temperature was similar.",
+     "grade": "weak",
+     "sources": [
+      "tatterson2000"
+     ],
+     "evidence": [
+      {
+       "source": "tatterson2000",
+       "quote": "Power output was 6.5% lower (P<0.05) during HT compared with NT.",
+       "level": "abstract"
+      },
+      {
+       "source": "tatterson2000",
+       "quote": "In contrast, rectal temperature was remarkably similar throughout each trial.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tucker-emg",
+     "text": "In the heat, power and muscle activation fell before any abnormal rise in rectal temperature, heart rate or RPE.",
+     "grade": "weak",
+     "sources": [
+      "tucker2004"
+     ],
+     "evidence": [
+      {
+       "source": "tucker2004",
+       "quote": "Thus, reduced power output and iEMG activity during self-paced exercise in the heat occurs before there is any abnormal increase in rectal temperature, heart rate or perception of effort.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tucker-storage",
+     "text": "At a fixed RPE, early afferent feedback on the rate of heat storage appeared to regulate exercise intensity in the heat.",
+     "grade": "weak",
+     "sources": [
+      "tucker2006b"
+     ],
+     "evidence": [
+      {
+       "source": "tucker2006b",
+       "quote": "We conclude that the regulation of exercise intensity is controlled by an initial afferent feedback regarding the rate of heat storage, which is used to regulate exercise intensity and hence the rate of heat storage for the remainder of the anticipated exercise bout.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pph-heat-early"
+  },
+  {
+   "type": "concept",
+   "id": "pph-heat-debate",
+   "title": "Anticipation or a strained heart?",
+   "text": "Not everyone agrees. In 40 km trials at 35 °C against 20 °C, power in the heat fell from 20 min on, while skin blood flow rose and stroke volume, cardiac output and blood pressure fell [[c:periard-cv]]. On this view the heart can't fully serve both skin and muscle (*Heat and the heart*).\n\nEither way, [heat acclimatisation](g:heat-acclimatisation) helps. 9 cyclists rode a 43.4 km time trial outdoors at about 37 °C. Every ride started the first 20% at a similar power; unacclimatised, they then faded badly (77 min, against 66 min in the cool). After 2 weeks of training in the heat, they rode about as fast as in the cool [[c:racinais-acclim]].",
+   "claims": [
+    {
+     "id": "periard-cv",
+     "text": "A heat-driven rise in cardiovascular strain went with lower sustainable power in a 40 km time trial in the heat.",
+     "grade": "weak",
+     "sources": [
+      "periard2011"
+     ],
+     "evidence": [
+      {
+       "source": "periard2011",
+       "quote": "We conclude that a thermoregulatory-mediated rise in cardiovascular strain is associated with reductions in sustainable power output, peak oxygen uptake and maximal power output during prolonged, intense self-paced exercise in the heat.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "racinais-acclim",
+     "text": "Cyclists started time trials at similar power whatever the heat; unacclimatised they then lost power, but after 2 weeks of acclimatisation they rode about as fast as in the cool.",
+     "grade": "weak",
+     "sources": [
+      "racinais2015b"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2015b",
+       "quote": "The cyclists initiated the first 20% of all TT at a similar power output, irrespective of climate and acclimatization status; however, during TTH-1, they subsequently had a marked decrease in power output, which was partly attenuated after 6 d of acclimatization and was further reduced after 14 d.",
+       "level": "abstract"
+      },
+      {
+       "source": "racinais2015b",
+       "quote": "After 2 wk of acclimatization, trained cyclists are capable of completing a prolonged TT in a similar time in the heat compared with cool conditions, whereas in the unacclimatized state, they experienced a marked decrease in power output during the TTH.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Why does self-paced power fall early in the heat?",
+    "sides": [
+     {
+      "position": "Anticipation: the brain uses early signals, such as the rate of heat storage, to lower muscle recruitment and power before core temperature becomes critical.",
+      "sources": [
+       "tucker2004",
+       "tucker2006b"
+      ]
+     },
+     {
+      "position": "Cardiovascular strain: rising skin blood flow and falling stroke volume and cardiac output reduce the power that can be sustained.",
+      "sources": [
+       "periard2011"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pph-heat-evidence"
+  },
+  {
+   "type": "question",
+   "item": "pph-acclim"
+  },
+  {
+   "type": "question",
+   "item": "pph-terrain-plan",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pph-wprime-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Above critical power you spend W′, a fixed budget: W′ used = (P − CP) × seconds. Ideal pacing empties it at the line.",
+    "W′ refills below CP, faster the further below; W′ balance tracks it and can show when exhaustion is near.",
+    "On hills and in wind, raise power about 5% where you are slow (climbs, headwind) and ease off where you are fast.",
+    "Heat lowers self-paced power early, before core temperature is high: anticipation, cardiovascular strain, or both.",
+    "About 2 weeks of heat acclimatisation brought heat time-trial times close to cool ones."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pph-wprime-calc",
+   "concept": "pph-wprime",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2017",
+    "skiba2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist with a CP of 300 W and a W′ of 18 kJ rides a 3 min climb at 350 W. How much W′ does she use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9 kJ",
+       "correct": true,
+       "why": "Right: (350 − 300) × 180 s = 9,000 J = 9 kJ, half her W′."
+      },
+      {
+       "id": "b",
+       "text": "63 kJ",
+       "why": "This uses the whole power (350 × 180). Only the part above CP draws on W′."
+      },
+      {
+       "id": "c",
+       "text": "0.15 kJ",
+       "why": "This uses minutes instead of seconds (50 × 3 = 150 J)."
+      },
+      {
+       "id": "d",
+       "text": "54 kJ",
+       "why": "This multiplies CP by the time (300 × 180); work at or below CP doesn't use W′."
+      }
+     ],
+     "solution": "W′ used = (P − CP) × t = (350 − 300) W × 180 s = 9,000 J = 9 kJ, leaving 9 of 18 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete with a CP of 250 W and a W′ of 15 kJ surges at 320 W for 2 min on the bike. How much W′ does he use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8.4 kJ",
+       "correct": true,
+       "why": "Right: (320 − 250) × 120 s = 8,400 J = 8.4 kJ, more than half his W′."
+      },
+      {
+       "id": "b",
+       "text": "38.4 kJ",
+       "why": "This uses the whole power (320 × 120). Only the part above CP draws on W′."
+      },
+      {
+       "id": "c",
+       "text": "0.14 kJ",
+       "why": "This uses minutes instead of seconds (70 × 2 = 140 J)."
+      },
+      {
+       "id": "d",
+       "text": "30 kJ",
+       "why": "This multiplies CP by the time (250 × 120); work at or below CP doesn't use W′."
+      }
+     ],
+     "solution": "W′ used = (320 − 250) W × 120 s = 8,400 J = 8.4 kJ, leaving 6.6 of 15 kJ."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist with a CP of 320 W and a W′ of 24 kJ starts a climb with W′ full. How long can he hold 400 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 s",
+       "correct": true,
+       "why": "Right: 24,000 J ÷ (400 − 320) W = 300 s."
+      },
+      {
+       "id": "b",
+       "text": "60 s",
+       "why": "This divides W′ by the whole power (24,000 ÷ 400). W′ is spent only by the part above CP."
+      },
+      {
+       "id": "c",
+       "text": "75 s",
+       "why": "This divides W′ by CP (24,000 ÷ 320). The rate of spending is P − CP."
+      },
+      {
+       "id": "d",
+       "text": "0.3 s",
+       "why": "This forgets to turn kJ into J (24 ÷ 80)."
+      }
+     ],
+     "solution": "Time = W′ ÷ (P − CP) = 24,000 J ÷ 80 W = 300 s = 5 min."
+    }
+   ]
+  },
+  {
+   "id": "pph-wprime-below",
+   "concept": "pph-wprime",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider with a CP of 300 W and a full W′ rides for an hour at a steady 280 W. What happens to her W′?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It isn't drawn on: riding below CP doesn't spend W′",
+       "correct": true,
+       "why": "Right: only power above CP uses W′; below it W′ stays full or refills."
+      },
+      {
+       "id": "b",
+       "text": "It is spent slowly, at 20 J each second",
+       "why": "This reverses the sign: she is 20 W below CP, not above it."
+      },
+      {
+       "id": "c",
+       "text": "It is spent at 280 J each second",
+       "why": "Only the power above CP uses W′, and here there is none."
+      },
+      {
+       "id": "d",
+       "text": "It runs out after about 20 min, whatever the power",
+       "why": "W′ runs out only above CP; below it the effort can settle into a steady state."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-recover",
+   "concept": "pph-wbal",
+   "bloom": "analyse",
+   "sources": [
+    "skiba2012",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders, both with a CP of 300 W, have each spent most of their W′ closing a gap. Rider A then recovers at 150 W, rider B at 270 W. Who is ready for the next attack sooner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rider A: recovering further below CP refills W′ faster",
+       "correct": true,
+       "why": "Right: W′ recharge is faster the bigger the gap between recovery power and CP."
+      },
+      {
+       "id": "b",
+       "text": "Rider B: staying near CP keeps the muscles working, which refills W′ faster",
+       "why": "Close to CP, W′ refills slowly."
+      },
+      {
+       "id": "c",
+       "text": "Both the same: W′ refills at a fixed rate whatever the power",
+       "why": "The rate of refilling depends on how far below CP you ride."
+      },
+      {
+       "id": "d",
+       "text": "Neither: W′ only refills after the race is over",
+       "why": "W′ refills during any period below CP, which is why W′ balance rises in recoveries."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-pursuit",
+   "concept": "pph-wbal",
+   "bloom": "apply",
+   "sources": [
+    "jones2017",
+    "skiba2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 4 km pursuit, a rider's W′ balance reaches zero with 500 m to go, and she slows sharply. What change would the W′ model suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Start a little less hard, so W′ runs out close to the line",
+       "correct": true,
+       "why": "Right: the budget should be spread so it empties at the finish."
+      },
+      {
+       "id": "b",
+       "text": "Ride the first lap even harder to bank more time",
+       "why": "That spends W′ even sooner and makes the late slowdown worse."
+      },
+      {
+       "id": "c",
+       "text": "Keep the same pacing; the slowdown is set by cadence, not W′",
+       "why": "Running out of W′ explains the slowdown; cadence doesn't."
+      },
+      {
+       "id": "d",
+       "text": "Spend W′ in short sprints early and recover between them",
+       "why": "Each sprint draws on the same budget, and recoveries in a pursuit are too short to refill much."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-terrain-plan",
+   "concept": "pph-terrain",
+   "bloom": "apply",
+   "sources": [
+    "swain1997b",
+    "atkinson2000",
+    "atkinson2007b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider will hold the same average power over a hilly time trial of equal climbs and descents. What spread gives the fastest time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 5% above average on the climbs and below it on the descents",
+       "correct": true,
+       "why": "Right: watts on the slow sections buy the most time."
+      },
+      {
+       "id": "b",
+       "text": "Exactly the same power everywhere",
+       "why": "Even power is best only on flat, still courses."
+      },
+      {
+       "id": "c",
+       "text": "Hard on the descents, where speed is high, easy on the climbs",
+       "why": "At high speed air resistance soaks up extra watts; little time is gained."
+      },
+      {
+       "id": "d",
+       "text": "All-out on the first climb, then hold on",
+       "why": "That spends W′ early and leaves too little for the rest of the course."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "An Ironman bike course goes out into a headwind and comes back with a tailwind. At the same average power, what spread is fastest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A little harder into the headwind, easier with the tailwind",
+       "correct": true,
+       "why": "Right: more time is spent in the headwind, so extra watts there save the most."
+      },
+      {
+       "id": "b",
+       "text": "The same power both ways",
+       "why": "Even power is best only when conditions don't change."
+      },
+      {
+       "id": "c",
+       "text": "Harder with the tailwind, to make use of the high speed",
+       "why": "At high speed air resistance soaks up extra watts; little time is gained."
+      },
+      {
+       "id": "d",
+       "text": "Easy out and hard back, to finish strong",
+       "why": "That puts the extra watts where they buy the least time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-terrain-why",
+   "concept": "pph-terrain",
+   "bloom": "understand",
+   "sources": [
+    "swain1997b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do extra watts on a climb save more time than the same watts lose on the descent?",
+     "options": [
+      {
+       "id": "a",
+       "text": "You spend much longer on the climb, so the extra watts act for longer",
+       "correct": true,
+       "why": "Right: time saved depends on how long the extra power acts."
+      },
+      {
+       "id": "b",
+       "text": "Air resistance is highest on the climb, so watts there beat it",
+       "why": "Air resistance rises with speed: it is highest on the fast descent."
+      },
+      {
+       "id": "c",
+       "text": "Muscles are more efficient going uphill",
+       "why": "Efficiency changes little with gradient; the gain comes from time spent."
+      },
+      {
+       "id": "d",
+       "text": "Gravity helps the rider most on climbs",
+       "why": "Gravity slows you on climbs; it helps on descents."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-heat-early",
+   "concept": "pph-heat",
+   "bloom": "analyse",
+   "sources": [
+    "tucker2004",
+    "tatterson2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 20 km time trial at 35 °C, a cyclist's power and muscle EMG start to fall while his core temperature, heart rate and RPE still match a cool ride. What does this pattern suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An anticipatory cut in pace, before he overheats",
+       "correct": true,
+       "why": "Right: the drop comes before any abnormal rise in core temperature, heart rate or RPE."
+      },
+      {
+       "id": "b",
+       "text": "He has already reached a critical core temperature",
+       "why": "His core temperature still matched the cool ride."
+      },
+      {
+       "id": "c",
+       "text": "His muscle glycogen has run out early",
+       "why": "Glycogen doesn't run out in the first minutes of a 20 km ride; EMG falls because the drive falls."
+      },
+      {
+       "id": "d",
+       "text": "His power meter reads low in the heat",
+       "why": "EMG fell too: the muscle really was being driven less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-heat-evidence",
+   "concept": "pph-heat-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "periard2011",
+    "tucker2006b",
+    "tucker2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which finding supports the cardiovascular-strain explanation of slower pacing in the heat more than pure anticipation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Power fell in the heat along with stroke volume, cardiac output and blood pressure",
+       "correct": true,
+       "why": "Right: the heart's limits track the fall in power."
+      },
+      {
+       "id": "b",
+       "text": "Power fell before core temperature differed from a cool ride",
+       "why": "That is the anticipation evidence."
+      },
+      {
+       "id": "c",
+       "text": "At a fixed RPE, power fell faster in the heat, linked to early heat storage",
+       "why": "That too supports anticipation."
+      },
+      {
+       "id": "d",
+       "text": "Short sprints are barely affected by heat",
+       "why": "True, but it doesn't separate the two explanations for prolonged efforts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph-acclim",
+   "concept": "pph-heat-debate",
+   "bloom": "apply",
+   "sources": [
+    "racinais2015b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete who trains in a cool climate will race an Ironman in about 32 °C heat in five weeks. Based on the acclimatisation study, what is the best plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2 weeks of training in the heat before the race",
+       "correct": true,
+       "why": "Right: after 2 weeks, cyclists' heat times were close to their cool times."
+      },
+      {
+       "id": "b",
+       "text": "Train only in the cool and start the race hard to bank time early",
+       "why": "The unacclimatised riders started at normal power and then faded badly."
+      },
+      {
+       "id": "c",
+       "text": "Two days of heat training, which give the full benefit",
+       "why": "Benefits built over 6 and 14 days; 2 days is too short."
+      },
+      {
+       "id": "d",
+       "text": "Nothing; heat tolerance is fixed and can't be trained",
+       "why": "Acclimatisation cut the heat penalty sharply in 2 weeks."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
