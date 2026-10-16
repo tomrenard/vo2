@@ -1,0 +1,724 @@
+{
+ "id": "bio-crossover",
+ "module": "t1a-bioenergetics",
+ "title": "The crossover: carbohydrate vs fat",
+ "goal": "Explain the crossover concept: why carbohydrate's share rises with intensity, how training and duration shift the mix, and what it means for race fueling.",
+ "requires": [
+  "bio-systems-together"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "xo-def",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "xo-concept",
+   "title": "The crossover concept",
+   "text": "Brooks and Mercier (1994) gave a simple way to think about fuel choice. As power rises, carbohydrate's share of the energy rises and fat's falls. The [crossover point](g:crossover-point) is the power above which carbohydrate supplies more energy than fat; past it, each step up in power shifts the mix further towards carbohydrate [[c:xo-def]].\n\nLab data fit it. With each step in intensity, muscle glycogen and blood glucose oxidation rose [[c:xo-cho-rises]], while fat oxidation peaked at moderate intensity and then fell: the Fatmax hill from the fat lesson.\n\n| intensity (trained) | main fuel |\n|---|---|\n| up to ~45% VO₂max | fat |\n| ~75% VO₂max | carbohydrate |\n\n[[c:xo-ranges]]",
+   "claims": [
+    {
+     "id": "xo-def",
+     "text": "The crossover point is the power output at which energy from carbohydrate predominates over energy from lipid; further increases in power raise carbohydrate's share and lower lipid's.",
+     "grade": "strong",
+     "sources": [
+      "brooks1994"
+     ],
+     "evidence": [
+      {
+       "source": "brooks1994",
+       "quote": "The crossover point is the power output at which energy from CHO-derived fuels predominates over energy from lipids, with further increases in power eliciting a relative increment in CHO utilization and a decrement in lipid oxidation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-cho-rises",
+     "text": "Muscle glycogen and plasma glucose oxidation increase with every increment in exercise intensity.",
+     "grade": "strong",
+     "sources": [
+      "vanloon2001",
+      "romijn1993"
+     ],
+     "evidence": [
+      {
+       "source": "vanloon2001",
+       "quote": "Muscle glycogen and plasma glucose oxidation rates increased with every increment in exercise intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "romijn1993",
+       "quote": "Plasma glucose tissue uptake and muscle glycogen oxidation increased in relation to exercise intensity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-ranges",
+     "text": "After endurance training, lipid is the main fuel at low intensities (up to about 45% VO₂max), while carbohydrate predominates in hard exercise (about 75% VO₂max).",
+     "grade": "moderate",
+     "sources": [
+      "brooks1994"
+     ],
+     "evidence": [
+      {
+       "source": "brooks1994",
+       "quote": "The contemporary literature contains data indicating that, after endurance training, exercise at low intensities (< or = 45% maximal O2 uptake) is accomplished with lipid as the main substrate.",
+       "level": "abstract"
+      },
+      {
+       "source": "brooks1994",
+       "quote": "In contrast, the literature also contains reports that are interpreted to indicate that during hard-intensity exercise (approximately 75% maximal O2 uptake) CHO is the predominant substrate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "xo-def",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "xo-intensity",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "xo-why",
+   "title": "Why carbohydrate takes over",
+   "text": "Three things push the mix towards carbohydrate as intensity rises [[c:xo-drivers]]:\n\n- **Glycogen breakdown speeds up** with harder contractions.\n- **More fast-twitch fibres** are recruited, and they are geared to glycolysis.\n- **Sympathetic activity rises**: more adrenaline and noradrenaline.\n\nThere is also a payoff. Per litre of oxygen, carbohydrate gives about 21.1 kJ against 19.6 kJ for fat [[c:xo-o2-energy]]. When oxygen uptake is near its limit, burning carbohydrate gets about 8% more energy from the same breath.\n\nThe brakes on fat oxidation from the fat lesson (the carnitine shuttle) do the rest.",
+   "claims": [
+    {
+     "id": "xo-drivers",
+     "text": "Rising intensity increases contraction-induced glycogenolysis, changes fibre-type recruitment and raises sympathetic nervous activity.",
+     "grade": "strong",
+     "sources": [
+      "brooks1994"
+     ],
+     "evidence": [
+      {
+       "source": "brooks1994",
+       "quote": "In contrast, increases in exercise intensity are conceived to increase contraction-induced muscle glycogenolysis, alter the pattern of fiber type recruitment, and increase sympathetic nervous system activity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-o2-energy",
+     "text": "Carbohydrate oxidation yields about 21.1 kJ per litre of O₂, fat oxidation about 19.6 kJ.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019",
+      "ortenblad2026"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "For every 1 liter of oxygen that is consumed to catabolize carbohydrates, 21.13 kJ (5.05 kcal) of energy is released, whereas the consumption of 1 liter of oxygen to catabolize fat yields 19.62 kJ (4.69 kcal) of energy",
+       "level": "full-text"
+      },
+      {
+       "source": "ortenblad2026",
+       "quote": "Thus, under aerobic conditions, carbohydrate combustion is a more efficient fuel yielding approximately 21.1 kJ/L O2, whereas fat oxidation yields ~19.6 kJ/L O2",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "xo-why"
+  },
+  {
+   "type": "concept",
+   "id": "xo-training",
+   "title": "Training moves the crossover to the right",
+   "text": "The other side of the balance is training. Endurance training adds mitochondria, raises the capacity to oxidise fat and blunts the sympathetic response to a given workload [[c:xo-training-adapt]]. The result at the same power: less glycogen and blood glucose used, more fat, less lactate [[c:xo-training-effect]].\n\nSo the crossover point moves to a higher power. The fuel mix at any moment is a tug of war between intensity, which pulls towards carbohydrate, and training, which pulls towards fat [[c:xo-balance]].\n\nTwo statements that sound contradictory, \"trained athletes run on fat\" and \"hard exercise runs on carbohydrate\", are both true, at different intensities.",
+   "claims": [
+    {
+     "id": "xo-training-adapt",
+     "text": "Endurance training brings muscle adaptations that enhance lipid oxidation and lowers the sympathetic response to a given submaximal workload.",
+     "grade": "strong",
+     "sources": [
+      "brooks1994",
+      "holloszy1984"
+     ],
+     "evidence": [
+      {
+       "source": "brooks1994",
+       "quote": "According to the crossover concept, endurance training results in muscular biochemical adaptations that enhance lipid oxidation as well as decrease the sympathetic nervous system responses to given submaximal exercise stresses.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-training-effect",
+     "text": "After endurance training, exercise at a given intensity uses less muscle glycogen and blood glucose, more fat, and produces less lactate.",
+     "grade": "strong",
+     "sources": [
+      "holloszy1984"
+     ],
+     "evidence": [
+      {
+       "source": "holloszy1984",
+       "quote": "The major metabolic consequences of the adaptations of muscle to endurance exercise are a slower utilization of muscle glycogen and blood glucose, a greater reliance on fat oxidation, and less lactate production during exercise of a given intensity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-balance",
+     "text": "Fuel use at any moment reflects the interaction between intensity (raising carbohydrate use) and training status (promoting fat oxidation).",
+     "grade": "moderate",
+     "sources": [
+      "brooks1994"
+     ],
+     "evidence": [
+      {
+       "source": "brooks1994",
+       "quote": "Therefore the pattern of substrate utilization in an individual at any point in time depends on the interaction between exercise intensity-induced responses (which increase CHO utilization) and endurance training-induced responses (which promote lipid oxidation).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "xo-training-shift"
+  },
+  {
+   "type": "question",
+   "item": "xo-balance-scenario"
+  },
+  {
+   "type": "question",
+   "item": "xo-myth"
+  },
+  {
+   "type": "concept",
+   "id": "xo-duration",
+   "title": "Duration shifts the mix too",
+   "text": "Hold one intensity for hours and the mix drifts. In trained subjects riding at 65% VO₂max for 2 h, oxidation of fuel brought in by the blood (fatty acids and glucose) rose over time, while oxidation of muscle glycogen and IMTG fell [[c:xo-drift]]. As the muscle's own stores run down, it leans more on what the blood delivers.\n\nThat study had only five subjects, so treat its numbers as rough. The lesson still holds: a fuel profile measured in the first 30 minutes of a ride is not the profile of hour four.",
+   "claims": [
+    {
+     "id": "xo-drift",
+     "text": "During 2 h at 65% VO₂max, oxidation of plasma-derived substrates rose progressively while muscle glycogen and triglyceride oxidation fell.",
+     "grade": "weak",
+     "sources": [
+      "romijn1993"
+     ],
+     "evidence": [
+      {
+       "source": "romijn1993",
+       "quote": "During 2 h of exercise at 65% VO2max plasma-derived substrate oxidation progressively increased over time, whereas muscle glycogen and triglyceride oxidation decreased.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "xo-drift"
+  },
+  {
+   "type": "question",
+   "item": "xo-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "xo-race",
+   "title": "What it means for race fueling",
+   "text": "Most races are run above the crossover point. For most Olympic events, carbohydrate is the main fuel, aerobic and anaerobic [[c:xo-race-cho]]. And muscle glycogen is a limited store: when it runs low, the muscle's capacity to make ATP falls and so does power [[c:xo-glycogen-limit]].\n\nRough rule from this module: the harder the race, the faster it burns carbohydrate per hour. A 40 km time trial, a hilly road race or an Olympic-distance triathlon burn it fast; an Ironman pace burns less per hour, but over many more hours.\n\nHow much to eat, when and in what form is tier 4: *Fueling during exercise and gut training*.",
+   "claims": [
+    {
+     "id": "xo-race-cho",
+     "text": "For most Olympic events, carbohydrate is the primary fuel for both anaerobic and aerobic metabolism.",
+     "grade": "strong",
+     "sources": [
+      "hargreaves2020"
+     ],
+     "evidence": [
+      {
+       "source": "hargreaves2020",
+       "quote": "For most events at the Olympics, carbohydrate is the primary fuel for anaerobic and aerobic metabolism.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xo-glycogen-limit",
+     "text": "Depleting the limited muscle glycogen stores reduces the muscle's metabolic capacity and power output, impairing performance.",
+     "grade": "strong",
+     "sources": [
+      "ortenblad2026"
+     ],
+     "evidence": [
+      {
+       "source": "ortenblad2026",
+       "quote": "Thus, depletion of the restricted muscle glycogen stores markedly reduces the metabolic capacity within muscle cells, thereby impairing the energy supply needed to sustain muscle contraction and power production, eventually causing decreased exercise performance",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "xo-race-fuel",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "xo-intensity",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "xo-race-fuel",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The crossover point is the power above which carbohydrate gives more energy than fat; beyond it carbohydrate's share keeps rising.",
+    "Intensity pushes towards carbohydrate: faster glycogen breakdown, more fast-twitch fibres, more sympathetic drive, and more energy per litre of oxygen (21.1 vs 19.6 kJ).",
+    "Training pulls towards fat: more mitochondria and a blunted sympathetic response move the crossover to higher power.",
+    "Over hours at one intensity, the mix drifts from muscle stores towards fuel from the blood.",
+    "Most races run above the crossover, on carbohydrate from a limited glycogen store; fueling strategy is tier 4."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "xo-def",
+   "concept": "xo-concept",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "brooks1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the crossover concept, what is the crossover point?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The power above which carbohydrate gives more energy than fat",
+       "correct": true,
+       "why": "Right: past this power, carbohydrate predominates and its share keeps rising."
+      },
+      {
+       "id": "b",
+       "text": "The intensity at which fat oxidation per minute is highest",
+       "why": "That is Fatmax, the top of the fat-oxidation hill: where the fat rate peaks, not where carbohydrate's share passes fat's."
+      },
+      {
+       "id": "c",
+       "text": "The effort length where aerobic and anaerobic supply are equal",
+       "why": "That is about 75–80 s in maximal efforts: a different balance, between energy systems, not fuels."
+      },
+      {
+       "id": "d",
+       "text": "The intensity at which lactate starts to build up in the blood",
+       "why": "That is the lactate threshold (tier 2); it is linked to fuel use but is a different marker."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A rider's lab report marks the lowest power at which carbohydrate supplies more energy than fat. What is that point called?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The crossover point",
+       "correct": true,
+       "why": "Right: Brooks and Mercier's term for where carbohydrate starts to predominate."
+      },
+      {
+       "id": "b",
+       "text": "Fatmax",
+       "why": "Fatmax is where fat oxidation per minute peaks; the crossover is about the shares of the two fuels."
+      },
+      {
+       "id": "c",
+       "text": "The lactate threshold",
+       "why": "The lactate threshold is defined by blood lactate, not by the fuel mix."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max",
+       "why": "VO₂max is the highest oxygen uptake, far above the point where carbohydrate takes over."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-intensity",
+   "concept": "xo-concept",
+   "bloom": "apply",
+   "sources": [
+    "brooks1994",
+    "vanloon2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner races at about 80% VO₂max. What is her main fuel?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate, mostly muscle glycogen",
+       "correct": true,
+       "why": "Right: at about 75% VO₂max and above, carbohydrate predominates even in trained athletes."
+      },
+      {
+       "id": "b",
+       "text": "Fat, because the race lasts hours",
+       "why": "Duration nudges the mix towards fat, but at 80% VO₂max intensity wins: carbohydrate dominates."
+      },
+      {
+       "id": "c",
+       "text": "Fat and carbohydrate in equal shares",
+       "why": "An even split fits the crossover point, well below marathon race pace for a trained runner."
+      },
+      {
+       "id": "d",
+       "text": "Protein, as glycogen starts to fall",
+       "why": "Protein supplies only a small share of energy in exercise; it doesn't take over from glycogen."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A trained cyclist does a long endurance ride at about 40% VO₂max. What is her main fuel?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fat",
+       "correct": true,
+       "why": "Right: after endurance training, intensities up to about 45% VO₂max run mainly on fat."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen",
+       "why": "Glycogen's share is small this easy; it grows as intensity rises past the crossover."
+      },
+      {
+       "id": "c",
+       "text": "Blood lactate",
+       "why": "Lactate is a fuel, but at 40% VO₂max it supplies a small share; fat dominates."
+      },
+      {
+       "id": "d",
+       "text": "Phosphocreatine",
+       "why": "PCr only buffers short surges; it can't be a main fuel for a long ride."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-why",
+   "concept": "xo-why",
+   "bloom": "understand",
+   "sources": [
+    "brooks1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "As a rider climbs harder, which set of changes pushes her fuel mix towards carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Faster glycogen breakdown, more fast-twitch fibres, more sympathetic drive",
+       "correct": true,
+       "why": "Right: these are the intensity-driven responses in the crossover concept."
+      },
+      {
+       "id": "b",
+       "text": "Less oxygen in her blood, which forces anaerobic metabolism",
+       "why": "Arterial oxygen stays high in most riders; the shift is driven by enzymes, fibres and hormones."
+      },
+      {
+       "id": "c",
+       "text": "Her fat stores running out as the climb goes on",
+       "why": "Fat stores can't run out in one climb; the shift happens within minutes of a harder effort."
+      },
+      {
+       "id": "d",
+       "text": "Lactate converting her fat into carbohydrate",
+       "why": "Fat can't be turned into carbohydrate in muscle, and lactate doesn't do it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-training-shift",
+   "concept": "xo-training",
+   "bloom": "analyse",
+   "sources": [
+    "holloszy1984",
+    "brooks1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 200 W, carbohydrate gave 80% of a rider's energy before a winter of base training and 60% after. Diet and test were the same. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training moved her crossover point to a higher power",
+       "correct": true,
+       "why": "Right: more mitochondria and a blunted sympathetic response mean more fat and less carbohydrate at the same power."
+      },
+      {
+       "id": "b",
+       "text": "Her fat stores grew, so there is more fat to burn",
+       "why": "The size of the fat store doesn't set the rate; even lean athletes have far more fat than one ride needs."
+      },
+      {
+       "id": "c",
+       "text": "Training made her glycolysis faster at 200 W",
+       "why": "That would raise carbohydrate use, the opposite of what happened."
+      },
+      {
+       "id": "d",
+       "text": "Training moved her crossover point to a lower power",
+       "why": "Backwards: a lower crossover would mean more carbohydrate at 200 W, not less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-balance-scenario",
+   "concept": "xo-training",
+   "bloom": "analyse",
+   "sources": [
+    "brooks1994",
+    "holloszy1984",
+    "ortenblad2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the same 150 W, a trained cyclist gets most of her energy from fat, while an untrained friend gets most from carbohydrate. What explains it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 W is easier for her, and training has shifted her crossover",
+       "correct": true,
+       "why": "Right: both sides of the tug of war favour fat for her: lower relative intensity and training adaptations."
+      },
+      {
+       "id": "b",
+       "text": "Her friend has more glycogen stored to burn",
+       "why": "Untrained people usually store less glycogen; the mix is set by intensity and training, not store size."
+      },
+      {
+       "id": "c",
+       "text": "She has larger fat stores than her friend",
+       "why": "Fat store size doesn't set the rate of fat oxidation; mitochondria and intensity do."
+      },
+      {
+       "id": "d",
+       "text": "Her friend is pedalling more efficiently",
+       "why": "Efficiency changes how much energy the power costs, not which fuel supplies it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-myth",
+   "concept": "xo-training",
+   "bloom": "evaluate",
+   "sources": [
+    "brooks1994",
+    "hargreaves2020",
+    "ortenblad2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"After a big base block you run on fat, so you won't need carbohydrate in a 40 km time trial.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong: training shifts the crossover, but TT intensity still runs mostly on carbohydrate",
+       "correct": true,
+       "why": "Right: a 40 km TT is far above the crossover point even for trained riders."
+      },
+      {
+       "id": "b",
+       "text": "Right: trained athletes burn mostly fat at every intensity",
+       "why": "Training moves the crossover to higher power; it doesn't remove it."
+      },
+      {
+       "id": "c",
+       "text": "Right: base training removes the need for muscle glycogen",
+       "why": "Glycogen stays the main fuel at hard intensities; trained athletes even store more of it."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: training makes you burn more carbohydrate at every power",
+       "why": "At the same power, training makes you burn less carbohydrate, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-drift",
+   "concept": "xo-duration",
+   "bloom": "apply",
+   "sources": [
+    "romijn1993"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides 2 hours at a steady 65% VO₂max. How does her fuel use most likely change over the ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More fuel from the blood, less from muscle glycogen and IMTG",
+       "correct": true,
+       "why": "Right: as the muscle's own stores run down, oxidation of blood-borne fatty acids and glucose rises."
+      },
+      {
+       "id": "b",
+       "text": "More muscle glycogen, as her fat stores run low",
+       "why": "Backwards: muscle glycogen oxidation falls over time, and fat stores can't run low in 2 hours."
+      },
+      {
+       "id": "c",
+       "text": "No change, since the intensity stays the same",
+       "why": "Duration shifts the mix even at a fixed intensity."
+      },
+      {
+       "id": "d",
+       "text": "She switches to protein once her IMTG is gone",
+       "why": "Protein stays a minor fuel, and IMTG is not used up in 2 hours."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-appraisal",
+   "concept": "xo-duration",
+   "bloom": "evaluate",
+   "sources": [
+    "romijn1993"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 2-hour fuel-drift data come from stable-isotope tracer studies in 5 trained subjects. What most limits how far you can generalise them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Five people is very few, so one unusual subject can sway the averages",
+       "correct": true,
+       "why": "Right: with n = 5, averages are imprecise and say little about women, untrained or older people."
+      },
+      {
+       "id": "b",
+       "text": "Tracers can't tell which fuels the body is burning",
+       "why": "Stable-isotope tracers with indirect calorimetry are a strong method for exactly this question."
+      },
+      {
+       "id": "c",
+       "text": "Two hours is too short to see any change in fuel use",
+       "why": "The study did see a clear change over the 2 hours."
+      },
+      {
+       "id": "d",
+       "text": "Trained people can't show shifts in fuel use",
+       "why": "Trained people show these shifts; training changes the size, not the existence."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xo-race-fuel",
+   "concept": "xo-race",
+   "bloom": "apply",
+   "sources": [
+    "hargreaves2020",
+    "brooks1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Who burns carbohydrate faster per hour: an Olympic-distance triathlete racing about 2 hours hard, or an Ironman athlete at a much easier pace?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The Olympic-distance triathlete",
+       "correct": true,
+       "why": "Right: higher intensity means a higher carbohydrate share of a larger energy use per hour."
+      },
+      {
+       "id": "b",
+       "text": "The Ironman triathlete",
+       "why": "The Ironman burns more carbohydrate in total, but less per hour, because the pace is easier."
+      },
+      {
+       "id": "c",
+       "text": "Both about the same",
+       "why": "Intensity differs a lot, so both the energy per hour and its carbohydrate share differ."
+      },
+      {
+       "id": "d",
+       "text": "Neither: both run on fat",
+       "why": "The Olympic-distance pace is well above the crossover point, and even at Ironman pace carbohydrate gives a large share."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Who burns carbohydrate faster per hour: a cyclist in a 1-hour time trial, or a cyclist on a 5-hour easy ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The time-trial cyclist",
+       "correct": true,
+       "why": "Right: a TT is far above the crossover point, with a high energy use per hour."
+      },
+      {
+       "id": "b",
+       "text": "The 5-hour cyclist",
+       "why": "The long ride may use more in total, but per hour its easy pace burns much less carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "Both about the same",
+       "why": "Intensity sets both the energy per hour and its carbohydrate share; they differ a lot here."
+      },
+      {
+       "id": "d",
+       "text": "Neither: both run on fat",
+       "why": "An easy ride may be mostly fat, but a TT runs mostly on carbohydrate."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

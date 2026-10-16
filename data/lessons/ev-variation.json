@@ -1,0 +1,922 @@
+{
+ "id": "ev-variation",
+ "module": "t0-evidence-101",
+ "title": "Noise, worthwhile changes and non-responders",
+ "goal": "Judge whether a change in a test is real by comparing it with the test's typical error and the smallest worthwhile change, and explain why many 'non-responders' are noise.",
+ "requires": [
+  "ev-effect-size"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "var-te-def",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "question",
+   "item": "var-noise-calc",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ev-var-te",
+   "title": "The same test never gives the same number",
+   "text": "Do the same 20-minute test on two good days and you won't get the same power. Sleep, glycogen, motivation, heat and the power meter itself all wobble.\n\nThe [typical error](g:typical-error) measures that wobble: the standard deviation of one person's repeated results [[c:te-def]]. It is usually given as a [coefficient of variation](g:coefficient-of-variation) (CV), a percentage of the mean. A typical error of 2% on a 300 W test means about two results in three land within 294–306 W with no real change in fitness.\n\nEvery result, yours or a study's, is true value plus noise. Before calling a change real, you need to know how big the noise is.",
+   "claims": [
+    {
+     "id": "te-def",
+     "text": "The typical error of measurement is the standard deviation of an individual's repeated measurements, best expressed as a coefficient of variation for many sports measures.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2000"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2000",
+       "quote": "A simple, adaptable form of within-subject variation is the typical (standard) error of measurement: the standard deviation of an individual's repeated measurements.",
+       "level": "abstract"
+      },
+      {
+       "source": "hopkins2000",
+       "quote": "For many measurements in sports medicine and science, the typical error is best expressed as a coefficient of variation (percentage of the mean).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "var-te-def",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ev-var-tests",
+   "title": "How noisy are common tests?",
+   "text": "Typical errors from reliability studies:\n\n| test | typical error (CV) |\n|---|---|\n| time trial or constant-power test, 1 min to 3 h (as power) | 0.9–2.0% [[c:power-cv]] |\n| lactate-threshold power | ~1.5% |\n| time to exhaustion at a set power | over 10% [[c:tte-cv]] |\n| VO2max, repeated tests | ~5.6% [[c:vo2max-cv]] |\n\nNon-athletes are about 1.3 times noisier than athletes. The first trial is special: performance improved 1.2% from the first to the second trial as people learned the test, but only 0.2% after that [[c:practice-effect]]. So a study, or an athlete, needs a practice trial before the baseline.\n\nTime trials are the better choice: they vary less and are closer to racing [[c:tt-validity]].",
+   "claims": [
+    {
+     "id": "power-cv",
+     "text": "Mean power in time-trial or constant-power tests of 1 min to 3 h has a typical error of about 0.9–2.0%; lactate-threshold power about 1.5%.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2001"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2001",
+       "quote": "Measures and tests with the smallest CV in exercise of a given duration include field tests of sprint running (approximately 0.9%), peak power in an incremental test on a treadmill or cycle ergometer (approximately 0.9%), equivalent mean power in a constant-power test lasting 1 minute to 3 hours on a treadmill or cycle ergometer (0.9 to 2.0%), lactate-threshold power (approximately 1.5%), and jump height or distance (approximately 2.0%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tte-cv",
+     "text": "Time-to-exhaustion protocols vary by more than 10%; time trials by less than 5%.",
+     "grade": "moderate",
+     "sources": [
+      "currell2008"
+     ],
+     "evidence": [
+      {
+       "source": "currell2008",
+       "quote": "Research has shown that time-to-exhaustion protocols have a coefficient of variation (CV) of >10%, whereas time trials are more reliable as they have been shown to have a CV of <5%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vo2max-cv",
+     "text": "VO2max varied by about ±5.6% between repeat tests, about 90% of it biological rather than technical.",
+     "grade": "weak",
+     "sources": [
+      "katch1982"
+     ],
+     "evidence": [
+      {
+       "source": "katch1982",
+       "quote": "Results revealed that Si + Se amounted to +/- 5.6%.",
+       "level": "abstract"
+      },
+      {
+       "source": "katch1982",
+       "quote": "Biological variability accounted for 90% or more of this variability, while technological error accounted for less than 10%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "practice-effect",
+     "text": "Typical errors are about 1.3 times larger in non-athletes; performance improves about 1.2% between the first two trials but only 0.2% after.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2001"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2001",
+       "quote": "CV were larger for nonathletes versus athletes (1.3 x), female versus male nonathletes (1.4 x), shorter (approximately 1-second) and longer (approximately 1-hour) versus 1-minute tests (< or = 1.6 x), and respiratory- versus ergometer-based measures of power (1.4 to 1.6 x).",
+       "level": "abstract"
+      },
+      {
+       "source": "hopkins2001",
+       "quote": "the CV between the first 2 trials was 1.3 times the CV between subsequent trials; performance also improved by 1.2% between the first 2 trials but by only 0.2% between subsequent trials.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tt-validity",
+     "text": "Time trials are more valid than time-to-exhaustion tests: they simulate and correlate with actual performance.",
+     "grade": "moderate",
+     "sources": [
+      "currell2008"
+     ],
+     "evidence": [
+      {
+       "source": "currell2008",
+       "quote": "Time trials have greater validity than time to exhaustion because they provide a good physiological simulation of actual performance and correlate with actual performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "var-tte"
+  },
+  {
+   "type": "question",
+   "item": "var-practice"
+  },
+  {
+   "type": "question",
+   "item": "var-katch"
+  },
+  {
+   "type": "example",
+   "id": "ev-var-example",
+   "title": "Is a 1.5% gain real?",
+   "problem": "A cyclist's 20-minute time trial has a typical error of 2%. After a training block her power is 1.5% higher. Is that a real change?",
+   "steps": [
+    "A change compares two tests, and both carry noise. The noise on a difference is √2 × typical error = 1.41 × 2% ≈ 2.8%.",
+    "About 95% of changes from noise alone fall within ±1.96 × 2.8% ≈ ±5.5%.",
+    "1.5% sits well inside that band: this test can't tell the gain from a good day.",
+    "To see small changes, cut the noise: repeat tests and average them, and keep conditions the same (time of day, food, warm-up, equipment)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "var-noise-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "var-noise-calc",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "ev-var-swc",
+   "title": "The smallest worthwhile change",
+   "text": "Noise is half the picture. The other half is what counts as a change worth having: the [smallest worthwhile change](g:smallest-worthwhile-change) (SWC).\n\nFor top athletes, Hopkins worked it out from how much results vary between races. His first estimate was 0.4–0.7 of that race-to-race variation; he later settled on about 0.3, the gain that wins one extra medal every 10 races [[c:swc-elite]]. If a runner's 10 km times vary by 1% from race to race, a gain of 0.3% already counts.\n\nA test is useful when its noise is no bigger than the SWC: compare the signal (the change) with the noise (the CV) [[c:signal-noise]]. A test with 2% noise can't track a 0.5% gain from one retest; averaging several tests can.",
+   "claims": [
+    {
+     "id": "swc-elite",
+     "text": "For a top athlete, the smallest worthwhile enhancement was first put at 0.4–0.7 of the typical race-to-race variation, later revised to about 0.3 of it (one extra medal every 10 competitions).",
+     "grade": "moderate",
+     "sources": [
+      "hopkins1999",
+      "hopkins2009"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins1999",
+       "quote": "Simulations show that the smallest worthwhile enhancement of performance for an athlete in an international event is 0.7-0.4 of the typical within-athlete random variation in performance between events.",
+       "level": "abstract"
+      },
+      {
+       "source": "hopkins2009",
+       "quote": "Similarly, the notion of an extra medal on average in 1, 3, 5, 7 and 9 competitions per 10 competitions provides thresholds for change in a top athlete’s competition time or distance of 0.3, 0.9, 1.6, 2.5 and 4.0 of the within-athlete variation between competitions",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "signal-noise",
+     "text": "A test's sensitivity can be expressed as signal (percentage improvement) over noise (its CV).",
+     "grade": "moderate",
+     "sources": [
+      "currell2008"
+     ],
+     "evidence": [
+      {
+       "source": "currell2008",
+       "quote": "A quantitative value of sensitivity may be accomplished through the signal : noise ratio, where the signal is the percentage improvement in performance and the noise is the CV.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "var-swc-def"
+  },
+  {
+   "type": "question",
+   "item": "var-swc-elite",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "var-signal-noise"
+  },
+  {
+   "type": "concept",
+   "id": "ev-var-responders",
+   "title": "Responders, non-responders and noise",
+   "text": "Plot each person's change after a training study and you see a spread: some up a lot, some flat, some down. It's tempting to call the flat ones \"non-responders\".\n\nBut noise alone makes that spread. Day-to-day variation, plus [regression to the mean](g:regression-to-the-mean), can create big apparent differences even if everyone responded the same [[c:noise-spread]]. Measurement error limits how well one person's response can be known [[c:measurement-error-response]].\n\nThe test: compare the SD of changes in the training group with the SD in a control group or a repeatability study [[c:sd-compare]]. Only a clearly bigger spread shows that people truly differ. Even then, the same person can respond differently to the same training twice, so naming a non-responder takes repeating the training [[c:repeat-training]].",
+   "claims": [
+    {
+     "id": "noise-spread",
+     "text": "Random within-subject variation and regression to the mean can make individual responses look very different even when the true response is identical.",
+     "grade": "strong",
+     "sources": [
+      "atkinson2015"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2015",
+       "quote": "We highlight the impact of within-subject random variation, which is inevitable even with 'gold-standard' measurement tools/protocols and sometimes so substantial that it explains all apparent individual response differences.",
+       "level": "abstract"
+      },
+      {
+       "source": "atkinson2015",
+       "quote": "Using a simulated data set of blood pressure measurements, we show that large individual differences in physiological response can be suggested by some plots and analyses, even when the true magnitude of response is exactly the same in all individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "measurement-error-response",
+     "text": "Measurement error limits the accuracy of individual response estimates and adds to apparent variation.",
+     "grade": "strong",
+     "sources": [
+      "hecksteden2015"
+     ],
+     "evidence": [
+      {
+       "source": "hecksteden2015",
+       "quote": "Clearly, measurement error limits the accuracy of response estimates and thereby contributes to variation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sd-compare",
+     "text": "True individual response differences are quantified by comparing the SD of changes in the intervention arm with that in a comparator arm.",
+     "grade": "strong",
+     "sources": [
+      "atkinson2015"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2015",
+       "quote": "True individual response differences are quantified only by comparing the SDs of changes between intervention and comparator arms.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "repeat-training",
+     "text": "Within-subject variation in training efficacy (the same person responding differently to repeats of the same training) isn't revealed by a control group and calls for repeated interventions.",
+     "grade": "weak",
+     "sources": [
+      "hecksteden2015"
+     ],
+     "evidence": [
+      {
+       "source": "hecksteden2015",
+       "quote": "Moreover, within-subject variation in training efficacy may contribute to gross response variability. This largely unstudied source of variation may not be disclosed by comparison to a control group but calls for repeated interventions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "How common are true non-responders to endurance training?",
+    "sides": [
+     {
+      "position": "Real: twin, family and animal studies show true, partly genetic differences in how much fitness people gain from the same training dose.",
+      "sources": [
+       "ross2019"
+      ]
+     },
+     {
+      "position": "Often specific to the programme: in a crossover, some people didn't respond to one programme, but everyone responded on at least one measure to one of the two.",
+      "sources": [
+       "bonafiglia2016"
+      ]
+     },
+     {
+      "position": "Often overstated: much reported non-response is noise and regression to the mean, and few studies compare the spread with a control group.",
+      "sources": [
+       "atkinson2015",
+       "hecksteden2015"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "var-responder-plot"
+  },
+  {
+   "type": "question",
+   "item": "var-true-response"
+  },
+  {
+   "type": "question",
+   "item": "var-two-te",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Typical error is the SD of one person's repeated results: the test's noise, usually as a CV.",
+    "Time trials vary by about 1–2% (as power), time-to-exhaustion tests by over 10%, VO2max by about 5%; the first trial includes a learning effect.",
+    "A change between two tests carries √2 × typical error of noise; a 95% noise band is about ±2.8 × typical error.",
+    "The smallest worthwhile change for top athletes is about 0.3 of race-to-race variation (first put at 0.4–0.7); a test is useful when its noise is no bigger.",
+    "Apparent non-responders are often noise: true individual differences need a bigger spread of changes than in a control group, and naming one person a non-responder needs repeated training."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "var-te-def",
+   "concept": "ev-var-te",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does a test's typical error measure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The spread of one person's repeated results when nothing real has changed",
+       "correct": true,
+       "why": "Right: it is the SD of an individual's repeated measurements, the test's day-to-day noise."
+      },
+      {
+       "id": "b",
+       "text": "The spread of results between different athletes",
+       "why": "That is the between-athlete SD, used for Cohen's d; typical error is within one athlete."
+      },
+      {
+       "id": "c",
+       "text": "The average gain after a training block",
+       "why": "That is the mean change, the signal, not the noise."
+      },
+      {
+       "id": "d",
+       "text": "The error of the measuring device alone",
+       "why": "Device error is only part of it; most of the noise is the athlete's own day-to-day variation."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's 3 km time trial has a typical error of 1.5%. What does that number describe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How much her time varies between repeat runs with no change in fitness",
+       "correct": true,
+       "why": "Right: typical error is the day-to-day noise in one athlete's results."
+      },
+      {
+       "id": "b",
+       "text": "How much faster she gets each week of training",
+       "why": "That is a rate of improvement, not noise."
+      },
+      {
+       "id": "c",
+       "text": "How much runners in her club differ from one another",
+       "why": "That is the spread between athletes, not within one."
+      },
+      {
+       "id": "d",
+       "text": "The error of the stopwatch",
+       "why": "Timing error is tiny; most of the noise comes from the runner herself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-noise-calc",
+   "concept": "ev-var-tests",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's 20-minute time trial has a typical error of 2%. After a training block her power is 1.5% higher. Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't tell: noise alone spans about ±5.5%",
+       "correct": true,
+       "why": "Right: noise on a change = √2 × 2% ≈ 2.8%; 95% band ≈ 1.96 × 2.8% ≈ ±5.5%. 1.5% is well inside."
+      },
+      {
+       "id": "b",
+       "text": "Real: 1.5% beats the 1.4% noise on a change",
+       "why": "This divides by √2 instead of multiplying: two noisy tests make a change noisier, not cleaner."
+      },
+      {
+       "id": "c",
+       "text": "Real: any gain above 1% counts",
+       "why": "Whether a change is real depends on the test's noise, not a fixed cut-off."
+      },
+      {
+       "id": "d",
+       "text": "Can't tell: noise alone spans about ±2%",
+       "why": "This uses the typical error of one test as the band; a change between two tests is noisier (√2) and a 95% band is wider (×1.96)."
+      }
+     ],
+     "solution": "Noise on a change between two tests = √2 × typical error = 1.41 × 2% = 2.8%. About 95% of noise-only changes fall within ±1.96 × 2.8% ≈ ±5.5%. A 1.5% gain sits inside that band, so this test can't separate it from noise."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's 5 km time trial has a typical error of 1%. After 8 weeks of training his time is 4% faster. Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Likely real: noise alone spans about ±2.8%",
+       "correct": true,
+       "why": "Right: √2 × 1% ≈ 1.4%; 95% band ≈ 1.96 × 1.4% ≈ ±2.8%. 4% is outside it."
+      },
+      {
+       "id": "b",
+       "text": "Can't tell: noise alone spans about ±5.5%",
+       "why": "That band belongs to a test with a 2% typical error; this one is 1%."
+      },
+      {
+       "id": "c",
+       "text": "Can't tell: one retest can never show a change",
+       "why": "A single retest can show a change when it is clearly larger than the noise, as here."
+      },
+      {
+       "id": "d",
+       "text": "Likely real: noise alone spans about ±1%",
+       "why": "This uses one test's typical error as the band, ignoring √2 and the 1.96 for 95%."
+      }
+     ],
+     "solution": "Noise on a change = √2 × 1% = 1.4%. 95% band ≈ ±1.96 × 1.4% ≈ ±2.8%. A 4% gain is outside it, so it is very likely real."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2max test has a typical error of 5%. After a winter of training, her VO2max is 6% higher. Is the change real?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Can't tell: noise alone spans about ±14%",
+       "correct": true,
+       "why": "Right: √2 × 5% ≈ 7.1%; 95% band ≈ 1.96 × 7.1% ≈ ±14%. 6% is well inside."
+      },
+      {
+       "id": "b",
+       "text": "Real: 6% is bigger than the 5% typical error",
+       "why": "This compares the change with one test's noise; a change between two tests carries √2 times more, and 95% needs ×1.96."
+      },
+      {
+       "id": "c",
+       "text": "Real: lab tests like VO2max have almost no noise",
+       "why": "VO2max varies about 5% from test to test, mostly from the athlete, not the equipment."
+      },
+      {
+       "id": "d",
+       "text": "Can't tell: noise alone spans about ±7%",
+       "why": "This stops at √2 × typical error; a 95% band also needs ×1.96."
+      }
+     ],
+     "solution": "Noise on a change = √2 × 5% = 7.1%. 95% band ≈ ±1.96 × 7.1% ≈ ±14%. A 6% gain is inside it: this one pair of tests can't confirm it."
+    }
+   ]
+  },
+  {
+   "id": "var-tte",
+   "concept": "ev-var-tests",
+   "bloom": "evaluate",
+   "sources": [
+    "currell2008",
+    "hopkins2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You want to test whether a new drink improves cycling performance by about 2%. Which protocol gives you the best chance of seeing it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A time trial, after a practice trial",
+       "correct": true,
+       "why": "Right: time trials vary by under 5% (power tests 1 min to 3 h by about 1–2%), and a practice trial removes the learning effect."
+      },
+      {
+       "id": "b",
+       "text": "Riding to exhaustion at 80% of peak power",
+       "why": "Its time varies by more than 10% between tries, and riding to failure is less like racing than a time trial."
+      },
+      {
+       "id": "c",
+       "text": "A single VO2max test before and after",
+       "why": "VO2max varies about 5% between tests, and it isn't a performance measure anyway."
+      },
+      {
+       "id": "d",
+       "text": "A time trial on the first lab visit, with no practice",
+       "why": "The first trial is the noisiest and includes a learning effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-practice",
+   "concept": "ev-var-tests",
+   "bloom": "analyse",
+   "sources": [
+    "hopkins2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does his first-ever treadmill 5 km time trial, then repeats it after 4 weeks on a new plan and is 2.5% faster. Apart from fitness, what likely explains part of the gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Learning the test: second trials tend to beat first ones",
+       "correct": true,
+       "why": "Right: in reliability studies performance improved about 1.2% from the first to the second trial, but only 0.2% after that."
+      },
+      {
+       "id": "b",
+       "text": "The treadmill becomes more accurate with use",
+       "why": "Treadmill accuracy doesn't improve with use; the athlete changes, not the machine."
+      },
+      {
+       "id": "c",
+       "text": "Four weeks of training always gives exactly 2.5%",
+       "why": "There is no fixed gain; that's why the learning effect needs separating."
+      },
+      {
+       "id": "d",
+       "text": "Typical error only applies to cycling tests",
+       "why": "Running tests have typical errors too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-katch",
+   "concept": "ev-var-tests",
+   "bloom": "evaluate",
+   "sources": [
+    "katch1982",
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A classic study put the day-to-day variation of VO2max at about 5.6%, from 8–20 repeat tests in each of 5 trained people (4 women, 1 man). What most limits this estimate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "With only 5 people, it may not hold for other athletes",
+       "correct": true,
+       "why": "Right: many repeats pin down these five people's noise, but people differ in how noisy they are. Hopkins advises about 50 participants and at least 3 trials for a reasonably precise estimate."
+      },
+      {
+       "id": "b",
+       "text": "Repeating a test 8–20 times makes it less reliable",
+       "why": "Many repeats per person help; the problem is the small number of people."
+      },
+      {
+       "id": "c",
+       "text": "Including women makes the result invalid",
+       "why": "Including women is a strength; the issue is the very small sample."
+      },
+      {
+       "id": "d",
+       "text": "VO2max can't vary from day to day",
+       "why": "It does: biological variation, not equipment, made up about 90% of the spread."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-swc-def",
+   "concept": "ev-var-swc",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hopkins1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the smallest worthwhile change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The smallest real change in performance that matters",
+       "correct": true,
+       "why": "Right: for racers, the smallest gain that would change results."
+      },
+      {
+       "id": "b",
+       "text": "The smallest change a test can detect",
+       "why": "That depends on the test's noise; the SWC is about what matters, not what's measurable."
+      },
+      {
+       "id": "c",
+       "text": "Twice the typical error of a test",
+       "why": "That is a noise threshold, not a definition of what matters."
+      },
+      {
+       "id": "d",
+       "text": "The average change in a study's group",
+       "why": "That is the mean effect, which may be bigger or smaller than what matters."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-signal-noise",
+   "concept": "ev-var-swc",
+   "bloom": "evaluate",
+   "sources": [
+    "currell2008",
+    "hopkins2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's smallest worthwhile change is 0.5%. Her 20-minute test has a typical error of 1.5%. She plans one test a month to track progress. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One test can't see 0.5% gains: average repeated tests and control conditions",
+       "correct": true,
+       "why": "Right: the noise is three times the signal she cares about. Repeats, the same time of day, food and warm-up cut it."
+      },
+      {
+       "id": "b",
+       "text": "The plan is fine, because a 1.5% error is already small",
+       "why": "Small in absolute terms, but three times larger than the change that matters."
+      },
+      {
+       "id": "c",
+       "text": "Switch to a time-to-exhaustion test",
+       "why": "Time-to-exhaustion tests are far noisier (over 10%)."
+      },
+      {
+       "id": "d",
+       "text": "Count any rise above 0.5% as a real gain",
+       "why": "Most 0.5–2% changes on this test would just be noise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-responder-plot",
+   "concept": "ev-var-responders",
+   "bloom": "analyse",
+   "sources": [
+    "atkinson2015",
+    "hecksteden2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An 8-week running study with no control group plots each runner's change in VO2max. Runners who improved by less than 2% are labelled 'non-responders' (30% of the group). What is the main weakness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Noise and regression to the mean alone can create that spread",
+       "correct": true,
+       "why": "Right: without a control group's spread of changes, you can't tell true non-response from measurement noise."
+      },
+      {
+       "id": "b",
+       "text": "The study should have used only elite runners",
+       "why": "Elite runners would still show noise; the issue is the missing comparison."
+      },
+      {
+       "id": "c",
+       "text": "Eight weeks is too short for VO2max to change at all",
+       "why": "VO2max can rise within weeks; the problem is separating each person's change from noise."
+      },
+      {
+       "id": "d",
+       "text": "VO2max isn't related to running performance",
+       "why": "It is related; the flaw is in how responders were defined."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-true-response",
+   "concept": "ev-var-responders",
+   "bloom": "understand",
+   "sources": [
+    "atkinson2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which finding is the best evidence of true individual differences in response to training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The SD of changes is clearly larger in the training group than in a control group",
+       "correct": true,
+       "why": "Right: extra spread beyond the control group's noise is true individual response."
+      },
+      {
+       "id": "b",
+       "text": "Some athletes' changes are bigger than twice the typical error",
+       "why": "In a large group, some changes exceed 2 × typical error by chance alone."
+      },
+      {
+       "id": "c",
+       "text": "The training group's mean change is large",
+       "why": "A large mean says the training works on average, not that people differ."
+      },
+      {
+       "id": "d",
+       "text": "The training group's changes are widely spread",
+       "why": "A wide spread alone can be pure noise; it must be compared with a control."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "var-two-te",
+   "concept": "ev-var-responders",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "bonafiglia2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study classes a 'non-responder' as anyone whose change is smaller than 2 × typical error. The typical error for VO2peak is 0.107 L·min⁻¹. A runner's VO2peak rises by 0.15 L·min⁻¹. How is she classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Non-responder: 0.15 is below the 0.214 L·min⁻¹ cut-off",
+       "correct": true,
+       "why": "Right: 2 × 0.107 = 0.214 L·min⁻¹. Her gain may still be real; it just can't be separated from noise."
+      },
+      {
+       "id": "b",
+       "text": "Responder: 0.15 is above the 0.107 L·min⁻¹ typical error",
+       "why": "The cut-off is twice the typical error, 0.214 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "Responder: any rise counts as a response",
+       "why": "The point of the cut-off is that small rises can be noise."
+      },
+      {
+       "id": "d",
+       "text": "Non-responder: VO2peak fell",
+       "why": "It rose by 0.15 L·min⁻¹; it just didn't clear the cut-off."
+      }
+     ],
+     "solution": "Cut-off = 2 × 0.107 = 0.214 L·min⁻¹. 0.15 < 0.214, so she is classed as a non-responder for VO2peak. 'Non-responder' here means 'change not clearly above noise', not 'did not adapt'."
+    },
+    {
+     "id": "b",
+     "stem": "A study classes a 'non-responder' as anyone whose change is smaller than 2 × typical error. The typical error for lactate-threshold power is 15.7 W. A cyclist's threshold rises by 40 W. How is he classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Responder: 40 W is above the 31.4 W cut-off",
+       "correct": true,
+       "why": "Right: 2 × 15.7 = 31.4 W, and 40 W clears it."
+      },
+      {
+       "id": "b",
+       "text": "Non-responder: 40 W is below the 62.8 W cut-off",
+       "why": "This doubles twice: the cut-off is 2 × 15.7 = 31.4 W."
+      },
+      {
+       "id": "c",
+       "text": "Non-responder: 40 W is less than 3 typical errors",
+       "why": "The rule in this study is 2 typical errors, not 3."
+      },
+      {
+       "id": "d",
+       "text": "Can't be classed without a VO2max test",
+       "why": "Each measure is classed on its own; lactate threshold doesn't need VO2max."
+      }
+     ],
+     "solution": "Cut-off = 2 × 15.7 = 31.4 W. 40 W > 31.4 W, so he is classed as a responder for lactate threshold."
+    }
+   ]
+  },
+  {
+   "id": "var-swc-elite",
+   "concept": "ev-var-swc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2009",
+    "hopkins1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An elite cyclist's results vary by 1.2% from race to race. Using SWC ≈ 0.3 × race-to-race variation, what is his smallest worthwhile change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.4%",
+       "correct": true,
+       "why": "Right: 0.3 × 1.2% = 0.36%, about 0.4%."
+      },
+      {
+       "id": "b",
+       "text": "About 1.2%",
+       "why": "This is the race-to-race variation itself; the SWC is a fraction of it."
+      },
+      {
+       "id": "c",
+       "text": "About 4%",
+       "why": "This divides by 0.3 instead of multiplying (1.2 ÷ 0.3 = 4)."
+      },
+      {
+       "id": "d",
+       "text": "About 0.04%",
+       "why": "A decimal slip: 0.3 × 1.2 is 0.36, not 0.036."
+      }
+     ],
+     "solution": "SWC ≈ 0.3 × 1.2% = 0.36%, about 0.4%. (Hopkins's earlier 0.4–0.7 would give 0.5–0.8%.)"
+    },
+    {
+     "id": "b",
+     "stem": "An elite runner's 10 km times vary by 2.0% from race to race. Using SWC ≈ 0.3 × race-to-race variation, what is her smallest worthwhile change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.6%",
+       "correct": true,
+       "why": "Right: 0.3 × 2.0% = 0.6%."
+      },
+      {
+       "id": "b",
+       "text": "About 2.0%",
+       "why": "This is the race-to-race variation itself; the SWC is a fraction of it."
+      },
+      {
+       "id": "c",
+       "text": "About 6.7%",
+       "why": "This divides by 0.3 instead of multiplying (2.0 ÷ 0.3 ≈ 6.7)."
+      },
+      {
+       "id": "d",
+       "text": "About 0.06%",
+       "why": "A decimal slip: 0.3 × 2.0 is 0.6, not 0.06."
+      }
+     ],
+     "solution": "SWC ≈ 0.3 × 2.0% = 0.6%. (Hopkins's earlier 0.4–0.7 would give 0.8–1.4%.)"
+    }
+   ]
+  }
+ ]
+}

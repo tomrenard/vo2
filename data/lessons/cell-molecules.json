@@ -1,0 +1,754 @@
+{
+ "id": "cell-molecules",
+ "module": "t0-cell-biochem",
+ "title": "The molecules of life: carbohydrate, fat, protein",
+ "goal": "Describe carbohydrates, fats and proteins, where and how much of each is stored in the body, and why the small glycogen store matters so much.",
+ "requires": [
+  "cell-structure"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "cm-store-rank",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cm-carbs",
+   "title": "Carbohydrate: glucose and glycogen",
+   "text": "Carbohydrates are built from sugars. The one that matters most is **glucose**, a sugar with six carbon atoms. Cells can't keep loose glucose in bulk, so they link thousands of glucose units into branched particles of [glycogen](g:glycogen).\n\nWhere the body keeps it [[c:carb-stores]]:\n\n| store | amount |\n|---|---|\n| muscle glycogen | about 400 g |\n| liver glycogen | about 80–100 g |\n| blood glucose | about 4–5 g |\n\nThe two big stores do different jobs. Muscle glycogen fuels the muscle that holds it. Liver glycogen tops up the blood, so the brain and working muscles keep getting glucose [[c:liver-job]]. That is why a long ride on an empty stomach can make your head foggy before your legs fail.",
+   "claims": [
+    {
+     "id": "carb-stores",
+     "text": "The body stores about 400 g of glycogen in muscle and about 80–100 g in the liver, with only 4–5 g of glucose in the blood.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018",
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "Carbohydrate is predominantly stored as glycogen in both the liver (approximately 100 g) and muscle (approximately 400 g) with 5 g also circulating in the blood stream as glucose.",
+       "level": "full-text"
+      },
+      {
+       "source": "murray2018",
+       "quote": "The > 80 g of glucose stored as liver glycogen is used to constantly replenish the 4 g of glucose circulating in the blood.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "liver-job",
+     "text": "Liver glycogen is released as glucose to keep blood glucose steady, which the brain depends on.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "To ensure the brain has an ample supply of glucose, the liver releases glucose into the bloodstream at a rate similar to the uptake of glucose from the blood into tissues, thereby stabilizing blood glucose concentration between 4.0 and 5.5 mmol/L (70–100 mg/dL).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cm-glycogen-where"
+  },
+  {
+   "type": "question",
+   "item": "cm-liver-role"
+  },
+  {
+   "type": "concept",
+   "id": "cm-fats",
+   "title": "Fat: fatty acids and triglycerides",
+   "text": "A [fatty acid](g:fatty-acid) is a long chain of carbon atoms. Three fatty acids joined to a small backbone (glycerol) make a [triglyceride](g:triglyceride), the storage form of fat.\n\nFat is stored in two main places [[c:fat-sources]]:\n\n- **Adipose tissue** under the skin and around the organs. Even a lean athlete at 7–14% body fat carries more than 125,000 kJ (30,000 kcal) there [[c:adipose-store]].\n- **Inside muscle fibres** as small droplets, called [IMTG](g:imtg), mostly in type I fibres right next to the mitochondria that burn them [[c:imtg-place]].\n\nFat from adipose tissue must be split, carried in the blood and taken up by the muscle before it can be burned; IMTG is already in place.",
+   "claims": [
+    {
+     "id": "fat-sources",
+     "text": "Fat burned in exercise comes from adipose tissue fatty acids, intramuscular triglycerides and dietary fat.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "Lipids as a fuel source for energy supply during submaximal exercise originate from subcutaneous adipose tissue derived fatty acids (FA), intramuscular triacylglycerides (IMTG), cholesterol and dietary fat.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "adipose-store",
+     "text": "A person with 7–14% body fat stores more than 30,000 kcal (about 125,000 kJ) in adipose tissue.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "A person with 7–14% body fat has >30,000 kcal of energy reserves stored in adipose tissue",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "imtg-place",
+     "text": "Intramuscular triglyceride sits mainly in type I fibres, close to the mitochondria.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "Intramuscular triacylglyerides are arranged within striated muscle, primarily in type I fibers in close proximity to the mitochondria",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cm-store-rank",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cm-imtg-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "cm-compare",
+   "title": "A small carbohydrate tank, a huge fat tank",
+   "text": "Oxidising carbohydrate releases about **17 kJ (4 kcal) per gram**; fat gives more than twice as much, about **37 kJ (9 kcal) per gram** [[c:carb-energy]]. So all the body's glycogen holds roughly 500 g × 17 kJ·g⁻¹ ≈ 8,500 kJ (2,000 kcal). The fat store holds over ten times more.\n\nYet muscle relies on that small tank: glycogen is only about 4% of the body's fuel stores, but it is the main fuel at moderate and higher intensity [[c:glycogen-main]]. Why muscle can't just switch to fat at race pace is about the *rate* of each pathway, which the bioenergetics module covers.\n\nFor now, keep the sizes in mind: carbohydrate is the limited, precious store; fat is the almost endless one.",
+   "claims": [
+    {
+     "id": "carb-energy",
+     "text": "Carbohydrate yields about 17 kJ (4 kcal) per gram and fat about 37 kJ (9 kcal) per gram.",
+     "grade": "strong",
+     "sources": [
+      "fao2003",
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "fao2003",
+       "quote": "The energy values are 17 kJ/g (4.0 kcal/g) for protein, 37 kJ/g (9.0 kcal/g) for fat and 17 kJ/g (4.0 kcal/g) for carbohydrates.",
+       "level": "full-text"
+      },
+      {
+       "source": "murray2018",
+       "quote": "for a 50-kg (110-lb) athlete, 10 g carbohydrate/kg BW/day is the equivalent of 500 g of carbohydrate (2000 kcal).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "glycogen-main",
+     "text": "Muscle and liver glycogen are only about 4% of total fuel stores, yet muscle glycogen is the main fuel at moderate and higher intensity.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Although muscle and liver glycogen represent just 4% of the body's total fuel stores, muscle glycogen is the primary fuel during exercise of moderate or greater intensity.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cm-glycogen-example",
+   "title": "How much energy is in your glycogen, and how long would it last?",
+   "problem": "A cyclist has 400 g of muscle glycogen and 100 g of liver glycogen. Carbohydrate gives about 17 kJ per gram. (1) How much energy is stored? (2) If her legs used carbohydrate at 2 g·min⁻¹ and could only draw on the 400 g in muscle, how long would that last?",
+   "steps": [
+    "Total glycogen: 400 g + 100 g = 500 g.",
+    "Energy = mass × energy per gram = 500 g × 17 kJ·g⁻¹ = 8,500 kJ. Check: 8,500 ÷ 4.184 ≈ 2,000 kcal.",
+    "Time = store ÷ rate of use = 400 g ÷ 2 g·min⁻¹ = 200 min, about 3 h 20 min.",
+    "That is a ceiling, not a forecast: not all muscle glycogen sits in the working muscles, and fat, blood glucose and food also supply energy."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cm-energy-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cm-time-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cm-glycogen-vs-fat"
+  },
+  {
+   "type": "concept",
+   "id": "cm-protein",
+   "title": "Protein: the body's machinery, not its fuel tank",
+   "text": "Proteins are chains of [amino acids](g:amino-acid) (20 kinds), folded into shapes that do work: the filaments that pull, the enzymes that run every reaction, the pumps and transporters in membranes. Muscle holds half or more of the body's protein [[c:muscle-protein]].\n\nThere is no protein store kept for fuel. Every gram is doing a job, so burning it means taking machinery apart. In exercise, amino acid oxidation supplies only about **1–5%** of the energy [[c:protein-fuel]]; it rises a bit when glycogen runs low.\n\nThis is why protein matters to endurance athletes for repair and adaptation (building more mitochondria and enzymes), not as a race fuel.",
+   "claims": [
+    {
+     "id": "muscle-protein",
+     "text": "Skeletal muscle contains 50–75% of all body proteins.",
+     "grade": "strong",
+     "sources": [
+      "frontera2015"
+     ],
+     "evidence": [
+      {
+       "source": "frontera2015",
+       "quote": "In humans, skeletal muscle comprises approximately 40% of total body weight and contains 50-75% of all body proteins.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "protein-fuel",
+     "text": "Oxidation of protein and amino acids supplies about 1–5% of the total energy cost of exercise.",
+     "grade": "strong",
+     "sources": [
+      "campbell2007"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2007",
+       "quote": "oxidation of protein/amino acids during exercise (approximately 1–5% of the total energy cost of exercise)",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cm-protein-fuel"
+  },
+  {
+   "type": "question",
+   "item": "cm-protein-claim"
+  },
+  {
+   "type": "question",
+   "item": "cm-energy-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cm-time-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Carbohydrate is stored as glycogen: about 400 g in muscle, 80–100 g in liver, and only 4–5 g as blood glucose.",
+    "Fat is stored as triglyceride in adipose tissue (over 125,000 kJ even in lean athletes) and as IMTG droplets beside the mitochondria.",
+    "Carbohydrate gives about 17 kJ (4 kcal) per gram, fat about 37 kJ (9 kcal); all glycogen holds about 8,500 kJ, a small but vital tank.",
+    "Protein is working machinery, not a fuel store; amino acids supply only about 1–5% of exercise energy."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cm-store-rank",
+   "concept": "cm-fats",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "purdom2018",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lean, well-fed athlete, which store holds the most energy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Triglyceride in adipose tissue",
+       "correct": true,
+       "why": "Right: even at 7–14% body fat, adipose tissue holds more than 125,000 kJ, many times the glycogen store."
+      },
+      {
+       "id": "b",
+       "text": "Glycogen in skeletal muscle",
+       "why": "Muscle glycogen (about 400 g, roughly 7,000 kJ) is the biggest carbohydrate store but small next to fat."
+      },
+      {
+       "id": "c",
+       "text": "Glycogen in the liver",
+       "why": "The liver holds only about 80–100 g of glycogen."
+      },
+      {
+       "id": "d",
+       "text": "Glucose in the blood",
+       "why": "The blood carries only 4–5 g of glucose at any time."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner at 9% body fat lines up for a marathon. Rank by energy content: which store is the largest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Adipose tissue fat",
+       "correct": true,
+       "why": "Right: more than 125,000 kJ (30,000 kcal), over ten times all the glycogen."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen",
+       "why": "About 400 g, roughly 7,000 kJ: large for carbohydrate, small next to fat."
+      },
+      {
+       "id": "c",
+       "text": "Liver glycogen",
+       "why": "About 80–100 g, under 2,000 kJ."
+      },
+      {
+       "id": "d",
+       "text": "Muscle protein",
+       "why": "Protein isn't a fuel store; it is working machinery and supplies only 1–5% of exercise energy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-glycogen-where",
+   "concept": "cm-carbs",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where is most of the body's glycogen stored?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In skeletal muscle",
+       "correct": true,
+       "why": "Right: about 400 g, against about 100 g in the liver."
+      },
+      {
+       "id": "b",
+       "text": "In the liver",
+       "why": "The liver holds only about 80–100 g; muscle, with far more mass, holds about 400 g."
+      },
+      {
+       "id": "c",
+       "text": "In the blood",
+       "why": "The blood holds glucose, not glycogen, and only 4–5 g of it."
+      },
+      {
+       "id": "d",
+       "text": "In adipose tissue",
+       "why": "Adipose tissue stores fat (triglyceride), not glycogen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-liver-role",
+   "concept": "cm-carbs",
+   "bloom": "understand",
+   "sources": [
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Three hours into a long ride without food, a cyclist feels light-headed and can't concentrate. Which store running low best explains this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Liver glycogen, which keeps blood glucose up for the brain",
+       "correct": true,
+       "why": "Right: the liver releases glucose to hold blood glucose steady; when it runs low, the brain is short of fuel."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen, which muscles share with the brain",
+       "why": "Muscle glycogen fuels the muscle that stores it; the brain relies on blood glucose from the liver."
+      },
+      {
+       "id": "c",
+       "text": "Adipose fat, which is the brain's main fuel",
+       "why": "The brain runs mainly on glucose, and fat stores are nowhere near empty after 3 h."
+      },
+      {
+       "id": "d",
+       "text": "Muscle protein, which the brain burns when hungry",
+       "why": "Protein supplies only a few % of energy and is not what fails here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-imtg-scenario",
+   "concept": "cm-fats",
+   "bloom": "apply",
+   "sources": [
+    "purdom2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a long, easy triathlon training ride, some fat burned comes from droplets inside the leg fibres. Where in the fibre are these droplets mostly found?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In type I fibres, next to the mitochondria",
+       "correct": true,
+       "why": "Right: IMTG sits mainly in type I fibres, close to the mitochondria that oxidise it."
+      },
+      {
+       "id": "b",
+       "text": "In type II fibres, next to the SR",
+       "why": "IMTG is mostly in type I fibres, near mitochondria, not near the calcium store."
+      },
+      {
+       "id": "c",
+       "text": "Inside the nuclei of the fibre",
+       "why": "Nuclei hold DNA; fat droplets sit in the cytosol near mitochondria."
+      },
+      {
+       "id": "d",
+       "text": "Outside the fibre, in the blood vessels",
+       "why": "That describes fat in transport; IMTG is stored inside the fibre itself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-energy-calc",
+   "concept": "cm-compare",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "murray2018",
+    "hearris2018",
+    "fao2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After carbohydrate loading, a cyclist holds 600 g of muscle glycogen and 100 g of liver glycogen. Carbohydrate gives about 17 kJ per gram. How much energy is stored as glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11,900 kJ",
+       "correct": true,
+       "why": "Right: (600 + 100) g × 17 kJ·g⁻¹ = 11,900 kJ (about 2,840 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "2,800 kJ",
+       "why": "This uses 4 per gram, the kcal factor, and labels the answer kJ: 700 × 4 = 2,800 kcal, not kJ."
+      },
+      {
+       "id": "c",
+       "text": "10,200 kJ",
+       "why": "This leaves out the liver: 600 × 17. The question asks for all glycogen."
+      },
+      {
+       "id": "d",
+       "text": "41 kJ",
+       "why": "This divides mass by energy per gram (700 ÷ 17). Energy = mass × energy per gram."
+      }
+     ],
+     "solution": "Total glycogen = 600 g + 100 g = 700 g. Energy = 700 g × 17 kJ·g⁻¹ = 11,900 kJ (11,900 ÷ 4.184 ≈ 2,840 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "After an overnight fast, a runner has 400 g of muscle glycogen and only 40 g of liver glycogen. Carbohydrate gives about 17 kJ per gram. How much energy is stored as glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7,480 kJ",
+       "correct": true,
+       "why": "Right: (400 + 40) g × 17 kJ·g⁻¹ = 7,480 kJ (about 1,790 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "1,760 kJ",
+       "why": "This uses 4 per gram, the kcal factor, and labels the answer kJ: 440 × 4 = 1,760 kcal."
+      },
+      {
+       "id": "c",
+       "text": "6,800 kJ",
+       "why": "This leaves out the liver: 400 × 17."
+      },
+      {
+       "id": "d",
+       "text": "26 kJ",
+       "why": "This divides mass by energy per gram (440 ÷ 17). Energy = mass × energy per gram."
+      }
+     ],
+     "solution": "Total glycogen = 400 g + 40 g = 440 g. Energy = 440 g × 17 kJ·g⁻¹ = 7,480 kJ (7,480 ÷ 4.184 ≈ 1,790 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete holds 500 g of muscle glycogen and 80 g of liver glycogen. Carbohydrate gives about 17 kJ per gram. How much energy is stored as glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9,860 kJ",
+       "correct": true,
+       "why": "Right: (500 + 80) g × 17 kJ·g⁻¹ = 9,860 kJ (about 2,360 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "2,320 kJ",
+       "why": "This uses 4 per gram, the kcal factor, and labels the answer kJ: 580 × 4 = 2,320 kcal."
+      },
+      {
+       "id": "c",
+       "text": "8,500 kJ",
+       "why": "This leaves out the liver: 500 × 17."
+      },
+      {
+       "id": "d",
+       "text": "34 kJ",
+       "why": "This divides mass by energy per gram (580 ÷ 17). Energy = mass × energy per gram."
+      }
+     ],
+     "solution": "Total glycogen = 500 g + 80 g = 580 g. Energy = 580 g × 17 kJ·g⁻¹ = 9,860 kJ (9,860 ÷ 4.184 ≈ 2,360 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "cm-time-calc",
+   "concept": "cm-compare",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides hard enough to use carbohydrate at 3 g·min⁻¹. If only her 450 g of muscle glycogen were available, what is the most it could last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 min",
+       "correct": true,
+       "why": "Right: 450 g ÷ 3 g·min⁻¹ = 150 min (2 h 30 min)."
+      },
+      {
+       "id": "b",
+       "text": "1,350 min",
+       "why": "This multiplies store by rate (450 × 3); the units don't give minutes."
+      },
+      {
+       "id": "c",
+       "text": "2.5 min",
+       "why": "This converts 150 min to hours (2.5) and then labels it minutes."
+      },
+      {
+       "id": "d",
+       "text": "0.007 min",
+       "why": "This divides rate by store (3 ÷ 450). Time = store ÷ rate."
+      }
+     ],
+     "solution": "Time = store ÷ rate = 450 g ÷ 3 g·min⁻¹ = 150 min = 2 h 30 min. A ceiling only: fat, blood glucose and food also contribute, and not all glycogen is in the working muscles."
+    },
+    {
+     "id": "b",
+     "stem": "A marathoner uses carbohydrate at 2.5 g·min⁻¹. If only his 400 g of muscle glycogen were available, what is the most it could last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "160 min",
+       "correct": true,
+       "why": "Right: 400 g ÷ 2.5 g·min⁻¹ = 160 min (2 h 40 min)."
+      },
+      {
+       "id": "b",
+       "text": "1,000 min",
+       "why": "This multiplies store by rate (400 × 2.5)."
+      },
+      {
+       "id": "c",
+       "text": "2.7 min",
+       "why": "This converts 160 min to hours (2.7) and then labels it minutes."
+      },
+      {
+       "id": "d",
+       "text": "0.006 min",
+       "why": "This divides rate by store (2.5 ÷ 400). Time = store ÷ rate."
+      }
+     ],
+     "solution": "Time = store ÷ rate = 400 g ÷ 2.5 g·min⁻¹ = 160 min = 2 h 40 min. A ceiling only: fat and blood glucose also contribute."
+    },
+    {
+     "id": "c",
+     "stem": "An Ironman athlete on the bike uses carbohydrate at 2 g·min⁻¹. If only her 500 g of muscle glycogen were available, what is the most it could last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "250 min",
+       "correct": true,
+       "why": "Right: 500 g ÷ 2 g·min⁻¹ = 250 min (4 h 10 min)."
+      },
+      {
+       "id": "b",
+       "text": "1,000 min",
+       "why": "This multiplies store by rate (500 × 2)."
+      },
+      {
+       "id": "c",
+       "text": "4.2 min",
+       "why": "This converts 250 min to hours (4.2) and then labels it minutes."
+      },
+      {
+       "id": "d",
+       "text": "0.004 min",
+       "why": "This divides rate by store (2 ÷ 500). Time = store ÷ rate."
+      }
+     ],
+     "solution": "Time = store ÷ rate = 500 g ÷ 2 g·min⁻¹ = 250 min ≈ 4 h 10 min. Over a full Ironman, fat and food must cover the rest."
+    }
+   ]
+  },
+  {
+   "id": "cm-glycogen-vs-fat",
+   "concept": "cm-compare",
+   "bloom": "analyse",
+   "sources": [
+    "murray2018",
+    "purdom2018",
+    "fao2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lean runner carries over 125,000 kJ of fat but only about 8,500 kJ of glycogen. Why is the small glycogen store the one that matters most for marathon pace?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle relies mainly on glycogen at moderate and higher intensity",
+       "correct": true,
+       "why": "Right: glycogen is only ~4% of fuel stores but the main fuel at moderate or greater intensity, so it runs low first."
+      },
+      {
+       "id": "b",
+       "text": "Fat can't be burned during exercise at all",
+       "why": "Fat is burned in all endurance exercise; it just can't cover all the demand at higher intensities."
+      },
+      {
+       "id": "c",
+       "text": "Glycogen holds more energy per gram than fat",
+       "why": "The reverse: fat holds about 37 kJ per gram, carbohydrate about 17 kJ. This isn't the reason."
+      },
+      {
+       "id": "d",
+       "text": "Fat stores are used up in the first hour",
+       "why": "Fat stores are huge; even a full marathon uses a small fraction of them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-protein-fuel",
+   "concept": "cm-protein",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "campbell2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About what share of the energy used in exercise comes from oxidising amino acids?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1–5%",
+       "correct": true,
+       "why": "Right: protein supplies only a small fraction of exercise energy."
+      },
+      {
+       "id": "b",
+       "text": "About 15–20%",
+       "why": "This overstates it several-fold; it may be confused with protein's share of a typical diet."
+      },
+      {
+       "id": "c",
+       "text": "About 40–50%",
+       "why": "Carbohydrate and fat supply almost all exercise energy; protein is a minor fuel."
+      },
+      {
+       "id": "d",
+       "text": "None at all",
+       "why": "Some amino acids are always oxidised, a little more when glycogen is low."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cm-protein-claim",
+   "concept": "cm-protein",
+   "bloom": "evaluate",
+   "sources": [
+    "campbell2007",
+    "frontera2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling forum post says: \"On long rides your body burns protein as a main fuel, so eat protein bars instead of carbs.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong: protein supplies only about 1–5% of exercise energy",
+       "correct": true,
+       "why": "Right: carbohydrate and fat supply nearly all the energy; protein matters for repair, not as the main fuel."
+      },
+      {
+       "id": "b",
+       "text": "Right: protein is the body's largest fuel store",
+       "why": "Protein isn't a fuel store; each gram is working machinery, and fat is the largest store."
+      },
+      {
+       "id": "c",
+       "text": "Right: muscle holds most of the body's protein for fuel",
+       "why": "Muscle does hold most body protein, but as filaments and enzymes, not as a fuel reserve."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: the body never oxidises any protein",
+       "why": "A little is always oxidised (1–5%); the post's error is calling it a main fuel."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

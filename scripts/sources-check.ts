@@ -5,6 +5,7 @@
  */
 import { readdirSync, readFileSync } from "node:fs";
 import type { Source } from "../src/lib/content.ts";
+import { sameName, titleMatch } from "./names.ts";
 
 const dir = new URL("../data/sources/", import.meta.url);
 const sources: Record<string, Source> = Object.assign(
@@ -14,29 +15,6 @@ const sources: Record<string, Source> = Object.assign(
     .map((file) => JSON.parse(readFileSync(new URL(file, dir), "utf8"))),
 );
 
-const words = (text: string) =>
-  new Set(
-    text
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/<[^>]+>|[^a-z0-9 ]/g, " ")
-      .split(/\s+/)
-      .filter((w) => w.length > 2),
-  );
-
-/** Share of our title's words found in Crossref's (case, accents, punctuation ignored). */
-function titleMatch(ours: string, theirs: string) {
-  const a = words(ours);
-  const b = words(theirs);
-  return [...a].filter((w) => b.has(w)).length / Math.max(a.size, 1);
-}
-
-const plain = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[^a-z]/g, "");
-
 type Work = {
   title?: string[];
   author?: { family?: string; sequence?: string }[];
@@ -44,13 +22,16 @@ type Work = {
   "updated-by"?: { type?: string }[];
 };
 
-async function fetchWork(doi: string): Promise<Work | null> {
+/** Crossref throttles (429) and has short outages: try again after 2, 4 and 8 s. */
+async function fetchWork(doi: string, attempt = 0): Promise<Work | null> {
   const response = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, {
     headers: { "User-Agent": "vo2-sources-check/1.0" },
-  });
-  if (response.status === 404) return null;
-  if (!response.ok) throw new Error(`Crossref ${response.status} for ${doi}`);
-  return ((await response.json()) as { message: Work }).message;
+  }).catch(() => null);
+  if (response?.status === 404) return null;
+  if (response?.ok) return ((await response.json()) as { message: Work }).message;
+  if (attempt >= 3) throw new Error(`Crossref ${response?.status ?? "unreachable"} for ${doi}`);
+  await new Promise((resolve) => setTimeout(resolve, 2000 * 2 ** attempt));
+  return fetchWork(doi, attempt + 1);
 }
 
 const errors: string[] = [];
@@ -65,7 +46,7 @@ for (const [id, source] of entries) {
   if (titleMatch(source.title, title) < 0.8)
     errors.push(`${id}: title doesn't match Crossref: "${title}"`);
   const first = work.author?.find((a) => a.sequence === "first") ?? work.author?.[0];
-  if (first?.family && plain(first.family) !== plain(source.firstAuthor)) {
+  if (first?.family && !sameName(first.family, source.firstAuthor)) {
     errors.push(`${id}: first author is ${first.family}, not ${source.firstAuthor}`);
   }
   const year = work.issued?.["date-parts"]?.[0]?.[0];

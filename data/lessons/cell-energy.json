@@ -1,0 +1,634 @@
+{
+ "id": "cell-energy",
+ "module": "t0-cell-biochem",
+ "title": "Energy, bonds and ATP",
+ "goal": "Explain how energy held in fuel molecules reaches muscle work through ATP, what a coupled reaction is, and why ATP is a carrier rather than a store.",
+ "requires": [
+  "cell-molecules"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "ce-carrier",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ce-bonds",
+   "title": "Energy is held in chemical bonds",
+   "text": "A molecule is atoms held together by chemical bonds. Bonds hold energy. When a big fuel molecule such as glucose or a fatty acid is broken down to carbon dioxide and water, the products hold less energy than the fuel did, and the difference is released.\n\nCells run two kinds of chemistry:\n\n- [Catabolism](g:catabolism): breaking fuels down, which **releases** energy.\n- [Anabolism](g:anabolism): building molecules (glycogen, proteins, new mitochondria), which **needs** energy.\n\n[ATP](g:atp) is the go-between that links the two [[c:atp-link]]. Fuel breakdown is used to rebuild ATP; ATP is then spent on contraction, pumping and building. Because the muscle's ATP pool is small, those pathways must keep running to resupply it [[c:atp-resupply]].",
+   "claims": [
+    {
+     "id": "atp-link",
+     "text": "ATP is the energy exchange factor that connects catabolism and anabolism, and it fuels contraction, phosphorylation and active transport.",
+     "grade": "strong",
+     "sources": [
+      "bonora2012"
+     ],
+     "evidence": [
+      {
+       "source": "bonora2012",
+       "quote": "ATP is universally seen as the energy exchange factor that connects anabolism and catabolism but also fuels processes such as motile contraction, phosphorylations, and active transport.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "atp-resupply",
+     "text": "Because muscle ATP stores are small, metabolic pathways fed by carbohydrate and fat must keep resynthesising ATP.",
+     "grade": "strong",
+     "sources": [
+      "hargreaves2020"
+     ],
+     "evidence": [
+      {
+       "source": "hargreaves2020",
+       "quote": "Because the muscle stores of ATP are small, metabolic pathways must be activated to maintain the required rates of ATP resynthesis.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-carrier",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ce-catab-anab"
+  },
+  {
+   "type": "concept",
+   "id": "ce-coupled",
+   "title": "Coupled reactions: paying for uphill jobs",
+   "text": "Many jobs in a cell are uphill: they would never happen on their own. Pushing sodium out of a fibre when far more of it is already outside, or joining glucose units into glycogen, are examples.\n\nThe cell does them with a [coupled reaction](g:coupled-reaction): it links the uphill job to a downhill one that releases more energy, almost always ATP [hydrolysis](g:hydrolysis) (ATP → [ADP](g:adp) + phosphate). Together, the pair runs downhill.\n\nA clear example is the [sodium–potassium pump](g:na-k-atpase): each ATP it splits moves 3 Na⁺ out of the cell and 2 K⁺ in, both against their gradients [[c:pump-coupling]].\n\nNo coupling is perfect. The energy that isn't turned into work appears as **heat** [[c:heat]]: the reason you warm up within minutes of starting to run.",
+   "claims": [
+    {
+     "id": "pump-coupling",
+     "text": "The Na⁺/K⁺-ATPase uses the energy from hydrolysing one ATP to move 3 Na⁺ out of the cell and 2 K⁺ in.",
+     "grade": "strong",
+     "sources": [
+      "green2004"
+     ],
+     "evidence": [
+      {
+       "source": "green2004",
+       "quote": "The active transport of these cations is mediated by the Na+-K+-ATPase, an integral membrane protein that uses the energy from the hydrolysis of 1 ATP to transport 3 Na+ out of the cell and 2 K+ into the cell.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heat",
+     "text": "Muscles convert energy from ATP into work; the energy not converted into work appears as heat.",
+     "grade": "strong",
+     "sources": [
+      "barclay2015"
+     ],
+     "evidence": [
+      {
+       "source": "barclay2015",
+       "quote": "Muscles convert energy from ATP into useful work, which can be used to move limbs and to transport ions across membranes.",
+       "level": "abstract"
+      },
+      {
+       "source": "barclay2015",
+       "quote": "The energy not converted into work appears as heat.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-coupled-example"
+  },
+  {
+   "type": "question",
+   "item": "ce-heat"
+  },
+  {
+   "type": "concept",
+   "id": "ce-size",
+   "title": "How much energy is in one ATP?",
+   "text": "In a working muscle, splitting one ATP releases about **100 zJ** (zeptojoules; 1 zJ = 10⁻²¹ J) [[c:atp-100zj]]. That is tiny, so chemists count per **mole**: 6.02 × 10²³ molecules. Per mole it comes to about 60 kJ.\n\nThe myosin [cross-bridge](g:cross-bridge) can turn at most about 50 zJ of each ATP into work, so even the motor itself is at best about 50% efficient [[c:xb-efficiency]]. The rest becomes heat.\n\nThe whole body loses more on the way (pumps, breathing, the heart, rebuilding ATP from food), which is why a cyclist's gross efficiency is far below 50%, as the units module showed.",
+   "claims": [
+    {
+     "id": "atp-100zj",
+     "text": "Each ATP molecule provides about 100 zJ of energy that can potentially be converted into work.",
+     "grade": "strong",
+     "sources": [
+      "barclay2015"
+     ],
+     "evidence": [
+      {
+       "source": "barclay2015",
+       "quote": "Each ATP molecule provides 100 zJ of energy that can potentially be converted into work.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "xb-efficiency",
+     "text": "A cross-bridge can do at most about 50 zJ of work per ATP, so its maximum efficiency is about 50%.",
+     "grade": "strong",
+     "sources": [
+      "barclay2015"
+     ],
+     "evidence": [
+      {
+       "source": "barclay2015",
+       "quote": "The mechanics of the myosin cross-bridge are such that at most 50 zJ of work can be done in one ATP consuming cycle; that is, the maximum efficiency of a cross-bridge is ∼50%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ce-mole-example",
+   "title": "From one molecule to a mole",
+   "problem": "One ATP releases 100 zJ when split. How much energy is that per mole of ATP (6.02 × 10²³ molecules)?",
+   "steps": [
+    "Write the prefix as a power of ten: 100 zJ = 100 × 10⁻²¹ J = 1 × 10⁻¹⁹ J.",
+    "Energy per mole = energy per molecule × molecules per mole = 1 × 10⁻¹⁹ J × 6.02 × 10²³ mol⁻¹.",
+    "Multiply the numbers and add the powers: 6.02 × 10⁴ J·mol⁻¹ = 60,200 J·mol⁻¹ ≈ 60 kJ·mol⁻¹.",
+    "Check the size: one molecule is tiny, a mole is huge, so the answer should land in the everyday range of kJ. It does."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-mole-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ce-efficiency-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ce-turnover",
+   "title": "ATP is a carrier, not a store",
+   "text": "ATP is recycled, not hoarded. Even at rest, each muscle cell holds about a billion ATP molecules, and all of them are used and replaced about every 2 minutes. In hard exercise, ATP production can rise about 1,000-fold [[c:atp-turnover]].\n\nSo think of ATP as a rechargeable battery that is drained and recharged nonstop, while the real fuel tanks are glycogen and fat. Resting before a race can't \"fill up\" your ATP; it can fill up glycogen.\n\nHow muscle recharges ATP fast enough (phosphocreatine, glycolysis, oxidative phosphorylation) is the subject of the bioenergetics module. Here, the key idea is simpler: fuel energy → ATP → work and heat.",
+   "claims": [
+    {
+     "id": "atp-turnover",
+     "text": "Each muscle cell holds about a billion ATP molecules, all used and replaced about every 2 minutes at rest; ATP production can rise 1,000-fold in intense exercise.",
+     "grade": "moderate",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Even at rest, each muscle cell contains roughly 1 billion ATP molecules, all of which will be used and replaced every 2 minutes; during intense exercise, muscle ATP production can increase 1000-fold to meet the demands of intense muscle contraction.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-turnover-claim"
+  },
+  {
+   "type": "question",
+   "item": "ce-mole-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ce-efficiency-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ce-mole-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Fuel molecules hold energy in their bonds; breaking them down (catabolism) releases it, building molecules (anabolism) needs it.",
+    "ATP links the two: fuel breakdown rebuilds ATP, and ATP hydrolysis pays for contraction, pumping and building.",
+    "Uphill jobs are coupled to ATP hydrolysis, e.g. 3 Na⁺ out and 2 K⁺ in per ATP; energy not turned into work becomes heat.",
+    "One ATP gives about 100 zJ (about 60 kJ·mol⁻¹); a cross-bridge is at best about 50% efficient.",
+    "ATP is a carrier recycled every few minutes even at rest; the stores are glycogen and fat."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ce-carrier",
+   "concept": "ce-bonds",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bonora2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which description best fits ATP's role in a cell?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A carrier passing energy from fuel to work",
+       "correct": true,
+       "why": "Right: ATP links catabolism (which rebuilds it) to contraction, pumping and building (which spend it)."
+      },
+      {
+       "id": "b",
+       "text": "The cell's long-term store of energy",
+       "why": "ATP is recycled within minutes; long-term energy is stored as glycogen and fat."
+      },
+      {
+       "id": "c",
+       "text": "A fuel the cell takes in from food",
+       "why": "Food supplies carbohydrate, fat and protein; the cell makes its own ATP from them."
+      },
+      {
+       "id": "d",
+       "text": "An enzyme that speeds up fuel breakdown",
+       "why": "ATP is a substrate and energy carrier, not an enzyme."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a long run, energy from fat and glycogen ends up moving the legs. What role does ATP play in that chain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The go-between: fuel breakdown rebuilds ATP, and ATP powers contraction",
+       "correct": true,
+       "why": "Right: ATP connects energy-releasing and energy-using reactions."
+      },
+      {
+       "id": "b",
+       "text": "A by-product made after contraction is done",
+       "why": "ATP is spent during contraction, not made after it."
+      },
+      {
+       "id": "c",
+       "text": "A backup fuel used only when glycogen runs out",
+       "why": "ATP is used every moment of every contraction, not as a backup."
+      },
+      {
+       "id": "d",
+       "text": "A store that is filled before the run and drained during it",
+       "why": "The ATP pool is tiny and recycled nonstop; it can't be filled up in advance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-catab-anab",
+   "concept": "ce-bonds",
+   "bloom": "understand",
+   "sources": [
+    "bonora2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a hard ride, a cyclist's muscles rebuild glycogen from glucose. What kind of process is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Anabolism, which needs energy from ATP",
+       "correct": true,
+       "why": "Right: building a big molecule from small ones is anabolism and costs energy."
+      },
+      {
+       "id": "b",
+       "text": "Catabolism, which releases energy",
+       "why": "Catabolism breaks molecules down; making glycogen builds one up."
+      },
+      {
+       "id": "c",
+       "text": "Anabolism, which releases energy",
+       "why": "Building molecules needs energy; it doesn't release it."
+      },
+      {
+       "id": "d",
+       "text": "Catabolism, which needs energy from ATP",
+       "why": "Catabolism is the breaking-down side, and overall it releases energy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-coupled-example",
+   "concept": "ce-coupled",
+   "bloom": "apply",
+   "sources": [
+    "green2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's leg fibres keep Na⁺ low inside even though Na⁺ leaks in with every nerve signal. How can the fibre push Na⁺ out, against its gradient?",
+     "options": [
+      {
+       "id": "a",
+       "text": "By coupling the transport to ATP hydrolysis in the Na⁺/K⁺ pump",
+       "correct": true,
+       "why": "Right: each ATP split moves 3 Na⁺ out and 2 K⁺ in; the pair of reactions runs downhill together."
+      },
+      {
+       "id": "b",
+       "text": "By diffusion, which moves Na⁺ out on its own",
+       "why": "Diffusion only moves Na⁺ down its gradient, which is into the fibre."
+      },
+      {
+       "id": "c",
+       "text": "By using heat released from contraction",
+       "why": "Heat can't be harnessed to drive pumps; it is the lost part of the energy."
+      },
+      {
+       "id": "d",
+       "text": "By using oxygen directly to push the ions out",
+       "why": "Oxygen is used in mitochondria to rebuild ATP; the pump itself runs on ATP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-heat",
+   "concept": "ce-coupled",
+   "bloom": "analyse",
+   "sources": [
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Ten minutes into a hard turbo session indoors, a cyclist's core temperature is rising fast even though the room is cool. What is the main source of this heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Energy from ATP and fuel breakdown that is not turned into work",
+       "correct": true,
+       "why": "Right: no coupling is perfect, and the energy not converted into work appears as heat."
+      },
+      {
+       "id": "b",
+       "text": "Friction between the legs and the bike",
+       "why": "Friction in the drivetrain warms the bike, not the body; the heat comes from the muscles."
+      },
+      {
+       "id": "c",
+       "text": "Heat absorbed from the room air",
+       "why": "The room is cool; the body is losing heat to the air, not gaining it."
+      },
+      {
+       "id": "d",
+       "text": "Heat released by the heart pumping blood",
+       "why": "The heart produces some heat, but the working leg muscles produce far more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-mole-calc",
+   "concept": "ce-size",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Splitting one ATP releases 100 zJ (1 zJ = 10⁻²¹ J). A mole holds 6.02 × 10²³ molecules. About how much energy is released per mole of ATP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60 kJ·mol⁻¹",
+       "correct": true,
+       "why": "Right: 1 × 10⁻¹⁹ J × 6.02 × 10²³ mol⁻¹ = 6.02 × 10⁴ J·mol⁻¹ ≈ 60 kJ·mol⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 6 kJ·mol⁻¹",
+       "why": "This takes 100 zJ as 10⁻²⁰ J (one power of ten lost)."
+      },
+      {
+       "id": "c",
+       "text": "About 600 kJ·mol⁻¹",
+       "why": "This takes 100 zJ as 10⁻¹⁸ J (one power of ten too many)."
+      },
+      {
+       "id": "d",
+       "text": "About 1.7 × 10⁻⁴³ J·mol⁻¹",
+       "why": "This divides by the number of molecules instead of multiplying."
+      }
+     ],
+     "solution": "100 zJ = 100 × 10⁻²¹ J = 10⁻¹⁹ J. Per mole: 10⁻¹⁹ J × 6.02 × 10²³ mol⁻¹ = 6.02 × 10⁴ J·mol⁻¹ ≈ 60 kJ·mol⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "Splitting one ATP releases 100 zJ (1 zJ = 10⁻²¹ J). How many ATP must be split to release 1 J?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1 × 10¹⁹",
+       "correct": true,
+       "why": "Right: 1 J ÷ 10⁻¹⁹ J per ATP = 10¹⁹ ATP."
+      },
+      {
+       "id": "b",
+       "text": "1 × 10²¹",
+       "why": "This forgets the 100 in 100 zJ: 1 ÷ 10⁻²¹."
+      },
+      {
+       "id": "c",
+       "text": "1 × 10¹⁷",
+       "why": "This takes zepto as 10⁻¹⁹ instead of 10⁻²¹, so 100 zJ becomes 10⁻¹⁷ J and the count comes out 100 times too small."
+      },
+      {
+       "id": "d",
+       "text": "6.02 × 10²³",
+       "why": "That is the number in a mole, which releases about 60 kJ, not 1 J."
+      }
+     ],
+     "solution": "100 zJ = 10⁻¹⁹ J. Number of ATP = 1 J ÷ 10⁻¹⁹ J = 10¹⁹ ATP (about 17 millionths of a mole)."
+    },
+    {
+     "id": "c",
+     "stem": "In a sprint, a muscle sample splits 1 mmol of ATP. Each mole of ATP releases about 60 kJ. How much energy is released?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 J",
+       "correct": true,
+       "why": "Right: 0.001 mol × 60 kJ·mol⁻¹ = 0.06 kJ = 60 J."
+      },
+      {
+       "id": "b",
+       "text": "60 kJ",
+       "why": "This forgets the milli: 1 mmol is 0.001 mol."
+      },
+      {
+       "id": "c",
+       "text": "0.06 J",
+       "why": "This applies the milli twice: 0.06 kJ is 60 J, not 0.06 J."
+      },
+      {
+       "id": "d",
+       "text": "6 J",
+       "why": "This slips one power of ten, e.g. taking 1 mmol as 10⁻⁴ mol. 1 mmol = 10⁻³ mol, so 10⁻³ × 60,000 J = 60 J."
+      }
+     ],
+     "solution": "1 mmol = 10⁻³ mol. Energy = 10⁻³ mol × 60 kJ·mol⁻¹ = 0.06 kJ = 60 J."
+    }
+   ]
+  },
+  {
+   "id": "ce-efficiency-calc",
+   "concept": "ce-size",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cross-bridge cycle splits one ATP (100 zJ) and does 40 zJ of work. What is its efficiency, and how much energy becomes heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40%, with 60 zJ as heat",
+       "correct": true,
+       "why": "Right: efficiency = work ÷ energy in = 40 ÷ 100 = 40%; the other 60 zJ is heat."
+      },
+      {
+       "id": "b",
+       "text": "60%, with 40 zJ as heat",
+       "why": "This swaps work and heat: 60 zJ is the heat, not the work."
+      },
+      {
+       "id": "c",
+       "text": "250%, with no heat",
+       "why": "This divides energy in by work (100 ÷ 40). Efficiency can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "40%, with no heat",
+       "why": "Energy isn't lost: what isn't work appears as heat (100 − 40 = 60 zJ)."
+      }
+     ],
+     "solution": "Efficiency = work ÷ energy in = 40 zJ ÷ 100 zJ = 0.40 = 40%. Heat = 100 − 40 = 60 zJ."
+    },
+    {
+     "id": "b",
+     "stem": "A cross-bridge cycle splits one ATP (100 zJ) and does 30 zJ of work. What is its efficiency, and how much energy becomes heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30%, with 70 zJ as heat",
+       "correct": true,
+       "why": "Right: 30 ÷ 100 = 30%; the other 70 zJ is heat."
+      },
+      {
+       "id": "b",
+       "text": "70%, with 30 zJ as heat",
+       "why": "This swaps work and heat."
+      },
+      {
+       "id": "c",
+       "text": "333%, with no heat",
+       "why": "This divides energy in by work (100 ÷ 30). Efficiency can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "30%, with no heat",
+       "why": "What isn't work appears as heat: 100 − 30 = 70 zJ."
+      }
+     ],
+     "solution": "Efficiency = 30 zJ ÷ 100 zJ = 30%. Heat = 100 − 30 = 70 zJ."
+    },
+    {
+     "id": "c",
+     "stem": "A cross-bridge cycle splits one ATP (100 zJ) and does 45 zJ of work. What is its efficiency, and how much energy becomes heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "45%, with 55 zJ as heat",
+       "correct": true,
+       "why": "Right: 45 ÷ 100 = 45%; the other 55 zJ is heat. Close to the ~50% ceiling."
+      },
+      {
+       "id": "b",
+       "text": "55%, with 45 zJ as heat",
+       "why": "This swaps work and heat."
+      },
+      {
+       "id": "c",
+       "text": "222%, with no heat",
+       "why": "This divides energy in by work (100 ÷ 45). Efficiency can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "45%, with no heat",
+       "why": "What isn't work appears as heat: 100 − 45 = 55 zJ."
+      }
+     ],
+     "solution": "Efficiency = 45 zJ ÷ 100 zJ = 45%. Heat = 100 − 45 = 55 zJ."
+    }
+   ]
+  },
+  {
+   "id": "ce-turnover-claim",
+   "concept": "ce-turnover",
+   "bloom": "evaluate",
+   "sources": [
+    "murray2018",
+    "hargreaves2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete says: \"I rest completely the day before a race to top up my ATP stores.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong idea: ATP is recycled within minutes; rest tops up glycogen",
+       "correct": true,
+       "why": "Right: the ATP pool is tiny and replaced about every 2 minutes even at rest; the stores that a rest day refills are glycogen."
+      },
+      {
+       "id": "b",
+       "text": "Right: ATP builds up over a rest day for use in the race",
+       "why": "ATP can't be stockpiled; it is used and replaced every few minutes."
+      },
+      {
+       "id": "c",
+       "text": "Right: ATP is the body's main long-term energy store",
+       "why": "The long-term stores are glycogen and fat; ATP is the carrier."
+      },
+      {
+       "id": "d",
+       "text": "Wrong idea: muscles don't use ATP during races",
+       "why": "Muscles use ATP for every contraction; the error is thinking it can be stored up."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,956 @@
+{
+ "id": "nerv-autonomic",
+ "module": "t0-nervous",
+ "title": "The autonomic nervous system and heart rate",
+ "goal": "Explain how the sympathetic and parasympathetic branches set heart rate, why HR jumps at exercise onset, and what HRV tells you.",
+ "requires": [
+  "nerv-motor-units"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "ans-transmitter",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ans-two",
+   "title": "Two branches, one heart",
+   "text": "Your heart beats without you thinking about it. The autonomic nervous system sets its pace through two branches [[c:ans-transmitters]]:\n\n| | [sympathetic](g:sympathetic) | [parasympathetic](g:parasympathetic) |\n|---|---|---|\n| role | effort, stress | rest, basal function |\n| messenger at the heart | noradrenaline (norepinephrine) | [acetylcholine](g:acetylcholine) |\n| receptor | β₁ | M₂ |\n| effect on HR | faster | slower |\n\nBoth act on the [sinoatrial node](g:sa-node-pacemaker), the heart's pacemaker. Sympathetic nerves speed it up and make each beat stronger [[c:ans-symp]]. The vagus nerve, the main parasympathetic nerve, slows it [[c:ans-vagus]].\n\nSame molecule, opposite effects: ACh excites skeletal muscle but slows the heart.",
+   "claims": [
+    {
+     "id": "ans-transmitters",
+     "text": "The sympathetic nervous system releases noradrenaline (norepinephrine) and the parasympathetic acetylcholine; ACh acts on M₂ receptors in the heart.",
+     "grade": "strong",
+     "sources": [
+      "gordan2015"
+     ],
+     "evidence": [
+      {
+       "source": "gordan2015",
+       "quote": "The sympathetic nervous system releases norepinephrine (NE) while the parasympathetic nervous system releases acetylcholine (ACh).",
+       "level": "full-text"
+      },
+      {
+       "source": "gordan2015",
+       "quote": "Although excitatory in skeletal muscle by binding to nicotinic receptors and inducing the opening of ligand gated sodium channels, acetylcholine inhibits the contraction of cardiomyocytes by activating muscarinic receptors",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ans-symp",
+     "text": "Activating β₁ receptors raises heart rate via the SA node and increases contractility.",
+     "grade": "strong",
+     "sources": [
+      "gordan2015"
+     ],
+     "evidence": [
+      {
+       "source": "gordan2015",
+       "quote": "The activation of β1 receptors increases heart rate (via the SA node), increases contractility",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ans-vagus",
+     "text": "The vagus nerve directly innervates the SA node and lowers heart rate.",
+     "grade": "strong",
+     "sources": [
+      "gordan2015"
+     ],
+     "evidence": [
+      {
+       "source": "gordan2015",
+       "quote": "The vagus nerve directly innervates the sinoatrial node; when activated, it serves to lower the heart rate, thus exhibiting a negative chronotropic effect.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ans-transmitter",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ans-symp-effect"
+  },
+  {
+   "type": "concept",
+   "id": "ans-vagal",
+   "title": "Vagal tone: a brake that's always on",
+   "text": "Left to itself, with no nerves or hormones, the SA node would fire about **100 times a minute** [[c:ans-intrinsic]]. A resting HR of 60 means the vagus is braking it all the time: that is [vagal tone](g:vagal-tone).\n\nEndurance athletes often rest at 40–50 beats·min⁻¹. Training raises parasympathetic and lowers sympathetic activity at rest, and may lower the node's own rate too [[c:ans-training-hr]]. How much is nerve and how much is the node itself is debated.\n\nHR comes from the time between beats, the [RR interval](g:rr-interval): HR = 60,000 ÷ RR in ms.",
+   "claims": [
+    {
+     "id": "ans-intrinsic",
+     "text": "Without nervous or hormonal input, the SA node would pace the heart at about 100 beats per minute.",
+     "grade": "strong",
+     "sources": [
+      "gordan2015"
+     ],
+     "evidence": [
+      {
+       "source": "gordan2015",
+       "quote": "In the absence of extrinsic neural or hormonal influences, the SA node pacing rate would be about 100 beats per minute.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ans-training-hr",
+     "text": "Endurance training raises resting parasympathetic and lowers sympathetic activity; with a possible fall in intrinsic HR, this lowers resting HR.",
+     "grade": "moderate",
+     "sources": [
+      "carter2003"
+     ],
+     "evidence": [
+      {
+       "source": "carter2003",
+       "quote": "Endurance training increases parasympathetic activity and decreases sympathetic activity in the human heart at rest. These two training-induced autonomic effects, coupled with a possible reduction in intrinsic heart rate, decrease resting heart rate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is an athlete's low resting heart rate mostly high vagal tone, or a slower SA node?",
+    "sides": [
+     {
+      "position": "Mostly autonomic: more vagal and less sympathetic activity at rest, with a possible small fall in intrinsic rate.",
+      "sources": [
+       "carter2003"
+      ]
+     },
+     {
+      "position": "Mostly the node itself: in trained mice, bradycardia persisted after autonomic blockade and came from fewer HCN4 pacemaker channels.",
+      "sources": [
+       "dsouza2014"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "ans-rr-example",
+   "title": "From RR interval to heart rate",
+   "problem": "A cyclist's chest strap shows an RR interval of 1,000 ms at rest, and 857 ms a minute later while standing. What are the heart rates?",
+   "steps": [
+    "A minute has 60 s = 60,000 ms. Beats per minute = 60,000 ÷ RR (ms).",
+    "Resting: 60,000 ÷ 1,000 = 60 beats·min⁻¹.",
+    "Standing: 60,000 ÷ 857 = 70 beats·min⁻¹.",
+    "A shorter RR interval means a higher heart rate: they are inverses, like firing rate and interspike interval."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ans-rr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ans-intrinsic-block"
+  },
+  {
+   "type": "question",
+   "item": "ans-bradycardia"
+  },
+  {
+   "type": "question",
+   "item": "ans-onset",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ans-onset",
+   "title": "Why HR jumps in the first seconds",
+   "text": "Start pedalling and HR rises within a breath. In a classic study of six men, HR peaked about **10 s** after starting light cycling. With atropine, which blocks the vagus, that fast jump was gone. So it came from releasing the vagal brake, not from the sympathetic accelerator [[c:ans-onset-vagal]].\n\nWhat releases the brake? Signals from the brain and from the working muscles. Stretch sensors in muscle can inhibit vagal activity and help raise HR at the onset [[c:ans-mechano]].\n\nAs the work gets harder, sympathetic drive grows. One review argues the vagus never fully switches off: from rest to maximal exercise the balance shifts from about 4 : 1 vagal to about 4 : 1 sympathetic [[c:ans-balance]].",
+   "claims": [
+    {
+     "id": "ans-onset-vagal",
+     "text": "The rapid rise in HR in the first ~10 s of light exercise is due to vagal withdrawal; atropine abolishes it.",
+     "grade": "moderate",
+     "sources": [
+      "fagraeus1976",
+      "white2014"
+     ],
+     "evidence": [
+      {
+       "source": "fagraeus1976",
+       "quote": "all subjects showed an immediate, rapid increase in HR, reaching a peak value after about 10 s",
+       "level": "abstract"
+      },
+      {
+       "source": "fagraeus1976",
+       "quote": "In the atropine experiments this response pattern was not evident at all",
+       "level": "abstract"
+      },
+      {
+       "source": "fagraeus1976",
+       "quote": "can be explained by a rapid vagal withdrawal, followed by a transient increase in vagal tone.",
+       "level": "abstract"
+      },
+      {
+       "source": "white2014",
+       "quote": "resetting of the arterial baroreflex causes immediate exercise-onset reflexive increases in HR, which are parasympathetically mediated",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ans-mechano",
+     "text": "Muscle mechanoreceptors can inhibit cardiac parasympathetic activity and likely help raise HR at the onset of exercise.",
+     "grade": "moderate",
+     "sources": [
+      "fisher2014"
+     ],
+     "evidence": [
+      {
+       "source": "fisher2014",
+       "quote": "indicating that the activation of mechanically sensitive skeletal muscle afferents (muscle mechanoreceptors) can inhibit cardiac parasympathetic activity and is likely to contribute to the increase in heart rate at the onset of exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ans-balance",
+     "text": "One review of blockade studies concludes the parasympathetic system stays active throughout exercise; from rest to maximal exercise the balance moves from about 4 : 1 vagal–sympathetic to 4 : 1 sympatho–vagal.",
+     "grade": "weak",
+     "sources": [
+      "white2014"
+     ],
+     "evidence": [
+      {
+       "source": "white2014",
+       "quote": "Results indicate that the PSNS remains functionally active throughout exercise and that increases in HR from rest to maximal exercise result from an increasing workload-related transition from a 4 : 1 vagal-sympathetic balance to a 4 : 1 sympatho-vagal balance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ans-onset",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ans-atropine"
+  },
+  {
+   "type": "question",
+   "item": "ans-balance"
+  },
+  {
+   "type": "concept",
+   "id": "ans-hrv",
+   "title": "HRV: reading the brake",
+   "text": "A healthy heart isn't a metronome: RR intervals change a little from beat to beat. That is [heart rate variability](g:hrv) [[c:ans-hrv-def]].\n\nThe vagus can change HR within a single beat; sympathetic effects are slower. So short-term HRV mostly tells you about the vagal brake, and isn't accepted as a measure of sympathetic activity [[c:ans-hrv-vagal]]. The main measure is [RMSSD](g:rmssd): take each beat-to-beat difference, square it, average, and take the square root.\n\nDuring exercise, HRV falls as intensity rises, up to moderate–high intensity [[c:ans-hrv-intensity]].\n\nNorms depend on recording length, age and sex, so compare yourself with yourself. The HRV module goes further.",
+   "claims": [
+    {
+     "id": "ans-hrv-def",
+     "text": "HRV is the change in the time intervals between consecutive heartbeats.",
+     "grade": "strong",
+     "sources": [
+      "shaffer2017"
+     ],
+     "evidence": [
+      {
+       "source": "shaffer2017",
+       "quote": "Heart rate variability (HRV) consists of changes in the time intervals between consecutive heartbeats called interbeat intervals (IBIs).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ans-hrv-vagal",
+     "text": "HRV, and RMSSD in particular, indexes cardiac parasympathetic (vagal) activity; HRV is not widely accepted to reflect sympathetic activity.",
+     "grade": "strong",
+     "sources": [
+      "michael2017",
+      "shaffer2017"
+     ],
+     "evidence": [
+      {
+       "source": "shaffer2017",
+       "quote": "The RMSSD reflects the beat-to-beat variance in HR and is the primary time-domain measure used to estimate the vagally mediated changes reflected in HRV",
+       "level": "full-text"
+      },
+      {
+       "source": "michael2017",
+       "quote": "Cardiac parasympathetic activity may be non-invasively investigated using heart rate variability (HRV), although HRV is not widely accepted to reflect sympathetic activity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ans-hrv-intensity",
+     "text": "During exercise, HRV falls as intensity rises up to moderate–high intensity, with little further change above that.",
+     "grade": "moderate",
+     "sources": [
+      "michael2017"
+     ],
+     "evidence": [
+      {
+       "source": "michael2017",
+       "quote": "Exercise intensity is the primary factor influencing HRV, with a greater intensity eliciting a lower HRV during exercise up to moderate-high intensity, with minimal change observed as intensity is increased further.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ans-rmssd-example",
+   "title": "Computing RMSSD",
+   "problem": "Five RR intervals at rest: 1000, 1040, 980, 1020 and 1000 ms. What is RMSSD?",
+   "steps": [
+    "Successive differences: +40, −60, +40, −20 ms (four differences from five beats).",
+    "Square them: 1600, 3600, 1600, 400. Sum = 7200.",
+    "Mean of the squares: 7,200 ÷ 4 = 1,800 ms².",
+    "RMSSD = √1,800 ≈ 42 ms. (Real RMSSD uses at least a minute of beats; five is just to show the steps.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ans-rmssd-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ans-hrv-meaning"
+  },
+  {
+   "type": "question",
+   "item": "ans-hrv-exercise"
+  },
+  {
+   "type": "question",
+   "item": "ans-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "ans-rr-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "ans-rmssd-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Sympathetic nerves (noradrenaline, β₁) speed the heart; the vagus (acetylcholine, M₂) slows it. Both act on the SA node.",
+    "The SA node alone would fire at about 100 beats·min⁻¹; a lower resting HR is vagal tone. HR = 60,000 ÷ RR (ms).",
+    "Trained athletes rest lower through more vagal and less sympathetic activity, and maybe a slower node; how much each counts is debated.",
+    "HR jumps in the first ~10 s of exercise by releasing the vagal brake; sympathetic drive grows with workload, and one review finds the vagus never fully switches off.",
+    "HRV (RMSSD) mainly reads the vagal brake; it falls as exercise intensity rises. Compare with your own baseline."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ans-transmitter",
+   "concept": "ans-two",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "gordan2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which messenger does the vagus nerve release at the heart's pacemaker to slow it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Acetylcholine",
+       "correct": true,
+       "why": "Right: the parasympathetic vagus releases ACh, which acts on M₂ receptors and slows the SA node."
+      },
+      {
+       "id": "b",
+       "text": "Noradrenaline",
+       "why": "Noradrenaline is the sympathetic messenger; it speeds the heart up."
+      },
+      {
+       "id": "c",
+       "text": "Adrenaline from the nerve ending",
+       "why": "Adrenaline comes mainly from the adrenal gland and speeds the heart; the vagus releases ACh."
+      },
+      {
+       "id": "d",
+       "text": "Dopamine",
+       "why": "Dopamine isn't the vagal messenger at the heart; ACh is."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's resting HR is held low by her parasympathetic nerves. What do they release at the SA node?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Acetylcholine, acting on M₂ receptors",
+       "correct": true,
+       "why": "Right: ACh on M₂ receptors slows the pacemaker."
+      },
+      {
+       "id": "b",
+       "text": "Noradrenaline, acting on β₁ receptors",
+       "why": "That is the sympathetic route, which raises heart rate."
+      },
+      {
+       "id": "c",
+       "text": "Acetylcholine, acting on nicotinic receptors",
+       "why": "Nicotinic receptors are where ACh excites skeletal muscle; at the heart it acts on muscarinic M₂ receptors."
+      },
+      {
+       "id": "d",
+       "text": "Noradrenaline, acting on M₂ receptors",
+       "why": "M₂ receptors respond to ACh, not noradrenaline."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-symp-effect",
+   "concept": "ans-two",
+   "bloom": "understand",
+   "sources": [
+    "gordan2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a time trial, a rider's sympathetic drive to the heart rises. Through β₁ receptors, what does it do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raises heart rate and makes each beat stronger",
+       "correct": true,
+       "why": "Right: β₁ activation raises HR via the SA node and increases contractility."
+      },
+      {
+       "id": "b",
+       "text": "Slows the heart to save energy",
+       "why": "Slowing is the vagal (parasympathetic) effect, through ACh."
+      },
+      {
+       "id": "c",
+       "text": "Raises heart rate but makes each beat weaker",
+       "why": "Sympathetic drive increases contractility as well as rate."
+      },
+      {
+       "id": "d",
+       "text": "Has no effect until exercise begins",
+       "why": "Sympathetic drive acts whenever it rises, including from pre-race nerves."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-rr-calc",
+   "concept": "ans-vagal",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "gordan2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's resting RR interval is 1,250 ms. What is his heart rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "48 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 60,000 ÷ 1,250 = 48."
+      },
+      {
+       "id": "b",
+       "text": "20.8 beats·min⁻¹",
+       "why": "This divides the RR interval by 60 (1,250 ÷ 60); HR = 60,000 ÷ RR."
+      },
+      {
+       "id": "c",
+       "text": "0.048 beats·min⁻¹",
+       "why": "This uses 60 s without converting to ms (60 ÷ 1,250)."
+      },
+      {
+       "id": "d",
+       "text": "1.25 beats·min⁻¹",
+       "why": "This gives the RR interval in seconds, not the beats per minute."
+      }
+     ],
+     "solution": "HR = 60,000 ÷ RR (ms) = 60,000 ÷ 1,250 = 48 beats·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "Near the end of a hard 5 km run, a runner's RR interval is 400 ms. What is her heart rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 60,000 ÷ 400 = 150."
+      },
+      {
+       "id": "b",
+       "text": "6.7 beats·min⁻¹",
+       "why": "This divides the RR interval by 60 (400 ÷ 60); HR = 60,000 ÷ RR."
+      },
+      {
+       "id": "c",
+       "text": "0.15 beats·min⁻¹",
+       "why": "This uses 60 s without converting to ms (60 ÷ 400)."
+      },
+      {
+       "id": "d",
+       "text": "0.4 beats·min⁻¹",
+       "why": "This gives the RR interval in seconds, not the beats per minute."
+      }
+     ],
+     "solution": "HR = 60,000 ÷ RR (ms) = 60,000 ÷ 400 = 150 beats·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's morning RR interval is 1,500 ms. What is his resting heart rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 60,000 ÷ 1,500 = 40."
+      },
+      {
+       "id": "b",
+       "text": "25 beats·min⁻¹",
+       "why": "This divides the RR interval by 60 (1,500 ÷ 60); HR = 60,000 ÷ RR."
+      },
+      {
+       "id": "c",
+       "text": "0.04 beats·min⁻¹",
+       "why": "This uses 60 s without converting to ms (60 ÷ 1,500)."
+      },
+      {
+       "id": "d",
+       "text": "1.5 beats·min⁻¹",
+       "why": "This gives the RR interval in seconds, not the beats per minute."
+      }
+     ],
+     "solution": "HR = 60,000 ÷ RR (ms) = 60,000 ÷ 1,500 = 40 beats·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "ans-intrinsic-block",
+   "concept": "ans-vagal",
+   "bloom": "analyse",
+   "sources": [
+    "gordan2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab, a rested runner with HR 55 gets drugs that block both autonomic branches. What happens to her HR?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises toward the node's own rate, about 100",
+       "correct": true,
+       "why": "Right: removing the vagal brake (and sympathetic drive) leaves the SA node near its own rate of about 100."
+      },
+      {
+       "id": "b",
+       "text": "It falls toward 0, since the heart needs nerves to beat",
+       "why": "The heart has its own pacemaker; nerves only speed or slow it."
+      },
+      {
+       "id": "c",
+       "text": "It stays at 55, since rest HR is set by the node alone",
+       "why": "Resting HR of 55 is well below the node's own rate; the gap is vagal tone."
+      },
+      {
+       "id": "d",
+       "text": "It rises to her maximum HR of about 190",
+       "why": "Without sympathetic drive the heart can't approach maximum; it settles near the node's own rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-bradycardia",
+   "concept": "ans-vagal",
+   "bloom": "evaluate",
+   "sources": [
+    "carter2003",
+    "dsouza2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trained cyclist rests at 42 beats·min⁻¹. A friend says: \"That's all vagal tone.\" What's the best response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Partly: vagal tone rises, but the node may slow too; it's debated",
+       "correct": true,
+       "why": "Right: human work points to autonomic changes plus a possible lower intrinsic rate; animal work argues the node itself changes."
+      },
+      {
+       "id": "b",
+       "text": "Right: the SA node can't change with training",
+       "why": "Mouse work found training remodels the node's pacemaker channels, and human reviews allow a lower intrinsic rate."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: vagal tone plays no part in athletes",
+       "why": "Reviews of human training studies find raised parasympathetic activity at rest."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: it's from higher sympathetic activity",
+       "why": "Training lowers resting sympathetic activity; more drive would raise HR, not lower it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-onset",
+   "concept": "ans-onset",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "fagraeus1976",
+    "fisher2014",
+    "white2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner sets off from standing. Her HR rises within the first few seconds. What causes this first rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Release of the vagal brake",
+       "correct": true,
+       "why": "Right: the immediate rise is from vagal withdrawal; atropine abolishes it."
+      },
+      {
+       "id": "b",
+       "text": "Adrenaline reaching the heart from the blood",
+       "why": "Hormones take much longer than a few seconds to raise HR."
+      },
+      {
+       "id": "c",
+       "text": "Lactate building up in the muscles",
+       "why": "Lactate builds over minutes, far too slowly for a rise within seconds."
+      },
+      {
+       "id": "d",
+       "text": "The SA node warming up",
+       "why": "Heart temperature doesn't change in seconds; the fast rise is neural."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist clips in and starts pedalling at 50 W. HR peaks about 10 s later. What is the main cause of that quick rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Vagal withdrawal at the SA node",
+       "correct": true,
+       "why": "Right: blocking the vagus with atropine abolished this fast rise."
+      },
+      {
+       "id": "b",
+       "text": "A surge of sympathetic noradrenaline",
+       "why": "Sympathetic effects are slower and grow with workload; the first seconds are vagal."
+      },
+      {
+       "id": "c",
+       "text": "More blood returning to the heart from the legs",
+       "why": "Venous return helps stroke volume, but the fast HR rise disappears with vagal blockade."
+      },
+      {
+       "id": "d",
+       "text": "Low blood oxygen sensed in the arteries",
+       "why": "Arterial O₂ barely changes at 50 W; this isn't what drives the first seconds."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-atropine",
+   "concept": "ans-onset",
+   "bloom": "analyse",
+   "sources": [
+    "fagraeus1976"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a study, people started light cycling once normally and once after atropine (blocks the vagus). The fast HR jump in the first 10 s was absent with atropine. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The fast jump comes from withdrawing vagal tone",
+       "correct": true,
+       "why": "Right: if blocking the vagus removes it, it depended on the vagus being withdrawn."
+      },
+      {
+       "id": "b",
+       "text": "The fast jump comes from sympathetic drive",
+       "why": "Atropine doesn't block the sympathetic system; β-blockade left the jump in place."
+      },
+      {
+       "id": "c",
+       "text": "Atropine stops the heart responding to exercise",
+       "why": "HR still rose to a steady state; only the fast early pattern disappeared."
+      },
+      {
+       "id": "d",
+       "text": "HR at the onset doesn't depend on nerves",
+       "why": "Removing one nerve's effect changed the response, so nerves do drive it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-balance",
+   "concept": "ans-onset",
+   "bloom": "understand",
+   "sources": [
+    "white2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a maximal ramp test, what happens to parasympathetic (vagal) control of the heart, according to a review of blockade studies?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It stays active as sympathetic drive comes to dominate",
+       "correct": true,
+       "why": "Right: that review finds the balance shifts from about 4 : 1 vagal to 4 : 1 sympathetic, but the vagus stays active."
+      },
+      {
+       "id": "b",
+       "text": "It switches off fully in the first seconds",
+       "why": "The first seconds are vagal withdrawal, but it isn't total; vagal control persists throughout."
+      },
+      {
+       "id": "c",
+       "text": "It increases to slow the heart near maximum",
+       "why": "Vagal influence falls as workload rises; it doesn't take over near maximum."
+      },
+      {
+       "id": "d",
+       "text": "It takes over from the sympathetic system above threshold",
+       "why": "Above threshold, sympathetic drive dominates, not vagal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-rmssd-calc",
+   "concept": "ans-hrv",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "shaffer2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Five RR intervals: 900, 940, 900, 960 and 920 ms. What is RMSSD?",
+     "options": [
+      {
+       "id": "a",
+       "text": "45.8 ms",
+       "correct": true,
+       "why": "Right: differences +40, −40, +60, −40; squares sum 8,400; ÷ 4 = 2,100; √2,100 ≈ 45.8 ms."
+      },
+      {
+       "id": "b",
+       "text": "2,100 ms",
+       "why": "This forgets the final square root (2,100 is in ms²)."
+      },
+      {
+       "id": "c",
+       "text": "45.0 ms",
+       "why": "This is the mean of the absolute differences, not the root mean square."
+      },
+      {
+       "id": "d",
+       "text": "41.0 ms",
+       "why": "This divides by 5 beats instead of 4 differences (√1,680)."
+      }
+     ],
+     "solution": "Differences: +40, −40, +60, −40. Squares: 1,600 + 1,600 + 3,600 + 1,600 = 8,400. Mean = 8,400 ÷ 4 = 2,100. RMSSD = √2,100 ≈ 45.8 ms."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's RR intervals: 1100, 1180, 1120, 1160 and 1100 ms. What is RMSSD?",
+     "options": [
+      {
+       "id": "a",
+       "text": "61.6 ms",
+       "correct": true,
+       "why": "Right: differences +80, −60, +40, −60; squares sum 15,200; ÷ 4 = 3,800; √3,800 ≈ 61.6 ms."
+      },
+      {
+       "id": "b",
+       "text": "3,800 ms",
+       "why": "This forgets the final square root (3,800 is in ms²)."
+      },
+      {
+       "id": "c",
+       "text": "60.0 ms",
+       "why": "This is the mean of the absolute differences, not the root mean square."
+      },
+      {
+       "id": "d",
+       "text": "55.1 ms",
+       "why": "This divides by 5 beats instead of 4 differences (√3,040)."
+      }
+     ],
+     "solution": "Differences: +80, −60, +40, −60. Squares: 6,400 + 3,600 + 1,600 + 3,600 = 15,200. Mean = 15,200 ÷ 4 = 3,800. RMSSD = √3,800 ≈ 61.6 ms."
+    }
+   ]
+  },
+  {
+   "id": "ans-hrv-meaning",
+   "concept": "ans-hrv",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "shaffer2017",
+    "michael2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's morning RMSSD is higher than usual. Which branch of the autonomic nervous system does that mainly tell her about?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Parasympathetic (vagal) activity",
+       "correct": true,
+       "why": "Right: RMSSD is the main time-domain measure of vagally mediated HRV."
+      },
+      {
+       "id": "b",
+       "text": "Sympathetic activity",
+       "why": "HRV isn't widely accepted as a measure of sympathetic activity."
+      },
+      {
+       "id": "c",
+       "text": "Neither: it measures the SA node's own rate",
+       "why": "RMSSD measures beat-to-beat change, which comes mostly from vagal input, not the node's own rate."
+      },
+      {
+       "id": "d",
+       "text": "The somatic nerves to her muscles",
+       "why": "Somatic motor nerves control skeletal muscle, not heart rhythm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-hrv-exercise",
+   "concept": "ans-hrv",
+   "bloom": "apply",
+   "sources": [
+    "michael2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist records HRV during an easy endurance block and during a threshold block. How should they compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HRV is lower in the threshold block",
+       "correct": true,
+       "why": "Right: during exercise, higher intensity gives lower HRV, up to moderate–high intensity."
+      },
+      {
+       "id": "b",
+       "text": "HRV is higher in the threshold block",
+       "why": "Harder work withdraws more vagal activity, so HRV falls, not rises."
+      },
+      {
+       "id": "c",
+       "text": "They are the same: HRV only changes at rest",
+       "why": "HRV changes during exercise, and intensity is the main factor."
+      },
+      {
+       "id": "d",
+       "text": "HRV keeps falling sharply all the way to sprints",
+       "why": "Above moderate–high intensity there is little further change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ans-appraisal",
+   "concept": "ans-vagal",
+   "bloom": "evaluate",
+   "sources": [
+    "dsouza2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study found that in trained mice, low resting HR persisted after autonomic blockade and came from fewer pacemaker channels. What most limits applying it to human athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It's in mice; human evidence is indirect and mixed",
+       "correct": true,
+       "why": "Right: mouse hearts beat far faster and are controlled differently; the finding needs testing in humans before it settles the debate."
+      },
+      {
+       "id": "b",
+       "text": "Autonomic blockade doesn't work in mice",
+       "why": "Blockade worked; that was how they showed the low HR persisted without nerves."
+      },
+      {
+       "id": "c",
+       "text": "Mice can't be trained to run",
+       "why": "They trained mice; the limit is that they are mice, not the training."
+      },
+      {
+       "id": "d",
+       "text": "Pacemaker channels don't exist in humans",
+       "why": "Humans have the same HCN4 channels in the SA node; the question is how training changes them in people."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

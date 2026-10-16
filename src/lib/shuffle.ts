@@ -1,5 +1,5 @@
 /** A shuffled copy (Fisher–Yates). */
-function shuffled<T>(items: readonly T[], random: () => number): T[] {
+export function shuffled<T>(items: readonly T[], random: () => number): T[] {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));

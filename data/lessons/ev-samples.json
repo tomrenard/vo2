@@ -1,0 +1,704 @@
+{
+ "id": "ev-samples",
+ "module": "t0-evidence-101",
+ "title": "Who was studied, who paid, who checked",
+ "goal": "Spot the limits that come from small, mostly male samples, funding and the publication process, and decide how far a result applies to a given athlete.",
+ "requires": [
+  "ev-variation"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "samp-female-share",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ev-samp-who",
+   "title": "Who gets studied",
+   "text": "Sports science mostly studies whoever is near the lab: young, male, often students or club athletes. An analysis of 5,261 studies in six major journals from 2014 to 2020 found [[c:cowley-share]]:\n\n| studies that included | share |\n|---|---|\n| both sexes | 63% |\n| men only | 31% |\n| women only | 6% |\n\nOf all participants, 66% were men and 34% women. So, for now, many conclusions may apply to only one sex [[c:cowley-conclusion]].\n\nThis matters wherever physiology differs by sex (hormones, the menstrual cycle, iron, fuel use), and for advice on fueling, heat and training load that is often borrowed from studies of men.",
+   "claims": [
+    {
+     "id": "cowley-share",
+     "text": "Of 5,261 sport and exercise science publications (2014–2020), 31% included men only and 6% women only; 66% of participants were men.",
+     "grade": "strong",
+     "sources": [
+      "cowley2021"
+     ],
+     "evidence": [
+      {
+       "source": "cowley2021",
+       "quote": "Sixty-three percentage of publications included both males and females, 31% included males only, and 6% included females only",
+       "level": "abstract"
+      },
+      {
+       "source": "cowley2021",
+       "quote": "When analyzing participants included in all journals, a total of 8,253,236 (66%) were male and 4,254,445 (34%) were female",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cowley-conclusion",
+     "text": "Because women are underrepresented, many sport and exercise science conclusions may apply to only one sex.",
+     "grade": "strong",
+     "sources": [
+      "cowley2021"
+     ],
+     "evidence": [
+      {
+       "source": "cowley2021",
+       "quote": "Therefore, at present most conclusions made from sport and exercise science research might only be applicable to one sex.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "samp-female-share",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "samp-women-apply"
+  },
+  {
+   "type": "concept",
+   "id": "ev-samp-small-n",
+   "title": "Small samples, lucky results",
+   "text": "Many sports science studies test 8 to 20 people. Small samples give wide confidence intervals, and they often miss real effects (low power).\n\nYet 70–82% of studies in sports science journals report significant findings, more than such small studies should produce [[c:excess-significance]]. The likely reasons:\n\n- [publication bias](g:publication-bias): positive results get published, null ones stay in drawers\n- flexible analysis: trying outcomes or tests until one reaches p < 0.05\n\nThe result: published small studies tend to overestimate effects, and many may not replicate [[c:replication-concerns]]. A single small positive study is a lead to follow, not a fact. vo2 grades one small study weak at best.",
+   "claims": [
+    {
+     "id": "excess-significance",
+     "text": "Between 70% and 82% of published studies in sports science journals report significant findings, despite small samples.",
+     "grade": "moderate",
+     "sources": [
+      "mesquida2022"
+     ],
+     "evidence": [
+      {
+       "source": "mesquida2022",
+       "quote": "Similarly, it has been observed that between 70% and 82% of published studies in sports science journals reported significant findings",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "replication-concerns",
+     "text": "An excess of significant findings, small samples and little data sharing are warning signs for the replicability of sports and exercise science.",
+     "grade": "moderate",
+     "sources": [
+      "mesquida2022"
+     ],
+     "evidence": [
+      {
+       "source": "mesquida2022",
+       "quote": "Although previous research in the field of sports and exercise science has identified the first warning signs, such as an overwhelming proportion of significant findings, small sample sizes and lack of data availability, their possible consequences for the replicability of our field have been overlooked.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "samp-small-n-why"
+  },
+  {
+   "type": "question",
+   "item": "samp-excess-sig"
+  },
+  {
+   "type": "concept",
+   "id": "ev-samp-generalise",
+   "title": "Does it apply to you?",
+   "text": "A result transfers only to people like those studied [[c:generalise]]. Before applying it, ask:\n\n- **Training status.** Untrained students usually gain far more from six weeks of intervals than a cyclist with ten years of base, who has less room left.\n- **Sex and age.** Results in young men may differ in women or masters athletes.\n- **Test vs race.** A lab time trial isn't a hilly road race in the heat.\n- **Practices.** Diet, training and timing in the study may differ from yours: caffeine in a rested rider isn't caffeine at hour 9 of an Ironman.\n\nIf the people, the dose or the setting differ a lot from yours, the result is a hint, not a forecast.",
+   "claims": [
+    {
+     "id": "generalise",
+     "text": "Performance-enhancement findings can be generalised only to athletes with abilities and practices like those in the study.",
+     "grade": "strong",
+     "sources": [
+      "hopkins1999"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins1999",
+       "quote": "Outcomes can be generalized only to athletes with abilities and practices represented in the study.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "samp-generalise",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "samp-generalise",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ev-samp-funding",
+   "title": "Who paid for it?",
+   "text": "Funding and conflicts of interest don't make a study wrong, but they shift the odds. A Cochrane review of 75 papers found that drug and device studies sponsored by the maker more often had favourable results (risk ratio 1.27) and favourable conclusions [[c:lundh-favourable]]. Standard checks such as randomisation and blinding didn't explain it [[c:lundh-hidden]]: bias can enter through the question asked, the comparison chosen and what gets published.\n\nThat review covers medicine, not sports supplements, but the same incentives exist there. So read the funding and conflict-of-interest statements, look for independent replication, and expect vo2 to go down one grade for industry funding.",
+   "claims": [
+    {
+     "id": "lundh-favourable",
+     "text": "Industry-sponsored drug and device studies more often report favourable efficacy results and conclusions than studies with other sponsors.",
+     "grade": "strong",
+     "sources": [
+      "lundh2017"
+     ],
+     "evidence": [
+      {
+       "source": "lundh2017",
+       "quote": "Industry sponsored studies more often had favorable efficacy results, RR: 1.27 (95% CI: 1.17 to 1.37) (25 papers) (moderate quality evidence)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lundh-hidden",
+     "text": "The industry bias is not explained by standard risk-of-bias assessments.",
+     "grade": "strong",
+     "sources": [
+      "lundh2017"
+     ],
+     "evidence": [
+      {
+       "source": "lundh2017",
+       "quote": "Our analyses suggest the existence of an industry bias that cannot be explained by standard 'Risk of bias' assessments.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "samp-lundh-hidden"
+  },
+  {
+   "type": "question",
+   "item": "samp-funding-response"
+  },
+  {
+   "type": "concept",
+   "id": "ev-samp-preprint",
+   "title": "Preprints and peer review",
+   "text": "A [preprint](g:preprint) is a paper posted online before [peer review](g:peer-review). It's fast, which is why new findings often reach podcasts as preprints.\n\nHow much does review add? One study compared preprints with peer-reviewed papers, including the published versions of the same preprints: reporting quality was better after review on average, but only by about 5% of reported items [[c:preprint-quality]]. Preprints are real science, just unchecked.\n\nPeer review isn't a guarantee either: small samples and publication bias pass straight through it.\n\nvo2 labels preprints and never rests a claim on one alone. Treat any single paper, reviewed or not, as provisional until others replicate it.",
+   "claims": [
+    {
+     "id": "preprint-quality",
+     "text": "Peer-reviewed articles had slightly better reporting quality than preprints, by about 5% of reported items.",
+     "grade": "weak",
+     "sources": [
+      "carneiro2020"
+     ],
+     "evidence": [
+      {
+       "source": "carneiro2020",
+       "quote": "Peer-reviewed articles had, on average, higher quality of reporting than preprints, although the difference was small, with absolute differences of 5.0% [95% CI 1.4, 8.6] and 4.7% [95% CI 2.4, 7.0] of reported items in the independent samples and paired sample comparison, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "samp-preprint-def"
+  },
+  {
+   "type": "question",
+   "item": "samp-preprint-use"
+  },
+  {
+   "type": "question",
+   "item": "samp-appraise-limits",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "samp-appraise-limits",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Women are underrepresented: 6% of studies were women only, and 34% of participants women, so many conclusions may fit only men.",
+    "Small samples give imprecise results; 70–82% significant findings in sports journals point to publication bias and flexible analysis.",
+    "Results generalise only to people like those studied: check training status, sex, age, test and practices.",
+    "Maker-funded studies more often report favourable results, by routes standard bias checks miss: look for independent replication.",
+    "Preprints are unreviewed and provisional; peer review is a filter, not a guarantee."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "samp-female-share",
+   "concept": "ev-samp-who",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "cowley2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an analysis of six major sport and exercise science journals (2014–2020), what share of all participants were women?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About a third (34%)",
+       "correct": true,
+       "why": "Right: 66% of participants were men and 34% women."
+      },
+      {
+       "id": "b",
+       "text": "About half (50%)",
+       "why": "Many studies include both sexes, but men still made up two thirds of participants."
+      },
+      {
+       "id": "c",
+       "text": "About one in twenty (6%)",
+       "why": "6% is the share of studies with women only, not the share of participants."
+      },
+      {
+       "id": "d",
+       "text": "About a tenth (10%)",
+       "why": "The share of participants was 34%; 10% is a guess, not a finding."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the same analysis of six major journals (2014–2020), what share of studies included only women?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 6%",
+       "correct": true,
+       "why": "Right: 6% of studies were women only, against 31% men only."
+      },
+      {
+       "id": "b",
+       "text": "About 31%",
+       "why": "31% were men only."
+      },
+      {
+       "id": "c",
+       "text": "About 34%",
+       "why": "34% is women's share of all participants."
+      },
+      {
+       "id": "d",
+       "text": "About 63%",
+       "why": "63% of studies included both sexes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-women-apply",
+   "concept": "ev-samp-who",
+   "bloom": "evaluate",
+   "sources": [
+    "cowley2021",
+    "hopkins1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 12 trained male cyclists finds a new fueling protocol improves a 1-hour time trial. A female triathlete asks whether it applies to her. Best answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It may, but it wasn't tested in women, so it's less certain for her",
+       "correct": true,
+       "why": "Right: results apply to people like those studied. Sex differences (hormones, fuel use) could change the effect."
+      },
+      {
+       "id": "b",
+       "text": "Yes: physiology is the same in men and women",
+       "why": "Several relevant processes differ by sex, which is why the sex data gap matters."
+      },
+      {
+       "id": "c",
+       "text": "No: results from men never apply to women",
+       "why": "Many findings do transfer; it just hasn't been shown here."
+      },
+      {
+       "id": "d",
+       "text": "Yes, because the result was statistically significant",
+       "why": "Significance says nothing about who the result applies to."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-small-n-why",
+   "concept": "ev-samp-small-n",
+   "bloom": "understand",
+   "sources": [
+    "mesquida2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why are small samples (say 10 athletes) a problem in sports science?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Imprecise estimates, and the published positive ones overstate effects",
+       "correct": true,
+       "why": "Right: small studies have wide CIs and low power; when only the significant ones get published, the literature overstates effects."
+      },
+      {
+       "id": "b",
+       "text": "Small samples always give significant results",
+       "why": "The opposite: small samples often miss real effects."
+      },
+      {
+       "id": "c",
+       "text": "Small samples are fine as long as p < 0.05",
+       "why": "A significant small study is more likely to have overestimated the effect."
+      },
+      {
+       "id": "d",
+       "text": "Small samples only matter in medicine, not sport",
+       "why": "Sport has the same statistics, and smaller samples than most fields."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-excess-sig",
+   "concept": "ev-samp-small-n",
+   "bloom": "analyse",
+   "sources": [
+    "mesquida2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "70–82% of studies in sports science journals report significant findings, though most have small samples and low power. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Publication bias and flexible analysis favouring significant results",
+       "correct": true,
+       "why": "Right: null results stay unpublished, and trying analyses until one reaches p < 0.05 adds false positives."
+      },
+      {
+       "id": "b",
+       "text": "Sports scientists only test treatments that work",
+       "why": "Low-powered studies should miss many real effects; the high rate points to bias, not perfect choices."
+      },
+      {
+       "id": "c",
+       "text": "Small samples make significance more likely",
+       "why": "Small samples make significance less likely when the analysis is honest."
+      },
+      {
+       "id": "d",
+       "text": "Sport effects are much larger than effects in other fields",
+       "why": "There's no sign of that; and large effects would not explain biased publishing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-generalise",
+   "concept": "ev-samp-generalise",
+   "bloom": "apply",
+   "sources": [
+    "hopkins1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 6-week interval study in untrained students raised VO2max by 15%. A cyclist with 10 years of training starts the same plan. Best expectation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A smaller gain, if any: the result fits people like those studied",
+       "correct": true,
+       "why": "Right: a trained cyclist has much less room to improve than an untrained student."
+      },
+      {
+       "id": "b",
+       "text": "About 15%, the same as in the study",
+       "why": "Results transfer only to people with similar abilities and practices."
+      },
+      {
+       "id": "c",
+       "text": "A bigger gain, because trained athletes respond better",
+       "why": "Trained athletes usually gain less, being closer to their ceiling."
+      },
+      {
+       "id": "d",
+       "text": "No gain at all, because intervals don't work in trained athletes",
+       "why": "Intervals can still help trained athletes; the gain will just differ."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A study in elite male 1,500 m runners finds a new warm-up improves times by 2%. A 55-year-old recreational female runner asks if it will work for her. Best answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unknown: she differs from those studied in sex, age and level",
+       "correct": true,
+       "why": "Right: outcomes generalise only to athletes like those in the study."
+      },
+      {
+       "id": "b",
+       "text": "Yes: about 2%, as in the study",
+       "why": "That assumes she responds like an elite young man, which wasn't tested."
+      },
+      {
+       "id": "c",
+       "text": "No: warm-ups only work for elite runners",
+       "why": "Nothing in the study shows that; it just didn't test her group."
+      },
+      {
+       "id": "d",
+       "text": "Yes, and by more, because slower runners always gain more",
+       "why": "There's no such rule; the study can't say."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-lundh-hidden",
+   "concept": "ev-samp-funding",
+   "bloom": "analyse",
+   "sources": [
+    "lundh2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A Cochrane review found that maker-sponsored drug and device studies more often had favourable results, yet scored no worse on standard risk-of-bias checks such as randomisation. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The bias enters by routes those checks miss, such as question, comparator and publication",
+       "correct": true,
+       "why": "Right: the authors concluded the industry bias couldn't be explained by standard risk-of-bias assessments."
+      },
+      {
+       "id": "b",
+       "text": "Sponsored studies are unbiased, so their results are true",
+       "why": "Their results were more favourable than others', which is what bias looks like."
+      },
+      {
+       "id": "c",
+       "text": "Randomisation causes favourable results",
+       "why": "Randomisation protects against bias; it doesn't create favourable results."
+      },
+      {
+       "id": "d",
+       "text": "Sponsored treatments simply work better",
+       "why": "That doesn't explain why the same kinds of treatments look better when the maker pays."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-funding-response",
+   "concept": "ev-samp-funding",
+   "bloom": "evaluate",
+   "sources": [
+    "lundh2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sports drink company funds a study of its own drink. How should you treat the result?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Read it with extra care and look for independent replication",
+       "correct": true,
+       "why": "Right: funding shifts the odds toward favourable results; it doesn't prove the result wrong."
+      },
+      {
+       "id": "b",
+       "text": "Dismiss it: industry-funded research is always wrong",
+       "why": "Many industry-funded studies are sound; funding is a reason to check, not to discard."
+      },
+      {
+       "id": "c",
+       "text": "Ignore the funding: peer review removes any bias",
+       "why": "Peer review doesn't remove funding bias, which often enters through design and publication."
+      },
+      {
+       "id": "d",
+       "text": "Trust it more: companies can afford bigger, better studies",
+       "why": "Bigger isn't unbiased; sponsored studies more often report favourable results."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-preprint-def",
+   "concept": "ev-samp-preprint",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "carneiro2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is a preprint?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A paper posted publicly before peer review",
+       "correct": true,
+       "why": "Right: it's real science, shared fast, but not yet checked by reviewers."
+      },
+      {
+       "id": "b",
+       "text": "A draft that only journal editors can see",
+       "why": "Preprints are public, posted on servers such as bioRxiv or SportRxiv."
+      },
+      {
+       "id": "c",
+       "text": "A paper that failed peer review",
+       "why": "Most preprints are later published; posting comes before review, not after a rejection."
+      },
+      {
+       "id": "d",
+       "text": "A short summary of a published paper",
+       "why": "That is an abstract or press release, not a preprint."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-preprint-use",
+   "concept": "ev-samp-preprint",
+   "bloom": "apply",
+   "sources": [
+    "carneiro2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A podcast cites a new preprint showing a ketone drink improves cycling time trials by 5%. How should you treat it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Promising but provisional: wait for peer review and replication",
+       "correct": true,
+       "why": "Right: one unreviewed study is a lead, not a fact; vo2 never rests a claim on a preprint alone."
+      },
+      {
+       "id": "b",
+       "text": "Settled: a 5% gain is far too big to be chance",
+       "why": "Size doesn't remove bias or noise, and one study can be wrong."
+      },
+      {
+       "id": "c",
+       "text": "Worthless: preprints are not science",
+       "why": "Preprints are real science, with reporting only slightly worse than published papers on average."
+      },
+      {
+       "id": "d",
+       "text": "Reliable, because the podcast hosts checked it",
+       "why": "A podcast mention is not peer review or replication."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "samp-appraise-limits",
+   "concept": "ev-samp-preprint",
+   "bloom": "evaluate",
+   "sources": [
+    "cowley2021",
+    "lundh2017",
+    "mesquida2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A crossover in 9 trained male cyclists, funded by the maker, finds a beetroot shot improves 10 km time-trial time by 1.2% (p = 0.04). No other study has tested it. What most limits trust in the result?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One small all-male study, funded by the maker",
+       "correct": true,
+       "why": "Right: one study, n < 15, men only and industry money each weaken it. Small positive studies often overstate effects."
+      },
+      {
+       "id": "b",
+       "text": "Nothing much: p < 0.05 settles it",
+       "why": "p = 0.04 in 9 riders says little about size or bias."
+      },
+      {
+       "id": "c",
+       "text": "The crossover design, which can't test supplements",
+       "why": "Crossovers suit short-acting supplements like beetroot; the design isn't the weak point."
+      },
+      {
+       "id": "d",
+       "text": "Time trials aren't valid tests of cycling performance",
+       "why": "Time trials are among the most valid and reliable performance tests."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "An RCT in 10 recreational male runners, funded by a shoe brand, finds its new shoe improves 5 km time by 1.0% (p = 0.04). No other study has tested it. What most limits trust in the result?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One small all-male study, funded by the brand",
+       "correct": true,
+       "why": "Right: one study, n < 15, men only and industry money each weaken it. Small positive studies often overstate effects."
+      },
+      {
+       "id": "b",
+       "text": "Nothing much: p < 0.05 settles it",
+       "why": "p = 0.04 in 10 runners says little about size or bias."
+      },
+      {
+       "id": "c",
+       "text": "Randomised trials can't be used to test running shoes",
+       "why": "Randomising runners to shoes is a sound design."
+      },
+      {
+       "id": "d",
+       "text": "5 km is too short to show any shoe effect",
+       "why": "Shoe effects show up over 5 km; distance isn't the main limit."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

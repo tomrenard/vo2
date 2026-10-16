@@ -1,0 +1,742 @@
+{
+ "id": "units-si",
+ "module": "t0-units-maths",
+ "title": "Units: reading the language of physiology",
+ "goal": "Read SI units and prefixes, convert between absolute and per-kg values, and judge when dividing by body mass helps and when it misleads.",
+ "requires": [],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "si-unit-read",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "si-why",
+   "title": "Welcome: why units come first",
+   "text": "Welcome to vo2. Everything in this course is a number with a unit: 60 mL·kg⁻¹·min⁻¹, 4 mmol·L⁻¹, 300 W. Read the unit and you already know half the meaning.\n\nSport science uses the [SI](g:si), the international system of units adopted in 1960 [[c:si-standard]]. A few base units do almost all the work:\n\n| quantity | unit |\n|---|---|\n| mass | kilogram (kg) |\n| distance | metre (m) |\n| time | second (s) |\n| amount of a substance | mole (mol) |\n\nOthers are built from these: force in newtons (N), energy in joules (J), power in watts (W). Volume is often in litres (L) for gas and blood, and minutes and hours stay in use for time.",
+   "claims": [
+    {
+     "id": "si-standard",
+     "text": "Sport and exercise science should describe exercise in SI units, the system adopted in 1960.",
+     "grade": "strong",
+     "sources": [
+      "winter2009"
+     ],
+     "evidence": [
+      {
+       "source": "winter2009",
+       "quote": "Accordingly, definitions of exercise and related terms and nomenclature that describe the performance of exercise must adhere to principles of science and satisfy the Systeme International d'Unites (SI) that was adopted universally in 1960.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "si-prefixes",
+   "title": "Prefixes: the same unit, scaled",
+   "text": "A prefix multiplies a unit by a power of ten. Learn these four and you can read almost every paper:\n\n| prefix | means | example |\n|---|---|---|\n| M (mega) | × 1,000,000 | 3.6 MJ of work in a long ride |\n| k (kilo) | × 1,000 | 900 kJ, 70 kg |\n| m (milli) | ÷ 1,000 | 250 ms ground contact, 4 mmol |\n| µ (micro) | ÷ 1,000,000 | µmol of an enzyme product |\n\nSo 3.6 L = 3,600 mL, and 2,450 kJ = 2.45 MJ.\n\nCapital or small letters matter: **m** is milli but **M** is mega. A mmol and a Mmol differ by a factor of a billion.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "si-prefix-convert",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "si-reading",
+   "title": "Reading compound units",
+   "text": "Units joined together read left to right. The dot (·) means \"times\" and the ⁻¹ means \"per\" (divided by):\n\n- **mL·kg⁻¹·min⁻¹**: millilitres of oxygen, per kg of body mass, per minute. The usual unit of relative [VO2max](g:vo2max).\n- **mmol·L⁻¹**: millimoles per litre, a concentration. Blood lactate of 4 mmol·L⁻¹ means 4 mmol in every litre of blood.\n- **W·kg⁻¹**: watts per kg of body mass.\n- **L·min⁻¹**: litres per minute, the absolute rate of oxygen uptake.\n\nThe unit is also a recipe. mL·kg⁻¹·min⁻¹ tells you how to get it: take mL per minute and divide by kg. If your answer comes out in the wrong unit, the sum is wrong.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "si-unit-read",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "si-concentration"
+  },
+  {
+   "type": "example",
+   "id": "si-vo2-example",
+   "title": "From absolute to relative VO2max",
+   "problem": "A runner's VO2max is 3.5 L·min⁻¹ and she weighs 56 kg. What is it in mL·kg⁻¹·min⁻¹?",
+   "steps": [
+    "The target unit is mL per kg per min, so first convert litres to millilitres: 3.5 L·min⁻¹ × 1,000 = 3,500 mL·min⁻¹.",
+    "Then divide by body mass: 3,500 ÷ 56 = 62.5 mL·kg⁻¹·min⁻¹.",
+    "Check the units: (mL·min⁻¹) ÷ kg = mL·kg⁻¹·min⁻¹. Right unit, so the recipe was right."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "si-relative-vo2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "si-per-kg",
+   "title": "Why divide by body mass",
+   "text": "Climbing and running mean lifting or carrying your own body. A heavier athlete needs more power for the same speed, so we divide by mass to compare: **W·kg⁻¹** for cycling power, **mL·kg⁻¹·min⁻¹** for VO2max.\n\n| rider | power | mass | W·kg⁻¹ |\n|---|---|---|---|\n| A | 300 W | 60 kg | 5.0 |\n| B | 350 W | 80 kg | 4.4 |\n\nB makes more watts, but on a steep climb, where gravity is most of the resistance, A goes faster.\n\nBy convention W·kg⁻¹ uses body mass only. The bike's mass also has to be lifted, so a few kg of bike shrink a light rider's advantage a little.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "si-wkg-example",
+   "title": "Power per kg",
+   "problem": "A cyclist holds 260 W for 20 minutes and weighs 65 kg. What is that in W·kg⁻¹?",
+   "steps": [
+    "W·kg⁻¹ means watts divided by kilograms of body mass.",
+    "260 ÷ 65 = 4.0 W·kg⁻¹.",
+    "Don't add the bike's mass: by convention W·kg⁻¹ is per kg of body mass."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "si-wkg-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "si-climb-compare",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "si-per-kg-limits",
+   "title": "When per kg misleads",
+   "text": "Dividing by mass assumes the measure grows in step with mass. It often doesn't.\n\n- **Flat roads.** At fast race speeds (about 50 km·h⁻¹) around 90% of the power goes into beating air drag [[c:aero-dominates]]. Air drag depends on frontal area, which grows much less than mass. On the flat, absolute watts (per unit of drag) matter more than W·kg⁻¹, which is why big, powerful riders often do well in flat time trials.\n- **Fair comparison of capacity.** VO2max rises with body mass less than one-to-one, roughly with mass^0.7. Dividing by mass makes heavy athletes look less fit than they are, though W·kg⁻¹ and mL·kg⁻¹·min⁻¹ still describe running and climbing performance well [[c:ratio-scaling]].\n\nSo pick the ratio that matches the task.",
+   "claims": [
+    {
+     "id": "aero-dominates",
+     "text": "On flat ground at about 50 km·h⁻¹, around 90% of a cyclist's power goes into overcoming aerodynamic drag.",
+     "grade": "strong",
+     "sources": [
+      "debraux2011",
+      "kordi2021"
+     ],
+     "evidence": [
+      {
+       "source": "debraux2011",
+       "quote": "When cycling on level ground at a speed greater than 14 m/s, aerodynamic drag is the most important resistive force. About 90% of the total mechanical power output is necessary to overcome it.",
+       "level": "abstract"
+      },
+      {
+       "source": "kordi2021",
+       "quote": "At these speeds, over 90% of the resistance forces come from aerodynamic resistance",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ratio-scaling",
+     "text": "Dividing VO2max or power by body mass (simple ratio standards) describes performance in body-mass-dependent tasks such as running, but VO2max rises less than in proportion to mass: pooled exponents are about 0.7.",
+     "grade": "moderate",
+     "sources": [
+      "nevill1992",
+      "lolli2017"
+     ],
+     "evidence": [
+      {
+       "source": "nevill1992",
+       "quote": "Based on the fitted power functions, the best method of scaling maximum oxygen uptake, peak and mean power output, required these variables to be divided by body mass, recorded in the units kg 2/3.",
+       "level": "abstract"
+      },
+      {
+       "source": "nevill1992",
+       "quote": "The simple ratio standards (ml.kg-1.min-1) and (W.kg-1) were found to best describe the same subjects according to their performance capacities or ability to run which are highly dependent on body size.",
+       "level": "abstract"
+      },
+      {
+       "source": "lolli2017",
+       "quote": "The pooled allometric exponent (95% Cls) was found to be 0.70 (0.64 to 0.76) for whole body mass and 0.90 (0.83 to 0.96) for fat-free mass.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "si-flat-mislead",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "si-scaling"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Sport science uses SI units: kg, m, s, mol, and units built from them (N, J, W); litres and minutes stay in use.",
+    "Prefixes scale by powers of ten: M = × 1,000,000, k = × 1,000, m = ÷ 1,000, µ = ÷ 1,000,000.",
+    "In compound units · means times and ⁻¹ means per: mL·kg⁻¹·min⁻¹ is mL per kg per minute.",
+    "Relative VO2max = absolute VO2 in mL·min⁻¹ ÷ body mass; W·kg⁻¹ = watts ÷ body mass.",
+    "Per kg fits climbing and running; on the flat, air drag dominates and absolute watts matter more."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "si-unit-read",
+   "concept": "si-reading",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab report gives a triathlete's VO2max as 62 mL·kg⁻¹·min⁻¹. What does that unit mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "62 mL of oxygen per kg of body mass in each minute",
+       "correct": true,
+       "why": "Right: · means times, ⁻¹ means per. mL per kg per minute."
+      },
+      {
+       "id": "b",
+       "text": "62 mL of oxygen per minute for the whole body",
+       "why": "That would be mL·min⁻¹ (an absolute rate, and far too small for an adult). The kg⁻¹ means it is per kg of body mass."
+      },
+      {
+       "id": "c",
+       "text": "62 mL of oxygen per kg of muscle in each minute",
+       "why": "The kg is body mass, not muscle mass. Muscle is rarely weighed in a VO2max test."
+      },
+      {
+       "id": "d",
+       "text": "62 kg of oxygen used per mL of blood per minute",
+       "why": "This reads the units backwards. The quantity on top is mL of oxygen; kg and min are what it is divided by."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's 20-minute power is written as 4.5 W·kg⁻¹. What does that unit mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.5 watts for each kg of body mass",
+       "correct": true,
+       "why": "Right: W·kg⁻¹ is watts divided by kilograms of body mass."
+      },
+      {
+       "id": "b",
+       "text": "4.5 watts multiplied by body mass",
+       "why": "The ⁻¹ means divided by (per), not multiplied."
+      },
+      {
+       "id": "c",
+       "text": "4.5 kg lifted per watt of power",
+       "why": "This reads the ratio upside down: watts are on top, kg below."
+      },
+      {
+       "id": "d",
+       "text": "4.5 watts for each kg of rider plus bike",
+       "why": "By convention W·kg⁻¹ uses body mass only, not bike mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "si-prefix-convert",
+   "concept": "si-prefixes",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO2 is 3.6 L·min⁻¹. What is that in mL·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3,600 mL·min⁻¹",
+       "correct": true,
+       "why": "Right: milli means one thousandth, so 1 L = 1,000 mL; 3.6 × 1,000 = 3,600."
+      },
+      {
+       "id": "b",
+       "text": "360 mL·min⁻¹",
+       "why": "This multiplies by 100, as if 1 L were 100 mL (that is a decilitre)."
+      },
+      {
+       "id": "c",
+       "text": "36,000 mL·min⁻¹",
+       "why": "This multiplies by 10,000: one zero too many."
+      },
+      {
+       "id": "d",
+       "text": "0.0036 mL·min⁻¹",
+       "why": "This divides by 1,000 instead of multiplying. mL are smaller, so there are more of them."
+      }
+     ],
+     "solution": "1 L = 1,000 mL, so 3.6 L·min⁻¹ × 1,000 = 3,600 mL·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's bike file shows 2,450 kJ of work. What is that in MJ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.45 MJ",
+       "correct": true,
+       "why": "Right: mega is a thousand times kilo, so divide kJ by 1,000."
+      },
+      {
+       "id": "b",
+       "text": "2,450,000 MJ",
+       "why": "That number is the work in joules (J), not megajoules."
+      },
+      {
+       "id": "c",
+       "text": "24.5 MJ",
+       "why": "This divides by 100 instead of 1,000."
+      },
+      {
+       "id": "d",
+       "text": "2,450 MJ",
+       "why": "This only changes the letter. k and M differ by a factor of 1,000."
+      }
+     ],
+     "solution": "1 MJ = 1,000 kJ, so 2,450 kJ ÷ 1,000 = 2.45 MJ."
+    },
+    {
+     "id": "c",
+     "stem": "A runner's ground contact time is 0.21 s. What is that in ms?",
+     "options": [
+      {
+       "id": "a",
+       "text": "210 ms",
+       "correct": true,
+       "why": "Right: 1 s = 1,000 ms, so 0.21 × 1,000 = 210 ms."
+      },
+      {
+       "id": "b",
+       "text": "21 ms",
+       "why": "This multiplies by 100, as if milli meant one hundredth."
+      },
+      {
+       "id": "c",
+       "text": "2,100 ms",
+       "why": "This multiplies by 10,000: one zero too many."
+      },
+      {
+       "id": "d",
+       "text": "0.00021 ms",
+       "why": "This divides by 1,000. Milliseconds are smaller, so there are more of them."
+      }
+     ],
+     "solution": "1 s = 1,000 ms, so 0.21 s × 1,000 = 210 ms."
+    }
+   ]
+  },
+  {
+   "id": "si-concentration",
+   "concept": "si-reading",
+   "bloom": "understand",
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a hard interval, a runner's blood lactate is 6 mmol·L⁻¹. What does that tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "There are 6 mmol of lactate in each litre of blood",
+       "correct": true,
+       "why": "Right: mmol·L⁻¹ is a concentration, an amount per volume."
+      },
+      {
+       "id": "b",
+       "text": "The body has made 6 mmol of lactate in total",
+       "why": "A concentration says how much is in each litre, not the total made. Lactate is also removed all the time."
+      },
+      {
+       "id": "c",
+       "text": "Lactate is rising by 6 mmol each minute",
+       "why": "That would be a rate, mmol·L⁻¹·min⁻¹. There is no time unit here."
+      },
+      {
+       "id": "d",
+       "text": "There are 6 mL of lactate in each litre of blood",
+       "why": "mmol is an amount of substance (moles), not a volume."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "si-relative-vo2-calc",
+   "concept": "si-reading",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO2max is 4.2 L·min⁻¹ and he weighs 70 kg. What is it in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 4,200 mL·min⁻¹ ÷ 70 kg = 60."
+      },
+      {
+       "id": "b",
+       "text": "0.06 mL·kg⁻¹·min⁻¹",
+       "why": "This divides litres by kg without converting to mL first (4.2 ÷ 70)."
+      },
+      {
+       "id": "c",
+       "text": "294 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by body mass (4.2 × 70). Per kg means divide."
+      },
+      {
+       "id": "d",
+       "text": "16.7 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO2 (70 ÷ 4.2): upside down."
+      }
+     ],
+     "solution": "4.2 L·min⁻¹ × 1,000 = 4,200 mL·min⁻¹; 4,200 ÷ 70 kg = 60 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO2max is 3.0 L·min⁻¹ and she weighs 60 kg. What is it in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 3,000 mL·min⁻¹ ÷ 60 kg = 50."
+      },
+      {
+       "id": "b",
+       "text": "0.05 mL·kg⁻¹·min⁻¹",
+       "why": "This divides litres by kg without converting to mL first (3.0 ÷ 60)."
+      },
+      {
+       "id": "c",
+       "text": "180 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by body mass (3.0 × 60). Per kg means divide."
+      },
+      {
+       "id": "d",
+       "text": "20 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO2 (60 ÷ 3.0): upside down."
+      }
+     ],
+     "solution": "3.0 L·min⁻¹ × 1,000 = 3,000 mL·min⁻¹; 3,000 ÷ 60 kg = 50 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2max is 5.1 L·min⁻¹ and he weighs 85 kg. What is it in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 5,100 mL·min⁻¹ ÷ 85 kg = 60."
+      },
+      {
+       "id": "b",
+       "text": "0.06 mL·kg⁻¹·min⁻¹",
+       "why": "This divides litres by kg without converting to mL first (5.1 ÷ 85)."
+      },
+      {
+       "id": "c",
+       "text": "433.5 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by body mass (5.1 × 85). Per kg means divide."
+      },
+      {
+       "id": "d",
+       "text": "16.7 mL·kg⁻¹·min⁻¹",
+       "why": "This divides mass by VO2 (85 ÷ 5.1): upside down."
+      }
+     ],
+     "solution": "5.1 L·min⁻¹ × 1,000 = 5,100 mL·min⁻¹; 5,100 ÷ 85 kg = 60 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "si-wkg-calc",
+   "concept": "si-per-kg",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist weighing 60 kg holds 300 W on a climb. What is that in W·kg⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.0 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 300 ÷ 60 = 5.0."
+      },
+      {
+       "id": "b",
+       "text": "0.2 W·kg⁻¹",
+       "why": "This divides mass by power (60 ÷ 300): upside down."
+      },
+      {
+       "id": "c",
+       "text": "4.4 W·kg⁻¹",
+       "why": "This divides by rider plus an 8 kg bike (300 ÷ 68). W·kg⁻¹ uses body mass only."
+      },
+      {
+       "id": "d",
+       "text": "18,000 W·kg⁻¹",
+       "why": "This multiplies power by mass. Per kg means divide."
+      }
+     ],
+     "solution": "300 W ÷ 60 kg = 5.0 W·kg⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete weighing 70 kg rides the bike leg at 280 W. What is that in W·kg⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.0 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 280 ÷ 70 = 4.0."
+      },
+      {
+       "id": "b",
+       "text": "0.25 W·kg⁻¹",
+       "why": "This divides mass by power (70 ÷ 280): upside down."
+      },
+      {
+       "id": "c",
+       "text": "3.6 W·kg⁻¹",
+       "why": "This divides by rider plus an 8 kg bike (280 ÷ 78). W·kg⁻¹ uses body mass only."
+      },
+      {
+       "id": "d",
+       "text": "19,600 W·kg⁻¹",
+       "why": "This multiplies power by mass. Per kg means divide."
+      }
+     ],
+     "solution": "280 W ÷ 70 kg = 4.0 W·kg⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist weighing 80 kg holds 340 W for 20 minutes. What is that in W·kg⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.25 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: 340 ÷ 80 = 4.25."
+      },
+      {
+       "id": "b",
+       "text": "0.24 W·kg⁻¹",
+       "why": "This divides mass by power (80 ÷ 340): upside down."
+      },
+      {
+       "id": "c",
+       "text": "3.86 W·kg⁻¹",
+       "why": "This divides by rider plus an 8 kg bike (340 ÷ 88). W·kg⁻¹ uses body mass only."
+      },
+      {
+       "id": "d",
+       "text": "27,200 W·kg⁻¹",
+       "why": "This multiplies power by mass. Per kg means divide."
+      }
+     ],
+     "solution": "340 W ÷ 80 kg = 4.25 W·kg⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "si-climb-compare",
+   "concept": "si-per-kg",
+   "bloom": "analyse",
+   "sources": [
+    "winter2009",
+    "nevill1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a steep 10% climb, rider A (60 kg) holds 300 W and rider B (80 kg) holds 350 W. Both bikes weigh 8 kg. Who climbs faster, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: 5.0 W·kg⁻¹ beats B's 4.4 W·kg⁻¹ where gravity dominates",
+       "correct": true,
+       "why": "Right: on a steep climb speed is low, so most power goes into lifting mass. Even with bikes (4.4 vs 4.0 W per kg of rider and bike) A is ahead."
+      },
+      {
+       "id": "b",
+       "text": "B: 350 W beats 300 W, so B goes faster",
+       "why": "More watts help on the flat, but uphill each watt has to lift more mass for B."
+      },
+      {
+       "id": "c",
+       "text": "Neither: they climb at the same speed",
+       "why": "Their power per kg differs (5.0 vs 4.4), so their climbing speeds differ."
+      },
+      {
+       "id": "d",
+       "text": "B, because heavier riders have more momentum",
+       "why": "Momentum doesn't help on a sustained climb; the heavier rider has more mass to lift."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On a steep climb in a hilly triathlon, athlete C (75 kg) holds 270 W and athlete D (60 kg) holds 240 W. Who climbs faster, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "D: 4.0 W·kg⁻¹ beats C's 3.6 W·kg⁻¹ where gravity dominates",
+       "correct": true,
+       "why": "Right: on a steep climb most power goes into lifting mass, so power per kg sets speed."
+      },
+      {
+       "id": "b",
+       "text": "C: 270 W beats 240 W, so C goes faster",
+       "why": "More watts help on the flat, but uphill each watt has to lift more mass for C."
+      },
+      {
+       "id": "c",
+       "text": "Neither: they climb at the same speed",
+       "why": "Their power per kg differs (3.6 vs 4.0), so their climbing speeds differ."
+      },
+      {
+       "id": "d",
+       "text": "C, because heavier riders have more momentum",
+       "why": "Momentum doesn't help on a sustained climb; the heavier rider has more mass to lift."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "si-flat-mislead",
+   "concept": "si-per-kg-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "debraux2011",
+    "nevill1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach picks riders for a flat 40 km team time trial by ranking their 20-minute W·kg⁻¹. What is the best judgement of this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Poor choice: on the flat, air drag dominates, so absolute watts per drag area matter more",
+       "correct": true,
+       "why": "Right: at race speed most resistance is air, and drag grows much less than body mass, so heavier, more powerful riders gain."
+      },
+      {
+       "id": "b",
+       "text": "Good choice: W·kg⁻¹ is the best predictor on every course",
+       "why": "W·kg⁻¹ fits climbing, where gravity dominates. On the flat, mass matters little."
+      },
+      {
+       "id": "c",
+       "text": "Poor choice: they should rank by body mass alone",
+       "why": "Mass alone says nothing about power. What matters on the flat is power relative to air drag."
+      },
+      {
+       "id": "d",
+       "text": "Good choice: lighter riders have less air drag in proportion to mass",
+       "why": "It is the other way round: frontal area grows less than mass, so heavy riders have less drag per kg."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete chooses between two bike plans for a flat Ironman course: one that raises 5-minute W·kg⁻¹ by losing 3 kg, and one that raises sustained power at the same mass. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sustained power counts more: on a flat course air drag, not mass, sets speed",
+       "correct": true,
+       "why": "Right: on the flat most resistance is aerodynamic, so watts held (and position) matter more than mass."
+      },
+      {
+       "id": "b",
+       "text": "Losing mass counts more: W·kg⁻¹ sets speed on every course",
+       "why": "W·kg⁻¹ matters most uphill. On the flat, losing 3 kg changes speed very little."
+      },
+      {
+       "id": "c",
+       "text": "Both plans are equal: W·kg⁻¹ rises in each",
+       "why": "The ratio rises in both, but on the flat speed follows absolute power against drag, not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "Losing mass counts more: lighter riders have less air drag per kg",
+       "why": "Frontal area grows less than mass, so heavier riders have less drag per kg, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "si-scaling",
+   "concept": "si-per-kg-limits",
+   "bloom": "understand",
+   "sources": [
+    "nevill1992",
+    "lolli2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 90 kg rower and a 60 kg runner are compared by VO2max in mL·kg⁻¹·min⁻¹. Why might this understate the rower's aerobic capacity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO2max rises less than mass, so per kg penalises big athletes",
+       "correct": true,
+       "why": "Right: VO2max scales about with mass^0.7, so a simple per-kg ratio pulls big athletes down."
+      },
+      {
+       "id": "b",
+       "text": "Rowers sit down, so their mass doesn't count",
+       "why": "Sitting changes what limits rowing performance, but it doesn't change how VO2max scales with mass."
+      },
+      {
+       "id": "c",
+       "text": "Heavier athletes always have a lower VO2max in L·min⁻¹",
+       "why": "The opposite is usual: bigger athletes tend to have a higher absolute VO2max."
+      },
+      {
+       "id": "d",
+       "text": "The per-kg unit removes the oxygen used by fat",
+       "why": "Dividing by total mass doesn't remove anything; it spreads VO2 over all the kg, fat included."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

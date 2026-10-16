@@ -12,7 +12,15 @@ import { Question, type Result } from "../../ui/Question";
 const saved = (id: string) => `vo2:lesson:${id}`;
 
 /** A lesson, one step at a time: concept cards, worked examples, questions, recap. */
-export function Player({ lesson, reps }: { lesson: Lesson; reps: Record<string, number> }) {
+export function Player({
+  lesson,
+  reps,
+  examHref,
+}: {
+  lesson: Lesson;
+  reps: Record<string, number>;
+  examHref?: string;
+}) {
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Result[]>([]);
   const [counts, setCounts] = useState(reps);
@@ -50,7 +58,7 @@ export function Player({ lesson, reps }: { lesson: Lesson; reps: Record<string, 
     setDone(true);
   };
 
-  if (done) return <Done lesson={lesson} results={results} />;
+  if (done) return <Done lesson={lesson} results={results} examHref={examHref} />;
   if (!step) return null;
 
   return (
@@ -189,7 +197,15 @@ export function Debate({ debate }: { debate: DebateSpec }) {
   );
 }
 
-function Done({ lesson, results }: { lesson: Lesson; results: Result[] }) {
+function Done({
+  lesson,
+  results,
+  examHref,
+}: {
+  lesson: Lesson;
+  results: Result[];
+  examHref?: string;
+}) {
   const right = results.filter((r) => r.correct).length;
   const confidentMisses = results.filter((r) => !r.correct && r.sure).length;
   const guessed = results.filter((r) => r.correct && !r.sure).length;
@@ -207,7 +223,12 @@ function Done({ lesson, results }: { lesson: Lesson; results: Result[] }) {
         Every question is now in your reviews. Missed ones come back in about 10 minutes, the others
         in a few days.
       </p>
-      <Go href="/session" className="btn btn-primary">
+      {examHref && (
+        <Go href={examHref} className="btn btn-primary">
+          Take the module exam
+        </Go>
+      )}
+      <Go href="/session" className={`btn ${examHref ? "" : "btn-primary"}`}>
         Review now
       </Go>
       <Go href="/" className="btn">

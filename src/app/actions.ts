@@ -1,6 +1,7 @@
 "use server";
 
 import { itemById, lessonById } from "@/lib/course";
+import { moduleLessons, saveExam } from "@/lib/exams";
 import { freshPages } from "@/lib/fresh";
 import { requireUser } from "@/lib/session";
 import { type Answer, answer, finishLesson, flag } from "@/lib/study";
@@ -39,5 +40,17 @@ export async function flagQuestion(itemId: string, variantId: string, note: stri
 /** After a review session: the tab pages show the new counts. */
 export async function sessionFinished() {
   await requireUser();
+  freshPages();
+}
+
+/**
+ * ponytail: the score comes from the client (it only affects your own record); compute it from
+ * the exam's answer rows if exams ever count for something.
+ */
+export async function examFinished(moduleId: string, score: number) {
+  const userId = await requireUser();
+  if (!moduleLessons(String(moduleId)).module || !Number.isFinite(score))
+    throw new Error("Bad exam");
+  await saveExam(userId, moduleId, Math.min(Math.max(score, 0), 100));
   freshPages();
 }

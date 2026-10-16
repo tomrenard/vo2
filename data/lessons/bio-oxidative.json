@@ -1,0 +1,824 @@
+{
+ "id": "bio-oxidative",
+ "module": "t1a-bioenergetics",
+ "title": "Oxidative phosphorylation: slow but huge",
+ "goal": "Explain how the Krebs cycle and the electron transport chain turn fuel and oxygen into about 30–32 ATP per glucose, why oxygen is the final electron acceptor, and why this route is slow but almost unlimited.",
+ "requires": [
+  "bio-glycolysis"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "ox-o2-role",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ox-mito",
+   "title": "Mitochondria: the aerobic power plant",
+   "text": "The third route runs inside [mitochondria](g:mitochondria), small structures packed between the contractile fibrils. Here fuel is burned completely, with oxygen [[c:ox-site]].\n\nTwo fuels come in: [pyruvate](g:pyruvate) from glycolysis, along with the electrons glycolysis loaded onto NADH, and fatty acids (next lesson). Both are cut into the same two-carbon unit, [acetyl-CoA](g:acetyl-coa). From there on, fat and carbohydrate share one pathway.\n\nMitochondria are trainable. Regular endurance training raises the mitochondrial content of muscle and its capacity to use oxygen [[c:ox-training]]. That is a big part of why the same pace feels easier after a season of base training.",
+   "claims": [
+    {
+     "id": "ox-site",
+     "text": "Oxidative ATP resynthesis happens in the mitochondria, burning fuel in the presence of oxygen; pyruvate and the NADH from glycolysis are its link to glycolysis.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "The resynthesis of ATP by mitochondrial respiration occurs in mitochondria and involves the combustion of fuel in the presence of sufficient oxygen.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "The connection between the mitochondria and glycolysis is complete when pyruvate and the electrons and protons from the glycolytic reduction of NAD+ to NADH are transferred into the mitochondria as substrates for mitochondrial respiration.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ox-training",
+     "text": "Endurance training increases muscle mitochondrial content and respiratory capacity, which slows glycogen use, raises fat oxidation and lowers lactate at a given intensity.",
+     "grade": "strong",
+     "sources": [
+      "holloszy1984"
+     ],
+     "evidence": [
+      {
+       "source": "holloszy1984",
+       "quote": "These include increases in the mitochondrial content and respiratory capacity of the muscle fibers.",
+       "level": "abstract"
+      },
+      {
+       "source": "holloszy1984",
+       "quote": "The major metabolic consequences of the adaptations of muscle to endurance exercise are a slower utilization of muscle glycogen and blood glucose, a greater reliance on fat oxidation, and less lactate production during exercise of a given intensity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ox-training-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "ox-krebs",
+   "title": "The Krebs cycle: stripping electrons off the fuel",
+   "text": "Acetyl-CoA enters the [Krebs cycle](g:krebs-cycle) (also called the citric acid or TCA cycle), a loop of reactions inside the mitochondria. Each turn gives off CO₂, part of the CO₂ you breathe out, and loads electrons onto two carriers: three NADH and one FADH₂ [[c:krebs-nadh]]. It makes only one ATP (as GTP) directly.\n\nSo the cycle's real product is **loaded electron carriers**. Their energy is cashed in at the next stage.\n\nThis is why the Krebs cycle needs oxygen even though it uses none itself. If the carriers can't unload their electrons further down the line, no empty NAD⁺ is left to load, and the loop jams.",
+   "claims": [
+    {
+     "id": "krebs-nadh",
+     "text": "Each acetyl-CoA oxidised in the TCA (Krebs) cycle yields 3 NADH, 1 FADH₂ and 1 GTP (equivalent to ATP); the NADH and FADH₂ donate electrons to the electron transport chain.",
+     "grade": "strong",
+     "sources": [
+      "judge2020",
+      "rowland2026"
+     ],
+     "evidence": [
+      {
+       "source": "judge2020",
+       "quote": "These acetyl CoA molecules enter the TCA cycle and generate: 1 molecule of GTP (interchangeable with ATP), 3 NADH, and 1 FADH₂ co-enzymes.",
+       "level": "full-text"
+      },
+      {
+       "source": "rowland2026",
+       "quote": "Acetyl-CoA then enters the tricarboxylic acid (TCA) cycle, where sequential enzymatic reactions generate NADH and FADH₂, which subsequently donate electrons to the ETC.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ox-krebs-product"
+  },
+  {
+   "type": "question",
+   "item": "ox-nadh-jam"
+  },
+  {
+   "type": "concept",
+   "id": "ox-etc",
+   "title": "The electron transport chain: oxygen at the end",
+   "text": "NADH and FADH₂ hand their electrons to the [electron transport chain](g:electron-transport-chain), a row of protein complexes in the inner mitochondrial membrane. As the electrons pass along, their energy pumps protons (H⁺) across the membrane, building a gradient like water behind a dam. The protons flow back through ATP synthase, a rotating enzyme, and that flow makes ATP [[c:etc-gradient]].\n\nAt the end of the chain the electrons need a final home: **oxygen**. Oxygen takes up the electrons with protons and becomes water [[c:o2-final]]. That is the whole reason you breathe hard. No oxygen, no place to dump electrons, and the chain, the Krebs cycle and aerobic ATP all stop.",
+   "claims": [
+    {
+     "id": "etc-gradient",
+     "text": "Electron flow along the ETC builds a proton gradient across the inner mitochondrial membrane that drives ATP synthase.",
+     "grade": "strong",
+     "sources": [
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "judge2020",
+       "quote": "The complexes use this energy to pump protons from the matrix, into the intermembrane space.",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "The ATP synthase multiprotein complex is a molecular motor powered of protons passing through it.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "o2-final",
+     "text": "Oxygen is the final electron acceptor of the ETC and is reduced to water.",
+     "grade": "strong",
+     "sources": [
+      "judge2020",
+      "rowland2026"
+     ],
+     "evidence": [
+      {
+       "source": "judge2020",
+       "quote": "The role of the ETC is, as its name suggests, to transport electrons through a series of complexes to the final electron acceptor: oxygen.",
+       "level": "full-text"
+      },
+      {
+       "source": "rowland2026",
+       "quote": "It involves the mitochondrial oxidation of carbohydrates, lipids and proteins, ultimately reducing molecular oxygen to water through the electron transport chain (ETC).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ox-o2-role",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ox-gradient"
+  },
+  {
+   "type": "question",
+   "item": "ox-yield-compare",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ox-yield",
+   "title": "The payoff: about 30–32 ATP per glucose",
+   "text": "Cashing in the carriers pays well. The [P/O ratio](g:p-o-ratio), the ATP made per oxygen atom used, is about **2.5** for electrons from NADH and **1.5** for electrons from FADH₂ [[c:po-ratio]]. The ratios are fractions because they follow from how many protons each pair of electrons pumps.\n\nAdd it all up and one glucose, fully oxidised, gives about **30–32 ATP** [[c:yield-glucose]], against 2 from glycolysis alone. The range depends on how glycolysis' NADH gets into the mitochondria: one shuttle delivers its electrons as if they came from FADH₂, worth 1.5 ATP instead of 2.5 [[c:nadh-shuttle]].\n\nOlder textbooks said 36–38 ATP: they assumed whole-number ratios of 3 and 2.",
+   "claims": [
+    {
+     "id": "po-ratio",
+     "text": "Mechanistic P/O ratios are about 2.5 for NADH-linked substrates and 1.5 for succinate (FADH₂); the fractions come from the coupling of proton transport.",
+     "grade": "strong",
+     "sources": [
+      "hinkle2005",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "hinkle2005",
+       "quote": "Values of about 2.5 with NADH-linked substrates and 1.5 with succinate are consistent with most reports after apparent contradictions are explained.",
+       "level": "abstract"
+      },
+      {
+       "source": "hinkle2005",
+       "quote": "The fractional values result from the coupling ratios of proton transport.",
+       "level": "abstract"
+      },
+      {
+       "source": "judge2020",
+       "quote": "In total, 1 NADH + H⁺ generates 2.5 ATP and 1 FADH₂ generates 1.5 ATP.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "yield-glucose",
+     "text": "Complete oxidation of one glucose yields about 30–32 ATP, 15–16 times the 2 ATP of glycolysis alone.",
+     "grade": "strong",
+     "sources": [
+      "judge2020",
+      "fu2021"
+     ],
+     "evidence": [
+      {
+       "source": "judge2020",
+       "quote": "This then liberates 30–32 ATP per glucose molecule, a 15–16-fold increase in energy return.",
+       "level": "full-text"
+      },
+      {
+       "source": "fu2021",
+       "quote": "In the presence of oxygen, the complete oxidation of one glucose molecule yields 30–32 ATP molecules, whereas one palmitate molecule yields 106 ATP molecules.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "nadh-shuttle",
+     "text": "Cytosolic NADH that enters by the glycerol-3-phosphate shuttle yields 1.5 ATP instead of 2.5.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "When cytosolic NADH transported by the glycerol-3-phosphate shuttle is oxidised by the respiratory chain 1.5 ATP is produced, rather than 2.5 ATP.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ox-yield-example",
+   "title": "Counting the ATP from one glucose",
+   "problem": "Per glucose fully oxidised: glycolysis nets 2 ATP and 2 NADH; turning 2 pyruvate into acetyl-CoA gives 2 NADH; two turns of the Krebs cycle give 6 NADH, 2 FADH₂ and 2 ATP (as GTP). With P/O ratios of 2.5 (NADH) and 1.5 (FADH₂), how many ATP in total?",
+   "steps": [
+    "Count the carriers: NADH = 2 + 2 + 6 = 10; FADH₂ = 2.",
+    "Electron transport chain: 10 × 2.5 = 25 ATP from NADH, 2 × 1.5 = 3 ATP from FADH₂.",
+    "Add the ATP made directly: 2 (glycolysis) + 2 (Krebs) = 4.",
+    "Total = 25 + 3 + 4 = 32 ATP.",
+    "If glycolysis' 2 NADH come in by the glycerol-phosphate shuttle, each is worth 1.5, not 2.5: subtract 2 × 1 = 2, giving 30 ATP. Hence 30–32."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ox-yield-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ox-yield-compare",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ox-po"
+  },
+  {
+   "type": "concept",
+   "id": "ox-slow",
+   "title": "Why it is slow, and why it lasts",
+   "text": "If full oxidation pays about 15 times more ATP per glucose, why sprint on glycolysis? Because of **rate**. Oxidative ATP supply is slower than PCr or glycolysis, held back mainly by oxygen delivery and fuel supply [[c:ox-slow-rate]]. Oxygen must travel from the lungs through the heart and blood into the fibre, and fuel passes many more steps.\n\nIts strength is **capacity**. It can run for hours, on carbohydrate and on fat [[c:ox-capacity]].\n\nSo the aerobic route sets the power you can hold for long, and the anaerobic routes top it up in bursts. How oxygen reaches the muscle is the subject of tier 1b.",
+   "claims": [
+    {
+     "id": "ox-slow-rate",
+     "text": "Oxidative phosphorylation is slower than glycolysis or PCr but sustains ATP production for long durations, limited chiefly by oxygen availability and substrate supply.",
+     "grade": "strong",
+     "sources": [
+      "rowland2026",
+      "gastin2001"
+     ],
+     "evidence": [
+      {
+       "source": "rowland2026",
+       "quote": "Although slower than glycolysis or PCr hydrolysis, oxidative phosphorylation is capable of sustaining ATP production for prolonged durations, constrained chiefly by oxygen availability and the supply of metabolic substrates",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ox-capacity",
+     "text": "The aerobic system has an enormous capacity but a limited ability to deliver energy quickly.",
+     "grade": "strong",
+     "sources": [
+      "gastin2001"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2001",
+       "quote": "In contrast, the aerobic system has an enormous capacity yet is somewhat hampered in its ability to delivery energy quickly.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ox-slow-scenario"
+  },
+  {
+   "type": "question",
+   "item": "ox-old-38"
+  },
+  {
+   "type": "question",
+   "item": "ox-yield-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Pyruvate and fatty acids become acetyl-CoA in the mitochondria; from there carbohydrate and fat share one pathway.",
+    "The Krebs cycle releases CO₂ and loads NADH and FADH₂; the electron transport chain uses them to pump protons that drive ATP synthase.",
+    "Oxygen is the final electron acceptor and becomes water: without it the chain and the Krebs cycle stop.",
+    "P/O ratios of about 2.5 (NADH) and 1.5 (FADH₂) give about 30–32 ATP per glucose, about 15 times glycolysis alone; the old 36–38 assumed whole numbers.",
+    "The aerobic route is slow (oxygen delivery, many steps) but lasts for hours, and training adds mitochondria."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ox-o2-role",
+   "concept": "ox-etc",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does oxygen do in the mitochondria?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It takes the electrons at the end of the transport chain and becomes water",
+       "correct": true,
+       "why": "Right: oxygen is the final electron acceptor; with protons, it is reduced to water."
+      },
+      {
+       "id": "b",
+       "text": "It burns acetyl-CoA directly into CO₂ inside the Krebs cycle",
+       "why": "The Krebs cycle uses no oxygen; its CO₂ comes from the carbons of the fuel."
+      },
+      {
+       "id": "c",
+       "text": "It carries electrons from NADH to the start of the transport chain",
+       "why": "NADH itself is the carrier; oxygen sits at the other end of the chain."
+      },
+      {
+       "id": "d",
+       "text": "It joins with lactate to turn it back into glucose",
+       "why": "Rebuilding glucose from lactate is done mostly in the liver and costs ATP; it isn't oxygen's role in mitochondria."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner breathes harder as the pace rises. Where in the muscle is that extra oxygen actually used?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At the end of the electron transport chain",
+       "correct": true,
+       "why": "Right: oxygen accepts the electrons there and becomes water, which keeps the chain running."
+      },
+      {
+       "id": "b",
+       "text": "In the Krebs cycle, to release the CO₂",
+       "why": "The Krebs cycle releases CO₂ from the fuel's carbons without using oxygen itself."
+      },
+      {
+       "id": "c",
+       "text": "In glycolysis, to turn glucose into pyruvate",
+       "why": "Glycolysis needs no oxygen at all; it runs in the cytosol."
+      },
+      {
+       "id": "d",
+       "text": "In ATP synthase, to turn its rotor",
+       "why": "ATP synthase is driven by the flow of protons, not by oxygen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-training-scenario",
+   "concept": "ox-mito",
+   "bloom": "apply",
+   "sources": [
+    "holloszy1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a winter of base training, a cyclist rides the same 220 W as in autumn. Her lactate is lower and she burns more fat. What is the main change in her muscles?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More mitochondria in the trained muscles",
+       "correct": true,
+       "why": "Right: training raises mitochondrial content, which means less glycogen use, more fat oxidation and less lactate at the same power."
+      },
+      {
+       "id": "b",
+       "text": "A larger store of phosphocreatine",
+       "why": "Creatine loading enlarges PCr, but PCr does not explain lower lactate and more fat use at a steady power."
+      },
+      {
+       "id": "c",
+       "text": "A faster maximal rate of glycolysis",
+       "why": "Faster glycolysis would raise lactate at a given power, not lower it."
+      },
+      {
+       "id": "d",
+       "text": "A bigger store of ATP in each fibre",
+       "why": "The ATP store hardly changes with training; what improves is how ATP is rebuilt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-krebs-product",
+   "concept": "ox-krebs",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the main product of the Krebs cycle, the thing the rest of the mitochondrion needs from it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Loaded electron carriers: NADH and FADH₂",
+       "correct": true,
+       "why": "Right: their electrons feed the transport chain, where most of the ATP is made."
+      },
+      {
+       "id": "b",
+       "text": "Most of the cell's ATP, made directly",
+       "why": "The cycle makes only one ATP (as GTP) per turn; most comes from the transport chain."
+      },
+      {
+       "id": "c",
+       "text": "Pyruvate, sent back for glycolysis",
+       "why": "This is backwards: pyruvate is made by glycolysis and enters the mitochondria."
+      },
+      {
+       "id": "d",
+       "text": "Water, made from the oxygen it uses",
+       "why": "Water forms at the end of the transport chain; the Krebs cycle uses no oxygen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-nadh-jam",
+   "concept": "ox-krebs",
+   "bloom": "analyse",
+   "sources": [
+    "judge2020",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The Krebs cycle uses no oxygen itself. Why would it still stop if oxygen supply to a fibre were cut off?",
+     "options": [
+      {
+       "id": "a",
+       "text": "NADH could not unload its electrons, so no free NAD⁺ is left for the cycle",
+       "correct": true,
+       "why": "Right: without oxygen at the end of the chain, carriers stay loaded and the cycle runs out of empty NAD⁺ and FAD."
+      },
+      {
+       "id": "b",
+       "text": "The cycle needs oxygen to release CO₂ from the acetyl-CoA",
+       "why": "The CO₂ comes from the fuel's own carbons; no oxygen is used inside the cycle."
+      },
+      {
+       "id": "c",
+       "text": "Lactate would build up and block the cycle's enzymes",
+       "why": "Lactate is not the brake; the cycle stops because its carriers can't be unloaded."
+      },
+      {
+       "id": "d",
+       "text": "Glycolysis would stop making pyruvate without oxygen",
+       "why": "Glycolysis runs without oxygen; it would keep going, turning more pyruvate into lactate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-gradient",
+   "concept": "ox-etc",
+   "bloom": "understand",
+   "sources": [
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What directly drives ATP synthase to make ATP in the mitochondria?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Protons flowing back across the inner membrane",
+       "correct": true,
+       "why": "Right: the transport chain pumps protons out; their flow back through ATP synthase makes ATP."
+      },
+      {
+       "id": "b",
+       "text": "Electrons flowing through the ATP synthase",
+       "why": "Electrons flow along the chain's complexes, not through ATP synthase; they only pump the protons."
+      },
+      {
+       "id": "c",
+       "text": "Oxygen binding to the ATP synthase",
+       "why": "Oxygen binds at the end of the chain, not at ATP synthase."
+      },
+      {
+       "id": "d",
+       "text": "NADH splitting at the ATP synthase",
+       "why": "NADH gives its electrons to the start of the chain; ATP synthase runs on the proton gradient."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-yield-compare",
+   "concept": "ox-yield",
+   "bloom": "apply",
+   "sources": [
+    "judge2020",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Fully oxidised, one blood glucose gives about 31 ATP; turned into lactate, it gives 2. About how many times more ATP does full oxidation give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 15 times",
+       "correct": true,
+       "why": "Right: 31 ÷ 2 ≈ 15."
+      },
+      {
+       "id": "b",
+       "text": "About 10 times",
+       "why": "This divides by 3, the glycolytic yield of a glycogen unit, not of blood glucose."
+      },
+      {
+       "id": "c",
+       "text": "About 29 times",
+       "why": "This subtracts (31 − 2) instead of dividing: that's the extra ATP, not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "About 19 times",
+       "why": "This uses the old textbook 38 ATP (38 ÷ 2). Modern P/O ratios give about 30–32."
+      }
+     ],
+     "solution": "Ratio = ATP from full oxidation ÷ ATP from glycolysis to lactate = 31 ÷ 2 ≈ 15."
+    },
+    {
+     "id": "b",
+     "stem": "Fully oxidised, one glucose unit from glycogen gives about 32 ATP; turned into lactate, it gives 3. About how many times more ATP does full oxidation give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 11 times",
+       "correct": true,
+       "why": "Right: 32 ÷ 3 ≈ 11."
+      },
+      {
+       "id": "b",
+       "text": "About 16 times",
+       "why": "This divides by 2, the glycolytic yield of blood glucose; a glycogen unit gives 3."
+      },
+      {
+       "id": "c",
+       "text": "About 29 times",
+       "why": "This subtracts (32 − 3) instead of dividing: that's the extra ATP, not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "About 13 times",
+       "why": "This uses the old textbook figure (39 for glycogen, ÷ 3). Modern P/O ratios give about 31–33."
+      }
+     ],
+     "solution": "Ratio = 32 ÷ 3 ≈ 11. A glycogen unit gives one more ATP in glycolysis, so the ratio is smaller than for blood glucose."
+    }
+   ]
+  },
+  {
+   "id": "ox-yield-calc",
+   "concept": "ox-yield",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hinkle2005",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One glucose gives 10 NADH, 2 FADH₂ and 4 ATP made directly. With P/O ratios of 2.5 for NADH and 1.5 for FADH₂, and all NADH counted at 2.5, how many ATP in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "32 ATP",
+       "correct": true,
+       "why": "Right: 10 × 2.5 + 2 × 1.5 + 4 = 25 + 3 + 4 = 32."
+      },
+      {
+       "id": "b",
+       "text": "28 ATP",
+       "why": "This forgets the 4 ATP made directly in glycolysis and the Krebs cycle."
+      },
+      {
+       "id": "c",
+       "text": "38 ATP",
+       "why": "This uses the old whole-number ratios of 3 and 2: 30 + 4 + 4."
+      },
+      {
+       "id": "d",
+       "text": "30 ATP",
+       "why": "That's the answer when glycolysis' 2 NADH enter by the glycerol-phosphate shuttle (1.5 each); here all count at 2.5."
+      }
+     ],
+     "solution": "NADH: 10 × 2.5 = 25. FADH₂: 2 × 1.5 = 3. Direct: 4. Total = 32 ATP."
+    },
+    {
+     "id": "b",
+     "stem": "A glucose unit from glycogen gives 10 NADH, 2 FADH₂ and 5 ATP made directly. Glycolysis' 2 NADH enter by the glycerol-phosphate shuttle (1.5 ATP each); the other 8 NADH give 2.5 each, FADH₂ 1.5 each. How many ATP in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "31 ATP",
+       "correct": true,
+       "why": "Right: 8 × 2.5 + 2 × 1.5 + 2 × 1.5 + 5 = 20 + 3 + 3 + 5 = 31."
+      },
+      {
+       "id": "b",
+       "text": "33 ATP",
+       "why": "This counts all 10 NADH at 2.5 and ignores the shuttle: 25 + 3 + 5."
+      },
+      {
+       "id": "c",
+       "text": "30 ATP",
+       "why": "This uses 4 direct ATP, as for blood glucose; a glycogen unit gives one more in glycolysis."
+      },
+      {
+       "id": "d",
+       "text": "39 ATP",
+       "why": "This uses the old whole-number ratios of 3 and 2: 30 + 4 + 5."
+      }
+     ],
+     "solution": "Mitochondrial NADH: 8 × 2.5 = 20. Shuttled NADH: 2 × 1.5 = 3. FADH₂: 2 × 1.5 = 3. Direct: 5. Total = 31 ATP."
+    },
+    {
+     "id": "c",
+     "stem": "Older textbooks used whole-number P/O ratios: 3 for NADH and 2 for FADH₂. With 10 NADH, 2 FADH₂ and 4 ATP made directly per glucose, what total did they get?",
+     "options": [
+      {
+       "id": "a",
+       "text": "38 ATP",
+       "correct": true,
+       "why": "Right: 10 × 3 + 2 × 2 + 4 = 30 + 4 + 4 = 38."
+      },
+      {
+       "id": "b",
+       "text": "32 ATP",
+       "why": "That is the modern figure, with ratios of 2.5 and 1.5; the question asks for the old ratios."
+      },
+      {
+       "id": "c",
+       "text": "34 ATP",
+       "why": "This forgets the 4 ATP made directly in glycolysis and the Krebs cycle."
+      },
+      {
+       "id": "d",
+       "text": "36 ATP",
+       "why": "36 is what old textbooks gave when glycolysis' NADH came in by the shuttle (2 instead of 3 each); here all NADH count at 3."
+      }
+     ],
+     "solution": "NADH: 10 × 3 = 30. FADH₂: 2 × 2 = 4. Direct: 4. Total = 38 ATP, the old textbook figure; measured ratios give about 30–32."
+    }
+   ]
+  },
+  {
+   "id": "ox-po",
+   "concept": "ox-yield",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hinkle2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how many ATP are made per oxygen atom used when the electrons come from NADH?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.5",
+       "correct": true,
+       "why": "Right: the measured P/O ratio for NADH-linked substrates is about 2.5."
+      },
+      {
+       "id": "b",
+       "text": "About 1.5",
+       "why": "That is the ratio for electrons from FADH₂ (succinate), which enter the chain later."
+      },
+      {
+       "id": "c",
+       "text": "Exactly 3",
+       "why": "3 is the old whole-number value; the real ratios are fractions set by proton pumping."
+      },
+      {
+       "id": "d",
+       "text": "About 30",
+       "why": "About 30–32 is the ATP per glucose, not per oxygen atom."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-slow-scenario",
+   "concept": "ox-slow",
+   "bloom": "analyse",
+   "sources": [
+    "rowland2026",
+    "gastin2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner holds race pace for over 2 hours almost entirely on oxidative ATP, yet can't power the final 200 m sprint with it alone. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its top rate is limited by oxygen delivery and its many steps",
+       "correct": true,
+       "why": "Right: the aerobic route has huge capacity but a limited maximal rate, so sprints need PCr and glycolysis on top."
+      },
+      {
+       "id": "b",
+       "text": "It has run out of fuel after 2 hours of running",
+       "why": "Capacity isn't the problem: fat stores alone could fuel days of running. The limit is rate."
+      },
+      {
+       "id": "c",
+       "text": "It can only burn fat, which is too slow to sprint",
+       "why": "Oxidative phosphorylation burns both carbohydrate and fat; even on carbohydrate its maximal rate is below glycolysis."
+      },
+      {
+       "id": "d",
+       "text": "It shuts down as soon as lactate starts to rise",
+       "why": "It keeps running at its maximum during a sprint; the anaerobic routes add ATP on top."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ox-old-38",
+   "concept": "ox-yield",
+   "bloom": "evaluate",
+   "sources": [
+    "hinkle2005",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 1990s textbook says one glucose yields 38 ATP when fully oxidised. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too high: measured P/O ratios of about 2.5 and 1.5 give about 30–32",
+       "correct": true,
+       "why": "Right: 38 came from assumed whole-number ratios of 3 and 2; measured ratios are fractional."
+      },
+      {
+       "id": "b",
+       "text": "Correct: 38 is the exact yield in human muscle",
+       "why": "The yield isn't fixed: it depends on the NADH shuttle and on how tightly the mitochondria are coupled, and the best estimate is 30–32."
+      },
+      {
+       "id": "c",
+       "text": "Too low: modern data give well over 40 ATP",
+       "why": "Modern data revised the figure down, not up."
+      },
+      {
+       "id": "d",
+       "text": "Correct, but only when the glucose comes from glycogen",
+       "why": "Glycogen adds just one ATP (in glycolysis); it can't close the gap from 30–32 to 38."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

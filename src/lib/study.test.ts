@@ -75,6 +75,22 @@ describe("answer", () => {
     expect((await counts("u1")).confidentMisses).toBe(0);
   });
 
+  it("logs exam answers without scheduling, and brings a missed one back now", async () => {
+    await answer("u1", { ...base, optionId: "a", sure: true, context: "lesson" });
+    expect(await dueItems("u1")).toEqual([]);
+    await answer("u1", {
+      ...base,
+      variantId: "v2",
+      optionId: "b",
+      sure: true,
+      context: "exam",
+      seenReps: 1,
+    });
+    const [state] = await db.select().from(itemStates);
+    expect(state?.fsrs.reps).toBe(1);
+    expect((await dueItems("u1")).map((d) => d.itemId)).toEqual(["q1"]);
+  });
+
   it("ignores questions retired from the content", async () => {
     await db.insert(itemStates).values({
       userId: "u1",

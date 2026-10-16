@@ -1,0 +1,838 @@
+{
+ "id": "bio-fat-ox",
+ "module": "t1a-bioenergetics",
+ "title": "Fat oxidation: a huge tank with a narrow tap",
+ "goal": "Explain where fat for exercise comes from, how beta-oxidation burns it, why its rate can't support high intensities, what Fatmax is, and what the evidence says about sex differences.",
+ "requires": [
+  "bio-oxidative"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "fat-source-scenario",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "fat-stores",
+   "title": "Two fat stores: adipose tissue and IMTG",
+   "text": "Fat is the body's big fuel tank. A lean athlete (7–14% body fat) carries about 125,000 kJ (over 30,000 kcal) in adipose tissue [[c:adipose-store]], enough for days of riding. Fat for exercise comes mainly from two stores [[c:fat-sources]]:\n\n- **Adipose tissue**, under the skin and around the organs. Its fat is split into fatty acids that travel in the blood to the muscle.\n- **[IMTG](g:imtg)**: fat droplets inside the fibres, next to the mitochondria, with no trip through the blood.\n\nWhich store is used depends on intensity. In trained subjects, fatty-acid release from adipose tissue was highest at the lowest intensity (25% VO₂max) and fell as intensity rose, while IMTG breakdown switched on only at higher intensities [[c:fat-intensity-source]].",
+   "claims": [
+    {
+     "id": "adipose-store",
+     "text": "A person with 7–14% body fat stores over 30,000 kcal of energy in adipose tissue.",
+     "grade": "moderate",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "A person with 7–14% body fat has >30,000 kcal of energy reserves stored in adipose tissue",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "fat-sources",
+     "text": "Fat oxidised in exercise comes from adipose-tissue fatty acids, intramuscular triglyceride, and minor sources such as dietary fat.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "Lipids as a fuel source for energy supply during submaximal exercise originate from subcutaneous adipose tissue derived fatty acids (FA), intramuscular triacylglycerides (IMTG), cholesterol and dietary fat.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fat-intensity-source",
+     "text": "Peripheral lipolysis is highest at low intensity and plasma fatty-acid release falls as intensity rises, while muscle triglyceride breakdown is stimulated only at higher intensities.",
+     "grade": "weak",
+     "sources": [
+      "romijn1993",
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "romijn1993",
+       "quote": "In contrast, peripheral lipolysis was stimulated maximally at the lowest exercise intensity, and fatty acid release into plasma decreased with increasing exercise intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "romijn1993",
+       "quote": "Muscle triglyceride lipolysis was stimulated only at higher intensities.",
+       "level": "abstract"
+      },
+      {
+       "source": "purdom2018",
+       "quote": "At 25% VO2max, FAox comprises >90% of energy expenditure and more specifically plasma FAs provide the largest energy contribution, where muscle glycogen and IMTG contribute very little",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-source-scenario",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "fat-beta",
+   "title": "Beta-oxidation: two carbons at a time",
+   "text": "A fatty acid is a long carbon chain; palmitate, a common one, has 16 carbons. To burn it, the fibre first activates it (this costs ATP) and then moves it into the mitochondria. Long chains can't cross the inner membrane on their own: the [carnitine shuttle](g:carnitine-shuttle), run by the enzyme CPT1, carries them in [[c:carnitine]].\n\nInside, [beta-oxidation](g:beta-oxidation) cuts the chain two carbons at a time. Each turn makes one acetyl-CoA, one NADH and one FADH₂ [[c:beta-ox]]. The acetyl-CoA joins the same Krebs cycle as carbohydrate.\n\nThe payoff is large: one palmitate gives about **106 ATP**, against about 31 for one glucose [[c:palmitate-yield]].",
+   "claims": [
+    {
+     "id": "carnitine",
+     "text": "Long-chain fatty acids can't cross the inner mitochondrial membrane and are carried in by the carnitine shuttle.",
+     "grade": "strong",
+     "sources": [
+      "baker2010",
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "The inner mitochondrial membrane is impermeable to long chain fatty acids; therefore the fatty acyl CoA molecules are transported into the mitochondria via the carnitine shuttle",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "beta-ox",
+     "text": "Beta-oxidation removes two carbons per turn as acetyl-CoA, making one NADH and one FADH₂ each time.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "Once inside the mitochondria, saturated fatty acids, such as palmitate, are sequentially degraded two carbons at a time in the four reaction β-oxidation pathway, releasing acetyl CoA, 1 NADH, and 1 FADH per cycle",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "palmitate-yield",
+     "text": "Full oxidation of one palmitate yields about 106 ATP: its NADH, FADH₂ and direct ATP add up to 108, minus 2 ATP spent on activation.",
+     "grade": "strong",
+     "sources": [
+      "fu2021",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "fu2021",
+       "quote": "In the presence of oxygen, the complete oxidation of one glucose molecule yields 30–32 ATP molecules, whereas one palmitate molecule yields 106 ATP molecules.",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "77.5 ATP (from NADH) + 22.5 ATP (from FADH₂) + 8 ATP = 108 ATP",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-beta-product"
+  },
+  {
+   "type": "question",
+   "item": "fat-carnitine"
+  },
+  {
+   "type": "question",
+   "item": "fat-palmitate-ratio"
+  },
+  {
+   "type": "concept",
+   "id": "fat-rate",
+   "title": "Why fat can't power hard efforts",
+   "text": "With that much fuel and that much ATP per molecule, why not race on fat? Because of **rate**: beta-oxidation is slow and fully oxygen-dependent [[c:fat-slow]].\n\nIn cyclists, whole-body fat oxidation rose to 32 kJ·min⁻¹ at 55% of maximal power, then **fell** to 19 kJ·min⁻¹ at 75% [[c:fat-falls]]. The likely brake is the carnitine shuttle: fast glycolysis ties up free carnitine, and falling pH may slow CPT1, so fatty acids can't get into the mitochondria fast enough [[c:cpt1-brake]].\n\nFat also gives less ATP per litre of oxygen than carbohydrate [[c:cho-o2]]. When oxygen is what limits you, carbohydrate gets more work out of each breath.",
+   "claims": [
+    {
+     "id": "fat-slow",
+     "text": "Beta-oxidation is relatively slow and oxygen-dependent; limits to fatty-acid transport across the cell and mitochondrial membranes cap fat oxidation at higher intensities.",
+     "grade": "strong",
+     "sources": [
+      "rowland2026",
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "rowland2026",
+       "quote": "Despite this high yield, beta-oxidation is relatively slow and ultimately oxygen-dependent, making it unsuitable for rapid or high-intensity efforts.",
+       "level": "full-text"
+      },
+      {
+       "source": "purdom2018",
+       "quote": "Due to limitations within FA transport across the cell and mitochondrial membranes, FAox is limited at higher exercise intensities.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fat-falls",
+     "text": "In cyclists, whole-body fat oxidation rose to 32 kJ·min⁻¹ at 55% Wmax and fell to 19 kJ·min⁻¹ at 75% Wmax.",
+     "grade": "weak",
+     "sources": [
+      "vanloon2001"
+     ],
+     "evidence": [
+      {
+       "source": "vanloon2001",
+       "quote": "Whole-body fat oxidation increased to 32 +/- 2 kJ min(-1) at 55 % W(max), but declined at 75 % W(max) (19 +/- 2 kJ min(-1)).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cpt1-brake",
+     "text": "The fall in fat oxidation at high intensity is most likely due to downregulation of CPT1, by a fall in free carnitine or in intracellular pH.",
+     "grade": "weak",
+     "sources": [
+      "vanloon2001"
+     ],
+     "evidence": [
+      {
+       "source": "vanloon2001",
+       "quote": "We conclude that the most likely mechanism for the reduction in fat oxidation during high-intensity exercise is a downregulation of carnitine palmitoyltransferase I, either by this marked decline in free carnitine availability or by a decrease in intracellular pH.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cho-o2",
+     "text": "Carbohydrate oxidation yields more ATP per oxygen used than fat oxidation.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "The higher ATP yield means that for a given rate of ATP regeneration there would be less demand for oxygen consumption.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-rate-scenario"
+  },
+  {
+   "type": "question",
+   "item": "fat-o2-cost"
+  },
+  {
+   "type": "concept",
+   "id": "fat-fatmax",
+   "title": "Fatmax: where fat burning peaks",
+   "text": "Plot fat oxidation per minute against intensity and you get a hill. Its top is [Fatmax](g:fatmax).\n\nIn moderately trained cyclists, Fatmax was at about **64% VO₂max**, with a broad zone (55–72%) within 10% of the peak. Above about 89% VO₂max, fat's contribution became negligible [[c:fatmax-cyclists]].\n\nIn 300 healthy men and women tested on a treadmill, Fatmax was lower, at about **48% VO₂max**, and maximal fat oxidation varied a lot between people. Fitness, physical activity and sex together explained only 12% of that variation [[c:fatmax-variation]].\n\nSo Fatmax is personal and has to be measured; a fixed \"fat-burning zone\" on a watch is a rough guess.",
+   "claims": [
+    {
+     "id": "fatmax-cyclists",
+     "text": "In moderately trained cyclists, Fatmax was about 64% VO₂max (zone 55–72%), and fat's contribution became negligible above about 89% VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "achten2002"
+     ],
+     "evidence": [
+      {
+       "source": "achten2002",
+       "quote": "Fat(max) was equivalent to 64 +/- 4%VO(2max) and 74 +/- 3%HR(max).",
+       "level": "abstract"
+      },
+      {
+       "source": "achten2002",
+       "quote": "The Fat(max) zone (range of intensities with fat oxidation rates within 10% of the peak rate) was located between 55 +/- 3 and 72 +/- 4%VO(2max).",
+       "level": "abstract"
+      },
+      {
+       "source": "achten2002",
+       "quote": "The contribution of fat oxidation to energy expenditure became negligible above 89 +/- 3%VO(2max) (92 +/- 1%HR(max)).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fatmax-variation",
+     "text": "In 300 adults, Fatmax averaged about 48% VO₂max and physical activity, VO₂max and sex explained only 12% of the variation in maximal fat oxidation.",
+     "grade": "weak",
+     "sources": [
+      "venables2005"
+     ],
+     "evidence": [
+      {
+       "source": "venables2005",
+       "quote": "On average, MFO was 7.8 +/- 0.13 mg.kg fat-free mass (FFM)(-1).min(-1) and occurred at 48.3 +/- 0.9% maximal oxygen uptake (Vo(2 max)), equivalent to 61.5 +/- 0.6% maximal heart rate.",
+       "level": "abstract"
+      },
+      {
+       "source": "venables2005",
+       "quote": "Physical activity, Vo(2 max), and gender explained only 12% of the interindividual variation in MFO during exercise, whereas body fatness was not a predictor.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-fatmax-apply"
+  },
+  {
+   "type": "question",
+   "item": "fat-appraisal",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "fat-sex",
+   "title": "Do women burn more fat?",
+   "text": "Many lab studies find that women oxidise more fat and less carbohydrate than men in endurance exercise, linked to greater use of IMTG and to oestrogen [[c:sex-more-fat]]. In the 300-person study, women had a higher maximal fat oxidation per kg of fat-free mass and a higher Fatmax (52 vs 45% VO₂max).\n\nA 2026 meta-analysis of 36 studies (8,990 people) disagrees in part. Relative to body size, women's maximal fat oxidation and Fatmax did not differ significantly from men's; in absolute terms (grams per minute), women's was lower [[c:sex-meta]]. Age, BMI, fitness and treadmill vs bike all shifted the result.\n\nFair summary: a difference often appears, but its size and direction depend on who is tested and how.",
+   "claims": [
+    {
+     "id": "sex-more-fat",
+     "text": "Women oxidise more fat and less carbohydrate than men during endurance exercise, with greater intramyocellular lipid use, partly through oestrogen.",
+     "grade": "disputed",
+     "sources": [
+      "tarnopolsky2008",
+      "venables2005"
+     ],
+     "evidence": [
+      {
+       "source": "tarnopolsky2008",
+       "quote": "Women oxidize more lipid and less carbohydrate and protein compared with men during endurance exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "tarnopolsky2008",
+       "quote": "The increase in fat oxidation is associated with higher intramyocellular lipid content and use as well as greater adipocyte lipolysis.",
+       "level": "abstract"
+      },
+      {
+       "source": "tarnopolsky2008",
+       "quote": "The greater fat oxidation for women during submaximal endurance exercise compared with men seems to occur partly through a sex hormone-mediated enhancement of lipid-oxidation pathways.",
+       "level": "abstract"
+      },
+      {
+       "source": "venables2005",
+       "quote": "MFO (7.4 +/- 0.2 vs. 8.3 +/- 0.2 mg.kg.FFM(-1).min(-1); P < 0.01) and Fat(max) (45 +/- 1 vs. 52 +/- 1% Vo(2 max); P < 0.01) were significantly lower in men compared with women.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sex-meta",
+     "text": "Pooled across 36 studies, absolute maximal fat oxidation was lower in women, with no significant sex difference in relative MFO or Fatmax.",
+     "grade": "disputed",
+     "sources": [
+      "ferrimarini2026"
+     ],
+     "evidence": [
+      {
+       "source": "ferrimarini2026",
+       "quote": "Absolute MFO was significantly lower in females (MD: -0.06 g/min), but no significant differences were observed in relative MFO (standardized mean difference: 0.202, p = .096) or FATmax (mean difference: 1.29% VO2max, p = .254).",
+       "level": "abstract"
+      },
+      {
+       "source": "ferrimarini2026",
+       "quote": "This review questions the assumption that women consistently oxidize more fat than men during exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do women oxidise more fat than men during endurance exercise?",
+    "sides": [
+     {
+      "position": "Yes: at the same relative intensity women oxidise more fat and less carbohydrate, with higher IMTG use, partly through oestrogen.",
+      "sources": [
+       "tarnopolsky2008",
+       "venables2005"
+      ]
+     },
+     {
+      "position": "Not consistently: pooled data show no significant difference in relative maximal fat oxidation or Fatmax; age, BMI, fitness and exercise mode decide.",
+      "sources": [
+       "ferrimarini2026"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fat-sex-absolute"
+  },
+  {
+   "type": "question",
+   "item": "fat-sex-debate"
+  },
+  {
+   "type": "question",
+   "item": "fat-appraisal",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Fat comes from adipose tissue (huge: about 125,000 kJ, over 30,000 kcal, even when lean) and from IMTG droplets inside the fibres.",
+    "Fatty acids enter the mitochondria by the carnitine shuttle; beta-oxidation cuts them two carbons at a time into acetyl-CoA, NADH and FADH₂.",
+    "One palmitate gives about 106 ATP, but the rate is low: fat oxidation peaks at moderate intensity and falls at high intensity, likely through a slowed carnitine shuttle.",
+    "Carbohydrate gives more ATP per litre of oxygen, which matters when oxygen is the limit.",
+    "Fatmax is around 45–65% VO₂max and varies a lot between people; sex differences in fat oxidation are real in many studies but not consistent."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fat-source-scenario",
+   "concept": "fat-stores",
+   "bloom": "apply",
+   "sources": [
+    "romijn1993",
+    "purdom2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An Ironman triathlete rides an easy recovery spin at about 25% VO₂max. Where does most of the fat she burns come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatty acids carried in the blood from adipose tissue",
+       "correct": true,
+       "why": "Right: at low intensity adipose lipolysis is at its highest and plasma fatty acids supply most of the energy."
+      },
+      {
+       "id": "b",
+       "text": "Triglyceride droplets inside her muscle fibres",
+       "why": "IMTG breakdown is switched on mainly at higher intensities; at 25% VO₂max its share is very small."
+      },
+      {
+       "id": "c",
+       "text": "Fat from the meal she ate an hour before",
+       "why": "Dietary fat is digested slowly and is only a minor source; adipose tissue supplies most of the fat."
+      },
+      {
+       "id": "d",
+       "text": "Muscle glycogen converted into fat on the spot",
+       "why": "Muscle does not turn glycogen into fat during exercise; at this intensity glycogen use is very low anyway."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner jogs very easily, at about 25% VO₂max. Which statement about her fuel is most likely true?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Over 90% of the energy comes from fat, mostly from the blood",
+       "correct": true,
+       "why": "Right: at 25% VO₂max fat supplies over 90% of the energy, mostly plasma fatty acids from adipose tissue."
+      },
+      {
+       "id": "b",
+       "text": "About half of the energy comes from muscle glycogen",
+       "why": "Glycogen contributes very little this easy; its share grows as intensity rises."
+      },
+      {
+       "id": "c",
+       "text": "Most of the fat comes from droplets inside the fibres",
+       "why": "IMTG contributes very little at 25% VO₂max; it is used more at moderate and higher intensities."
+      },
+      {
+       "id": "d",
+       "text": "Carbohydrate and fat each supply about half the energy",
+       "why": "A 50:50 mix fits moderate intensities; at very low intensity fat dominates."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-beta-product",
+   "concept": "fat-beta",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does each turn of beta-oxidation produce from a fatty acid?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One acetyl-CoA, one NADH and one FADH₂",
+       "correct": true,
+       "why": "Right: each turn removes two carbons as acetyl-CoA and loads one NADH and one FADH₂."
+      },
+      {
+       "id": "b",
+       "text": "One pyruvate and two ATP",
+       "why": "Pyruvate and two ATP are products of glycolysis, which handles sugar, not fat."
+      },
+      {
+       "id": "c",
+       "text": "One glucose and one CO₂",
+       "why": "Muscle cannot turn fatty acids into glucose; their carbons go to acetyl-CoA."
+      },
+      {
+       "id": "d",
+       "text": "One lactate and one NAD⁺",
+       "why": "The lactate step belongs to glycolysis; fat breakdown makes no lactate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-carnitine",
+   "concept": "fat-beta",
+   "bloom": "understand",
+   "sources": [
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do long-chain fatty acids need the carnitine shuttle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The inner mitochondrial membrane won't let them through",
+       "correct": true,
+       "why": "Right: that membrane is impermeable to long chains, so carnitine and CPT1 carry them in."
+      },
+      {
+       "id": "b",
+       "text": "They must be turned into glucose before burning",
+       "why": "Fatty acids are never turned into glucose in muscle; they go straight to beta-oxidation."
+      },
+      {
+       "id": "c",
+       "text": "They need a carrier to travel in the blood",
+       "why": "In the blood they ride on albumin; carnitine works at the mitochondria, inside the fibre."
+      },
+      {
+       "id": "d",
+       "text": "Carnitine cuts them into two-carbon pieces",
+       "why": "Cutting into two-carbon pieces is beta-oxidation itself, after the shuttle has carried them in."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-palmitate-ratio",
+   "concept": "fat-beta",
+   "bloom": "apply",
+   "sources": [
+    "fu2021",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One palmitate gives about 106 ATP when fully oxidised; one glucose gives about 31. About how many times more ATP does one palmitate give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3.4 times",
+       "correct": true,
+       "why": "Right: 106 ÷ 31 ≈ 3.4."
+      },
+      {
+       "id": "b",
+       "text": "About 2.7 times",
+       "why": "This is the ratio of carbons (16 ÷ 6). Fat carbons are more reduced, so each gives more ATP than a glucose carbon."
+      },
+      {
+       "id": "c",
+       "text": "About 75 times",
+       "why": "This subtracts (106 − 31) instead of dividing: that's the extra ATP, not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "About 53 times",
+       "why": "This divides by 2, the glycolytic yield of glucose; full oxidation of glucose gives about 31."
+      }
+     ],
+     "solution": "Ratio = 106 ÷ 31 ≈ 3.4. Per molecule, fat is a much richer fuel."
+    }
+   ]
+  },
+  {
+   "id": "fat-rate-scenario",
+   "concept": "fat-rate",
+   "bloom": "analyse",
+   "sources": [
+    "vanloon2001",
+    "purdom2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's fat oxidation drops from 32 to 19 kJ·min⁻¹ as she goes from 55% to 75% of maximal power, though her fat stores are huge. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatty acids can't enter her mitochondria fast enough",
+       "correct": true,
+       "why": "Right: the carnitine shuttle (CPT1) is slowed at high intensity, likely by lower free carnitine or pH, so fat oxidation falls."
+      },
+      {
+       "id": "b",
+       "text": "Her fat stores are starting to run empty",
+       "why": "Stores of about 125,000 kJ (over 30,000 kcal) can't empty in one ride; the limit is the rate, not the tank."
+      },
+      {
+       "id": "c",
+       "text": "Fat burns without oxygen, so it can't keep up",
+       "why": "Fat oxidation is fully oxygen-dependent; it is the anaerobic routes that use no oxygen."
+      },
+      {
+       "id": "d",
+       "text": "Her lactate is turning the fat into glycogen",
+       "why": "Lactate does not convert fat into glycogen; fat can't be turned into carbohydrate in muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-o2-cost",
+   "concept": "fat-rate",
+   "bloom": "understand",
+   "sources": [
+    "baker2010",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Near the top of a hard climb, oxygen supply limits a rider. Why is carbohydrate the better fuel then?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It gives more ATP per litre of oxygen",
+       "correct": true,
+       "why": "Right: per litre of oxygen, carbohydrate yields more ATP (and more energy) than fat."
+      },
+      {
+       "id": "b",
+       "text": "It gives more ATP per gram of fuel",
+       "why": "The opposite: fat gives far more ATP per gram. The advantage of carbohydrate is per litre of oxygen."
+      },
+      {
+       "id": "c",
+       "text": "Its full oxidation needs no oxygen",
+       "why": "Only glycolysis runs without oxygen; full oxidation of carbohydrate needs oxygen like fat does."
+      },
+      {
+       "id": "d",
+       "text": "It is stored inside the mitochondria",
+       "why": "Glycogen sits in the cytosol; the advantage is in the chemistry, not the storage site."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-fatmax-apply",
+   "concept": "fat-fatmax",
+   "bloom": "apply",
+   "sources": [
+    "achten2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's lab test puts her Fatmax at 64% VO₂max, with a Fatmax zone of 55–72%. She wants the ride that burns the most fat per minute. Which intensity fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60–65% VO₂max",
+       "correct": true,
+       "why": "Right: that is inside her Fatmax zone, where fat oxidation per minute is at its peak."
+      },
+      {
+       "id": "b",
+       "text": "About 30% VO₂max",
+       "why": "Fat's share of energy is highest this easy, but total energy use is so low that fat burned per minute is smaller."
+      },
+      {
+       "id": "c",
+       "text": "About 85% VO₂max",
+       "why": "Above Fatmax, fat oxidation drops steeply; near 89% VO₂max it becomes negligible."
+      },
+      {
+       "id": "d",
+       "text": "Any intensity, if the ride is long",
+       "why": "Duration matters too, but per minute the rate depends strongly on intensity; that's what Fatmax describes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-appraisal",
+   "concept": "fat-fatmax",
+   "bloom": "evaluate",
+   "sources": [
+    "venables2005",
+    "achten2002",
+    "ferrimarini2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a cross-sectional study of 300 adults, VO₂max, physical activity and sex together explained 12% of the variation in maximal fat oxidation. What does this most limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Predicting one person's fat oxidation from those traits",
+       "correct": true,
+       "why": "Right: 88% of the variation is unexplained, so an individual's fat oxidation has to be measured, not guessed."
+      },
+      {
+       "id": "b",
+       "text": "Trusting the average, since 300 people is a small sample",
+       "why": "300 is a large sample for this kind of lab study; the average is precise. The spread between people is the problem."
+      },
+      {
+       "id": "c",
+       "text": "Applying it to women, since only men were tested",
+       "why": "143 of the 300 were women; the study included both sexes."
+      },
+      {
+       "id": "d",
+       "text": "Using any of it, since cross-sectional data prove nothing",
+       "why": "Overreach: cross-sectional data describe associations well; they just can't show cause and effect."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Fatmax at 64% VO₂max came from 18 moderately trained cyclists tested on a bike. What most limits applying that number to a recreational runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatmax differs between people and between bike and treadmill",
+       "correct": true,
+       "why": "Right: a large treadmill study found about 48% VO₂max on average, and exercise mode shifts fat oxidation; she should be measured."
+      },
+      {
+       "id": "b",
+       "text": "Indirect calorimetry cannot measure fat oxidation",
+       "why": "Indirect calorimetry is the standard method for whole-body fat oxidation; the issue is who was tested."
+      },
+      {
+       "id": "c",
+       "text": "The study had no control group, so Fatmax is invalid",
+       "why": "This was a methods study measuring a curve in each person; it didn't need a control group."
+      },
+      {
+       "id": "d",
+       "text": "Percent of VO₂max cannot be compared between people",
+       "why": "Expressing intensity as % VO₂max is what makes people comparable; the problem is that Fatmax itself varies between people and sports."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-sex-absolute",
+   "concept": "fat-sex",
+   "bloom": "analyse",
+   "sources": [
+    "ferrimarini2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis found women's maximal fat oxidation lower than men's in grams per minute, but not significantly different relative to body size. How can both be true?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Women are smaller on average, so less in total but similar per kg",
+       "correct": true,
+       "why": "Right: absolute rates scale with body size and muscle mass; scaling to body size removes most of the gap."
+      },
+      {
+       "id": "b",
+       "text": "One of the two results must be a calculation error",
+       "why": "Absolute and relative values answer different questions; both can hold at once."
+      },
+      {
+       "id": "c",
+       "text": "Women burn more carbohydrate per kg than men",
+       "why": "The finding is about fat; nothing in it says women burn more carbohydrate."
+      },
+      {
+       "id": "d",
+       "text": "Men have a much higher Fatmax than women",
+       "why": "The meta-analysis found no significant sex difference in Fatmax."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-sex-debate",
+   "concept": "fat-sex",
+   "bloom": "evaluate",
+   "sources": [
+    "tarnopolsky2008",
+    "ferrimarini2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A female triathlete reads: \"Women burn mostly fat, so they barely need carbohydrate in races.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: any sex difference is modest, inconsistent, and race pace still runs largely on carbohydrate",
+       "correct": true,
+       "why": "Right: many studies find somewhat more fat use in women, a meta-analysis found no clear relative difference, and fat oxidation falls at race intensities in both sexes."
+      },
+      {
+       "id": "b",
+       "text": "Correct: women oxidise so much fat that carbohydrate stops mattering",
+       "why": "Even where women oxidise more fat, the difference is modest; at hard race intensities carbohydrate dominates."
+      },
+      {
+       "id": "c",
+       "text": "Wrong the other way: men always oxidise more fat than women",
+       "why": "Most studies that find a difference find it in women's favour; none show men always higher."
+      },
+      {
+       "id": "d",
+       "text": "Correct, but only at intensities well above her Fatmax",
+       "why": "Above Fatmax fat oxidation falls in everyone; that's where carbohydrate matters most."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

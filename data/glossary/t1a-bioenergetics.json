@@ -1,11 +1,147 @@
 {
- "atp": { "term": "ATP (adenosine triphosphate)", "short": "The molecule whose splitting (hydrolysis) to ADP and phosphate powers muscle contraction and ion pumps. The only energy currency muscle spends directly.", "lesson": "bio-atp" },
- "adp": { "term": "ADP (adenosine diphosphate)", "short": "What is left of ATP after one phosphate is split off. Rising ADP is a signal that drives ATP resynthesis.", "lesson": "bio-atp" },
- "hydrolysis": { "term": "Hydrolysis", "short": "Splitting a molecule with water. ATP hydrolysis (ATP + H₂O → ADP + Pi) releases the energy muscles use.", "lesson": "bio-atp" },
- "cross-bridge": { "term": "Cross-bridge", "short": "The link a myosin head makes with actin. Each attach–pull–detach cycle splits one ATP and moves the filaments a few nanometres.", "lesson": "bio-atp" },
- "pcr": { "term": "PCr (phosphocreatine)", "short": "A high-energy phosphate store in muscle that rebuilds ATP almost instantly via creatine kinase. About three times the ATP store; mostly used within 10–30 s of an all-out effort.", "lesson": "bio-pcr" },
- "creatine-kinase": { "term": "Creatine kinase (CK)", "short": "The enzyme that moves a phosphate from PCr to ADP, making ATP (PCr + ADP + H⁺ ⇌ creatine + ATP). Runs both ways; in recovery it rebuilds PCr.", "lesson": "bio-pcr" },
- "glycolysis": { "term": "Glycolysis", "short": "Breakdown of glucose or glycogen to pyruvate in the cytosol, making ATP fast without oxygen. Some pyruvate always becomes lactate; more does when it is made faster than the mitochondria take it up.", "lesson": "bio-atp" },
- "oxidative-phosphorylation": { "term": "Oxidative phosphorylation", "short": "ATP made in mitochondria using oxygen, from carbohydrate and fat. Slowest maximal rate of the three routes, but almost unlimited capacity.", "lesson": "bio-atp" },
- "time-constant": { "term": "Time constant (τ)", "short": "For an exponential process, the time to get 63% of the way to the end. Half-time = τ × ln 2 ≈ 0.69 τ.", "lesson": "bio-pcr" }
+ "atp": {
+  "term": "ATP (adenosine triphosphate)",
+  "short": "The molecule whose splitting (hydrolysis) to ADP and phosphate powers muscle contraction and ion pumps. The only energy currency muscle spends directly.",
+  "lesson": "bio-atp"
+ },
+ "adp": {
+  "term": "ADP (adenosine diphosphate)",
+  "short": "What is left of ATP after one phosphate is split off. Rising ADP is a signal that drives ATP resynthesis.",
+  "lesson": "bio-atp"
+ },
+ "hydrolysis": {
+  "term": "Hydrolysis",
+  "short": "Splitting a molecule with water. ATP hydrolysis (ATP + H₂O → ADP + Pi) releases the energy muscles use.",
+  "lesson": "bio-atp"
+ },
+ "cross-bridge": {
+  "term": "Cross-bridge",
+  "short": "The link a myosin head makes with actin. Each attach–pull–detach cycle splits one ATP and moves the filaments a few nanometres.",
+  "lesson": "bio-atp"
+ },
+ "pcr": {
+  "term": "PCr (phosphocreatine)",
+  "short": "A high-energy phosphate store in muscle that rebuilds ATP almost instantly via creatine kinase. About three times the ATP store; mostly used within 10–30 s of an all-out effort.",
+  "lesson": "bio-pcr"
+ },
+ "creatine-kinase": {
+  "term": "Creatine kinase (CK)",
+  "short": "The enzyme that moves a phosphate from PCr to ADP, making ATP (PCr + ADP + H⁺ ⇌ creatine + ATP). Runs both ways; in recovery it rebuilds PCr.",
+  "lesson": "bio-pcr"
+ },
+ "glycolysis": {
+  "term": "Glycolysis",
+  "short": "Breakdown of glucose or glycogen to pyruvate in the cytosol, making ATP fast without oxygen. Some pyruvate always becomes lactate; more does when it is made faster than the mitochondria take it up.",
+  "lesson": "bio-atp"
+ },
+ "oxidative-phosphorylation": {
+  "term": "Oxidative phosphorylation",
+  "short": "ATP made in mitochondria using oxygen, from carbohydrate and fat. Slowest maximal rate of the three routes, but almost unlimited capacity.",
+  "lesson": "bio-atp"
+ },
+ "time-constant": {
+  "term": "Time constant (τ)",
+  "short": "For an exponential process, the time to get 63% of the way to the end. Half-time = τ × ln 2 ≈ 0.69 τ.",
+  "lesson": "bio-pcr"
+ },
+ "pyruvate": {
+  "term": "Pyruvate",
+  "short": "The three-carbon end product of glycolysis. Either enters the mitochondria to be fully oxidised, or is turned into lactate in the cytosol.",
+  "lesson": "bio-glycolysis"
+ },
+ "glycogen": {
+  "term": "Glycogen",
+  "short": "The stored form of glucose: long branched chains kept in muscle and liver. Muscle glycogen is the main carbohydrate fuel in hard exercise.",
+  "lesson": "bio-glycolysis"
+ },
+ "nad": {
+  "term": "NAD⁺ / NADH",
+  "short": "An electron carrier. Glycolysis and the Krebs cycle load it with electrons (NAD⁺ → NADH); the electron transport chain or lactate formation unloads it.",
+  "lesson": "bio-glycolysis"
+ },
+ "phosphofructokinase": {
+  "term": "Phosphofructokinase (PFK)",
+  "short": "The enzyme of the committed step of glycolysis and its main control point: sped up by rising AMP when ATP is being used fast, slowed by acidity.",
+  "lesson": "bio-glycolysis"
+ },
+ "lactate": {
+  "term": "Lactate",
+  "short": "Made from pyruvate by lactate dehydrogenase, which also regenerates NAD⁺. Formed all the time, more when glycolysis is fast; a fuel, not a waste product.",
+  "lesson": "bio-glycolysis"
+ },
+ "acidosis": {
+  "term": "Acidosis",
+  "short": "A fall in pH (a rise in free H⁺) in muscle or blood. In hard exercise muscle pH falls by several tenths of a unit.",
+  "lesson": "bio-glycolysis"
+ },
+ "mitochondria": {
+  "term": "Mitochondria",
+  "short": "The structures in the cell where the Krebs cycle, beta-oxidation and the electron transport chain run, using oxygen to make most of the ATP.",
+  "lesson": "bio-oxidative"
+ },
+ "acetyl-coa": {
+  "term": "Acetyl-CoA",
+  "short": "A two-carbon unit carried by coenzyme A. Pyruvate and fatty acids both become acetyl-CoA, which feeds the Krebs cycle.",
+  "lesson": "bio-oxidative"
+ },
+ "krebs-cycle": {
+  "term": "Krebs cycle (citric acid, TCA cycle)",
+  "short": "A loop of reactions in the mitochondria that breaks acetyl-CoA down to CO₂ and loads NAD⁺ and FAD with electrons.",
+  "lesson": "bio-oxidative"
+ },
+ "electron-transport-chain": {
+  "term": "Electron transport chain (ETC)",
+  "short": "Protein complexes in the inner mitochondrial membrane that pass electrons from NADH and FADH₂ to oxygen, pumping protons to drive ATP synthase.",
+  "lesson": "bio-oxidative"
+ },
+ "p-o-ratio": {
+  "term": "P/O ratio",
+  "short": "ATP made per oxygen atom used: about 2.5 for electrons from NADH and 1.5 for electrons from FADH₂.",
+  "lesson": "bio-oxidative"
+ },
+ "beta-oxidation": {
+  "term": "Beta-oxidation",
+  "short": "The pathway in the mitochondria that cuts fatty acids into two-carbon acetyl-CoA units, making one NADH and one FADH₂ per turn.",
+  "lesson": "bio-fat-ox"
+ },
+ "imtg": {
+  "term": "IMTG (intramuscular triglyceride)",
+  "short": "Fat stored as droplets inside muscle fibres, close to the mitochondria. A fuel alongside fatty acids delivered by the blood from adipose tissue.",
+  "lesson": "bio-fat-ox"
+ },
+ "carnitine-shuttle": {
+  "term": "Carnitine shuttle",
+  "short": "The carrier system (CPT1 and CPT2) that moves long-chain fatty acids into the mitochondria. A main brake on fat oxidation at high intensity.",
+  "lesson": "bio-fat-ox"
+ },
+ "fatmax": {
+  "term": "Fatmax",
+  "short": "The exercise intensity at which fat oxidation per minute is highest, often around 45–65% of VO₂max; varies a lot between people.",
+  "lesson": "bio-fat-ox"
+ },
+ "oxygen-deficit": {
+  "term": "Oxygen deficit",
+  "short": "The gap between the oxygen an effort needs and the oxygen actually taken up, mostly at its start. PCr and glycolysis cover the gap.",
+  "lesson": "bio-systems-together"
+ },
+ "epoc": {
+  "term": "EPOC (excess post-exercise oxygen consumption)",
+  "short": "Oxygen uptake above resting after exercise. Once called the oxygen debt; it has a fast and a slow component.",
+  "lesson": "bio-systems-together"
+ },
+ "crossover-point": {
+  "term": "Crossover point",
+  "short": "The power output above which energy from carbohydrate exceeds that from fat (Brooks and Mercier, 1994). Training moves it to higher power.",
+  "lesson": "bio-crossover"
+ },
+ "rer": {
+  "term": "RER (respiratory exchange ratio)",
+  "short": "CO₂ produced ÷ O₂ used, measured at the mouth. About 0.7 when burning only fat, 1.0 when burning only carbohydrate.",
+  "lesson": "bio-calc"
+ },
+ "gross-efficiency": {
+  "term": "Gross efficiency (GE)",
+  "short": "Mechanical power ÷ metabolic power. In cycling about 20%: the rest of the energy becomes heat.",
+  "lesson": "bio-calc"
+ }
 }

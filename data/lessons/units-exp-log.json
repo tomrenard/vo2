@@ -1,0 +1,726 @@
+{
+ "id": "units-exp-log",
+ "module": "t0-units-maths",
+ "title": "Exponentials, half-lives and log scales",
+ "goal": "Tell linear from exponential change, use half-life and the time constant τ to say how far a response has gone, and read log axes like those on power-duration curves.",
+ "requires": [
+  "units-rates"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "exp-linear-vs-exp",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "exp-growth",
+   "title": "Linear or exponential?",
+   "text": "Two ways a quantity can change over time:\n\n- **Linear**: the same *amount* each step. A ramp test adds 20 W every minute.\n- **Exponential**: the same *fraction* each step. A plan that adds 10% of last week's distance each week grows faster and faster.\n\nExponential decay works the same way in reverse: a gap closes by the same fraction each second, so it shrinks quickly at first, then ever more slowly, and never quite reaches zero.\n\nMany body responses follow this \"fast, then slower\" shape: oxygen uptake at the start of exercise, heart rate and PCr in recovery. One number sums up the speed: a half-life or a time constant.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "exp-linear-vs-exp",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "exp-half-life",
+   "title": "Half-life",
+   "text": "The [half-life](g:half-life) (t½) is the time for the remaining gap to halve. After each half-life, half of what was left is gone:\n\n| half-lives | gap left | done |\n|---|---|---|\n| 1 | 50% | 50% |\n| 2 | 25% | 75% |\n| 3 | 12.5% | 87.5% |\n| 4 | 6.25% | 93.75% |\n\nSo it doesn't finish in two half-lives: linear thinking (\"half in 30 s, so all in 60 s\") is the classic error. Count the halvings: time ÷ t½.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "exp-half-example",
+   "title": "Counting half-lives",
+   "problem": "A recovery process has a half-life of 25 s. What share of the gap is left after 75 s?",
+   "steps": [
+    "Number of half-lives = 75 ÷ 25 = 3.",
+    "Halve three times: 100% → 50% → 25% → 12.5%.",
+    "12.5% of the gap is left, so 87.5% has recovered."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "exp-half-life-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "exp-tau",
+   "title": "The time constant τ",
+   "text": "Physiologists more often use the [time constant](g:time-constant) **τ** (tau). After one τ, a response has covered **63%** of the way to its new level:\n\n| time | % of the way |\n|---|---|\n| 1 τ | 63% |\n| 2 τ | 86% |\n| 3 τ | 95% |\n| 4 τ | 98% |\n\nτ and half-life measure the same speed: **t½ = 0.69 × τ**.\n\nWhen moderate exercise starts, VO2 rises roughly exponentially. In young and trained adults its τ is about 10–30 s, and shorter in trained people [[c:vo2-tau]]. A shorter τ means less oxygen deficit at the start [[c:fast-kinetics]].",
+   "claims": [
+    {
+     "id": "vo2-tau",
+     "text": "At the start of moderate cycling, the main (phase II) rise in VO2 fits a single exponential with a time constant of roughly 10–30 s in young and trained men, shorter in endurance-trained people.",
+     "grade": "weak",
+     "sources": [
+      "grey2015",
+      "koppo2004"
+     ],
+     "evidence": [
+      {
+       "source": "grey2015",
+       "quote": "On-transient VO2p and [HHb] responses to cycling exercise at 80% of the estimated lactate threshold (three repeats) were modeled as monoexponential.",
+       "level": "abstract"
+      },
+      {
+       "source": "grey2015",
+       "quote": "The time constant for the adjustment of phase II pulmonary VO2 (τVO2p) was larger in OuT (42.0 ± 11.3 s) compared with that in YT (17.0 ± 7.5 s), MT (18.1 ± 5.3 s), OT (19.8 ± 5.4 s), YuT (25.7 ± 6.6 s), and MuT (24.4 ± 7.4 s) (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "koppo2004",
+       "quote": "A repeated measures ANOVA revealed that the tau1 was significantly smaller (i.e., the kinetics were faster) in the trained compared with the untrained subjects",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fast-kinetics",
+     "text": "Faster VO2 kinetics means a smaller O2 deficit at the start of exercise.",
+     "grade": "strong",
+     "sources": [
+      "poole2012"
+     ],
+     "evidence": [
+      {
+       "source": "poole2012",
+       "quote": "For a given metabolic demand, fast VO2 kinetics mandates a smaller O2 deficit, less substrate-level phosphorylation and high exercise tolerance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "exp-tau-example",
+   "title": "How long to reach steady state?",
+   "problem": "A cyclist's VO2 τ is 20 s. How long after the start of a moderate effort is VO2 about 95% of the way to its new level?",
+   "steps": [
+    "95% is 3 τ (from the table).",
+    "3 × 20 s = 60 s.",
+    "The half-life is 0.69 × 20 ≈ 14 s, so 60 s is about 4.3 half-lives: 1 − 0.5^4.3 ≈ 95%. Same answer."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "exp-tau-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "exp-tau-halflife",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "exp-tau-trained",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "exp-log",
+   "title": "Log scales",
+   "text": "On a normal axis, equal distances mean equal *differences*. On a [log scale](g:log-scale), equal distances mean equal *ratios*: 1 s → 10 s → 100 s → 1,000 s are evenly spaced.\n\nThis is why power-duration curves use log time. Power falls steeply over the first minutes, then levels off towards [critical power](g:critical-power) [[c:pd-curve]]. On a linear axis from 1 s to 5 h, all the sprint data would be squeezed against the left edge.\n\nThe halfway point between 1 and 10 on a log axis is √10 ≈ 3.2, not 5.5. Statisticians also log-transform data whose spread grows with size [[c:log-transform]].",
+   "claims": [
+    {
+     "id": "pd-curve",
+     "text": "The power-duration relationship is curved: power falls steeply with longer durations and then levels off at critical power.",
+     "grade": "strong",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "The curvilinear relationship between power output and the time for which it can be sustained is a fundamental and well-known feature of high-intensity exercise performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "jones2017",
+       "quote": "This relationship 'levels off' at a 'critical power' (CP) that separates power outputs that can be sustained with stable values of, for example, muscle phosphocreatine, blood lactate, and pulmonary oxygen uptake",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "log-transform",
+     "text": "Log transformation is a standard way to handle effects and errors that are not uniform across the range of the data.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2009"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2009",
+       "quote": "using log transformation to deal with nonuniformity of effects and error",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "exp-log-axis"
+  },
+  {
+   "type": "question",
+   "item": "exp-read-log",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "exp-pd-why-log"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Linear change adds the same amount each step; exponential change multiplies by the same fraction.",
+    "Half-life: the gap halves each t½. After 3 half-lives 12.5% is left; it never quite reaches zero.",
+    "Time constant τ: 63% of the way after 1 τ, 86% after 2 τ, 95% after 3 τ. t½ = 0.69 τ.",
+    "VO2 at the start of moderate exercise has τ of about 10–30 s in young and trained adults, shorter in trained people.",
+    "Log axes space equal ratios evenly, so seconds and hours fit on one power-duration curve."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "exp-linear-vs-exp",
+   "concept": "exp-growth",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these changes is exponential?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO2 closing the same fraction of its remaining gap each second",
+       "correct": true,
+       "why": "Right: a constant fraction per step is exponential."
+      },
+      {
+       "id": "b",
+       "text": "Power rising by 20 W every minute in a ramp test",
+       "why": "A fixed amount per step is linear."
+      },
+      {
+       "id": "c",
+       "text": "Distance growing by 5 km each week in a run plan",
+       "why": "A fixed amount per step is linear."
+      },
+      {
+       "id": "d",
+       "text": "A clock adding 1 s of elapsed time every second",
+       "why": "A fixed amount per step is linear."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which training plan increases weekly running volume exponentially?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Add 10% of last week's distance each week",
+       "correct": true,
+       "why": "Right: a constant fraction per step is exponential; each week's increase is bigger."
+      },
+      {
+       "id": "b",
+       "text": "Add 5 km to last week's distance each week",
+       "why": "A fixed amount per step is linear."
+      },
+      {
+       "id": "c",
+       "text": "Run the same 50 km every week",
+       "why": "No change is neither linear growth nor exponential growth."
+      },
+      {
+       "id": "d",
+       "text": "Add 1 km per run, three runs a week",
+       "why": "3 km more each week is a fixed amount: linear."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exp-half-life-calc",
+   "concept": "exp-half-life",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recovery process has a half-life of 30 s. What share of the gap is left after 90 s?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.5%",
+       "correct": true,
+       "why": "Right: 90 ÷ 30 = 3 half-lives; 0.5^3 = 0.125."
+      },
+      {
+       "id": "b",
+       "text": "0%",
+       "why": "This is linear thinking: 50% every 30 s, so gone after 60 s. Exponential decay halves what is left each time."
+      },
+      {
+       "id": "c",
+       "text": "25%",
+       "why": "This halves twice instead of three times. Count the halvings: 90 ÷ 30 = 3."
+      },
+      {
+       "id": "d",
+       "text": "87.5%",
+       "why": "87.5% is the share already recovered, not the gap that is left."
+      }
+     ],
+     "solution": "Half-lives = 90 ÷ 30 = 3. Gap left = 0.5^3 = 12.5%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's heart-rate recovery, modelled simply, has a half-life of 40 s. What share of the gap is left after 80 s?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25%",
+       "correct": true,
+       "why": "Right: 80 ÷ 40 = 2 half-lives; 0.5^2 = 0.25."
+      },
+      {
+       "id": "b",
+       "text": "0%",
+       "why": "This is linear thinking: 50% every 40 s, so gone after 80 s. Exponential decay halves what is left each time."
+      },
+      {
+       "id": "c",
+       "text": "50%",
+       "why": "This halves once instead of twice. Count the halvings: 80 ÷ 40 = 2."
+      },
+      {
+       "id": "d",
+       "text": "75%",
+       "why": "75% is the share already recovered, not the gap that is left."
+      }
+     ],
+     "solution": "Half-lives = 80 ÷ 40 = 2. Gap left = 0.5^2 = 25%."
+    },
+    {
+     "id": "c",
+     "stem": "A recovery process in a runner has a half-life of 15 s. What share of the gap is left after 60 s?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6.25%",
+       "correct": true,
+       "why": "Right: 60 ÷ 15 = 4 half-lives; 0.5^4 = 0.0625."
+      },
+      {
+       "id": "b",
+       "text": "0%",
+       "why": "This is linear thinking: 50% every 15 s, so gone after 30 s. Exponential decay halves what is left each time."
+      },
+      {
+       "id": "c",
+       "text": "12.5%",
+       "why": "This halves three times instead of four times. Count the halvings: 60 ÷ 15 = 4."
+      },
+      {
+       "id": "d",
+       "text": "93.75%",
+       "why": "93.75% is the share already recovered, not the gap that is left."
+      }
+     ],
+     "solution": "Half-lives = 60 ÷ 15 = 4. Gap left = 0.5^4 = 6.25%."
+    }
+   ]
+  },
+  {
+   "id": "exp-tau-calc",
+   "concept": "exp-tau",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "grey2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO2 τ is 20 s. About how long after starting a moderate effort is VO2 95% of the way to its new level?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 s",
+       "correct": true,
+       "why": "Right: 95% is 3 τ, and 3 × 20 = 60 s."
+      },
+      {
+       "id": "b",
+       "text": "20 s",
+       "why": "One τ is only 63% of the way, not 95%."
+      },
+      {
+       "id": "c",
+       "text": "40 s",
+       "why": "Two τ is 86% of the way."
+      },
+      {
+       "id": "d",
+       "text": "19 s",
+       "why": "This is linear thinking: 95% of 20 s. τ doesn't mean the response is done in one τ."
+      }
+     ],
+     "solution": "95% of the way takes 3 τ = 3 × 20 s = 60 s."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO2 τ is 15 s. What share of the rise has VO2 covered 30 s after a step to moderate power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "86%",
+       "correct": true,
+       "why": "Right: 30 s is 2 τ, and 2 τ is 86% of the way."
+      },
+      {
+       "id": "b",
+       "text": "100%",
+       "why": "This is linear thinking: halfway at 15 s, so done at 30 s."
+      },
+      {
+       "id": "c",
+       "text": "75%",
+       "why": "This treats τ as a half-life (two halvings leave 25%). τ is longer than t½."
+      },
+      {
+       "id": "d",
+       "text": "63%",
+       "why": "63% is one τ (15 s); 30 s is two."
+      }
+     ],
+     "solution": "30 s ÷ 15 s = 2 τ. Share covered = 1 − e^(−2) = 0.86 = 86%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2 τ is 25 s. What share of the rise has VO2 covered 25 s after a step to moderate power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "63%",
+       "correct": true,
+       "why": "Right: by definition, one τ is 63% of the way."
+      },
+      {
+       "id": "b",
+       "text": "50%",
+       "why": "This treats τ as a half-life. The half-life is 0.69 × 25 ≈ 17 s."
+      },
+      {
+       "id": "c",
+       "text": "100%",
+       "why": "τ isn't the time to finish; after one τ, 37% of the gap remains."
+      },
+      {
+       "id": "d",
+       "text": "37%",
+       "why": "37% is the gap left after one τ, not the share covered."
+      }
+     ],
+     "solution": "25 s = 1 τ. Share covered = 1 − e^(−1) = 0.63 = 63%."
+    }
+   ]
+  },
+  {
+   "id": "exp-tau-halflife",
+   "concept": "exp-tau",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study reports a VO2 τ of 30 s. What is the half-life?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 21 s",
+       "correct": true,
+       "why": "Right: t½ = 0.69 × 30 = 20.7 s."
+      },
+      {
+       "id": "b",
+       "text": "About 43 s",
+       "why": "This divides by 0.69 (30 ÷ 0.69). The half-life is shorter than τ."
+      },
+      {
+       "id": "c",
+       "text": "15 s",
+       "why": "This halves τ. The factor is 0.69, not 0.5."
+      },
+      {
+       "id": "d",
+       "text": "30 s",
+       "why": "τ and half-life aren't the same: after one τ, 63% is done, not 50%."
+      }
+     ],
+     "solution": "t½ = 0.69 × τ = 0.69 × 30 s ≈ 21 s."
+    },
+    {
+     "id": "b",
+     "stem": "A paper reports a τ of 20 s for a cyclist's VO2 rise. What is the half-life?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 14 s",
+       "correct": true,
+       "why": "Right: t½ = 0.69 × 20 = 13.8 s."
+      },
+      {
+       "id": "b",
+       "text": "About 29 s",
+       "why": "This divides by 0.69 (20 ÷ 0.69). The half-life is shorter than τ."
+      },
+      {
+       "id": "c",
+       "text": "10 s",
+       "why": "This halves τ. The factor is 0.69, not 0.5."
+      },
+      {
+       "id": "d",
+       "text": "20 s",
+       "why": "τ and half-life aren't the same: after one τ, 63% is done, not 50%."
+      }
+     ],
+     "solution": "t½ = 0.69 × τ = 0.69 × 20 s ≈ 14 s."
+    }
+   ]
+  },
+  {
+   "id": "exp-tau-trained",
+   "concept": "exp-tau",
+   "bloom": "analyse",
+   "sources": [
+    "grey2015",
+    "koppo2004",
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trained cyclist (VO2 τ = 15 s) and an untrained one (τ = 30 s) step up to the same moderate power. After 30 s, who is closer to steady state?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The trained one: about 86% of the way vs 63%",
+       "correct": true,
+       "why": "Right: 30 s is 2 τ for the trained rider and 1 τ for the untrained one."
+      },
+      {
+       "id": "b",
+       "text": "Both: at the same power they are equally far",
+       "why": "The same power gives the same target, but they approach it at different speeds."
+      },
+      {
+       "id": "c",
+       "text": "The untrained one: a longer τ means a bigger response",
+       "why": "τ sets speed, not size. A longer τ means a slower rise."
+      },
+      {
+       "id": "d",
+       "text": "The trained one: 100% of the way vs 50%",
+       "why": "This is linear thinking. Even at 2 τ, 14% of the gap is left."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners step from walking to the same steady jog. Runner A's VO2 τ is 18 s, runner B's is 36 s. After 36 s, how do they compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A is about 86% of the way, B about 63%",
+       "correct": true,
+       "why": "Right: 36 s is 2 τ for A and 1 τ for B."
+      },
+      {
+       "id": "b",
+       "text": "Both are equally far: the jog is the same",
+       "why": "The same pace gives the same target, but they approach it at different speeds."
+      },
+      {
+       "id": "c",
+       "text": "B is further: a longer τ means a bigger response",
+       "why": "τ sets speed, not size. A longer τ means a slower rise."
+      },
+      {
+       "id": "d",
+       "text": "A is 100% of the way, B 50%",
+       "why": "This is linear thinking. Even at 2 τ, 14% of the gap is left."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exp-log-axis",
+   "concept": "exp-log",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a log time axis, the distance from 10 s to 100 s is the same as the distance from 100 s to what?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,000 s",
+       "correct": true,
+       "why": "Right: equal distances on a log axis are equal ratios (× 10)."
+      },
+      {
+       "id": "b",
+       "text": "190 s",
+       "why": "That is equal differences (+ 90 s), which is a linear axis."
+      },
+      {
+       "id": "c",
+       "text": "200 s",
+       "why": "× 2 is a smaller ratio than × 10, so it is a shorter distance."
+      },
+      {
+       "id": "d",
+       "text": "10,000 s",
+       "why": "That is two steps of × 10 from 100 s, twice the distance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exp-read-log",
+   "concept": "exp-log",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A power-duration graph has a log time axis with ticks at 1 min and 10 min. A point sits exactly halfway between them. What duration is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3.2 min",
+       "correct": true,
+       "why": "Right: halfway on a log axis is the geometric mean, √(1 × 10) ≈ 3.2."
+      },
+      {
+       "id": "b",
+       "text": "5.5 min",
+       "why": "5.5 is halfway on a linear axis, (1 + 10) ÷ 2."
+      },
+      {
+       "id": "c",
+       "text": "5 min",
+       "why": "Half of 10 is linear thinking; on a log axis 5 min sits well past halfway."
+      },
+      {
+       "id": "d",
+       "text": "About 2 min",
+       "why": "2 min is under a third of the way along: log 2 ≈ 0.3."
+      }
+     ],
+     "solution": "Halfway on a log axis is √(1 × 10) = √10 ≈ 3.16 min."
+    },
+    {
+     "id": "b",
+     "stem": "A running power-duration graph has a log time axis with ticks at 10 s and 1,000 s. A point sits exactly halfway between them. What duration is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "100 s",
+       "correct": true,
+       "why": "Right: halfway on a log axis is the geometric mean, √(10 × 1,000) = 100."
+      },
+      {
+       "id": "b",
+       "text": "505 s",
+       "why": "505 is halfway on a linear axis, (10 + 1,000) ÷ 2."
+      },
+      {
+       "id": "c",
+       "text": "500 s",
+       "why": "Half of 1,000 is linear thinking; on a log axis 500 s sits well past halfway."
+      },
+      {
+       "id": "d",
+       "text": "About 32 s",
+       "why": "32 s is a quarter of the way along: √(10 × 100)."
+      }
+     ],
+     "solution": "Halfway on a log axis is √(10 × 1,000) = √10,000 = 100 s."
+    }
+   ]
+  },
+  {
+   "id": "exp-pd-why-log",
+   "concept": "exp-log",
+   "bloom": "analyse",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's power-duration curve runs from 5 s to 5 h. Why is it usually drawn with a log time axis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Power changes fast at short durations; a log axis gives seconds and hours room",
+       "correct": true,
+       "why": "Right: on a linear axis the first minutes, where power falls steeply, would be squashed against the left edge."
+      },
+      {
+       "id": "b",
+       "text": "Power falls exponentially, so a log axis turns it into a straight line",
+       "why": "The curve is closer to a hyperbola levelling off at CP; on a log time axis it is still curved."
+      },
+      {
+       "id": "c",
+       "text": "Watts are a logarithmic unit, so the axis must match",
+       "why": "Watts are linear (J·s⁻¹). It is the time axis that is logged."
+      },
+      {
+       "id": "d",
+       "text": "It makes critical power appear at exactly the middle",
+       "why": "Where CP appears depends on the data, not the axis choice."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,979 @@
+{
+ "id": "bio-calc",
+ "module": "t1a-bioenergetics",
+ "title": "Bioenergetics by numbers",
+ "goal": "Calculate ATP yield per oxygen for carbohydrate and fat, turn VO₂ and RER into energy, find the oxygen cost of a power output from efficiency, and estimate the energy and carbohydrate of a long ride.",
+ "requires": [
+  "bio-crossover"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "calc-atp-per-o2",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "calc-yield",
+   "title": "Per molecule, per gram, per oxygen",
+   "text": "Two fuels, compared three ways. **Per molecule**, palmitate gives about 106 ATP and glucose about 31 (30–32) [[c:calc-yields]].\n\n**Per oxygen** is different. Burning them takes:\n\n- glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O\n- palmitate: C₁₆H₃₂O₂ + 23 O₂ → 16 CO₂ + 16 H₂O\n\nGlucose gets more ATP from each O₂, so it needs less oxygen for the same ATP rate [[c:calc-o2-economy]].\n\n**Per gram**, fat wins by far, because its carbons carry more hydrogen and so more electrons.\n\nSo fat is the dense fuel to carry, and carbohydrate the economical fuel to burn when oxygen is the limit.",
+   "claims": [
+    {
+     "id": "calc-yields",
+     "text": "Full oxidation yields about 30–32 ATP per glucose and about 106 ATP per palmitate.",
+     "grade": "strong",
+     "sources": [
+      "fu2021",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "fu2021",
+       "quote": "In the presence of oxygen, the complete oxidation of one glucose molecule yields 30–32 ATP molecules, whereas one palmitate molecule yields 106 ATP molecules.",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "This then liberates 30–32 ATP per glucose molecule, a 15–16-fold increase in energy return.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "calc-o2-economy",
+     "text": "Carbohydrate oxidation gives a greater ATP yield per oxygen than fat, so a given ATP rate needs less oxygen.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "The higher ATP yield means that for a given rate of ATP regeneration there would be less demand for oxygen consumption.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "calc-yield-example",
+   "title": "ATP per O₂ and per gram",
+   "problem": "Glucose (180 g·mol⁻¹) gives 31 ATP and uses 6 O₂. Palmitate (256 g·mol⁻¹) gives 106 ATP and uses 23 O₂. Compare them per O₂ and per gram.",
+   "steps": [
+    "Per O₂: glucose 31 ÷ 6 = 5.2 ATP; palmitate 106 ÷ 23 = 4.6 ATP.",
+    "So glucose gives about (5.2 − 4.6) ÷ 4.6 ≈ 12% more ATP per O₂.",
+    "Per gram: glucose 31 ÷ 180 = 0.17 mol ATP per g; palmitate 106 ÷ 256 = 0.41 mol ATP per g.",
+    "So palmitate gives 0.41 ÷ 0.17 ≈ 2.4 times more ATP per gram. Carry fat, burn carbohydrate when oxygen is short."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "calc-atp-per-o2",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "calc-per-gram"
+  },
+  {
+   "type": "concept",
+   "id": "calc-rer",
+   "title": "Energy per litre of oxygen, and the RER",
+   "text": "A lab cart measures gases, not fuels. Two facts turn gases into energy.\n\n**Energy per litre of O₂**: about 21.1 kJ for carbohydrate and 19.6 kJ for fat [[c:calc-energy-o2]].\n\n**[RER](g:rer)** = CO₂ out ÷ O₂ in. The equations above give 6 ÷ 6 = 1.0 for glucose and 16 ÷ 23 = 0.70 for palmitate: carbohydrate 1.0, fat 0.7 [[c:calc-rq]].\n\nRough rule for a mix: carbohydrate's share ≈ (RER − 0.70) ÷ 0.30. It is an approximation: it gives the share of the O₂, not of the energy (under 2 percentage points apart), and ignores protein. Exact tables are in the calorimetry module.\n\nRER shows fuel use only in steady exercise: in hard efforts, buffering adds extra CO₂ [[c:calc-rer-limit]].",
+   "claims": [
+    {
+     "id": "calc-energy-o2",
+     "text": "Carbohydrate oxidation yields about 21.1 kJ per litre of O₂, fat oxidation about 19.6 kJ.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019",
+      "ortenblad2026"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "For every 1 liter of oxygen that is consumed to catabolize carbohydrates, 21.13 kJ (5.05 kcal) of energy is released, whereas the consumption of 1 liter of oxygen to catabolize fat yields 19.62 kJ (4.69 kcal) of energy",
+       "level": "full-text"
+      },
+      {
+       "source": "ortenblad2026",
+       "quote": "Thus, under aerobic conditions, carbohydrate combustion is a more efficient fuel yielding approximately 21.1 kJ/L O2, whereas fat oxidation yields ~19.6 kJ/L O2",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "calc-rq",
+     "text": "The respiratory quotient is 1.0 for carbohydrate, 0.7 for fat and 0.8 for protein oxidation.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019",
+      "moonen2021"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "If carbohydrates are exclusively utilized CO₂ is generated in amounts equal to the volume of O₂ consumed [i.e., a respiratory exchange ratio (RER) of 1.00], whereas a fat-only fuel source returns a RER of 0.70.",
+       "level": "full-text"
+      },
+      {
+       "source": "moonen2021",
+       "quote": "A human RQ of 1.0, 0.8, and 0.7 represents glucose, protein, and fat oxidation, respectively",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "calc-rer-limit",
+     "text": "At higher exercise intensities, changes in the bicarbonate pool can invalidate fuel calculations from gas exchange.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2005"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2005",
+       "quote": "When indirect calorimetry is used during exercise most of the assumptions on which the method is based hold true although changes in the size of the bicarbonate pool at higher exercise intensities may invalidate the calculations of carbohydrate and fat oxidation.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "calc-energy-example",
+   "title": "From VO₂ and RER to energy",
+   "problem": "A runner's VO₂ is 3.0 L·min⁻¹ at a steady RER of 0.85. About how much energy is she using per minute?",
+   "steps": [
+    "Carbohydrate share ≈ (0.85 − 0.70) ÷ 0.30 = 0.50, so half carbohydrate, half fat.",
+    "Energy per litre ≈ 0.5 × 21.1 + 0.5 × 19.6 = 20.35 kJ.",
+    "Energy = 3.0 × 20.35 ≈ 61 kJ·min⁻¹ (about 1,020 W of metabolic power)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "calc-rer-share",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "calc-energy-rate",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "calc-rer-limit"
+  },
+  {
+   "type": "concept",
+   "id": "calc-power",
+   "title": "The oxygen cost of power",
+   "text": "Muscles turn only part of their energy into work. In cycling, [gross efficiency](g:gross-efficiency) is about **20%** [[c:calc-ge]]; the rest becomes heat. So:\n\n- metabolic power = mechanical power ÷ efficiency\n- VO₂ = metabolic power ÷ energy per litre of O₂\n\nIn one line: **VO₂ (L·min⁻¹) = P (W) × 60 ÷ (GE × J per litre)**.\n\nAt 20% and 20,500 J per litre (a mixed fuel), each watt costs about 0.0146 L·min⁻¹, about 15 mL·min⁻¹ of O₂ per watt including the resting baseline.\n\nEfficiency isn't fixed: in one study it was about 1 point lower in the heat (19.6% vs 20.5%) [[c:calc-ge-heat]].",
+   "claims": [
+    {
+     "id": "calc-ge",
+     "text": "Gross efficiency in cycling is about 20% (means of 20.2% and 20.5% in two lab studies, both of men only).",
+     "grade": "weak",
+     "sources": [
+      "noordhof2010",
+      "hettinga2007"
+     ],
+     "evidence": [
+      {
+       "source": "noordhof2010",
+       "quote": "GE measured during the individually highest exercise intensity with RER <1.0 did not differ significantly between days (F = 2.70, p = 0.08), which resulted in lower and upper boundaries of the 95% limits of agreement of 19.6 and 20.8%, respectively, around a mean GE of 20.2%.",
+       "level": "abstract"
+      },
+      {
+       "source": "hettinga2007",
+       "quote": "GE was 0.9% lower in H compared to N (19.6+/-1.1% vs. 20.5+/-1.4%) (P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "calc-ge-heat",
+     "text": "In well-trained male cyclists, gross efficiency was 0.9 points lower at 35.5 °C than at 15.6 °C.",
+     "grade": "weak",
+     "sources": [
+      "hettinga2007"
+     ],
+     "evidence": [
+      {
+       "source": "hettinga2007",
+       "quote": "GE was 0.9% lower in H compared to N (19.6+/-1.1% vs. 20.5+/-1.4%) (P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "calc-power-example",
+   "title": "What does 250 W cost in oxygen?",
+   "problem": "A cyclist rides at 250 W with a gross efficiency of 20%. Take 20.5 kJ per litre of O₂. What is her VO₂?",
+   "steps": [
+    "Metabolic power = 250 ÷ 0.20 = 1,250 W = 1.25 kJ·s⁻¹ = 75 kJ·min⁻¹.",
+    "VO₂ = 75 ÷ 20.5 ≈ 3.66 L·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "calc-vo2-power",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "calc-no-efficiency"
+  },
+  {
+   "type": "concept",
+   "id": "calc-ride",
+   "title": "A long ride: energy and carbohydrate",
+   "text": "Now chain the steps for a long ride.\n\n1. **Work** (what the power meter counts): average power × time, in kJ.\n2. **Energy spent**: work ÷ efficiency.\n3. **Carbohydrate energy**: energy × carbohydrate share from the RER.\n4. **Grams**: carbohydrate gives about 17 kJ (4 kcal) per gram [[c:calc-cho-g]].\n\nA popular shortcut says \"kJ on the power meter ≈ kcal burned\". It holds only if efficiency is about 24%, because 1 kcal = 4.184 kJ. At 20% you burn about 20% more kcal than the meter's kJ.\n\nHow those grams compare with your glycogen stores, and how much you can eat per hour, is tier 4.",
+   "claims": [
+    {
+     "id": "calc-cho-g",
+     "text": "Carbohydrate provides about 4 kcal (17 kJ) per gram: 500 g is about 2,000 kcal.",
+     "grade": "strong",
+     "sources": [
+      "murray2018",
+      "fao2003"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Consumption of 10 g carbohydrate/kg BW/day represents a sizable amount of carbohydrate; for a 50-kg (110-lb) athlete, 10 g carbohydrate/kg BW/day is the equivalent of 500 g of carbohydrate (2000 kcal).",
+       "level": "full-text"
+      },
+      {
+       "source": "fao2003",
+       "quote": "The energy values are 17 kJ/g (4.0 kcal/g) for protein, 37 kJ/g (9.0 kcal/g) for fat and 17 kJ/g (4.0 kcal/g) for carbohydrates.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "calc-ride-example",
+   "title": "A 3-hour ride, end to end",
+   "problem": "A rider averages 200 W for 3 h. Gross efficiency is 20% and the average RER is 0.88. How much energy did she spend, and how much carbohydrate did that take?",
+   "steps": [
+    "Work = 200 W × 10,800 s = 2,160,000 J = 2,160 kJ.",
+    "Energy spent = 2,160 ÷ 0.20 = 10,800 kJ (10,800 ÷ 4.184 ≈ 2,580 kcal).",
+    "Carbohydrate share ≈ (0.88 − 0.70) ÷ 0.30 = 0.60, so 0.60 × 10,800 = 6,480 kJ.",
+    "Grams ≈ 6,480 ÷ 17 ≈ 380 g of carbohydrate."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "calc-ride-kj",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "calc-ride-cho",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "calc-kj-kcal"
+  },
+  {
+   "type": "question",
+   "item": "calc-vo2-power",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Per molecule palmitate gives about 3.4 times the ATP of glucose and per gram about 2.4 times, but per O₂ glucose gives about 12% more (5.2 vs 4.6 ATP).",
+    "Energy per litre of O₂: 21.1 kJ for carbohydrate, 19.6 kJ for fat; RER 1.0 for carbohydrate, 0.7 for fat, and carbohydrate share ≈ (RER − 0.70) ÷ 0.30 in steady exercise.",
+    "VO₂ = power ÷ efficiency ÷ energy per litre; at about 20% efficiency each watt costs about 15 mL·min⁻¹ of O₂.",
+    "Long ride: work (kJ) ÷ efficiency = energy spent; × carbohydrate share ÷ 17 kJ·g⁻¹ = grams of carbohydrate.",
+    "\"Power-meter kJ ≈ kcal burned\" holds only near 24% efficiency; at 20% you burn about a fifth more."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "calc-atp-per-o2",
+   "concept": "calc-yield",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fu2021",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One palmitate gives 106 ATP and uses 23 O₂ when fully oxidised. How many ATP does it give per O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.6",
+       "correct": true,
+       "why": "Right: 106 ÷ 23 = 4.6 ATP per O₂."
+      },
+      {
+       "id": "b",
+       "text": "6.6",
+       "why": "This divides by the 16 carbons, not by the 23 O₂: that's ATP per carbon."
+      },
+      {
+       "id": "c",
+       "text": "0.22",
+       "why": "This divides O₂ by ATP (23 ÷ 106): upside down."
+      },
+      {
+       "id": "d",
+       "text": "5.2",
+       "why": "5.2 is glucose's value (31 ÷ 6); palmitate gives less ATP per O₂."
+      }
+     ],
+     "solution": "ATP per O₂ = 106 ÷ 23 = 4.6."
+    },
+    {
+     "id": "b",
+     "stem": "One glucose gives 31 ATP and uses 6 O₂ when fully oxidised. How many ATP does it give per O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.2",
+       "correct": true,
+       "why": "Right: 31 ÷ 6 = 5.2 ATP per O₂."
+      },
+      {
+       "id": "b",
+       "text": "0.19",
+       "why": "This divides O₂ by ATP (6 ÷ 31): upside down."
+      },
+      {
+       "id": "c",
+       "text": "186",
+       "why": "This multiplies (31 × 6); per O₂ means dividing by the O₂."
+      },
+      {
+       "id": "d",
+       "text": "4.6",
+       "why": "4.6 is palmitate's value (106 ÷ 23); glucose gives more ATP per O₂."
+      }
+     ],
+     "solution": "ATP per O₂ = 31 ÷ 6 = 5.2."
+    },
+    {
+     "id": "c",
+     "stem": "A glucose unit from glycogen gives 32 ATP and uses 6 O₂ when fully oxidised. How many ATP does it give per O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.3",
+       "correct": true,
+       "why": "Right: 32 ÷ 6 = 5.3 ATP per O₂."
+      },
+      {
+       "id": "b",
+       "text": "5.2",
+       "why": "This uses 31 ATP, the value for blood glucose; a glycogen unit gives one more."
+      },
+      {
+       "id": "c",
+       "text": "0.19",
+       "why": "This divides O₂ by ATP (6 ÷ 32): upside down."
+      },
+      {
+       "id": "d",
+       "text": "192",
+       "why": "This multiplies (32 × 6); per O₂ means dividing by the O₂."
+      }
+     ],
+     "solution": "ATP per O₂ = 32 ÷ 6 = 5.3."
+    }
+   ]
+  },
+  {
+   "id": "calc-per-gram",
+   "concept": "calc-yield",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fu2021",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Glucose (180 g·mol⁻¹) gives 31 ATP; palmitate (256 g·mol⁻¹) gives 106 ATP. How many times more ATP per gram does palmitate give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.4 times",
+       "correct": true,
+       "why": "Right: (106 ÷ 256) ÷ (31 ÷ 180) = 0.41 ÷ 0.17 ≈ 2.4."
+      },
+      {
+       "id": "b",
+       "text": "About 3.4 times",
+       "why": "This is the per-molecule ratio (106 ÷ 31); it forgets that a palmitate weighs more than a glucose."
+      },
+      {
+       "id": "c",
+       "text": "About 1.4 times",
+       "why": "This is just the ratio of molar masses (256 ÷ 180), not of ATP per gram."
+      },
+      {
+       "id": "d",
+       "text": "About 0.4 times",
+       "why": "This is the ratio upside down (glucose per gram ÷ palmitate per gram)."
+      }
+     ],
+     "solution": "Glucose: 31 ÷ 180 = 0.17 mol ATP per g. Palmitate: 106 ÷ 256 = 0.41 mol ATP per g. Ratio = 0.41 ÷ 0.17 ≈ 2.4."
+    }
+   ]
+  },
+  {
+   "id": "calc-rer-share",
+   "concept": "calc-rer",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a steady tempo run, a runner's RER is 0.94. Using the rough rule, what share of her fuel is carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 80%",
+       "correct": true,
+       "why": "Right: (0.94 − 0.70) ÷ 0.30 = 0.80."
+      },
+      {
+       "id": "b",
+       "text": "About 94%",
+       "why": "This reads the RER as a percentage; an RER of 0.70 means 0% carbohydrate, not 70%."
+      },
+      {
+       "id": "c",
+       "text": "About 24%",
+       "why": "This stops at 0.94 − 0.70 = 0.24 and forgets to divide by the 0.30 range."
+      },
+      {
+       "id": "d",
+       "text": "About 20%",
+       "why": "That is the fat share (1 − 0.80), not carbohydrate's."
+      }
+     ],
+     "solution": "Carbohydrate share ≈ (RER − 0.70) ÷ 0.30 = (0.94 − 0.70) ÷ 0.30 = 0.24 ÷ 0.30 = 0.80."
+    },
+    {
+     "id": "b",
+     "stem": "On a long easy ride, a cyclist's steady RER is 0.79. Using the rough rule, what share of his fuel is carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 30%",
+       "correct": true,
+       "why": "Right: (0.79 − 0.70) ÷ 0.30 = 0.30."
+      },
+      {
+       "id": "b",
+       "text": "About 79%",
+       "why": "This reads the RER as a percentage; an RER of 0.70 means 0% carbohydrate, not 70%."
+      },
+      {
+       "id": "c",
+       "text": "About 9%",
+       "why": "This stops at 0.79 − 0.70 = 0.09 and forgets to divide by the 0.30 range."
+      },
+      {
+       "id": "d",
+       "text": "About 70%",
+       "why": "That is the fat share (1 − 0.30), not carbohydrate's."
+      }
+     ],
+     "solution": "Carbohydrate share ≈ (0.79 − 0.70) ÷ 0.30 = 0.09 ÷ 0.30 = 0.30."
+    }
+   ]
+  },
+  {
+   "id": "calc-energy-rate",
+   "concept": "calc-rer",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Near the end of a 10 km race, a runner's VO₂ is 4.0 L·min⁻¹ at an RER of 1.00 (all carbohydrate, steady state). How much energy is she using per minute?",
+     "options": [
+      {
+       "id": "a",
+       "text": "84.4 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: 4.0 × 21.1 = 84.4 kJ·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "78.4 kJ·min⁻¹",
+       "why": "This uses fat's 19.6 kJ per litre; at RER 1.00 the fuel is carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "21.1 kJ·min⁻¹",
+       "why": "That is the energy per litre; it still has to be multiplied by the 4.0 L per minute."
+      },
+      {
+       "id": "d",
+       "text": "5.3 kJ·min⁻¹",
+       "why": "This divides (21.1 ÷ 4.0) instead of multiplying."
+      }
+     ],
+     "solution": "Energy = VO₂ × energy per litre = 4.0 × 21.1 = 84.4 kJ·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "On an easy, fasted ride, a cyclist's VO₂ is 2.5 L·min⁻¹ at an RER of 0.70 (all fat). How much energy is he using per minute?",
+     "options": [
+      {
+       "id": "a",
+       "text": "49.0 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.5 × 19.6 = 49.0 kJ·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "52.8 kJ·min⁻¹",
+       "why": "This uses carbohydrate's 21.1 kJ per litre; at RER 0.70 the fuel is fat."
+      },
+      {
+       "id": "c",
+       "text": "19.6 kJ·min⁻¹",
+       "why": "That is the energy per litre; it still has to be multiplied by the 2.5 L per minute."
+      },
+      {
+       "id": "d",
+       "text": "7.8 kJ·min⁻¹",
+       "why": "This divides (19.6 ÷ 2.5) instead of multiplying."
+      }
+     ],
+     "solution": "Energy = 2.5 × 19.6 = 49.0 kJ·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike leg of a half Ironman, a triathlete's VO₂ is 3.2 L·min⁻¹ at a steady RER of 0.85. Using the rough rule for the fuel mix, how much energy is she using per minute?",
+     "options": [
+      {
+       "id": "a",
+       "text": "65.1 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: half carbohydrate, half fat gives 20.35 kJ per litre; 3.2 × 20.35 = 65.1."
+      },
+      {
+       "id": "b",
+       "text": "67.5 kJ·min⁻¹",
+       "why": "This treats the fuel as all carbohydrate (3.2 × 21.1); at RER 0.85 it is about half fat."
+      },
+      {
+       "id": "c",
+       "text": "62.7 kJ·min⁻¹",
+       "why": "This treats the fuel as all fat (3.2 × 19.6); at RER 0.85 it is about half carbohydrate."
+      },
+      {
+       "id": "d",
+       "text": "20.4 kJ·min⁻¹",
+       "why": "That is the energy per litre of the mix; it still has to be multiplied by 3.2 L per minute."
+      }
+     ],
+     "solution": "Share ≈ (0.85 − 0.70) ÷ 0.30 = 0.5. Energy per litre = 0.5 × 21.1 + 0.5 × 19.6 = 20.35 kJ. Energy = 3.2 × 20.35 = 65.1 kJ·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "calc-rer-limit",
+   "concept": "calc-rer",
+   "bloom": "evaluate",
+   "sources": [
+    "jeukendrup2005",
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the last minute of an all-out 3-minute effort, a cyclist's RER reads 1.15. What is the best reading of this number?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Extra CO₂ from buffering is included, so it no longer shows fuel use",
+       "correct": true,
+       "why": "Right: in hard, non-steady efforts, bicarbonate buffering releases extra CO₂ and the fuel calculation breaks down."
+      },
+      {
+       "id": "b",
+       "text": "She is burning more than 100% carbohydrate",
+       "why": "No fuel mix can exceed 100%; fuel oxidation alone tops out at 1.0."
+      },
+      {
+       "id": "c",
+       "text": "She has switched to burning mostly protein",
+       "why": "Protein's quotient is about 0.8, which would lower the RER, not raise it above 1.0."
+      },
+      {
+       "id": "d",
+       "text": "The gas analyser is faulty: RER can't exceed 1.0",
+       "why": "RER above 1.0 is common in hard efforts; it reflects buffering, not a broken cart."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calc-vo2-power",
+   "concept": "calc-power",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "noordhof2010",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides at 200 W with a gross efficiency of 21%, burning almost only carbohydrate (21.1 kJ per litre of O₂). What is his VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.71 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 200 ÷ 0.21 = 952 W = 57.1 kJ·min⁻¹; 57.1 ÷ 21.1 = 2.71."
+      },
+      {
+       "id": "b",
+       "text": "0.57 L·min⁻¹",
+       "why": "This forgets efficiency: 200 W is the work done, but the muscles spend about five times that."
+      },
+      {
+       "id": "c",
+       "text": "0.045 L·min⁻¹",
+       "why": "This is per second: it forgets to multiply kJ·s⁻¹ by 60."
+      },
+      {
+       "id": "d",
+       "text": "0.12 L·min⁻¹",
+       "why": "This multiplies by the efficiency instead of dividing by it."
+      }
+     ],
+     "solution": "Metabolic power = 200 ÷ 0.21 = 952 W = 0.952 kJ·s⁻¹ × 60 = 57.1 kJ·min⁻¹. VO₂ = 57.1 ÷ 21.1 = 2.71 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "On an Ironman bike leg, a triathlete holds 180 W with a gross efficiency of 20%. Take 20.5 kJ per litre of O₂. What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.63 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 180 ÷ 0.20 = 900 W = 54 kJ·min⁻¹; 54 ÷ 20.5 = 2.63."
+      },
+      {
+       "id": "b",
+       "text": "0.53 L·min⁻¹",
+       "why": "This forgets efficiency: 180 W is the work done, but the muscles spend five times that."
+      },
+      {
+       "id": "c",
+       "text": "0.044 L·min⁻¹",
+       "why": "This is per second: it forgets to multiply kJ·s⁻¹ by 60."
+      },
+      {
+       "id": "d",
+       "text": "0.11 L·min⁻¹",
+       "why": "This multiplies by the efficiency instead of dividing by it."
+      }
+     ],
+     "solution": "Metabolic power = 180 ÷ 0.20 = 900 W = 54 kJ·min⁻¹. VO₂ = 54 ÷ 20.5 = 2.63 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist climbs at 300 W with a gross efficiency of 22%, burning almost only carbohydrate (21.1 kJ per litre of O₂). What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.88 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 300 ÷ 0.22 = 1,364 W = 81.8 kJ·min⁻¹; 81.8 ÷ 21.1 = 3.88."
+      },
+      {
+       "id": "b",
+       "text": "0.85 L·min⁻¹",
+       "why": "This forgets efficiency: 300 W is the work done, but the muscles spend about 4.5 times that."
+      },
+      {
+       "id": "c",
+       "text": "0.065 L·min⁻¹",
+       "why": "This is per second: it forgets to multiply kJ·s⁻¹ by 60."
+      },
+      {
+       "id": "d",
+       "text": "0.19 L·min⁻¹",
+       "why": "This multiplies by the efficiency instead of dividing by it."
+      }
+     ],
+     "solution": "Metabolic power = 300 ÷ 0.22 = 1,364 W = 81.8 kJ·min⁻¹. VO₂ = 81.8 ÷ 21.1 = 3.88 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "calc-no-efficiency",
+   "concept": "calc-power",
+   "bloom": "analyse",
+   "sources": [
+    "noordhof2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider works out his VO₂ at 250 W as 0.73 L·min⁻¹, but the lab measures 3.6 L·min⁻¹. What did he most likely forget?",
+     "options": [
+      {
+       "id": "a",
+       "text": "To divide by his gross efficiency",
+       "correct": true,
+       "why": "Right: 250 W = 15 kJ·min⁻¹ ÷ 20.5 = 0.73 L; divided by 0.20 efficiency, that's 3.66 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "To convert his answer from kcal into kJ",
+       "why": "A kcal–kJ mix-up gives a factor of 4.184, not 5, and his sum used kJ throughout."
+      },
+      {
+       "id": "c",
+       "text": "To add the oxygen deficit from the start",
+       "why": "The deficit is a short-lived gap at the start; it can't explain a fivefold difference in steady state."
+      },
+      {
+       "id": "d",
+       "text": "To use fat's energy per litre instead",
+       "why": "Switching between 21.1 and 19.6 kJ per litre changes the answer by under 8%, not fivefold."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calc-ride-kj",
+   "concept": "calc-ride",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "noordhof2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist averages 150 W for 3 hours with a gross efficiency of 20%. How much energy did she spend?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8,100 kJ",
+       "correct": true,
+       "why": "Right: work = 150 × 10,800 s = 1,620 kJ; spent = 1,620 ÷ 0.20 = 8,100 kJ."
+      },
+      {
+       "id": "b",
+       "text": "1,620 kJ",
+       "why": "That is the work the power meter counts; the energy spent is work ÷ efficiency."
+      },
+      {
+       "id": "c",
+       "text": "324 kJ",
+       "why": "This multiplies the work by the efficiency instead of dividing by it."
+      },
+      {
+       "id": "d",
+       "text": "135 kJ",
+       "why": "This uses 180 (minutes) as if it were seconds; 3 h = 10,800 s."
+      }
+     ],
+     "solution": "Work = 150 W × 10,800 s = 1,620,000 J = 1,620 kJ. Energy spent = 1,620 ÷ 0.20 = 8,100 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "An Ironman triathlete averages 180 W for a 5-hour bike leg with a gross efficiency of 21%. How much energy did he spend on the bike?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 15,400 kJ",
+       "correct": true,
+       "why": "Right: work = 180 × 18,000 s = 3,240 kJ; spent = 3,240 ÷ 0.21 ≈ 15,400 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 3,240 kJ",
+       "why": "That is the work the power meter counts; the energy spent is work ÷ efficiency."
+      },
+      {
+       "id": "c",
+       "text": "About 680 kJ",
+       "why": "This multiplies the work by the efficiency instead of dividing by it."
+      },
+      {
+       "id": "d",
+       "text": "About 260 kJ",
+       "why": "This uses 300 (minutes) as if it were seconds; 5 h = 18,000 s."
+      }
+     ],
+     "solution": "Work = 180 W × 18,000 s = 3,240 kJ. Energy spent = 3,240 ÷ 0.21 ≈ 15,400 kJ."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist averages 220 W for 2 hours with a gross efficiency of 22%. How much energy did she spend?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7,200 kJ",
+       "correct": true,
+       "why": "Right: work = 220 × 7,200 s = 1,584 kJ; spent = 1,584 ÷ 0.22 = 7,200 kJ."
+      },
+      {
+       "id": "b",
+       "text": "1,584 kJ",
+       "why": "That is the work the power meter counts; the energy spent is work ÷ efficiency."
+      },
+      {
+       "id": "c",
+       "text": "348 kJ",
+       "why": "This multiplies the work by the efficiency instead of dividing by it."
+      },
+      {
+       "id": "d",
+       "text": "120 kJ",
+       "why": "This uses 120 (minutes) as if it were seconds; 2 h = 7,200 s."
+      }
+     ],
+     "solution": "Work = 220 W × 7,200 s = 1,584 kJ. Energy spent = 1,584 ÷ 0.22 = 7,200 kJ."
+    }
+   ]
+  },
+  {
+   "id": "calc-ride-cho",
+   "concept": "calc-ride",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "murray2018",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider spends 10,800 kJ on a long ride at an average steady RER of 0.85. Using the rough rule and 17 kJ per gram, about how much carbohydrate did she burn?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 320 g",
+       "correct": true,
+       "why": "Right: share ≈ 0.50, so 5,400 kJ from carbohydrate; 5,400 ÷ 17 ≈ 320 g."
+      },
+      {
+       "id": "b",
+       "text": "About 635 g",
+       "why": "This turns all 10,800 kJ into carbohydrate; at RER 0.85 only about half came from it."
+      },
+      {
+       "id": "c",
+       "text": "About 540 g",
+       "why": "This reads the RER as an 85% carbohydrate share; the rule gives (0.85 − 0.70) ÷ 0.30 = 50%."
+      },
+      {
+       "id": "d",
+       "text": "About 1,350 g",
+       "why": "This divides kJ by 4, the kcal value per gram; in kJ it's about 17 per gram."
+      }
+     ],
+     "solution": "Share ≈ (0.85 − 0.70) ÷ 0.30 = 0.50. Carbohydrate energy = 0.50 × 10,800 = 5,400 kJ. Grams ≈ 5,400 ÷ 17 ≈ 320 g."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete spends 9,000 kJ in a race at an average steady RER of 0.91. Using the rough rule and 17 kJ per gram, about how much carbohydrate did he burn?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 370 g",
+       "correct": true,
+       "why": "Right: share ≈ 0.70, so 6,300 kJ from carbohydrate; 6,300 ÷ 17 ≈ 370 g."
+      },
+      {
+       "id": "b",
+       "text": "About 530 g",
+       "why": "This turns all 9,000 kJ into carbohydrate; at RER 0.91 about 30% came from fat."
+      },
+      {
+       "id": "c",
+       "text": "About 480 g",
+       "why": "This reads the RER as a 91% carbohydrate share; the rule gives (0.91 − 0.70) ÷ 0.30 = 70%."
+      },
+      {
+       "id": "d",
+       "text": "About 1,580 g",
+       "why": "This divides kJ by 4, the kcal value per gram; in kJ it's about 17 per gram."
+      }
+     ],
+     "solution": "Share ≈ (0.91 − 0.70) ÷ 0.30 = 0.70. Carbohydrate energy = 0.70 × 9,000 = 6,300 kJ. Grams ≈ 6,300 ÷ 17 ≈ 370 g."
+    }
+   ]
+  },
+  {
+   "id": "calc-kj-kcal",
+   "concept": "calc-ride",
+   "bloom": "evaluate",
+   "sources": [
+    "noordhof2010",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a ride, a cyclist's head unit shows 2,400 kJ of work and her app says she burned 2,400 kcal. Her gross efficiency is about 20%. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An underestimate: at 20% she burned about 2,900 kcal",
+       "correct": true,
+       "why": "Right: 2,400 ÷ 0.20 = 12,000 kJ spent; ÷ 4.184 ≈ 2,870 kcal. The kJ ≈ kcal shortcut assumes about 24%."
+      },
+      {
+       "id": "b",
+       "text": "Correct: kJ of work always equals kcal burned",
+       "why": "It's only true near 24% efficiency, where dividing by efficiency and by 4.184 cancel out."
+      },
+      {
+       "id": "c",
+       "text": "An overestimate: she burned only about 570 kcal",
+       "why": "This converts the work alone (2,400 kJ ÷ 4.184) and forgets that only about 20% of the energy becomes work."
+      },
+      {
+       "id": "d",
+       "text": "An overestimate: she burned only about 480 kcal",
+       "why": "This multiplies by the efficiency (2,400 × 0.20) instead of dividing."
+      }
+     ],
+     "solution": "Energy spent = 2,400 kJ ÷ 0.20 = 12,000 kJ. In kcal: 12,000 ÷ 4.184 ≈ 2,870 kcal, about 20% more than the 2,400 the shortcut gives."
+    }
+   ]
+  }
+ ]
+}

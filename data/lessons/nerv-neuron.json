@@ -1,0 +1,967 @@
+{
+ "id": "nerv-neuron",
+ "module": "t0-nervous",
+ "title": "Neurons, synapses and the spark of contraction",
+ "goal": "Explain how a resting membrane, an action potential and the neuromuscular junction turn a nerve signal into calcium release and cross-bridge cycling.",
+ "requires": [
+  "anat-blood"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "nn-rest-sign",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "nn-resting",
+   "title": "A charged membrane at rest",
+   "text": "Every nerve and muscle cell is a tiny battery. At rest a muscle fibre sits at about **−70 to −90 mV**: the inside is negative compared with the outside [[c:nn-rest-value]]. This is its resting [membrane potential](g:membrane-potential).\n\nTwo things set it up:\n\n- **Gradients.** The [Na⁺/K⁺ pump](g:na-k-atpase) spends ATP to keep K⁺ high inside the cell and Na⁺ high outside.\n- **Leaks.** At rest the membrane mostly lets K⁺ through. K⁺ seeps out, leaving the inside negative [[c:nn-leak]].\n\nEach nerve signal lets a little Na⁺ in and K⁺ out. In hard work the pump must keep up, or the fibre stops responding [[c:nn-pump-job]].",
+   "claims": [
+    {
+     "id": "nn-rest-value",
+     "text": "At rest a skeletal muscle fibre is polarised to about −70 to −90 mV (inside negative); isolated fibres read about −70 mV at 22 °C and −83 mV at 37 °C.",
+     "grade": "strong",
+     "sources": [
+      "kaura2024",
+      "bolanos2022"
+     ],
+     "evidence": [
+      {
+       "source": "kaura2024",
+       "quote": "Muscle fibres, like neurones, are excitable cells with a resting membrane potential of -70 to -90 mV",
+       "level": "full-text"
+      },
+      {
+       "source": "bolanos2022",
+       "quote": "Under resting conditions, the fibre is polarized between –70 (Head, 1993) and –83 mV (Luff and Atwood, 1972; Wang et al., 2022), at 22 and 37°C, respectively.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "nn-leak",
+     "text": "Leak (mainly K⁺) conductances set the resting membrane potential.",
+     "grade": "strong",
+     "sources": [
+      "powell2021",
+      "tanner2022"
+     ],
+     "evidence": [
+      {
+       "source": "tanner2022",
+       "quote": "This model teaches that leak conductances set membrane resting potential",
+       "level": "abstract"
+      },
+      {
+       "source": "powell2021",
+       "quote": "the membrane potential approaches the reversal potential of the ion to which it is most permeable at that instant.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nn-pump-job",
+     "text": "The main job of the Na⁺/K⁺ pumps is to restore the Na⁺ and K⁺ gradients that excitation runs down; without it, excitability is lost during work.",
+     "grade": "strong",
+     "sources": [
+      "clausen2003"
+     ],
+     "evidence": [
+      {
+       "source": "clausen2003",
+       "quote": "During work, therefore, the impending loss of excitability has to be counterbalanced by prompt restoration of Na+-K+ gradients. Since this is the major function of the Na+-K+ pumps, it is crucial that their activity and capacity are adequate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-rest-sign",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "nn-pump-role"
+  },
+  {
+   "type": "concept",
+   "id": "nn-ap",
+   "title": "The action potential: a brief flip",
+   "text": "When the membrane is pushed past a threshold, voltage-gated Na⁺ channels open. Na⁺ rushes in and the inside swings positive: in muscle recordings, to about **+25 to +35 mV** [[c:nn-ap-peak]]. Within a millisecond or so the Na⁺ channels close and K⁺ channels open; K⁺ flows out and the voltage falls back [[c:nn-ap-ions]].\n\nThat flip is an [action potential](g:action-potential). Two rules matter for the rest of the module:\n\n- **All or none.** Once threshold is crossed, the spike has the same size every time.\n- **It travels.** Each patch of membrane triggers the next, so the spike runs along the nerve.\n\nSince every spike is the same size, a nerve can only say \"more\" by firing more often.",
+   "claims": [
+    {
+     "id": "nn-ap-peak",
+     "text": "In skeletal muscle the action potential overshoots to about +25 to +35 mV (lab recordings at 15–30 °C).",
+     "grade": "strong",
+     "sources": [
+      "bolanos2022"
+     ],
+     "evidence": [
+      {
+       "source": "bolanos2022",
+       "quote": "In most experiments, performed between 15 and 30°C, the AP depolarizes the fibre and then slightly polarizes it to positive values between +25 and +35 mV",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "nn-ap-ions",
+     "text": "Voltage-gated Na⁺ channels carry the upstroke of the action potential and K⁺ channels its repolarisation.",
+     "grade": "strong",
+     "sources": [
+      "tanner2022"
+     ],
+     "evidence": [
+      {
+       "source": "tanner2022",
+       "quote": "that fast, inactivating, voltage-gated sodium channels effect the SGA AP upstroke; and that delayed, rectifying, noninactivating voltage-gated potassium channels carry AP repolarization",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-ap-upstroke"
+  },
+  {
+   "type": "question",
+   "item": "nn-all-or-none"
+  },
+  {
+   "type": "question",
+   "item": "nn-ecc-trigger",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "nn-nmj",
+   "title": "Crossing the gap: the neuromuscular junction",
+   "text": "A motor nerve doesn't touch its muscle fibre. It ends at the [neuromuscular junction](g:neuromuscular-junction), with a narrow gap. In milliseconds [[c:nn-nmj-steps]]:\n\n1. The nerve action potential arrives and Ca²⁺ enters the nerve terminal.\n2. The terminal releases [acetylcholine](g:acetylcholine) (ACh).\n3. ACh crosses the gap and binds receptors on the fibre: the endplate potential.\n4. That starts a muscle action potential.\n\n[Acetylcholinesterase](g:acetylcholinesterase) in the gap then breaks ACh down, so each signal is short [[c:nn-ache]].\n\nThe junction releases far more ACh than needed: the [safety factor](g:safety-factor) is about **3–5** [[c:nn-safety]]. So, in health, every nerve spike makes one muscle spike.",
+   "claims": [
+    {
+     "id": "nn-nmj-steps",
+     "text": "At the NMJ the nerve action potential lets Ca²⁺ into the terminal, which releases ACh; ACh binds receptors on the fibre, giving the endplate potential that starts the muscle action potential, all within milliseconds.",
+     "grade": "strong",
+     "sources": [
+      "rodriguezcruz2020"
+     ],
+     "evidence": [
+      {
+       "source": "rodriguezcruz2020",
+       "quote": "On arrival of the motor nerve action potential, calcium enters the presynaptic terminal, which leads to the release of the neurotransmitter acetylcholine (ACh). ACh crosses the synaptic gap and binds to ACh receptors (AChRs) tightly clustered on the surface of the muscle fiber; this leads to the endplate potential which initiates the muscle action potential that results in muscle contraction.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nn-ache",
+     "text": "Acetylcholinesterase ends transmission by breaking down ACh; blocking it makes endplate potentials larger and longer.",
+     "grade": "strong",
+     "sources": [
+      "rodriguezcruz2020"
+     ],
+     "evidence": [
+      {
+       "source": "rodriguezcruz2020",
+       "quote": "In particular, it is of relevance that the enzyme acetylcholinesterase (AChE), which terminates synaptic transmission by breaking down acetylcholine, is attached to the basal lamina",
+       "level": "full-text"
+      },
+      {
+       "source": "rodriguezcruz2020",
+       "quote": "cholinesterase inhibitors to prevent the breakdown of ACh by AChE; this leads to longer duration of ACh in the synapse leading to larger and slightly prolonged EPPs.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "nn-safety",
+     "text": "The NMJ releases more transmitter than needed to fire the muscle fibre; the safety factor is generally 3–5 in adult mammals.",
+     "grade": "strong",
+     "sources": [
+      "wood2001"
+     ],
+     "evidence": [
+      {
+       "source": "wood2001",
+       "quote": "This is a result of the amount of transmitter released per nerve impulse being greater than that required to trigger an action potential in the muscle fibre.",
+       "level": "abstract"
+      },
+      {
+       "source": "wood2001",
+       "quote": "In normal adult mammals, the safety factor is generally 3-5.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-nmj-order"
+  },
+  {
+   "type": "question",
+   "item": "nn-ache-block"
+  },
+  {
+   "type": "example",
+   "id": "nn-safety-example",
+   "title": "Working out a safety factor",
+   "problem": "At one junction, a nerve impulse releases 60 packets (quanta) of ACh. The muscle fibre needs 20 quanta to reach threshold. What is the safety factor?",
+   "steps": [
+    "Safety factor = transmitter released ÷ transmitter needed to fire the fibre.",
+    "60 ÷ 20 = 3.",
+    "So the junction could lose two thirds of its release and still fire the fibre. A safety factor near 1 would mean any drop in release causes failed signals."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-safety-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "nn-safety-meaning"
+  },
+  {
+   "type": "concept",
+   "id": "nn-ecc",
+   "title": "From muscle spike to calcium",
+   "text": "The muscle action potential doesn't pull anything by itself. [Excitation–contraction coupling](g:ec-coupling) turns it into force [[c:nn-ecc-chain]]:\n\n1. The spike runs along the fibre's membrane and down the T-tubules, pits that carry it deep inside.\n2. Voltage sensors (DHPRs) in the T-tubules detect it.\n3. They open the ryanodine receptors of the [sarcoplasmic reticulum](g:sarcoplasmic-reticulum) (SR).\n4. Ca²⁺ floods out, from about 45–106 nM at rest to about 7–30 µM [[c:nn-ca-rise]].\n5. Ca²⁺ binds troponin C, which frees actin for the [cross-bridges](g:cross-bridge) [[c:nn-troponin]].\n\nTo relax, the SERCA pump spends ATP to pull Ca²⁺ back into the SR.",
+   "claims": [
+    {
+     "id": "nn-ecc-chain",
+     "text": "EC coupling: the action potential spreads along the membrane and T-tubules, DHPRs detect it and open SR ryanodine receptors, Ca²⁺ is released, and SERCA takes it back up.",
+     "grade": "strong",
+     "sources": [
+      "calderon2014"
+     ],
+     "evidence": [
+      {
+       "source": "calderon2014",
+       "quote": "The sequence of events in twitch skeletal muscle involves: (1) initiation and propagation of an action potential along the plasma membrane, (2) spread of the potential throughout the transverse tubule system (T-tubule system), (3) dihydropyridine receptors (DHPR)-mediated detection of changes in membrane potential, (4) allosteric interaction between DHPR and sarcoplasmic reticulum (SR) ryanodine receptors (RyR), (5) release of Ca2+ from the SR and transient increase of Ca2+ concentration in the myoplasm",
+       "level": "abstract"
+      },
+      {
+       "source": "calderon2014",
+       "quote": "Ca2+ disappearance from the myoplasm mediated mainly by its reuptake by the SR through the SR Ca2+ adenosine triphosphatase (SERCA)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nn-ca-rise",
+     "text": "SR release raises free cytoplasmic Ca²⁺ from about 45–106 nM at rest to an average of about 7–30 µM, depending on fibre type.",
+     "grade": "moderate",
+     "sources": [
+      "bolanos2022"
+     ],
+     "evidence": [
+      {
+       "source": "bolanos2022",
+       "quote": "The amount of Ca2+ released from the SR is enough to rise the resting cytoplasmic free [Ca2+] from 45–106 nM",
+       "level": "full-text"
+      },
+      {
+       "source": "bolanos2022",
+       "quote": "to a fibre-type dependent averaged value of 7–30 µM",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "nn-troponin",
+     "text": "Released Ca²⁺ binds troponin C, which activates the contractile machinery.",
+     "grade": "strong",
+     "sources": [
+      "bolanos2022"
+     ],
+     "evidence": [
+      {
+       "source": "bolanos2022",
+       "quote": "Upon release, the diffusing Ca2+ has multiple fates: binds to troponin C thus activating the contractile machinery",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-ecc-trigger",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "nn-ca-example",
+   "title": "How big is the calcium jump?",
+   "problem": "Free Ca²⁺ in a resting fibre is 50 nM. During a contraction it reaches 10 µM. By what factor does it rise?",
+   "steps": [
+    "Put both in the same unit first: 1 µM = 1,000 nM, so 10 µM = 10,000 nM.",
+    "Factor = 10,000 ÷ 50 = 200.",
+    "So Ca²⁺ rises about 200-fold within milliseconds: a huge, fast signal, which is why the SR has to spend ATP to pump it back."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-ca-fold",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "nn-relax-atp"
+  },
+  {
+   "type": "concept",
+   "id": "nn-endurance",
+   "title": "The chain in a long effort",
+   "text": "In a 5-hour ride at 10 spikes a second, an active fibre fires about 180,000 action potentials. Each lets in a little Na⁺ and lets out a little K⁺, so the [Na⁺/K⁺ pump](g:na-k-atpase) runs all day, and with SERCA it is a real ATP cost on top of the cross-bridges.\n\nThe good news: training adds pumps. Pump content in muscle goes up with training and down with immobilisation [[c:nn-pump-training]].\n\nWhere the chain fails when you are tired (brain, nerve, junction, calcium release or cross-bridges) is the subject of the fatigue module. For now, remember the order: nerve spike → ACh → muscle spike → Ca²⁺ → cross-bridges.",
+   "claims": [
+    {
+     "id": "nn-pump-training",
+     "text": "Na⁺/K⁺ pump content in muscle is upregulated by training and downregulated by immobilisation.",
+     "grade": "strong",
+     "sources": [
+      "clausen2003"
+     ],
+     "evidence": [
+      {
+       "source": "clausen2003",
+       "quote": "Na+-K+ pump content is upregulated by training, thyroid hormones, insulin, glucocorticoids, and K+ overload. Downregulation is seen during immobilization",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nn-pump-training"
+  },
+  {
+   "type": "question",
+   "item": "nn-safety-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "nn-ca-fold",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "At rest a muscle fibre is about −70 to −90 mV inside; K⁺ leak sets it and the ATP-driven Na⁺/K⁺ pump keeps the gradients.",
+    "An action potential is an all-or-none flip: Na⁺ in for the upstroke, K⁺ out to recover. Nerves code \"more\" by firing more often, never by bigger spikes.",
+    "At the neuromuscular junction, Ca²⁺ entry releases ACh, which fires the muscle fibre; acetylcholinesterase ends the signal. The safety factor is about 3–5.",
+    "EC coupling: muscle spike → T-tubules → DHPR → ryanodine receptor → Ca²⁺ out of the SR → troponin C → cross-bridges. SERCA spends ATP to relax.",
+    "Training adds Na⁺/K⁺ pumps, helping fibres stay excitable through long efforts."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "nn-rest-sign",
+   "concept": "nn-resting",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kaura2024",
+    "bolanos2022",
+    "tanner2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before you even start pedalling, what is the voltage inside a resting leg muscle fibre, compared with outside?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About −80 mV: negative inside",
+       "correct": true,
+       "why": "Right: a resting skeletal muscle fibre sits at about −70 to −90 mV."
+      },
+      {
+       "id": "b",
+       "text": "About +80 mV: positive inside",
+       "why": "That sign belongs to nothing at rest; the inside only goes briefly positive (about +30 mV) during an action potential."
+      },
+      {
+       "id": "c",
+       "text": "0 mV: no voltage until a nerve fires",
+       "why": "The membrane is charged all the time; the nerve signal changes an existing voltage, it doesn't create one."
+      },
+      {
+       "id": "d",
+       "text": "About −1 V: strongly negative inside",
+       "why": "The order of magnitude is off: membrane potentials are tens of millivolts, not volts."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner stands at the start line. Her calf muscle fibres are at rest. Which describes their membrane?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inside negative, about −70 to −90 mV",
+       "correct": true,
+       "why": "Right: leak K⁺ channels and the Na⁺/K⁺ pump keep the inside about −70 to −90 mV."
+      },
+      {
+       "id": "b",
+       "text": "Inside positive, about +25 to +35 mV",
+       "why": "That is the peak of an action potential, which lasts only a millisecond or so."
+      },
+      {
+       "id": "c",
+       "text": "Uncharged, since no nerve is firing",
+       "why": "The resting membrane is always charged; that stored voltage is what lets it fire quickly."
+      },
+      {
+       "id": "d",
+       "text": "Inside negative, about −180 mV",
+       "why": "−180 mV is the voltage across the mitochondrial inner membrane, not the fibre's outer membrane."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-pump-role",
+   "concept": "nn-resting",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "clausen2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a 2-hour triathlon bike leg, what is the main job of the Na⁺/K⁺ pumps in the working muscle fibres?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rebuilding the Na⁺ and K⁺ gradients that each spike runs down",
+       "correct": true,
+       "why": "Right: restoring Na⁺–K⁺ gradients is their major function; otherwise fibres lose excitability."
+      },
+      {
+       "id": "b",
+       "text": "Making ATP from Na⁺ and K⁺ flowing back",
+       "why": "It's the other way round: the pump spends ATP; ion flow doesn't make ATP in muscle."
+      },
+      {
+       "id": "c",
+       "text": "Releasing Ca²⁺ from the SR to start contraction",
+       "why": "Ca²⁺ release is the ryanodine receptor's job; the Na⁺/K⁺ pump handles Na⁺ and K⁺."
+      },
+      {
+       "id": "d",
+       "text": "Generating the action potential itself",
+       "why": "The spike comes from voltage-gated Na⁺ and K⁺ channels; the pump only restores the gradients afterwards."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-ap-upstroke",
+   "concept": "nn-ap",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tanner2022",
+    "bolanos2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What makes the inside of a nerve or muscle fibre swing positive at the start of an action potential?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Na⁺ rushing in through voltage-gated channels",
+       "correct": true,
+       "why": "Right: fast voltage-gated Na⁺ channels carry the upstroke."
+      },
+      {
+       "id": "b",
+       "text": "K⁺ rushing in through leak channels",
+       "why": "K⁺ flows out, not in, and its flow brings the voltage back down."
+      },
+      {
+       "id": "c",
+       "text": "The Na⁺/K⁺ pump speeding up",
+       "why": "The pump is slow and moves 3 Na⁺ out per 2 K⁺ in; it can't make a millisecond spike."
+      },
+      {
+       "id": "d",
+       "text": "Ca²⁺ leaving the sarcoplasmic reticulum",
+       "why": "SR Ca²⁺ release comes after the spike and happens inside the fibre; it doesn't make the membrane spike."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-all-or-none",
+   "concept": "nn-ap",
+   "bloom": "analyse",
+   "sources": [
+    "tanner2022",
+    "enoka2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist goes from 150 W to 350 W. What changes in the action potentials of the motor nerves to her quads?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They come more often, and more nerves fire; each spike stays the same size",
+       "correct": true,
+       "why": "Right: spikes are all-or-none, so more force means more frequent spikes and more active units."
+      },
+      {
+       "id": "b",
+       "text": "Each spike gets taller, so the muscle gets a stronger signal",
+       "why": "Spikes are all-or-none: once over threshold, the size is fixed. Strength isn't coded in spike height."
+      },
+      {
+       "id": "c",
+       "text": "Each spike lasts longer, so Ca²⁺ stays out longer",
+       "why": "Spike duration is set by the channels, not by the effort; force is coded by frequency."
+      },
+      {
+       "id": "d",
+       "text": "Nothing; force is set in the muscle, not by the nerves",
+       "why": "The muscle only contracts when told; the nervous system grades force by how many units fire and how often."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-nmj-order",
+   "concept": "nn-nmj",
+   "bloom": "understand",
+   "sources": [
+    "rodriguezcruz2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Put the neuromuscular junction in order. Which sequence is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nerve spike → Ca²⁺ enters terminal → ACh released → endplate potential → muscle spike",
+       "correct": true,
+       "why": "Right: that's the sequence, all within milliseconds."
+      },
+      {
+       "id": "b",
+       "text": "Nerve spike → ACh released → Ca²⁺ enters terminal → muscle spike → endplate potential",
+       "why": "Ca²⁺ entry triggers ACh release, and the endplate potential comes before (and starts) the muscle spike."
+      },
+      {
+       "id": "c",
+       "text": "Ca²⁺ released from SR → nerve spike → ACh released → muscle spike",
+       "why": "SR Ca²⁺ release is in the muscle fibre and comes last, after the muscle spike."
+      },
+      {
+       "id": "d",
+       "text": "Nerve spike → muscle spike → ACh released → Ca²⁺ enters terminal",
+       "why": "The nerve doesn't touch the fibre; ACh must cross the gap before the muscle can fire."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-ache-block",
+   "concept": "nn-nmj",
+   "bloom": "apply",
+   "sources": [
+    "rodriguezcruz2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A drug partly blocks acetylcholinesterase at the neuromuscular junction. What happens to each endplate potential?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It gets larger and lasts a little longer",
+       "correct": true,
+       "why": "Right: ACh stays in the gap longer, giving larger, slightly prolonged endplate potentials."
+      },
+      {
+       "id": "b",
+       "text": "It disappears, since ACh can no longer be made",
+       "why": "Acetylcholinesterase breaks ACh down; it doesn't make it. Blocking it leaves more ACh, not less."
+      },
+      {
+       "id": "c",
+       "text": "It gets smaller, because ACh can't reach its receptors",
+       "why": "The enzyme doesn't carry ACh anywhere; blocking it means ACh lingers on its receptors."
+      },
+      {
+       "id": "d",
+       "text": "It is unchanged, since the enzyme acts only in the brain",
+       "why": "Acetylcholinesterase sits right in the junction's gap; that is where it ends each signal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-safety-calc",
+   "concept": "nn-nmj",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "wood2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A nerve impulse releases 50 quanta of ACh. The muscle fibre needs 10 quanta to reach threshold. What is the safety factor?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5",
+       "correct": true,
+       "why": "Right: 50 ÷ 10 = 5."
+      },
+      {
+       "id": "b",
+       "text": "0.2",
+       "why": "This divides needed by released (10 ÷ 50). The safety factor is released ÷ needed."
+      },
+      {
+       "id": "c",
+       "text": "40",
+       "why": "This is the difference (50 − 10), not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "500",
+       "why": "This multiplies the two (50 × 10); the factor is a ratio."
+      }
+     ],
+     "solution": "Safety factor = released ÷ needed = 50 ÷ 10 = 5."
+    },
+    {
+     "id": "b",
+     "stem": "In a muscle sample, each nerve impulse releases 45 quanta and 15 are needed to fire the fibre. Safety factor?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3",
+       "correct": true,
+       "why": "Right: 45 ÷ 15 = 3."
+      },
+      {
+       "id": "b",
+       "text": "0.33",
+       "why": "This divides needed by released (15 ÷ 45). The safety factor is released ÷ needed."
+      },
+      {
+       "id": "c",
+       "text": "30",
+       "why": "This is the difference (45 − 15), not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "675",
+       "why": "This multiplies the two (45 × 15); the factor is a ratio."
+      }
+     ],
+     "solution": "Safety factor = released ÷ needed = 45 ÷ 15 = 3."
+    },
+    {
+     "id": "c",
+     "stem": "In a disease that destroys ACh receptors, a junction still releases 60 quanta, but the fibre now needs 40 to fire. Safety factor?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.5",
+       "correct": true,
+       "why": "Right: 60 ÷ 40 = 1.5, close to failure: a small drop in release would block transmission."
+      },
+      {
+       "id": "b",
+       "text": "0.67",
+       "why": "This divides needed by released (40 ÷ 60). The safety factor is released ÷ needed."
+      },
+      {
+       "id": "c",
+       "text": "20",
+       "why": "This is the difference (60 − 40), not the ratio."
+      },
+      {
+       "id": "d",
+       "text": "2,400",
+       "why": "This multiplies the two (60 × 40); the factor is a ratio."
+      }
+     ],
+     "solution": "Safety factor = released ÷ needed = 60 ÷ 40 = 1.5."
+    }
+   ]
+  },
+  {
+   "id": "nn-safety-meaning",
+   "concept": "nn-nmj",
+   "bloom": "analyse",
+   "sources": [
+    "wood2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In health the neuromuscular safety factor is about 3–5. What does that buy an ultra runner in hour 10?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ACh release can drop a lot before nerve spikes stop firing the muscle",
+       "correct": true,
+       "why": "Right: the junction releases several times the ACh needed, so moderate drops in release still fire the fibre."
+      },
+      {
+       "id": "b",
+       "text": "Each nerve spike makes the muscle fire 3–5 times",
+       "why": "The safety factor is a margin, not a multiplier: one nerve spike still gives one muscle spike."
+      },
+      {
+       "id": "c",
+       "text": "The muscle can make 3–5 times more force than normal",
+       "why": "The safety factor is about transmitter at the junction; it says nothing about the force of the fibre."
+      },
+      {
+       "id": "d",
+       "text": "The muscle needs 3–5 nerve spikes before it fires once",
+       "why": "It's the reverse: one spike releases 3–5 times what is needed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-ecc-trigger",
+   "concept": "nn-ecc",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bolanos2022",
+    "calderon2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Inside a muscle fibre, what directly lets myosin start pulling on actin after the fibre fires?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ca²⁺ released from the SR binding troponin C",
+       "correct": true,
+       "why": "Right: Ca²⁺ from the SR binds troponin C, which frees actin for the cross-bridges."
+      },
+      {
+       "id": "b",
+       "text": "ACh binding to receptors on the myosin",
+       "why": "ACh acts only on the fibre's surface at the junction; it never reaches the myosin."
+      },
+      {
+       "id": "c",
+       "text": "Na⁺ entering the fibre during the spike",
+       "why": "Na⁺ entry makes the spike; it's Ca²⁺ inside the fibre that switches on the filaments."
+      },
+      {
+       "id": "d",
+       "text": "ATP arriving from the mitochondria",
+       "why": "ATP powers each cross-bridge cycle, but Ca²⁺ is the on switch."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's quad fibre has just fired an action potential. What is the last step before cross-bridges can form?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ca²⁺ binds troponin C",
+       "correct": true,
+       "why": "Right: spike → T-tubule → DHPR → ryanodine receptor → Ca²⁺ → troponin C → cross-bridges."
+      },
+      {
+       "id": "b",
+       "text": "ACh binds troponin C",
+       "why": "ACh works only at the junction's surface; troponin C binds Ca²⁺."
+      },
+      {
+       "id": "c",
+       "text": "SERCA pumps Ca²⁺ into the SR",
+       "why": "SERCA removes Ca²⁺ to relax the fibre; it ends contraction, it doesn't start it."
+      },
+      {
+       "id": "d",
+       "text": "K⁺ leaves the fibre",
+       "why": "K⁺ outflow brings the membrane back down after the spike; it doesn't switch on the filaments."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-ca-fold",
+   "concept": "nn-ecc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "bolanos2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Free Ca²⁺ in a resting fibre is 100 nM. During a sprint it reaches 20 µM. By what factor does it rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "200-fold",
+       "correct": true,
+       "why": "Right: 20 µM = 20,000 nM; 20,000 ÷ 100 = 200."
+      },
+      {
+       "id": "b",
+       "text": "0.2-fold",
+       "why": "This divides 20 by 100 without converting µM to nM."
+      },
+      {
+       "id": "c",
+       "text": "2,000-fold",
+       "why": "This uses 1 µM = 10,000 nM. It is 1,000 nM."
+      },
+      {
+       "id": "d",
+       "text": "0.005-fold",
+       "why": "This divides rest by peak (100 ÷ 20,000); the rise is peak ÷ rest."
+      }
+     ],
+     "solution": "20 µM × 1,000 = 20,000 nM. Factor = 20,000 ÷ 100 = 200."
+    },
+    {
+     "id": "b",
+     "stem": "Free Ca²⁺ at rest is 50 nM and rises to 25 µM during a hard pedal stroke. By what factor does it rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "500-fold",
+       "correct": true,
+       "why": "Right: 25 µM = 25,000 nM; 25,000 ÷ 50 = 500."
+      },
+      {
+       "id": "b",
+       "text": "0.5-fold",
+       "why": "This divides 25 by 50 without converting µM to nM."
+      },
+      {
+       "id": "c",
+       "text": "5,000-fold",
+       "why": "This uses 1 µM = 10,000 nM. It is 1,000 nM."
+      },
+      {
+       "id": "d",
+       "text": "0.002-fold",
+       "why": "This divides rest by peak (50 ÷ 25,000); the rise is peak ÷ rest."
+      }
+     ],
+     "solution": "25 µM × 1,000 = 25,000 nM. Factor = 25,000 ÷ 50 = 500."
+    }
+   ]
+  },
+  {
+   "id": "nn-relax-atp",
+   "concept": "nn-ecc",
+   "bloom": "analyse",
+   "sources": [
+    "calderon2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a muscle fibre still need ATP to relax, not just to contract?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SERCA spends ATP to pump Ca²⁺ back into the SR",
+       "correct": true,
+       "why": "Right: Ca²⁺ is removed mainly by SERCA, an ATP-driven pump; until it is, the fibre stays switched on."
+      },
+      {
+       "id": "b",
+       "text": "ATP is needed to release Ca²⁺ from the SR",
+       "why": "Release through ryanodine receptors is triggered by the voltage sensors; it is the pumping back that costs ATP."
+      },
+      {
+       "id": "c",
+       "text": "ATP makes acetylcholine leave its receptors",
+       "why": "ACh is cleared by acetylcholinesterase in the junction; this has nothing to do with relaxation inside the fibre."
+      },
+      {
+       "id": "d",
+       "text": "Relaxation needs no ATP; only the pull does",
+       "why": "Relaxation is active: Ca²⁺ has to be pumped back against its gradient, which costs ATP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nn-pump-training",
+   "concept": "nn-endurance",
+   "bloom": "analyse",
+   "sources": [
+    "clausen2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's coach says endurance training only changes the heart and mitochondria. Which finding contradicts this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training raises muscle Na⁺/K⁺ pump content",
+       "correct": true,
+       "why": "Right: pump content is upregulated by training, helping fibres stay excitable during work."
+      },
+      {
+       "id": "b",
+       "text": "Training removes the need for Na⁺/K⁺ pumps",
+       "why": "Every spike runs the gradients down, so trained fibres still need pumps, and they have more of them."
+      },
+      {
+       "id": "c",
+       "text": "Training makes action potentials taller",
+       "why": "Spikes are all-or-none; training doesn't make them taller."
+      },
+      {
+       "id": "d",
+       "text": "Training lowers pump content to save ATP",
+       "why": "Lower pump content is seen with immobilisation, not training."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

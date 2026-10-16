@@ -1,0 +1,716 @@
+{
+ "id": "cell-structure",
+ "module": "t0-cell-biochem",
+ "title": "The cell and its parts",
+ "goal": "Name the parts of a muscle cell that matter for exercise (membrane, cytosol, nucleus, mitochondria, sarcoplasmic reticulum), what each does, and why a muscle fibre has many nuclei.",
+ "requires": [
+  "ev-samples"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "cs-where-glycolysis",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cs-cell",
+   "title": "The cell: a small bag of chemistry",
+   "text": "Every tissue is made of cells. Each cell is a bag of watery fluid, the [cytosol](g:cytosol), wrapped in a thin fatty membrane that decides what gets in and out. Inside float [organelles](g:organelle), each with its own job:\n\n| part | job that matters for exercise |\n|---|---|\n| membrane | lets in fuel, keeps ion gradients |\n| cytosol | [glycolysis](g:glycolysis) and many fast reactions [[c:glycolysis-cytosol]] |\n| nucleus | holds the DNA: the recipes for every protein |\n| [mitochondria](g:mitochondria) | make ATP with oxygen |\n| [sarcoplasmic reticulum](g:sarcoplasmic-reticulum) | stores calcium (muscle) |\n\nSkeletal muscle is the biggest tissue you train: about 40% of body weight, holding half or more of all the body's protein [[c:muscle-mass]].",
+   "claims": [
+    {
+     "id": "glycolysis-cytosol",
+     "text": "Glycolysis takes place in the cytosol, outside the mitochondria; pyruvate then enters the mitochondria for oxidation.",
+     "grade": "strong",
+     "sources": [
+      "mukund2020"
+     ],
+     "evidence": [
+      {
+       "source": "mukund2020",
+       "quote": "glycolysis occurs outside the mitochondrion—when a six-carbon is converted to a 3-carbon pyruvate molecule generating energy in the form of ATP and NADH.",
+       "level": "full-text"
+      },
+      {
+       "source": "mukund2020",
+       "quote": "Pyruvate is additionally imported into the mitochondrion, where it is converted to acetyl-CoA and enters the citric acid (TCA) cycle.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "muscle-mass",
+     "text": "Skeletal muscle makes up about 40% of body weight and holds 50–75% of the body's protein.",
+     "grade": "strong",
+     "sources": [
+      "frontera2015"
+     ],
+     "evidence": [
+      {
+       "source": "frontera2015",
+       "quote": "In humans, skeletal muscle comprises approximately 40% of total body weight and contains 50-75% of all body proteins.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-where-glycolysis",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cs-organelle-job"
+  },
+  {
+   "type": "concept",
+   "id": "cs-fibre",
+   "title": "A muscle cell is a long fibre with many nuclei",
+   "text": "A muscle cell doesn't look like a textbook cell. It is a long, thin **fibre** with many nuclei. During growth, many small single-nucleus cells fuse into one fibre [[c:multinucleated]]. Each [myonucleus](g:myonucleus) then looks after the stretch of fibre around it, making the proteins that part needs.\n\nThe fibre's membrane is called the [sarcolemma](g:sarcolemma), and its cytosol the sarcoplasm. Most of the inside is packed with the contractile filaments that pull, with mitochondria and the calcium store squeezed between them.\n\nWhether nuclei gained in training stay for years, as a \"muscle memory\", is still argued (see the debate box).",
+   "claims": [
+    {
+     "id": "multinucleated",
+     "text": "Muscle fibres form when many single-nucleus cells fuse, so a mature fibre has many nuclei.",
+     "grade": "strong",
+     "sources": [
+      "mukund2020"
+     ],
+     "evidence": [
+      {
+       "source": "mukund2020",
+       "quote": "The mononucleated myocytes eventually fuse to form multinucleated, mature, contracting muscle fibers",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do myonuclei gained in training stay after you stop, making it easier to regain muscle?",
+    "sides": [
+     {
+      "position": "Yes: in mice, new nuclei are added during overload and kept through long disuse, and could act as a muscle memory.",
+      "sources": [
+       "bruusgaard2010"
+      ]
+     },
+     {
+      "position": "Not shown in humans yet: in 19 adults, 10 weeks of one-leg training did not add nuclei, and the trained leg did not respond better on retraining.",
+      "sources": [
+       "psilander2019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cs-nuclei-why"
+  },
+  {
+   "type": "question",
+   "item": "cs-biopsy-read"
+  },
+  {
+   "type": "question",
+   "item": "cs-memory-claim"
+  },
+  {
+   "type": "concept",
+   "id": "cs-mito",
+   "title": "Mitochondria: the aerobic ATP factories",
+   "text": "[Mitochondria](g:mitochondria) are where fat and carbohydrate are burned with oxygen to rebuild ATP ([oxidative phosphorylation](g:oxidative-phosphorylation)). Glycolysis in the cytosol hands its product, pyruvate, to them.\n\nHow many mitochondria a muscle has is a main marker of its aerobic capacity [[c:mito-capacity]]. Slow, fatigue-resistant **type I** fibres are packed with them; fast type II fibres have fewer.\n\nEndurance training adds mitochondria. Reviews of human training studies point to **training volume** as a key driver of how much mitochondrial content rises, while intensity matters more for how well each mitochondrion works [[c:mito-volume]]. This is one reason base miles matter for runners, cyclists and triathletes alike.",
+   "claims": [
+    {
+     "id": "mito-capacity",
+     "text": "Mitochondrial content is a main indicator of a muscle's oxidative capacity; type I fibres are rich in mitochondria.",
+     "grade": "strong",
+     "sources": [
+      "mukund2020"
+     ],
+     "evidence": [
+      {
+       "source": "mukund2020",
+       "quote": "Mitochondrial content or volume within muscle is a major quantitative indicator of the muscle's oxidative capacity.",
+       "level": "full-text"
+      },
+      {
+       "source": "mukund2020",
+       "quote": "Phenotypically, slow-twitch or Type I muscle is highly vascularized and saturated with mitochondria and myoglobin exhibiting high mitochondrial and oxidative enzyme content with low glycolytic activity.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mito-volume",
+     "text": "Endurance training raises mitochondrial content; training volume seems key for content, relative intensity for mitochondrial respiratory function.",
+     "grade": "moderate",
+     "sources": [
+      "granata2018"
+     ],
+     "evidence": [
+      {
+       "source": "granata2018",
+       "quote": "Endurance training can induce an increase in mitochondrial content and/or mitochondrial functional qualities",
+       "level": "abstract"
+      },
+      {
+       "source": "granata2018",
+       "quote": "Specifically, we report that training volume may be a critical factor affecting changes in mitochondrial content, whereas relative exercise intensity is an important determinant of changes in mitochondrial respiratory function.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-mito-role"
+  },
+  {
+   "type": "question",
+   "item": "cs-fibre-type"
+  },
+  {
+   "type": "question",
+   "item": "cs-mito-training",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cs-sr-trigger",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cs-sr",
+   "title": "The sarcoplasmic reticulum: the calcium switch",
+   "text": "Wrapped around the filaments of every fibre is a network of sacs, the [sarcoplasmic reticulum](g:sarcoplasmic-reticulum) (SR). It is a calcium store.\n\nWhen a nerve signal arrives, it runs along the sarcolemma and down tubes into the fibre (T-tubules). There it opens channels in the SR, which releases a burst of Ca²⁺ into the cytosol [[c:sr-release]]. Calcium is the switch that lets the filaments pull.\n\nTo relax, pumps in the SR membrane push the Ca²⁺ back in, against its gradient. Those pumps run on ATP [[c:sr-pump]]. So relaxing costs energy too, which matters at a high cadence or stride rate, where the fibre must switch on and off many times a second.",
+   "claims": [
+    {
+     "id": "sr-release",
+     "text": "A nerve signal travelling down the T-tubules triggers release of a large burst of Ca²⁺ from the sarcoplasmic reticulum.",
+     "grade": "strong",
+     "sources": [
+      "mukund2020"
+     ],
+     "evidence": [
+      {
+       "source": "mukund2020",
+       "quote": "The transmitted nerve action potential depolarizes the dihydropyridine receptor (DHPR) of the T-tubules, a voltage-gated Ca2+ channel (VGCC L-Type), which in turn triggers the intracellular release of a large bolus of Ca2+ from the sarcoplasmic reticulum (SR) terminal cisternae via the ryanodine receptors (RYRs, calcium release channels).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sr-pump",
+     "text": "ATP-driven Ca²⁺ pumps (SERCA) return Ca²⁺ to the SR; pumping Ca²⁺ and Na⁺ takes 30–40% of the ATP in an isometric contraction.",
+     "grade": "strong",
+     "sources": [
+      "mukund2020",
+      "barclay2015"
+     ],
+     "evidence": [
+      {
+       "source": "mukund2020",
+       "quote": "ATP-dependent Ca2+ ATPase (SERCA pumps) densely packed on the non-junctional face of the SR terminal cisternae function to return cytosolic Ca2+ released into the terminal cisternae",
+       "level": "full-text"
+      },
+      {
+       "source": "barclay2015",
+       "quote": "Between 30% and 40% of the ATP used during isometric contraction fuels the pumping Ca(2+) and Na(+) out of the myoplasm.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-sr-trigger",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cs-sr-relax"
+  },
+  {
+   "type": "question",
+   "item": "cs-mito-training",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A cell is a membrane-wrapped bag of cytosol with organelles; glycolysis runs in the cytosol, aerobic ATP supply in the mitochondria.",
+    "A muscle cell is a long fibre with many nuclei, formed by fusion of many cells; each nucleus serves its own stretch of fibre.",
+    "Mitochondrial content sets aerobic capacity; type I fibres are rich in them and endurance training (volume especially) adds more.",
+    "The sarcoplasmic reticulum releases Ca²⁺ to switch contraction on and pumps it back with ATP to relax."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cs-where-glycolysis",
+   "concept": "cs-cell",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where in a muscle fibre does glycolysis, the first stage of breaking down glucose, take place?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the cytosol, outside the mitochondria",
+       "correct": true,
+       "why": "Right: glycolysis runs in the cytosol; its product, pyruvate, then enters the mitochondria."
+      },
+      {
+       "id": "b",
+       "text": "Inside the mitochondria",
+       "why": "Mitochondria take over after glycolysis: they oxidise pyruvate and fat. Glycolysis itself is outside them."
+      },
+      {
+       "id": "c",
+       "text": "Inside the nucleus",
+       "why": "The nucleus holds DNA and controls which proteins are made; it doesn't run fuel breakdown."
+      },
+      {
+       "id": "d",
+       "text": "Inside the sarcoplasmic reticulum",
+       "why": "The SR stores and releases calcium; it isn't where glucose is broken down."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's leg fibres break glucose down to pyruvate in the first seconds of a sprint. Which compartment does this happen in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cytosol (sarcoplasm)",
+       "correct": true,
+       "why": "Right: glycolysis happens in the cytosol, which is why it can start without the mitochondria."
+      },
+      {
+       "id": "b",
+       "text": "The mitochondrial matrix",
+       "why": "That is where pyruvate goes next, to be oxidised. Glycolysis is upstream, in the cytosol."
+      },
+      {
+       "id": "c",
+       "text": "The space between fibres",
+       "why": "Fuel breakdown happens inside cells; glucose has to be transported in first."
+      },
+      {
+       "id": "d",
+       "text": "The sarcoplasmic reticulum",
+       "why": "The SR is a calcium store, not a site of glucose breakdown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-organelle-job",
+   "concept": "cs-cell",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mukund2020",
+    "frontera2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which part of a cell holds the DNA, the recipes for every protein the cell can make?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The nucleus",
+       "correct": true,
+       "why": "Right: the nucleus holds the DNA and controls which proteins are made."
+      },
+      {
+       "id": "b",
+       "text": "The mitochondria",
+       "why": "Mitochondria make ATP with oxygen. (They carry a few genes of their own, but the main DNA is in the nucleus.)"
+      },
+      {
+       "id": "c",
+       "text": "The cell membrane",
+       "why": "The membrane controls what enters and leaves; it holds no recipe for proteins."
+      },
+      {
+       "id": "d",
+       "text": "The cytosol",
+       "why": "The cytosol is the fluid where many reactions happen; the DNA is kept apart in the nucleus."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-nuclei-why",
+   "concept": "cs-fibre",
+   "bloom": "understand",
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a single skeletal muscle fibre contain many nuclei?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It forms by the fusion of many single-nucleus cells",
+       "correct": true,
+       "why": "Right: many myocytes fuse into one fibre, keeping their nuclei; each then serves its own stretch of fibre."
+      },
+      {
+       "id": "b",
+       "text": "Its nucleus divides each time the fibre contracts",
+       "why": "Contraction doesn't make nuclei divide; the nuclei come from fused cells (and, later, from stem cells)."
+      },
+      {
+       "id": "c",
+       "text": "Each mitochondrion carries its own nucleus",
+       "why": "Mitochondria have no nucleus; they are separate organelles."
+      },
+      {
+       "id": "d",
+       "text": "Extra nuclei store calcium for contraction",
+       "why": "Calcium is stored in the sarcoplasmic reticulum, not in nuclei."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-biopsy-read",
+   "concept": "cs-fibre",
+   "bloom": "analyse",
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's calf biopsy is cut across. Under the microscope, one fibre's outline shows several nuclei along its edge. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Normal: a single fibre has many nuclei along its length",
+       "correct": true,
+       "why": "Right: muscle fibres are multinucleated, so a cross-section of one fibre often cuts through several nuclei."
+      },
+      {
+       "id": "b",
+       "text": "Several fibres have merged because of damage",
+       "why": "Fusion happens in development and repair, but several nuclei in one fibre is the normal state, not a sign of damage."
+      },
+      {
+       "id": "c",
+       "text": "The fibre is dividing into new fibres",
+       "why": "Mature fibres don't divide; their many nuclei come from fused cells."
+      },
+      {
+       "id": "d",
+       "text": "The nuclei are invading white blood cells",
+       "why": "Immune cells can enter damaged muscle, but nuclei at the edge of a healthy fibre are its own myonuclei."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-memory-claim",
+   "concept": "cs-fibre",
+   "bloom": "evaluate",
+   "sources": [
+    "bruusgaard2010",
+    "psilander2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete took a year off strength training. A coach says: \"Your muscles keep the extra nuclei you built, so the muscle will come back faster.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plausible from mouse data, not yet clearly shown in humans",
+       "correct": true,
+       "why": "Right: mice kept added nuclei through disuse, but a human one-leg study didn't add nuclei in the first place, so it couldn't test the idea."
+      },
+      {
+       "id": "b",
+       "text": "Proven: human studies show nuclei stay for years",
+       "why": "The long-lasting retention was shown in mice; the human evidence so far is inconclusive."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: muscle fibres have only one nucleus each",
+       "why": "Fibres are multinucleated; the question is whether added nuclei stay, not whether there are several."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: nuclei are always lost within a few days",
+       "why": "In mice, nuclei were kept through long disuse; nobody has shown fast loss."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-mito-role",
+   "concept": "cs-mito",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which feature of a muscle fibre best predicts how much ATP it can make with oxygen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How many mitochondria it contains",
+       "correct": true,
+       "why": "Right: mitochondrial content is a main marker of oxidative capacity."
+      },
+      {
+       "id": "b",
+       "text": "How many nuclei it contains",
+       "why": "Nuclei control protein making; they don't make ATP."
+      },
+      {
+       "id": "c",
+       "text": "How much calcium its SR stores",
+       "why": "The SR's calcium controls contraction, not aerobic ATP supply."
+      },
+      {
+       "id": "d",
+       "text": "How thick its membrane is",
+       "why": "The membrane's job is transport and signalling; aerobic ATP is made in the mitochondria."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-fibre-type",
+   "concept": "cs-mito",
+   "bloom": "apply",
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Biopsies from an Ironman triathlete and a track sprint cyclist are compared. Which finding fits the triathlete's leg muscle best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More type I fibres, packed with mitochondria",
+       "correct": true,
+       "why": "Right: type I fibres are rich in mitochondria and oxidative enzymes, suited to hours of aerobic work."
+      },
+      {
+       "id": "b",
+       "text": "More type II fibres with high glycolytic activity",
+       "why": "That profile fits the sprinter, who needs fast, high-rate glycolytic ATP."
+      },
+      {
+       "id": "c",
+       "text": "Fewer mitochondria but more nuclei per fibre",
+       "why": "Endurance training adds mitochondria; nothing suggests fewer."
+      },
+      {
+       "id": "d",
+       "text": "A larger SR calcium store per fibre",
+       "why": "Fast fibres tend to have the more developed SR; it doesn't mark endurance capacity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-mito-training",
+   "concept": "cs-mito",
+   "bloom": "apply",
+   "sources": [
+    "granata2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathon runner wants the biggest rise in leg mitochondrial content over 12 weeks. Based on reviews of training studies, which change matters most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raising weekly training volume",
+       "correct": true,
+       "why": "Right: training volume seems to be a key factor for mitochondrial content."
+      },
+      {
+       "id": "b",
+       "text": "Doing only short all-out sprints",
+       "why": "Intensity matters more for mitochondrial function per unit; content tracks volume more."
+      },
+      {
+       "id": "c",
+       "text": "Adding heavy strength training only",
+       "why": "Strength training mainly builds contractile protein; it is not the main driver of mitochondrial content."
+      },
+      {
+       "id": "d",
+       "text": "Resting more between easy runs",
+       "why": "Recovery helps, but less training means a smaller stimulus for new mitochondria."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two cyclists train for 8 weeks. A doubles weekly hours at easy-moderate intensity; B keeps hours but adds hard intervals. Which outcome do training reviews predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A gains more mitochondrial content; B may gain more respiratory function",
+       "correct": true,
+       "why": "Right: volume seems key for content, relative intensity for how well mitochondria work."
+      },
+      {
+       "id": "b",
+       "text": "B gains more mitochondrial content, A gains nothing",
+       "why": "Volume is the main driver of content; A's extra hours are a strong stimulus."
+      },
+      {
+       "id": "c",
+       "text": "Both gain the same, because only total work counts",
+       "why": "The review found volume and intensity drive different mitochondrial changes."
+      },
+      {
+       "id": "d",
+       "text": "Neither gains, because mitochondria are fixed in adults",
+       "why": "Endurance training reliably adds mitochondria in adults."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-sr-trigger",
+   "concept": "cs-sr",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mukund2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When a nerve signal reaches a muscle fibre, what directly switches on the pulling of the filaments?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ca²⁺ released from the sarcoplasmic reticulum",
+       "correct": true,
+       "why": "Right: the signal opens SR channels, and the Ca²⁺ burst lets the filaments interact."
+      },
+      {
+       "id": "b",
+       "text": "ATP released from the mitochondria",
+       "why": "ATP powers each pull, but the on switch is calcium."
+      },
+      {
+       "id": "c",
+       "text": "Glucose entering through the membrane",
+       "why": "Glucose is fuel; it doesn't switch contraction on."
+      },
+      {
+       "id": "d",
+       "text": "A new protein made by the nucleus",
+       "why": "Making protein takes minutes to hours; contraction starts within milliseconds."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's calf fibres switch on at each foot strike. Which event, triggered by the nerve signal, starts each contraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Calcium floods out of the SR into the cytosol",
+       "correct": true,
+       "why": "Right: the SR's Ca²⁺ release is the switch."
+      },
+      {
+       "id": "b",
+       "text": "Potassium is pumped into the SR",
+       "why": "Potassium gradients matter for the electrical signal, but the SR releases calcium."
+      },
+      {
+       "id": "c",
+       "text": "Mitochondria release stored oxygen",
+       "why": "Mitochondria use oxygen; they don't trigger contraction."
+      },
+      {
+       "id": "d",
+       "text": "The nucleus sends a chemical signal",
+       "why": "The nucleus isn't part of the fast on-off switch."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-sr-relax",
+   "concept": "cs-sr",
+   "bloom": "analyse",
+   "sources": [
+    "mukund2020",
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist spins at 140 rpm, so each leg muscle switches on and off more than twice a second. Why does fast on-off cycling raise ATP use beyond the pulling itself?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Each relaxation needs ATP to pump Ca²⁺ back into the SR",
+       "correct": true,
+       "why": "Right: SR pumps move Ca²⁺ against its gradient using ATP; more cycles mean more pumping."
+      },
+      {
+       "id": "b",
+       "text": "Relaxation is passive, so the extra cost is all in pulling",
+       "why": "Relaxing isn't free: calcium must be pumped back, which costs ATP."
+      },
+      {
+       "id": "c",
+       "text": "Releasing Ca²⁺ from the SR uses most of the ATP",
+       "why": "Release runs downhill through channels; it's the pumping back that costs ATP."
+      },
+      {
+       "id": "d",
+       "text": "The nuclei must remake proteins after every contraction",
+       "why": "Proteins aren't rebuilt after each contraction; that would take far longer."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

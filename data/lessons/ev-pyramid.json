@@ -1,0 +1,673 @@
+{
+ "id": "ev-pyramid",
+ "module": "t0-evidence-101",
+ "title": "The evidence pyramid and its limits",
+ "goal": "Explain how the evidence pyramid ranks designs by risk of bias, where it breaks, how vo2's evidence grades map onto it, and why a mechanism isn't proof of a performance effect.",
+ "requires": [
+  "ev-study-types"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "pyr-top",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "question",
+   "item": "pyr-grade-map",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ev-pyr-classic",
+   "title": "The evidence pyramid",
+   "text": "For decades, evidence has been drawn as a pyramid [[c:pyramid-order]]. From bottom to top:\n\n1. mechanistic lab work and case reports\n2. cross-sectional and case-control studies\n3. cohort studies\n4. randomised controlled trials\n5. systematic reviews and meta-analyses\n\nWhat you gain as you climb is protection from [bias](g:bias): systematic error that pushes a result away from the truth [[c:pyramid-bias]]. Randomisation removes confounding; pooling many trials shrinks chance.\n\nSo, all else equal, a claim backed by a meta-analysis of good RCTs deserves more trust than one backed by a single cohort. \"All else equal\" carries a lot of weight, as the next card shows.",
+   "claims": [
+    {
+     "id": "pyramid-order",
+     "text": "The classic pyramid puts basic science and case series at the bottom, observational studies in the middle, then RCTs, and systematic reviews and meta-analyses at the top.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "Various versions of the evidence pyramid have been described, but all of them focused on showing weaker study designs in the bottom (basic science and case series), followed by case–control and cohort studies in the middle, then randomised controlled trials (RCTs), and at the very top, systematic reviews and meta-analysis.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pyramid-bias",
+     "text": "The pyramid ranks study designs by internal validity, that is, risk of bias.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "Most versions of the pyramid clearly represented a hierarchy of internal validity (risk of bias).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pyr-top",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pyr-what-ranks"
+  },
+  {
+   "type": "concept",
+   "id": "ev-pyr-limits",
+   "title": "Where the pyramid breaks",
+   "text": "Design is only a starting point [[c:design-not-enough]]. A small unblinded RCT can be weaker evidence than a large, careful cohort with a big, consistent effect. The GRADE system used in medicine starts from design, then rates down for bias, imprecision (wide confidence intervals), inconsistency and indirectness (other people or outcomes), and can rate up.\n\nA meta-analysis is only as good as what goes in [[c:ma-inputs]]. Pool ten small, biased studies and you get a precise-looking biased answer. Studies also differ in who, what dose and which test, and that spread (heterogeneity) never fully goes away [[c:heterogeneity]].\n\nOne proposal redraws the pyramid with wavy lines and treats systematic reviews as a lens for viewing the other studies, not a layer on top.",
+   "claims": [
+    {
+     "id": "design-not-enough",
+     "text": "Study design alone is not enough to judge the certainty of evidence; bias, imprecision, inconsistency and indirectness matter too.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "Study design alone appears to be insufficient on its own as a surrogate for risk of bias.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ma-inputs",
+     "text": "A meta-analysis of low-risk RCTs is not equivalent to a meta-analysis of higher-risk observational studies.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "In other words, a meta-analysis of well-conducted RCTs at low risk of bias cannot be equated with a meta-analysis of observational studies at higher risk of bias.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "heterogeneity",
+     "text": "Heterogeneity between studies is an inherent limit of meta-analysis.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "For instance, heterogeneity (clinical, methodological or statistical) is an inherent limitation of meta-analyses that can be minimised or explained but never eliminated.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pyr-design-alone"
+  },
+  {
+   "type": "question",
+   "item": "pyr-ma-inputs"
+  },
+  {
+   "type": "question",
+   "item": "pyr-lens"
+  },
+  {
+   "type": "concept",
+   "id": "ev-pyr-vo2",
+   "title": "How vo2 grades its claims",
+   "text": "Every vo2 evidence badge starts from the pyramid, then adjusts:\n\n| grade | when |\n|---|---|\n| strong | consistent systematic reviews or meta-analyses of RCTs, or a consensus statement |\n| strong (mechanism) | settled physiology, shown in many independent studies |\n| moderate | several RCTs or well-controlled crossovers that agree |\n| weak | one small study, or mechanistic or observational work only |\n| disputed | good studies disagree |\n\nThen it **goes down one grade** for fewer than 15 participants, trained men only when the claim is meant for everyone, or industry funding.\n\nSo three agreeing crossovers, all in trained men, behind a general rule, end up **weak**, not moderate.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "pyr-grade-map",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pyr-downgrade",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pyr-grade-map",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "ev-pyr-mechanism",
+   "title": "A mechanism is not a result",
+   "text": "Mechanistic reasoning goes: X changes Y in the muscle, Y matters for performance, so X should improve performance. Each link can fail, and a described mechanism is not evidence of an effect [[c:mechanism-not-evidence]]. Medicine learned this the hard way: drugs that suppressed abnormal heartbeats after heart attacks were meant to save lives, and increased deaths.\n\nSport has its own example. In an 11-week RCT, vitamin C and E blunted the training rise in mitochondrial markers in muscle, yet VO2max rose by about 8% in both the vitamin and the placebo groups [[c:paulsen-result]].\n\nThe lesson cuts both ways: a marker that rises doesn't prove you'll go faster, and a blunted marker doesn't prove you'll go slower. Only performance studies can show that.",
+   "claims": [
+    {
+     "id": "mechanism-not-evidence",
+     "text": "A described mechanism is not evidence that a treatment works; mechanistic predictions have been wrong, as with antiarrhythmic drugs after heart attack.",
+     "grade": "moderate",
+     "sources": [
+      "howick2010"
+     ],
+     "evidence": [
+      {
+       "source": "howick2010",
+       "quote": "However, described mechanisms do not amount to evidence.",
+       "level": "full-text"
+      },
+      {
+       "source": "howick2010",
+       "quote": "For example, the proposed mechanism predicting that antiarrhythmic drugs would reduce mortality in patients with asymptomatic cardiac arrhythmias after myocardial infarction was mistaken",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "paulsen-result",
+     "text": "In an 11-week RCT, vitamin C and E blunted rises in mitochondrial markers, but VO2max improved equally (about 8%) with vitamins and placebo.",
+     "grade": "weak",
+     "sources": [
+      "paulsen2014"
+     ],
+     "evidence": [
+      {
+       "source": "paulsen2014",
+       "quote": "Participants in the vitamin C and E group increased their VO2 max (mean ± s.d.: 8 ± 5%) and performance in the 20 m shuttle test (10 ± 11%) to the same degree as those in the placebo group (mean ± s.d.: 8 ± 5% and 14 ± 17%, respectively).",
+       "level": "abstract"
+      },
+      {
+       "source": "paulsen2014",
+       "quote": "Daily vitamin C and E supplementation attenuated increases in markers of mitochondrial biogenesis following endurance training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pyr-mechanism"
+  },
+  {
+   "type": "question",
+   "item": "pyr-paulsen"
+  },
+  {
+   "type": "question",
+   "item": "pyr-downgrade",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The classic pyramid runs from mechanistic work and case reports up through cohorts and RCTs to systematic reviews and meta-analyses, ranked by protection from bias.",
+    "Design is only a start: a poor RCT can be weak, and a meta-analysis is only as good as the studies it pools.",
+    "vo2 grades: strong, moderate, weak, disputed; one grade down for n < 15, trained men only behind a general claim, or industry funding.",
+    "A mechanism is not a performance result: markers can move while performance doesn't, and vice versa."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pyr-top",
+   "concept": "ev-pyr-classic",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the classic evidence pyramid, which kind of evidence sits at the top?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Systematic reviews and meta-analyses",
+       "correct": true,
+       "why": "Right: they pool many studies, so they sit above single trials in the classic pyramid."
+      },
+      {
+       "id": "b",
+       "text": "Randomised controlled trials",
+       "why": "RCTs are just below the top; reviews that pool them sit above."
+      },
+      {
+       "id": "c",
+       "text": "Large cohort studies",
+       "why": "Cohorts sit in the middle, below RCTs, because confounding remains."
+      },
+      {
+       "id": "d",
+       "text": "Consensus statements",
+       "why": "The classic pyramid ranks study designs; consensus statements are expert recommendations built on top of them."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the classic evidence pyramid, which kind of evidence sits at the bottom?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mechanistic lab work and case reports",
+       "correct": true,
+       "why": "Right: they show how something might work or what happened to a few people, with no comparison group."
+      },
+      {
+       "id": "b",
+       "text": "Prospective cohort studies",
+       "why": "Cohorts sit in the middle: they have a comparison but can't rule out confounding."
+      },
+      {
+       "id": "c",
+       "text": "Cross-sectional surveys of athletes",
+       "why": "They sit low, but above mechanistic work and case reports."
+      },
+      {
+       "id": "d",
+       "text": "Randomised crossover trials",
+       "why": "Crossovers are randomised experiments, near the top with other RCTs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-what-ranks",
+   "concept": "ev-pyr-classic",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does climbing the classic evidence pyramid buy you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More protection from bias",
+       "correct": true,
+       "why": "Right: the pyramid ranks designs by internal validity, that is, by risk of bias."
+      },
+      {
+       "id": "b",
+       "text": "Bigger samples",
+       "why": "A cohort can be far larger than an RCT and still sit lower."
+      },
+      {
+       "id": "c",
+       "text": "More recent research",
+       "why": "Publication date plays no part in the pyramid."
+      },
+      {
+       "id": "d",
+       "text": "Results that apply better to you personally",
+       "why": "Applicability depends on who was studied, not on design."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-design-alone",
+   "concept": "ev-pyr-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a running-injury question you find two small, unblinded RCTs with wide confidence intervals, and several large cohort studies that agree on a big effect. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Design alone can't decide: rate each body for bias, precision and consistency",
+       "correct": true,
+       "why": "Right: GRADE rates small unblinded RCTs down for bias and imprecision, and consistent large effects can rate observational evidence up."
+      },
+      {
+       "id": "b",
+       "text": "Trust the RCTs, because RCTs always beat cohorts",
+       "why": "Design is a starting point; poor, imprecise RCTs can give low certainty."
+      },
+      {
+       "id": "c",
+       "text": "Trust the cohorts, because bigger studies always win",
+       "why": "Large cohorts still carry confounding; size alone doesn't settle it."
+      },
+      {
+       "id": "d",
+       "text": "Conclude nothing, because the two kinds of evidence cancel out",
+       "why": "Evidence isn't a vote; each body is weighed by its quality, not discarded."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-ma-inputs",
+   "concept": "ev-pyr-limits",
+   "bloom": "analyse",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis pools 9 small, unblinded crossover studies of a cycling supplement, all funded by its maker, and finds a 2% time-trial gain (95% CI 1% to 3%). What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A precise-looking estimate that inherits the studies' bias: low certainty",
+       "correct": true,
+       "why": "Right: pooling shrinks chance error but not bias. A meta-analysis is only as good as what goes in."
+      },
+      {
+       "id": "b",
+       "text": "Strong evidence, because meta-analyses sit at the top of the pyramid",
+       "why": "Its place on the pyramid assumes good inputs; biased studies give a biased pooled answer."
+      },
+      {
+       "id": "c",
+       "text": "Strong evidence, because the confidence interval excludes zero",
+       "why": "A narrow CI shows precision, not freedom from bias."
+      },
+      {
+       "id": "d",
+       "text": "No evidence at all, because industry-funded work must be ignored",
+       "why": "Funding is a reason to rate down, not to discard."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-lens",
+   "concept": "ev-pyr-limits",
+   "bloom": "understand",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Murad and colleagues proposed taking systematic reviews off the top of the pyramid. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They are a lens for judging other studies, only as good as those studies",
+       "correct": true,
+       "why": "Right: a review of biased studies isn't strong evidence, so they treat reviews as a tool for viewing evidence, not a layer above it."
+      },
+      {
+       "id": "b",
+       "text": "Systematic reviews are usually wrong",
+       "why": "The point isn't that they are wrong, but that their strength depends on what they pool."
+      },
+      {
+       "id": "c",
+       "text": "Single large RCTs are always better than reviews",
+       "why": "They didn't put RCTs on top; they changed how reviews are seen."
+      },
+      {
+       "id": "d",
+       "text": "Reviews are too old to be useful",
+       "why": "Age has nothing to do with it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-grade-map",
+   "concept": "ev-pyr-vo2",
+   "bloom": "apply",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Using vo2's evidence grades: one crossover study of 10 trained male cyclists finds a 2% time-trial gain from a new drink. Grade?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong",
+       "why": "Strong needs consistent systematic reviews or meta-analyses of RCTs, or a consensus statement."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "why": "Moderate needs several RCTs or crossovers that agree; this is one study."
+      },
+      {
+       "id": "c",
+       "text": "Weak",
+       "correct": true,
+       "why": "Right: one small study is weak (and it can't go lower for n < 15)."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "why": "Disputed means good studies disagree; here there is only one study."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Using vo2's evidence grades: four independently funded RCTs in male and female runners agree that a warm-up improves 3 km time. No meta-analysis exists. Grade?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong",
+       "why": "Without a meta-analysis or consensus statement, several agreeing RCTs stop at moderate."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "correct": true,
+       "why": "Right: several RCTs that agree, with no reason to go down a grade, are moderate."
+      },
+      {
+       "id": "c",
+       "text": "Weak",
+       "why": "Weak is for one small study or mechanistic and observational work only."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "why": "The trials agree, so the evidence isn't disputed."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "Using vo2's evidence grades: several well-run RCTs in triathletes find a benefit from a fueling strategy, and several equally good RCTs find none. Grade?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong",
+       "why": "Strong needs consistent findings; these conflict."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "why": "Moderate needs trials that agree; these don't."
+      },
+      {
+       "id": "c",
+       "text": "Weak",
+       "why": "Weak is for thin evidence; here there is plenty of good evidence, it just conflicts."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "correct": true,
+       "why": "Right: good studies disagree, which is the definition of disputed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-downgrade",
+   "concept": "ev-pyr-vo2",
+   "bloom": "apply",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Three crossover studies (20 riders each) agree that a supplement improves cycling time trials. All tested trained men, and the claim is stated for all endurance athletes. vo2 grade?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong",
+       "why": "There is no meta-analysis or consensus, so it can't start at strong."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "why": "It starts at moderate (several agreeing crossovers), but drops one grade: trained men only, for a general claim."
+      },
+      {
+       "id": "c",
+       "text": "Weak",
+       "correct": true,
+       "why": "Right: moderate, minus one grade for a men-only sample behind a general claim, gives weak."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "why": "The studies agree, so it isn't disputed."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A meta-analysis of consistent RCTs supports a running supplement, but every trial was funded by its maker. vo2 grade?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong",
+       "why": "It would start at strong, but industry funding takes it down one grade."
+      },
+      {
+       "id": "b",
+       "text": "Moderate",
+       "correct": true,
+       "why": "Right: strong, minus one grade for industry funding, gives moderate."
+      },
+      {
+       "id": "c",
+       "text": "Weak",
+       "why": "Funding takes off one grade, not two."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "why": "The trials agree, so it isn't disputed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-mechanism",
+   "concept": "ev-pyr-mechanism",
+   "bloom": "analyse",
+   "sources": [
+    "howick2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A biopsy study shows a new supplement raises a muscle buffer by 40%. Buffers slow acid build-up, so the maker says it will make you faster in a 4 km pursuit. What evidence is missing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A controlled trial that measures pursuit performance",
+       "correct": true,
+       "why": "Right: each link from marker to performance can fail. Only a performance outcome shows the effect."
+      },
+      {
+       "id": "b",
+       "text": "A bigger rise in the buffer, say 80%",
+       "why": "A bigger marker change still isn't a performance result."
+      },
+      {
+       "id": "c",
+       "text": "A second biopsy study with the same result",
+       "why": "Replicating the mechanism makes it more certain, but still doesn't measure performance."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: the mechanism makes the benefit certain",
+       "why": "Mechanistic reasoning has often been wrong; a plausible chain isn't proof."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyr-paulsen",
+   "concept": "ev-pyr-mechanism",
+   "bloom": "analyse",
+   "sources": [
+    "paulsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an 11-week RCT, vitamin C and E blunted the rise in mitochondrial markers in muscle, yet VO2max rose about 8% in both the vitamin and placebo groups. Which conclusion fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A blunted marker didn't show up in VO2max over 11 weeks",
+       "correct": true,
+       "why": "Right: the marker moved, the measured performance didn't differ. Longer or other outcomes remain open, so the authors still advised caution."
+      },
+      {
+       "id": "b",
+       "text": "Vitamin C and E harm endurance performance",
+       "why": "Performance measures didn't differ between groups in this study."
+      },
+      {
+       "id": "c",
+       "text": "Muscle markers are meaningless",
+       "why": "Markers show what happens in the muscle; they just aren't performance results."
+      },
+      {
+       "id": "d",
+       "text": "Vitamin C and E improve VO2max",
+       "why": "Both groups improved equally, so the gain came from training, not the vitamins."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

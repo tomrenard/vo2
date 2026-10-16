@@ -1,0 +1,716 @@
+{
+ "id": "cell-membranes",
+ "module": "t0-cell-biochem",
+ "title": "Membranes, transporters and ion pumps",
+ "goal": "Explain how molecules cross the muscle membrane by diffusion and transporters (GLUT4), how the Na⁺/K⁺-ATPase builds ion gradients, and why those gradients matter for nerve and muscle signals.",
+ "requires": [
+  "cell-enzymes"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "cmb-glucose-entry",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cmb-diffusion",
+   "title": "Diffusion: downhill, free of charge",
+   "text": "The cell membrane is a thin double layer of fat. Small, uncharged molecules such as oxygen and carbon dioxide slip straight through it. Most other molecules need a door.\n\nMolecules jiggle at random, so they spread from where they are crowded to where they are scarce. That net movement is [diffusion](g:diffusion). It costs no ATP, but it only ever runs **downhill**, from high to low concentration, and it slows as the difference shrinks.\n\nOxygen reaches the mitochondria this way: blood in the capillaries holds more oxygen than the working fibre, where mitochondria are using it up. The steeper that difference, the faster oxygen moves in. The cardiorespiratory module comes back to this when it looks at oxygen delivery.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "cmb-diffusion-dir"
+  },
+  {
+   "type": "concept",
+   "id": "cmb-glut4",
+   "title": "Transporters: doors for glucose",
+   "text": "Glucose is too big and too polar to cross the fat layer, so it uses a protein door, a transporter. In muscle the door is [GLUT4](g:glut4). Glucose still moves downhill, from blood into fibre, with no ATP spent: this is called facilitated diffusion [[c:glut4-diffusion]].\n\nThe clever part is control. At rest most GLUT4 sits in stores inside the fibre. Insulin after a meal, and **muscle contraction** itself, move GLUT4 to the membrane, so more doors are open [[c:glut4-translocation]]. That is why exercising muscle can pull in glucose even when insulin is low, as in a long run.\n\nTraining also makes the fibre build more GLUT4, which may help trained muscle store more glycogen [[c:glut4-training]].",
+   "claims": [
+    {
+     "id": "glut4-diffusion",
+     "text": "Glucose enters muscle by facilitated diffusion through the GLUT4 transporter.",
+     "grade": "strong",
+     "sources": [
+      "richter2013"
+     ],
+     "evidence": [
+      {
+       "source": "richter2013",
+       "quote": "Glucose enters the muscle cell via facilitated diffusion through the GLUT4 glucose transporter which translocates from intracellular storage depots to the plasma membrane and T-tubules upon muscle contraction.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "glut4-translocation",
+     "text": "Muscle contraction moves GLUT4 from stores inside the fibre to the plasma membrane and T-tubules.",
+     "grade": "strong",
+     "sources": [
+      "richter2013"
+     ],
+     "evidence": [
+      {
+       "source": "richter2013",
+       "quote": "Glucose enters the muscle cell via facilitated diffusion through the GLUT4 glucose transporter which translocates from intracellular storage depots to the plasma membrane and T-tubules upon muscle contraction.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "glut4-training",
+     "text": "Exercise training is the most potent stimulus to increase muscle GLUT4, which may help glycogen storage.",
+     "grade": "moderate",
+     "sources": [
+      "richter2013"
+     ],
+     "evidence": [
+      {
+       "source": "richter2013",
+       "quote": "Exercise training is the most potent stimulus to increase skeletal muscle GLUT4 expression, an effect that may partly contribute to improved insulin action and glucose disposal and enhanced muscle glycogen storage following exercise training in health and disease.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cmb-glucose-entry",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cmb-glut4-exercise"
+  },
+  {
+   "type": "question",
+   "item": "cmb-glut4-training"
+  },
+  {
+   "type": "concept",
+   "id": "cmb-gradients",
+   "title": "Ion gradients: a charged battery",
+   "text": "Ions are charged atoms. Muscle keeps very different amounts on each side of its membrane [[c:k-gradient]]:\n\n| ion | inside fibre | outside (interstitial fluid) |\n|---|---|---|\n| K⁺ | about 150–160 mM | about 4–4.5 mM |\n| Na⁺ | about 8–15 mM | much higher |\n\nThe K⁺ gradient sets a voltage across the membrane, the [membrane potential](g:membrane-potential): about −80 to −90 mV, inside negative [[c:em]].\n\nThat stored difference powers signalling. In an [action potential](g:action-potential), channels open and Na⁺ rushes in, then K⁺ flows out, both downhill. Each signal spends a little of the gradient. In very hard exercise, K⁺ piles up outside the fibres, the gradient runs down, and the fibre becomes harder to excite.",
+   "claims": [
+    {
+     "id": "k-gradient",
+     "text": "In human muscle, intracellular K⁺ is about 150–160 mM and Na⁺ about 8–15 mM; resting interstitial K⁺ is about 4.0–4.5 mM.",
+     "grade": "strong",
+     "sources": [
+      "mckenna2024"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2024",
+       "quote": "In various muscles obtained under general, spinal or local anaesthesia from healthy individuals and patients, intracellular K+ concentration ([K+]i) was typically around 150–160 mM, whilst the intracellular Na+ concentration ([Na+]i) was around 8–15 mM",
+       "level": "full-text"
+      },
+      {
+       "source": "mckenna2024",
+       "quote": "The mean resting [K+]int typically varied between 4.0 and 4.5 mM and was increased with exercise, which in some studies was proportional to exercise intensity.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "em",
+     "text": "The resting membrane potential of human skeletal muscle is about −80 to −90 mV and depends on the K⁺ gradient: −80 mV measured in vivo, −89 mV calculated, falling to −75 mV at exhaustion as intracellular K⁺ dropped.",
+     "grade": "moderate",
+     "sources": [
+      "mckenna2024",
+      "fantini1987"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2024",
+       "quote": "The resting Em depends on the transmembrane K+ gradient which is influenced by both [K+]int and [K+]i.",
+       "level": "full-text"
+      },
+      {
+       "source": "mckenna2024",
+       "quote": "In a second study, [K+]i declined from 168 to 129 mM after exhaustion and the calculated Em declined from − 89 to − 75 mV",
+       "level": "full-text"
+      },
+      {
+       "source": "fantini1987",
+       "quote": "Hospitalization with intake of a defined-formula enteral diet for 3 days resulted in depolarization (P less than 0.05) of resting Em (-75.3 +/- 1.6 mV) compared with normal (-79.8 +/- 0.9 mV).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cmb-ratio-example",
+   "title": "How steep is the potassium gradient?",
+   "problem": "At rest, a cyclist's quadriceps fibres hold 150 mM K⁺ inside, with 4 mM outside. After an all-out effort, inside K⁺ falls to 130 mM and outside rises to 12 mM. How many times higher is K⁺ inside than outside, before and after?",
+   "steps": [
+    "Gradient as a ratio = concentration inside ÷ concentration outside.",
+    "Before: 150 ÷ 4 = 37.5, so K⁺ is about 38 times higher inside.",
+    "After: 130 ÷ 12 ≈ 10.8, so about 11 times higher.",
+    "The ratio fell more than threefold, mostly because K⁺ piled up outside. A flatter gradient means a less negative membrane potential and a fibre that is harder to excite."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cmb-ratio-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cmb-fatigue-k"
+  },
+  {
+   "type": "concept",
+   "id": "cmb-pump",
+   "title": "The sodium–potassium pump recharges the battery",
+   "text": "Every action potential lets a little Na⁺ in and K⁺ out. The [Na⁺/K⁺-ATPase](g:na-k-atpase) pushes them back: each cycle splits one ATP and moves **3 Na⁺ out and 2 K⁺ in**, against their gradients [[c:nka-stoich]].\n\nIt responds fast. Fast, repeated stimulation can switch on up to all of a muscle's pumps within 10 s, raising Na⁺ efflux up to 22-fold [[c:nka-fast]]. Blocking the pumps makes muscle lose force and endurance.\n\nTraining adds pumps: across many studies, muscle pump content rose by about 8–22% [[c:nka-up]]. In one study, 7 weeks of intense one-leg training raised pump subunits by 15–29%; the trained leg built up less K⁺ outside its fibres and fatigued later [[c:nka-training]]. That is one way intervals help you hold hard efforts.",
+   "claims": [
+    {
+     "id": "nka-stoich",
+     "text": "The Na⁺/K⁺-ATPase extrudes 3 Na⁺ and takes up 2 K⁺ per cycle, against their gradients, using one ATP.",
+     "grade": "strong",
+     "sources": [
+      "mckenna2024",
+      "green2004"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2024",
+       "quote": "The NKA functions primarily as a cellular transmembrane cation active transporter, respectively, extruding 3 Na+ and accumulating 2K+ ions against their electrochemical gradients per cycle",
+       "level": "full-text"
+      },
+      {
+       "source": "green2004",
+       "quote": "The active transport of these cations is mediated by the Na+-K+-ATPase, an integral membrane protein that uses the energy from the hydrolysis of 1 ATP to transport 3 Na+ out of the cell and 2 K+ into the cell.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nka-fast",
+     "text": "Depending on stimulation frequency, excitation can activate up to all Na⁺/K⁺ pumps within 10 s, raising Na⁺ efflux up to 22-fold; blocking the pumps causes loss of contractility and endurance.",
+     "grade": "moderate",
+     "sources": [
+      "clausen2003"
+     ],
+     "evidence": [
+      {
+       "source": "clausen2003",
+       "quote": "Depending on frequency of stimulation, excitation may activate up to all of the Na+-K+ pumps available within 10 s, causing up to 22-fold increase in Na+ efflux.",
+       "level": "abstract"
+      },
+      {
+       "source": "clausen2003",
+       "quote": "Conversely, inhibition of the Na+-K+ pumps by ouabain leads to progressive loss of contractility and endurance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nka-up",
+     "text": "Training raises muscle Na⁺/K⁺-ATPase content, by about 8–22% across a range of training types.",
+     "grade": "moderate",
+     "sources": [
+      "mckenna2024",
+      "clausen2003"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2024",
+       "quote": "contrasting robust findings of 8–22% increases in muscle NKA content after a range of training types",
+       "level": "full-text"
+      },
+      {
+       "source": "clausen2003",
+       "quote": "Na+-K+ pump content is upregulated by training, thyroid hormones, insulin, glucocorticoids, and K+ overload.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nka-training",
+     "text": "Seven weeks of intense intermittent one-leg training raised Na⁺/K⁺-ATPase subunits, reduced interstitial K⁺ build-up and delayed fatigue in the trained leg.",
+     "grade": "weak",
+     "sources": [
+      "nielsen2004"
+     ],
+     "evidence": [
+      {
+       "source": "nielsen2004",
+       "quote": "The amounts of Na(+),K(+)-ATPase alpha(1) and alpha(2) subunits were, respectively, 29.0 +/- 8.4 and 15.1 +/- 2.7% higher (P < 0.05) in TL than in CL, while the amounts of beta(1) subunits and ATP-dependent K(+) (K(ATP)) channels were the same.",
+       "level": "abstract"
+      },
+      {
+       "source": "nielsen2004",
+       "quote": "The lower accumulation of potassium in muscle interstitium in the trained leg was associated with delayed fatigue during intense exercise, supporting the hypothesis that interstitial potassium accumulation is involved in the development of fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cmb-pump-stoich"
+  },
+  {
+   "type": "question",
+   "item": "cmb-pump-role"
+  },
+  {
+   "type": "question",
+   "item": "cmb-appraise-nka"
+  },
+  {
+   "type": "question",
+   "item": "cmb-ratio-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cmb-ratio-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Diffusion moves molecules downhill, from high to low concentration, at no ATP cost; oxygen reaches the mitochondria this way.",
+    "Glucose enters muscle through GLUT4 by facilitated diffusion; contraction and insulin move GLUT4 to the membrane, and training adds more.",
+    "Muscle holds about 150–160 mM K⁺ inside against about 4 mM outside; this gradient sets a resting potential of about −80 to −90 mV and powers action potentials.",
+    "The Na⁺/K⁺-ATPase spends one ATP to move 3 Na⁺ out and 2 K⁺ in; training adds pumps, which helps resist fatigue in hard efforts."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cmb-glucose-entry",
+   "concept": "cmb-glut4",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "richter2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does glucose get from the blood into a working muscle fibre?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Through GLUT4 transporters, moving downhill without spending ATP",
+       "correct": true,
+       "why": "Right: facilitated diffusion through GLUT4."
+      },
+      {
+       "id": "b",
+       "text": "Straight through the fatty membrane, like oxygen",
+       "why": "Glucose is too big and polar to cross the fat layer; it needs a transporter."
+      },
+      {
+       "id": "c",
+       "text": "Pumped in by the Na⁺/K⁺-ATPase",
+       "why": "That pump moves Na⁺ and K⁺, not glucose."
+      },
+      {
+       "id": "d",
+       "text": "Carried in by insulin molecules",
+       "why": "Insulin is a signal that moves GLUT4 to the membrane; it doesn't carry glucose."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a long run, glucose from a gel moves from the blood into the leg fibres. Which mechanism carries it across the membrane?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Facilitated diffusion through GLUT4",
+       "correct": true,
+       "why": "Right: a transporter lets glucose move down its gradient at no ATP cost."
+      },
+      {
+       "id": "b",
+       "text": "Active pumping that splits ATP",
+       "why": "Glucose entry into muscle doesn't spend ATP; it runs downhill."
+      },
+      {
+       "id": "c",
+       "text": "Simple diffusion through the fat layer",
+       "why": "Glucose can't cross the fat layer on its own."
+      },
+      {
+       "id": "d",
+       "text": "Being taken in as whole glycogen particles",
+       "why": "Glycogen is built inside the fibre; glucose enters one molecule at a time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-diffusion-dir",
+   "concept": "cmb-diffusion",
+   "bloom": "understand",
+   "sources": [
+    "richter2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's blood glucose is 5 mmol·L⁻¹. Inside her working thigh fibres, glucose is used almost as fast as it arrives. Which way does glucose move through GLUT4, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Into the fibre, down its concentration gradient",
+       "correct": true,
+       "why": "Right: facilitated diffusion runs downhill, from high (blood) to low (fibre)."
+      },
+      {
+       "id": "b",
+       "text": "Out of the fibre, because GLUT4 pumps glucose outwards",
+       "why": "GLUT4 doesn't pump; it lets glucose move downhill, here into the fibre."
+      },
+      {
+       "id": "c",
+       "text": "Into the fibre, because GLUT4 spends ATP to pull it in",
+       "why": "Facilitated diffusion spends no ATP."
+      },
+      {
+       "id": "d",
+       "text": "Neither way, because diffusion needs the levels to be equal",
+       "why": "Equal levels are when diffusion stops; a difference is what drives it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-glut4-exercise",
+   "concept": "cmb-glut4",
+   "bloom": "apply",
+   "sources": [
+    "richter2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two hours into an Ironman run, insulin in the blood is low, yet the leg muscles keep taking up glucose. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Contraction itself moves GLUT4 to the membrane",
+       "correct": true,
+       "why": "Right: contraction is a signal for GLUT4 translocation, separate from insulin."
+      },
+      {
+       "id": "b",
+       "text": "Glucose diffuses through the fat layer without help",
+       "why": "Glucose needs a transporter; without GLUT4 at the membrane little gets in."
+      },
+      {
+       "id": "c",
+       "text": "The Na⁺/K⁺ pump carries glucose in",
+       "why": "That pump moves ions, not glucose."
+      },
+      {
+       "id": "d",
+       "text": "Muscle makes its own glucose from fat",
+       "why": "Muscle can't turn fat into glucose; it takes glucose from the blood."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-glut4-training",
+   "concept": "cmb-glut4",
+   "bloom": "apply",
+   "sources": [
+    "richter2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's coach says months of training will help her muscles store more glycogen after hard sessions. Which membrane change supports this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More GLUT4 transporters in the trained muscle",
+       "correct": true,
+       "why": "Right: training is the strongest stimulus for GLUT4, which helps glucose uptake and may help glycogen storage."
+      },
+      {
+       "id": "b",
+       "text": "A thicker membrane that holds glucose in",
+       "why": "Membrane thickness isn't what changes; transporter number is."
+      },
+      {
+       "id": "c",
+       "text": "Fewer Na⁺/K⁺ pumps, saving ATP for glycogen",
+       "why": "Training raises pump content; it doesn't remove pumps."
+      },
+      {
+       "id": "d",
+       "text": "Glucose crossing by simple diffusion after training",
+       "why": "Glucose always needs a transporter, trained or not."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-ratio-calc",
+   "concept": "cmb-gradients",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mckenna2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At rest, a runner's calf fibres hold 160 mM K⁺ inside and 4 mM outside. How many times higher is K⁺ inside than outside?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40 times",
+       "correct": true,
+       "why": "Right: 160 ÷ 4 = 40."
+      },
+      {
+       "id": "b",
+       "text": "156 times",
+       "why": "This is the difference in mM (160 − 4), not the ratio."
+      },
+      {
+       "id": "c",
+       "text": "0.025 times",
+       "why": "This divides outside by inside (4 ÷ 160)."
+      },
+      {
+       "id": "d",
+       "text": "640 times",
+       "why": "This multiplies the two (160 × 4)."
+      }
+     ],
+     "solution": "Ratio = inside ÷ outside = 160 mM ÷ 4 mM = 40."
+    },
+    {
+     "id": "b",
+     "stem": "After an exhausting 4-minute cycling effort, inside K⁺ has fallen to 140 mM and interstitial K⁺ has risen to 12 mM. How many times higher is K⁺ inside than outside?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 12 times",
+       "correct": true,
+       "why": "Right: 140 ÷ 12 ≈ 11.7."
+      },
+      {
+       "id": "b",
+       "text": "128 times",
+       "why": "This is the difference in mM (140 − 12), not the ratio."
+      },
+      {
+       "id": "c",
+       "text": "About 0.09 times",
+       "why": "This divides outside by inside (12 ÷ 140)."
+      },
+      {
+       "id": "d",
+       "text": "1,680 times",
+       "why": "This multiplies the two (140 × 12)."
+      }
+     ],
+     "solution": "Ratio = 140 mM ÷ 12 mM ≈ 11.7, so about 12 times; at rest it was about 35–40 times."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's resting forearm fibres hold 150 mM K⁺ inside and 5 mM outside. How many times higher is K⁺ inside than outside?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 times",
+       "correct": true,
+       "why": "Right: 150 ÷ 5 = 30."
+      },
+      {
+       "id": "b",
+       "text": "145 times",
+       "why": "This is the difference in mM (150 − 5), not the ratio."
+      },
+      {
+       "id": "c",
+       "text": "0.033 times",
+       "why": "This divides outside by inside (5 ÷ 150)."
+      },
+      {
+       "id": "d",
+       "text": "750 times",
+       "why": "This multiplies the two (150 × 5)."
+      }
+     ],
+     "solution": "Ratio = 150 mM ÷ 5 mM = 30."
+    }
+   ]
+  },
+  {
+   "id": "cmb-fatigue-k",
+   "concept": "cmb-gradients",
+   "bloom": "analyse",
+   "sources": [
+    "mckenna2008",
+    "mckenna2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the end of a flat-out 1 km track rep, K⁺ in the fluid around a runner's leg fibres has risen to about 12 mM. Why might this weaken the next contractions?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The K⁺ gradient shrinks, the membrane depolarises and the fibre is harder to excite",
+       "correct": true,
+       "why": "Right: these ionic changes depolarise the sarcolemma and T-tubules and depress force."
+      },
+      {
+       "id": "b",
+       "text": "Extra K⁺ outside gives the fibre more energy for contraction",
+       "why": "Ions outside aren't fuel; the problem is the lost gradient."
+      },
+      {
+       "id": "c",
+       "text": "K⁺ blocks GLUT4, so glucose can't enter",
+       "why": "K⁺ build-up acts on excitability, not on glucose transport."
+      },
+      {
+       "id": "d",
+       "text": "K⁺ outside is pumped into the SR, so less Ca²⁺ is stored",
+       "why": "The SR stores Ca²⁺; K⁺ isn't pumped into it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-pump-stoich",
+   "concept": "cmb-pump",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mckenna2024",
+    "green2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "For each ATP it splits, what does the Na⁺/K⁺-ATPase move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 Na⁺ out of the cell and 2 K⁺ in",
+       "correct": true,
+       "why": "Right: 3 Na⁺ out, 2 K⁺ in, both against their gradients."
+      },
+      {
+       "id": "b",
+       "text": "2 Na⁺ out of the cell and 3 K⁺ in",
+       "why": "The numbers are swapped: it is 3 Na⁺ out and 2 K⁺ in."
+      },
+      {
+       "id": "c",
+       "text": "3 Na⁺ into the cell and 2 K⁺ out",
+       "why": "That is the direction ions leak during an action potential; the pump reverses it."
+      },
+      {
+       "id": "d",
+       "text": "1 Na⁺ out of the cell and 1 K⁺ in",
+       "why": "The pump moves unequal numbers: 3 Na⁺ for 2 K⁺."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-pump-role",
+   "concept": "cmb-pump",
+   "bloom": "understand",
+   "sources": [
+    "clausen2003",
+    "mckenna2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a hard cycling effort switch on a muscle's Na⁺/K⁺ pumps within seconds?",
+     "options": [
+      {
+       "id": "a",
+       "text": "To restore the Na⁺ and K⁺ gradients that each action potential runs down",
+       "correct": true,
+       "why": "Right: fast pump activation protects excitability during repeated signals."
+      },
+      {
+       "id": "b",
+       "text": "To pump glucose into the fibre for glycolysis",
+       "why": "The pump moves ions; glucose enters through GLUT4."
+      },
+      {
+       "id": "c",
+       "text": "To release Ca²⁺ from the SR and start contraction",
+       "why": "Ca²⁺ release is by SR channels; the Na⁺/K⁺ pump works at the sarcolemma."
+      },
+      {
+       "id": "d",
+       "text": "To make ATP from the ion gradients",
+       "why": "The pump spends ATP; it doesn't make it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmb-appraise-nka",
+   "concept": "cmb-pump",
+   "bloom": "evaluate",
+   "sources": [
+    "nielsen2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a study, 6 men trained one leg with intense knee-extensor work for 7 weeks; the other leg was the control. The trained leg had more Na⁺/K⁺ pumps and fatigued later. What is the best appraisal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Strong within-person control, but 6 men in one exercise limits its reach",
+       "correct": true,
+       "why": "Right: comparing legs removes person-to-person differences, but a small, all-male, single-exercise sample is weak for a general claim about runners or cyclists."
+      },
+      {
+       "id": "b",
+       "text": "The control leg makes the result worthless",
+       "why": "Using the other leg as control is a strength: same person, same day, same blood."
+      },
+      {
+       "id": "c",
+       "text": "It proves pumps cause fatigue resistance in all athletes",
+       "why": "It shows an association in one small study; it doesn't prove cause for everyone."
+      },
+      {
+       "id": "d",
+       "text": "Seven weeks is too short for muscle to change",
+       "why": "Pump content changed measurably in 7 weeks."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

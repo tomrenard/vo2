@@ -9,11 +9,11 @@ sources, ids) and `pnpm sources:check` (every DOI against Crossref, retractions)
 - `glossary/<module>.json`: terms, linked from text as `[MLSS](g:mlss)`.
 - `facts/<module>.json`: numbers used in more than one lesson (glycogen stores, PCr content…):
   use these, never a different figure.
+- `items.lock.json`: content hash per question, written by `pnpm content:check --accept`.
 
 One file per module, so modules can be written at the same time. An id may appear in several
 files only with the same content (look for it with `grep -r '"gastin2001"' data/` before adding).
 Check one module while others are being written: `pnpm content:check --module <id>`.
-- `items.lock.json`: content hash per question, written by `pnpm content:check --accept`.
 
 ## Writing a lesson
 
@@ -26,7 +26,8 @@ lesson is about to teach (unscored; the same item comes back scored later, with 
   the abstract or full text that supports them. A live debate gets a `debate` box with both sides.
 - **Worked example** (`example`) before the first calculation of a kind; later ones fade the steps.
 - **Units:** SI, written as `mL·kg⁻¹·min⁻¹`, `mmol·L⁻¹`, `W·kg⁻¹`, `g·h⁻¹`, `kJ` (kcal only in
-  brackets: `1,000 kJ (239 kcal)`). Decimal point, thin thousands comma.
+  brackets: `1,000 kJ (239 kcal)`). Decimal point, thousands comma (`2,151 kcal`), except in a list of numbers, where 4-digit
+  numbers have none (`1100, 1180 and 1120 ms`), so the commas only separate the values.
 - **Examples** from running, cycling and triathlon in turn; general science where it applies.
 
 ## Writing questions (items)

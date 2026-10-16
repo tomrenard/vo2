@@ -1,0 +1,535 @@
+{
+ "id": "anat-blood",
+ "module": "t0-anatomy",
+ "title": "Blood: plasma, red cells and haemoglobin",
+ "goal": "Describe what blood is made of, use haematocrit to split blood volume into red cells and plasma, and explain why training lowers haematocrit while raising total haemoglobin mass.",
+ "requires": ["anat-lungs"],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  { "type": "question", "item": "bld-hct-def", "variant": "a", "pretest": true },
+  { "type": "question", "item": "bld-pv-first", "variant": "a", "pretest": true },
+  {
+   "type": "concept",
+   "id": "blood-parts",
+   "title": "Spin a tube of blood",
+   "text": "Spin a tube of blood and it separates into three layers [[c:blood-layers]]:\n\n| layer | share | what |\n|---|---|---|\n| bottom | about 45% | red cells |\n| thin middle (buffy coat) | under 1% | white cells and platelets |\n| top | the rest | [plasma](g:plasma) |\n\nThe red-cell share is the [haematocrit](g:haematocrit) (Hct): on average about 41% in women and 47% in men, with normal ranges of 37–47% and 42–52% [[c:hct-normal]].\n\nPlasma is mostly water; about 7% of it is proteins [[c:plasma-proteins]]. Salts, nutrients, hormones and CO₂ travel in it too.",
+   "claims": [
+    {
+     "id": "blood-layers",
+     "text": "Centrifuged blood separates into red cells at the bottom (about 45%), a buffy coat of white cells and platelets (under 1%) and plasma on top.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "Because the heaviest elements in blood are the erythrocytes, these settle at the very bottom of the hematocrit tube.", "level": "full-text" },
+      { "source": "betts2022", "quote": "This layer is referred to as the buffy coat because of its color; it normally constitutes less than 1 percent of a blood sample.", "level": "full-text" },
+      { "source": "betts2022", "quote": "In normal blood, about 45 percent of a sample is erythrocytes.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "hct-normal",
+     "text": "Normal haematocrit is 37–47% in women (mean 41%) and 42–52% in men (mean 47%).",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "Normal hematocrit values for females range from 37 to 47, with a mean value of 41; for males, hematocrit ranges from 42 to 52, with a mean of 47.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "plasma-proteins",
+     "text": "About 7% of plasma volume is proteins; nearly all the rest is water.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "About 7 percent of the volume of plasma—nearly all that is not water—is made of proteins.", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "bld-hct-def", "variant": "b" },
+  {
+   "type": "concept",
+   "id": "blood-rbc",
+   "title": "Red cells and haemoglobin",
+   "text": "A red cell (erythrocyte) pushes out its nucleus and most organelles as it matures, which leaves room for [haemoglobin](g:haemoglobin). Its biconcave disc shape gives a large surface for its volume, which helps gas exchange [[c:rbc-shape]]. It lives up to about **120 days** [[c:rbc-life]].\n\nHaemoglobin is four globin chains, each holding one iron-containing haem group. Each iron binds one O₂, so one haemoglobin carries up to **four O₂**. A red cell holds about 300 million haemoglobin molecules [[c:hb-structure]].\n\nHow much oxygen the blood carries, and how it lets go of it, is the topic of the oxygen-transport module. Here, just the parts.",
+   "claims": [
+    {
+     "id": "rbc-shape",
+     "text": "Maturing red cells extrude their nucleus and most organelles, leaving more room for haemoglobin; their biconcave shape gives a high surface-to-volume ratio for gas exchange.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "As an erythrocyte matures in the red bone marrow, it extrudes its nucleus and most of its other organelles.", "level": "full-text" },
+      { "source": "betts2022", "quote": "Since they lack most organelles, there is more interior space for the presence of the hemoglobin molecules that, as you will see shortly, transport gases.", "level": "full-text" },
+      { "source": "betts2022", "quote": "The biconcave shape also provides a greater surface area across which gas exchange can occur, relative to its volume; a sphere of a similar diameter would have a lower surface area-to-volume ratio.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "rbc-life",
+     "text": "Red cells live up to about 120 days in the circulation.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "Erythrocytes live up to 120 days in the circulation, after which the worn-out cells are removed by a type of myeloid phagocytic cell called a macrophage, located primarily within the bone marrow, liver, and spleen.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "hb-structure",
+     "text": "Haemoglobin has four globin chains, each with an iron-containing haem that binds one O₂, so it carries up to four O₂; a red cell holds about 300 million haemoglobin molecules.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "Each iron ion in the heme can bind to one oxygen molecule; therefore, each hemoglobin molecule can transport four oxygen molecules.", "level": "full-text" },
+      { "source": "betts2022", "quote": "An individual erythrocyte may contain about 300 million hemoglobin molecules, and therefore can bind to and transport up to 1.2 billion oxygen molecules", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "bld-rbc-o2-calc" },
+  { "type": "question", "item": "bld-rbc-nucleus" },
+  {
+   "type": "concept",
+   "id": "blood-volume",
+   "title": "Blood volume, split in two",
+   "text": "Blood is about **8% of body mass**: about 5–6 L in men and 4–5 L in women [[c:blood-volume]].\n\nHaematocrit lets you split that volume into its two parts:\n\n- red-cell volume = blood volume × Hct\n- plasma volume = blood volume × (1 − Hct)\n\nNote that haematocrit is a **ratio**. It can change because the red cells changed, because the plasma changed, or both. Keep that in mind for the next card.",
+   "claims": [
+    {
+     "id": "blood-volume",
+     "text": "Blood is about 8% of adult body mass: about 5–6 L in men and 4–5 L in women.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "Blood constitutes approximately 8 percent of adult body weight.", "level": "full-text" },
+      { "source": "betts2022", "quote": "Adult males typically average about 5 to 6 liters of blood.", "level": "full-text" },
+      { "source": "betts2022", "quote": "Females average 4–5 liters.", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "blood-split-example",
+   "title": "Red cells and plasma in one rider",
+   "problem": "A 70 kg cyclist's blood is 8% of his body mass and his haematocrit is 45%. Estimate his blood, red-cell and plasma volumes.",
+   "steps": [
+    "Blood = 8% of 70 kg = 0.08 × 70 = 5.6 kg. Taking 1 kg of blood as about 1 L, that is about 5.6 L.",
+    "Red-cell volume = 5.6 L × 0.45 = 2.52 L.",
+    "Plasma volume = 5.6 L × (1 − 0.45) = 5.6 × 0.55 = 3.08 L.",
+    "Check: 2.52 + 3.08 = 5.6 L."
+   ]
+  },
+  { "type": "question", "item": "bld-plasma-calc", "variant": "a" },
+  {
+   "type": "concept",
+   "id": "blood-training",
+   "title": "Training: more blood, lower haematocrit",
+   "text": "Endurance training expands blood volume in two steps [[c:bv-training]]:\n\n1. **Plasma first**, within days of starting or stepping up training.\n2. **Red-cell volume later**, over weeks.\n\nWhile plasma grows faster, the haematocrit falls a little. Trained endurance athletes often have a lowish haematocrit, sometimes called 'sports anaemia'. It is not anaemia in the clinical sense: they have *more* red cells and haemoglobin in total, diluted in a bigger plasma volume [[c:sports-anaemia]].\n\nRunning adds a twist: foot strikes crush some red cells in the soles of the feet. In one study an hour's run broke up four times more than an hour's ride at the same effort, yet still only about 0.04% of red cells [[c:footstrike]].",
+   "claims": [
+    {
+     "id": "bv-training",
+     "text": "Training expands plasma volume within days, while red-cell volume rises only after weeks, so haematocrit is lower for a while.",
+     "grade": "moderate",
+     "sources": ["sawka2000", "mairbaurl2013"],
+     "evidence": [
+      { "source": "sawka2000", "quote": "Exercise training can induce BV expansion: PV expansion usually occurs immediately, but EV expansion takes weeks.", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "Sawka et al. summarized data from 18 investigations and found that PV and blood volume increased rapidly after training sessions, whereas red cell volume remained unchanged for several days before it began to increase indicating that Hct values were decreased for several days", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "sports-anaemia",
+     "text": "Endurance athletes' lower haematocrit ('sports anaemia') comes from a larger plasma volume; their total red-cell and haemoglobin mass is higher, not lower.",
+     "grade": "moderate",
+     "sources": ["mairbaurl2013"],
+     "evidence": [
+      { "source": "mairbaurl2013", "quote": "Trained athletes, particularly in endurance sports, have a decreased hematocrit, which is sometimes called \"sports anemia.\"", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "This is not anemia in a clinical sense, because athletes have in fact an increased total mass of red blood cells and hemoglobin in circulation relative to sedentary individuals.", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "The slight decrease in hematocrit by training is brought about by an increased plasma volume (PV).", "level": "abstract" }
+     ]
+    },
+    {
+     "id": "footstrike",
+     "text": "Running destroys some red cells by compression in the soles of the feet: in one crossover study of 10 male triathletes, plasma free haemoglobin rose four times more after 1 h of running than after 1 h of cycling at the same VO₂, and the run lysed about 0.04% of circulating red cells.",
+     "grade": "weak",
+     "sources": ["telford2003", "mairbaurl2013"],
+     "evidence": [
+      { "source": "telford2003", "quote": "Plasma free hemoglobin increased after both running (P < 0.01) and cycling (P < 0.01), but the increase was fourfold greater after running (P < 0.01).", "level": "abstract" },
+      { "source": "telford2003", "quote": "footstrike is the major contributor to hemolysis during running", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "Despite stimulated erythropoiesis, exercise can decrease the red blood cell mass by intravascular hemolysis mainly of senescent red blood cells, which is caused by mechanical rupture when red blood cells pass through capillaries in contracting muscles, and by compression of red cells e.g., in foot soles during running or in hand palms in weightlifters.", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "Running exercise has been found to increase plasma hemoglobin from ~30 mg/liter at rest to ~120 mg/liter indicating that about 0.04% of all circulating red blood cells were lyzed", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "bld-pv-first", "variant": "b" },
+  {
+   "type": "example",
+   "id": "blood-dilution-example",
+   "title": "Same red cells, lower haematocrit",
+   "problem": "Before a training block a runner has 2.4 L of red cells and 3.0 L of plasma. Two weeks in, her plasma has grown by 0.4 L and her red cells not yet. What happens to her haematocrit?",
+   "steps": [
+    "Before: Hct = red cells ÷ (red cells + plasma) = 2.4 ÷ (2.4 + 3.0) = 2.4 ÷ 5.4 = 44.4%.",
+    "After: plasma = 3.0 + 0.4 = 3.4 L, so Hct = 2.4 ÷ (2.4 + 3.4) = 2.4 ÷ 5.8 = 41.4%.",
+    "Haematocrit fell by 3 points, yet she has exactly the same red cells: the drop is dilution, not a loss."
+   ]
+  },
+  { "type": "question", "item": "bld-dilution-calc", "variant": "a" },
+  { "type": "question", "item": "bld-hct-drop" },
+  { "type": "question", "item": "bld-footstrike" },
+  { "type": "question", "item": "bld-sports-anaemia" },
+  {
+   "type": "concept",
+   "id": "blood-hbmass",
+   "title": "Total haemoglobin mass: the number that matters",
+   "text": "If haematocrit and haemoglobin *concentration* move with plasma volume, what tracks endurance capacity? The **total** amount of haemoglobin in the body, the [haemoglobin mass](g:haemoglobin-mass). One lab pooled its studies and found VO₂max about 4 mL·kg⁻¹·min⁻¹ higher per extra 1 g·kg⁻¹ of haemoglobin mass, and no link with Hb concentration or Hct [[c:hbmass-vo2max]].\n\nTypical values in men: about 11 g·kg⁻¹ untrained and about 15 g·kg⁻¹ in elite endurance athletes [[c:hbmass-values]]. For a 70 kg rider: 11 × 70 = 770 g versus 15 × 70 = 1,050 g.\n\nElite athletes have about 35% more than the general population, but at sea level training raises it only moderately: genes matter more [[c:hbmass-genes]].",
+   "claims": [
+    {
+     "id": "hbmass-vo2max",
+     "text": "Across people, VO₂max is about 4.2–4.4 mL·kg⁻¹·min⁻¹ higher per 1 g·kg⁻¹ of total haemoglobin mass (r ≈ 0.79, one lab's pooled data as reported in a review), with no correlation with Hb concentration or haematocrit. In elite male athletes VO₂max was related to haemoglobin mass in every endurance discipline.",
+     "grade": "moderate",
+     "sources": ["mairbaurl2013", "heinicke2001"],
+     "evidence": [
+      { "source": "heinicke2001", "quote": "VO(2)max was significantly related to tHb and BV not only in the whole group but also in all endurance disciplines.", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "found a change in VO2,max of 4.2 ml/min/kg in males and of 4.4 ml/min/kg in females per change in tHb of 1 g/kg with very high correlation coefficients (r ~ 0.79), whereas there was no correlation between VO2,max and Hb or Hct.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "hbmass-values",
+     "text": "In men, total haemoglobin mass is about 11 g·kg⁻¹ untrained and about 15 g·kg⁻¹ (14.8–15.3) in elite endurance athletes, some 35–40% more.",
+     "grade": "moderate",
+     "sources": ["heinicke2001", "mairbaurl2013"],
+     "evidence": [
+      { "source": "heinicke2001", "quote": "In comparison to UT (mean +/- SD: tHb 11.0 +/- 1.1 g/kg, BV 78.3 +/- 7.9 ml/kg) tHb and BV were about 35 - 40 % higher in the endurance groups R, TA, CJ, and CP (e. g. in CP: tHb 15.3 +/- 1.3 g/kg, BV 107.1 +/- 7.0 ml/kg).", "level": "abstract" },
+      { "source": "mairbaurl2013", "quote": "non-athletes (though with a rather high VO2,max of 45 ml/min/kg) had a tHb of 11 g/kg and their best athletes (average VO2,max = 71.9 ml/kg) had a tHb of 14.8 g/kg", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "hbmass-genes",
+     "text": "Elite athletes have about 35% more haemoglobin mass than the general population (cross-sectional); at sea level it is only moderately raised by training and depends more on genetic make-up.",
+     "grade": "moderate",
+     "sources": ["schmidt2008"],
+     "evidence": [
+      { "source": "schmidt2008", "quote": "Cross-sectional studies show that elite athletes posses approximately 35% higher tHb-mass than the normal population, which is further elevated by 14% in athletes native to altitude of 2600 m.", "level": "abstract" },
+      { "source": "schmidt2008", "quote": "At sea level tHb-mass is only moderately influenced by training and depends more on genetic predisposition.", "level": "abstract" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "bld-hbmass-best" },
+  { "type": "question", "item": "bld-hbmass-calc", "variant": "a" },
+  { "type": "question", "item": "bld-appraisal" },
+  { "type": "question", "item": "bld-plasma-calc", "variant": "b" },
+  { "type": "question", "item": "bld-dilution-calc", "variant": "b" },
+  { "type": "question", "item": "bld-hbmass-calc", "variant": "b" },
+  {
+   "type": "recap",
+   "points": [
+    "Blood is plasma (mostly water, about 7% protein) plus cells; red cells take about 45% of the volume: that share is the haematocrit.",
+    "Red cells have no nucleus and a biconcave shape, live about 120 days and are full of haemoglobin, which carries up to four O₂ per molecule.",
+    "Blood is about 8% of body mass; plasma volume = blood volume × (1 − Hct).",
+    "Training expands plasma within days and red cells over weeks, so haematocrit drops a little: 'sports anaemia' is dilution, not a loss of red cells.",
+    "Total haemoglobin mass, not concentration or haematocrit, tracks VO₂max; athletes have more, mostly through genes, a little through sea-level training."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bld-hct-def",
+   "concept": "blood-parts",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does a haematocrit of 45% mean?",
+     "options": [
+      { "id": "a", "text": "45% of the blood's volume is red cells", "correct": true, "why": "Right: haematocrit is the red-cell share of blood volume." },
+      { "id": "b", "text": "45% of the blood's volume is plasma", "why": "That swaps the parts: with an Hct of 45%, plasma is about 55%." },
+      { "id": "c", "text": "45% of the haemoglobin is carrying oxygen", "why": "That describes oxygen saturation, a different measure." },
+      { "id": "d", "text": "There are 45 g of haemoglobin per litre of blood", "why": "That would be a haemoglobin concentration; haematocrit is a volume share." }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's lab report gives his haematocrit as 42%. What was measured?",
+     "options": [
+      { "id": "a", "text": "The share of his blood volume taken up by red cells", "correct": true, "why": "Right: in a spun tube, red cells take 42% of the volume." },
+      { "id": "b", "text": "The share of his blood volume taken up by plasma", "why": "Plasma is the rest, here about 58%." },
+      { "id": "c", "text": "How saturated his haemoglobin is with oxygen", "why": "That is oxygen saturation, not haematocrit." },
+      { "id": "d", "text": "His haemoglobin concentration in grams per litre", "why": "That is a separate measure; haematocrit is a share of volume." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-rbc-o2-calc",
+   "concept": "blood-rbc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One red cell holds about 300 million haemoglobin molecules. At most, how many O₂ molecules can it carry?",
+     "options": [
+      { "id": "a", "text": "About 1.2 billion", "correct": true, "why": "Right: each haemoglobin has four haem irons, each binding one O₂: 300 million × 4 = 1.2 billion." },
+      { "id": "b", "text": "About 300 million", "why": "This counts one O₂ per haemoglobin; each molecule has four haem groups, so four O₂." },
+      { "id": "c", "text": "About 600 million", "why": "This counts the two pairs of globin chains (two alpha, two beta) instead of the four haem groups." },
+      { "id": "d", "text": "About 75 million", "why": "This divides by four instead of multiplying: each haemoglobin carries up to four O₂." }
+     ],
+     "solution": "Each haemoglobin has four globin chains, each with one haem iron that binds one O₂, so up to 4 O₂ per molecule. 300 million × 4 = 1.2 billion O₂ per red cell."
+    }
+   ]
+  },
+  {
+   "id": "bld-rbc-nucleus",
+   "concept": "blood-rbc",
+   "bloom": "understand",
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does a mature red cell gain by having no nucleus?",
+     "options": [
+      { "id": "a", "text": "More room inside for haemoglobin", "correct": true, "why": "Right: without a nucleus and most organelles, more of the cell can be filled with haemoglobin." },
+      { "id": "b", "text": "The ability to divide quickly in the blood", "why": "Without a nucleus a red cell can't divide; new ones are made in the bone marrow." },
+      { "id": "c", "text": "The ability to leave capillaries and enter muscle", "why": "Red cells stay inside the vessels; oxygen leaves them by diffusion." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-plasma-calc",
+   "concept": "blood-volume",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has a blood volume of 5.0 L and a haematocrit of 42%. What is his plasma volume?",
+     "options": [
+      { "id": "a", "text": "2.9 L", "correct": true, "why": "Right: 5.0 × (1 − 0.42) = 5.0 × 0.58 = 2.9 L." },
+      { "id": "b", "text": "2.1 L", "why": "That is the red-cell volume (5.0 × 0.42), not the plasma." },
+      { "id": "c", "text": "4.58 L", "why": "This subtracts 0.42 L from 5.0 L. Hct is a share, so multiply by (1 − Hct)." },
+      { "id": "d", "text": "11.9 L", "why": "This divides by the haematocrit (5.0 ÷ 0.42); more than double the blood volume can't be right." }
+     ],
+     "solution": "Plasma volume = blood volume × (1 − Hct) = 5.0 L × (1 − 0.42) = 5.0 × 0.58 = 2.9 L."
+    },
+    {
+     "id": "b",
+     "stem": "A runner has a blood volume of 4.4 L and a haematocrit of 40%. What is her plasma volume?",
+     "options": [
+      { "id": "a", "text": "2.64 L", "correct": true, "why": "Right: 4.4 × (1 − 0.40) = 4.4 × 0.60 = 2.64 L." },
+      { "id": "b", "text": "1.76 L", "why": "That is the red-cell volume (4.4 × 0.40), not the plasma." },
+      { "id": "c", "text": "4.0 L", "why": "This subtracts 0.40 L from 4.4 L. Hct is a share, so multiply by (1 − Hct)." },
+      { "id": "d", "text": "11 L", "why": "This divides by the haematocrit (4.4 ÷ 0.40); more than the whole blood volume can't be right." }
+     ],
+     "solution": "Plasma volume = blood volume × (1 − Hct) = 4.4 L × (1 − 0.40) = 4.4 × 0.60 = 2.64 L."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete has a blood volume of 6.0 L and a haematocrit of 46%. What is his plasma volume?",
+     "options": [
+      { "id": "a", "text": "3.24 L", "correct": true, "why": "Right: 6.0 × (1 − 0.46) = 6.0 × 0.54 = 3.24 L." },
+      { "id": "b", "text": "2.76 L", "why": "That is the red-cell volume (6.0 × 0.46), not the plasma." },
+      { "id": "c", "text": "5.54 L", "why": "This subtracts 0.46 L from 6.0 L. Hct is a share, so multiply by (1 − Hct)." },
+      { "id": "d", "text": "13.0 L", "why": "This divides by the haematocrit (6.0 ÷ 0.46); more than double the blood volume can't be right." }
+     ],
+     "solution": "Plasma volume = blood volume × (1 − Hct) = 6.0 L × (1 − 0.46) = 6.0 × 0.54 = 3.24 L."
+    }
+   ]
+  },
+  {
+   "id": "bld-pv-first",
+   "concept": "blood-training",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": ["sawka2000", "mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider starts a hard training block. After one week, which part of his blood volume has grown?",
+     "options": [
+      { "id": "a", "text": "Mainly the plasma", "correct": true, "why": "Right: plasma expands within days; red-cell volume takes weeks to follow." },
+      { "id": "b", "text": "Mainly the red cells", "why": "Making new red cells takes weeks; in the first days red-cell volume is unchanged." },
+      { "id": "c", "text": "Plasma and red cells equally", "why": "They grow on different time scales: plasma within days, red cells over weeks." },
+      { "id": "d", "text": "Neither yet: blood volume changes only after months", "why": "Plasma volume rises within days of training." }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Five days into a triathlon training camp, which part of an athlete's blood volume has expanded?",
+     "options": [
+      { "id": "a", "text": "Mainly the plasma", "correct": true, "why": "Right: plasma volume rises almost at once; red cells follow over weeks." },
+      { "id": "b", "text": "Mainly the red cells", "why": "Red-cell volume stays the same for several days before it starts to rise." },
+      { "id": "c", "text": "Plasma and red cells equally", "why": "Plasma leads; red cells lag by weeks." },
+      { "id": "d", "text": "Neither yet: blood volume changes only after months", "why": "Plasma volume changes within days." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-dilution-calc",
+   "concept": "blood-training",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": ["sawka2000", "mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has 2.5 L of red cells and 3.0 L of plasma. After a week of training his plasma grows by 0.5 L and his red cells not yet. What is his new haematocrit?",
+     "options": [
+      { "id": "a", "text": "41.7%", "correct": true, "why": "Right: 2.5 ÷ (2.5 + 3.5) = 2.5 ÷ 6.0 = 41.7%." },
+      { "id": "b", "text": "45.5%", "why": "That is the old value, 2.5 ÷ 5.5: it forgets the extra plasma." },
+      { "id": "c", "text": "71.4%", "why": "This divides red cells by plasma (2.5 ÷ 3.5); Hct is red cells ÷ total blood." },
+      { "id": "d", "text": "8.3%", "why": "This is the extra plasma as a share of the new total (0.5 ÷ 6.0), not the red-cell share." }
+     ],
+     "solution": "New plasma = 3.0 + 0.5 = 3.5 L. New Hct = red cells ÷ (red cells + plasma) = 2.5 ÷ (2.5 + 3.5) = 2.5 ÷ 6.0 = 41.7% (down from 2.5 ÷ 5.5 = 45.5%)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner has 2.0 L of red cells and 2.6 L of plasma. Early in a training block her plasma grows by 0.4 L and her red cells not yet. What is her new haematocrit?",
+     "options": [
+      { "id": "a", "text": "40.0%", "correct": true, "why": "Right: 2.0 ÷ (2.0 + 3.0) = 2.0 ÷ 5.0 = 40.0%." },
+      { "id": "b", "text": "43.5%", "why": "That is the old value, 2.0 ÷ 4.6: it forgets the extra plasma." },
+      { "id": "c", "text": "66.7%", "why": "This divides red cells by plasma (2.0 ÷ 3.0); Hct is red cells ÷ total blood." },
+      { "id": "d", "text": "8.0%", "why": "This is the extra plasma as a share of the new total (0.4 ÷ 5.0), not the red-cell share." }
+     ],
+     "solution": "New plasma = 2.6 + 0.4 = 3.0 L. New Hct = 2.0 ÷ (2.0 + 3.0) = 2.0 ÷ 5.0 = 40.0% (down from 2.0 ÷ 4.6 = 43.5%)."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete has 2.7 L of red cells and 3.3 L of plasma. After a week at a training camp his plasma grows by 0.6 L and his red cells not yet. What is his new haematocrit?",
+     "options": [
+      { "id": "a", "text": "40.9%", "correct": true, "why": "Right: 2.7 ÷ (2.7 + 3.9) = 2.7 ÷ 6.6 = 40.9%." },
+      { "id": "b", "text": "45.0%", "why": "That is the old value, 2.7 ÷ 6.0: it forgets the extra plasma." },
+      { "id": "c", "text": "69.2%", "why": "This divides red cells by plasma (2.7 ÷ 3.9); Hct is red cells ÷ total blood." },
+      { "id": "d", "text": "9.1%", "why": "This is the extra plasma as a share of the new total (0.6 ÷ 6.6), not the red-cell share." }
+     ],
+     "solution": "New plasma = 3.3 + 0.6 = 3.9 L. New Hct = 2.7 ÷ (2.7 + 3.9) = 2.7 ÷ 6.6 = 40.9% (down from 2.7 ÷ 6.0 = 45.0%)."
+    }
+   ]
+  },
+  {
+   "id": "bld-hct-drop",
+   "concept": "blood-training",
+   "bloom": "analyse",
+   "sources": ["sawka2000", "mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two weeks into a training camp, a cyclist's haematocrit has dropped from 45% to 42%. She feels fine and is riding well. Most likely cause?",
+     "options": [
+      { "id": "a", "text": "Her plasma volume has grown faster than her red cells", "correct": true, "why": "Right: plasma expands within days, red cells over weeks, so haematocrit dips by dilution." },
+      { "id": "b", "text": "She has lost red cells and is becoming anaemic", "why": "Possible in principle, but early in a training block a dip of this size is what plasma expansion predicts." },
+      { "id": "c", "text": "Heavy sweating has cut her red-cell volume", "why": "Sweating removes water from plasma, which would push haematocrit up, not down." },
+      { "id": "d", "text": "Her red cells have shrunk with training", "why": "Training doesn't shrink red cells; the change is in the plasma around them." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-footstrike",
+   "concept": "blood-training",
+   "bloom": "apply",
+   "sources": ["telford2003", "mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's blood shows more signs of red-cell breakdown after long runs than after long rides of similar effort. Most likely reason?",
+     "options": [
+      { "id": "a", "text": "Foot strikes crush red cells in the soles of the feet", "correct": true, "why": "Right: compression in the foot soles during running is a known cause of red-cell breakdown." },
+      { "id": "b", "text": "Running dilutes the blood, which looks like breakdown", "why": "Dilution lowers haematocrit but doesn't break red cells open." },
+      { "id": "c", "text": "Running muscles use haemoglobin as a fuel", "why": "Haemoglobin carries oxygen; it isn't burned for energy." },
+      { "id": "d", "text": "Cycling makes red cells live longer than 120 days", "why": "Red cells live up to about 120 days whatever the sport; the difference is the foot impact." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-sports-anaemia",
+   "concept": "blood-training",
+   "bloom": "evaluate",
+   "sources": ["mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained marathoner's haematocrit is 40%, lower than her untrained friend's 44%. The friend says she must carry less oxygen. Best judgement?",
+     "options": [
+      { "id": "a", "text": "Probably wrong: a bigger plasma volume can dilute a larger total of red cells", "correct": true, "why": "Right: endurance athletes usually have more red cells and haemoglobin in total, in more plasma." },
+      { "id": "b", "text": "Right: a lower haematocrit always means less oxygen carried", "why": "Haematocrit is a ratio; it says nothing about the total amount of red cells." },
+      { "id": "c", "text": "Right: training has shrunk her red cells", "why": "The lower haematocrit comes from extra plasma, not smaller cells." },
+      { "id": "d", "text": "Wrong: her blood is thicker than her friend's", "why": "A lower haematocrit means thinner blood, not thicker." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-hbmass-best",
+   "concept": "blood-hbmass",
+   "bloom": "evaluate",
+   "sources": ["mairbaurl2013", "heinicke2001"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You want to compare two cyclists' oxygen-carrying capacity as it relates to VO₂max. Which blood measure is most useful?",
+     "options": [
+      { "id": "a", "text": "Total haemoglobin mass per kg body mass", "correct": true, "why": "Right: it tracks VO₂max closely, and plasma volume doesn't change it." },
+      { "id": "b", "text": "Haematocrit", "why": "Haematocrit moves with plasma volume and showed no link with VO₂max in pooled data." },
+      { "id": "c", "text": "Haemoglobin concentration", "why": "A concentration depends on plasma volume too; it wasn't linked to VO₂max." },
+      { "id": "d", "text": "Red cells per microlitre of blood", "why": "Another concentration: a bigger plasma volume lowers it even when total red cells rise." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bld-hbmass-calc",
+   "concept": "blood-hbmass",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": ["heinicke2001", "mairbaurl2013"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 65 kg elite runner has a haemoglobin mass of 14.8 g·kg⁻¹. What is his total haemoglobin mass?",
+     "options": [
+      { "id": "a", "text": "962 g", "correct": true, "why": "Right: 14.8 × 65 = 962 g." },
+      { "id": "b", "text": "4.4 g", "why": "This divides body mass by 14.8; per-kg values are multiplied by body mass." },
+      { "id": "c", "text": "715 g", "why": "This uses the non-athlete value, 11 g·kg⁻¹ (11 × 65)." },
+      { "id": "d", "text": "9,620 g", "why": "Off by a factor of ten: 14.8 × 65 = 962." }
+     ],
+     "solution": "Total = per-kg value × body mass = 14.8 g·kg⁻¹ × 65 kg = 962 g."
+    },
+    {
+     "id": "b",
+     "stem": "A 72 kg recreational cyclist has a haemoglobin mass of 11 g·kg⁻¹. What is his total haemoglobin mass?",
+     "options": [
+      { "id": "a", "text": "792 g", "correct": true, "why": "Right: 11 × 72 = 792 g." },
+      { "id": "b", "text": "6.5 g", "why": "This divides body mass by 11; per-kg values are multiplied by body mass." },
+      { "id": "c", "text": "1,066 g", "why": "This uses the top-athlete value, 14.8 g·kg⁻¹ (14.8 × 72)." },
+      { "id": "d", "text": "7,920 g", "why": "Off by a factor of ten: 11 × 72 = 792." }
+     ],
+     "solution": "Total = per-kg value × body mass = 11 g·kg⁻¹ × 72 kg = 792 g."
+    }
+   ]
+  },
+  {
+   "id": "bld-appraisal",
+   "concept": "blood-hbmass",
+   "bloom": "evaluate",
+   "sources": ["schmidt2008"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cross-sectional studies find elite endurance athletes have about 35% more haemoglobin mass than the general population. A rider concludes training will raise his by 35%. What is the main flaw?",
+     "options": [
+      { "id": "a", "text": "A one-time comparison can't separate training from genes and selection", "correct": true, "why": "Right: cross-sectional data show a difference, not its cause; the review says genes matter more than sea-level training." },
+      { "id": "b", "text": "The studies were too small to find any difference", "why": "They did find a large difference; the problem is what caused it, not whether it exists." },
+      { "id": "c", "text": "Haemoglobin mass can't be measured in living people", "why": "It can, for example by carbon monoxide rebreathing; that is how these studies measured it." },
+      { "id": "d", "text": "Athletes living at altitude were left out", "why": "They were included, and had even higher values; that doesn't explain the flaw in the conclusion." }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,824 @@
+{
+ "id": "bio-systems-together",
+ "module": "t1a-bioenergetics",
+ "title": "All systems together: deficit and EPOC",
+ "goal": "Explain how intensity and duration set the mix of the three ATP routes, why every start runs an oxygen deficit, and what EPOC (the old oxygen debt) is.",
+ "requires": [
+  "bio-fat-ox"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "sys-diagram-read",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "sys-mix",
+   "title": "One mix, set by intensity and duration",
+   "text": "Every effort draws on all three routes at once; intensity and duration only set the shares [[c:sys-intensity-duration]]. For all-out efforts, estimates of the split look like this [[c:sys-splits]]:\n\n| maximal effort | PCr | glycolysis | aerobic |\n|---|---|---|---|\n| 10 s | 53% | 44% | 3% |\n| 30 s | 23% | 49% | 28% |\n\nAt about **75–80 s**, aerobic and anaerobic supply are equal [[c:sys-equal]]; after that, the aerobic share keeps growing. Slide the chart to see it.\n\nThe table is one review's estimate. The chart is a 2026 model fitted to 102 studies, mostly oxygen-deficit tests; it gives 9% aerobic at 10 s, not 3% [[c:sys-model]]. Neither is measured directly: read them as round figures.",
+   "claims": [
+    {
+     "id": "sys-intensity-duration",
+     "text": "The relative contribution of the ATP-resynthesis pathways is set mainly by exercise intensity and duration.",
+     "grade": "strong",
+     "sources": [
+      "hargreaves2020",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "hargreaves2020",
+       "quote": "The relative contribution of these metabolic pathways is primarily determined by the intensity and duration of exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sys-splits",
+     "text": "Estimated energy split: 10 s maximal sprint 53% PCr, 44% glycolysis, 3% aerobic; 30 s sprint 23%, 49%, 28%.",
+     "grade": "weak",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "Whereas during a 10-second maximal sprint it has been estimated that energy is provided by 53% phosphagen, 44% glycolysis, and 3% mitochondrial respiration",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "It has been estimated that during a 30 seconds sprint the phosphagen system accounts for 23% of energy provision, 49% comes from glycolysis and 28% from mitochondrial respiration.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sys-equal",
+     "text": "Aerobic and anaerobic contributions are about equal in a maximal effort of about 75–80 s.",
+     "grade": "moderate",
+     "sources": [
+      "gastin2026",
+      "gastin2001"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2026",
+       "quote": "The maximal exercise duration that derived equal contributions from both the anaerobic and aerobic energy systems was 78.6 s (95% confidence interval [95% CI] ± 1.1 s)",
+       "level": "abstract"
+      },
+      {
+       "source": "gastin2001",
+       "quote": "The duration of maximal exercise at which equal contributions are derived from the anaerobic and aerobic energy systems appears to occur between 1 to 2 minutes and most probably around 75 seconds, a time that is considerably earlier than has traditionally been suggested.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sys-model",
+     "text": "A model fitted to 311 data points from 102 studies estimates a 10 s maximal effort at 91% anaerobic and 9% aerobic; the measurement method had small but significant effects.",
+     "grade": "moderate",
+     "sources": [
+      "gastin2026"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2026",
+       "quote": "A duration of 10 s of maximal exercise was estimated to be 91% anaerobic and 9% aerobic.",
+       "level": "full-text"
+      },
+      {
+       "source": "gastin2026",
+       "quote": "Comparison of regression curves showed no differences between running and cycling or training status but revealed small significant effects of measurement method and pacing strategy.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "diagram": {
+    "id": "energy-systems",
+    "caption": "Aerobic vs anaerobic (PCr + glycolysis) share of energy in maximal efforts of 10 s to 4 min.",
+    "params": {
+     "duration": 60
+    }
+   }
+  },
+  {
+   "type": "question",
+   "item": "sys-diagram-read",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "sys-method-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "sys-steady",
+   "title": "Below and above a steady state",
+   "text": "Most training is not all-out. Ride at a pace you could hold for an hour or more, and once the first minutes are past, the mitochondria supply almost all the ATP. PCr and glycolysis still run, but the pyruvate is mostly oxidised and the H⁺ released by ATP splitting are used again by the mitochondria, so nothing builds up [[c:sys-steady-state]].\n\nAbove that steady state, aerobic supply can't match demand. PCr and glycolysis keep covering part of it, H⁺ and other products accumulate, and the effort has a time limit.\n\nWhere that boundary lies (thresholds, critical power) is the subject of tier 2.",
+   "claims": [
+    {
+     "id": "sys-steady-state",
+     "text": "When mitochondrial respiration meets the ATP demand there is no proton accumulation; only beyond a steady state does reliance on glycolysis and PCr rise.",
+     "grade": "moderate",
+     "sources": [
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "When the ATP demand of muscle contraction is met by mitochondrial respiration, there is no proton accumulation in the cell, as protons are used by the mitochondria for oxidative phosphorylation and to maintain the proton gradient in the intermembranous space.",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "It is only when the exercise intensity increases beyond steady state that there is a need for greater reliance on ATP regeneration from glycolysis and the phosphagen system.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sys-steady"
+  },
+  {
+   "type": "question",
+   "item": "sys-above-steady"
+  },
+  {
+   "type": "concept",
+   "id": "sys-deficit",
+   "title": "The oxygen deficit: every start is partly anaerobic",
+   "text": "Even an easy effort starts partly anaerobic. ATP demand jumps the moment you push the pedals, but oxygen uptake (VO₂) climbs more slowly. The gap between the oxygen the work needs and the oxygen actually taken up is the [oxygen deficit](g:oxygen-deficit). PCr and glycolysis fill it.\n\nThe faster your VO₂ rises, the smaller the deficit and the less PCr and glycolysis you spend; slow VO₂ kinetics mean a bigger deficit and poorer exercise tolerance [[c:sys-kinetics]].\n\nIn all-out running, the accumulated deficit grew with effort length up to about 2 min, then levelled off. That maximum (MAOD) has been used as a measure of anaerobic capacity [[c:sys-maod]].",
+   "claims": [
+    {
+     "id": "sys-kinetics",
+     "text": "For a given demand, faster VO₂ kinetics mean a smaller O₂ deficit and less substrate-level phosphorylation; slower kinetics mean a larger deficit and poorer tolerance.",
+     "grade": "strong",
+     "sources": [
+      "poole2012"
+     ],
+     "evidence": [
+      {
+       "source": "poole2012",
+       "quote": "For a given metabolic demand, fast VO2 kinetics mandates a smaller O2 deficit, less substrate-level phosphorylation and high exercise tolerance.",
+       "level": "abstract"
+      },
+      {
+       "source": "poole2012",
+       "quote": "By the same token, slow VO2 kinetics incurs a high O2 deficit, presents a greater challenge to homeostasis and presages poor exercise tolerance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sys-maod",
+     "text": "The accumulated O₂ deficit rises with the length of exhausting runs up to about 2 min, then levels off; this maximum (MAOD) is proposed as a measure of anaerobic capacity.",
+     "grade": "weak",
+     "sources": [
+      "medbo1988"
+     ],
+     "evidence": [
+      {
+       "source": "medbo1988",
+       "quote": "The accumulated O2 deficit increased with the duration for exhausting bouts lasting up to 2 min, but a leveling off was found for bouts lasting 2 min or more.",
+       "level": "abstract"
+      },
+      {
+       "source": "medbo1988",
+       "quote": "By using these individual relationships the maximal accumulated O2 deficit, which appears to be a direct quantitative expression of the anaerobic capacity, can be calculated after measuring the O2 uptake during one exhausting bout of exercise lasting 2-3 min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sys-deficit-def"
+  },
+  {
+   "type": "example",
+   "id": "sys-deficit-example",
+   "title": "Working out an oxygen deficit",
+   "problem": "A triathlete rides a 4 min effort at a power whose steady oxygen demand is 3.0 L·min⁻¹. Her measured VO₂ over those 4 min adds up to 10.8 L. What is her oxygen deficit?",
+   "steps": [
+    "Oxygen the work needed over 4 min = 3.0 L·min⁻¹ × 4 min = 12.0 L.",
+    "Deficit = needed − taken up = 12.0 − 10.8 = 1.2 L.",
+    "That 1.2 L worth of energy came from PCr, glycolysis and a little oxygen stored in blood and muscle."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sys-deficit-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sys-kinetics-scenario"
+  },
+  {
+   "type": "question",
+   "item": "sys-maod-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "sys-epoc",
+   "title": "After the effort: EPOC, once called the oxygen debt",
+   "text": "When you stop, oxygen uptake stays above resting for a while. In the 1920s, A. V. Hill called this the \"oxygen debt\": oxygen used to deal with the lactate made during the effort. That explanation was too simple [[c:epoc-name]]. Most lactate is burned as fuel, and the extra uptake has other causes. The neutral name is [EPOC](g:epoc), excess post-exercise oxygen consumption.\n\nEPOC has a **rapid** part (refilling oxygen stores, rebuilding ATP and PCr, removing lactate, raised temperature, circulation and breathing) and a **prolonged** part that is less understood [[c:epoc-parts]]. Its size rises steeply with intensity and more steadily with duration [[c:epoc-size]].",
+   "claims": [
+    {
+     "id": "epoc-name",
+     "text": "Hill's lactate-based oxygen-debt explanation was too simplistic; post-exercise lactate is mainly oxidised, and the neutral term EPOC is preferred.",
+     "grade": "moderate",
+     "sources": [
+      "gaesser1984"
+     ],
+     "evidence": [
+      {
+       "source": "gaesser1984",
+       "quote": "The classical \"oxygen debt\" hypothesis formulated by Hill and associates in the 1920s was an attempt to link the metabolism of lactic acid with the O2 consumption in excess of resting that occurs after exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "gaesser1984",
+       "quote": "It is now probable that the original lactic acid explanation of the O2 debt was too simplistic.",
+       "level": "abstract"
+      },
+      {
+       "source": "gaesser1984",
+       "quote": "The metabolism of lactate, a readily oxidizable substrate, following exercise appears to be directed primarily toward energy production in mitochondria.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "epoc-parts",
+     "text": "EPOC has a rapid component (oxygen stores, ATP/PCr resynthesis, lactate removal, temperature, circulation, ventilation) and a less understood prolonged component.",
+     "grade": "moderate",
+     "sources": [
+      "borsheim2003"
+     ],
+     "evidence": [
+      {
+       "source": "borsheim2003",
+       "quote": "In the recovery period after exercise there is an increase in oxygen uptake termed the 'excess post-exercise oxygen consumption' (EPOC), consisting of a rapid and a prolonged component.",
+       "level": "abstract"
+      },
+      {
+       "source": "borsheim2003",
+       "quote": "Finally, while some of the mechanisms underlying the more rapid EPOC are well known (replenishment of oxygen stores, adenosine triphosphate/creatine phosphate resynthesis, lactate removal, and increased body temperature, circulation and ventilation), less is known about the mechanisms underlying the prolonged EPOC component.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "epoc-size",
+     "text": "EPOC magnitude rises curvilinearly with exercise intensity and more linearly with duration.",
+     "grade": "moderate",
+     "sources": [
+      "borsheim2003"
+     ],
+     "evidence": [
+      {
+       "source": "borsheim2003",
+       "quote": "A curvilinear relationship between the magnitude of EPOC and the intensity of the exercise bout has been found, whereas the relationship between exercise duration and EPOC magnitude appears to be more linear, especially at higher intensities.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sys-epoc-name"
+  },
+  {
+   "type": "question",
+   "item": "sys-epoc-scenario"
+  },
+  {
+   "type": "question",
+   "item": "sys-epoc-myth"
+  },
+  {
+   "type": "question",
+   "item": "sys-deficit-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "All three routes run in every effort; intensity and duration set the shares (a 10 s sprint is about half PCr, a 30 s sprint about half glycolysis, and aerobic equals anaerobic near 75–80 s).",
+    "Below a steady state the mitochondria cover nearly all the ATP and nothing builds up; above it, PCr and glycolysis keep topping up and the effort has a time limit.",
+    "Every start runs an oxygen deficit, filled by PCr and glycolysis; faster VO₂ kinetics mean a smaller deficit.",
+    "Deficit = oxygen needed − oxygen taken up; its all-out maximum (MAOD) has been used to estimate anaerobic capacity.",
+    "EPOC, the old oxygen debt, is not lactate repayment: it has a rapid and a prolonged part and grows steeply with intensity."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sys-diagram-read",
+   "concept": "sys-mix",
+   "bloom": "apply",
+   "sources": [
+    "gastin2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist rides a 4 km individual pursuit all-out in about 4 minutes. Roughly what share of its energy is aerobic?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About three quarters",
+       "correct": true,
+       "why": "Right: the 2026 model gives about 78% aerobic for a 4 min all-out effort."
+      },
+      {
+       "id": "b",
+       "text": "About one half",
+       "why": "Half and half fits an all-out effort of about 75–80 s, not 4 min."
+      },
+      {
+       "id": "c",
+       "text": "About one quarter",
+       "why": "That fits an all-out 30 s sprint; by 4 min the aerobic share is much larger."
+      },
+      {
+       "id": "d",
+       "text": "Almost none of it",
+       "why": "This is the old sequential picture; aerobic supply contributes from the start and dominates by 4 min."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner races an all-out 600 m in about 90 s. Using the chart, roughly what share of the energy is aerobic?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Just over half",
+       "correct": true,
+       "why": "Right: the model gives about 54% aerobic at 90 s, just past the 75–80 s break-even."
+      },
+      {
+       "id": "b",
+       "text": "About a quarter",
+       "why": "About 25% fits a 30 s effort; by 90 s the aerobic share has roughly doubled."
+      },
+      {
+       "id": "c",
+       "text": "About 80%",
+       "why": "That fits an all-out effort of about 4 min, not 90 s."
+      },
+      {
+       "id": "d",
+       "text": "Under 10%",
+       "why": "Under 10% fits only about the first 10 s of an all-out effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-method-appraisal",
+   "concept": "sys-mix",
+   "bloom": "evaluate",
+   "sources": [
+    "baker2010",
+    "gastin2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One review estimates the aerobic share of a 10 s all-out sprint at 3%; a 2026 model fitted to 102 studies gives about 9%. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both are method-dependent estimates: the share is small, a few percent up to about 10%",
+       "correct": true,
+       "why": "Right: aerobic contribution in sprints is estimated, not measured directly, and methods differ; both agree it is small."
+      },
+      {
+       "id": "b",
+       "text": "The 2026 model must be wrong, since it disagrees with the review",
+       "why": "Disagreement alone doesn't show which is wrong; the model pools many studies, the review cites one estimate."
+      },
+      {
+       "id": "c",
+       "text": "The 3% figure must be wrong, simply because it is older",
+       "why": "Age alone doesn't make a figure wrong; both are estimates with different methods."
+      },
+      {
+       "id": "d",
+       "text": "The gap shows the aerobic system is switched off for the first 10 s",
+       "why": "Both estimates are above zero: the aerobic route runs from the first second."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-steady",
+   "concept": "sys-steady",
+   "bloom": "understand",
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides at a pace she could hold for 2 hours. After 10 minutes, where does almost all of her ATP come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oxidative phosphorylation, with pyruvate mostly oxidised",
+       "correct": true,
+       "why": "Right: below a steady state, mitochondria meet the demand; glycolysis runs, but its pyruvate is burned."
+      },
+      {
+       "id": "b",
+       "text": "Glycolysis, with most pyruvate turned into lactate",
+       "why": "Some lactate always forms, but at this pace most pyruvate is oxidised; lactate stays low and steady."
+      },
+      {
+       "id": "c",
+       "text": "Phosphocreatine, topped up all the time",
+       "why": "PCr only buffers small changes; it can't be a net source of ATP for 2 hours."
+      },
+      {
+       "id": "d",
+       "text": "All three routes in roughly equal shares",
+       "why": "All three run, but in steady submaximal exercise the aerobic share is far larger."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-above-steady",
+   "concept": "sys-steady",
+   "bloom": "analyse",
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner lifts her pace from steady to just above the fastest pace she can hold in a steady state. What changes in her muscles?",
+     "options": [
+      {
+       "id": "a",
+       "text": "PCr and glycolysis keep covering part of the demand, and H⁺ accumulate",
+       "correct": true,
+       "why": "Right: above a steady state the aerobic supply can't match demand, so products build up and time is limited."
+      },
+      {
+       "id": "b",
+       "text": "The aerobic system switches off and glycolysis takes over",
+       "why": "The aerobic route keeps running near its maximum; the anaerobic routes add to it."
+      },
+      {
+       "id": "c",
+       "text": "Fat becomes her main fuel to spare glycogen",
+       "why": "The opposite: as intensity rises, carbohydrate's share rises and fat's falls."
+      },
+      {
+       "id": "d",
+       "text": "Nothing changes until she reaches her VO₂max",
+       "why": "The change starts at the steady-state limit, well below VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-deficit-def",
+   "concept": "sys-deficit",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "medbo1988",
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the oxygen deficit at the start of an effort?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The gap between the oxygen the work needs and the oxygen taken up",
+       "correct": true,
+       "why": "Right: VO₂ lags behind demand, and PCr and glycolysis fill the gap."
+      },
+      {
+       "id": "b",
+       "text": "The extra oxygen taken up after the effort has ended",
+       "why": "That is EPOC, the old oxygen debt, which comes after the effort."
+      },
+      {
+       "id": "c",
+       "text": "The oxygen missing from the blood during hard exercise",
+       "why": "Arterial blood stays well saturated in most athletes; the deficit is about uptake lagging demand."
+      },
+      {
+       "id": "d",
+       "text": "The drop in VO₂max that happens at altitude",
+       "why": "Altitude does lower VO₂max, but that is a different idea from the start-up deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-deficit-calc",
+   "concept": "sys-deficit",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "medbo1988"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's pace needs 3.5 L·min⁻¹ of oxygen in steady state. Over the first 3 min her measured VO₂ adds up to 9.2 L. What is her oxygen deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.3 L",
+       "correct": true,
+       "why": "Right: needed 3.5 × 3 = 10.5 L; 10.5 − 9.2 = 1.3 L."
+      },
+      {
+       "id": "b",
+       "text": "0.4 L",
+       "why": "This is a per-minute gap (3.5 − 9.2 ÷ 3); the deficit is the total over the 3 min."
+      },
+      {
+       "id": "c",
+       "text": "19.7 L",
+       "why": "This adds needed and taken up (10.5 + 9.2); the deficit is the difference."
+      },
+      {
+       "id": "d",
+       "text": "9.2 L",
+       "why": "That is the oxygen taken up, not the shortfall."
+      }
+     ],
+     "solution": "Needed = 3.5 L·min⁻¹ × 3 min = 10.5 L. Deficit = 10.5 − 9.2 = 1.3 L."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's interval needs 4.0 L·min⁻¹ of oxygen in steady state. Over 2 min his measured VO₂ adds up to 6.6 L. What is his oxygen deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.4 L",
+       "correct": true,
+       "why": "Right: needed 4.0 × 2 = 8.0 L; 8.0 − 6.6 = 1.4 L."
+      },
+      {
+       "id": "b",
+       "text": "0.7 L",
+       "why": "This is a per-minute gap (4.0 − 6.6 ÷ 2); the deficit is the total over the 2 min."
+      },
+      {
+       "id": "c",
+       "text": "14.6 L",
+       "why": "This adds needed and taken up (8.0 + 6.6); the deficit is the difference."
+      },
+      {
+       "id": "d",
+       "text": "6.6 L",
+       "why": "That is the oxygen taken up, not the shortfall."
+      }
+     ],
+     "solution": "Needed = 4.0 L·min⁻¹ × 2 min = 8.0 L. Deficit = 8.0 − 6.6 = 1.4 L."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's swim pace needs 2.5 L·min⁻¹ of oxygen in steady state. Over the first 4 min her measured VO₂ adds up to 9.1 L. What is her oxygen deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.9 L",
+       "correct": true,
+       "why": "Right: needed 2.5 × 4 = 10.0 L; 10.0 − 9.1 = 0.9 L."
+      },
+      {
+       "id": "b",
+       "text": "0.2 L",
+       "why": "This is a per-minute gap (2.5 − 9.1 ÷ 4); the deficit is the total over the 4 min."
+      },
+      {
+       "id": "c",
+       "text": "19.1 L",
+       "why": "This adds needed and taken up (10.0 + 9.1); the deficit is the difference."
+      },
+      {
+       "id": "d",
+       "text": "9.1 L",
+       "why": "That is the oxygen taken up, not the shortfall."
+      }
+     ],
+     "solution": "Needed = 2.5 L·min⁻¹ × 4 min = 10.0 L. Deficit = 10.0 − 9.1 = 0.9 L."
+    }
+   ]
+  },
+  {
+   "id": "sys-kinetics-scenario",
+   "concept": "sys-deficit",
+   "bloom": "analyse",
+   "sources": [
+    "poole2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists jump from easy spinning to the same 300 W. Rider A's VO₂ rises faster than rider B's. What follows?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A runs a smaller oxygen deficit and uses less PCr and glycolysis",
+       "correct": true,
+       "why": "Right: faster VO₂ kinetics shrink the deficit, so less substrate-level phosphorylation is needed."
+      },
+      {
+       "id": "b",
+       "text": "A runs a larger oxygen deficit, since he uses oxygen faster",
+       "why": "The deficit is oxygen missing compared with demand; a faster rise means less missing, not more."
+      },
+      {
+       "id": "c",
+       "text": "Both run the same deficit, since the power is the same",
+       "why": "Same demand, but the deficit depends on how fast VO₂ catches up with it."
+      },
+      {
+       "id": "d",
+       "text": "B uses less glycogen, since his VO₂ is lower",
+       "why": "B's slower VO₂ means a bigger gap, which PCr and glycolysis (using glycogen) must cover."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-maod-appraisal",
+   "concept": "sys-deficit",
+   "bloom": "evaluate",
+   "sources": [
+    "medbo1988"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "MAOD estimates the oxygen demand of an all-out run by extending the straight line of VO₂ against speed from submaximal runs. What is the method's main weakness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It assumes the straight line still holds above VO₂max, which can't be checked directly",
+       "correct": true,
+       "why": "Right: supramaximal demand is extrapolated, not measured; if economy changes at high speed, MAOD is off."
+      },
+      {
+       "id": "b",
+       "text": "It needs a muscle biopsy, so few labs can use it",
+       "why": "MAOD uses only gas exchange on a treadmill; no biopsy is needed."
+      },
+      {
+       "id": "c",
+       "text": "It ignores aerobic metabolism during the all-out run",
+       "why": "It measures VO₂ during the run directly; the deficit is what is left after that."
+      },
+      {
+       "id": "d",
+       "text": "It was developed in cyclists, so it can't apply to runners",
+       "why": "It was developed on treadmill runners; the extrapolation is the issue in any sport."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-epoc-name",
+   "concept": "sys-epoc",
+   "bloom": "understand",
+   "sources": [
+    "gaesser1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why did physiologists move from the term \"oxygen debt\" to EPOC?",
+     "options": [
+      {
+       "id": "a",
+       "text": "\"Debt\" implied a lactate repayment that turned out too simple",
+       "correct": true,
+       "why": "Right: lactate removal and post-exercise VO₂ don't track each other closely, so a neutral name was chosen."
+      },
+      {
+       "id": "b",
+       "text": "Oxygen uptake turned out not to be raised after exercise",
+       "why": "It is raised; the change was about the explanation, not the observation."
+      },
+      {
+       "id": "c",
+       "text": "The debt was found to be repaid during the effort, not after",
+       "why": "The extra uptake really comes after exercise; that's what EPOC measures."
+      },
+      {
+       "id": "d",
+       "text": "It was renamed to match the oxygen deficit at the start",
+       "why": "The deficit (at the start) and EPOC (after) are different things, measured at different times."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-epoc-scenario",
+   "concept": "sys-epoc",
+   "bloom": "apply",
+   "sources": [
+    "borsheim2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these 30-minute run sessions most likely leaves the largest EPOC?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Warm-up, then 5 × 3 min near VO₂max",
+       "correct": true,
+       "why": "Right: EPOC rises steeply (curvilinearly) with intensity, so hard intervals give the most."
+      },
+      {
+       "id": "b",
+       "text": "30 min of easy running throughout",
+       "why": "Low-intensity sessions leave a small, short EPOC."
+      },
+      {
+       "id": "c",
+       "text": "30 min of brisk walking throughout",
+       "why": "Low intensity: studies find no sustained EPOC after easy, short exercise."
+      },
+      {
+       "id": "d",
+       "text": "All the same, as the duration is the same",
+       "why": "Duration matters, but intensity matters more, and it differs here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sys-epoc-myth",
+   "concept": "sys-epoc",
+   "bloom": "evaluate",
+   "sources": [
+    "gaesser1984",
+    "borsheim2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlon coach says: \"Your panting after a hard swim set is your body paying back the lactic acid.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too simple: EPOC covers oxygen stores, PCr, heat and more, and most lactate is burned",
+       "correct": true,
+       "why": "Right: the lactate-repayment idea was dropped; EPOC has several causes, and lactate is mostly oxidised as fuel."
+      },
+      {
+       "id": "b",
+       "text": "Right: EPOC is the oxygen used to rebuild all the lactate into glycogen",
+       "why": "This is Hill's original oxygen-debt idea, which turned out too simple."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: oxygen uptake returns to resting the moment exercise stops",
+       "why": "Uptake stays raised after exercise; that is EPOC."
+      },
+      {
+       "id": "d",
+       "text": "Right, but only for swimming, where breathing is restricted",
+       "why": "EPOC follows all exercise; its causes don't depend on the sport."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

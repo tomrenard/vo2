@@ -1,0 +1,904 @@
+{
+ "id": "nerv-motor-units",
+ "module": "t0-nervous",
+ "title": "Motor units: how the nervous system grades force",
+ "goal": "Explain how recruitment (in size order) and rate coding grade force, and how the units recruited change with intensity and over a long effort.",
+ "requires": [
+  "nerv-neuron"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "mu-define",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "mu-what",
+   "title": "One neuron, many fibres",
+   "text": "A [motor unit](g:motor-unit) is one motor neuron in the spinal cord plus every muscle fibre its axon reaches. Muscle fibres are grouped into units this way, and the fibres of one unit share their contractile properties: broadly slow-twitch (type I) or fast-twitch (type II) [[c:mu-grouped]].\n\nWhen the neuron fires, every fibre in its unit fires: the nervous system can't switch on half a unit.\n\nSo it has only two dials for force [[c:mu-two-dials]]:\n\n- **Recruitment:** how many units are on.\n- **[Rate coding](g:rate-coding):** how often each one fires.\n\nThe rest of this lesson is about how it turns those two dials.",
+   "claims": [
+    {
+     "id": "mu-grouped",
+     "text": "Muscle fibres are grouped into motor units whose fibres share contractile properties, broadly slow- or fast-twitch.",
+     "grade": "strong",
+     "sources": [
+      "hodsontole2009",
+      "lai2018"
+     ],
+     "evidence": [
+      {
+       "source": "hodsontole2009",
+       "quote": "Skeletal muscle contains many muscle fibres that are functionally grouped into motor units.",
+       "level": "abstract"
+      },
+      {
+       "source": "lai2018",
+       "quote": "Mammalian skeletal muscles are comprised of many motor units, each containing a group of muscle fibres that have common contractile properties: these can be broadly categorized as slow and fast twitch muscle fibres.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-two-dials",
+     "text": "Muscle force in voluntary contractions comes from recruiting motor units and from modulating the rate at which they discharge.",
+     "grade": "strong",
+     "sources": [
+      "duchateau2011"
+     ],
+     "evidence": [
+      {
+       "source": "duchateau2011",
+       "quote": "the force exerted by muscle during voluntary contractions was the result of the concurrent recruitment of motor units and modulation of the rate at which they discharged action potentials.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mu-define",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "mu-all-fibres"
+  },
+  {
+   "type": "question",
+   "item": "mu-order-easy",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "mu-size",
+   "title": "Small first: the size principle",
+   "text": "Which units go first? In 1957 Elwood Henneman proposed the [size principle](g:size-principle): units are recruited in order of motor neuron size, smallest first. A small neuron needs less input to reach threshold.\n\nIn humans, recruitment order is set mainly by motoneuron size [[c:mu-size-order]]. Small units are slow and fatigue-resistant, so low efforts are cheap and can last for hours [[c:mu-size-cheap]].\n\n| effort | units working |\n|---|---|\n| easy endurance | small, slow (type I) |\n| threshold | plus mid-sized, fast type IIA |\n| sprint | nearly all, including the largest |\n\nAs effort falls, units drop out in reverse order: last in, first out.",
+   "claims": [
+    {
+     "id": "mu-size-order",
+     "text": "In humans, motor unit recruitment order is determined primarily by motoneuron size.",
+     "grade": "strong",
+     "sources": [
+      "duchateau2011"
+     ],
+     "evidence": [
+      {
+       "source": "duchateau2011",
+       "quote": "By the end of the 20th C, the experimental evidence indicated that the recruitment order of human motor units was determined primarily by motoneuron size",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-size-cheap",
+     "text": "Under the size principle slower units are recruited for low-intensity contractions, a metabolically cheap and fatigue-resistant strategy.",
+     "grade": "strong",
+     "sources": [
+      "lai2018"
+     ],
+     "evidence": [
+      {
+       "source": "lai2018",
+       "quote": "Motor units are typically recruited in an orderly fashion following the 'size principle', in which slower motor units would be recruited for low intensity contraction; a metabolically cheap and fatigue-resistant strategy.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does the size principle hold in fast, natural movements, or does the order change with the task?",
+    "sides": [
+     {
+      "position": "It holds: changes in human recruitment order are occasional and not a strategy of the nervous system.",
+      "sources": [
+       "duchateau2011"
+      ]
+     },
+     {
+      "position": "It bends: in natural, fast movements recruitment varies with the task, not always following size.",
+      "sources": [
+       "hodsontole2009",
+       "lai2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "mu-order-easy",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "mu-size-why"
+  },
+  {
+   "type": "question",
+   "item": "mu-size-debate"
+  },
+  {
+   "type": "concept",
+   "id": "mu-rate",
+   "title": "Rate coding: firing faster",
+   "text": "The second dial is firing rate. Each spike gives a twitch; fire again before the fibre has relaxed and the twitches add up to more force.\n\nAbove fairly low forces, muscle force depends mainly on rate coding, especially in fast contractions [[c:mu-rate-main]].\n\nMuscles differ in when recruitment stops [[c:mu-recruit-range]]:\n\n| muscle | last units recruited at |\n|---|---|\n| biceps (large, mixed) | about 88% [MVC](g:mvc) |\n| adductor pollicis (small thumb muscle) | about 50% MVC, most below 30% |\n\nPast that point, more force can only come from firing faster. Firing rate is the inverse of the gap between spikes, the interspike interval.",
+   "claims": [
+    {
+     "id": "mu-rate-main",
+     "text": "Except at relatively low forces, muscle force is controlled mainly by rate coding, especially during fast contractions.",
+     "grade": "moderate",
+     "sources": [
+      "enoka2017"
+     ],
+     "evidence": [
+      {
+       "source": "enoka2017",
+       "quote": "Except at relatively low forces, however, the control of muscle force depends primarily on rate coding, especially during fast contractions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-recruit-range",
+     "text": "Recruitment continues up to about 88% MVC in biceps brachii but stops by about 50% MVC in adductor pollicis.",
+     "grade": "weak",
+     "sources": [
+      "kukulka1981"
+     ],
+     "evidence": [
+      {
+       "source": "kukulka1981",
+       "quote": "In biceps brachii, recruitment was observed from 0 to 88% maximum voluntary contraction (MVC). In adductor pollicis, no motor unit was observed to be recruited at forces greater than 50% MVC, with the majority of recruitment occurring below 30% MVC.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mu-rate-example",
+   "title": "From interspike interval to firing rate",
+   "problem": "A motor unit in a runner's calf fires every 100 ms. As she speeds up, the gap shrinks to 40 ms. What are the firing rates?",
+   "steps": [
+    "Firing rate (Hz, spikes per second) = 1 ÷ interspike interval in seconds = 1,000 ÷ interval in ms.",
+    "Before: 1,000 ÷ 100 = 10 Hz.",
+    "After: 1,000 ÷ 40 = 25 Hz.",
+    "So the unit fires 2.5 times as often. Halving the interval doubles the rate: rate and interval are inverses."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mu-rate-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mu-rate-vs-recruit"
+  },
+  {
+   "type": "concept",
+   "id": "mu-intensity",
+   "title": "Intensity decides who works",
+   "text": "We can't watch units fire during a real ride, but we can see which fibres used their glycogen, a sign they were working.\n\nOne small study (5–7 men per ride) [[c:mu-depletion-intensity]]:\n\n| intensity | fibres that used glycogen |\n|---|---|\n| 43% VO₂max, 60 min | almost all type I, about 20% of type IIA |\n| 61% VO₂max, 60 min | all type I, about 65% of type IIA |\n| 91% VO₂max, early on | all type I and IIA, about half of the fastest type II |\n\nThe harder the effort, the more units join from the start, in size order. In another study, cadence (and so force per pedal stroke) didn't change the pattern [[c:mu-cadence]].",
+   "claims": [
+    {
+     "id": "mu-depletion-intensity",
+     "text": "In small studies, the share of muscle fibres activated, judged by glycogen depletion, rises gradually with exercise intensity: type I first, then more type II.",
+     "grade": "weak",
+     "sources": [
+      "vollestad1985",
+      "gollnick1974"
+     ],
+     "evidence": [
+      {
+       "source": "vollestad1985",
+       "quote": "After 60 min at the lowest intensity, glycogen depletion was observed in almost all type I fibres and in about 20% of type IIA fibres. After 60 min exercise at 61% of VO2max, glycogen breakdown was observed in all type I fibres and in about 65% of type IIA fibres.",
+       "level": "abstract"
+      },
+      {
+       "source": "vollestad1985",
+       "quote": "The results indicate that the number of fibres activated from the start increase gradually in response to increased exercise intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "vollestad1985",
+       "quote": "During the first part of exercise at 91% of VO2max, glycogen breakdown was observed in all type I and IIA and in about 50% of type IIAB and IIB fibres.",
+       "level": "abstract"
+      },
+      {
+       "source": "gollnick1974",
+       "quote": "Slow twitch, high oxidative (ST) fibres were the first to lose glycogen (reduced PAS staining) at all workloads below V(O) (2) max.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-cadence",
+     "text": "In one study, varying pedalling rate (and so force per pedal thrust) did not change the fibre glycogen depletion pattern.",
+     "grade": "weak",
+     "sources": [
+      "gollnick1974"
+     ],
+     "evidence": [
+      {
+       "source": "gollnick1974",
+       "quote": "Varying the pedalling rate and, thus, the total force exerted in each pedal thrust had no effect on the pattern of glycogen depletion in the fibres.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mu-intensity-depletion"
+  },
+  {
+   "type": "question",
+   "item": "mu-recruit-range"
+  },
+  {
+   "type": "concept",
+   "id": "mu-fatigue",
+   "title": "Long efforts: calling up the reserves",
+   "text": "Hold the same power for hours and the picture changes. Glycogen stains suggest slow fibres empty first, and fast fibres are then recruited to keep the power up [[c:mu-ft-late]].\n\nType II fibres are less efficient. In a study where slow fibres were emptied first, a moderate ride recruited more fast fibres and cost more oxygen, with VO₂ slowly creeping up [[c:mu-krustrup]].\n\nIn repeated 20% MVC knee contractions held to exhaustion, firing rate first fell, then rose, and new units were added as fatigue grew [[c:mu-fatigue-recruit]].\n\nSo late in a long ride at the same watts, more and bigger units are working. That is one reason the same power feels harder and costs more.",
+   "claims": [
+    {
+     "id": "mu-ft-late",
+     "text": "During submaximal endurance exercise muscle relies first on slow-twitch fibres; fast-twitch fibres are recruited once slow fibres are depleted of glycogen.",
+     "grade": "weak",
+     "sources": [
+      "gollnick1974"
+     ],
+     "evidence": [
+      {
+       "source": "gollnick1974",
+       "quote": "Results point to primary reliance upon ST fibres during submaximal endurance exercise, FT fibres being recruited after ST fibres are depleted of glycogen.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-krustrup",
+     "text": "Prior glycogen depletion of slow-twitch fibres raises fast-twitch recruitment, O₂ cost and gives a slow component of VO₂ at moderate intensity.",
+     "grade": "weak",
+     "sources": [
+      "krustrup2004"
+     ],
+     "evidence": [
+      {
+       "source": "krustrup2004",
+       "quote": "This study demonstrates that previous glycogen depletion of ST fibers enhances FT fiber recruitment, elevates O2 cost, and causes a slow component of VO2 during dynamic exercise with no blood lactate accumulation or muscular acidosis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mu-fatigue-recruit",
+     "text": "In fatiguing contractions held at constant force, firing rates first fall then rise, and additional motor units are recruited.",
+     "grade": "weak",
+     "sources": [
+      "adam2005"
+     ],
+     "evidence": [
+      {
+       "source": "adam2005",
+       "quote": "The firing rate of motor units first decreased within the first 10-20% of the endurance time of the contractions and then increased. The firing rate increase was accompanied by recruitment of additional motor units as the force output remained constant.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mu-long-ride"
+  },
+  {
+   "type": "question",
+   "item": "mu-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "mu-rate-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A motor unit is one motor neuron and all its fibres; they fire together. Force is graded by recruitment and by rate coding.",
+    "Size principle: small, slow, fatigue-resistant units first, large fast ones last, because small neurons reach threshold sooner. Whether it bends in fast natural movements is debated.",
+    "Firing rate = 1,000 ÷ interspike interval (ms). Above low forces, and in small muscles above about 50% MVC, more force comes mainly from firing faster.",
+    "Glycogen depletion shows more fibres, and more type II fibres, working as intensity rises.",
+    "In long efforts slow fibres run low on glycogen and fast fibres are added, so the same power costs more oxygen and feels harder."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mu-define",
+   "concept": "mu-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "hodsontole2009",
+    "lai2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is a motor unit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One motor neuron plus all the muscle fibres it supplies",
+       "correct": true,
+       "why": "Right: one neuron and every fibre its axon reaches."
+      },
+      {
+       "id": "b",
+       "text": "One muscle fibre plus all the nerves that supply it",
+       "why": "It's the other way round: each fibre gets one motor neuron; one neuron supplies many fibres."
+      },
+      {
+       "id": "c",
+       "text": "A bundle of fibres wrapped in connective tissue",
+       "why": "That is a fascicle, an anatomical bundle; a motor unit's fibres are scattered through the muscle."
+      },
+      {
+       "id": "d",
+       "text": "The junction where a nerve meets a muscle fibre",
+       "why": "That is the neuromuscular junction, one contact point; the motor unit is the whole neuron with its fibres."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a triathlete's quadriceps, what makes up a single motor unit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One spinal motor neuron and every fibre its axon reaches",
+       "correct": true,
+       "why": "Right: that is the definition; all its fibres fire when it fires."
+      },
+      {
+       "id": "b",
+       "text": "One muscle fibre and the several neurons that share it",
+       "why": "Each adult fibre is supplied by just one motor neuron."
+      },
+      {
+       "id": "c",
+       "text": "One sarcomere and its actin and myosin",
+       "why": "A sarcomere is the contractile unit inside a fibre, not a nerve-and-fibre unit."
+      },
+      {
+       "id": "d",
+       "text": "All the type I fibres of the muscle together",
+       "why": "A muscle has many motor units of each type; one unit is one neuron's fibres."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-all-fibres",
+   "concept": "mu-what",
+   "bloom": "understand",
+   "sources": [
+    "duchateau2011",
+    "hodsontole2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A motor neuron supplying 300 fibres in a cyclist's quad fires one action potential. What do its fibres do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "All 300 contract together",
+       "correct": true,
+       "why": "Right: one neuron fires all its fibres; the unit is all-or-none."
+      },
+      {
+       "id": "b",
+       "text": "Only as many as the effort needs",
+       "why": "Grading happens by recruiting units and changing their rate, not by firing part of a unit."
+      },
+      {
+       "id": "c",
+       "text": "The slow ones contract, the fast ones wait",
+       "why": "The fibres of one unit share one type; there is no mixing within a unit."
+      },
+      {
+       "id": "d",
+       "text": "They take turns, a few at a time",
+       "why": "There is no rotation within a unit: one spike reaches every branch of the axon."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-order-easy",
+   "concept": "mu-size",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "duchateau2011",
+    "lai2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides an easy recovery spin at 120 W. Which motor units in her quads are doing most of the work?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small units of slow, fatigue-resistant fibres",
+       "correct": true,
+       "why": "Right: low efforts recruit the smallest, slow units first, as the size principle predicts."
+      },
+      {
+       "id": "b",
+       "text": "Large units of fast fibres, since they are most efficient",
+       "why": "Large fast units come in last, at high efforts; slow units are cheaper for low forces."
+      },
+      {
+       "id": "c",
+       "text": "All units equally, each at a low rate",
+       "why": "The nervous system recruits in size order rather than spreading the load over all units."
+      },
+      {
+       "id": "d",
+       "text": "The units with the most fibres, to share the load",
+       "why": "Units with many fibres are the large, fast ones, recruited last."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A marathoner jogs at an easy pace. According to the size principle, which units are active in his calves?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mainly small, slow, fatigue-resistant units",
+       "correct": true,
+       "why": "Right: small motoneurons reach threshold first, so easy efforts use slow units."
+      },
+      {
+       "id": "b",
+       "text": "Mainly large, fast units, which reach threshold first",
+       "why": "Large motoneurons need more input; they are recruited last, not first."
+      },
+      {
+       "id": "c",
+       "text": "Large and small units in turns, a minute each",
+       "why": "Rotation isn't how human recruitment mainly works; order is set by motoneuron size."
+      },
+      {
+       "id": "d",
+       "text": "Only fast units, since running needs speed",
+       "why": "Even fast movements at low force start with small units; speed of running isn't force per unit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-size-why",
+   "concept": "mu-size",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "duchateau2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why are small motor units recruited before large ones?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small motor neuron reaches threshold with less input",
+       "correct": true,
+       "why": "Right: recruitment order is set mainly by motoneuron size; small neurons are easier to excite."
+      },
+      {
+       "id": "b",
+       "text": "The brain chooses small units on purpose for each task",
+       "why": "Order follows from the neurons' size; changes in order aren't an intended strategy of the brain."
+      },
+      {
+       "id": "c",
+       "text": "Small units are closer to the skin",
+       "why": "Location doesn't set the order; motoneuron size does."
+      },
+      {
+       "id": "d",
+       "text": "Large units need glycogen before they can fire",
+       "why": "Fibres don't need glycogen to be recruited; the order is set in the spinal cord."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-size-debate",
+   "concept": "mu-size",
+   "bloom": "evaluate",
+   "sources": [
+    "duchateau2011",
+    "hodsontole2009",
+    "lai2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post says: \"In a fast track sprint start, the size principle is switched off and fast units fire first.\" What's the best reading of the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Size order mostly holds; whether fast movements change it is debated",
+       "correct": true,
+       "why": "Right: human recordings mostly back size order, but reviews and models argue recruitment varies with the task."
+      },
+      {
+       "id": "b",
+       "text": "Settled: fast units always fire first in fast movements",
+       "why": "That overstates it: most human recordings find order set mainly by size."
+      },
+      {
+       "id": "c",
+       "text": "Settled: the order can never change, whatever the task",
+       "why": "Reviews of natural movements report variations, so \"never\" goes beyond the evidence."
+      },
+      {
+       "id": "d",
+       "text": "It can't be tested, since single units can't be recorded in humans",
+       "why": "Single motor units have been recorded in humans since soon after 1925; that is where the evidence comes from."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-rate-calc",
+   "concept": "mu-rate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "enoka2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A motor unit in a rower's back fires every 80 ms. What is its firing rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.5 Hz",
+       "correct": true,
+       "why": "Right: 1,000 ÷ 80 = 12.5 Hz."
+      },
+      {
+       "id": "b",
+       "text": "0.08 Hz",
+       "why": "This takes the interval in seconds (0.08 s) as the rate; rate is its inverse."
+      },
+      {
+       "id": "c",
+       "text": "80 Hz",
+       "why": "This takes the interval (80 ms) as if it were the rate."
+      },
+      {
+       "id": "d",
+       "text": "1.25 Hz",
+       "why": "This uses 100 ÷ 80 instead of 1,000 ÷ 80; there are 1,000 ms in a second."
+      }
+     ],
+     "solution": "Rate = 1,000 ÷ interval (ms) = 1,000 ÷ 80 = 12.5 Hz."
+    },
+    {
+     "id": "b",
+     "stem": "During a hard climb, a unit in a cyclist's quad fires every 50 ms. What is its firing rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 Hz",
+       "correct": true,
+       "why": "Right: 1,000 ÷ 50 = 20 Hz."
+      },
+      {
+       "id": "b",
+       "text": "0.05 Hz",
+       "why": "This takes the interval in seconds (0.05 s) as the rate; rate is its inverse."
+      },
+      {
+       "id": "c",
+       "text": "50 Hz",
+       "why": "This takes the interval (50 ms) as if it were the rate."
+      },
+      {
+       "id": "d",
+       "text": "2 Hz",
+       "why": "This uses 100 ÷ 50 instead of 1,000 ÷ 50; there are 1,000 ms in a second."
+      }
+     ],
+     "solution": "Rate = 1,000 ÷ interval (ms) = 1,000 ÷ 50 = 20 Hz."
+    },
+    {
+     "id": "c",
+     "stem": "In a triathlete's calf, a unit's interspike interval falls from 125 ms to 50 ms as she surges. By how much does its firing rate rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "By 12 Hz",
+       "correct": true,
+       "why": "Right: 1,000 ÷ 125 = 8 Hz, 1,000 ÷ 50 = 20 Hz; 20 − 8 = 12 Hz."
+      },
+      {
+       "id": "b",
+       "text": "By 75 Hz",
+       "why": "This subtracts the intervals (125 − 50); convert each to a rate first."
+      },
+      {
+       "id": "c",
+       "text": "By 2.5 Hz",
+       "why": "2.5 is the ratio of the rates (20 ÷ 8), not the rise in Hz."
+      },
+      {
+       "id": "d",
+       "text": "By 0.012 Hz",
+       "why": "This works in spikes per ms; per second the rise is 12 Hz."
+      }
+     ],
+     "solution": "8 Hz → 20 Hz: rise = 20 − 8 = 12 Hz (a 2.5-fold increase)."
+    }
+   ]
+  },
+  {
+   "id": "mu-rate-vs-recruit",
+   "concept": "mu-rate",
+   "bloom": "analyse",
+   "sources": [
+    "kukulka1981",
+    "enoka2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A climber squeezes a hold with her thumb muscle (adductor pollicis), going from 60% to 90% MVC. Where does the extra force come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Firing the already active units faster",
+       "correct": true,
+       "why": "Right: in this muscle recruitment ends by about 50% MVC, so above that it's rate coding."
+      },
+      {
+       "id": "b",
+       "text": "Recruiting the largest units, held back until now",
+       "why": "In adductor pollicis no units were recruited above about 50% MVC; there are none left to add."
+      },
+      {
+       "id": "c",
+       "text": "Making each action potential larger",
+       "why": "Spikes are all-or-none; the nervous system can't make them bigger."
+      },
+      {
+       "id": "d",
+       "text": "Adding fibres to each unit as force rises",
+       "why": "A unit's fibres are fixed by its axon's branches; they don't change within a contraction."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-recruit-range",
+   "concept": "mu-rate",
+   "bloom": "apply",
+   "sources": [
+    "kukulka1981",
+    "enoka2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two muscles go from 40% to 80% MVC. In the biceps, recruitment goes on to about 88% MVC; in a small hand muscle, it ends by about 50%. Which statement fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The biceps still adds units; the hand muscle relies on firing faster",
+       "correct": true,
+       "why": "Right: large mixed muscles keep recruiting to high forces, small ones switch to rate coding early."
+      },
+      {
+       "id": "b",
+       "text": "Both rely only on new units, since rate is fixed",
+       "why": "Firing rate rises in both; in the small muscle it is the only dial left above 50%."
+      },
+      {
+       "id": "c",
+       "text": "The hand muscle adds more units than the biceps",
+       "why": "It's the reverse: the hand muscle has finished recruiting by about 50% MVC."
+      },
+      {
+       "id": "d",
+       "text": "Neither changes; force above 50% is passive stretch",
+       "why": "Active force is graded by the nervous system with recruitment and rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-intensity-depletion",
+   "concept": "mu-intensity",
+   "bloom": "analyse",
+   "sources": [
+    "vollestad1985",
+    "gollnick1974"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Biopsies are taken after 60 min of cycling at 43% VO₂max, or early in a ride at 91% VO₂max. At 91%, what do you expect in the fastest type II fibres compared with 43%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Many more of them have used glycogen",
+       "correct": true,
+       "why": "Right: at 91% VO₂max about half the fastest fibres lost glycogen; at 43% mostly type I did."
+      },
+      {
+       "id": "b",
+       "text": "They are untouched in both rides",
+       "why": "At high intensity many type II fibres are recruited and use glycogen."
+      },
+      {
+       "id": "c",
+       "text": "They used glycogen at 43% but not at 91%",
+       "why": "That reverses the size order: fast fibres join as intensity rises, not falls."
+      },
+      {
+       "id": "d",
+       "text": "They used glycogen before any type I fibres",
+       "why": "Type I fibres were used at every intensity; fast fibres were added on top."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-long-ride",
+   "concept": "mu-fatigue",
+   "bloom": "analyse",
+   "sources": [
+    "gollnick1974",
+    "krustrup2004",
+    "adam2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In hour 5 of a 735 km ride, a rider holds the same 180 W. His oxygen uptake has crept up and the effort feels harder. Best explanation from this lesson?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slow fibres are low on glycogen, so more fast, less efficient units are recruited",
+       "correct": true,
+       "why": "Right: fast fibres are recruited as slow fibres empty, raising the O₂ cost of the same power."
+      },
+      {
+       "id": "b",
+       "text": "His motor units are firing smaller action potentials",
+       "why": "Spikes are all-or-none; they don't shrink with fatigue."
+      },
+      {
+       "id": "c",
+       "text": "Fewer units are active, since the size principle reverses late in rides",
+       "why": "Late in long efforts more units are added, not fewer."
+      },
+      {
+       "id": "d",
+       "text": "Power output must have risen without him noticing",
+       "why": "The power is fixed at 180 W; the cost of that power rose."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Late in an Ironman run at the same pace, a triathlete's VO₂ has drifted up. Which change in her muscles best explains it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More fast-twitch units are recruited as slow fibres run out of glycogen",
+       "correct": true,
+       "why": "Right: emptying slow fibres raises fast-fibre recruitment and the O₂ cost of the same work."
+      },
+      {
+       "id": "b",
+       "text": "Her slow units now fire with bigger spikes",
+       "why": "Spikes are all-or-none; their size doesn't change with fatigue."
+      },
+      {
+       "id": "c",
+       "text": "Her fast units have dropped out to save glycogen",
+       "why": "As slow fibres tire, fast units are added, not dropped."
+      },
+      {
+       "id": "d",
+       "text": "Each motor unit now supplies more fibres",
+       "why": "A unit's fibres are fixed by its axon; they don't grow during a race."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mu-appraisal",
+   "concept": "mu-fatigue",
+   "bloom": "evaluate",
+   "sources": [
+    "adam2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study recorded motor units in 5 young men repeating knee contractions at 20% MVC to exhaustion and found new units were recruited. What most limits using it to explain a long bike race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few men, a static contraction, one muscle: far from hours of pedalling",
+       "correct": true,
+       "why": "Right: n = 5 men in an isometric task at fixed force doesn't match dynamic multi-hour cycling, so treat it as weak evidence."
+      },
+      {
+       "id": "b",
+       "text": "Isometric tests can't record motor units at all",
+       "why": "Isometric contractions are where motor unit recordings work best."
+      },
+      {
+       "id": "c",
+       "text": "20% MVC is too hard to tell us about endurance",
+       "why": "20% MVC is a low force, close to endurance efforts; the task type is the bigger problem."
+      },
+      {
+       "id": "d",
+       "text": "The contractions were too short to cause any fatigue",
+       "why": "The contractions went on to exhaustion, so fatigue was real; the problem is the task and sample, not the duration."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

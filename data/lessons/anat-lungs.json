@@ -1,0 +1,441 @@
+{
+ "id": "anat-lungs",
+ "module": "t0-anatomy",
+ "title": "The lungs: airways, alveoli and breathing muscles",
+ "goal": "Trace air from the mouth to the alveoli, explain why a huge, thin alveolar-capillary barrier suits gas exchange, and name the muscles that breathe in and out at rest and in hard exercise.",
+ "requires": ["anat-heart"],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  { "type": "question", "item": "lng-exchange-site", "variant": "a", "pretest": true },
+  { "type": "question", "item": "lng-expiration", "variant": "a", "pretest": true },
+  {
+   "type": "concept",
+   "id": "lung-airways",
+   "title": "The airways: a tree that conducts",
+   "text": "Air reaches the gas-exchange surface through a branching tree. Its first part is the [conducting zone](g:conducting-zone): nose and mouth, pharynx, larynx, trachea, bronchi and bronchioles. It carries the air, cleans it, warms it and humidifies it, but exchanges no gas [[c:conducting-zone]].\n\n- The trachea is held open by 16–20 C-shaped rings of cartilage.\n- Bronchioles, about 1 mm across, have muscular walls and no cartilage [[c:airway-walls]].\n\nThe air in these tubes at the end of a breath in never reaches the alveoli: it is [anatomical dead space](g:anatomical-dead-space) [[c:dead-space]]. Any tube you add to the airway, such as a swim snorkel, adds to it.",
+   "claims": [
+    {
+     "id": "conducting-zone",
+     "text": "The conducting zone carries air, removes debris and pathogens, and warms and humidifies it, without taking part in gas exchange.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "The conducting zone of the respiratory system includes the organs and structures not directly involved in gas exchange.", "level": "full-text" },
+      { "source": "betts2022", "quote": "The major functions of the conducting zone are to provide a route for incoming and outgoing air, remove debris and pathogens from the incoming air, and warm and humidify the incoming air.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "airway-walls",
+     "text": "The trachea is held open by 16–20 C-shaped cartilage rings; bronchioles, about 1 mm across, have muscular walls without cartilage.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "The trachea is formed by 16 to 20 stacked, C-shaped pieces of hyaline cartilage that are connected by dense connective tissue.", "level": "full-text" },
+      { "source": "betts2022", "quote": "Bronchioles, which are about 1 mm in diameter, further branch until they become the tiny terminal bronchioles, which lead to the structures of gas exchange.", "level": "full-text" },
+      { "source": "betts2022", "quote": "The muscular walls of the bronchioles do not contain cartilage like those of the bronchi.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "dead-space",
+     "text": "Anatomical dead space is the air in the airways that never reaches the alveoli and so takes no part in gas exchange.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "In addition to the air that creates respiratory volumes, the respiratory system also contains anatomical dead space, which is air that is present in the airway that never reaches the alveoli and therefore never participates in gas exchange.", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "lng-conducting-role" },
+  { "type": "question", "item": "lng-cartilage-bronchiole" },
+  { "type": "question", "item": "lng-snorkel" },
+  {
+   "type": "concept",
+   "id": "lung-alveoli",
+   "title": "Alveoli: hundreds of millions of tiny sacs",
+   "text": "Gas exchange starts where the terminal bronchioles join respiratory bronchioles. These lead through alveolar ducts to clusters of [alveoli](g:alveolus), sacs about 200 μm across [[c:respiratory-zone]].\n\nA count in six adult lungs found on average **480 million** alveoli, from 274 to 790 million; bigger lungs had more [[c:alveoli-number]]. Together they give a huge surface: textbooks often say about 70 m², while electron-microscope measurements give about **130 m²** [[c:alveoli-area]].\n\nTwo cell types line them [[c:alveolar-cells]]:\n\n- **type I** cells, thin and flat, cover up to 97% of the surface;\n- **type II** cells make [surfactant](g:surfactant), which lowers surface tension so the alveoli don't collapse.",
+   "claims": [
+    {
+     "id": "respiratory-zone",
+     "text": "Gas exchange happens in the respiratory zone: respiratory bronchioles, alveolar ducts and alveoli about 200 μm across.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "The gas exchange occurs in the respiratory zone.", "level": "full-text" },
+      { "source": "betts2022", "quote": "An alveolus is approximately 200 μm in diameter with elastic walls that allow the alveolus to stretch during air intake, which greatly increases the surface area available for gas exchange.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "alveoli-number",
+     "text": "Six adult human lungs held on average 480 million alveoli (range 274–790 million); larger lungs had more.",
+     "grade": "weak",
+     "sources": ["ochs2004"],
+     "evidence": [
+      { "source": "ochs2004", "quote": "In six adult human lungs, the mean alveolar number was 480 million (range: 274-790 million; coefficient of variation: 37%).", "level": "abstract" },
+      { "source": "ochs2004", "quote": "Alveolar number was closely related to total lung volume, with larger lungs having considerably more alveoli.", "level": "abstract" }
+     ]
+    },
+    {
+     "id": "alveoli-area",
+     "text": "The alveolar surface is often given as about 70 m² in textbooks; electron-microscope morphometry gives about 130 m², higher than the older light-microscope values.",
+     "grade": "moderate",
+     "sources": ["hsia2016", "betts2022"],
+     "evidence": [
+      { "source": "hsia2016", "quote": "These data, obtained by electron microscopy on seven young adults (average body mass 70 kg) (109, 388), reveal an alveolar surface area of ~130 m2 and a capillary surface ~10% smaller.", "level": "full-text" },
+      { "source": "hsia2016", "quote": "These values are higher than the older data most commonly quoted in textbooks that had been derived from light microscopic studies", "level": "full-text" },
+      { "source": "betts2022", "quote": "To this end, the lungs exchange respiratory gases across a very large epithelial surface area—about 70 square meters—that is highly permeable to gases.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "alveolar-cells",
+     "text": "Type I alveolar cells cover up to 97% of the alveolar surface; type II cells secrete surfactant, which lowers surface tension.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "A type I alveolar cell is a squamous epithelial cell of the alveoli, which constitute up to 97 percent of the alveolar surface area.", "level": "full-text" },
+      { "source": "betts2022", "quote": "A type II alveolar cell is interspersed among the type I cells and secretes pulmonary surfactant, a substance composed of phospholipids and proteins that reduces the surface tension of the alveoli.", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "lng-exchange-site", "variant": "b" },
+  { "type": "question", "item": "lng-type1" },
+  { "type": "question", "item": "lng-surfactant" },
+  { "type": "question", "item": "lng-appraisal" },
+  {
+   "type": "concept",
+   "id": "lung-barrier",
+   "title": "The alveolar-capillary barrier",
+   "text": "Between alveolar air and capillary blood sits the [respiratory membrane](g:respiratory-membrane): a type I cell, a thin basement membrane and the capillary's own wall. In all it is about **0.5 μm** thick, and gases cross it by simple diffusion [[c:barrier-thin]].\n\nA huge surface together with a very thin barrier is what lets the lung take up enough oxygen for hard work [[c:lung-design]].\n\nThe lung's capillary network must also take the entire output of the right ventricle, at rest and in a sprint alike [[c:whole-output]]. Since the circuits are in series (last lesson), that is all the blood the heart pumps.",
+   "claims": [
+    {
+     "id": "barrier-thin",
+     "text": "Alveolar and capillary walls together form a respiratory membrane about 0.5 μm thick, which gases cross by simple diffusion.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "The simple squamous epithelium formed by type I alveolar cells is attached to a thin, elastic basement membrane.", "level": "full-text" },
+      { "source": "betts2022", "quote": "Taken together, the alveoli and capillary membranes form a respiratory membrane that is approximately 0.5 μm (micrometers) thick.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "lung-design",
+     "text": "A very large air-blood surface and a very thin barrier are needed for adequate oxygen uptake during work.",
+     "grade": "strong",
+     "sources": ["weibel2009", "betts2022"],
+     "evidence": [
+      { "source": "weibel2009", "quote": "A very large surface of air-blood contact, together with a very thin tissue barrier, are required to permit adequate oxygen uptake under work conditions.", "level": "abstract" },
+      { "source": "betts2022", "quote": "The anatomy of the lung maximizes the diffusion of gases: The respiratory membrane is highly permeable to gases; the respiratory and blood capillary membranes are very thin; and there is a large surface area throughout the lungs.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "whole-output",
+     "text": "The lung's microvascular network accommodates the entire right ventricular output, under stresses that rise several-fold from rest to exercise.",
+     "grade": "strong",
+     "sources": ["hsia2016"],
+     "evidence": [
+      { "source": "hsia2016", "quote": "a microvascular network to accommodate the entire right ventricular cardiac output while withstanding cyclic mechanical stresses that increase several folds from rest to exercise", "level": "abstract" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "lng-barrier-order" },
+  { "type": "question", "item": "lng-design" },
+  { "type": "question", "item": "lng-whole-output" },
+  {
+   "type": "concept",
+   "id": "lung-muscles",
+   "title": "The muscles that breathe",
+   "text": "The lungs have no muscle that moves them; they follow the chest wall [[c:lungs-passive]].\n\n- **Breathing in** at rest uses the [diaphragm](g:diaphragm), which moves down as it contracts, and the external intercostals, which lift the ribs up and out. Both enlarge the chest.\n- **Breathing out** at rest is passive: the muscles relax and the stretched lung recoils [[c:quiet-breathing]].\n\nIn hard exercise breathing becomes forced. Neck muscles such as the scalenes help lift the chest wall, and abdominal muscles such as the obliques contract, pushing the diaphragm up to drive air out [[c:forced-breathing]]. On a hard climb or a fast run, your abs are breathing muscles too.",
+   "claims": [
+    {
+     "id": "lungs-passive",
+     "text": "The lungs themselves are passive in breathing; the movement comes from the diaphragm and chest wall muscles.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "The lungs themselves are passive during breathing, meaning they are not involved in creating the movement that helps inspiration and expiration.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "quiet-breathing",
+     "text": "Quiet inspiration uses the diaphragm (which moves down as it contracts) and the external intercostals; quiet expiration is passive recoil.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "In general, two muscle groups are used during normal inspiration: the diaphragm and the external intercostal muscles.", "level": "full-text" },
+      { "source": "betts2022", "quote": "When the diaphragm contracts, it moves inferiorly toward the abdominal cavity, creating a larger thoracic cavity and more space for the lungs.", "level": "full-text" },
+      { "source": "betts2022", "quote": "The process of normal expiration is passive, meaning that energy is not required to push air out of the lungs.", "level": "full-text" }
+     ]
+    },
+    {
+     "id": "forced-breathing",
+     "text": "In forced breathing, as in exercise, both phases use muscles: neck muscles such as the scalenes help inspiration, abdominal muscles such as the obliques drive expiration.",
+     "grade": "strong",
+     "sources": ["betts2022"],
+     "evidence": [
+      { "source": "betts2022", "quote": "During forced breathing, inspiration and expiration both occur due to muscle contractions.", "level": "full-text" },
+      { "source": "betts2022", "quote": "During forced inspiration, muscles of the neck, including the scalenes, contract and lift the thoracic wall, increasing lung volume.", "level": "full-text" },
+      { "source": "betts2022", "quote": "During forced expiration, accessory muscles of the abdomen, including the obliques, contract, forcing abdominal organs upward against the diaphragm.", "level": "full-text" }
+     ]
+    }
+   ]
+  },
+  { "type": "question", "item": "lng-diaphragm" },
+  { "type": "question", "item": "lng-expiration", "variant": "b" },
+  {
+   "type": "recap",
+   "points": [
+    "The conducting zone (nose to terminal bronchioles) carries, cleans, warms and humidifies air; its air is anatomical dead space.",
+    "Gas exchange happens in the respiratory zone: hundreds of millions of alveoli, 70–130 m² depending on the method, lined mostly by type I cells, kept open by surfactant from type II cells.",
+    "The air-blood barrier is about 0.5 μm thick: a huge surface and a thin barrier are what allow enough oxygen uptake in hard work.",
+    "The lung capillaries take the whole output of the right ventricle, which equals all the blood the heart pumps.",
+    "Breathing in uses the diaphragm and external intercostals; breathing out is passive at rest but driven by the abdominal muscles in hard exercise."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lng-exchange-site",
+   "concept": "lung-alveoli",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where in the airway tree does gas exchange begin?",
+     "options": [
+      { "id": "a", "text": "In the respiratory bronchioles and alveoli", "correct": true, "why": "Right: the respiratory zone starts where terminal bronchioles join respiratory bronchioles, which lead to the alveoli." },
+      { "id": "b", "text": "In the trachea and main bronchi", "why": "These are conducting airways: they carry and condition air but exchange no gas." },
+      { "id": "c", "text": "In the nose, where air is warmed", "why": "The nose warms, cleans and humidifies air; it is part of the conducting zone." },
+      { "id": "d", "text": "In the terminal bronchioles", "why": "Terminal bronchioles are the last part of the conducting zone; exchange starts just beyond them." }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner breathes in. In which structures does that air first meet blood it can exchange gas with?",
+     "options": [
+      { "id": "a", "text": "Respiratory bronchioles and alveoli", "correct": true, "why": "Right: these make up the respiratory zone, wrapped in capillaries." },
+      { "id": "b", "text": "Trachea and main bronchi", "why": "These conduct air; their walls are too thick for gas exchange." },
+      { "id": "c", "text": "Nasal passages and pharynx", "why": "These clean, warm and humidify air, but exchange no gas." },
+      { "id": "d", "text": "Terminal bronchioles", "why": "These are the end of the conducting zone; exchange starts just after them." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-conducting-role",
+   "concept": "lung-airways",
+   "bloom": "understand",
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a cold winter ride, what does the conducting zone do to the air you breathe in?",
+     "options": [
+      { "id": "a", "text": "Carries it, cleans it, warms it and humidifies it", "correct": true, "why": "Right: those are its jobs; it exchanges no gas." },
+      { "id": "b", "text": "Takes up a small part of its oxygen", "why": "No gas exchange happens in the conducting zone; that is what makes it 'conducting'." },
+      { "id": "c", "text": "Stores it between breaths for the alveoli", "why": "The airways are tubes, not a store; the air left in them at the end of a breath is dead space." },
+      { "id": "d", "text": "Pumps it into the alveoli by squeezing its walls", "why": "Air is drawn in by the diaphragm and chest wall, not pumped by the airways." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-cartilage-bronchiole",
+   "concept": "lung-airways",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an asthma attack a swimmer's bronchioles narrow sharply, yet her trachea stays wide open. What difference in their walls explains this?",
+     "options": [
+      { "id": "a", "text": "Trachea: rings of cartilage; bronchioles: muscle and no cartilage", "correct": true, "why": "Right: 16–20 C-shaped cartilage rings hold the trachea open, while the muscular, cartilage-free bronchiole walls can squeeze the tube shut." },
+      { "id": "b", "text": "Trachea: muscle and no cartilage; bronchioles: rings of cartilage", "why": "This swaps them: the cartilage is in the trachea, the muscle-only wall is the bronchiole design." },
+      { "id": "c", "text": "Both have cartilage rings, but thinner in the bronchioles", "why": "Bronchioles have no cartilage at all; that is why their muscle can narrow them so much." },
+      { "id": "d", "text": "Bronchioles are lined with surfactant, which pulls them shut", "why": "Surfactant is made in the alveoli and lowers surface tension, which helps keep air spaces open." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-snorkel",
+   "concept": "lung-airways",
+   "bloom": "apply",
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete trains with a front snorkel in the pool. What does the snorkel tube do to each breath?",
+     "options": [
+      { "id": "a", "text": "Adds dead space: the air in the tube never reaches the alveoli", "correct": true, "why": "Right: the tube extends the conducting airway, so more of each breath is air that takes no part in exchange." },
+      { "id": "b", "text": "Adds surface for gas exchange, so more oxygen is taken up", "why": "Exchange needs alveoli and capillaries; a plastic tube only conducts air." },
+      { "id": "c", "text": "Has no effect, since the tube is outside the body", "why": "Anything the air must pass through before the alveoli and back counts as dead space, inside the body or not." },
+      { "id": "d", "text": "Shortens the airway, so more fresh air reaches the alveoli", "why": "The tube makes the path longer, not shorter." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-type1",
+   "concept": "lung-alveoli",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which cells form most of the alveolar surface?",
+     "options": [
+      { "id": "a", "text": "Type I alveolar cells", "correct": true, "why": "Right: these thin, flat cells cover up to 97% of the alveolar surface." },
+      { "id": "b", "text": "Type II alveolar cells", "why": "Type II cells are scattered among the type I cells; their job is to make surfactant." },
+      { "id": "c", "text": "Alveolar macrophages", "why": "Macrophages roam the alveolar wall clearing debris; they don't form the surface." },
+      { "id": "d", "text": "Capillary wall cells", "why": "These line the blood side of the barrier, not the air side of the alveolus." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-surfactant",
+   "concept": "lung-alveoli",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does surfactant do in the alveoli?",
+     "options": [
+      { "id": "a", "text": "Lowers surface tension so the alveoli stay open", "correct": true, "why": "Right: this film of phospholipids and proteins from type II cells reduces surface tension." },
+      { "id": "b", "text": "Carries oxygen across the barrier into the blood", "why": "Oxygen crosses by simple diffusion; it needs no carrier." },
+      { "id": "c", "text": "Traps dust and microbes in the air", "why": "Mucus in the conducting airways does that; surfactant is in the alveoli." },
+      { "id": "d", "text": "Thickens the barrier to protect the capillaries", "why": "A thicker barrier would slow gas exchange; surfactant is a thin film that keeps alveoli open." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-appraisal",
+   "concept": "lung-alveoli",
+   "bloom": "evaluate",
+   "sources": ["ochs2004"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study counted alveoli in six adult lungs: mean 480 million, range 274–790 million. What most limits quoting '480 million' for one athlete's lungs?",
+     "options": [
+      { "id": "a", "text": "Only six lungs, and a wide spread linked to lung size", "correct": true, "why": "Right: with n = 6 and a coefficient of variation of 37%, a single person may be far from the mean, and bigger lungs had more alveoli." },
+      { "id": "b", "text": "The count assumed every alveolus is a round sphere", "why": "The method was chosen to be free of assumptions on alveolar shape, size or orientation." },
+      { "id": "c", "text": "The alveoli were counted in athletes during exercise", "why": "The counts were made on fixed lung tissue, not in living, exercising people." },
+      { "id": "d", "text": "Alveoli multiply quickly with training, so counts go stale", "why": "Nothing in the study measured training effects; the limit here is a small, varied sample." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-barrier-order",
+   "concept": "lung-barrier",
+   "bloom": "understand",
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On its way from alveolar air into the plasma, what does an oxygen molecule cross, in order?",
+     "options": [
+      { "id": "a", "text": "Type I cell, basement membrane, capillary wall", "correct": true, "why": "Right: from the air side to the blood side, about 0.5 μm in all." },
+      { "id": "b", "text": "Capillary wall, basement membrane, type I cell", "why": "That is the order for CO₂ leaving the blood; oxygen goes the other way." },
+      { "id": "c", "text": "Type II cell, cartilage, capillary wall", "why": "Type II cells make surfactant, and there is no cartilage in the alveolar wall." },
+      { "id": "d", "text": "Bronchiole wall, smooth muscle, capillary wall", "why": "Bronchioles are conducting airways; exchange happens across the alveolar wall." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-design",
+   "concept": "lung-barrier",
+   "bloom": "apply",
+   "sources": ["weibel2009", "betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which change would most reduce how fast oxygen can cross from the alveoli into the blood?",
+     "options": [
+      { "id": "a", "text": "A thicker barrier between air and blood", "correct": true, "why": "Right: gas exchange relies on a large surface and a very thin barrier; thickening it slows diffusion." },
+      { "id": "b", "text": "A longer trachea down to the bronchi", "why": "A longer trachea adds dead space, but it doesn't change the exchange surface or barrier." },
+      { "id": "c", "text": "A larger total alveolar surface", "why": "A larger surface would speed oxygen uptake, not reduce it." },
+      { "id": "d", "text": "More cartilage in the bronchial walls", "why": "Cartilage supports conducting airways and has no part in exchange." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-whole-output",
+   "concept": "lung-barrier",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": ["hsia2016", "betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 4 km pursuit a rider's heart pumps 25 L·min⁻¹ into the aorta. How much blood flows through his lung capillaries each minute?",
+     "options": [
+      { "id": "a", "text": "All 25 L·min⁻¹", "correct": true, "why": "Right: the lung capillaries take the whole right ventricular output, which equals the left's in series." },
+      { "id": "b", "text": "About half, 12.5 L·min⁻¹", "why": "The flow isn't split between lungs and body; the circuits are in series." },
+      { "id": "c", "text": "Only what the lung tissue itself needs", "why": "That confuses the lungs' own nourishment with gas exchange: every red cell passes the lungs on each lap." },
+      { "id": "d", "text": "Almost none: at high flow blood bypasses the lungs", "why": "The lung capillaries must accept the whole right ventricular output, at rest and in a sprint alike." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-diaphragm",
+   "concept": "lung-muscles",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What happens when the diaphragm contracts?",
+     "options": [
+      { "id": "a", "text": "It moves down, the chest gets bigger and air flows in", "correct": true, "why": "Right: contraction pulls the dome down, enlarging the chest, so air is drawn in." },
+      { "id": "b", "text": "It moves up and pushes air out of the lungs", "why": "This is what happens when it relaxes, or when the abdominal muscles push it up." },
+      { "id": "c", "text": "It squeezes the lungs, which then spring open", "why": "The diaphragm enlarges the chest; it doesn't squeeze the lungs." },
+      { "id": "d", "text": "It signals the lung muscle to expand the lungs", "why": "The lungs are passive; they have no muscle that expands them." }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lng-expiration",
+   "concept": "lung-muscles",
+   "bloom": "apply",
+   "sources": ["betts2022"],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At rest you breathe out without effort. Near the top of a hard climb on the bike, what is different about breathing out?",
+     "options": [
+      { "id": "a", "text": "Abdominal muscles contract to push air out", "correct": true, "why": "Right: in forced breathing, expiration is active, driven by abdominal muscles such as the obliques." },
+      { "id": "b", "text": "Nothing: breathing out stays passive, only breathing in gets harder", "why": "At rest it is passive, but in forced breathing both phases use muscles." },
+      { "id": "c", "text": "The lungs' own muscle squeezes harder", "why": "The lungs are passive; the work is done by the chest wall and abdominal muscles." },
+      { "id": "d", "text": "The diaphragm contracts harder to push air out", "why": "Contracting the diaphragm draws air in; it is pushed up from below to help air out." }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the last kilometre of a 10 km race, which muscles actively drive air out of the lungs?",
+     "options": [
+      { "id": "a", "text": "Abdominal muscles such as the obliques", "correct": true, "why": "Right: they push the abdominal organs up against the diaphragm, forcing air out." },
+      { "id": "b", "text": "None: breathing out is always passive", "why": "Only quiet breathing out is passive; in hard exercise it is muscle-driven." },
+      { "id": "c", "text": "The diaphragm, contracting upwards", "why": "The diaphragm moves down when it contracts, which draws air in." },
+      { "id": "d", "text": "The scalenes in the neck", "why": "The scalenes lift the chest wall; they help breathing in, not out." }
+     ]
+    }
+   ]
+  }
+ ]
+}

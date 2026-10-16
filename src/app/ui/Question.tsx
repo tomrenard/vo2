@@ -27,6 +27,7 @@ export function Question({
   reps,
   conceptHref,
   onDone,
+  onSaveError,
 }: {
   item: Item;
   variant: Variant;
@@ -36,6 +37,8 @@ export function Question({
   /** Where the concept this question tests can be read again. */
   conceptHref?: string;
   onDone: (result: Result) => void;
+  /** Exam mode moves on at once, so this screen can't show a failed save: the caller does. */
+  onSaveError?: () => void;
 }) {
   const [options] = useState(() => seededShuffle(variant.options, `${variant.id}:${reps}`));
   const [picked, setPicked] = useState<string | null>(null);
@@ -64,6 +67,7 @@ export function Question({
           setSaveError(false);
         } catch {
           setSaveError(true);
+          onSaveError?.();
         }
       });
     send();

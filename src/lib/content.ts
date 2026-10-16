@@ -33,6 +33,8 @@ export const Source = z.object({
     "crossover",
     "cohort",
     "cross-sectional",
+    /** Test–retest: how much a measure varies when nothing changed. */
+    "reliability",
     "mechanistic",
     "review",
     "textbook",

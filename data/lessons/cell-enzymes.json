@@ -1,0 +1,882 @@
+{
+ "id": "cell-enzymes",
+ "module": "t0-cell-biochem",
+ "title": "Enzymes: what sets the rate",
+ "goal": "Explain how enzymes set reaction rates, how substrate concentration, allosteric molecules and phosphorylation change that rate, why rate-limiting steps matter, and how temperature and pH act on enzymes.",
+ "requires": [
+  "cell-energy"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "cz-enzyme-def",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cz-what",
+   "title": "Enzymes: the cell's speed controls",
+   "text": "Most reactions in a cell would take years on their own. An [enzyme](g:enzyme), a protein folded around a pocket called the active site, grabs its [substrate](g:substrate), holds it in the right position and lets the reaction happen many times faster. The enzyme comes out unchanged and can go again.\n\nMichaelis and Menten showed in 1913 that the reaction rate follows how much enzyme is bound to its substrate [[c:mm-complex]]. Two things follow:\n\n- **More enzyme, higher top rate.** Training builds more of the enzymes in mitochondria: six weeks of 4-minute intervals raised citrate synthase activity by 26% [[c:training-enzymes]].\n- **Each step has its own enzyme**, so a pathway like glycolysis is a chain of about ten enzymes.",
+   "claims": [
+    {
+     "id": "mm-complex",
+     "text": "The rate of an enzyme-catalysed reaction is proportional to the concentration of the enzyme–substrate complex.",
+     "grade": "strong",
+     "sources": [
+      "johnson2011"
+     ],
+     "evidence": [
+      {
+       "source": "johnson2011",
+       "quote": "in which they showed that the rate of an enzyme-catalyzed reaction is proportional to the concentration of the enzyme-substrate complex predicted by the Michaelis-Menten equation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "training-enzymes",
+     "text": "Six weeks of high-intensity aerobic interval training raised the maximal activities of mitochondrial enzymes, e.g. citrate synthase by 26%.",
+     "grade": "moderate",
+     "sources": [
+      "perry2008",
+      "granata2018"
+     ],
+     "evidence": [
+      {
+       "source": "perry2008",
+       "quote": "increased cytochrome c oxidase IV content (18%) and maximal activities of the mitochondrial enzymes citrate synthase (26%), beta-hydroxyacyl-CoA dehydrogenase (29%), aspartate-amino transferase (26%), and pyruvate dehydrogenase (PDH; 21%)",
+       "level": "abstract"
+      },
+      {
+       "source": "granata2018",
+       "quote": "Endurance training can induce an increase in mitochondrial content and/or mitochondrial functional qualities",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cz-enzyme-def",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cz-training-enzyme"
+  },
+  {
+   "type": "concept",
+   "id": "cz-substrate",
+   "title": "More substrate, faster: up to a limit",
+   "text": "Give an enzyme more substrate and it works faster, but only up to a point. Once nearly every enzyme molecule is busy, extra substrate barely helps: the enzyme is **saturated** and runs near its top rate, Vmax.\n\nThe substrate concentration that gives half of Vmax is called [Km](g:km) [[c:km-half]]. The Michaelis–Menten equation puts it together:\n\nrate = Vmax × [S] ÷ (Km + [S])\n\n| [S] | rate |\n|---|---|\n| far below Km | rises almost in step with [S] |\n| equal to Km | half of Vmax |\n| far above Km | close to Vmax, flat |\n\nSo when substrate is plentiful, the rate is set by how much enzyme there is and how active it is, not by the substrate.",
+   "claims": [
+    {
+     "id": "km-half",
+     "text": "Km is the substrate concentration at which the reaction runs at half its maximal rate; the rate saturates at Vmax.",
+     "grade": "strong",
+     "sources": [
+      "johnson2011"
+     ],
+     "evidence": [
+      {
+       "source": "johnson2011",
+       "quote": "since the adjusted curve should saturate at V=1, they could then read off the value of log[S] at V=0.5 to determine KS.",
+       "level": "full-text"
+      },
+      {
+       "source": "johnson2011",
+       "quote": "KS is equal to Km (the Michaelis constant), although it was defined as the equilibrium dissociation constant for sucrose.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cz-mm-example",
+   "title": "How close to full speed is the enzyme?",
+   "problem": "An enzyme has a Km of 4 mmol·L⁻¹ for its substrate. What share of Vmax does it reach at a substrate concentration of 4 mmol·L⁻¹, and at 12 mmol·L⁻¹?",
+   "steps": [
+    "Use rate ÷ Vmax = [S] ÷ (Km + [S]).",
+    "At 4 mmol·L⁻¹: 4 ÷ (4 + 4) = 4 ÷ 8 = 0.50, so 50% of Vmax (as it must be, since [S] = Km).",
+    "At 12 mmol·L⁻¹: 12 ÷ (4 + 12) = 12 ÷ 16 = 0.75, so 75% of Vmax.",
+    "Tripling the substrate raised the rate by only half again: the enzyme is heading for saturation."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cz-mm-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cz-saturation"
+  },
+  {
+   "type": "question",
+   "item": "cz-allosteric",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cz-regulation",
+   "title": "Switches and dimmers: regulating enzymes",
+   "text": "Cells don't wait for substrate to pile up; they turn enzymes up and down. Two main ways:\n\n- [Allosteric](g:allosteric) **regulation**: a small molecule binds away from the active site and changes the enzyme's shape, like a dimmer. When ATP is spent fast, AMP rises and speeds up [glycogen phosphorylase](g:glycogen-phosphorylase), the enzyme that breaks down glycogen; rising phosphate, one of its substrates, adds to the push [[c:phos-activators]].\n- [Phosphorylation](g:phosphorylation): another enzyme clips a phosphate group onto it, like a switch. Adrenaline works this way [[c:adrenaline-switch]]: infused in exercising men, it raised glycogen breakdown through more phosphorylase being switched on [[c:adrenaline-phos]].\n\nCalcium released for contraction also activates phosphorylase, so fuel supply starts the moment the muscle does.",
+   "claims": [
+    {
+     "id": "phos-activators",
+     "text": "Contraction raises ADP, AMP, IMP, Ca²⁺ and inorganic phosphate, which enhance glycogen phosphorylase activity, as does adrenaline; phosphate acts as substrate, AMP as allosteric modulator.",
+     "grade": "strong",
+     "sources": [
+      "murray2018",
+      "chesley1996"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "In addition to the stimulating effect of epinephrine binding to β-adrenergic receptors on the sarcolemma, muscle contraction produces a variety of metabolites, such as adenosine diphosphate (ADP), adenosine monophosphate (AMP), and inosine monophosphate (IMP), along with increased levels of calcium and inorganic phosphate, which also enhance the activity of glycogen phosphorylase.",
+       "level": "full-text"
+      },
+      {
+       "source": "chesley1996",
+       "quote": "It is concluded that posttransformational control of Phos, exerted by reductions in substrate (free Pi) and allosteric modulator (free AMP) contents, is responsible for a blunted muscle glycogenolysis after 6 days of endurance training.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "adrenaline-switch",
+     "text": "Glycogen phosphorylase is switched to its more active a form by phosphorylation (via phosphorylase kinase), a step driven by adrenaline signalling.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "Phosphorylase, in turn, exists as a more active a form (which is under the control of phosphorylation by phosphorylase kinase) and also as a more inactive b form (which exists in a dephosphorylated form due to the action of protein phosphatase 1).",
+       "level": "full-text"
+      },
+      {
+       "source": "hearris2018",
+       "quote": "Given that phosphorylase can be transformed via covalent modification (i.e., phosphorylation by phosphorylase kinase) mediated through epinephrine",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "adrenaline-phos",
+     "text": "Raised adrenaline during moderate exercise increased muscle glycogen breakdown, apparently through greater transformation (phosphorylation) of glycogen phosphorylase.",
+     "grade": "weak",
+     "sources": [
+      "watt2001"
+     ],
+     "evidence": [
+      {
+       "source": "watt2001",
+       "quote": "The greater muscle glycogenolysis appears to be due to increased glycogen phosphorylase transformation whilst the increased PDH activity cannot be readily explained.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cz-allosteric",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cz-phospho"
+  },
+  {
+   "type": "question",
+   "item": "cz-trained-phos"
+  },
+  {
+   "type": "concept",
+   "id": "cz-rate-limit",
+   "title": "The rate-limiting step",
+   "text": "A pathway is like a road with one narrow bridge: the slowest, most tightly controlled step sets the flow for the whole road. That is the [rate-limiting step](g:rate-limiting-step), and its enzyme is where the cell puts most of its controls.\n\nIn glycolysis, the key control enzyme is [phosphofructokinase](g:pfk) (PFK) [[c:pfk-regulatory]]. It responds to the same signals of ATP use (ADP, AMP, phosphate), so the flow through glycolysis rises when ATP is being spent fast.\n\nThe result: ATP resupply is matched closely to ATP demand, from an easy jog to a sprint finish [[c:supply-demand]]. Controlling a few key enzymes, not every step, is how the cell does it.",
+   "claims": [
+    {
+     "id": "pfk-regulatory",
+     "text": "Phosphofructokinase (PFK) is the regulatory enzyme of glycolysis.",
+     "grade": "strong",
+     "sources": [
+      "spriet1991"
+     ],
+     "evidence": [
+      {
+       "source": "spriet1991",
+       "quote": "The increasing [H+] and decreasing tension led to the suggestion that H+ inhibits the activity of the regulatory glycolytic enzyme phosphofructokinase (PFK).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "supply-demand",
+     "text": "Regulatory mechanisms keep ATP resynthesis closely matched to the ATP demand of exercise.",
+     "grade": "strong",
+     "sources": [
+      "hargreaves2020"
+     ],
+     "evidence": [
+      {
+       "source": "hargreaves2020",
+       "quote": "Here, we provide an overview of exercise metabolism and the key regulatory mechanisms ensuring that ATP resynthesis is closely matched to the ATP demand of exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cz-rate-limit-def"
+  },
+  {
+   "type": "question",
+   "item": "cz-mm-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "cz-temp-ph",
+   "title": "Temperature and pH",
+   "text": "Enzymes are sensitive to their surroundings.\n\n**Temperature.** Warmer molecules collide more often, so most reactions speed up as muscle warms. In one study, a heated thigh used about 75% more glycogen than a cooled one in the same 20-minute ride [[c:temp-glycogen]]. Too hot, though, and enzymes lose their shape.\n\n**pH.** Hard exercise makes muscle more acidic (more H⁺). In the test tube, PFK almost stops at pH 6.9–7.0, yet in contracting muscle it keeps working down to pH 6.4–6.6 [[c:pfk-ph]], because the rising activators (ADP, AMP, phosphate) offset the acid [[c:deinhibitors]]. How much acidity brakes glycolysis in real exercise is still debated (see the box).",
+   "claims": [
+    {
+     "id": "temp-glycogen",
+     "text": "Raising muscle temperature increased glycogen use during 20 min of cycling at 70% VO₂peak (208 vs 118 mmol·kg⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "starkie1999"
+     ],
+     "evidence": [
+      {
+       "source": "starkie1999",
+       "quote": "Thus, net muscle glycogen use was greater during exercise with heating (208 +/- 23 vs. 118 +/- 22 mmol kg-1 for HL and CL, respectively; P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "starkie1999",
+       "quote": "These data demonstrate that muscle glycogen use is augmented by increases in intramuscular temperature despite no differences in high energy phosphagen metabolism being observed when comparing treatments.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pfk-ph",
+     "text": "In vitro, little PFK activity should persist at pH 6.9–7.0, but in contracting muscle significant PFK activity continues down to pH 6.4–6.6.",
+     "grade": "moderate",
+     "sources": [
+      "spriet1991"
+     ],
+     "evidence": [
+      {
+       "source": "spriet1991",
+       "quote": "Early in vitro work confirmed the H+ sensitivity of PFK in the test tube, indicating that little PFK activity should persist at a pH of 6.9-7.0. However, in situ and in vivo experiments suggested that significant PFK activity was maintained during intense contractions when muscle pH decreased to 6.4-6.6.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "deinhibitors",
+     "text": "In contracting muscle, PFK activity rises through the build-up of activators despite rising H⁺.",
+     "grade": "weak",
+     "sources": [
+      "spriet1990"
+     ],
+     "evidence": [
+      {
+       "source": "spriet1990",
+       "quote": "The activity of PFK increases during in situ contraction through the accumulation of deinhibitors, despite increasing [H+].",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does acidity (H⁺) brake glycolysis during hard exercise?",
+    "sides": [
+     {
+      "position": "Partly: in repeated 30 s cycling sprints, glycogen breakdown fell steeply in the third bout as H⁺ rose, possibly from H⁺ inhibiting phosphorylase.",
+      "sources": [
+       "spriet1989"
+      ]
+     },
+     {
+      "position": "Less than test-tube data suggest: in contracting muscle, PFK keeps working down to pH 6.4–6.6 as activators build up.",
+      "sources": [
+       "spriet1991",
+       "spriet1990"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cz-temp"
+  },
+  {
+   "type": "question",
+   "item": "cz-ph-read"
+  },
+  {
+   "type": "question",
+   "item": "cz-appraise-temp"
+  },
+  {
+   "type": "question",
+   "item": "cz-mm-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "An enzyme speeds one reaction without being used up; more enzyme (as training builds) means a higher top rate.",
+    "Rate rises with substrate, then saturates: at [S] = Km the enzyme runs at half of Vmax.",
+    "Enzymes are tuned by allosteric molecules (AMP, ADP) and switched by phosphorylation (adrenaline signalling).",
+    "A pathway's rate-limiting step, such as PFK in glycolysis, is where control sits, matching ATP supply to demand.",
+    "Warmer muscle speeds reactions; acidity slows PFK in the test tube, less so in working muscle."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cz-enzyme-def",
+   "concept": "cz-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "johnson2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does an enzyme do to a chemical reaction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Speeds it up and comes out unchanged",
+       "correct": true,
+       "why": "Right: an enzyme is a catalyst; it is not used up by the reaction."
+      },
+      {
+       "id": "b",
+       "text": "Supplies the energy the reaction needs",
+       "why": "Enzymes don't supply energy; uphill reactions are paid for by coupling to ATP hydrolysis."
+      },
+      {
+       "id": "c",
+       "text": "Is used up as the reaction's fuel",
+       "why": "The enzyme comes out unchanged; the substrate is what gets converted."
+      },
+      {
+       "id": "d",
+       "text": "Changes which products the reaction makes",
+       "why": "An enzyme speeds a reaction towards the same products; it doesn't change where the reaction ends up."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Glycogen phosphorylase breaks glucose units off glycogen in a runner's calf. What happens to the phosphorylase molecule itself?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is released unchanged and can act again",
+       "correct": true,
+       "why": "Right: enzymes are catalysts and are reused many times."
+      },
+      {
+       "id": "b",
+       "text": "It is broken down along with the glycogen",
+       "why": "The substrate (glycogen) is broken down; the enzyme isn't."
+      },
+      {
+       "id": "c",
+       "text": "It becomes part of the glucose released",
+       "why": "Enzymes are proteins; they don't become part of the product."
+      },
+      {
+       "id": "d",
+       "text": "It is burned to supply ATP for the reaction",
+       "why": "Enzymes aren't fuel; this reaction doesn't need ATP to run."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-training-enzyme",
+   "concept": "cz-what",
+   "bloom": "apply",
+   "sources": [
+    "perry2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After six weeks of 4-minute intervals, a cyclist's biopsy shows citrate synthase activity up 26%. What does this mostly mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More of this mitochondrial enzyme, so a higher top rate for aerobic metabolism",
+       "correct": true,
+       "why": "Right: maximal enzyme activity reflects how much enzyme there is; more enzyme raises Vmax."
+      },
+      {
+       "id": "b",
+       "text": "The enzyme now works without needing its substrate",
+       "why": "No enzyme works without substrate; training changes the amount of enzyme, not that rule."
+      },
+      {
+       "id": "c",
+       "text": "Less glycogen is stored, so the enzyme looks more active",
+       "why": "Glycogen content actually rose in this study; enzyme activity was measured directly."
+      },
+      {
+       "id": "d",
+       "text": "The enzyme has become a fuel the muscle can burn",
+       "why": "Enzymes are machinery, not fuel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-mm-calc",
+   "concept": "cz-substrate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "johnson2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An enzyme has a Km of 1 mmol·L⁻¹. Its substrate is at 3 mmol·L⁻¹. Using rate ÷ Vmax = [S] ÷ (Km + [S]), at what share of Vmax does it run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75%",
+       "correct": true,
+       "why": "Right: 3 ÷ (1 + 3) = 0.75."
+      },
+      {
+       "id": "b",
+       "text": "25%",
+       "why": "This computes Km ÷ (Km + [S]), the share of enzyme that is free, not the rate."
+      },
+      {
+       "id": "c",
+       "text": "300%",
+       "why": "This divides [S] by Km. The rate can never exceed Vmax."
+      },
+      {
+       "id": "d",
+       "text": "33%",
+       "why": "This divides Km by [S] (1 ÷ 3)."
+      }
+     ],
+     "solution": "rate ÷ Vmax = [S] ÷ (Km + [S]) = 3 ÷ (1 + 3) = 0.75, so 75% of Vmax."
+    },
+    {
+     "id": "b",
+     "stem": "An enzyme has a Km of 2 mmol·L⁻¹. Its substrate rises to 8 mmol·L⁻¹ during a hard run. Using rate ÷ Vmax = [S] ÷ (Km + [S]), at what share of Vmax does it run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "80%",
+       "correct": true,
+       "why": "Right: 8 ÷ (2 + 8) = 0.80."
+      },
+      {
+       "id": "b",
+       "text": "20%",
+       "why": "This computes Km ÷ (Km + [S]), not the rate."
+      },
+      {
+       "id": "c",
+       "text": "400%",
+       "why": "This divides [S] by Km. The rate can never exceed Vmax."
+      },
+      {
+       "id": "d",
+       "text": "25%",
+       "why": "This divides Km by [S] (2 ÷ 8)."
+      }
+     ],
+     "solution": "rate ÷ Vmax = 8 ÷ (2 + 8) = 0.80, so 80% of Vmax."
+    },
+    {
+     "id": "c",
+     "stem": "An enzyme has a Km of 0.2 mmol·L⁻¹. Its substrate is at only 0.05 mmol·L⁻¹. Using rate ÷ Vmax = [S] ÷ (Km + [S]), at what share of Vmax does it run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20%",
+       "correct": true,
+       "why": "Right: 0.05 ÷ (0.2 + 0.05) = 0.05 ÷ 0.25 = 0.20."
+      },
+      {
+       "id": "b",
+       "text": "80%",
+       "why": "This computes Km ÷ (Km + [S]), not the rate."
+      },
+      {
+       "id": "c",
+       "text": "25%",
+       "why": "This divides [S] by Km (0.05 ÷ 0.2), forgetting to add [S] below the line."
+      },
+      {
+       "id": "d",
+       "text": "400%",
+       "why": "This divides Km by [S]. The rate can never exceed Vmax."
+      }
+     ],
+     "solution": "rate ÷ Vmax = 0.05 ÷ (0.2 + 0.05) = 0.05 ÷ 0.25 = 0.20, so 20% of Vmax."
+    }
+   ]
+  },
+  {
+   "id": "cz-saturation",
+   "concept": "cz-substrate",
+   "bloom": "analyse",
+   "sources": [
+    "johnson2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An enzyme's substrate sits at 20 times its Km. A sports drink doubles the substrate. What happens to the reaction rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It barely changes: the enzyme is already near saturation",
+       "correct": true,
+       "why": "Right: at 20 × Km it runs at about 95% of Vmax; at 40 × Km about 98%."
+      },
+      {
+       "id": "b",
+       "text": "It doubles, because rate follows substrate",
+       "why": "Rate follows substrate only when [S] is well below Km."
+      },
+      {
+       "id": "c",
+       "text": "It halves, because extra substrate blocks the enzyme",
+       "why": "Extra substrate doesn't block a Michaelis–Menten enzyme; the rate just levels off."
+      },
+      {
+       "id": "d",
+       "text": "It rises above Vmax for a short time",
+       "why": "Vmax is the ceiling for a given amount of enzyme."
+      }
+     ],
+     "solution": "At 20 × Km: 20 ÷ 21 ≈ 95% of Vmax. At 40 × Km: 40 ÷ 41 ≈ 98%. A gain of about 3 points."
+    }
+   ]
+  },
+  {
+   "id": "cz-allosteric",
+   "concept": "cz-regulation",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "murray2018",
+    "chesley1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the first seconds of a sprint, AMP rises in the fibre and glycogen phosphorylase speeds up, with no change in how much enzyme there is. What is this kind of control called?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Allosteric regulation",
+       "correct": true,
+       "why": "Right: a small molecule (AMP) binding away from the active site changes the enzyme's activity."
+      },
+      {
+       "id": "b",
+       "text": "Making more enzyme protein",
+       "why": "Making new protein takes hours, not seconds."
+      },
+      {
+       "id": "c",
+       "text": "Raising the temperature of the enzyme",
+       "why": "Temperature rises slowly over minutes; this is a fast chemical signal."
+      },
+      {
+       "id": "d",
+       "text": "Saturating the enzyme with glycogen",
+       "why": "Glycogen didn't change; the signal molecule AMP did."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "As a runner surges, ATP is split faster and ADP and AMP rise. These molecules bind to glycolytic enzymes and speed them up. What is this called?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Allosteric regulation",
+       "correct": true,
+       "why": "Right: binding of small signal molecules away from the active site changes the enzyme's activity."
+      },
+      {
+       "id": "b",
+       "text": "Phosphorylation by adrenaline signalling",
+       "why": "That is covalent switching through a hormone; here the signal is ADP and AMP binding directly."
+      },
+      {
+       "id": "c",
+       "text": "Enzyme saturation",
+       "why": "Saturation is about the enzyme's own substrate, not signal molecules."
+      },
+      {
+       "id": "d",
+       "text": "Coupled transport",
+       "why": "Coupled transport moves ions or molecules across a membrane; it isn't enzyme control."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-phospho",
+   "concept": "cz-regulation",
+   "bloom": "apply",
+   "sources": [
+    "watt2001",
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers infused adrenaline into men cycling at a moderate pace. Glycogen breakdown rose, through more phosphorylase in its switched-on form. Which control mechanism does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Phosphorylation of the enzyme, triggered by a hormone",
+       "correct": true,
+       "why": "Right: adrenaline signalling adds a phosphate group to phosphorylase, switching it on."
+      },
+      {
+       "id": "b",
+       "text": "A rise in glycogen, the enzyme's substrate",
+       "why": "The infusion didn't add glycogen; it switched the enzyme on."
+      },
+      {
+       "id": "c",
+       "text": "A rise in muscle temperature",
+       "why": "Temperature wasn't the change; the hormone was."
+      },
+      {
+       "id": "d",
+       "text": "More phosphorylase protein made during the ride",
+       "why": "New enzyme protein takes hours to make; the change was within minutes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-trained-phos",
+   "concept": "cz-regulation",
+   "bloom": "analyse",
+   "sources": [
+    "chesley1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 6 days of endurance training, men broke down 42% less glycogen in the same hard 15-minute ride, with less free phosphate and AMP in their muscle and no change in the switched-on form of phosphorylase. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less Pi (substrate) and AMP (activator) slowed phosphorylase",
+       "correct": true,
+       "why": "Right: with better ATP balance, less Pi and AMP built up, so phosphorylase ran slower."
+      },
+      {
+       "id": "b",
+       "text": "Training removed the phosphorylase enzyme",
+       "why": "The switched-on fraction was unchanged; the enzyme was still there."
+      },
+      {
+       "id": "c",
+       "text": "Training made glycogen impossible to break down",
+       "why": "Glycogen was still broken down, just 42% less of it."
+      },
+      {
+       "id": "d",
+       "text": "Adrenaline rose and switched phosphorylase off",
+       "why": "Adrenaline was lower after training, and it switches phosphorylase on, not off."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-rate-limit-def",
+   "concept": "cz-rate-limit",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "spriet1991",
+    "hargreaves2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does the cell concentrate its control of glycolysis on one enzyme, PFK?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its step limits the flow through the whole pathway",
+       "correct": true,
+       "why": "Right: controlling the rate-limiting step sets the rate of the whole chain."
+      },
+      {
+       "id": "b",
+       "text": "It is the only enzyme in glycolysis",
+       "why": "Glycolysis is a chain of about ten enzymes."
+      },
+      {
+       "id": "c",
+       "text": "It is the first enzyme glucose meets",
+       "why": "The first step isn't necessarily the limiting one; PFK sits a few steps in."
+      },
+      {
+       "id": "d",
+       "text": "It makes most of glycolysis's ATP",
+       "why": "PFK actually uses an ATP; its importance is control, not ATP output."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-temp",
+   "concept": "cz-temp-ph",
+   "bloom": "apply",
+   "sources": [
+    "starkie1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does the same 20-minute tempo run on a cool morning and, a week later, after a long hot warm-up that raises muscle temperature. What change in muscle fuel use fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More glycogen used after the hot warm-up",
+       "correct": true,
+       "why": "Right: warmer muscle used more glycogen at the same workload."
+      },
+      {
+       "id": "b",
+       "text": "Less glycogen used, because warm muscle is more efficient",
+       "why": "The heated muscle used more glycogen, not less."
+      },
+      {
+       "id": "c",
+       "text": "No change, because enzymes ignore temperature",
+       "why": "Reaction rates rise with temperature; this study showed more glycogen use."
+      },
+      {
+       "id": "d",
+       "text": "More ATP stored, so less fuel needed",
+       "why": "ATP content didn't change; glycogen use did."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-ph-read",
+   "concept": "cz-temp-ph",
+   "bloom": "analyse",
+   "sources": [
+    "spriet1991",
+    "spriet1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a test tube, PFK nearly stops at pH 6.9. Yet biopsies after a 30 s cycling sprint show muscle at pH 6.5 with glycolysis still running fast. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In muscle, rising ADP, AMP and Pi keep PFK active despite the acid",
+       "correct": true,
+       "why": "Right: activators build up in contracting muscle and offset H⁺ inhibition."
+      },
+      {
+       "id": "b",
+       "text": "The biopsies must have been measured wrongly",
+       "why": "Many in situ and in vivo studies agree; the test tube just lacks the muscle's activators."
+      },
+      {
+       "id": "c",
+       "text": "Glycolysis doesn't need PFK in working muscle",
+       "why": "PFK is a step glycolysis can't skip."
+      },
+      {
+       "id": "d",
+       "text": "Acid speeds PFK up inside the body",
+       "why": "H⁺ still inhibits PFK; the activators win out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz-appraise-temp",
+   "concept": "cz-temp-ph",
+   "bloom": "evaluate",
+   "sources": [
+    "starkie1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study warmed one thigh and cooled the other in 6 endurance-trained men, then measured glycogen use in 20 minutes of cycling. A coach wants to apply it to female triathletes racing in the heat. What is the main limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small all-male sample, and heating one thigh isn't whole-body heat stress",
+       "correct": true,
+       "why": "Right: n = 6 men limits the general claim, and local heating leaves out the hormonal and circulation effects of a hot race."
+      },
+      {
+       "id": "b",
+       "text": "Using each man's two legs makes the comparison unfair",
+       "why": "Comparing legs within a person is a strength: it removes differences between people."
+      },
+      {
+       "id": "c",
+       "text": "Twenty minutes is too long to show any effect",
+       "why": "Twenty minutes was enough to see a clear difference in glycogen use."
+      },
+      {
+       "id": "d",
+       "text": "Biopsies can't measure glycogen",
+       "why": "Biopsies are the standard way to measure muscle glycogen."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

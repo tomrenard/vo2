@@ -1,5 +1,6 @@
 import { CURRICULUM } from "@/lib/content-index";
 import { lessonById } from "@/lib/course";
+import { bestExamScores, PASS } from "@/lib/exams";
 import { requireUser } from "@/lib/session";
 import { lessonsDone, recall } from "@/lib/study";
 import { Go } from "../Nav";
@@ -13,7 +14,11 @@ export const dynamic = "force-dynamic";
  */
 export default async function MapPage() {
   const userId = await requireUser();
-  const [done, recalls] = await Promise.all([lessonsDone(userId), recall(userId)]);
+  const [done, recalls, exams] = await Promise.all([
+    lessonsDone(userId),
+    recall(userId),
+    bestExamScores(userId),
+  ]);
 
   return (
     <main className="screen with-tabs">
@@ -30,6 +35,8 @@ export default async function MapPage() {
                 ? Math.round((100 * started.reduce((a, b) => a + b, 0)) / started.length)
                 : null;
               const doneCount = module.lessons.filter((id) => done.has(id)).length;
+              const allDone = lessons.length > 0 && doneCount === module.lessons.length;
+              const best = exams.get(module.id);
               return (
                 <details key={module.id} className="group px-4 py-3">
                   <summary className="flex cursor-pointer list-none items-center gap-3">
@@ -87,6 +94,17 @@ export default async function MapPage() {
                         );
                       })}
                     </ol>
+                  )}
+                  {allDone && (
+                    <Go
+                      href={`/exam/${module.id}`}
+                      className="btn mt-3 ml-9 flex justify-between text-sm"
+                    >
+                      <span>Module exam</span>
+                      <span className="muted font-mono">
+                        {best === undefined ? `${PASS}% to pass` : `best ${best}%`}
+                      </span>
+                    </Go>
                   )}
                 </details>
               );

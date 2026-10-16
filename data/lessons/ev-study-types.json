@@ -1,0 +1,642 @@
+{
+ "id": "ev-study-types",
+ "module": "t0-evidence-101",
+ "title": "Study types: what each can and can't show",
+ "goal": "Name the main study designs, from mechanistic work to meta-analyses and consensus statements, and say which questions each can and can't answer.",
+ "requires": [
+  "units-graphs"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "st-classify",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "ev-st-families",
+   "title": "Watch or intervene: two families of studies",
+   "text": "Every study either **watches** or **intervenes** [[c:exp-vs-obs]].\n\n- In an **observational** study the researchers only measure: who trains how, who gets injured, who is fast. They assign nothing.\n- In an **experimental** study they decide who gets what: caffeine or placebo, training block A or block B.\n\nA third kind sits beside these: the [mechanistic study](g:mechanistic-study). It looks inside the body (cells, enzymes, muscle biopsies, animals) to show *how* something could work, for example which enzymes rise after interval training.\n\nEach answers a different question. Watching shows what goes together; intervening tests what causes what; mechanism explains how. Many mistakes in reading science come from asking a study a question its design can't answer.",
+   "claims": [
+    {
+     "id": "exp-vs-obs",
+     "text": "Studies are experimental or observational, depending on whether the investigator assigns the exposure.",
+     "grade": "strong",
+     "sources": [
+      "grimes2002"
+     ],
+     "evidence": [
+      {
+       "source": "grimes2002",
+       "quote": "Clinical research falls into two general categories: experimental and observational, based on whether the investigator assigns the exposures or not.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "st-exp-vs-obs"
+  },
+  {
+   "type": "question",
+   "item": "st-mechanistic"
+  },
+  {
+   "type": "concept",
+   "id": "ev-st-observational",
+   "title": "Snapshots and follow-ups",
+   "text": "Two observational designs matter most [[c:obs-designs]]:\n\n| design | what it does | example |\n|---|---|---|\n| [cross-sectional](g:cross-sectional-study) | measures everything once: a snapshot | VO2max and weekly hours in 300 club cyclists, in one week |\n| [cohort](g:cohort-study) | follows people forward in time | 500 marathoners tracked for injuries for a year |\n\nBoth can show an **association**: two things that go together. Neither can prove cause, because of [confounders](g:confounder): third factors linked to both. Cyclists who ride more hours have a higher VO2max, but talented riders also tend to ride more.\n\nA cohort beats a snapshot because it shows what came first. The confounders remain.",
+   "claims": [
+    {
+     "id": "obs-designs",
+     "text": "Cohort studies follow people forward from exposure to outcome; cross-sectional studies measure exposure and outcome at one time point.",
+     "grade": "strong",
+     "sources": [
+      "grimes2002"
+     ],
+     "evidence": [
+      {
+       "source": "grimes2002",
+       "quote": "Within analytical studies, cohort studies track people forward in time from exposure to outcome.",
+       "level": "abstract"
+      },
+      {
+       "source": "grimes2002",
+       "quote": "Cross-sectional studies are like a snapshot, which measures both exposure and outcome at one time point.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "st-classify",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "st-association"
+  },
+  {
+   "type": "question",
+   "item": "st-confounder"
+  },
+  {
+   "type": "concept",
+   "id": "ev-st-rct",
+   "title": "Randomised trials and crossovers",
+   "text": "In a [randomised controlled trial](g:rct) (RCT), chance decides who gets the treatment. With enough people, randomisation balances the groups on everything, including factors nobody measured, so a difference at the end can be put down to the treatment. A placebo and blinding stop expectations from doing the work.\n\nIn a **parallel** RCT each person gets one condition. In a [crossover](g:crossover-study) each athlete does every condition, in random order, with a washout between. Each athlete is their own control, so far fewer are needed [[c:crossover-n]].\n\nCrossovers suit effects that wear off: caffeine before a time trial, yes; 12 weeks of training, no, because fitness carries over into the next condition.",
+   "claims": [
+    {
+     "id": "crossover-n",
+     "text": "A crossover design needs far fewer athletes than a fully controlled parallel trial to detect the same small performance effect.",
+     "grade": "strong",
+     "sources": [
+      "hopkins1999"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins1999",
+       "quote": "Using change in performance in events as the outcome measure in a crossover study, researchers could delimit such enhancements with a sample of 16-65 athletes, or with 65-260 in a fully controlled study.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "st-randomise"
+  },
+  {
+   "type": "question",
+   "item": "st-classify",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "st-crossover-fit",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "st-crossover-n"
+  },
+  {
+   "type": "concept",
+   "id": "ev-st-synthesis",
+   "title": "Reviews, meta-analyses and consensus",
+   "text": "One study is rarely enough, so some studies pull many others together:\n\n- A [systematic review](g:systematic-review) searches for *every* study on a question, with rules fixed in advance, and judges the quality of each.\n- A [meta-analysis](g:meta-analysis) goes one step further and pools their results into one effect estimate [[c:sr-ma]].\n- A [consensus statement](g:consensus-statement) is a panel of experts (IOC, ACSM, ISSN) reading the evidence and writing recommendations. It mixes evidence with expert judgement, which helps where trials are missing.\n\nA systematic review is not the same as an ordinary (narrative) review. In a narrative review the author chooses which studies to discuss, so it can cherry-pick.",
+   "claims": [
+    {
+     "id": "sr-ma",
+     "text": "A systematic review selects the studies; a meta-analysis statistically pools them into a single effect size.",
+     "grade": "strong",
+     "sources": [
+      "murad2016"
+     ],
+     "evidence": [
+      {
+       "source": "murad2016",
+       "quote": "The systematic review (the process of selecting the studies) and meta-analysis (the statistical aggregation that produces a single effect size) are tools to consume and apply the evidence by stakeholders.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "st-sr-ma"
+  },
+  {
+   "type": "question",
+   "item": "st-consensus"
+  },
+  {
+   "type": "concept",
+   "id": "ev-st-match",
+   "title": "Match the question to the design",
+   "text": "Each design answers some questions and not others:\n\n| design | can show | can't show |\n|---|---|---|\n| mechanistic | how an effect could work | that performance changes |\n| cross-sectional | what goes together now | what came first, or cause |\n| cohort | what comes before what | cause, because of confounders |\n| RCT or crossover | cause, in people like those studied | effects in very different people |\n| systematic review, meta-analysis | the overall picture | more than its studies allow |\n\nBefore trusting a headline (\"coffee drinkers run faster\"), ask which design it came from and whether that design can answer the claim being made.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "st-crossover-fit",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Observational studies only measure; experiments assign the exposure; mechanistic studies show how something could work.",
+    "Cross-sectional studies are snapshots and cohorts follow people forward: both show association, not cause, because of confounders.",
+    "Randomisation balances groups on measured and unmeasured factors; a crossover makes each athlete their own control and needs far fewer people.",
+    "Crossovers fit short-acting treatments (caffeine, bicarbonate), not training blocks that carry over.",
+    "A systematic review finds and appraises every study; a meta-analysis pools them; a consensus statement adds expert judgement."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "st-classify",
+   "concept": "ev-st-observational",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "grimes2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers record VO2max and usual weekly riding hours in 300 club cyclists, all in the same week. What design is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cross-sectional study",
+       "correct": true,
+       "why": "Right: everything is measured once, at one time point: a snapshot."
+      },
+      {
+       "id": "b",
+       "text": "Cohort study",
+       "why": "A cohort follows people forward in time; here nobody is followed up."
+      },
+      {
+       "id": "c",
+       "text": "Parallel-group RCT",
+       "why": "Nobody is assigned to a treatment, so it isn't an experiment."
+      },
+      {
+       "id": "d",
+       "text": "Crossover study",
+       "why": "Nobody does two conditions; the researchers only measure."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "At the start of a season, 400 marathon runners report their weekly strength training. Researchers then record their injuries for 12 months. What design is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cross-sectional study",
+       "why": "A snapshot would measure training and injuries at the same moment; here runners are followed for a year."
+      },
+      {
+       "id": "b",
+       "text": "Cohort study",
+       "correct": true,
+       "why": "Right: people are tracked forward in time from exposure (strength training) to outcome (injury)."
+      },
+      {
+       "id": "c",
+       "text": "Parallel-group RCT",
+       "why": "The runners chose their own training; nobody was randomised to it."
+      },
+      {
+       "id": "d",
+       "text": "Crossover study",
+       "why": "Each runner lives one season with their own habits; nobody does both conditions."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "Twenty triathletes each do a 40 km bike time trial twice, once after caffeine and once after placebo, in random order a week apart. What design is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cross-sectional study",
+       "why": "This is an experiment: the researchers assign caffeine and placebo."
+      },
+      {
+       "id": "b",
+       "text": "Cohort study",
+       "why": "Nobody is simply followed over time; the researchers assign the conditions."
+      },
+      {
+       "id": "c",
+       "text": "Parallel-group RCT",
+       "why": "In a parallel RCT each athlete would get only one condition; here each gets both."
+      },
+      {
+       "id": "d",
+       "text": "Crossover study",
+       "correct": true,
+       "why": "Right: every athlete does both conditions in random order, so each is their own control."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-exp-vs-obs",
+   "concept": "ev-st-families",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "grimes2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What makes a study experimental rather than observational?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The researchers decide who gets the exposure",
+       "correct": true,
+       "why": "Right: experiments assign the exposure; observational studies only measure what people already do."
+      },
+      {
+       "id": "b",
+       "text": "It takes place in a laboratory",
+       "why": "Lab studies can be observational (testing runners once) and experiments can run in the field."
+      },
+      {
+       "id": "c",
+       "text": "It measures a large number of people",
+       "why": "Size doesn't define the design: a cohort can have 100,000 people and an experiment 10."
+      },
+      {
+       "id": "d",
+       "text": "It compares a group with a control group",
+       "why": "Analytical observational studies, such as cohorts, also have comparison groups."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-mechanistic",
+   "concept": "ev-st-families",
+   "bloom": "analyse",
+   "sources": [
+    "grimes2002",
+    "howick2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers take thigh muscle biopsies from 12 cyclists before and after 6 weeks of interval training and find a key mitochondrial enzyme up by 30%. What does this study show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How the muscle changed, not that race performance improved",
+       "correct": true,
+       "why": "Right: it is mechanistic work: it shows a change inside the muscle, but performance was never measured."
+      },
+      {
+       "id": "b",
+       "text": "That interval training makes cyclists faster in races",
+       "why": "No race or time trial was measured; a rise in an enzyme is a step on the way, not the result."
+      },
+      {
+       "id": "c",
+       "text": "That intervals beat steady riding for fitness",
+       "why": "There was no steady-riding group to compare with."
+      },
+      {
+       "id": "d",
+       "text": "Nothing, because biopsies can't be trusted",
+       "why": "Biopsies are a standard, useful tool; the limit is what the study measured, not the method."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-association",
+   "concept": "ev-st-observational",
+   "bloom": "analyse",
+   "sources": [
+    "grimes2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cross-sectional study of 300 club cyclists finds that those who ride more hours per week have higher VO2max. Can we conclude that riding more raises VO2max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: a snapshot can't show what came first, and talent may drive both",
+       "correct": true,
+       "why": "Right: high-VO2max riders may simply enjoy riding more. A snapshot shows association only."
+      },
+      {
+       "id": "b",
+       "text": "Yes: with 300 riders the sample is large enough",
+       "why": "A larger sample makes the association more precise, not causal. Confounding doesn't shrink with n."
+      },
+      {
+       "id": "c",
+       "text": "Yes, as long as the result has p < 0.05",
+       "why": "A small p-value only says the data would be surprising if there were no association; it can't tell cause from confounding."
+      },
+      {
+       "id": "d",
+       "text": "No: observational studies are always wrong",
+       "why": "Observational studies are often right about associations; they just can't prove cause on their own."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-confounder",
+   "concept": "ev-st-observational",
+   "bloom": "apply",
+   "sources": [
+    "grimes2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a cohort of 400 runners, those who did strength training had fewer injuries over a year. Which is the most likely confounder?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Experience: veterans lift more and get injured less",
+       "correct": true,
+       "why": "Right: experience is linked to both the exposure (strength training) and the outcome (injury), so it can create the association by itself."
+      },
+      {
+       "id": "b",
+       "text": "Strength training itself, the exposure studied",
+       "why": "That is the exposure being studied, not a third factor."
+      },
+      {
+       "id": "c",
+       "text": "The injuries recorded over the year",
+       "why": "That is the outcome, not a third factor."
+      },
+      {
+       "id": "d",
+       "text": "The number of runners followed in the cohort",
+       "why": "Sample size affects precision, not confounding."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-randomise",
+   "concept": "ev-st-rct",
+   "bloom": "understand",
+   "sources": [
+    "grimes2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do trials let chance decide who gets the treatment?",
+     "options": [
+      {
+       "id": "a",
+       "text": "To balance the groups on everything, measured or not",
+       "correct": true,
+       "why": "Right: with enough people, randomisation spreads confounders (talent, sleep, diet) evenly, so a difference can be put down to the treatment."
+      },
+      {
+       "id": "b",
+       "text": "To make the groups larger",
+       "why": "Randomisation doesn't change the number of people; it changes how they are split."
+      },
+      {
+       "id": "c",
+       "text": "To stop athletes from knowing what they got",
+       "why": "That is blinding, often used with a placebo; randomisation is a separate step."
+      },
+      {
+       "id": "d",
+       "text": "To make the results apply to all athletes",
+       "why": "Results apply to people like those studied; randomisation protects against bias, not narrow samples."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-crossover-fit",
+   "concept": "ev-st-rct",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins1999",
+    "bonafiglia2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which cycling question would a crossover study answer best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Does caffeine improve 40 km time-trial power?",
+       "correct": true,
+       "why": "Right: caffeine wears off within a day, so each rider can do both conditions with a short washout."
+      },
+      {
+       "id": "b",
+       "text": "Does 12 weeks of polarised training raise VO2max more than threshold training?",
+       "why": "Fitness from the first block carries over into the second, which spoils a crossover unless the washout is months long."
+      },
+      {
+       "id": "c",
+       "text": "Do cyclists who ride more get more knee pain over 5 years?",
+       "why": "This is about habits people choose over years: a cohort question, not an experiment."
+      },
+      {
+       "id": "d",
+       "text": "Does a year of strength training improve cycling economy?",
+       "why": "A year-long training effect would carry over into the next condition."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which running question would a crossover study answer best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Does sodium bicarbonate before a 1,500 m race improve time?",
+       "correct": true,
+       "why": "Right: the effect lasts hours, so each runner can try both conditions a few days apart."
+      },
+      {
+       "id": "b",
+       "text": "Does a 16-week marathon plan beat a 12-week plan?",
+       "why": "Training effects carry over from one condition to the next, so a parallel RCT fits better."
+      },
+      {
+       "id": "c",
+       "text": "Do runners who stretch get fewer injuries over 2 years?",
+       "why": "This asks about chosen habits over years: a cohort question."
+      },
+      {
+       "id": "d",
+       "text": "Does a year of strength training improve running economy?",
+       "why": "Strength gained in the first condition would still be there during the second."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-crossover-n",
+   "concept": "ev-st-rct",
+   "bloom": "understand",
+   "sources": [
+    "hopkins1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a crossover study usually need far fewer athletes than a parallel RCT?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Each athlete is their own control, so differences between athletes drop out",
+       "correct": true,
+       "why": "Right: comparing each athlete with themselves removes the big between-athlete spread from the comparison."
+      },
+      {
+       "id": "b",
+       "text": "Crossover studies don't need a placebo",
+       "why": "Crossovers often use a placebo; that isn't why they need fewer people."
+      },
+      {
+       "id": "c",
+       "text": "Each athlete is tested twice, which doubles the sample size",
+       "why": "Two tests on the same person aren't two people; the gain comes from within-athlete comparison."
+      },
+      {
+       "id": "d",
+       "text": "Crossover studies only include well-trained athletes",
+       "why": "Any population can be studied in a crossover; the design, not the sample, saves numbers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-sr-ma",
+   "concept": "ev-st-synthesis",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does a meta-analysis add to a systematic review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It pools the studies' results into one effect estimate",
+       "correct": true,
+       "why": "Right: the systematic review finds and appraises the studies; the meta-analysis combines their numbers."
+      },
+      {
+       "id": "b",
+       "text": "It runs a new, larger trial",
+       "why": "A meta-analysis uses existing studies; it collects no new data."
+      },
+      {
+       "id": "c",
+       "text": "It picks the best study and reports only that",
+       "why": "It combines all suitable studies rather than choosing one."
+      },
+      {
+       "id": "d",
+       "text": "It adds expert opinion on what athletes should do",
+       "why": "That describes a consensus statement."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "st-consensus",
+   "concept": "ev-st-synthesis",
+   "bloom": "understand",
+   "sources": [
+    "murad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An IOC consensus statement on sports nutrition is best described as:",
+     "options": [
+      {
+       "id": "a",
+       "text": "An expert panel's recommendations after reviewing the evidence",
+       "correct": true,
+       "why": "Right: it combines the evidence with expert judgement, useful where trials are missing."
+      },
+      {
+       "id": "b",
+       "text": "The largest randomised trial on the topic",
+       "why": "A consensus statement runs no trial of its own."
+      },
+      {
+       "id": "c",
+       "text": "A statistical pooling of all trials on the topic",
+       "why": "That is a meta-analysis; a consensus statement may use one, but adds judgement."
+      },
+      {
+       "id": "d",
+       "text": "A survey of what elite athletes actually do",
+       "why": "Common practice isn't evidence that it works."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

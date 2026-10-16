@@ -1,0 +1,908 @@
+{
+ "id": "bio-glycolysis",
+ "module": "t1a-bioenergetics",
+ "title": "Glycolysis: fast ATP from carbohydrate",
+ "goal": "Explain how glycolysis turns glucose or glycogen into pyruvate and ATP, why it is fast but limited, how PFK controls it, and why lactate is its normal end product.",
+ "requires": [
+  "bio-pcr"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "gly-net-atp",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "gly-path",
+   "title": "Ten steps from sugar to pyruvate",
+   "text": "[Glycolysis](g:glycolysis) runs in the cytosol, the fluid of the fibre, and needs no oxygen. In ten steps it splits one six-carbon sugar into two three-carbon [pyruvate](g:pyruvate) molecules. On the way it makes ATP and loads electrons onto the carrier [NAD⁺](g:nad), which becomes NADH.\n\nThe sugar comes from two places: glucose from the blood, or [glycogen](g:glycogen), the muscle's own store. The first steps cost ATP; the second half pays back more. The net gain [[c:gly-net-atp]]:\n\n| start | net ATP per sugar unit |\n|---|---|\n| blood glucose | 2 |\n| muscle glycogen | 3 |\n\nGlycogen gives one more because a sugar unit broken off the store skips the first ATP-costing step.",
+   "claims": [
+    {
+     "id": "gly-net-atp",
+     "text": "Glycolysis nets 2 ATP per glucose from the blood and 3 ATP per glucose unit from muscle glycogen.",
+     "grade": "strong",
+     "sources": [
+      "baker2010",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "Once exercise and glycogenolysis begin, this earlier cost is benefited from and thereby increases net ATP regeneration from glycolysis from 2 to 3 ATP per G6P conversion to 2 pyruvate, which is a meaningful 50% increase in the rate and capacity of glycolytic ATP turnover.",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "Despite glycolysis only yielding two ATP molecules, the process is vital.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-net-atp",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "gly-calc-example",
+   "title": "How much ATP did glycolysis rebuild?",
+   "problem": "Suppose that in a 30 s sprint a cyclist's thigh muscle breaks down 60 mmol·kg⁻¹ dry muscle of glucose units from glycogen, all the way to lactate. How much ATP did glycolysis rebuild?",
+   "steps": [
+    "Pick the right yield: the sugar came from glycogen, so the net is 3 ATP per glucose unit (2 would be for blood glucose).",
+    "ATP = glucose units × 3 = 60 × 3 = 180 mmol·kg⁻¹ dry muscle.",
+    "Compare with the stores: ATP is about 25 and PCr about 80 mmol·kg⁻¹ dry. Glycolysis rebuilt more ATP than both stores hold together, which is why it carries most of a 30 s sprint."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-atp-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gly-rate",
+   "title": "Fast, but with a limited capacity",
+   "text": "Glycolysis is slower than PCr but much faster than the mitochondria, reaching its top rate after about 10–15 s of an all-out start. For a 30 s sprint, one estimate puts the split at 23% PCr, 49% glycolysis and 28% aerobic [[c:gly-30s]].\n\nIts **capacity** is larger than PCr's but still limited. The most ATP glycolysis can give in one effort is reached when you work above your VO₂max for as long as you can: about **2–3 minutes** for a trained athlete [[c:gly-capacity]].\n\nFuel is not the limit: a 75 s all-out effort uses only about a fifth of the muscle's glycogen [[c:gly-not-fuel]]. The limits are the pathway's own brakes and the H⁺ that pile up.",
+   "claims": [
+    {
+     "id": "gly-30s",
+     "text": "In a 30 s all-out sprint, glycolysis supplies about half the energy (estimated 23% PCr, 49% glycolysis, 28% aerobic). Glycolysis reaches its maximal rate after about 10–15 s.",
+     "grade": "weak",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "It has been estimated that during a 30 seconds sprint the phosphagen system accounts for 23% of energy provision, 49% comes from glycolysis and 28% from mitochondrial respiration.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "Over a period of 30-second of exercise the contribution from glycolysis to ATP turnover is nearly double that of CrP",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "ATP production from glycolysis does not reach its maximal rate of regeneration until after about 10 to 15 seconds of exercise",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-capacity",
+     "text": "Glycolytic ATP capacity is used up most fully in efforts above VO₂max held to exhaustion, about 2–3 min for a trained athlete.",
+     "grade": "moderate",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "is performed for as long as possible, which for the average trained athlete is between 2 to 3 minutes",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-not-fuel",
+     "text": "A single 75 s all-out effort lowers muscle glycogen by only about 20%.",
+     "grade": "weak",
+     "sources": [
+      "ortenblad2026"
+     ],
+     "evidence": [
+      {
+       "source": "ortenblad2026",
+       "quote": "For instance, a single 75‐s all‐out effort can reduce muscle glycogen by ~20%",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-30s-share",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gly-capacity-test"
+  },
+  {
+   "type": "concept",
+   "id": "gly-pfk",
+   "title": "The throttle: phosphofructokinase",
+   "text": "Glycolysis has a throttle. Its main control point is the enzyme [phosphofructokinase](g:phosphofructokinase) (PFK), at the step that commits the sugar to the pathway [[c:pfk-control]].\n\nThe signal to open the throttle is the cell's own energy use. When ATP is split fast, ADP and then AMP rise. AMP switches on PFK, and also the enzyme that breaks sugar units off glycogen, so more sugar flows [[c:amp-activates]]. That is how glycolysis matches supply to demand within seconds, with no outside command.\n\nThe throttle also closes. PFK is very sensitive to acidity: as H⁺ build up during a long all-out effort, PFK slows, and so does the ATP supply from glycolysis [[c:pfk-ph]].",
+   "claims": [
+    {
+     "id": "pfk-control",
+     "text": "PFK catalyses an effectively irreversible step of glycolysis and is its main rate-limiting control point.",
+     "grade": "strong",
+     "sources": [
+      "wackerhage2025",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "wackerhage2025",
+       "quote": "Glycolysis is a multi-enzyme sequence of chemical reactions, but this sequence has a single rate-limiting enzyme, phosphofructokinase (PFK)",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "one of the key regulatory steps in glycolysis – the reaction catalysed by phosphofructokinase 1 (PFK1)",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "This reaction is effectively irreversible under physiological conditions",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "amp-activates",
+     "text": "Rising AMP during fast ATP use activates both glycogen phosphorylase and PFK, raising glycolytic flux.",
+     "grade": "strong",
+     "sources": [
+      "baker2010",
+      "judge2020"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "AMP is a potent allosteric activator of two enzymes influential to glycolysis.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "Second, AMP activates phosphofructokinase (PFK) within phase 1 of glycolysis, thereby allowing increased flux of G6P through glycolysis, which in turn allows for increased rates of ATP regeneration from phase 2.",
+       "level": "full-text"
+      },
+      {
+       "source": "judge2020",
+       "quote": "an increase in the concentration of adenosine monophosphate (AMP) signals an energy deficit in the cell and therefore activates PFK1.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pfk-ph",
+     "text": "PFK is inhibited by falling intracellular pH, which slows glycolysis in intense exercise.",
+     "grade": "moderate",
+     "sources": [
+      "wackerhage2025"
+     ],
+     "evidence": [
+      {
+       "source": "wackerhage2025",
+       "quote": "once glycolytic flux increases from baseline, the pH will drop",
+       "level": "full-text"
+      },
+      {
+       "source": "wackerhage2025",
+       "quote": "the rate of glycolysis will decline towards the end of the run due to the inhibitory effect of a low pH",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-pfk-signal"
+  },
+  {
+   "type": "question",
+   "item": "gly-pfk-ph"
+  },
+  {
+   "type": "question",
+   "item": "gly-lactate-oxygen",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "gly-lactate",
+   "title": "Lactate: the normal end of fast glycolysis",
+   "text": "Glycolysis loads electrons onto [NAD⁺](g:nad), making NADH. The cell holds little NAD⁺, so glycolysis stalls unless NADH is unloaded again. There are two ways: send pyruvate and the electrons into the [mitochondria](g:mitochondria), or turn pyruvate into [lactate](g:lactate), which gives NAD⁺ back [[c:ldh-nad]].\n\nWhen glycolysis makes pyruvate faster than the mitochondria take it up, more becomes lactate. That is not a sign of missing oxygen: lactate forms all the time in well-oxygenated muscle, and in hard enough exercise even when breathing pure oxygen [[c:lactate-aerobic]].\n\nSo lactate is the normal end of fast glycolysis. Where it goes next, and why it is a fuel and not a waste, is the next module: *Lactate: fuel, not waste*.",
+   "claims": [
+    {
+     "id": "ldh-nad",
+     "text": "Lactate formation removes pyruvate and regenerates NAD⁺, letting glycolysis keep a high rate when pyruvate is made faster than mitochondria take it up.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "In summary, muscle production of lactate is essential to remove pyruvate, regenerate NAD+ to sustain a high rate of ATP regeneration from glycolysis, and contribute to metabolic proton buffering.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "This is because pyruvate production occurs at rates that exceed the capacity of the mitochondria to take up pyruvate.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lactate-aerobic",
+     "text": "Lactate forms continuously under aerobic conditions, and in intense exercise even with pure oxygen breathing.",
+     "grade": "strong",
+     "sources": [
+      "brooks2018",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "brooks2018",
+       "quote": "Once thought to be a waste product of anaerobic metabolism, lactate is now known to form continuously under aerobic conditions.",
+       "level": "abstract"
+      },
+      {
+       "source": "baker2010",
+       "quote": "We now know this to be an incorrect assumption, for if exercise is intense enough lactate will always be produced regardless of normal oxygenation, or even hyperoxygenation such as with the breathing of pure oxygen.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-ldh-role"
+  },
+  {
+   "type": "question",
+   "item": "gly-lactate-oxygen",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "gly-acid",
+   "title": "H⁺ and acidosis: what lactic acid does not do",
+   "text": "In a hard effort, muscle pH falls: [acidosis](g:acidosis). The classic story blamed lactic acid. The biochemistry is subtler [[c:acid-source]]:\n\n- Each ATP split releases an H⁺. When the mitochondria supply the ATP, they use those H⁺ again, so none build up.\n- Above a steady state, more ATP comes from glycolysis and PCr, and H⁺ accumulate.\n- Turning pyruvate into lactate *uses up* an H⁺: it slows acidosis.\n\nLactate and acidosis still rise together, so blood lactate stays a good marker of hard, acid-producing work [[c:lactate-marker]].\n\nAcid-base physiologists still argue over how much lactate itself counts, so treat the details as open.",
+   "claims": [
+    {
+     "id": "acid-source",
+     "text": "The H⁺ of exercise acidosis come mainly from ATP hydrolysis when ATP is supplied outside the mitochondria; lactate production consumes H⁺ and slows acidosis.",
+     "grade": "disputed",
+     "sources": [
+      "robergs2004",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "Every time ATP is broken down to ADP and P(i), a proton is released.",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "Lactate production retards, not causes, acidosis.",
+       "level": "abstract"
+      },
+      {
+       "source": "baker2010",
+       "quote": "As such, lactate production retards, not causes, the development of metabolic acidosis.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lactate-marker",
+     "text": "Rising lactate coincides with acidosis and remains a good indirect marker of it.",
+     "grade": "moderate",
+     "sources": [
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "Thus increased lactate production coincides with cellular acidosis and remains a good indirect marker for cell metabolic conditions that induce metabolic acidosis.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is lactic acid the cause of the acidosis of hard exercise?",
+    "sides": [
+     {
+      "position": "No: the H⁺ come mainly from ATP turnover outside the mitochondria; making lactate consumes an H⁺ and slows acidosis.",
+      "sources": [
+       "robergs2004",
+       "baker2010"
+      ]
+     },
+     {
+      "position": "Largely yes: in a physicochemical (strong-ion) analysis, lactate accumulation is the main driver of the fall in pH.",
+      "sources": [
+       "boning2008"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "gly-acid-judge"
+  },
+  {
+   "type": "question",
+   "item": "gly-acid-marker"
+  },
+  {
+   "type": "question",
+   "item": "gly-30s-share",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "gly-atp-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Glycolysis splits a sugar into two pyruvate in the cytosol without oxygen: net 2 ATP from blood glucose, 3 from a glycogen unit.",
+    "It is fast (top rate after about 10–15 s, about half the energy of a 30 s sprint) but its capacity is used up in 2–3 min of work above VO₂max.",
+    "PFK is the throttle: rising AMP opens it, rising acidity closes it.",
+    "Lactate is the normal end of fast glycolysis: it regenerates NAD⁺ and forms even in well-oxygenated muscle.",
+    "Hard exercise acidifies muscle; lactate tracks the acidosis, but making it uses up H⁺. How much lactate itself counts is still argued."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gly-net-atp",
+   "concept": "gly-path",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "baker2010",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How many ATP does glycolysis net from one glucose unit taken from muscle glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 ATP",
+       "correct": true,
+       "why": "Right: 4 ATP are made in the second half; a glycogen unit costs only 1 at the start, so the net is 3."
+      },
+      {
+       "id": "b",
+       "text": "2 ATP",
+       "why": "That is the net from blood glucose, which costs 2 ATP at the start. A glycogen unit skips one of those steps."
+      },
+      {
+       "id": "c",
+       "text": "4 ATP",
+       "why": "4 is the gross ATP made in the second half; the ATP spent in the first steps must be subtracted."
+      },
+      {
+       "id": "d",
+       "text": "31 ATP",
+       "why": "About 30–32 is the yield when pyruvate is fully oxidised in the mitochondria, not from glycolysis alone."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's legs take up glucose from the blood. How many ATP does glycolysis net from one such glucose?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 ATP",
+       "correct": true,
+       "why": "Right: blood glucose costs 2 ATP in the first steps and gives 4 back, a net of 2."
+      },
+      {
+       "id": "b",
+       "text": "3 ATP",
+       "why": "3 is the net for a glucose unit from glycogen, which skips one ATP-costing step."
+      },
+      {
+       "id": "c",
+       "text": "4 ATP",
+       "why": "4 is the gross ATP made in the second half, before subtracting the 2 spent at the start."
+      },
+      {
+       "id": "d",
+       "text": "36 ATP",
+       "why": "36–38 is an old textbook figure for full oxidation in the mitochondria (now about 30–32), not glycolysis alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-atp-calc",
+   "concept": "gly-path",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "baker2010",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Suppose a track cyclist's thigh breaks down 40 mmol·kg⁻¹ dry muscle of glucose units from glycogen to lactate in a sprint. How much ATP did glycolysis rebuild?",
+     "options": [
+      {
+       "id": "a",
+       "text": "120 mmol·kg⁻¹ dry",
+       "correct": true,
+       "why": "Right: glycogen nets 3 ATP per glucose unit, 40 × 3 = 120."
+      },
+      {
+       "id": "b",
+       "text": "80 mmol·kg⁻¹ dry",
+       "why": "This uses 2 ATP per unit, the yield for blood glucose. The sugar came from glycogen: 3 per unit."
+      },
+      {
+       "id": "c",
+       "text": "160 mmol·kg⁻¹ dry",
+       "why": "This uses the gross 4 ATP per unit and forgets the ATP spent at the start."
+      },
+      {
+       "id": "d",
+       "text": "1,240 mmol·kg⁻¹ dry",
+       "why": "This uses about 31 ATP per glucose, the yield of full oxidation. The sugar ended as lactate, so only glycolysis counts."
+      }
+     ],
+     "solution": "From glycogen, glycolysis nets 3 ATP per glucose unit. ATP = 40 × 3 = 120 mmol·kg⁻¹ dry muscle."
+    },
+    {
+     "id": "b",
+     "stem": "Suppose a runner's calf breaks down 50 mmol·kg⁻¹ dry muscle of glucose units from glycogen to lactate in a hill sprint. How much ATP did glycolysis rebuild?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 mmol·kg⁻¹ dry",
+       "correct": true,
+       "why": "Right: glycogen nets 3 ATP per glucose unit, 50 × 3 = 150."
+      },
+      {
+       "id": "b",
+       "text": "100 mmol·kg⁻¹ dry",
+       "why": "This uses 2 ATP per unit, the yield for blood glucose. The sugar came from glycogen: 3 per unit."
+      },
+      {
+       "id": "c",
+       "text": "200 mmol·kg⁻¹ dry",
+       "why": "This uses the gross 4 ATP per unit and forgets the ATP spent at the start."
+      },
+      {
+       "id": "d",
+       "text": "1,550 mmol·kg⁻¹ dry",
+       "why": "This uses about 31 ATP per glucose, the yield of full oxidation. The sugar ended as lactate, so only glycolysis counts."
+      }
+     ],
+     "solution": "From glycogen, glycolysis nets 3 ATP per glucose unit. ATP = 50 × 3 = 150 mmol·kg⁻¹ dry muscle."
+    },
+    {
+     "id": "c",
+     "stem": "Suppose a triathlete's muscle takes up 10 mmol·kg⁻¹ dry muscle of glucose from the blood and turns it all into lactate. How much ATP did glycolysis rebuild?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 mmol·kg⁻¹ dry",
+       "correct": true,
+       "why": "Right: blood glucose nets 2 ATP each, 10 × 2 = 20."
+      },
+      {
+       "id": "b",
+       "text": "30 mmol·kg⁻¹ dry",
+       "why": "This uses 3 ATP per unit, the yield for glycogen. Glucose from the blood costs one more ATP: net 2."
+      },
+      {
+       "id": "c",
+       "text": "40 mmol·kg⁻¹ dry",
+       "why": "This uses the gross 4 ATP and forgets the 2 ATP spent at the start."
+      },
+      {
+       "id": "d",
+       "text": "310 mmol·kg⁻¹ dry",
+       "why": "This uses about 31 ATP per glucose, the yield of full oxidation. The glucose ended as lactate, so only glycolysis counts."
+      }
+     ],
+     "solution": "Blood glucose nets 2 ATP per glucose in glycolysis. ATP = 10 × 2 = 20 mmol·kg⁻¹ dry muscle."
+    }
+   ]
+  },
+  {
+   "id": "gly-30s-share",
+   "concept": "gly-rate",
+   "bloom": "apply",
+   "sources": [
+    "baker2010",
+    "gastin2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist rides an all-out 30 s effort. Which route supplies the largest share of the energy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycolysis",
+       "correct": true,
+       "why": "Right: estimates put it near 49%, about twice PCr's share over 30 s."
+      },
+      {
+       "id": "b",
+       "text": "Phosphocreatine",
+       "why": "PCr leads in the first seconds, but by 30 s it is mostly spent: about 23% of the total."
+      },
+      {
+       "id": "c",
+       "text": "Oxidative phosphorylation",
+       "why": "The aerobic share grows fast (about 28% at 30 s) but is not yet the largest."
+      },
+      {
+       "id": "d",
+       "text": "The stored ATP",
+       "why": "The ATP store lasts seconds and barely falls; it is rebuilt, not used up."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner sprints all-out for about 10 s. Which route supplies the largest share of the energy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Phosphocreatine",
+       "correct": true,
+       "why": "Right: estimates give PCr about 53% of a 10 s sprint, with glycolysis close behind."
+      },
+      {
+       "id": "b",
+       "text": "Glycolysis",
+       "why": "Close: about 44%, a near-equal partner. It takes the lead only in longer sprints, such as 30 s."
+      },
+      {
+       "id": "c",
+       "text": "Oxidative phosphorylation",
+       "why": "Only a few percent of a 10 s sprint (3–9% in different estimates): the aerobic route is too slow to rise that quickly."
+      },
+      {
+       "id": "d",
+       "text": "The stored ATP",
+       "why": "The ATP store is tiny and barely falls; PCr and glycolysis rebuild it as it is used."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-capacity-test",
+   "concept": "gly-rate",
+   "bloom": "apply",
+   "sources": [
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants an effort that uses up as much of a cyclist's glycolytic capacity as possible. Which effort fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An all-out effort lasting about 2–3 minutes",
+       "correct": true,
+       "why": "Right: glycolytic capacity is reached by working above VO₂max for as long as possible, about 2–3 min."
+      },
+      {
+       "id": "b",
+       "text": "An all-out sprint lasting about 10 seconds",
+       "why": "Too short: glycolysis has only just reached its top rate after 10–15 s."
+      },
+      {
+       "id": "c",
+       "text": "An all-out sprint lasting about 30 seconds",
+       "why": "Glycolysis supplies about half of a 30 s sprint, but the effort ends long before its capacity is used up."
+      },
+      {
+       "id": "d",
+       "text": "A 40 km time trial lasting about an hour",
+       "why": "Below VO₂max, most pyruvate is oxidised in the mitochondria; this is an aerobic effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-pfk-signal",
+   "concept": "gly-pfk",
+   "bloom": "understand",
+   "sources": [
+    "baker2010",
+    "judge2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the start of a sprint, ATP use soars and AMP rises in the fibre. What does the AMP do to glycolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Speeds it up, by switching on PFK and glycogen breakdown",
+       "correct": true,
+       "why": "Right: AMP is a signal of fast ATP use; it activates both enzymes, so more sugar flows through."
+      },
+      {
+       "id": "b",
+       "text": "Slows it down, so that PCr can do the work first",
+       "why": "AMP signals that energy is short; it switches glycolysis on, not off. PCr and glycolysis run together."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: glycolysis is switched on by oxygen",
+       "why": "Glycolysis needs no oxygen; it is controlled from inside the fibre by enzymes such as PFK."
+      },
+      {
+       "id": "d",
+       "text": "It turns pyruvate straight into lactate",
+       "why": "Lactate is made by lactate dehydrogenase. AMP acts earlier, on PFK and glycogen breakdown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-pfk-ph",
+   "concept": "gly-pfk",
+   "bloom": "analyse",
+   "sources": [
+    "wackerhage2025",
+    "ortenblad2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Near the end of an all-out 800 m, glycolysis in a runner's legs slows down, though most of the glycogen is still there. What is the most likely brake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rising acidity slowing PFK",
+       "correct": true,
+       "why": "Right: PFK is very sensitive to pH; as H⁺ build up, it slows and glycolytic flux falls."
+      },
+      {
+       "id": "b",
+       "text": "The glycogen store running empty",
+       "why": "A short all-out effort uses only a small part of the glycogen (about a fifth in 75 s); fuel isn't the limit."
+      },
+      {
+       "id": "c",
+       "text": "Oxygen arriving and switching it off",
+       "why": "Oxygen does not switch glycolysis off; it runs at every intensity, with or without oxygen."
+      },
+      {
+       "id": "d",
+       "text": "Lactate poisoning the enzymes",
+       "why": "Lactate is not a poison; making it even uses up an H⁺. The brake is the acidity, not the lactate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-ldh-role",
+   "concept": "gly-lactate",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does turning pyruvate into lactate give back to glycolysis, so that it can keep running fast?",
+     "options": [
+      {
+       "id": "a",
+       "text": "NAD⁺, the electron carrier glycolysis needs",
+       "correct": true,
+       "why": "Right: lactate dehydrogenase unloads NADH back to NAD⁺, which glycolysis needs at one of its steps."
+      },
+      {
+       "id": "b",
+       "text": "ATP, made in the lactate step itself",
+       "why": "The lactate step makes no ATP. Its job is to regenerate NAD⁺ and clear pyruvate."
+      },
+      {
+       "id": "c",
+       "text": "Oxygen, released as pyruvate is changed",
+       "why": "No oxygen is released or used in this step: it adds electrons and an H⁺ to pyruvate."
+      },
+      {
+       "id": "d",
+       "text": "Glucose, rebuilt from the lactate formed",
+       "why": "Lactate can be rebuilt into glucose later, mostly in the liver, but not inside the sprinting fibre."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-lactate-oxygen",
+   "concept": "gly-lactate",
+   "bloom": "analyse",
+   "sources": [
+    "brooks2018",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's blood lactate climbs from 1 to 6 mmol·L⁻¹ during a hard 10 km run, while her muscles are well supplied with oxygen. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycolysis makes pyruvate faster than her mitochondria take it up",
+       "correct": true,
+       "why": "Right: the extra pyruvate becomes lactate, which also regenerates NAD⁺ so glycolysis can keep its pace."
+      },
+      {
+       "id": "b",
+       "text": "Her working muscles have run short of oxygen",
+       "why": "The classic misconception: lactate forms under fully aerobic conditions, even when breathing pure oxygen."
+      },
+      {
+       "id": "c",
+       "text": "Her muscles make lactate only once glycogen runs out",
+       "why": "Lactate comes from pyruvate, which comes from glycogen and glucose; it rises when glycolysis is fast, not when fuel is gone."
+      },
+      {
+       "id": "d",
+       "text": "Her liver releases lactate to fuel her leg muscles",
+       "why": "In exercise the liver takes lactate up; the rise in the blood comes from the working muscles."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides at an easy 120 W and his blood lactate sits at 1 mmol·L⁻¹. Are his leg muscles making lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: it forms all the time, and removal keeps pace",
+       "correct": true,
+       "why": "Right: lactate forms continuously under aerobic conditions; a steady low level means it is removed as fast as it is made."
+      },
+      {
+       "id": "b",
+       "text": "No: lactate is only made when oxygen is lacking",
+       "why": "Lactate forms in well-oxygenated muscle; oxygen lack is not the trigger."
+      },
+      {
+       "id": "c",
+       "text": "No: lactate only forms above the lactate threshold",
+       "why": "The threshold is where lactate starts to accumulate in the blood, not where it starts to be made."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only in the liver, not in muscle",
+       "why": "Working muscle is the main producer; the liver is one of the places that take lactate up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-acid-judge",
+   "concept": "gly-acid",
+   "bloom": "evaluate",
+   "sources": [
+    "robergs2004",
+    "boning2008",
+    "brooks2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a cyclist: \"Lactic acid makes your legs burn, so lactate is a waste you have to flush out.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mostly wrong: lactate tracks acidosis, but making it uses up H⁺, and it is a fuel",
+       "correct": true,
+       "why": "Right: lactate production consumes a proton and slows acidosis; how much lactate counts in the acid-base balance is still argued, and lactate is reused as fuel."
+      },
+      {
+       "id": "b",
+       "text": "Right: making lactate is what releases the acid that lowers muscle pH",
+       "why": "This is the classic lactic-acid story. The lactate step itself uses up an H⁺; the H⁺ come mainly from ATP turnover outside the mitochondria."
+      },
+      {
+       "id": "c",
+       "text": "Right: lactate is a dead-end waste product that the body must get rid of",
+       "why": "Lactate forms all the time and is a fuel and a raw material for glucose (next module)."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: muscle pH stays the same during hard exercise, so there is no acid",
+       "why": "Muscle pH does fall in hard exercise; the argument is about where the H⁺ come from."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-acid-marker",
+   "concept": "gly-acid",
+   "bloom": "analyse",
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "If making lactate doesn't cause acidosis, why does a high blood lactate still tell a runner the effort is acid-producing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both rise when more ATP comes from glycolysis and PCr than from mitochondria",
+       "correct": true,
+       "why": "Right: the same conditions that raise H⁺ release also speed glycolysis and lactate production, so they move together."
+      },
+      {
+       "id": "b",
+       "text": "Lactate breaks down into acid once it reaches the blood",
+       "why": "Lactate is not converted into acid in the blood; it is taken up and used by other tissues."
+      },
+      {
+       "id": "c",
+       "text": "It doesn't: blood lactate is unrelated to muscle pH",
+       "why": "Lactate and acidosis do coincide, which is why lactate remains a good indirect marker."
+      },
+      {
+       "id": "d",
+       "text": "The lab analyser measures acid and reports it as lactate",
+       "why": "Lactate analysers measure lactate itself (usually with an enzyme), not H⁺."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

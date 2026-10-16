@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { lessonById } from "@/lib/course";
+import { lessonById, moduleOf } from "@/lib/course";
 import { requireUser } from "@/lib/session";
 import { repsOf } from "@/lib/study";
 import { Player } from "./Player";
@@ -14,5 +14,10 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
     userId,
     lesson.items.map((item) => item.id),
   );
-  return <Player lesson={lesson} reps={Object.fromEntries(reps)} />;
+  // After a module's last lesson, the Done screen offers its exam.
+  const examHref =
+    moduleOf(lesson.module)?.module.lessons.at(-1) === lesson.id
+      ? `/exam/${lesson.module}`
+      : undefined;
+  return <Player lesson={lesson} reps={Object.fromEntries(reps)} examHref={examHref} />;
 }

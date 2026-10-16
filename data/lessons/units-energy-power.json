@@ -1,0 +1,755 @@
+{
+ "id": "units-energy-power",
+ "module": "t0-units-maths",
+ "title": "Energy, work and power",
+ "goal": "Tell work from power, calculate kJ from watts and time and power from force and speed, convert ride kJ into energy burned using efficiency, and say what running power can and can't tell you.",
+ "requires": [
+  "units-si"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "en-power-def",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "en-energy",
+   "title": "Energy and work: joules",
+   "text": "**Work** is force applied over a distance: 1 newton pushed through 1 metre is 1 [joule](g:joule) (J). Energy is the capacity to do work, in the same unit. A bike computer's \"kJ\" total is the work your legs did on the pedals.\n\nFood energy uses an older unit, the kilocalorie: **1 kcal = 4.184 kJ**, so 1,000 kJ (239 kcal).\n\nWork and power are different things, and sport writing often mixes them up [[c:power-misuse]]. A rider who did 4,000 kJ today did a lot of work; that says nothing about how hard any minute was.",
+   "claims": [
+    {
+     "id": "power-misuse",
+     "text": "Sport science writing often fails to distinguish work from power (and mass from weight), contrary to the SI.",
+     "grade": "strong",
+     "sources": [
+      "winter2016"
+     ],
+     "evidence": [
+      {
+       "source": "winter2016",
+       "quote": "Misuse applies principally to failure to distinguish between mass and weight, velocity and speed, and especially the terms \"work\" and \"power.\"",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "en-power",
+   "title": "Power: how fast work is done",
+   "text": "**Power** is work divided by time. Its unit, the [watt](g:watt), is one joule per second: **W = J·s⁻¹**.\n\nTurn it round and you get work from power: **work (J) = power (W) × time (s)**. Time must be in seconds; 1 h = 3,600 s.\n\n| ride | power | time | work |\n|---|---|---|---|\n| endurance | 200 W | 2 h | 1,440 kJ |\n| tempo | 250 W | 1 h | 900 kJ |\n\nThe same 900 kJ could come from 125 W for 2 hours. Power describes intensity; work describes the total.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "en-kj-example",
+   "title": "Work from power and time",
+   "problem": "A cyclist rides for 1 hour at an average of 250 W. How much work in kJ?",
+   "steps": [
+    "Work = power × time, with time in seconds: 1 h = 3,600 s.",
+    "250 W × 3,600 s = 900,000 J.",
+    "Divide by 1,000 for kJ: 900 kJ. Check the units: W × s = (J·s⁻¹) × s = J."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "en-power-def",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "en-kj-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "en-misuse"
+  },
+  {
+   "type": "concept",
+   "id": "en-fv",
+   "title": "Power = force × velocity",
+   "text": "Power is also **force × velocity**: **P = F·v**, in newtons × metres per second.\n\nOn a bike, F is the total resistance you push against (air, rolling, gravity on a slope) and v is your speed. At the pedals the same rule appears as torque × pedalling speed (cadence): you can make 300 W by pushing hard at a low cadence or lightly at a high one.\n\nSpeed must be in m·s⁻¹. To convert from km·h⁻¹, divide by 3.6: 36 km·h⁻¹ = 10 m·s⁻¹.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "en-fv-example",
+   "title": "Power from force and speed",
+   "problem": "A rider pushes against a total resistance of 35 N at 32.4 km·h⁻¹. What power is that?",
+   "steps": [
+    "Convert speed to m·s⁻¹: 32.4 ÷ 3.6 = 9 m·s⁻¹.",
+    "P = F·v = 35 N × 9 m·s⁻¹ = 315 W.",
+    "Check the units: N × m·s⁻¹ = J·s⁻¹ = W."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "en-fv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "en-efficiency",
+   "title": "Efficiency: most energy becomes heat",
+   "text": "Muscles turn only part of the energy they use into work. The rest becomes heat. **[Gross efficiency](g:gross-efficiency)** = work done ÷ metabolic energy used.\n\nIn cycling it is **about 20%** in lab tests (18–21% in the studies here), and in one large study it was similar from recreational to world-class riders [[c:ge-range]].\n\nSo **metabolic energy = work ÷ efficiency**. A ride with 900 kJ of work at 20% efficiency used 900 ÷ 0.20 = 4,500 kJ (1,076 kcal).\n\nThat explains the rule of thumb \"kJ on the bike ≈ kcal burned\". It is exact only at 1 ÷ 4.184 ≈ 24% efficiency. At a typical 20% you burn about 20% more kcal than the kJ figure.",
+   "claims": [
+    {
+     "id": "ge-range",
+     "text": "Gross efficiency in cycling is about 20% in lab tests (18–21% in the studies cited), with no difference between recreational and world-class cyclists in one study of 69 riders.",
+     "grade": "weak",
+     "sources": [
+      "moseley2004",
+      "hettinga2007"
+     ],
+     "evidence": [
+      {
+       "source": "moseley2004",
+       "quote": "Mean GE (165) was 18.6 +/- 0.3 %, 18.8 +/- 0.4 % and 17.9 +/- 0.3 % while mean DE was 22.4 +/- 0.4 %, 21.6 +/- 0.4 % and 21.2 +/- 0.5 % (for Low, Medium and High, respectively).",
+       "level": "abstract"
+      },
+      {
+       "source": "moseley2004",
+       "quote": "Based on these data, we conclude that there are no differences in efficiency and economy between elite cyclists and recreational level cyclists.",
+       "level": "abstract"
+      },
+      {
+       "source": "hettinga2007",
+       "quote": "GE was 0.9% lower in H compared to N (19.6+/-1.1% vs. 20.5+/-1.4%) (P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "en-ge-meaning"
+  },
+  {
+   "type": "example",
+   "id": "en-kcal-example",
+   "title": "From ride kJ to energy burned",
+   "problem": "A ride file shows 1,000 kJ of work. Assume a gross efficiency of 22%. How much energy did the rider use?",
+   "steps": [
+    "Metabolic energy = work ÷ efficiency = 1,000 kJ ÷ 0.22 = 4,545 kJ.",
+    "In kcal: 4,545 ÷ 4.184 = 1,086 kcal.",
+    "The \"kJ ≈ kcal\" rule would say 1,000 kcal: close, because 22% is near the 24% where the rule is exact."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "en-ride-kcal",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "en-kj-kcal-rule",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "en-running-power",
+   "title": "Running power: a model, not a meter",
+   "text": "A cycling power meter measures force and speed at the crank. Running has no crank. Running \"power\" pods and watches estimate a number in watts from motion sensors, using each brand's own model.\n\nThe brands don't agree: in one test of five devices, only Stryd was highly repeatable, and the others were less suited [[c:run-power-devices]]. Running also mixes braking, pushing off and springy tendons, so there is no agreed \"true\" running power to check against.\n\nUse running watts as a steady pacing number within one device. Don't compare them with your bike watts or across brands.",
+   "claims": [
+    {
+     "id": "run-power-devices",
+     "text": "Commercial running power devices differ in repeatability: in a test of five, Stryd was the most repeatable, while others were too variable to be recommended.",
+     "grade": "weak",
+     "sources": [
+      "cerezuelaespejo2020"
+     ],
+     "evidence": [
+      {
+       "source": "cerezuelaespejo2020",
+       "quote": "Stryd device was found as the most repeatable technology for all environments and conditions (SEM ≤ 12.5 W, CV ≤ 4.3%, ICC ≥ 0.980), besides the best concurrent validity to the VO<sub>2</sub> (<i>r</i> ≥ 0.911, SEE ≤ 7.3%).",
+       "level": "abstract"
+      },
+      {
+       "source": "cerezuelaespejo2020",
+       "quote": "On the contrary, although the Polar<sub>V</sub>, Garmin<sub>RP</sub> and RunScribe technologies maintain a certain relationship with VO<sub>2</sub>, their low repeatability questions their suitability.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "en-run-power",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Work and energy are in joules (J): force × distance. 1 kcal = 4.184 kJ.",
+    "Power is the rate of work: W = J·s⁻¹. Work (J) = power (W) × time (s).",
+    "P = F·v: force (N) × speed (m·s⁻¹); divide km·h⁻¹ by 3.6 to get m·s⁻¹.",
+    "Gross efficiency in cycling is about 20%; energy used = work ÷ efficiency.",
+    "\"kJ ≈ kcal\" is exact only at about 24% efficiency; at 20% you burn about 20% more.",
+    "Running power is a model estimate: compare it only within one device."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "en-power-def",
+   "concept": "en-power",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One watt is equal to which of these?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One joule per second",
+       "correct": true,
+       "why": "Right: power is the rate of work, W = J·s⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "One joule per minute",
+       "why": "The SI time unit is the second, so W is per second, not per minute."
+      },
+      {
+       "id": "c",
+       "text": "One newton per metre",
+       "why": "Force per distance isn't power. A newton times a metre is a joule (work)."
+      },
+      {
+       "id": "d",
+       "text": "One kilojoule per hour",
+       "why": "1 kJ·h⁻¹ is 1,000 J over 3,600 s, about 0.28 W."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running pod reports power in watts. In SI base terms, what is a watt?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A joule of work done each second",
+       "correct": true,
+       "why": "Right: W = J·s⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "A joule of work done each minute",
+       "why": "The SI time unit is the second, so W is per second, not per minute."
+      },
+      {
+       "id": "c",
+       "text": "A newton of force on each metre",
+       "why": "Force per distance isn't power. A newton times a metre is a joule (work)."
+      },
+      {
+       "id": "d",
+       "text": "A kilocalorie used each hour",
+       "why": "1 kcal·h⁻¹ is 4,184 J over 3,600 s, about 1.2 W."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "en-kj-calc",
+   "concept": "en-power",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winter2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 2 h at an average of 200 W. How much work is that in kJ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,440 kJ",
+       "correct": true,
+       "why": "Right: 200 W × 7,200 s = 1,440,000 J = 1,440 kJ."
+      },
+      {
+       "id": "b",
+       "text": "24 kJ",
+       "why": "This uses minutes (120) instead of seconds. W = J·s⁻¹, so time must be in seconds."
+      },
+      {
+       "id": "c",
+       "text": "400 kJ",
+       "why": "200 W × 2 h = 400 watt-hours, not kJ. 1 Wh = 3.6 kJ."
+      },
+      {
+       "id": "d",
+       "text": "1,440,000 kJ",
+       "why": "1,440,000 is the work in joules. Divide by 1,000 for kJ."
+      }
+     ],
+     "solution": "Work = power × time = 200 W × 7,200 s = 1,440,000 J = 1,440 kJ."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete rides 1.5 h at an average of 250 W. How much work is that in kJ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,350 kJ",
+       "correct": true,
+       "why": "Right: 250 W × 5,400 s = 1,350,000 J = 1,350 kJ."
+      },
+      {
+       "id": "b",
+       "text": "22.5 kJ",
+       "why": "This uses minutes (90) instead of seconds. W = J·s⁻¹, so time must be in seconds."
+      },
+      {
+       "id": "c",
+       "text": "375 kJ",
+       "why": "250 W × 1.5 h = 375 watt-hours, not kJ. 1 Wh = 3.6 kJ."
+      },
+      {
+       "id": "d",
+       "text": "1,350,000 kJ",
+       "why": "1,350,000 is the work in joules. Divide by 1,000 for kJ."
+      }
+     ],
+     "solution": "Work = power × time = 250 W × 5,400 s = 1,350,000 J = 1,350 kJ."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist rides 4 h at an average of 180 W. How much work is that in kJ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2,592 kJ",
+       "correct": true,
+       "why": "Right: 180 W × 14,400 s = 2,592,000 J = 2,592 kJ."
+      },
+      {
+       "id": "b",
+       "text": "43.2 kJ",
+       "why": "This uses minutes (240) instead of seconds. W = J·s⁻¹, so time must be in seconds."
+      },
+      {
+       "id": "c",
+       "text": "720 kJ",
+       "why": "180 W × 4 h = 720 watt-hours, not kJ. 1 Wh = 3.6 kJ."
+      },
+      {
+       "id": "d",
+       "text": "2,592,000 kJ",
+       "why": "2,592,000 is the work in joules. Divide by 1,000 for kJ."
+      }
+     ],
+     "solution": "Work = power × time = 180 W × 14,400 s = 2,592,000 J = 2,592 kJ."
+    }
+   ]
+  },
+  {
+   "id": "en-misuse",
+   "concept": "en-energy",
+   "bloom": "understand",
+   "sources": [
+    "winter2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"He has huge power: he did 3,200 kJ of work in today's race.\" What is wrong with this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "kJ measures work, not power; power is the rate, in W",
+       "correct": true,
+       "why": "Right: 3,200 kJ is a total. It could come from a long easy ride or a short hard one."
+      },
+      {
+       "id": "b",
+       "text": "kJ is a unit of force, so it can't measure work",
+       "why": "Force is in newtons. kJ is a unit of work and energy."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: kJ and W measure the same thing",
+       "why": "They don't: W = J·s⁻¹, so power is work divided by time."
+      },
+      {
+       "id": "d",
+       "text": "Power should be given in kcal, not kJ",
+       "why": "kcal is also an energy unit. Power is in watts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "en-fv-calc",
+   "concept": "en-fv",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winter2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist pushes against a total resistance of 30 N at 36 km·h⁻¹. What power is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 W",
+       "correct": true,
+       "why": "Right: 36 ÷ 3.6 = 10 m·s⁻¹; 30 N × 10 m·s⁻¹ = 300 W."
+      },
+      {
+       "id": "b",
+       "text": "1,080 W",
+       "why": "This uses km·h⁻¹ without converting to m·s⁻¹ (30 × 36)."
+      },
+      {
+       "id": "c",
+       "text": "3 W",
+       "why": "This divides force by speed (30 ÷ 10). P = F × v."
+      },
+      {
+       "id": "d",
+       "text": "0.33 W",
+       "why": "This divides speed by force (10 ÷ 30). P = F × v."
+      }
+     ],
+     "solution": "v = 36 km·h⁻¹ ÷ 3.6 = 10 m·s⁻¹. P = F·v = 30 N × 10 m·s⁻¹ = 300 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on a draft-legal bike leg pushes against 40 N of resistance at 27 km·h⁻¹. What power is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300 W",
+       "correct": true,
+       "why": "Right: 27 ÷ 3.6 = 7.5 m·s⁻¹; 40 N × 7.5 m·s⁻¹ = 300 W."
+      },
+      {
+       "id": "b",
+       "text": "1,080 W",
+       "why": "This uses km·h⁻¹ without converting to m·s⁻¹ (40 × 27)."
+      },
+      {
+       "id": "c",
+       "text": "5.3 W",
+       "why": "This divides force by speed (40 ÷ 7.5). P = F × v."
+      },
+      {
+       "id": "d",
+       "text": "0.19 W",
+       "why": "This divides speed by force (7.5 ÷ 40). P = F × v."
+      }
+     ],
+     "solution": "v = 27 km·h⁻¹ ÷ 3.6 = 7.5 m·s⁻¹. P = F·v = 40 N × 7.5 m·s⁻¹ = 300 W."
+    },
+    {
+     "id": "c",
+     "stem": "A time trialist pushes against 25 N of resistance at 45 km·h⁻¹. What power is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "312.5 W",
+       "correct": true,
+       "why": "Right: 45 ÷ 3.6 = 12.5 m·s⁻¹; 25 N × 12.5 m·s⁻¹ = 312.5 W."
+      },
+      {
+       "id": "b",
+       "text": "1,125 W",
+       "why": "This uses km·h⁻¹ without converting to m·s⁻¹ (25 × 45)."
+      },
+      {
+       "id": "c",
+       "text": "2 W",
+       "why": "This divides force by speed (25 ÷ 12.5). P = F × v."
+      },
+      {
+       "id": "d",
+       "text": "0.5 W",
+       "why": "This divides speed by force (12.5 ÷ 25). P = F × v."
+      }
+     ],
+     "solution": "v = 45 km·h⁻¹ ÷ 3.6 = 12.5 m·s⁻¹. P = F·v = 25 N × 12.5 m·s⁻¹ = 312.5 W."
+    }
+   ]
+  },
+  {
+   "id": "en-ge-meaning",
+   "concept": "en-efficiency",
+   "bloom": "understand",
+   "sources": [
+    "moseley2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab test finds a cyclist's gross efficiency is 20%. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20% of the energy used becomes work at the pedals; 80% becomes heat",
+       "correct": true,
+       "why": "Right: gross efficiency = work done ÷ metabolic energy used."
+      },
+      {
+       "id": "b",
+       "text": "20% of the energy used is wasted; 80% becomes work",
+       "why": "This is upside down. Muscle is far less efficient than that."
+      },
+      {
+       "id": "c",
+       "text": "20% of the energy comes from fat and 80% from carbohydrate",
+       "why": "Fuel mix is a different measure (from RER). Efficiency is work out ÷ energy in."
+      },
+      {
+       "id": "d",
+       "text": "The rider can hold 20% more power than threshold",
+       "why": "Efficiency says nothing about how long a power can be held."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "en-ride-kcal",
+   "concept": "en-efficiency",
+   "bloom": "apply",
+   "sources": [
+    "moseley2004",
+    "hettinga2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's ride file shows 1,800 kJ of work. With a gross efficiency of 20%, how much energy did the rider use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9,000 kJ (2,151 kcal)",
+       "correct": true,
+       "why": "Right: 1,800 ÷ 0.20 = 9,000 kJ; ÷ 4.184 = 2,151 kcal."
+      },
+      {
+       "id": "b",
+       "text": "1,800 kJ (430 kcal)",
+       "why": "This treats the work as all the energy used, as if efficiency were 100%."
+      },
+      {
+       "id": "c",
+       "text": "7,531 kJ (1,800 kcal)",
+       "why": "This applies \"kJ ≈ kcal\", which assumes about 24% efficiency, not 20%."
+      },
+      {
+       "id": "d",
+       "text": "360 kJ (86 kcal)",
+       "why": "This multiplies by efficiency. Energy used is larger than work, so divide by efficiency."
+      }
+     ],
+     "solution": "Energy used = work ÷ efficiency = 1,800 kJ ÷ 0.20 = 9,000 kJ. In kcal: 9,000 ÷ 4.184 = 2,151 kcal."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's ride file shows 1,200 kJ of work. With a gross efficiency of 20%, how much energy did the rider use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6,000 kJ (1,434 kcal)",
+       "correct": true,
+       "why": "Right: 1,200 ÷ 0.20 = 6,000 kJ; ÷ 4.184 = 1,434 kcal."
+      },
+      {
+       "id": "b",
+       "text": "1,200 kJ (287 kcal)",
+       "why": "This treats the work as all the energy used, as if efficiency were 100%."
+      },
+      {
+       "id": "c",
+       "text": "5,021 kJ (1,200 kcal)",
+       "why": "This applies \"kJ ≈ kcal\", which assumes about 24% efficiency, not 20%."
+      },
+      {
+       "id": "d",
+       "text": "240 kJ (57 kcal)",
+       "why": "This multiplies by efficiency. Energy used is larger than work, so divide by efficiency."
+      }
+     ],
+     "solution": "Energy used = work ÷ efficiency = 1,200 kJ ÷ 0.20 = 6,000 kJ. In kcal: 6,000 ÷ 4.184 = 1,434 kcal."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's ride file shows 900 kJ of work. With a gross efficiency of 20%, how much energy did the rider use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4,500 kJ (1,076 kcal)",
+       "correct": true,
+       "why": "Right: 900 ÷ 0.20 = 4,500 kJ; ÷ 4.184 = 1,076 kcal."
+      },
+      {
+       "id": "b",
+       "text": "900 kJ (215 kcal)",
+       "why": "This treats the work as all the energy used, as if efficiency were 100%."
+      },
+      {
+       "id": "c",
+       "text": "3,766 kJ (900 kcal)",
+       "why": "This applies \"kJ ≈ kcal\", which assumes about 24% efficiency, not 20%."
+      },
+      {
+       "id": "d",
+       "text": "180 kJ (43 kcal)",
+       "why": "This multiplies by efficiency. Energy used is larger than work, so divide by efficiency."
+      }
+     ],
+     "solution": "Energy used = work ÷ efficiency = 900 kJ ÷ 0.20 = 4,500 kJ. In kcal: 4,500 ÷ 4.184 = 1,076 kcal."
+    }
+   ]
+  },
+  {
+   "id": "en-kj-kcal-rule",
+   "concept": "en-efficiency",
+   "bloom": "evaluate",
+   "sources": [
+    "moseley2004",
+    "hettinga2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a ride, a cyclist's head unit shows 2,000 kJ. A friend says: \"So you burned about 2,000 kcal.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fair rough guess; at a typical 20% efficiency it is nearer 2,400 kcal",
+       "correct": true,
+       "why": "Right: 2,000 ÷ 0.20 = 10,000 kJ = 2,390 kcal. The rule is exact only at about 24% efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Wrong: 2,000 kJ is only 478 kcal, so far less was burned",
+       "why": "2,000 kJ (478 kcal) is the work done. The muscles used about five times that energy."
+      },
+      {
+       "id": "c",
+       "text": "Exact: kJ and kcal are the same unit",
+       "why": "1 kcal = 4.184 kJ. The rule works only because efficiency roughly cancels that factor."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: efficiency means only about 400 kJ was burned",
+       "why": "This multiplies by efficiency. Energy used is work ÷ efficiency, so it is more than the work."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's Ironman bike leg shows 3,500 kJ of work. She plans her fuelling on \"about 3,500 kcal burned\". What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fair rough guess; at a typical 20% efficiency it is nearer 4,200 kcal",
+       "correct": true,
+       "why": "Right: 3,500 ÷ 0.20 = 17,500 kJ = 4,183 kcal. The rule is exact only at about 24% efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Wrong: 3,500 kJ is only 837 kcal, so far less was burned",
+       "why": "3,500 kJ (837 kcal) is the work done. The muscles used about five times that energy."
+      },
+      {
+       "id": "c",
+       "text": "Exact: kJ and kcal are the same unit",
+       "why": "1 kcal = 4.184 kJ. The rule works only because efficiency roughly cancels that factor."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: efficiency means only about 700 kJ was burned",
+       "why": "This multiplies by efficiency. Energy used is work ÷ efficiency, so it is more than the work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "en-run-power",
+   "concept": "en-running-power",
+   "bloom": "evaluate",
+   "sources": [
+    "cerezuelaespejo2020",
+    "winter2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner wears two power pods from different brands on the same run. One shows 260 W, the other 300 W. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Expected: each brand estimates power with its own model",
+       "correct": true,
+       "why": "Right: running power is estimated from motion sensors, and devices differ in method and repeatability."
+      },
+      {
+       "id": "b",
+       "text": "One pod must be broken, since power is measured directly",
+       "why": "Running pods don't measure force at a crank; they estimate power from movement."
+      },
+      {
+       "id": "c",
+       "text": "Average them: the true running power is 280 W",
+       "why": "There is no agreed true value to average towards; each number belongs to its own model."
+      },
+      {
+       "id": "d",
+       "text": "Trust the higher one: pods tend to miss some of the work",
+       "why": "Neither brand is known to be closer to a true value; higher isn't more correct."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's threshold is 220 W on the bike and 300 W on her running pod. She concludes running is harder for her. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not valid: running watts are a model estimate on a different scale",
+       "correct": true,
+       "why": "Right: crank power and running-pod power aren't measured the same way, so the numbers can't be compared."
+      },
+      {
+       "id": "b",
+       "text": "Valid: a watt is a watt, so running costs her more",
+       "why": "The unit is the same, but running pods estimate a modelled number, not crank power."
+      },
+      {
+       "id": "c",
+       "text": "Valid: the bike number is low because of drag",
+       "why": "Drag affects speed at a given power; it doesn't make the two power numbers comparable."
+      },
+      {
+       "id": "d",
+       "text": "Not valid: running power should be in W·kg⁻¹",
+       "why": "Dividing by mass doesn't make a modelled running number comparable to crank power."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

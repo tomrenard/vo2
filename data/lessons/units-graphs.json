@@ -1,0 +1,729 @@
+{
+ "id": "units-graphs",
+ "module": "t0-units-maths",
+ "title": "Reading physiology graphs",
+ "goal": "Read a physiology graph's axes, slope and area, see a threshold as a breakpoint, and say why a scatter plot's correlation doesn't show cause.",
+ "requires": [
+  "units-exp-log"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "gr-slope-calc",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "gr-axes",
+   "title": "Read the axes first",
+   "text": "Before looking at the line, read the frame. Four questions:\n\n1. **What is on each axis?** Usually the thing you control (power, speed, time) is on x, and the response (heart rate, lactate, VO2) on y.\n2. **What units?** They tell you what a slope or an area will mean.\n3. **Linear or log?** On a log axis equal steps are ratios.\n4. **Does the y-axis start at zero?** A cut axis makes small differences look huge.\n\nA bar chart with the y-axis starting at 280 W can make 290 W look twice as tall as 285 W, though the gap is under 2%.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "gr-axis-truncated"
+  },
+  {
+   "type": "concept",
+   "id": "gr-slope",
+   "title": "Slope: change per unit",
+   "text": "The **slope** of a line is rise ÷ run: how much y changes for each unit of x. Its unit is the y unit divided by the x unit.\n\n| graph | slope unit |\n|---|---|\n| VO2 vs power | mL·min⁻¹·W⁻¹ |\n| heart rate vs speed | beats·min⁻¹ per km·h⁻¹ |\n| lactate vs power | mmol·L⁻¹·W⁻¹ |\n\nTake two points, subtract, divide: (y₂ − y₁) ÷ (x₂ − x₁). A steeper slope means a bigger response per step. A slope taken from the origin (y ÷ x at one point) is a different number, and usually the wrong one.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "gr-slope-example",
+   "title": "Slope of heart rate against power",
+   "problem": "In a step test a cyclist's HR is 130 beats·min⁻¹ at 200 W and 150 beats·min⁻¹ at 250 W. What is the slope?",
+   "steps": [
+    "Rise: 150 − 130 = 20 beats·min⁻¹. Run: 250 − 200 = 50 W.",
+    "Slope = 20 ÷ 50 = 0.4 beats·min⁻¹ per W.",
+    "So each extra 10 W adds about 4 beats·min⁻¹ in this range."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gr-slope-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "gr-slope-units"
+  },
+  {
+   "type": "concept",
+   "id": "gr-area",
+   "title": "Area under a curve: rate × time = amount",
+   "text": "When y is a **rate** and x is **time**, the area under the curve is a total. Area under power (W) against time (s) is work (J). Area under VO2 (L·min⁻¹) against time (min) is litres of oxygen.\n\nThe [oxygen deficit](g:o2-deficit) is an area. At the start of exercise, demand jumps at once but VO2 rises slowly. The gap between them, summed over time, is oxygen that PCr and glycolysis must mostly make up for [[c:o2-deficit-def]].\n\nIf VO2 rises in a straight line, the deficit is a triangle: ½ × time × gap. For a simple exponential rise (ignoring the first few seconds' delay) it equals gap × τ, so faster kinetics mean a smaller deficit [[c:deficit-kinetics]].",
+   "claims": [
+    {
+     "id": "o2-deficit-def",
+     "text": "The accumulated O2 deficit is estimated as O2 demand (extrapolated from the linear VO2-intensity relation) minus the O2 actually taken up, and is used as a measure of anaerobic capacity.",
+     "grade": "moderate",
+     "sources": [
+      "medbo1988"
+     ],
+     "evidence": [
+      {
+       "source": "medbo1988",
+       "quote": "The method is based on estimation of the O2 demand by extrapolating the linear relationship between treadmill speed and O2 uptake at submaximal intensities.",
+       "level": "abstract"
+      },
+      {
+       "source": "medbo1988",
+       "quote": "the maximal accumulated O2 deficit, which appears to be a direct quantitative expression of the anaerobic capacity",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "deficit-kinetics",
+     "text": "Slower VO2 kinetics incur a larger O2 deficit for the same demand.",
+     "grade": "strong",
+     "sources": [
+      "poole2012"
+     ],
+     "evidence": [
+      {
+       "source": "poole2012",
+       "quote": "By the same token, slow VO2 kinetics incurs a high O2 deficit, presents a greater challenge to homeostasis and presages poor exercise tolerance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "gr-area-example",
+   "title": "An oxygen deficit as a triangle",
+   "problem": "A runner steps from a VO2 of 0.5 L·min⁻¹ to a pace needing 3.5 L·min⁻¹. Suppose VO2 rises in a straight line and reaches 3.5 L·min⁻¹ after 1.5 min. What is the O2 deficit?",
+   "steps": [
+    "The gap at the start is 3.5 − 0.5 = 3.0 L·min⁻¹; it shrinks to zero over 1.5 min. That is a triangle.",
+    "Area = ½ × 1.5 min × 3.0 L·min⁻¹ = 2.25 L.",
+    "Units: min × L·min⁻¹ = L. A rate times a time gives an amount."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gr-area-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gr-area-meaning"
+  },
+  {
+   "type": "question",
+   "item": "gr-deficit-kinetics",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gr-breakpoints",
+   "title": "Thresholds are breakpoints",
+   "text": "Many \"thresholds\" are places where a line changes slope. In the **V-slope** method, CO2 output is plotted against O2 uptake during a ramp test. The line runs straight, then steepens: from there, extra CO2 is coming from buffering the acid that comes with lactate. That bend is the gas-exchange threshold [[c:v-slope]].\n\nTwo cautions when reading a breakpoint:\n\n- It is found by fitting lines, and different fitting rules can put it in different places.\n- A smooth curve can look bent if the axes are stretched. Check the scale before you trust the bend.",
+   "claims": [
+    {
+     "id": "v-slope",
+     "text": "In the V-slope method, the gas-exchange threshold is detected as the point where the slope of VCO2 against VO2 increases, marking extra CO2 from buffering.",
+     "grade": "strong",
+     "sources": [
+      "beaver1986"
+     ],
+     "evidence": [
+      {
+       "source": "beaver1986",
+       "quote": "We developed a method to detect the anaerobic threshold (AT), using computerized regression analysis of the slopes of the CO2 uptake (VCO2) vs. O2 uptake (VO2) plot, which detects the beginning of the excess CO2 output generated from the buffering of [H+], termed the V-slope method.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gr-breakpoint"
+  },
+  {
+   "type": "concept",
+   "id": "gr-scatter",
+   "title": "Scatter plots and correlation",
+   "text": "A **line graph** follows one thing as x changes, often over time: one rider's heart rate through a ride. A **scatter plot** shows many separate cases, one dot each: 30 runners' VO2max against their 10 km times.\n\nA scatter can show a correlation: the dots lean one way. It can't show cause. A third factor, a [confounder](g:confounder), may drive both. Cyclists with dearer bikes may have higher FTP because keen riders both spend more and train more. Studies adjust for confounders they measured [[c:adjust-confounders]]; only a trial that assigns the treatment at random can rule them out. The evidence module covers this in depth.",
+   "claims": [
+    {
+     "id": "adjust-confounders",
+     "text": "Covariates in statistical models are used to adjust for confounders.",
+     "grade": "strong",
+     "sources": [
+      "hopkins2009"
+     ],
+     "evidence": [
+      {
+       "source": "hopkins2009",
+       "quote": "using covariates in linear models to adjust for confounders, to account for individual differences, and to identify potential mechanisms of an effect",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gr-scatter-vs-line"
+  },
+  {
+   "type": "question",
+   "item": "gr-correlation-appraisal",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Read the axes first: what, which units, linear or log, and whether y starts at zero.",
+    "Slope = (y₂ − y₁) ÷ (x₂ − x₁), in y units per x unit.",
+    "Area under a rate-against-time curve is an amount: W × s = J; L·min⁻¹ × min = L.",
+    "The O2 deficit is the area between demand and actual VO2; slower kinetics give a bigger one.",
+    "Thresholds are breakpoints in slope; scatter plots show correlation, not cause."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gr-slope-calc",
+   "concept": "gr-slope",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "beaver1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lactate test a cyclist's blood lactate is 2.0 mmol·L⁻¹ at 240 W and 4.0 mmol·L⁻¹ at 280 W. What is the slope between these points?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.05 mmol·L⁻¹ per W",
+       "correct": true,
+       "why": "Right: (4.0 − 2.0) ÷ (280 − 240) = 2.0 ÷ 40 = 0.05."
+      },
+      {
+       "id": "b",
+       "text": "20 W per mmol·L⁻¹",
+       "why": "This divides run by rise (40 ÷ 2.0): x per y, upside down."
+      },
+      {
+       "id": "c",
+       "text": "0.017 mmol·L⁻¹ per W",
+       "why": "This is y ÷ x at one point (4.0 ÷ 240): a slope from the origin, not between the two points."
+      },
+      {
+       "id": "d",
+       "text": "2.0 mmol·L⁻¹ per W",
+       "why": "2.0 is the rise alone; divide it by the 40 W run."
+      }
+     ],
+     "solution": "Slope = (4.0 − 2.0) mmol·L⁻¹ ÷ (280 − 240) W = 2.0 ÷ 40 = 0.05 mmol·L⁻¹ per W."
+    },
+    {
+     "id": "b",
+     "stem": "On a treadmill a runner's HR is 140 beats·min⁻¹ at 10 km·h⁻¹ and 160 beats·min⁻¹ at 14 km·h⁻¹. What is the slope?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5 beats·min⁻¹ per km·h⁻¹",
+       "correct": true,
+       "why": "Right: (160 − 140) ÷ (14 − 10) = 20 ÷ 4 = 5."
+      },
+      {
+       "id": "b",
+       "text": "0.2 km·h⁻¹ per beats·min⁻¹",
+       "why": "This divides run by rise (4 ÷ 20): x per y, upside down."
+      },
+      {
+       "id": "c",
+       "text": "11.4 beats·min⁻¹ per km·h⁻¹",
+       "why": "This is y ÷ x at one point (160 ÷ 14): a slope from the origin, not between the two points."
+      },
+      {
+       "id": "d",
+       "text": "20 beats·min⁻¹ per km·h⁻¹",
+       "why": "20 is the rise alone; divide it by the 4 km·h⁻¹ run."
+      }
+     ],
+     "solution": "Slope = (160 − 140) ÷ (14 − 10) = 20 ÷ 4 = 5 beats·min⁻¹ per km·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "In a step test a triathlete's VO2 is 2.0 L·min⁻¹ at 150 W and 3.0 L·min⁻¹ at 250 W. What is the slope, in mL·min⁻¹ per W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10 mL·min⁻¹ per W",
+       "correct": true,
+       "why": "Right: 1.0 L·min⁻¹ = 1,000 mL·min⁻¹; 1,000 ÷ 100 W = 10."
+      },
+      {
+       "id": "b",
+       "text": "0.1 W per mL·min⁻¹",
+       "why": "This divides run by rise (100 ÷ 1,000): x per y, upside down."
+      },
+      {
+       "id": "c",
+       "text": "12 mL·min⁻¹ per W",
+       "why": "This is y ÷ x at one point (3,000 ÷ 250): a slope from the origin, not between the two points."
+      },
+      {
+       "id": "d",
+       "text": "0.01 mL·min⁻¹ per W",
+       "why": "This leaves VO2 in litres (1.0 ÷ 100 = 0.01 L·min⁻¹ per W) but labels it mL."
+      }
+     ],
+     "solution": "Rise = 3.0 − 2.0 = 1.0 L·min⁻¹ = 1,000 mL·min⁻¹. Run = 250 − 150 = 100 W. Slope = 1,000 ÷ 100 = 10 mL·min⁻¹ per W."
+    }
+   ]
+  },
+  {
+   "id": "gr-axis-truncated",
+   "concept": "gr-axes",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A wheel ad shows a bar chart of power needed at 40 km·h⁻¹: old wheel 306 W, new wheel 300 W. The y-axis starts at 298 W, so the old bar looks four times taller. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The saving is 6 W, about 2%; the cut axis makes it look huge",
+       "correct": true,
+       "why": "Right: (306 − 300) ÷ 306 ≈ 2%. Bar heights only show ratios when the axis starts at zero."
+      },
+      {
+       "id": "b",
+       "text": "The new wheel needs about a quarter of the power",
+       "why": "That reads bar heights from a cut axis as if it started at zero."
+      },
+      {
+       "id": "c",
+       "text": "The chart is fine: bar heights always show the ratio",
+       "why": "Only when the axis starts at zero. Here it starts at 298 W."
+      },
+      {
+       "id": "d",
+       "text": "The saving is 6%, since the bars differ by 6",
+       "why": "The bars differ by 6 W; as a share of 306 W that is about 2%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-slope-units",
+   "concept": "gr-slope",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A graph shows blood lactate (mmol·L⁻¹) on the y-axis against running speed (km·h⁻¹) on the x-axis. What is the unit of its slope?",
+     "options": [
+      {
+       "id": "a",
+       "text": "mmol·L⁻¹ per km·h⁻¹",
+       "correct": true,
+       "why": "Right: slope = change in y ÷ change in x, so y units per x unit."
+      },
+      {
+       "id": "b",
+       "text": "km·h⁻¹ per mmol·L⁻¹",
+       "why": "This is x per y, the slope upside down."
+      },
+      {
+       "id": "c",
+       "text": "mmol·L⁻¹ × km·h⁻¹",
+       "why": "Slope divides by the x unit; it doesn't multiply."
+      },
+      {
+       "id": "d",
+       "text": "mmol·L⁻¹, the same as the y-axis",
+       "why": "A slope is a change per unit of x, so it carries the x unit too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-area-calc",
+   "concept": "gr-area",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "medbo1988"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO2 is 1.0 L·min⁻¹ before a step to an effort needing 3.0 L·min⁻¹. Suppose VO2 rises in a straight line and reaches it after 1 min. What is the O2 deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1 L",
+       "correct": true,
+       "why": "Right: ½ × 1 min × 2.0 L·min⁻¹ = 1 L."
+      },
+      {
+       "id": "b",
+       "text": "2 L",
+       "why": "This is the rectangle (time × gap). The gap shrinks to zero, so the area is a triangle: halve it."
+      },
+      {
+       "id": "c",
+       "text": "1.5 L",
+       "why": "This uses the full demand (3) as the gap. Subtract the starting VO2 (1) first."
+      },
+      {
+       "id": "d",
+       "text": "60 L",
+       "why": "This uses the time in seconds with a rate per minute. Units must match: min × L·min⁻¹ = L."
+      }
+     ],
+     "solution": "Gap = 3.0 − 1.0 = 2.0 L·min⁻¹. Deficit = ½ × 1 min × 2.0 L·min⁻¹ = 1 L."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO2 is 0.8 L·min⁻¹ before a step to an effort needing 3.2 L·min⁻¹. Suppose VO2 rises in a straight line and reaches it after 2 min. What is the O2 deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.4 L",
+       "correct": true,
+       "why": "Right: ½ × 2 min × 2.4 L·min⁻¹ = 2.4 L."
+      },
+      {
+       "id": "b",
+       "text": "4.8 L",
+       "why": "This is the rectangle (time × gap). The gap shrinks to zero, so the area is a triangle: halve it."
+      },
+      {
+       "id": "c",
+       "text": "3.2 L",
+       "why": "This uses the full demand (3.2) as the gap. Subtract the starting VO2 (0.8) first."
+      },
+      {
+       "id": "d",
+       "text": "144 L",
+       "why": "This uses the time in seconds with a rate per minute. Units must match: min × L·min⁻¹ = L."
+      }
+     ],
+     "solution": "Gap = 3.2 − 0.8 = 2.4 L·min⁻¹. Deficit = ½ × 2 min × 2.4 L·min⁻¹ = 2.4 L."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2 is 1.0 L·min⁻¹ before a step to an effort needing 4.0 L·min⁻¹. Suppose VO2 rises in a straight line and reaches it after 30 s (0.5 min). What is the O2 deficit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.75 L",
+       "correct": true,
+       "why": "Right: ½ × 0.5 min × 3.0 L·min⁻¹ = 0.75 L."
+      },
+      {
+       "id": "b",
+       "text": "1.5 L",
+       "why": "This is the rectangle (time × gap). The gap shrinks to zero, so the area is a triangle: halve it."
+      },
+      {
+       "id": "c",
+       "text": "1 L",
+       "why": "This uses the full demand (4) as the gap. Subtract the starting VO2 (1) first."
+      },
+      {
+       "id": "d",
+       "text": "45 L",
+       "why": "This uses the time in seconds with a rate per minute. Units must match: min × L·min⁻¹ = L."
+      }
+     ],
+     "solution": "Gap = 4.0 − 1.0 = 3.0 L·min⁻¹. Deficit = ½ × 0.5 min × 3.0 L·min⁻¹ = 0.75 L."
+    }
+   ]
+  },
+  {
+   "id": "gr-area-meaning",
+   "concept": "gr-area",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "winter2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A graph shows a cyclist's power (W) against time (s) during a sprint. What does the area under the curve give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The work done, in joules",
+       "correct": true,
+       "why": "Right: W × s = J. A rate times a time gives an amount."
+      },
+      {
+       "id": "b",
+       "text": "The average power, in watts",
+       "why": "Average power is the area divided by the time."
+      },
+      {
+       "id": "c",
+       "text": "The peak power, in watts",
+       "why": "Peak power is the highest point of the curve, not its area."
+      },
+      {
+       "id": "d",
+       "text": "The rate of change of power, in W·s⁻¹",
+       "why": "That is the slope of the curve, not its area."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-deficit-kinetics",
+   "concept": "gr-area",
+   "bloom": "analyse",
+   "sources": [
+    "poole2012",
+    "grey2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists step up to a power that raises their oxygen demand by 2.0 L·min⁻¹. Rider A's VO2 τ is 15 s, rider B's is 30 s. How do their O2 deficits compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B's is about twice A's: 1.0 L vs 0.5 L",
+       "correct": true,
+       "why": "Right: deficit = gap × τ = 2.0 L·min⁻¹ × 0.25 min (A) or × 0.5 min (B)."
+      },
+      {
+       "id": "b",
+       "text": "They are the same: the demand is the same",
+       "why": "The demand is the same, but B's VO2 rises more slowly, so the gap lasts longer."
+      },
+      {
+       "id": "c",
+       "text": "A's is bigger: a shorter τ means a sharper rise",
+       "why": "A shorter τ closes the gap faster, so the area between demand and VO2 is smaller."
+      },
+      {
+       "id": "d",
+       "text": "B's is about four times A's",
+       "why": "Deficit = gap × τ grows in step with τ, so double τ gives double the deficit."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners step to a pace that raises their oxygen demand by 2.4 L·min⁻¹. Runner C's VO2 τ is 20 s, runner D's is 40 s. How do their O2 deficits compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "D's is about twice C's: 1.6 L vs 0.8 L",
+       "correct": true,
+       "why": "Right: deficit = gap × τ = 2.4 L·min⁻¹ × 0.33 min (C) or × 0.67 min (D)."
+      },
+      {
+       "id": "b",
+       "text": "They are the same: the demand is the same",
+       "why": "The demand is the same, but D's VO2 rises more slowly, so the gap lasts longer."
+      },
+      {
+       "id": "c",
+       "text": "C's is bigger: a shorter τ means a sharper rise",
+       "why": "A shorter τ closes the gap faster, so the area between demand and VO2 is smaller."
+      },
+      {
+       "id": "d",
+       "text": "D's is about four times C's",
+       "why": "Deficit = gap × τ grows in step with τ, so double τ gives double the deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-breakpoint",
+   "concept": "gr-breakpoints",
+   "bloom": "understand",
+   "sources": [
+    "beaver1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a ramp test, CO2 output plotted against O2 uptake runs in a straight line, then turns steeper. What does the bend mark?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Extra CO2 from buffering acid: the gas-exchange threshold",
+       "correct": true,
+       "why": "Right: this is the V-slope method."
+      },
+      {
+       "id": "b",
+       "text": "The point where VO2max is reached",
+       "why": "VO2max is where VO2 stops rising, near the end of the test, not this bend."
+      },
+      {
+       "id": "c",
+       "text": "The point where fat use stops completely",
+       "why": "Fat use falls with intensity but doesn't stop at a single point, and this plot doesn't measure it."
+      },
+      {
+       "id": "d",
+       "text": "The end of the warm-up stage",
+       "why": "The bend comes from a change in metabolism, not from the test protocol."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-scatter-vs-line",
+   "concept": "gr-scatter",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A graph shows 30 dots: each runner's VO2max on the x-axis against their 10 km time on the y-axis. What does each dot stand for?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One runner's pair of values",
+       "correct": true,
+       "why": "Right: in a scatter plot each dot is one case, here one runner."
+      },
+      {
+       "id": "b",
+       "text": "One moment during a single runner's test",
+       "why": "That would be a line graph over time for one person."
+      },
+      {
+       "id": "c",
+       "text": "The group's average time at that VO2max",
+       "why": "Each dot is a single runner, not an average."
+      },
+      {
+       "id": "d",
+       "text": "One measurement error",
+       "why": "Errors may move dots, but each dot is still one runner's data."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A graph shows a cyclist's heart rate every second through a 2-hour ride, joined by a line. What kind of graph is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A line graph: one rider followed over time",
+       "correct": true,
+       "why": "Right: a line joins values of one thing as x (here time) changes."
+      },
+      {
+       "id": "b",
+       "text": "A scatter plot of many riders",
+       "why": "There is only one rider; the points are joined in time order."
+      },
+      {
+       "id": "c",
+       "text": "A bar chart of heart-rate zones",
+       "why": "Bars would sum time spent in each zone, not show second-by-second values."
+      },
+      {
+       "id": "d",
+       "text": "A power-duration curve",
+       "why": "That plots best power against duration, not heart rate against time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr-correlation-appraisal",
+   "concept": "gr-scatter",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A survey of 200 club triathletes finds that those who own power meters have higher FTP (r = 0.45). An article concludes power meters raise FTP. What most limits this conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Confounding: keen athletes may both buy meters and train more",
+       "correct": true,
+       "why": "Right: a survey at one time point can't separate the meter from what comes with owning one, such as training volume."
+      },
+      {
+       "id": "b",
+       "text": "r = 0.45 is too weak to mean anything",
+       "why": "A moderate correlation is real; the problem is that correlation doesn't show cause."
+      },
+      {
+       "id": "c",
+       "text": "200 athletes is far too few for any survey",
+       "why": "200 is a fair sample. A bigger survey would still not show cause."
+      },
+      {
+       "id": "d",
+       "text": "FTP can't be measured with a power meter",
+       "why": "FTP is commonly estimated with a power meter; measurement isn't the main flaw here."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In 150 recreational runners, those who drink more coffee run faster 10 km times (r = 0.30 between coffee and speed). A blog says coffee makes you faster. What most limits this conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Confounding: age or training may drive both",
+       "correct": true,
+       "why": "Right: a single survey can't rule out third factors; only a trial that assigns coffee can test cause."
+      },
+      {
+       "id": "b",
+       "text": "r = 0.30 is too weak to mean anything",
+       "why": "A weak correlation can be real; the problem is that correlation doesn't show cause."
+      },
+      {
+       "id": "c",
+       "text": "150 runners is far too few for any survey",
+       "why": "150 is a fair sample. A bigger survey would still not show cause."
+      },
+      {
+       "id": "d",
+       "text": "10 km times are too variable to measure",
+       "why": "Race times are precise; measurement isn't the main flaw here."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

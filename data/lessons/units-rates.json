@@ -1,0 +1,666 @@
+{
+ "id": "units-rates",
+ "module": "t0-units-maths",
+ "title": "Percentages, ratios and change",
+ "goal": "Turn intensity percentages into targets, use heart-rate reserve correctly, and tell absolute from relative change and percentage points from percent.",
+ "requires": [
+  "units-energy-power"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "rate-of-what",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "rate-percent",
+   "title": "Percent of what?",
+   "text": "Training intensity is nearly always a percentage: 75% of [VO2max](g:vo2max), 90% of [FTP](g:ftp), 105% of critical power. A percentage is a part divided by a whole, × 100.\n\nThe question to ask every time: **percent of what?** Each anchor is a different maximum, measured a different way:\n\n| anchor | measured as |\n|---|---|\n| % VO2max | oxygen uptake, lab test |\n| % HRmax | heart rate |\n| % FTP | power, field test |\n\n80% of one is not 80% of another. To turn a percentage into a target, multiply: 90% of a 280 W FTP is 0.90 × 280 = 252 W.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "rate-percent-of-ftp",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rate-hrr",
+   "title": "Heart-rate reserve",
+   "text": "Heart rate doesn't start at zero: the heart is already beating at rest. So a percentage of maximum heart rate sits on top of a big floor.\n\nThe [heart-rate reserve](g:heart-rate-reserve) (HRR) removes it: **HRR = HRmax − HRrest**. A target at x% HRR is:\n\n**target HR = HRrest + x% × HRR**\n\nThis matters because %HRR lines up with % of VO2 *reserve* (VO2max minus resting VO2), almost one-to-one, but not with % of VO2max [[c:hrr-vo2r]]. Percentages only line up when both start from rest.",
+   "claims": [
+    {
+     "id": "hrr-vo2r",
+     "text": "Percent heart-rate reserve matches percent VO2 reserve, not percent VO2max.",
+     "grade": "weak",
+     "sources": [
+      "swain1997"
+     ],
+     "evidence": [
+      {
+       "source": "swain1997",
+       "quote": "In conclusion, %HRR should not be considered equivalent to %VO2max. Rather, %HRR is equivalent to %VO2R, and this relationship should be used in exercise prescription.",
+       "level": "abstract"
+      },
+      {
+       "source": "swain1997",
+       "quote": "For %HRR versus %VO2R, the mean intercept and slope were -0.1 +/- 0.6 and 1.00 +/- 0.01, respectively, which were not distinguishable from the line of identity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rate-hrr-example",
+   "title": "A Karvonen target",
+   "problem": "A runner's HRmax is 185 beats·min⁻¹ and resting HR is 55. What is 75% of HRR? How does it compare with 75% of HRmax?",
+   "steps": [
+    "HRR = 185 − 55 = 130 beats·min⁻¹.",
+    "75% of HRR = 0.75 × 130 = 97.5. Add it to resting HR: 55 + 97.5 = 152.5 ≈ 153 beats·min⁻¹.",
+    "75% of HRmax = 0.75 × 185 = 139 beats·min⁻¹: 14 beats lower, because it ignores the resting floor."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rate-hrr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rate-hrr-vo2r"
+  },
+  {
+   "type": "question",
+   "item": "rate-anchor",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rate-change",
+   "title": "Absolute and relative change",
+   "text": "A change can be given two ways:\n\n- **Absolute**: new − old, in the original unit. FTP 250 → 275 W is **+25 W**.\n- **Relative**: (new − old) ÷ old × 100. The same change is **+10%**.\n\nAlways divide by the **old** value. Dividing by the new one (25 ÷ 275 = 9.1%) is a common slip.\n\nFor times, a fall is good: 10 km in 40:00 → 38:00 is −2 min, or −5%. Write the sign so a reader knows which way it went.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "rate-rel-change-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rate-points",
+   "title": "Percentage points",
+   "text": "When the thing that changes is itself a percentage, there are two different \"percent\" changes.\n\nIf gross efficiency rises from 20% to 22%, that is **+2 [percentage points](g:percentage-point)** (22 − 20), but a **10% relative** rise (2 ÷ 20).\n\nHeadlines love the bigger number. \"Halves injury risk\" may mean injuries fell from 6% of runners to 3%: a 50% relative fall, but only 3 percentage points, or 3 fewer runners in every 100.\n\nGood reporting gives both: the absolute difference and the relative change.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "rate-points",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rate-headline"
+  },
+  {
+   "type": "question",
+   "item": "rate-of-what",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Every intensity percentage needs an anchor: % of VO2max, % HRmax, % FTP and % CP are different scales.",
+    "Target = percentage × anchor: 90% of a 280 W FTP is 252 W.",
+    "HRR = HRmax − HRrest; target = HRrest + x% × HRR. %HRR matches %VO2 reserve, not %VO2max.",
+    "Absolute change is new − old; relative change divides by the old value.",
+    "Between two percentages, percentage points are the plain difference; relative change can sound much bigger."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "rate-of-what",
+   "concept": "rate-percent",
+   "bloom": "understand",
+   "sources": [
+    "swain1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclist A rides at 80% of VO2max and cyclist B at 80% of HRmax. Are they working at the same intensity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not necessarily: each is a share of a different maximum",
+       "correct": true,
+       "why": "Right: VO2 and heart rate don't line up one-to-one as shares of their maxima, so 80% of each needn't match."
+      },
+      {
+       "id": "b",
+       "text": "Yes: 80% is 80% whatever it is a percentage of",
+       "why": "A percentage only means something with its anchor. These are different anchors."
+      },
+      {
+       "id": "c",
+       "text": "Yes: heart rate and VO2 both rise in step from zero",
+       "why": "Heart rate is well above zero at rest, so the shares don't match."
+      },
+      {
+       "id": "d",
+       "text": "Not necessarily: but only because the riders' masses differ",
+       "why": "Body mass isn't the issue; the problem is the two different maxima used as anchors."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running plan says \"tempo at 85%\" with no other detail. What is the first thing you need to know?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85% of what: VO2max, HRmax, threshold pace or something else",
+       "correct": true,
+       "why": "Right: each anchor gives a different target, so a percentage without one can't be used."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: 85% means the same effort on any scale",
+       "why": "Different anchors (HR, VO2, pace, power) give different efforts at the same percentage."
+      },
+      {
+       "id": "c",
+       "text": "Only the runner's body mass",
+       "why": "Mass doesn't turn a percentage into a target; the anchor does."
+      },
+      {
+       "id": "d",
+       "text": "Only how long the tempo lasts",
+       "why": "Duration matters for the session, but first you need the anchor to know the target."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rate-percent-of-ftp",
+   "concept": "rate-percent",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "borszcz2018",
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's FTP is 280 W. An interval is set at 105% of FTP. What is the target power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "294 W",
+       "correct": true,
+       "why": "Right: 1.05 × 280 = 294 W."
+      },
+      {
+       "id": "b",
+       "text": "267 W",
+       "why": "This divides by 1.05 (280 ÷ 1.05). A percentage of FTP is a multiplication."
+      },
+      {
+       "id": "c",
+       "text": "285 W",
+       "why": "This adds 5 W instead of 5%. 5% of 280 W is 14 W."
+      }
+     ],
+     "solution": "Target = 1.05 × 280 W = 294 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's FTP is 250 W. The Ironman bike plan is 72% of FTP. What is the target power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "180 W",
+       "correct": true,
+       "why": "Right: 0.72 × 250 = 180 W."
+      },
+      {
+       "id": "b",
+       "text": "347 W",
+       "why": "This divides by 0.72 (250 ÷ 0.72). A percentage of FTP is a multiplication."
+      },
+      {
+       "id": "c",
+       "text": "222 W",
+       "why": "This takes away 28 W instead of 28%. 28% of 250 W is 70 W."
+      }
+     ],
+     "solution": "Target = 0.72 × 250 W = 180 W."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's critical power is 320 W. A VO2max interval is set at 110% of CP. What is the target power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "352 W",
+       "correct": true,
+       "why": "Right: 1.10 × 320 = 352 W."
+      },
+      {
+       "id": "b",
+       "text": "291 W",
+       "why": "This divides by 1.10 (320 ÷ 1.1). A percentage of CP is a multiplication."
+      },
+      {
+       "id": "c",
+       "text": "330 W",
+       "why": "This adds 10 W instead of 10%. 10% of 320 W is 32 W."
+      }
+     ],
+     "solution": "Target = 1.10 × 320 W = 352 W."
+    }
+   ]
+  },
+  {
+   "id": "rate-hrr-calc",
+   "concept": "rate-hrr",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "swain1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's HRmax is 190 beats·min⁻¹ and resting HR is 50. What is 70% of heart-rate reserve?",
+     "options": [
+      {
+       "id": "a",
+       "text": "148 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: HRR = 190 − 50 = 140; 50 + 0.7 × 140 = 148."
+      },
+      {
+       "id": "b",
+       "text": "133 beats·min⁻¹",
+       "why": "This is 70% of HRmax (0.7 × 190), which ignores the resting floor."
+      },
+      {
+       "id": "c",
+       "text": "98 beats·min⁻¹",
+       "why": "This is 70% of the reserve alone (0.7 × 140). Resting HR must be added back."
+      },
+      {
+       "id": "d",
+       "text": "183 beats·min⁻¹",
+       "why": "This adds resting HR to 70% of HRmax (0.7 × 190 + 50), counting the floor twice."
+      }
+     ],
+     "solution": "HRR = 190 − 50 = 140 beats·min⁻¹. Target = 50 + 0.7 × 140 = 148 beats·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's HRmax is 180 beats·min⁻¹ and resting HR is 45. What is 80% of heart-rate reserve?",
+     "options": [
+      {
+       "id": "a",
+       "text": "153 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: HRR = 180 − 45 = 135; 45 + 0.8 × 135 = 153."
+      },
+      {
+       "id": "b",
+       "text": "144 beats·min⁻¹",
+       "why": "This is 80% of HRmax (0.8 × 180), which ignores the resting floor."
+      },
+      {
+       "id": "c",
+       "text": "108 beats·min⁻¹",
+       "why": "This is 80% of the reserve alone (0.8 × 135). Resting HR must be added back."
+      },
+      {
+       "id": "d",
+       "text": "189 beats·min⁻¹",
+       "why": "This adds resting HR to 80% of HRmax (0.8 × 180 + 45), counting the floor twice."
+      }
+     ],
+     "solution": "HRR = 180 − 45 = 135 beats·min⁻¹. Target = 45 + 0.8 × 135 = 153 beats·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's HRmax is 200 beats·min⁻¹ and resting HR is 60. What is 60% of heart-rate reserve?",
+     "options": [
+      {
+       "id": "a",
+       "text": "144 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: HRR = 200 − 60 = 140; 60 + 0.6 × 140 = 144."
+      },
+      {
+       "id": "b",
+       "text": "120 beats·min⁻¹",
+       "why": "This is 60% of HRmax (0.6 × 200), which ignores the resting floor."
+      },
+      {
+       "id": "c",
+       "text": "84 beats·min⁻¹",
+       "why": "This is 60% of the reserve alone (0.6 × 140). Resting HR must be added back."
+      },
+      {
+       "id": "d",
+       "text": "180 beats·min⁻¹",
+       "why": "This adds resting HR to 60% of HRmax (0.6 × 200 + 60), counting the floor twice."
+      }
+     ],
+     "solution": "HRR = 200 − 60 = 140 beats·min⁻¹. Target = 60 + 0.6 × 140 = 144 beats·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "rate-hrr-vo2r",
+   "concept": "rate-hrr",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "swain1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An exercise test finds that percent heart-rate reserve lines up almost one-to-one with another measure. Which one?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Percent of VO2 reserve",
+       "correct": true,
+       "why": "Right: VO2 reserve is VO2max minus resting VO2. Both start from rest, and %HRR matched %VO2R almost exactly."
+      },
+      {
+       "id": "b",
+       "text": "Percent of VO2max",
+       "why": "%HRR and %VO2max differ, most at low intensity, because VO2max has no resting floor removed."
+      },
+      {
+       "id": "c",
+       "text": "Percent of maximum heart rate",
+       "why": "%HRmax keeps the resting floor, so it runs higher than %HRR at the same effort."
+      },
+      {
+       "id": "d",
+       "text": "Percent of FTP",
+       "why": "FTP is a power anchor from a field test; it wasn't part of this comparison."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rate-anchor",
+   "concept": "rate-hrr",
+   "bloom": "analyse",
+   "sources": [
+    "swain1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists both have HRmax 190 and resting HR 50 beats·min⁻¹. A rides at 75% of HRmax, B at 75% of HRR. Who rides harder?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: about 155 vs 143 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: A = 0.75 × 190 = 142.5; B = 50 + 0.75 × 140 = 155."
+      },
+      {
+       "id": "b",
+       "text": "A: %HRmax always gives the higher target",
+       "why": "%HRmax ignores the resting floor, so at the same percentage it gives the lower target."
+      },
+      {
+       "id": "c",
+       "text": "Neither: the same percentage gives the same heart rate",
+       "why": "The anchors differ: one is 190, the other the 140-beat reserve plus rest."
+      },
+      {
+       "id": "d",
+       "text": "B: about 193 vs 143 beats·min⁻¹",
+       "why": "193 adds resting HR to 75% of HRmax (142.5 + 50), counting the floor twice; it is also above HRmax, which can't be."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners both have HRmax 200 and resting HR 40 beats·min⁻¹. C runs at 60% of HRmax, D at 60% of HRR. Who runs harder?",
+     "options": [
+      {
+       "id": "a",
+       "text": "D: about 136 vs 120 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: C = 0.6 × 200 = 120; D = 40 + 0.6 × 160 = 136."
+      },
+      {
+       "id": "b",
+       "text": "C: %HRmax always gives the higher target",
+       "why": "%HRmax ignores the resting floor, so at the same percentage it gives the lower target."
+      },
+      {
+       "id": "c",
+       "text": "Neither: the same percentage gives the same heart rate",
+       "why": "The anchors differ: one is 200, the other the 160-beat reserve plus rest."
+      },
+      {
+       "id": "d",
+       "text": "D: about 160 vs 120 beats·min⁻¹",
+       "why": "160 adds resting HR to 60% of HRmax (120 + 40), counting the floor twice."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rate-rel-change-calc",
+   "concept": "rate-change",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a training block a cyclist's FTP rises from 250 W to 275 W. What is the relative change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+10%",
+       "correct": true,
+       "why": "Right: (275 − 250) ÷ 250 = 0.10."
+      },
+      {
+       "id": "b",
+       "text": "+9.1%",
+       "why": "This divides by the new value (25 ÷ 275). Relative change uses the old value."
+      },
+      {
+       "id": "c",
+       "text": "+25%",
+       "why": "This reads the 25 W absolute change as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "+110%",
+       "why": "275 ÷ 250 = 1.10 is the ratio; the change is 1.10 − 1 = +10%."
+      }
+     ],
+     "solution": "Relative change = (new − old) ÷ old = (275 − 250) ÷ 250 = +0.10 = +10%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's 10 km time falls from 40:00 to 38:00. What is the relative change in time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−5%",
+       "correct": true,
+       "why": "Right: −2 min ÷ 40 min = −0.05."
+      },
+      {
+       "id": "b",
+       "text": "−5.3%",
+       "why": "This divides by the new time (2 ÷ 38). Relative change uses the old value."
+      },
+      {
+       "id": "c",
+       "text": "−2%",
+       "why": "This reads the 2-minute absolute change as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "−95%",
+       "why": "38 ÷ 40 = 0.95 is the ratio; the change is 0.95 − 1 = −5%."
+      }
+     ],
+     "solution": "Relative change = (38 − 40) ÷ 40 = −0.05 = −5%."
+    },
+    {
+     "id": "c",
+     "stem": "After an injury a triathlete's critical power falls from 300 W to 285 W. What is the relative change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−5%",
+       "correct": true,
+       "why": "Right: −15 ÷ 300 = −0.05."
+      },
+      {
+       "id": "b",
+       "text": "−5.3%",
+       "why": "This divides by the new value (15 ÷ 285). Relative change uses the old value."
+      },
+      {
+       "id": "c",
+       "text": "−15%",
+       "why": "This reads the 15 W absolute change as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "−95%",
+       "why": "285 ÷ 300 = 0.95 is the ratio; the change is 0.95 − 1 = −5%."
+      }
+     ],
+     "solution": "Relative change = (285 − 300) ÷ 300 = −0.05 = −5%."
+    }
+   ]
+  },
+  {
+   "id": "rate-points",
+   "concept": "rate-points",
+   "bloom": "analyse",
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a winter of training, a cyclist's gross efficiency rises from 20% to 22%. How should the change be described?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+2 percentage points, a 10% relative rise",
+       "correct": true,
+       "why": "Right: 22 − 20 = 2 points; 2 ÷ 20 = 10% relative."
+      },
+      {
+       "id": "b",
+       "text": "+2%, a 2% relative rise",
+       "why": "The 2 is percentage points. The relative rise is 2 ÷ 20 = 10%."
+      },
+      {
+       "id": "c",
+       "text": "+10 percentage points, a 10% relative rise",
+       "why": "The plain difference is 2 points, not 10; 10% is the relative change."
+      },
+      {
+       "id": "d",
+       "text": "+22%, since efficiency is now 22%",
+       "why": "22% is the new level, not the change."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a triathlon club, the share of members injured each season falls from 10% to 8%. How should the change be described?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−2 percentage points, a 20% relative fall",
+       "correct": true,
+       "why": "Right: 8 − 10 = −2 points; −2 ÷ 10 = −20% relative."
+      },
+      {
+       "id": "b",
+       "text": "−2%, a 2% relative fall",
+       "why": "The 2 is percentage points. The relative fall is 2 ÷ 10 = 20%."
+      },
+      {
+       "id": "c",
+       "text": "−20 percentage points, a 20% relative fall",
+       "why": "The plain difference is 2 points, not 20; 20% is the relative change."
+      },
+      {
+       "id": "d",
+       "text": "−8%, since 8% are now injured",
+       "why": "8% is the new level, not the change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rate-headline",
+   "concept": "rate-points",
+   "bloom": "evaluate",
+   "sources": [
+    "hopkins2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An ad says a drink \"cuts cramp risk by 50%\". In the trial, 4% of placebo riders and 2% of drink riders cramped. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "True in relative terms, but only 2 fewer riders in 100 cramped",
+       "correct": true,
+       "why": "Right: a 50% relative fall is 2 percentage points in absolute terms; give both."
+      },
+      {
+       "id": "b",
+       "text": "It means each rider's cramp risk falls by 50 points",
+       "why": "A fall from 4% to 2% is 2 percentage points, not 50."
+      },
+      {
+       "id": "c",
+       "text": "False: the fall is only 2% in relative terms",
+       "why": "2 is the absolute fall in points; relative to 4%, it is a 50% fall."
+      },
+      {
+       "id": "d",
+       "text": "It means half of all riders will stop cramping",
+       "why": "Only 4% cramped to begin with; half of them, 2 in 100, were spared."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
