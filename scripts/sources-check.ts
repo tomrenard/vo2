@@ -55,7 +55,9 @@ for (const [id, source] of entries) {
   // Online-first and print years can differ by one.
   if (year && Math.abs(year - source.year) > 1)
     errors.push(`${id}: year is ${year}, not ${source.year}`);
-  const notice = work["updated-by"]?.find((u) => /retraction|withdrawal|removal|expression.of.concern/i.test(u.type ?? ""));
+  const notice = work["updated-by"]?.find((u) =>
+    /retraction|withdrawal|removal|expression.of.concern/i.test(u.type ?? ""),
+  );
   if (notice) errors.push(`${id}: ${notice.type} notice on this paper`);
   // A correction may change a number we quote: someone reads it before relying on the paper.
   const correction = work["updated-by"]?.find((u) =>
