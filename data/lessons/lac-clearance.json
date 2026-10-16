@@ -1,0 +1,812 @@
+{
+ "id": "lac-clearance",
+ "module": "t1a-lactate",
+ "title": "Where lactate goes",
+ "goal": "Explain where lactate is removed (mostly burned, partly made into glucose), how clearance is measured, and what active recovery and training change.",
+ "requires": [
+  "lac-shuttle"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "lcl-fate-main",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "lcl-fates",
+   "title": "Mostly burned, close to home",
+   "text": "Once made, lactate has two main exits: it is burned (oxidised) in muscle, heart and other tissues, or turned into glucose, mainly in the liver.\n\nBurning wins. In a tracer study, about half the lactate removed from the blood was oxidised at rest, rising to **87%** during exercise [[c:oxidation-major]]. And most lactate never travels far: around three quarters is used in the tissue that made it, or by working muscle that takes it back up [[c:local-disposal]].\n\nSo skeletal muscle is both the main producer and the main consumer of lactate. The more muscle works aerobically, the faster it burns lactate.",
+   "claims": [
+    {
+     "id": "oxidation-major",
+     "text": "Oxidation is the main fate of lactate during exercise: the share of removed blood lactate that was oxidised rose from about 49% at rest to 87% in exercise.",
+     "grade": "weak",
+     "sources": [
+      "mazzeo1986",
+      "brooks2020"
+     ],
+     "evidence": [
+      {
+       "source": "mazzeo1986",
+       "quote": "the percentage of RiLa oxidized increased from 49.3% at rest to 87.0% during exercise",
+       "level": "abstract"
+      },
+      {
+       "source": "mazzeo1986",
+       "quote": "oxidation is the major fate of lactate removal during exercise",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "local-disposal",
+     "text": "Most (75–80%) lactate is disposed of within the producing tissue or by working muscle after release and reuptake; muscle is both the main source and the main consumer.",
+     "grade": "moderate",
+     "sources": [
+      "brooks2020",
+      "goodwin2007"
+     ],
+     "evidence": [
+      {
+       "source": "brooks2020",
+       "quote": "Importantly, most (75–80%) of lactate is disposed of immediately within the tissue or subsequent to release and reuptake by working muscle, with significant uptake and oxidation by heart or oxidation and liver for gluconeogenesis.",
+       "level": "full-text"
+      },
+      {
+       "source": "goodwin2007",
+       "quote": "Furthermore, because of the large metabolic capacity of skeletal muscle, it is now considered not only the foremost source of La−, but also the primary consumer of La−.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lcl-fate-main",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lcl-oxidised-share"
+  },
+  {
+   "type": "concept",
+   "id": "lcl-cori",
+   "title": "Back to glucose: the Cori cycle",
+   "text": "The second exit is [gluconeogenesis](g:gluconeogenesis): making new glucose, mostly in the liver. Lactate is its main raw material [[c:gng-precursor]]. The loop muscle → lactate → blood → liver → glucose → blood → muscle is the [Cori cycle](g:cori-cycle).\n\nIt matters on long or fasted sessions, when the liver must keep blood glucose up. In fasted men riding for an hour near their lactate threshold, gluconeogenesis was an essential part of the liver's glucose output; raising blood lactate by infusion more than doubled it, from 1.7 to 4.4 mg·kg⁻¹·min⁻¹ [[c:gng-exercise]].\n\nSo lactate made by working muscle can come back later as glucose for the brain and muscles.",
+   "claims": [
+    {
+     "id": "gng-precursor",
+     "text": "Lactate is the major gluconeogenic precursor; the Cori cycle was the first recognised beneficial use of lactate.",
+     "grade": "strong",
+     "sources": [
+      "brooks2018",
+      "brooks2020"
+     ],
+     "evidence": [
+      {
+       "source": "brooks2018",
+       "quote": "Shuttling between producer and consumer cells fulfills at least three purposes for lactate: (1) a major energy source, (2) the major gluconeogenic precursor, and (3) a signaling molecule.",
+       "level": "abstract"
+      },
+      {
+       "source": "brooks2020",
+       "quote": "First recognition of a metabolically beneficial use of lactate in normal physiology was discovery of the Cori Cycle with lactate as the major gluconeogenic precursor",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gng-exercise",
+     "text": "In fasted men exercising at the lactate threshold, gluconeogenesis was essential to glucose production, and raising blood lactate increased it (1.7 to 4.4 mg·kg⁻¹·min⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "emhoff2013"
+     ],
+     "evidence": [
+      {
+       "source": "emhoff2013",
+       "quote": "We conclude that GNG plays an essential role in maintaining total glucose production during exercise in fasted men, regardless of training state.",
+       "level": "abstract"
+      },
+      {
+       "source": "emhoff2013",
+       "quote": "increasing [lactate] in the LT-10%+LC trial significantly increased GNG (4.4 ± 0.9 mg·kg(-1)·min(-1)) compared with its corresponding control (1.7 ± 0.4 mg·kg(-1)·min(-1), P < 0.05)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lcl-cori-scenario"
+  },
+  {
+   "type": "question",
+   "item": "lcl-cori-define"
+  },
+  {
+   "type": "concept",
+   "id": "lcl-mcr",
+   "title": "Clearance as a number",
+   "text": "Removal can be measured. Tracer studies express it as the [metabolic clearance rate](g:metabolic-clearance-rate) (MCR): the volume of blood cleared of lactate each minute, per kg of body mass. Then\n\n**rate of removal = MCR × blood lactate**\n\nTwo things follow. At a higher blood lactate, the same MCR removes more lactate per minute. And a higher MCR clears more at the same level. After 9 weeks of endurance training, untrained men's MCR rose from about 31 to 40 mL·kg⁻¹·min⁻¹ [[c:mcr-training]].\n\nUnit tip: 1 mL × 1 mmol·L⁻¹ = 1 µmol.",
+   "claims": [
+    {
+     "id": "mcr-training",
+     "text": "Nine weeks of endurance training raised lactate metabolic clearance rate in untrained men from about 31 to 40 mL·kg⁻¹·min⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "macrae1992"
+     ],
+     "evidence": [
+      {
+       "source": "macrae1992",
+       "quote": "In contrast, submaximal (less than 75% VO2max) and peak lactate MCR values were higher after than before training (40 +/- 3 vs. 31 +/- 4 ml.min-1.kg-1, P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lcl-mcr-example",
+   "title": "How fast is lactate cleared?",
+   "problem": "A cyclist's lactate MCR is 35 mL·kg⁻¹·min⁻¹ and her blood lactate is 4 mmol·L⁻¹. How fast is lactate removed from her blood?",
+   "steps": [
+    "Removal = MCR × concentration = 35 mL·kg⁻¹·min⁻¹ × 4 mmol·L⁻¹.",
+    "Convert mL to L: 35 mL = 0.035 L, so 0.035 × 4 = 0.14 mmol·kg⁻¹·min⁻¹.",
+    "That is 140 µmol·kg⁻¹·min⁻¹. For scale: peak lactate appearance in untrained men in one study was about 215 µmol·kg⁻¹·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lcl-mcr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lcl-mcr-interpret"
+  },
+  {
+   "type": "concept",
+   "id": "lcl-active",
+   "title": "Active or passive recovery?",
+   "text": "Keep moving after a hard effort and blood lactate falls faster than if you sit still. After 5-minute runs at 90% of VO₂max, men cleared blood lactate fastest when they recovered at 80–100% of their lactate-threshold intensity; very easy or passive recovery was slower [[c:active-faster]]. Working muscle, slow fibres above all, burns the lactate.\n\nBut faster lactate clearance is not the same as better recovery. A review of cool-down studies found that active cool-downs speed the fall of lactate in blood (not necessarily in muscle), yet do little for performance later that day or the next [[c:cooldown-performance]].\n\nSo an easy spin clears lactate faster; just don't judge recovery by how fast lactate falls.",
+   "claims": [
+    {
+     "id": "active-faster",
+     "text": "After intense running, active recovery cleared blood lactate faster than passive recovery, fastest near the lactate threshold.",
+     "grade": "weak",
+     "sources": [
+      "menzies2010"
+     ],
+     "evidence": [
+      {
+       "source": "menzies2010",
+       "quote": "Therefore, active recovery after strenuous exercise clears accumulated blood lactate faster than passive recovery in an intensity-dependent manner. Maximum clearance occurred at active recovery close to the lactate threshold.",
+       "level": "abstract"
+      },
+      {
+       "source": "menzies2010",
+       "quote": "The more detailed curve and rate analyses showed that active recovery at 80-100% of lactate threshold had shorter time constants for 67% lactate clearance and higher peak clearance rates than 40% of lactate threshold or passive recovery (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cooldown-performance",
+     "text": "Active cool-downs speed the fall of blood lactate but are largely ineffective for same-day and next-day performance.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2018"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2018",
+       "quote": "Active cool-downs accelerate recovery of lactate in blood, but not necessarily in muscle tissue.",
+       "level": "abstract"
+      },
+      {
+       "source": "vanhooren2018",
+       "quote": "An active cool-down is largely ineffective with respect to enhancing same-day and next-day(s) sports performance, but some beneficial effects on next-day(s) performance have been reported.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lcl-active-intensity",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lcl-active-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "lcl-training",
+   "title": "How training raises clearance",
+   "text": "Trained athletes have lower blood lactate at the same power. Tracer studies show two reasons [[c:train-kinetics]]:\n\n- **less appears**: more mitochondria take up pyruvate, so less lactate is made at a given moderate power;\n- **more is cleared**: the clearance rate rises, most clearly at high relative intensities.\n\nIn one 9-week cycling study, arterial lactate at the same power fell by 41% [[c:train-41]]. Training also adds MCT1 and MCT4 to muscle: more doors for export and uptake [[c:train-mct]].\n\nSo a lower lactate at a given pace after a training block mixes making less and clearing more. Blood lactate alone can't tell you which.",
+   "claims": [
+    {
+     "id": "train-kinetics",
+     "text": "Endurance training lowers blood lactate during exercise by reducing lactate appearance at a given moderate power and raising lactate clearance.",
+     "grade": "weak",
+     "sources": [
+      "macrae1992",
+      "bergman1999"
+     ],
+     "evidence": [
+      {
+       "source": "macrae1992",
+       "quote": "Thus the lower blood [La] values during exercise after training in this study were caused by a diminished lactate Ra at low absolute and relative work rates and an elevated MCR at higher absolute and all relative work rates during exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "bergman1999",
+       "quote": "training increases leg lactate clearance, decreases whole body and leg lactate production at a given moderate-intensity power output, and increases both whole body and leg lactate clearance at a high relative power output",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "train-41",
+     "text": "After 9 weeks of cycle training, arterial lactate at the same absolute workload fell by 41%.",
+     "grade": "weak",
+     "sources": [
+      "bergman1999"
+     ],
+     "evidence": [
+      {
+       "source": "bergman1999",
+       "quote": "Compared with the 65% VO(2 peak) pretraining condition (4.75 +/- 0.4 mM), [lactate](a) decreased at ABT (41%) and RLT (21%) (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "train-mct",
+     "text": "Exercise training can increase both MCT1 and MCT4 in human muscle.",
+     "grade": "moderate",
+     "sources": [
+      "bonen2001",
+      "juel1999"
+     ],
+     "evidence": [
+      {
+       "source": "bonen2001",
+       "quote": "Exercise training can increase the expression of both MCT1 and MCT4 in human muscle, although the extent of this up-regulation may be related to the intensity of training.",
+       "level": "abstract"
+      },
+      {
+       "source": "juel1999",
+       "quote": "MCT1 expression is increased in response to chronic stimulation and either endurance or explosive exercise training in rats and humans",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lcl-training-mix"
+  },
+  {
+   "type": "question",
+   "item": "lcl-training-mito"
+  },
+  {
+   "type": "question",
+   "item": "lcl-mcr-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Most lactate is burned, much of it in or near the muscle that made it; oxidation took 87% of removed lactate during exercise in one tracer study.",
+    "The rest mostly becomes glucose in the liver (gluconeogenesis, the Cori cycle), which helps hold blood glucose on long or fasted sessions.",
+    "Removal = MCR × blood lactate: a higher level or a higher MCR clears more per minute (1 mL × 1 mmol·L⁻¹ = 1 µmol).",
+    "Active recovery near (below) lactate threshold clears blood lactate fastest, but that doesn't make later performance better.",
+    "Training lowers lactate at a given power by making less and clearing more, with more mitochondria and more MCTs."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lcl-fate-main",
+   "concept": "lcl-fates",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mazzeo1986",
+    "brooks2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During exercise, what happens to most of the lactate removed from the blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is oxidised as fuel",
+       "correct": true,
+       "why": "Right: tracer studies show oxidation is the main fate during exercise (87% in one study)."
+      },
+      {
+       "id": "b",
+       "text": "It is made into glucose by the liver",
+       "why": "That is the second exit, and a real one, but smaller than oxidation during exercise."
+      },
+      {
+       "id": "c",
+       "text": "It is lost in urine and sweat",
+       "why": "Only a tiny share leaves the body this way."
+      },
+      {
+       "id": "d",
+       "text": "It is converted into body fat",
+       "why": "Lactate is burned or made into glucose; it is not a meaningful source of fat."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides an hour at a steady hard pace. A tracer study of lactate would show that most of the lactate removed from her blood is…",
+     "options": [
+      {
+       "id": "a",
+       "text": "burned as fuel by muscle and heart",
+       "correct": true,
+       "why": "Right: oxidation dominates removal during exercise."
+      },
+      {
+       "id": "b",
+       "text": "made into new glucose by the liver",
+       "why": "Gluconeogenesis takes part of it, but less than oxidation during exercise."
+      },
+      {
+       "id": "c",
+       "text": "stored as glycogen in the thigh muscles",
+       "why": "Muscle burns lactate during exercise; it doesn't store most of it as glycogen."
+      },
+      {
+       "id": "d",
+       "text": "breathed out unchanged through the lungs",
+       "why": "Lactate isn't breathed out; the CO₂ from burning it is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-oxidised-share",
+   "concept": "lcl-fates",
+   "bloom": "analyse",
+   "sources": [
+    "mazzeo1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a tracer study, the share of removed lactate that was oxidised rose from about half at rest to 87% during exercise. What best explains the rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Working muscle and heart burn much more fuel, so they take up and oxidise more lactate",
+       "correct": true,
+       "why": "Right: lactate oxidation rose in step with oxygen uptake; working muscle is the main consumer."
+      },
+      {
+       "id": "b",
+       "text": "The liver shuts down during exercise, so less lactate becomes glucose",
+       "why": "The liver keeps working; gluconeogenesis continues. Oxidation simply grows much more."
+      },
+      {
+       "id": "c",
+       "text": "Exercise lowers lactate production, so more of what is left gets burned",
+       "why": "Production rises with exercise; the share oxidised rises because consumers burn more."
+      },
+      {
+       "id": "d",
+       "text": "At rest there is too little oxygen to burn lactate",
+       "why": "Resting tissues have plenty of oxygen; half the lactate is burned even at rest."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-cori-scenario",
+   "concept": "lcl-cori",
+   "bloom": "apply",
+   "sources": [
+    "emhoff2013",
+    "brooks2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a 3-hour training ride before breakfast. How does lactate help hold her blood glucose up?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her liver turns lactate from working muscle into new glucose",
+       "correct": true,
+       "why": "Right: lactate is the main raw material for gluconeogenesis, which is essential to glucose output in fasted exercise."
+      },
+      {
+       "id": "b",
+       "text": "Her thigh muscles turn lactate into glucose and release it into the blood",
+       "why": "In the Cori cycle the new glucose is made in the liver, not released by muscle."
+      },
+      {
+       "id": "c",
+       "text": "Lactate is stored as fat and burned later in the ride",
+       "why": "Lactate is burned or made into glucose; it isn't turned into fat for later."
+      },
+      {
+       "id": "d",
+       "text": "It doesn't: lactate lowers blood glucose",
+       "why": "Raising blood lactate increased gluconeogenesis; it supports blood glucose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-cori-define",
+   "concept": "lcl-cori",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "brooks2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the Cori cycle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle lactate is made into glucose in the liver, which returns to the muscle",
+       "correct": true,
+       "why": "Right: muscle → lactate → liver → glucose → muscle."
+      },
+      {
+       "id": "b",
+       "text": "Lactate moves from fast to slow fibres in a muscle and is burned",
+       "why": "That is the cell–cell lactate shuttle inside a muscle, not the Cori cycle."
+      },
+      {
+       "id": "c",
+       "text": "Pyruvate enters the mitochondria and is oxidised in the Krebs cycle",
+       "why": "That is aerobic oxidation of pyruvate, not the muscle–liver loop."
+      },
+      {
+       "id": "d",
+       "text": "PCr is rebuilt from creatine after a sprint",
+       "why": "PCr resynthesis uses ATP from the mitochondria; it doesn't involve the liver."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-mcr-calc",
+   "concept": "lcl-mcr",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "macrae1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a training block, a runner's lactate MCR is 31 mL·kg⁻¹·min⁻¹ and her blood lactate is 4 mmol·L⁻¹. How fast is lactate removed from her blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "124 µmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.031 L × 4 mmol·L⁻¹ = 0.124 mmol = 124 µmol per kg per minute."
+      },
+      {
+       "id": "b",
+       "text": "124 mmol·kg⁻¹·min⁻¹",
+       "why": "This skips the mL to L conversion, so it is 1,000 times too high."
+      },
+      {
+       "id": "c",
+       "text": "7.75 µmol·kg⁻¹·min⁻¹",
+       "why": "This divides MCR by concentration. Removal = MCR × concentration."
+      },
+      {
+       "id": "d",
+       "text": "35 µmol·kg⁻¹·min⁻¹",
+       "why": "This adds MCR and concentration; the units only work as a product."
+      }
+     ],
+     "solution": "Removal = MCR × [lactate] = 31 mL·kg⁻¹·min⁻¹ × 4 mmol·L⁻¹ = 0.031 L·kg⁻¹·min⁻¹ × 4 mmol·L⁻¹ = 0.124 mmol·kg⁻¹·min⁻¹ = 124 µmol·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "After a training block, a cyclist's lactate MCR is 40 mL·kg⁻¹·min⁻¹ and his blood lactate is 4 mmol·L⁻¹. How fast is lactate removed from his blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "160 µmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.040 L × 4 mmol·L⁻¹ = 0.16 mmol = 160 µmol per kg per minute."
+      },
+      {
+       "id": "b",
+       "text": "160 mmol·kg⁻¹·min⁻¹",
+       "why": "This skips the mL to L conversion, so it is 1,000 times too high."
+      },
+      {
+       "id": "c",
+       "text": "10 µmol·kg⁻¹·min⁻¹",
+       "why": "This divides MCR by concentration. Removal = MCR × concentration."
+      },
+      {
+       "id": "d",
+       "text": "44 µmol·kg⁻¹·min⁻¹",
+       "why": "This adds MCR and concentration; the units only work as a product."
+      }
+     ],
+     "solution": "Removal = MCR × [lactate] = 40 mL·kg⁻¹·min⁻¹ × 4 mmol·L⁻¹ = 0.040 L·kg⁻¹·min⁻¹ × 4 mmol·L⁻¹ = 0.16 mmol·kg⁻¹·min⁻¹ = 160 µmol·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "In a hard brick session, a triathlete's lactate MCR is 40 mL·kg⁻¹·min⁻¹ and her blood lactate is 6 mmol·L⁻¹. How fast is lactate removed from her blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "240 µmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.040 L × 6 mmol·L⁻¹ = 0.24 mmol = 240 µmol per kg per minute."
+      },
+      {
+       "id": "b",
+       "text": "240 mmol·kg⁻¹·min⁻¹",
+       "why": "This skips the mL to L conversion, so it is 1,000 times too high."
+      },
+      {
+       "id": "c",
+       "text": "6.7 µmol·kg⁻¹·min⁻¹",
+       "why": "This divides MCR by concentration. Removal = MCR × concentration."
+      },
+      {
+       "id": "d",
+       "text": "46 µmol·kg⁻¹·min⁻¹",
+       "why": "This adds MCR and concentration; the units only work as a product."
+      }
+     ],
+     "solution": "Removal = MCR × [lactate] = 40 mL·kg⁻¹·min⁻¹ × 6 mmol·L⁻¹ = 0.040 L·kg⁻¹·min⁻¹ × 6 mmol·L⁻¹ = 0.24 mmol·kg⁻¹·min⁻¹ = 240 µmol·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "lcl-mcr-interpret",
+   "concept": "lcl-mcr",
+   "bloom": "analyse",
+   "sources": [
+    "macrae1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders hold the same power, and lactate enters their blood at the same rate. Rider A's MCR is 40 mL·kg⁻¹·min⁻¹, rider B's is 30. Whose blood lactate settles higher?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B's: with a lower MCR, the level must climb higher before removal matches entry",
+       "correct": true,
+       "why": "Right: removal = MCR × level. The level stops rising when removal equals entry, which takes a higher level at a lower MCR."
+      },
+      {
+       "id": "b",
+       "text": "A's: clearing faster pulls more lactate out of the muscle into the blood",
+       "why": "Clearance removes lactate from the blood; a higher MCR lowers the blood level."
+      },
+      {
+       "id": "c",
+       "text": "Neither: the entry rate alone sets the blood level",
+       "why": "The level is a balance of entry and removal; removal depends on MCR."
+      },
+      {
+       "id": "d",
+       "text": "A's: a high MCR means more lactate is being made",
+       "why": "MCR is about removal, not production; here production is the same."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-active-intensity",
+   "concept": "lcl-active",
+   "bloom": "apply",
+   "sources": [
+    "menzies2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After hard 5-minute intervals, a runner wants her blood lactate to fall as fast as possible. Which recovery works best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Steady jogging at a pace near, but not above, her lactate threshold",
+       "correct": true,
+       "why": "Right: clearance was fastest at 80–100% of lactate-threshold intensity."
+      },
+      {
+       "id": "b",
+       "text": "Lying down and keeping completely still",
+       "why": "Passive recovery clears blood lactate more slowly than moving."
+      },
+      {
+       "id": "c",
+       "text": "Very slow walking, at about a fifth of threshold effort",
+       "why": "Very easy recovery (0–40% of threshold) cleared lactate more slowly than recovery near threshold."
+      },
+      {
+       "id": "d",
+       "text": "Running hard above threshold to burn the lactate off",
+       "why": "Above threshold you add lactate faster than you remove it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "After a hard criterium, a cyclist wants his blood lactate to fall as fast as possible. Which cool-down works best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Steady riding at a moderate effort just under lactate threshold",
+       "correct": true,
+       "why": "Right: clearance is fastest during active recovery close to (not above) the lactate threshold."
+      },
+      {
+       "id": "b",
+       "text": "Sitting still in the team car",
+       "why": "Passive recovery clears blood lactate more slowly than moving."
+      },
+      {
+       "id": "c",
+       "text": "Very easy soft-pedalling at about a fifth of threshold",
+       "why": "Very easy recovery cleared lactate more slowly than recovery near threshold."
+      },
+      {
+       "id": "d",
+       "text": "A few hard sprints to burn the lactate off",
+       "why": "Sprints make more lactate; removal needs steady aerobic work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-active-appraisal",
+   "concept": "lcl-active",
+   "bloom": "evaluate",
+   "sources": [
+    "menzies2010",
+    "vanhooren2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach cites a study of 10 men in which jogging near lactate threshold cleared blood lactate faster than resting, and concludes: \"Active recovery will make you race better tomorrow.\" What is the main flaw?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It measured blood lactate, not how well anyone raced afterwards",
+       "correct": true,
+       "why": "Right: the outcome was a blood marker, and a faster-falling marker doesn't show faster recovery of performance. Cool-down reviews find little performance benefit."
+      },
+      {
+       "id": "b",
+       "text": "Ten men are too few to measure lactate at all",
+       "why": "Small samples limit generalisation, but lactate itself can be measured fine; the bigger problem is the outcome."
+      },
+      {
+       "id": "c",
+       "text": "Blood lactate can't be measured while someone is jogging",
+       "why": "It was measured repeatedly during recovery; that part is sound."
+      },
+      {
+       "id": "d",
+       "text": "None: faster lactate clearance always means better performance",
+       "why": "Lactate isn't what limits next-day performance, and reviews find active cool-downs largely ineffective for it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-training-mix",
+   "concept": "lcl-training",
+   "bloom": "analyse",
+   "sources": [
+    "macrae1992",
+    "bergman1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 9 weeks of endurance training, a cyclist's blood lactate at 200 W falls from 4.8 to 2.8 mmol·L⁻¹. Which reading does this blood value support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less made, more cleared, or both; it can't say which",
+       "correct": true,
+       "why": "Right: tracer studies find both, in different mixes. In one 9-week study the 41% fall at the same power came with less lactate released, while clearance rose only at the same relative intensity."
+      },
+      {
+       "id": "b",
+       "text": "Her muscles have stopped making lactate at 200 W",
+       "why": "Lactate is still made at every power; the balance has shifted."
+      },
+      {
+       "id": "c",
+       "text": "Only her liver has got better at removing lactate",
+       "why": "Leg muscle clearance also rose; working muscle is the main consumer."
+      },
+      {
+       "id": "d",
+       "text": "Training has made the LDH in her muscles less active",
+       "why": "LDH stays in large excess; the change is in mitochondria, transporters and clearance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lcl-training-mito",
+   "concept": "lcl-training",
+   "bloom": "understand",
+   "sources": [
+    "holloszy1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a trained runner make less lactate at a given moderate pace than before training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More mitochondria take up more pyruvate, leaving less to become lactate",
+       "correct": true,
+       "why": "Right: a bigger mitochondrial sink narrows the gap between glycolysis and pyruvate use."
+      },
+      {
+       "id": "b",
+       "text": "Training removes LDH from the muscle",
+       "why": "LDH remains abundant; lactate still forms whenever glycolysis runs."
+      },
+      {
+       "id": "c",
+       "text": "Trained muscle gets so much oxygen that glycolysis stops",
+       "why": "Glycolysis keeps running in trained muscle; it just runs slower at a given pace."
+      },
+      {
+       "id": "d",
+       "text": "Trained muscle stores less glycogen, so it has less to break down",
+       "why": "Training slows the use of glycogen at a given pace; it doesn't work by leaving less glycogen to break down."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

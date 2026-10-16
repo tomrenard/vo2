@@ -165,6 +165,18 @@ for (const lesson of lessons) {
   const conceptIds = new Set(lesson.steps.flatMap((s) => (s.type === "concept" ? [s.id] : [])));
   const items = new Map(lesson.items.map((item) => [item.id, item]));
   const scored = new Set<string>();
+  const pretests = lesson.steps.filter((s) => s.type === "question" && s.pretest).length;
+  if (pretests > 1) fail(at, `${pretests} pretest questions: one per lesson at most`);
+  // A pretest item comes back scored later in the lesson, in another wording.
+  lesson.steps.forEach((s, i) => {
+    if (s.type !== "question" || !s.pretest) return;
+    const back = lesson.steps
+      .slice(i + 1)
+      .some(
+        (t) => t.type === "question" && !t.pretest && t.item === s.item && t.variant !== s.variant,
+      );
+    if (!back) fail(at, `pretest ${s.item} never comes back scored later in another variant`);
+  });
 
   for (const step of lesson.steps) {
     if (step.type === "concept") {

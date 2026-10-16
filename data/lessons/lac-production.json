@@ -1,0 +1,738 @@
+{
+ "id": "lac-production",
+ "module": "t1a-lactate",
+ "title": "Why lactate forms",
+ "goal": "Explain why muscle makes lactate all the time, why it piles up when glycolysis outpaces the mitochondria, and why a high lactate is not a sign of missing oxygen.",
+ "requires": [
+  "bio-calc"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "lp-always-forms",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "lp-ldh",
+   "title": "LDH: a reaction that never switches off",
+   "text": "In *Glycolysis* you saw that turning pyruvate into lactate gives back NAD⁺. The enzyme that does it, [lactate dehydrogenase](g:lactate-dehydrogenase) (LDH), explains why lactate is made *all the time*:\n\n**pyruvate + NADH + H⁺ ⇌ lactate + NAD⁺**\n\n- LDH is far more active than the enzymes that control glycolysis or let pyruvate into the [mitochondria](g:mitochondria).\n- The reaction sits close to equilibrium, and the equilibrium lies strongly on the lactate side.\n\nSo whenever glycolysis runs, part of its [pyruvate](g:pyruvate) becomes [lactate](g:lactate) within moments, oxygen or not [[c:ldh-always]]. Resting muscle holds about 10 lactate for every pyruvate; after exhausting work, well over 100 [[c:lp-ratio]].",
+   "claims": [
+    {
+     "id": "ldh-always",
+     "text": "Because LDH is highly active and its reaction is near equilibrium, favouring lactate, lactate forms whenever glycolysis runs.",
+     "grade": "strong",
+     "sources": [
+      "rogatzki2015",
+      "brooks2020"
+     ],
+     "evidence": [
+      {
+       "source": "rogatzki2015",
+       "quote": "In contrast, given the near-equilibrium nature of the lactate dehydrogenase (LDH) reaction and that LDH has a much higher activity than the putative regulatory enzymes of the glycolytic and oxidative pathways, we contend that La(-) is always the end product of glycolysis.",
+       "level": "abstract"
+      },
+      {
+       "source": "brooks2020",
+       "quote": "Lactate, which is always produced in cytosol of muscle and other tissues because of the abundance, activity, and characteristics of cytosolic LDH, is oxidized to pyruvate via the lactate oxidation complex in mitochondria of the same cell.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lp-ratio",
+     "text": "The lactate:pyruvate ratio is about 10:1 in resting muscle and rises above 100:1 after exhausting exercise.",
+     "grade": "moderate",
+     "sources": [
+      "brooks2020",
+      "rogatzki2015"
+     ],
+     "evidence": [
+      {
+       "source": "brooks2020",
+       "quote": "The physiological range of tissue [lactate] is 0.5-20 mM and the cellular Lactate/Pyruvate ratio (L/P) can range from 10 to >500",
+       "level": "abstract"
+      },
+      {
+       "source": "rogatzki2015",
+       "quote": "values as high as 159:1 in skeletal muscle immediately following exhaustive dynamic exercise",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lp-always-forms",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lp-ldh-role"
+  },
+  {
+   "type": "question",
+   "item": "lp-ratio-read"
+  },
+  {
+   "type": "concept",
+   "id": "lp-mismatch",
+   "title": "Made versus piled up",
+   "text": "Lactate *formation* and lactate *accumulation* are different things. LDH makes lactate all the time, but much of it is turned back into pyruvate and oxidised close by. How much piles up in the fibre depends on four things [[c:accum-factors]]:\n\n| factor | more lactate piles up when it is… |\n|---|---|\n| rate of glycolysis | fast |\n| mitochondrial capacity | small |\n| oxygen in the cell | very low |\n| transport out of the fibre | slow |\n\nIn most exercise the first two rule: a hard effort speeds glycolysis beyond what the mitochondria can take up as pyruvate, and the surplus becomes lactate. Endurance training adds mitochondria, so less lactate is made at a given pace [[c:trained-less]].",
+   "claims": [
+    {
+     "id": "accum-factors",
+     "text": "Lactate accumulation in a cell depends on the rate of glycolysis, oxidative capacity, cell oxygen and net lactate transport.",
+     "grade": "moderate",
+     "sources": [
+      "rogatzki2015"
+     ],
+     "evidence": [
+      {
+       "source": "rogatzki2015",
+       "quote": "Cellular La(-) accumulation, as opposed to flux, is dependent on (1) the rate of glycolysis, (2) oxidative enzyme activity, (3) cellular O2 level, and (4) the net rate of La(-) transport into (influx) or out of (efflux) the cell.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "trained-less",
+     "text": "Endurance training increases muscle mitochondria and lowers lactate production at a given exercise intensity.",
+     "grade": "strong",
+     "sources": [
+      "holloszy1984",
+      "rogatzki2015"
+     ],
+     "evidence": [
+      {
+       "source": "holloszy1984",
+       "quote": "The major metabolic consequences of the adaptations of muscle to endurance exercise are a slower utilization of muscle glycogen and blood glucose, a greater reliance on fat oxidation, and less lactate production during exercise of a given intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "rogatzki2015",
+       "quote": "With endurance exercise training, skeletal muscle mitochondrial content is increased",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lp-surplus-example",
+   "title": "How fast does lactate form?",
+   "problem": "On a hard climb, a cyclist's thigh breaks down glycogen at 3 mmol of glucose units·kg⁻¹·min⁻¹. Its mitochondria take up and oxidise pyruvate at 4.5 mmol·kg⁻¹·min⁻¹. At what rate does lactate form, net? (Made-up numbers, for practice.)",
+   "steps": [
+    "Each glucose unit gives 2 pyruvate: 3 × 2 = 6 mmol·kg⁻¹·min⁻¹ of pyruvate.",
+    "Surplus = pyruvate made − pyruvate oxidised = 6 − 4.5 = 1.5 mmol·kg⁻¹·min⁻¹.",
+    "LDH turns that surplus into lactate, which builds up in the fibre or leaves it. Forgetting the ×2 would wrongly suggest the mitochondria keep up (3 < 4.5)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lp-surplus-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lp-trained-sink"
+  },
+  {
+   "type": "concept",
+   "id": "lp-oxygen",
+   "title": "Plenty of oxygen, still lactate",
+   "text": "How do we know oxygen lack isn't the trigger? Measure the oxygen inside working muscle.\n\n- In dog muscle made to contract at rising work rates, cell oxygen stayed above the level that limits mitochondria, yet lactate built up in step with the work rate [[c:aerobic-accum]].\n- In people kicking with one leg up to their maximum, lactate release from the thigh did not track the oxygen level inside the fibres; it tracked the work rate [[c:efflux-po2]].\n\nReal oxygen lack (dysoxia) does raise lactate, but in healthy exercise it is the exception, not the rule [[c:dysoxia-rare]]. A high lactate tells you glycolysis is running fast, not that the muscle is suffocating.",
+   "claims": [
+    {
+     "id": "aerobic-accum",
+     "text": "In fully aerobic, contracting dog muscle, lactate accumulated in proportion to work rate, without an oxygen limit on the mitochondria.",
+     "grade": "weak",
+     "sources": [
+      "connett1984"
+     ],
+     "evidence": [
+      {
+       "source": "connett1984",
+       "quote": "We conclude that fully aerobic lactate accumulation occurs in this pure red muscle. This accumulation results from causes other than a simple O2 limit on mitochondrial ATP production.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "efflux-po2",
+     "text": "In human quadriceps exercising up to maximum, net lactate efflux was unrelated to intracellular PO₂.",
+     "grade": "weak",
+     "sources": [
+      "richardson1998"
+     ],
+     "evidence": [
+      {
+       "source": "richardson1998",
+       "quote": "These data suggest that with increasing work rate, at a given fraction of inspired O2, lactate efflux is unrelated to muscle cytoplasmic PO2, yet the efflux is higher in hypoxia.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dysoxia-rare",
+     "text": "Dysoxia raises lactate production, but it is the exception rather than the rule for rises in lactate.",
+     "grade": "moderate",
+     "sources": [
+      "ferguson2018",
+      "gladden2004"
+     ],
+     "evidence": [
+      {
+       "source": "ferguson2018",
+       "quote": "That La⁻ production increases during dysoxia is beyond debate, but this condition is the exception rather than the rule.",
+       "level": "abstract"
+      },
+      {
+       "source": "gladden2004",
+       "quote": "It now appears that increased lactate production and concentration as a result of anoxia or dysoxia are often the exception rather than the rule.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lp-oxygen-coach",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lp-richardson-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "lp-rest",
+   "title": "Lactate at rest and on easy days",
+   "text": "Even lying still you make lactate: glycolysis runs all the time in well-oxygenated tissues, and the lactate is used about as fast as it appears [[c:rest-production]]. That is why resting blood lactate sits around **1 mmol·L⁻¹**, not zero.\n\nIn one tracer study, blood lactate was 0.8 mmol·L⁻¹ at rest, 1.3 during 140 minutes of easy cycling and 4.8 during an hour of hard cycling. Yet the rate of lactate removal from the blood had already doubled on the easy ride [[c:mazzeo-turnover]]. The level barely moved because removal kept up with production.\n\nSo blood lactate is a *level*, not a *flow*: a flat line can hide a large turnover.",
+   "claims": [
+    {
+     "id": "rest-production",
+     "text": "Aerobic glycolysis producing lactate runs continuously in resting humans as well as during exercise.",
+     "grade": "strong",
+     "sources": [
+      "brooks2020"
+     ],
+     "evidence": [
+      {
+       "source": "brooks2020",
+       "quote": "we now have good support showing that aerobic glycolysis leading to lactate production occurs continuously in resting humans as well as during stressful conditions such as exercise, high altitude exposure, trauma, pancreatitis, sepsis, myocardial infarction and heart failure.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mazzeo-turnover",
+     "text": "Blood lactate was 0.84, 1.33 and 4.75 mmol·L⁻¹ at rest, easy and hard cycling, while lactate disposal rose from 123 to 246 to 316 mg·kg⁻¹·h⁻¹; blood concentration did not reflect disposal.",
+     "grade": "weak",
+     "sources": [
+      "mazzeo1986"
+     ],
+     "evidence": [
+      {
+       "source": "mazzeo1986",
+       "quote": "Corresponding values of blood lactate levels were 0.84 +/- 0.01, 1.33 +/- 0.05, and 4.75 +/- 0.28 mM in the three conditions.",
+       "level": "abstract"
+      },
+      {
+       "source": "mazzeo1986",
+       "quote": "Blood lactate disposal rates were significantly correlated to VO2 (r = 0.78), averaging 123.4 +/- 20.7, 245.5 +/- 40.3, and 316.2 +/- 53.7 mg X kg-1 X h-1 during Re, EE, and HE, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "mazzeo1986",
+       "quote": "blood lactate concentration is not an accurate indicator of lactate disposal and oxidation",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lp-rest-level"
+  },
+  {
+   "type": "question",
+   "item": "lp-turnover"
+  },
+  {
+   "type": "question",
+   "item": "lp-surplus-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "LDH is very active and near equilibrium, so some pyruvate becomes lactate whenever glycolysis runs, at rest and with plenty of oxygen.",
+    "Lactate piles up when glycolysis makes pyruvate faster than the mitochondria take it up; training adds mitochondria and lowers lactate at a given pace.",
+    "Direct oxygen measurements in working muscle show lactate tracks work rate, not oxygen lack; dysoxia is the exception.",
+    "Resting blood lactate is about 1 mmol·L⁻¹ because production and removal balance; the blood level hides how large the turnover is."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lp-always-forms",
+   "concept": "lp-ldh",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "rogatzki2015",
+    "brooks2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When does working muscle make lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Whenever glycolysis runs, at any intensity",
+       "correct": true,
+       "why": "Right: LDH is so active and so close to equilibrium that part of the pyruvate always becomes lactate."
+      },
+      {
+       "id": "b",
+       "text": "Only when the muscle runs short of oxygen",
+       "why": "This is the old 'anaerobic' story. Lactate forms in fully oxygenated muscle, even at rest."
+      },
+      {
+       "id": "c",
+       "text": "Only above the lactate threshold",
+       "why": "The threshold is where blood lactate starts to climb, not where production starts. Below it, production is matched by removal."
+      },
+      {
+       "id": "d",
+       "text": "Only in all-out efforts of under a minute",
+       "why": "Short sprints make lots of lactate, but some is made at every intensity, easy riding included."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete is swimming easily at the start of a long session. Is her muscle making lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes, a little: LDH turns part of the pyruvate into lactate all the time",
+       "correct": true,
+       "why": "Right: lactate forms continuously; at easy intensity it is used about as fast as it appears."
+      },
+      {
+       "id": "b",
+       "text": "No: easy swimming is fully aerobic, so no lactate forms",
+       "why": "Aerobic and lactate-making are not opposites: glycolysis runs, and makes some lactate, in well-oxygenated muscle."
+      },
+      {
+       "id": "c",
+       "text": "No: lactate forms only once glycogen starts to run low",
+       "why": "Lactate comes from glycolysis whatever the glycogen level; low glycogen, if anything, lowers it."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only because swimmers hold their breath",
+       "why": "Breathing pattern doesn't decide it; LDH makes lactate whenever glycolysis runs, in any sport."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-ldh-role",
+   "concept": "lp-ldh",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "rogatzki2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which enzyme turns pyruvate into lactate, and what does that reaction give back to glycolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lactate dehydrogenase; it gives back NAD⁺",
+       "correct": true,
+       "why": "Right: pyruvate + NADH + H⁺ ⇌ lactate + NAD⁺. The NAD⁺ lets glycolysis keep running."
+      },
+      {
+       "id": "b",
+       "text": "Phosphofructokinase; it gives back ATP",
+       "why": "PFK is glycolysis' throttle near the start of the pathway; it doesn't touch pyruvate."
+      },
+      {
+       "id": "c",
+       "text": "Creatine kinase; it gives back ADP",
+       "why": "Creatine kinase moves phosphate between PCr and ADP; it has nothing to do with pyruvate."
+      },
+      {
+       "id": "d",
+       "text": "Pyruvate dehydrogenase; it gives back NADH",
+       "why": "Pyruvate dehydrogenase sends pyruvate into the mitochondria as acetyl-CoA, the other fate of pyruvate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-ratio-read",
+   "concept": "lp-ldh",
+   "bloom": "analyse",
+   "sources": [
+    "rogatzki2015",
+    "brooks2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Biopsies from a cyclist show a lactate:pyruvate ratio of about 10:1 at rest and about 150:1 straight after an exhausting 3-minute effort. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycolysis outran pyruvate use by the mitochondria, and LDH turned the surplus into lactate",
+       "correct": true,
+       "why": "Right: with LDH near equilibrium, a flood of pyruvate and NADH pushes the ratio far towards lactate."
+      },
+      {
+       "id": "b",
+       "text": "The muscle stopped making pyruvate during the effort, leaving only lactate",
+       "why": "Pyruvate production rose steeply; the ratio rose because LDH turned most of it into lactate."
+      },
+      {
+       "id": "c",
+       "text": "The 10:1 ratio at rest shows the resting muscle was short of oxygen",
+       "why": "Resting muscle is well oxygenated. A 10:1 ratio simply reflects where the LDH equilibrium lies."
+      },
+      {
+       "id": "d",
+       "text": "LDH was switched off at rest and only switched on during the effort",
+       "why": "LDH is always active; that is why lactate is present at rest at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-surplus-calc",
+   "concept": "lp-mismatch",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rogatzki2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hill rep, a runner's calf breaks down glycogen at 2.5 mmol of glucose units·kg⁻¹·min⁻¹. Its mitochondria oxidise pyruvate at 4 mmol·kg⁻¹·min⁻¹. At what net rate does lactate form?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1 mmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.5 × 2 = 5 pyruvate; 5 − 4 = 1 mmol·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "None: the mitochondria keep up",
+       "why": "This forgets that each glucose unit gives 2 pyruvate (2.5 looks smaller than 4)."
+      },
+      {
+       "id": "c",
+       "text": "5 mmol·kg⁻¹·min⁻¹",
+       "why": "This turns all the pyruvate into lactate and ignores what the mitochondria take up."
+      },
+      {
+       "id": "d",
+       "text": "9 mmol·kg⁻¹·min⁻¹",
+       "why": "This adds oxidation to production. The surplus is production minus oxidation."
+      }
+     ],
+     "solution": "Pyruvate made = 2.5 × 2 = 5 mmol·kg⁻¹·min⁻¹. Surplus = 5 − 4 = 1 mmol·kg⁻¹·min⁻¹, which LDH turns into lactate."
+    },
+    {
+     "id": "b",
+     "stem": "In a hard 3-minute effort, a cyclist's thigh breaks down glycogen at 4 mmol of glucose units·kg⁻¹·min⁻¹. Its mitochondria oxidise pyruvate at 5 mmol·kg⁻¹·min⁻¹. At what net rate does lactate form?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 mmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 4 × 2 = 8 pyruvate; 8 − 5 = 3 mmol·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "None: the mitochondria keep up",
+       "why": "This forgets that each glucose unit gives 2 pyruvate (4 looks smaller than 5)."
+      },
+      {
+       "id": "c",
+       "text": "8 mmol·kg⁻¹·min⁻¹",
+       "why": "This turns all the pyruvate into lactate and ignores what the mitochondria take up."
+      },
+      {
+       "id": "d",
+       "text": "13 mmol·kg⁻¹·min⁻¹",
+       "why": "This adds oxidation to production. The surplus is production minus oxidation."
+      }
+     ],
+     "solution": "Pyruvate made = 4 × 2 = 8 mmol·kg⁻¹·min⁻¹. Surplus = 8 − 5 = 3 mmol·kg⁻¹·min⁻¹, which LDH turns into lactate."
+    },
+    {
+     "id": "c",
+     "stem": "Running hard off the bike, a triathlete's thigh breaks down glycogen at 3.5 mmol of glucose units·kg⁻¹·min⁻¹. Its mitochondria oxidise pyruvate at 6 mmol·kg⁻¹·min⁻¹. At what net rate does lactate form?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1 mmol·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.5 × 2 = 7 pyruvate; 7 − 6 = 1 mmol·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "None: the mitochondria keep up",
+       "why": "This forgets that each glucose unit gives 2 pyruvate (3.5 looks smaller than 6)."
+      },
+      {
+       "id": "c",
+       "text": "7 mmol·kg⁻¹·min⁻¹",
+       "why": "This turns all the pyruvate into lactate and ignores what the mitochondria take up."
+      },
+      {
+       "id": "d",
+       "text": "13 mmol·kg⁻¹·min⁻¹",
+       "why": "This adds oxidation to production. The surplus is production minus oxidation."
+      }
+     ],
+     "solution": "Pyruvate made = 3.5 × 2 = 7 mmol·kg⁻¹·min⁻¹. Surplus = 7 − 6 = 1 mmol·kg⁻¹·min⁻¹, which LDH turns into lactate."
+    }
+   ]
+  },
+  {
+   "id": "lp-trained-sink",
+   "concept": "lp-mismatch",
+   "bloom": "analyse",
+   "sources": [
+    "holloszy1984",
+    "rogatzki2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners hold the same pace with the same rate of glycolysis in their legs. After years of endurance training, runner A has far more mitochondria than runner B. Whose muscle piles up more lactate, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B's: fewer mitochondria take up less pyruvate, so more becomes lactate",
+       "correct": true,
+       "why": "Right: accumulation is the gap between glycolysis and pyruvate uptake; more mitochondria shrink the gap."
+      },
+      {
+       "id": "b",
+       "text": "A's: more mitochondria use up the oxygen, starving the rest of the fibre",
+       "why": "Mitochondria don't starve the fibre; they are the sink for pyruvate. More of them means less lactate."
+      },
+      {
+       "id": "c",
+       "text": "Neither: lactate depends only on oxygen supply, which is the same",
+       "why": "Oxygen is one factor of four, and rarely the deciding one; mitochondrial capacity matters here."
+      },
+      {
+       "id": "d",
+       "text": "A's: training makes LDH more active, so it makes more lactate",
+       "why": "LDH is already in large excess; what decides accumulation is the mismatch between glycolysis and the mitochondria."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-oxygen-coach",
+   "concept": "lp-oxygen",
+   "bloom": "evaluate",
+   "sources": [
+    "ferguson2018",
+    "richardson1998",
+    "connett1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the end of a 20-minute treadmill effort, a runner's blood lactate is 5 mmol·L⁻¹. The coach says: \"Your legs ran out of oxygen.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unlikely: lactate rises when glycolysis outpaces the mitochondria, even with ample oxygen",
+       "correct": true,
+       "why": "Right: lactate tracks work rate and glycolytic speed; true oxygen lack is the exception in healthy exercise."
+      },
+      {
+       "id": "b",
+       "text": "Right: muscle makes lactate only once its oxygen runs out",
+       "why": "This is the old misconception. Lactate forms in fully oxygenated muscle, even at rest."
+      },
+      {
+       "id": "c",
+       "text": "Right, but only in the fast fibres, which get no oxygen at all",
+       "why": "Fast fibres have capillaries and oxygen too; they make more lactate because their glycolysis is fast."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: blood lactate tells you nothing at all about the muscle",
+       "why": "Too strong. Blood lactate reflects the balance of muscle release and removal; it just doesn't mean oxygen lack."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist breathes pure oxygen during a hard 5-minute effort, and her blood lactate still climbs to 8 mmol·L⁻¹. A teammate is surprised. What is the best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycolysis still made pyruvate faster than her mitochondria could use it",
+       "correct": true,
+       "why": "Right: in hard enough exercise lactate forms even with extra oxygen, because the cause is the mismatch, not oxygen lack."
+      },
+      {
+       "id": "b",
+       "text": "The extra oxygen stayed in her lungs and never reached the muscle",
+       "why": "Breathing pure oxygen does raise blood oxygen; the lactate rises anyway because glycolysis is fast."
+      },
+      {
+       "id": "c",
+       "text": "Pure oxygen speeds up LDH, so it makes more lactate",
+       "why": "LDH doesn't use oxygen. Lactate rises because pyruvate is made faster than it is oxidised."
+      },
+      {
+       "id": "d",
+       "text": "The lactate came from her red blood cells, not her muscles",
+       "why": "Red cells make a little lactate, but in hard exercise the working muscles are by far the main source."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-richardson-appraisal",
+   "concept": "lp-oxygen",
+   "bloom": "evaluate",
+   "sources": [
+    "richardson1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 6 trained people doing one-leg knee extensions up to maximum found that lactate release from the thigh did not track the oxygen level inside the fibres. What most limits how far this result can be pushed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few people, one small muscle group, and fibre oxygen estimated from myoglobin",
+       "correct": true,
+       "why": "Right: n = 6 and a single-leg model are a narrow base, and cell oxygen was inferred, not measured directly. That is why the claim is graded weak."
+      },
+      {
+       "id": "b",
+       "text": "It measured lactate in blood, which never reflects what the muscle does",
+       "why": "Arterial and venous lactate across one leg with blood flow is a good measure of what that muscle releases."
+      },
+      {
+       "id": "c",
+       "text": "Trained people make no lactate, so the result can't apply to anyone",
+       "why": "Trained people make lactate too, and it rose with work rate in this study."
+      },
+      {
+       "id": "d",
+       "text": "One-leg knee extension is too easy to produce any lactate",
+       "why": "The subjects went up to maximal effort for the quadriceps, and lactate release rose with work rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-rest-level",
+   "concept": "lp-rest",
+   "bloom": "apply",
+   "sources": [
+    "brooks2020",
+    "mazzeo1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a swim, a triathlete's resting blood lactate is 1.0 mmol·L⁻¹. What does this value tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lactate is being made and removed at about the same rate",
+       "correct": true,
+       "why": "Right: glycolysis makes lactate all the time; a steady level means removal matches production."
+      },
+      {
+       "id": "b",
+       "text": "Her muscles are short of oxygen even at rest",
+       "why": "Resting tissues are well oxygenated; lactate forms anyway because LDH is always active."
+      },
+      {
+       "id": "c",
+       "text": "Some lactate is still left over from yesterday's session",
+       "why": "Lactate from a session is cleared within an hour or two. The resting level is ongoing turnover."
+      },
+      {
+       "id": "d",
+       "text": "She has a problem, because healthy resting blood holds no lactate",
+       "why": "About 1 mmol·L⁻¹ at rest is normal; zero would be the odd result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lp-turnover",
+   "concept": "lp-rest",
+   "bloom": "analyse",
+   "sources": [
+    "mazzeo1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a tracer study, a cyclist's blood lactate rose only from 0.8 to 1.3 mmol·L⁻¹ between rest and easy riding, yet the rate at which lactate left the blood doubled. What follows?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Production roughly doubled too, and removal kept pace, so the level barely moved",
+       "correct": true,
+       "why": "Right: the level depends on the balance of in and out, not on how big the flows are."
+      },
+      {
+       "id": "b",
+       "text": "Production stayed the same and only removal increased",
+       "why": "If removal doubled with no rise in production, the blood level would fall, not rise."
+      },
+      {
+       "id": "c",
+       "text": "The tracer must be wrong, since the level hardly changed",
+       "why": "A steady level is exactly what you expect when in and out rise together."
+      },
+      {
+       "id": "d",
+       "text": "Easy riding makes no extra lactate; the small rise is from sweating",
+       "why": "Easy riding raised lactate production; sweating doesn't explain a doubled turnover."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

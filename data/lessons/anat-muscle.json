@@ -3,11 +3,17 @@
  "module": "t0-anatomy",
  "title": "Skeletal muscle: from whole muscle to sarcomere",
  "goal": "Explain how a skeletal muscle is built, from fascicles and fibres down to sarcomeres of actin and myosin, how tendons pass its force to bone, and which muscles drive pedalling and running.",
- "requires": ["cell-membranes"],
+ "requires": [
+  "cell-membranes"
+ ],
  "lastReviewed": "2026-10-16",
  "steps": [
-  { "type": "question", "item": "mus-order", "variant": "a", "pretest": true },
-  { "type": "question", "item": "mus-sliding", "variant": "a", "pretest": true },
+  {
+   "type": "question",
+   "item": "mus-order",
+   "variant": "a",
+   "pretest": true
+  },
   {
    "type": "concept",
    "id": "muscle-layers",
@@ -18,25 +24,50 @@
      "id": "muscle-nesting",
      "text": "Muscle fibres are bundled into fascicles, and fascicles into the whole muscle; each level has its own connective tissue layer (endomysium, perimysium, epimysium).",
      "grade": "strong",
-     "sources": ["mukund2020", "betts2022"],
+     "sources": [
+      "mukund2020",
+      "betts2022"
+     ],
      "evidence": [
-      { "source": "mukund2020", "quote": "Bundles of myofibers form the fascicles, and bundles of fascicles form the muscle tissue", "level": "full-text" },
-      { "source": "mukund2020", "quote": "The epimysium, a dense connective tissue layer encapsulates the entire muscle while the perimysium derives from the epimysium and surrounds the fascicles (bundles of muscle fibers).", "level": "full-text" },
-      { "source": "betts2022", "quote": "Inside each skeletal muscle, muscle fibers are organized into individual bundles, each called a fascicle, by a middle layer of connective tissue called the perimysium.", "level": "full-text" }
+      {
+       "source": "mukund2020",
+       "quote": "Bundles of myofibers form the fascicles, and bundles of fascicles form the muscle tissue",
+       "level": "full-text"
+      },
+      {
+       "source": "mukund2020",
+       "quote": "The epimysium, a dense connective tissue layer encapsulates the entire muscle while the perimysium derives from the epimysium and surrounds the fascicles (bundles of muscle fibers).",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "Inside each skeletal muscle, muscle fibers are organized into individual bundles, each called a fascicle, by a middle layer of connective tissue called the perimysium.",
+       "level": "full-text"
+      }
      ]
     },
     {
      "id": "muscle-mass",
      "text": "Skeletal muscle makes up about 40% of body mass.",
      "grade": "strong",
-     "sources": ["frontera2015"],
+     "sources": [
+      "frontera2015"
+     ],
      "evidence": [
-      { "source": "frontera2015", "quote": "In humans, skeletal muscle comprises approximately 40% of total body weight and contains 50-75% of all body proteins.", "level": "abstract" }
+      {
+       "source": "frontera2015",
+       "quote": "In humans, skeletal muscle comprises approximately 40% of total body weight and contains 50-75% of all body proteins.",
+       "level": "abstract"
+      }
      ]
     }
    ]
   },
-  { "type": "question", "item": "mus-order", "variant": "b" },
+  {
+   "type": "question",
+   "item": "mus-order",
+   "variant": "b"
+  },
   {
    "type": "concept",
    "id": "muscle-fibre",
@@ -47,24 +78,43 @@
      "id": "fibre-size",
      "text": "Skeletal muscle fibres are multinucleated cells formed by fusion of many precursor cells, up to about 100 μm in diameter and 30 cm long.",
      "grade": "strong",
-     "sources": ["betts2022"],
+     "sources": [
+      "betts2022"
+     ],
      "evidence": [
-      { "source": "betts2022", "quote": "Skeletal muscle fibers can be quite large for human cells, with diameters up to 100 μm and lengths up to 30 cm (11.8 in) in the Sartorius of the upper leg.", "level": "full-text" },
-      { "source": "betts2022", "quote": "During early development, embryonic myoblasts, each with its own nucleus, fuse with up to hundreds of other myoblasts to form the multinucleated skeletal muscle fibers.", "level": "full-text" }
+      {
+       "source": "betts2022",
+       "quote": "Skeletal muscle fibers can be quite large for human cells, with diameters up to 100 μm and lengths up to 30 cm (11.8 in) in the Sartorius of the upper leg.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "During early development, embryonic myoblasts, each with its own nucleus, fuse with up to hundreds of other myoblasts to form the multinucleated skeletal muscle fibers.",
+       "level": "full-text"
+      }
      ]
     },
     {
      "id": "myofibril-size",
      "text": "Myofibrils are about 1.2 μm across; a fibre holds hundreds to thousands, each with thousands of sarcomeres.",
      "grade": "strong",
-     "sources": ["betts2022"],
+     "sources": [
+      "betts2022"
+     ],
      "evidence": [
-      { "source": "betts2022", "quote": "Because myofibrils are only approximately 1.2 μm in diameter, hundreds to thousands (each with thousands of sarcomeres) can be found inside one muscle fiber.", "level": "full-text" }
+      {
+       "source": "betts2022",
+       "quote": "Because myofibrils are only approximately 1.2 μm in diameter, hundreds to thousands (each with thousands of sarcomeres) can be found inside one muscle fiber.",
+       "level": "full-text"
+      }
      ]
     }
    ]
   },
-  { "type": "question", "item": "mus-fibre-cell" },
+  {
+   "type": "question",
+   "item": "mus-fibre-cell"
+  },
   {
    "type": "concept",
    "id": "muscle-sarcomere",
@@ -75,26 +125,54 @@
      "id": "sarcomere-structure",
      "text": "A sarcomere is about 2 μm long, bordered by Z-discs that anchor the thin actin filaments, with thick myosin filaments between them.",
      "grade": "strong",
-     "sources": ["betts2022", "mukund2020"],
+     "sources": [
+      "betts2022",
+      "mukund2020"
+     ],
      "evidence": [
-      { "source": "betts2022", "quote": "Each sarcomere is approximately 2 μm in length with a three-dimensional cylinder-like arrangement and is bordered by structures called Z-discs (also called Z-lines, because pictures are two-dimensional), to which the actin myofilaments are anchored", "level": "full-text" },
-      { "source": "mukund2020", "quote": "Sarcomeres represent an elegant piece of molecular machinery whose complex structure is composed of two main alternating sets of protein filaments: thin filaments (α‐actin and associated proteins) and thick filaments (myosin and associated proteins) which run parallel to the muscle fiber axis.", "level": "full-text" }
+      {
+       "source": "betts2022",
+       "quote": "Each sarcomere is approximately 2 μm in length with a three-dimensional cylinder-like arrangement and is bordered by structures called Z-discs (also called Z-lines, because pictures are two-dimensional), to which the actin myofilaments are anchored",
+       "level": "full-text"
+      },
+      {
+       "source": "mukund2020",
+       "quote": "Sarcomeres represent an elegant piece of molecular machinery whose complex structure is composed of two main alternating sets of protein filaments: thin filaments (α‐actin and associated proteins) and thick filaments (myosin and associated proteins) which run parallel to the muscle fiber axis.",
+       "level": "full-text"
+      }
      ]
     },
     {
      "id": "sliding-filaments",
      "text": "A fibre contracts as the thin filaments are pulled and slide past the thick filaments; the sarcomeres in series along the myofibril shorten together.",
      "grade": "strong",
-     "sources": ["betts2022"],
+     "sources": [
+      "betts2022"
+     ],
      "evidence": [
-      { "source": "betts2022", "quote": "When signaled by a motor neuron, a skeletal muscle fiber contracts as the thin filaments are pulled and then slide past the thick filaments within the fiber’s sarcomeres.", "level": "full-text" },
-      { "source": "betts2022", "quote": "The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments.", "level": "full-text" }
+      {
+       "source": "betts2022",
+       "quote": "When signaled by a motor neuron, a skeletal muscle fiber contracts as the thin filaments are pulled and then slide past the thick filaments within the fiber’s sarcomeres.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments.",
+       "level": "full-text"
+      }
      ]
     }
    ]
   },
-  { "type": "question", "item": "mus-zdisc" },
-  { "type": "question", "item": "mus-sliding", "variant": "b" },
+  {
+   "type": "question",
+   "item": "mus-zdisc"
+  },
+  {
+   "type": "question",
+   "item": "mus-sliding",
+   "variant": "b"
+  },
   {
    "type": "example",
    "id": "muscle-series-example",
@@ -107,8 +185,16 @@
     "So the fibre shortens by 8 mm, 10% of its length, the same 10% as each sarcomere (0.2 of 2 μm)."
    ]
   },
-  { "type": "question", "item": "mus-sarc-count", "variant": "a" },
-  { "type": "question", "item": "mus-sarc-shorten", "variant": "a" },
+  {
+   "type": "question",
+   "item": "mus-sarc-count",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mus-sarc-shorten",
+   "variant": "a"
+  },
   {
    "type": "concept",
    "id": "muscle-tendon",
@@ -119,27 +205,58 @@
      "id": "tendon-role",
      "text": "A tendon is fibrous connective tissue, mostly type I collagen with few cells, that connects muscle to bone and transmits its force.",
      "grade": "strong",
-     "sources": ["franchi2007", "betts2022"],
+     "sources": [
+      "franchi2007",
+      "betts2022"
+     ],
      "evidence": [
-      { "source": "franchi2007", "quote": "A tendon is a tough band of fibrous connective tissue that connects muscle to bone, designed to transmit forces and withstand tension during muscle contraction.", "level": "abstract" },
-      { "source": "franchi2007", "quote": "Tendons contain a) few cells, mostly represented by tenoblasts along with endothelial cells and some chondrocytes; b) proteoglycans (PGs), mainly decorin and hyaluronan, and c) collagen, mostly type I.", "level": "abstract" },
-      { "source": "betts2022", "quote": "The tension created by contraction of the muscle fibers is then transferred through the mysia, to the tendon, and then to the periosteum to pull on the bone for movement of the skeleton.", "level": "full-text" }
+      {
+       "source": "franchi2007",
+       "quote": "A tendon is a tough band of fibrous connective tissue that connects muscle to bone, designed to transmit forces and withstand tension during muscle contraction.",
+       "level": "abstract"
+      },
+      {
+       "source": "franchi2007",
+       "quote": "Tendons contain a) few cells, mostly represented by tenoblasts along with endothelial cells and some chondrocytes; b) proteoglycans (PGs), mainly decorin and hyaluronan, and c) collagen, mostly type I.",
+       "level": "abstract"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The tension created by contraction of the muscle fibers is then transferred through the mysia, to the tendon, and then to the periosteum to pull on the bone for movement of the skeleton.",
+       "level": "full-text"
+      }
      ]
     },
     {
      "id": "tendon-spring",
      "text": "In running, energy removed from the body in the first half of stance is stored as elastic strain in leg tendons and the foot arch and returned by recoil in the second half.",
      "grade": "moderate",
-     "sources": ["ker1987"],
+     "sources": [
+      "ker1987"
+     ],
      "evidence": [
-      { "source": "ker1987", "quote": "Kinetic and potential energy removed from the body in the first half of the stance phase is stored briefly as elastic strain energy and then returned in the second half by elastic recoil.", "level": "abstract" },
-      { "source": "ker1987", "quote": "Among the elastic structures involved, the tendons of distal leg muscles have been shown to be important. Here we show that the elastic properties of the arch of the human foot are also important.", "level": "abstract" }
+      {
+       "source": "ker1987",
+       "quote": "Kinetic and potential energy removed from the body in the first half of the stance phase is stored briefly as elastic strain energy and then returned in the second half by elastic recoil.",
+       "level": "abstract"
+      },
+      {
+       "source": "ker1987",
+       "quote": "Among the elastic structures involved, the tendons of distal leg muscles have been shown to be important. Here we show that the elastic properties of the arch of the human foot are also important.",
+       "level": "abstract"
+      }
      ]
     }
    ]
   },
-  { "type": "question", "item": "mus-tendon-role" },
-  { "type": "question", "item": "mus-tendon-spring" },
+  {
+   "type": "question",
+   "item": "mus-tendon-role"
+  },
+  {
+   "type": "question",
+   "item": "mus-tendon-spring"
+  },
   {
    "type": "concept",
    "id": "muscle-sport",
@@ -150,34 +267,94 @@
      "id": "cycling-muscles",
      "text": "In pedalling, the one-joint hip and knee extensors (gluteus maximus, vasti) are the main power producers; the plantarflexors transfer energy to the crank, and hamstrings and rectus femoris carry it through the stroke transitions.",
      "grade": "moderate",
-     "sources": ["raasch1997", "elmer2011", "obryan2014"],
+     "sources": [
+      "raasch1997",
+      "elmer2011",
+      "obryan2014"
+     ],
      "evidence": [
-      { "source": "raasch1997", "quote": "Over the crank cycle, uniarticular hip and knee extensor muscles provide 55% of the propulsive energy, even though 27% of the amount they produce in the downstroke is absorbed in the upstroke.", "level": "abstract" },
-      { "source": "raasch1997", "quote": "The other 56% is delivered to the limb segments, and then transferred to the crank by the ankle plantarflexors.", "level": "abstract" },
-      { "source": "raasch1997", "quote": "Hamstrings and rectus femoris make smooth pedaling possible by propelling the crank through the stroke transitions.", "level": "abstract" },
-      { "source": "elmer2011", "quote": "hip extension was the dominant power-producing action during SUB(cyc) and MAX(cyc)", "level": "abstract" },
-      { "source": "obryan2014", "quote": "Our results show that substantial power reduction during fatiguing sprint cycling is accompanied by marked reductions in the EMG activity of bi-articular GAS and RF and co-activation level between GAS and main power producer muscles (GMAX and VAS).", "level": "abstract" }
+      {
+       "source": "raasch1997",
+       "quote": "Over the crank cycle, uniarticular hip and knee extensor muscles provide 55% of the propulsive energy, even though 27% of the amount they produce in the downstroke is absorbed in the upstroke.",
+       "level": "abstract"
+      },
+      {
+       "source": "raasch1997",
+       "quote": "The other 56% is delivered to the limb segments, and then transferred to the crank by the ankle plantarflexors.",
+       "level": "abstract"
+      },
+      {
+       "source": "raasch1997",
+       "quote": "Hamstrings and rectus femoris make smooth pedaling possible by propelling the crank through the stroke transitions.",
+       "level": "abstract"
+      },
+      {
+       "source": "elmer2011",
+       "quote": "hip extension was the dominant power-producing action during SUB(cyc) and MAX(cyc)",
+       "level": "abstract"
+      },
+      {
+       "source": "obryan2014",
+       "quote": "Our results show that substantial power reduction during fatiguing sprint cycling is accompanied by marked reductions in the EMG activity of bi-articular GAS and RF and co-activation level between GAS and main power producer muscles (GMAX and VAS).",
+       "level": "abstract"
+      }
      ]
     },
     {
      "id": "running-muscles",
      "text": "In a running simulation, the quadriceps were the largest contributors to braking and support in early stance, and soleus and gastrocnemius to propulsion and support in late stance. An EMG study agrees that the calf muscles propel, but found gluteus maximus and vastus medialis contribute to propulsion too; the split between muscles is still debated.",
      "grade": "weak",
-     "sources": ["hamner2010", "ellis2014"],
+     "sources": [
+      "hamner2010",
+      "ellis2014"
+     ],
      "evidence": [
-      { "source": "hamner2010", "quote": "During the early part of the stance phase, the quadriceps muscle group was the largest contributor to braking (i.e., backward acceleration of the mass center) and support.", "level": "abstract" },
-      { "source": "hamner2010", "quote": "During the second half of the stance phase, the soleus and gastrocnemius muscles were the greatest contributors to propulsion and support.", "level": "abstract" },
-      { "source": "ellis2014", "quote": "There remains substantial debate as to the specific contributions of individual muscles to center of mass accelerations during walking and running.", "level": "abstract" },
-      { "source": "ellis2014", "quote": "During running, we found that the gluteus maximus, vastus medialis, gastrocnemius and soleus all contribute to propulsion.", "level": "abstract" }
+      {
+       "source": "hamner2010",
+       "quote": "During the early part of the stance phase, the quadriceps muscle group was the largest contributor to braking (i.e., backward acceleration of the mass center) and support.",
+       "level": "abstract"
+      },
+      {
+       "source": "hamner2010",
+       "quote": "During the second half of the stance phase, the soleus and gastrocnemius muscles were the greatest contributors to propulsion and support.",
+       "level": "abstract"
+      },
+      {
+       "source": "ellis2014",
+       "quote": "There remains substantial debate as to the specific contributions of individual muscles to center of mass accelerations during walking and running.",
+       "level": "abstract"
+      },
+      {
+       "source": "ellis2014",
+       "quote": "During running, we found that the gluteus maximus, vastus medialis, gastrocnemius and soleus all contribute to propulsion.",
+       "level": "abstract"
+      }
      ]
     }
    ]
   },
-  { "type": "question", "item": "mus-cycling-main" },
-  { "type": "question", "item": "mus-running-early" },
-  { "type": "question", "item": "mus-running-late" },
-  { "type": "question", "item": "mus-sarc-count", "variant": "c" },
-  { "type": "question", "item": "mus-sarc-shorten", "variant": "b" },
+  {
+   "type": "question",
+   "item": "mus-cycling-main"
+  },
+  {
+   "type": "question",
+   "item": "mus-running-early"
+  },
+  {
+   "type": "question",
+   "item": "mus-running-late"
+  },
+  {
+   "type": "question",
+   "item": "mus-sarc-count",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "mus-sarc-shorten",
+   "variant": "b"
+  },
   {
    "type": "recap",
    "points": [
@@ -195,26 +372,63 @@
    "concept": "muscle-layers",
    "bloom": "remember",
    "recallFirst": true,
-   "sources": ["mukund2020", "betts2022"],
+   "sources": [
+    "mukund2020",
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "From largest to smallest, how is a skeletal muscle built?",
      "options": [
-      { "id": "a", "text": "Muscle → fascicle → fibre → myofibril → sarcomere", "correct": true, "why": "Right: fascicles are bundles of fibres, each fibre is packed with myofibrils, and each myofibril is a chain of sarcomeres." },
-      { "id": "b", "text": "Muscle → fibre → fascicle → myofibril → sarcomere", "why": "A fascicle is a bundle of fibres, so it is bigger than a fibre and comes before it." },
-      { "id": "c", "text": "Muscle → fascicle → myofibril → fibre → sarcomere", "why": "Myofibrils are threads inside a fibre (the cell), not bundles of fibres." },
-      { "id": "d", "text": "Muscle → fascicle → fibre → sarcomere → myofibril", "why": "A myofibril is made of sarcomeres joined end to end, so the sarcomere is the smaller unit." }
+      {
+       "id": "a",
+       "text": "Muscle → fascicle → fibre → myofibril → sarcomere",
+       "correct": true,
+       "why": "Right: fascicles are bundles of fibres, each fibre is packed with myofibrils, and each myofibril is a chain of sarcomeres."
+      },
+      {
+       "id": "b",
+       "text": "Muscle → fibre → fascicle → myofibril → sarcomere",
+       "why": "A fascicle is a bundle of fibres, so it is bigger than a fibre and comes before it."
+      },
+      {
+       "id": "c",
+       "text": "Muscle → fascicle → myofibril → fibre → sarcomere",
+       "why": "Myofibrils are threads inside a fibre (the cell), not bundles of fibres."
+      },
+      {
+       "id": "d",
+       "text": "Muscle → fascicle → fibre → sarcomere → myofibril",
+       "why": "A myofibril is made of sarcomeres joined end to end, so the sarcomere is the smaller unit."
+      }
      ]
     },
     {
      "id": "b",
      "stem": "A biopsy needle takes a small piece of a cyclist's vastus lateralis. Going down in size, what does the piece contain?",
      "options": [
-      { "id": "a", "text": "Fascicles, made of fibres, made of myofibrils, made of sarcomeres", "correct": true, "why": "Right: that is the nesting, from the bundle down to the contractile unit." },
-      { "id": "b", "text": "Fibres, made of fascicles, made of myofibrils, made of sarcomeres", "why": "This swaps fibre and fascicle: the fascicle is the bundle, the fibre is one cell inside it." },
-      { "id": "c", "text": "Fascicles, made of myofibrils, made of fibres, made of sarcomeres", "why": "This puts myofibrils outside the fibre; they are threads inside the cell." },
-      { "id": "d", "text": "Fascicles, made of fibres, made of sarcomeres, made of myofibrils", "why": "This swaps the last two: a myofibril is a chain of sarcomeres." }
+      {
+       "id": "a",
+       "text": "Fascicles, made of fibres, made of myofibrils, made of sarcomeres",
+       "correct": true,
+       "why": "Right: that is the nesting, from the bundle down to the contractile unit."
+      },
+      {
+       "id": "b",
+       "text": "Fibres, made of fascicles, made of myofibrils, made of sarcomeres",
+       "why": "This swaps fibre and fascicle: the fascicle is the bundle, the fibre is one cell inside it."
+      },
+      {
+       "id": "c",
+       "text": "Fascicles, made of myofibrils, made of fibres, made of sarcomeres",
+       "why": "This puts myofibrils outside the fibre; they are threads inside the cell."
+      },
+      {
+       "id": "d",
+       "text": "Fascicles, made of fibres, made of sarcomeres, made of myofibrils",
+       "why": "This swaps the last two: a myofibril is a chain of sarcomeres."
+      }
      ]
     }
    ]
@@ -224,16 +438,35 @@
    "concept": "muscle-fibre",
    "bloom": "understand",
    "recallFirst": true,
-   "sources": ["betts2022"],
+   "sources": [
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "What is a single skeletal muscle fibre?",
      "options": [
-      { "id": "a", "text": "One long cell with many nuclei", "correct": true, "why": "Right: it forms by the fusion of hundreds of precursor cells, so one cell ends up with many nuclei." },
-      { "id": "b", "text": "A bundle of small cells, each with one nucleus", "why": "The precursor cells fuse during development; the mature fibre is one cell. A bundle of fibres is a fascicle." },
-      { "id": "c", "text": "A strand of collagen that links muscle to tendon", "why": "That describes the connective tissue, not the contractile cell." },
-      { "id": "d", "text": "A single protein filament inside the cell", "why": "That is an actin or myosin filament, several levels smaller than a fibre." }
+      {
+       "id": "a",
+       "text": "One long cell with many nuclei",
+       "correct": true,
+       "why": "Right: it forms by the fusion of hundreds of precursor cells, so one cell ends up with many nuclei."
+      },
+      {
+       "id": "b",
+       "text": "A bundle of small cells, each with one nucleus",
+       "why": "The precursor cells fuse during development; the mature fibre is one cell. A bundle of fibres is a fascicle."
+      },
+      {
+       "id": "c",
+       "text": "A strand of collagen that links muscle to tendon",
+       "why": "That describes the connective tissue, not the contractile cell."
+      },
+      {
+       "id": "d",
+       "text": "A single protein filament inside the cell",
+       "why": "That is an actin or myosin filament, several levels smaller than a fibre."
+      }
      ]
     }
    ]
@@ -243,16 +476,36 @@
    "concept": "muscle-sarcomere",
    "bloom": "remember",
    "recallFirst": true,
-   "sources": ["betts2022", "mukund2020"],
+   "sources": [
+    "betts2022",
+    "mukund2020"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "Which filaments are anchored to the Z-discs at each end of a sarcomere?",
      "options": [
-      { "id": "a", "text": "The thin actin filaments", "correct": true, "why": "Right: actin is anchored at the Z-discs and pulled towards the centre of the sarcomere." },
-      { "id": "b", "text": "The thick myosin filaments", "why": "Myosin sits in the middle of the sarcomere and is held together at its centre, not at the Z-discs." },
-      { "id": "c", "text": "The collagen fibres of the endomysium", "why": "Collagen wraps the fibre from outside; it isn't part of the sarcomere." },
-      { "id": "d", "text": "The myofibrils of the next fibre", "why": "Myofibrils are made of sarcomeres; Z-discs link sarcomeres within one myofibril." }
+      {
+       "id": "a",
+       "text": "The thin actin filaments",
+       "correct": true,
+       "why": "Right: actin is anchored at the Z-discs and pulled towards the centre of the sarcomere."
+      },
+      {
+       "id": "b",
+       "text": "The thick myosin filaments",
+       "why": "Myosin sits in the middle of the sarcomere and is held together at its centre, not at the Z-discs."
+      },
+      {
+       "id": "c",
+       "text": "The collagen fibres of the endomysium",
+       "why": "Collagen wraps the fibre from outside; it isn't part of the sarcomere."
+      },
+      {
+       "id": "d",
+       "text": "The myofibrils of the next fibre",
+       "why": "Myofibrils are made of sarcomeres; Z-discs link sarcomeres within one myofibril."
+      }
      ]
     }
    ]
@@ -261,26 +514,62 @@
    "id": "mus-sliding",
    "concept": "muscle-sarcomere",
    "bloom": "understand",
-   "sources": ["betts2022"],
+   "sources": [
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "When a sarcomere shortens during a pedal stroke, what happens to the actin and myosin filaments?",
      "options": [
-      { "id": "a", "text": "They keep their length and slide further over each other", "correct": true, "why": "Right: this is the sliding filament model. The overlap grows; the filaments themselves don't shorten." },
-      { "id": "b", "text": "Both get shorter, like springs coiling up", "why": "A common picture, but wrong: neither filament changes length, only how far they overlap." },
-      { "id": "c", "text": "The myosin filaments shorten and actin stays the same", "why": "Myosin doesn't shorten; its heads pull actin past it." },
-      { "id": "d", "text": "The actin filaments fold up against the Z-discs", "why": "Actin doesn't fold; it is pulled towards the centre, which brings the Z-discs closer." }
+      {
+       "id": "a",
+       "text": "They keep their length and slide further over each other",
+       "correct": true,
+       "why": "Right: this is the sliding filament model. The overlap grows; the filaments themselves don't shorten."
+      },
+      {
+       "id": "b",
+       "text": "Both get shorter, like springs coiling up",
+       "why": "A common picture, but wrong: neither filament changes length, only how far they overlap."
+      },
+      {
+       "id": "c",
+       "text": "The myosin filaments shorten and actin stays the same",
+       "why": "Myosin doesn't shorten; its heads pull actin past it."
+      },
+      {
+       "id": "d",
+       "text": "The actin filaments fold up against the Z-discs",
+       "why": "Actin doesn't fold; it is pulled towards the centre, which brings the Z-discs closer."
+      }
      ]
     },
     {
      "id": "b",
      "stem": "Sarcomeres from a runner's calf are compared relaxed and fully contracted. What has changed?",
      "options": [
-      { "id": "a", "text": "Actin and myosin overlap more; filament lengths are the same", "correct": true, "why": "Right: the filaments slide, so overlap rises and the Z-discs come closer." },
-      { "id": "b", "text": "Actin and myosin filaments are both shorter", "why": "Neither filament shortens in contraction; that is the point of the sliding model." },
-      { "id": "c", "text": "Only the myosin filaments have become shorter", "why": "Myosin keeps its length; its heads pull actin towards the centre." },
-      { "id": "d", "text": "More sarcomeres have been added in series", "why": "Adding sarcomeres is a slow adaptation over weeks, not what happens in one contraction." }
+      {
+       "id": "a",
+       "text": "Actin and myosin overlap more; filament lengths are the same",
+       "correct": true,
+       "why": "Right: the filaments slide, so overlap rises and the Z-discs come closer."
+      },
+      {
+       "id": "b",
+       "text": "Actin and myosin filaments are both shorter",
+       "why": "Neither filament shortens in contraction; that is the point of the sliding model."
+      },
+      {
+       "id": "c",
+       "text": "Only the myosin filaments have become shorter",
+       "why": "Myosin keeps its length; its heads pull actin towards the centre."
+      },
+      {
+       "id": "d",
+       "text": "More sarcomeres have been added in series",
+       "why": "Adding sarcomeres is a slow adaptation over weeks, not what happens in one contraction."
+      }
      ]
     }
    ]
@@ -290,16 +579,35 @@
    "concept": "muscle-sarcomere",
    "bloom": "apply",
    "recallFirst": true,
-   "sources": ["betts2022"],
+   "sources": [
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A muscle fibre is 10 cm long and each sarcomere is 2 μm long. About how many sarcomeres sit in series along one myofibril?",
      "options": [
-      { "id": "a", "text": "50,000", "correct": true, "why": "Right: 10 cm = 100,000 μm, and 100,000 ÷ 2 = 50,000." },
-      { "id": "b", "text": "5,000", "why": "This takes 10 cm as 10,000 μm. 1 cm = 10,000 μm, so 10 cm = 100,000 μm." },
-      { "id": "c", "text": "5,000,000", "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres. 1 cm = 10,000 μm." },
-      { "id": "d", "text": "200,000", "why": "This multiplies by the sarcomere length (100,000 × 2) instead of dividing." }
+      {
+       "id": "a",
+       "text": "50,000",
+       "correct": true,
+       "why": "Right: 10 cm = 100,000 μm, and 100,000 ÷ 2 = 50,000."
+      },
+      {
+       "id": "b",
+       "text": "5,000",
+       "why": "This takes 10 cm as 10,000 μm. 1 cm = 10,000 μm, so 10 cm = 100,000 μm."
+      },
+      {
+       "id": "c",
+       "text": "5,000,000",
+       "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres. 1 cm = 10,000 μm."
+      },
+      {
+       "id": "d",
+       "text": "200,000",
+       "why": "This multiplies by the sarcomere length (100,000 × 2) instead of dividing."
+      }
      ],
      "solution": "10 cm = 0.1 m = 100,000 μm. Number in series = 100,000 μm ÷ 2 μm = 50,000."
     },
@@ -307,10 +615,27 @@
      "id": "b",
      "stem": "A fibre in a runner's soleus is 4 cm long and each sarcomere is 2 μm long. About how many sarcomeres sit in series along one myofibril?",
      "options": [
-      { "id": "a", "text": "20,000", "correct": true, "why": "Right: 4 cm = 40,000 μm, and 40,000 ÷ 2 = 20,000." },
-      { "id": "b", "text": "2,000", "why": "This takes 4 cm as 4,000 μm. 1 cm = 10,000 μm, so 4 cm = 40,000 μm." },
-      { "id": "c", "text": "2,000,000", "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres." },
-      { "id": "d", "text": "80,000", "why": "This multiplies by the sarcomere length (40,000 × 2) instead of dividing." }
+      {
+       "id": "a",
+       "text": "20,000",
+       "correct": true,
+       "why": "Right: 4 cm = 40,000 μm, and 40,000 ÷ 2 = 20,000."
+      },
+      {
+       "id": "b",
+       "text": "2,000",
+       "why": "This takes 4 cm as 4,000 μm. 1 cm = 10,000 μm, so 4 cm = 40,000 μm."
+      },
+      {
+       "id": "c",
+       "text": "2,000,000",
+       "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres."
+      },
+      {
+       "id": "d",
+       "text": "80,000",
+       "why": "This multiplies by the sarcomere length (40,000 × 2) instead of dividing."
+      }
      ],
      "solution": "4 cm = 0.04 m = 40,000 μm. Number in series = 40,000 μm ÷ 2 μm = 20,000."
     },
@@ -318,10 +643,27 @@
      "id": "c",
      "stem": "A triathlete's thigh fibre is 12 cm long and each sarcomere is 2 μm long. About how many sarcomeres sit in series along one myofibril?",
      "options": [
-      { "id": "a", "text": "60,000", "correct": true, "why": "Right: 12 cm = 120,000 μm, and 120,000 ÷ 2 = 60,000." },
-      { "id": "b", "text": "6,000", "why": "This takes 12 cm as 12,000 μm. 1 cm = 10,000 μm, so 12 cm = 120,000 μm." },
-      { "id": "c", "text": "6,000,000", "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres." },
-      { "id": "d", "text": "240,000", "why": "This multiplies by the sarcomere length (120,000 × 2) instead of dividing." }
+      {
+       "id": "a",
+       "text": "60,000",
+       "correct": true,
+       "why": "Right: 12 cm = 120,000 μm, and 120,000 ÷ 2 = 60,000."
+      },
+      {
+       "id": "b",
+       "text": "6,000",
+       "why": "This takes 12 cm as 12,000 μm. 1 cm = 10,000 μm, so 12 cm = 120,000 μm."
+      },
+      {
+       "id": "c",
+       "text": "6,000,000",
+       "why": "This uses 1 cm = 1,000,000 μm, which is the conversion for metres."
+      },
+      {
+       "id": "d",
+       "text": "240,000",
+       "why": "This multiplies by the sarcomere length (120,000 × 2) instead of dividing."
+      }
      ],
      "solution": "12 cm = 0.12 m = 120,000 μm. Number in series = 120,000 μm ÷ 2 μm = 60,000."
     }
@@ -332,16 +674,35 @@
    "concept": "muscle-sarcomere",
    "bloom": "apply",
    "recallFirst": true,
-   "sources": ["betts2022"],
+   "sources": [
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A myofibril has 50,000 sarcomeres in series. In a pedal stroke each shortens by 0.3 μm. By how much does the fibre shorten?",
      "options": [
-      { "id": "a", "text": "15 mm", "correct": true, "why": "Right: 50,000 × 0.3 μm = 15,000 μm = 15 mm." },
-      { "id": "b", "text": "0.3 μm", "why": "This treats the fibre as one sarcomere. In series, every sarcomere's shortening adds up." },
-      { "id": "c", "text": "1.5 mm", "why": "Unit slip: 15,000 μm is 15 mm, not 1.5 mm (1 mm = 1,000 μm)." },
-      { "id": "d", "text": "150 mm", "why": "Unit slip the other way: 15,000 μm ÷ 1,000 = 15 mm." }
+      {
+       "id": "a",
+       "text": "15 mm",
+       "correct": true,
+       "why": "Right: 50,000 × 0.3 μm = 15,000 μm = 15 mm."
+      },
+      {
+       "id": "b",
+       "text": "0.3 μm",
+       "why": "This treats the fibre as one sarcomere. In series, every sarcomere's shortening adds up."
+      },
+      {
+       "id": "c",
+       "text": "1.5 mm",
+       "why": "Unit slip: 15,000 μm is 15 mm, not 1.5 mm (1 mm = 1,000 μm)."
+      },
+      {
+       "id": "d",
+       "text": "150 mm",
+       "why": "Unit slip the other way: 15,000 μm ÷ 1,000 = 15 mm."
+      }
      ],
      "solution": "Shortenings in series add: 50,000 × 0.3 μm = 15,000 μm. 1 mm = 1,000 μm, so 15,000 μm = 15 mm."
     },
@@ -349,10 +710,27 @@
      "id": "b",
      "stem": "A myofibril in a runner's calf has 30,000 sarcomeres in series. At push-off each shortens by 0.25 μm. By how much does the fibre shorten?",
      "options": [
-      { "id": "a", "text": "7.5 mm", "correct": true, "why": "Right: 30,000 × 0.25 μm = 7,500 μm = 7.5 mm." },
-      { "id": "b", "text": "0.25 μm", "why": "This treats the fibre as one sarcomere. In series, every sarcomere's shortening adds up." },
-      { "id": "c", "text": "0.75 mm", "why": "Unit slip: 7,500 μm is 7.5 mm, not 0.75 mm (1 mm = 1,000 μm)." },
-      { "id": "d", "text": "75 mm", "why": "Unit slip the other way: 7,500 μm ÷ 1,000 = 7.5 mm." }
+      {
+       "id": "a",
+       "text": "7.5 mm",
+       "correct": true,
+       "why": "Right: 30,000 × 0.25 μm = 7,500 μm = 7.5 mm."
+      },
+      {
+       "id": "b",
+       "text": "0.25 μm",
+       "why": "This treats the fibre as one sarcomere. In series, every sarcomere's shortening adds up."
+      },
+      {
+       "id": "c",
+       "text": "0.75 mm",
+       "why": "Unit slip: 7,500 μm is 7.5 mm, not 0.75 mm (1 mm = 1,000 μm)."
+      },
+      {
+       "id": "d",
+       "text": "75 mm",
+       "why": "Unit slip the other way: 7,500 μm ÷ 1,000 = 7.5 mm."
+      }
      ],
      "solution": "Shortenings in series add: 30,000 × 0.25 μm = 7,500 μm. 1 mm = 1,000 μm, so 7,500 μm = 7.5 mm."
     }
@@ -363,16 +741,36 @@
    "concept": "muscle-tendon",
    "bloom": "understand",
    "recallFirst": true,
-   "sources": ["franchi2007", "betts2022"],
+   "sources": [
+    "franchi2007",
+    "betts2022"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "When the quadriceps contract on a climb, what does the patellar tendon do?",
      "options": [
-      { "id": "a", "text": "Passes the muscle's pull on to the bone", "correct": true, "why": "Right: a tendon is a collagen cable that transmits muscle force to bone." },
-      { "id": "b", "text": "Contracts along with the muscle to add force", "why": "A tendon has few cells and no contractile machinery; it can stretch and recoil but not contract." },
-      { "id": "c", "text": "Makes ATP for the muscle fibres", "why": "ATP is made inside the muscle fibres themselves; the tendon is mostly collagen." },
-      { "id": "d", "text": "Carries the nerve signal to the fibres", "why": "Nerves carry the signal; the tendon only carries force." }
+      {
+       "id": "a",
+       "text": "Passes the muscle's pull on to the bone",
+       "correct": true,
+       "why": "Right: a tendon is a collagen cable that transmits muscle force to bone."
+      },
+      {
+       "id": "b",
+       "text": "Contracts along with the muscle to add force",
+       "why": "A tendon has few cells and no contractile machinery; it can stretch and recoil but not contract."
+      },
+      {
+       "id": "c",
+       "text": "Makes ATP for the muscle fibres",
+       "why": "ATP is made inside the muscle fibres themselves; the tendon is mostly collagen."
+      },
+      {
+       "id": "d",
+       "text": "Carries the nerve signal to the fibres",
+       "why": "Nerves carry the signal; the tendon only carries force."
+      }
      ]
     }
    ]
@@ -381,16 +779,35 @@
    "id": "mus-tendon-spring",
    "concept": "muscle-tendon",
    "bloom": "apply",
-   "sources": ["ker1987"],
+   "sources": [
+    "ker1987"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A triathlete starts the run off the bike. When does her Achilles tendon store elastic energy, and when does it give it back?",
      "options": [
-      { "id": "a", "text": "Stores it in the first half of stance, returns it at push-off", "correct": true, "why": "Right: energy taken out of the body as she lands is stored as strain and returned by recoil in the second half of stance." },
-      { "id": "b", "text": "Stores it at push-off, returns it at the next landing", "why": "This reverses the order: the tendon is stretched as the body is slowed on landing, then recoils at push-off." },
-      { "id": "c", "text": "Stores it while the leg swings, returns it at landing", "why": "In swing the foot is off the ground, so there is almost no load to stretch the tendon." },
-      { "id": "d", "text": "Never: a tendon only passes force on", "why": "Tendons do pass force on, but they also stretch and recoil, which saves energy in running." }
+      {
+       "id": "a",
+       "text": "Stores it in the first half of stance, returns it at push-off",
+       "correct": true,
+       "why": "Right: energy taken out of the body as she lands is stored as strain and returned by recoil in the second half of stance."
+      },
+      {
+       "id": "b",
+       "text": "Stores it at push-off, returns it at the next landing",
+       "why": "This reverses the order: the tendon is stretched as the body is slowed on landing, then recoils at push-off."
+      },
+      {
+       "id": "c",
+       "text": "Stores it while the leg swings, returns it at landing",
+       "why": "In swing the foot is off the ground, so there is almost no load to stretch the tendon."
+      },
+      {
+       "id": "d",
+       "text": "Never: a tendon only passes force on",
+       "why": "Tendons do pass force on, but they also stretch and recoil, which saves energy in running."
+      }
      ]
     }
    ]
@@ -399,16 +816,37 @@
    "id": "mus-cycling-main",
    "concept": "muscle-sport",
    "bloom": "apply",
-   "sources": ["raasch1997", "elmer2011", "obryan2014"],
+   "sources": [
+    "raasch1997",
+    "elmer2011",
+    "obryan2014"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A rider pushes hard through the downstroke on a seated climb. Which muscles supply most of the propulsive energy?",
      "options": [
-      { "id": "a", "text": "Gluteus maximus and the vasti", "correct": true, "why": "Right: these one-joint hip and knee extensors are the main power producers, about 55% of the propulsive energy in one model." },
-      { "id": "b", "text": "Hamstrings and rectus femoris", "why": "These two-joint muscles mainly carry the crank through the top and bottom of the stroke." },
-      { "id": "c", "text": "Soleus and gastrocnemius", "why": "The calf muscles mostly pass energy made by the hip and knee extensors on to the pedal." },
-      { "id": "d", "text": "Tibialis anterior and the hip flexors", "why": "These work near the top and on the upstroke and add little of the propulsive energy." }
+      {
+       "id": "a",
+       "text": "Gluteus maximus and the vasti",
+       "correct": true,
+       "why": "Right: these one-joint hip and knee extensors are the main power producers, about 55% of the propulsive energy in one model."
+      },
+      {
+       "id": "b",
+       "text": "Hamstrings and rectus femoris",
+       "why": "These two-joint muscles mainly carry the crank through the top and bottom of the stroke."
+      },
+      {
+       "id": "c",
+       "text": "Soleus and gastrocnemius",
+       "why": "The calf muscles mostly pass energy made by the hip and knee extensors on to the pedal."
+      },
+      {
+       "id": "d",
+       "text": "Tibialis anterior and the hip flexors",
+       "why": "These work near the top and on the upstroke and add little of the propulsive energy."
+      }
      ]
     }
    ]
@@ -417,16 +855,35 @@
    "id": "mus-running-early",
    "concept": "muscle-sport",
    "bloom": "apply",
-   "sources": ["hamner2010"],
+   "sources": [
+    "hamner2010"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "On a steep downhill run, each landing has to be braked harder. Which muscle group takes most of that braking early in stance?",
      "options": [
-      { "id": "a", "text": "The quadriceps", "correct": true, "why": "Right: in early stance the quadriceps are the largest contributors to braking and support, so a downhill loads them most." },
-      { "id": "b", "text": "Soleus and gastrocnemius", "why": "The calf muscles matter most in the second half of stance, for push-off, not for braking." },
-      { "id": "c", "text": "The hamstrings", "why": "The model found the quadriceps, not the hamstrings, were the largest contributors to braking in early stance." },
-      { "id": "d", "text": "The arm muscles", "why": "In the model the arms gave under 1% of the peak acceleration of the body; they mainly balance the legs' rotation." }
+      {
+       "id": "a",
+       "text": "The quadriceps",
+       "correct": true,
+       "why": "Right: in early stance the quadriceps are the largest contributors to braking and support, so a downhill loads them most."
+      },
+      {
+       "id": "b",
+       "text": "Soleus and gastrocnemius",
+       "why": "The calf muscles matter most in the second half of stance, for push-off, not for braking."
+      },
+      {
+       "id": "c",
+       "text": "The hamstrings",
+       "why": "The model found the quadriceps, not the hamstrings, were the largest contributors to braking in early stance."
+      },
+      {
+       "id": "d",
+       "text": "The arm muscles",
+       "why": "In the model the arms gave under 1% of the peak acceleration of the body; they mainly balance the legs' rotation."
+      }
      ]
     }
    ]
@@ -436,16 +893,36 @@
    "concept": "muscle-sport",
    "bloom": "understand",
    "recallFirst": true,
-   "sources": ["hamner2010", "ellis2014"],
+   "sources": [
+    "hamner2010",
+    "ellis2014"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "In the second half of stance, which muscles do most to push a runner forward and up?",
      "options": [
-      { "id": "a", "text": "Soleus and gastrocnemius", "correct": true, "why": "Right: in late stance the calf muscles are the greatest contributors to propulsion and support." },
-      { "id": "b", "text": "The quadriceps", "why": "The quadriceps lead in the first half of stance, braking and supporting the body." },
-      { "id": "c", "text": "The hip flexors", "why": "The hip flexors swing the leg forward after the foot leaves the ground." },
-      { "id": "d", "text": "The arms, swinging forward", "why": "In the model the arms gave under 1% of the peak acceleration of the body." }
+      {
+       "id": "a",
+       "text": "Soleus and gastrocnemius",
+       "correct": true,
+       "why": "Right: in late stance the calf muscles are the greatest contributors to propulsion and support."
+      },
+      {
+       "id": "b",
+       "text": "The quadriceps",
+       "why": "The quadriceps lead in the first half of stance, braking and supporting the body."
+      },
+      {
+       "id": "c",
+       "text": "The hip flexors",
+       "why": "The hip flexors swing the leg forward after the foot leaves the ground."
+      },
+      {
+       "id": "d",
+       "text": "The arms, swinging forward",
+       "why": "In the model the arms gave under 1% of the peak acceleration of the body."
+      }
      ]
     }
    ]

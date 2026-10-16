@@ -1,0 +1,803 @@
+{
+ "id": "lac-acidosis",
+ "module": "t1a-lactate",
+ "title": "Lactate, H⁺ and fatigue",
+ "goal": "Explain Robergs' argument that lactate production uses up an H⁺, the case against it, and why lactate is not what tires muscle in hard efforts.",
+ "requires": [
+  "lac-clearance"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "la-lactic-form",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "la-names",
+   "title": "Lactic acid is really two things",
+   "text": "*Lactic acid* is the old name. It gives up its H⁺ almost completely at body pH (its pK is about 3.8), so in muscle and blood you find **lactate** (La⁻) and **H⁺** as separate particles [[c:hla-dissociates]].\n\nFor more than 80 years the textbook chain ran: glycolysis makes lactic acid → lactic acid releases H⁺ → H⁺ cause [acidosis](g:acidosis) → acidosis causes fatigue [[c:classic-story]]. Each link has since been challenged.\n\nThis lesson takes two of them: where the H⁺ really come from, and whether H⁺ are what tire the muscle. The *Glycolysis* lesson gave the short answer; here is the argument behind it.",
+   "claims": [
+    {
+     "id": "hla-dissociates",
+     "text": "Lactic acid (pK about 3.8) dissociates nearly completely in the body, so it is present as lactate and H⁺.",
+     "grade": "strong",
+     "sources": [
+      "boning2008"
+     ],
+     "evidence": [
+      {
+       "source": "boning2008",
+       "quote": "HLa dissociates nearly completely (pK 3.8), thus the total amount of added lactic acid is almost equal to that of lactate",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "classic-story",
+     "text": "For over 80 years exercise acidosis was explained by lactic acid production, which was in turn blamed for fatigue.",
+     "grade": "strong",
+     "sources": [
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "The lactic acidosis of exercise has been a classic explanation of the biochemistry of acidosis for more than 80 years.",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "This belief has led to the interpretation that lactate production causes acidosis and, in turn, that increased lactate production is one of the several causes of muscle fatigue during intense exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "la-lactic-form",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "la-robergs",
+   "title": "Robergs: follow the protons",
+   "text": "In 2004 Robergs and colleagues traced the H⁺ through each reaction and concluded that lactate production *slows* acidosis rather than causing it [[c:robergs-retards]]:\n\n- Every time ATP is split to ADP and Pi, an H⁺ is released.\n- When the mitochondria supply the ATP, they use those H⁺ again: no build-up.\n- Above a steady state, more ATP comes from glycolysis and PCr, and the H⁺ from splitting it pile up.\n- The LDH step itself *uses* an H⁺: pyruvate + NADH + **H⁺** → lactate + NAD⁺.\n\nTheir punchline: a muscle that couldn't make lactate would acidify and tire *sooner* [[c:no-lactate-worse]].",
+   "claims": [
+    {
+     "id": "robergs-retards",
+     "text": "The H⁺ of exercise acidosis come from splitting ATP supplied outside the mitochondria; lactate production retards rather than causes acidosis.",
+     "grade": "disputed",
+     "sources": [
+      "robergs2004",
+      "boning2008"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "Every time ATP is broken down to ADP and P(i), a proton is released.",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "When the ATP demand of muscle contraction is met by mitochondrial respiration, there is no proton accumulation in the cell",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "Lactate production retards, not causes, acidosis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "no-lactate-worse",
+     "text": "Without lactate production, acidosis and fatigue would come sooner, because lactate formation supplies NAD⁺ and prevents pyruvate build-up.",
+     "grade": "weak",
+     "sources": [
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "Lactate production increases under these cellular conditions to prevent pyruvate accumulation and supply the NAD(+) needed for phase 2 of glycolysis.",
+       "level": "abstract"
+      },
+      {
+       "source": "robergs2004",
+       "quote": "If muscle did not produce lactate, acidosis and muscle fatigue would occur more quickly and exercise performance would be severely impaired.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "la-ldh-proton"
+  },
+  {
+   "type": "question",
+   "item": "la-proton-source"
+  },
+  {
+   "type": "question",
+   "item": "la-no-lactate"
+  },
+  {
+   "type": "concept",
+   "id": "la-counter",
+   "title": "The case against: count the whole pathway",
+   "text": "Critics accept the reactions; they dispute the bookkeeping.\n\nBöning and Maassen note that the ATP glycolysis makes is spent at once. Count the whole loop, glucose to lactate *plus* the ATP spent, and you get one H⁺ per lactate, just as if lactic acid had been added [[c:net-equal]]. Starting from glycogen gives one extra ATP, and splitting it releases the H⁺ that Robergs counts as consumed [[c:glycogen-rebuttal]].\n\nA third camp (Lindinger and Heigenhauser) says H⁺ is set by the balance of strong ions (Na⁺, K⁺, Cl⁻, lactate) and CO₂, so lactate is one contributor among several [[c:sid-view]].\n\nAll agree on this: lactate and H⁺ rise together, so lactate stays a fair marker of acidifying work [[c:marker-agree]].",
+   "claims": [
+    {
+     "id": "net-equal",
+     "text": "Because the ATP made by glycolysis is spent at once, lactate and H⁺ appear together in about equal amounts, with the same effect as adding lactic acid.",
+     "grade": "disputed",
+     "sources": [
+      "boning2008",
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "boning2008",
+       "quote": "Both ions appear coincident in the cell and their effects are equal to those of adding HLa from outside.",
+       "level": "full-text"
+      },
+      {
+       "source": "boning2008",
+       "quote": "Furthermore there cannot be much quantitative difference between the outputs of La− and H+ ions since the produced ATP is immediately consumed for contraction.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "glycogen-rebuttal",
+     "text": "Glycolysis from glycogen makes three ATP per glucose unit; spending the extra ATP releases an H⁺, restoring two lactate and two H⁺.",
+     "grade": "disputed",
+     "sources": [
+      "boning2008"
+     ],
+     "evidence": [
+      {
+       "source": "boning2008",
+       "quote": "But they do not consider that three instead of only two ATP per glucosyl unit are synthesized when starting with glycogen.",
+       "level": "full-text"
+      },
+      {
+       "source": "boning2008",
+       "quote": "The consumption of one additional ATP liberates one H+ ending again in two La− and two H+",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sid-view",
+     "text": "In the strong ion approach, H⁺ in body fluids is set by the strong ion difference (Na⁺ + K⁺ − Cl⁻ − lactate), CO₂ and plasma protein, so lactate is only one part; in venous blood during exercise, the rise in CO₂ is the main contributor.",
+     "grade": "disputed",
+     "sources": [
+      "boning2008",
+      "lindinger2008"
+     ],
+     "evidence": [
+      {
+       "source": "lindinger2008",
+       "quote": "With both high … and moderate-intensity … exercise, blood is also acidified due to decreases in plasma strong ion difference, or [SID], and increases in plasma [protein].",
+       "level": "full-text"
+      },
+      {
+       "source": "lindinger2008",
+       "quote": "In femoral venous plasma the increase in Pco2 remains the primary contributor to the plasma acidosis during exercise and the initial recovery period.",
+       "level": "full-text"
+      },
+      {
+       "source": "boning2008",
+       "quote": "Lindinger et al. (13) are convinced that SID (essentially [Na+ + K+ − Cl− − La−]), in which [La−] is only a part, determines [H+] in body fluids to a large extent.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "marker-agree",
+     "text": "Lactate production coincides with cellular acidosis and remains a good indirect marker of acidifying metabolic conditions.",
+     "grade": "moderate",
+     "sources": [
+      "robergs2004"
+     ],
+     "evidence": [
+      {
+       "source": "robergs2004",
+       "quote": "Thus increased lactate production coincides with cellular acidosis and remains a good indirect marker for cell metabolic conditions that induce metabolic acidosis.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does lactate production cause the acidosis of hard exercise?",
+    "sides": [
+     {
+      "position": "No: the H⁺ come from splitting ATP made outside the mitochondria, and the LDH step uses an H⁺, so lactate production slows acidosis (Robergs).",
+      "sources": [
+       "robergs2004"
+      ]
+     },
+     {
+      "position": "Yes, in effect: counted over the whole pathway, lactate and H⁺ appear one for one, so lactic acid is the essential cause of non-respiratory acidosis (Böning and Maassen).",
+      "sources": [
+       "boning2008"
+      ]
+     },
+     {
+      "position": "Partly: H⁺ is set by the strong ion difference and CO₂; lactate is one contributor among several (Lindinger and Heigenhauser).",
+      "sources": [
+       "lindinger2008"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "la-boning-glycogen"
+  },
+  {
+   "type": "question",
+   "item": "la-debate-judge"
+  },
+  {
+   "type": "concept",
+   "id": "la-fatigue",
+   "title": "So what does tire the muscle?",
+   "text": "If not lactate, what? In isolated mammalian muscle at body temperature, acidosis itself has little direct effect on force. A stronger candidate is [inorganic phosphate](g:inorganic-phosphate) (Pi), which builds up as PCr is broken down [[c:pi-major]].\n\nA major review lists other players too [[c:fatigue-mechanisms]]:\n\n- changes in ions that weaken the electrical signal along the fibre;\n- failing Ca²⁺ release from its store inside the fibre;\n- reactive oxygen species.\n\nThe old lactate-and-H⁺ explanation is probably of limited importance. Which factor dominates depends on the task, and the brain plays a part as well: the module *Fatigue: peripheral and central* takes this further.",
+   "claims": [
+    {
+     "id": "pi-major",
+     "text": "Acidosis has little direct effect on mammalian muscle function at physiological temperatures; inorganic phosphate from PCr breakdown appears to be a major cause of fatigue.",
+     "grade": "moderate",
+     "sources": [
+      "westerblad2002"
+     ],
+     "evidence": [
+      {
+       "source": "westerblad2002",
+       "quote": "Recent studies on mammalian muscle, however, show little direct effect of acidosis on muscle function at physiological temperatures. Instead, inorganic phosphate, which increases during fatigue due to breakdown of creatine phosphate, appears to be a major cause of muscle fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fatigue-mechanisms",
+     "text": "Lactate and H⁺ are probably of limited importance for fatigue in mammals; ionic effects on the action potential, failing SR Ca²⁺ release and reactive oxygen species also contribute.",
+     "grade": "moderate",
+     "sources": [
+      "allen2008"
+     ],
+     "evidence": [
+      {
+       "source": "allen2008",
+       "quote": "The traditional explanation, accumulation of intracellular lactate and hydrogen ions causing impaired function of the contractile proteins, is probably of limited importance in mammals.",
+       "level": "abstract"
+      },
+      {
+       "source": "allen2008",
+       "quote": "Alternative explanations that will be considered are the effects of ionic changes on the action potential, failure of SR Ca2+ release by various mechanisms, and the effects of reactive oxygen species.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "la-fatigue-cause",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "la-pi-source"
+  },
+  {
+   "type": "question",
+   "item": "la-nielsen-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "la-whole-body",
+   "title": "Acidosis in the whole body",
+   "text": "The picture shifts again in whole-body exercise. Isolated-muscle work suggests acidosis does little harm, and may even protect force: in rat muscle weakened by high potassium, adding lactic acid restored force almost fully [[c:lactic-protective]].\n\nYet in people, making the blood more acidic worsens fatigue in whole-body exercise, and making it more alkaline improves performance in events of about 1–10 minutes. One idea is that severe blood acidosis lowers the brain's drive to the muscles [[c:whole-body-acid]].\n\nSo H⁺ are not irrelevant; they act in more places, and more weakly inside the fibre, than the old story said. Lactate itself is not the culprit.",
+   "claims": [
+    {
+     "id": "lactic-protective",
+     "text": "In isolated rat soleus muscle depressed by high extracellular K⁺, adding lactic acid almost completely restored force.",
+     "grade": "weak",
+     "sources": [
+      "nielsen2001"
+     ],
+     "evidence": [
+      {
+       "source": "nielsen2001",
+       "quote": "Subsequent addition of 20 mM lactic acid led, however, to an almost complete force recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "nielsen2001",
+       "quote": "this indicates that, in contrast to the often suggested role for acidosis as a cause of muscle fatigue, acidosis may protect against fatigue",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "whole-body-acid",
+     "text": "Induced acidosis worsens fatigue in whole-body exercise and alkalosis improves performance in 1–10 minute events, possibly via reduced central drive.",
+     "grade": "moderate",
+     "sources": [
+      "cairns2006"
+     ],
+     "evidence": [
+      {
+       "source": "cairns2006",
+       "quote": "In contrast, induced acidosis can exacerbate fatigue during whole-body dynamic exercise and alkalosis can improve exercise performance in events lasting 1-10 minutes.",
+       "level": "abstract"
+      },
+      {
+       "source": "cairns2006",
+       "quote": "it is hypothesised that a severe plasma acidosis in humans might impair exercise performance by causing a reduced CNS drive to muscle",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "la-alkalosis-event"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Lactic acid is almost fully split into lactate and H⁺ in the body; the old chain was lactic acid → H⁺ → acidosis → fatigue.",
+    "Robergs: H⁺ come from splitting ATP made outside the mitochondria, and the LDH step uses an H⁺, so lactate production slows acidosis.",
+    "Böning and Maassen: over the whole pathway lactate and H⁺ appear one for one; the strong-ion camp counts lactate as one contributor. The debate is open; lactate stays a marker.",
+    "Inside the fibre, Pi from PCr breakdown, ion shifts, failing Ca²⁺ release and reactive oxygen species matter more than lactate or H⁺.",
+    "In whole-body efforts of 1–10 minutes blood acidosis does hurt performance, possibly via the brain."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "la-lactic-form",
+   "concept": "la-names",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "boning2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In working muscle at a pH near 7, in what form is \"lactic acid\" found?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As separate lactate ions and H⁺ ions",
+       "correct": true,
+       "why": "Right: with a pK of about 3.8, lactic acid is almost fully dissociated at body pH."
+      },
+      {
+       "id": "b",
+       "text": "As whole lactic acid molecules, mostly intact",
+       "why": "At pH 7, far above its pK of 3.8, almost none stays as intact lactic acid."
+      },
+      {
+       "id": "c",
+       "text": "As lactate crystals lodged in the fibres",
+       "why": "Lactate is dissolved, not crystals; this is a myth often linked to soreness."
+      },
+      {
+       "id": "d",
+       "text": "As pyruvate, since lactic acid can't exist in cells",
+       "why": "Lactate is plentiful in cells; LDH keeps it in balance with pyruvate."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's blood test reports \"lactate\" rather than \"lactic acid\". Why is that the better word?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At body pH lactic acid is almost fully split into lactate and H⁺",
+       "correct": true,
+       "why": "Right: what is present, and measured, is the lactate ion."
+      },
+      {
+       "id": "b",
+       "text": "Lactate is a different molecule made only in the blood",
+       "why": "Lactate is the same molecule minus its H⁺, made mostly in muscle."
+      },
+      {
+       "id": "c",
+       "text": "Lactic acid is found only in muscle, lactate only in blood",
+       "why": "In both muscle and blood it is almost all lactate plus separate H⁺."
+      },
+      {
+       "id": "d",
+       "text": "Labs say \"lactate\" only to avoid alarming athletes",
+       "why": "It's chemistry, not tact: the acid is almost entirely dissociated."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-ldh-proton",
+   "concept": "la-robergs",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the LDH step that turns pyruvate into lactate, what happens to H⁺?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One H⁺ is used up",
+       "correct": true,
+       "why": "Right: pyruvate + NADH + H⁺ → lactate + NAD⁺. This is the heart of Robergs' argument."
+      },
+      {
+       "id": "b",
+       "text": "One H⁺ is released",
+       "why": "This is the classic 'lactic acid releases a proton' idea; the LDH step itself consumes one."
+      },
+      {
+       "id": "c",
+       "text": "No H⁺ takes part",
+       "why": "An H⁺ is on the left-hand side of the LDH reaction."
+      },
+      {
+       "id": "d",
+       "text": "Two H⁺ are released",
+       "why": "The reaction consumes one H⁺; it releases none."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-proton-source",
+   "concept": "la-robergs",
+   "bloom": "understand",
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to Robergs, where do most of the H⁺ that acidify muscle in a hard effort come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Splitting ATP made outside the mitochondria",
+       "correct": true,
+       "why": "Right: each ATP split releases an H⁺, and only mitochondria reuse them; above steady state they pile up."
+      },
+      {
+       "id": "b",
+       "text": "Lactic acid letting go of its H⁺",
+       "why": "That is the classic view Robergs rejects; in his accounting the LDH step uses an H⁺."
+      },
+      {
+       "id": "c",
+       "text": "CO₂ produced by the mitochondria",
+       "why": "CO₂ affects pH, but Robergs' argument is about the H⁺ from ATP splitting."
+      },
+      {
+       "id": "d",
+       "text": "The breakdown of PCr by creatine kinase",
+       "why": "The creatine kinase reaction uses up an H⁺; it slightly alkalises muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-no-lactate",
+   "concept": "la-robergs",
+   "bloom": "analyse",
+   "sources": [
+    "robergs2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Thought experiment: during a 1-minute all-out effort, a cyclist's muscle can no longer make lactate. What would Robergs predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycolysis stalls for lack of NAD⁺, and acidosis and fatigue come sooner",
+       "correct": true,
+       "why": "Right: lactate formation supplies NAD⁺, prevents pyruvate build-up and, in his view, uses up H⁺."
+      },
+      {
+       "id": "b",
+       "text": "No acidosis at all, so the effort lasts much longer",
+       "why": "H⁺ from ATP splitting would still pile up, and glycolysis would slow without NAD⁺."
+      },
+      {
+       "id": "c",
+       "text": "No change, because lactate plays no part in glycolysis",
+       "why": "Lactate formation regenerates the NAD⁺ that keeps glycolysis running fast."
+      },
+      {
+       "id": "d",
+       "text": "More ATP, because pyruvate is no longer 'wasted' as lactate",
+       "why": "Pyruvate would pile up and NAD⁺ run short, so glycolytic ATP would fall."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-boning-glycogen",
+   "concept": "la-counter",
+   "bloom": "analyse",
+   "sources": [
+    "boning2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Robergs argues that glycolysis from glycogen to lactate actually uses up an H⁺, so it should alkalise muscle. What is Böning and Maassen's reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycogen yields an extra ATP, and splitting it releases an H⁺",
+       "correct": true,
+       "why": "Right: three ATP per glucose unit instead of two; spending the extra one brings the net back to two lactate and two H⁺."
+      },
+      {
+       "id": "b",
+       "text": "Glycogen isn't used in hard exercise, so it doesn't matter",
+       "why": "Glycogen is the main sugar source in hard exercise; their reply is about ATP accounting."
+      },
+      {
+       "id": "c",
+       "text": "PCr breakdown supplies the missing H⁺",
+       "why": "Creatine kinase uses up an H⁺; it can't be the source of the extra one."
+      },
+      {
+       "id": "d",
+       "text": "They agree that this pathway alkalises muscle",
+       "why": "They reject it: counting the ATP spent, lactate and H⁺ still appear one for one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-debate-judge",
+   "concept": "la-counter",
+   "bloom": "evaluate",
+   "sources": [
+    "robergs2004",
+    "boning2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach reads that \"lactate production uses up H⁺\" and tells his athletes that blood lactate is now useless for gauging hard work. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong: whatever the bookkeeping, lactate and H⁺ rise together, so lactate stays a useful marker",
+       "correct": true,
+       "why": "Right: both sides of the debate agree that rising lactate coincides with acidosis and marks acidifying work."
+      },
+      {
+       "id": "b",
+       "text": "Right: if lactate doesn't cause acidosis, it tells you nothing",
+       "why": "A marker need not be a cause; lactate still tracks the conditions that acidify muscle."
+      },
+      {
+       "id": "c",
+       "text": "Right: the debate is settled and lactate has no link to effort",
+       "why": "The debate is still open, and lactate's link to effort is not in doubt."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: Robergs showed lactate is the only cause of acidosis",
+       "why": "Robergs argued the opposite: lactate production slows acidosis."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-fatigue-cause",
+   "concept": "la-fatigue",
+   "bloom": "apply",
+   "sources": [
+    "westerblad2002",
+    "allen2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the last minute of a 4 km pursuit, a cyclist's power fades. Inside the muscle fibres, what does current evidence point to as a major cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inorganic phosphate building up from PCr breakdown, among other factors",
+       "correct": true,
+       "why": "Right: Pi is a leading cause of fibre fatigue, together with ion shifts and failing Ca²⁺ release."
+      },
+      {
+       "id": "b",
+       "text": "Lactate itself poisoning the contractile proteins",
+       "why": "Lactate has little direct effect on force; the lactate-and-H⁺ story is of limited importance."
+      },
+      {
+       "id": "c",
+       "text": "Muscle glycogen running out",
+       "why": "A 4-minute effort uses only part of the glycogen store; fuel isn't the limit here."
+      },
+      {
+       "id": "d",
+       "text": "ATP running out completely",
+       "why": "ATP falls only modestly even in all-out work; it never runs out."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A 1500 m runner's legs \"tie up\" in the final 300 m. Inside the fibres, which change is a leading candidate for the loss of force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rising inorganic phosphate, with ion shifts and weaker Ca²⁺ release",
+       "correct": true,
+       "why": "Right: these are the main fibre-level mechanisms in current reviews."
+      },
+      {
+       "id": "b",
+       "text": "Lactate itself poisoning the contractile proteins",
+       "why": "Lactate has little direct effect on force in mammalian muscle at body temperature."
+      },
+      {
+       "id": "c",
+       "text": "Muscle glycogen running out",
+       "why": "Glycogen lasts far longer than a 4-minute race."
+      },
+      {
+       "id": "d",
+       "text": "ATP running out completely",
+       "why": "Muscle defends ATP; it falls by a third at most."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-pi-source",
+   "concept": "la-fatigue",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "westerblad2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where does most of the inorganic phosphate that builds up in a hard effort come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The breakdown of PCr",
+       "correct": true,
+       "why": "Right: PCr gives its phosphate to rebuild ATP, and splitting that ATP leaves Pi; as PCr falls, Pi rises."
+      },
+      {
+       "id": "b",
+       "text": "The formation of lactate",
+       "why": "The LDH step involves no phosphate."
+      },
+      {
+       "id": "c",
+       "text": "The oxidation of fat",
+       "why": "Fat oxidation rebuilds ATP; it doesn't release a pile of free phosphate."
+      },
+      {
+       "id": "d",
+       "text": "Phosphate carried in from the blood",
+       "why": "The rise comes from within the fibre, from PCr, not from the blood."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-nielsen-appraisal",
+   "concept": "la-fatigue",
+   "bloom": "evaluate",
+   "sources": [
+    "nielsen2001",
+    "cairns2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In isolated rat soleus muscles weakened by high potassium, adding lactic acid restored force almost fully. A blogger concludes: \"Lactic acid makes runners faster.\" What most limits this conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It was isolated rat muscle, with no blood flow, brain or whole-body exercise",
+       "correct": true,
+       "why": "Right: mechanistic animal work can't show a performance effect in people; whole-body studies find blood acidosis worsens fatigue."
+      },
+      {
+       "id": "b",
+       "text": "The study didn't measure muscle force at all",
+       "why": "Force was the main outcome; the problem is how far a dish result carries to a race."
+      },
+      {
+       "id": "c",
+       "text": "Rat soleus has no slow-twitch fibres, unlike human legs",
+       "why": "Rat soleus is mostly slow-twitch; the issue is the model, not the fibre type."
+      },
+      {
+       "id": "d",
+       "text": "None: muscle behaves the same in a dish and in a race",
+       "why": "In a race, blood, nerves, temperature and the brain all change the picture."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "la-alkalosis-event",
+   "concept": "la-whole-body",
+   "bloom": "apply",
+   "sources": [
+    "cairns2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Studies found that making the blood more alkaline improved performance in some events. In which event would reducing acidosis most likely help?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 4-minute individual pursuit",
+       "correct": true,
+       "why": "Right: alkalosis helped in events of about 1–10 minutes, where H⁺ build up most."
+      },
+      {
+       "id": "b",
+       "text": "A 5-hour Ironman bike leg",
+       "why": "Long steady efforts produce little acidosis; fuel and heat matter more."
+      },
+      {
+       "id": "c",
+       "text": "A 6-second track sprint start",
+       "why": "Too short for much H⁺ to build up; PCr dominates."
+      },
+      {
+       "id": "d",
+       "text": "An easy 1-hour recovery run",
+       "why": "Easy running produces almost no acidosis."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

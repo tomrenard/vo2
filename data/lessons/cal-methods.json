@@ -1,0 +1,949 @@
+{
+ "id": "cal-methods",
+ "module": "t1a-calorimetry",
+ "title": "Measuring energy: calorimetry",
+ "goal": "Explain how direct calorimetry, a metabolic cart and doubly labelled water measure energy use, and calculate VO₂ and energy from cart and DLW data.",
+ "requires": [
+  "mus-plasticity"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "meth-cart-measures",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "meth-heat",
+   "title": "Heat or gases",
+   "text": "Almost all the energy your muscles turn over ends up as heat; only the work you do on the pedals or road leaves the body another way. [Direct calorimetry](g:direct-calorimetry) measures that heat: the athlete sits or rides in an insulated chamber and the heat given off is measured [[c:direct-heat]]. It counts energy from every route, aerobic and anaerobic alike [[c:direct-all-routes]].\n\nChambers are rare and slow, and you can't race in one. So labs use [indirect calorimetry](g:indirect-calorimetry): measure the O₂ used and the CO₂ made, and work out the energy from them. Direct calorimetry is what proved that this shortcut gives the right answer [[c:direct-validates]].\n\nThe catch: gases only see aerobic metabolism. A 30 s sprint, paid mostly by PCr and glycolysis, is badly measured by gases alone.",
+   "claims": [
+    {
+     "id": "direct-heat",
+     "text": "Direct calorimetry measures heat production, which needs an insulated chamber; it is the gold standard for metabolic rate.",
+     "grade": "strong",
+     "sources": [
+      "moonen2021",
+      "kenny2017"
+     ],
+     "evidence": [
+      {
+       "source": "moonen2021",
+       "quote": "Direct calorimetry, in contrast, measures heat production and, therefore, energy production directly, but this method is not feasible in clinical practice, as it requires the patients to be measured inside an insulated chamber",
+       "level": "full-text"
+      },
+      {
+       "source": "kenny2017",
+       "quote": "Direct calorimetry is the gold standard means of measuring human metabolic rate and its use has been fundamental for understanding metabolism in health and disease.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "direct-all-routes",
+     "text": "Direct calorimetry captures the heat from both aerobic and anaerobic metabolism.",
+     "grade": "strong",
+     "sources": [
+      "kenny2017"
+     ],
+     "evidence": [
+      {
+       "source": "kenny2017",
+       "quote": "direct calorimetry provides the user with the unique capacity to quantify the heat produced from aerobic and anaerobic metabolism by measuring heat exchange between the body and the environment",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "direct-validates",
+     "text": "Direct calorimetry studies established the validity of indirect calorimetry.",
+     "grade": "strong",
+     "sources": [
+      "kenny2017"
+     ],
+     "evidence": [
+      {
+       "source": "kenny2017",
+       "quote": "Attention is directed to seminal studies that successfully employed direct calorimetry to verify that the law of energy conservation also applies to human beings and to establish the validity of indirect calorimetry.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "meth-direct-anaerobic"
+  },
+  {
+   "type": "concept",
+   "id": "meth-cart",
+   "title": "Inside a metabolic cart",
+   "text": "A [metabolic cart](g:metabolic-cart) measures three things: how much air you breathe out per minute (**VE**, from a flow sensor) and the O₂ and CO₂ fractions in it (**FEO₂**, **FECO₂**, from gas analysers). Room air is known: 20.93% O₂, 0.04% CO₂, 79.03% N₂.\n\nThe rest is bookkeeping:\n\n- **VO₂** = O₂ in − O₂ out = VI × 0.2093 − VE × FEO₂ [[c:vo2-equation]]\n- **VCO₂** ≈ VE × FECO₂ (there is almost no CO₂ in room air)\n\nCarts aren't perfect. When 57 carts in everyday use were tested against a gas simulator, their VO₂ errors ranged from about 3% to 11% [[c:cart-error]]. Compare your numbers on the same cart, not across labs.\n\nOne gap remains: the equation needs **VI**, the air breathed in, and the cart measured only VE.",
+   "claims": [
+    {
+     "id": "vo2-equation",
+     "text": "VO₂ is the O₂ breathed in minus the O₂ breathed out: VI × FIO₂ − VE × FEO₂.",
+     "grade": "strong",
+     "sources": [
+      "datta2015"
+     ],
+     "evidence": [
+      {
+       "source": "datta2015",
+       "quote": "The measurement of V O2 is based on the equation: V O2 = VI × FIO 2 − VE × FEO 2",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cart-error",
+     "text": "Tested against a metabolic simulator, 57 carts used in practice had VO₂ errors of about 3.3% to 10.6%.",
+     "grade": "moderate",
+     "sources": [
+      "vanhooren2026"
+     ],
+     "evidence": [
+      {
+       "source": "vanhooren2026",
+       "quote": "Absolute percentage errors during the simulations ranged from 1.41% to 24.6% for V̇E, 3.29%-10.6% for V̇O2, 2.86%-13.3% for V̇CO2, and 1.90%-10.0% for RER.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "meth-cart-measures",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "meth-haldane",
+   "title": "The Haldane trick",
+   "text": "Carts measure one flow and work out the other with the [Haldane transformation](g:haldane-transformation). The idea: your body neither uses nor makes nitrogen, so the nitrogen breathed in equals the nitrogen breathed out [[c:haldane-n2]]:\n\nVI × 0.7903 = VE × FEN₂, so **VI = VE × FEN₂ ÷ 0.7903**, where FEN₂ = 1 − FEO₂ − FECO₂.\n\nWhy VI and VE differ at all: below an RER of 1 you take up more O₂ than you give back as CO₂, so slightly less gas comes out than went in. The same nitrogen sits in less gas, so FEN₂ is above 0.7903 and VI is a little larger than VE.\n\nThe correction is small, a few percent, but always in the same direction. It holds in normal air and up to 40% O₂, and fails only with very O₂-rich mixtures [[c:haldane-hyperoxia]].",
+   "claims": [
+    {
+     "id": "haldane-n2",
+     "text": "The Haldane transformation assumes nitrogen is not exchanged, so inspired and expired nitrogen volumes are equal; this gives the inspired volume.",
+     "grade": "strong",
+     "sources": [
+      "moonen2021",
+      "lang2018"
+     ],
+     "evidence": [
+      {
+       "source": "moonen2021",
+       "quote": "IC uses an adjusted version based on the Haldane transformation, which assumes that nitrogen is physiologically inert, and therefore, the volume of inspired nitrogen must equal the volume of expired nitrogen.",
+       "level": "full-text"
+      },
+      {
+       "source": "lang2018",
+       "quote": "On the assumption that no nitrogen exchange (VN 2 ) takes place, John Scott Haldane (1860–1936) defined a correction factor for the exact calculation of the inspiratory volume (V I ).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "haldane-hyperoxia",
+     "text": "The Haldane transformation is valid in normal air and at 40% inspired O₂, but not at 80%.",
+     "grade": "weak",
+     "sources": [
+      "lang2018"
+     ],
+     "evidence": [
+      {
+       "source": "lang2018",
+       "quote": "the data obtained show that both the HT and ET are valid under normal conditions and at an increased FIO2 of 40%",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "meth-vo2-example",
+   "title": "VO₂ from cart readings",
+   "problem": "A runner on a treadmill: VE = 80.0 L·min⁻¹, FEO₂ = 16.50%, FECO₂ = 4.00%. Find VO₂ and RER.",
+   "steps": [
+    "Nitrogen fraction out: FEN₂ = 1 − 0.1650 − 0.0400 = 0.7950.",
+    "Haldane: VI = 80.0 × 0.7950 ÷ 0.7903 = 80.48 L·min⁻¹, a little more air in than out.",
+    "O₂ in = 80.48 × 0.2093 = 16.84 L·min⁻¹; O₂ out = 80.0 × 0.1650 = 13.20 L·min⁻¹.",
+    "VO₂ = 16.84 − 13.20 = 3.64 L·min⁻¹. Skipping Haldane (VI = VE) would give 3.54, about 3% too low.",
+    "VCO₂ ≈ 80.0 × 0.0400 = 3.20 L·min⁻¹, so RER ≈ 3.20 ÷ 3.64 = 0.88."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "meth-haldane-why"
+  },
+  {
+   "type": "question",
+   "item": "meth-vo2-calc"
+  },
+  {
+   "type": "question",
+   "item": "meth-skip-haldane"
+  },
+  {
+   "type": "concept",
+   "id": "meth-weir",
+   "title": "From gases to energy, in a steady state",
+   "text": "Carts turn VO₂ and VCO₂ into energy with the [Weir equation](g:weir-equation) [[c:weir]]:\n\n**Energy (kcal·min⁻¹) = 3.94 × VO₂ + 1.11 × VCO₂** (both in L·min⁻¹), then × 4.184 for kJ.\n\nIt is the energy-per-litre idea with the fuel mix built in: more CO₂ per O₂ means more carbohydrate, which gives a little more energy per litre of O₂.\n\nAll of this assumes the gases at the mouth mirror what the cells do. That holds only in a [steady state](g:steady-state): stable VO₂, stable breathing, no change in the CO₂ stored in the body [[c:steady-state]]. At the start of a stage VO₂ is still rising, and in the heavy domain it can take more than 3–4 minutes to settle. Short ramp stages are fine for finding VO₂max, but poor for energy and fuel numbers.",
+   "claims": [
+    {
+     "id": "weir",
+     "text": "Indirect calorimetry calculates energy expenditure from VO₂ and VCO₂ with the (adjusted) Weir equation.",
+     "grade": "strong",
+     "sources": [
+      "moonen2021"
+     ],
+     "evidence": [
+      {
+       "source": "moonen2021",
+       "quote": "IC determines REE by measuring oxygen consumption (VO 2 , in L/min) and carbon dioxide production (VCO 2 , in L/min) and subsequently calculates REE according to the adjusted Weir’s equation, based on the caloric values of the oxidation of 1 L of O 2 metabolizing a fat and carbohydrate mixture",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "steady-state",
+     "text": "Gas-exchange estimates need a metabolic steady state, which in the heavy domain can take longer than 3–4 min to reach.",
+     "grade": "strong",
+     "sources": [
+      "hassanein2026",
+      "moonen2021"
+     ],
+     "evidence": [
+      {
+       "source": "hassanein2026",
+       "quote": "Accurate determination of substrate utilization requires a metabolic steady state (Jeukendrup and Wallis 2005), however as exercise intensity increases into the heavy domain, the duration required to achieve a steady state can extend beyond 3–4 min",
+       "level": "full-text"
+      },
+      {
+       "source": "moonen2021",
+       "quote": "it is essential to ensure as much of a steady state as possible and practical during the measurement procedure",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "meth-weir-example",
+   "title": "Energy with the Weir equation",
+   "problem": "A cyclist rides steadily with VO₂ = 3.00 L·min⁻¹ and VCO₂ = 2.70 L·min⁻¹. How much energy is she using?",
+   "steps": [
+    "Energy = 3.94 × 3.00 + 1.11 × 2.70 = 11.82 + 3.00 = 14.82 kcal·min⁻¹.",
+    "In kJ: 14.82 × 4.184 = 62.0 kJ·min⁻¹ (about 1,030 W of metabolic power).",
+    "Check with the rough method: RER 0.90 means about two thirds carbohydrate, so about 20.6 kJ per litre × 3.00 L = 61.8 kJ·min⁻¹. The two agree."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "meth-weir-calc"
+  },
+  {
+   "type": "question",
+   "item": "meth-steady-stage"
+  },
+  {
+   "type": "concept",
+   "id": "meth-dlw",
+   "title": "Doubly labelled water: a week in real life",
+   "text": "A cart sees minutes. For a whole training camp you need [doubly labelled water](g:doubly-labelled-water) (DLW). You drink water tagged with heavy hydrogen (²H) and heavy oxygen (¹⁸O), then give urine samples over 1–3 weeks [[c:dlw-principle]].\n\nThe trick: hydrogen leaves the body only as water; oxygen leaves as water **and** as CO₂. So ¹⁸O washes out faster than ²H, and the difference is your CO₂ production.\n\nCO₂ is turned into energy with an energy per litre of CO₂: about 23.5 kJ on a typical mixed diet, from 21.1 kJ for pure carbohydrate to 27.8 kJ for pure fat [[c:dlw-co2-energy]].\n\nAgainst a respiration chamber, DLW is accurate, with a precision of 2–8% [[c:dlw-precision]]. But it gives one average over days, nothing about a single session.",
+   "claims": [
+    {
+     "id": "dlw-principle",
+     "text": "DLW enriches body water with ²H and ¹⁸O; the difference in their washout rates reflects CO₂ production.",
+     "grade": "strong",
+     "sources": [
+      "westerterp2017"
+     ],
+     "evidence": [
+      {
+       "source": "westerterp2017",
+       "quote": "The method involves enriching the body water of a subject with heavy hydrogen (2H) and heavy oxygen (18O), and then determining the difference in washout kinetics between both isotopes, being a function of carbon dioxide production.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dlw-co2-energy",
+     "text": "The energy equivalent of CO₂ is about 23.5 kJ per litre on a typical mixed diet (21.1 for carbohydrate to 27.8 for fat).",
+     "grade": "strong",
+     "sources": [
+      "westerterp2017"
+     ],
+     "evidence": [
+      {
+       "source": "westerterp2017",
+       "quote": "It ranges from a minimum of 21.1 kJ/l for pure carbohydrate oxidation to 27.8 kJ/l for pure fat oxidation (Table 3). For a typical western diet, 55 energy% carbohydrate, 15 energy% protein, and 30 energy% fat, the energy equivalent of carbon dioxide is 23.5 kJ/l.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dlw-precision",
+     "text": "Validated against respiration chambers, DLW is accurate with a precision of 2–8%.",
+     "grade": "moderate",
+     "sources": [
+      "westerterp2017"
+     ],
+     "evidence": [
+      {
+       "source": "westerterp2017",
+       "quote": "validation studies, comparing doubly labelled water-assessed energy expenditure with simultaneously measured energy expenditure in a respiration chamber, showed that the method is accurate and has a precision of 2–8%",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "meth-dlw-example",
+   "title": "Energy from doubly labelled water",
+   "problem": "Over a 14-day camp, a triathlete's DLW result is a CO₂ production of 700 L·day⁻¹. About what is her daily energy expenditure?",
+   "steps": [
+    "Energy per litre of CO₂ on a mixed diet ≈ 23.5 kJ.",
+    "Energy = 700 × 23.5 = 16,450 kJ·day⁻¹ (16,450 ÷ 4.184 ≈ 3,930 kcal).",
+    "This is an average over the 14 days: hard and easy days are blended together."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "meth-dlw-calc"
+  },
+  {
+   "type": "question",
+   "item": "meth-method-choice"
+  },
+  {
+   "type": "question",
+   "item": "meth-cart-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Direct calorimetry measures heat (aerobic and anaerobic); indirect calorimetry infers energy from O₂ used and CO₂ made, and was validated against it.",
+    "VO₂ = VI × 0.2093 − VE × FEO₂; the Haldane transformation gets VI from VE because nitrogen in = nitrogen out: VI = VE × FEN₂ ÷ 0.7903.",
+    "Weir: energy (kcal·min⁻¹) = 3.94 × VO₂ + 1.11 × VCO₂; × 4.184 for kJ.",
+    "Gas numbers are valid only in a steady state; heavy-domain stages need more than 3–4 min.",
+    "Doubly labelled water measures CO₂ production over 1–3 weeks; × about 23.5 kJ per litre gives daily energy, with 2–8% precision.",
+    "Carts differ by roughly 3–11% in VO₂: compare on the same cart."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "meth-cart-measures",
+   "concept": "meth-cart",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "datta2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does a metabolic cart actually measure to find VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Air flow and the O₂ and CO₂ fractions of breath",
+       "correct": true,
+       "why": "Right: from ventilation and gas fractions it does the O₂ and CO₂ bookkeeping."
+      },
+      {
+       "id": "b",
+       "text": "The heat given off by the body",
+       "why": "That is direct calorimetry, done in an insulated chamber; a cart measures gases."
+      },
+      {
+       "id": "c",
+       "text": "Heart rate and blood lactate",
+       "why": "These track intensity but say nothing direct about O₂ used; a cart doesn't measure them."
+      },
+      {
+       "id": "d",
+       "text": "Oxygen in the working muscle",
+       "why": "That is near-infrared spectroscopy (NIRS); a cart measures breath at the mouth."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cart's sensors give three numbers each breath. Which three?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Expired volume, expired O₂ fraction, expired CO₂ fraction",
+       "correct": true,
+       "why": "Right: VE, FEO₂ and FECO₂; inspired air is known room air, and VI comes from the Haldane step."
+      },
+      {
+       "id": "b",
+       "text": "Inspired volume, expired volume, heart rate",
+       "why": "The cart usually measures only one flow, and heart rate isn't part of the gas calculation."
+      },
+      {
+       "id": "c",
+       "text": "Blood O₂, blood CO₂, blood pH",
+       "why": "These are blood-gas values from a sample; a cart only analyses breath."
+      },
+      {
+       "id": "d",
+       "text": "VO₂, VCO₂ and RER directly",
+       "why": "These are calculated from flow and gas fractions; no sensor reads VO₂ directly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-direct-anaerobic",
+   "concept": "meth-heat",
+   "bloom": "understand",
+   "sources": [
+    "kenny2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sprinter does a 30 s all-out effort inside a whole-body calorimeter that also collects her breath. Which measurement best captures the energy of the sprint itself?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The heat measured by direct calorimetry",
+       "correct": true,
+       "why": "Right: heat comes from aerobic and anaerobic routes alike, so it counts the PCr and glycolysis energy too."
+      },
+      {
+       "id": "b",
+       "text": "The O₂ used during the 30 s",
+       "why": "Most of a 30 s sprint is paid by PCr and glycolysis, which use no O₂ at the time; gases miss that part."
+      },
+      {
+       "id": "c",
+       "text": "The CO₂ made during the 30 s",
+       "why": "CO₂ at the mouth also reflects buffering and breathing, and still misses most of the anaerobic energy."
+      },
+      {
+       "id": "d",
+       "text": "Doubly labelled water over the day",
+       "why": "DLW averages over days; it can't isolate a 30 s effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-haldane-why",
+   "concept": "meth-haldane",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "moonen2021",
+    "lang2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cart measures only expired air flow. Why can it still work out how much air was breathed in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nitrogen is neither used nor made, so nitrogen in equals nitrogen out",
+       "correct": true,
+       "why": "Right: that is the Haldane transformation, VI = VE × FEN₂ ÷ 0.7903."
+      },
+      {
+       "id": "b",
+       "text": "Inspired and expired volumes are always equal",
+       "why": "They differ whenever RER isn't 1: more O₂ goes in than CO₂ comes out, so less gas leaves."
+      },
+      {
+       "id": "c",
+       "text": "O₂ in equals CO₂ out",
+       "why": "That is true only at RER 1.0, and it is what the cart is trying to measure, not an assumption it can use."
+      },
+      {
+       "id": "d",
+       "text": "It assumes an RER of 0.85 for everyone",
+       "why": "No fuel mix is assumed; the nitrogen balance gives VI directly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-vo2-calc",
+   "concept": "meth-haldane",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "datta2015",
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner is at a steady 14 km·h⁻¹ on the treadmill. The cart reads VE = 100.0 L·min⁻¹, FEO₂ = 16.50% and FECO₂ = 4.00%. Using the Haldane transformation (inspired air 20.93% O₂, 79.03% N₂), what is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.55 L·min⁻¹",
+       "correct": true,
+       "why": "Right: FEN₂ = 0.7950, VI = 100.0 × 0.7950 ÷ 0.7903 = 100.59 L·min⁻¹, VO₂ = 100.59 × 0.2093 − 100.0 × 0.165 = 4.55."
+      },
+      {
+       "id": "b",
+       "text": "4.43 L·min⁻¹",
+       "why": "This sets VI equal to VE, skipping the Haldane step; with RER below 1, VI is a little larger than VE, so VO₂ comes out too low."
+      },
+      {
+       "id": "c",
+       "text": "4.31 L·min⁻¹",
+       "why": "This turns the ratio upside down (VE × 0.7903 ÷ FEN₂); nitrogen is more concentrated in expired air, so VI must be larger than VE, not smaller."
+      },
+      {
+       "id": "d",
+       "text": "21.05 L·min⁻¹",
+       "why": "That is the O₂ breathed in; the O₂ breathed out still has to be subtracted."
+      }
+     ],
+     "solution": "FEN₂ = 1 − 0.165 − 0.040 = 0.7950. VI = 100.0 × 0.7950 ÷ 0.7903 = 100.59 L·min⁻¹. VO₂ = 100.59 × 0.2093 − 100.0 × 0.165 = 21.05 − 16.50 = 4.55 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides an easy, steady 150 W. The cart reads VE = 50.0 L·min⁻¹, FEO₂ = 16.00% and FECO₂ = 4.00%. Using the Haldane transformation (inspired air 20.93% O₂, 79.03% N₂), what is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.59 L·min⁻¹",
+       "correct": true,
+       "why": "Right: FEN₂ = 0.8000, VI = 50.0 × 0.8000 ÷ 0.7903 = 50.61 L·min⁻¹, VO₂ = 50.61 × 0.2093 − 50.0 × 0.160 = 2.59."
+      },
+      {
+       "id": "b",
+       "text": "2.47 L·min⁻¹",
+       "why": "This sets VI equal to VE, skipping the Haldane step; with RER below 1, VI is a little larger than VE, so VO₂ comes out too low."
+      },
+      {
+       "id": "c",
+       "text": "2.34 L·min⁻¹",
+       "why": "This turns the ratio upside down (VE × 0.7903 ÷ FEN₂); nitrogen is more concentrated in expired air, so VI must be larger than VE, not smaller."
+      },
+      {
+       "id": "d",
+       "text": "10.59 L·min⁻¹",
+       "why": "That is the O₂ breathed in; the O₂ breathed out still has to be subtracted."
+      }
+     ],
+     "solution": "FEN₂ = 1 − 0.160 − 0.040 = 0.8000. VI = 50.0 × 0.8000 ÷ 0.7903 = 50.61 L·min⁻¹. VO₂ = 50.61 × 0.2093 − 50.0 × 0.160 = 10.59 − 8.00 = 2.59 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete holds her Ironman bike power on the ergometer. The cart reads VE = 110.0 L·min⁻¹, FEO₂ = 16.60% and FECO₂ = 4.20%. Using the Haldane transformation (inspired air 20.93% O₂, 79.03% N₂), what is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.81 L·min⁻¹",
+       "correct": true,
+       "why": "Right: FEN₂ = 0.7920, VI = 110.0 × 0.7920 ÷ 0.7903 = 110.24 L·min⁻¹, VO₂ = 110.24 × 0.2093 − 110.0 × 0.166 = 4.81."
+      },
+      {
+       "id": "b",
+       "text": "4.76 L·min⁻¹",
+       "why": "This sets VI equal to VE, skipping the Haldane step; with RER below 1, VI is a little larger than VE, so VO₂ comes out too low."
+      },
+      {
+       "id": "c",
+       "text": "4.71 L·min⁻¹",
+       "why": "This turns the ratio upside down (VE × 0.7903 ÷ FEN₂); nitrogen is more concentrated in expired air, so VI must be larger than VE, not smaller."
+      },
+      {
+       "id": "d",
+       "text": "23.07 L·min⁻¹",
+       "why": "That is the O₂ breathed in; the O₂ breathed out still has to be subtracted."
+      }
+     ],
+     "solution": "FEN₂ = 1 − 0.166 − 0.042 = 0.7920. VI = 110.0 × 0.7920 ÷ 0.7903 = 110.24 L·min⁻¹. VO₂ = 110.24 × 0.2093 − 110.0 × 0.166 = 23.07 − 18.26 = 4.81 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "meth-skip-haldane",
+   "concept": "meth-haldane",
+   "bloom": "analyse",
+   "sources": [
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rests on the bike before a test, with an RER of 0.80. Faulty software sets VI equal to VE instead of using the Haldane transformation. What happens to his VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is underestimated, by a few percent",
+       "correct": true,
+       "why": "Right: at RER 0.80 less gas leaves than enters, so VI is larger than VE; setting VI = VE counts too little O₂ going in."
+      },
+      {
+       "id": "b",
+       "text": "It is overestimated, by a few percent",
+       "why": "The error goes the other way: VI is the larger volume, so using VE in its place lowers the O₂ in."
+      },
+      {
+       "id": "c",
+       "text": "It is unchanged, because nitrogen is inert",
+       "why": "Nitrogen being inert is why the Haldane step works; skipping the step still leaves the wrong VI."
+      },
+      {
+       "id": "d",
+       "text": "Only VCO₂ is affected",
+       "why": "VCO₂ comes almost entirely from VE × FECO₂; it is VO₂ that needs VI."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-weir-calc",
+   "concept": "meth-weir",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An easy run: VO₂ is 2.00 L·min⁻¹ and VCO₂ is 1.70 L·min⁻¹ in a steady state. Using the Weir equation, how much energy is being used?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40.9 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.94 × 2.00 + 1.11 × 1.70 = 9.77 kcal·min⁻¹; × 4.184 = 40.9 kJ·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "9.8 kJ·min⁻¹",
+       "why": "That is the answer in kcal; it still has to be multiplied by 4.184 to give kJ."
+      },
+      {
+       "id": "c",
+       "text": "33.0 kJ·min⁻¹",
+       "why": "This leaves out the 1.11 × VCO₂ term, which carries the fuel mix into the energy."
+      },
+      {
+       "id": "d",
+       "text": "2.3 kJ·min⁻¹",
+       "why": "This divides by 4.184 instead of multiplying: a kJ is smaller than a kcal, so the kJ number must be bigger."
+      }
+     ],
+     "solution": "Energy = 3.94 × 2.00 + 1.11 × 1.70 = 7.88 + 1.89 = 9.77 kcal·min⁻¹ = 9.77 × 4.184 = 40.9 kJ·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist near her threshold: VO₂ is 4.20 L·min⁻¹ and VCO₂ is 4.00 L·min⁻¹ in a steady state. Using the Weir equation, how much energy is being used?",
+     "options": [
+      {
+       "id": "a",
+       "text": "87.8 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.94 × 4.20 + 1.11 × 4.00 = 20.99 kcal·min⁻¹; × 4.184 = 87.8 kJ·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "21.0 kJ·min⁻¹",
+       "why": "That is the answer in kcal; it still has to be multiplied by 4.184 to give kJ."
+      },
+      {
+       "id": "c",
+       "text": "69.2 kJ·min⁻¹",
+       "why": "This leaves out the 1.11 × VCO₂ term, which carries the fuel mix into the energy."
+      },
+      {
+       "id": "d",
+       "text": "5.0 kJ·min⁻¹",
+       "why": "This divides by 4.184 instead of multiplying: a kJ is smaller than a kcal, so the kJ number must be bigger."
+      }
+     ],
+     "solution": "Energy = 3.94 × 4.20 + 1.11 × 4.00 = 16.55 + 4.44 = 20.99 kcal·min⁻¹ = 20.99 × 4.184 = 87.8 kJ·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete on the run leg: VO₂ is 3.40 L·min⁻¹ and VCO₂ is 3.00 L·min⁻¹ in a steady state. Using the Weir equation, how much energy is being used?",
+     "options": [
+      {
+       "id": "a",
+       "text": "70.0 kJ·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.94 × 3.40 + 1.11 × 3.00 = 16.73 kcal·min⁻¹; × 4.184 = 70.0 kJ·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "16.7 kJ·min⁻¹",
+       "why": "That is the answer in kcal; it still has to be multiplied by 4.184 to give kJ."
+      },
+      {
+       "id": "c",
+       "text": "56.0 kJ·min⁻¹",
+       "why": "This leaves out the 1.11 × VCO₂ term, which carries the fuel mix into the energy."
+      },
+      {
+       "id": "d",
+       "text": "4.0 kJ·min⁻¹",
+       "why": "This divides by 4.184 instead of multiplying: a kJ is smaller than a kcal, so the kJ number must be bigger."
+      }
+     ],
+     "solution": "Energy = 3.94 × 3.40 + 1.11 × 3.00 = 13.40 + 3.33 = 16.73 kcal·min⁻¹ = 16.73 × 4.184 = 70.0 kJ·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "meth-steady-stage",
+   "concept": "meth-weir",
+   "bloom": "analyse",
+   "sources": [
+    "hassanein2026",
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants her energy use at Ironman bike power. The lab uses a ramp test with 1-minute stages and reads the value at the minute that matches that power. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO₂ hasn't reached a steady state at that minute",
+       "correct": true,
+       "why": "Right: after one minute VO₂ is still rising toward its steady level, so the gases understate the energy and can mislead on fuel."
+      },
+      {
+       "id": "b",
+       "text": "Ramp tests can't measure VO₂ at all",
+       "why": "Ramp tests measure VO₂ fine, and are the standard for VO₂max; the issue is steady state."
+      },
+      {
+       "id": "c",
+       "text": "The Haldane transformation fails during exercise",
+       "why": "It fails only with very O₂-rich gas, not in normal air during exercise."
+      },
+      {
+       "id": "d",
+       "text": "One minute gives too few breaths to average",
+       "why": "There are plenty of breaths in a minute; the problem is that the body hasn't settled."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-dlw-calc",
+   "concept": "meth-dlw",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "westerterp2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a block of high-volume running, doubly labelled water gives a CO₂ production of 650 L·day⁻¹. On a typical mixed diet, about what is the daily energy expenditure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15,275 kJ·day⁻¹",
+       "correct": true,
+       "why": "Right: 650 L × 23.5 kJ per litre of CO₂ = 15,275 kJ."
+      },
+      {
+       "id": "b",
+       "text": "13,325 kJ·day⁻¹",
+       "why": "This uses the energy per litre of O₂ (about 20.5 kJ); DLW measures CO₂, which carries more energy per litre."
+      },
+      {
+       "id": "c",
+       "text": "18,070 kJ·day⁻¹",
+       "why": "27.8 kJ per litre of CO₂ is for pure fat oxidation; a mixed diet is about 23.5."
+      },
+      {
+       "id": "d",
+       "text": "3,651 kJ·day⁻¹",
+       "why": "That is the kcal figure written as kJ; 23.5 kJ per litre already gives kJ, so no ÷ 4.184 is needed."
+      }
+     ],
+     "solution": "Energy = CO₂ × energy per litre of CO₂ = 650 × 23.5 = 15,275 kJ·day⁻¹ (3,651 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "In a cyclist's stage race week, doubly labelled water gives a CO₂ production of 1,100 L·day⁻¹. On a typical mixed diet, about what is the daily energy expenditure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25,850 kJ·day⁻¹",
+       "correct": true,
+       "why": "Right: 1,100 L × 23.5 kJ per litre of CO₂ = 25,850 kJ."
+      },
+      {
+       "id": "b",
+       "text": "22,550 kJ·day⁻¹",
+       "why": "This uses the energy per litre of O₂ (about 20.5 kJ); DLW measures CO₂, which carries more energy per litre."
+      },
+      {
+       "id": "c",
+       "text": "30,580 kJ·day⁻¹",
+       "why": "27.8 kJ per litre of CO₂ is for pure fat oxidation; a mixed diet is about 23.5."
+      },
+      {
+       "id": "d",
+       "text": "6,178 kJ·day⁻¹",
+       "why": "That is the kcal figure written as kJ; 23.5 kJ per litre already gives kJ, so no ÷ 4.184 is needed."
+      }
+     ],
+     "solution": "Energy = CO₂ × energy per litre of CO₂ = 1,100 × 23.5 = 25,850 kJ·day⁻¹ (6,178 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "Over a recovery week, a triathlete's doubly labelled water gives a CO₂ production of 480 L·day⁻¹. On a typical mixed diet, about what is the daily energy expenditure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11,280 kJ·day⁻¹",
+       "correct": true,
+       "why": "Right: 480 L × 23.5 kJ per litre of CO₂ = 11,280 kJ."
+      },
+      {
+       "id": "b",
+       "text": "9,840 kJ·day⁻¹",
+       "why": "This uses the energy per litre of O₂ (about 20.5 kJ); DLW measures CO₂, which carries more energy per litre."
+      },
+      {
+       "id": "c",
+       "text": "13,344 kJ·day⁻¹",
+       "why": "27.8 kJ per litre of CO₂ is for pure fat oxidation; a mixed diet is about 23.5."
+      },
+      {
+       "id": "d",
+       "text": "2,696 kJ·day⁻¹",
+       "why": "That is the kcal figure written as kJ; 23.5 kJ per litre already gives kJ, so no ÷ 4.184 is needed."
+      }
+     ],
+     "solution": "Energy = CO₂ × energy per litre of CO₂ = 480 × 23.5 = 11,280 kJ·day⁻¹ (2,696 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "meth-method-choice",
+   "concept": "meth-dlw",
+   "bloom": "evaluate",
+   "sources": [
+    "westerterp2017",
+    "kenny2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants a cyclist's average daily energy expenditure across a two-week training camp, with no change to how she lives and rides. Which method fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Doubly labelled water",
+       "correct": true,
+       "why": "Right: it measures free-living CO₂ production over 1–3 weeks without getting in the way."
+      },
+      {
+       "id": "b",
+       "text": "A metabolic cart worn during every ride",
+       "why": "Possible in theory, but impractical for two weeks and it misses everything off the bike."
+      },
+      {
+       "id": "c",
+       "text": "Direct calorimetry in a chamber",
+       "why": "A chamber can't hold training rides on the road; it changes how she lives."
+      },
+      {
+       "id": "d",
+       "text": "The Weir equation from one lab test",
+       "why": "One test gives minutes, not two weeks of real training and rest."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A sports scientist wants the fat and carbohydrate use of a runner at marathon pace. Which method fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A metabolic cart in a steady state",
+       "correct": true,
+       "why": "Right: VO₂ and VCO₂ at a stable pace give both energy and fuel mix minute by minute."
+      },
+      {
+       "id": "b",
+       "text": "Doubly labelled water",
+       "why": "DLW gives total CO₂ over days; it can't separate fuels at one pace."
+      },
+      {
+       "id": "c",
+       "text": "Direct calorimetry",
+       "why": "Heat tells you total energy but not which fuel made it."
+      },
+      {
+       "id": "d",
+       "text": "Heart rate with a weekly diary",
+       "why": "Heart rate estimates intensity; it doesn't measure fuel use."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meth-cart-appraisal",
+   "concept": "meth-cart",
+   "bloom": "evaluate",
+   "sources": [
+    "vanhooren2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist tests at two labs at the same steady 250 W. Lab A measures VO₂ = 3.40 L·min⁻¹, lab B 3.62 L·min⁻¹. A forum post says she must have lost fitness between tests. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 6% gap is within the error seen between carts",
+       "correct": true,
+       "why": "Right: carts in everyday use showed VO₂ errors of about 3–11% against a simulator, so compare only on the same cart."
+      },
+      {
+       "id": "b",
+       "text": "The higher value is right, since carts underread",
+       "why": "Errors go both ways between units; neither value is known to be the true one."
+      },
+      {
+       "id": "c",
+       "text": "It proves her efficiency dropped",
+       "why": "A change in efficiency is possible, but a gap this size between two carts can't show it."
+      },
+      {
+       "id": "d",
+       "text": "It must be a steady-state problem",
+       "why": "Both were steady 250 W rides; the cart itself is the likelier source of the gap."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

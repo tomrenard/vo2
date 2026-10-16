@@ -18,8 +18,9 @@ Check one module while others are being written: `pnpm content:check --module <i
 ## Writing a lesson
 
 A lesson is a run of steps, 5–8 minutes in all:
-concept → 1–3 questions → concept → … → recap. Start with 1–2 `pretest` questions on what the
+concept → 1–3 questions → concept → … → recap. Start with one `pretest` question on what the
 lesson is about to teach (unscored; the same item comes back scored later, with another variant).
+Never more than one per lesson.
 
 - **Concept cards:** one idea, about 120 words, plain English. Mark the claims that matter with
   `[[c:<claim id>]]` and list them in `claims` with a grade, sources and the quoted sentence from

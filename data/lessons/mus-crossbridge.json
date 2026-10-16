@@ -1,0 +1,686 @@
+{
+ "id": "mus-crossbridge",
+ "module": "t1a-muscle",
+ "title": "The cross-bridge cycle: how myosin pulls",
+ "goal": "Explain how Ca²⁺ and troponin–tropomyosin switch the cross-bridge cycle on, walk through its steps (attach, power stroke, ATP binding and detachment, re-cocking), and say why muscle needs ATP to let go as well as to pull.",
+ "requires": [
+  "lac-blood"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "cb-atp-detach",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "cb-switch",
+   "title": "Calcium flips the switch",
+   "text": "You saw how a nerve spike ends with Ca²⁺ flooding out of the [sarcoplasmic reticulum](g:sarcoplasmic-reticulum). Here is what that Ca²⁺ does.\n\nThe thin filament is more than [actin](g:actin). A strand of [tropomyosin](g:tropomyosin) lies along it, with a [troponin](g:troponin) complex every seven actins. At rest, tropomyosin covers the spots where [myosin](g:myosin) heads would bind.\n\nWhen Ca²⁺ binds troponin C, troponin pulls tropomyosin aside and the binding sites open [[c:cb-ca-switch]]. Myosin heads can now grab actin.\n\nThe switch also feeds itself: heads that bind strongly push tropomyosin further, opening sites next door [[c:cb-cooperative]].\n\nWhen the SERCA pump takes the Ca²⁺ back, tropomyosin slides back over the sites and the heads can no longer attach: the muscle relaxes.",
+   "claims": [
+    {
+     "id": "cb-ca-switch",
+     "text": "Ca²⁺ binding to troponin C moves tropomyosin over the actin surface and exposes the myosin-binding sites it was blocking.",
+     "grade": "strong",
+     "sources": [
+      "gordon2000"
+     ],
+     "evidence": [
+      {
+       "source": "gordon2000",
+       "quote": "Ca(2+) binding to TnC enhances TnC-TnI interaction, weakens TnI attachment to its binding sites on 1-2 actins of the regulatory unit, increases Tm movement over the actin surface, and exposes myosin-binding sites on actin previously blocked by Tm.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cb-cooperative",
+     "text": "Strongly bound, cycling cross-bridges move tropomyosin further and help switch on neighbouring actins.",
+     "grade": "strong",
+     "sources": [
+      "gordon2000"
+     ],
+     "evidence": [
+      {
+       "source": "gordon2000",
+       "quote": "In skeletal muscle, strong binding of cycling cross bridges promotes additional Tm movement. This movement effectively stabilizes Tm in the open position and allows cooperative activation of additional actins in that and possibly neighboring A(7)TmTn regulatory units.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cb-tropomyosin"
+  },
+  {
+   "type": "question",
+   "item": "cb-ca-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "cb-cycle",
+   "title": "One cycle, step by step",
+   "text": "Each [cross-bridge](g:cross-bridge) cycle runs through four steps [[c:cb-steps]]:\n\n1. **Attach.** A myosin head holding ADP and phosphate (Pi) from its last ATP binds actin, weakly at first, then strongly [[c:cb-weak-strong]].\n2. **[Power stroke](g:power-stroke).** The head tilts, pulling actin **5–10 nm** towards the middle of the sarcomere [[c:cb-stroke-size]]. Pi and then ADP leave (whether Pi leaves just before or just after the tilt is still argued). The head stays stuck to actin.\n3. **Detach.** A fresh ATP binds the head, and the head lets go of actin.\n4. **Re-cock.** Off actin, the head splits that ATP into ADP + Pi and swings back, ready for the next pull.\n\nSo ATP does two jobs: binding it releases the head, splitting it loads it. One cycle, one ATP.\n\nHeads cycle out of step, so some always hold on while others reset.",
+   "claims": [
+    {
+     "id": "cb-steps",
+     "text": "The cycle runs: strong binding to actin, power stroke, ADP release, ATP binding with detachment from actin, then ATP hydrolysis that resets the head.",
+     "grade": "strong",
+     "sources": [
+      "guellich2014",
+      "debold2025"
+     ],
+     "evidence": [
+      {
+       "source": "guellich2014",
+       "quote": "Subsequent steps involve the release of ADP (Figure 2 , step c), and the binding of ATP that rapidly dissociates the actomyosin complex (Figure 2 , step d).",
+       "level": "full-text"
+      },
+      {
+       "source": "guellich2014",
+       "quote": "When unbound from actin, myosin hydrolyzes ATP and reverses the power stroke, thus returning to its original position and allowing a new cycle to start",
+       "level": "full-text"
+      },
+      {
+       "source": "debold2025",
+       "quote": "An early version of the cross-bridge cycle ( Figure 1 ) included steps in which ATP binding to myosin rapidly induces detachment from actin in a post-power stroke state ( Geeves and Holmes, 2005 ), after which hydrolysis occurs, and the lever arm is re-primed to a pre-power stroke position ( Steffen and Sleep, 2004 ).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cb-weak-strong",
+     "text": "On binding actin, the cross-bridge moves from a weakly bound, low-force state to a strongly bound, high-force state.",
+     "grade": "strong",
+     "sources": [
+      "fitts2008"
+     ],
+     "evidence": [
+      {
+       "source": "fitts2008",
+       "quote": "With actin-myosin binding, the cross-bridge transitions from a weakly bound low-force state to a strongly bound high-force state.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cb-stroke-size",
+     "text": "One power stroke moves the actin filament about 5–10 nm towards the centre of the sarcomere.",
+     "grade": "strong",
+     "sources": [
+      "guellich2014"
+     ],
+     "evidence": [
+      {
+       "source": "guellich2014",
+       "quote": "Then, the CB goes through the power stroke (Figure 2 , step b), during which the myosin head can generate a force of several piconewtons or an axial displacement of the actin filament toward the center of the sarcomere of 5–10 nm in vitro",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cb-step-order"
+  },
+  {
+   "type": "question",
+   "item": "cb-atp-detach",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "cb-strokes-example",
+   "title": "How many strokes to shorten a sarcomere?",
+   "problem": "During a pedal downstroke a vastus lateralis sarcomere shortens from 2.6 μm to 2.4 μm. Each power stroke moves actin 10 nm. Shortening is shared by the two halves of the sarcomere, each pulled towards the middle. How many strokes in a row must act on each thin filament, at the least?",
+   "steps": [
+    "Total shortening: 2.6 − 2.4 = 0.2 μm. Convert: 0.2 μm = 200 nm.",
+    "Each half of the sarcomere shortens by half of that: 200 ÷ 2 = 100 nm per thin filament.",
+    "Strokes: 100 nm ÷ 10 nm per stroke = 10 strokes, one after another (by different heads in turn, each using one ATP).",
+    "This is why ATP turnover rises so steeply with shortening speed: more distance per second means more cycles per second."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cb-strokes-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "cb-rigor",
+   "title": "Why letting go costs ATP",
+   "text": "Look again at step 3: only a new ATP releases the head. With no ATP, the cycle stops at the bound state, the [rigor](g:rigor) state, and the heads stay locked onto actin [[c:cb-rigor-state]].\n\nThat is what rigor mortis is. After death ATP runs out while Ca²⁺ stays high, so the cross-bridges stay attached and the muscles stiffen [[c:cb-rigor-mortis]].\n\nSo a fibre needs ATP to **relax**, twice over:\n\n| job | what uses ATP |\n|---|---|\n| release each head | ATP binding to myosin |\n| stop new attachments | the SERCA pump returning Ca²⁺ |\n\nIn living muscle this never goes as far as rigor: as the ATP lesson showed, ATP stays above about 70% of rest even after an all-out sprint, because it is rebuilt almost as fast as it is spent.",
+   "claims": [
+    {
+     "id": "cb-rigor-state",
+     "text": "After the power stroke and ADP release, myosin is in the rigor state, bound to actin, until ATP binds.",
+     "grade": "strong",
+     "sources": [
+      "debold2025",
+      "guellich2014"
+     ],
+     "evidence": [
+      {
+       "source": "debold2025",
+       "quote": "Once these mentioned steps are complete, myosin is again in the rigor state, and if the ATP concentration is high, the cycle would rapidly repeat.",
+       "level": "full-text"
+      },
+      {
+       "source": "guellich2014",
+       "quote": "ATP can then rapidly bind to myosin which dissociates from actin.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cb-rigor-mortis",
+     "text": "In rigor mortis, ATP depletion with high Ca²⁺ leaves cross-bridges attached, so muscle stiffens.",
+     "grade": "strong",
+     "sources": [
+      "hayakawa2026"
+     ],
+     "evidence": [
+      {
+       "source": "hayakawa2026",
+       "quote": "During rigor mortis, ATP depletion and elevated intracellular calcium levels lead to sustained actomyosin cross-bridges, resulting in muscle stiffness.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cb-rigor-mortis"
+  },
+  {
+   "type": "question",
+   "item": "cb-rigor-lab"
+  },
+  {
+   "type": "concept",
+   "id": "cb-phosphate",
+   "title": "When phosphate piles up",
+   "text": "In hard work, Pi from split ATP and PCr builds up, and so does H⁺. Both act on the cycle itself [[c:cb-pi-h]]:\n\n- **Pi** seems to push strongly bound heads back towards the weak, low-force state, so fewer heads pull at once.\n- **H⁺** cuts the number of strong cross-bridges in fast fibres and the force each one makes.\n- **Both** make the filaments less sensitive to Ca²⁺, which matters more as Ca²⁺ release falls with fatigue.\n\nOne caution: most of these data come from fibres studied below 25 °C, and the effects change with temperature, so they may not hold in working muscle at about 37 °C [[c:cb-temperature]].\n\nWhen Pi leaves in the cycle is still argued (see the box). The fatigue module picks this up.",
+   "claims": [
+    {
+     "id": "cb-pi-h",
+     "text": "Pi lowers force by speeding the reversal of the weak-to-strong transition; low pH reduces the number and force of strong cross-bridges; both lower Ca²⁺ sensitivity.",
+     "grade": "moderate",
+     "sources": [
+      "fitts2008"
+     ],
+     "evidence": [
+      {
+       "source": "fitts2008",
+       "quote": "Low pH reduces the number of high-force cross bridges in fast fibers, and the force per cross bridge in both fast and slow fibers.",
+       "level": "abstract"
+      },
+      {
+       "source": "fitts2008",
+       "quote": "In contrast, inorganic phosphate (Pi) is thought to reduce P0 by accelerating the reversal of this step. Both H+ and Pi decrease myofibrillar Ca2+ sensitivity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cb-temperature",
+     "text": "Effects of H⁺ and Pi measured in fibres below 25 °C can't easily be applied to muscle at body temperature.",
+     "grade": "moderate",
+     "sources": [
+      "fitts2008"
+     ],
+     "evidence": [
+      {
+       "source": "fitts2008",
+       "quote": "Thus the depressive effects of H+ and Pi at in vivo temperatures cannot easily be predicted from data collected below 25 degrees C.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does myosin release Pi before or after its power stroke?",
+    "sides": [
+     {
+      "position": "Before: atomic structures suggest Pi must leave for the power stroke to happen.",
+      "sources": [
+       "debold2025"
+      ]
+     },
+     {
+      "position": "After: fast mechanical assays show the stroke within about 1 ms of strong binding, Pi release 10–200 ms later.",
+      "sources": [
+       "debold2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cb-pi-effect"
+  },
+  {
+   "type": "question",
+   "item": "cb-strokes-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cb-temp-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Ca²⁺ binds troponin C, troponin pulls tropomyosin off actin's binding sites, and myosin heads can attach; strong binding opens more sites nearby.",
+    "Each cycle: attach, power stroke (5–10 nm, with Pi and ADP leaving), ATP binds and the head detaches, ATP is split and the head re-cocks.",
+    "Without ATP the heads stay locked on actin (rigor): ATP is needed to let go, and SERCA needs ATP to remove Ca²⁺.",
+    "Pi and H⁺ build up in hard work and weaken the cycle, but most data come from cold fibres, so the size of the effect at 37 °C is uncertain."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cb-atp-detach",
+   "concept": "cb-cycle",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "guellich2014",
+    "debold2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the cross-bridge cycle, what happens right after a new ATP binds to a myosin head that is attached to actin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The head lets go of actin",
+       "correct": true,
+       "why": "Right: ATP binding is what releases myosin from actin."
+      },
+      {
+       "id": "b",
+       "text": "The head makes its power stroke",
+       "why": "The power stroke happens while the head is bound and holds ADP + Pi, before the new ATP arrives."
+      },
+      {
+       "id": "c",
+       "text": "The head binds actin more strongly",
+       "why": "The opposite: ATP lowers myosin's grip on actin; the tightest grip is the rigor state with no nucleotide."
+      },
+      {
+       "id": "d",
+       "text": "Ca²⁺ is released from the head",
+       "why": "Ca²⁺ binds troponin on the thin filament, not the myosin head."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a long triathlon swim, each myosin head in the shoulder muscles cycles over and over. Which event in the cycle actually frees the head from actin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Binding of a new ATP to the head",
+       "correct": true,
+       "why": "Right: a fresh ATP binds and the head detaches; the ATP is split afterwards, off actin."
+      },
+      {
+       "id": "b",
+       "text": "Splitting of ATP while still on actin",
+       "why": "Splitting happens after the head has let go; it re-cocks the head for the next stroke."
+      },
+      {
+       "id": "c",
+       "text": "Release of Pi from the head",
+       "why": "Pi release goes with the power stroke, when the head is strongly bound."
+      },
+      {
+       "id": "d",
+       "text": "Removal of Ca²⁺ from troponin",
+       "why": "Removing Ca²⁺ stops new attachments, but an attached head still needs ATP to let go."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-tropomyosin",
+   "concept": "cb-switch",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "gordon2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a resting fibre, what stops myosin heads from binding actin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tropomyosin lying over the binding sites on actin",
+       "correct": true,
+       "why": "Right: tropomyosin blocks the sites until Ca²⁺-bound troponin moves it."
+      },
+      {
+       "id": "b",
+       "text": "Troponin bound to the myosin heads",
+       "why": "Troponin sits on the thin filament and acts by moving tropomyosin; it does not bind myosin heads."
+      },
+      {
+       "id": "c",
+       "text": "A lack of ATP in the resting fibre",
+       "why": "Resting fibres are full of ATP; with no ATP heads would stay bound (rigor), the opposite."
+      },
+      {
+       "id": "d",
+       "text": "Ca²⁺ sitting on the actin binding sites",
+       "why": "Ca²⁺ is low at rest; when it rises it binds troponin and opens the sites."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-ca-scenario",
+   "concept": "cb-switch",
+   "bloom": "apply",
+   "sources": [
+    "gordon2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab test on a single fibre from a runner's calf, a drug stops Ca²⁺ from binding troponin C. The fibre has normal ATP and the nerve fires normally. What happens to force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Almost no force: tropomyosin keeps covering actin's binding sites",
+       "correct": true,
+       "why": "Right: without Ca²⁺ on troponin, tropomyosin is never moved and heads can't attach."
+      },
+      {
+       "id": "b",
+       "text": "Normal force, since ATP and the nerve signal are both intact",
+       "why": "ATP and the spike are needed but not enough: the Ca²⁺–troponin switch is the gate."
+      },
+      {
+       "id": "c",
+       "text": "A rigor-like lock, because heads can't detach",
+       "why": "Rigor needs heads bound and no ATP; here heads never bind in the first place."
+      },
+      {
+       "id": "d",
+       "text": "Higher force, because Ca²⁺ stays free in the fibre",
+       "why": "Free Ca²⁺ does nothing to the filaments unless it binds troponin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-step-order",
+   "concept": "cb-cycle",
+   "bloom": "remember",
+   "sources": [
+    "guellich2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which order of events matches one cross-bridge cycle, starting from a cocked head holding ADP + Pi?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Binds actin → power stroke → ATP binds and head detaches → ATP split, head re-cocks",
+       "correct": true,
+       "why": "Right: attach, pull, let go, reset."
+      },
+      {
+       "id": "b",
+       "text": "ATP split → binds actin → head detaches → power stroke",
+       "why": "The cocked head already holds the products of the last split; the stroke happens while bound, not after detaching."
+      },
+      {
+       "id": "c",
+       "text": "Power stroke → binds actin → ATP split → head detaches",
+       "why": "A head can't pull before it has hold of actin."
+      },
+      {
+       "id": "d",
+       "text": "Binds actin → ATP binds → power stroke → head detaches",
+       "why": "ATP binding frees the head; the stroke comes before it, with Pi and ADP leaving."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-strokes-calc",
+   "concept": "cb-cycle",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "guellich2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's soleus sarcomere shortens from 2.5 μm to 2.3 μm at push-off. Each power stroke moves actin 10 nm, and each half of the sarcomere shortens equally. At least how many strokes in a row act on each thin filament?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10",
+       "correct": true,
+       "why": "Right: 0.2 μm = 200 nm in all, 100 nm per half, 100 ÷ 10 = 10."
+      },
+      {
+       "id": "b",
+       "text": "20",
+       "why": "This uses the whole 200 nm for one filament; each thin filament only covers its half of the shortening."
+      },
+      {
+       "id": "c",
+       "text": "0.01",
+       "why": "This divides 0.1 μm by 10 nm without converting units: 0.1 μm is 100 nm."
+      },
+      {
+       "id": "d",
+       "text": "1",
+       "why": "One stroke moves actin 10 nm, far less than the 100 nm needed."
+      }
+     ],
+     "solution": "Shortening = 2.5 − 2.3 = 0.2 μm = 200 nm. Per half-sarcomere: 200 ÷ 2 = 100 nm. Strokes = 100 ÷ 10 = 10."
+    },
+    {
+     "id": "b",
+     "stem": "In a track sprint a cyclist's sarcomere shortens from 2.8 μm to 2.5 μm. Each power stroke moves actin 5 nm, and each half of the sarcomere shortens equally. At least how many strokes in a row act on each thin filament?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30",
+       "correct": true,
+       "why": "Right: 0.3 μm = 300 nm in all, 150 nm per half, 150 ÷ 5 = 30."
+      },
+      {
+       "id": "b",
+       "text": "60",
+       "why": "This uses the whole 300 nm for one filament; each thin filament only covers its half."
+      },
+      {
+       "id": "c",
+       "text": "15",
+       "why": "This uses 10 nm per stroke; the question gives 5 nm."
+      },
+      {
+       "id": "d",
+       "text": "0.03",
+       "why": "This divides 0.15 μm by 5 nm without converting: 0.15 μm is 150 nm."
+      }
+     ],
+     "solution": "Shortening = 2.8 − 2.5 = 0.3 μm = 300 nm. Per half-sarcomere: 300 ÷ 2 = 150 nm. Strokes = 150 ÷ 5 = 30."
+    }
+   ]
+  },
+  {
+   "id": "cb-rigor-mortis",
+   "concept": "cb-rigor",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hayakawa2026",
+    "debold2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do muscles go stiff a few hours after death (rigor mortis)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ATP runs out, so myosin heads stay locked onto actin",
+       "correct": true,
+       "why": "Right: with no ATP to bind, heads can't detach, and high Ca²⁺ keeps the sites open."
+      },
+      {
+       "id": "b",
+       "text": "Ca²⁺ runs out, so tropomyosin locks the filaments",
+       "why": "Ca²⁺ is high in rigor mortis; tropomyosin over the sites would block binding, not lock heads on."
+      },
+      {
+       "id": "c",
+       "text": "Lactate builds up and glues the filaments together",
+       "why": "Lactate and acidity change the rate of rigor, but the lock itself is cross-bridges with no ATP."
+      },
+      {
+       "id": "d",
+       "text": "The tendons shorten and pull the muscles tight",
+       "why": "Tendons don't contract; the stiffness comes from inside the fibres."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-rigor-lab",
+   "concept": "cb-rigor",
+   "bloom": "analyse",
+   "sources": [
+    "debold2025",
+    "gordon2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A fibre from a cyclist's vastus lateralis is skinned (membrane removed) and bathed first in a solution with Ca²⁺ but no ATP, then in one with ATP but no Ca²⁺. What happens in each?",
+     "options": [
+      {
+       "id": "a",
+       "text": "First stiff and locked; then it goes slack and relaxes",
+       "correct": true,
+       "why": "Right: no ATP leaves heads stuck in rigor; ATP frees them, and with no Ca²⁺ tropomyosin stops them reattaching."
+      },
+      {
+       "id": "b",
+       "text": "First it contracts normally; then it goes into rigor",
+       "why": "Normal cycling needs ATP; the first bath has none. The second bath has ATP, so heads can let go."
+      },
+      {
+       "id": "c",
+       "text": "First slack; then it contracts with full force",
+       "why": "With no Ca²⁺ the binding sites are covered, so the second bath can't make force."
+      },
+      {
+       "id": "d",
+       "text": "Slack in both, since each bath lacks one ingredient",
+       "why": "Lacking ATP is different from lacking Ca²⁺: heads already bound stay locked, so the fibre is stiff, not slack."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-pi-effect",
+   "concept": "cb-phosphate",
+   "bloom": "analyse",
+   "sources": [
+    "fitts2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Near the end of a 400 m run, Pi in the runner's leg fibres is high. Based on fibre studies, how does this most likely lower force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It pushes bound heads back to the weak state and lowers Ca²⁺ sensitivity",
+       "correct": true,
+       "why": "Right: fewer heads are in the strong, force-making state at any moment."
+      },
+      {
+       "id": "b",
+       "text": "It binds the myosin head in place of ATP and causes rigor",
+       "why": "Rigor needs a lack of ATP; ATP stays above about 70% of rest even after all-out efforts."
+      },
+      {
+       "id": "c",
+       "text": "It blocks the nerve signal at the neuromuscular junction",
+       "why": "Pi acts inside the fibre, on the cross-bridges and Ca²⁺ sensitivity, not at the junction."
+      },
+      {
+       "id": "d",
+       "text": "It makes each power stroke longer but slower",
+       "why": "There is no evidence that Pi lengthens the stroke; it reduces how many heads are strongly bound."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cb-temp-appraisal",
+   "concept": "cb-phosphate",
+   "bloom": "evaluate",
+   "sources": [
+    "fitts2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Suppose a study of skinned fibres at 15 °C finds that high Pi cuts force by 40%. A blog says this explains the power you lose at the end of a 20 km time trial. What is the main limit of that reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pi effects change with temperature, so 15 °C data may not hold at 37 °C",
+       "correct": true,
+       "why": "Right: Fitts notes the effects at body temperature can't easily be predicted from data below 25 °C."
+      },
+      {
+       "id": "b",
+       "text": "Skinned fibres have no myosin, so the result is irrelevant",
+       "why": "Skinned fibres keep their filaments and cycling heads; only the membrane is removed."
+      },
+      {
+       "id": "c",
+       "text": "Pi does not build up at all during a time trial",
+       "why": "Pi does rise in hard exercise; the problem is how big its effect is at body temperature."
+      },
+      {
+       "id": "d",
+       "text": "The study is limited because 40% is too large to be true",
+       "why": "A large effect isn't a flaw by itself; the issue is whether the test conditions match the body."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

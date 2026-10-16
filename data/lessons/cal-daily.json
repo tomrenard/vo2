@@ -1,0 +1,988 @@
+{
+ "id": "cal-daily",
+ "module": "t1a-calorimetry",
+ "title": "Daily energy expenditure in endurance sport",
+ "goal": "Estimate the total daily energy of a long ride, run or race, and explain the limits on sustained expenditure and the constrained-energy debate.",
+ "requires": [
+  "cal-o2-cost"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "day-tdf",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "day-tee",
+   "title": "What a day costs",
+   "text": "[Total energy expenditure](g:tee) (TEE) has three parts: the cost of being alive at rest ([BMR](g:bmr)), the cost of digesting food, and activity. For most people BMR is the biggest part; for a pro in a stage race, activity dwarfs it.\n\nHow big? In the Tour de France, estimates from sleep, rest and predicted cycling cost put five riders' mean daily expenditure at 25.4 MJ (about 6,070 kcal), with the hardest days near 32.7 MJ [[c:tdf-ee]].\n\nWith doubly labelled water, four Tour riders averaged 4.3 to 5.3 times BMR. DLW also showed that food records fell short: DLW was 13% higher in the first week and 35% higher in the third [[c:tdf-dlw]].",
+   "claims": [
+    {
+     "id": "tdf-ee",
+     "text": "In five Tour de France riders, estimated mean daily energy expenditure was 25.4 MJ, with a highest daily mean of 32.7 MJ.",
+     "grade": "weak",
+     "sources": [
+      "saris1989"
+     ],
+     "evidence": [
+      {
+       "source": "saris1989",
+       "quote": "Mean EE was 25.4 MJ with a highest mean daily EE of 32.7 MJ.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tdf-dlw",
+     "text": "By DLW, four Tour de France riders reached 4.3–5.3 × BMR; the gap to food records grew from about 13% to 35% over the race.",
+     "grade": "weak",
+     "sources": [
+      "westerterp1986"
+     ],
+     "evidence": [
+      {
+       "source": "westerterp1986",
+       "quote": "The subjects reached an average daily metabolic rate of 3.4-3.9 or 4.3-5.3 times basal metabolic rate based on the food record technique and the doubly labeled water technique, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "westerterp1986",
+       "quote": "The discrepancy showed a systematic increment from the first to the third interval, being 12.9 +/- 7.9, 21.4 +/- 9.8, and 35.3 +/- 4.4% of the energy expenditure calculated from dietary intake, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "day-ride-example",
+   "title": "A long day on the bike",
+   "problem": "A rider spends 8 h on the bike at an average 170 W, gross efficiency 20%. Her BMR is 7,200 kJ·day⁻¹; assume the 16 h off the bike cost 1.5 × BMR. Estimate her TEE.",
+   "steps": [
+    "Work = 170 W × 28,800 s = 4,896 kJ (what the power meter shows).",
+    "Riding energy = 4,896 ÷ 0.20 = 24,480 kJ. This already includes her resting cost during those 8 h.",
+    "Off the bike: 7,200 × 16/24 × 1.5 = 7,200 kJ.",
+    "TEE ≈ 24,480 + 7,200 = 31,680 kJ (7,572 kcal), about 4.4 × BMR: a hard Tour day."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "day-tdf",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "day-ride-calc"
+  },
+  {
+   "type": "question",
+   "item": "day-scope-calc"
+  },
+  {
+   "type": "concept",
+   "id": "day-ceiling",
+   "title": "A ceiling on what you can keep burning",
+   "text": "How long can anyone keep that up? Pooling events from a few days to a 20-week run across the USA, one analysis found that the sustainable multiple of BMR falls as events get longer, levelling off below 3 × BMR [[c:scope-duration]].\n\nThe likely limit is the gut: over weeks and months, about **2.5 × BMR** is the most energy people take in and absorb; spend more, and the rest comes from body stores [[c:alimentary-limit]]. Tour riders are the known exception: they held 3–5 × BMR for three weeks without much weight loss, and nobody is sure how [[c:tdf-exception]].\n\nThe same data suggest the body can partly trim its other spending during very long events [[c:reduce-tee]]. That idea leads to a wider debate.",
+   "claims": [
+    {
+     "id": "scope-duration",
+     "text": "Across human endurance events, sustained metabolic scope falls with event duration, plateauing below 3 × BMR.",
+     "grade": "weak",
+     "sources": [
+      "thurber2019"
+     ],
+     "evidence": [
+      {
+       "source": "thurber2019",
+       "quote": "For events lasting 0.5 to 250+ days, SusMS decreases curvilinearly with event duration, plateauing below 3× BMR.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "alimentary-limit",
+     "text": "There appears to be an alimentary limit of about 2.5 × BMR; expenditure above it draws on body stores.",
+     "grade": "weak",
+     "sources": [
+      "thurber2019"
+     ],
+     "evidence": [
+      {
+       "source": "thurber2019",
+       "quote": "Incorporating data from overfeeding studies, we find evidence for an alimentary energy supply limit in humans of ~2.5× BMR; greater expenditure requires drawing down the body's energy stores.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "reduce-tee",
+     "text": "Transcontinental race data suggest humans can partly reduce TEE during long events.",
+     "grade": "weak",
+     "sources": [
+      "thurber2019"
+     ],
+     "evidence": [
+      {
+       "source": "thurber2019",
+       "quote": "Transcontinental race data suggest that humans can partially reduce TEE during long events to extend endurance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tdf-exception",
+     "text": "Tour de France cyclists and elite Nordic skiers maintained 3–5 × BMR without substantial weight loss; whether special nutrition strategies explain it is unclear.",
+     "grade": "weak",
+     "sources": [
+      "thurber2019"
+     ],
+     "evidence": [
+      {
+       "source": "thurber2019",
+       "quote": "in at least two studies (Tour de France cyclists and elite Nordic skiers; table S1), subjects maintained metabolic scopes of 3× to 5× BMR without substantial weight loss",
+       "level": "full-text"
+      },
+      {
+       "source": "thurber2019",
+       "quote": "it is unclear whether their above-average energy intake reflects special nutritional strategies",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "day-deficit"
+  },
+  {
+   "type": "question",
+   "item": "day-dlw-gap"
+  },
+  {
+   "type": "concept",
+   "id": "day-constrained",
+   "title": "Constrained or additive?",
+   "text": "The usual model is **additive**: each extra hour of training adds its full cost to TEE. Pontzer's [constrained model](g:constrained-tee) says the body adapts: TEE rises with activity at low levels but plateaus at high levels, as other spending is trimmed [[c:constrained-plateau]].\n\nIn data from 1,754 adults, about 28% of the energy burned in extra activity was, on average, offset by lower basal expenditure [[c:compensation-28]].\n\nCritics answer that most of this evidence is cross-sectional, open to statistical traps, and that a large observational study found a straight-line, additive link with no plateau [[c:additive-evidence]].\n\nFor you: the kJ on your power meter are real, but daily needs may not rise exactly in step with training. Track body mass and how you recover.",
+   "claims": [
+    {
+     "id": "constrained-plateau",
+     "text": "In 332 adults from five populations, TEE (by DLW) plateaued at the upper range of physical activity.",
+     "grade": "disputed",
+     "sources": [
+      "pontzer2016"
+     ],
+     "evidence": [
+      {
+       "source": "pontzer2016",
+       "quote": "For subjects in the upper range of physical activity, total energy expenditure plateaued, supporting a Constrained total energy expenditure model.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "compensation-28",
+     "text": "Across 1,754 adults, energy compensation averaged 28%: only about 72% of the energy of extra activity showed up as extra TEE.",
+     "grade": "disputed",
+     "sources": [
+      "careau2021"
+     ],
+     "evidence": [
+      {
+       "source": "careau2021",
+       "quote": "We used the largest dataset compiled on adult TEE and basal energy expenditure (BEE) (n = 1,754) of people living normal lives to find that energy compensation by a typical human averages 28% due to reduced BEE; this suggests that only 72% of the extra calories we burn from additional activity translates into extra calories burned that day.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "additive-evidence",
+     "text": "Evidence for constraint is mostly cross-sectional; in many scenarios the effect of activity on TEE looks mostly additive, and one study found a linear link with no sign of constraint.",
+     "grade": "disputed",
+     "sources": [
+      "gonzalez2023",
+      "howard2025"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalez2023",
+       "quote": "evidence supporting constraint is subject to several limitations, including cross-sectional and correlational studies with potential methodological issues from extreme differences in body size/composition and lifestyle, potential statistical issues such as regression dilution and spurious correlations",
+       "level": "abstract"
+      },
+      {
+       "source": "gonzalez2023",
+       "quote": "The available evidence indicates that in many scenarios, the effect of increasing physical activity on TEE will be mostly additive although some energy appears to \"go missing\" and is currently unaccounted for.",
+       "level": "abstract"
+      },
+      {
+       "source": "howard2025",
+       "quote": "The findings of this observational study do not support the constrained/compensated model but affirm the conventional additive relationship between PA and TEE across a broad range of PA levels.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does total energy expenditure plateau at high activity (constrained) or keep rising with it (additive)?",
+    "sides": [
+     {
+      "position": "Constrained: at high activity the body trims other spending, so TEE rises less than the cost of the extra activity and plateaus.",
+      "sources": [
+       "pontzer2016",
+       "careau2021",
+       "thurber2019"
+      ]
+     },
+     {
+      "position": "Mostly additive: the evidence for constraint is largely cross-sectional with possible statistical artefacts, and a large observational study found TEE rising in a straight line with activity.",
+      "sources": [
+       "gonzalez2023",
+       "howard2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "day-constrained-predict"
+  },
+  {
+   "type": "question",
+   "item": "day-compensation-calc"
+  },
+  {
+   "type": "question",
+   "item": "day-debate"
+  },
+  {
+   "type": "concept",
+   "id": "day-estimate",
+   "title": "Estimating a race",
+   "text": "Build the estimate from parts, then sanity-check it.\n\n1. **Exercise.** Cycling: work ÷ GE. Running: mass × km × about 4.1 kJ (200 mL·kg⁻¹·km⁻¹ × 20.5 kJ per litre). Swimming: use a measured or published rate.\n2. **The rest of the day.** A multiple of BMR for the hours not exercising (the examples here assume 1.5).\n3. **Check.** Compare with what you can eat and absorb, about 2.5 × BMR a day if it goes on for weeks. The rest comes from stores.\n\nThen add error bars. One point of GE changes cycling energy by about 5% (1 ÷ 20). Running economy differs by around ±9% between trained runners [[c:oc-spread]]. So treat any single figure as roughly ±10%.",
+   "claims": [
+    {
+     "id": "oc-spread",
+     "text": "In 16 trained male runners, oxygen cost was 221 ± 19 mL·kg⁻¹·km⁻¹ (SD about 9% of the mean).",
+     "grade": "weak",
+     "sources": [
+      "fletcher2009"
+     ],
+     "evidence": [
+      {
+       "source": "fletcher2009",
+       "quote": "Average oxygen cost was 221 +/- 19, 217 +/- 15, and 221 +/- 13 mlxkg(-1)xkm(-1), respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "day-run-calc"
+  },
+  {
+   "type": "question",
+   "item": "day-tri-calc"
+  },
+  {
+   "type": "question",
+   "item": "day-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "TEE = BMR + digesting food + activity; in the Tour de France about 25 MJ a day on average, up to about 33 MJ, 4–5 × BMR by DLW.",
+    "Long-ride TEE ≈ work ÷ GE + off-bike hours × a multiple of BMR; running ≈ mass × km × 4.1 kJ.",
+    "Sustainable expenditure falls with event length to below 3 × BMR; over weeks the gut supplies about 2.5 × BMR and the rest comes from body stores (Tour riders are a puzzling exception).",
+    "Constrained vs additive is a live debate: one large dataset suggests about 28% compensation, other studies find a straight-line rise.",
+    "Treat any single estimate as about ±10%: GE and running economy vary between people."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "day-tdf",
+   "concept": "day-tee",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "saris1989",
+    "westerterp1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the classic Tour de France study, about what was the riders' mean daily energy expenditure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 25 MJ (6,000 kcal)",
+       "correct": true,
+       "why": "Right: 25.4 MJ on average, with the hardest days near 32.7 MJ."
+      },
+      {
+       "id": "b",
+       "text": "About 12 MJ (3,000 kcal)",
+       "why": "That is a normal day for an active adult, not a Grand Tour."
+      },
+      {
+       "id": "c",
+       "text": "About 50 MJ (12,000 kcal)",
+       "why": "Higher than even the hardest days measured (about 33 MJ)."
+      },
+      {
+       "id": "d",
+       "text": "About 8 MJ (2,000 kcal)",
+       "why": "That is close to a typical sedentary day."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Measured with doubly labelled water, Tour de France riders' daily expenditure was about how many times their BMR?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4–5 times",
+       "correct": true,
+       "why": "Right: 4.3 to 5.3 × BMR by DLW."
+      },
+      {
+       "id": "b",
+       "text": "About 2 times",
+       "why": "That is a very active normal life, not a Grand Tour."
+      },
+      {
+       "id": "c",
+       "text": "About 10 times",
+       "why": "Far above anything sustained over weeks."
+      },
+      {
+       "id": "d",
+       "text": "About 1.5 times",
+       "why": "That is near a sedentary day."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "day-ride-calc",
+   "concept": "day-tee",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "noordhof2010",
+    "saris1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist on a long training ride rides 6 h at an average 180 W with a gross efficiency of 20%. Her BMR is 7,000 kJ·day⁻¹; assume the hours off the bike cost 1.5 × BMR. About what is her total energy expenditure that day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "27,315 kJ",
+       "correct": true,
+       "why": "Right: work 3,888 kJ ÷ 0.20 = 19,440 kJ on the bike, plus 7,875 kJ for the rest of the day."
+      },
+      {
+       "id": "b",
+       "text": "11,763 kJ",
+       "why": "This adds the power meter's work without dividing by efficiency: the body spends about five times the work done."
+      },
+      {
+       "id": "c",
+       "text": "19,440 kJ",
+       "why": "This is only the riding; the hours off the bike still cost energy."
+      },
+      {
+       "id": "d",
+       "text": "29,940 kJ",
+       "why": "This adds a full day of off-bike energy; the riding hours already include the resting cost."
+      }
+     ],
+     "solution": "Work = 180 × 21,600 s = 3,888 kJ. On the bike: 3,888 ÷ 0.20 = 19,440 kJ. Off the bike: 7,000 × 18/24 × 1.5 = 7,875 kJ. TEE ≈ 27,315 kJ (6,528 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A rider on a mountain stage rides 5 h at an average 240 W with a gross efficiency of 21%. Her BMR is 7,800 kJ·day⁻¹; assume the hours off the bike cost 1.5 × BMR. About what is her total energy expenditure that day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "29,834 kJ",
+       "correct": true,
+       "why": "Right: work 4,320 kJ ÷ 0.21 = 20,571 kJ on the bike, plus 9,262 kJ for the rest of the day."
+      },
+      {
+       "id": "b",
+       "text": "13,582 kJ",
+       "why": "This adds the power meter's work without dividing by efficiency: the body spends about five times the work done."
+      },
+      {
+       "id": "c",
+       "text": "20,571 kJ",
+       "why": "This is only the riding; the hours off the bike still cost energy."
+      },
+      {
+       "id": "d",
+       "text": "32,271 kJ",
+       "why": "This adds a full day of off-bike energy; the riding hours already include the resting cost."
+      }
+     ],
+     "solution": "Work = 240 × 18,000 s = 4,320 kJ. On the bike: 4,320 ÷ 0.21 = 20,571 kJ. Off the bike: 7,800 × 19/24 × 1.5 = 9,262 kJ. TEE ≈ 29,834 kJ (7,130 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete on the long bike day of a training weekend rides 4 h at an average 200 W with a gross efficiency of 20%. Her BMR is 6,600 kJ·day⁻¹; assume the hours off the bike cost 1.5 × BMR. About what is her total energy expenditure that day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "22,650 kJ",
+       "correct": true,
+       "why": "Right: work 2,880 kJ ÷ 0.20 = 14,400 kJ on the bike, plus 8,250 kJ for the rest of the day."
+      },
+      {
+       "id": "b",
+       "text": "11,130 kJ",
+       "why": "This adds the power meter's work without dividing by efficiency: the body spends about five times the work done."
+      },
+      {
+       "id": "c",
+       "text": "14,400 kJ",
+       "why": "This is only the riding; the hours off the bike still cost energy."
+      },
+      {
+       "id": "d",
+       "text": "24,300 kJ",
+       "why": "This adds a full day of off-bike energy; the riding hours already include the resting cost."
+      }
+     ],
+     "solution": "Work = 200 × 14,400 s = 2,880 kJ. On the bike: 2,880 ÷ 0.20 = 14,400 kJ. Off the bike: 6,600 × 20/24 × 1.5 = 8,250 kJ. TEE ≈ 22,650 kJ (5,413 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "day-scope-calc",
+   "concept": "day-tee",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "westerterp1986",
+    "thurber2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A Tour rider on a mountain stage has a TEE of 30,000 kJ·day⁻¹ and a BMR of 7,500 kJ·day⁻¹. What is the metabolic scope (TEE as a multiple of BMR)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.0 × BMR",
+       "correct": true,
+       "why": "Right: 30,000 ÷ 7,500 = 4.0."
+      },
+      {
+       "id": "b",
+       "text": "3.0 × BMR",
+       "why": "This divides only the energy above BMR; the multiple compares total expenditure with BMR."
+      },
+      {
+       "id": "c",
+       "text": "0.25 × BMR",
+       "why": "This divides the wrong way round."
+      },
+      {
+       "id": "d",
+       "text": "0.17 × BMR",
+       "why": "This divides by 24 hours, but both numbers are already per day."
+      }
+     ],
+     "solution": "Scope = TEE ÷ BMR = 30,000 ÷ 7,500 = 4.0."
+    },
+    {
+     "id": "b",
+     "stem": "An ultrarunner on day 3 of a stage race has a TEE of 21,000 kJ·day⁻¹ and a BMR of 6,200 kJ·day⁻¹. What is the metabolic scope (TEE as a multiple of BMR)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.4 × BMR",
+       "correct": true,
+       "why": "Right: 21,000 ÷ 6,200 = 3.4."
+      },
+      {
+       "id": "b",
+       "text": "2.4 × BMR",
+       "why": "This divides only the energy above BMR; the multiple compares total expenditure with BMR."
+      },
+      {
+       "id": "c",
+       "text": "0.30 × BMR",
+       "why": "This divides the wrong way round."
+      },
+      {
+       "id": "d",
+       "text": "0.14 × BMR",
+       "why": "This divides by 24 hours, but both numbers are already per day."
+      }
+     ],
+     "solution": "Scope = TEE ÷ BMR = 21,000 ÷ 6,200 = 3.4."
+    }
+   ]
+  },
+  {
+   "id": "day-deficit",
+   "concept": "day-ceiling",
+   "bloom": "analyse",
+   "sources": [
+    "thurber2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An ultra-cyclist on a four-week ride across a continent has a BMR of 7,000 kJ·day⁻¹ and spends 21,000 kJ a day. If the most he can absorb day after day is about 2.5 × BMR, what follows?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3,500 kJ a day must come from body stores",
+       "correct": true,
+       "why": "Right: 2.5 × 7,000 = 17,500 kJ can be absorbed; 21,000 − 17,500 = 3,500 kJ comes from stores."
+      },
+      {
+       "id": "b",
+       "text": "He can eat it all back if he eats enough",
+       "why": "The point of the alimentary limit is that, over weeks, intake can't keep up beyond about 2.5 × BMR."
+      },
+      {
+       "id": "c",
+       "text": "About 14,000 kJ a day must come from stores",
+       "why": "This subtracts only BMR (21,000 − 7,000); the gut can supply 2.5 × BMR, not 1 ×."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: his TEE will drop to 2.5 × BMR",
+       "why": "TEE may be trimmed a little in long events, but riding all day still costs more than 2.5 × BMR."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner in a two-month run across a continent has a BMR of 6,000 kJ·day⁻¹ and spends 18,000 kJ a day. With a sustained intake limit of about 2.5 × BMR, how much comes from stores each day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3,000 kJ",
+       "correct": true,
+       "why": "Right: 2.5 × 6,000 = 15,000 kJ absorbed; 18,000 − 15,000 = 3,000 kJ from stores."
+      },
+      {
+       "id": "b",
+       "text": "About 12,000 kJ",
+       "why": "This subtracts only BMR; the gut can supply 2.5 × BMR."
+      },
+      {
+       "id": "c",
+       "text": "None, if she eats 18,000 kJ",
+       "why": "Eating it is not the same as absorbing it day after day; the limit is about 2.5 × BMR."
+      },
+      {
+       "id": "d",
+       "text": "About 15,000 kJ",
+       "why": "That is what the gut can supply each day, not the shortfall that stores must cover."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "day-dlw-gap",
+   "concept": "day-tee",
+   "bloom": "analyse",
+   "sources": [
+    "westerterp1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the Tour, DLW expenditure exceeded the food-record intake by 13% in week 1 and 35% in week 3, yet body mass and composition didn't change significantly. What is the most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Riders recorded less of what they ate as the race went on",
+       "correct": true,
+       "why": "Right: with stable body mass, intake must have roughly matched expenditure, so the records fell short, more so as fatigue grew."
+      },
+      {
+       "id": "b",
+       "text": "The riders lost a lot of body fat",
+       "why": "Body mass and composition didn't change significantly, so a large hidden deficit is unlikely."
+      },
+      {
+       "id": "c",
+       "text": "DLW overestimates in very active people",
+       "why": "DLW was validated against chambers; nothing points to a growing error over three weeks."
+      },
+      {
+       "id": "d",
+       "text": "Their BMR fell by a third",
+       "why": "A fall in BMR would lower expenditure, not raise it above intake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "day-constrained-predict",
+   "concept": "day-constrained",
+   "bloom": "understand",
+   "sources": [
+    "pontzer2016",
+    "careau2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner already training a lot raises her weekly volume further. What does the constrained model predict for her TEE?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises by less than the cost of the extra running",
+       "correct": true,
+       "why": "Right: at high activity, other spending is trimmed, so TEE rises less than the extra running costs, or plateaus."
+      },
+      {
+       "id": "b",
+       "text": "It rises by exactly the cost of the extra running",
+       "why": "That is the additive model."
+      },
+      {
+       "id": "c",
+       "text": "It falls below its previous level",
+       "why": "The constrained model predicts a plateau, not a fall."
+      },
+      {
+       "id": "d",
+       "text": "It doubles, because training raises BMR",
+       "why": "No model predicts that; BMR is, if anything, trimmed under the constrained model."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "day-compensation-calc",
+   "concept": "day-constrained",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "careau2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist adds training that burns 2,000 kJ more per day. If, as in the large dataset, about 28% is offset by lower basal expenditure, how much does TEE actually rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,440 kJ",
+       "correct": true,
+       "why": "Right: 72% of 2,000 = 1,440 kJ; 28% is offset by lower basal expenditure."
+      },
+      {
+       "id": "b",
+       "text": "560 kJ",
+       "why": "This is the part that is offset (28%), not the part that remains."
+      },
+      {
+       "id": "c",
+       "text": "2,000 kJ",
+       "why": "That is the purely additive answer; the constrained estimate removes 28% of it."
+      },
+      {
+       "id": "d",
+       "text": "2,560 kJ",
+       "why": "Compensation lowers TEE; it doesn't add 28% on top."
+      }
+     ],
+     "solution": "Rise = 2,000 × (1 − 0.28) = 2,000 × 0.72 = 1,440 kJ·day⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner adds training that burns 1,500 kJ more per day. If, as in the large dataset, about 28% is offset by lower basal expenditure, how much does TEE actually rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,080 kJ",
+       "correct": true,
+       "why": "Right: 72% of 1,500 = 1,080 kJ; 28% is offset by lower basal expenditure."
+      },
+      {
+       "id": "b",
+       "text": "420 kJ",
+       "why": "This is the part that is offset (28%), not the part that remains."
+      },
+      {
+       "id": "c",
+       "text": "1,500 kJ",
+       "why": "That is the purely additive answer; the constrained estimate removes 28% of it."
+      },
+      {
+       "id": "d",
+       "text": "1,920 kJ",
+       "why": "Compensation lowers TEE; it doesn't add 28% on top."
+      }
+     ],
+     "solution": "Rise = 1,500 × (1 − 0.28) = 1,500 × 0.72 = 1,080 kJ·day⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "day-debate",
+   "concept": "day-constrained",
+   "bloom": "evaluate",
+   "sources": [
+    "pontzer2016",
+    "careau2021",
+    "gonzalez2023",
+    "howard2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post says: \"Training doesn't burn extra calories, because your metabolism adapts.\" What is the best judgement on the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: activity adds energy use, but how fully is debated",
+       "correct": true,
+       "why": "Right: some data suggest partial compensation (about 28%), others a straight-line additive rise; none show that training adds nothing."
+      },
+      {
+       "id": "b",
+       "text": "Correct: TEE is fixed whatever you do",
+       "why": "Even the constrained model has TEE rising with activity at low levels; it is never fully fixed."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: every kJ of training adds exactly 1 kJ to TEE",
+       "why": "That ignores evidence of partial compensation; the question is still open."
+      },
+      {
+       "id": "d",
+       "text": "Correct for women, wrong for men",
+       "why": "No sex split is part of this debate; the claim is overstated for everyone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "day-run-calc",
+   "concept": "day-estimate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fletcher2009",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An ultrarunner (65 kg) runs 100 km. Using about 200 mL·kg⁻¹·km⁻¹ of O₂ and 20.5 kJ per litre (4.1 kJ·kg⁻¹·km⁻¹), about how much energy does the running take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "26,650 kJ",
+       "correct": true,
+       "why": "Right: 65 × 100 × 4.1 = 26,650 kJ."
+      },
+      {
+       "id": "b",
+       "text": "410 kJ",
+       "why": "This leaves out body mass: running cost is per kg."
+      },
+      {
+       "id": "c",
+       "text": "1,300 kJ",
+       "why": "This stops at litres of O₂ (mass × km × 0.2 L); they still need × 20.5 kJ per litre."
+      },
+      {
+       "id": "d",
+       "text": "111,504 kJ",
+       "why": "This multiplies by 4.184 as if the answer were in kcal; 4.1 kJ per kg per km already gives kJ."
+      }
+     ],
+     "solution": "Energy ≈ mass × distance × 4.1 = 65 × 100 × 4.1 = 26,650 kJ (6,370 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner on a 100-mile race (72 kg) runs 161 km. Using about 200 mL·kg⁻¹·km⁻¹ of O₂ and 20.5 kJ per litre (4.1 kJ·kg⁻¹·km⁻¹), about how much energy does the running take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "47,527 kJ",
+       "correct": true,
+       "why": "Right: 72 × 161 × 4.1 = 47,527 kJ."
+      },
+      {
+       "id": "b",
+       "text": "660 kJ",
+       "why": "This leaves out body mass: running cost is per kg."
+      },
+      {
+       "id": "c",
+       "text": "2,318 kJ",
+       "why": "This stops at litres of O₂ (mass × km × 0.2 L); they still need × 20.5 kJ per litre."
+      },
+      {
+       "id": "d",
+       "text": "198,854 kJ",
+       "why": "This multiplies by 4.184 as if the answer were in kcal; 4.1 kJ per kg per km already gives kJ."
+      }
+     ],
+     "solution": "Energy ≈ mass × distance × 4.1 = 72 × 161 × 4.1 = 47,527 kJ (11,359 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete in an Ironman marathon (70 kg) runs 42.2 km. Using about 200 mL·kg⁻¹·km⁻¹ of O₂ and 20.5 kJ per litre (4.1 kJ·kg⁻¹·km⁻¹), about how much energy does the running take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12,111 kJ",
+       "correct": true,
+       "why": "Right: 70 × 42.2 × 4.1 = 12,111 kJ."
+      },
+      {
+       "id": "b",
+       "text": "173 kJ",
+       "why": "This leaves out body mass: running cost is per kg."
+      },
+      {
+       "id": "c",
+       "text": "591 kJ",
+       "why": "This stops at litres of O₂ (mass × km × 0.2 L); they still need × 20.5 kJ per litre."
+      },
+      {
+       "id": "d",
+       "text": "50,674 kJ",
+       "why": "This multiplies by 4.184 as if the answer were in kcal; 4.1 kJ per kg per km already gives kJ."
+      }
+     ],
+     "solution": "Energy ≈ mass × distance × 4.1 = 70 × 42.2 × 4.1 = 12,111 kJ (2,895 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "day-tri-calc",
+   "concept": "day-estimate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "noordhof2010",
+    "fletcher2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An Ironman triathlete (70 kg) rides 5 h at 200 W (gross efficiency 20%), then runs 42.2 km at about 4.1 kJ·kg⁻¹·km⁻¹. Leaving out the swim, about how much energy do the bike and run take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30,111 kJ",
+       "correct": true,
+       "why": "Right: bike 18,000 kJ + run 12,111 kJ = 30,111 kJ."
+      },
+      {
+       "id": "b",
+       "text": "15,711 kJ",
+       "why": "This uses the bike's work instead of its energy cost: work must be divided by the 20% efficiency."
+      },
+      {
+       "id": "c",
+       "text": "18,173 kJ",
+       "why": "This leaves body mass out of the run: running cost is per kg."
+      },
+      {
+       "id": "d",
+       "text": "18,000 kJ",
+       "why": "This is the bike only; the run is still to come."
+      }
+     ],
+     "solution": "Bike: 200 × 18,000 s = 3,600 kJ of work ÷ 0.20 = 18,000 kJ. Run: 70 × 42.2 × 4.1 = 12,111 kJ. Total ≈ 30,111 kJ (7,197 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A 70.3 triathlete (62 kg) rides 2.5 h at 210 W (gross efficiency 20%), then runs 21.1 km at about 4.1 kJ·kg⁻¹·km⁻¹. Leaving out the swim, about how much energy do the bike and run take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14,814 kJ",
+       "correct": true,
+       "why": "Right: bike 9,450 kJ + run 5,364 kJ = 14,814 kJ."
+      },
+      {
+       "id": "b",
+       "text": "7,254 kJ",
+       "why": "This uses the bike's work instead of its energy cost: work must be divided by the 20% efficiency."
+      },
+      {
+       "id": "c",
+       "text": "9,537 kJ",
+       "why": "This leaves body mass out of the run: running cost is per kg."
+      },
+      {
+       "id": "d",
+       "text": "9,450 kJ",
+       "why": "This is the bike only; the run is still to come."
+      }
+     ],
+     "solution": "Bike: 210 × 9,000 s = 1,890 kJ of work ÷ 0.20 = 9,450 kJ. Run: 62 × 21.1 × 4.1 = 5,364 kJ. Total ≈ 14,814 kJ (3,541 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "day-appraisal",
+   "concept": "day-tee",
+   "bloom": "evaluate",
+   "sources": [
+    "saris1989",
+    "westerterp1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The Tour de France study found a mean expenditure of 25.4 MJ a day in five riders, estimated from sleep and activity periods and predicted cycling cost. What most limits this number?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Five riders, with expenditure estimated, not measured",
+       "correct": true,
+       "why": "Right: a tiny sample, and EE was predicted from activity rather than measured; DLW in other riders gave higher values than food records."
+      },
+      {
+       "id": "b",
+       "text": "The race was too long to study",
+       "why": "Three weeks is long, but DLW can cover it; length isn't the weakness."
+      },
+      {
+       "id": "c",
+       "text": "Cyclists can't be studied during a race",
+       "why": "They were studied during the race; the issue is how EE was obtained."
+      },
+      {
+       "id": "d",
+       "text": "The riders were too well trained to be typical",
+       "why": "Pros are exactly the population of interest here."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -6,6 +6,9 @@ import g_t0_evidence_101 from "../../data/glossary/t0-evidence-101.json";
 import g_t0_nervous from "../../data/glossary/t0-nervous.json";
 import g_t0_units_maths from "../../data/glossary/t0-units-maths.json";
 import g_t1a_bioenergetics from "../../data/glossary/t1a-bioenergetics.json";
+import g_t1a_calorimetry from "../../data/glossary/t1a-calorimetry.json";
+import g_t1a_lactate from "../../data/glossary/t1a-lactate.json";
+import g_t1a_muscle from "../../data/glossary/t1a-muscle.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -13,6 +16,9 @@ import s_t0_evidence_101 from "../../data/sources/t0-evidence-101.json";
 import s_t0_nervous from "../../data/sources/t0-nervous.json";
 import s_t0_units_maths from "../../data/sources/t0-units-maths.json";
 import s_t1a_bioenergetics from "../../data/sources/t1a-bioenergetics.json";
+import s_t1a_calorimetry from "../../data/sources/t1a-calorimetry.json";
+import s_t1a_lactate from "../../data/sources/t1a-lactate.json";
+import s_t1a_muscle from "../../data/sources/t1a-muscle.json";
 
 export const GLOSSARY = {
   ...g_t0_anatomy,
@@ -21,6 +27,9 @@ export const GLOSSARY = {
   ...g_t0_nervous,
   ...g_t0_units_maths,
   ...g_t1a_bioenergetics,
+  ...g_t1a_calorimetry,
+  ...g_t1a_lactate,
+  ...g_t1a_muscle,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -30,4 +39,7 @@ export const SOURCES = {
   ...s_t0_nervous,
   ...s_t0_units_maths,
   ...s_t1a_bioenergetics,
+  ...s_t1a_calorimetry,
+  ...s_t1a_lactate,
+  ...s_t1a_muscle,
 } as Record<string, Source>;

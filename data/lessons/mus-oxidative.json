@@ -1,0 +1,711 @@
+{
+ "id": "mus-oxidative",
+ "module": "t1a-muscle",
+ "title": "Mitochondria and capillaries: the endurance muscle",
+ "goal": "Explain how mitochondrial content and capillary supply set a muscle's endurance, how they are measured (citrate synthase and other markers), and how they shape oxygen use at the muscle through the a-vO₂ difference.",
+ "requires": [
+  "mus-length-velocity"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "mo-what-sets",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "mo-content",
+   "title": "The size of the aerobic engine",
+   "text": "Fibre type tells you how fast a fibre is. How long it can keep going depends mostly on how much aerobic machinery it has: its [mitochondria](g:mitochondria) and the capillaries that feed them.\n\nMitochondrial content varies hugely between people. In 16 young men whose VO₂peak ranged from 30 to 72 mL·kg⁻¹·min⁻¹, mitochondria filled **4–15% of the fibre volume** [[c:mo-range]].\n\nEndurance training raises it, and that changes how the muscle copes [[c:mo-holloszy]]. With more mitochondria, the same pace disturbs the fibre less, so a trained muscle at the same workload:\n\n- uses glycogen and blood glucose more slowly;\n- burns more fat;\n- makes less lactate.\n\nThat is much of why a familiar pace feels easier after a season of training.",
+   "claims": [
+    {
+     "id": "mo-range",
+     "text": "In young healthy men, mitochondrial content ranged from 4 to 15% of fibre volume, alongside VO₂peak from about 30 to 72 mL·kg⁻¹·min⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "larsen2012"
+     ],
+     "evidence": [
+      {
+       "source": "larsen2012",
+       "quote": "Subjects had a large range of VO2peak (range 29.9–71.6ml min−1 kg−1) and mitochondrial content (4–15% of cell volume).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mo-holloszy",
+     "text": "Endurance training raises mitochondrial content, so the same workload disturbs the muscle less: less glycogen and glucose use, more fat oxidation and less lactate.",
+     "grade": "strong",
+     "sources": [
+      "holloszy1984"
+     ],
+     "evidence": [
+      {
+       "source": "holloszy1984",
+       "quote": "These include increases in the mitochondrial content and respiratory capacity of the muscle fibers. As a consequence of the increase in mitochondria, exercise of the same intensity results in a disturbance in homeostasis that is smaller in trained than in untrained muscles.",
+       "level": "abstract"
+      },
+      {
+       "source": "holloszy1984",
+       "quote": "The major metabolic consequences of the adaptations of muscle to endurance exercise are a slower utilization of muscle glycogen and blood glucose, a greater reliance on fat oxidation, and less lactate production during exercise of a given intensity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-what-sets",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "mo-same-pace"
+  },
+  {
+   "type": "concept",
+   "id": "mo-markers",
+   "title": "Counting mitochondria",
+   "text": "The reference method is electron microscopy: photograph thin slices of a biopsy and measure what share of the fibre is mitochondria. It is slow and expensive, so studies mostly use markers.\n\nIn one study that checked markers against electron microscopy, three tracked mitochondrial content best: **cardiolipin** (a lipid of the mitochondrial membrane), **[citrate synthase](g:citrate-synthase) (CS)** activity, and complex I activity. Mitochondrial DNA did not track content at all. Complex IV activity was the best guide to the muscle's actual oxygen-using capacity [[c:mo-markers]].\n\nCS, the first enzyme of the [Krebs cycle](g:krebs-cycle), is the most used.\n\nOxidative enzymes separate athletes clearly: another Krebs-cycle enzyme, succinate dehydrogenase (SDH), was **3.4 times** higher in elite distance runners' calves than in untrained men [[c:mo-sdh]].",
+   "claims": [
+    {
+     "id": "mo-markers",
+     "text": "Cardiolipin content, citrate synthase and complex I activities are most closely associated with mitochondrial content measured by electron microscopy; mtDNA is not; complex IV activity is associated with oxidative capacity.",
+     "grade": "moderate",
+     "sources": [
+      "larsen2012"
+     ],
+     "evidence": [
+      {
+       "source": "larsen2012",
+       "quote": "We conclude that cardiolipin content, and CS and complex I activities are the biomarkers that exhibit the strongest association with mitochondrial content, while complex IV activity is strongly associated with OXPHOS capacity in human skeletal muscle.",
+       "level": "abstract"
+      },
+      {
+       "source": "larsen2012",
+       "quote": "mtDNA was not related to mitochondrial content.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mo-sdh",
+     "text": "SDH activity was 3.4-fold higher in elite distance runners' muscle than in untrained men.",
+     "grade": "moderate",
+     "sources": [
+      "costill1976"
+     ],
+     "evidence": [
+      {
+       "source": "costill1976",
+       "quote": "SDH activity of whole muscle homogenates from elicte and middle distance runners was 3.4- and 2.8- fold greater, respectively, than that measured in the untrained men.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-cs-marker"
+  },
+  {
+   "type": "question",
+   "item": "mo-mtdna-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "mo-capillaries",
+   "title": "Capillaries: the delivery side",
+   "text": "Mitochondria can only burn the oxygen that reaches them. Oxygen leaves the blood in the [capillaries](g:capillary) around each fibre, so the more capillaries, the more surface for oxygen to cross and the shorter its path into the fibre.\n\nResearchers count them as [capillary density](g:capillary-density) (capillaries per mm²) or as capillaries in contact with each fibre.\n\nCapillaries respond to training. In a classic study, five people cycled four times a week for eight weeks at 80% of VO₂max. Results [[c:mo-andersen]]:\n\n| measure | change |\n|---|---|\n| capillary density | +20% |\n| oxidative enzymes (SDH, cytochrome oxidase) | about +40% |\n| VO₂max | +16% |\n\nThe capillary supply grew around all fibre types alike. A small study with no control group, so take the exact numbers as rough.",
+   "claims": [
+    {
+     "id": "mo-andersen",
+     "text": "Eight weeks of cycle training raised capillary density by 20%, oxidative enzyme activities by about 40% and VO₂max by 16%.",
+     "grade": "weak",
+     "sources": [
+      "andersen1977"
+     ],
+     "evidence": [
+      {
+       "source": "andersen1977",
+       "quote": "The training programme resulted in a 16% increase in V(O2 max.), a 20% increase in capillary density, a 20% increase in mean fibre area, and an approximately 40% increase in the activities of succinate dehydrogenase and cytochrome oxidase.",
+       "level": "abstract"
+      },
+      {
+       "source": "andersen1977",
+       "quote": "The present study shows that endurance training constitutes a powerful stimulus for capillary proliferation in human skeletal muscle.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-capillary-train"
+  },
+  {
+   "type": "question",
+   "item": "mo-andersen-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "mo-fick",
+   "title": "VO₂ at the muscle",
+   "text": "How much oxygen a muscle uses can be worked out from the blood going in and out (the Fick principle):\n\n**muscle VO₂ = blood flow × [a-vO₂ difference](g:a-vo2-difference)**\n\nThe a-vO₂ difference is how much oxygen each litre of blood gives up on its way through. The heart and blood vessels set the flow. The muscle itself sets the extraction: more capillaries and more mitochondria let it take more oxygen out of each litre.\n\nThis shows when training stops. In endurance athletes who stopped for 84 days, VO₂max stayed above that of sedentary people mainly because of a larger a-vO₂ difference, which the authors linked to capillaries and oxidative enzymes staying above sedentary levels [[c:mo-avo2-detrain]].\n\nNext, a calculation.",
+   "claims": [
+    {
+     "id": "mo-avo2-detrain",
+     "text": "After 84 days of detraining, retained capillarisation and oxidative enzymes may explain why a-vO₂ difference and VO₂max stayed above sedentary values.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "Muscle capillarization and oxidative enzyme activity remained above sedentary levels and this may help explain why a-vO2 difference and VO2 max after 84 days of detraining were still higher than in untrained subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mo-fick-example",
+   "title": "Oxygen use of one leg",
+   "problem": "During a hard ride, blood flows through one leg at 7 L·min⁻¹. Arterial blood holds 200 mL O₂ per litre, the blood leaving the leg 40 mL O₂ per litre. What is the leg's VO₂?",
+   "steps": [
+    "a-vO₂ difference = arterial − venous = 200 − 40 = 160 mL O₂ per litre of blood.",
+    "VO₂ = flow × a-vO₂ difference = 7 L·min⁻¹ × 160 mL·L⁻¹ = 1,120 mL·min⁻¹.",
+    "Convert: 1,120 mL·min⁻¹ = 1.12 L·min⁻¹. The litres of blood cancel, leaving mL O₂ per minute."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-fick-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mo-avo2-reason"
+  },
+  {
+   "type": "concept",
+   "id": "mo-reserve",
+   "title": "More mitochondria than oxygen",
+   "text": "Are mitochondria or oxygen delivery the tighter limit at VO₂max? One study compared the two directly [[c:mo-boushel]]:\n\n| muscle and task | mitochondria could use | the muscle actually took up |\n|---|---|---|\n| thigh, in cycling | 6.9 | 5.0 |\n| shoulder, in arm cranking | 4.3 | 4.7 |\n\n(mmol O₂ per kg of muscle per minute; mitochondria measured in biopsies, uptake by the Fick method.)\n\nWhen a large muscle mass works, as in cycling or running, the mitochondria could burn more oxygen than the heart and blood deliver. So at VO₂max in whole-body exercise, delivery is the tighter limit, while mitochondria matter most for how hard you can work below it, for how long. The VO₂max module takes this up.",
+   "claims": [
+    {
+     "id": "mo-boushel",
+     "text": "With half or more of the muscle mass active, as in cycling, the quadriceps' mitochondrial capacity (6.9 mmol O₂·kg⁻¹·min⁻¹) exceeded leg VO₂max (5.0).",
+     "grade": "weak",
+     "sources": [
+      "boushel2011"
+     ],
+     "evidence": [
+      {
+       "source": "boushel2011",
+       "quote": "In contrast, the mitochondrial state 3 of the quadriceps was 6.9±0.5 mmol O(2) kg(-1) min(-1), exceeding the in-vivo leg VO(2) max (5.0±0.2 mmol O(2) kg(-1) min(-1)) during leg cycling with 20 kg muscle (P<0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "boushel2011",
+       "quote": "Thus, when half or more of the body muscle mass is engaged during exercise, muscle mitochondrial respiratory capacity surpasses in-vivo VO(2) max.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-boushel"
+  },
+  {
+   "type": "question",
+   "item": "mo-fick-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "mo-sdh-runners"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Mitochondrial content (4–15% of fibre volume across people) sets how long a fibre can work aerobically; more of it means less glycogen use, more fat use and less lactate at the same workload.",
+    "Citrate synthase, cardiolipin and complex I activity track mitochondrial content; mitochondrial DNA does not.",
+    "Capillaries are the delivery side: eight weeks of training raised capillary density by about 20%.",
+    "Muscle VO₂ = blood flow × a-vO₂ difference; mitochondria and capillaries widen the a-vO₂ difference.",
+    "In cycling, thigh mitochondria could use more oxygen than is delivered: at VO₂max, delivery is the tighter limit."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mo-what-sets",
+   "concept": "mo-content",
+   "bloom": "understand",
+   "sources": [
+    "holloszy1984",
+    "larsen2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which feature of a muscle fibre most directly sets how much ATP it can make aerobically for a long time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its mitochondrial content",
+       "correct": true,
+       "why": "Right: oxidative phosphorylation happens in the mitochondria, so their amount sets aerobic capacity."
+      },
+      {
+       "id": "b",
+       "text": "Its myosin heavy chain isoform",
+       "why": "MHC sets contraction speed; oxidative capacity varies with training within a type."
+      },
+      {
+       "id": "c",
+       "text": "Its sarcomere length",
+       "why": "Sarcomere length sets force through overlap, not aerobic ATP supply."
+      },
+      {
+       "id": "d",
+       "text": "Its stored ATP",
+       "why": "Stored ATP lasts seconds; it has to be rebuilt continuously."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two cyclists have the same share of type I fibres, but one can ride far longer at the same power. Which muscle difference best explains it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More mitochondria in her fibres",
+       "correct": true,
+       "why": "Right: mitochondrial content varies several-fold between people, independent of fibre type."
+      },
+      {
+       "id": "b",
+       "text": "More myosin IIx in her fibres",
+       "why": "IIx fibres are powerful but tire quickly; they don't improve endurance."
+      },
+      {
+       "id": "c",
+       "text": "Longer sarcomeres in her fibres",
+       "why": "Sarcomere length affects force, not how long a fibre can work."
+      },
+      {
+       "id": "d",
+       "text": "More stored ATP in her fibres",
+       "why": "The ATP store lasts seconds in either rider; resynthesis is what counts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-same-pace",
+   "concept": "mo-content",
+   "bloom": "apply",
+   "sources": [
+    "holloszy1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a winter of base training, a runner repeats a 60-minute run at the same pace as last autumn. What muscle changes would you expect at that pace?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slower glycogen use, more fat burned, less lactate made",
+       "correct": true,
+       "why": "Right: more mitochondria mean a smaller disturbance at the same workload."
+      },
+      {
+       "id": "b",
+       "text": "Faster glycogen use, as the trained muscle works harder",
+       "why": "The reverse: trained muscle spares glycogen at the same workload."
+      },
+      {
+       "id": "c",
+       "text": "More lactate made, since mitochondria use more pyruvate",
+       "why": "More mitochondria take up more pyruvate, so less lactate is made."
+      },
+      {
+       "id": "d",
+       "text": "No change, as the pace and so the demand are the same",
+       "why": "The ATP demand is the same, but how the muscle meets it changes with training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-cs-marker",
+   "concept": "mo-markers",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "larsen2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which enzyme's activity in a muscle biopsy is the most widely used marker of mitochondrial content?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Citrate synthase",
+       "correct": true,
+       "why": "Right: CS, the first Krebs-cycle enzyme, tracks mitochondrial content well."
+      },
+      {
+       "id": "b",
+       "text": "Lactate dehydrogenase",
+       "why": "LDH works in the cytosol and tracks glycolytic, not mitochondrial, capacity."
+      },
+      {
+       "id": "c",
+       "text": "Creatine kinase",
+       "why": "Creatine kinase rebuilds ATP from PCr and isn't a mitochondrial marker."
+      },
+      {
+       "id": "d",
+       "text": "Phosphofructokinase",
+       "why": "PFK controls glycolysis in the cytosol."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-mtdna-appraisal",
+   "concept": "mo-markers",
+   "bloom": "evaluate",
+   "sources": [
+    "larsen2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A training study reports that mitochondrial DNA copy number in the vastus lateralis rose 30%, and concludes that mitochondrial content rose 30%. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "mtDNA doesn't track mitochondrial content well",
+       "correct": true,
+       "why": "Right: in Larsen's validation, mtDNA was not related to content; CS or cardiolipin would be better."
+      },
+      {
+       "id": "b",
+       "text": "Mitochondria hold no DNA of their own",
+       "why": "They do; the issue is that its amount doesn't follow how many mitochondria there are."
+      },
+      {
+       "id": "c",
+       "text": "Training never changes mitochondrial content",
+       "why": "Endurance training does raise it; the problem is the marker chosen."
+      },
+      {
+       "id": "d",
+       "text": "A 30% rise is too small to detect",
+       "why": "30% is measurable with good markers; this one is simply not valid for content."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-capillary-train",
+   "concept": "mo-capillaries",
+   "bloom": "apply",
+   "sources": [
+    "andersen1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An untrained person starts triathlon training and rides four times a week at about 80% VO₂max for eight weeks. Based on the classic study, what change in thigh capillary density is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About +20%",
+       "correct": true,
+       "why": "Right: capillary density rose 20% in eight weeks of similar training."
+      },
+      {
+       "id": "b",
+       "text": "About +200%",
+       "why": "Far too large for eight weeks; the study found +20%."
+      },
+      {
+       "id": "c",
+       "text": "No change: capillaries are fixed in adults",
+       "why": "Training is a powerful stimulus for new capillaries in adult muscle."
+      },
+      {
+       "id": "d",
+       "text": "A fall, as fibres grow and spread the capillaries out",
+       "why": "Fibre area grew 20% too, yet capillary density still rose 20%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-andersen-appraisal",
+   "concept": "mo-capillaries",
+   "bloom": "evaluate",
+   "sources": [
+    "andersen1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Five people trained for eight weeks and capillary density rose 20%, with biopsies before and during training and no control group. What most limits the claim that training caused the rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Five people and no control group: noise isn't ruled out",
+       "correct": true,
+       "why": "Right: a small, uncontrolled study can't separate the training effect from measurement noise or other changes."
+      },
+      {
+       "id": "b",
+       "text": "Capillaries can't be counted in biopsies",
+       "why": "They can, with staining; that is how the study measured them."
+      },
+      {
+       "id": "c",
+       "text": "Eight weeks is too long for a change to show",
+       "why": "Changes in capillaries appear within weeks; eight weeks is plenty."
+      },
+      {
+       "id": "d",
+       "text": "Cycling hardly uses the thigh muscles",
+       "why": "The vastus lateralis is a main cycling muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-fick-calc",
+   "concept": "mo-fick",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "boushel2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a hard ride, blood flows through one leg at 6 L·min⁻¹. Arterial blood holds 200 mL O₂·L⁻¹ and the blood leaving the leg 30 mL O₂·L⁻¹. What is the leg's VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.02 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (200 − 30) × 6 = 1,020 mL·min⁻¹ = 1.02 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.20 L·min⁻¹",
+       "why": "This uses the arterial content alone (200 × 6) and forgets to subtract what leaves in the veins."
+      },
+      {
+       "id": "c",
+       "text": "0.18 L·min⁻¹",
+       "why": "This uses the venous content (30 × 6): the oxygen left over, not the oxygen used."
+      },
+      {
+       "id": "d",
+       "text": "1,020 L·min⁻¹",
+       "why": "The number is right but the unit isn't: it is 1,020 mL·min⁻¹."
+      }
+     ],
+     "solution": "a-vO₂ difference = 200 − 30 = 170 mL·L⁻¹. VO₂ = 6 L·min⁻¹ × 170 mL·L⁻¹ = 1,020 mL·min⁻¹ = 1.02 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A trained cyclist's leg receives 8 L·min⁻¹ of blood. Arterial blood holds 200 mL O₂·L⁻¹ and the blood leaving the leg 20 mL O₂·L⁻¹. What is the leg's VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.44 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (200 − 20) × 8 = 1,440 mL·min⁻¹ = 1.44 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.60 L·min⁻¹",
+       "why": "This uses the arterial content alone (200 × 8) and forgets to subtract what leaves in the veins."
+      },
+      {
+       "id": "c",
+       "text": "0.16 L·min⁻¹",
+       "why": "This uses the venous content (20 × 8): the oxygen left over, not the oxygen used."
+      },
+      {
+       "id": "d",
+       "text": "1,440 L·min⁻¹",
+       "why": "The number is right but the unit isn't: it is 1,440 mL·min⁻¹."
+      }
+     ],
+     "solution": "a-vO₂ difference = 200 − 20 = 180 mL·L⁻¹. VO₂ = 8 L·min⁻¹ × 180 mL·L⁻¹ = 1,440 mL·min⁻¹ = 1.44 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "During an uphill run, blood flows through a runner's thigh at 5 L·min⁻¹. Arterial blood holds 190 mL O₂·L⁻¹ and the blood leaving the thigh 40 mL O₂·L⁻¹. What is the thigh's VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.75 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (190 − 40) × 5 = 750 mL·min⁻¹ = 0.75 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.95 L·min⁻¹",
+       "why": "This uses the arterial content alone (190 × 5) and forgets to subtract what leaves in the veins."
+      },
+      {
+       "id": "c",
+       "text": "0.20 L·min⁻¹",
+       "why": "This uses the venous content (40 × 5): the oxygen left over, not the oxygen used."
+      },
+      {
+       "id": "d",
+       "text": "750 L·min⁻¹",
+       "why": "The number is right but the unit isn't: it is 750 mL·min⁻¹."
+      }
+     ],
+     "solution": "a-vO₂ difference = 190 − 40 = 150 mL·L⁻¹. VO₂ = 5 L·min⁻¹ × 150 mL·L⁻¹ = 750 mL·min⁻¹ = 0.75 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "mo-avo2-reason",
+   "concept": "mo-fick",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1984",
+    "andersen1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes have the same leg blood flow at their maximum. Blood leaving A's legs holds 20 mL O₂·L⁻¹, B's 45 mL O₂·L⁻¹, with the same arterial content. What best explains A's higher leg VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A extracts more oxygen per litre, likely from more capillaries and mitochondria",
+       "correct": true,
+       "why": "Right: with equal flow, a larger a-vO₂ difference means more extraction, which the muscle's capillaries and mitochondria set."
+      },
+      {
+       "id": "b",
+       "text": "A has a larger heart, so more blood reaches the legs",
+       "why": "Flow is the same in both; the difference is in extraction, not delivery."
+      },
+      {
+       "id": "c",
+       "text": "A has more haemoglobin, so more oxygen arrives",
+       "why": "Arterial content is the same; more haemoglobin would raise it."
+      },
+      {
+       "id": "d",
+       "text": "A's blood moves faster, so it leaves fuller",
+       "why": "Venous blood leaves A's legs emptier, not fuller."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-boushel",
+   "concept": "mo-reserve",
+   "bloom": "analyse",
+   "sources": [
+    "boushel2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In cycling, thigh mitochondria could use 6.9 mmol O₂·kg⁻¹·min⁻¹, but the thigh took up only 5.0 at VO₂max. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oxygen delivery, not mitochondrial capacity, is the tighter limit at VO₂max in cycling",
+       "correct": true,
+       "why": "Right: the mitochondria had spare capacity that the blood supply couldn't fill."
+      },
+      {
+       "id": "b",
+       "text": "The mitochondria were the limit and needed more oxygen to grow",
+       "why": "Spare mitochondrial capacity means they were not the main limit here."
+      },
+      {
+       "id": "c",
+       "text": "Cycling uses too little muscle to reach VO₂max",
+       "why": "Cycling uses about 20 kg of muscle, enough for delivery to become limiting."
+      },
+      {
+       "id": "d",
+       "text": "Mitochondria are useless for endurance, since they're never fully used",
+       "why": "They set how hard you can work below VO₂max and for how long."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-sdh-runners",
+   "concept": "mo-markers",
+   "bloom": "apply",
+   "sources": [
+    "costill1976"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "SDH activity in elite distance runners' calves was 3.4 times that of untrained men, while glycolytic enzyme activity was similar. What does this pattern show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Distance runners' muscles differ mainly in oxidative, not glycolytic, capacity",
+       "correct": true,
+       "why": "Right: a mitochondrial enzyme differed greatly, glycolytic ones hardly at all."
+      },
+      {
+       "id": "b",
+       "text": "Distance runners rely on glycolysis more than untrained men",
+       "why": "Glycolytic enzymes were similar; the large difference was oxidative."
+      },
+      {
+       "id": "c",
+       "text": "Runners have 3.4 times as many muscle fibres",
+       "why": "SDH is an enzyme activity per amount of muscle, not a fibre count."
+      },
+      {
+       "id": "d",
+       "text": "SDH is a marker of type IIx fibres",
+       "why": "SDH is a mitochondrial enzyme, highest in oxidative fibres."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

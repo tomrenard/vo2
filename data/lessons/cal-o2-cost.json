@@ -1,0 +1,990 @@
+{
+ "id": "cal-o2-cost",
+ "module": "t1a-calorimetry",
+ "title": "Oxygen cost of cycling and running",
+ "goal": "Calculate gross, net and delta efficiency, predict VO₂ from power or pace, and estimate the energy of a ride or run.",
+ "requires": [
+  "cal-substrates"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "o2-eff-kind",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "o2-efficiency",
+   "title": "Three kinds of efficiency",
+   "text": "Efficiency = mechanical power out ÷ metabolic power in. The three kinds differ in what they count as 'in':\n\n| | work divided by | at 150 W, one lab |\n|---|---|---|\n| [gross](g:gross-efficiency) (GE) | all the energy used | 20.0% |\n| [net](g:net-efficiency) (NE) | energy above resting | 23.4% |\n| [delta](g:delta-efficiency) (DE) | the extra energy for extra work | 23.8% |\n\n[[c:eff-values]]\n\nGE includes the cost of being alive and of moving the legs, so it is the lowest. DE looks only at the change between two power outputs. GE is the most reliable to measure and the one that matters for fuelling: you pay the whole bill [[c:ge-best]]. DE, read off a line through a few points, is the least reliable [[c:de-reliability]]. Between trained cyclists, DE ranged from about 18% to 26% in one study [[c:de-range]].",
+   "claims": [
+    {
+     "id": "eff-values",
+     "text": "In 14 active adults cycling at 150 W, mean GE was 20.0%, NE 23.4% and DE 23.8%; economy was 14.3 mL·min⁻¹·W⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "matomaki2019"
+     ],
+     "evidence": [
+      {
+       "source": "matomaki2019",
+       "quote": "Efficiency GE (%) T (ml/min/W) NE (%) DE (%) WE e (%) WE m (%) Mean (± SD) 20.0 ± 0.8 14.3 ± 0.6 23.4 ± 1.0 23.8 ± 1.9",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ge-best",
+     "text": "Gross efficiency is the most consistent and relevant expression of cycling efficiency.",
+     "grade": "moderate",
+     "sources": [
+      "matomaki2019",
+      "ettema2009"
+     ],
+     "evidence": [
+      {
+       "source": "matomaki2019",
+       "quote": "Based on problems and imprecisions with other efficiency indices, GE, or group I, seems to be the best indicator for mechanical efficiency because of its consistency and unambiguity.",
+       "level": "abstract"
+      },
+      {
+       "source": "ettema2009",
+       "quote": "present arguments to support the contention that gross efficiency can be considered to be the most relevant expression of efficiency",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "de-reliability",
+     "text": "Delta efficiency has poor reliability because it depends on a regression line of work against energy.",
+     "grade": "weak",
+     "sources": [
+      "matomaki2019"
+     ],
+     "evidence": [
+      {
+       "source": "matomaki2019",
+       "quote": "group II appeared to have poor reliability due to its dependence on a work-expended energy regression line, which accuracy is poorly measured by confidence interval",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "de-range",
+     "text": "In 19 highly trained cyclists, delta efficiency ranged from 18.3% to 25.6%.",
+     "grade": "weak",
+     "sources": [
+      "coyle1992"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1992",
+       "quote": "The % Type I fibers ranged from 32 to 76%, and DE when cycling ranged from 18.3 to 25.6% in these subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "o2-eff-example",
+   "title": "Gross, net and delta efficiency",
+   "problem": "A cyclist's steady VO₂ is 2.15 L·min⁻¹ at 150 W and 3.35 L·min⁻¹ at 250 W; resting VO₂ is 0.30 L·min⁻¹. Take 20.5 kJ per litre of O₂.",
+   "steps": [
+    "Metabolic power at 150 W: 2.15 × 20,500 ÷ 60 = 735 W. GE = 150 ÷ 735 = 20.4%.",
+    "Net: subtract rest, (2.15 − 0.30) × 20,500 ÷ 60 = 632 W. NE = 150 ÷ 632 = 23.7%.",
+    "Delta: ΔVO₂ = 1.20 L·min⁻¹ → 410 W for 100 extra watts. DE = 100 ÷ 410 = 24.4%.",
+    "GE at 250 W: 250 ÷ 1145 = 21.8%: higher than at 150 W, with no change in the muscles."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "o2-eff-kind",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "o2-ge-calc"
+  },
+  {
+   "type": "question",
+   "item": "o2-de-calc"
+  },
+  {
+   "type": "concept",
+   "id": "o2-watt",
+   "title": "What one watt costs",
+   "text": "Turn delta efficiency around for the price of each extra watt: **ΔVO₂ per watt = 60 ÷ (DE × 20,500)** L·min⁻¹, using 20,500 J per litre of O₂. At DE 24% that is about **12 mL·min⁻¹·W⁻¹**; at 26%, about 11.\n\nThat is the slope. Whole VO₂ also carries a baseline (resting needs, moving the legs), so VO₂ ÷ power is higher: 14.3 mL·min⁻¹·W⁻¹ at 150 W in the same study [[c:eff-values-2]]. The 'about 15 per watt' from the bioenergetics module is this whole-VO₂ figure.\n\nEnergy rises in a straight line with power, but the baseline is shared over more watts, so GE climbs with power [[c:ge-rises]]. A higher GE at a higher power doesn't mean you got more efficient.\n\nTo predict VO₂ at a new power, add slope × Δwatts to a VO₂ you measured; don't scale in proportion.",
+   "claims": [
+    {
+     "id": "eff-values-2",
+     "text": "In the same 14 adults at 150 W, VO₂ per watt (economy) was 14.3 mL·min⁻¹·W⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "matomaki2019"
+     ],
+     "evidence": [
+      {
+       "source": "matomaki2019",
+       "quote": "Efficiency GE (%) T (ml/min/W) NE (%) DE (%) WE e (%) WE m (%) Mean (± SD) 20.0 ± 0.8 14.3 ± 0.6 23.4 ± 1.0 23.8 ± 1.9",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ge-rises",
+     "text": "Energy expenditure rises linearly with work rate; GE rises with work rate mainly because the baseline expenditure matters less.",
+     "grade": "moderate",
+     "sources": [
+      "ettema2009"
+     ],
+     "evidence": [
+      {
+       "source": "ettema2009",
+       "quote": "A linear relationship between work rate and energy expenditure appears to be a rather consistent outcome among the various studies considered in this review, irrespective of subject performance level.",
+       "level": "abstract"
+      },
+      {
+       "source": "ettema2009",
+       "quote": "Gross efficiency is strongly dependent on work rate, mainly because of the diminishing effect of the (zero work-rate) base-line energy expenditure with increasing work rate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "o2-ge-rises"
+  },
+  {
+   "type": "question",
+   "item": "o2-slope-calc"
+  },
+  {
+   "type": "concept",
+   "id": "o2-run",
+   "title": "Running: oxygen per kilometre",
+   "text": "Runners rarely have a power number, so cost is given per distance and per kg: [running economy](g:running-economy) in mL of O₂ per kg per km.\n\nA useful fact: in steady running below the threshold, the oxygen cost per km barely changes with speed [[c:oc-flat]]. A km costs about the same O₂ whether you jog it or run it fast; you just spend it sooner.\n\nIn 16 highly trained male runners it was about 220 mL·kg⁻¹·km⁻¹ [[c:oc-value]]; 200 is a handy round figure. A world-record half marathoner used about 40 mL·kg⁻¹·min⁻¹ at 16 km·h⁻¹, which is about 150 per km [[c:oc-elite]].\n\nEnergy per km rises a little with speed (1.05 to 1.11 kcal·kg⁻¹·km⁻¹), because RER rises and carbohydrate gives more energy per litre of O₂ [[c:ec-speed]].",
+   "claims": [
+    {
+     "id": "oc-flat",
+     "text": "Below the lactate threshold, oxygen cost per km does not differ across running speeds.",
+     "grade": "moderate",
+     "sources": [
+      "shaw2014",
+      "fletcher2009"
+     ],
+     "evidence": [
+      {
+       "source": "shaw2014",
+       "quote": "However, no differences were observed for OC across the four monitored speeds (P = 0.54).",
+       "level": "abstract"
+      },
+      {
+       "source": "fletcher2009",
+       "quote": "There was no difference in oxygen cost with respect to speed (P = 0.657)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oc-value",
+     "text": "In 16 highly trained male runners, oxygen cost was about 217–221 mL·kg⁻¹·km⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "fletcher2009"
+     ],
+     "evidence": [
+      {
+       "source": "fletcher2009",
+       "quote": "Average oxygen cost was 221 +/- 19, 217 +/- 15, and 221 +/- 13 mlxkg(-1)xkm(-1), respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oc-elite",
+     "text": "The half-marathon world-record holder's running economy was equivalent to 40.0 mL·kg⁻¹·min⁻¹ at 16 km·h⁻¹ (about 150 mL·kg⁻¹·km⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "barnes2015"
+     ],
+     "evidence": [
+      {
+       "source": "barnes2015",
+       "quote": "which is equivalent to 40.0 ml . kg -1. min −1 at 16 km . hr −1 or 48.2% relative intensity of effort",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ec-speed",
+     "text": "Energy cost per km rises with running speed (1.05 to 1.11 kcal·kg⁻¹·km⁻¹), along with RER.",
+     "grade": "moderate",
+     "sources": [
+      "fletcher2009",
+      "shaw2014"
+     ],
+     "evidence": [
+      {
+       "source": "fletcher2009",
+       "quote": "Caloric unit cost was 1.05 +/- 0.09, 1.07 +/- 0.08, and 1.11 +/- 0.07 kcalxkg(-1)xkm(-1) at the three trial speeds, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "shaw2014",
+       "quote": "There were stepwise increases in EC and RER with increments in running speed (both, P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "o2-run-example",
+   "title": "VO₂ and energy from pace",
+   "problem": "A 70 kg runner with an oxygen cost of 200 mL·kg⁻¹·km⁻¹ runs 10 km at 4:30 per km. Find her VO₂ and the energy of the run (20.5 kJ per litre of O₂).",
+   "steps": [
+    "Pace 4:30 = 4.5 min per km. VO₂ = 200 ÷ 4.5 = 44.4 mL·kg⁻¹·min⁻¹ (× 70 kg = 3.11 L·min⁻¹).",
+    "Total O₂ = 200 × 70 × 10 = 140,000 mL = 140 L.",
+    "Energy = 140 × 20.5 = 2,870 kJ (686 kcal): close to the rule of thumb of 1 kcal per kg per km.",
+    "At 5:30 per km, VO₂ falls to 36.4 mL·kg⁻¹·min⁻¹, but the 10 km still takes about 140 L of O₂."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "o2-run-vo2"
+  },
+  {
+   "type": "question",
+   "item": "o2-run-energy"
+  },
+  {
+   "type": "concept",
+   "id": "o2-recipes",
+   "title": "Two recipes, one idea",
+   "text": "Energy = oxygen × energy per litre. Only the way to the oxygen differs.\n\n- **Cycling, from power**: energy (kJ) = work (kJ) ÷ GE. Per minute: VO₂ at a known power + about 12 mL·min⁻¹ per extra watt.\n- **Running, from pace**: VO₂ (mL·kg⁻¹·min⁻¹) = cost per km ÷ pace (min per km). Energy (kJ) = mass × km × cost × 20.5 ÷ 1000.\n\nWhat follows:\n\n- Running cost scales with **body mass**: every extra kg is paid on every km. In cycling the cost follows **watts**; mass matters through the watts it takes, most on climbs.\n- A faster run costs about the same energy per km. A faster ride needs more watts per km, so it costs more.\n\nTreat any single number as ±10%: GE and running economy differ between people.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "o2-run-speed"
+  },
+  {
+   "type": "question",
+   "item": "o2-mass"
+  },
+  {
+   "type": "question",
+   "item": "o2-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Gross efficiency divides work by all energy used (about 20%); net subtracts resting; delta uses the change between two powers (about 24%). GE is the one to use for fuelling.",
+    "Each extra watt costs about 11–12 mL·min⁻¹ of O₂ (the slope); VO₂ ÷ watts is higher (about 14–15) because of the baseline. Predict VO₂ by adding slope × Δwatts, not by scaling.",
+    "GE rises with power only because the baseline is spread over more watts.",
+    "Running costs about 200 mL·kg⁻¹·km⁻¹ (220 in trained men, 150 in a world-class runner), almost the same at any steady speed below threshold: VO₂ = cost ÷ pace.",
+    "Run energy (kJ) ≈ mass × km × cost × 20.5 ÷ 1000, about 1 kcal per kg per km."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "o2-eff-kind",
+   "concept": "o2-efficiency",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "matomaki2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which efficiency divides the extra work by the extra energy between two power outputs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Delta efficiency",
+       "correct": true,
+       "why": "Right: DE uses only the changes, the slope of energy against power."
+      },
+      {
+       "id": "b",
+       "text": "Gross efficiency",
+       "why": "GE divides all the work by all the energy, baseline included."
+      },
+      {
+       "id": "c",
+       "text": "Net efficiency",
+       "why": "NE subtracts the resting energy use, but still uses one power output."
+      },
+      {
+       "id": "d",
+       "text": "Running economy",
+       "why": "Economy is O₂ per distance in running; it isn't a ratio of work to energy."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which efficiency subtracts resting energy use before dividing work by energy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Net efficiency",
+       "correct": true,
+       "why": "Right: NE = work ÷ (energy − resting energy)."
+      },
+      {
+       "id": "b",
+       "text": "Gross efficiency",
+       "why": "GE keeps the resting cost in: it divides by all the energy used."
+      },
+      {
+       "id": "c",
+       "text": "Delta efficiency",
+       "why": "DE uses the change between two powers, so the baseline drops out, but it doesn't subtract a resting value."
+      },
+      {
+       "id": "d",
+       "text": "Mechanical efficiency of the muscle fibre",
+       "why": "That is measured on isolated muscle, not with a cart."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o2-ge-calc",
+   "concept": "o2-efficiency",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "matomaki2019",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides a steady 250 W at a VO₂ of 3.40 L·min⁻¹. Taking 20.5 kJ per litre of O₂, what is the gross efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "21.5%",
+       "correct": true,
+       "why": "Right: 3.40 × 20.5 = 69.7 kJ·min⁻¹ = 1162 W; 250 ÷ 1162 = 21.5%."
+      },
+      {
+       "id": "c",
+       "text": "78.5%",
+       "why": "That is the share of energy lost as heat, not the efficiency."
+      },
+      {
+       "id": "d",
+       "text": "20.9%",
+       "why": "This uses 21.1 kJ per litre (pure carbohydrate); the stem says 20.5 for a mixed fuel."
+      }
+     ],
+     "solution": "Metabolic power = 3.40 × 20,500 ÷ 60 = 1162 W. GE = 250 ÷ 1162 = 21.5%."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on her time-trial bike rides a steady 180 W at a VO₂ of 2.65 L·min⁻¹. Taking 20.5 kJ per litre of O₂, what is the gross efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "19.9%",
+       "correct": true,
+       "why": "Right: 2.65 × 20.5 = 54.3 kJ·min⁻¹ = 905 W; 180 ÷ 905 = 19.9%."
+      },
+      {
+       "id": "c",
+       "text": "80.1%",
+       "why": "That is the share of energy lost as heat, not the efficiency."
+      },
+      {
+       "id": "d",
+       "text": "19.3%",
+       "why": "This uses 21.1 kJ per litre (pure carbohydrate); the stem says 20.5 for a mixed fuel."
+      }
+     ],
+     "solution": "Metabolic power = 2.65 × 20,500 ÷ 60 = 905 W. GE = 180 ÷ 905 = 19.9%."
+    },
+    {
+     "id": "c",
+     "stem": "A heavier rider rides a steady 300 W at a VO₂ of 4.30 L·min⁻¹. Taking 20.5 kJ per litre of O₂, what is the gross efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20.4%",
+       "correct": true,
+       "why": "Right: 4.30 × 20.5 = 88.1 kJ·min⁻¹ = 1469 W; 300 ÷ 1469 = 20.4%."
+      },
+      {
+       "id": "c",
+       "text": "79.6%",
+       "why": "That is the share of energy lost as heat, not the efficiency."
+      },
+      {
+       "id": "d",
+       "text": "19.8%",
+       "why": "This uses 21.1 kJ per litre (pure carbohydrate); the stem says 20.5 for a mixed fuel."
+      }
+     ],
+     "solution": "Metabolic power = 4.30 × 20,500 ÷ 60 = 1469 W. GE = 300 ÷ 1469 = 20.4%."
+    }
+   ]
+  },
+  {
+   "id": "o2-de-calc",
+   "concept": "o2-efficiency",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "matomaki2019",
+    "coyle1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO₂ is 2.10 L·min⁻¹ at 150 W and 3.30 L·min⁻¹ at 250 W (both steady). Taking 20.5 kJ per litre of O₂, what is the delta efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "24.4%",
+       "correct": true,
+       "why": "Right: ΔVO₂ = 1.20 L·min⁻¹ = 410 W of metabolic power; 100 ÷ 410 = 24.4%."
+      },
+      {
+       "id": "b",
+       "text": "22.2%",
+       "why": "That is the gross efficiency at 250 W; delta efficiency uses only the changes."
+      },
+      {
+       "id": "c",
+       "text": "63.6%",
+       "why": "This divides the two VO₂ values; efficiency needs work over energy."
+      },
+      {
+       "id": "d",
+       "text": "8.9%",
+       "why": "This divides the extra watts by the whole metabolic power at 250 W; DE needs the extra energy only."
+      }
+     ],
+     "solution": "ΔP = 100 W. ΔVO₂ = 1.20 L·min⁻¹ → 1.20 × 20,500 ÷ 60 = 410 W. DE = 100 ÷ 410 = 24.4%."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's VO₂ is 2.80 L·min⁻¹ at 200 W and 4.05 L·min⁻¹ at 300 W (both steady). Taking 20.5 kJ per litre of O₂, what is the delta efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "23.4%",
+       "correct": true,
+       "why": "Right: ΔVO₂ = 1.25 L·min⁻¹ = 427 W of metabolic power; 100 ÷ 427 = 23.4%."
+      },
+      {
+       "id": "b",
+       "text": "21.7%",
+       "why": "That is the gross efficiency at 300 W; delta efficiency uses only the changes."
+      },
+      {
+       "id": "c",
+       "text": "69.1%",
+       "why": "This divides the two VO₂ values; efficiency needs work over energy."
+      },
+      {
+       "id": "d",
+       "text": "7.2%",
+       "why": "This divides the extra watts by the whole metabolic power at 300 W; DE needs the extra energy only."
+      }
+     ],
+     "solution": "ΔP = 100 W. ΔVO₂ = 1.25 L·min⁻¹ → 1.25 × 20,500 ÷ 60 = 427 W. DE = 100 ÷ 427 = 23.4%."
+    },
+    {
+     "id": "c",
+     "stem": "A junior rider's VO₂ is 1.55 L·min⁻¹ at 100 W and 2.70 L·min⁻¹ at 200 W (both steady). Taking 20.5 kJ per litre of O₂, what is the delta efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25.5%",
+       "correct": true,
+       "why": "Right: ΔVO₂ = 1.15 L·min⁻¹ = 393 W of metabolic power; 100 ÷ 393 = 25.5%."
+      },
+      {
+       "id": "b",
+       "text": "21.7%",
+       "why": "That is the gross efficiency at 200 W; delta efficiency uses only the changes."
+      },
+      {
+       "id": "c",
+       "text": "57.4%",
+       "why": "This divides the two VO₂ values; efficiency needs work over energy."
+      },
+      {
+       "id": "d",
+       "text": "10.8%",
+       "why": "This divides the extra watts by the whole metabolic power at 200 W; DE needs the extra energy only."
+      }
+     ],
+     "solution": "ΔP = 100 W. ΔVO₂ = 1.15 L·min⁻¹ → 1.15 × 20,500 ÷ 60 = 393 W. DE = 100 ÷ 393 = 25.5%."
+    }
+   ]
+  },
+  {
+   "id": "o2-ge-rises",
+   "concept": "o2-watt",
+   "bloom": "analyse",
+   "sources": [
+    "ettema2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In one test, a cyclist's gross efficiency is 18% at 100 W and 21% at 250 W. He says his muscles became more efficient as he warmed up. What is the better explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The baseline energy is spread over more watts",
+       "correct": true,
+       "why": "Right: energy rises in a straight line with power, but the fixed baseline matters less at 250 W, so GE rises."
+      },
+      {
+       "id": "b",
+       "text": "More type II fibres join in at 250 W",
+       "why": "Type II fibres are, if anything, less economical; recruiting them wouldn't raise GE."
+      },
+      {
+       "id": "c",
+       "text": "RER rises, so each litre of O₂ gives more energy",
+       "why": "That changes energy per litre slightly, but it can't explain a 3-point rise in GE."
+      },
+      {
+       "id": "d",
+       "text": "Warm muscle is always more efficient",
+       "why": "Warm-up has small effects; the rise with power is seen in every test, warm or not."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o2-slope-calc",
+   "concept": "o2-watt",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "ettema2009",
+    "matomaki2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has a VO₂ of 2.85 L·min⁻¹ at 200 W. Each extra watt costs about 12 mL·min⁻¹ of O₂. What VO₂ do you expect at 280 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.81 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.85 + (280 − 200) × 12 mL = 2.85 + 0.96 = 3.81."
+      },
+      {
+       "id": "b",
+       "text": "3.99 L·min⁻¹",
+       "why": "This scales VO₂ in proportion to power, as if there were no baseline; the baseline doesn't grow with watts."
+      },
+      {
+       "id": "c",
+       "text": "3.36 L·min⁻¹",
+       "why": "This is 280 × 12 mL, the slope alone; it leaves out the baseline VO₂."
+      }
+     ],
+     "solution": "ΔVO₂ = (280 − 200) × 12 = 960 mL·min⁻¹ = 0.96 L·min⁻¹. VO₂ = 2.85 + 0.96 = 3.81 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete has a VO₂ of 2.20 L·min⁻¹ at 150 W. Each extra watt costs about 11 mL·min⁻¹ of O₂. What VO₂ do you expect at 230 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.08 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.20 + (230 − 150) × 11 mL = 2.20 + 0.88 = 3.08."
+      },
+      {
+       "id": "b",
+       "text": "3.37 L·min⁻¹",
+       "why": "This scales VO₂ in proportion to power, as if there were no baseline; the baseline doesn't grow with watts."
+      },
+      {
+       "id": "c",
+       "text": "2.53 L·min⁻¹",
+       "why": "This is 230 × 11 mL, the slope alone; it leaves out the baseline VO₂."
+      }
+     ],
+     "solution": "ΔVO₂ = (230 − 150) × 11 = 880 mL·min⁻¹ = 0.88 L·min⁻¹. VO₂ = 2.20 + 0.88 = 3.08 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A rider training for a climb has a VO₂ of 3.45 L·min⁻¹ at 250 W. Each extra watt costs about 12 mL·min⁻¹ of O₂. What VO₂ do you expect at 320 W?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.29 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 3.45 + (320 − 250) × 12 mL = 3.45 + 0.84 = 4.29."
+      },
+      {
+       "id": "b",
+       "text": "4.42 L·min⁻¹",
+       "why": "This scales VO₂ in proportion to power, as if there were no baseline; the baseline doesn't grow with watts."
+      },
+      {
+       "id": "c",
+       "text": "3.84 L·min⁻¹",
+       "why": "This is 320 × 12 mL, the slope alone; it leaves out the baseline VO₂."
+      }
+     ],
+     "solution": "ΔVO₂ = (320 − 250) × 12 = 840 mL·min⁻¹ = 0.84 L·min⁻¹. VO₂ = 3.45 + 0.84 = 4.29 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "o2-run-vo2",
+   "concept": "o2-run",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fletcher2009",
+    "shaw2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has an oxygen cost of 200 mL·kg⁻¹·km⁻¹ and runs at 4:00 per km. What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50.0 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 200 mL per km ÷ 4.00 min per km = 50.0 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "800 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by the pace; minutes per km must divide the cost per km."
+      },
+      {
+       "id": "c",
+       "text": "13.3 mL·kg⁻¹·min⁻¹",
+       "why": "This divides by the speed in km·h⁻¹; the cost per km must be divided by the pace in minutes per km."
+      },
+      {
+       "id": "d",
+       "text": "3,000 mL·kg⁻¹·min⁻¹",
+       "why": "This is the O₂ per hour (200 × 15.0 km), not per minute."
+      }
+     ],
+     "solution": "Pace 4:00 = 4.00 min per km. VO₂ = 200 ÷ 4.00 = 50.0 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete off the bike has an oxygen cost of 210 mL·kg⁻¹·km⁻¹ and runs at 5:00 per km. What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "42.0 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 210 mL per km ÷ 5.00 min per km = 42.0 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1,050 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by the pace; minutes per km must divide the cost per km."
+      },
+      {
+       "id": "c",
+       "text": "17.5 mL·kg⁻¹·min⁻¹",
+       "why": "This divides by the speed in km·h⁻¹; the cost per km must be divided by the pace in minutes per km."
+      },
+      {
+       "id": "d",
+       "text": "2,520 mL·kg⁻¹·min⁻¹",
+       "why": "This is the O₂ per hour (210 × 12.0 km), not per minute."
+      }
+     ],
+     "solution": "Pace 5:00 = 5.00 min per km. VO₂ = 210 ÷ 5.00 = 42.0 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A club runner has an oxygen cost of 220 mL·kg⁻¹·km⁻¹ and runs at 3:30 per km. What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "62.9 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 220 mL per km ÷ 3.50 min per km = 62.9 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "770 mL·kg⁻¹·min⁻¹",
+       "why": "This multiplies by the pace; minutes per km must divide the cost per km."
+      },
+      {
+       "id": "c",
+       "text": "12.8 mL·kg⁻¹·min⁻¹",
+       "why": "This divides by the speed in km·h⁻¹; the cost per km must be divided by the pace in minutes per km."
+      },
+      {
+       "id": "d",
+       "text": "3,771 mL·kg⁻¹·min⁻¹",
+       "why": "This is the O₂ per hour (220 × 17.1 km), not per minute."
+      }
+     ],
+     "solution": "Pace 3:30 = 3.50 min per km. VO₂ = 220 ÷ 3.50 = 62.9 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "o2-run-energy",
+   "concept": "o2-run",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fletcher2009",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner (60 kg) runs 21.1 km with an oxygen cost of 200 mL·kg⁻¹·km⁻¹. Taking 20.5 kJ per litre of O₂, how much energy does the run take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5,191 kJ",
+       "correct": true,
+       "why": "Right: 60 × 21.1 × 200 mL = 253.2 L of O₂; × 20.5 = 5,191 kJ."
+      },
+      {
+       "id": "b",
+       "text": "87 kJ",
+       "why": "This leaves out body mass: the cost is per kg, so it must be multiplied by the runner's mass."
+      },
+      {
+       "id": "c",
+       "text": "1,241 kJ",
+       "why": "That is the answer in kcal, labelled as kJ."
+      },
+      {
+       "id": "d",
+       "text": "246 kJ",
+       "why": "That is the energy for one km; it still has to be multiplied by the distance."
+      }
+     ],
+     "solution": "O₂ = 60 × 21.1 × 200 = 253,200 mL = 253.2 L. Energy = 253.2 × 20.5 = 5,191 kJ (1,241 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete (75 kg) runs 10 km with an oxygen cost of 210 mL·kg⁻¹·km⁻¹. Taking 20.5 kJ per litre of O₂, how much energy does the run take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3,229 kJ",
+       "correct": true,
+       "why": "Right: 75 × 10 × 210 mL = 157.5 L of O₂; × 20.5 = 3,229 kJ."
+      },
+      {
+       "id": "b",
+       "text": "43 kJ",
+       "why": "This leaves out body mass: the cost is per kg, so it must be multiplied by the runner's mass."
+      },
+      {
+       "id": "c",
+       "text": "772 kJ",
+       "why": "That is the answer in kcal, labelled as kJ."
+      },
+      {
+       "id": "d",
+       "text": "323 kJ",
+       "why": "That is the energy for one km; it still has to be multiplied by the distance."
+      }
+     ],
+     "solution": "O₂ = 75 × 10 × 210 = 157,500 mL = 157.5 L. Energy = 157.5 × 20.5 = 3,229 kJ (772 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "A marathoner (65 kg) runs 42.2 km with an oxygen cost of 200 mL·kg⁻¹·km⁻¹. Taking 20.5 kJ per litre of O₂, how much energy does the run take?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11,246 kJ",
+       "correct": true,
+       "why": "Right: 65 × 42.2 × 200 mL = 548.6 L of O₂; × 20.5 = 11,246 kJ."
+      },
+      {
+       "id": "b",
+       "text": "173 kJ",
+       "why": "This leaves out body mass: the cost is per kg, so it must be multiplied by the runner's mass."
+      },
+      {
+       "id": "c",
+       "text": "2,688 kJ",
+       "why": "That is the answer in kcal, labelled as kJ."
+      },
+      {
+       "id": "d",
+       "text": "266 kJ",
+       "why": "That is the energy for one km; it still has to be multiplied by the distance."
+      }
+     ],
+     "solution": "O₂ = 65 × 42.2 × 200 = 548,600 mL = 548.6 L. Energy = 548.6 × 20.5 = 11,246 kJ (2,688 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "o2-run-speed",
+   "concept": "o2-run",
+   "bloom": "analyse",
+   "sources": [
+    "shaw2014",
+    "fletcher2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner covers 10 km once at 12 km·h⁻¹ and once at 15 km·h⁻¹, both below her threshold. How does the total O₂ for the 10 km compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same; energy is slightly higher at 15",
+       "correct": true,
+       "why": "Right: O₂ per km barely changes with speed below threshold; energy per km rises a little because RER rises."
+      },
+      {
+       "id": "b",
+       "text": "About 25% more at 15 km·h⁻¹",
+       "why": "VO₂ per minute is about 25% higher, but she finishes 25% sooner; per km it evens out."
+      },
+      {
+       "id": "c",
+       "text": "Less at 15 km·h⁻¹, because she is faster",
+       "why": "Less time doesn't mean less O₂: the higher rate per minute cancels the shorter time."
+      },
+      {
+       "id": "d",
+       "text": "It can't be compared without her VO₂max",
+       "why": "O₂ per km is independent of VO₂max here; cost per km is what matters."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete runs his 10 km leg in 45 min one year and 40 min the next, both steady and below threshold, at the same body mass. How does the energy for the run compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nearly the same; a little higher at the faster pace",
+       "correct": true,
+       "why": "Right: cost per km stays about constant; the faster run uses slightly more energy per km as RER rises."
+      },
+      {
+       "id": "b",
+       "text": "About 12% less at the faster pace",
+       "why": "Finishing sooner doesn't save O₂: the rate per minute rises by the same proportion."
+      },
+      {
+       "id": "c",
+       "text": "About 12% more at the faster pace",
+       "why": "That would be true per minute, not per km; per km the cost hardly changes."
+      },
+      {
+       "id": "d",
+       "text": "Half as much, since cost falls with speed",
+       "why": "Cost per km doesn't fall with speed in steady running."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o2-mass",
+   "concept": "o2-recipes",
+   "bloom": "analyse",
+   "sources": [
+    "fletcher2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg runner and a 70 kg cyclist each gain 5 kg. On flat ground at the same pace or speed, whose energy per km goes up more?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runner's, by about 7%",
+       "correct": true,
+       "why": "Right: running cost is per kg, so 75 ÷ 70 = 1.07; on the flat a cyclist's watts depend mostly on air drag."
+      },
+      {
+       "id": "b",
+       "text": "The cyclist's, by about 7%",
+       "why": "On the flat, cycling power goes mainly into air drag, so body mass changes the watts only a little."
+      },
+      {
+       "id": "c",
+       "text": "Both by about 7%",
+       "why": "Running cost scales with mass; flat cycling cost scales with watts, which mass hardly changes."
+      },
+      {
+       "id": "d",
+       "text": "Neither: cost per km is fixed",
+       "why": "Running cost per km is fixed per kg, so total cost grows with mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o2-appraisal",
+   "concept": "o2-efficiency",
+   "bloom": "evaluate",
+   "sources": [
+    "matomaki2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study measures delta efficiency from three stages before and after six weeks of training and reports a rise from 23% to 25%. What most limits this conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "DE from a few points has poor reliability",
+       "correct": true,
+       "why": "Right: DE depends on a regression line through few points; its error can be as large as the change reported."
+      },
+      {
+       "id": "b",
+       "text": "Delta efficiency can't change with training",
+       "why": "Efficiency can change; the question is whether this method can detect it."
+      },
+      {
+       "id": "c",
+       "text": "They should have used running economy",
+       "why": "Running economy is for running; the issue is the reliability of DE."
+      },
+      {
+       "id": "d",
+       "text": "Six weeks is too short for any adaptation",
+       "why": "Many adaptations show within weeks; the measurement is the weaker link."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,784 @@
+{
+ "id": "mus-plasticity",
+ "module": "t1a-muscle",
+ "title": "What training changes in muscle",
+ "goal": "Explain which muscle features change quickly with training (mitochondria, capillaries, IIx→IIa), which barely change in humans (type I ↔ II), and what fades first when training stops.",
+ "requires": [
+  "mus-oxidative"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "pl-first-shift",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "pl-overview",
+   "title": "The fast changes",
+   "text": "Muscle answers training within weeks, but not every part moves at the same speed.\n\n**Fast to change:**\n\n- **Mitochondria and oxidative enzymes**, such as citrate synthase: up by tens of percent in a few weeks of endurance training (last lesson). How you train matters: training **volume** seems to drive mitochondrial **content**, while relative **intensity** drives how well each mitochondrion works [[c:pl-volume-intensity]].\n- **Capillaries**: about +20% in eight weeks (last lesson).\n- **IIx → IIa**: in the first few months of both endurance and strength training, IIx fibres and IIa/IIx hybrids turn into pure IIa [[c:pl-iix-iia]]. IIa is slower than IIx but far more fatigue resistant.\n\n**Slow, or hardly at all:** the switch between type I and type II. That is the next card.",
+   "claims": [
+    {
+     "id": "pl-volume-intensity",
+     "text": "Training volume may be the key factor for changes in mitochondrial content, and relative intensity for changes in mitochondrial respiratory function.",
+     "grade": "moderate",
+     "sources": [
+      "granata2018"
+     ],
+     "evidence": [
+      {
+       "source": "granata2018",
+       "quote": "Specifically, we report that training volume may be a critical factor affecting changes in mitochondrial content, whereas relative exercise intensity is an important determinant of changes in mitochondrial respiratory function.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-iix-iia",
+     "text": "A shift from IIx to IIa fibres happens quickly, within the first months of endurance and resistance training.",
+     "grade": "moderate",
+     "sources": [
+      "plotkin2021",
+      "wilson2012"
+     ],
+     "evidence": [
+      {
+       "source": "plotkin2021",
+       "quote": "As previously mentioned, a hallmark adaptation that appears to occur rapidly during the first few months of endurance and resistance training involves the transition of IIx → IIa fibers.",
+       "level": "full-text"
+      },
+      {
+       "source": "wilson2012",
+       "quote": "Although interconversions between type IIA and IIX are well recognized in the literature, there are conflicting studies regarding the capacity of type I and II fibers to interconvert.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pl-first-shift",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pl-volume"
+  },
+  {
+   "type": "concept",
+   "id": "pl-type-i",
+   "title": "The stubborn switch: type I and type II",
+   "text": "Endurance athletes have far more type I fibres than sprinters. But athletes measured once can't tell you whether training made that difference: training studies over time have not agreed on how far fibres move between slow and fast [[c:pl-longitudinal]].\n\nWhat trials show is modest. In novice runners, 13 weeks of marathon training plus a taper took thigh type I fibres from 42.6% to 48.6% [[c:pl-marathon]]. Strength and power trials show pure type I fibres resisting change more than fast ones [[c:pl-type-i-resists]].\n\nGenes matter too. In one analysis about 45% of the variation in type I share between people was linked to inherited factors, 40% to environment, and 15% to sampling and lab error [[c:pl-genes]].\n\nSo the endurance athlete's type I-rich muscle is probably part talent, part decades of training.",
+   "claims": [
+    {
+     "id": "pl-longitudinal",
+     "text": "Cross-sectional comparisons show marked differences between athletes, but longitudinal data have not converged on slow–fast shifts.",
+     "grade": "moderate",
+     "sources": [
+      "plotkin2021",
+      "wilson2012"
+     ],
+     "evidence": [
+      {
+       "source": "plotkin2021",
+       "quote": "While cross-sectional comparisons have shown marked differences between athletes, longitudinal data have not clearly converged on patterns in fiber type shifts over time, particularly between slow and fast fibers.",
+       "level": "abstract"
+      },
+      {
+       "source": "wilson2012",
+       "quote": "Although interconversions between type IIA and IIX are well recognized in the literature, there are conflicting studies regarding the capacity of type I and II fibers to interconvert.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-marathon",
+     "text": "In 6 novice runners, 13 weeks of marathon training and a 3-week taper raised vastus lateralis type I fibres from 42.6% to 48.6%.",
+     "grade": "weak",
+     "sources": [
+      "plotkin2021",
+      "luden2012"
+     ],
+     "evidence": [
+      {
+       "source": "plotkin2021",
+       "quote": "Luden et al. investigated the effects of 13 weeks of marathon training, followed by a 3-week taper on fiber type shifts in novice runners",
+       "level": "full-text"
+      },
+      {
+       "source": "plotkin2021",
+       "quote": "Vastus lateralis type I fiber composition increased (42.6% to 48.6%), I/IIa increased (5.1% to 8.2%), IIa decreased (40.1% to 35.8%), IIa/IIx decreased (11.9% to 6.4%), and IIx increased (0% to 1%).",
+       "level": "full-text"
+      },
+      {
+       "source": "luden2012",
+       "quote": "Soleus and vastus lateralis (VL) biopsies were obtained from six recreational runners (23 ± 1 years, 61 ± 3 kg) before (T1), after 13 weeks of run training (T2), and after 3 weeks of taper and marathon (T3).",
+       "level": "abstract"
+      },
+      {
+       "source": "luden2012",
+       "quote": "fiber type distribution was determined before and after the 16-week intervention",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-type-i-resists",
+     "text": "In resistance and power training trials using single-fibre typing, pure type I fibres resist shifting more than fast fibres.",
+     "grade": "moderate",
+     "sources": [
+      "plotkin2021"
+     ],
+     "evidence": [
+      {
+       "source": "plotkin2021",
+       "quote": "Overall, the few resistance training and power training longitudinal trials available using single fiber typing have shown a relative resistance to a shift from pure type I fibers compared to shifts from pure fast-twitch phenotypes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pl-genes",
+     "text": "About 45% of the variance in type I fibre share is associated with inherited factors, about 40% with environment and about 15% with sampling and technical error.",
+     "grade": "moderate",
+     "sources": [
+      "simoneau1995"
+     ],
+     "evidence": [
+      {
+       "source": "simoneau1995",
+       "quote": "The results summarized here suggest that about 15% of the total variance in the proportion of type I muscle fibers in human is explained by the error component related to muscle sampling and technical variance, that about 40% of the phenotype variance is influenced by environmental factors, and the remaining variance (about 45%) is associated with inherited factors.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can training turn type II fibres into type I (or back) in adult humans?",
+    "sides": [
+     {
+      "position": "Only a little: in months-long trials, type I share moves a few percentage points at most, and genes explain much of the spread between people.",
+      "sources": [
+       "plotkin2021",
+       "wilson2012",
+       "simoneau1995"
+      ]
+     },
+     {
+      "position": "Yes, given the right stimulus or enough years: sprint training cut type I from 52% to 41% in 8 weeks, and a twin with decades of endurance exercise had 95% type I.",
+      "sources": [
+       "plotkin2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pl-genes"
+  },
+  {
+   "type": "question",
+   "item": "pl-type-claim"
+  },
+  {
+   "type": "concept",
+   "id": "pl-strength",
+   "title": "Strength and sprint work move fibres too",
+   "text": "IIx is the type almost any training removes. In sedentary men, three months of heavy strength training cut MHC IIx from **9.3% to 2.0%**, while MHC IIa rose from 42.4% to 49.6% [[c:pl-strength-iix]].\n\nSprint training can shift fibres further. In male sprinters, 8 weeks of sprint training raised IIa fibres from 35% to 52% and lowered type I from 52% to 41% [[c:pl-sprint]]. The sprinters had just had three weeks of complete rest before the first biopsy, so part of the change may be a return from detraining.\n\nFor an endurance athlete, strength work mostly turns the few IIx fibres into IIa: the same direction as endurance training.\n\nWhen comparing such figures, watch the units: a fall from 9.3% to 2.0% is 7.3 [percentage points](g:percentage-point), or 78% of what was there.",
+   "claims": [
+    {
+     "id": "pl-strength-iix",
+     "text": "Three months of heavy resistance training cut MHC IIx from 9.3% to 2.0% and raised MHC IIa from 42.4% to 49.6%.",
+     "grade": "weak",
+     "sources": [
+      "andersen2000"
+     ],
+     "evidence": [
+      {
+       "source": "andersen2000",
+       "quote": "Following the period of resistance training, MHC IIX content decreased from 9.3 +/- 2.1% to 2.0 +/- 0.8% (P < 0.01), with a corresponding increase in MHC IIA (42.4 +/- 3.9% vs. 49.6 +/- 4.0% [P < 0.05]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-sprint",
+     "text": "Eight weeks of sprint training in male sprinters raised type IIa from 35% to 52% and lowered type I from 52% to 41%.",
+     "grade": "weak",
+     "sources": [
+      "plotkin2021"
+     ],
+     "evidence": [
+      {
+       "source": "plotkin2021",
+       "quote": "Andersen et al. used SDS-PAGE single fiber analysis and found that 8 weeks of sprint training in male sprinters increased the proportion of type IIa fibers in their vastus lateralis (from 35% to 52%; p < 0.05), with a corresponding reduction in the percentage of type I fibers (from 52% to 41%; p < 0.05)",
+       "level": "full-text"
+      },
+      {
+       "source": "plotkin2021",
+       "quote": "It is important to point out that the sprinters had just completed a 3-week period of full rest when the first biopsy was taken, and training ensued thereafter.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pl-points-example",
+   "title": "Percentage points or percent?",
+   "problem": "In the marathon-training study, thigh type I fibres went from 42.6% to 48.6%. Give the change in percentage points and as a relative change.",
+   "steps": [
+    "Percentage points: plain difference, 48.6 − 42.6 = +6.0 percentage points.",
+    "Relative change: difference ÷ starting value = 6.0 ÷ 42.6 = 0.14, so +14%.",
+    "Both are right; they answer different questions. \"Type I rose 14%\" can sound like a big shift, when only 6 fibres in every 100 changed."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pl-points-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pl-squats"
+  },
+  {
+   "type": "concept",
+   "id": "pl-detrain",
+   "title": "Detraining at a glance",
+   "text": "Stop training and the fast-gained features are the fast-lost ones. In seven endurance athletes who stopped for 84 days [[c:pl-coyle]]:\n\n| measure | what happened |\n|---|---|\n| VO₂max | −7% by day 21, settled 16% down by day 56 |\n| citrate synthase, SDH | fell with a half-time of about 12 days, settled 50% above sedentary |\n| capillaries | no fall, still 50% above sedentary |\n\nA review puts it more gloomily: capillary density may fall within 2–3 weeks, and oxidative enzymes fall quickly. It also notes that long-trained athletes stay above sedentary levels, while recently trained people drop back to baseline [[c:pl-mujika]].\n\nFibre types bounce. After three months of strength training then three months off, MHC IIx rose to **17.2%**, above where it started (9.3%): an overshoot [[c:pl-overshoot]].\n\nThe detraining module goes further.",
+   "claims": [
+    {
+     "id": "pl-coyle",
+     "text": "After stopping endurance training, VO₂max fell 7% in 21 days and settled 16% lower; CS and SDH fell with a half-time of 12 days to 50% above sedentary; capillarisation did not fall.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "Maximal O2 uptake (VO2 max) declined 7% (P less than 0.05) during the first 21 days of inactivity and stabilized after 56 days at a level 16% (P less than 0.05) below the initial trained value.",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1984",
+       "quote": "Skeletal muscle capillarization did not decline with inactivity and remained 50% above (P less than 0.05) sedentary control. Citrate synthase and succinate dehydrogenase activities in muscle declined with a half-time of 12 days and stabilized at levels 50% above sedentary control (P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-mujika",
+     "text": "Detraining may lower capillary density within 2–3 weeks and quickly reduces oxidative enzymes; these stay above sedentary values in long-trained athletes but return to baseline in recently trained people.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2001"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2001",
+       "quote": "This may be characterized by a decreased capillary density, which could take place within 2--3 wk of inactivity.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2001",
+       "quote": "These muscular characteristics remain above sedentary values in the detrained athlete but usually return to baseline values in recently trained individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pl-overshoot",
+     "text": "After resistance training and then 3 months of detraining, MHC IIx rose to 17.2%, above its pre-training level.",
+     "grade": "weak",
+     "sources": [
+      "andersen2000"
+     ],
+     "evidence": [
+      {
+       "source": "andersen2000",
+       "quote": "Following detraining the amount of MHC IIX reached values that were higher than before and after resistance training (17.2 +/- 3.2% [P < 0.01]).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do capillaries fall quickly when training stops?",
+    "sides": [
+     {
+      "position": "No: in trained athletes, capillarisation had not fallen after 84 days off.",
+      "sources": [
+       "coyle1984"
+      ]
+     },
+     {
+      "position": "Yes: capillary density may fall within 2–3 weeks of inactivity.",
+      "sources": [
+       "mujika2001"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pl-detrain-injury"
+  },
+  {
+   "type": "question",
+   "item": "pl-overshoot"
+  },
+  {
+   "type": "question",
+   "item": "pl-points-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pl-marathon-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Fast to change: mitochondria (volume drives content, intensity drives function), capillaries, and IIx → IIa in the first months of any training.",
+    "Type I ↔ II shifts are small in human training studies (e.g. +6 percentage points type I after a marathon block); genes explain much of the spread.",
+    "Strength and sprint training also turn IIx into IIa; they don't make an endurance athlete's muscle slower or faster in a big way.",
+    "Detraining: oxidative enzymes and VO₂max fall within weeks, capillaries more slowly (studies disagree), and IIx can overshoot above its starting level."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pl-first-shift",
+   "concept": "pl-overview",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "plotkin2021",
+    "wilson2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the first few months of training, which fibre-type change is most consistently seen in human muscle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "IIx fibres turning into IIa",
+       "correct": true,
+       "why": "Right: IIx → IIa is the hallmark early shift with endurance and strength training."
+      },
+      {
+       "id": "b",
+       "text": "Type II fibres turning into type I",
+       "why": "Fast-to-slow shifts are small and slow in human studies, and the evidence conflicts."
+      },
+      {
+       "id": "c",
+       "text": "Type I fibres turning into IIx",
+       "why": "Training moves fibres away from IIx, not towards it."
+      },
+      {
+       "id": "d",
+       "text": "New fibres forming next to the old ones",
+       "why": "Adult muscle changes the type and size of existing fibres; new fibres aren't the main response."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A previously inactive person starts cycling to work and training on weekends. After three months, which fibre-type change is a biopsy most likely to show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fewer IIx and IIa/IIx fibres, more pure IIa",
+       "correct": true,
+       "why": "Right: IIx → IIa is the quick, consistent change."
+      },
+      {
+       "id": "b",
+       "text": "Many more type I fibres, at the expense of IIa",
+       "why": "Type II → I shifts are modest and slow, a few percentage points at most in months."
+      },
+      {
+       "id": "c",
+       "text": "More IIx fibres, from the extra effort",
+       "why": "IIx falls with almost any training; it rises when training stops."
+      },
+      {
+       "id": "d",
+       "text": "No change of any kind in three months",
+       "why": "IIx → IIa, mitochondria and capillaries all change within weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-volume",
+   "concept": "pl-overview",
+   "bloom": "apply",
+   "sources": [
+    "granata2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner wants above all to raise the amount of mitochondria in her leg muscles over a training block. Based on the evidence, which change to her training is most likely to do that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More total training volume",
+       "correct": true,
+       "why": "Right: volume seems to be the key driver of mitochondrial content."
+      },
+      {
+       "id": "b",
+       "text": "Fewer, shorter sessions",
+       "why": "Less volume is the opposite of what drives mitochondrial content."
+      },
+      {
+       "id": "c",
+       "text": "Heavy strength training only",
+       "why": "Strength work mainly shifts IIx → IIa and builds fibre size, not mitochondrial content."
+      },
+      {
+       "id": "d",
+       "text": "Only maximal sprints of a few seconds",
+       "why": "High relative intensity drives mitochondrial function more than content, and a few seconds add little volume."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-genes",
+   "concept": "pl-type-i",
+   "bloom": "understand",
+   "sources": [
+    "simoneau1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to one analysis, about how much of the variation in type I fibre share between people is linked to inherited factors?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 45%",
+       "correct": true,
+       "why": "Right: about 45% inherited, 40% environment, 15% sampling and lab error."
+      },
+      {
+       "id": "b",
+       "text": "About 100%",
+       "why": "Environment (including training) explained about 40% in this analysis."
+      },
+      {
+       "id": "c",
+       "text": "About 15%",
+       "why": "15% was the share put down to biopsy sampling and lab error."
+      },
+      {
+       "id": "d",
+       "text": "None at all",
+       "why": "Inherited factors were the largest single share."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-type-claim",
+   "concept": "pl-type-i",
+   "bloom": "evaluate",
+   "sources": [
+    "plotkin2021",
+    "wilson2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling app says its 12-week plan will \"convert your fast-twitch fibres into slow-twitch endurance fibres\". What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: in months, mostly IIx turns into IIa; type I share moves little",
+       "correct": true,
+       "why": "Right: training studies show quick IIx → IIa shifts but small and inconsistent type II → I changes."
+      },
+      {
+       "id": "b",
+       "text": "Accurate: 12 weeks of endurance training turns most type II fibres into type I",
+       "why": "No human training study shows a shift of that size; the marathon block moved type I by 6 percentage points."
+      },
+      {
+       "id": "c",
+       "text": "Accurate, but only for cyclists, not runners",
+       "why": "Fibre plasticity is a property of muscle, the same in any sport."
+      },
+      {
+       "id": "d",
+       "text": "Wrong the other way: endurance training makes fibres faster",
+       "why": "Endurance training moves fibres in the oxidative direction, if at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-points-calc",
+   "concept": "pl-strength",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "andersen2000",
+    "plotkin2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After three months of heavy strength training, MHC IIa rose from 42.4% to 49.6% of the thigh's myosin. What is the relative change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+17%",
+       "correct": true,
+       "why": "Right: 7.2 ÷ 42.4 = 0.17."
+      },
+      {
+       "id": "b",
+       "text": "+7.2%",
+       "why": "7.2 is the change in percentage points, not the relative change."
+      },
+      {
+       "id": "c",
+       "text": "+15%",
+       "why": "This divides by the final value (7.2 ÷ 49.6); divide by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "+117%",
+       "why": "This is the ratio 49.6 ÷ 42.4 = 1.17 read as a change; the change is 17%."
+      }
+     ],
+     "solution": "Change = 49.6 − 42.4 = 7.2 percentage points. Relative change = 7.2 ÷ 42.4 = 0.17 = +17%."
+    },
+    {
+     "id": "b",
+     "stem": "In 8 weeks of sprint training, type I fibres in sprinters' thighs fell from 52% to 41%. What is the relative change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−21%",
+       "correct": true,
+       "why": "Right: −11 ÷ 52 = −0.21."
+      },
+      {
+       "id": "b",
+       "text": "−11%",
+       "why": "11 is the change in percentage points, not the relative change."
+      },
+      {
+       "id": "c",
+       "text": "−27%",
+       "why": "This divides by the final value (11 ÷ 41); divide by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "−79%",
+       "why": "This is 41 ÷ 52 = 0.79, the share left, read as a change."
+      }
+     ],
+     "solution": "Change = 41 − 52 = −11 percentage points. Relative change = −11 ÷ 52 = −0.21 = −21%."
+    },
+    {
+     "id": "c",
+     "stem": "After the same strength training, MHC IIx in the thigh fell from 9.3% to 2.0%. What is the relative change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−78%",
+       "correct": true,
+       "why": "Right: −7.3 ÷ 9.3 = −0.78."
+      },
+      {
+       "id": "b",
+       "text": "−7.3%",
+       "why": "7.3 is the change in percentage points, not the relative change."
+      },
+      {
+       "id": "c",
+       "text": "−365%",
+       "why": "This divides by the final value (7.3 ÷ 2.0); divide by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "−22%",
+       "why": "This is 2.0 ÷ 9.3 = 0.22, the share left, read as a change."
+      }
+     ],
+     "solution": "Change = 2.0 − 9.3 = −7.3 percentage points. Relative change = −7.3 ÷ 9.3 = −0.78 = −78%."
+    }
+   ]
+  },
+  {
+   "id": "pl-squats",
+   "concept": "pl-strength",
+   "bloom": "apply",
+   "sources": [
+    "andersen2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete adds three months of heavy squats to her endurance training. What change in her thigh myosin is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less MHC IIx, more MHC IIa",
+       "correct": true,
+       "why": "Right: heavy strength training cut IIx and raised IIa."
+      },
+      {
+       "id": "b",
+       "text": "More MHC IIx, as the work is explosive",
+       "why": "IIx fell sharply with heavy strength training; it rises when training stops."
+      },
+      {
+       "id": "c",
+       "text": "Much less MHC I, as type I turns into IIx",
+       "why": "Pure type I fibres resist change in strength trials, and IIx falls rather than rises."
+      },
+      {
+       "id": "d",
+       "text": "No change, since strength work doesn't affect fibre type",
+       "why": "It does: IIx fell from 9.3% to 2.0% in three months."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-detrain-injury",
+   "concept": "pl-detrain",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1984",
+    "mujika2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained cyclist breaks a collarbone and can't train for three weeks. Which muscle change is likely to be largest by then?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower oxidative enzymes such as citrate synthase",
+       "correct": true,
+       "why": "Right: oxidative enzymes fall with a half-time of about 12 days, the fastest of these changes."
+      },
+      {
+       "id": "b",
+       "text": "A large shift from type I to type II fibres",
+       "why": "Fibre distribution stays the same in the first weeks of inactivity."
+      },
+      {
+       "id": "c",
+       "text": "Loss of all capillaries gained by training",
+       "why": "Capillaries change more slowly; in trained athletes they hadn't fallen after 84 days."
+      },
+      {
+       "id": "d",
+       "text": "A fall of VO₂max to sedentary levels",
+       "why": "VO₂max fell about 7% in 21 days and stayed above sedentary even after 84 days."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-overshoot",
+   "concept": "pl-detrain",
+   "bloom": "analyse",
+   "sources": [
+    "andersen2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Men did three months of heavy strength training (MHC IIx fell from 9.3% to 2.0%), then three months of no training. IIx then measured 17.2%. What is the best description?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An overshoot: IIx rose above its starting level after training stopped",
+       "correct": true,
+       "why": "Right: 17.2% is higher than both the trained and the pre-training values."
+      },
+      {
+       "id": "b",
+       "text": "A return to baseline: IIx came back to where it started",
+       "why": "Baseline was 9.3%; 17.2% is well above it."
+      },
+      {
+       "id": "c",
+       "text": "A training effect: strength work raises IIx",
+       "why": "Training lowered IIx to 2.0%; the rise came after training stopped."
+      },
+      {
+       "id": "d",
+       "text": "Noise: fibre type can't change in three months",
+       "why": "IIx changed both ways within three months each, with clear statistics."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pl-marathon-appraisal",
+   "concept": "pl-type-i",
+   "bloom": "evaluate",
+   "sources": [
+    "plotkin2021",
+    "horwath2021",
+    "luden2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of six novice runners found thigh type I fibres rose from 42.6% to 48.6% over 16 weeks of marathon training, with no control group and fibre typing from one biopsy before and one after. What most limits the claim that training turned type II fibres into type I?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few people, no control group, single biopsies: 6 points is near biopsy noise",
+       "correct": true,
+       "why": "Right: single biopsies vary by 13–18%, so without controls or repeats the change may be partly noise."
+      },
+      {
+       "id": "b",
+       "text": "Marathon training is too short to affect muscle at all",
+       "why": "16 weeks is long enough for clear changes in mitochondria and IIx → IIa."
+      },
+      {
+       "id": "c",
+       "text": "Single-fibre SDS-PAGE can't identify type I fibres",
+       "why": "It is the best method for typing fibres, including hybrids."
+      },
+      {
+       "id": "d",
+       "text": "Novice runners can't adapt, so the result must be wrong",
+       "why": "Novices adapt strongly; the issue is the design, not the people."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

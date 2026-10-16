@@ -1,0 +1,880 @@
+{
+ "id": "cal-substrates",
+ "module": "t1a-calorimetry",
+ "title": "From gases to fuels",
+ "goal": "Calculate carbohydrate and fat oxidation from VO₂ and VCO₂, and judge when RER stops reflecting what the muscles burn.",
+ "requires": [
+  "cal-methods"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "sub-rer-rq",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "sub-rq",
+   "title": "RQ in the cell, RER at the mouth",
+   "text": "Two names for the same ratio, CO₂ ÷ O₂, measured in two places:\n\n- **[RQ](g:rq)** (respiratory quotient): what the cells make and use. It depends only on the fuel.\n- **[RER](g:rer)** (respiratory exchange ratio): what the cart sees at the mouth.\n\nIn a steady state the two are equal, because the lungs pass on exactly what the cells exchange [[c:rer-equals-rq]]. Out of a steady state, the lungs can breathe off CO₂ that no fuel made, or hold some back. Then RER drifts away from RQ and the fuel numbers go wrong.\n\nSo RER can rise above 1.0, or drop below 0.7, while the cells' RQ for burning fat and carbohydrate stays inside that range. Everything in this lesson assumes RER = RQ.",
+   "claims": [
+    {
+     "id": "rer-equals-rq",
+     "text": "In a steady state, RER (measured at the mouth) equals RQ (tissue metabolism).",
+     "grade": "strong",
+     "sources": [
+      "datta2015"
+     ],
+     "evidence": [
+      {
+       "source": "datta2015",
+       "quote": "In steady state, it equals the Respiratory Quotient (RQ) which represents metabolism at the tissue level.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sub-rer-rq",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "sub-equations",
+   "title": "Grams of fuel from two gases",
+   "text": "Each fuel's burning equation fixes how much O₂ it uses and CO₂ it makes. Two unknowns (carbohydrate, fat), two measurements (VO₂, VCO₂): you can solve for both. Because glycogen, not glucose, is the main carbohydrate in exercise, Jeukendrup and Wallis adjusted the classic equations [[c:glycogen-equations]]. Their set for 50–75% of VO₂max, with gases in L·min⁻¹ [[c:jw-equations]]:\n\n- **Carbohydrate (g·min⁻¹) = 4.210 × VCO₂ − 2.962 × VO₂**\n- **Fat (g·min⁻¹) = 1.695 × VO₂ − 1.701 × VCO₂**\n\nEnergy: about 17 kJ (4.07 kcal) per gram of carbohydrate and 40.8 kJ (9.75 kcal) per gram of fat oxidised [[c:energy-per-gram]]. Food labels say 37 kJ (9 kcal) for fat: what eaten fat yields after losses in digestion and absorption [[c:food-energy]]. Fat burned from your stores has no such loss.",
+   "claims": [
+    {
+     "id": "glycogen-equations",
+     "text": "Because glycogen, not glucose, is the main carbohydrate in exercise, Jeukendrup and Wallis proposed slightly modified substrate equations.",
+     "grade": "strong",
+     "sources": [
+      "jeukendrup2005"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2005",
+       "quote": "However, in many exercise conditions, glycogen and not glucose is the predominant carbohydrate substrate. Therefore we propose slightly modified equations for the calculation of carbohydrate and fat oxidation for use during low to high intensity exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "jw-equations",
+     "text": "For exercise at 50–75% of VO₂max, Jeukendrup and Wallis give carbohydrate oxidation (g·min⁻¹) = 4.210 VCO₂ − 2.962 VO₂ and fat oxidation = 1.695 VO₂ − 1.701 VCO₂; lower intensities use slightly different carbohydrate coefficients.",
+     "grade": "strong",
+     "sources": [
+      "hogan2026",
+      "gonzalezharo2019",
+      "hassanein2026"
+     ],
+     "evidence": [
+      {
+       "source": "hogan2026",
+       "quote": "40%–50% = 4.344 × V̇CO2 − 3.061 × V̇O2 50%–75% = 4.210 × V̇CO2 − 2.962 × V̇O2",
+       "level": "full-text"
+      },
+      {
+       "source": "gonzalezharo2019",
+       "quote": "Low intensity, 40–50% V̇O2max; High intensity, 50–75% V̇O2max",
+       "level": "full-text"
+      },
+      {
+       "source": "hassanein2026",
+       "quote": "CHOox (g·min−1) (4.210 * V̇CO2) − (2.962 * V̇O2) 1 FATox (g·min−1) (1.695 * V̇O2) − (1.701 * V̇CO2)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "energy-per-gram",
+     "text": "Energy from oxidation rates uses about 4.07 kcal per gram of carbohydrate and 9.75 kcal per gram of fat (the value for an average fatty acid, from Péronnet and Massicotte).",
+     "grade": "strong",
+     "sources": [
+      "hassanein2026",
+      "gonzalezharo2019"
+     ],
+     "evidence": [
+      {
+       "source": "hassanein2026",
+       "quote": "EE (kcal·min−1) (4.07 * CHOox) + (9.75 * FATox)",
+       "level": "full-text"
+      },
+      {
+       "source": "gonzalezharo2019",
+       "quote": "1 g fat (fatty acid average: C17.2702H32.7142O2) = 9.75 kcal (Peronnet and Massicotte 1991)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "food-energy",
+     "text": "The food factors (37 kJ, 9 kcal, per gram of fat) are heats of combustion corrected for losses in digestion, absorption and urinary excretion.",
+     "grade": "strong",
+     "sources": [
+      "fao2003"
+     ],
+     "evidence": [
+      {
+       "source": "fao2003",
+       "quote": "The system is based on the heats of combustion of protein, fat and carbohydrate, which are corrected for losses in digestion, absorption and urinary excretion of urea.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "sub-eq-example",
+   "title": "Fuel use from VO₂ and VCO₂",
+   "problem": "A cyclist rides steadily at VO₂ = 3.00 L·min⁻¹ and VCO₂ = 2.70 L·min⁻¹ (RER 0.90). How much carbohydrate and fat is she oxidising, and what share of the energy is carbohydrate?",
+   "steps": [
+    "Carbohydrate = 4.210 × 2.70 − 2.962 × 3.00 = 11.367 − 8.886 = 2.48 g·min⁻¹ (about 149 g·h⁻¹).",
+    "Fat = 1.695 × 3.00 − 1.701 × 2.70 = 5.085 − 4.593 = 0.49 g·min⁻¹ (about 30 g·h⁻¹).",
+    "Energy: carbohydrate 2.48 × 17 = 42.2 kJ; fat 0.49 × 40.8 = 20.1 kJ; total 62.3 kJ·min⁻¹ (the Weir equation gives 62.0).",
+    "Carbohydrate share = 42.2 ÷ 62.3 ≈ 68%. The rough rule (0.90 − 0.70) ÷ 0.30 gives 67%: close.",
+    "Note that fat gives about a third of the energy from only a sixth of the grams."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sub-cho-calc"
+  },
+  {
+   "type": "question",
+   "item": "sub-fat-calc"
+  },
+  {
+   "type": "question",
+   "item": "sub-energy-share"
+  },
+  {
+   "type": "question",
+   "item": "sub-glycogen"
+  },
+  {
+   "type": "concept",
+   "id": "sub-buffering",
+   "title": "When extra CO₂ fools the cart",
+   "text": "Above the lactate threshold, muscles release H⁺ faster than they can clear it. Bicarbonate in the blood buffers it: H⁺ + HCO₃⁻ → H₂O + CO₂. That CO₂ comes from the buffer, not from burning fuel, but the cart can't tell [[c:bicarb-co2]].\n\nSo RER climbs, often past 1.0 near the end of a ramp. Put an RER of 1.05 into the equations and fat oxidation comes out negative, which is impossible. The equations hold only while the body's bicarbonate store is stable [[c:bicarb-invalid]].\n\n**Hyperventilation** does the same thing: breathing more than metabolism needs (nerves before a test, a sudden surge) blows off stored CO₂ and lifts RER [[c:hyperventilation]].",
+   "claims": [
+    {
+     "id": "bicarb-co2",
+     "text": "Bicarbonate buffering of acid during hard exercise adds CO₂ and pushes RER above 1.",
+     "grade": "strong",
+     "sources": [
+      "datta2015"
+     ],
+     "evidence": [
+      {
+       "source": "datta2015",
+       "quote": "The production of lactic acid during exercise results in an RER greater than 1, since extra CO 2 is introduced into the system from bicarbonate buffering of the acid.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bicarb-invalid",
+     "text": "Changes in the bicarbonate pool at high intensities can invalidate carbohydrate and fat oxidation calculations.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2005"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2005",
+       "quote": "When indirect calorimetry is used during exercise most of the assumptions on which the method is based hold true although changes in the size of the bicarbonate pool at higher exercise intensities may invalidate the calculations of carbohydrate and fat oxidation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hyperventilation",
+     "text": "Hyperventilation can raise RER above 1.",
+     "grade": "strong",
+     "sources": [
+      "datta2015"
+     ],
+     "evidence": [
+      {
+       "source": "datta2015",
+       "quote": "Hyperventilation may also cause an RER>1.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sub-negative-fat"
+  },
+  {
+   "type": "question",
+   "item": "sub-hypervent"
+  },
+  {
+   "type": "concept",
+   "id": "sub-protein",
+   "title": "Protein and other blind spots",
+   "text": "The equations assume no protein is burned [[c:no-protein]]. Measuring protein would need the nitrogen in urine. Leaving it out usually costs little: at rest, dropping the nitrogen term changes the energy figure by only 1–2% [[c:protein-small]].\n\nOther processes also bend the numbers. Making glucose from amino acids, or fat from carbohydrate, changes gas exchange without any burning. The equations then give **net use**, not true oxidation [[c:frayn-net]].\n\nBottom line: trust fuel numbers from steady efforts below the threshold, after a few minutes at each stage, with normal breathing. Treat numbers from the top of a ramp, or from someone breathing hard at rest, as artefacts.",
+   "claims": [
+    {
+     "id": "no-protein",
+     "text": "Exercise substrate equations are applied assuming no contribution of protein oxidation.",
+     "grade": "strong",
+     "sources": [
+      "hassanein2026"
+     ],
+     "evidence": [
+      {
+       "source": "hassanein2026",
+       "quote": "was inserted into equations shown in Table 1 to calculate substrate utilization, assuming no contribution of protein oxidation (Jeukendrup and Wallis 2005)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "protein-small",
+     "text": "Omitting urinary nitrogen (protein) from the Weir calculation introduces an error of only about 1–2% in resting energy expenditure.",
+     "grade": "moderate",
+     "sources": [
+      "moonen2021"
+     ],
+     "evidence": [
+      {
+       "source": "moonen2021",
+       "quote": "This adjustment excludes the need for urinary measurements, which improves feasibility and introduces only a small error up to 1-2% occurs in final REE calculation",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "frayn-net",
+     "text": "Gluconeogenesis and lipogenesis distort calculated oxidation rates, which then represent net utilisation.",
+     "grade": "strong",
+     "sources": [
+      "frayn1983"
+     ],
+     "evidence": [
+      {
+       "source": "frayn1983",
+       "quote": "It is shown that erroneous results are obtained in the presence of metabolic processes such as lipogenesis and gluconeogenesis.",
+       "level": "abstract"
+      },
+      {
+       "source": "frayn1983",
+       "quote": "The apparent rates calculated under these conditions can, however, be interpreted as net rates of \"utilization.\"",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sub-protein-q"
+  },
+  {
+   "type": "question",
+   "item": "sub-trust"
+  },
+  {
+   "type": "question",
+   "item": "sub-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "RQ is the cells' CO₂ ÷ O₂; RER is the same ratio at the mouth. They are equal only in a steady state.",
+    "Carbohydrate (g·min⁻¹) = 4.210 × VCO₂ − 2.962 × VO₂; fat = 1.695 × VO₂ − 1.701 × VCO₂ (Jeukendrup and Wallis, for 50–75% of VO₂max).",
+    "Energy: about 17 kJ per gram of carbohydrate and 40.8 kJ per gram of fat oxidised (food labels' 37 kJ is after digestive losses); fat's energy share is much larger than its share of the grams.",
+    "Bicarbonate buffering above the threshold and hyperventilation add CO₂ that no fuel made: RER rises, carbohydrate is overestimated, fat can come out negative.",
+    "Protein is ignored (small error); gluconeogenesis and lipogenesis turn results into net use."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sub-rer-rq",
+   "concept": "sub-rq",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "datta2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the difference between RQ and RER?",
+     "options": [
+      {
+       "id": "a",
+       "text": "RQ is the cells' ratio, RER the ratio at the mouth",
+       "correct": true,
+       "why": "Right: both are CO₂ ÷ O₂; RER equals RQ only in a steady state."
+      },
+      {
+       "id": "b",
+       "text": "RQ includes protein, RER leaves it out",
+       "why": "Neither definition is about protein; the difference is where the gases are measured."
+      },
+      {
+       "id": "c",
+       "text": "RQ is O₂ ÷ CO₂, RER is CO₂ ÷ O₂",
+       "why": "Both are CO₂ ÷ O₂; neither is turned upside down."
+      },
+      {
+       "id": "d",
+       "text": "RQ is measured at rest, RER during exercise",
+       "why": "Both apply at rest and in exercise; one is at the cells, the other at the mouth."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a steady 2 h endurance ride, the cart shows RER = 0.85. What is the best estimate of the muscles' RQ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.85, the same as RER",
+       "correct": true,
+       "why": "Right: in a steady state the lungs pass on what the cells exchange, so RQ ≈ RER."
+      },
+      {
+       "id": "b",
+       "text": "Higher than 0.85, because of buffering",
+       "why": "Buffering adds CO₂ only above the threshold or in surges, not in a steady endurance ride."
+      },
+      {
+       "id": "c",
+       "text": "Lower than 0.85, because fat makes less CO₂",
+       "why": "Fat's lower CO₂ output is already in the 0.85; it isn't counted twice."
+      },
+      {
+       "id": "d",
+       "text": "It can't be estimated from gases",
+       "why": "In a steady state, RER is exactly how RQ is estimated."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-cho-calc",
+   "concept": "sub-equations",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jeukendrup2005",
+    "hassanein2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At marathon pace, a runner's VO₂ is 3.50 L·min⁻¹ and VCO₂ is 3.15 L·min⁻¹ (steady state). How much carbohydrate is she oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.89 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 4.210 × 3.15 − 2.962 × 3.50 = 2.89 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "5.40 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂: the 4.210 goes with VCO₂, because carbohydrate makes relatively more CO₂."
+      },
+      {
+       "id": "c",
+       "text": "0.57 g·min⁻¹",
+       "why": "This is the fat equation (1.695 × VO₂ − 1.701 × VCO₂), not the carbohydrate one."
+      },
+      {
+       "id": "d",
+       "text": "13.26 g·min⁻¹",
+       "why": "This leaves out the − 2.962 × VO₂ term, which removes the CO₂ share that fat would also make."
+      }
+     ],
+     "solution": "Carbohydrate = 4.210 × 3.15 − 2.962 × 3.50 = 13.261 − 10.367 = 2.89 g·min⁻¹ (about 174 g·h⁻¹)."
+    },
+    {
+     "id": "b",
+     "stem": "On an easy endurance ride, a cyclist's VO₂ is 2.50 L·min⁻¹ and VCO₂ is 2.00 L·min⁻¹ (steady state). How much carbohydrate is she oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.01 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 4.210 × 2.00 − 2.962 × 2.50 = 1.01 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "4.60 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂: the 4.210 goes with VCO₂, because carbohydrate makes relatively more CO₂."
+      },
+      {
+       "id": "c",
+       "text": "0.84 g·min⁻¹",
+       "why": "This is the fat equation (1.695 × VO₂ − 1.701 × VCO₂), not the carbohydrate one."
+      },
+      {
+       "id": "d",
+       "text": "8.42 g·min⁻¹",
+       "why": "This leaves out the − 2.962 × VO₂ term, which removes the CO₂ share that fat would also make."
+      }
+     ],
+     "solution": "Carbohydrate = 4.210 × 2.00 − 2.962 × 2.50 = 8.420 − 7.405 = 1.01 g·min⁻¹ (about 61 g·h⁻¹)."
+    },
+    {
+     "id": "c",
+     "stem": "Near her threshold on the bike leg, a triathlete's VO₂ is 4.00 L·min⁻¹ and VCO₂ is 3.80 L·min⁻¹ (steady state). How much carbohydrate is she oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.15 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 4.210 × 3.80 − 2.962 × 4.00 = 4.15 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "5.58 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂: the 4.210 goes with VCO₂, because carbohydrate makes relatively more CO₂."
+      },
+      {
+       "id": "c",
+       "text": "0.32 g·min⁻¹",
+       "why": "This is the fat equation (1.695 × VO₂ − 1.701 × VCO₂), not the carbohydrate one."
+      },
+      {
+       "id": "d",
+       "text": "16.00 g·min⁻¹",
+       "why": "This leaves out the − 2.962 × VO₂ term, which removes the CO₂ share that fat would also make."
+      }
+     ],
+     "solution": "Carbohydrate = 4.210 × 3.80 − 2.962 × 4.00 = 15.998 − 11.848 = 4.15 g·min⁻¹ (about 249 g·h⁻¹)."
+    }
+   ]
+  },
+  {
+   "id": "sub-fat-calc",
+   "concept": "sub-equations",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jeukendrup2005",
+    "hassanein2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a long easy ride, a cyclist's VO₂ is 3.20 L·min⁻¹ and VCO₂ is 2.56 L·min⁻¹ (steady state). How much fat is he oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.07 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 1.695 × 3.20 − 1.701 × 2.56 = 1.07 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "−1.10 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂ and comes out negative; the 1.695 goes with VO₂."
+      },
+      {
+       "id": "c",
+       "text": "1.30 g·min⁻¹",
+       "why": "This is the carbohydrate equation, not the fat one."
+      },
+      {
+       "id": "d",
+       "text": "9.78 g·min⁻¹",
+       "why": "This adds the two terms; the VCO₂ term is subtracted."
+      }
+     ],
+     "solution": "Fat = 1.695 × 3.20 − 1.701 × 2.56 = 5.424 − 4.355 = 1.07 g·min⁻¹ (about 64 g·h⁻¹)."
+    },
+    {
+     "id": "b",
+     "stem": "On an easy run, a runner's VO₂ is 2.00 L·min⁻¹ and VCO₂ is 1.70 L·min⁻¹ (steady state). How much fat is he oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.50 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 1.695 × 2.00 − 1.701 × 1.70 = 0.50 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "−0.52 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂ and comes out negative; the 1.695 goes with VO₂."
+      },
+      {
+       "id": "c",
+       "text": "1.23 g·min⁻¹",
+       "why": "This is the carbohydrate equation, not the fat one."
+      },
+      {
+       "id": "d",
+       "text": "6.28 g·min⁻¹",
+       "why": "This adds the two terms; the VCO₂ term is subtracted."
+      }
+     ],
+     "solution": "Fat = 1.695 × 2.00 − 1.701 × 1.70 = 3.390 − 2.892 = 0.50 g·min⁻¹ (about 30 g·h⁻¹)."
+    },
+    {
+     "id": "c",
+     "stem": "In the middle of an Ironman bike leg, a triathlete's VO₂ is 4.00 L·min⁻¹ and VCO₂ is 3.60 L·min⁻¹ (steady state). How much fat is he oxidising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.66 g·min⁻¹",
+       "correct": true,
+       "why": "Right: 1.695 × 4.00 − 1.701 × 3.60 = 0.66 g·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "−0.70 g·min⁻¹",
+       "why": "This swaps VO₂ and VCO₂ and comes out negative; the 1.695 goes with VO₂."
+      },
+      {
+       "id": "c",
+       "text": "3.31 g·min⁻¹",
+       "why": "This is the carbohydrate equation, not the fat one."
+      },
+      {
+       "id": "d",
+       "text": "12.90 g·min⁻¹",
+       "why": "This adds the two terms; the VCO₂ term is subtracted."
+      }
+     ],
+     "solution": "Fat = 1.695 × 4.00 − 1.701 × 3.60 = 6.780 − 6.124 = 0.66 g·min⁻¹ (about 39 g·h⁻¹)."
+    }
+   ]
+  },
+  {
+   "id": "sub-energy-share",
+   "concept": "sub-equations",
+   "bloom": "analyse",
+   "sources": [
+    "hassanein2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a fasted easy ride (VO₂ 2.50, VCO₂ 2.00 L·min⁻¹), the equations give 1.01 g·min⁻¹ of carbohydrate and 0.84 g·min⁻¹ of fat. Which fuel supplies more of the energy, and about how much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fat, about 66% of the energy",
+       "correct": true,
+       "why": "Right: fat 0.84 × 40.8 = 34.1 kJ, carbohydrate 1.01 × 17 = 17.3 kJ; fat gives 66%."
+      },
+      {
+       "id": "b",
+       "text": "Fat, about 45% of the energy",
+       "why": "45% is fat's share of the grams; per gram fat carries about 2.4 times the energy, so its energy share is larger."
+      },
+      {
+       "id": "c",
+       "text": "Carbohydrate, about 55% of the energy",
+       "why": "That is carbohydrate's share of the grams; more grams doesn't mean more energy, because fat has 40.8 kJ per gram."
+      },
+      {
+       "id": "d",
+       "text": "Each about half of the energy",
+       "why": "Equal grams wouldn't give equal energy, and the grams aren't equal here either."
+      }
+     ],
+     "solution": "Carbohydrate: 1.01 × 17 = 17.3 kJ·min⁻¹. Fat: 0.84 × 40.8 = 34.1 kJ·min⁻¹. Fat share = 34.1 ÷ 51.3 = 66%."
+    },
+    {
+     "id": "b",
+     "stem": "In a long, easy run (VO₂ 3.20, VCO₂ 2.56 L·min⁻¹), the equations give 1.30 g·min⁻¹ of carbohydrate and 1.07 g·min⁻¹ of fat. Which fuel supplies more of the energy, and about how much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fat, about 66% of the energy",
+       "correct": true,
+       "why": "Right: fat 1.07 × 40.8 = 43.6 kJ, carbohydrate 1.30 × 17 = 22.1 kJ; fat gives 66%."
+      },
+      {
+       "id": "b",
+       "text": "Fat, about 45% of the energy",
+       "why": "45% is fat's share of the grams; per gram fat carries about 2.4 times the energy, so its energy share is larger."
+      },
+      {
+       "id": "c",
+       "text": "Carbohydrate, about 55% of the energy",
+       "why": "That is carbohydrate's share of the grams; more grams doesn't mean more energy, because fat has 40.8 kJ per gram."
+      },
+      {
+       "id": "d",
+       "text": "Each about half of the energy",
+       "why": "Equal grams wouldn't give equal energy, and the grams aren't equal here either."
+      }
+     ],
+     "solution": "Carbohydrate: 1.30 × 17 = 22.1 kJ·min⁻¹. Fat: 1.07 × 40.8 = 43.6 kJ·min⁻¹. Fat share = 43.6 ÷ 65.7 = 66%."
+    }
+   ]
+  },
+  {
+   "id": "sub-glycogen",
+   "concept": "sub-equations",
+   "bloom": "understand",
+   "sources": [
+    "jeukendrup2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why did Jeukendrup and Wallis propose modified substrate equations for exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In exercise, glycogen rather than glucose is the main carbohydrate burned",
+       "correct": true,
+       "why": "Right: glycogen units differ slightly from glucose in O₂ and CO₂ per gram, so the coefficients change a little."
+      },
+      {
+       "id": "b",
+       "text": "The old equations didn't work above an RER of 0.85",
+       "why": "The old equations work across the normal RER range; the change is about which carbohydrate is burned."
+      },
+      {
+       "id": "c",
+       "text": "Protein is the main fuel during exercise",
+       "why": "Protein is a small fuel in exercise and the equations still leave it out."
+      },
+      {
+       "id": "d",
+       "text": "Fat in exercise comes only from muscle triglyceride",
+       "why": "The fat term represents typical human triglyceride; the change was to the carbohydrate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-negative-fat",
+   "concept": "sub-buffering",
+   "bloom": "analyse",
+   "sources": [
+    "jeukendrup2005",
+    "datta2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the last minute of a 5 km race simulation, a runner's VO₂ is 4.00 and VCO₂ 4.20 L·min⁻¹. The fat equation gives −0.36 g·min⁻¹. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bicarbonate buffering added CO₂ that no fuel made",
+       "correct": true,
+       "why": "Right: above the threshold, buffered H⁺ releases CO₂, pushing RER past 1.0 and breaking the equations."
+      },
+      {
+       "id": "b",
+       "text": "Her muscles were making fat from carbohydrate",
+       "why": "Fat synthesis doesn't happen at race pace; the extra CO₂ comes from buffering."
+      },
+      {
+       "id": "c",
+       "text": "She was burning only carbohydrate, plus protein",
+       "why": "Even pure carbohydrate gives RER 1.0, and protein would lower RER, not raise it."
+      },
+      {
+       "id": "d",
+       "text": "The Haldane transformation fails at high ventilation",
+       "why": "Haldane depends on gas fractions, not on how fast she breathes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-hypervent",
+   "concept": "sub-buffering",
+   "bloom": "analyse",
+   "sources": [
+    "datta2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a lab test, a nervous cyclist sits on the bike breathing fast. After a mixed breakfast, his RER reads 1.02. What is the best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hyperventilation is blowing off stored CO₂",
+       "correct": true,
+       "why": "Right: breathing more than metabolism needs lifts VCO₂ at the mouth, not the cells' RQ."
+      },
+      {
+       "id": "b",
+       "text": "He is burning only carbohydrate at rest",
+       "why": "Even pure carbohydrate gives RQ 1.0; after a mixed breakfast at rest it should be lower."
+      },
+      {
+       "id": "c",
+       "text": "Lactate is being buffered at rest",
+       "why": "At rest there is no large acid load to buffer."
+      },
+      {
+       "id": "d",
+       "text": "He is burning mostly protein",
+       "why": "Protein's RQ is about 0.8; it would lower RER, not raise it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-protein-q",
+   "concept": "sub-protein",
+   "bloom": "understand",
+   "sources": [
+    "hassanein2026",
+    "moonen2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What do the exercise substrate equations assume about protein, and why is that usually acceptable?",
+     "options": [
+      {
+       "id": "a",
+       "text": "None is burned; leaving it out changes energy by only 1–2%",
+       "correct": true,
+       "why": "Right: protein would need urinary nitrogen to measure, and its omission introduces only a small error."
+      },
+      {
+       "id": "b",
+       "text": "It is burned at a fixed 15%, matching the diet",
+       "why": "No fixed share is built in; the equations simply leave protein out."
+      },
+      {
+       "id": "c",
+       "text": "It is measured from the RER",
+       "why": "RER can't separate protein; that would need urinary nitrogen."
+      },
+      {
+       "id": "d",
+       "text": "It is counted as carbohydrate",
+       "why": "It isn't counted at all; ignoring it is what keeps the error small but present."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-trust",
+   "concept": "sub-protein",
+   "bloom": "evaluate",
+   "sources": [
+    "jeukendrup2005",
+    "hassanein2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has four cart readings. Which one gives the most trustworthy fat and carbohydrate split?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Minute 6 of a steady stage at 60% of VO₂max",
+       "correct": true,
+       "why": "Right: steady state, below the threshold, normal breathing: RER ≈ RQ."
+      },
+      {
+       "id": "b",
+       "text": "The last minute of a ramp test",
+       "why": "Bicarbonate buffering and fast breathing add CO₂ there; RER overstates carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "The first minute of a new stage",
+       "why": "VO₂ and CO₂ stores haven't settled yet; the gases lag behind the cells."
+      },
+      {
+       "id": "d",
+       "text": "Two minutes after a hard interval",
+       "why": "After hard efforts the CO₂ stores refill and breathing is still out of step with metabolism."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist wants to know his fat use at his usual endurance power. Which test plan gives the most trustworthy answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Several 6-minute stages, reading the last two minutes of each",
+       "correct": true,
+       "why": "Right: long enough stages reach a steady state, so RER reflects RQ."
+      },
+      {
+       "id": "b",
+       "text": "A 1-minute ramp to exhaustion, reading every stage",
+       "why": "Stages that short never reach a steady state, so fuel numbers lag and mislead."
+      },
+      {
+       "id": "c",
+       "text": "One 30-second sprint",
+       "why": "A sprint is mostly anaerobic and far from steady; gases can't split fuels there."
+      },
+      {
+       "id": "d",
+       "text": "A resting test only",
+       "why": "Rest tells you little about fuel use at endurance power."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sub-appraisal",
+   "concept": "sub-buffering",
+   "bloom": "evaluate",
+   "sources": [
+    "jeukendrup2005",
+    "hassanein2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study reports fat oxidation at 95% of VO₂max from a ramp test with 2-minute stages. What most limits that number?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No steady state, and buffering adds CO₂ at that intensity",
+       "correct": true,
+       "why": "Right: both break the link between RER and the cells' RQ, so the fuel split is unreliable."
+      },
+      {
+       "id": "b",
+       "text": "The sample is too small to measure fat oxidation",
+       "why": "Sample size limits how well a group is described, not whether each person's equations are valid."
+      },
+      {
+       "id": "c",
+       "text": "The equations ignore glycogen",
+       "why": "The Jeukendrup–Wallis equations were built for glycogen."
+      },
+      {
+       "id": "d",
+       "text": "Fat can't be burned above 90% of VO₂max",
+       "why": "Fat oxidation is low there but not zero; the problem is measuring it."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

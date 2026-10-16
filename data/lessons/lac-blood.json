@@ -1,0 +1,855 @@
+{
+ "id": "lac-blood",
+ "module": "t1a-lactate",
+ "title": "Reading blood lactate",
+ "goal": "Explain blood lactate as the balance of appearance and disappearance, read the shape of a lactate curve, and take a lactate sample that means something.",
+ "requires": [
+  "lac-acidosis"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "lb-rise-meaning",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "lb-balance",
+   "title": "A level set by in and out",
+   "text": "Blood lactate is a balance: lactate released into the blood by some tissues ([rate of appearance](g:rate-of-appearance), Ra) against lactate taken up by others (rate of disappearance, Rd) [[c:ra-rd-balance]].\n\n| Ra vs Rd | blood lactate |\n|---|---|\n| Ra > Rd | rises |\n| Ra = Rd | stays flat, at any level |\n| Ra < Rd | falls |\n\nSo a rise can mean more production, less removal, or both. And a flat line at 4 mmol·L⁻¹ isn't 'no production': it means large flows in and out are matched. As *Why lactate forms* showed, the level tells you little about how big the turnover is.",
+   "claims": [
+    {
+     "id": "ra-rd-balance",
+     "text": "Blood lactate concentration is the balance of lactate release into the blood and simultaneous uptake and removal; it does not show disposal rate.",
+     "grade": "strong",
+     "sources": [
+      "goodwin2007",
+      "mazzeo1986"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "It is critical to understand that [La−]b represents a balance between La− production and release into the blood by various tissues versus simultaneous La− uptake and removal from the blood by other tissues.",
+       "level": "full-text"
+      },
+      {
+       "source": "mazzeo1986",
+       "quote": "blood lactate concentration is not an accurate indicator of lactate disposal and oxidation",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lb-rise-meaning",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "lb-balance-example",
+   "title": "In minus out",
+   "problem": "During a steady 8-minute block, suppose lactate enters a runner's blood fast enough to add 0.60 mmol·L⁻¹ per minute, and removal takes away 0.45 mmol·L⁻¹ per minute. She starts at 1.5 mmol·L⁻¹. Where does she end?",
+   "steps": [
+    "Net change per minute = Ra − Rd = 0.60 − 0.45 = 0.15 mmol·L⁻¹·min⁻¹.",
+    "Over 8 minutes: 0.15 × 8 = 1.2 mmol·L⁻¹.",
+    "End value = 1.5 + 1.2 = 2.7 mmol·L⁻¹. (A simplification: in real life Rd rises as the level rises, which is why lactate can level off.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lb-ra-rd-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lb-steady"
+  },
+  {
+   "type": "question",
+   "item": "lb-compare-athletes"
+  },
+  {
+   "type": "concept",
+   "id": "lb-curve",
+   "title": "The lactate curve at a glance",
+   "text": "In a step test (power or pace raised every few minutes, a drop of blood at the end of each step), blood lactate traces a typical [curve](g:lactate-curve): close to resting values at first, then rising faster and faster. A shift of the whole curve to the right means better endurance [[c:curve-shape]].\n\nTwo bends matter [[c:two-breakpoints]]:\n\n1. where lactate first rises above baseline;\n2. the highest intensity at which production and removal still balance: the *maximal lactate steady state* (MLSS).\n\nThe lactate value at MLSS differs a lot between people, from about 1.5 to 7 mmol·L⁻¹ (average about 3.7) [[c:mlss-range]], so a fixed '4 mmol' threshold fits some athletes badly. The *Thresholds* module covers this in depth.",
+   "claims": [
+    {
+     "id": "curve-shape",
+     "text": "In incremental exercise blood lactate rises gradually at first and then more rapidly; a shift of the curve shows a change in endurance capacity.",
+     "grade": "strong",
+     "sources": [
+      "goodwin2007",
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "In response to progressive, incremental exercise, [La(-)](b) increases gradually at first and then more rapidly as the exercise becomes more intense.",
+       "level": "abstract"
+      },
+      {
+       "source": "faude2009",
+       "quote": "A shift of such lactate curves indicates changes in endurance capacity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "two-breakpoints",
+     "text": "The lactate curve has two typical breakpoints: the first rise above baseline, and the maximal lactate steady state.",
+     "grade": "moderate",
+     "sources": [
+      "faude2009"
+     ],
+     "evidence": [
+      {
+       "source": "faude2009",
+       "quote": "This model consists of two typical breakpoints that are passed during incremental exercise: the intensity at which bLa begin to rise above baseline levels and the highest intensity at which lactate production and elimination are in equilibrium (maximal lactate steady state [MLSS]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mlss-range",
+     "text": "Blood lactate at MLSS ranges from about 1.5 to almost 7 mmol·L⁻¹ between individuals, averaging about 3.7.",
+     "grade": "moderate",
+     "sources": [
+      "goodwin2007"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "a wide range of [La−]b values at MLSS has been reported for different subjects, from as low as 1.5 mM to almost 7 mM. However, the average value is ≈3.7 mM.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lb-curve-shape"
+  },
+  {
+   "type": "question",
+   "item": "lb-fixed-4"
+  },
+  {
+   "type": "concept",
+   "id": "lb-sampling",
+   "title": "Where the drop comes from",
+   "text": "Field tests use a drop of [capillary](g:capillary) blood from the earlobe or fingertip. The site can matter: in upper-body ski-ergometer work, fingertip values ran about 0.7 mmol·L⁻¹ higher than earlobe values [[c:site-diff]], while after rowing, in only 9 people, the toe, ear and fingertip did not differ significantly, though the fingertip still averaged up to 1 mmol·L⁻¹ higher [[c:site-same]]. Pick one site and keep it for every test.\n\nAlso check *what* your analyser reports. Whole blood holds less lactate than [plasma](g:plasma): on average about **70%** of the plasma value [[c:whole-plasma]]. A lab that reports plasma values will read higher than a device that reads whole blood, for the same sample.",
+   "claims": [
+    {
+     "id": "site-diff",
+     "text": "During ski-ergometer double poling, fingertip lactate was significantly higher than earlobe lactate (mean bias about 0.66 mmol·L⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "zhong2025"
+     ],
+     "evidence": [
+      {
+       "source": "zhong2025",
+       "quote": "Fingertip Bla values were significantly higher than earlobe values, with a mean bias of -0.66 mmol/L, reaching -0.86 mmol/L in the 4-8 mmol/L range.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "site-same",
+     "text": "After submaximal rowing, plasma lactate from toe, earlobe and fingertip did not differ significantly in 9 rowers, although fingertip means were higher than earlobe means (6.36 vs 5.29 mmol·L⁻¹ at the lower load).",
+     "grade": "weak",
+     "sources": [
+      "forsyth2000"
+     ],
+     "evidence": [
+      {
+       "source": "forsyth2000",
+       "quote": "No significant differences (p > 0.05) were found between any of the sites at either work intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "forsyth2000",
+       "quote": "the mean (SD) plasma lactate concentrations sampled from the fingertip, toe, and earlobe were 6.36 (1.58), 5.81 (1.11), and 5.29 (1.24) mmol/l respectively",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "whole-plasma",
+     "text": "Whole-blood lactate is on average about 70% of plasma lactate, at rest and in most exercise.",
+     "grade": "weak",
+     "sources": [
+      "goodwin2007"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "At rest and during most exercise conditions, whole blood [La(-)] values are on average 70% of the corresponding plasma [La(-)] values",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lb-plasma-example",
+   "title": "Plasma or whole blood?",
+   "problem": "A lab reports a cyclist's plasma lactate as 5.0 mmol·L⁻¹. Her portable analyser reads whole blood. About what would it show for the same sample?",
+   "steps": [
+    "Whole blood ≈ 0.7 × plasma.",
+    "0.7 × 5.0 = 3.5 mmol·L⁻¹.",
+    "Going the other way, divide by 0.7: a whole-blood 3.5 ÷ 0.7 = 5.0 mmol·L⁻¹ plasma. The 70% is an average, so treat the result as approximate."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lb-plasma-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lb-site-consistency"
+  },
+  {
+   "type": "concept",
+   "id": "lb-analysers",
+   "title": "Analysers and timing",
+   "text": "Portable analysers are good enough to track one athlete: their error is much smaller than the athlete's own biological variation. But compared with a lab reference, they tended to **under-read**, most at high values (about 15–23 mmol·L⁻¹) [[c:analyser-bias]]. Use the same brand of device each time.\n\nTiming matters too. In a step test, sample at the end of each step. After an all-out effort of 30–120 s, blood lactate peaks at about 15–25 mmol·L⁻¹ only **3–8 minutes** later, and stays raised for over an hour [[c:peak-timing]]. A sample at the finish line misses the peak.",
+   "claims": [
+    {
+     "id": "analyser-bias",
+     "text": "Portable lactate analysers had analytical error much smaller than biological variation, but tended to under-read against a criterion analyser, especially at 15–23 mmol·L⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "bonaventura2015"
+     ],
+     "evidence": [
+      {
+       "source": "bonaventura2015",
+       "quote": "For all five portable analysers, the analytical error within a brand was much smaller than the biological variation in blood lactate (BLa).",
+       "level": "abstract"
+      },
+      {
+       "source": "bonaventura2015",
+       "quote": "Compared with a criterion blood lactate analyser, there was a tendency for all portable analysers to under-read (i.e. a negative bias), which was particularly evident at the highest concentrations (BLa ~15-23 mM).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "peak-timing",
+     "text": "After all-out efforts of 30–120 s, blood lactate peaks at about 15–25 mmol·L⁻¹ some 3–8 minutes later and stays elevated for over an hour.",
+     "grade": "moderate",
+     "sources": [
+      "goodwin2007"
+     ],
+     "evidence": [
+      {
+       "source": "goodwin2007",
+       "quote": "In response to \"all-out\" maximal exertion lasting 30-120 seconds, peak [La(-)](b) values of approximately 15-25 mM may be observed 3-8 minutes postexercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "goodwin2007",
+       "quote": "As can be seen, peak [La−]b values typically appear at approximately 3–8 minutes postexercise, but [La−]b remains elevated for over 60 minutes.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lb-peak-timing"
+  },
+  {
+   "type": "question",
+   "item": "lb-analyser-bias"
+  },
+  {
+   "type": "question",
+   "item": "lb-analyser-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "lb-ra-rd-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Blood lactate is a level: it rises when appearance (Ra) beats disappearance (Rd), falls when Rd wins, and stays flat when they match, at any level.",
+    "A higher value can mean more production, less removal, or both; the level alone can't tell you which.",
+    "In a step test lactate stays low, then rises faster and faster; the two bends (first rise, MLSS) are covered in the Thresholds module. MLSS lactate ranges about 1.5–7 mmol·L⁻¹.",
+    "Keep the sampling site and device the same; whole blood reads about 70% of plasma; portable analysers tend to under-read high values.",
+    "After a 30–120 s all-out effort, lactate peaks 3–8 minutes later, not at the finish."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lb-rise-meaning",
+   "concept": "lb-balance",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "goodwin2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a step test, a cyclist's blood lactate rises from 2 to 4 mmol·L⁻¹ between two steps. What does the rise tell you for certain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lactate entered the blood faster than it left",
+       "correct": true,
+       "why": "Right: a rise only means Ra exceeded Rd; it doesn't say which one changed."
+      },
+      {
+       "id": "b",
+       "text": "Her lactate production doubled",
+       "why": "The level doubled, but that could come from less removal as well as more production."
+      },
+      {
+       "id": "c",
+       "text": "Her lactate removal stopped",
+       "why": "Removal keeps going and usually rises too; it just fell behind appearance."
+      },
+      {
+       "id": "d",
+       "text": "Her muscles ran short of oxygen",
+       "why": "Lactate rises with glycolytic speed, not oxygen lack, in healthy exercise."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the second half of a 10 km race, a runner's blood lactate keeps climbing. What can you say for certain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lactate is entering the blood faster than it is removed",
+       "correct": true,
+       "why": "Right: that is all a rising level shows for sure."
+      },
+      {
+       "id": "b",
+       "text": "Her muscles make more lactate than at the start",
+       "why": "Possible, but a fall in removal could give the same rise."
+      },
+      {
+       "id": "c",
+       "text": "Her liver has stopped clearing lactate",
+       "why": "Removal continues; it just isn't keeping pace."
+      },
+      {
+       "id": "d",
+       "text": "Her legs have run out of oxygen",
+       "why": "A rising lactate reflects the balance of in and out, not oxygen lack."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-ra-rd-calc",
+   "concept": "lb-balance",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "goodwin2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist starts a 10-minute block at 2.0 mmol·L⁻¹. Lactate enters her blood at 0.50 mmol·L⁻¹ per minute and is removed at 0.40 mmol·L⁻¹ per minute. What is her blood lactate at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.0 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: (0.50 − 0.40) × 10 = 1.0, and 2.0 + 1.0 = 3.0."
+      },
+      {
+       "id": "b",
+       "text": "1.0 mmol·L⁻¹",
+       "why": "This is the change only; it forgets the starting value of 2.0."
+      },
+      {
+       "id": "c",
+       "text": "7.0 mmol·L⁻¹",
+       "why": "This ignores removal: 2.0 + 0.50 × 10."
+      },
+      {
+       "id": "d",
+       "text": "11.0 mmol·L⁻¹",
+       "why": "This adds removal to appearance instead of subtracting it."
+      }
+     ],
+     "solution": "Net change = (Ra − Rd) × time = (0.50 − 0.40) × 10 = 1.0 mmol·L⁻¹. End = 2.0 + 1.0 = 3.0 mmol·L⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete starts a 6-minute block at 1.2 mmol·L⁻¹. Lactate enters his blood at 0.80 mmol·L⁻¹ per minute and is removed at 0.65 mmol·L⁻¹ per minute. What is his blood lactate at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.1 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: (0.80 − 0.65) × 6 = 0.9, and 1.2 + 0.9 = 2.1."
+      },
+      {
+       "id": "b",
+       "text": "0.9 mmol·L⁻¹",
+       "why": "This is the change only; it forgets the starting value of 1.2."
+      },
+      {
+       "id": "c",
+       "text": "6.0 mmol·L⁻¹",
+       "why": "This ignores removal: 1.2 + 0.80 × 6."
+      },
+      {
+       "id": "d",
+       "text": "9.9 mmol·L⁻¹",
+       "why": "This adds removal to appearance instead of subtracting it."
+      }
+     ],
+     "solution": "Net change = (Ra − Rd) × time = (0.80 − 0.65) × 6 = 0.9 mmol·L⁻¹. End = 1.2 + 0.9 = 2.1 mmol·L⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "After intervals, a runner starts a 10-minute recovery jog at 3.0 mmol·L⁻¹. Lactate enters her blood at 0.40 mmol·L⁻¹ per minute and is removed at 0.55 mmol·L⁻¹ per minute. What is her blood lactate at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.5 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: (0.40 − 0.55) × 10 = −1.5, and 3.0 − 1.5 = 1.5."
+      },
+      {
+       "id": "b",
+       "text": "4.5 mmol·L⁻¹",
+       "why": "This flips the sign: removal is faster than appearance, so the level falls."
+      },
+      {
+       "id": "c",
+       "text": "7.0 mmol·L⁻¹",
+       "why": "This ignores removal: 3.0 + 0.40 × 10."
+      },
+      {
+       "id": "d",
+       "text": "12.5 mmol·L⁻¹",
+       "why": "This adds removal to appearance instead of subtracting it."
+      }
+     ],
+     "solution": "Net change = (Ra − Rd) × time = (0.40 − 0.55) × 10 = −1.5 mmol·L⁻¹. End = 3.0 − 1.5 = 1.5 mmol·L⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "lb-steady",
+   "concept": "lb-balance",
+   "bloom": "analyse",
+   "sources": [
+    "goodwin2007",
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides 30 minutes at constant power, and her blood lactate stays at 3.5 mmol·L⁻¹ throughout. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Appearance and removal are matched, possibly both at high rates",
+       "correct": true,
+       "why": "Right: a flat level means Ra = Rd; it says nothing about how large they are."
+      },
+      {
+       "id": "b",
+       "text": "Her muscles have stopped producing lactate",
+       "why": "Production continues; it is matched by removal."
+      },
+      {
+       "id": "c",
+       "text": "Her lactate removal has reached its limit",
+       "why": "A steady level shows a match, not a maximum; above MLSS the level would keep rising."
+      },
+      {
+       "id": "d",
+       "text": "She is above her highest sustainable intensity",
+       "why": "Above MLSS lactate keeps rising; a flat level suggests she is at or below it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-compare-athletes",
+   "concept": "lb-balance",
+   "bloom": "evaluate",
+   "sources": [
+    "goodwin2007",
+    "mazzeo1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the same running pace, runner A's blood lactate is 2 mmol·L⁻¹ and runner B's is 4. A coach says: \"B's muscles make twice as much lactate.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unproven: B may make more, clear less, or both",
+       "correct": true,
+       "why": "Right: the level is a balance; without tracers you can't split production from removal."
+      },
+      {
+       "id": "b",
+       "text": "Right: blood lactate directly measures production",
+       "why": "Blood lactate is a level set by both production and removal."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: at equal pace production is equal, so B clears less",
+       "why": "Production at a given pace differs between people, for example with mitochondrial content."
+      },
+      {
+       "id": "d",
+       "text": "Right, because everyone clears lactate at the same rate",
+       "why": "Clearance differs between people and rises with training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-curve-shape",
+   "concept": "lb-curve",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "goodwin2007",
+    "faude2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a step test to exhaustion, how does blood lactate typically change as power rises?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Near baseline at first, then rising faster and faster",
+       "correct": true,
+       "why": "Right: a slow start, then a steeper and steeper climb."
+      },
+      {
+       "id": "b",
+       "text": "Rising in a straight line from the first step",
+       "why": "The early steps barely change lactate; the curve bends upward later."
+      },
+      {
+       "id": "c",
+       "text": "Rising fast at first, then levelling off",
+       "why": "That is the reverse of the real shape."
+      },
+      {
+       "id": "d",
+       "text": "Flat until exhaustion, then a sudden jump",
+       "why": "The rise is gradual, then steeper; there's no single jump at the end."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-fixed-4",
+   "concept": "lb-curve",
+   "bloom": "evaluate",
+   "sources": [
+    "goodwin2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach sets every runner's \"threshold\" pace where blood lactate reaches 4 mmol·L⁻¹. One runner's true MLSS sits at 2.5 mmol·L⁻¹. What is the likely result for her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her threshold sessions are set too hard, above her real steady state",
+       "correct": true,
+       "why": "Right: she reaches 4 mmol·L⁻¹ at a faster pace than her MLSS, so lactate would keep rising there."
+      },
+      {
+       "id": "b",
+       "text": "Her threshold sessions are set too easy",
+       "why": "4 is above her MLSS lactate, so the pace that gives 4 is faster than her MLSS, not slower."
+      },
+      {
+       "id": "c",
+       "text": "No problem: MLSS is at 4 mmol·L⁻¹ for everyone",
+       "why": "MLSS lactate ranges from about 1.5 to 7 mmol·L⁻¹ between people."
+      },
+      {
+       "id": "d",
+       "text": "No problem, as long as she is tested on a treadmill",
+       "why": "The mode of testing doesn't fix a threshold that ignores individual differences."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-plasma-calc",
+   "concept": "lb-sampling",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "goodwin2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab reports a runner's plasma lactate as 6.0 mmol·L⁻¹. About what would a whole-blood analyser show for the same sample?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.2 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 6.0 = 4.2."
+      },
+      {
+       "id": "b",
+       "text": "8.6 mmol·L⁻¹",
+       "why": "This divides by 0.7; whole blood is lower than plasma, so multiply."
+      },
+      {
+       "id": "c",
+       "text": "6.0 mmol·L⁻¹",
+       "why": "This assumes plasma and whole blood read the same; whole blood is about 70% of plasma."
+      },
+      {
+       "id": "d",
+       "text": "1.8 mmol·L⁻¹",
+       "why": "This takes 30% instead of 70% of the plasma value."
+      }
+     ],
+     "solution": "Whole blood ≈ 0.7 × plasma = 0.7 × 6.0 = 4.2 mmol·L⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's whole-blood analyser reads 2.8 mmol·L⁻¹. About what would a lab report as plasma lactate for the same sample?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.0 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: 2.8 ÷ 0.7 = 4.0."
+      },
+      {
+       "id": "b",
+       "text": "2.0 mmol·L⁻¹",
+       "why": "This multiplies by 0.7; plasma is higher than whole blood, so divide."
+      },
+      {
+       "id": "c",
+       "text": "2.8 mmol·L⁻¹",
+       "why": "This assumes plasma and whole blood read the same."
+      },
+      {
+       "id": "d",
+       "text": "3.6 mmol·L⁻¹",
+       "why": "This adds 30% (2.8 × 1.3); the right step is to divide by 0.7."
+      }
+     ],
+     "solution": "Plasma ≈ whole blood ÷ 0.7 = 2.8 ÷ 0.7 = 4.0 mmol·L⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A lab reports a triathlete's plasma lactate as 4.0 mmol·L⁻¹. About what would a whole-blood analyser show for the same sample?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.8 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 4.0 = 2.8."
+      },
+      {
+       "id": "b",
+       "text": "5.7 mmol·L⁻¹",
+       "why": "This divides by 0.7; whole blood is lower than plasma, so multiply."
+      },
+      {
+       "id": "c",
+       "text": "4.0 mmol·L⁻¹",
+       "why": "This assumes plasma and whole blood read the same."
+      },
+      {
+       "id": "d",
+       "text": "1.2 mmol·L⁻¹",
+       "why": "This takes 30% instead of 70% of the plasma value."
+      }
+     ],
+     "solution": "Whole blood ≈ 0.7 × plasma = 0.7 × 4.0 = 2.8 mmol·L⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "lb-site-consistency",
+   "concept": "lb-sampling",
+   "bloom": "apply",
+   "sources": [
+    "zhong2025",
+    "forsyth2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's spring lactate test used fingertip blood; the autumn retest uses the earlobe. At the same power, lactate is 0.6 mmol·L⁻¹ lower in autumn. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The change may just be the switch of sampling site",
+       "correct": true,
+       "why": "Right: fingertip values can run about 0.7 mmol·L⁻¹ above earlobe values, as big as the change seen. Retest using one site."
+      },
+      {
+       "id": "b",
+       "text": "Her endurance has clearly improved since spring",
+       "why": "The change is no bigger than a known site difference, so it can't be read as fitness yet."
+      },
+      {
+       "id": "c",
+       "text": "Earlobe blood can't be used for lactate testing",
+       "why": "Earlobe sampling is standard; the problem is switching sites between tests."
+      },
+      {
+       "id": "d",
+       "text": "Her endurance has clearly got worse since spring",
+       "why": "Lower lactate at the same power would suggest better, not worse, endurance, and here the site changed anyway."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-peak-timing",
+   "concept": "lb-analysers",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "goodwin2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist rides an all-out 1 km in about 65 s. When should you take blood to catch her peak lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3–8 minutes after the finish",
+       "correct": true,
+       "why": "Right: after a 30–120 s all-out effort, blood lactate peaks 3–8 minutes later."
+      },
+      {
+       "id": "b",
+       "text": "Right at the finish line",
+       "why": "Lactate is still moving from muscle into blood; the peak comes minutes later."
+      },
+      {
+       "id": "c",
+       "text": "In the last 10 seconds of the effort",
+       "why": "Blood lactate is still rising then; it peaks well after the effort."
+      },
+      {
+       "id": "d",
+       "text": "An hour later, once it has spread evenly",
+       "why": "By then it is falling, though still raised; the peak has passed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-analyser-bias",
+   "concept": "lb-analysers",
+   "bloom": "analyse",
+   "sources": [
+    "bonaventura2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's portable analyser under-reads high lactate values compared with a lab analyser. If her training zones are set from its readings, what is the risk?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her ability is overestimated, so the zones come out too hard",
+       "correct": true,
+       "why": "Right: lower readings make each pace look easier than it is, so zones are placed at faster paces."
+      },
+      {
+       "id": "b",
+       "text": "Her ability is underestimated, so the zones come out too easy",
+       "why": "Under-reading makes lactate look lower, which makes her look fitter, not less fit."
+      },
+      {
+       "id": "c",
+       "text": "No risk, because the analyser's error is random",
+       "why": "The error was a tendency to read low, so it pushes the result one way."
+      },
+      {
+       "id": "d",
+       "text": "Only her resting values are affected",
+       "why": "The under-reading was largest at high values, not at rest."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lb-analyser-appraisal",
+   "concept": "lb-analysers",
+   "bloom": "evaluate",
+   "sources": [
+    "bonaventura2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study tested six lactate analysers on 22 blood samples from 5 people, drawn and measured in a lab against a reference analyser. What most limits using its results for your field tests?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few people, and lab samples rather than finger or earlobe drops in the field",
+       "correct": true,
+       "why": "Right: the authors note that field sampling from finger or earlobe may give slightly different results."
+      },
+      {
+       "id": "b",
+       "text": "A reference analyser makes the comparison meaningless",
+       "why": "A criterion method is exactly what you need to judge accuracy."
+      },
+      {
+       "id": "c",
+       "text": "Measuring each sample several times hides the errors",
+       "why": "Repeated measures are how reliability is estimated; they reveal errors."
+      },
+      {
+       "id": "d",
+       "text": "None: lab results always carry over to the field",
+       "why": "Sampling, handling and conditions differ in the field and can change readings."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,833 @@
+{
+ "id": "mus-length-velocity",
+ "module": "t1a-muscle",
+ "title": "Length, speed and power",
+ "goal": "Explain how sarcomere length and shortening speed limit muscle force, why power (force × velocity) peaks at a middle speed, and what that means for cadence in cycling and stride in running.",
+ "requires": [
+  "mus-fibre-types"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "lv-plateau",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "lv-length",
+   "title": "Length–tension: overlap sets force",
+   "text": "A fibre's isometric force depends on how long its sarcomeres are when it contracts. That is the [length–tension relationship](g:length-tension).\n\nIn classic single-fibre experiments (frog muscle), force was highest on a short **plateau, between sarcomere lengths of 2.05 and 2.2 μm**, and fell on both sides [[c:lv-plateau]]:\n\n| sarcomere | what happens | force |\n|---|---|---|\n| stretched long | actin and myosin barely overlap: fewer heads can reach actin | low |\n| plateau | every myosin head can reach actin | highest |\n| squashed short | filaments run into each other and the Z-discs | falls steeply |\n\nThe sliding-filament model explains most of this curve [[c:lv-sliding-explains]]: force follows how many [cross-bridges](g:cross-bridge) can form.\n\nFor you, this is one reason force changes with joint angle, for example over the crank circle or through the stance phase of a run.",
+   "claims": [
+    {
+     "id": "lv-plateau",
+     "text": "In single frog fibres, isometric force peaks on a plateau between sarcomere lengths of 2.05 and 2.2 μm and falls above and below it.",
+     "grade": "strong",
+     "sources": [
+      "gordon1966"
+     ],
+     "evidence": [
+      {
+       "source": "gordon1966",
+       "quote": "In most respects the results of Ramsey & Street (1940) were confirmed, but (a) the peak of the curve was found to consist of a plateau between sarcomere lengths of 2.05 and 2.2 mu, (b) the decline of tension above this plateau is steeper than found by Ramsey & Street, and (c) the decline of tension below the plateau becomes suddenly steeper at a sarcomere length of about 1.67 mu.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-sliding-explains",
+     "text": "The length–tension relationship is largely explained by filament overlap in the sliding-filament model.",
+     "grade": "strong",
+     "sources": [
+      "gordon1966"
+     ],
+     "evidence": [
+      {
+       "source": "gordon1966",
+       "quote": "Many features of this length-tension relation are simply explained on the sliding-filament theory.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lv-plateau",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lv-stretched"
+  },
+  {
+   "type": "concept",
+   "id": "lv-velocity",
+   "title": "Force–velocity: faster means weaker",
+   "text": "The second limit is speed. The faster a muscle shortens, the less force it can make: the [force–velocity relationship](g:force-velocity). In isolated muscle the curve is most often described as a hyperbola, steep at first and flatter towards top speed, though real data bend away from it at both ends [[c:lv-hyperbola]]. Part of the reason: at high speed, fewer heads are attached at any moment.\n\nLengthening is different. In an [eccentric](g:eccentric) contraction (an active muscle being stretched, as the quadriceps braking on a descent), force can rise above the isometric maximum: up to about **1.4 times** in humans, if tested well [[c:lv-eccentric]].\n\nThe whole leg follows the same rule: on a cycle ergometer, peak pedal force fell in a straight line as crank speed rose [[c:lv-crank-linear]].",
+   "claims": [
+    {
+     "id": "lv-hyperbola",
+     "text": "The concentric force–velocity relationship is most often described as a rectangular hyperbola, with deviations at both ends.",
+     "grade": "strong",
+     "sources": [
+      "alcazar2019"
+     ],
+     "evidence": [
+      {
+       "source": "alcazar2019",
+       "quote": "While the F-V relationship has most frequently been described as a rectangular hyperbola, a large number of studies have found deviations from the hyperbolic function at both ends of the F-V relation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-eccentric",
+     "text": "Properly tested, maximal eccentric force in humans is greater than isometric force, up to about 1.4 times.",
+     "grade": "moderate",
+     "sources": [
+      "alcazar2019"
+     ],
+     "evidence": [
+      {
+       "source": "alcazar2019",
+       "quote": "In any case, maximum eccentric force values should generally be found to be greater than isometric force (up to 1.4 P 0 ), provided that the assessment has been properly carried out",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lv-crank-linear",
+     "text": "In maximal cycling, peak pedal force falls linearly as crank velocity rises.",
+     "grade": "weak",
+     "sources": [
+      "sargeant1981"
+     ],
+     "evidence": [
+      {
+       "source": "sargeant1981",
+       "quote": "PFmax was found to be inversely and linearly related to crank velocity",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lv-fv-shape"
+  },
+  {
+   "type": "question",
+   "item": "lv-eccentric"
+  },
+  {
+   "type": "concept",
+   "id": "lv-power",
+   "title": "Power = force × velocity",
+   "text": "Power is force × velocity. Both ends of the force–velocity curve give **zero** power: at zero speed (isometric) nothing moves, and at top speed there is no force left. Power peaks in between.\n\nOn a bike, maximal power traced a curve against cadence with its top at about **110 rpm** (840 W, in five subjects) [[c:lv-110]]. World-class track sprinters peaked higher, at about **130 rpm** and 1,600 W [[c:lv-sprinters]].\n\nWhy do people differ? Fast fibres reach higher top speeds and make peak power at higher speeds than type I fibres [[c:lv-fibre-vopt]]. So more fast fibres should put the peak at a higher cadence.\n\nOn a bike: **power = torque × angular velocity**, where [torque](g:torque) is in N·m and angular velocity in rad·s⁻¹ (rpm × 2π ÷ 60).",
+   "claims": [
+    {
+     "id": "lv-110",
+     "text": "Maximal cycling power is a parabolic function of crank velocity, with its peak at about 110 rpm in this study.",
+     "grade": "weak",
+     "sources": [
+      "sargeant1981"
+     ],
+     "evidence": [
+      {
+       "source": "sargeant1981",
+       "quote": "Maximum power output was a parabolic function of crank velocity, the apex of the relationship indicating that the velocity for greatest power output was 110 rev/min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-sprinters",
+     "text": "In 12 elite track sprinters, maximal power was about 1,600 W at an optimal pedalling rate of about 130 rpm.",
+     "grade": "weak",
+     "sources": [
+      "dorel2005"
+     ],
+     "evidence": [
+      {
+       "source": "dorel2005",
+       "quote": "P(max), f(opt), and T(opt) were respectively 1600 +/- 116 W, 129.8 +/- 4.7 rpm and 118.5 +/- 9.8 N . m.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-fibre-vopt",
+     "text": "Maximum velocity, maximum power and the velocity of peak power are lower in type I than in fast fibres.",
+     "grade": "strong",
+     "sources": [
+      "bottinelli1996"
+     ],
+     "evidence": [
+      {
+       "source": "bottinelli1996",
+       "quote": "All parameters were significantly lower in type I than in the fast (type IIA and IIB) fibres.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lv-power-example",
+   "title": "Power from torque and cadence",
+   "problem": "A rider pushes an average torque of 40 N·m on the cranks at 90 rpm. What is the power?",
+   "steps": [
+    "Convert cadence to angular velocity. One revolution is 2π radians, one minute is 60 s: 90 × 2π ÷ 60 = 9.42 rad·s⁻¹.",
+    "Power = torque × angular velocity = 40 N·m × 9.42 rad·s⁻¹ = 377 W.",
+    "Check: N·m·s⁻¹ = J·s⁻¹ = W. Skipping the 2π gives 60 W, and skipping the whole conversion gives 3,600: both far from any real ride."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lv-power-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lv-power-zero"
+  },
+  {
+   "type": "question",
+   "item": "lv-fibre-opt"
+  },
+  {
+   "type": "concept",
+   "id": "lv-cadence",
+   "title": "Most powerful is not most economical",
+   "text": "The cadence for peak power is not the one that costs the least oxygen at endurance power.\n\nExperienced cyclists, runners and triathletes choose **80–100 rpm** in rides under 15 minutes, well above the cadence where VO₂ is lowest, about **55–65 rpm** [[c:lv-fcc]]. Reasons put forward: lower force on each pedal stroke, smaller joint loads and less neuromuscular fatigue.\n\nThe gap shrinks at higher power. In six elite road cyclists, the most economical cadence rose from 60 rpm at 0 W to **80 rpm at 350 W** [[c:lv-econ-rises]].\n\nSprinters face the opposite problem. In a 200 m track sprint, riders pedal at about 150–155 rpm, above their optimal cadence of about 130, so a sprinter whose peak sits at a higher cadence loses less power in the race [[c:lv-sprint-above]].",
+   "claims": [
+    {
+     "id": "lv-fcc",
+     "text": "In short rides, experienced cyclists, runners and triathletes choose 80–100 rpm, above the 55–65 rpm at which VO₂ is lowest.",
+     "grade": "moderate",
+     "sources": [
+      "vercruyssen2010"
+     ],
+     "evidence": [
+      {
+       "source": "vercruyssen2010",
+       "quote": "During cycle bouts of short duration (<15 min), it has been well argued that experienced cyclists, trained runners and triathletes adopt high cadences (80-100 rpm) systematically above the energetically optimal cadence (EOC) at which the oxygen uptake is minimal (55-65 rpm).",
+       "level": "abstract"
+      },
+      {
+       "source": "vercruyssen2010",
+       "quote": "The choice of a high cadence has been shown to be dependent upon several factors, such as the aerobic fitness level, the reduction in forces applied to the cranks, the lower extremity net joint moments and minimal neuromuscular fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-econ-rises",
+     "text": "In elite cyclists, the most economical cadence rose from 60 rpm at 0 W to 80 rpm at 350 W.",
+     "grade": "weak",
+     "sources": [
+      "foss2004"
+     ],
+     "evidence": [
+      {
+       "source": "foss2004",
+       "quote": "The results showed that the lowest oxygen uptake, i.e. the best work economy, shifted from 60 rpm at 0 W to 80 rpm at 350 W ( P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lv-sprint-above",
+     "text": "Pedalling rates in 200 m track sprints (about 149–155 rpm) are higher than sprinters' optimal pedalling rate.",
+     "grade": "weak",
+     "sources": [
+      "dorel2005"
+     ],
+     "evidence": [
+      {
+       "source": "dorel2005",
+       "quote": "f 200 (155.2 +/- 3, REC; 149 +/- 4.3, NAT) were significantly higher than f(opt) (p < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Why do endurance cyclists choose a cadence above the most economical one?",
+    "sides": [
+     {
+      "position": "Economy isn't the only goal: a higher cadence lowers pedal forces, joint loads and neuromuscular fatigue.",
+      "sources": [
+       "vercruyssen2010"
+      ]
+     },
+     {
+      "position": "The gap is smaller than it looks: the most economical cadence rises with power, towards what riders choose at race intensity.",
+      "sources": [
+       "foss2004"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "lv-cadence-econ"
+  },
+  {
+   "type": "question",
+   "item": "lv-sprinter-fopt"
+  },
+  {
+   "type": "concept",
+   "id": "lv-stride",
+   "title": "Runners find their own stride",
+   "text": "Running has its own version of cadence: steps per minute, which with speed sets stride length.\n\nIn a classic study, ten trained runners ran at 3.83 m·s⁻¹ while stride length was varied by up to ±20% of leg length. Every runner had a stride length at which VO₂ was lowest. Their freely chosen stride was close to it: on average it cost only **0.2 mL·kg⁻¹·min⁻¹** more than the best one, while the extreme strides cost 2.6–3.4 mL·kg⁻¹·min⁻¹ more [[c:lv-stride-optimal]].\n\nSo trained runners mostly settle near their own most economical stride, by habit or by adaptation. Forcing a big change for the sake of economy is more likely to cost oxygen than to save it. Other reasons to change cadence, such as injury, are a different question.",
+   "claims": [
+    {
+     "id": "lv-stride-optimal",
+     "text": "Trained runners' freely chosen stride length is close to the one that minimises VO₂.",
+     "grade": "weak",
+     "sources": [
+      "cavanagh1982"
+     ],
+     "evidence": [
+      {
+       "source": "cavanagh1982",
+       "quote": "All subjects exhibited a stride length of which O2 uptake was minimized, although the individual profiles varied considerably.",
+       "level": "abstract"
+      },
+      {
+       "source": "cavanagh1982",
+       "quote": "During unrestricted running deviations from optimal stride length caused a mean increase in VO2 of 0.2 ml . kg-1 . min-1.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lv-stride"
+  },
+  {
+   "type": "question",
+   "item": "lv-power-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "lv-foss-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Length–tension: force is highest where actin and myosin overlap best (a plateau at 2.05–2.2 μm in frog fibres) and lower when stretched or squashed.",
+    "Force–velocity: faster shortening means less force; lengthening (eccentric) allows more, up to about 1.4 times isometric.",
+    "Power = force × velocity, zero at both ends, peaking near 110 rpm on a bike in five healthy subjects and about 130 rpm in elite sprinters. More fast fibres put the peak at a higher speed.",
+    "The cadence of peak power is not the most economical one; trained runners already pick close to their most economical stride."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lv-plateau",
+   "concept": "lv-length",
+   "bloom": "understand",
+   "sources": [
+    "gordon1966"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At which sarcomere length does a fibre make its highest isometric force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At a middle length, where every myosin head can reach actin",
+       "correct": true,
+       "why": "Right: force peaks on the plateau of best overlap."
+      },
+      {
+       "id": "b",
+       "text": "At the longest length, where the fibre is most stretched",
+       "why": "Stretched far, actin and myosin barely overlap, so few heads can pull."
+      },
+      {
+       "id": "c",
+       "text": "At the shortest length, where the filaments overlap most",
+       "why": "Squashed short, filaments collide and force falls steeply."
+      },
+      {
+       "id": "d",
+       "text": "At any length, since force depends only on Ca²⁺",
+       "why": "Ca²⁺ switches the cycle on, but how many heads can bind depends on overlap."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's calf sarcomere sits on the plateau of its length–tension curve. Why is isometric force highest there?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overlap lets every myosin head reach actin, without the filaments colliding",
+       "correct": true,
+       "why": "Right: the most cross-bridges can form."
+      },
+      {
+       "id": "b",
+       "text": "The tendon is stretched most there and adds its force",
+       "why": "The plateau is a property of the sarcomere and appears in single fibres with no tendon."
+      },
+      {
+       "id": "c",
+       "text": "More Ca²⁺ is released at that length",
+       "why": "The classic curve is measured at full activation; the plateau reflects overlap."
+      },
+      {
+       "id": "d",
+       "text": "The filaments themselves are shortest there",
+       "why": "Filaments don't change length; they slide past each other."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-stretched",
+   "concept": "lv-length",
+   "bloom": "analyse",
+   "sources": [
+    "gordon1966"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Suppose that with a saddle set far too high, a cyclist's hamstrings work at sarcomere lengths well beyond the plateau. Why would their force be lower there?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Actin and myosin overlap less, so fewer heads can bind",
+       "correct": true,
+       "why": "Right: past the plateau, force falls with overlap."
+      },
+      {
+       "id": "b",
+       "text": "The filaments run into the Z-discs",
+       "why": "That happens when a sarcomere is very short, not long."
+      },
+      {
+       "id": "c",
+       "text": "The fibres run out of ATP when stretched",
+       "why": "ATP supply doesn't depend on sarcomere length; overlap does."
+      },
+      {
+       "id": "d",
+       "text": "Stretched fibres switch to type I myosin",
+       "why": "Fibre type doesn't change with length; it takes weeks of training to shift."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-fv-shape",
+   "concept": "lv-velocity",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "alcazar2019",
+    "sargeant1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "As a muscle shortens faster and faster, what happens to the maximal force it can make?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls, reaching zero at top speed",
+       "correct": true,
+       "why": "Right: that is the force–velocity relationship."
+      },
+      {
+       "id": "b",
+       "text": "It rises, because faster cycling of heads makes more force",
+       "why": "Faster cycling means fewer heads attached at once, so force falls."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same until the muscle fatigues",
+       "why": "Force depends on speed even in a fresh muscle."
+      },
+      {
+       "id": "d",
+       "text": "It rises to a peak at middle speed, then falls",
+       "why": "That shape belongs to power (force × velocity), not force."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-eccentric",
+   "concept": "lv-velocity",
+   "bloom": "apply",
+   "sources": [
+    "alcazar2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a steep trail descent, a runner's quadriceps are active while being stretched at each landing. Compared with their isometric maximum, how much force can they make?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More, up to about 1.4 times isometric",
+       "correct": true,
+       "why": "Right: eccentric force exceeds isometric when properly tested."
+      },
+      {
+       "id": "b",
+       "text": "Less, since any movement lowers force",
+       "why": "Only shortening lowers force; lengthening raises it."
+      },
+      {
+       "id": "c",
+       "text": "Exactly the same as isometric",
+       "why": "The force–velocity curve continues past zero speed: force rises in lengthening."
+      },
+      {
+       "id": "d",
+       "text": "About 3 times isometric",
+       "why": "Too high: human data show up to about 1.4 times, isolated muscle up to about 1.6–1.8."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-power-zero",
+   "concept": "lv-power",
+   "bloom": "understand",
+   "sources": [
+    "sargeant1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does maximal cycling power peak at a middle cadence rather than at very low or very high cadence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Power is force × speed, and each is low where the other is high",
+       "correct": true,
+       "why": "Right: the product is zero at both ends and largest in between."
+      },
+      {
+       "id": "b",
+       "text": "At low cadence the leg muscles run short of oxygen",
+       "why": "Low cadence means high force per stroke; the issue is the low speed, not oxygen."
+      },
+      {
+       "id": "c",
+       "text": "At high cadence the heart can't pump fast enough",
+       "why": "Maximal power over a few seconds is limited by the muscle's force–velocity curve, not the heart."
+      },
+      {
+       "id": "d",
+       "text": "Pedal force itself is highest at the middle cadence",
+       "why": "Force is highest at the lowest speed; it is power that peaks in the middle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-power-calc",
+   "concept": "lv-power",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sargeant1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist on a climb pushes an average torque of 35 N·m at 90 rpm. What is the power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "330 W",
+       "correct": true,
+       "why": "Right: 90 × 2π ÷ 60 = 9.42 rad·s⁻¹; 35 × 9.42 = 330 W."
+      },
+      {
+       "id": "b",
+       "text": "53 W",
+       "why": "This converts rpm to revolutions per second (1.5) but forgets the 2π radians per revolution."
+      },
+      {
+       "id": "c",
+       "text": "3,150 W",
+       "why": "This multiplies torque by rpm with no conversion to rad·s⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "19,800 W",
+       "why": "This multiplies by 2π but never divides by 60 s per minute."
+      }
+     ],
+     "solution": "Angular velocity = 90 × 2π ÷ 60 = 9.42 rad·s⁻¹. Power = 35 N·m × 9.42 rad·s⁻¹ = 330 W."
+    },
+    {
+     "id": "b",
+     "stem": "A track sprinter pushes an average torque of 150 N·m at 120 rpm in the middle of a sprint. What is the power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,885 W",
+       "correct": true,
+       "why": "Right: 120 × 2π ÷ 60 = 12.57 rad·s⁻¹; 150 × 12.57 = 1,885 W."
+      },
+      {
+       "id": "b",
+       "text": "300 W",
+       "why": "This converts rpm to revolutions per second (2) but forgets the 2π radians per revolution."
+      },
+      {
+       "id": "c",
+       "text": "18,000 W",
+       "why": "This multiplies torque by rpm with no conversion to rad·s⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "113,000 W",
+       "why": "This multiplies by 2π but never divides by 60 s per minute."
+      }
+     ],
+     "solution": "Angular velocity = 120 × 2π ÷ 60 = 12.57 rad·s⁻¹. Power = 150 N·m × 12.57 rad·s⁻¹ = 1,885 W."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike leg of a half-Ironman, a triathlete pushes an average torque of 30 N·m at 85 rpm. What is the power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "267 W",
+       "correct": true,
+       "why": "Right: 85 × 2π ÷ 60 = 8.90 rad·s⁻¹; 30 × 8.90 = 267 W."
+      },
+      {
+       "id": "b",
+       "text": "43 W",
+       "why": "This converts rpm to revolutions per second (1.42) but forgets the 2π radians per revolution."
+      },
+      {
+       "id": "c",
+       "text": "2,550 W",
+       "why": "This multiplies torque by rpm with no conversion to rad·s⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "16,000 W",
+       "why": "This multiplies by 2π but never divides by 60 s per minute."
+      }
+     ],
+     "solution": "Angular velocity = 85 × 2π ÷ 60 = 8.90 rad·s⁻¹. Power = 30 N·m × 8.90 rad·s⁻¹ = 267 W."
+    }
+   ]
+  },
+  {
+   "id": "lv-fibre-opt",
+   "concept": "lv-power",
+   "bloom": "analyse",
+   "sources": [
+    "bottinelli1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders do a maximal torque–cadence test. Rider A's thigh is 70% type I fibres; rider B's is 35% type I. Whose maximal power is likely to peak at the higher cadence, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rider B: fast fibres make peak power at higher shortening speeds",
+       "correct": true,
+       "why": "Right: optimal velocity is higher in type II fibres, so more of them shifts the peak to faster pedalling."
+      },
+      {
+       "id": "b",
+       "text": "Rider A: type I fibres are more efficient at high cadence",
+       "why": "Type I fibres have lower top speed and optimal velocity; they favour lower speeds for peak power."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, since cadence depends only on crank length",
+       "why": "Crank length matters, but fibre type also shifts where the power peak lies."
+      },
+      {
+       "id": "d",
+       "text": "Rider A: more mitochondria allow faster cycling of heads",
+       "why": "Mitochondria set endurance, not cross-bridge speed; myosin isoform does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-cadence-econ",
+   "concept": "lv-cadence",
+   "bloom": "apply",
+   "sources": [
+    "vercruyssen2010",
+    "foss2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides at a steady, moderate power and chooses about 90 rpm. In lab tests her VO₂ at that power is lowest at about 65 rpm. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Normal: most riders pick a cadence above the VO₂ minimum",
+       "correct": true,
+       "why": "Right: experienced riders pick 80–100 rpm, above the 55–65 rpm VO₂ minimum; lower pedal forces and less fatigue are the likely reasons."
+      },
+      {
+       "id": "b",
+       "text": "A fault: she would be faster riding at 65 rpm",
+       "why": "Lowest VO₂ isn't the only goal; lower forces and less neuromuscular fatigue also matter."
+      },
+      {
+       "id": "c",
+       "text": "An error in her test: VO₂ is lowest at 90 rpm",
+       "why": "At moderate power the VO₂ minimum is usually lower than the cadence riders choose."
+      },
+      {
+       "id": "d",
+       "text": "Expected: peak power and best economy share one cadence",
+       "why": "Peak power and best economy fall at different cadences."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-sprinter-fopt",
+   "concept": "lv-cadence",
+   "bloom": "analyse",
+   "sources": [
+    "dorel2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two track sprinters have the same maximal power. Sprinter A reaches it at 135 rpm, sprinter B at 120 rpm. A 200 m sprint is ridden at about 150 rpm. Who is better placed, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: at 150 rpm she is closer to her peak, so she loses less power",
+       "correct": true,
+       "why": "Right: race cadence is above the optimum, so a higher optimal cadence means less power lost."
+      },
+      {
+       "id": "b",
+       "text": "B: a lower optimal cadence means more force per stroke at 150 rpm",
+       "why": "Above the optimum, the rider whose optimum is lower is further down the power curve."
+      },
+      {
+       "id": "c",
+       "text": "Neither: with equal maximal power they will produce the same in the race",
+       "why": "Power at race cadence depends on where each curve peaks, not only on its height."
+      },
+      {
+       "id": "d",
+       "text": "B: she can use a bigger gear and pedal more slowly",
+       "why": "Gear sets cadence for a speed; the 200 m is raced at about 150 rpm regardless."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-stride",
+   "concept": "lv-stride",
+   "bloom": "evaluate",
+   "sources": [
+    "cavanagh1982"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a trained runner to lengthen his stride by 15% \"to cover more ground per step and save energy\". What does the evidence suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Likely to cost more oxygen: trained runners already run close to their own most economical stride",
+       "correct": true,
+       "why": "Right: freely chosen stride cost only about 0.2 mL·kg⁻¹·min⁻¹ more than the best; big changes cost much more."
+      },
+      {
+       "id": "b",
+       "text": "Likely to save energy, since fewer steps mean fewer contractions",
+       "why": "Longer strides need more force per step and cost more VO₂, as the stride-length study showed."
+      },
+      {
+       "id": "c",
+       "text": "No effect, since stride length doesn't affect VO₂",
+       "why": "Strides 20% of leg length off the chosen one raised VO₂ by about 2.6–3.4 mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "Good advice for everyone, since the most economical stride is the same for all",
+       "why": "The profiles differed a lot between runners; each had their own best stride."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lv-foss-appraisal",
+   "concept": "lv-cadence",
+   "bloom": "evaluate",
+   "sources": [
+    "foss2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In six elite road cyclists, the most economical cadence at 350 W was 80 rpm, and the best performance in tests of about 5 minutes came at 80 rpm too. A rider wants to use this to set her cadence for a 40 km time trial. What limits this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few riders, all elite, tested in short efforts: a 55-minute effort may differ",
+       "correct": true,
+       "why": "Right: n = 6 and tests of about 5 minutes; duration and fatigue may shift the best cadence."
+      },
+      {
+       "id": "b",
+       "text": "Cadence has no effect on VO₂, so the study proves nothing",
+       "why": "The study found VO₂ did change with cadence; that is its main result."
+      },
+      {
+       "id": "c",
+       "text": "It measured VO₂ instead of power, so it can't speak to economy",
+       "why": "Economy is VO₂ at a given power; that is the right measure."
+      },
+      {
+       "id": "d",
+       "text": "Elite cyclists can't be studied in a lab",
+       "why": "They can; the problem is how far a small, elite, short-effort study generalises."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
