@@ -5,6 +5,7 @@
  */
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import type { z } from "zod";
 import { Curriculum, Facts, Glossary, type Item, Lesson, Sources } from "../src/lib/content.ts";
 
 const dataUrl = (path: string) => new URL(`../data/${path}`, import.meta.url);
@@ -13,17 +14,7 @@ const errors: string[] = [];
 const warnings: string[] = [];
 const fail = (where: string, message: string) => errors.push(`${where}: ${message}`);
 
-function parse<T>(
-  schema: {
-    safeParse: (v: unknown) => {
-      success: boolean;
-      data?: T;
-      error?: { issues: { path: PropertyKey[]; message: string }[] };
-    };
-  },
-  value: unknown,
-  where: string,
-): T | null {
+function parse<T>(schema: z.ZodType<T>, value: unknown, where: string): T | null {
   const result = schema.safeParse(value);
   if (result.success) return result.data as T;
   for (const issue of result.error?.issues ?? [])
@@ -48,7 +39,8 @@ const lessons = lessonIds.flatMap((file) => {
 
 /** Units written the way the guide asks (data/README.md). */
 const UNIT_RULES: [RegExp, string][] = [
-  [/\bml\s*\/\s*kg\s*\/\s*min\b|\bml·kg/i, "write mL·kg⁻¹·min⁻¹"],
+  [/\bml\s*\/\s*kg\s*\/\s*min\b/i, "write mL·kg⁻¹·min⁻¹"],
+  [/\bml·kg/, "write mL·kg⁻¹·min⁻¹ (capital L)"],
   [/\bmmol\s*\/\s*l\b/i, "write mmol·L⁻¹"],
   [/\bg\s*\/\s*h(our)?\b/i, "write g·h⁻¹"],
   [/\bW\s*\/\s*kg\b/, "write W·kg⁻¹"],

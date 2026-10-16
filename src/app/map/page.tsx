@@ -1,4 +1,4 @@
-import { CURRICULUM, LESSONS } from "@/lib/content-index";
+import { CURRICULUM } from "@/lib/content-index";
 import { lessonById } from "@/lib/course";
 import { requireUser } from "@/lib/session";
 import { lessonsDone, recall } from "@/lib/study";
@@ -14,7 +14,6 @@ export const dynamic = "force-dynamic";
 export default async function MapPage() {
   const userId = await requireUser();
   const [done, recalls] = await Promise.all([lessonsDone(userId), recall(userId)]);
-  const written = new Set(LESSONS.map((l) => l.id));
 
   return (
     <main className="screen with-tabs">
@@ -61,7 +60,7 @@ export default async function MapPage() {
                         const lesson = lessonById(id);
                         if (!lesson) return null;
                         const missing = lesson.requires.filter(
-                          (r) => written.has(r) && !done.has(r),
+                          (r) => lessonById(r) && !done.has(r),
                         );
                         return (
                           <li key={id} className="flex items-center gap-2 text-sm">

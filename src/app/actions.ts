@@ -1,6 +1,6 @@
 "use server";
 
-import { lessonById } from "@/lib/course";
+import { itemById, lessonById } from "@/lib/course";
 import { freshPages } from "@/lib/fresh";
 import { requireUser } from "@/lib/session";
 import { type Answer, answer, finishLesson, flag } from "@/lib/study";
@@ -31,7 +31,8 @@ export async function lessonFinished(lessonId: string) {
 
 export async function flagQuestion(itemId: string, variantId: string, note: string) {
   const userId = await requireUser();
-  if (!note.trim()) return;
+  const variant = itemById(String(itemId))?.item.variants.find((v) => v.id === variantId);
+  if (!variant || typeof note !== "string" || !note.trim()) return;
   await flag(userId, itemId, variantId, note.trim());
 }
 

@@ -1,7 +1,5 @@
-/* Shuffles, kept apart from units.ts so code that runs on the phone doesn't load zod. */
-
 /** A shuffled copy (Fisher–Yates). */
-export function shuffled<T>(items: readonly T[], random: () => number = Math.random): T[] {
+function shuffled<T>(items: readonly T[], random: () => number): T[] {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));

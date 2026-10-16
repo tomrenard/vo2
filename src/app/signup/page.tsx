@@ -33,7 +33,7 @@ async function signup(form: FormData) {
     error = codes[status] ?? "other";
     await new Promise((resolve) => setTimeout(resolve, 1000));
   }
-  redirect(error ? `/signup?error=${error}` : "/placement");
+  redirect(error ? `/signup?error=${error}` : "/");
 }
 
 export default async function SignupPage({

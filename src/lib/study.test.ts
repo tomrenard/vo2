@@ -75,6 +75,28 @@ describe("answer", () => {
     expect((await counts("u1")).confidentMisses).toBe(0);
   });
 
+  it("ignores questions retired from the content", async () => {
+    await db.insert(itemStates).values({
+      userId: "u1",
+      itemId: "retired",
+      fsrs: {
+        due: new Date(),
+        stability: 1,
+        difficulty: 5,
+        elapsed_days: 0,
+        scheduled_days: 0,
+        learning_steps: 0,
+        reps: 1,
+        lapses: 0,
+        state: 2,
+        last_review: new Date(),
+      },
+      due: new Date(Date.now() - 60_000),
+    });
+    expect(await dueItems("u1")).toEqual([]);
+    expect((await counts("u1")).due).toBe(0);
+  });
+
   it("rejects an option that doesn't exist", async () => {
     await expect(
       answer("u1", { ...base, optionId: "d", sure: true, context: "lesson" }),

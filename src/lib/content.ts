@@ -106,7 +106,8 @@ export type Item = z.infer<typeof Item>;
 
 /** A diagram the app draws (src/app/diagrams), with its starting values. */
 const Diagram = z.object({
-  id: z.enum(["energy-systems", "fuel-crossover", "lactate-curve", "cp-model"]),
+  // Add an id here when its component exists in src/app/diagrams.
+  id: z.enum(["energy-systems"]),
   caption: z.string(),
   params: z.record(z.string(), z.number()).optional(),
 });
@@ -118,7 +119,7 @@ const Step = z.discriminatedUnion("type", [
     title: z.string(),
     /** ~120 words. Small markdown; [[c:<claim>]] places a badge, [term](g:<glossary id>) a term. */
     text: z.string().max(1400),
-    claims: z.array(Claim).default([]),
+    claims: z.array(Claim),
     debate: Debate.optional(),
     diagram: Diagram.optional(),
   }),
@@ -148,7 +149,7 @@ export const Lesson = z.object({
   /** What you can explain after the lesson, one sentence. */
   goal: z.string(),
   /** Lessons to know first (a soft warning when jumping ahead). */
-  requires: z.array(id).default([]),
+  requires: z.array(id),
   /** Last full review of the content; re-review after two years. */
   lastReviewed: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   steps: z.array(Step).min(3),

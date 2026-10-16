@@ -36,8 +36,14 @@ export function Player({ lesson, reps }: { lesson: Lesson; reps: Record<string, 
     window.scrollTo(0, 0);
   };
   const next = () => (index + 1 < steps.length ? go(index + 1) : finish());
+  const [finishError, setFinishError] = useState(false);
   const finish = async () => {
-    await lessonFinished(lesson.id);
+    try {
+      await lessonFinished(lesson.id);
+    } catch {
+      setFinishError(true);
+      return;
+    }
     try {
       localStorage.removeItem(saved(lesson.id));
     } catch {}
@@ -114,6 +120,11 @@ export function Player({ lesson, reps }: { lesson: Lesson; reps: Record<string, 
               </li>
             ))}
           </ul>
+          {finishError && (
+            <p role="alert" className="text-sm text-[var(--wrong)]">
+              Couldn't save the lesson. Check your connection and try again.
+            </p>
+          )}
           <button type="button" className="btn btn-primary mt-auto" onClick={next}>
             Finish lesson
           </button>

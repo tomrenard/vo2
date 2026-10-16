@@ -6,6 +6,9 @@ const itemIndex = new Map(
   LESSONS.flatMap((lesson) => lesson.items.map((item) => [item.id, { item, lesson }] as const)),
 );
 
+/** Every question id in the content. */
+export const ITEM_IDS = [...itemIndex.keys()];
+
 export const lessonById = (id: string): Lesson | undefined => byId.get(id);
 export const itemById = (id: string) => itemIndex.get(id);
 export const hashOf = (itemId: string) => HASHES[itemId] ?? "";

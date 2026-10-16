@@ -3,12 +3,12 @@
 import { useEffect, useRef, useState, useTransition } from "react";
 import type { Item } from "@/lib/content";
 import { seededShuffle } from "@/lib/shuffle";
+import type { Context } from "@/lib/study";
 import { flagQuestion, submitAnswer } from "../actions";
 import { Go } from "../Nav";
 import { SourceLine } from "./Evidence";
 import { Prose } from "./Prose";
 
-export type Mode = "lesson" | "pretest" | "review" | "exam";
 export type Result = { correct: boolean; sure: boolean };
 type Variant = Item["variants"][number];
 
@@ -30,7 +30,7 @@ export function Question({
 }: {
   item: Item;
   variant: Variant;
-  mode: Mode;
+  mode: Context;
   /** Review count shown, so a repeated submit is dropped by the server. */
   reps: number;
   /** Where the concept this question tests can be read again. */
@@ -76,7 +76,15 @@ export function Question({
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (event.target instanceof HTMLTextAreaElement || event.metaKey || event.ctrlKey) return;
+      // A focused control handles its own keys (Enter on a button clicks it): don't act twice.
+      const target = event.target as Element | null;
+      if (
+        target?.closest("button, a, summary, input, textarea") ||
+        event.metaKey ||
+        event.ctrlKey
+      ) {
+        return;
+      }
       if (result) {
         if (event.key === "Enter") onDone(result);
         return;

@@ -2,7 +2,7 @@ import { and, eq, inArray, lte, sql } from "drizzle-orm";
 import { createEmptyCard, fsrs, type Grade, TypeConvert } from "ts-fsrs";
 import { db } from "../db/client.ts";
 import { activityLogs, answers, flags, itemStates } from "../db/schema.ts";
-import { COURSE_ORDER, hashOf, itemById, ratingFor } from "./course.ts";
+import { COURSE_ORDER, hashOf, ITEM_IDS, itemById, ratingFor } from "./course.ts";
 
 /** A missed question comes back once 10 minutes later; a right one is done for the day. */
 const scheduler = fsrs({ enable_fuzz: true, learning_steps: ["10m"], relearning_steps: ["10m"] });
@@ -89,6 +89,9 @@ export async function answer(userId: string, a: Answer) {
   return { correct };
 }
 
+/** Questions still in the content: retired ones keep their state but are never asked or counted. */
+const CURRENT = inArray(itemStates.itemId, ITEM_IDS);
+
 /** The item's latest scored answer was wrong while sure. */
 const CONFIDENT_MISS = sql`coalesce((select not a.correct and a.sure from answers a
   where a.user_id = ${itemStates.userId} and a.item_id = ${itemStates.itemId} and a.context <> 'pretest'
@@ -98,15 +101,14 @@ const CONFIDENT_MISS = sql`coalesce((select not a.correct and a.sure from answer
  * Questions to review now: confident misses first, then the rest in random order, so modules
  * mix (interleaving).
  */
-export async function dueItems(userId: string, limit = SESSION_SIZE) {
+export async function dueItems(userId: string) {
   const rows = await db()
     .select({ itemId: itemStates.itemId, reps: sql<number>`(${itemStates.fsrs}->>'reps')::int` })
     .from(itemStates)
-    .where(and(eq(itemStates.userId, userId), lte(itemStates.due, LEARN_AHEAD)))
+    .where(and(eq(itemStates.userId, userId), lte(itemStates.due, LEARN_AHEAD), CURRENT))
     .orderBy(sql`${CONFIDENT_MISS} desc`, sql`random()`)
-    .limit(limit);
-  // Questions removed from the content can't be asked any more.
-  return rows.filter((row) => itemById(row.itemId));
+    .limit(SESSION_SIZE);
+  return rows;
 }
 
 /** Lessons finished, as a set of lesson ids. */
@@ -133,12 +135,12 @@ export const nextLesson = (done: Set<string>) =>
 export async function counts(userId: string) {
   const result = await db().execute(sql`
     select
-      (select count(*) from item_states where user_id = ${userId} and due <= ${LEARN_AHEAD})::int as due,
+      (select count(*) from item_states where user_id = ${userId} and due <= ${LEARN_AHEAD} and ${CURRENT})::int as due,
       (select count(*) from answers where user_id = ${userId} and at >= ${DAY_START})::int as today,
       (select count(*) from answers where user_id = ${userId} and at >= now() - interval '7 days')::int as week,
       (select count(*) from (
         select distinct on (item_id) item_id, correct, sure from answers
-        where user_id = ${userId} and at >= now() - interval '14 days' and context <> 'pretest'
+        where user_id = ${userId} and at >= now() - interval '14 days' and context <> 'pretest' and item_id in ${ITEM_IDS}
         order by item_id, at desc
       ) last where not correct and sure)::int as "confidentMisses"`);
   // postgres.js returns the rows, PGlite (tests) { rows }.
@@ -155,15 +157,11 @@ export async function counts(userId: string) {
  * Per item: how likely you are to recall it now (FSRS retrievability, 0–1). Items never
  * answered are missing.
  */
-export async function recall(userId: string, itemIds?: string[]) {
+export async function recall(userId: string) {
   const rows = await db()
     .select({ itemId: itemStates.itemId, fsrs: itemStates.fsrs })
     .from(itemStates)
-    .where(
-      itemIds
-        ? and(eq(itemStates.userId, userId), inArray(itemStates.itemId, itemIds))
-        : eq(itemStates.userId, userId),
-    );
+    .where(eq(itemStates.userId, userId));
   const now = new Date();
   return new Map(
     rows.map((row) => [
