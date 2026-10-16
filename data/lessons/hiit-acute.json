@@ -1,0 +1,631 @@
+{
+ "id": "hiit-acute",
+ "module": "t3-hiit",
+ "title": "What an interval session does",
+ "goal": "Explain how work and relief choices change time near VO₂max, lactate and W′ use in a session, and estimate how many reps W′ allows.",
+ "requires": [
+  "hiit-types"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "time-at-vo2max"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "acute-red-zone",
+   "title": "The 'red zone' idea",
+   "text": "Why do coaches count [time at VO₂max](g:time-at-vo2max)? The idea is that to push both the heart and the muscles to adapt, a session should hold you above 90% of [VO₂max](g:vo2max), the 'red zone', for at least several minutes [[c:red-zone]]. Note the wording in the review: 'it is believed'. This is an expert view, not a proven rule.\n\nSome support came in 2024. Twenty-two well-trained cyclists did 21 sessions of 5 × 8 min over 9 weeks, with VO₂ measured in every one. Those who rode at a higher share of their VO₂max gained more [[c:odden-fraction]]. But that's a [correlation](g:correlation) in a small group: riders who reach a higher share of VO₂max may differ in other ways too.",
+   "claims": [
+    {
+     "id": "red-zone",
+     "text": "The optimal HIIT stimulus is believed to be at least several minutes per session above 90% of VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "buchheit2013a"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013a",
+       "quote": "It is believed that an optimal stimulus to elicit both maximal cardiovascular and peripheral adaptations is one where athletes spend at least several minutes per session in their 'red zone,' which generally means reaching at least 90% of their maximal oxygen uptake (VO2max).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "odden-fraction",
+     "text": "In 22 well-trained cyclists, gains after 9 weeks of interval training were larger in those who reached a higher % of VO₂max in the work intervals.",
+     "grade": "weak",
+     "sources": [
+      "odden2024"
+     ],
+     "evidence": [
+      {
+       "source": "odden2024",
+       "quote": "In conclusion, improvements in endurance measures were positively related to the % of VO2max achieved during interval training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acute-red-zone-def"
+  },
+  {
+   "type": "question",
+   "item": "acute-odden-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "acute-intermittent",
+   "title": "Stop–start keeps VO₂ higher for longer",
+   "text": "Eight runners did two track sessions to exhaustion: a 30-30 (30 s at 100%, 30 s at 50% of vVO₂max), and a continuous run at about 91% of vVO₂max. The 30-30 held them at VO₂max for **7 min 51 s**, the continuous run for only **2 min 42 s** [[c:billat-time]]. Blood lactate was a little lower in the 30-30 (6.8 vs 7.5 mmol·L⁻¹), not a clear difference [[c:billat-lactate]].\n\nOne reason: oxygen uptake is slow to change (its [kinetics](g:vo2-kinetics)), so in 30 s of easy running it doesn't fall far, and the next rep starts near the top. The relief lets you go on; VO₂ stays high.\n\nA caution: only 8 runners, and a huge spread between them ([SD](g:standard-deviation) 6 min 38 s).",
+   "claims": [
+    {
+     "id": "billat-time",
+     "text": "In 8 runners, a 30-30 at 100%/50% of vVO₂max gave about 7 min 51 s at VO₂max, against 2 min 42 s in a continuous run at about 91% of vVO₂max.",
+     "grade": "weak",
+     "sources": [
+      "billat2000"
+     ],
+     "evidence": [
+      {
+       "source": "billat2000",
+       "quote": "the time spent specifically at VO2max was much less than that during the alternating low/high intensity exercise protocol [2 min 42 s (SD 3 min 09 s) for v delta 50 run vs 7 min 51 s (SD 6 min 38 s) in 19 (SD 5) interval runs]",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "billat-lactate",
+     "text": "Blood lactate was a little, not significantly, lower in the 30-30 than in the continuous run (6.8 vs 7.5 mmol·L⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "billat2000"
+     ],
+     "evidence": [
+      {
+       "source": "billat2000",
+       "quote": "The blood lactate responses were less pronounced in the interval runs than for the v delta 50 runs, but not significantly so",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acute-billat-choose",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "acute-short-vs-long",
+   "title": "30 s reps beat longer reps, at a price",
+   "text": "In cyclists, Rønnestad and Hansen had 13 well-trained men ride at maximal aerobic power to exhaustion, with work bouts of 30 s or longer and reliefs half as long. The 30 s format gave the most time above 90% of [VO₂peak](g:vo2peak): the bigger stimulus [[c:ronn-30s]].\n\nIn 2024, 19 cyclists (11 women) did 6 × 8 min at the same average power three ways. The 30/15 version (30 s at 118%, 15 s at 60% of their 40-min power) gave more time at or above 90% of VO₂max than steady riding: about 1123 vs 879 s, in women and men alike [[c:urianstad-time]].\n\nThe price: the 30/15 felt harder, with higher [RPE](g:rpe) and higher blood lactate [[c:urianstad-rpe]].",
+   "claims": [
+    {
+     "id": "ronn-30s",
+     "text": "In 13 well-trained male cyclists working at MAP, 30 s work intervals gave longer time above 90% of VO₂peak than longer work intervals.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2016"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2016",
+       "quote": "the present study suggests that the 30-second work interval protocol acutely induces a larger exercise stimulus in well-trained cyclists than the protocols using work periods of 50% of Tmax or 80% of Tmax.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "urianstad-time",
+     "text": "At the same mean power, 30/15 intervals gave more time at or above 90% of VO₂max than steady riding (about 1123 vs 879 s), in female and male cyclists.",
+     "grade": "weak",
+     "sources": [
+      "urianstad2024"
+     ],
+     "evidence": [
+      {
+       "source": "urianstad2024",
+       "quote": "Overall, mean %V˙O2max and time ≥90% of V˙O2max were higher during 30/15 compared to CON (86.7 (10.1)% and 1123 (787) s versus 85.0 (10.4)% and 879 (779) s, respectively; both p ≤ 0.01)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "urianstad-rpe",
+     "text": "The 30/15 session gave higher RPE and blood lactate than the steady session.",
+     "grade": "weak",
+     "sources": [
+      "urianstad2024"
+     ],
+     "evidence": [
+      {
+       "source": "urianstad2024",
+       "quote": "the participants reported higher RPE and session RPE during 30/15 compared to CON in the current study.",
+       "level": "full-text"
+      },
+      {
+       "source": "urianstad2024",
+       "quote": "The higher levels of RPE and session RPE during 30/15 compared to CON in the present study are supported by the concomitantly higher absolute and relative mean VE, mean BR, and mean [La−].",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acute-format-choice"
+  },
+  {
+   "type": "concept",
+   "id": "acute-wprime",
+   "title": "Reading a set through W′",
+   "text": "The critical power model gives a second lens. Above [critical power](g:critical-power), [W′](g:w-prime) is spent at P − CP joules each second, in a straight line; below CP it refills along a curve [[c:wbal-rules]].\n\nSo four dials decide how long you last in a set: work power, work duration, relief power and relief duration. Raise any of the first three and you fail sooner; lengthen the relief and you last longer [[c:four-factors]].\n\nA well-built set leaves [W′ balance](g:w-prime-balance) close to zero on the last rep, not on the third. The refill rate is personal and only roughly known, so treat the sums below as a guide.",
+   "claims": [
+    {
+     "id": "wbal-rules",
+     "text": "W′ is assumed to be spent linearly above CP and refilled along a curve below CP, at rates that vary a lot between people.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "However, while the utilization of W′ may be assumed to be linear, studies indicate that the reconstitution of W′ may be curvilinear with kinetics that are highly variable between individuals.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "four-factors",
+     "text": "Tolerance in intervals depends on work power and duration and recovery power and duration: longer recoveries extend it, raising any of the other three shortens it.",
+     "grade": "moderate",
+     "sources": [
+      "jones2017"
+     ],
+     "evidence": [
+      {
+       "source": "jones2017",
+       "quote": "it can be shown that performance during intermittent exercise is related to four factors: the intensity and duration of the work intervals and the intensity and duration of the recovery intervals.",
+       "level": "full-text"
+      },
+      {
+       "source": "jones2017",
+       "quote": "if one of PW, DW, or PR is increased while the other variables are held constant, exercise tolerance is reduced; however, if DR is increased while the other variables are held constant, exercise tolerance is increased.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "acute-wprime-example",
+   "title": "How many reps before W′ runs out?",
+   "problem": "A cyclist has CP 280 W and W′ 18 kJ. She rides 30/15 with work at 400 W. Suppose each 15 s relief refills about 1.2 kJ. Roughly how many reps can she do?",
+   "steps": [
+    "W′ spent per work interval = (P − CP) × time = (400 − 280) W × 30 s = 3600 J = 3.6 kJ.",
+    "Net cost of one rep (work minus relief refill) = 3.6 − 1.2 = 2.4 kJ.",
+    "Reps ≈ W′ ÷ net cost per rep = 18 ÷ 2.4 = 7.5: W′ runs out during about the 8th rep.",
+    "To finish 13 reps, the net cost must fall to about 18 ÷ 13 ≈ 1.4 kJ per rep: lower work power, or a longer or easier relief."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acute-wprime-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "acute-four-factors"
+  },
+  {
+   "type": "question",
+   "item": "acute-wprime-calc",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "acute-anaerobic",
+   "title": "Same VO₂, different cost",
+   "text": "Two sessions can hold you just as close to VO₂max yet differ a lot in how much energy comes from anaerobic sources [[c:anaerobic-differs]]. Harder or longer reps, and above all all-out sprints, lean more on [glycolysis](g:glycolysis) and raise blood lactate more.\n\nWhy does it matter? A session with a high glycolytic load, and a high strain on the legs, costs more recovery. Before a race or a key session, choose a format that gives time near VO₂max with less of that cost. In a phase meant to build tolerance to hard racing, the glycolytic load may be the point.\n\nSo plan a session by what it does, not only by its name.",
+   "claims": [
+    {
+     "id": "anaerobic-differs",
+     "text": "HIIT formats with similar, maximal cardiorespiratory responses can have very different anaerobic energy contributions.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2013b"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013b",
+       "quote": "Contrasting HIT formats that elicit similar (and maximal) cardiorespiratory responses have been associated with distinctly different anaerobic energy contributions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acute-anaerobic-choice"
+  },
+  {
+   "type": "question",
+   "item": "acute-billat-choose",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Coaches aim for several minutes per session above 90% of VO₂max: an expert view with some correlational support.",
+    "Stop–start formats (30-30, 30/15) hold VO₂ near its maximum longer than continuous running or riding, because VO₂ falls little in short reliefs.",
+    "At the same mean power, 30/15 gave more time ≥90% of VO₂max than steady riding, at the cost of higher RPE and lactate.",
+    "In W′ terms, work power, work duration and relief power drain you faster; a longer relief lets you last. Net W′ cost per rep ≈ (P − CP) × work time − refill.",
+    "Formats with the same VO₂ response can differ a lot in glycolytic load and recovery cost."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "acute-red-zone-def",
+   "concept": "acute-red-zone",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "buchheit2013a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says a HIIT session 'worked' because the athlete spent 6 min in the red zone. What does she most likely mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 min above 90% of VO₂max",
+       "correct": true,
+       "why": "Right: the 'red zone' usually means at least 90% of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "6 min above critical power",
+       "why": "Above CP, VO₂ climbs towards VO₂max, but time above CP and time near VO₂max are not the same thing."
+      },
+      {
+       "id": "c",
+       "text": "6 min with heart rate in zone 5",
+       "why": "Heart rate lags behind VO₂ and is a rough guide; the red zone is defined by VO₂."
+      },
+      {
+       "id": "d",
+       "text": "6 min with lactate above 4 mmol·L⁻¹",
+       "why": "Lactate shows glycolytic load, not how close VO₂ is to its maximum."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acute-odden-appraisal",
+   "concept": "acute-red-zone",
+   "bloom": "evaluate",
+   "sources": [
+    "odden2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 22 well-trained cyclists, those who rode at a higher % of VO₂max during 9 weeks of intervals improved more. What most limits the claim that pushing % of VO₂max higher causes bigger gains?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It's a correlation in a small group",
+       "correct": true,
+       "why": "Right: riders weren't assigned to different % of VO₂max, so other differences between them could explain both the higher % and the bigger gains."
+      },
+      {
+       "id": "b",
+       "text": "VO₂ wasn't measured during the sessions",
+       "why": "It was measured in every interval session; that's the strength of this study."
+      },
+      {
+       "id": "c",
+       "text": "Nine weeks is too short to change anything",
+       "why": "Nine weeks is long enough for measurable gains; the gains are what was related to % of VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "Cyclists can't reach 90% of VO₂max in intervals",
+       "why": "Well-trained cyclists do reach it; time at or above 90% is routinely measured."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acute-billat-choose",
+   "concept": "acute-intermittent",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "billat2000",
+    "buchheit2013a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has one track session to get as much time near VO₂max as she can. Which session fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 s at vVO₂max, 30 s at half of it, repeated",
+       "correct": true,
+       "why": "Right: in Billat's study, the 30-30 held runners at VO₂max about three times longer than a continuous run."
+      },
+      {
+       "id": "b",
+       "text": "One continuous run at about 90% of vVO₂max to exhaustion",
+       "why": "This can reach VO₂max, but it held runners there for only about 2–3 min."
+      },
+      {
+       "id": "c",
+       "text": "A steady 60 min run at an easy pace",
+       "why": "Easy running stays far below VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "30 s all-out sprints with 4 min standing rest",
+       "why": "Long standing rests let VO₂ fall back each time, so little time is spent near VO₂max."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete wants as much time near VO₂max on the bike as possible in one session. Which session fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 s at MAP with short easy reliefs, repeated",
+       "correct": true,
+       "why": "Right: short work intervals with short reliefs keep VO₂ near its maximum; VO₂ falls little in a short relief."
+      },
+      {
+       "id": "b",
+       "text": "One continuous effort a little below MAP to exhaustion",
+       "why": "A continuous severe effort reaches VO₂max only late and holds it briefly."
+      },
+      {
+       "id": "c",
+       "text": "A 2 h steady ride at an easy power",
+       "why": "An easy ride stays far below VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "6 × 30 s all-out with 4 min easy spinning",
+       "why": "In SIT the long reliefs let VO₂ fall back each time; it's built for all-out power, not time near VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acute-format-choice",
+   "concept": "acute-short-vs-long",
+   "bloom": "analyse",
+   "sources": [
+    "urianstad2024",
+    "ronnestad2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclists ride 6 × 8 min at the same average power, either steady or as 30/15 (30 s hard, 15 s easy). Compared with steady, what does the 30/15 most likely give?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More time ≥90% of VO₂max and a higher RPE",
+       "correct": true,
+       "why": "Right: 30/15 gave about 1123 vs 879 s at or above 90% of VO₂max, and felt harder."
+      },
+      {
+       "id": "b",
+       "text": "Less time ≥90% of VO₂max, since power keeps dropping",
+       "why": "The 15 s reliefs are too short for VO₂ to fall far; time near VO₂max went up."
+      },
+      {
+       "id": "c",
+       "text": "The same of everything, as average power is equal",
+       "why": "Same average power, different pattern: VO₂, RPE and lactate all differed."
+      },
+      {
+       "id": "d",
+       "text": "More time ≥90% of VO₂max in men only",
+       "why": "The difference was found in both women and men."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acute-wprime-calc",
+   "concept": "acute-wprime",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider has CP 300 W and W′ 20 kJ. He does 30 s reps at 420 W, and each relief refills about 1.6 kJ. Using the net W′ cost per rep, roughly how many reps can he do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 10",
+       "correct": true,
+       "why": "Right: (420 − 300) × 30 = 3.6 kJ per rep; net 3.6 − 1.6 = 2.0 kJ; 20 ÷ 2.0 = 10."
+      },
+      {
+       "id": "b",
+       "text": "About 5.6",
+       "why": "This forgets the refill in the reliefs: 20 ÷ 3.6."
+      },
+      {
+       "id": "c",
+       "text": "About 1.8",
+       "why": "This uses full power, not power above CP: 420 × 30 = 12.6 kJ, minus 1.6, then 20 ÷ 11."
+      },
+      {
+       "id": "d",
+       "text": "About 12.5",
+       "why": "This divides W′ by the refill (20 ÷ 1.6) instead of by the net cost per rep."
+      }
+     ],
+     "solution": "Spent per rep = (P − CP) × t = 120 W × 30 s = 3600 J = 3.6 kJ. Net = 3.6 − 1.6 = 2.0 kJ. Reps ≈ 20 ÷ 2.0 = 10."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete has CP 250 W and W′ 15 kJ. She does 40 s reps at 325 W, and each relief refills about 1.0 kJ. Using the net W′ cost per rep, roughly how many reps can she do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7.5",
+       "correct": true,
+       "why": "Right: (325 − 250) × 40 = 3.0 kJ per rep; net 2.0 kJ; 15 ÷ 2.0 = 7.5."
+      },
+      {
+       "id": "b",
+       "text": "About 5",
+       "why": "This forgets the refill in the reliefs: 15 ÷ 3.0."
+      },
+      {
+       "id": "c",
+       "text": "About 1.25",
+       "why": "This uses full power, not power above CP: 325 × 40 = 13 kJ, minus 1.0, then 15 ÷ 12."
+      },
+      {
+       "id": "d",
+       "text": "About 15",
+       "why": "This divides W′ by the refill (15 ÷ 1.0) instead of by the net cost per rep."
+      }
+     ],
+     "solution": "Spent per rep = 75 W × 40 s = 3000 J = 3.0 kJ. Net = 3.0 − 1.0 = 2.0 kJ. Reps ≈ 15 ÷ 2.0 = 7.5."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist has CP 320 W and W′ 24 kJ. He does 60 s reps at 400 W, and each relief refills about 1.8 kJ. Using the net W′ cost per rep, roughly how many reps can he do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 8",
+       "correct": true,
+       "why": "Right: (400 − 320) × 60 = 4.8 kJ per rep; net 3.0 kJ; 24 ÷ 3.0 = 8."
+      },
+      {
+       "id": "b",
+       "text": "About 5",
+       "why": "This forgets the refill in the reliefs: 24 ÷ 4.8."
+      },
+      {
+       "id": "c",
+       "text": "About 1.1",
+       "why": "This uses full power, not power above CP: 400 × 60 = 24 kJ, minus 1.8, then 24 ÷ 22.2."
+      },
+      {
+       "id": "d",
+       "text": "About 13.3",
+       "why": "This divides W′ by the refill (24 ÷ 1.8) instead of by the net cost per rep."
+      }
+     ],
+     "solution": "Spent per rep = 80 W × 60 s = 4800 J = 4.8 kJ. Net = 4.8 − 1.8 = 3.0 kJ. Reps ≈ 24 ÷ 3.0 = 8."
+    }
+   ]
+  },
+  {
+   "id": "acute-four-factors",
+   "concept": "acute-wprime",
+   "bloom": "apply",
+   "sources": [
+    "jones2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider keeps cracking at rep 9 of 13 in a 30/15 set. He wants to finish the set without lowering the 30 s power. Which change helps most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lengthen the relief, say to 20 s",
+       "correct": true,
+       "why": "Right: of these options, only a longer relief extends tolerance: more W′ refills between reps. (An easier relief would also help.)"
+      },
+      {
+       "id": "b",
+       "text": "Ride the 15 s reliefs harder",
+       "why": "A higher relief power refills less W′ (none at all if it is above CP), so he fails sooner."
+      },
+      {
+       "id": "c",
+       "text": "Make the work bouts 40 s",
+       "why": "Longer work intervals spend more W′ per rep."
+      },
+      {
+       "id": "d",
+       "text": "Shorten the relief to 10 s",
+       "why": "A shorter relief refills less W′ per rep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acute-anaerobic-choice",
+   "concept": "acute-anaerobic",
+   "bloom": "evaluate",
+   "sources": [
+    "buchheit2013b",
+    "billat2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner races a 10 km in three days and wants one last session near VO₂max that costs little recovery. Which choice is best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A short 30-30 set at vVO₂max",
+       "correct": true,
+       "why": "Right: it gives time near VO₂max with less glycolytic load than sprints and a small total volume."
+      },
+      {
+       "id": "b",
+       "text": "All-out 30 s sprints with long rests",
+       "why": "Sprints carry the biggest glycolytic and muscular load, the opposite of what she needs."
+      },
+      {
+       "id": "c",
+       "text": "A continuous run to exhaustion just below vVO₂max",
+       "why": "Running to exhaustion is costly and gave less time at VO₂max than a 30-30."
+      },
+      {
+       "id": "d",
+       "text": "A long threshold set of 3 × 15 min",
+       "why": "Low in lactate, but long and tiring three days out, and it spends little time near VO₂max."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

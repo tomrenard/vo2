@@ -1,0 +1,664 @@
+{
+ "id": "int-zones",
+ "module": "t3-intensity",
+ "title": "Intensity zones",
+ "goal": "Explain how training zones are set from LT1/VT1 and LT2/RCP, how 3-, 5- and 7-zone systems relate, and why fixed percentages of HRmax or VO₂max put people in the wrong zone.",
+ "requires": [
+  "ad-timeline"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "training-zone",
+    "three-zone-model"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "iz-why",
+   "title": "What a zone is for",
+   "text": "A [training zone](g:training-zone) is a band of power, pace or heart rate you train in. It is only useful if everyone inside the same zone gets roughly the same response from the body.\n\nYou already have the map for that: the [intensity domains](g:intensity-domain). Below the first [lactate threshold](g:lactate-threshold) is the [moderate domain](g:moderate-domain); between it and [critical power](g:critical-power) is the [heavy domain](g:heavy-domain); above is the [severe domain](g:severe-domain). Each brings a distinct response in muscle chemistry, blood acid and breathing [[c:iz-domains-distinct]].\n\nSo a good zone system is a way of keeping each session inside the domain you meant it for. The numbers on your bike computer are only labels for those bands.",
+   "claims": [
+    {
+     "id": "iz-domains-distinct",
+     "text": "Zones set at the two thresholds match the moderate, heavy and severe domains, which bring distinct metabolic, acid–base and gas-exchange responses.",
+     "grade": "strong",
+     "sources": [
+      "burnley2022",
+      "jamnick2020"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2022",
+       "quote": "These zones are defensible because they correspond to the moderate, heavy, and severe exercise intensity domains that have been comprehensively characterized and that evoke discrete muscle metabolic, blood acid–base, and pulmonary gas exchange responses to exercise",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-purpose"
+  },
+  {
+   "type": "concept",
+   "id": "iz-three",
+   "title": "The three-zone model",
+   "text": "Research on training uses one model above all, the [three-zone model](g:three-zone-model) [[c:iz-three-def]]:\n\n| zone | where | domain |\n|---|---|---|\n| 1 | below LT1 or [VT1](g:vt1) | moderate |\n| 2 | between the thresholds | heavy |\n| 3 | above LT2 or the [respiratory compensation point](g:respiratory-compensation-point) | severe |\n\nStudies treat lactate and breathing thresholds as roughly the same, and the upper one as close to [MLSS](g:mlss) or critical power [[c:iz-thresholds-equivalent]]. That is a simplification: the thresholds don't fall at exactly the same point (you met this in the thresholds module).\n\nFor the upper boundary, critical power (or [critical speed](g:critical-speed) for runners) has the best evidence of marking where the severe domain starts [[c:iz-cp-boundary]].",
+   "claims": [
+    {
+     "id": "iz-three-def",
+     "text": "The most used model defines zone 1 below the first threshold, zone 3 above the second, and zone 2 between them.",
+     "grade": "strong",
+     "sources": [
+      "silvaoliveira2024"
+     ],
+     "evidence": [
+      {
+       "source": "silvaoliveira2024",
+       "quote": "The most used model defines Zone 1 (Z1) as intensity below the first ventilatory or lactate threshold, Zone 3 (Z3) as above the second ventilatory or lactate threshold, and Zone 2 (Z2) between Z1 and Z3",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "iz-thresholds-equivalent",
+     "text": "Intensity distribution studies treat lactate and ventilatory thresholds as roughly equivalent, and the second threshold as broadly equivalent to MLSS or critical power/speed.",
+     "grade": "moderate",
+     "sources": [
+      "foster2022"
+     ],
+     "evidence": [
+      {
+       "source": "foster2022",
+       "quote": "Recognizing that the lactate and ventilatory thresholds are not precisely the same, the general practice in the TID literature has been to treat them as more or less equivalent, and with the second lactate/ventilatory threshold seen as broadly equivalent to the maximal lactate steady state or critical power/speed.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "iz-cp-boundary",
+     "text": "LT1, GET and VT are supported for the moderate/heavy boundary; for the heavy/severe boundary only CP and CS are well supported.",
+     "grade": "moderate",
+     "sources": [
+      "jamnick2020"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2020",
+       "quote": "There is some evidence to support the validity of LT1, GET, and VT to delineate the moderate and heavy domains of exercise. However, there is little evidence to support the validity of most commonly used methods, with exception of CP and CS, to delineate the heavy and severe domains of exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-zone2-recall"
+  },
+  {
+   "type": "example",
+   "id": "iz-zone-example",
+   "title": "Which zone is this ride?",
+   "problem": "A cyclist's step test puts LT1 at 190 W and critical power at 265 W. She rides 2 × 20 min at 235 W. Which zone of the three-zone model is that?",
+   "steps": [
+    "Zone 1 is below LT1: under 190 W.",
+    "Zone 2 is from LT1 to critical power: 190–265 W.",
+    "Zone 3 is above critical power: over 265 W.",
+    "235 W lies between 190 and 265 W, so this is zone 2: the heavy domain. Lactate rises, then settles after several minutes."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-zone-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "iz-zone-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "iz-more-zones",
+   "title": "Five and seven zones",
+   "text": "Coaches often split the range more finely. A common Norwegian 5-zone scale puts zones 1–2 below LT1, zone 3 between the thresholds and zones 4–5 above LT2 [[c:iz-five-zone]]. Some cycling programmes use seven zones: one study of 14 trained cyclists set seven heart-rate zones from maximal heart rate, and zones 1–3 fell below the lactate threshold, zones 4–7 at or above it [[c:iz-seven-zone]].\n\nMore zones describe sessions more finely, but add no new physiology: there are still three domains underneath. And the same label means different things in different systems. 'Zone 3' is between the thresholds on the 5-zone scale but above LT2 in three zones. Always ask which model a plan or study uses.",
+   "claims": [
+    {
+     "id": "iz-five-zone",
+     "text": "A common 5-zone scale puts zones 1–2 below LT1, zone 3 between LT1 and LT2, and zones 4–5 above LT2.",
+     "grade": "moderate",
+     "sources": [
+      "tonnessen2014",
+      "stoggl2015"
+     ],
+     "evidence": [
+      {
+       "source": "tonnessen2014",
+       "quote": "or a 5-zone model were zones 1–2 are below the first lactate threshold",
+       "level": "full-text"
+      },
+      {
+       "source": "stoggl2015",
+       "quote": "Some investigators have separated the TID into five zones",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "iz-seven-zone",
+     "text": "One cycling study set seven heart-rate zones from maximal heart rate, with zones 1–3 below the lactate threshold and 4–7 at or above it.",
+     "grade": "weak",
+     "sources": [
+      "dionne2018"
+     ],
+     "evidence": [
+      {
+       "source": "dionne2018",
+       "quote": "We provided a training diary to participants that included training zones based on the maximal HR at pre-camp to quantify training loads",
+       "level": "full-text"
+      },
+      {
+       "source": "dionne2018",
+       "quote": "Seven training zones were calculated and divided into two major zones: 1) below the LT (zones 1, 2 and 3), and 2) at and above the LT (zones 4, 5, 6 and 7).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-five-map"
+  },
+  {
+   "type": "concept",
+   "id": "iz-fixed-percent",
+   "title": "Why fixed percentages misplace people",
+   "text": "The quick way to set zones is a fixed share of a maximum: 75% of [HRmax](g:hrmax), 85% of [VO2max](g:vo2max). It's easy, but the thresholds sit at very different percentages in different people. In 100 women and men, LT fell anywhere from **60 to 90% of HRmax** and MLSS from **75 to 97%** [[c:iz-iannetta-range]].\n\nSo at the same '75% HRmax', one athlete is in the moderate domain and another in the heavy one [[c:iz-same-percent]]. The same applies to [heart rate reserve](g:heart-rate-reserve). Reviews conclude that fixed percentages of maximal values do little to keep people in the same domain [[c:iz-little-merit]]. Anchoring zones to your own thresholds fixes this.",
+   "claims": [
+    {
+     "id": "iz-iannetta-range",
+     "text": "Across 100 women and men, LT occurred at 60–90% and MLSS at 75–97% of HRmax (45–74% and 69–96% of VO2max).",
+     "grade": "moderate",
+     "sources": [
+      "iannetta2020"
+     ],
+     "evidence": [
+      {
+       "source": "iannetta2020",
+       "quote": "The large ranges in both sexes at which LT and MLSS occurred on the basis of %V˙O2max (LT, 45%-74%; MLSS, 69%-96%), %WRpeak (LT, 23%-57%; MLSS, 44%-71%), and %HRmax (LT, 60%-90%; MLSS, 75%-97%) elicited large variability in the number of individuals distributed in each domain at the fixed-percentages examined.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "iz-same-percent",
+     "text": "At the same %VO2max or %HRmax, some people are above and others below their metabolic thresholds.",
+     "grade": "strong",
+     "sources": [
+      "mann2013",
+      "iannetta2020"
+     ],
+     "evidence": [
+      {
+       "source": "mann2013",
+       "quote": "Furthermore, some individuals may be above and others below metabolic thresholds such as the aerobic threshold (AerT) or anaerobic threshold (AnT) at the same %VO2max or %HRmax.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "iz-little-merit",
+     "text": "Fixed percentages of maximal anchors (VO2max, HRmax, peak power) do little to place people in the same intensity domain.",
+     "grade": "strong",
+     "sources": [
+      "jamnick2020",
+      "iannetta2020"
+     ],
+     "evidence": [
+      {
+       "source": "jamnick2020",
+       "quote": "it is apparent that prescribing exercise intensity based on a fixed percentage of these maximal anchors has little merit for eliciting distinct or domain-specific homeostatic perturbations",
+       "level": "abstract"
+      },
+      {
+       "source": "iannetta2020",
+       "quote": "Contemporary gold-standard methods for exercise prescription based on fixed-percentages of maximum values conform poorly to exercise intensity domains and thus do not adequately control the metabolic stimulus.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "iz-percent-example",
+   "title": "Same percentage, different zone",
+   "problem": "Two runners both have an HRmax of 190 bpm. Their coach sets every easy run at 75% HRmax. Runner A's LT1 is at 62% HRmax; runner B's is at 85%. Where is each runner on an easy run?",
+   "steps": [
+    "Easy-run heart rate: 0.75 × 190 = 142.5, about 143 bpm.",
+    "Runner A's LT1: 0.62 × 190 ≈ 118 bpm. 143 bpm is well above it, so A's 'easy' run is zone 2 (heavy domain).",
+    "Runner B's LT1: 0.85 × 190 ≈ 162 bpm. 143 bpm is far below it: zone 1, truly easy.",
+    "One prescription, two different sessions. Both 62% and 85% lie inside the 60–90% range measured in real athletes."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-percent-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "iz-percent-critique"
+  },
+  {
+   "type": "concept",
+   "id": "iz-keeping-anchors",
+   "title": "Anchors cost effort and drift",
+   "text": "Threshold zones are better in principle, but they have costs. A single step test can misplace a threshold, and checking it properly takes extra lab visits. Thresholds also vary more from day to day than HRmax or VO2max do [[c:iz-threshold-noise]]. And thresholds move as you get fitter, so zones from last season's test may now be too easy or too hard.\n\nPractical answers:\n\n- Retest every few months, or after a big change in fitness.\n- Check zone 1 with the [talk test](g:talk-test) or [RPE](g:rpe): if you can't talk comfortably, you are probably past LT1.\n- For the top boundary, use critical power or critical speed from your best efforts, or a fresh field test.",
+   "claims": [
+    {
+     "id": "iz-threshold-noise",
+     "text": "Thresholds from a single incremental test may be wrong in some people without verification trials, and they vary more from day to day than VO2max or HRmax.",
+     "grade": "moderate",
+     "sources": [
+      "mann2013"
+     ],
+     "evidence": [
+      {
+       "source": "mann2013",
+       "quote": "Thresholds determined from single incremental tests cannot be assumed to be accurate in all individuals without verification trials.",
+       "level": "abstract"
+      },
+      {
+       "source": "mann2013",
+       "quote": "Threshold measurements also tend to show higher day-to-day variation than VO2max or HRmax.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "iz-retest"
+  },
+  {
+   "type": "question",
+   "item": "iz-zone-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "iz-percent-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A zone is useful only if everyone in it gets the same response: zones should map onto the moderate, heavy and severe domains.",
+    "Three-zone model: zone 1 below LT1/VT1, zone 2 between the thresholds, zone 3 above LT2/RCP (close to MLSS or critical power).",
+    "5- and 7-zone systems describe sessions more finely but sit on the same three domains; the same zone number can mean different things.",
+    "Fixed % of HRmax or VO2max misplaces people: LT ranges from 60 to 90% of HRmax between individuals.",
+    "Threshold anchors need testing, carry day-to-day noise and drift with fitness: retest and cross-check with talk test or RPE."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "iz-purpose",
+   "concept": "iz-why",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "burnley2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What makes a training-zone system good?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Each zone keeps everyone in it inside the same intensity domain",
+       "why": "Right: a zone is useful when it brings a similar physiological response in everyone who trains in it.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It has as many zones as possible, for precision",
+       "why": "More zones describe sessions in more detail but add no new physiology: there are still three domains."
+      },
+      {
+       "id": "c",
+       "text": "It uses the same percentages of maximum for everyone",
+       "why": "Equal percentages give different responses in different people, because thresholds fall at different percentages."
+      },
+      {
+       "id": "d",
+       "text": "Its zones are equal steps of heart rate",
+       "why": "Equal steps in heart rate don't line up with the thresholds, which is where the body's response changes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iz-zone2-recall",
+   "concept": "iz-three",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "silvaoliveira2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the three-zone model used in research, where is zone 2?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Between the first and second thresholds",
+       "why": "Right: zone 2 lies between LT1/VT1 and LT2/RCP, roughly the heavy domain.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Just below the first threshold",
+       "why": "That is the top of zone 1, still in the moderate domain."
+      },
+      {
+       "id": "c",
+       "text": "Between the second threshold and VO₂max",
+       "why": "That is zone 3, the severe domain."
+      },
+      {
+       "id": "d",
+       "text": "At 60–70% of maximal heart rate",
+       "why": "Zones in this model are set by thresholds, not fixed percentages of HRmax."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iz-zone-calc",
+   "concept": "iz-three",
+   "bloom": "apply",
+   "sources": [
+    "silvaoliveira2024",
+    "jamnick2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has LT1 at 210 W and critical power at 290 W. He rides a long climb at 280 W. Which zone of the three-zone model is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Zone 2",
+       "why": "Right: 280 W is above LT1 (210 W) and below CP (290 W), so heavy domain, zone 2.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Zone 3",
+       "why": "Zone 3 starts above critical power (290 W); 280 W is 10 W under it."
+      },
+      {
+       "id": "c",
+       "text": "Zone 1",
+       "why": "Zone 1 is below LT1 (210 W); 280 W is far above it."
+      },
+      {
+       "id": "d",
+       "text": "It depends on his heart rate",
+       "why": "Power anchored to his own thresholds is enough to place the effort; heart rate lags and drifts."
+      }
+     ],
+     "solution": "Zone 1: under 210 W. Zone 2: 210–290 W. Zone 3: over 290 W. 280 W falls in 210–290 W, so zone 2."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VT1 is at 5:00 min·km⁻¹ and her respiratory compensation point at 4:10 min·km⁻¹. She runs a tempo at 4:25 min·km⁻¹. Which zone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Zone 2",
+       "why": "Right: 4:25 is faster than VT1 pace (5:00) and slower than RCP pace (4:10), so between the thresholds.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Zone 3",
+       "why": "Zone 3 would be faster than 4:10 per km; 4:25 is slower."
+      },
+      {
+       "id": "c",
+       "text": "Zone 1",
+       "why": "Zone 1 would be slower than 5:00 per km. Careful: with pace, a smaller number is faster."
+      },
+      {
+       "id": "d",
+       "text": "Zone 3, because 4:25 is faster than VT1 pace",
+       "why": "Faster than VT1 pace only takes her out of zone 1; zone 3 starts at RCP pace, 4:10 per km."
+      }
+     ],
+     "solution": "Slower than 5:00 = zone 1; 5:00 to 4:10 = zone 2; faster than 4:10 = zone 3. 4:25 lies between, so zone 2."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's heart rate at VT1 is 142 bpm and at the respiratory compensation point 168 bpm, both from a recent test. During a bike interval her heart rate settles at 172 bpm. Which zone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Zone 3",
+       "why": "Right: 172 bpm is above her RCP heart rate (168 bpm), so zone 3.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Zone 2",
+       "why": "Zone 2 is 142–168 bpm; 172 is above it."
+      },
+      {
+       "id": "c",
+       "text": "Zone 1",
+       "why": "Zone 1 is below 142 bpm."
+      },
+      {
+       "id": "d",
+       "text": "Zone 2, because the run thresholds are higher",
+       "why": "Run and bike thresholds can differ, but these were measured on the bike, so they apply."
+      }
+     ],
+     "solution": "Zone 1: under 142 bpm. Zone 2: 142–168 bpm. Zone 3: over 168 bpm. 172 bpm is zone 3."
+    }
+   ]
+  },
+  {
+   "id": "iz-five-map",
+   "concept": "iz-more-zones",
+   "bloom": "analyse",
+   "sources": [
+    "tonnessen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A plan written on the 5-zone scale (zones 1–2 below LT1, zone 3 between thresholds, zones 4–5 above LT2) prescribes '2 h in zone 3'. In the three-zone model that is:",
+     "options": [
+      {
+       "id": "a",
+       "text": "Zone 2: between the thresholds",
+       "why": "Right: zone 3 of the 5-zone scale is the between-threshold band, which is zone 2 of the three-zone model.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Zone 3: above LT2",
+       "why": "That mixes up the labels: zone 3 means different bands in the two systems."
+      },
+      {
+       "id": "c",
+       "text": "Zone 1: still easy",
+       "why": "Zones 1–2 of the 5-zone scale are the easy ones; zone 3 is above LT1."
+      },
+      {
+       "id": "d",
+       "text": "Impossible to say without HRmax",
+       "why": "The scale is defined by the thresholds, so the mapping is clear without HRmax."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iz-percent-calc",
+   "concept": "iz-fixed-percent",
+   "bloom": "apply",
+   "sources": [
+    "iannetta2020",
+    "mann2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists both have an HRmax of 180 bpm and are told to ride endurance at 80% HRmax. Rider A's LT1 is at 150 bpm, rider B's at 126 bpm. Where is each?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A in zone 1, B in zone 2",
+       "why": "Right: 0.80 × 180 = 144 bpm, below A's LT1 (150) but above B's (126).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Both in zone 1",
+       "why": "Rider B's LT1 is 126 bpm, so 144 bpm is above it: heavy domain."
+      },
+      {
+       "id": "c",
+       "text": "A in zone 2, B in zone 1",
+       "why": "That is reversed: the higher LT1 (A) leaves more room below it."
+      },
+      {
+       "id": "d",
+       "text": "Both in zone 2",
+       "why": "Rider A's LT1 is 150 bpm, above 144 bpm, so A is still in zone 1."
+      }
+     ],
+     "solution": "0.80 × 180 = 144 bpm. A: LT1 150 bpm > 144, so zone 1. B: LT1 126 bpm < 144, so zone 2."
+    },
+    {
+     "id": "b",
+     "stem": "Two runners with an HRmax of 200 bpm do easy runs at 70% HRmax. Runner A's LT1 is at 65% HRmax, runner B's at 80%. Which is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A is in zone 2, B in zone 1",
+       "why": "Right: 140 bpm is above A's LT1 (130 bpm) and below B's (160 bpm).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Both are in zone 1, since 70% is easy",
+       "why": "70% is easy for B but above A's LT1: a fixed share doesn't mean the same for both."
+      },
+      {
+       "id": "c",
+       "text": "A is in zone 1, B in zone 2",
+       "why": "Reversed: the runner whose LT1 is at the lower percentage is the one pushed above it."
+      },
+      {
+       "id": "d",
+       "text": "Both are in zone 2",
+       "why": "B's LT1 is 160 bpm, well above 140 bpm."
+      }
+     ],
+     "solution": "0.70 × 200 = 140 bpm. A's LT1 = 0.65 × 200 = 130 bpm → 140 is above: zone 2. B's LT1 = 0.80 × 200 = 160 bpm → zone 1."
+    }
+   ]
+  },
+  {
+   "id": "iz-percent-critique",
+   "concept": "iz-fixed-percent",
+   "bloom": "evaluate",
+   "sources": [
+    "iannetta2020",
+    "jamnick2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlon club sets the whole squad's threshold intervals at 88% HRmax. What is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is below MLSS for some athletes and above it for others",
+       "why": "Right: MLSS ranges from about 75 to 97% of HRmax, so 88% is heavy for some, severe for others.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "88% HRmax is too low to be called threshold for anyone",
+       "why": "For athletes whose MLSS is at 80% HRmax, 88% is above it."
+      },
+      {
+       "id": "c",
+       "text": "Heart rate can't be used for training intensity",
+       "why": "Heart rate is usable once anchored to the athlete's own thresholds; the issue is the fixed percentage."
+      },
+      {
+       "id": "d",
+       "text": "HRmax is unreliable from day to day",
+       "why": "HRmax is fairly stable; thresholds are the noisier measure."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iz-retest",
+   "concept": "iz-keeping-anchors",
+   "bloom": "apply",
+   "sources": [
+    "mann2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner set her zones from a lab test eight months ago. Since then her 10 km time has dropped by 2 min, and her 'zone 1' runs now feel very easy. Best next step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Retest, or update her thresholds from recent races, and reset the zones",
+       "why": "Right: thresholds move with fitness; zones from an old test are likely too low now.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Keep the zones: they come from a lab test, so they stay valid",
+       "why": "A lab test is a snapshot. Thresholds shift with training."
+      },
+      {
+       "id": "c",
+       "text": "Switch to 75% HRmax for easy runs",
+       "why": "A fixed percentage misplaces people more than updated thresholds do."
+      },
+      {
+       "id": "d",
+       "text": "Run zone 1 sessions harder by feel and ignore the zones",
+       "why": "Feel is a good cross-check, but resetting the anchors keeps every zone right, not just zone 1."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

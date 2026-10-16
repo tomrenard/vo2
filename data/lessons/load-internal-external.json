@@ -1,0 +1,1040 @@
+{
+ "id": "load-internal-external",
+ "module": "t3-load",
+ "title": "Internal and external load",
+ "goal": "Explain the difference between internal and external training load and calculate session-RPE, Banister, Edwards and Lucia scores for a session.",
+ "requires": [
+  "hiit-dose"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "training-load",
+    "external-load",
+    "internal-load",
+    "session-rpe",
+    "arbitrary-unit",
+    "trimp"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ie-two-loads",
+   "title": "What you did vs what it cost",
+   "text": "[Training load](g:training-load) is the dose of training. Since 2003 it has been split into two measurable parts [[c:load-two-components]]:\n\n- **[External load](g:external-load)**: what you did. Watts, kilojoules, km, pace, time.\n- **[Internal load](g:internal-load)**: what it cost your body. Heart rate, [RPE](g:rpe), lactate.\n\nThe body's responses to the work are what drive adaptation [[c:internal-drives]]. So both matter: the same 2 h at 200 W is a different dose in July heat, after a bad night, or six months fitter.\n\nComparing the two is information in itself: when the same external load starts to cost more internal load, fatigue (or heat, or illness) may be building [[c:load-dissociation]].",
+   "claims": [
+    {
+     "id": "load-two-components",
+     "text": "Training load has two measurable components: internal and external load.",
+     "grade": "moderate",
+     "sources": [
+      "impellizzeri2019"
+     ],
+     "evidence": [
+      {
+       "source": "impellizzeri2019",
+       "quote": "They described training load as having 2 measurable components: internal and external load.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "internal-drives",
+     "text": "Exercise causes psychophysiological responses, and these responses mediate the adaptations to training.",
+     "grade": "moderate",
+     "sources": [
+      "impellizzeri2019"
+     ],
+     "evidence": [
+      {
+       "source": "impellizzeri2019",
+       "quote": "Exercise is a stressor that induces various psychophysiological responses, which mediate cellular adaptations in many organ systems.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "load-dissociation",
+     "text": "A mismatch between external and internal load may reveal fatigue.",
+     "grade": "weak",
+     "sources": [
+      "halson2014"
+     ],
+     "evidence": [
+      {
+       "source": "halson2014",
+       "quote": "Dissociation between external and internal load units may reveal the state of fatigue of an athlete.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-classify",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-dissociation",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ie-srpe",
+   "title": "Session RPE: one number × minutes",
+   "text": "The simplest internal-load score is [session RPE](g:session-rpe). About 30 minutes after a session you answer one question, 'How was your workout?', on a 0–10 scale, then multiply by the minutes [[c:srpe-method]]. The result is in [arbitrary units](g:arbitrary-unit) (AU).\n\nThe 30-minute wait stops the last hard minutes from dominating the rating. Later work found the rating stays stable from 1 minute to 14 days after the session [[c:srpe-timing]].\n\nA review of 36 validation studies found it valid and reliable across many sports, ages and levels [[c:srpe-valid]]. Its strength is that one method fits every kind of session: a long ride, a track session, a swim or the gym.",
+   "claims": [
+    {
+     "id": "srpe-method",
+     "text": "Session-RPE load is the session's RPE (0–10 scale) multiplied by its duration in minutes, in arbitrary units.",
+     "grade": "strong",
+     "sources": [
+      "haddad2017"
+     ],
+     "evidence": [
+      {
+       "source": "haddad2017",
+       "quote": "A single arbitrary unit representing the magnitude of global TL for each session is then calculated by the multiplication of training intensity and the length of training (mins).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "srpe-timing",
+     "text": "sRPE was designed to be collected about 30 min after a session; it is stable from 1 minute to 14 days after.",
+     "grade": "moderate",
+     "sources": [
+      "foster2021"
+     ],
+     "evidence": [
+      {
+       "source": "foster2021",
+       "quote": "Originally designed to be acquired ∼30 minutes after a training bout to prevent the terminal elements of an exercise session from unduly influencing the rating, sRPE has been shown to be temporally robust across periods ranging from 1 minute to 14 days following an exercise session.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "srpe-valid",
+     "text": "Validation studies support sRPE as a valid, reliable load measure across sports, sexes, ages and levels.",
+     "grade": "moderate",
+     "sources": [
+      "haddad2017",
+      "foster2001"
+     ],
+     "evidence": [
+      {
+       "source": "haddad2017",
+       "quote": "These studies confirmed the validity and good reliability and internal consistency of session-RPE method in several sports and physical activities with men and women of different age categories (children, adolescents, and adults) among various expertise levels.",
+       "level": "abstract"
+      },
+      {
+       "source": "foster2001",
+       "quote": "We conclude that the session RPE method is a valid method of quantitating exercise training during a wide variety of types of exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ie-srpe-example",
+   "title": "A day of session-RPE load",
+   "problem": "A cyclist rides 87 min in the morning and rates it 4 ('somewhat hard'). In the evening she runs a 60-min interval session and rates it 7. What is her session-RPE load for the day?",
+   "steps": [
+    "Load of each session = RPE × duration in minutes.",
+    "Ride: 4 × 87 = 348 AU.",
+    "Run: 7 × 60 = 420 AU.",
+    "Day: 348 + 420 = 768 AU. The units are arbitrary: compare this only with her own other days, not with watts or another athlete's scores."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-srpe-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-srpe-timing"
+  },
+  {
+   "type": "concept",
+   "id": "ie-banister",
+   "title": "Banister's TRIMP: heart rate, weighted",
+   "text": "A [TRIMP](g:trimp) (training impulse) scores a session from heart rate. Banister's version uses minutes and the average fraction of [heart-rate reserve](g:heart-rate-reserve) used (ΔHR), weighted by an exponential [[c:banister-formula]]:\n\n**TRIMP = D × ΔHR × e^(b × ΔHR)**\n\n- D = duration (min)\n- ΔHR = (HR average − HR rest) ÷ (HR max − HR rest)\n- b = 1.92 for men, 1.67 for women\n\nThe exponential makes hard minutes count far more: for men, the weighting is about 2.6 at ΔHR 0.5 and 5.6 at 0.9.\n\nIts weak point: one average heart rate for the whole session. A steady ride and a ride of hard surges with the same average score the same.",
+   "claims": [
+    {
+     "id": "banister-formula",
+     "text": "Banister's TRIMP = duration × ΔHR ratio × e^(b × ΔHR ratio), with b = 1.92 for men and 1.67 for women, and ΔHR ratio = (average − resting HR) ÷ (maximal − resting HR).",
+     "grade": "strong",
+     "sources": [
+      "falkneto2020"
+     ],
+     "evidence": [
+      {
+       "source": "falkneto2020",
+       "quote": "TRIMP = D × Δ heart rate ratio × e b × Δ heart rate ratio , where D = session duration, the constant e = 2.718, the weighting factor b = 1.67 for women and 1.92 for men, and ∆ heart rate ratio = (average heart rate − resting heart rate) ÷ (maximal heart rate − resting heart rate; Sanders et al., 2017 ).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ie-banister-example",
+   "title": "Banister TRIMP for a 1-hour ride",
+   "problem": "A male cyclist rides 60 min at an average heart rate of 148 bpm. His resting heart rate is 50 bpm and his maximum 190 bpm. What is his Banister TRIMP?",
+   "steps": [
+    "ΔHR = (148 − 50) ÷ (190 − 50) = 98 ÷ 140 = 0.70.",
+    "Weighting = e^(1.92 × 0.70) = e^1.344 = 3.83.",
+    "TRIMP = 60 × 0.70 × 3.83 = 161.",
+    "Without the weighting it would be only 60 × 0.70 = 42: the exponential is what makes intensity count."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-banister-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-banister-surges"
+  },
+  {
+   "type": "concept",
+   "id": "ie-zone-trimps",
+   "title": "Edwards and Lucia: minutes in zones",
+   "text": "Zone-based TRIMPs avoid the single average: they count minutes in each heart-rate zone and weight them.\n\n**Edwards** uses five zones of [HRmax](g:hrmax): 50–59% ×1, 60–69% ×2, 70–79% ×3, 80–89% ×4, 90–100% ×5 [[c:edwards-zones]].\n\n**Lucia** uses three zones set from each athlete's own lab test: below [VT1](g:vt1) ×1, between VT1 and the [respiratory compensation point](g:respiratory-compensation-point) (RCP) ×2, above RCP ×3 [[c:lucia-zones]]. It was first used to compare Grand Tours: the Tour de France took longer than the Vuelta (5552 vs 5086 min), yet total loads did not differ [[c:lucia-tour-vuelta]].\n\nEdwards needs only HRmax. Lucia needs a test, but its zones fit the individual.",
+   "claims": [
+    {
+     "id": "edwards-zones",
+     "text": "Edwards' TRIMP weights minutes in five zones of %HRmax (50–59% to 90–100%) by 1 to 5.",
+     "grade": "strong",
+     "sources": [
+      "falkneto2020"
+     ],
+     "evidence": [
+      {
+       "source": "falkneto2020",
+       "quote": "The training zones and their weighting factor were as follows: zone 1 (50–59% HRmax—weighting factor = 1), zone 2 (60–69% HRmax—weighting factor = 2), zone 3 (70–79% HRmax—weighting factor = 3), zone 4 (80–89% HRmax—weighting factor = 4), and zone 5 (90–100% HRmax—weighting factor = 5).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "lucia-zones",
+     "text": "Lucia's TRIMP weights minutes below VT1, between VT1 and RCP, and above RCP by 1, 2 and 3.",
+     "grade": "strong",
+     "sources": [
+      "rothschild2025b",
+      "lucia2003"
+     ],
+     "evidence": [
+      {
+       "source": "rothschild2025b",
+       "quote": "LuTRIMP (Duration (minutes) in zone 1 × 1) + (duration in zone 2 × 2) + (duration in zone 3 × 3).",
+       "level": "full-text"
+      },
+      {
+       "source": "lucia2003",
+       "quote": "exercise intensity was divided into three phases according to the reference HR values obtained during a previous ramp cycle-ergometer test: phase I (<ventilatory threshold (VT)), phase II (between VT and the respiratory compensation point (RCP)) and phase III (>RCP).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lucia-tour-vuelta",
+     "text": "In 7 professionals, total load did not differ between the Tour and the Vuelta despite a longer total exercise time in the Tour.",
+     "grade": "weak",
+     "sources": [
+      "lucia2003"
+     ],
+     "evidence": [
+      {
+       "source": "lucia2003",
+       "quote": "The total loads (volume x intensity) did not significantly differ between the two races (P > 0.05), despite a significantly longer total exercise time of the Tour (P < 0.05) (5552 +/- 176 vs 5086 +/- 290 min).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ie-edwards-example",
+   "title": "Edwards TRIMP for a 1-hour ride",
+   "problem": "A cyclist rides 60 min: 20 min at 65% of HRmax, 30 min at 75% and 10 min at 85%. What is the Edwards TRIMP?",
+   "steps": [
+    "Put each block in its zone: 65% is zone 2 (×2), 75% zone 3 (×3), 85% zone 4 (×4).",
+    "20 × 2 = 40; 30 × 3 = 90; 10 × 4 = 40.",
+    "Edwards TRIMP = 40 + 90 + 40 = 170.",
+    "Lucia works the same way, with three individual zones weighted 1, 2 and 3."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-edwards-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ie-lucia-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-lucia-vs-edwards"
+  },
+  {
+   "type": "concept",
+   "id": "ie-which",
+   "title": "Which score to trust?",
+   "text": "In 15 well-trained cyclists over 10 weeks, every method tested (three TRIMPs, an individualised TRIMP, sRPE and the power-based TSS of the next lesson) related to gains in submaximal fitness (r = 0.54–0.81). Methods built on each rider's own physiology related best to time-trial gains [[c:load-dose-response]].\n\nTrade-offs:\n\n- High-intensity work is hard to quantify [[c:hiit-hard]]. Heart rate lags in short intervals and barely rises in sprints or gym work, so HR-based scores miss part of that load.\n- sRPE covers any session, but needs honest ratings and a learned scale.\n- No method is the 'true' load. Use one or two consistently, and compare an athlete only with themself.",
+   "claims": [
+    {
+     "id": "load-dose-response",
+     "text": "In 15 cyclists, all load methods related to fitness changes (r = 0.54–0.81); individualised methods had the strongest dose–response relationships.",
+     "grade": "weak",
+     "sources": [
+      "sanders2017"
+     ],
+     "evidence": [
+      {
+       "source": "sanders2017",
+       "quote": "Large to very large relationships (r = .54-.81) between training load and changes in submaximal fitness variables (power at 2 and 4 mmol/L) were observed for all training-load calculation methods.",
+       "level": "abstract"
+      },
+      {
+       "source": "sanders2017",
+       "quote": "Training-load quantification methods that integrate individual physiological characteristics have the strongest dose-response relationships, suggesting this to be an essential factor in the quantification of training load in cycling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hiit-hard",
+     "text": "High-intensity training is particularly hard to quantify; sRPE tracked an HR-based score in steady and interval exercise.",
+     "grade": "weak",
+     "sources": [
+      "foster2001"
+     ],
+     "evidence": [
+      {
+       "source": "foster2001",
+       "quote": "High-intensity exercise training is particularly difficult to quantitate.",
+       "level": "abstract"
+      },
+      {
+       "source": "foster2001",
+       "quote": "During cycle exercise, the relationship between the exercise score derived using the session RPE method and the HR method was highly consistent, although the absolute score was significantly greater with the session RPE method.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-hiit",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "ie-banister-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "External load is what you did (watts, km, time); internal load is what it cost your body (heart rate, RPE, lactate). The same work can cost more when you're tired, hot or ill.",
+    "Session RPE: rate the whole session 0–10 about 30 min later and multiply by minutes. Simple, valid across many sports, in arbitrary units.",
+    "Banister TRIMP = D × ΔHR × e^(b × ΔHR): one average heart rate, exponentially weighted, so it can't see intervals inside a session.",
+    "Edwards (five %HRmax zones ×1–5) and Lucia (three individual zones ×1–3) count minutes in zones; Lucia fits each athlete's thresholds.",
+    "All methods relate to fitness gains in small studies; none is the true load. Use one or two consistently and compare an athlete with themself."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ie-classify",
+   "concept": "ie-two-loads",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "impellizzeri2019",
+    "halson2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these measures the internal load of a bike session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Average heart rate",
+       "why": "Right: heart rate is the body's response to the work, so it is internal load.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Average power",
+       "why": "Power is the work done on the pedals: external load."
+      },
+      {
+       "id": "c",
+       "text": "Kilojoules of work",
+       "why": "Kilojoules count the mechanical work done: external load."
+      },
+      {
+       "id": "d",
+       "text": "Distance ridden",
+       "why": "Distance describes what was done, not what it cost the body: external load."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner logs four numbers after a session. Which one is internal load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A session RPE of 6",
+       "why": "Right: perceived effort is the body's (and brain's) response, so it is internal load.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "12 km covered",
+       "why": "Distance is what was done: external load."
+      },
+      {
+       "id": "c",
+       "text": "An average pace of 4:30 per km",
+       "why": "Pace describes the work, the same for anyone running it: external load."
+      },
+      {
+       "id": "d",
+       "text": "45 min of running",
+       "why": "Duration is part of the external load; it says nothing about how hard it felt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-dissociation",
+   "concept": "ie-two-loads",
+   "bloom": "analyse",
+   "sources": [
+    "halson2014",
+    "impellizzeri2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete repeats the same 40-min bike set at 230 W every Tuesday. This week, in the same cool room, her heart rate is 12 bpm higher and her RPE is 7 instead of 5. Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same external load, higher internal load: possible fatigue or illness",
+       "why": "Right: when the same work costs more, something in the athlete has changed, such as fatigue, illness or poor sleep.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Her external load rose, so a higher heart rate is expected",
+       "why": "The external load is unchanged: same watts, same duration."
+      },
+      {
+       "id": "c",
+       "text": "Her fitness improved, so the set now feels harder",
+       "why": "Better fitness lowers heart rate and RPE at a given power, not the reverse."
+      },
+      {
+       "id": "d",
+       "text": "Nothing changed: heart rate and RPE are external measures",
+       "why": "Heart rate and RPE are internal load, and both rose."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner does his usual 10 km loop at the same 5:00 per km pace as last week, in similar weather. His average heart rate is 8 bpm lower and the run feels easier. Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same external load, lower internal load: likely a fitness gain",
+       "why": "Right: the same work now costs less, which fits improved fitness (or freshness).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "His external load fell, so a lower heart rate is expected",
+       "why": "Distance and pace are the same, so the external load is unchanged."
+      },
+      {
+       "id": "c",
+       "text": "He is fatigued, which always lowers heart rate",
+       "why": "Fatigue more often raises heart rate and RPE for the same work."
+      },
+      {
+       "id": "d",
+       "text": "Internal load can't change if external load stays the same",
+       "why": "It can: internal load depends on the athlete's state, not only on the work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-srpe-calc",
+   "concept": "ie-srpe",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "haddad2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 2 h and, half an hour later, rates the session 3 ('moderate'). What is the session-RPE load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "360 AU",
+       "why": "Right: 3 × 120 min = 360 AU.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "6 AU",
+       "why": "This uses hours (3 × 2). The method uses minutes."
+      },
+      {
+       "id": "c",
+       "text": "123 AU",
+       "why": "This adds RPE and minutes (120 + 3) instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "40 AU",
+       "why": "This divides minutes by RPE (120 ÷ 3)."
+      }
+     ],
+     "solution": "Load = RPE × minutes = 3 × 120 = 360 AU."
+    },
+    {
+     "id": "b",
+     "stem": "A runner does a 75-min tempo run and rates it 6. What is the session-RPE load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "450 AU",
+       "why": "Right: 6 × 75 = 450 AU.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "81 AU",
+       "why": "This adds RPE and minutes (75 + 6) instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "12.5 AU",
+       "why": "This divides minutes by RPE (75 ÷ 6)."
+      },
+      {
+       "id": "d",
+       "text": "27,000 AU",
+       "why": "This uses seconds (6 × 4500). The method uses minutes."
+      }
+     ],
+     "solution": "Load = RPE × minutes = 6 × 75 = 450 AU."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete swims for 40 min and rates the session 5. What is the session-RPE load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "200 AU",
+       "why": "Right: 5 × 40 = 200 AU.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "45 AU",
+       "why": "This adds RPE and minutes (40 + 5) instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "8 AU",
+       "why": "This divides minutes by RPE (40 ÷ 5)."
+      },
+      {
+       "id": "d",
+       "text": "12,000 AU",
+       "why": "This uses seconds (5 × 2400). The method uses minutes."
+      }
+     ],
+     "solution": "Load = RPE × minutes = 5 × 40 = 200 AU."
+    }
+   ]
+  },
+  {
+   "id": "ie-srpe-timing",
+   "concept": "ie-srpe",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "foster2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does the session-RPE method ask for the rating about 30 minutes after the session, not at the finish line?",
+     "options": [
+      {
+       "id": "a",
+       "text": "So the hardest last minutes don't dominate the rating",
+       "why": "Right: the delay was meant to stop the end of the session from unduly colouring the whole-session rating.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "So heart rate is back to rest before rating",
+       "why": "The rating is a perception of the whole session; heart rate isn't part of it."
+      },
+      {
+       "id": "c",
+       "text": "Because the session is forgotten after an hour",
+       "why": "Ratings proved stable from 1 minute up to 14 days after the session."
+      },
+      {
+       "id": "d",
+       "text": "So the rating can be checked against blood lactate",
+       "why": "No lactate sample is needed; the method stands alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-banister-calc",
+   "concept": "ie-banister",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "falkneto2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A male cyclist rides 40 min at an average of 155 bpm. Resting HR 50, maximum 190 bpm. What is his Banister TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "127",
+       "why": "Right: ΔHR = 105 ÷ 140 = 0.75; 40 × 0.75 × e^1.44 = 40 × 0.75 × 4.22 = 127.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "30",
+       "why": "This leaves out the exponential weighting (40 × 0.75)."
+      },
+      {
+       "id": "c",
+       "text": "169",
+       "why": "This forgets to multiply by ΔHR (40 × 4.22)."
+      },
+      {
+       "id": "d",
+       "text": "156",
+       "why": "This uses a fraction of HRmax (155 ÷ 190) instead of heart-rate reserve."
+      }
+     ],
+     "solution": "ΔHR = (155 − 50) ÷ (190 − 50) = 0.75. Weighting = e^(1.92 × 0.75) = e^1.44 = 4.22. TRIMP = 40 × 0.75 × 4.22 = 127."
+    },
+    {
+     "id": "b",
+     "stem": "A male runner does a 90-min easy run at an average of 134 bpm. Resting HR 50, maximum 190 bpm. What is his Banister TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "171",
+       "why": "Right: ΔHR = 84 ÷ 140 = 0.60; 90 × 0.60 × e^1.152 = 90 × 0.60 × 3.17 = 171.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "54",
+       "why": "This leaves out the exponential weighting (90 × 0.60)."
+      },
+      {
+       "id": "c",
+       "text": "285",
+       "why": "This forgets to multiply by ΔHR (90 × 3.17)."
+      },
+      {
+       "id": "d",
+       "text": "246",
+       "why": "This uses a fraction of HRmax (134 ÷ 190) instead of heart-rate reserve."
+      }
+     ],
+     "solution": "ΔHR = (134 − 50) ÷ (190 − 50) = 0.60. Weighting = e^(1.92 × 0.60) = e^1.152 = 3.17. TRIMP = 90 × 0.60 × 3.17 = 171."
+    },
+    {
+     "id": "c",
+     "stem": "A female triathlete rides 60 min at an average of 162 bpm. Resting HR 50, maximum 190 bpm. What is her Banister TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "183",
+       "why": "Right: ΔHR = 112 ÷ 140 = 0.80; with b = 1.67 for women, 60 × 0.80 × e^1.336 = 60 × 0.80 × 3.80 = 183.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "223",
+       "why": "This uses the men's factor b = 1.92 (e^1.536 = 4.65)."
+      },
+      {
+       "id": "c",
+       "text": "48",
+       "why": "This leaves out the exponential weighting (60 × 0.80)."
+      },
+      {
+       "id": "d",
+       "text": "228",
+       "why": "This forgets to multiply by ΔHR (60 × 3.80)."
+      }
+     ],
+     "solution": "ΔHR = (162 − 50) ÷ (190 − 50) = 0.80. Weighting = e^(1.67 × 0.80) = e^1.336 = 3.80. TRIMP = 60 × 0.80 × 3.80 = 183."
+    }
+   ]
+  },
+  {
+   "id": "ie-banister-surges",
+   "concept": "ie-banister",
+   "bloom": "analyse",
+   "sources": [
+    "falkneto2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two 60-min rides give the same average heart rate. One is steady; the other alternates 3 min hard and 3 min easy. How does Banister's TRIMP score them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same, as it uses only the session's average heart rate",
+       "why": "Right: the formula takes one average ΔHR, so the pattern inside the session is lost.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Higher for the surging ride, as hard minutes are weighted",
+       "why": "The exponential is applied to the session average, not minute by minute."
+      },
+      {
+       "id": "c",
+       "text": "Higher for the steady ride, as heart rate stays up longer",
+       "why": "Same average and same duration give the same score."
+      },
+      {
+       "id": "d",
+       "text": "It can't be calculated for interval sessions",
+       "why": "It can; it just can't see the intervals."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-edwards-calc",
+   "concept": "ie-zone-trimps",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "falkneto2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's 50-min session: 10 min at 55% of HRmax, 25 min at 75%, 10 min at 85% and 5 min at 92%. What is the Edwards TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150",
+       "why": "Right: 10 × 1 + 25 × 3 + 10 × 4 + 5 × 5 = 10 + 75 + 40 + 25 = 150.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "50",
+       "why": "This is just the minutes, with no zone weighting."
+      },
+      {
+       "id": "c",
+       "text": "100",
+       "why": "This uses weights one too low (55% as ×0, 75% as ×2, and so on)."
+      },
+      {
+       "id": "d",
+       "text": "13",
+       "why": "This adds the zone weights (1 + 3 + 4 + 5) and forgets the minutes."
+      }
+     ],
+     "solution": "Zones: 55% → ×1, 75% → ×3, 85% → ×4, 92% → ×5. TRIMP = 10 + 75 + 40 + 25 = 150."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's 90-min ride: 30 min at 65% of HRmax, 45 min at 72% and 15 min at 82%. What is the Edwards TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "255",
+       "why": "Right: 30 × 2 + 45 × 3 + 15 × 4 = 60 + 135 + 60 = 255.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "90",
+       "why": "This is just the minutes, with no zone weighting."
+      },
+      {
+       "id": "c",
+       "text": "165",
+       "why": "This uses weights one too low (65% as ×1, 72% as ×2, 82% as ×3)."
+      },
+      {
+       "id": "d",
+       "text": "9",
+       "why": "This adds the zone weights (2 + 3 + 4) and forgets the minutes."
+      }
+     ],
+     "solution": "Zones: 65% → ×2, 72% → ×3, 82% → ×4. TRIMP = 60 + 135 + 60 = 255."
+    }
+   ]
+  },
+  {
+   "id": "ie-lucia-calc",
+   "concept": "ie-zone-trimps",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rothschild2025b",
+    "lucia2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A professional's 4-h stage: 150 min below VT1, 70 min between VT1 and RCP, 20 min above RCP. What is the Lucia TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "350",
+       "why": "Right: 150 × 1 + 70 × 2 + 20 × 3 = 150 + 140 + 60 = 350.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "240",
+       "why": "This is just the minutes, with no zone weighting."
+      },
+      {
+       "id": "c",
+       "text": "610",
+       "why": "This reverses the weights (×3 below VT1, ×1 above RCP)."
+      },
+      {
+       "id": "d",
+       "text": "6",
+       "why": "This adds the zone weights (1 + 2 + 3) and forgets the minutes."
+      }
+     ],
+     "solution": "Lucia TRIMP = 150 × 1 + 70 × 2 + 20 × 3 = 350."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's 70-min session: 40 min below VT1, 20 min between VT1 and RCP, 10 min above RCP. What is the Lucia TRIMP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "110",
+       "why": "Right: 40 × 1 + 20 × 2 + 10 × 3 = 40 + 40 + 30 = 110.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "70",
+       "why": "This is just the minutes, with no zone weighting."
+      },
+      {
+       "id": "c",
+       "text": "170",
+       "why": "This reverses the weights (×3 below VT1, ×1 above RCP)."
+      },
+      {
+       "id": "d",
+       "text": "6",
+       "why": "This adds the zone weights (1 + 2 + 3) and forgets the minutes."
+      }
+     ],
+     "solution": "Lucia TRIMP = 40 × 1 + 20 × 2 + 10 × 3 = 110."
+    }
+   ]
+  },
+  {
+   "id": "ie-lucia-vs-edwards",
+   "concept": "ie-zone-trimps",
+   "bloom": "analyse",
+   "sources": [
+    "falkneto2020",
+    "rothschild2025b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders both have an HRmax of 190 bpm. Rider A's VT1 is at 150 bpm, rider B's at 130 bpm (both RCPs are well above 140). Both ride 60 min at 140 bpm. How do Edwards and Lucia TRIMP compare them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Edwards: the same; Lucia: higher for rider B",
+       "why": "Right: 140 bpm is 74% of HRmax for both (Edwards zone 3), but it is above VT1 only for rider B (Lucia ×2 vs ×1).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Both methods give the same score",
+       "why": "Lucia uses each rider's own thresholds, so it separates them."
+      },
+      {
+       "id": "c",
+       "text": "Edwards: higher for B; Lucia: the same",
+       "why": "It's the other way round: Edwards sees only %HRmax, which is the same."
+      },
+      {
+       "id": "d",
+       "text": "Both methods give rider A the higher score",
+       "why": "Rider A is below VT1, so Lucia gives A the lower score."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-hiit",
+   "concept": "ie-which",
+   "bloom": "analyse",
+   "sources": [
+    "foster2001",
+    "haddad2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 10 × 200 m very fast with 2-min walking rests. Her average heart rate stays fairly low, but she rates the session 8/10. Which score best captures how hard the session was for her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Session RPE × minutes",
+       "why": "Right: perceived effort registers short, intense work that heart rate, which lags and recovers in the rests, barely shows.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Banister TRIMP from average heart rate",
+       "why": "The low average heart rate, diluted by long rests, makes it underrate the session."
+      },
+      {
+       "id": "c",
+       "text": "Edwards TRIMP from minutes in heart-rate zones",
+       "why": "Few minutes reach high zones in short reps, so it underrates the session too."
+      },
+      {
+       "id": "d",
+       "text": "Total distance covered",
+       "why": "Distance is external load and ignores the intensity entirely."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A track cyclist does 6 × 10 s standing-start sprints and a heavy gym session. His heart-rate monitor shows a low average. Which score is most likely to reflect how demanding his day was?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Session RPE × minutes",
+       "why": "Right: sRPE works for sprints and strength work, where heart rate says little.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Lucia TRIMP from time in zones",
+       "why": "He spends almost no minutes above his thresholds, so it barely counts the day."
+      },
+      {
+       "id": "c",
+       "text": "Banister TRIMP from average heart rate",
+       "why": "A low average heart rate makes it underrate sprints and lifting."
+      },
+      {
+       "id": "d",
+       "text": "Average power over the whole session",
+       "why": "Averaged over rests, power hides the sprints and ignores the gym."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-appraisal",
+   "concept": "ie-which",
+   "bloom": "evaluate",
+   "sources": [
+    "sanders2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 15 trained cyclists over 10 weeks found r = 0.70 (95% CI 0.29–0.89) between Lucia TRIMP and time-trial gains, the highest of the methods tested. What most limits the claim 'Lucia TRIMP is the best load measure for cyclists'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small sample, wide CIs that overlap other methods",
+       "why": "Right: with 15 riders the intervals are wide and overlap, so the ranking of methods is uncertain, and correlation is not cause.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "r = 0.70 is too weak a relationship to mean anything",
+       "why": "r = 0.70 is a large correlation; the problem is its precision."
+      },
+      {
+       "id": "c",
+       "text": "TRIMP can't be computed for cyclists",
+       "why": "Heart rate is easy to record in cycling; all TRIMPs were computed."
+      },
+      {
+       "id": "d",
+       "text": "The study measured only external load",
+       "why": "It compared internal (TRIMPs, sRPE) and external (TSS) measures."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

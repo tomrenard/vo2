@@ -1,0 +1,649 @@
+{
+ "id": "ad-timeline",
+ "module": "t3-adaptation",
+ "title": "How fast adaptations happen",
+ "goal": "Explain the stress, recovery and adaptation cycle, place the main endurance adaptations on their timescales of days, weeks and years, calculate exponential losses, and explain hormesis.",
+ "requires": [
+  "ad-vessels-blood"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "homeostasis",
+    "hormesis"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "tl-cycle",
+   "title": "Stress, recovery, adaptation",
+   "text": "Put the module together. Each session is a threat to [homeostasis](g:homeostasis): ATP, oxygen, temperature and fluid all drift from their usual values, and many systems respond at once to limit the drift [[c:tl-homeostasis]].\n\nThe cycle:\n\n1. **Stress**: the session sends its signals (Ca²⁺, AMP, ROS, shear, stretch).\n2. **Recovery**: in the hours after, genes are read and proteins built.\n3. **Adaptation**: repeated over weeks, months and years, those responses add up [[c:tl-repeat]].\n\nWhat you end up with depends on the volume, intensity and frequency of the stress, and on how long each protein lasts before it is broken down [[c:tl-coffey]]. That last point is why different adaptations run on different clocks.",
+   "claims": [
+    {
+     "id": "tl-homeostasis",
+     "text": "Exercise challenges whole-body homeostasis, and multiple integrated responses limit the disturbance.",
+     "grade": "strong",
+     "sources": [
+      "hawley2014"
+     ],
+     "evidence": [
+      {
+       "source": "hawley2014",
+       "quote": "Exercise represents a major challenge to whole-body homeostasis provoking widespread perturbations in numerous cells, tissues, and organs that are caused by or are a response to the increased metabolic activity of contracting skeletal muscles.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-repeat",
+     "text": "Acute exercise responses, repeated over months and years, amplify training adaptation.",
+     "grade": "moderate",
+     "sources": [
+      "hawley2018"
+     ],
+     "evidence": [
+      {
+       "source": "hawley2018",
+       "quote": "Such approaches are based on the underlying premise that imposing a greater metabolic load and provoking extreme perturbations in cellular homeostasis will augment acute exercise responses that, when repeated over months and years, will amplify training adaptation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-coffey",
+     "text": "The functional result of training depends on its volume, intensity and frequency and on the half-life of the proteins involved.",
+     "grade": "moderate",
+     "sources": [
+      "coffey2007"
+     ],
+     "evidence": [
+      {
+       "source": "coffey2007",
+       "quote": "The functional consequences of these adaptations are determined by training volume, intensity and frequency, and the half-life of the protein.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-cycle-order"
+  },
+  {
+   "type": "question",
+   "item": "tl-factors"
+  },
+  {
+   "type": "concept",
+   "id": "tl-clocks",
+   "title": "Three clocks",
+   "text": "The module's evidence, on one timeline:\n\n| how fast | what | example |\n|---|---|---|\n| **days** | plasma volume | +12% in 8 days [[c:tl-pv]] |\n| **weeks** | mitochondria, capillaries, arteries, red cells | CS up by session 3; capillaries +20% in 8 weeks [[c:tl-cap]]; VO₂max up within 3 weeks [[c:tl-vo2]] |\n| **months to years** | heart size, [running economy](g:running-economy) | left ventricle widens only after 6–9 months; one runner's economy improved 15% over 11 years [[c:tl-economy]] |\n\nSo a block of a few weeks shows up in blood and muscle; the heart and the way you move keep changing for years.\n\nThe clocks run backwards too: what comes fast mostly goes fast (the *Detraining* module).",
+   "claims": [
+    {
+     "id": "tl-pv",
+     "text": "Eight days of training expanded plasma volume by 427 mL (12%).",
+     "grade": "weak",
+     "sources": [
+      "convertino1980"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1980",
+       "quote": "After training, BV increased by 457 ml (+8.1% P less than 0.05), due to an increase in PV of 427 ml (+12.1%, P less than 0.05); red cell volume was essentially constant (delta = +30 ml, NS).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-cap",
+     "text": "Eight weeks of cycle training raised capillary density by 20%.",
+     "grade": "weak",
+     "sources": [
+      "andersen1977"
+     ],
+     "evidence": [
+      {
+       "source": "andersen1977",
+       "quote": "The training programme resulted in a 16% increase in V(O2 max.), a 20% increase in capillary density, a 20% increase in mean fibre area, and an approximately 40% increase in the activities of succinate dehydrogenase and cytochrome oxidase.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-vo2",
+     "text": "VO₂max rose within 3 weeks of training, with further gains to 12 weeks.",
+     "grade": "weak",
+     "sources": [
+      "murias2010"
+     ],
+     "evidence": [
+      {
+       "source": "murias2010",
+       "quote": "Vo(2 max) increased within 3 wk with further increases observed posttraining in both O (+31%) and Y (+18%), (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-economy",
+     "text": "One elite marathoner's running economy improved by about 15% between 1992 and 2003.",
+     "grade": "weak",
+     "sources": [
+      "jones2006"
+     ],
+     "evidence": [
+      {
+       "source": "jones2006",
+       "quote": "PR's data demonstrate a 15% improvement in running economy between 1992 and 2003 suggesting that improvements in this parameter are very important in allowing a distance runner to continue to improve their performance over the longer-term.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-camp"
+  },
+  {
+   "type": "question",
+   "item": "tl-ranking"
+  },
+  {
+   "type": "question",
+   "item": "tl-economy-case"
+  },
+  {
+   "type": "concept",
+   "id": "tl-halflife",
+   "title": "Gains fade on a half-life",
+   "text": "When training stops, a fast adaptation fades roughly exponentially. In endurance athletes who stopped for 84 days, citrate synthase fell with a [half-life](g:half-life) of about **12 days**, settling 50% above sedentary [[c:tl-coyle]].\n\nSo it's the *gained part above the floor* that halves every 12 days:\n\n**gain left = gain × 0.5^(days ÷ half-life)**\n\nTwo weeks off costs about half of that gain; a month, most of it. Capillaries in the same athletes didn't fall at all. Slower clocks lose slower, which is one reason years of training leave a base that a short break doesn't erase.",
+   "claims": [
+    {
+     "id": "tl-coyle",
+     "text": "After stopping training, citrate synthase fell with a half-time of 12 days and settled 50% above sedentary; capillarisation did not decline.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "Skeletal muscle capillarization did not decline with inactivity and remained 50% above (P less than 0.05) sedentary control. Citrate synthase and succinate dehydrogenase activities in muscle declined with a half-time of 12 days and stabilized at levels 50% above sedentary control (P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tl-halflife-example",
+   "title": "How much is left after 24 days off?",
+   "problem": "A cyclist's CS is 80 units above the level it will settle at once he stops training. The half-life is 12 days. How much of that 80 is left after 24 days off?",
+   "steps": [
+    "24 days ÷ 12 days = 2 half-lives.",
+    "Gain left = 80 × 0.5² = 80 × 0.25 = 20 units.",
+    "Not 0: an exponential loss halves the gap each half-life, it doesn't fall in a straight line to zero at 24 days."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-halflife-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "tl-hormesis",
+   "title": "Hormesis: the dose makes the adaptation",
+   "text": "Why not just train harder for faster gains? Because adaptation follows [hormesis](g:hormesis): a moderate dose of stress makes you stronger, too much harms.\n\nROS show it well. A single session raises the oxidative challenge, and regular training *lowers* it, as the body builds its own antioxidant defences. But excessive exercise and overtraining bring damaging oxidative stress: the other end of the curve [[c:tl-radak]]. The contraction-linked rise in ROS itself triggers the protective response [[c:tl-hormetic]].\n\nThe same logic holds for training as a whole: too little stress sends no signal, too much outruns recovery. The overtraining module covers the far end.",
+   "claims": [
+    {
+     "id": "tl-radak",
+     "text": "Single exercise bouts increase and regular exercise decreases the oxidative challenge; excessive exercise and overtraining lead to damaging oxidative stress.",
+     "grade": "moderate",
+     "sources": [
+      "radak2008"
+     ],
+     "evidence": [
+      {
+       "source": "radak2008",
+       "quote": "Single bouts of exercise increases, and regular exercise decreases the oxidative challenge to the body, whereas excessive exercise and overtraining lead to damaging oxidative stress and thus are an indication of the other end point of the hormetic response.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-hormetic",
+     "text": "Contraction-induced ROS trigger a hormetic response that upregulates defences against future insults.",
+     "grade": "moderate",
+     "sources": [
+      "furrer2023"
+     ],
+     "evidence": [
+      {
+       "source": "furrer2023",
+       "quote": "Furthermore, such a contraction-linked increase in ROS and RNS triggers a hormetic response, in which an upregulation of mitochondrial uncoupling proteins, antioxidant enzymes, and compounds blunts potential damage by future insults ( 534 ).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-dose"
+  },
+  {
+   "type": "question",
+   "item": "tl-ros-paradox"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Each session disturbs homeostasis; recovery rebuilds; repeated over weeks to years, the responses add up to adaptation.",
+    "Results depend on volume, intensity, frequency and each protein's half-life, so adaptations run on different clocks.",
+    "Days: plasma volume. Weeks: mitochondria, capillaries, arteries, red cells, VO₂max. Months to years: heart size, economy.",
+    "Fast gains fade fast: CS lost half its gained part every 12 days after stopping, while capillaries held.",
+    "Adaptation is hormetic: moderate stress builds defences and capacity, excessive stress outruns recovery."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "tl-cycle-order",
+   "concept": "tl-cycle",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hawley2014",
+    "hawley2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the stress → recovery → adaptation model, when are most new proteins built?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the hours and days after each session",
+       "correct": true,
+       "why": "Right: the session sends signals; genes are read and proteins built during recovery."
+      },
+      {
+       "id": "b",
+       "text": "During the session itself",
+       "why": "During the session the fibre is busy contracting; building comes after."
+      },
+      {
+       "id": "c",
+       "text": "Only after a full rest week",
+       "why": "Proteins are built after every session; rest weeks aren't the only time."
+      },
+      {
+       "id": "d",
+       "text": "Only once the season is over",
+       "why": "Adaptation accumulates across the season, session by session."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-factors",
+   "concept": "tl-cycle",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "coffey2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Besides training volume, intensity and frequency, what else sets the result of training, according to a classic review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Each protein's half-life",
+       "correct": true,
+       "why": "Right: protein half-life sets how fast a change builds and fades."
+      },
+      {
+       "id": "b",
+       "text": "The time of day of each session",
+       "why": "Not one of the factors the review lists."
+      },
+      {
+       "id": "c",
+       "text": "How much the athlete stretches after each session",
+       "why": "Stretching isn't one of the factors the review lists, and it doesn't drive these adaptations."
+      },
+      {
+       "id": "d",
+       "text": "How sore the muscles are the next day",
+       "why": "Soreness isn't a measure of adaptation; the review lists protein half-life."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-camp",
+   "concept": "tl-clocks",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "convertino1980",
+    "murias2010",
+    "arbabzadeh2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a 10-day training camp. Which adaptation is most likely to be clearly measurable at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A larger plasma volume",
+       "correct": true,
+       "why": "Right: plasma volume expands within days."
+      },
+      {
+       "id": "b",
+       "text": "A larger left ventricle",
+       "why": "The left ventricle cavity took 6–9 months to widen."
+      },
+      {
+       "id": "c",
+       "text": "A 15% better running economy",
+       "why": "Economy gains of that size took a decade in one elite runner."
+      },
+      {
+       "id": "d",
+       "text": "A much higher haemoglobin mass",
+       "why": "Red cells and Hb mass take weeks."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner spends 9 days at a training camp at sea level, 2 h a day. Which change is most likely clearly measurable at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A larger plasma volume",
+       "correct": true,
+       "why": "Right: +12% in 8 days in one study."
+      },
+      {
+       "id": "b",
+       "text": "A thicker, larger heart",
+       "why": "Heart remodelling takes months."
+      },
+      {
+       "id": "c",
+       "text": "Much better running economy",
+       "why": "Economy improves over months to years."
+      },
+      {
+       "id": "d",
+       "text": "More red cells",
+       "why": "Red-cell volume was unchanged after 8 days; it takes weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-ranking",
+   "concept": "tl-clocks",
+   "bloom": "analyse",
+   "sources": [
+    "convertino1980",
+    "andersen1977",
+    "arbabzadeh2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Order these from fastest to slowest to adapt: left ventricle size, plasma volume, capillary density.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plasma volume, capillary density, left ventricle size",
+       "correct": true,
+       "why": "Right: days, then weeks, then months."
+      },
+      {
+       "id": "b",
+       "text": "Capillary density, plasma volume, left ventricle size",
+       "why": "Plasma volume moves within days, faster than capillaries."
+      },
+      {
+       "id": "c",
+       "text": "Left ventricle size, capillary density, plasma volume",
+       "why": "This is reversed: the heart is the slowest."
+      },
+      {
+       "id": "d",
+       "text": "Plasma volume, left ventricle size, capillary density",
+       "why": "The left ventricle cavity widened only after 6–9 months; capillaries grow in weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-economy-case",
+   "concept": "tl-clocks",
+   "bloom": "evaluate",
+   "sources": [
+    "jones2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One elite runner's economy improved about 15% over 11 years. What is the main limit of this as evidence that economy keeps improving with years of training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is one athlete, and age, mass, shoes and methods may have changed too",
+       "correct": true,
+       "why": "Right: a single case shows what's possible, not what to expect."
+      },
+      {
+       "id": "b",
+       "text": "It is a randomised trial, so it can't measure long-term change",
+       "why": "It is a case study, not a trial."
+      },
+      {
+       "id": "c",
+       "text": "Economy can't be measured in elite runners",
+       "why": "It can, with a treadmill and gas analysis, as here."
+      },
+      {
+       "id": "d",
+       "text": "11 years is too short to see any change",
+       "why": "A clear change was seen; the limit is the sample of one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-halflife-calc",
+   "concept": "tl-halflife",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's CS is 60 units above the level it will settle at. Half-life 12 days. How much of that 60 is left after 36 days off?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.5 units",
+       "correct": true,
+       "why": "Right: 36 ÷ 12 = 3 half-lives; 60 × 0.5³ = 7.5."
+      },
+      {
+       "id": "b",
+       "text": "0 units",
+       "why": "This assumes a straight-line loss; exponential loss halves the gap, never reaching zero."
+      },
+      {
+       "id": "c",
+       "text": "20 units",
+       "why": "This divides 60 by 3 half-lives; each half-life halves what's left."
+      },
+      {
+       "id": "d",
+       "text": "30 units",
+       "why": "This is only one half-life (12 days)."
+      }
+     ],
+     "solution": "36 days ÷ 12 days = 3 half-lives. Left = 60 × 0.5³ = 60 × 0.125 = 7.5 units."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's CS is 40 units above the level it will settle at. Half-life 12 days. How much is left after 12 days off the bike?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 units",
+       "correct": true,
+       "why": "Right: one half-life, 40 × 0.5 = 20."
+      },
+      {
+       "id": "b",
+       "text": "0 units",
+       "why": "A half-life halves the gap; it doesn't empty it."
+      },
+      {
+       "id": "c",
+       "text": "10 units",
+       "why": "That is two half-lives (24 days)."
+      },
+      {
+       "id": "d",
+       "text": "28 units",
+       "why": "This takes off 12 units, one per day; the loss is a halving, not 1 unit per day."
+      }
+     ],
+     "solution": "12 days ÷ 12 days = 1 half-life. Left = 40 × 0.5 = 20 units."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's CS is 100 units above the level it will settle at. Half-life 12 days. How much is left after 24 days of injury?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25 units",
+       "correct": true,
+       "why": "Right: 2 half-lives, 100 × 0.5² = 25."
+      },
+      {
+       "id": "b",
+       "text": "50 units",
+       "why": "That is one half-life only."
+      },
+      {
+       "id": "c",
+       "text": "0 units",
+       "why": "This assumes a straight-line loss to zero."
+      },
+      {
+       "id": "d",
+       "text": "76 units",
+       "why": "This takes off 24 units, one per day; the loss halves the gap each 12 days."
+      }
+     ],
+     "solution": "24 days ÷ 12 days = 2 half-lives. Left = 100 × 0.5² = 100 × 0.25 = 25 units."
+    }
+   ]
+  },
+  {
+   "id": "tl-dose",
+   "concept": "tl-hormesis",
+   "bloom": "evaluate",
+   "sources": [
+    "radak2008",
+    "hawley2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist reasons: 'If stress causes adaptation, doubling my training load will double my gains.' How should you judge that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Flawed: adaptation is hormetic; past some dose, stress outruns recovery and harms",
+       "correct": true,
+       "why": "Right: moderate doses help, excessive ones (overtraining) bring damage."
+      },
+      {
+       "id": "b",
+       "text": "Correct: the response rises in a straight line with load",
+       "why": "The dose–response bends over: too much stress causes damage."
+      },
+      {
+       "id": "c",
+       "text": "Flawed: any extra stress blocks adaptation",
+       "why": "More load often helps; the problem is only past a point."
+      },
+      {
+       "id": "d",
+       "text": "Correct, as long as he takes antioxidants to remove the damage",
+       "why": "High-dose antioxidants blunted adaptation in some trials, and none shows they help."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-ros-paradox",
+   "concept": "tl-hormesis",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "radak2008",
+    "furrer2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Each session raises ROS, yet trained people face less oxidative challenge than sedentary ones. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Repeated ROS signals build up the body's own antioxidant defences",
+       "correct": true,
+       "why": "Right: a hormetic response that blunts damage from future sessions."
+      },
+      {
+       "id": "b",
+       "text": "Trained muscle stops making ROS",
+       "why": "It still makes ROS in every session; the defences are stronger."
+      },
+      {
+       "id": "c",
+       "text": "Trained people eat more antioxidant vitamins",
+       "why": "The effect comes from the body's own enzymes, and high-dose vitamins can blunt it."
+      },
+      {
+       "id": "d",
+       "text": "ROS only appear in untrained muscle",
+       "why": "ROS rise with contraction in everyone."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

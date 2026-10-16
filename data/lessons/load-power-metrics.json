@@ -1,0 +1,744 @@
+{
+ "id": "load-power-metrics",
+ "module": "t3-load",
+ "title": "Power-based load: NP, IF and TSS",
+ "goal": "Calculate normalised power, intensity factor and TSS, and explain what they assume and how weak their validity evidence is.",
+ "requires": [
+  "load-internal-external"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "normalised-power",
+    "intensity-factor",
+    "tss"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pm-np",
+   "title": "Normalised power: weighting the surges",
+   "text": "Average power is a poor summary of a ride that keeps changing: it can't show how the power was spread or how much metabolic stress it caused [[c:avg-hides]].\n\n[Normalised power](g:normalised-power) (NP) tries to fix that in four steps [[c:np-algorithm]]:\n\n1. take 30-s rolling averages of power;\n2. raise each to the 4th power;\n3. average those;\n4. take the 4th root.\n\nThe 30-s smoothing is meant to follow the body's delayed response to a change in power, and the 4th power its curved, faster-than-linear rise in strain [[c:np-rationale]]. So a criterium full of surges gets an NP well above its average power; a steady time trial gets an NP close to its average.",
+   "claims": [
+    {
+     "id": "avg-hides",
+     "text": "Simple summaries such as average power can't reflect a session's variable power or its likely metabolic stress.",
+     "grade": "moderate",
+     "sources": [
+      "passfield2017"
+     ],
+     "evidence": [
+      {
+       "source": "passfield2017",
+       "quote": "Simple summary methods cannot reflect a session's variable distribution of power output or indicate its likely metabolic stress.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "np-algorithm",
+     "text": "NP: 30-s rolling averages of power, each raised to the 4th power, averaged, then the 4th root taken.",
+     "grade": "strong",
+     "sources": [
+      "rothschild2025b"
+     ],
+     "evidence": [
+      {
+       "source": "rothschild2025b",
+       "quote": "NP is calculated by creating rolling 30-s averages and raising each value to the fourth power, then taking the fourth root of the average of the fourth powers.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "np-rationale",
+     "text": "NP's weighting aims to account for delayed and curvilinear physiological responses to changes in power.",
+     "grade": "weak",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "This method aims to account for delayed physiological responses to changes in power output, and for their curvilinear rather than linear nature.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pm-np-example",
+   "title": "NP of a two-part ride",
+   "problem": "A rider does 30 min at 300 W, then 30 min at 100 W. Average power is 200 W. What is the NP? (Ignore the few seconds of smoothing at the change.)",
+   "steps": [
+    "4th powers: 300⁴ = 8.1 × 10⁹; 100⁴ = 1 × 10⁸.",
+    "Average of the 4th powers (half the time each): (8.1 × 10⁹ + 0.1 × 10⁹) ÷ 2 = 4.1 × 10⁹.",
+    "4th root = square root twice: √(4.1 × 10⁹) = 64,031; √64,031 = 253.",
+    "NP ≈ 253 W, about 25% above the 200 W average: the hard half counts for much more."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pm-np-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pm-np-why"
+  },
+  {
+   "type": "concept",
+   "id": "pm-tss",
+   "title": "Intensity factor and TSS",
+   "text": "[Intensity factor](g:intensity-factor) (IF) is NP divided by [FTP](g:ftp). [TSS](g:tss) then combines duration and IF [[c:tss-formula]]:\n\n**TSS = (seconds × NP × IF) ÷ (FTP × 3600) × 100**\n\nSince NP ÷ FTP is IF, this simplifies to:\n\n**TSS = hours × IF² × 100**\n\nBy design, 1 hour at FTP scores 100.\n\nTypical values: an easy ride is IF 0.6–0.7, a hard group ride 0.8–0.9, a 40-km time trial close to 1.0. Note the square: doubling time doubles TSS, but riding 10% harder for the same time raises it by 21%.",
+   "claims": [
+    {
+     "id": "tss-formula",
+     "text": "TSS = (seconds × NP × IF) ÷ (FTP × 3600) × 100, with IF = NP ÷ FTP; one hour at FTP gives 100.",
+     "grade": "strong",
+     "sources": [
+      "rothschild2025b",
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "rothschild2025b",
+       "quote": "TSS [(seconds × NP × IF)/(FTP × 3600)] × 100",
+       "level": "full-text"
+      },
+      {
+       "source": "kontro2026",
+       "quote": "This metric is anchored to the individual functional threshold power (FTP; an estimate of critical power or maximal lactate steady state) and, by definition, 1 hour at this threshold gives 100 TSS.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pm-tss-example",
+   "title": "TSS of a 2-hour ride",
+   "problem": "A rider with an FTP of 280 W rides 2 h with an NP of 210 W. What are the IF and the TSS?",
+   "steps": [
+    "IF = NP ÷ FTP = 210 ÷ 280 = 0.75.",
+    "TSS = hours × IF² × 100 = 2 × 0.75² × 100.",
+    "0.75² = 0.5625, so TSS = 2 × 0.5625 × 100 = 112.5 ≈ 113.",
+    "Check with the long form: (7200 × 210 × 0.75) ÷ (280 × 3600) × 100 = 1,134,000 ÷ 1,008,000 × 100 = 112.5."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pm-if-calc"
+  },
+  {
+   "type": "question",
+   "item": "pm-tss-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pm-tss-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pm-other-sports",
+   "title": "Running, swimming and heart-rate versions",
+   "text": "The TSS idea has been carried to other sports: a heart-rate version for any activity, and speed-based versions for running and swimming [[c:tss-other-sports]]. The recipe is the same: intensity relative to a threshold. The heart-rate version swaps power for heart rate and FTP for threshold heart rate, so an hour at threshold again scores 100 [[c:hrtss]].\n\nTwo cautions:\n\n- A threshold pace is harder to pin down than a power. Hills, wind, surface, waves and currents change pace without changing effort.\n- Adding bike, run and swim points into one weekly total assumes 100 points in one sport stress you as much as 100 in another. Running's impact loading alone makes that doubtful; it is an assumption, not a measured fact.",
+   "claims": [
+    {
+     "id": "tss-other-sports",
+     "text": "TSS has been adapted to heart rate (any activity) and to speed for running and swimming.",
+     "grade": "weak",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "This method has also been transformed to calculate TSS from HR data (for any activity) and from velocity data (for running and swimming) [ 27 ].",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hrtss",
+     "text": "Heart-rate TSS is calculated like TSS, with heart rate in place of power and a threshold heart rate in place of FTP.",
+     "grade": "weak",
+     "sources": [
+      "rothschild2025b"
+     ],
+     "evidence": [
+      {
+       "source": "rothschild2025b",
+       "quote": "Calculated the same as TSS, substituting HR for power and using VT 2 HR as a measure of functional threshold HR",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pm-tri-sum"
+  },
+  {
+   "type": "concept",
+   "id": "pm-assumptions",
+   "title": "What TSS assumes",
+   "text": "TSS is built on choices that are easy to forget:\n\n- **FTP is right and current.** FTP is meant to estimate [critical power](g:critical-power) or [MLSS](g:mlss) [[c:ftp-anchor]]. If FTP is set too low, every IF and every TSS is too high.\n- **Time and intensity trade through IF².** 1 h at IF 1.0, 2 h at 0.71 and 4 h at 0.5 all score 100. Physiologically they differ: different fuel use, different fatigue, different demands on [durability](g:durability).\n- **The smoothing and the 4th power are fixed by design.** They are not fitted to each rider.\n- **Above threshold it ignores how much of [W′](g:w-prime) you used**, and it knows nothing of heat, sleep or glycogen.\n\nNP and TSS are commercial, trademarked metrics.",
+   "claims": [
+    {
+     "id": "ftp-anchor",
+     "text": "TSS is anchored to FTP, which is used as an estimate of critical power or MLSS.",
+     "grade": "moderate",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "This metric is anchored to the individual functional threshold power (FTP; an estimate of critical power or maximal lactate steady state) and, by definition, 1 hour at this threshold gives 100 TSS.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pm-ftp-stale",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pm-tss-equal"
+  },
+  {
+   "type": "concept",
+   "id": "pm-evidence",
+   "title": "How good is the evidence?",
+   "text": "Grade it honestly: thin.\n\n- In 15 well-trained cyclists over 10 weeks, TSS related to gains in submaximal fitness (r = 0.75–0.79) [[c:tss-dose-response]], about as well as heart-rate TRIMPs [[c:tss-vs-trimp]].\n- In 9 people training for 8 weeks, the fitness–fatigue model fitted performance with similar error whatever load measure went in. But the measures rose and fell differently over time, so they are not interchangeable [[c:methods-not-interchangeable]].\n- A review of cycling power data concluded that current methods are inadequate and new ones are needed [[c:methods-inadequate]].\n\nSmall samples, correlations, no trials. TSS is a useful bookkeeping tool, not a validated measure of training stress.",
+   "claims": [
+    {
+     "id": "tss-dose-response",
+     "text": "In 15 cyclists, TSS correlated with changes in submaximal fitness (r about 0.75–0.79).",
+     "grade": "weak",
+     "sources": [
+      "sanders2017"
+     ],
+     "evidence": [
+      {
+       "source": "sanders2017",
+       "quote": "The strongest relationships with changes in aerobic fitness variables were observed for iTRIMP (r = .81 [95% CI .51-.93, r = .77 [95% CI .43-.92]) and TSS (r = .75 [95% CI .31-.93], r = .79 [95% CI .40-.94]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tss-vs-trimp",
+     "text": "TSS has correlated with performance gains about as well as or better than HR-based TRIMPs.",
+     "grade": "weak",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "TSS has been demonstrated to correlate with performance increases equally or better when compared with various HR-derived TRIMPs [ 24 , 28 , 29 ].",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "methods-not-interchangeable",
+     "text": "Load methods gave similar model errors but evolved differently over time, so they can't be used interchangeably.",
+     "grade": "weak",
+     "sources": [
+      "vermeire2021"
+     ],
+     "evidence": [
+      {
+       "source": "vermeire2021",
+       "quote": "However, the TL methods evolved differently over time, which was reflected in the differences between the methods in the calculation of the day before performance on which training has the biggest positive influence (range of 19.6 d).",
+       "level": "abstract"
+      },
+      {
+       "source": "vermeire2021",
+       "quote": "The authors concluded that TL methods cannot be used interchangeably because they evolve differently.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "methods-inadequate",
+     "text": "Current methods of quantifying cycling training load are inadequate; new methods are needed.",
+     "grade": "weak",
+     "sources": [
+      "passfield2017"
+     ],
+     "evidence": [
+      {
+       "source": "passfield2017",
+       "quote": "Due to the inadequacy of current methods, the review highlights the need for new methods to be established which quantify the effects of training loads and models their implications for performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pm-evidence"
+  },
+  {
+   "type": "question",
+   "item": "pm-np-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pm-tss-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Average power hides how a ride was spread; NP (30-s rolling averages, 4th power, mean, 4th root) weights the surges.",
+    "IF = NP ÷ FTP; TSS = hours × IF² × 100, so 1 h at FTP = 100.",
+    "Heart-rate, running and swimming versions exist; adding points across sports assumes they are equal, which is untested.",
+    "TSS depends on a correct, current FTP and treats time and intensity as interchangeable through IF².",
+    "Validity evidence is weak: small correlational studies. Use TSS for bookkeeping, not as a measure of true stress."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pm-np-calc",
+   "concept": "pm-np",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rothschild2025b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider does 30 min at 320 W, then 30 min at 160 W. Ignoring the smoothing at the change, what is the NP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "273 W",
+       "why": "Right: (0.5 × 320⁴ + 0.5 × 160⁴)^¼ = (5.57 × 10⁹)^¼ ≈ 273 W.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "240 W",
+       "why": "This is the plain average power."
+      },
+      {
+       "id": "c",
+       "text": "320 W",
+       "why": "This takes the hardest block as the NP; the easy half still counts."
+      },
+      {
+       "id": "d",
+       "text": "253 W",
+       "why": "This uses squares and a square root instead of the 4th power and 4th root."
+      }
+     ],
+     "solution": "320⁴ = 1.049 × 10¹⁰; 160⁴ = 6.55 × 10⁸. Average = 5.57 × 10⁹. 4th root: √(5.57 × 10⁹) = 74,636; √74,636 = 273 W."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist does 15 min at 400 W, then 45 min at 150 W. Ignoring the smoothing at the change, what is the NP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "287 W",
+       "why": "Right: (0.25 × 400⁴ + 0.75 × 150⁴)^¼ = (6.78 × 10⁹)^¼ ≈ 287 W.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "213 W",
+       "why": "This is the plain average power (0.25 × 400 + 0.75 × 150)."
+      },
+      {
+       "id": "c",
+       "text": "400 W",
+       "why": "This takes the hardest block as the NP; the easy part still counts."
+      },
+      {
+       "id": "d",
+       "text": "238 W",
+       "why": "This uses squares and a square root instead of the 4th power and 4th root."
+      }
+     ],
+     "solution": "400⁴ = 2.56 × 10¹⁰ (× 0.25 = 6.40 × 10⁹); 150⁴ = 5.06 × 10⁸ (× 0.75 = 3.80 × 10⁸). Sum = 6.78 × 10⁹. 4th root ≈ 287 W."
+    }
+   ]
+  },
+  {
+   "id": "pm-np-why",
+   "concept": "pm-np",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "rothschild2025b",
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a criterium a rider averages 230 W, but his NP is 290 W. Why is NP so much higher?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The 4th power gives the surges far more weight",
+       "why": "Right: hard efforts, raised to the 4th power, dominate the average, so a surging ride has an NP well above its average power.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "NP leaves out the time spent coasting",
+       "why": "NP keeps every second, zeros included; it's the weighting that lifts it."
+      },
+      {
+       "id": "c",
+       "text": "NP adds the energy lost in braking",
+       "why": "NP uses only the power measured at the pedals."
+      },
+      {
+       "id": "d",
+       "text": "NP corrects average power for wind and drafting",
+       "why": "NP knows nothing about wind; it only reshapes the power data."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-if-calc",
+   "concept": "pm-tss",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rothschild2025b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's FTP is 280 W. A ride has an average power of 220 W and an NP of 238 W. What is its IF?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.85",
+       "why": "Right: IF = NP ÷ FTP = 238 ÷ 280 = 0.85.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.79",
+       "why": "This uses average power (220 ÷ 280); IF uses NP."
+      },
+      {
+       "id": "c",
+       "text": "1.18",
+       "why": "This divides FTP by NP (280 ÷ 238), upside down."
+      },
+      {
+       "id": "d",
+       "text": "0.72",
+       "why": "This is IF squared (0.85²), the term inside TSS, not IF itself."
+      }
+     ],
+     "solution": "IF = NP ÷ FTP = 238 ÷ 280 = 0.85."
+    }
+   ]
+  },
+  {
+   "id": "pm-tss-calc",
+   "concept": "pm-tss",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rothschild2025b",
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist with an FTP of 300 W rides 1.5 h at an NP of 240 W. What is the TSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "96",
+       "why": "Right: IF = 0.80; TSS = 1.5 × 0.80² × 100 = 1.5 × 0.64 × 100 = 96.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "120",
+       "why": "This forgets to square IF (1.5 × 0.80 × 100)."
+      },
+      {
+       "id": "c",
+       "text": "64",
+       "why": "This leaves out the duration (0.80² × 100)."
+      },
+      {
+       "id": "d",
+       "text": "150",
+       "why": "This counts only the hours (1.5 × 100), as if the ride were at FTP."
+      }
+     ],
+     "solution": "IF = 240 ÷ 300 = 0.80. TSS = 1.5 × 0.64 × 100 = 96."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete with an FTP of 260 W does a 3-h ride at an NP of 195 W. What is the TSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "169",
+       "why": "Right: IF = 0.75; TSS = 3 × 0.5625 × 100 = 168.75 ≈ 169.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "225",
+       "why": "This forgets to square IF (3 × 0.75 × 100)."
+      },
+      {
+       "id": "c",
+       "text": "56",
+       "why": "This leaves out the duration (0.75² × 100)."
+      },
+      {
+       "id": "d",
+       "text": "300",
+       "why": "This counts only the hours (3 × 100), as if the ride were at FTP."
+      }
+     ],
+     "solution": "IF = 195 ÷ 260 = 0.75. TSS = 3 × 0.75² × 100 = 169."
+    },
+    {
+     "id": "c",
+     "stem": "A rider with an FTP of 280 W does a 4-h endurance ride at an NP of 140 W. What is the TSS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "100",
+       "why": "Right: IF = 0.50; TSS = 4 × 0.25 × 100 = 100, the same as 1 h at FTP.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "200",
+       "why": "This forgets to square IF (4 × 0.50 × 100)."
+      },
+      {
+       "id": "c",
+       "text": "25",
+       "why": "This leaves out the duration (0.50² × 100)."
+      },
+      {
+       "id": "d",
+       "text": "400",
+       "why": "This counts only the hours (4 × 100), as if the ride were at FTP."
+      }
+     ],
+     "solution": "IF = 140 ÷ 280 = 0.50. TSS = 4 × 0.50² × 100 = 100."
+    }
+   ]
+  },
+  {
+   "id": "pm-tri-sum",
+   "concept": "pm-other-sports",
+   "bloom": "evaluate",
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete adds bike TSS, run TSS and swim TSS into one weekly total of 600. What is the most defensible view of that number?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rough trend; points aren't proven equal across sports",
+       "why": "Right: each version is built the same way, but no one has shown 100 run points stress you like 100 bike points.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Exact: every sport scores 100 per hour at threshold",
+       "why": "Same scaling doesn't mean same stress; running adds impact loading, for one."
+      },
+      {
+       "id": "c",
+       "text": "Meaningless: TSS exists only for cycling",
+       "why": "Run, swim and heart-rate versions exist."
+      },
+      {
+       "id": "d",
+       "text": "Valid once run points are doubled for impact",
+       "why": "There's no tested conversion factor; doubling is made up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-ftp-stale",
+   "concept": "pm-assumptions",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kontro2026",
+    "rothschild2025b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's app still has her FTP at 250 W, but a new test puts it at 280 W. She rides 2 h at an NP of 210 W. What TSS does the app show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "141",
+       "why": "Right: the app uses IF = 210 ÷ 250 = 0.84, so 2 × 0.84² × 100 = 141, about 25% more than the true 113.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "113",
+       "why": "This uses the new FTP (IF 0.75): the correct value, not what the app shows."
+      },
+      {
+       "id": "c",
+       "text": "168",
+       "why": "This forgets to square IF (2 × 0.84 × 100)."
+      },
+      {
+       "id": "d",
+       "text": "71",
+       "why": "This leaves out the duration (0.84² × 100)."
+      }
+     ],
+     "solution": "App: IF = 210 ÷ 250 = 0.84; TSS = 2 × 0.7056 × 100 = 141. With the true FTP: IF = 0.75; TSS = 113. A stale FTP inflates every score."
+    },
+    {
+     "id": "b",
+     "stem": "A rider's app has his FTP at 300 W, but he has lost fitness and it is now 270 W. He rides 1.5 h at an NP of 243 W. What TSS does the app show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "98",
+       "why": "Right: the app uses IF = 243 ÷ 300 = 0.81, so 1.5 × 0.81² × 100 = 98, less than the true 122.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "122",
+       "why": "This uses the new FTP (IF 0.90): the correct value, not what the app shows."
+      },
+      {
+       "id": "c",
+       "text": "66",
+       "why": "This leaves out the duration (0.81² × 100)."
+      },
+      {
+       "id": "d",
+       "text": "150",
+       "why": "This counts only the hours (1.5 × 100), as if the ride were at FTP."
+      }
+     ],
+     "solution": "App: IF = 0.81; TSS = 1.5 × 0.656 × 100 = 98. True: IF = 0.90; TSS = 1.5 × 0.81 × 100 = 122. An FTP set too high hides load."
+    }
+   ]
+  },
+  {
+   "id": "pm-tss-equal",
+   "concept": "pm-assumptions",
+   "bloom": "analyse",
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Ride A: 1 h at IF 1.0. Ride B: 4 h at IF 0.5. Both score 100 TSS. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same score, but different stresses that TSS can't separate",
+       "why": "Right: IF² trades time for intensity by design, but a threshold hour and a long easy ride differ in fuel use, fatigue and durability demands.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Same score, so the two rides have identical effects",
+       "why": "The score is equal by construction, not because the physiology is."
+      },
+      {
+       "id": "c",
+       "text": "Ride B is harder because it lasts four times longer",
+       "why": "TSS already counts the duration; the point is that one number hides how it was built."
+      },
+      {
+       "id": "d",
+       "text": "Ride A is harder because IF counts four times more",
+       "why": "IF is squared, not multiplied by four; both rides land at 100."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-evidence",
+   "concept": "pm-evidence",
+   "bloom": "evaluate",
+   "sources": [
+    "sanders2017",
+    "vermeire2021",
+    "passfield2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coaching website says: 'TSS is a scientifically validated measure of training stress.' What is the fairest grade of that claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak: a few small correlational studies support it",
+       "why": "Right: the support is correlations in groups of 9–15 people, with no trials showing TSS captures stress better than alternatives.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Strong: meta-analyses of trials confirm it",
+       "why": "There are no meta-analyses of trials validating TSS."
+      },
+      {
+       "id": "c",
+       "text": "Disputed: good trials show it doesn't work",
+       "why": "There are no good trials either way; the evidence is thin, not conflicting."
+      },
+      {
+       "id": "d",
+       "text": "Moderate: several large RCTs agree",
+       "why": "No RCTs test TSS as a measure; the studies are small and observational."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

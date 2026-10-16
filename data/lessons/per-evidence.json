@@ -1,0 +1,652 @@
+{
+ "id": "per-evidence",
+ "module": "t3-periodization",
+ "title": "What the trials show",
+ "goal": "Read the block vs traditional trials and meta-analysis for endurance athletes, and grade the evidence honestly.",
+ "requires": [
+  "per-models"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "concept",
+   "id": "ev-cyclists",
+   "title": "The cycling trials",
+   "text": "Most evidence comes from Rønnestad's group in Norway. In both trials, block and traditional groups did the **same total hours and the same number of interval sessions**: only the order changed.\n\n| trial | block group | traditional group | VO2max change |\n|---|---|---|---|\n| 4 weeks, trained cyclists | 5 [HIIT](g:hiit) sessions in week 1, then 1 a week (n = 10) | 2 a week (n = 9) | +4.6% vs no change [[c:per-ev-4wk]] |\n| 12 weeks, well-trained cyclists | same, every 4th week (n = 8) | 2 a week (n = 7) | +8.8% vs +3.7% [[c:per-ev-12wk]] |\n\nBoth favour blocks. But groups of 7–10 riders weren't randomised, and outcomes were lab tests, not races.",
+   "claims": [
+    {
+     "id": "per-ev-4wk",
+     "text": "In a 4-week trial, block-periodised HIIT raised VO2max by 4.6% while volume-matched traditional training gave no change.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2012a"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2012a",
+       "quote": "While BP increased VO2max , peak power output (Wmax) and power output at 2 mmol/L [la(-)] by 4.6 ± 3.7%, 2.1 ± 2.8%, and 10 ± 12%, respectively (P < 0.05), no changes occurred in TRAD.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-ev-12wk",
+     "text": "Over 12 weeks, block periodisation raised VO2max by 8.8% against 3.7% for traditional organisation.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2012b"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2012b",
+       "quote": "BP achieved a larger relative improvement in VO2max than TRAD (8.8 ± 5.9% vs 3.7 ± 2.9%, respectively, < 0.05)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-ev-design"
+  },
+  {
+   "type": "example",
+   "id": "per-ev-example",
+   "title": "From a percent change to mL·kg⁻¹·min⁻¹",
+   "problem": "A rider in the 4-week block group starts at a VO2max of 62 mL·kg⁻¹·min⁻¹ and gains the group's average 4.6%. What is his new VO2max?",
+   "steps": [
+    "A percent change multiplies the starting value: change = 62 × 4.6 ÷ 100.",
+    "62 × 0.046 = 2.85 mL·kg⁻¹·min⁻¹.",
+    "New VO2max = 62 + 2.85 ≈ 64.9 mL·kg⁻¹·min⁻¹.",
+    "The ± 3.7% spread around that average means some riders gained almost nothing and others about 8%."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-ev-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ev-skiers",
+   "title": "Skiers: one yes, one no",
+   "text": "Elite cross-country skiers did 5 weeks of block or traditional HIIT, again matched for total load (n = 10 vs 9). The block group raised [peak power output](g:peak-power-output) by 4% while the traditional group lost 3%, and VO2max rose 2% with blocks only [[c:per-ev-skiers]].\n\nA [crossover study](g:crossover-study) of 20 junior skiers, men and women, compared 9 HIIT sessions packed into one week of a 3-week period with 3 a week. It found **no difference** in VO2max, 600 m time trial, economy or muscle markers [[c:per-ev-mcgawley]].\n\nSo the block advantage doesn't show up in every group, design or length of block.",
+   "claims": [
+    {
+     "id": "per-ev-skiers",
+     "text": "In elite skiers, 5 weeks of block-periodised HIIT raised peak power by 4% (vs −3% traditional) and VO2max by 2%.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2015b"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2015b",
+       "quote": "BP achieved a larger relative increase in peak power output and power output at a blood lactate concentration of 4 mmol/L than TRAD (4 ± 4 vs -3 ± 6% and 11 ± 10 vs 2 ± 4%, respectively, both P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-ev-mcgawley",
+     "text": "In junior skiers, block-distributed HIIT gave no extra benefit over evenly distributed HIIT.",
+     "grade": "weak",
+     "sources": [
+      "mcgawley2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcgawley2017",
+       "quote": "However, the findings do not support block-distributed HIT as a superior method to a more even distribution of HIT in terms of enhancing physiological or performance adaptions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-ev-skier-result"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-conflict"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ev-meta",
+   "title": "The meta-analysis",
+   "text": "Mølmen and colleagues (2019) screened 2905 records, kept 20 studies, and could pool only 6 [[c:per-ev-meta]]:\n\n- VO2max: standardised mean difference 0.40, [95% CI](g:confidence-interval) 0.02 to 0.79, favouring blocks;\n- peak power: 0.28, CI 0.01 to 0.54.\n\nBoth are **small** effects (like a [Cohen's d](g:cohens-d) of 0.3–0.4), and both intervals nearly touch zero. The 10 controlled trials it rated scored 3.7 out of 10 on average on the PEDro scale, a 10-point checklist of how well a trial was run [[c:per-ev-quality]]. The pooled studies lasted 4.9 weeks on average (1–12 weeks).\n\nA limit to keep in mind: Rønnestad, the review's last (senior) author, was first author of 4 of the 6 pooled trials [[c:per-ev-authors]]. That's common in a small field, and the authors declared no conflicts of interest, but an independent review would add confidence.",
+   "claims": [
+    {
+     "id": "per-ev-meta",
+     "text": "Pooled, block periodisation had small favourable effects on VO2max (SMD 0.40) and peak power (SMD 0.28) compared with traditional organisation.",
+     "grade": "weak",
+     "sources": [
+      "molmen2019"
+     ],
+     "evidence": [
+      {
+       "source": "molmen2019",
+       "quote": "The meta-analyses revealed small favorable effects for BP compared to TRAD regarding changes in VO2max (standardized mean difference, 0.40; 95% CI=0.02, 0.79) and Wmax (standardized mean difference, 0.28; 95% CI=0.01, 0.54).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-ev-quality",
+     "text": "The block periodisation studies were small and of generally low methodological quality.",
+     "grade": "strong",
+     "sources": [
+      "molmen2019"
+     ],
+     "evidence": [
+      {
+       "source": "molmen2019",
+       "quote": "these results must be considered with some caution due to small studies with generally low methodological quality (mean PEDro score =3.7/10).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-ev-authors",
+     "text": "Rønnestad is the last author of the meta-analysis and first author of 4 of its 6 pooled trials; the authors declared no conflicts of interest.",
+     "grade": "strong",
+     "sources": [
+      "molmen2019"
+     ],
+     "evidence": [
+      {
+       "source": "molmen2019",
+       "quote": "Six of the 20 studies were eligible for meta-analysis (ie, parallel-design studies comparing BP with TRAD).",
+       "level": "full-text"
+      },
+      {
+       "source": "molmen2019",
+       "quote": "Rønnestad BR, Hansen J, Thyli V, Bakken TA, Sandbakk O. 5-week block periodization increases aerobic power in elite cross-country skiers.",
+       "level": "full-text"
+      },
+      {
+       "source": "molmen2019",
+       "quote": "The authors report no conflicts of interest in this work.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-ev-ci"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "ev-grade",
+   "title": "Grading it honestly",
+   "text": "Put the pieces together with the course's grading rules:\n\n- a handful of trials, mostly fewer than 15 people per group;\n- mostly trained men;\n- mostly not randomised, quality about 4 out of 10;\n- 1–12 weeks, so nothing on whole seasons;\n- lab outcomes, not races; one null crossover trial.\n\nThat makes \"blocks beat traditional\" **weak** evidence [[c:per-ev-weak]]. Reverse periodisation is also weak (no advantage). The fair practical reading: a HIIT block is a reasonable way to vary training and may give a small extra gain over a few weeks, not a proven upgrade, and there's no evidence on whether it adds up over a season.",
+   "claims": [
+    {
+     "id": "per-ev-weak",
+     "text": "The evidence that block periodisation beats traditional organisation is small, short and low in quality.",
+     "grade": "weak",
+     "sources": [
+      "molmen2019"
+     ],
+     "evidence": [
+      {
+       "source": "molmen2019",
+       "quote": "Nonetheless, the number of eligible studies are quite small (n=10) and they achieved only low-to-moderate PEDro scores.",
+       "level": "full-text"
+      },
+      {
+       "source": "molmen2019",
+       "quote": "However, the long-term effects of this organization may not directly be answered by the relatively short-term studies conducted so far in the literature.",
+       "level": "full-text"
+      },
+      {
+       "source": "molmen2019",
+       "quote": "More or less all studies are at a higher risk of bias, mostly because of lack of blinding of testers and specifying randomization",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-ev-grade"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-short"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-practice"
+  },
+  {
+   "type": "question",
+   "item": "per-ev-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Block and traditional groups in the trials did the same total load: only the order of the intervals changed.",
+    "Cycling trials (n = 7–10 per group) and one skier trial favoured blocks; a crossover in junior skiers found no difference.",
+    "The meta-analysis: small effects (SMD 0.40 VO2max, 0.28 peak power), CIs near zero, quality 3.7/10, studies of about 5 weeks.",
+    "Grade: weak. Blocks are a reasonable option, not a proven upgrade; season-long effects are unknown.",
+    "Reverse periodisation: no advantage shown, also weak evidence."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "per-ev-design",
+   "concept": "ev-cyclists",
+   "bloom": "understand",
+   "sources": [
+    "ronnestad2012a",
+    "ronnestad2012b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the block vs traditional cycling trials, why did the groups do the same total hours and number of interval sessions?",
+     "options": [
+      {
+       "id": "a",
+       "text": "So any difference could be put down to the order of sessions",
+       "correct": true,
+       "why": "Right: matching the load isolates the effect of how it is organised."
+      },
+      {
+       "id": "b",
+       "text": "So both groups would gain exactly the same",
+       "why": "Matching the inputs doesn't force equal outcomes; it lets you compare them fairly."
+      },
+      {
+       "id": "c",
+       "text": "Because random allocation was impossible otherwise",
+       "why": "Matching load and random allocation are separate design choices; these trials weren't randomised."
+      },
+      {
+       "id": "d",
+       "text": "To make the study blind to the riders",
+       "why": "Riders could see how many intervals they did; load matching doesn't blind them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-calc",
+   "concept": "ev-cyclists",
+   "bloom": "apply",
+   "sources": [
+    "ronnestad2012a",
+    "ronnestad2012b",
+    "ronnestad2015b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist with a VO2max of 58 mL·kg⁻¹·min⁻¹ gains the 4-week block group's average of 4.6%. What is his new VO2max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60.7 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 58 × 0.046 = 2.67; 58 + 2.67 ≈ 60.7."
+      },
+      {
+       "id": "b",
+       "text": "62.6 mL·kg⁻¹·min⁻¹",
+       "why": "That adds 4.6 as if it were mL·kg⁻¹·min⁻¹, not a percentage."
+      },
+      {
+       "id": "c",
+       "text": "84.7 mL·kg⁻¹·min⁻¹",
+       "why": "That multiplies by 1.46: a 46% gain, not 4.6%."
+      },
+      {
+       "id": "d",
+       "text": "55.3 mL·kg⁻¹·min⁻¹",
+       "why": "That subtracts the change instead of adding it."
+      }
+     ],
+     "solution": "Change = 58 × 4.6 ÷ 100 = 2.67 mL·kg⁻¹·min⁻¹. New VO2max = 58 + 2.67 ≈ 60.7 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "Two riders both start at 60 mL·kg⁻¹·min⁻¹. Over 12 weeks one gains 8.8% (block), the other 3.7% (traditional). How far apart are they after?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3.1 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 60 × 0.088 = 5.3 and 60 × 0.037 = 2.2; 5.3 − 2.2 ≈ 3.1."
+      },
+      {
+       "id": "b",
+       "text": "About 5.1 mL·kg⁻¹·min⁻¹",
+       "why": "That takes the difference in percent (5.1) as if it were mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "About 5.3 mL·kg⁻¹·min⁻¹",
+       "why": "That's the block rider's whole gain, forgetting the traditional rider also improved."
+      },
+      {
+       "id": "d",
+       "text": "About 0.3 mL·kg⁻¹·min⁻¹",
+       "why": "That treats 8.8% and 3.7% as 0.88% and 0.37%: a decimal slip (0.53 − 0.22)."
+      }
+     ],
+     "solution": "Block: 60 × 0.088 = 5.28. Traditional: 60 × 0.037 = 2.22. Gap = 5.28 − 2.22 ≈ 3.1 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A skier's peak power on the ramp test is 380 W. After 5 weeks she gains the block group's average 4%. What is her new peak power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 395 W",
+       "correct": true,
+       "why": "Right: 380 × 0.04 = 15.2 W; 380 + 15 ≈ 395 W."
+      },
+      {
+       "id": "b",
+       "text": "384 W",
+       "why": "That adds 4 W, treating the percent as watts."
+      },
+      {
+       "id": "c",
+       "text": "About 532 W",
+       "why": "That multiplies by 1.4: a 40% gain."
+      },
+      {
+       "id": "d",
+       "text": "About 369 W",
+       "why": "That applies the traditional group's −3% instead."
+      }
+     ],
+     "solution": "Change = 380 × 4 ÷ 100 = 15.2 W. New peak power ≈ 395 W."
+    }
+   ]
+  },
+  {
+   "id": "per-ev-skier-result",
+   "concept": "ev-skiers",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mcgawley2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What did the crossover study in 20 junior cross-country skiers find for block vs evenly spread HIIT?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No difference in fitness or performance",
+       "correct": true,
+       "why": "Right: no differences in VO2max, time trial, economy or muscle markers."
+      },
+      {
+       "id": "b",
+       "text": "A clear advantage for blocks",
+       "why": "That was the elite skier and cyclist trials, not this one."
+      },
+      {
+       "id": "c",
+       "text": "A clear advantage for even spreading",
+       "why": "Neither way was better; the 600 m time trial improved after both."
+      },
+      {
+       "id": "d",
+       "text": "More illness and fatigue in the block period",
+       "why": "Recovery and stress scores didn't differ between the periods."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-conflict",
+   "concept": "ev-skiers",
+   "bloom": "evaluate",
+   "sources": [
+    "ronnestad2015b",
+    "mcgawley2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One 5-week trial in elite skiers favours blocks; a 3-week crossover in junior skiers finds no difference. What is the most reasonable conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Any block advantage isn't robust across groups and designs",
+       "correct": true,
+       "why": "Right: mixed results from small studies mean the effect, if real, is small or depends on context."
+      },
+      {
+       "id": "b",
+       "text": "The crossover is wrong because it disagrees with the trial",
+       "why": "A crossover with 20 athletes is no weaker by design; disagreement means uncertainty."
+      },
+      {
+       "id": "c",
+       "text": "Blocks work in elite athletes only, which is now proven",
+       "why": "Two small studies can't prove an interaction with training level."
+      },
+      {
+       "id": "d",
+       "text": "The trial is wrong because elite athletes can't improve",
+       "why": "Elite athletes can improve; the study's design, not their level, is what limits it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-ci",
+   "concept": "ev-meta",
+   "bloom": "analyse",
+   "sources": [
+    "molmen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The pooled effect of blocks on VO2max was 0.40, 95% CI 0.02 to 0.79. What does the interval tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The true effect may be near zero or moderate",
+       "correct": true,
+       "why": "Right: the interval runs from barely above zero to about 0.8."
+      },
+      {
+       "id": "b",
+       "text": "Blocks raise VO2max by 0.40 to 0.79%",
+       "why": "These are standardised effect sizes, not percent changes."
+      },
+      {
+       "id": "c",
+       "text": "The effect is large and certain",
+       "why": "0.40 is small, and a lower end of 0.02 is close to no effect."
+      },
+      {
+       "id": "d",
+       "text": "There's a 95% chance blocks are worse",
+       "why": "The whole interval is above zero, favouring blocks, if only just."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-appraisal",
+   "concept": "ev-meta",
+   "bloom": "evaluate",
+   "sources": [
+    "molmen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits the meta-analysis claiming blocks beat traditional training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few small, short, low-quality trials, many by the authors' own group",
+       "correct": true,
+       "why": "Right: 6 pooled studies, PEDro 3.7/10, about 5 weeks long, several led by its senior author."
+      },
+      {
+       "id": "b",
+       "text": "It pooled too many studies to be precise",
+       "why": "It pooled only 6; more studies would make it more precise, not less."
+      },
+      {
+       "id": "c",
+       "text": "Its interval excludes zero, so it can't be trusted",
+       "why": "An interval that excludes zero is a point in its favour, though only just here."
+      },
+      {
+       "id": "d",
+       "text": "It measured race results, which are too noisy",
+       "why": "It pooled lab measures (VO2max, peak power), not races."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-grade",
+   "concept": "ev-grade",
+   "bloom": "evaluate",
+   "recallFirst": true,
+   "sources": [
+    "molmen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Using the course's rubric, what grade fits \"block periodisation beats traditional organisation for endurance athletes\"?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak",
+       "correct": true,
+       "why": "Right: few small, mostly non-randomised, short trials in mostly trained men."
+      },
+      {
+       "id": "b",
+       "text": "Strong",
+       "why": "A meta-analysis alone isn't enough: strong needs consistent reviews of good trials."
+      },
+      {
+       "id": "c",
+       "text": "Moderate",
+       "why": "Moderate needs several agreeing RCTs; these are small, mostly not randomised, and one disagrees."
+      },
+      {
+       "id": "d",
+       "text": "Disputed",
+       "why": "There is one null study, but most point the same way; the problem is quality, not a clash of good studies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-short",
+   "concept": "ev-grade",
+   "bloom": "understand",
+   "sources": [
+    "molmen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can 4-week trials not tell you whether block periodisation is better across a whole season?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gains over a few weeks may not add up or last over months",
+       "correct": true,
+       "why": "Right: short-term effects say nothing about how they accumulate over a season."
+      },
+      {
+       "id": "b",
+       "text": "Four weeks is too short for any training adaptation",
+       "why": "VO2max can change within weeks; the trials did show changes."
+      },
+      {
+       "id": "c",
+       "text": "Season-long trials always find the opposite",
+       "why": "There are no season-long trials to compare with."
+      },
+      {
+       "id": "d",
+       "text": "Lab tests cannot measure VO2max properly",
+       "why": "Lab tests measure VO2max well; the issue is the time frame."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-ev-practice",
+   "concept": "ev-grade",
+   "bloom": "apply",
+   "sources": [
+    "molmen2019",
+    "mcgawley2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner training 7 hours a week asks whether to switch to a block plan of 5 interval sessions in one week, then 1 a week for three weeks. What's the fairest answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It's a reasonable option to try, not a proven upgrade",
+       "correct": true,
+       "why": "Right: evidence is weak, small and short; trying it and watching the response is fair."
+      },
+      {
+       "id": "b",
+       "text": "Yes: blocks are proven to beat traditional plans",
+       "why": "The evidence is weak, with one null trial; \"proven\" overstates it."
+      },
+      {
+       "id": "c",
+       "text": "No: blocks are proven to cause overtraining",
+       "why": "No trial showed harm; junior skiers coped with 9 sessions in a week."
+      },
+      {
+       "id": "d",
+       "text": "Only if he also doubles his weekly hours",
+       "why": "In the trials, total load stayed the same; only the order changed."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

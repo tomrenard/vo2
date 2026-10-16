@@ -1,0 +1,766 @@
+{
+ "id": "tr-genes",
+ "module": "t3-trainability",
+ "title": "Genes and endurance",
+ "goal": "Explain what ACTN3, ACE and polygenic scores tell us about endurance, why single genes explain so little, and what consensus statements say about genetic tests sold to athletes.",
+ "requires": [
+  "tr-heritage"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "polymorphism",
+    "allele",
+    "genotype",
+    "odds-ratio",
+    "gwas",
+    "polygenic-score",
+    "direct-to-consumer-test"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gen-actn3",
+   "title": "Versions of a gene: ACTN3",
+   "text": "Most [genes](g:gene) come in slightly different versions. A spot where people commonly differ is a [polymorphism](g:polymorphism); each version is an [allele](g:allele), and the pair you carry, one from each parent, is your [genotype](g:genotype).\n\nThe best-known sport example is ACTN3. It makes α-actinin-3, a protein found only in fast-twitch fibres, the ones that make force at high speed [[c:actn3-fast]]. A common variant, R577X, stops the protein being made. People with two X alleles (XX), about 18% of healthy white people, have none at all, and no disease [[c:actn3-xx]].\n\nElite sprinters, men and women, carry the R allele more often than non-athletes [[c:actn3-sprint]].",
+   "claims": [
+    {
+     "id": "actn3-fast",
+     "text": "α-actinin-3 is found only in fast-twitch fibres, which make force at high speed.",
+     "grade": "strong",
+     "sources": [
+      "yang2003"
+     ],
+     "evidence": [
+      {
+       "source": "yang2003",
+       "quote": "alpha-Actinin-3 is specifically expressed in fast-twitch myofibers responsible for generating force at high velocity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "actn3-xx",
+     "text": "About 18% of healthy white people are ACTN3 XX and have no α-actinin-3.",
+     "grade": "strong",
+     "sources": [
+      "yang2003"
+     ],
+     "evidence": [
+      {
+       "source": "yang2003",
+       "quote": "We have recently demonstrated that the skeletal-muscle actin-binding protein alpha-actinin-3 is absent in 18% of healthy white individuals because of homozygosity for a common stop-codon polymorphism in the ACTN3 gene, R577X.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "actn3-sprint",
+     "text": "Elite sprinters carry the ACTN3 R allele more often than controls.",
+     "grade": "moderate",
+     "sources": [
+      "yang2003"
+     ],
+     "evidence": [
+      {
+       "source": "yang2003",
+       "quote": "Both male and female elite sprint athletes have significantly higher frequencies of the 577R allele than do controls.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gen-genotype"
+  },
+  {
+   "type": "question",
+   "item": "gen-xx"
+  },
+  {
+   "type": "concept",
+   "id": "gen-ace",
+   "title": "ACE, ACTN3 and how small their effects are",
+   "text": "ACE is an enzyme of the [renin–angiotensin system](g:renin-angiotensin). Its gene has an insertion (I) or deletion (D) polymorphism.\n\nA [meta-analysis](g:meta-analysis) of studies up to 2012 found the II genotype more common in endurance athletes than in controls: [odds ratio](g:odds-ratio) 1.35. ACTN3 RR wasn't linked to performance overall (OR 1.03), only to power events (OR 1.21) [[c:ma-or]].\n\nOdds ratios this size are very small for picking talent: in the UK about 20 million people are RR, yet only a tiny fraction are elite athletes [[c:or-small]]. ACTN3 explains perhaps 2–3% of the differences in sprint performance between people, and probably less than 1% [[c:actn3-share]].",
+   "claims": [
+    {
+     "id": "ma-or",
+     "text": "ACE II is linked to endurance athletes (OR 1.35); ACTN3 RR is not linked to performance overall (OR 1.03), only to power events (OR 1.21).",
+     "grade": "moderate",
+     "sources": [
+      "ma2013"
+     ],
+     "evidence": [
+      {
+       "source": "ma2013",
+       "quote": "With respect to sport discipline, the II genotype was found to be associated with performance in endurance athletes (OR, 1.35; 95% CI, 1.17-1.55).",
+       "level": "abstract"
+      },
+      {
+       "source": "ma2013",
+       "quote": "On the other hand, no significant association was observed for ACTN3 RR genotype as compared to X allele carriage (XX+RX) (OR, 1.03; 95% CI, 0.92-1.15).",
+       "level": "abstract"
+      },
+      {
+       "source": "ma2013",
+       "quote": "When restricted the analyses to power events, a significant association was observed (OR, 1.21; 95% CI, 1.03–1.42).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "or-small",
+     "text": "Odds ratios of this size are very small and useless for talent identification on their own.",
+     "grade": "strong",
+     "sources": [
+      "webborn2015"
+     ],
+     "evidence": [
+      {
+       "source": "webborn2015",
+       "quote": "ORs of approximately 1.5 are very small, however and virtually meaningless for talent identification in isolation.",
+       "level": "full-text"
+      },
+      {
+       "source": "webborn2015",
+       "quote": "in the UK's ∼65 million population there are an estimated 20 million people of RR genotype—but only a tiny fraction of those people are elite athletes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "actn3-share",
+     "text": "ACTN3 explains at most about 2–3%, and probably under 1%, of the variation in sprint performance.",
+     "grade": "strong",
+     "sources": [
+      "webborn2015"
+     ],
+     "evidence": [
+      {
+       "source": "webborn2015",
+       "quote": "Indeed, the degree of interindividual variability in sprinting performance that can be explained by ACTN3 genotype, for example, which has been estimated to reach ∼2–3%, 24 25 while based on the broader scientific literature is probably less than 1%.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gen-or-meaning"
+  },
+  {
+   "type": "question",
+   "item": "gen-or-runner"
+  },
+  {
+   "type": "concept",
+   "id": "gen-polygenic",
+   "title": "Many genes, each with a tiny effect",
+   "text": "Endurance depends on many genes. Williams and Folland took 23 polymorphisms linked to endurance: the chance of one person having the 'good' version of all 23 was 0.0005%, and 99% of people differed from the typical profile by no more than seven [[c:wf-23]]. Most of us carry a similar mix of good and bad versions.\n\nA [genome-wide association study](g:gwas) tests hundreds of thousands of spots at once. In HERITAGE it found 21 spots that together accounted for 49% of the spread in VO₂max gains. Adding up the favourable alleles gives a [polygenic score](g:polygenic-score): people with 9 or fewer gained 221 mL·min⁻¹, those with 19 or more 604 mL·min⁻¹ [[c:b11-score]].",
+   "claims": [
+    {
+     "id": "wf-23",
+     "text": "Only 0.0005% of people would carry the preferable form of all 23 endurance polymorphisms; 99% differ from the typical profile by no more than seven.",
+     "grade": "weak",
+     "sources": [
+      "williams2008"
+     ],
+     "evidence": [
+      {
+       "source": "williams2008",
+       "quote": "Using probability calculations, we found only a 0.0005% chance of a single individual in the world having the 'preferable' form of all 23 polymorphisms.",
+       "level": "abstract"
+      },
+      {
+       "source": "williams2008",
+       "quote": "There was considerable homogeneity in terms of genetic predisposition to high endurance potential, with 99% of people differing by no more than seven genotypes from the typical profile.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "b11-score",
+     "text": "In HERITAGE, 21 SNPs accounted for 49% of the variance in VO₂max trainability; carriers of ≤9 favourable alleles gained 221 mL·min⁻¹, carriers of ≥19 gained 604 mL·min⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "bouchard2011"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard2011",
+       "quote": "Stepwise multiple regression analysis of the 39 SNPs identified a panel of 21 SNPs that accounted for 49% of the variance in VO(2max) trainability.",
+       "level": "abstract"
+      },
+      {
+       "source": "bouchard2011",
+       "quote": "Subjects who carried ≤9 favorable alleles at these 21 SNPs improved their VO(2max) by 221 ml/min, whereas those who carried ≥19 of these alleles gained, on average, 604 ml/min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gen-why-polygenic"
+  },
+  {
+   "type": "concept",
+   "id": "gen-replicate",
+   "title": "Findings that don't repeat",
+   "text": "Treat that 49% with care. The 21 spots were picked from 324,611 tested, then scored in the same people. Spots picked that way always fit the data they were picked from better than they will fit new people, and the authors called for large replication studies [[c:b11-replicate]]. The strongest single spot explained only about 6% of the gain [[c:b11-single]].\n\nA [systematic review](g:systematic-review) of genes for VO₂max trainability found 97 candidate genes, but only 13 variants were found again by more than two research groups. Small samples, weak statistics and mostly white volunteers were common [[c:w17-replicate]].\n\nSo far, no gene test predicts how much one athlete will gain.",
+   "claims": [
+    {
+     "id": "b11-replicate",
+     "text": "The 21-SNP panel was found by testing 324,611 SNPs in the same cohort, and the authors called for large-scale replication.",
+     "grade": "strong",
+     "sources": [
+      "bouchard2011"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard2011",
+       "quote": "A genome-wide association study based on 324,611 single-nucleotide polymorphisms (SNPs) was undertaken to identify SNPs associated with improvements in VO(2max)",
+       "level": "abstract"
+      },
+      {
+       "source": "bouchard2011",
+       "quote": "Large-scale replication studies are warranted.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "b11-single",
+     "text": "The strongest single SNP (in ACSL1) accounted for about 6% of the VO₂max response.",
+     "grade": "weak",
+     "sources": [
+      "bouchard2011"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard2011",
+       "quote": "The strongest association was with rs6552828, located in the acyl-CoA synthase long-chain member 1 (ACSL1) gene, which accounted by itself for ~6% of the training response of VO(2max).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "w17-replicate",
+     "text": "Of 97 candidate genes for VO₂max trainability, only 13 variants were reproduced by more than two authors; small samples and mostly white cohorts limit the evidence.",
+     "grade": "strong",
+     "sources": [
+      "williams2017"
+     ],
+     "evidence": [
+      {
+       "source": "williams2017",
+       "quote": "Only 13 genetic variants were reproduced by more than two authors.",
+       "level": "abstract"
+      },
+      {
+       "source": "williams2017",
+       "quote": "Several other limitations were noted throughout these studies, including the robustness of significance for identified variants, small sample sizes, limited cohorts focused primarily on Caucasian populations, and minimal baseline data.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gen-appraise-21"
+  },
+  {
+   "type": "question",
+   "item": "gen-97-genes"
+  },
+  {
+   "type": "concept",
+   "id": "gen-dtc",
+   "title": "Genetic tests sold to athletes",
+   "text": "[Direct-to-consumer tests](g:direct-to-consumer-test) promise to reveal your 'power or endurance type'. In 2015, 21 of 39 companies didn't say which variants they tested; of those that did, 89% tested ACTN3 [[c:dtc-market]].\n\nThe [consensus statement](g:consensus-statement) of sport genetics researchers: genetic tests have no role in picking talent or in tailoring training to maximise performance, and no child or young athlete should be tested for this. Labs have even reported different results from samples of the same person [[c:dtc-consensus]]. The 2019 update agrees: performance is polygenic, so choosing talent or a sport from a few variants is unlikely ever to work [[c:fims-poly]].\n\nMedical genetic testing is different: it helps with inherited heart disease in athletes [[c:fims-heart]].",
+   "claims": [
+    {
+     "id": "dtc-market",
+     "text": "In 2015, 54% of sport DTC companies didn't name the variants tested; of the rest, 89% tested ACTN3.",
+     "grade": "strong",
+     "sources": [
+      "webborn2015"
+     ],
+     "evidence": [
+      {
+       "source": "webborn2015",
+       "quote": "For 21 of the 39 companies (54%), it was not possible to identify the specific DNA sequence variants tested.",
+       "level": "full-text"
+      },
+      {
+       "source": "webborn2015",
+       "quote": "the most commonly-tested variant was the ACTN3 R577X polymorphism that was tested by 16 of those 18 companies (89%).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dtc-consensus",
+     "text": "Genetic tests have no role in talent identification or training prescription; no child or young athlete should take DTC tests for this; labs have given different results for the same person.",
+     "grade": "strong",
+     "sources": [
+      "webborn2015"
+     ],
+     "evidence": [
+      {
+       "source": "webborn2015",
+       "quote": "The general consensus among sport and exercise genetics researchers is that genetic tests have no role to play in talent identification or the individualised prescription of training to maximise performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "webborn2015",
+       "quote": "Furthermore independent studies have identified issues relating to quality control by DTC laboratories with different results being reported from samples from the same individual.",
+       "level": "abstract"
+      },
+      {
+       "source": "webborn2015",
+       "quote": "Consequently, in the current state of knowledge, no child or young athlete should be exposed to DTC genetic testing to define or alter training or for talent identification aimed at selecting gifted children or adolescents.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fims-poly",
+     "text": "Because performance is polygenic, talent identification from a few variants is unlikely ever to be possible.",
+     "grade": "strong",
+     "sources": [
+      "tanisawa2020"
+     ],
+     "evidence": [
+      {
+       "source": "tanisawa2020",
+       "quote": "Nevertheless, given the polygenic nature of athletic performance and sports skill, talent identification or selection of optimal sports by using only limited genetic variants is unlikely to ever be a possibility.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "fims-heart",
+     "text": "Genetic testing can help evaluate athletes with abnormal heart screening or a family history of inherited heart disease.",
+     "grade": "strong",
+     "sources": [
+      "tanisawa2020"
+     ],
+     "evidence": [
+      {
+       "source": "tanisawa2020",
+       "quote": "Thus, genetic testing may be an important tool in the evaluation of athletes with abnormal cardiovascular screening, inconclusive cardiac imaging and in athletes with a family history of an inheritable cardiac disorder.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gen-dtc-child"
+  },
+  {
+   "type": "question",
+   "item": "gen-dtc-report"
+  },
+  {
+   "type": "question",
+   "item": "gen-dtc-medical"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A polymorphism is a spot where people's DNA differs; each version is an allele, and your pair of alleles is your genotype.",
+    "ACTN3 R577X: XX people (about 18% of white people) lack α-actinin-3 in fast fibres; R is more common in elite sprinters.",
+    "ACE II is a bit more common in endurance athletes (OR 1.35); odds ratios this small, and ACTN3's share of sprint differences (2–3% at most, probably under 1%), are useless for one person.",
+    "Endurance is polygenic: most people carry a similar mix of variants; a 21-SNP score from HERITAGE still needs replication, and few candidate genes have repeated.",
+    "Consensus: genetic tests have no role in talent selection or training prescription; testing for inherited heart disease is a separate, medical use."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gen-genotype",
+   "concept": "gen-actn3",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "yang2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner got an R allele of ACTN3 from her mother and an X allele from her father. What is her ACTN3 genotype?",
+     "options": [
+      {
+       "id": "a",
+       "text": "RX",
+       "correct": true,
+       "why": "Right: the genotype is the pair of alleles, one from each parent."
+      },
+      {
+       "id": "b",
+       "text": "XX",
+       "why": "XX needs an X from both parents."
+      },
+      {
+       "id": "c",
+       "text": "R, because R is the stronger allele",
+       "why": "A genotype names both alleles, not just one."
+      },
+      {
+       "id": "d",
+       "text": "R577X",
+       "why": "R577X is the name of the polymorphism, not of her genotype."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-xx",
+   "concept": "gen-actn3",
+   "bloom": "understand",
+   "sources": [
+    "yang2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is different about the muscle of a person with the ACTN3 XX genotype?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Their fast-twitch fibres make no α-actinin-3",
+       "correct": true,
+       "why": "Right: the X allele stops the protein being made; it causes no disease."
+      },
+      {
+       "id": "b",
+       "text": "They have no fast-twitch fibres",
+       "why": "They have fast fibres; they lack one protein in them."
+      },
+      {
+       "id": "c",
+       "text": "They have a muscle disease that limits sprinting",
+       "why": "XX causes no disease; about 18% of healthy white people are XX."
+      },
+      {
+       "id": "d",
+       "text": "Their slow-twitch fibres can't use oxygen",
+       "why": "α-actinin-3 is a fast-fibre protein; slow fibres are unaffected."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-or-meaning",
+   "concept": "gen-ace",
+   "bloom": "apply",
+   "sources": [
+    "ma2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis reports that the ACE II genotype is linked to endurance athletes with an odds ratio of 1.35. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "II is somewhat more common among endurance athletes than among controls",
+       "correct": true,
+       "why": "Right: the odds of being II are 35% higher in endurance athletes than in controls; nothing more."
+      },
+      {
+       "id": "b",
+       "text": "II people have about 35% more endurance than others",
+       "why": "An odds ratio compares how common a genotype is in two groups, not performance."
+      },
+      {
+       "id": "c",
+       "text": "About 35% of all endurance athletes carry II",
+       "why": "1.35 is a ratio of odds, not a share of athletes."
+      },
+      {
+       "id": "d",
+       "text": "The ACE gene explains 35% of endurance differences",
+       "why": "An odds ratio isn't a share of variation; single genes explain only a few percent at most."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-or-runner",
+   "concept": "gen-ace",
+   "bloom": "analyse",
+   "sources": [
+    "webborn2015",
+    "ma2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A club runner learns he is ACE II, the genotype a bit more common in endurance athletes. How much does this change his chance of becoming elite?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hardly at all: most people with that genotype are nowhere near elite",
+       "correct": true,
+       "why": "Right: as with the 20 million RR people in the UK, a common genotype with OR around 1.3 says almost nothing about one person."
+      },
+      {
+       "id": "b",
+       "text": "A lot: II is the endurance genotype",
+       "why": "Being a bit more common in athletes doesn't make a genotype a strong predictor."
+      },
+      {
+       "id": "c",
+       "text": "By 35%: that is the odds ratio",
+       "why": "The odds ratio compares groups; it isn't one person's chance of success."
+      },
+      {
+       "id": "d",
+       "text": "It shows his training gains will be above average",
+       "why": "The finding was about elite status, not trainability; and the link is weak anyway."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-why-polygenic",
+   "concept": "gen-polygenic",
+   "bloom": "understand",
+   "sources": [
+    "williams2008",
+    "bouchard2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can't one gene test tell you how good an endurance athlete you can become?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Many genes each add a tiny effect, and most people carry a similar mix",
+       "correct": true,
+       "why": "Right: endurance is polygenic; almost nobody has all the 'good' versions, and 99% differ from the typical profile by seven or fewer."
+      },
+      {
+       "id": "b",
+       "text": "Endurance has no genetic part",
+       "why": "Family studies show a real genetic part; it is just spread over many genes."
+      },
+      {
+       "id": "c",
+       "text": "The right gene is known but too expensive to test",
+       "why": "No single gene with a large effect has been found."
+      },
+      {
+       "id": "d",
+       "text": "Genes only affect sprinting, not endurance",
+       "why": "Several variants are linked to endurance; each one's effect is tiny."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-appraise-21",
+   "concept": "gen-replicate",
+   "bloom": "evaluate",
+   "sources": [
+    "bouchard2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study tests 324,611 SNPs in 473 people and finds 21 that 'account for 49% of the variance' in VO₂max gains in the same people. What most limits that 49%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The SNPs were picked and scored in the same people, so the fit is overstated",
+       "correct": true,
+       "why": "Right: picking the best of 324,611 tests in one sample flatters the result; only replication in new people shows the true share."
+      },
+      {
+       "id": "b",
+       "text": "473 people is too few to measure VO₂max gains reliably",
+       "why": "It is a large training study; the problem is the number of tests compared with the number of people."
+      },
+      {
+       "id": "c",
+       "text": "Single-letter DNA differences can't affect VO₂max gains",
+       "why": "Genes do influence trainability; the issue is how well these particular SNPs predict it."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max gains aren't heritable, so no SNP can predict them",
+       "why": "The same cohort estimated a heritability of 47%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-97-genes",
+   "concept": "gen-replicate",
+   "bloom": "analyse",
+   "sources": [
+    "williams2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A systematic review lists 97 genes linked to VO₂max trainability, but only 13 variants were found again by more than two groups. What is the most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Many links were chance findings from small samples and many tests",
+       "correct": true,
+       "why": "Right: small, mostly white samples and weak statistics produce false hits that don't repeat."
+      },
+      {
+       "id": "b",
+       "text": "Trainability genes differ in every study population",
+       "why": "Population differences may play a part, but the review points first to small samples and weak statistics."
+      },
+      {
+       "id": "c",
+       "text": "The 97 genes all matter, but scientists didn't test them again",
+       "why": "Several were tested again and didn't repeat; that is the point."
+      },
+      {
+       "id": "d",
+       "text": "Genes for trainability change after training",
+       "why": "Your DNA sequence doesn't change with training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-dtc-child",
+   "concept": "gen-dtc",
+   "bloom": "evaluate",
+   "sources": [
+    "webborn2015",
+    "tanisawa2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A parent wants to buy a €200 saliva test to decide whether his 12-year-old should do sprinting or triathlon. What does the consensus advise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Don't: no child should be tested for talent or training choices",
+       "correct": true,
+       "why": "Right: the consensus says genetic tests have no role in talent identification, and children shouldn't be tested for it."
+      },
+      {
+       "id": "b",
+       "text": "Test, but only for ACTN3, the best-studied gene",
+       "why": "ACTN3 explains only a few percent of sprint differences: useless for one child."
+      },
+      {
+       "id": "c",
+       "text": "Test, and choose triathlon if she is ACTN3 XX",
+       "why": "A common genotype carried by millions can't pick a sport for one child."
+      },
+      {
+       "id": "d",
+       "text": "Wait until she is 16, then test",
+       "why": "The advice isn't about age: the tests can't predict talent at any age."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-dtc-report",
+   "concept": "gen-dtc",
+   "bloom": "apply",
+   "sources": [
+    "webborn2015",
+    "tanisawa2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's genetic report says: \"ACE DD: power type. Cut your long rides and train short intervals.\" What should she do with it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ignore it for training: plan from her goals and her own test results",
+       "correct": true,
+       "why": "Right: genetic tests have no role in tailoring training, and one variant explains almost nothing."
+      },
+      {
+       "id": "b",
+       "text": "Follow it, since ACE is a well-studied gene",
+       "why": "Well studied doesn't mean predictive: the effect is tiny and doesn't apply to one person."
+      },
+      {
+       "id": "c",
+       "text": "Retest with another company to confirm, then follow it",
+       "why": "Labs have even given different results for the same person, but even a correct result wouldn't justify the change."
+      },
+      {
+       "id": "d",
+       "text": "Follow it for a season, since it can't do harm",
+       "why": "Dropping long rides for an endurance goal can do harm; the test gives no reason to."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen-dtc-medical",
+   "concept": "gen-dtc",
+   "bloom": "understand",
+   "sources": [
+    "tanisawa2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where does genetic testing of athletes have an accepted use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Checking for inherited heart disease in at-risk athletes",
+       "correct": true,
+       "why": "Right: some inherited heart conditions are caused by single genes, and testing can help diagnose them."
+      },
+      {
+       "id": "b",
+       "text": "Choosing the best sport for a young athlete",
+       "why": "The consensus rules this out: performance is polygenic."
+      },
+      {
+       "id": "c",
+       "text": "Setting training zones",
+       "why": "Zones come from tests of the athlete (lactate, power, heart rate), not from DNA."
+      },
+      {
+       "id": "d",
+       "text": "Predicting VO₂max gains before a training block",
+       "why": "No gene test does this reliably yet."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

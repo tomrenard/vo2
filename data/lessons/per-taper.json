@@ -1,0 +1,789 @@
+{
+ "id": "per-taper",
+ "module": "t3-periodization",
+ "title": "Tapering",
+ "goal": "Plan a taper from the meta-analyses (how much to cut, what to keep, how long) and explain why it improves performance.",
+ "requires": [
+  "per-evidence"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "taper",
+    "progressive-taper",
+    "step-taper",
+    "functional-overreaching",
+    "supercompensation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "taper-what",
+   "title": "What a taper is for",
+   "text": "A [taper](g:taper) is a planned, gradual cut in training in the last days or weeks before a key race. Its aim: clear the fatigue of hard training **without losing the fitness** it built [[c:taper-aim]].\n\nThink of fitness and fatigue as two things training creates at once. Fitness fades slowly; fatigue fades fast. Cut training for a week or two and fatigue drops much more than fitness, so you race fresher and fitter than you were in the heavy weeks.\n\nHow much does it help? In studies, performance usually improves by **about 3%**, with a usual range of 0.5–6% [[c:taper-gain]]. For a 60-minute 40 km time trial, 3% is almost 2 minutes.",
+   "claims": [
+    {
+     "id": "taper-aim",
+     "text": "The aim of the taper is to minimise accumulated fatigue without compromising adaptations.",
+     "grade": "strong",
+     "sources": [
+      "mujika2003"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2003",
+       "quote": "The aim of the taper should be to minimize accumulated fatigue without compromising adaptations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "taper-gain",
+     "text": "A taper usually improves performance by about 3% (usual range 0.5–6%).",
+     "grade": "moderate",
+     "sources": [
+      "mujika2003"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2003",
+       "quote": "Performance usually improves by about 3% (usual range 0.5-6.0%)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-aim-q"
+  },
+  {
+   "type": "question",
+   "item": "taper-gain-q"
+  },
+  {
+   "type": "concept",
+   "id": "taper-recipe",
+   "title": "The recipe from two meta-analyses",
+   "text": "A [meta-analysis](g:meta-analysis) of 27 studies (swimmers, cyclists, runners) found the biggest gains from [[c:taper-bosquet]]:\n\n- **volume** cut by **41–60%**;\n- **intensity** kept;\n- **frequency** (sessions per week) kept;\n- about **2 weeks** long.\n\nA 2023 meta-analysis of 14 studies in endurance athletes found the same: a 41–60% volume cut with intensity and frequency kept, and 8–14 days gave the largest effect, though only two data sets used that length [[c:taper-wang]].\n\nBoth pooled mostly before-and-after changes in the same athletes rather than comparisons with a control group [[c:taper-design]], so we grade this moderate, not strong.",
+   "claims": [
+    {
+     "id": "taper-bosquet",
+     "text": "A 2-week taper with volume reduced by 41–60% and intensity and frequency kept gave the largest performance gains.",
+     "grade": "moderate",
+     "sources": [
+      "bosquet2007"
+     ],
+     "evidence": [
+      {
+       "source": "bosquet2007",
+       "quote": "A 2-wk taper during which training volume is exponentially reduced by 41-60% seems to be the most efficient strategy to maximize performance gains.",
+       "level": "abstract"
+      },
+      {
+       "source": "bosquet2007",
+       "quote": "where the training volume is exponentially decreased by 41-60% (overall effect = 0.72 +/- 0.36, P < 0.001), without any modification of either training intensity (overall effect = 0.33 +/- 0.14, P < 0.001) or frequency (overall effect = 0.35 +/- 0.17, P < 0.001)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "taper-wang",
+     "text": "In endurance athletes, cutting volume by 41–60% while keeping intensity and frequency improved time-trial performance; 8–14 days gave the largest effect.",
+     "grade": "moderate",
+     "sources": [
+      "wang2023"
+     ],
+     "evidence": [
+      {
+       "source": "wang2023",
+       "quote": "A tapering strategy that reduced training volume by 41-60%, maintained training intensity and frequency, lasted ≤7 days, 8-14 days, or 15-21 days, used a progressive or step taper could significantly improve TT performance (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "wang2023",
+       "quote": "Subgroup analysis of taper duration showed that the subgroup with duration of 8–14-days experienced the largest overall effect",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "taper-design",
+     "text": "The taper meta-analyses pooled mainly pre- to post-taper changes within athletes, not comparisons with control groups.",
+     "grade": "strong",
+     "sources": [
+      "bosquet2007",
+      "wang2023"
+     ],
+     "evidence": [
+      {
+       "source": "bosquet2007",
+       "quote": "Pre-post taper standardized mean differences in performance were calculated and weighted according to the within-group heterogeneity to develop an overall effect.",
+       "level": "abstract"
+      },
+      {
+       "source": "wang2023",
+       "quote": "Significant improvements were found between pre- and post-tapering in time–trial (TT) performance",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-what-cut"
+  },
+  {
+   "type": "example",
+   "id": "taper-example",
+   "title": "Planning a 2-week taper",
+   "problem": "A cyclist normally rides 10 h a week. Plan a 2-week progressive taper with an average volume cut of about 50%.",
+   "steps": [
+    "Normal fortnight: 2 × 10 = 20 h. A 50% cut leaves about 10 h over the two weeks.",
+    "Progressive means the cut grows: week 1 at 6.5 h (−35%), week 2 at 3.5 h (−65%).",
+    "Check: 6.5 + 3.5 = 10 h, so the average cut is (20 − 10) ÷ 20 = 50%.",
+    "Keep the number of rides and keep short race-pace or interval efforts in each week: only the amount drops."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "taper-duration"
+  },
+  {
+   "type": "concept",
+   "id": "taper-shape",
+   "title": "Shape: keep the intensity",
+   "text": "A [progressive taper](g:progressive-taper) cuts a little more each day or week; a [step taper](g:step-taper) cuts once and holds. An early review found progressive tapers better [[c:taper-progressive]]; the 2023 meta-analysis found both work, with a slightly larger effect for progressive.\n\nThe common mistake is cutting **intensity**. Hard sessions are what keep the adaptations during reduced training; volume can fall a lot with no harm, so the load should not be cut at the expense of intensity [[c:taper-intensity]]. Cut too much of everything for too long and you drift into [detraining](g:detraining).\n\nIn practice: shorter interval sessions at race pace, fewer reps, same number of training days.",
+   "claims": [
+    {
+     "id": "taper-progressive",
+     "text": "Progressive nonlinear tapers benefit performance more than step tapers.",
+     "grade": "weak",
+     "sources": [
+      "mujika2003"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2003",
+       "quote": "Progressive nonlinear tapers are more beneficial to performance than step tapers.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "taper-intensity",
+     "text": "Training load should not be reduced at the expense of intensity during the taper; volume can be cut markedly.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2010"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2010",
+       "quote": "Therefore, the training load should not be reduced at the expense of intensity during the taper.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2010",
+       "quote": "On the other hand, training volume can be markedly reduced without a negative impact on athletes' performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-shape-q"
+  },
+  {
+   "type": "question",
+   "item": "taper-mistake"
+  },
+  {
+   "type": "concept",
+   "id": "taper-overload",
+   "title": "Overload first, but not too far",
+   "text": "Many tapers follow a deliberate overload. In the 2023 meta-analysis, tapers that came after a period of extra load improved time trials more than ordinary tapers [[c:taper-overload-wang]].\n\nBut there's a limit. In 33 trained male triathletes, a 3-week overload left 11 of 23 [functionally overreached](g:functional-overreaching): performance down, fatigue high. The other 12 were only tired. During the taper, the merely tired group showed the most [supercompensation](g:supercompensation), about 2.6% more than both the overreached and the normal-training groups. The overreached group also had the most infections (70% vs 20% and 10%) [[c:taper-aubry]].\n\nSo: load up before the taper, but stop before your performance drops.",
+   "claims": [
+    {
+     "id": "taper-overload-wang",
+     "text": "Tapers that followed pre-taper overload training improved time-trial performance more than conventional tapers.",
+     "grade": "weak",
+     "sources": [
+      "wang2023"
+     ],
+     "evidence": [
+      {
+       "source": "wang2023",
+       "quote": "Further subgroup analysis showed that tapering combined with pre-taper overload training had a more significant effect on TT performance than conventional tapering (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "taper-aubry",
+     "text": "Athletes who were acutely fatigued, but not functionally overreached, before the taper gained most; overreached athletes gained less and had more infections.",
+     "grade": "weak",
+     "sources": [
+      "aubry2014"
+     ],
+     "evidence": [
+      {
+       "source": "aubry2014",
+       "quote": "the AF group demonstrated a small to large greater peak performance supercompensation than the F-OR group (2.6% ± 1.1%) and the CTL group (2.6% ± 1.6%).",
+       "level": "abstract"
+      },
+      {
+       "source": "aubry2014",
+       "quote": "3) F-OR provides higher risk for training maladaptation, including increased infection risks.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-aubry-q"
+  },
+  {
+   "type": "concept",
+   "id": "taper-mechanisms",
+   "title": "Why it works",
+   "text": "What changes during a taper [[c:taper-mech]]:\n\n- **fatigue clears**: models show the taper mostly restores capacities that heavy training had held down;\n- **blood**: more blood and red cell volume, and more haemoglobin;\n- **fuel**: muscle [glycogen](g:glycogen) rises;\n- **muscle**: strength and power rise markedly;\n- **mind**: better mood and sleep, lower perceived effort.\n\nWhat often **doesn't** change: [VO2max](g:vo2max). A rise isn't needed for a better race [[c:taper-vo2]], and the 2023 meta-analysis found no average change in VO2max or economy, while time trials and time to exhaustion improved.\n\nSo the taper reveals fitness that fatigue was hiding more than it adds new fitness.",
+   "claims": [
+    {
+     "id": "taper-mech",
+     "text": "Taper-related gains come from restored capacities, blood volume and haemoglobin, glycogen, strength and power, and better mood.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2004"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2004",
+       "quote": "Mathematical models indicate that the physiological changes associated with the taper are the result of a restoration of previously impaired physiological capacities (fatigue and adaptation model)",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2004",
+       "quote": "From a neuromuscular perspective, the taper usually results in markedly increased muscular strength and power, often associated with performance gains at the muscular and whole body level.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2004",
+       "quote": "Possible haematological changes include increased blood and red cell volume, haemoglobin, haematocrit, reticulocytes and haptoglobin, and decreased red cell distribution width.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2004",
+       "quote": "muscle glycogen concentration increases progressively",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2004",
+       "quote": "including a reduction in total mood disturbance and somatic complaints, improved somatic relaxation and self-assessed physical conditioning scores, reduced perception of effort and improved quality of sleep",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "taper-vo2",
+     "text": "An increase in VO2max isn't needed for taper-induced performance gains.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2004",
+      "wang2023"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2004",
+       "quote": "Changes in the cardiorespiratory system may include an increase in maximal oxygen uptake, but this is not a necessary prerequisite for taper-induced gains in performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "wang2023",
+       "quote": "There were no improvements in maximal oxygen consumption",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "taper-mech-q"
+  },
+  {
+   "type": "question",
+   "item": "taper-vo2-q"
+  },
+  {
+   "type": "question",
+   "item": "taper-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "taper-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A taper cuts training before a key race to clear fatigue while keeping fitness; it usually gains about 3% (0.5–6%).",
+    "Recipe from two meta-analyses: cut volume 41–60%, keep intensity and frequency, about 2 weeks (8–14 days). Grade: moderate.",
+    "Cut volume, not intensity: hard efforts keep the adaptations; too big a cut drifts into detraining.",
+    "Overload before the taper helps, but tipping into functional overreaching cut the gain and raised infections.",
+    "Gains come from cleared fatigue, more blood volume, glycogen and power; VO2max often doesn't change."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "taper-aim-q",
+   "concept": "taper-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mujika2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is a taper trying to do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Clear fatigue while keeping fitness",
+       "correct": true,
+       "why": "Right: fatigue fades faster than fitness, so cutting training reveals the fitness."
+      },
+      {
+       "id": "b",
+       "text": "Build new fitness in the last weeks",
+       "why": "Little new fitness is built; the taper mainly lets fatigue clear."
+      },
+      {
+       "id": "c",
+       "text": "Rest fully so the body forgets the training",
+       "why": "Full rest for weeks would cost fitness (detraining)."
+      },
+      {
+       "id": "d",
+       "text": "Raise training load to peak fitness on race day",
+       "why": "Load goes down in a taper, not up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-gain-q",
+   "concept": "taper-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mujika2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "By about how much does a taper typically improve performance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3%",
+       "correct": true,
+       "why": "Right: usually about 3%, ranging 0.5–6%."
+      },
+      {
+       "id": "b",
+       "text": "About 0.1%",
+       "why": "That would be too small to matter; typical gains are much larger."
+      },
+      {
+       "id": "c",
+       "text": "About 15%",
+       "why": "That's far beyond what tapers give trained athletes."
+      },
+      {
+       "id": "d",
+       "text": "About 30%",
+       "why": "No taper gives that; it would be a huge change in fitness."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-what-cut",
+   "concept": "taper-recipe",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bosquet2007",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which part of training do the meta-analyses say to cut in a taper?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Volume, by about 41–60%",
+       "correct": true,
+       "why": "Right: cut how much you train, keep how hard and how often."
+      },
+      {
+       "id": "b",
+       "text": "Intensity, by about half",
+       "why": "Cutting intensity didn't help; keeping it gave the gains."
+      },
+      {
+       "id": "c",
+       "text": "Frequency, to every other day",
+       "why": "Keeping the number of sessions worked better than cutting them."
+      },
+      {
+       "id": "d",
+       "text": "All three equally, by about 20%",
+       "why": "A 20% volume cut was too small, and intensity should stay."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-calc",
+   "concept": "taper-recipe",
+   "bloom": "apply",
+   "sources": [
+    "bosquet2007",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner averages 60 km a week. For her taper she cuts volume by 50%. How many km a week does she run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 km",
+       "correct": true,
+       "why": "Right: 60 × (1 − 0.50) = 30 km."
+      },
+      {
+       "id": "b",
+       "text": "10 km",
+       "why": "That subtracts 50 km instead of 50%."
+      },
+      {
+       "id": "c",
+       "text": "54 km",
+       "why": "That cuts 10%, not 50%."
+      },
+      {
+       "id": "d",
+       "text": "12 km",
+       "why": "That keeps 20%, an 80% cut: well past the 41–60% range."
+      }
+     ],
+     "solution": "Cut = 60 × 0.50 = 30 km. Taper volume = 60 − 30 = 30 km a week."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete trains 12 h a week. His coach plans a 40% volume cut for the taper. How many hours a week is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.2 h",
+       "correct": true,
+       "why": "Right: 12 × (1 − 0.40) = 7.2 h."
+      },
+      {
+       "id": "b",
+       "text": "4.8 h",
+       "why": "That's the 40% that is removed, not what's left."
+      },
+      {
+       "id": "c",
+       "text": "8 h",
+       "why": "That subtracts 4 hours, as if 40% of 10 h."
+      },
+      {
+       "id": "d",
+       "text": "11.6 h",
+       "why": "That subtracts 0.4 h instead of 40%."
+      }
+     ],
+     "solution": "Cut = 12 × 0.40 = 4.8 h. Taper volume = 12 − 4.8 = 7.2 h a week."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist normally rides 10 h a week and rides 4 h in his taper week. By what percentage did he cut volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60%",
+       "correct": true,
+       "why": "Right: (10 − 4) ÷ 10 = 0.60, a 60% cut."
+      },
+      {
+       "id": "b",
+       "text": "40%",
+       "why": "That's the share he kept, not the share he cut."
+      },
+      {
+       "id": "c",
+       "text": "6%",
+       "why": "That's the 6 hours cut, read as a percent."
+      },
+      {
+       "id": "d",
+       "text": "150%",
+       "why": "That divides 6 by 4, using the taper week as the base."
+      }
+     ],
+     "solution": "Cut = (10 − 4) ÷ 10 = 0.60 = 60%: at the top of the 41–60% range."
+    }
+   ]
+  },
+  {
+   "id": "taper-duration",
+   "concept": "taper-recipe",
+   "bloom": "apply",
+   "sources": [
+    "bosquet2007",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's A race is on Sunday 13 September. Following the meta-analyses, when should her taper start?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Around Monday 31 August",
+       "correct": true,
+       "why": "Right: about 2 weeks (8–14 days) before the race."
+      },
+      {
+       "id": "b",
+       "text": "Around Monday 7 September",
+       "why": "That gives 6 days; short tapers can work but 8–14 days gave the largest effect."
+      },
+      {
+       "id": "c",
+       "text": "Around Monday 17 August",
+       "why": "That's nearly 4 weeks: longer than the 8–14 days that worked best, and long enough to start losing fitness."
+      },
+      {
+       "id": "d",
+       "text": "On Thursday 10 September",
+       "why": "Three days is far shorter than the 8–14 days that gave the largest effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-shape-q",
+   "concept": "taper-shape",
+   "bloom": "understand",
+   "sources": [
+    "mujika2003",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the difference between a progressive and a step taper?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Progressive cuts gradually; step cuts once and holds",
+       "correct": true,
+       "why": "Right: a progressive taper's cut grows; a step taper is one drop."
+      },
+      {
+       "id": "b",
+       "text": "Progressive cuts intensity; step cuts volume",
+       "why": "Both are about how volume falls; intensity is kept in either."
+      },
+      {
+       "id": "c",
+       "text": "Progressive lasts longer than a step taper",
+       "why": "Their length can be the same; the shape differs."
+      },
+      {
+       "id": "d",
+       "text": "Progressive adds load first; step does not",
+       "why": "Adding load first is pre-taper overload, a separate choice."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-mistake",
+   "concept": "taper-shape",
+   "bloom": "analyse",
+   "sources": [
+    "mujika2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist halves his hours in the last 2 weeks and also drops all intervals, riding only easy. On race day he feels flat and sluggish. What is the most likely error?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He cut intensity, which keeps adaptations in a taper",
+       "correct": true,
+       "why": "Right: volume can fall, but hard efforts should stay."
+      },
+      {
+       "id": "b",
+       "text": "He cut volume, which should have stayed the same",
+       "why": "A volume cut of about 50% is the recommended part."
+      },
+      {
+       "id": "c",
+       "text": "Two weeks is far too long for a taper",
+       "why": "About 2 weeks is the length that worked best."
+      },
+      {
+       "id": "d",
+       "text": "He should have added extra hours instead",
+       "why": "Adding load right before a race adds fatigue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-aubry-q",
+   "concept": "taper-overload",
+   "bloom": "analyse",
+   "sources": [
+    "aubry2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the triathlete study, who gained the most from the taper?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Those tired from overload but not overreached",
+       "correct": true,
+       "why": "Right: the acutely fatigued group gained about 2.6% more than the others."
+      },
+      {
+       "id": "b",
+       "text": "Those pushed into functional overreaching",
+       "why": "They gained less and had more infections."
+      },
+      {
+       "id": "c",
+       "text": "Those who kept training normally",
+       "why": "The normal-training group gained less than the acutely fatigued one."
+      },
+      {
+       "id": "d",
+       "text": "All three groups gained the same",
+       "why": "The acutely fatigued group gained clearly more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-mech-q",
+   "concept": "taper-mechanisms",
+   "bloom": "understand",
+   "sources": [
+    "mujika2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which change best explains most of the gain from a taper?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatigue clearing, revealing capacities held down by training",
+       "correct": true,
+       "why": "Right: models show the taper mainly restores impaired capacities."
+      },
+      {
+       "id": "b",
+       "text": "A large rise in VO2max",
+       "why": "VO2max often doesn't change; a rise isn't needed."
+      },
+      {
+       "id": "c",
+       "text": "Loss of body fat during the reduced training",
+       "why": "Body composition isn't a main taper mechanism; energy expenditure falls."
+      },
+      {
+       "id": "d",
+       "text": "New mitochondria built from the extra rest",
+       "why": "New mitochondria come from training, not rest; the taper mainly removes fatigue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "taper-vo2-q",
+   "concept": "taper-mechanisms",
+   "bloom": "apply",
+   "sources": [
+    "mujika2004",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO2max is identical before and after her taper, yet her 10 km time is 1 minute faster. What best explains it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less fatigue, more glycogen, blood and power",
+       "correct": true,
+       "why": "Right: these raise performance without changing VO2max."
+      },
+      {
+       "id": "b",
+       "text": "The VO2max test must have been wrong",
+       "why": "A taper often doesn't change VO2max; the result is expected."
+      },
+      {
+       "id": "c",
+       "text": "The faster time is only luck",
+       "why": "A 1-minute gain fits the usual taper gain of about 3%."
+      },
+      {
+       "id": "d",
+       "text": "Her VO2max rose during the race only",
+       "why": "VO2max is a capacity; it doesn't rise just for one race."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

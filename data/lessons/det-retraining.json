@@ -1,0 +1,672 @@
+{
+ "id": "det-retraining",
+ "module": "t3-detraining",
+ "title": "Coming back: retraining and muscle memory",
+ "goal": "Explain how fast endurance fitness returns after a break, what lags behind, and why a special endurance \"muscle memory\" isn't proven.",
+ "requires": [
+  "det-time-course"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "retraining",
+    "muscle-memory"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ret-floor",
+   "title": "You restart from a higher floor",
+   "text": "[Retraining](g:retraining) starts from wherever detraining left you, and for long-trained athletes that floor is well above untrained. After 84 days off, athletes still had a [VO₂max](g:vo2max) above never-trained people (50.8 against 43.3 mL·kg⁻¹·min⁻¹), [mitochondria](g:mitochondria) markers 50% above and capillaries 50% above [[c:ret-floor]]. Part of their higher [lactate threshold](g:lactate-threshold) lasted too [[c:ret-lt]].\n\nThis is the solid part of \"it comes back faster\": you don't start from zero. People who trained for only a few months usually drop back to their baseline, so they have little floor to build on [[c:ret-recent]].",
+   "claims": [
+    {
+     "id": "ret-floor",
+     "text": "After 84 days off, athletes' VO₂max, capillarisation and oxidative enzymes were still above those of never-trained controls.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "After 84 days of detraining the experimental subjects still had a higher VO2 max than did eight sedentary control subjects who had never trained (50.8 vs. 43.3 ml X kg-1 X min-1), due primarily to a larger arterial-mixed venous O2 (a-vO2) difference.",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1984",
+       "quote": "Skeletal muscle capillarization did not decline with inactivity and remained 50% above (P less than 0.05) sedentary control. Citrate synthase and succinate dehydrogenase activities in muscle declined with a half-time of 12 days and stabilized at levels 50% above sedentary control (P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ret-lt",
+     "text": "Part of the adaptation behind a higher lactate threshold persists for more than 85 days after training stops.",
+     "grade": "weak",
+     "sources": [
+      "coyle1985"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1985",
+       "quote": "Thus it appears that a portion of the adaptation to prolonged and intense endurance training that is responsible for the higher lactate threshold in the trained state persists for a long time (greater than 85 days) after training is stopped.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ret-recent",
+     "text": "Muscle adaptations stay above sedentary values in detrained athletes but usually return to baseline in recently trained people.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2001"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2001",
+       "quote": "These muscular characteristics remain above sedentary values in the detrained athlete but usually return to baseline values in recently trained individuals.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ret-floor-who"
+  },
+  {
+   "type": "example",
+   "id": "ret-floor-example",
+   "title": "How far above untrained?",
+   "problem": "After 84 days off, the athletes' VO₂max was 50.8 mL·kg⁻¹·min⁻¹; never-trained controls had 43.3. By what percentage were the athletes above the controls?",
+   "steps": [
+    "\"Above the controls\" means the controls are the reference: divide by their value.",
+    "Difference: 50.8 − 43.3 = 7.5 mL·kg⁻¹·min⁻¹.",
+    "7.5 ÷ 43.3 = 0.173, so about 17% above.",
+    "Dividing by 50.8 instead (7.5 ÷ 50.8 = 15%) answers a different question: how far below the athletes the controls were."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ret-floor-percent",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ret-speed",
+   "title": "How fast it comes back",
+   "text": "Few athletes agree to stop for months, so data are thin. One short review found about a dozen studies of stopping but almost none of coming back (one training study, one case report). It concluded that the fall in VO₂max and in mitochondrial enzymes could largely be won back in about as long as the break lasted [[c:ret-similar]]. A rough rule, not a law.\n\nOne well-measured case fits: a triathlete aged 54 stopped for 12 weeks, then trained for 12 weeks, building up step by step. Nearly everything returned to baseline or slightly above [[c:ret-case]]. In an earlier case those authors report, a master cyclist off for 4 weeks with a broken collarbone had her VO₂max back in 6 weeks (longer than the break), but needed 11 weeks for her peak power [[c:ret-nichols]].",
+   "claims": [
+    {
+     "id": "ret-similar",
+     "text": "The fall in VO₂max and mitochondrial enzymes after training stops can largely be won back in a similar time of renewed training.",
+     "grade": "weak",
+     "sources": [
+      "burtscher2022"
+     ],
+     "evidence": [
+      {
+       "source": "burtscher2022",
+       "quote": "This reduction could largely be rescued within similar time periods of training (re)uptake.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ret-case",
+     "text": "After 12 weeks off and 12 weeks of retraining, almost all of one master triathlete's measures returned to baseline, except running economy and lean mass.",
+     "grade": "weak",
+     "sources": [
+      "lepers2024"
+     ],
+     "evidence": [
+      {
+       "source": "lepers2024",
+       "quote": "After retraining, almost all variables returned to baseline or even slightly increased, except RE and lean mass, which did not return to baseline.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ret-nichols",
+     "text": "A master cyclist off for 4 weeks after a collarbone fracture regained VO₂max in 6 weeks; peak power took 11 weeks (as reported by Lepers and colleagues).",
+     "grade": "weak",
+     "sources": [
+      "lepers2024"
+     ],
+     "evidence": [
+      {
+       "source": "lepers2024",
+       "quote": "following a 4-week detraining period (due to a collarbone fracture), the",
+       "level": "full-text"
+      },
+      {
+       "source": "lepers2024",
+       "quote": "while peak power output (PPO) was still 6% lower, and it took 11 weeks to reach the preinjury value.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ret-speed-plan"
+  },
+  {
+   "type": "question",
+   "item": "ret-speed-lag"
+  },
+  {
+   "type": "concept",
+   "id": "ret-memory",
+   "title": "Muscle memory for endurance: not shown",
+   "text": "\"Once fit, easier to get fit again\" is often put down to [muscle memory](g:muscle-memory). For strength, the argument is about extra [myonuclei](g:myonucleus) staying after a break: see the debate in *Cells, ATP and enzymes*. For endurance, the best human test used a neat design: 23 people trained **one leg** for 3 months, so the other leg was the control. Nine months later, 12 of them trained **both** legs [[c:ret-oneleg]].\n\nAfter the break, the trained leg kept no lasting difference in gene activity, and on retraining both legs responded alike [[c:ret-no-memory]]. The one hint: the first session felt slightly easier in the leg trained before [[c:ret-rpe]].",
+   "claims": [
+    {
+     "id": "ret-oneleg",
+     "text": "23 people trained one leg for 3 months; 9 months later, 12 of them trained both legs.",
+     "grade": "weak",
+     "sources": [
+      "lindholm2016"
+     ],
+     "evidence": [
+      {
+       "source": "lindholm2016",
+       "quote": "In this study, 23 individuals trained one leg for three months. Nine months later, 12 of the same subjects trained both legs in a second training period.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ret-no-memory",
+     "text": "After 9 months, previously trained and untrained legs had no remaining gene-activity differences, and they responded alike to retraining.",
+     "grade": "weak",
+     "sources": [
+      "lindholm2016"
+     ],
+     "evidence": [
+      {
+       "source": "lindholm2016",
+       "quote": "After nine months of detraining, no training-induced transcriptome differences were detected between the previously trained and untrained legs.",
+       "level": "abstract"
+      },
+      {
+       "source": "lindholm2016",
+       "quote": "Apart from a significant increase of β-HAD activity in the previously untrained leg only, there were no significant physiological differences in response between the two legs.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ret-rpe",
+     "text": "The first retraining session felt slightly easier in the previously trained leg (borderline, p = 0.05).",
+     "grade": "weak",
+     "sources": [
+      "lindholm2016"
+     ],
+     "evidence": [
+      {
+       "source": "lindholm2016",
+       "quote": "However, the rate of perceived exertion (Borg-scale) in the exercising leg from the end of the first training session in Period 2 was lower (perceived as easier) in the previously trained leg (mean±SD T-leg: 13.3±2.6, U-leg 14.0±2.9, p = 0.05).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does earlier endurance training make muscle respond better when you train again after a break?",
+    "sides": [
+     {
+      "position": "Possibly: in mice, retraining after a break gave more muscle growth and boosted mitochondrial genes, even with less running.",
+      "sources": [
+       "weidenhamer2025"
+      ]
+     },
+     {
+      "position": "Not shown in humans: in a one-leg study, no gene-activity memory remained after 9 months and both legs responded alike to retraining.",
+      "sources": [
+       "lindholm2016"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ret-oneleg-why"
+  },
+  {
+   "type": "question",
+   "item": "ret-memory-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "ret-memory-claim"
+  },
+  {
+   "type": "concept",
+   "id": "ret-lag",
+   "title": "What lags: economy and muscle",
+   "text": "Not everything comes back at the same speed. After the triathlete's 12 weeks of retraining, VO₂max and peak power were back, but [running economy](g:running-economy) and lean mass were still slightly below where they had been [[c:ret-lag]]. His running still cost more oxygen with his engine restored.\n\nTwo practical points follow. First, VO₂max is a poor sign of being \"back\": a ramp test can look normal while economy and muscle still trail. Second, losses come fast but the return takes weeks, so build back up progressively, as in that case, rather than restarting at your old loads.",
+   "claims": [
+    {
+     "id": "ret-lag",
+     "text": "After 12 weeks of progressive retraining, the master triathlete regained VO₂max, but running economy and lean mass stayed slightly depressed.",
+     "grade": "weak",
+     "sources": [
+      "lepers2024"
+     ],
+     "evidence": [
+      {
+       "source": "lepers2024",
+       "quote": "with 12 weeks of progressive and structured retraining, but his running economy and lean mass remain slightly depressed.",
+       "level": "abstract"
+      },
+      {
+       "source": "lepers2024",
+       "quote": "After retraining, almost all variables returned to baseline or even slightly increased, except RE and lean mass, which did not return to baseline.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ret-back-test"
+  },
+  {
+   "type": "question",
+   "item": "ret-lag-which"
+  },
+  {
+   "type": "question",
+   "item": "ret-floor-percent",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Long-trained athletes keep a floor after months off: VO₂max, mitochondria, capillaries and lactate threshold stay above never-trained values. That floor is the solid part of \"it comes back faster\".",
+    "Recently trained people drop back to baseline, so they have little floor to build on.",
+    "Rough rule from one review with thin data: what a break took can largely be won back in about as long as the break lasted.",
+    "VO₂max tends to return first; peak power, running economy and lean mass can lag.",
+    "A muscle memory specific to endurance training hasn't been shown in humans: in a one-leg study both legs responded alike to retraining."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ret-floor-who",
+   "concept": "ret-floor",
+   "bloom": "apply",
+   "sources": [
+    "mujika2001",
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists both stop for 4 months: Carla has trained for 8 years, Dan for 3 months. When they restart, what is the key difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carla keeps a floor above untrained; Dan is near baseline",
+       "correct": true,
+       "why": "Right: athletes' muscle adaptations stay above sedentary values, while recently trained people usually return to baseline."
+      },
+      {
+       "id": "b",
+       "text": "Dan restarts higher: his gains are fresher",
+       "why": "Recent gains are the ones that are fully lost after a long break."
+      },
+      {
+       "id": "c",
+       "text": "Both restart at untrained levels after 4 months",
+       "why": "Long-trained athletes keep part of their adaptations for months."
+      },
+      {
+       "id": "d",
+       "text": "Carla restarts lower: the fit lose the most",
+       "why": "Athletes lose more in absolute terms, but they still settle above untrained values."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-floor-percent",
+   "concept": "ret-floor",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 84 days off, the athletes' VO₂max was 50.8 mL·kg⁻¹·min⁻¹ and the never-trained controls' 43.3. By what percentage were the athletes above the controls?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17%",
+       "correct": true,
+       "why": "Right: (50.8 − 43.3) ÷ 43.3 = 0.173."
+      },
+      {
+       "id": "b",
+       "text": "15%",
+       "why": "This divides by 50.8 (the athletes) instead of 43.3 (the reference)."
+      },
+      {
+       "id": "c",
+       "text": "7.5%",
+       "why": "7.5 is the difference in mL·kg⁻¹·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "16%",
+       "why": "16% is how far their VO₂max fell from its trained value, a different comparison."
+      }
+     ],
+     "solution": "(50.8 − 43.3) ÷ 43.3 = 7.5 ÷ 43.3 = 0.173, about 17% above the controls."
+    },
+    {
+     "id": "b",
+     "stem": "After a long break, a runner's VO₂max is 52 mL·kg⁻¹·min⁻¹; before she ever trained it was 40. By what percentage is she still above her untrained value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30%",
+       "correct": true,
+       "why": "Right: (52 − 40) ÷ 40 = 0.30."
+      },
+      {
+       "id": "b",
+       "text": "23%",
+       "why": "This divides by 52 instead of the reference value, 40."
+      },
+      {
+       "id": "c",
+       "text": "12%",
+       "why": "12 is the difference in mL·kg⁻¹·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "130%",
+       "why": "This is 52 ÷ 40 as a percentage: her whole value, not the part above 40."
+      }
+     ],
+     "solution": "(52 − 40) ÷ 40 = 12 ÷ 40 = 0.30, 30% above her untrained value."
+    }
+   ]
+  },
+  {
+   "id": "ret-speed-plan",
+   "concept": "ret-speed",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "burtscher2022",
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner was off for 6 weeks with a calf injury and now trains normally again. Going by the available evidence, about how long until her VO₂max is back?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 6 weeks",
+       "correct": true,
+       "why": "Right: one review concluded that losses can largely be won back in about as long as the break lasted, a rough rule from thin data."
+      },
+      {
+       "id": "b",
+       "text": "1–2 weeks: muscle memory makes it almost instant",
+       "why": "No special muscle memory has been shown for endurance; the floor helps, but it still takes weeks."
+      },
+      {
+       "id": "c",
+       "text": "About 6 months: each week off costs a month",
+       "why": "The scarce data suggest a similar time back, not several times longer."
+      },
+      {
+       "id": "d",
+       "text": "Never fully: lost VO₂max doesn't return",
+       "why": "In the reported cases VO₂max came back within weeks of retraining."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-speed-lag",
+   "concept": "ret-speed",
+   "bloom": "analyse",
+   "sources": [
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO₂max is back to its pre-injury value, but his peak power in a ramp test is still 6% short. Most likely why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Power also needs muscle and efficiency, which come back more slowly",
+       "correct": true,
+       "why": "Right: in the reported cases VO₂max returned first; peak power, economy and lean mass lagged."
+      },
+      {
+       "id": "b",
+       "text": "The VO₂max test is wrong: power and VO₂max always move together",
+       "why": "They don't: in the collarbone case VO₂max was back at 6 weeks, peak power at 11."
+      },
+      {
+       "id": "c",
+       "text": "He is overtrained from coming back too fast",
+       "why": "Nothing points to overtraining; a lag in power is the usual pattern."
+      },
+      {
+       "id": "d",
+       "text": "Peak power never fully returns after a break",
+       "why": "In the collarbone case it returned, after 11 weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-oneleg-why",
+   "concept": "ret-memory",
+   "bloom": "understand",
+   "sources": [
+    "lindholm2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why did the muscle memory study train only one leg at first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "So the other leg was a control in the same person",
+       "correct": true,
+       "why": "Right: same genes, diet and lifestyle, so only the earlier training differs between the legs."
+      },
+      {
+       "id": "b",
+       "text": "To halve the training time",
+       "why": "Time wasn't the point; the design creates a control leg."
+      },
+      {
+       "id": "c",
+       "text": "Because one-leg training gives bigger gains",
+       "why": "Gains per leg weren't the aim; the untrained leg had to stay untrained to compare."
+      },
+      {
+       "id": "d",
+       "text": "So biopsies were needed from one leg only",
+       "why": "Both legs were biopsied before and after each period."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-memory-appraisal",
+   "concept": "ret-memory",
+   "bloom": "evaluate",
+   "sources": [
+    "lindholm2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits this study as evidence that endurance athletes have no muscle memory?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12 non-athletes, after one 3-month block",
+       "correct": true,
+       "why": "Right: a single 3-month block in non-athletes is far from years of athlete training; the authors say a memory isn't ruled out."
+      },
+      {
+       "id": "b",
+       "text": "One-leg training can't change muscle",
+       "why": "It changed thousands of gene isoforms and raised oxidative enzymes."
+      },
+      {
+       "id": "c",
+       "text": "It measured strength, not endurance",
+       "why": "It was endurance training, with endurance enzymes and performance measured."
+      },
+      {
+       "id": "d",
+       "text": "The retraining used a different programme",
+       "why": "The second period repeated exactly the same training, now on both legs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-memory-claim",
+   "concept": "ret-memory",
+   "bloom": "evaluate",
+   "sources": [
+    "lindholm2016",
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"Take 3 months off, your muscles remember, you'll be back in 2 weeks.\" Best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "You keep a floor, but no fast memory is shown",
+       "correct": true,
+       "why": "Right: retained adaptations help, but a special endurance memory hasn't been shown and coming back takes weeks."
+      },
+      {
+       "id": "b",
+       "text": "Right: extra myonuclei guarantee it",
+       "why": "Myonuclei are a disputed idea about strength and muscle size, not a guarantee for endurance."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: after 3 months you are back to untrained",
+       "why": "Long-trained athletes keep a floor above untrained values."
+      },
+      {
+       "id": "d",
+       "text": "Right, but only for runners, not cyclists",
+       "why": "Nothing in the evidence splits runners from cyclists here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-back-test",
+   "concept": "ret-lag",
+   "bloom": "analyse",
+   "sources": [
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 10 weeks back, a triathlete's ramp test shows her VO₂max at its old level. Is she fully back for an Ironman?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not necessarily: economy and muscle can lag VO₂max",
+       "correct": true,
+       "why": "Right: in the case study VO₂max returned while running economy and lean mass still trailed, and long races depend on them."
+      },
+      {
+       "id": "b",
+       "text": "Yes: VO₂max alone sets Ironman performance",
+       "why": "Economy, fuel use and durability matter at least as much in long races."
+      },
+      {
+       "id": "c",
+       "text": "No: VO₂max is always the last thing to return",
+       "why": "It tends to be the first, not the last."
+      },
+      {
+       "id": "d",
+       "text": "Yes, as long as her body weight is back too",
+       "why": "Weight can be back while lean mass and economy are not."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ret-lag-which",
+   "concept": "ret-lag",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 12-week detraining and retraining case, which measures had not returned to baseline after retraining?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Running economy and lean mass",
+       "correct": true,
+       "why": "Right: both stayed slightly depressed."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max and peak power",
+       "why": "These returned to baseline or slightly above."
+      },
+      {
+       "id": "c",
+       "text": "Body fat and knee strength",
+       "why": "These returned with retraining."
+      },
+      {
+       "id": "d",
+       "text": "Cycling efficiency and VO₂max",
+       "why": "These returned with retraining."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

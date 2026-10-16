@@ -1,0 +1,637 @@
+{
+ "id": "per-season",
+ "module": "t3-periodization",
+ "title": "Putting a season together",
+ "goal": "Plan an amateur season around A, B and C races, with phases, recovery weeks and a taper, and say which parts rest on evidence and which on practice.",
+ "requires": [
+  "per-taper"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "priority-race",
+    "transition-phase",
+    "recovery-week"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "season-backwards",
+   "title": "Work backwards from the A race",
+   "text": "Most coaches build an amateur season backwards from the main race:\n\n| phase | rough length | main content |\n|---|---|---|\n| [transition](g:transition-phase) | 2–4 weeks after the last race | easy, unstructured |\n| general preparation | 3–5 months | volume, mostly easy |\n| specific preparation | 2–3 months | race-like intensity and duration |\n| taper | about 2 weeks | volume cut, intensity kept |\n\nPhase lengths are practice, not trial results. In skiers and biathletes who won Olympic or world gold, volume followed a traditional pattern, highest months before the peak, while the hours of hard training stayed about the same all year [[c:season-elite]]. Easy volume fell about 31% from general preparation to the peak.",
+   "claims": [
+    {
+     "id": "season-elite",
+     "text": "Gold-medal skiers' volume followed a traditional periodisation pattern, while the volume of hard training stayed stable across phases.",
+     "grade": "weak",
+     "sources": [
+      "tonnessen2014"
+     ],
+     "evidence": [
+      {
+       "source": "tonnessen2014",
+       "quote": "Training volume and specificity distribution conformed to a traditional periodization model, but absolute volume of HIT remained stable across phases.",
+       "level": "abstract"
+      },
+      {
+       "source": "tonnessen2014",
+       "quote": "However, LIT training volume decreased by 31±17%",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-season-order"
+  },
+  {
+   "type": "question",
+   "item": "per-season-transition"
+  },
+  {
+   "type": "question",
+   "item": "per-season-elite"
+  },
+  {
+   "type": "concept",
+   "id": "season-abc",
+   "title": "A, B and C races",
+   "text": "Few amateurs race only once. Coaches rank races ([A, B and C](g:priority-race)): this is **practice**, not tested in trials.\n\n- **A**: 1–3 a season. Full taper, as in the last lesson.\n- **B**: matter, but you train through most of the week and ease off for 2–3 days.\n- **C**: training races. No easing; treat them as a hard session.\n\nElite skiers point the same way. With up to two race days a week for up to 14 weeks, they didn't follow the textbook taper [[c:season-mini-taper]]: they cut volume by only 4–15% in the last two weeks and did repeated short mini-tapers before races. Eleven athletes, observed, not tested, so it is weak evidence that a smaller cut can still work.",
+   "claims": [
+    {
+     "id": "season-mini-taper",
+     "text": "Gold-medal skiers didn't follow the recommended taper; a busy race schedule calls for repeated mini-tapers.",
+     "grade": "weak",
+     "sources": [
+      "tonnessen2014"
+     ],
+     "evidence": [
+      {
+       "source": "tonnessen2014",
+       "quote": "However, they did not follow suggested tapering practice derived from short-term experimental studies.",
+       "level": "abstract"
+      },
+      {
+       "source": "tonnessen2014",
+       "quote": "Rather than incorporating a single tapering phase, such a schedule may rather require the athlete to perform repeated “mini-tapers” prior to each competition.",
+       "level": "full-text"
+      },
+      {
+       "source": "tonnessen2014",
+       "quote": "With regards to training volume, we found only a 4 and 15% (NS) decrease in training volume during days -14 to -8 and days -7 to-1 respectively, compared to the pre-peaking phase.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-season-abc"
+  },
+  {
+   "type": "question",
+   "item": "per-season-two-peaks"
+  },
+  {
+   "type": "concept",
+   "id": "season-recovery",
+   "title": "Recovery weeks and real life",
+   "text": "A common pattern: 3 weeks of building, then a [recovery week](g:recovery-week) with about 30–50% less volume. It's everywhere in coaching but hasn't been tested against other ratios. Kiely's summary: beyond broad rules of thumb, there are no rules proven in trials [[c:season-no-rules]]. A small study in 32 amateur triathletes did find that two 4-week mesocycles and a 2-week taper raised performance without overreaching, in either order [[c:season-amateur]].\n\nLife stress counts as load. Piled-up stress from work, family and poor sleep dampens adaptation and raises injury risk [[c:season-life-stress]]. So the recovery week is a default, to be moved: if your measures and feel say you're not absorbing training, ease off earlier.",
+   "claims": [
+    {
+     "id": "season-no-rules",
+     "text": "There are no empirically validated rules for detailed training planning, only broad guidelines.",
+     "grade": "weak",
+     "sources": [
+      "kiely2018"
+     ],
+     "evidence": [
+      {
+       "source": "kiely2018",
+       "quote": "Beyond these broad rubrics, however, we have no empirically validated rules, and few specific guidelines.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "season-amateur",
+     "text": "In amateur triathletes, two 4-week mesocycles followed by a 2-week taper improved performance without overreaching, whichever order was used.",
+     "grade": "weak",
+     "sources": [
+      "clementesuarez2019"
+     ],
+     "evidence": [
+      {
+       "source": "clementesuarez2019",
+       "quote": "Independently of the periodization model, the combination of two four-week mesocycles followed by a two-week taper is an efficiency strategy to avoid overreaching, obtaining an increase in parasympathetic modulation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "season-life-stress",
+     "text": "Accumulated stress from many sources dampens adaptation, lowers performance and raises injury risk.",
+     "grade": "moderate",
+     "sources": [
+      "kiely2018"
+     ],
+     "evidence": [
+      {
+       "source": "kiely2018",
+       "quote": "In summary, mounting evidence illustrates that excessively accumulating multi-source stress variously downregulates the immune system, motor coordination, cognition, mood, metabolism, and hormonal health; thereby dampening positive adaptation, diminishing athletic performance, elevating injury risk, and compromising recovery and recuperation",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "season-example",
+   "title": "Hours for a recovery week",
+   "problem": "A cyclist builds 8, 9 and 10 h over three weeks. She plans a recovery week with 40% less than her build-week average. How many hours?",
+   "steps": [
+    "Build average = (8 + 9 + 10) ÷ 3 = 9 h.",
+    "40% less: 9 × (1 − 0.40) = 9 × 0.60 = 5.4 h.",
+    "Keep one short harder session in it, so the week rests without going stale. The 40% is a habit of coaches, not a tested number."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-season-recovery-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "per-season-life"
+  },
+  {
+   "type": "concept",
+   "id": "season-label",
+   "title": "What's evidence and what's practice",
+   "text": "Sort every piece of season advice by where it comes from:\n\n| advice | basis |\n|---|---|\n| taper: volume −41–60%, intensity and frequency kept, about 2 weeks | **moderate**: two meta-analyses [[c:season-taper-recipe]] |\n| HIIT blocks beat even spreading | **weak**: small, short trials |\n| reverse order is better | **weak**: no advantage found |\n| hard training kept all year, volume peaks early | **weak**: 11 elite athletes, observed |\n| A/B/C races, mini-tapers | **practice** |\n| 3:1 build:recovery weeks, transition phase | **practice**, untested |\n\nPractice isn't wrong: it is what experienced coaches converged on. But hold it more loosely than the taper recipe, and let your own data correct it.",
+   "claims": [
+    {
+     "id": "season-taper-recipe",
+     "text": "The taper recipe is the best-supported part of season planning.",
+     "grade": "moderate",
+     "sources": [
+      "bosquet2007",
+      "wang2023"
+     ],
+     "evidence": [
+      {
+       "source": "bosquet2007",
+       "quote": "A 2-wk taper during which training volume is exponentially reduced by 41-60% seems to be the most efficient strategy to maximize performance gains.",
+       "level": "abstract"
+      },
+      {
+       "source": "wang2023",
+       "quote": "Current evidence suggests that a ≤21-day taper, in which training volume is progressively reduced by 41-60% without changing training intensity or frequency, is an effective tapering strategy.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-season-label"
+  },
+  {
+   "type": "question",
+   "item": "per-season-evidence"
+  },
+  {
+   "type": "question",
+   "item": "per-season-taper-cut"
+  },
+  {
+   "type": "question",
+   "item": "per-season-recovery-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Build the season backwards from the A race: transition, general preparation (volume), specific preparation (race-like work), taper.",
+    "Gold-medal skiers: volume highest months before the peak, hard training about stable all year (weak, observational).",
+    "A races get a full taper, B races a 2–3-day easing, C races none; busy calendars need mini-tapers (practice).",
+    "Recovery weeks (often 3:1) and phase lengths are practice, untested; life stress counts as load, so move them when needed.",
+    "Best evidence: the taper recipe (moderate). Block and reverse claims: weak. Everything else: practice."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "per-season-order",
+   "concept": "season-backwards",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tonnessen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a typical amateur season plan, in what order do the phases come before the A race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "General preparation, specific preparation, taper",
+       "correct": true,
+       "why": "Right: broad volume first, race-like work next, then the cut-back."
+      },
+      {
+       "id": "b",
+       "text": "Taper, general preparation, specific preparation",
+       "why": "The taper comes last, just before the race."
+      },
+      {
+       "id": "c",
+       "text": "Specific preparation, general preparation, taper",
+       "why": "Race-specific work comes after the general base, not before."
+      },
+      {
+       "id": "d",
+       "text": "Transition, taper, general preparation",
+       "why": "The transition follows the last race; the taper sits right before the A race."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-transition",
+   "concept": "season-backwards",
+   "bloom": "understand",
+   "sources": [
+    "tonnessen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the transition phase for?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Recovering in body and mind after the season",
+       "correct": true,
+       "why": "Right: 2–4 weeks of easy, unstructured activity after the last race."
+      },
+      {
+       "id": "b",
+       "text": "Building race-specific fitness",
+       "why": "That's specific preparation, closer to the A race."
+      },
+      {
+       "id": "c",
+       "text": "Clearing fatigue just before the A race",
+       "why": "That's the taper."
+      },
+      {
+       "id": "d",
+       "text": "Testing fitness at the start of the season",
+       "why": "Testing can happen any time; it isn't what the transition is for."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-elite",
+   "concept": "season-backwards",
+   "bloom": "analyse",
+   "sources": [
+    "tonnessen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the year before their gold medals, elite skiers kept their hours of hard training about the same all year while easy volume fell by about 31% towards the peak. What does that suggest for an amateur cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep some hard work all year; let easy volume do the rising and falling",
+       "correct": true,
+       "why": "Right: hard training stayed steady; easy volume changed between phases."
+      },
+      {
+       "id": "b",
+       "text": "Do no hard training until the last two months",
+       "why": "The elites kept hard training throughout, not only near the peak."
+      },
+      {
+       "id": "c",
+       "text": "Keep total volume the same all year",
+       "why": "Volume did change: highest early, lower near the peak."
+      },
+      {
+       "id": "d",
+       "text": "This proves traditional plans beat block plans",
+       "why": "An observation of 11 athletes compares nothing; it can't prove one model better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-abc",
+   "concept": "season-abc",
+   "bloom": "apply",
+   "sources": [
+    "tonnessen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's season: a club criterium every Tuesday, a regional road race in June, and a 735 km ride in August that is his main goal. How should he rank them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "August ride A, June race B, criteriums C",
+       "correct": true,
+       "why": "Right: one main goal gets the full taper; the June race a short easing; weekly races are training."
+      },
+      {
+       "id": "b",
+       "text": "All of them A, with a full taper each",
+       "why": "Tapering for weekly races would leave almost no real training."
+      },
+      {
+       "id": "c",
+       "text": "Criteriums A, as he races them most often",
+       "why": "How often you race doesn't make a race the goal."
+      },
+      {
+       "id": "d",
+       "text": "June race A, August ride B",
+       "why": "The August ride is his main goal, so it gets the A taper."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-two-peaks",
+   "concept": "season-abc",
+   "bloom": "evaluate",
+   "sources": [
+    "tonnessen2014",
+    "bosquet2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has two A races only 3 weeks apart. What is the most sensible plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Full taper for the first, a few easy days, a short rebuild, a mini-taper",
+       "correct": true,
+       "why": "Right: there's no time for a full rebuild; keep fitness and freshen up again."
+      },
+      {
+       "id": "b",
+       "text": "A full taper before each and no training in between",
+       "why": "Weeks of reduced training in a row risk detraining."
+      },
+      {
+       "id": "c",
+       "text": "Skip both tapers to keep fitness",
+       "why": "Skipping tapers gives up the usual ~3% gain at both races."
+      },
+      {
+       "id": "d",
+       "text": "A big overload block between the two races",
+       "why": "Three weeks isn't enough to absorb an overload and taper again."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-recovery-calc",
+   "concept": "season-recovery",
+   "bloom": "apply",
+   "sources": [
+    "kiely2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete builds 6, 7 and 8 h over three weeks and plans a recovery week 40% below the build average. How many hours is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.2 h",
+       "correct": true,
+       "why": "Right: average 7 h; 7 × 0.60 = 4.2 h."
+      },
+      {
+       "id": "b",
+       "text": "2.8 h",
+       "why": "That's the 40% removed, not what's left."
+      },
+      {
+       "id": "c",
+       "text": "4.8 h",
+       "why": "That takes 40% off the last week (8 h), not the average."
+      },
+      {
+       "id": "d",
+       "text": "6.6 h",
+       "why": "That subtracts 0.4 h instead of 40%."
+      }
+     ],
+     "solution": "Average = (6 + 7 + 8) ÷ 3 = 7 h. Recovery week = 7 × (1 − 0.40) = 4.2 h."
+    },
+    {
+     "id": "b",
+     "stem": "A runner builds 40, 45 and 50 km a week and plans a recovery week 30% below the build average. How many km?",
+     "options": [
+      {
+       "id": "a",
+       "text": "31.5 km",
+       "correct": true,
+       "why": "Right: average 45 km; 45 × 0.70 = 31.5 km."
+      },
+      {
+       "id": "b",
+       "text": "35 km",
+       "why": "That takes 30% off the last week (50 km), not the average."
+      },
+      {
+       "id": "c",
+       "text": "13.5 km",
+       "why": "That's the 30% removed, not what's left."
+      },
+      {
+       "id": "d",
+       "text": "15 km",
+       "why": "That subtracts 30 km from the average."
+      }
+     ],
+     "solution": "Average = (40 + 45 + 50) ÷ 3 = 45 km. Recovery week = 45 × (1 − 0.30) = 31.5 km."
+    }
+   ]
+  },
+  {
+   "id": "per-season-life",
+   "concept": "season-recovery",
+   "bloom": "evaluate",
+   "sources": [
+    "kiely2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist is in the second week of a 3-week build. Work is brutal, he sleeps 5 h a night, and his legs feel heavy on easy rides. What's the best call?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bring the recovery week forward",
+       "correct": true,
+       "why": "Right: life stress counts as load; the 3:1 pattern is a default, not a rule."
+      },
+      {
+       "id": "b",
+       "text": "Finish the build: the 3:1 pattern is proven",
+       "why": "The 3:1 ratio is coaching practice, never tested in trials."
+      },
+      {
+       "id": "c",
+       "text": "Add volume to make up for the missed adaptation",
+       "why": "Extra load on top of heavy life stress raises the risk of poor adaptation."
+      },
+      {
+       "id": "d",
+       "text": "Stop training for the rest of the month",
+       "why": "A short easing is enough; weeks off would cost fitness."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-label",
+   "concept": "season-label",
+   "bloom": "understand",
+   "sources": [
+    "bosquet2007",
+    "kiely2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which piece of season advice rests on practice rather than trials?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Three build weeks, then one recovery week",
+       "correct": true,
+       "why": "Right: common in coaching, but never tested against other ratios."
+      },
+      {
+       "id": "b",
+       "text": "Cut taper volume by about 41–60%",
+       "why": "That comes from two meta-analyses."
+      },
+      {
+       "id": "c",
+       "text": "Keep intensity during the taper",
+       "why": "That's supported by the taper meta-analyses and reviews."
+      },
+      {
+       "id": "d",
+       "text": "Taper for about 2 weeks",
+       "why": "The 8–14-day window comes from meta-analyses."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-evidence",
+   "concept": "season-label",
+   "bloom": "evaluate",
+   "sources": [
+    "bosquet2007",
+    "wang2023",
+    "molmen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A friend says: \"Science proves block periodisation, 3:1 recovery weeks and tapering all work.\" Which part has the best evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The taper",
+       "correct": true,
+       "why": "Right: two meta-analyses agree on the recipe (moderate)."
+      },
+      {
+       "id": "b",
+       "text": "Block periodisation",
+       "why": "Small, short, low-quality trials: weak."
+      },
+      {
+       "id": "c",
+       "text": "3:1 recovery weeks",
+       "why": "Practice only; no trials compared ratios."
+      },
+      {
+       "id": "d",
+       "text": "They are equally well supported",
+       "why": "They differ a lot: moderate, weak and untested."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-season-taper-cut",
+   "concept": "season-label",
+   "bloom": "apply",
+   "sources": [
+    "bosquet2007",
+    "wang2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner peaks at 70 km a week before her A marathon. Which taper fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 35 km a week for 2 weeks, keeping her short fast sessions",
+       "correct": true,
+       "why": "Right: a 50% volume cut, about 2 weeks, intensity and frequency kept."
+      },
+      {
+       "id": "b",
+       "text": "About 65 km a week, cutting only the fast sessions",
+       "why": "That cuts intensity, the part to keep, and barely touches volume."
+      },
+      {
+       "id": "c",
+       "text": "About 35 km a week for 6 weeks, all easy",
+       "why": "Six weeks is too long and dropping all fast running cuts intensity."
+      },
+      {
+       "id": "d",
+       "text": "Complete rest for the last 10 days",
+       "why": "Rest isn't a taper; it risks losing fitness and feeling flat."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,705 @@
+{
+ "id": "load-monitoring",
+ "module": "t3-load",
+ "title": "Monitoring: load, HRV and how you feel",
+ "goal": "Combine load, morning HRV and a wellness questionnaire to judge how an athlete is coping, and tell a meaningful change from noise.",
+ "requires": [
+  "load-acwr"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "wellness-questionnaire",
+    "ln-rmssd",
+    "overreaching"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mo-why",
+   "title": "Load is only half the picture",
+   "text": "Load numbers say what you did. Monitoring asks a second question: how are you coping with it? No single marker answers that: the search for one definitive measure has failed so far [[c:no-single-marker]].\n\nSo practical monitoring combines a few cheap measures:\n\n- **load**: sRPE, TSS or a TRIMP, logged every session;\n- **response at rest**: morning heart rate and [HRV](g:hrv);\n- **how you feel**: a short daily questionnaire;\n- **performance**: a repeatable effort, such as a standard bike set or a short test.\n\nHeart-rate measures can't capture every aspect of fatigue and wellness, so the advice is to combine them with training logs, questionnaires and simple performance tests [[c:mo-combine]].",
+   "claims": [
+    {
+     "id": "no-single-marker",
+     "text": "There is not yet a single, definitive marker of how an athlete is responding to training load.",
+     "grade": "moderate",
+     "sources": [
+      "halson2014"
+     ],
+     "evidence": [
+      {
+       "source": "halson2014",
+       "quote": "However, very few of these markers have strong scientific evidence supporting their use, and there is yet to be a single, definitive marker described in the literature.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mo-combine",
+     "text": "Heart-rate measures can't inform on all aspects of wellness and fatigue; combining them with training logs, questionnaires and simple performance tests may give a complete picture.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2014"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2014",
+       "quote": "However, measures of heart rate cannot inform on all aspects of wellness, fatigue, and performance, so their use in combination with daily training logs, psychometric questionnaires and non-invasive, cost-effective performance tests such as a countermovement jump may offer a complete solution to monitor training status in athletes participating in aerobic-oriented sports.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-no-single"
+  },
+  {
+   "type": "concept",
+   "id": "mo-subjective",
+   "title": "How you feel is data",
+   "text": "A [wellness questionnaire](g:wellness-questionnaire) takes a minute each morning: rate sleep, fatigue, soreness, stress and mood, often on a 1–5 scale.\n\nIt holds up well. A systematic review of 56 studies compared self-reports with objective markers such as blood tests and heart rate [[c:saw-subjective]]:\n\n- the two generally did **not** agree;\n- self-reports tracked acute and chronic training load **more sensitively and consistently** than the objective markers;\n- well-being fell when load rose sharply and recovered when load dropped.\n\nThe catch: answers must be honest. If a low score means the coach drops you from the team, scores tend to drift upwards.",
+   "claims": [
+    {
+     "id": "saw-subjective",
+     "text": "Subjective and objective measures generally did not correlate; subjective measures reflected acute and chronic load with greater sensitivity and consistency.",
+     "grade": "moderate",
+     "sources": [
+      "saw2016"
+     ],
+     "evidence": [
+      {
+       "source": "saw2016",
+       "quote": "Subjective and objective measures of athlete well-being generally did not correlate. Subjective measures reflected acute and chronic training loads with superior sensitivity and consistency than objective measures.",
+       "level": "abstract"
+      },
+      {
+       "source": "saw2016",
+       "quote": "Subjective well-being was typically impaired with an acute increase in training load, and also with chronic training, while an acute decrease in training load improved subjective well-being.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-subjective-scn",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "mo-hrv",
+   "title": "Morning HRV, averaged",
+   "text": "The usual daily HRV number is [ln rMSSD](g:ln-rmssd), the log of [RMSSD](g:rmssd), taken on waking. One reading jumps around a lot, so experts recommend averaging, typically a 7-day rolling mean [[c:hrv-averaging]].\n\nIn a case study of two elite triathletes, the one who became [overreached](g:overreaching) showed a falling 7-day average and shrinking day-to-day variation in the weeks before a poor race; the other stayed stable [[c:plews-case]].\n\nIn elite athletes the direction is not simple: both rises and falls in HRV have come with poor adaptation, and fitness gains have sometimes come with lower HRV [[c:hrv-equivocal]]. Read changes against the athlete's own history. The HRV module later in the course covers measurement in depth.",
+   "claims": [
+    {
+     "id": "hrv-averaging",
+     "text": "Appropriate averaging techniques help overcome the problems of day-to-day HRV monitoring.",
+     "grade": "moderate",
+     "sources": [
+      "plews2013"
+     ],
+     "evidence": [
+      {
+       "source": "plews2013",
+       "quote": "We offer solutions to some of the methodological issues associated with using HRV as a day-to-day monitoring tool. These include the use of appropriate averaging techniques, and the use of specific HRV indices to overcome the issue of HRV saturation in elite athletes",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "plews-case",
+     "text": "In two elite triathletes, the 7-day rolling ln rMSSD and its CV declined towards non-functional overreaching in one athlete and stayed stable in the other.",
+     "grade": "weak",
+     "sources": [
+      "plews2012"
+     ],
+     "evidence": [
+      {
+       "source": "plews2012",
+       "quote": "The 7-day rolling average of the log-transformed square root of the mean sum of the squared differences between R-R intervals (Ln rMSSD), declined towards the day of triathlon event (slope = -0.17 ms/week; r2 = -0.88) in the NFOR athlete, remaining stable in the control (slope = 0.01 ms/week; r2 = 0.12).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hrv-equivocal",
+     "text": "In elite athletes, both increases and decreases in HRV have been associated with negative adaptation, and fitness gains have come with decreases in HRV.",
+     "grade": "weak",
+     "sources": [
+      "plews2013"
+     ],
+     "evidence": [
+      {
+       "source": "plews2013",
+       "quote": "For example, in elite athletes, studies have revealed both increases and decreases in HRV to be associated with negative adaptation. Additionally, signs of positive adaptation, such as increases in cardiorespiratory fitness, have been observed with atypical concomitant decreases in HRV.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-rolling"
+  },
+  {
+   "type": "question",
+   "item": "mo-hrv-direction"
+  },
+  {
+   "type": "concept",
+   "id": "mo-meaningful",
+   "title": "Is a change real?",
+   "text": "Any measure moves a little even when nothing has changed. Read a change against two numbers [[c:mo-swc]]:\n\n- the [typical error](g:typical-error): how much the measure varies by itself;\n- the [smallest worthwhile change](g:smallest-worthwhile-change): the smallest change that matters.\n\nFor resting RMSSD, one morning's reading typically varies by about 12% [[c:rmssd-te]]. So one morning 7% below your average is within noise. A drop that is larger, lasts several days, or shows up in the rolling average deserves attention.\n\nWork out the change on RMSSD itself, in ms: (today − baseline) ÷ baseline × 100. Not on its log: a fall of just 0.25 in ln rMSSD is already a 22% fall in RMSSD.",
+   "claims": [
+    {
+     "id": "mo-swc",
+     "text": "Changes in heart-rate measures should be interpreted against the error of measurement and the smallest important change, in the training context.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2014"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2014",
+       "quote": "For appropriate interpretation at the individual level, changes in a given measure should be interpreted by taking into account the error of measurement and the smallest important change of the measure, as well as the training context (training phase, load, and intensity distribution).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rmssd-te",
+     "text": "The day-to-day typical error (as a CV) of resting RMSSD is about 12%.",
+     "grade": "weak",
+     "sources": [
+      "buchheit2014"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2014",
+       "quote": "coefficient of variation (CV) for rMSSD ≈12% vs. low-to-high frequency oscillations ratio, LF/HF, CV ≈82%",
+       "level": "full-text"
+      },
+      {
+       "source": "buchheit2014",
+       "quote": "Index-dependent, e.g., ~12 (Ln rMSSD) to ~80 (LF/HF)%",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mo-change-example",
+   "title": "Is this morning's HRV drop real?",
+   "problem": "A cyclist's 7-day baseline RMSSD is 70 ms. This morning it is 66 ms. How big is the change, and does it matter on its own?",
+   "steps": [
+    "Change = (66 − 70) ÷ 70 × 100 = −4 ÷ 70 × 100 = −5.7%.",
+    "Compare with the typical error for one reading, about 12%: −5.7% is well inside it.",
+    "On its own, this is likely noise. Check the rolling average, the questionnaire and how the warm-up feels before changing the plan."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-rmssd-change-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mo-rmssd-noise"
+  },
+  {
+   "type": "concept",
+   "id": "mo-decide",
+   "title": "Putting it together",
+   "text": "Does steering training by HRV work better than a fixed plan? A 2021 meta-analysis found HRV-guided training improved HRV itself, but gains in aerobic fitness and performance were small and not statistically clear (SMD about 0.20) [[c:hrv-guided]]. If there is a benefit, it is small.\n\nA sensible rule for an amateur is to act when signals agree:\n\n| Signals | Action |\n|---|---|\n| One odd reading, all else normal | Train as planned |\n| Rolling HRV down, poor questionnaire, usual session feels harder | Ease off for a day or two |\n| Several bad weeks, performance falling | Rest, and consider seeing a doctor |\n\nKeep it cheap and consistent: the same measures, the same time of day, compared with yourself.",
+   "claims": [
+    {
+     "id": "hrv-guided",
+     "text": "HRV-guided training improved vagal HRV more than predefined training; benefits for aerobic fitness and endurance performance were small (SMD ≈ 0.20) and not significant.",
+     "grade": "moderate",
+     "sources": [
+      "manresarocamora2021"
+     ],
+     "evidence": [
+      {
+       "source": "manresarocamora2021",
+       "quote": "Accounting for methodological factors, HRV-guided training was superior for enhancing vagal-related HRV indices (SMD+ = 0.50 (95% confidence interval (CI) = 0.09, 0.91)), but not resting HR",
+       "level": "abstract"
+      },
+      {
+       "source": "manresarocamora2021",
+       "quote": "Consistently small but non-significant (p > 0.05) SMDs in favor of HRV-guided training were observed for enhancing maximal aerobic capacity (SMD+ = 0.20 (95% CI = -0.07, 0.47)), aerobic capacity at second ventilatory threshold (SMD+ = 0.26 (95% CI = -0.05, 0.57)), and endurance performance (SMD+ = 0.20 (95% CI = -0.09, 0.48)), versus predefined training.",
+       "level": "abstract"
+      },
+      {
+       "source": "manresarocamora2021",
+       "quote": "However, if HRV-guided training is superior to predefined training for producing group-level improvements in fitness and performance, current data suggest it is only by a small margin.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mo-decision",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mo-hrv-guided"
+  },
+  {
+   "type": "question",
+   "item": "mo-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "mo-rmssd-change-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No single marker shows how you cope with training: combine load, resting HR/HRV, a short questionnaire and a repeatable effort.",
+    "Self-reported wellness tracks load changes more sensitively than blood or heart-rate markers, if answers are honest.",
+    "Use a 7-day rolling average of morning ln rMSSD; in elites, falls in HRV can come with gains as well as with overreaching.",
+    "Judge a change against typical error (~12% for one morning's RMSSD, worked out in ms, not on its log) and the smallest worthwhile change.",
+    "HRV-guided training helps HRV but any performance benefit is small; act when several signals agree."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mo-no-single",
+   "concept": "mo-why",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "halson2014",
+    "buchheit2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do monitoring guides advise combining load, heart-rate measures, a questionnaire and a performance check, rather than relying on one of them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No single marker captures how an athlete is coping",
+       "why": "Right: each measure sees part of the picture, and none has proved definitive on its own.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "HRV is too new to be trusted alone",
+       "why": "HRV has been studied for decades; the issue is that it shows only part of the response."
+      },
+      {
+       "id": "c",
+       "text": "Load numbers already show how the athlete is coping",
+       "why": "Load describes the dose, not the athlete's response to it."
+      },
+      {
+       "id": "d",
+       "text": "Combining measures cancels out their errors exactly",
+       "why": "Combining helps judgement, but errors don't cancel exactly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-subjective-scn",
+   "concept": "mo-subjective",
+   "bloom": "analyse",
+   "sources": [
+    "saw2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two weeks into a bigger training block, a cyclist's blood tests come back normal, but her daily sleep, mood and fatigue scores have fallen for 6 days in a row. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Take the questionnaire seriously: it is the more sensitive signal",
+       "why": "Right: self-reports respond to load changes more sensitively than blood markers, and the two often disagree.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Ignore the questionnaire: the blood tests prove she is fine",
+       "why": "Objective and subjective measures often don't agree, and the subjective ones track load better."
+      },
+      {
+       "id": "c",
+       "text": "The questionnaire must be faulty if blood tests are normal",
+       "why": "Disagreement between the two is the usual finding, not a fault."
+      },
+      {
+       "id": "d",
+       "text": "Increase load further to test whether the scores keep falling",
+       "why": "Pushing on despite a clear downward trend risks overreaching."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running squad starts a daily wellness questionnaire. The coach announces that anyone scoring low will be left out of the race team. What is the most likely problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Athletes will rate themselves better than they feel",
+       "why": "Right: the method depends on honest answers, and a penalty for low scores invites inflated ones.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The scores will become too sensitive to load",
+       "why": "The risk is the opposite: inflated, flattened scores."
+      },
+      {
+       "id": "c",
+       "text": "Questionnaires can't detect changes in load",
+       "why": "They track load changes well when answered honestly."
+      },
+      {
+       "id": "d",
+       "text": "The scores will start to match blood markers",
+       "why": "Pressure changes honesty, not agreement with biology."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-rolling",
+   "concept": "mo-hrv",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "plews2013",
+    "plews2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do HRV guides recommend watching a 7-day rolling average of ln rMSSD rather than reacting to each morning's value?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Single readings vary a lot; an average shows the trend",
+       "why": "Right: day-to-day noise is large, and averaging lets a real trend stand out.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "HRV can only be measured once a week",
+       "why": "It's measured daily; the average is of daily readings."
+      },
+      {
+       "id": "c",
+       "text": "A 7-day average matches the 7-day ATL time constant",
+       "why": "The window is about noise, not about matching the PMC."
+      },
+      {
+       "id": "d",
+       "text": "Morning values are always wrong",
+       "why": "Morning values are the standard; they're just noisy one at a time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-hrv-direction",
+   "concept": "mo-hrv",
+   "bloom": "analyse",
+   "sources": [
+    "plews2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An elite triathlete's HRV has drifted down over a heavy block, but his resting heart rate is lower than ever, his sessions feel good and his test results are improving. Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not necessarily bad: in elites lower HRV can come with gains",
+       "why": "Right: in elite athletes, falls in HRV have been seen alongside improving fitness, so read it with the other signs.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "He is clearly overreached and must rest",
+       "why": "His other signs all point to positive adaptation."
+      },
+      {
+       "id": "c",
+       "text": "His HRV device must be broken",
+       "why": "A real fall alongside good adaptation has been described in elites."
+      },
+      {
+       "id": "d",
+       "text": "HRV is useless and should be dropped",
+       "why": "It's useful when read against his own history and other markers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-rmssd-change-calc",
+   "concept": "mo-meaningful",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "buchheit2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's 7-day baseline RMSSD is 82 ms. This morning it is 76 ms. What is the change as a percentage of baseline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−7.3%",
+       "correct": true,
+       "why": "Right: (76 − 82) ÷ 82 × 100 = −7.3%."
+      },
+      {
+       "id": "b",
+       "text": "−7.9%",
+       "why": "This divides by today's value (76) instead of the baseline."
+      },
+      {
+       "id": "c",
+       "text": "−6%",
+       "why": "This takes the raw difference (6 ms) as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "+7.3%",
+       "why": "The value went down, so the change is negative."
+      }
+     ],
+     "solution": "Change = (76 − 82) ÷ 82 × 100 = −6 ÷ 82 × 100 = −7.3%."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's 7-day baseline RMSSD is 60 ms. This morning it is 54 ms. What is the change as a percentage of baseline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−10%",
+       "correct": true,
+       "why": "Right: (54 − 60) ÷ 60 × 100 = −10%."
+      },
+      {
+       "id": "b",
+       "text": "−11.1%",
+       "why": "This divides by today's value (54) instead of the baseline."
+      },
+      {
+       "id": "c",
+       "text": "−6%",
+       "why": "This takes the raw difference (6 ms) as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "+10%",
+       "why": "The value went down, so the change is negative."
+      }
+     ],
+     "solution": "Change = (54 − 60) ÷ 60 × 100 = −6 ÷ 60 × 100 = −10%."
+    }
+   ]
+  },
+  {
+   "id": "mo-rmssd-noise",
+   "concept": "mo-meaningful",
+   "bloom": "analyse",
+   "sources": [
+    "buchheit2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's RMSSD is 8% below his 7-day average this morning. He slept well, feels fine and has a key interval session planned. The typical error of one reading is about 12%. Best decision?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Train as planned: one reading inside the noise, nothing else wrong",
+       "why": "Right: an 8% drop is within the ~12% typical error, and every other sign is normal.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Cancel the session: any HRV drop means fatigue",
+       "why": "A change smaller than the typical error can't be told apart from noise."
+      },
+      {
+       "id": "c",
+       "text": "Do the session twice as hard to test his fitness",
+       "why": "Nothing in the data supports changing the session either way."
+      },
+      {
+       "id": "d",
+       "text": "Stop measuring HRV, as it gave a false alarm",
+       "why": "It gave no alarm: read properly, an 8% drop isn't one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-decision",
+   "concept": "mo-decide",
+   "bloom": "apply",
+   "sources": [
+    "buchheit2014",
+    "saw2016",
+    "plews2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's 7-day HRV average has been below his usual range for 5 days, his questionnaire shows poor sleep and heavy legs, and his standard bike set felt 2 RPE points harder at the same power. What should he do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ease off for a day or two, then reassess",
+       "why": "Right: several independent signals agree, which is the time to act.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Push through: load numbers are on plan",
+       "why": "The plan describes the dose; all response signals say he isn't coping with it."
+      },
+      {
+       "id": "c",
+       "text": "Ignore it unless his ACWR goes above 1.5",
+       "why": "The ACWR has no proven value, and his own signals are clearer."
+      },
+      {
+       "id": "d",
+       "text": "Stop training for a month",
+       "why": "Agreeing short-term signals call for a short easing, not a month off."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's HRV is low one morning after a late flight. Her rolling average is normal, she feels fine and her warm-up feels as usual. What should she do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Train as planned and keep an eye on the next days",
+       "why": "Right: one odd reading with a clear reason, and nothing else off, isn't a reason to change the plan.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Skip the session: low HRV means she isn't recovered",
+       "why": "A single reading after travel is not enough on its own."
+      },
+      {
+       "id": "c",
+       "text": "Do an extra session to make up for lost fitness",
+       "why": "Nothing suggests lost fitness, and extra load isn't the response to a low reading."
+      },
+      {
+       "id": "d",
+       "text": "Change her HRV device",
+       "why": "One low value after a flight is expected, not a device fault."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-hrv-guided",
+   "concept": "mo-decide",
+   "bloom": "evaluate",
+   "sources": [
+    "manresarocamora2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An app advertises: 'HRV-guided training makes you much faster than a normal plan.' A 2021 meta-analysis found SMD ≈ 0.20 (95% CI −0.09 to 0.48) for endurance performance. What is the fairest verdict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: any benefit looks small and uncertain",
+       "why": "Right: a small effect whose CI includes zero doesn't support 'much faster'.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Supported: 0.20 is a large effect",
+       "why": "0.20 is a small standardised effect, and its CI crosses zero."
+      },
+      {
+       "id": "c",
+       "text": "Disproven: HRV-guided training makes you slower",
+       "why": "The estimate favours HRV guidance slightly; it isn't evidence of harm."
+      },
+      {
+       "id": "d",
+       "text": "Supported, because HRV itself improved",
+       "why": "Better HRV isn't the same as better performance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mo-appraisal",
+   "concept": "mo-decide",
+   "bloom": "evaluate",
+   "sources": [
+    "plews2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A paper followed two elite triathletes daily for 77 days: the one who became overreached showed a falling 7-day HRV average. What most limits using this to claim 'falling HRV predicts overreaching'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Two athletes, observed only: it can't show prediction",
+       "why": "Right: a case comparison of two people can suggest a pattern but not test how well it predicts in others.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "77 days is too long to follow athletes",
+       "why": "A longer follow-up is a strength, not a weakness."
+      },
+      {
+       "id": "c",
+       "text": "HRV can't be measured in triathletes",
+       "why": "It was measured daily in both athletes."
+      },
+      {
+       "id": "d",
+       "text": "The athletes were too fit for HRV to change",
+       "why": "HRV did change in one of them; that's the finding."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

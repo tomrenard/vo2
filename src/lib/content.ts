@@ -32,6 +32,8 @@ export const Source = z.object({
     "umbrella-review",
     "meta-analysis",
     "rct",
+    /** One group trained, measured before and after, no control group. */
+    "single-group-trial",
     /** A controlled trial without random allocation. */
     "non-randomised-trial",
     "crossover",
@@ -43,6 +45,8 @@ export const Source = z.object({
     "reliability",
     "mechanistic",
     "review",
+    /** A letter, comment or opinion piece. */
+    "commentary",
     "textbook",
     "preprint",
   ]),

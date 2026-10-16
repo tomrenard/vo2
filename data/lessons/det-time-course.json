@@ -1,0 +1,813 @@
+{
+ "id": "det-time-course",
+ "module": "t3-detraining",
+ "title": "How fast fitness fades",
+ "goal": "Explain what an endurance athlete loses, in what order and how fast, when training stops for days, weeks or months.",
+ "requires": [
+  "tr-responders"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "short-term-detraining",
+    "long-term-detraining"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "det-phases",
+   "title": "Short-term and long-term detraining",
+   "text": "[Detraining](g:detraining) is what happens when the training stimulus gets too small: a full stop, or just too little training. A major review splits it in two [[c:det-split]]:\n\n- [short-term detraining](g:short-term-detraining): under 4 weeks of too little training;\n- [long-term detraining](g:long-term-detraining): over 4 weeks.\n\nWho you are matters as much as how long. Highly trained athletes lose a lot, but even after months off they stay above people who never trained. Someone who started training a few months ago loses less at first, yet after more than 4 weeks off their recent [VO₂max](g:vo2max) gains are completely gone [[c:det-recent-lost]].",
+   "claims": [
+    {
+     "id": "det-split",
+     "text": "Detraining is split into short term (under 4 weeks of insufficient training stimulus) and long term (over 4 weeks).",
+     "grade": "moderate",
+     "sources": [
+      "mujika2000"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2000",
+       "quote": "Short term detraining (less than 4 weeks of insufficient training stimulus) is analysed in part I of this review, whereas part II will deal with long term detraining (more than 4 weeks of insufficient training stimulus).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-recent-lost",
+     "text": "Athletes' VO₂max stays above control values in long-term detraining, while recently gained VO₂max is completely lost after more than 4 weeks off.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2000b",
+      "mujika2001b"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2000b",
+       "quote": "The maximal oxygen uptake (VO2max) of athletes declines markedly but remains above control values during long term detraining, whereas recently acquired VO2max gains are completely lost.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2001b",
+       "quote": "These changes are more moderate in recently trained subjects in the short-term, but recently acquired VO2max gains are completely lost after training stoppage periods longer than 4 wk.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "det-phase-define"
+  },
+  {
+   "type": "question",
+   "item": "det-who-keeps"
+  },
+  {
+   "type": "concept",
+   "id": "det-blood",
+   "title": "Weeks 1–4: the blood goes first",
+   "text": "The first big loss is blood. In endurance-trained men, 2–4 weeks off cut [plasma volume](g:plasma-volume) by 12% and [stroke volume](g:stroke-volume) by 12%; VO₂max fell 6%. Heart rate at the same submaximal power rose 11% [[c:det-blood-loss]].\n\nThe faster heart rate can't make up for the smaller stroke volume, so maximal [cardiac output](g:cardiac-output) falls [[c:det-hr-short]].\n\nOver 84 days off the order is clear: the early fall in VO₂max came with a smaller stroke volume, the later fall with a smaller [a-vO₂ difference](g:a-vo2-difference), that is, less oxygen taken out of the blood by the muscles [[c:det-two-steps]]. Heart and blood first, muscle second.",
+   "claims": [
+    {
+     "id": "det-blood-loss",
+     "text": "After 2–4 weeks off, endurance-trained men lost 12% of plasma volume and 12% of stroke volume; VO₂max fell 6% and submaximal heart rate rose 11%.",
+     "grade": "weak",
+     "sources": [
+      "coyle1986b"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1986b",
+       "quote": "Detraining produced a 9% decline in blood volume (5,177 to 4,692 ml; P less than 0.01) during upright exercise, due primarily to a 12% lowering (P less than 0.01) of plasma volume (PV; Evans blue dye technique).",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1986b",
+       "quote": "SV was reduced by 12% (P less than 0.05) and VO2max declined 6% (P less than 0.01), whereas heart rate (HR) and total peripheral resistance (TPR) during submaximal exercise were increased 11% (P less than 0.01) and 8% (P less than 0.05), respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-hr-short",
+     "text": "In short-term detraining, exercise heart rate rises too little to offset the smaller stroke volume, so maximal cardiac output falls.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2000"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2000",
+       "quote": "Exercise heart rate increases insufficiently to counterbalance the decreased stroke volume, and maximal cardiac output is thus reduced.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-two-steps",
+     "text": "The early fall in VO₂max comes with a smaller stroke volume, the later fall with a smaller a-vO₂ difference.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "The initial decline in VO2 max was related to a reduced SV and the later decline to a reduced a-vO2 difference.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "det-hr-rise"
+  },
+  {
+   "type": "question",
+   "item": "det-early-late"
+  },
+  {
+   "type": "concept",
+   "id": "det-vo2",
+   "title": "VO₂max: a fast fall, then a plateau",
+   "text": "In seven endurance athletes who stopped for 84 days, [VO₂max](g:vo2max) fell **7%** in the first 21 days and settled after 56 days at **16%** below its trained value. Even then it was above that of people who had never trained: 50.8 against 43.3 mL·kg⁻¹·min⁻¹ [[c:det-vo2-course]].\n\nA review that brought together about a dozen studies found an almost straight-line fall that starts a few days after training stops and reaches as much as **20% after 12 weeks** [[c:det-vo2-linear]].\n\nA rough guide: about 2% a week for the first 8 weeks (16% ÷ 8). After that the 84-day study saw a plateau, while some studies in the review kept falling towards 20%. The losses are percentages of *your own* trained value.",
+   "claims": [
+    {
+     "id": "det-vo2-course",
+     "text": "After stopping, VO₂max fell 7% in 21 days and settled 16% lower after 56 days, still above that of never-trained controls (50.8 vs 43.3 mL·kg⁻¹·min⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "Maximal O2 uptake (VO2 max) declined 7% (P less than 0.05) during the first 21 days of inactivity and stabilized after 56 days at a level 16% (P less than 0.05) below the initial trained value.",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1984",
+       "quote": "After 84 days of detraining the experimental subjects still had a higher VO2 max than did eight sedentary control subjects who had never trained (50.8 vs. 43.3 ml X kg-1 X min-1), due primarily to a larger arterial-mixed venous O2 (a-vO2) difference.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-vo2-linear",
+     "text": "Across studies, VO₂max falls almost linearly from a few days after training stops, by as much as 20% after 12 weeks.",
+     "grade": "weak",
+     "sources": [
+      "burtscher2022"
+     ],
+     "evidence": [
+      {
+       "source": "burtscher2022",
+       "quote": "An almost linear VO2max decrease was observed in studies on young and older athletes, as well as non-athletes, starting a few days after training cessation, with a decline of as much as -20% after 12 weeks.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "det-vo2-example",
+   "title": "What will a break cost?",
+   "problem": "A runner's VO₂max is 60 mL·kg⁻¹·min⁻¹ when fully trained. Using the 84-day study, what should she expect after 3 weeks off, and after 8 weeks off?",
+   "steps": [
+    "The losses are percentages of the trained value: about 7% at 21 days, 16% from 56 days on.",
+    "3 weeks: 60 × (1 − 0.07) = 60 × 0.93 = 55.8 mL·kg⁻¹·min⁻¹.",
+    "8 weeks (56 days): 60 × (1 − 0.16) = 60 × 0.84 = 50.4 mL·kg⁻¹·min⁻¹.",
+    "Not 60 − 16 = 44: taking away the percentage as if it were mL·kg⁻¹·min⁻¹ makes the loss look much bigger."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "det-vo2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "det-vo2-floor"
+  },
+  {
+   "type": "concept",
+   "id": "det-muscle",
+   "title": "Muscle: mitochondria fade, the threshold hangs on",
+   "text": "Inside the muscle, [citrate synthase](g:citrate-synthase), a marker of how many [mitochondria](g:mitochondria) there are, fell with a **half-time of about 12 days**, then levelled off 50% above sedentary values [[c:det-cs-half]]. [Capillary density](g:capillary-density) didn't fall in that study; a review suggests it can within 2–3 weeks [[c:det-cap]] (see the debate in *What training changes in muscle*).\n\nFuel use shifts within about **10 days**: a higher [RER](g:rer), so more carbohydrate at the same pace. Resting [glycogen](g:glycogen) falls back to its baseline within a few weeks [[c:det-fuel]]. Yet the [lactate threshold](g:lactate-threshold) stays partly trained: after 84 days off it sat at 75% of VO₂max, against 62% in people who never trained [[c:det-lt]].",
+   "claims": [
+    {
+     "id": "det-cs-half",
+     "text": "After stopping, citrate synthase and SDH fell with a half-time of 12 days and settled 50% above sedentary values.",
+     "grade": "weak",
+     "sources": [
+      "coyle1984"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1984",
+       "quote": "Citrate synthase and succinate dehydrogenase activities in muscle declined with a half-time of 12 days and stabilized at levels 50% above sedentary control (P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-cap",
+     "text": "Capillary density may fall within 2–3 weeks of inactivity.",
+     "grade": "weak",
+     "sources": [
+      "mujika2001"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2001",
+       "quote": "This may be characterized by a decreased capillary density, which could take place within 2--3 wk of inactivity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-fuel",
+     "text": "Within about 10 days off, exercise RER rises (more carbohydrate use); resting muscle glycogen returns to baseline within a few weeks.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2001b"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2001b",
+       "quote": "From a metabolic viewpoint, even short-term inactivity implies an increased reliance on carbohydrate metabolism during exercise, as shown by a higher exercise respiratory exchange ratio.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2001b",
+       "quote": "These metabolic changes may take place within 10 d of training cessation.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2001b",
+       "quote": "Resting muscle glycogen concentration returns to baseline within a few weeks without training, and trained athletes' lactate threshold is also lowered, but still remains above untrained values.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-lt",
+     "text": "After 84 days off, the lactate threshold was at 75% of VO₂max, against 62% in never-trained controls.",
+     "grade": "weak",
+     "sources": [
+      "coyle1985"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1985",
+       "quote": "The blood lactate threshold of the detrained subjects occurred at higher absolute and relative (i.e., 75 +/- 2% vs. 62 +/- 3% of maximal O2 uptake) exercise intensities in the subjects after 84 days of detraining than in untrained controls (P less than 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "det-cs-example",
+   "title": "Reading a half-time",
+   "problem": "Citrate synthase falls towards its new, lower plateau with a half-time of 12 days. How much of the total drop has happened after 36 days off?",
+   "steps": [
+    "A half-time is the time for half of the remaining drop to happen.",
+    "After 12 days: half the drop is done (50%), half is still to come.",
+    "After 24 days: half of the remaining half goes too: 50% + 25% = 75%.",
+    "After 36 days: half of the last quarter goes: 75% + 12.5% = 87.5% of the drop has happened."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "det-cs-halftime"
+  },
+  {
+   "type": "question",
+   "item": "det-fuel-ride"
+  },
+  {
+   "type": "concept",
+   "id": "det-performance",
+   "title": "Economy and performance",
+   "text": "Endurance performance falls with all of this [[c:det-perf]]. And [economy](g:economy)? It's rarely measured in detraining; here is one well-measured case: a triathlete aged 54, racing since age 20, who stopped for 12 weeks [[c:det-case]]:\n\n| measure | change |\n|---|---|\n| VO₂max, cycling | −9.1% |\n| VO₂max, running | −10.9% |\n| cycling [gross efficiency](g:gross-efficiency) | −6.2% |\n| [running economy](g:running-economy) (O₂ cost) | 22% higher |\n| lean mass | −2.2 kg |\n\nA 22% higher cost means a given pace needs much more oxygen, on top of a smaller VO₂max. It's one man, so treat each number as a hint, not a rule.",
+   "claims": [
+    {
+     "id": "det-perf",
+     "text": "Endurance performance is impaired by detraining.",
+     "grade": "moderate",
+     "sources": [
+      "mujika2000b",
+      "mujika2001b"
+     ],
+     "evidence": [
+      {
+       "source": "mujika2000b",
+       "quote": "Endurance performance is accordingly impaired.",
+       "level": "abstract"
+      },
+      {
+       "source": "mujika2001b",
+       "quote": "Consequently, endurance performance is also markedly impaired.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "det-case",
+     "text": "In one master triathlete, 12 weeks off cut VO₂max 9.1% (cycling) and 10.9% (running), cycling efficiency 6.2%, raised the O₂ cost of running 22% and cut lean mass 2.2 kg.",
+     "grade": "weak",
+     "sources": [
+      "lepers2024"
+     ],
+     "evidence": [
+      {
+       "source": "lepers2024",
+       "quote": "Detraining resulted in a 9.1% and 10.9% decrease in relative",
+       "level": "abstract"
+      },
+      {
+       "source": "lepers2024",
+       "quote": "After detraining, CE decreased by 6.2%, and RE was 22% higher than the baseline.",
+       "level": "abstract"
+      },
+      {
+       "source": "lepers2024",
+       "quote": "Body fat percentage increased from 10.5% to 13.8%, while lean mass decreased by 2.2 kg.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "det-case-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "det-economy-meaning"
+  },
+  {
+   "type": "question",
+   "item": "det-vo2-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Detraining is too little training, not only a full stop: short term is under 4 weeks, long term over 4 weeks.",
+    "Weeks 1–4: plasma volume and stroke volume fall, heart rate rises at the same power, and VO₂max drops about 6–7%.",
+    "VO₂max then settles about 16% down after 8 weeks (up to 20% by 12 weeks), but long-trained athletes stay above never-trained people.",
+    "Muscle follows: mitochondria markers go half of the way down to their new, lower level in about 12 days, fuel use shifts towards carbohydrate within 10 days, but the lactate threshold stays partly trained.",
+    "Economy can worsen too (22% higher running cost in one triathlete), so a given pace costs a bigger share of a smaller VO₂max."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "det-phase-define",
+   "concept": "det-phases",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mujika2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist breaks a collarbone and does no training at all for 3 weeks. In the review's terms, what is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Short-term detraining",
+       "correct": true,
+       "why": "Right: under 4 weeks of too little (here, no) training."
+      },
+      {
+       "id": "b",
+       "text": "Long-term detraining",
+       "why": "Long term starts after 4 weeks of too little training; 3 weeks is still short term."
+      },
+      {
+       "id": "c",
+       "text": "Not detraining: a full stop is just rest",
+       "why": "Detraining covers any training stimulus that is too small, and a full stop is the most extreme case."
+      },
+      {
+       "id": "d",
+       "text": "A taper",
+       "why": "A taper cuts load before a race while keeping intensity, to keep adaptations; it isn't a forced stop."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-who-keeps",
+   "concept": "det-phases",
+   "bloom": "apply",
+   "sources": [
+    "mujika2000b",
+    "mujika2001b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two people stop running for 3 months: Ana, who has trained for 12 years, and Ben, who started 10 weeks before. Who ends up further above their own untrained level?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ana: athletes stay above untrained values",
+       "correct": true,
+       "why": "Right: athletes' VO₂max stays above control values, while recently gained VO₂max is completely lost after 4 weeks off."
+      },
+      {
+       "id": "b",
+       "text": "Ben: recent gains are lost more slowly",
+       "why": "Recently trained people lose less only in the short term; after more than 4 weeks their gains are gone."
+      },
+      {
+       "id": "c",
+       "text": "Neither: both are back to untrained",
+       "why": "Long-trained athletes keep part of their adaptations for months."
+      },
+      {
+       "id": "d",
+       "text": "Both are unchanged: 3 months is too short",
+       "why": "VO₂max falls within weeks; 3 months is long-term detraining."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-hr-rise",
+   "concept": "det-blood",
+   "bloom": "apply",
+   "sources": [
+    "coyle1986b",
+    "mujika2000",
+    "burtscher2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete is back from 3 weeks off. At her usual 200 W, her heart rate is about 15 beats·min⁻¹ higher. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less plasma, so less filling and a smaller stroke volume",
+       "correct": true,
+       "why": "Right: plasma volume falls first; with a smaller stroke volume, heart rate must rise to keep the same cardiac output."
+      },
+      {
+       "id": "b",
+       "text": "Her heart muscle has lost its mitochondria",
+       "why": "The early, main change is in blood volume, not the heart's mitochondria."
+      },
+      {
+       "id": "c",
+       "text": "Her maximal heart rate has fallen",
+       "why": "HRmax rises slightly if anything with detraining, and it wouldn't raise heart rate at 200 W."
+      },
+      {
+       "id": "d",
+       "text": "She now burns more fat, which costs more oxygen",
+       "why": "The shift is the other way: more carbohydrate, a higher RER."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-early-late",
+   "concept": "det-blood",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1984",
+    "burtscher2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An athlete does a VO₂max test after 2 weeks off and again after 12 weeks off. Which change best explains most of the drop at each point?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 weeks: smaller stroke volume; 12 weeks: also a smaller a-vO₂ difference",
+       "correct": true,
+       "why": "Right: the early fall came with a reduced stroke volume, the later one with a reduced a-vO₂ difference."
+      },
+      {
+       "id": "b",
+       "text": "2 weeks: smaller a-vO₂ difference; 12 weeks: smaller stroke volume",
+       "why": "That's the order reversed: blood and stroke volume go first, muscle extraction later."
+      },
+      {
+       "id": "c",
+       "text": "Both times: a lower maximal heart rate",
+       "why": "Maximal heart rate doesn't fall with detraining; the losses are in stroke volume and extraction."
+      },
+      {
+       "id": "d",
+       "text": "Both times: fewer capillaries in the muscle",
+       "why": "In the 84-day study capillarisation didn't fall at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-vo2-calc",
+   "concept": "det-vo2",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's trained VO₂max is 55 mL·kg⁻¹·min⁻¹. He stops for 2 months, past the 56-day plateau of the 84-day study (16% down). Expected VO₂max, in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "46.2",
+       "correct": true,
+       "why": "Right: 55 × 0.84 = 46.2."
+      },
+      {
+       "id": "b",
+       "text": "39.0",
+       "why": "This takes 16 away as if it were mL·kg⁻¹·min⁻¹: 55 − 16."
+      },
+      {
+       "id": "c",
+       "text": "51.2",
+       "why": "This uses the 21-day loss (7%) instead of the 16% plateau."
+      },
+      {
+       "id": "d",
+       "text": "47.4",
+       "why": "This divides by 1.16 instead of multiplying by 0.84."
+      }
+     ],
+     "solution": "55 × (1 − 0.16) = 55 × 0.84 = 46.2 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's trained VO₂max is 70 mL·kg⁻¹·min⁻¹. She stops for 3 weeks (7% down in the 84-day study). Expected VO₂max, in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "65.1",
+       "correct": true,
+       "why": "Right: 70 × 0.93 = 65.1."
+      },
+      {
+       "id": "b",
+       "text": "63.0",
+       "why": "This takes 7 away as if it were mL·kg⁻¹·min⁻¹: 70 − 7."
+      },
+      {
+       "id": "c",
+       "text": "58.8",
+       "why": "This uses the 16% plateau, reached only after about 8 weeks."
+      },
+      {
+       "id": "d",
+       "text": "65.4",
+       "why": "This divides by 1.07 instead of multiplying by 0.93."
+      }
+     ],
+     "solution": "70 × (1 − 0.07) = 70 × 0.93 = 65.1 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A runner's trained VO₂max is 48 mL·kg⁻¹·min⁻¹. She stops for 10 weeks (past the 16% plateau). Expected VO₂max, in mL·kg⁻¹·min⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40.3",
+       "correct": true,
+       "why": "Right: 48 × 0.84 = 40.3."
+      },
+      {
+       "id": "b",
+       "text": "32.0",
+       "why": "This takes 16 away as if it were mL·kg⁻¹·min⁻¹: 48 − 16."
+      },
+      {
+       "id": "c",
+       "text": "44.6",
+       "why": "This uses the 21-day loss (7%) instead of the plateau."
+      },
+      {
+       "id": "d",
+       "text": "41.4",
+       "why": "This divides by 1.16 instead of multiplying by 0.84."
+      }
+     ],
+     "solution": "48 × (1 − 0.16) = 48 × 0.84 = 40.3 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "det-vo2-floor",
+   "concept": "det-vo2",
+   "bloom": "understand",
+   "sources": [
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 84 days off, the athletes' VO₂max was still above that of never-trained people. Mainly because of what?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A larger a-vO₂ difference",
+       "correct": true,
+       "why": "Right: muscles still took more oxygen out of the blood; the study puts the remaining gap down mainly to a larger a-vO₂ difference."
+      },
+      {
+       "id": "b",
+       "text": "A larger stroke volume",
+       "why": "Stroke volume fell early in detraining to a level no different from the controls."
+      },
+      {
+       "id": "c",
+       "text": "A higher maximal heart rate",
+       "why": "Maximal heart rate isn't what training raises, and it wasn't the reason."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max can't fall below where it started",
+       "why": "It can fall a long way; it stayed higher because of retained adaptations, not a fixed floor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-cs-halftime",
+   "concept": "det-muscle",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "coyle1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Citrate synthase falls towards its new plateau with a half-time of about 12 days. A runner stops for 24 days. About how much of the total drop has already happened?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75%",
+       "correct": true,
+       "why": "Right: half the drop by day 12, half of the rest by day 24: 50% + 25%."
+      },
+      {
+       "id": "b",
+       "text": "50%",
+       "why": "That is one half-time (12 days), not two."
+      },
+      {
+       "id": "c",
+       "text": "100%",
+       "why": "Two half-times don't finish the drop: each one removes only half of what remains."
+      },
+      {
+       "id": "d",
+       "text": "25%",
+       "why": "25% is what is still to come, not what has happened."
+      }
+     ],
+     "solution": "Day 12: 50% of the drop done. Day 24: half of the remaining 50% goes too, so 50% + 25% = 75% done, 25% still to come."
+    }
+   ]
+  },
+  {
+   "id": "det-fuel-ride",
+   "concept": "det-muscle",
+   "bloom": "analyse",
+   "sources": [
+    "mujika2001b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist back from 2 weeks off rides his usual 3-h endurance ride at his usual power and runs out of energy earlier than usual. Most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He burns more carbohydrate at that power, so glycogen runs out sooner",
+       "correct": true,
+       "why": "Right: within about 10 days, RER rises and more carbohydrate is used at the same intensity."
+      },
+      {
+       "id": "b",
+       "text": "His VO₂max has fallen 16%",
+       "why": "The 16% plateau takes about 8 weeks; and fuel use, more than VO₂max, sets how long a 3-h ride lasts."
+      },
+      {
+       "id": "c",
+       "text": "His capillaries are gone, so no oxygen reaches the muscle",
+       "why": "Capillaries change slowly, if at all, in 2 weeks; oxygen still reaches the muscle."
+      },
+      {
+       "id": "d",
+       "text": "His lactate threshold is back to untrained values",
+       "why": "It falls, but stays above untrained values even after months off."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-case-appraisal",
+   "concept": "det-performance",
+   "bloom": "evaluate",
+   "sources": [
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits using this triathlete's numbers to predict what 12 weeks off will do to you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One person, a master athlete: responses vary",
+       "correct": true,
+       "why": "Right: a case study shows what can happen, not the average or the spread; age and training history differ."
+      },
+      {
+       "id": "b",
+       "text": "Economy can't be measured in triathletes",
+       "why": "It can: running economy and cycling efficiency were both measured."
+      },
+      {
+       "id": "c",
+       "text": "12 weeks is too short to see a change",
+       "why": "Large changes were seen, including a 22% higher running cost."
+      },
+      {
+       "id": "d",
+       "text": "Case studies aren't peer reviewed",
+       "why": "This one was published in a peer-reviewed journal; the limit is the design (n = 1), not where it appeared."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "det-economy-meaning",
+   "concept": "det-performance",
+   "bloom": "analyse",
+   "sources": [
+    "lepers2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 12 weeks off, a runner's VO₂max is about 10% lower and her O₂ cost of running 20% higher. Why does her old marathon pace feel much harder than a 10% loss would suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The pace costs more oxygen and the ceiling is lower, so she runs at a bigger share of it",
+       "correct": true,
+       "why": "Right: both changes push the same way, so her old pace now takes a much larger fraction of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Only the VO₂max loss matters; economy doesn't change pace",
+       "why": "Economy sets the oxygen cost of each pace, so a 20% higher cost matters a lot."
+      },
+      {
+       "id": "c",
+       "text": "Only economy matters; VO₂max isn't used in a marathon",
+       "why": "The share of VO₂max used is what sets how hard a pace feels; both terms count."
+      },
+      {
+       "id": "d",
+       "text": "Her maximal heart rate has fallen, capping her pace",
+       "why": "Maximal heart rate doesn't fall with detraining."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

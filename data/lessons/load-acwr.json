@@ -1,0 +1,756 @@
+{
+ "id": "load-acwr",
+ "module": "t3-load",
+ "title": "The acute:chronic workload ratio",
+ "goal": "Calculate the ACWR with rolling averages and EWMA, explain mathematical coupling and the case against the ratio, and say what to use instead.",
+ "requires": [
+  "load-models"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "acwr",
+    "ewma",
+    "mathematical-coupling"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ac-define",
+   "title": "The acute:chronic workload ratio",
+   "text": "The [ACWR](g:acwr) compares recent load with the load you are used to. It divides this week's load by the average weekly load of the last 3–6 weeks (this lesson uses four) [[c:acwr-def]]. The acute week stands for fatigue, the chronic average for what the athlete has been prepared for [[c:acwr-idea]].\n\nAn ACWR of 1.0 means a normal week; 1.5 means 50% more than usual.\n\nIn 2016 it was proposed as an injury predictor: 0.8–1.3 as a 'sweet spot' and 1.5 or more as a 'danger zone'. Note where the numbers came from: cricket, Australian football and rugby league, not running, cycling or triathlon [[c:acwr-sweet-spot]].",
+   "claims": [
+    {
+     "id": "acwr-def",
+     "text": "The ACWR compares an acute load (often 1 week) with a chronic load, the rolling average of the most recent 3–6 weeks.",
+     "grade": "strong",
+     "sources": [
+      "gabbett2016"
+     ],
+     "evidence": [
+      {
+       "source": "gabbett2016",
+       "level": "full-text",
+       "quote": "Acute training loads can be as short as one session, but in team sports, 1 week of training appears to be a logical and convenient unit."
+      },
+      {
+       "source": "gabbett2016",
+       "level": "full-text",
+       "quote": "Chronic training loads represent the rolling average of the most recent 3–6 weeks of training."
+      }
+     ]
+    },
+    {
+     "id": "acwr-idea",
+     "text": "The ACWR relates current (acute) load to the load the athlete has been prepared for (chronic).",
+     "grade": "strong",
+     "sources": [
+      "griffin2020"
+     ],
+     "evidence": [
+      {
+       "source": "griffin2020",
+       "quote": "The acute:chronic workload ratio (ACWR) takes into account the current training load (acute) and the training load that an athlete has been prepared for (chronic).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acwr-sweet-spot",
+     "text": "From cricket, Australian football and rugby league data, ACWRs of 0.8–1.3 were proposed as a 'sweet spot' and ≥1.5 as a 'danger zone'.",
+     "grade": "weak",
+     "sources": [
+      "gabbett2016"
+     ],
+     "evidence": [
+      {
+       "source": "gabbett2016",
+       "quote": "In terms of injury risk, acute:chronic workload ratios within the range of 0.8–1.3 could be considered the training ‘sweet spot’, while acute:chronic workload ratios ≥1.5 represent the ‘danger zone’.",
+       "level": "full-text"
+      },
+      {
+       "source": "gabbett2016",
+       "quote": "Taken from three different sports (cricket, Australian football and rugby league), a guide to interpreting and applying acute:chronic workload ratio data is shown in figure 6 .",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ac-example",
+   "title": "An ACWR from four weeks",
+   "problem": "A runner runs 40, 40 and 40 km in three weeks, then 60 km this week. What is the usual (4-week) ACWR?",
+   "steps": [
+    "Acute load = this week = 60 km.",
+    "Chronic load = average of the last 4 weeks, this week included: (40 + 40 + 40 + 60) ÷ 4 = 45 km.",
+    "ACWR = 60 ÷ 45 = 1.33.",
+    "By the 2016 bands this sits just above the 'sweet spot'. Keep this example: the next cards show why the number is less solid than it looks."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ac-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ac-sweet-spot"
+  },
+  {
+   "type": "concept",
+   "id": "ac-ewma",
+   "title": "Rolling averages or EWMA?",
+   "text": "A plain rolling average treats every day in the window the same, and ignores that the effects of training fade over time. An [EWMA](g:ewma) gives each older day less weight [[c:ewma-def]]:\n\n**EWMA today = load today × λ + (1 − λ) × EWMA yesterday**, with **λ = 2 ÷ (N + 1)**\n\nN is typically 7 days (acute) and 28 days (chronic), so λ = 0.25 and 0.069.\n\nIt matters: three made-up athletes with different load patterns all had a rolling ACWR of 1.43, but EWMA ratios of 1.25, 1.41 and 1.55 [[c:ewma-differs]]. A 2020 review of 22 team-sport studies supported an ACWR–injury link and preferred EWMA [[c:griffin-review]].",
+   "claims": [
+    {
+     "id": "ewma-def",
+     "text": "EWMA: today's load × λ + (1 − λ) × yesterday's EWMA, with λ = 2/(N + 1) and N typically 7 and 28 days.",
+     "grade": "strong",
+     "sources": [
+      "williams2017b"
+     ],
+     "evidence": [
+      {
+       "source": "williams2017b",
+       "quote": "Where 𝜆𝑎 is a value between 0 and 1 that represents the degree of decay, with higher values discounting older observations at a faster rate. The 𝜆𝑎 is given by: 𝜆𝑎 = 2/(𝑁 + 1) Where N is the chosen time decay constant, typically 7 and 28 days for acute (‘fatigue’) and chronic (‘fitness’) loads, respectively.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ewma-differs",
+     "text": "For three example athletes, rolling averages gave identical ACWRs (1.43) while EWMA gave 1.25, 1.41 and 1.55.",
+     "grade": "weak",
+     "sources": [
+      "williams2017b"
+     ],
+     "evidence": [
+      {
+       "source": "williams2017b",
+       "quote": "Applying this method to the example data presented by Dr Menaspà [2] produces a different acute:chronic workload on day 28 for each of the three fictitious athletes (1.25, 1.41 and 1.55, respectively), whereas the use of rolling averages produces three identical values (1.43).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "griffin-review",
+     "text": "A systematic review of 22 team-sport studies supported an association between ACWR and non-contact injury and favoured the EWMA model.",
+     "grade": "weak",
+     "sources": [
+      "griffin2020"
+     ],
+     "evidence": [
+      {
+       "source": "griffin2020",
+       "quote": "The findings of this review support the association between the ACWR and non-contact injuries and its use as a valuable tool for monitoring training load as part of a larger scale multifaceted monitoring system that includes other proven methods.",
+       "level": "abstract"
+      },
+      {
+       "source": "griffin2020",
+       "quote": "There is support for both models, but the EWMA is the more suitable measure, in part due to its greater sensitivity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ac-ewma-example",
+   "title": "One day of an acute EWMA",
+   "problem": "A cyclist's acute EWMA (N = 7) was 50 TSS yesterday. Today she rides 100 TSS. What is today's acute EWMA?",
+   "steps": [
+    "λ = 2 ÷ (7 + 1) = 0.25.",
+    "EWMA today = 100 × 0.25 + (1 − 0.25) × 50 = 25 + 37.5.",
+    "EWMA today = 62.5.",
+    "With N = 28, λ = 2 ÷ 29 = 0.069: the chronic EWMA would move only from 50 to 53.4."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ac-ewma-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ac-ewma-calc",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "ac-coupling",
+   "title": "Mathematical coupling",
+   "text": "Look again at the example: this week's 60 km is in the numerator and also inside the chronic average. Top and bottom share a number: [mathematical coupling](g:mathematical-coupling). A ratio built like this can look linked to injury when it isn't: one reanalysis got similar 'injury effects' after dividing by made-up, random chronic loads [[c:coupling]].\n\nOne fix is to 'uncouple': make the chronic average from the three weeks before. In the example, that gives 60 ÷ 40 = 1.50 instead of 1.33, a different band from the same training.\n\nUncoupling doesn't save the idea. A ratio doesn't remove the effect of the numerator even when uncoupled, it is ambiguous (many load patterns give the same value), and no study has properly tested whether changing it changes injury risk [[c:acwr-pitfalls]].",
+   "claims": [
+    {
+     "id": "coupling",
+     "text": "Part of the ACWR's link with injury is a ratio artefact: dividing the acute load by fixed or random 'chronic' loads gave similar effects (one reanalysis of published data).",
+     "grade": "weak",
+     "sources": [
+      "impellizzeri2021"
+     ],
+     "evidence": [
+      {
+       "source": "impellizzeri2021",
+       "level": "abstract",
+       "quote": "However, we observed similar effects by dividing AL by the \"contrived\" fixed and randomly generated CLs"
+      },
+      {
+       "source": "impellizzeri2021",
+       "level": "abstract",
+       "quote": "ACWR is a rescaling of the explanatory variable (AL, numerator), in turn magnifying its effect estimates and decreasing its variance despite conferring no predictive advantage."
+      }
+     ]
+    },
+    {
+     "id": "acwr-pitfalls",
+     "text": "The ACWR fails to normalise the numerator even when uncoupled, is ambiguous, is not consistently related to injury, and its causal role has not been established.",
+     "grade": "moderate",
+     "sources": [
+      "impellizzeri2020"
+     ],
+     "evidence": [
+      {
+       "source": "impellizzeri2020",
+       "quote": "ACWR use in practical settings can lead to inappropriate recommendations, because its causal relation to injury has not been established, it is an inaccurate metric (failing to normalize the numerator by the denominator even when uncoupled), it has a lack of background rationale to support its causal role, it is an ambiguous metric, and it is not consistently and unidirectionally related to injury risk.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ac-coupled-calc"
+  },
+  {
+   "type": "question",
+   "item": "ac-coupling-why"
+  },
+  {
+   "type": "concept",
+   "id": "ac-random",
+   "title": "The random-number test",
+   "text": "In 2021, researchers re-ran a published injury analysis but replaced each player's chronic load with a fixed number, or with random numbers. The 'ACWR' built that way showed similar apparent injury effects to the real one. And neither the real ACWR nor acute load alone predicted injury much better than a model with no load data at all (c-statistic 0.574 and 0.544, where 0.5 is a coin toss) [[c:acwr-random]].\n\nIf dividing by random numbers works as well, the chronic part adds nothing: the ratio only rescales acute load. The authors called for ACWR to be dismissed.\n\nAnother view: a review of 22 team-sport studies still supports an ACWR–injury link, as one tool among many.",
+   "claims": [
+    {
+     "id": "acwr-random",
+     "text": "Replacing chronic load with fixed or random numbers gave similar associations; neither ACWR nor acute load meaningfully beat an intercept-only model.",
+     "grade": "moderate",
+     "sources": [
+      "impellizzeri2021"
+     ],
+     "evidence": [
+      {
+       "source": "impellizzeri2021",
+       "quote": "However, we observed similar effects by dividing AL by the \"contrived\" fixed and randomly generated CLs: OR 1.95 (1.18-3.52) dividing by 1510 (average CL); and OR ranging from 1.16 to 2.07, using random CL 1.53 (mean).",
+       "level": "abstract"
+      },
+      {
+       "source": "impellizzeri2021",
+       "quote": "Finally, neither ACWR nor AL alone confer a meaningful predictive advantage to an intercept-only model, even within the training sample (c-statistic 0.574/0.544 vs. 0.5 in both ACWR/AL and intercept-only models, respectively).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is the ACWR a useful tool for managing injury risk?",
+    "sides": [
+     {
+      "position": "Yes, as part of wider monitoring: studies link high ACWRs (especially EWMA-based) with non-contact injuries in team sports.",
+      "sources": [
+       "gabbett2016",
+       "griffin2020"
+      ]
+     },
+     {
+      "position": "No: the ratio is mathematically coupled, adds nothing beyond acute load, has no causal evidence and should be dismissed.",
+      "sources": [
+       "impellizzeri2020",
+       "impellizzeri2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ac-random-meaning"
+  },
+  {
+   "type": "concept",
+   "id": "ac-instead",
+   "title": "What to use instead",
+   "text": "No single ratio is proven to prevent injury. What holds up:\n\n- **Track acute and chronic load separately**, as plain numbers, rather than folding them into a ratio.\n- **Build load gradually**, especially after a break, illness or injury.\n- **Remember that load is one cause among many**: sleep, illness, technique, past injury, kit.\n\nEndurance-specific data are scarce. In 874 novice runners followed for a year, overall injury rates did not differ significantly by how fast weekly distance rose. For 'distance-related' injuries, runners who added more than 30% over two weeks had about 1.6 times the rate of those adding under 10%, but the 95% CI ran from 0.96 to 2.66 [[c:nielsen-30pct]].",
+   "claims": [
+    {
+     "id": "nielsen-30pct",
+     "text": "In 874 novice runners, progressing weekly distance by more than 30% was linked to more distance-related injuries than under 10% (HR 1.59, 95% CI 0.96–2.66), with no difference in injuries overall.",
+     "grade": "weak",
+     "sources": [
+      "nielsen2014"
+     ],
+     "evidence": [
+      {
+       "source": "nielsen2014",
+       "quote": "Using Cox regression analysis, no statistically significant differences in injury rates were found across the 3 exposure groups.",
+       "level": "abstract"
+      },
+      {
+       "source": "nielsen2014",
+       "quote": "An increased rate of distance-related injuries (patellofemoral pain, iliotibial band syndrome, medial tibial stress syndrome, gluteus medius injury, greater trochanteric bursitis, injury to the tensor fascia latae, and patellar tendinopathy) existed in those who progressed their weekly running distance by more than 30% compared with those who progressed less than 10% (hazard ratio = 1.59; 95% confidence interval: 0.96, 2.66; P = .07).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ac-nielsen"
+  },
+  {
+   "type": "question",
+   "item": "ac-what-instead",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ac-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "ACWR = this week's load ÷ average weekly load of the last 4 weeks; the 0.8–1.3 'sweet spot' came from team-sport data.",
+    "EWMA (λ = 2 ÷ (N + 1), N = 7 and 28) weights recent days more than a rolling average and can give a different ratio.",
+    "The usual ACWR is mathematically coupled: this week sits in both parts, which can create spurious correlations.",
+    "In one reanalysis, random denominators gave similar injury links and ACWR barely beat a coin toss: the chronic part added nothing.",
+    "Instead: track loads as plain numbers, build gradually after breaks, and remember load is one injury factor among many."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ac-calc",
+   "concept": "ac-define",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "gabbett2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's weekly TSS: 300, 350, 400, and 550 this week. What is the usual 4-week ACWR (this week included in the chronic average)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.38",
+       "why": "Right: chronic = (300 + 350 + 400 + 550) ÷ 4 = 400; ACWR = 550 ÷ 400 = 1.38.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "1.57",
+       "why": "This leaves this week out of the chronic average (550 ÷ 350): the 'uncoupled' version, not the usual one."
+      },
+      {
+       "id": "c",
+       "text": "0.73",
+       "why": "This divides chronic by acute (400 ÷ 550), upside down."
+      },
+      {
+       "id": "d",
+       "text": "0.34",
+       "why": "This divides by the 4-week total (550 ÷ 1600) instead of the weekly average."
+      }
+     ],
+     "solution": "Chronic = 1600 ÷ 4 = 400. ACWR = 550 ÷ 400 = 1.375 ≈ 1.38."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's weekly sRPE loads: 450, 500, 550, then a recovery week of 300. What is the usual 4-week ACWR?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.67",
+       "why": "Right: chronic = (450 + 500 + 550 + 300) ÷ 4 = 450; ACWR = 300 ÷ 450 = 0.67.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.60",
+       "why": "This leaves this week out of the chronic average (300 ÷ 500)."
+      },
+      {
+       "id": "c",
+       "text": "1.50",
+       "why": "This divides chronic by acute (450 ÷ 300), upside down."
+      },
+      {
+       "id": "d",
+       "text": "0.17",
+       "why": "This divides by the 4-week total (300 ÷ 1800) instead of the weekly average."
+      }
+     ],
+     "solution": "Chronic = 1800 ÷ 4 = 450. ACWR = 300 ÷ 450 = 0.67."
+    }
+   ]
+  },
+  {
+   "id": "ac-sweet-spot",
+   "concept": "ac-define",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "gabbett2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A running coach uses the ACWR 'sweet spot' of 0.8–1.3. Where did those bands come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Injury data from cricket, Australian football and rugby league",
+       "why": "Right: the bands were drawn from team-sport data, then applied far more widely.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Trials in distance runners",
+       "why": "No trial in runners produced these bands."
+      },
+      {
+       "id": "c",
+       "text": "The fitness–fatigue model's 42- and 7-day constants",
+       "why": "The bands came from injury data, not from the Banister model."
+      },
+      {
+       "id": "d",
+       "text": "A consensus of endurance coaching bodies",
+       "why": "They came from one author's synthesis of team-sport studies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ac-ewma-calc",
+   "concept": "ac-ewma",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "williams2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An EWMA uses N = 7 days. What is λ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.25",
+       "why": "Right: λ = 2 ÷ (7 + 1) = 0.25.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.14",
+       "why": "This uses 1 ÷ N (1 ÷ 7)."
+      },
+      {
+       "id": "c",
+       "text": "0.29",
+       "why": "This uses 2 ÷ N (2 ÷ 7) and forgets the + 1."
+      },
+      {
+       "id": "d",
+       "text": "0.75",
+       "why": "This is 1 − λ, the weight on yesterday's EWMA."
+      }
+     ],
+     "solution": "λ = 2 ÷ (N + 1) = 2 ÷ 8 = 0.25."
+    },
+    {
+     "id": "b",
+     "stem": "A chronic EWMA uses N = 28 days. What is λ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.069",
+       "why": "Right: λ = 2 ÷ (28 + 1) = 2 ÷ 29 = 0.069.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.036",
+       "why": "This uses 1 ÷ N (1 ÷ 28)."
+      },
+      {
+       "id": "c",
+       "text": "0.071",
+       "why": "This uses 2 ÷ N (2 ÷ 28) and forgets the + 1."
+      },
+      {
+       "id": "d",
+       "text": "0.931",
+       "why": "This is 1 − λ, the weight on yesterday's EWMA."
+      }
+     ],
+     "solution": "λ = 2 ÷ 29 = 0.069."
+    },
+    {
+     "id": "c",
+     "stem": "A runner's acute EWMA (λ = 0.25) was 60 yesterday. Today is an easy 30-load jog. What is today's acute EWMA?",
+     "options": [
+      {
+       "id": "a",
+       "text": "52.5",
+       "why": "Right: 30 × 0.25 + 0.75 × 60 = 7.5 + 45 = 52.5.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "45",
+       "why": "This is the simple mean of 30 and 60, ignoring λ."
+      },
+      {
+       "id": "c",
+       "text": "30",
+       "why": "This takes today's load alone; the EWMA blends it with the past."
+      },
+      {
+       "id": "d",
+       "text": "37.5",
+       "why": "This swaps the weights: 30 × 0.75 + 60 × 0.25."
+      }
+     ],
+     "solution": "EWMA = 30 × 0.25 + (1 − 0.25) × 60 = 52.5."
+    }
+   ]
+  },
+  {
+   "id": "ac-coupled-calc",
+   "concept": "ac-coupling",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "impellizzeri2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's weekly loads: 400, 400, 400, then 600 this week. What are the coupled ACWR (4-week average) and the uncoupled ACWR (previous 3 weeks)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.33 coupled; 1.50 uncoupled",
+       "why": "Right: 600 ÷ 450 = 1.33 with this week in the average; 600 ÷ 400 = 1.50 without it.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "1.50 coupled; 1.33 uncoupled",
+       "why": "Swapped: leaving this week out lowers the chronic average and raises the ratio."
+      },
+      {
+       "id": "c",
+       "text": "1.33 both ways",
+       "why": "Removing this week from the chronic average changes it from 450 to 400."
+      },
+      {
+       "id": "d",
+       "text": "0.75 coupled; 0.67 uncoupled",
+       "why": "These divide chronic by acute, upside down."
+      }
+     ],
+     "solution": "Coupled: chronic = (400 × 3 + 600) ÷ 4 = 450; 600 ÷ 450 = 1.33. Uncoupled: chronic = 400; 600 ÷ 400 = 1.50."
+    }
+   ]
+  },
+  {
+   "id": "ac-coupling-why",
+   "concept": "ac-coupling",
+   "bloom": "analyse",
+   "sources": [
+    "impellizzeri2021",
+    "impellizzeri2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study finds high ACWRs come before injuries. A statistician points out that this week's load is also part of the chronic average. Why does that matter?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shared numbers can create a correlation with no biology behind it",
+       "why": "Right: when the acute week sits in both parts, the ratio is coupled and some of the association can be an artefact.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It doesn't: including this week makes the average more accurate",
+       "why": "Accuracy of the average isn't the issue; the shared term distorts the ratio's links."
+      },
+      {
+       "id": "c",
+       "text": "It means chronic load must cause the injuries",
+       "why": "Coupling says nothing about causes; it can manufacture a correlation."
+      },
+      {
+       "id": "d",
+       "text": "It only matters with EWMA, not rolling averages",
+       "why": "Coupling comes from putting acute load inside chronic load, whatever the averaging."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ac-random-meaning",
+   "concept": "ac-random",
+   "bloom": "evaluate",
+   "sources": [
+    "impellizzeri2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Dividing acute load by random numbers gave similar 'ACWR' injury associations to dividing by real chronic loads. What does this most strongly suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The chronic part adds nothing; the link comes from acute load",
+       "why": "Right: if any denominator works, the ratio is just rescaled acute load, so the 'acute:chronic' theory isn't supported.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Chronic load protects the athlete against injury",
+       "why": "A random denominator can't carry a protective effect; the test points the other way."
+      },
+      {
+       "id": "c",
+       "text": "Random numbers can predict injuries well in team sports",
+       "why": "Neither the real nor the contrived ratios predicted much better than a coin toss."
+      },
+      {
+       "id": "d",
+       "text": "The test validates the real ACWR as an injury marker",
+       "why": "The test was designed to show artefacts, and it found them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ac-nielsen",
+   "concept": "ac-instead",
+   "bloom": "evaluate",
+   "sources": [
+    "nielsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 874 novice runners, those who raised weekly distance by more than 30% had 1.59 times the rate of distance-related injuries of those raising it by under 10% (95% CI 0.96–2.66, p = 0.07). What is the fairest conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Suggestive but uncertain: the CI includes no effect",
+       "why": "Right: the interval runs from slightly protective to more than double the rate, and the authors called the study exploratory.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Proven: increases above 30% cause injury",
+       "why": "An observational study with a CI crossing 1 can't prove cause."
+      },
+      {
+       "id": "c",
+       "text": "Disproven: p > 0.05 means there is no effect",
+       "why": "A non-significant result isn't proof of no effect; the estimate still points to harm."
+      },
+      {
+       "id": "d",
+       "text": "Applies equally to elite runners",
+       "why": "Novice runners can't stand in for trained or elite runners."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ac-what-instead",
+   "concept": "ac-instead",
+   "bloom": "apply",
+   "sources": [
+    "impellizzeri2020",
+    "nielsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete returns after 3 weeks off with a chest infection. His app says any week is fine 'as long as ACWR stays in 0.8–1.3'. What is the most defensible plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rebuild gradually, watching how he responds, not the ratio",
+       "why": "Right: after a break, small steps up from what he's actually been doing are sensible; the ratio has no proven protective value.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Trust the ACWR band: staying in it keeps him safe",
+       "why": "No study shows that keeping ACWR in a band lowers injury risk."
+      },
+      {
+       "id": "c",
+       "text": "Go straight back to his old load, since fitness is kept",
+       "why": "Three weeks off lowers what he is prepared for; jumping back is the classic error."
+      },
+      {
+       "id": "d",
+       "text": "Avoid all training until his ACWR is exactly 1.0",
+       "why": "After a break the ACWR is distorted; waiting for 1.0 has no basis."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's weekly distance has been 30 km for months. She wants to train for a marathon. Which plan best fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Add distance gradually and track weekly totals and how she feels",
+       "why": "Right: gradual increases and simple tracking are sensible; no ratio threshold is proven.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Jump to 60 km if her ACWR stays under 1.5",
+       "why": "A doubling isn't made safe by a ratio; ACWR thresholds came from team sports."
+      },
+      {
+       "id": "c",
+       "text": "Keep her ACWR at 1.3 every week, the sweet spot",
+       "why": "Holding a ratio constant can still mean large absolute jumps, and the band is unproven."
+      },
+      {
+       "id": "d",
+       "text": "Ignore load: injuries are mostly bad luck",
+       "why": "Load is one of several factors; ignoring it throws away useful information."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

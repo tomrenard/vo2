@@ -1,0 +1,662 @@
+{
+ "id": "tr-heritage",
+ "module": "t3-trainability",
+ "title": "The HERITAGE Family Study",
+ "goal": "Explain what HERITAGE found about how much VO₂max gains vary and run in families, what a heritability of 47% does and doesn't mean, and the study's limits.",
+ "requires": [
+  "str-programming"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "gene",
+    "familial-aggregation",
+    "heritability",
+    "trainability"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "her-design",
+   "title": "A training study built on families",
+   "text": "Why do two people on the same plan improve by different amounts? The HERITAGE Family Study was built to ask that.\n\nIt recruited whole families: two parents and at least two grown-up children, all sedentary. In the 1999 analysis, 481 white adults from 98 families trained on a cycle ergometer for 20 weeks, and [VO2max](g:vo2max) was tested twice before and twice after [[c:her-n]]. Everyone did the same plan, three supervised sessions a week, from 30 min at the heart rate of 55% of VO₂max up to 50 min at 75% for the last 6 weeks [[c:her-protocol]].\n\nWhy families? Relatives share [genes](g:gene). If the gain clusters in families ([familial aggregation](g:familial-aggregation)), something families share shapes [trainability](g:trainability).",
+   "claims": [
+    {
+     "id": "her-n",
+     "text": "HERITAGE trained 481 sedentary adults from 98 two-generation families for 20 weeks, with VO₂max tested twice before and twice after.",
+     "grade": "strong",
+     "sources": [
+      "bouchard1999"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard1999",
+       "quote": "A total of 481 sedentary adult Caucasians from 98 two-generation families was exercise trained for 20 wk and was tested for VO(2max) on a cycle ergometer twice before and twice after the training program.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "her-protocol",
+     "text": "The programme was standardised: 3 sessions a week, from 30 min at the heart rate of 55% of VO₂max to 50 min at 75% in the last 6 weeks.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "The intensity or duration of the training sessions was increased every 2 wk, until subjects were working at the HR associated with 75% of baseline V̇O2max for 50 min during the last 6 wk",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "her-why-families"
+  },
+  {
+   "type": "concept",
+   "id": "her-spread",
+   "title": "Same plan, very different gains",
+   "text": "On average VO₂max rose by about 400 mL·min⁻¹. But the spread was huge: some people gained little or nothing, others more than 1.0 L·min⁻¹ [[c:her-mean]]. A later summary gives the mean as 384 mL·min⁻¹ with a [standard deviation](g:standard-deviation) of 202 [[c:her-sd]].\n\nEven in the most alike subgroup, young men aged 17–35, the mean gain was 15.7% with an SD of 8.7%. Most gained 10–20%, some nothing, some 40–60%: a skewed spread with a long tail of big gainers [[c:her-young]].\n\nRemember the setting: same plan, same relative intensity, every session supervised, and only people who did at least 57 of the 60 sessions counted. The spread isn't explained by skipped sessions [[c:her-supervised]].",
+   "claims": [
+    {
+     "id": "her-mean",
+     "text": "The mean VO₂max gain was about 400 mL·min⁻¹, ranging from little or none to over 1.0 L·min⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "bouchard1999"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard1999",
+       "quote": "The mean increase in VO(2max) reached approximately 400 ml/min, but there was considerable heterogeneity in responsiveness, with some individuals experiencing little or no gain, whereas others gained >1.0 l/min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "her-sd",
+     "text": "The mean gain was 384 mL·min⁻¹ with an SD of 202 mL·min⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "The mean gain in V̇O2max was 384 mL O2 (SD, 202).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "her-young",
+     "text": "In young men aged 17–35 the gain was 15.7% ± 8.7%, from none to 40–60%.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "The mean gain reached 15.7%, with SD of 8.7%. Even though most tended to improve by about 10% to 20%, the range of responses is wide, with some experiencing no gain and others improving by 40% to 60%, as illustrated by the skewed distribution.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "her-supervised",
+     "text": "All sessions were supervised on site, and post-training results counted only participants who completed at least 57 of the 60 sessions.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "All training sessions were supervised on-site by trained personnel to ensure that the equipment was working properly, and the participants were compliant with the protocol.",
+       "level": "full-text"
+      },
+      {
+       "source": "sarzynski2022",
+       "quote": "Posttraining numbers include only the subjects who were classified as completers having completed at least 57 (95%) of the 60 exercise training sessions.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "her-mean-recall"
+  },
+  {
+   "type": "example",
+   "id": "her-sd-example",
+   "title": "Reading a mean and an SD",
+   "problem": "Suppose a training study reports a mean VO₂max gain of 400 mL·min⁻¹ with an SD of 200 mL·min⁻¹. Roughly where do two thirds of people lie, and how unusual is a gain of zero?",
+   "steps": [
+    "About two thirds of values lie within one SD of the mean: 400 − 200 = 200 and 400 + 200 = 600 mL·min⁻¹.",
+    "A gain of 0 is (0 − 400) ÷ 200 = −2 SD from the mean. In a bell-shaped spread about 2–3% of people lie further than 2 SD below the mean.",
+    "In 481 people that is roughly 10 people with no gain at all, even on a plan that works on average. (Real gains are skewed, so treat this as a rough guide.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "her-spread-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "her-heritability",
+   "title": "47%: what heritability means",
+   "text": "The gain varied 2.5 times more between families than within them. The best-fitting model gave a maximal [heritability](g:heritability) of 47% for the VO₂max response [[c:her-h2-response]]. Before training, VO₂max itself (429 people, 86 families) had a maximal heritability of at least 50% [[c:her-h2-base]].\n\nRead 47% carefully. It means that about half of the *differences between people* in this group, on this plan, went with family. It does not mean that 47% of your own gain comes from your genes: one person's gain can't be split that way.\n\nIt also belongs to the setting. When everyone trains the same, more of the remaining spread can come from genes; give people very different plans and the same genes explain a smaller share.",
+   "claims": [
+    {
+     "id": "her-h2-response",
+     "text": "VO₂max gains varied 2.5 times more between families than within them, with a maximal heritability of 47%.",
+     "grade": "weak",
+     "sources": [
+      "bouchard1999"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard1999",
+       "quote": "An ANOVA revealed that there was 2.5 times more variance between families than within families in the VO(2max) response variance.",
+       "level": "abstract"
+      },
+      {
+       "source": "bouchard1999",
+       "quote": "With the use of a model-fitting procedure, the most parsimonious models yielded a maximal heritability estimate of 47% for the VO(2max) response, which was adjusted for age and sex with a maternal transmission of 28% in one of the models.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "her-h2-base",
+     "text": "In the sedentary state, VO₂max had a maximal heritability of at least 50%.",
+     "grade": "weak",
+     "sources": [
+      "bouchard1998"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard1998",
+       "quote": "Maximal heritability estimates were at least 50%, a value inflated to an undetermined degree by nongenetic factors.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "her-h2-meaning"
+  },
+  {
+   "type": "question",
+   "item": "her-h2-setting"
+  },
+  {
+   "type": "question",
+   "item": "her-spread-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "her-limits",
+   "title": "What HERITAGE does not show",
+   "text": "Three cautions.\n\n**Families share more than genes.** Spouses, who share no genes, had alike VO₂max too, so home life plays a part, and the authors say the heritability is inflated by non-genetic factors to an unknown degree [[c:her-shared-env]].\n\n**No control group.** The money went to more families instead, which made later analyses harder; without one, a study can't separate training effects from changes that would have happened anyway [[c:her-no-control]]. Without one, the spread of changes can't be cleanly split into true differences and test noise (*Noise, worthwhile changes and non-responders*). Testing twice at each end reduces the noise but doesn't remove it.\n\n**One dose.** Only one standard dose was tested [[c:her-one-dose]]. A small gain on 20 weeks of moderate cycling says nothing about a bigger or harder plan. And the 47% comes from sedentary white adults.",
+   "claims": [
+    {
+     "id": "her-shared-env",
+     "text": "Spouse correlations show that shared environment adds to family resemblance in VO₂max, so heritability estimates are inflated by non-genetic factors.",
+     "grade": "moderate",
+     "sources": [
+      "bouchard1998"
+     ],
+     "evidence": [
+      {
+       "source": "bouchard1998",
+       "quote": "Spouse, sibling, and parent-offspring correlations were significant, suggesting that both genetic and environmental factors contribute to the familial resemblance for VO2max.",
+       "level": "abstract"
+      },
+      {
+       "source": "bouchard1998",
+       "quote": "Maximal heritability estimates were at least 50%, a value inflated to an undetermined degree by nongenetic factors.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "her-no-control",
+     "text": "HERITAGE had no control group: the money went to more families, and the gap limits secondary analyses, since designs without a control group cannot separate training effects from changes that would have happened anyway.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022",
+      "ross2019"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "The lack of a control group became a challenge when the HERITAGE resource was used in secondary analyses.",
+       "level": "full-text"
+      },
+      {
+       "source": "sarzynski2022",
+       "quote": "Indeed, the consensus was that the funding available would be better devoted to reaching a larger sample size of families and participants in both ethnic groups than to add a control group.",
+       "level": "full-text"
+      },
+      {
+       "source": "ross2019",
+       "quote": "Designs without a control group (or control condition) (ie, designs 1, 2 and 3) cannot isolate changes due to treatment (eg, exercise training) from changes that would have occurred in the absence of treatment.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "her-one-dose",
+     "text": "HERITAGE tested only one standardised dose of exercise.",
+     "grade": "strong",
+     "sources": [
+      "sarzynski2022"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2022",
+       "quote": "Other limitations include that only one standardized dose of exercise was tested, children and older adults were not incorporated into the study",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "her-appraise"
+  },
+  {
+   "type": "question",
+   "item": "her-spouse"
+  },
+  {
+   "type": "question",
+   "item": "her-one-dose"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "HERITAGE gave 481 sedentary adults from 98 families the same supervised 20-week cycling plan, testing VO₂max twice before and after.",
+    "The mean gain was about 400 mL·min⁻¹ (SD about 200), from little or none to over 1 L·min⁻¹.",
+    "Gains clustered in families: maximal heritability 47% for the gain, at least 50% for VO₂max before training.",
+    "Heritability describes the spread in one group on one plan; it can't say how much of one person's gain is genetic.",
+    "Shared home life inflates family estimates, there was no control group, and one moderate dose can't show who can't improve."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "her-why-families",
+   "concept": "her-design",
+   "bloom": "understand",
+   "sources": [
+    "bouchard1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why did HERITAGE recruit whole families instead of unrelated volunteers?",
+     "options": [
+      {
+       "id": "a",
+       "text": "To see whether the training gain clusters in families",
+       "correct": true,
+       "why": "Right: comparing the spread between and within families shows whether response runs in families, and so whether genes (or family life) play a part."
+      },
+      {
+       "id": "b",
+       "text": "To have relatives act as an untrained control group",
+       "why": "There was no control group: every participant trained."
+      },
+      {
+       "id": "c",
+       "text": "Because relatives train together and so stick to the plan",
+       "why": "Every session was supervised on site; adherence wasn't the reason for families."
+      },
+      {
+       "id": "d",
+       "text": "To remove the effect of genes on the results",
+       "why": "The opposite: families were chosen to measure the effect of genes, not to remove it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-mean-recall",
+   "concept": "her-spread",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bouchard1999",
+    "sarzynski2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In HERITAGE, about how much did VO₂max rise on average after 20 weeks of training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 400 mL·min⁻¹",
+       "correct": true,
+       "why": "Right: about 400 mL·min⁻¹ (384 in the later summary)."
+      },
+      {
+       "id": "b",
+       "text": "About 1.0 L·min⁻¹",
+       "why": "That was the top of the range, reached only by the biggest gainers."
+      },
+      {
+       "id": "c",
+       "text": "About 40 mL·min⁻¹",
+       "why": "That is ten times too small: it would be within test noise."
+      },
+      {
+       "id": "d",
+       "text": "About 4 L·min⁻¹",
+       "why": "That is a whole VO₂max of a fit adult, not a gain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-spread-calc",
+   "concept": "her-spread",
+   "bloom": "apply",
+   "sources": [
+    "sarzynski2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A summary of HERITAGE gives the mean VO₂max gain as 384 mL·min⁻¹ with an SD of 202 mL·min⁻¹. Between which values do roughly two thirds of people lie?",
+     "options": [
+      {
+       "id": "a",
+       "text": "182 to 586 mL·min⁻¹",
+       "correct": true,
+       "why": "Right: mean ± 1 SD = 384 − 202 to 384 + 202."
+      },
+      {
+       "id": "b",
+       "text": "384 to 586 mL·min⁻¹",
+       "why": "This adds the SD on one side only; the band goes both ways from the mean."
+      },
+      {
+       "id": "c",
+       "text": "−20 to 788 mL·min⁻¹",
+       "why": "That is ± 2 SD (384 ± 404), which holds about 95% of people, not two thirds."
+      },
+      {
+       "id": "d",
+       "text": "202 to 384 mL·min⁻¹",
+       "why": "This treats the SD as the lowest value instead of a distance from the mean."
+      }
+     ],
+     "solution": "Two thirds lie within 1 SD of the mean: 384 − 202 = 182 and 384 + 202 = 586 mL·min⁻¹. The real spread is skewed, so this is approximate."
+    },
+    {
+     "id": "b",
+     "stem": "In HERITAGE's young white men, VO₂max rose by 15.7% on average, with an SD of 8.7%. Between which gains do roughly two thirds of them lie?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.0% to 24.4%",
+       "correct": true,
+       "why": "Right: 15.7 − 8.7 = 7.0 and 15.7 + 8.7 = 24.4."
+      },
+      {
+       "id": "b",
+       "text": "15.7% to 24.4%",
+       "why": "This adds the SD on one side only."
+      },
+      {
+       "id": "c",
+       "text": "−1.7% to 33.1%",
+       "why": "That is ± 2 SD, about 95% of people."
+      },
+      {
+       "id": "d",
+       "text": "8.7% to 15.7%",
+       "why": "This treats the SD as the lowest gain."
+      }
+     ],
+     "solution": "Mean ± 1 SD: 15.7 − 8.7 = 7.0% and 15.7 + 8.7 = 24.4%."
+    },
+    {
+     "id": "c",
+     "stem": "A 12-week running study reports a mean VO₂max gain of 5.0 mL·kg⁻¹·min⁻¹ with an SD of 2.5. Between which gains do roughly two thirds of runners lie?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.5 to 7.5 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: 5.0 ± 2.5."
+      },
+      {
+       "id": "b",
+       "text": "5.0 to 7.5 mL·kg⁻¹·min⁻¹",
+       "why": "This adds the SD on one side only."
+      },
+      {
+       "id": "c",
+       "text": "0 to 10.0 mL·kg⁻¹·min⁻¹",
+       "why": "That is ± 2 SD, about 95% of runners."
+      },
+      {
+       "id": "d",
+       "text": "2.5 to 5.0 mL·kg⁻¹·min⁻¹",
+       "why": "This takes the SD down from the mean only."
+      }
+     ],
+     "solution": "Mean ± 1 SD: 5.0 − 2.5 = 2.5 and 5.0 + 2.5 = 7.5 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "her-h2-meaning",
+   "concept": "her-heritability",
+   "bloom": "understand",
+   "sources": [
+    "bouchard1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist reads about HERITAGE and says: \"So 47% of my VO₂max gain is decided by my genes.\" What is the best correction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "47% describes differences between people in that group, not a share of one person's gain",
+       "correct": true,
+       "why": "Right: heritability is about the spread in a group on a given plan; it can't be applied to one person's gain."
+      },
+      {
+       "id": "b",
+       "text": "The figure is right but only for VO₂max before training",
+       "why": "47% was the heritability of the gain; VO₂max before training was at least 50%."
+      },
+      {
+       "id": "c",
+       "text": "Genes decide 53% of the gain, since 47% is the share due to training",
+       "why": "Heritability isn't a split between genes and training for one person."
+      },
+      {
+       "id": "d",
+       "text": "47% means his gain will be about 47% smaller than average",
+       "why": "Heritability says nothing about the size of a gain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-h2-setting",
+   "concept": "her-heritability",
+   "bloom": "analyse",
+   "sources": [
+    "bouchard1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Study A gives 200 runners the same supervised plan. Study B lets 200 runners train anywhere from 2 to 8 hours a week. Both estimate the heritability of the VO₂max gain. What do you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower heritability in B, because training differences add non-genetic spread",
+       "correct": true,
+       "why": "Right: heritability is a share of the spread; when training varies, more of the spread comes from training, so genes explain a smaller share."
+      },
+      {
+       "id": "b",
+       "text": "The same in both, since runners' genes don't change between studies",
+       "why": "The genes are the same, but heritability is a share of the spread, which depends on the setting."
+      },
+      {
+       "id": "c",
+       "text": "Higher heritability in B, since more training reveals the genes",
+       "why": "More varied training adds non-genetic spread, so genes take a smaller share of it."
+      },
+      {
+       "id": "d",
+       "text": "Heritability can't be estimated when training is supervised",
+       "why": "HERITAGE was supervised and estimated it fine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-appraise",
+   "concept": "her-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "sarzynski2022",
+    "bouchard1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog uses HERITAGE's spread of VO₂max changes to claim that a fixed share of people are 'non-responders'. What most limits that claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "There was no control group to show how much of the spread is test noise",
+       "correct": true,
+       "why": "Right: without a control group (or repeat testing), true differences can't be separated from day-to-day noise and regression to the mean."
+      },
+      {
+       "id": "b",
+       "text": "The sample was too small to see a spread",
+       "why": "481 people from 98 families is large for a training study."
+      },
+      {
+       "id": "c",
+       "text": "Nobody checked that people did their sessions",
+       "why": "Every session was supervised on site."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max was measured only once at each end",
+       "why": "It was measured twice before and twice after, which reduces noise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-spouse",
+   "concept": "her-limits",
+   "bloom": "analyse",
+   "sources": [
+    "bouchard1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In HERITAGE, husbands' and wives' VO₂max before training were also alike, although spouses share no genes. What does that mean for the 'at least 50%' heritability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shared home life also makes families alike, so the estimate is likely too high",
+       "correct": true,
+       "why": "Right: the authors say the estimate is inflated by non-genetic factors to an unknown degree."
+      },
+      {
+       "id": "b",
+       "text": "It proves VO₂max has nothing to do with genes",
+       "why": "Parents and children were alike too, and the data fit a genetic part; spouses show only that environment adds to it."
+      },
+      {
+       "id": "c",
+       "text": "Spouses must be related, so the estimate is too low",
+       "why": "Spouses aren't blood relatives; their likeness comes from shared life (and choosing alike partners)."
+      },
+      {
+       "id": "d",
+       "text": "It has no bearing: spouses aren't used to estimate heritability",
+       "why": "Spouse likeness is how a family study detects the share of shared environment."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "her-one-dose",
+   "concept": "her-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "bouchard1999",
+    "sarzynski2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete did a HERITAGE-style plan: 20 weeks, three moderate 50-minute sessions a week. Her VO₂max barely moved. What is the soundest conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She responded little to this dose; a different or bigger plan may work",
+       "correct": true,
+       "why": "Right: HERITAGE tested one moderate dose, so a low gain on it says nothing about other plans."
+      },
+      {
+       "id": "b",
+       "text": "Her genes make her a non-responder to endurance training",
+       "why": "One plan and one pair of test results can't show that; a later lesson shows that higher doses can turn non-response around."
+      },
+      {
+       "id": "c",
+       "text": "Her heritability for VO₂max is low",
+       "why": "Heritability belongs to a group, not to one person."
+      },
+      {
+       "id": "d",
+       "text": "She should stop training for VO₂max and focus on economy",
+       "why": "Too early: a low response to one moderate plan is weak evidence about her trainability."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

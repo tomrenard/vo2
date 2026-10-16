@@ -1,0 +1,857 @@
+{
+ "id": "str-concurrent",
+ "module": "t3-strength",
+ "title": "Concurrent training and the interference effect",
+ "goal": "Explain what the interference effect is, how strong the evidence for it is now, why its mechanism is debated, and when it matters for an endurance athlete.",
+ "requires": [
+  "per-season"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "concurrent-training",
+    "interference-effect",
+    "hypertrophy",
+    "explosive-strength",
+    "mtor"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cc-hickson",
+   "title": "Hickson 1980: the first warning",
+   "text": "[Concurrent training](g:concurrent-training) means training for strength and endurance in the same period. The classic study dates from 1980. One group lifted 5 days a week, one did 40 min of endurance work 6 days a week, and a third did both programmes in full.\n\nAfter 10 weeks, [VO2max](g:vo2max) had risen by about 20–25% in both groups that did endurance work. Strength rose steadily in the lifting group. In the combined group it rose just as fast for 7 weeks, then levelled off and fell in weeks 9 and 10 [[c:hickson]].\n\nThis blunting of strength gains by endurance work became known as the [interference effect](g:interference-effect). Note the dose, though: the combined group trained about 11 times a week.",
+   "claims": [
+    {
+     "id": "hickson",
+     "text": "Adding endurance training to strength training stopped strength gains after about 7 weeks, but did not reduce the rise in VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "hickson1980"
+     ],
+     "evidence": [
+      {
+       "source": "hickson1980",
+       "quote": "The rate of strength improvement by the S and E group was similar to the S group for the first 7 weeks of training, but subsequently leveled off and declined during the 9th and 10th weeks.",
+       "level": "abstract"
+      },
+      {
+       "source": "hickson1980",
+       "quote": "These findings demonstrate that simultaneously training for S and E will result in a reduced capacity to develop strength, but will not affect the magnitude of increase in VO2max.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cc-hickson-pattern"
+  },
+  {
+   "type": "question",
+   "item": "cc-hickson-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "cc-wilson",
+   "title": "The 2012 meta-analysis",
+   "text": "A 2012 [meta-analysis](g:meta-analysis) pooled 21 studies that compared strength training alone with strength plus endurance training. It gave [effect sizes](g:effect-size) for three outcomes [[c:wilson-es]]:\n\n| outcome | strength only | concurrent |\n|---|---|---|\n| [hypertrophy](g:hypertrophy) | 1.23 | 0.85 |\n| strength | 1.76 | 1.44 |\n| power | 0.91 | 0.55 |\n\nConcurrent training still built all three, only less, and power suffered most. Running, but not cycling, cut the gains in muscle size and strength, and more frequent and longer endurance sessions went with smaller gains [[c:wilson-mod]].\n\nWhy running? One idea is the muscle damage from its [eccentric](g:eccentric) landings; the meta-analysis didn't test this.",
+   "claims": [
+    {
+     "id": "wilson-es",
+     "text": "Across 21 studies, concurrent training still built muscle size, strength and power, but with smaller effect sizes than strength training alone (hypertrophy 0.85 vs 1.23, strength 1.44 vs 1.76, power 0.55 vs 0.91).",
+     "grade": "moderate",
+     "sources": [
+      "wilson2012b"
+     ],
+     "evidence": [
+      {
+       "source": "wilson2012b",
+       "quote": "The mean ES for hypertrophy for strength training was 1.23; for endurance training, it was 0.27; and for concurrent training, it was 0.85, with strength and concurrent training being significantly greater than endurance training only.",
+       "level": "abstract"
+      },
+      {
+       "source": "wilson2012b",
+       "quote": "The mean ES for power development for strength training only was 0.91; for endurance training, it was 0.11; and for concurrent training, it was 0.55.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wilson-mod",
+     "text": "Running, but not cycling, combined with strength training reduced hypertrophy and strength gains; more frequent and longer endurance training went with smaller gains. The 2022 meta-analysis found no difference by mode or frequency.",
+     "grade": "disputed",
+     "sources": [
+      "wilson2012b"
+     ],
+     "evidence": [
+      {
+       "source": "wilson2012b",
+       "quote": "For moderator variables, resistance training concurrently with running, but not cycling, resulted in significant decrements in both hypertrophy and strength.",
+       "level": "abstract"
+      },
+      {
+       "source": "wilson2012b",
+       "quote": "Correlational analysis identified significant negative relationships between frequency (-0.26 to -0.35) and duration (-0.29 to -0.75) of endurance training for hypertrophy, strength, and power.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cc-kept-example",
+   "title": "How much of the gain is kept?",
+   "problem": "In the 2012 meta-analysis, strength training alone gave an effect size of 1.76 for strength, and concurrent training 1.44. What share of the strength effect did concurrent training keep?",
+   "steps": [
+    "Share kept = concurrent effect ÷ strength-only effect.",
+    "1.44 ÷ 1.76 = 0.82, so about 82% of the effect was kept (about 18% lost).",
+    "Effect sizes are pooled averages in standard deviation units: this is a rough comparison of groups, not a forecast for one athlete."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cc-kept-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cc-run-cycle"
+  },
+  {
+   "type": "question",
+   "item": "cc-dose"
+  },
+  {
+   "type": "concept",
+   "id": "cc-newer",
+   "title": "Newer meta-analyses: small and selective",
+   "text": "Larger, later meta-analyses found much less interference. Their numbers are effect sizes against strength training alone; negative means a smaller gain.\n\n- **43 studies (2022):** no clear loss of maximal strength (−0.06) or muscle size (−0.01), but a blunted gain in [explosive strength](g:explosive-strength) (−0.28), most of all when both were done in the same session [[c:schumann]]. Running and cycling did not differ [[c:schumann-mode]].\n- **27 studies (2021):** lower-body [1RM](g:one-rep-max) gains were blunted only in trained people (−0.35), and only when both were done in the same session [[c:petre]].\n- **59 studies, 1,346 people (2024):** small interference with lower-body strength in men (−0.43), none in women (+0.08) [[c:huiberts]].\n\nSo interference is real but selective: explosive strength, trained people and same-session training.",
+   "claims": [
+    {
+     "id": "schumann",
+     "text": "Across 43 studies, concurrent training did not compromise maximal strength or hypertrophy, but blunted explosive strength, especially when both were done in the same session.",
+     "grade": "moderate",
+     "sources": [
+      "schumann2022"
+     ],
+     "evidence": [
+      {
+       "source": "schumann2022",
+       "quote": "Concurrent aerobic and strength training does not compromise muscle hypertrophy and maximal strength development.",
+       "level": "abstract"
+      },
+      {
+       "source": "schumann2022",
+       "quote": "However, explosive strength gains may be attenuated, especially when aerobic and strength training are performed in the same session.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "schumann-mode",
+     "text": "In the 2022 meta-analysis, the type of aerobic training (cycling vs running), training frequency, training status and age did not change the effect of concurrent training.",
+     "grade": "moderate",
+     "sources": [
+      "schumann2022"
+     ],
+     "evidence": [
+      {
+       "source": "schumann2022",
+       "quote": "No significant effects were found for the other moderators, i.e. type of aerobic training (cycling vs. running), frequency of concurrent training (> 5 vs. < 5 weekly sessions), training status (untrained vs. active), and mean age (< 40 vs. > 40 years).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "petre",
+     "text": "Across 27 studies, concurrent training blunted lower-body 1RM gains in trained but not in untrained or moderately trained people, and only when done in the same session.",
+     "grade": "moderate",
+     "sources": [
+      "petre2021"
+     ],
+     "evidence": [
+      {
+       "source": "petre2021",
+       "quote": "A subgroup analysis revealed that the negative effect observed in trained individuals occurred only when resistance and endurance training were conducted within the same training session",
+       "level": "abstract"
+      },
+      {
+       "source": "petre2021",
+       "quote": "Trained individuals should therefore consider separating endurance from resistance training during periods where the development of dynamic maximal strength is prioritised.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "huiberts",
+     "text": "Across 59 studies (1,346 people), concurrent training caused small interference with lower-body strength in men but not in women.",
+     "grade": "moderate",
+     "sources": [
+      "huiberts2024"
+     ],
+     "evidence": [
+      {
+       "source": "huiberts2024",
+       "quote": "Concurrent training results in small interference for lower-body strength adaptations in males, but not in females.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does adding endurance training blunt strength and muscle gains?",
+    "sides": [
+     {
+      "position": "Yes, for some outcomes: explosive strength, and lower-body strength in trained people and in men, especially with same-session training.",
+      "sources": [
+       "schumann2022",
+       "petre2021",
+       "huiberts2024"
+      ]
+     },
+     {
+      "position": "Not meaningfully for muscle size and maximal strength: the classic interference effect on muscle growth was overstated.",
+      "sources": [
+       "schumann2022",
+       "murach2016"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cc-explosive"
+  },
+  {
+   "type": "question",
+   "item": "cc-trained-same"
+  },
+  {
+   "type": "question",
+   "item": "cc-ci-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "cc-mech",
+   "title": "AMPK against mTOR: a neat story in doubt",
+   "text": "The classic explanation comes from inside the muscle cell. [AMPK](g:ampk) is an enzyme switched on when the cell runs short of energy, as in long endurance work; it drives endurance changes such as more [mitochondria](g:mitochondria). [mTOR](g:mtor) is the switch for building new muscle protein after lifting. In rodent experiments AMPK blocks mTOR, so endurance work would directly block growth [[c:ampk-mtor]].\n\nHuman data fit poorly. In 10 moderately trained men, 30 min of cycling after heavy leg presses did not reduce mTOR signalling 1 or 3 h later [[c:apro]]. Reviews find no clear molecular interference after single sessions, and suspect several processes rather than one switch [[c:mech-multi]]. Plain fatigue and total load are simpler suspects.",
+   "claims": [
+    {
+     "id": "ampk-mtor",
+     "text": "The proposed mechanism, based on rodent experiments, is that AMPK activated by endurance exercise inhibits mTORC1 and so impairs muscle growth.",
+     "grade": "weak",
+     "sources": [
+      "apro2013",
+      "baar2006"
+     ],
+     "evidence": [
+      {
+       "source": "apro2013",
+       "quote": "The suggested mechanism (based on rodent experiments) is that activation of adenosine monophosphate-activated protein kinase (AMPK) during endurance exercise impairs muscle growth through inhibition of the mechanistic target of rapamycin complex 1 (mTORC1).",
+       "level": "abstract"
+      },
+      {
+       "source": "baar2006",
+       "quote": "Not only are PKB and AMPK central to the generation of the resistance and endurance phenotypes, they also block each other's downstream signaling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "apro",
+     "text": "In 10 moderately trained men, 30 min of cycling after heavy resistance exercise did not inhibit mTORC1 signalling.",
+     "grade": "weak",
+     "sources": [
+      "apro2013"
+     ],
+     "evidence": [
+      {
+       "source": "apro2013",
+       "quote": "These data show that the signaling of muscle growth through the mTORC1-S6K1 axis after heavy resistance exercise is not inhibited by subsequent endurance exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mech-multi",
+     "text": "Human studies have not found molecular interference after single concurrent sessions; several integrated processes, rather than one, probably cause the interference effect.",
+     "grade": "disputed",
+     "sources": [
+      "fyfe2014",
+      "coffey2017"
+     ],
+     "evidence": [
+      {
+       "source": "fyfe2014",
+       "quote": "human studies to date have not observed such molecular 'interference' following acute concurrent exercise that might explain compromised muscle hypertrophy following concurrent training.",
+       "level": "abstract"
+      },
+      {
+       "source": "coffey2017",
+       "quote": "it now seems likely that multiple integrated, rather than isolated, effectors or processes generate the interference effect.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does AMPK blocking mTOR explain the interference effect in humans?",
+    "sides": [
+     {
+      "position": "Yes: the endurance and growth signals block each other, a direct molecular blockade.",
+      "sources": [
+       "baar2006"
+      ]
+     },
+     {
+      "position": "Not on its own: human studies don't show the blockade, and several processes are probably involved.",
+      "sources": [
+       "apro2013",
+       "fyfe2014",
+       "coffey2017"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cc-ampk"
+  },
+  {
+   "type": "question",
+   "item": "cc-apro-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "cc-when",
+   "title": "When it matters for an endurance athlete",
+   "text": "The effect runs mostly one way. Endurance work can blunt strength gains, but strength work hardly harms aerobic gains: in the 2024 meta-analysis only untrained people gained less VO₂max with concurrent training, not trained endurance athletes [[c:vo2-safe]].\n\nAnd an endurance athlete's goal is different. You don't need a lifter's maximal gains, only enough extra strength to help economy and performance (next lesson). A blunted gain is still a gain: concurrent training still gave large strength effects in the 2012 meta-analysis.\n\nInterference matters most for a lifter who also runs, when explosive power is the goal, or when hard lifting is stacked right after long or frequent endurance sessions. How to schedule around it comes in the last lesson.",
+   "claims": [
+    {
+     "id": "vo2-safe",
+     "text": "In the 2024 meta-analysis, concurrent training impaired VO₂max gains in untrained people but not in trained or highly trained endurance athletes.",
+     "grade": "moderate",
+     "sources": [
+      "huiberts2024"
+     ],
+     "evidence": [
+      {
+       "source": "huiberts2024",
+       "quote": "Untrained, but not trained or highly trained endurance athletes demonstrated impaired improvements in V˙ O<sub>2max</sub> following concurrent training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cc-when-cyclist"
+  },
+  {
+   "type": "question",
+   "item": "cc-who-worry"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Concurrent training = strength and endurance in the same period. Hickson (1980) saw strength gains stall after 7 weeks when endurance work was added, with no loss of VO₂max gains.",
+    "The 2012 meta-analysis: concurrent training still built size, strength and power, but less; power suffered most, and running more than cycling (a difference the 2022 meta-analysis didn't find).",
+    "Newer meta-analyses: little or no loss of maximal strength and muscle size; explosive strength, trained people, men and same-session training show the clearest interference.",
+    "AMPK blocking mTOR is a rodent-based idea that human studies don't clearly support: the mechanism is debated.",
+    "For endurance athletes the effect runs mostly one way: lifting doesn't cost trained athletes aerobic gains."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cc-hickson-pattern",
+   "concept": "cc-hickson",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hickson1980"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Hickson's 1980 study, how did strength develop in the group that did both the strength and the endurance programme?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rose as fast as with lifting alone for 7 weeks, then levelled off and fell",
+       "correct": true,
+       "why": "Right: the gains matched the strength group until about week 7, then stalled and declined in weeks 9 and 10."
+      },
+      {
+       "id": "b",
+       "text": "It hardly rose at all, from the first week onward",
+       "why": "That describes the endurance-only group, which showed no appreciable strength gains. The combined group gained well at first."
+      },
+      {
+       "id": "c",
+       "text": "It rose faster than with lifting alone, thanks to the extra training",
+       "why": "More training doesn't add up here: the combined group never outgained the strength group, and later fell behind."
+      },
+      {
+       "id": "d",
+       "text": "It rose normally, while the VO₂max gain was the part that shrank",
+       "why": "This reverses the finding: VO₂max rose as much as with endurance alone; strength was the quality that suffered."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-hickson-appraisal",
+   "concept": "cc-hickson",
+   "bloom": "evaluate",
+   "sources": [
+    "hickson1980"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Hickson's combined group did the full strength programme plus the full endurance programme, about 11 sessions a week. What most limits applying the result to a cyclist who adds two gym sessions to her riding?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The combined group's total load was far higher, so plain overload can't be told apart from interference",
+       "correct": true,
+       "why": "Right: the combined group did both full programmes, so it trained much more than either other group. A two-session add-on is a very different dose."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max was measured on both a bike and a treadmill, which makes the results invalid",
+       "why": "Testing on two machines adds information; it doesn't invalidate anything, and VO₂max wasn't where the problem appeared."
+      },
+      {
+       "id": "c",
+       "text": "Ten weeks is too short for any strength gain to show up",
+       "why": "Strength rose clearly for 7 weeks in both lifting groups: the length was enough to see gains and then the stall."
+      },
+      {
+       "id": "d",
+       "text": "It shows cyclists can't gain strength while riding, so the gym is pointless",
+       "why": "Overreading: the combined group gained strength for 7 weeks, and later work shows endurance athletes do gain strength."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-kept-calc",
+   "concept": "cc-wilson",
+   "bloom": "apply",
+   "sources": [
+    "wilson2012b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 2012 meta-analysis, the effect size for muscle hypertrophy was 1.23 with strength training alone and 0.85 with concurrent training. What share of the hypertrophy effect did concurrent training keep?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 69%",
+       "correct": true,
+       "why": "Right: 0.85 ÷ 1.23 = 0.69."
+      },
+      {
+       "id": "b",
+       "text": "About 145%",
+       "why": "This divides the wrong way round (1.23 ÷ 0.85): concurrent training kept less, not more."
+      },
+      {
+       "id": "c",
+       "text": "About 38%",
+       "why": "0.38 is the difference between the two effect sizes (1.23 − 0.85), not a share."
+      },
+      {
+       "id": "d",
+       "text": "About 31%",
+       "why": "That is the share lost (1 − 0.69), not the share kept."
+      }
+     ],
+     "solution": "Share kept = 0.85 ÷ 1.23 = 0.69, about 69% (about 31% lost)."
+    },
+    {
+     "id": "b",
+     "stem": "In the 2012 meta-analysis, the effect size for power was 0.91 with strength training alone and 0.55 with concurrent training. What share of the power effect did concurrent training keep?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60%",
+       "correct": true,
+       "why": "Right: 0.55 ÷ 0.91 = 0.60."
+      },
+      {
+       "id": "b",
+       "text": "About 165%",
+       "why": "This divides the wrong way round (0.91 ÷ 0.55): concurrent training kept less, not more."
+      },
+      {
+       "id": "c",
+       "text": "About 36%",
+       "why": "0.36 is the difference between the two effect sizes (0.91 − 0.55), not a share."
+      },
+      {
+       "id": "d",
+       "text": "About 40%",
+       "why": "That is the share lost (1 − 0.60), not the share kept."
+      }
+     ],
+     "solution": "Share kept = 0.55 ÷ 0.91 = 0.60, about 60% (about 40% lost). Power kept the smallest share of the three outcomes."
+    }
+   ]
+  },
+  {
+   "id": "cc-run-cycle",
+   "concept": "cc-wilson",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "wilson2012b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete in a block aimed at building leg strength must drop one endurance session a week. In the 2012 meta-analysis, which kind of endurance training went with smaller strength and muscle gains when combined with lifting?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Running",
+       "correct": true,
+       "why": "Right: running, but not cycling, combined with lifting reduced hypertrophy and strength gains, so on this evidence a run is the session to drop. A later meta-analysis found no difference by mode, so the edge is uncertain."
+      },
+      {
+       "id": "b",
+       "text": "Cycling",
+       "why": "Cycling was the mode that did not cause significant losses in the meta-analysis."
+      },
+      {
+       "id": "c",
+       "text": "Swimming",
+       "why": "Swimming wasn't one of the moderators reported; the contrast found was running versus cycling."
+      },
+      {
+       "id": "d",
+       "text": "Neither: the type of endurance training made no difference",
+       "why": "The type did matter: it was one of the moderators, with running worse than cycling."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-dose",
+   "concept": "cc-wilson",
+   "bloom": "understand",
+   "sources": [
+    "wilson2012b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What did the 2012 meta-analysis find about how often and how long the endurance sessions were?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More frequent and longer sessions went with smaller strength, power and muscle gains",
+       "correct": true,
+       "why": "Right: frequency and duration of endurance training were negatively related to all three outcomes."
+      },
+      {
+       "id": "b",
+       "text": "They made no difference: only the type of endurance training mattered",
+       "why": "The type mattered, but frequency and duration also had significant negative relationships with the gains."
+      },
+      {
+       "id": "c",
+       "text": "More and longer sessions went with bigger gains, because fitter athletes recover faster",
+       "why": "The relationship was negative: more endurance training went with smaller strength-side gains."
+      },
+      {
+       "id": "d",
+       "text": "Only the intensity mattered, measured as % of maximal heart rate",
+       "why": "% of maximal heart rate was linked to fat loss in that analysis, not to smaller strength gains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-explosive",
+   "concept": "cc-newer",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "schumann2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 2022 meta-analysis of 43 studies, which outcome did concurrent training clearly blunt?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Explosive strength",
+       "correct": true,
+       "why": "Right: −0.28, with a stronger effect when both kinds of training were done in the same session."
+      },
+      {
+       "id": "b",
+       "text": "Muscle hypertrophy",
+       "why": "Hypertrophy was not compromised (−0.01, with a confidence interval spanning zero)."
+      },
+      {
+       "id": "c",
+       "text": "Maximal strength",
+       "why": "Maximal strength was not compromised (−0.06, with a confidence interval spanning zero)."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max",
+       "why": "The analysis compared concurrent training with strength training alone and looked at muscle size and function, not VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-trained-same",
+   "concept": "cc-newer",
+   "bloom": "apply",
+   "sources": [
+    "petre2021",
+    "huiberts2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A male 1500 m runner who has lifted seriously for years wants to raise his squat 1RM this winter. He can lift straight after his track session, or on a separate day. What does the 2021 meta-analysis suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lift on a separate day: in trained people the loss appeared only with same-session training",
+       "correct": true,
+       "why": "Right: trained individuals showed blunted 1RM gains only when both kinds of training were done in the same session."
+      },
+      {
+       "id": "b",
+       "text": "Lift after the track session: trained people show no interference at all",
+       "why": "It was the untrained and moderately trained who showed no clear loss; trained people did, in same-session training."
+      },
+      {
+       "id": "c",
+       "text": "Lift after the track session: warm muscles lift more, so gains are bigger",
+       "why": "Being warmed up doesn't offset the finding: same-session training was where the loss appeared."
+      },
+      {
+       "id": "d",
+       "text": "Either is fine, because concurrent training never affects 1RM",
+       "why": "A different meta-analysis found no average loss in maximal strength, but in trained people doing both in one session there was one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-ci-appraisal",
+   "concept": "cc-newer",
+   "bloom": "evaluate",
+   "sources": [
+    "schumann2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 2022 meta-analysis reports an effect of concurrent training on maximal strength of −0.06 (95% CI −0.20 to 0.09). Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No clear effect: a large loss is unlikely, but a small loss or small gain can't be ruled out",
+       "correct": true,
+       "why": "Right: the interval crosses zero and is narrow, so it rules out a big effect in either direction but not a small one."
+      },
+      {
+       "id": "b",
+       "text": "Concurrent training lowers maximal strength by 6%",
+       "why": "−0.06 is a standardised effect size (in standard deviations), not a percentage."
+      },
+      {
+       "id": "c",
+       "text": "It proves interference with maximal strength is exactly zero",
+       "why": "No study proves an effect is exactly zero; the interval still allows small effects."
+      },
+      {
+       "id": "d",
+       "text": "A clear loss of strength, because the estimate is below zero",
+       "why": "The estimate is below zero, but the interval includes zero and positive values, so the direction isn't clear."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-ampk",
+   "concept": "cc-mech",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "apro2013",
+    "baar2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the classic molecular explanation of the interference effect, what does AMPK do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Switched on by endurance work, it blocks mTOR, the switch for building muscle protein",
+       "correct": true,
+       "why": "Right: that is the rodent-based idea; human data support it poorly."
+      },
+      {
+       "id": "b",
+       "text": "Switched on by lifting, it blocks the building of new mitochondria",
+       "why": "This reverses the roles: AMPK is the low-energy, endurance-side signal."
+      },
+      {
+       "id": "c",
+       "text": "It is itself the switch that builds new muscle protein after lifting",
+       "why": "That describes mTOR, not AMPK."
+      },
+      {
+       "id": "d",
+       "text": "Switched on by endurance work, it speeds up the building of muscle protein",
+       "why": "In the classic idea it blocks muscle protein building, which is why it would explain interference."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-apro-appraisal",
+   "concept": "cc-mech",
+   "bloom": "evaluate",
+   "sources": [
+    "apro2013",
+    "fyfe2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog says: 'A study found that cycling after leg presses doesn't block mTOR, so the interference effect is a myth.' What most limits this conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It measured signals for 3 h after one session in 10 men, not muscle growth over weeks",
+       "correct": true,
+       "why": "Right: short-term signalling is a step removed from muscle gains over a training programme, and the sample was small. Training studies still find some interference."
+      },
+      {
+       "id": "b",
+       "text": "30 min of cycling is too long a session to tell anything",
+       "why": "The length of the cycling isn't the problem; the outcome measured (short-term signalling) is."
+      },
+      {
+       "id": "c",
+       "text": "mTOR has nothing to do with muscle growth",
+       "why": "mTOR is a key switch for muscle protein building; that's why it was measured."
+      },
+      {
+       "id": "d",
+       "text": "Muscle biopsies can't measure signalling molecules",
+       "why": "Biopsies are exactly how these signals are measured in humans."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-when-cyclist",
+   "concept": "cc-when",
+   "bloom": "evaluate",
+   "sources": [
+    "huiberts2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained cyclist fears that two gym sessions a week will slow her aerobic gains this winter. What does the evidence suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In trained endurance athletes, concurrent training didn't impair VO₂max gains",
+       "correct": true,
+       "why": "Right: in the 2024 meta-analysis only untrained people gained less VO₂max with concurrent training."
+      },
+      {
+       "id": "b",
+       "text": "Her VO₂max gains will be roughly halved by the lifting",
+       "why": "No meta-analysis found that; in trained endurance athletes VO₂max gains weren't impaired."
+      },
+      {
+       "id": "c",
+       "text": "Only women show interference, so she in particular should avoid lifting",
+       "why": "This reverses the sex finding: men, not women, showed interference with lower-body strength, and it was about strength, not VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "Lifting will raise her VO₂max more than riding would",
+       "why": "Strength training doesn't typically raise VO₂max; its benefits for endurance come by other routes (next lesson)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc-who-worry",
+   "concept": "cc-when",
+   "bloom": "analyse",
+   "sources": [
+    "schumann2022",
+    "wilson2012b",
+    "petre2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete is most likely to lose out from the interference effect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A sprint triathlete chasing jump power, lifting right after daily long runs",
+       "correct": true,
+       "why": "Right: explosive strength is the most sensitive outcome, and same-session, frequent, long running is the worst setting."
+      },
+      {
+       "id": "b",
+       "text": "A marathoner adding two short heavy sessions a week on easy days",
+       "why": "Small add-on doses on separate or easy days are where interference is smallest, and his main goal is endurance."
+      },
+      {
+       "id": "c",
+       "text": "A triathlete doing heavy lifts on rest days, with endurance as the goal",
+       "why": "Separate days and an endurance goal make interference matter little."
+      },
+      {
+       "id": "d",
+       "text": "A cyclist lifting before short easy rides in the off-season",
+       "why": "Lifting first, with short easy cycling, is about the least interfering setting."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

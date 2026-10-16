@@ -1,0 +1,707 @@
+{
+ "id": "int-distributions",
+ "module": "t3-intensity",
+ "title": "Intensity distributions",
+ "goal": "Tell polarised, pyramidal and threshold distributions apart, quantify them by time-in-zone, session goal and the polarisation index, and describe what elite athletes actually do.",
+ "requires": [
+  "int-zones"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "training-intensity-distribution",
+    "pyramidal-training",
+    "threshold-training",
+    "time-in-zone",
+    "session-goal-method",
+    "polarisation-index",
+    "survivorship-bias"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "id-patterns",
+   "title": "Three shapes of a training week",
+   "text": "Your [training intensity distribution](g:training-intensity-distribution) (TID) is how your training is shared between the three zones over weeks or months. Three shapes have names [[c:id-definitions]]:\n\n| shape | rule | example (Z1/Z2/Z3) |\n|---|---|---|\n| [polarised](g:polarised-training) | Z1 > Z3 > Z2 | 75/5/20 |\n| [pyramidal](g:pyramidal-training) | Z1 > Z2 > Z3 | 80/15/5 |\n| [threshold](g:threshold-training) | Z2 the largest | 40/50/10 |\n\nPolarised and pyramidal both put most training in zone 1. They differ only in what the hard part is: mostly above the second threshold (polarised) or mostly between the thresholds (pyramidal). That small part of the week is what the whole debate is about.",
+   "claims": [
+    {
+     "id": "id-definitions",
+     "text": "Polarised TID is zone 1 > zone 3 > zone 2; pyramidal is zone 1 > zone 2 > zone 3; threshold TID has zone 2 larger than zones 1 and 3.",
+     "grade": "strong",
+     "sources": [
+      "burnley2022",
+      "treff2019"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2022",
+       "quote": "In contrast, a “pyramidal” training intensity distribution is zone 1 > zone 2 > zone 3, whereas a “threshold” training distribution is zone 2 > zone 1 and zone 3",
+       "level": "full-text"
+      },
+      {
+       "source": "treff2019",
+       "quote": "Polarized TID consists of elevated percentages of time or distance spent in both high- (Zone 3) and low-intensity exercise (Zone 1) and only a small proportion of training in Zone 2.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "id-classify",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "id-classify",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "id-counting",
+   "title": "Counting minutes or counting sessions",
+   "text": "There are two ways to count. The [time-in-zone method](g:time-in-zone) adds up minutes in each zone. The [session-goal method](g:session-goal-method) puts each whole session in the zone of its hardest planned part, so a 2 h ride with 20 min of intervals is one zone 3 session.\n\nThe two give very different numbers. In 570 sessions of elite skiers, time-in-zone gave **96% / 3% / 1%**; session goal gave **87% / 11% / 2%** [[c:id-sylta]]. Re-counting the skier data of Seiler and Kjerland (2006) by time turned a 'polarised' 75/8/17 into a pyramidal **91/6/3** [[c:id-recount]].\n\nSo a 'polarised' label often depends on the counting method more than on the training.",
+   "claims": [
+    {
+     "id": "id-sylta",
+     "text": "In 570 sessions of 29 elite skiers, time-in-zone gave about 96/3/1% in zones 1/2/3, while the session-goal method gave about 87/11/2%.",
+     "grade": "moderate",
+     "sources": [
+      "sylta2014"
+     ],
+     "evidence": [
+      {
+       "source": "sylta2014",
+       "quote": "Comparing the TIZ and SG/TIZ methods, 96.1% and 95.5%, respectively, of total training time was spent in zone 1 (P < .001), with 2.9%/3.6% and 1.1%/0.8% in zones 2/3 (P < .001).",
+       "level": "abstract"
+      },
+      {
+       "source": "sylta2014",
+       "quote": "Using SG, this corresponded to 86.6% zone 1 and 11.1%/2.4% zone 2/3 sessions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "id-recount",
+     "text": "Counted by time spent in each zone, the skiers in Seiler and Kjerland's 2006 study trained pyramidally (about 91/6/3%), not polarised (75/8/17% by session).",
+     "grade": "moderate",
+     "sources": [
+      "burnley2022",
+      "seiler2004"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2022",
+       "quote": "However, when the actual time spent in each of the three training zones is quantified from the data presented, it is clear that the athletes actually performed pyramidal, not polarized, training (91%, 6%, and 3% in zones 1, 2, and 3, respectively).",
+       "level": "full-text"
+      },
+      {
+       "source": "seiler2004",
+       "quote": "Intensity distribution across endurance training sessions (n=318) was similar when based on heart rate analysis (75+/-3%, zone 1; 8+/-3%, zone 2; 17+/-4%, zone 3)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "id-count-example",
+   "title": "One week, two counts",
+   "problem": "A cyclist's week: Mon 60 min easy; Tue 45 min easy; Wed 90 min with 5 × 4 min above critical power (rest easy); Fri 60 min easy; Sun 150 min with 2 × 20 min between the thresholds (rest easy). What is the TID by time, and by session goal?",
+   "steps": [
+    "Total time: 60 + 45 + 90 + 60 + 150 = 405 min.",
+    "Zone 3: 5 × 4 = 20 min. Zone 2: 2 × 20 = 40 min. Zone 1: 405 − 20 − 40 = 345 min.",
+    "By time: 345/405 = 85%, 40/405 = 10%, 20/405 = 5%. Zone 1 > 2 > 3: pyramidal.",
+    "By session goal: 3 easy, 1 zone 2, 1 zone 3 sessions = 60/20/20. Zone 2 equals zone 3: neither pattern is clear. Same week, different label."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "id-count-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "id-method"
+  },
+  {
+   "type": "concept",
+   "id": "id-index",
+   "title": "One number: the polarisation index",
+   "text": "To stop arguing over labels, Treff and colleagues proposed the [polarisation index](g:polarisation-index):\n\n**PI = log₁₀(Z1 ÷ Z2 × Z3 × 100)**\n\nwith each zone as a fraction of training (75% = 0.75) [[c:id-pi-def]]. Above **2.00** counts as polarised [[c:id-pi-cutoff]]. It rises when there is a lot of zone 1 relative to zone 2 *and* a decent share of zone 3.\n\nExample, 75/5/20: 0.75 ÷ 0.05 = 15; 15 × 0.20 = 3; 3 × 100 = 300; log₁₀(300) = **2.48**: polarised. Seiler's skiers give 2.20 by session but 1.66 by time.",
+   "claims": [
+    {
+     "id": "id-pi-def",
+     "text": "The polarisation index is log10(Zone 1/Zone 2 × Zone 3 × 100), with each zone as a fraction of training volume.",
+     "grade": "strong",
+     "sources": [
+      "treff2019"
+     ],
+     "evidence": [
+      {
+       "source": "treff2019",
+       "quote": "where Zone is the fraction (given percentage/100) of the training volume in Zone 1, 2, and 3.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "id-pi-cutoff",
+     "text": "A polarisation index above 2.00 marks a polarised distribution.",
+     "grade": "moderate",
+     "sources": [
+      "treff2019"
+     ],
+     "evidence": [
+      {
+       "source": "treff2019",
+       "quote": "PI allows to distinguish between non-polarized and polarized TID using a cut-off > 2.00 a.U. and to quantify the level of a polarized TID.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "id-pi-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "id-pi-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "id-elites",
+   "title": "What elites actually do",
+   "text": "The idea began with logs of elite athletes. In Seiler and Kjerland's 2006 study, junior skiers did about 75% of sessions below VT1 and 15–20% with substantial work above VT2, with little in between [[c:id-seiler-skiers]]. Across sports, about 80% of sessions are easy and 20% contain hard work [[c:id-80-20]].\n\nBut most studies of nationally and internationally competitive athletes find a pyramidal shape, with some world-class athletes polarised only in some phases [[c:id-mostly-pyramidal]]. A systematic review of elite distance runners agrees: pyramidal most of the year, often more polarised in the competition period; marathoners more pyramidal, 1500 m runners more polarised [[c:id-casado]].\n\nWhat every pattern shares: a large majority of easy training.",
+   "claims": [
+    {
+     "id": "id-seiler-skiers",
+     "text": "Well-trained junior skiers did about 75% of sessions clearly below VT1 and 15–20% with substantial periods above VT2.",
+     "grade": "weak",
+     "sources": [
+      "seiler2004"
+     ],
+     "evidence": [
+      {
+       "source": "seiler2004",
+       "quote": "In this group of nationally competitive junior skiers, training was organized after a polarized pattern, with most sessions performed clearly below (about 75%) or with substantial periods above (15-20%) the lactate accommodation zone, which is bounded by VT1 and VT2.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "id-80-20",
+     "text": "Descriptive studies of competitive endurance athletes converge on about 80% of sessions at low intensity and about 20% dominated by high-intensity work.",
+     "grade": "moderate",
+     "sources": [
+      "seiler2010"
+     ],
+     "evidence": [
+      {
+       "source": "seiler2010",
+       "quote": "Numerous descriptive studies of the training characteristics of nationally or internationally competitive endurance athletes training 10 to 13 times per week seem to converge on a typical intensity distribution in which about 80% of training sessions are performed at low intensity",
+       "level": "abstract"
+      },
+      {
+       "source": "seiler2010",
+       "quote": "with about 20% dominated by periods of high-intensity work, such as interval training at approx. 90% VO2max",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "id-mostly-pyramidal",
+     "text": "Most studies of well-trained and elite athletes show a pyramidal TID; some world-class athletes adopt a polarised TID in certain phases.",
+     "grade": "moderate",
+     "sources": [
+      "stoggl2015"
+     ],
+     "evidence": [
+      {
+       "source": "stoggl2015",
+       "quote": "The majority of studies present a \"pyramidal\" TID with a high proportion of high volume, low intensity training (HVLIT).",
+       "level": "abstract"
+      },
+      {
+       "source": "stoggl2015",
+       "quote": "Some world-class athletes appear to adopt a so-called \"polarized\" TID (i.e., significant % of HVLIT and high-intensity training) during certain phases of the season.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "id-casado",
+     "text": "Highly trained and elite distance runners typically train pyramidally, marathoners more so and 1500 m runners more polarised; reviewers suggest moving from pyramidal to polarised towards competition.",
+     "grade": "moderate",
+     "sources": [
+      "casado2022"
+     ],
+     "evidence": [
+      {
+       "source": "casado2022",
+       "quote": "Highly trained/elite distance runners typically follow a pyramidal TID approach",
+       "level": "abstract"
+      },
+      {
+       "source": "casado2022",
+       "quote": "More pyramidal- and polarized-oriented approaches were used by marathoners and 1500-m runners, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "casado2022",
+       "quote": "consisting in a shift from a pyramidal TID used during the preparatory and precompetitive periods toward a polarized TID during the competitive period",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "id-elite-pattern"
+  },
+  {
+   "type": "question",
+   "item": "id-phase"
+  },
+  {
+   "type": "concept",
+   "id": "id-limits",
+   "title": "What training logs can't tell you",
+   "text": "Descriptions of elite training are [cross-sectional](g:cross-sectional-study) or observational: they show what champions do, not what made them champions. Copying them risks [survivorship bias](g:survivorship-bias): you see the winners' programmes, not the many athletes who did the same and never won [[c:id-survivor]].\n\nThree more limits:\n\n- **Volume confounds intensity.** Elites train 10–13 times a week; with that many hours, most of it has to be easy.\n- **Thresholds are often loosely set**, so training near LT1 can be filed as zone 1 or zone 2.\n- **Counting method** changes the shape, as you saw.\n\nTo learn what *causes* better performance, you need trials that change the distribution: next lesson.",
+   "claims": [
+    {
+     "id": "id-survivor",
+     "text": "Inferring the optimal distribution from successful athletes' training invites survivorship bias.",
+     "grade": "moderate",
+     "sources": [
+      "burnley2022"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2022",
+       "quote": "this approach invites survivorship bias wherein recommendations are based on the practices of successful athletes while ignoring the many athletes that followed the same program without success.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "id-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "id-count-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "id-pi-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Polarised = Z1 > Z3 > Z2; pyramidal = Z1 > Z2 > Z3; threshold = Z2 largest. Polarised and pyramidal are both mostly easy.",
+    "Time-in-zone and session-goal counts give very different shapes: the same skiers were 75/8/17 by session but 91/6/3 by time.",
+    "Polarisation index = log₁₀(Z1 ÷ Z2 × Z3 × 100), zones as fractions; above 2.00 is polarised.",
+    "Most elite athletes are pyramidal by time, some polarised in competition phases; all do a large majority of easy training.",
+    "Training logs are observational: survivorship bias, volume and loose thresholds limit what they prove."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "id-classify",
+   "concept": "id-patterns",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "burnley2022",
+    "treff2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathon runner's season is 78% zone 1, 16% zone 2 and 6% zone 3 by time. Which distribution is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pyramidal",
+       "why": "Right: zone 1 > zone 2 > zone 3.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Polarised",
+       "why": "Polarised needs zone 3 larger than zone 2; here zone 2 is larger."
+      },
+      {
+       "id": "c",
+       "text": "Threshold",
+       "why": "Threshold needs zone 2 to be the largest share."
+      },
+      {
+       "id": "d",
+       "text": "Polarised, since 78% is easy",
+       "why": "A big zone 1 share is common to polarised and pyramidal; the Z2 vs Z3 order decides."
+      }
+     ],
+     "solution": "78 > 16 > 6, so Z1 > Z2 > Z3: pyramidal."
+    },
+    {
+     "id": "b",
+     "stem": "A track cyclist's block is 72% zone 1, 6% zone 2 and 22% zone 3. Which distribution is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Polarised",
+       "why": "Right: zone 1 > zone 3 > zone 2.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Pyramidal",
+       "why": "Pyramidal needs zone 2 above zone 3; here zone 3 is larger."
+      },
+      {
+       "id": "c",
+       "text": "Threshold",
+       "why": "Zone 2 is the smallest share here, the opposite of threshold."
+      },
+      {
+       "id": "d",
+       "text": "High-intensity, since 22% is hard",
+       "why": "Zone 1 still dominates; a large zone 3 with little zone 2 is the polarised shape."
+      }
+     ],
+     "solution": "72 > 22 > 6, so Z1 > Z3 > Z2: polarised."
+    }
+   ]
+  },
+  {
+   "id": "id-count-calc",
+   "concept": "id-counting",
+   "bloom": "apply",
+   "sources": [
+    "sylta2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's week: three easy runs of 40, 50 and 45 min; a 60 min interval session with 6 × 3 min in zone 3 (rest easy); a 100 min long run with 20 min of tempo in zone 2 (rest easy). What share of time is zone 1?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 87%",
+       "why": "Right: 257 of 295 min.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "60%",
+       "why": "That is the session-goal count: 3 of 5 sessions are easy."
+      },
+      {
+       "id": "c",
+       "text": "About 94%",
+       "why": "Removes only the 18 min of zone 3 and forgets the 20 min of tempo: 277/295."
+      },
+      {
+       "id": "d",
+       "text": "About 46%",
+       "why": "That counts only the three easy runs' minutes (135 min) and ignores the easy parts of the other two."
+      }
+     ],
+     "solution": "Total = 40 + 50 + 45 + 60 + 100 = 295 min. Zone 3 = 18 min; zone 2 = 20 min; zone 1 = 295 − 38 = 257 min. 257/295 = 87%."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's week totals 600 min. It includes 30 min in zone 3 (intervals) and 60 min in zone 2 (tempo); everything else is zone 1. There are 8 sessions: 6 easy, 1 tempo, 1 interval. What is the TID by time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85/10/5",
+       "why": "Right: zone 1 = 510 min (85%), zone 2 = 60 (10%), zone 3 = 30 (5%).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "75/12.5/12.5",
+       "why": "That is the session-goal count: 6/8, 1/8, 1/8."
+      },
+      {
+       "id": "c",
+       "text": "85/5/10",
+       "why": "Zones 2 and 3 are swapped: there is more tempo than interval time."
+      },
+      {
+       "id": "d",
+       "text": "90/6/4",
+       "why": "Arithmetic slip: 510/600 is 85%, not 90%."
+      }
+     ],
+     "solution": "Zone 1 = 600 − 60 − 30 = 510 min. 510/600 = 85%; 60/600 = 10%; 30/600 = 5%."
+    }
+   ]
+  },
+  {
+   "id": "id-method",
+   "concept": "id-counting",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "sylta2014",
+    "burnley2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do session-goal counts usually make training look more polarised than time-in-zone counts?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A hard session counts fully as zone 3, though most of its minutes are easy",
+       "why": "Right: warm-up, recoveries and cool-down are zone 1 minutes, but the whole session is filed as zone 3.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Heart rate overestimates intensity in long sessions",
+       "why": "Heart-rate drift exists, but it is not why the two methods differ."
+      },
+      {
+       "id": "c",
+       "text": "Session-goal counts leave out easy sessions",
+       "why": "Easy sessions are counted, one each; it's the hard sessions that get inflated."
+      },
+      {
+       "id": "d",
+       "text": "Time-in-zone ignores zone 3 work shorter than 5 min",
+       "why": "Time-in-zone counts every minute; short intervals still add up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "id-pi-calc",
+   "concept": "id-index",
+   "bloom": "apply",
+   "sources": [
+    "treff2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's TID is 70/10/20. What is the polarisation index, and is it polarised?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.15: polarised",
+       "why": "Right: 0.70 ÷ 0.10 = 7; × 0.20 = 1.4; × 100 = 140; log₁₀(140) = 2.15 > 2.00.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.15: not polarised",
+       "why": "This forgets the × 100 inside the log: log₁₀(1.4) = 0.15."
+      },
+      {
+       "id": "c",
+       "text": "4.15: polarised",
+       "why": "This uses percentages, not fractions: log₁₀(70 ÷ 10 × 20 × 100) = log₁₀(14,000). Zones must be fractions."
+      },
+      {
+       "id": "d",
+       "text": "1.90: not polarised",
+       "why": "That is the PI of 80/10/10, where zone 3 is smaller."
+      }
+     ],
+     "solution": "PI = log₁₀(0.70 ÷ 0.10 × 0.20 × 100) = log₁₀(140) = 2.15. Above 2.00: polarised."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's TID is 80/10/10. Polarisation index?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.90: not polarised",
+       "why": "Right: 0.80 ÷ 0.10 = 8; × 0.10 = 0.8; × 100 = 80; log₁₀(80) = 1.90 < 2.00.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "2.15: polarised",
+       "why": "That is the PI of 70/10/20, with twice the zone 3."
+      },
+      {
+       "id": "c",
+       "text": "3.90: polarised",
+       "why": "This uses percentages, not fractions: log₁₀(80 ÷ 10 × 10 × 100) = log₁₀(8000)."
+      },
+      {
+       "id": "d",
+       "text": "0.90: not polarised",
+       "why": "Forgets the × 100: log₁₀(8) = 0.90."
+      }
+     ],
+     "solution": "PI = log₁₀(0.80 ÷ 0.10 × 0.10 × 100) = log₁₀(80) = 1.90. Equal zone 2 and 3 are not enough for polarised."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's TID is 85/5/10. Polarisation index?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.23: polarised",
+       "why": "Right: 0.85 ÷ 0.05 = 17; × 0.10 = 1.7; × 100 = 170; log₁₀(170) = 2.23.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.23: not polarised",
+       "why": "Forgets the × 100: log₁₀(1.7) = 0.23."
+      },
+      {
+       "id": "c",
+       "text": "1.63: not polarised",
+       "why": "Zones 2 and 3 swapped: log₁₀(0.85 ÷ 0.10 × 0.05 × 100) = log₁₀(42.5) = 1.63."
+      },
+      {
+       "id": "d",
+       "text": "2.48: polarised",
+       "why": "That is 75/5/20."
+      }
+     ],
+     "solution": "PI = log₁₀(0.85 ÷ 0.05 × 0.10 × 100) = log₁₀(170) = 2.23."
+    }
+   ]
+  },
+  {
+   "id": "id-elite-pattern",
+   "concept": "id-elites",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "stoggl2015",
+    "casado2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Counted by time, what intensity distribution do most studies of elite endurance athletes report?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pyramidal, with some athletes polarised in certain phases",
+       "why": "Right: reviews find mostly pyramidal TIDs, with polarised phases in some world-class athletes.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Polarised all year round",
+       "why": "That came from session-based counts; by time most elites are pyramidal."
+      },
+      {
+       "id": "c",
+       "text": "Threshold: mostly between the thresholds",
+       "why": "Reviews of elite logs find zone 1, not zone 2, is the largest share."
+      },
+      {
+       "id": "d",
+       "text": "Mostly high intensity, with little easy work",
+       "why": "Elites do a large majority of easy training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "id-phase",
+   "concept": "id-elites",
+   "bloom": "apply",
+   "sources": [
+    "casado2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 1500 m runner and a marathoner are planning their season. What do elite data suggest about how their distributions differ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both mostly pyramidal; the 1500 m runner leans more polarised, especially near competition",
+       "why": "Right: Casado's review found 1500 m runners more polarised, marathoners more pyramidal.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The marathoner should be polarised, the 1500 m runner pyramidal",
+       "why": "That is the reverse of what elite runners do."
+      },
+      {
+       "id": "c",
+       "text": "Both should do mostly zone 2, at race pace",
+       "why": "Neither group trains mostly in zone 2; zone 1 dominates for both."
+      },
+      {
+       "id": "d",
+       "text": "Event distance makes no difference to the distribution",
+       "why": "The review did find differences by event distance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "id-appraisal",
+   "concept": "id-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "burnley2022",
+    "seiler2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog argues: 'World champions train polarised, so polarised training is optimal.' What is the main flaw?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It shows what champions did, not what made them win",
+       "why": "Right: it ignores athletes who trained the same way and didn't win, and can't separate cause from habit.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "World champions are too few to measure",
+       "why": "Small samples are a problem, but the deeper flaw would remain with many champions."
+      },
+      {
+       "id": "c",
+       "text": "Champions use different thresholds from amateurs",
+       "why": "Thresholds differ in value, but the zones are set from each athlete's own thresholds."
+      },
+      {
+       "id": "d",
+       "text": "Polarised training was invented for skiing only",
+       "why": "The pattern has been described in several sports; the issue is the reasoning, not the sport."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

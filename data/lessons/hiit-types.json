@@ -1,0 +1,754 @@
+{
+ "id": "hiit-types",
+ "module": "t3-hiit",
+ "title": "Types of interval training",
+ "goal": "Describe an interval session by its nine variables, tell SIT, short, long and threshold intervals apart, and work out a session's work time and work:rest ratio.",
+ "requires": [
+  "int-practice"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "work-interval",
+    "relief-interval",
+    "vvo2max",
+    "threshold-interval"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "types-dials",
+   "title": "Nine dials of an interval session",
+   "text": "[HIIT](g:hiit) is a run of hard [work intervals](g:work-interval) split by easier [relief intervals](g:relief-interval). Buchheit and Laursen list up to **nine variables** a coach can set [[c:nine-variables]]:\n\n- work interval: intensity and duration;\n- relief interval: intensity and duration;\n- the type of exercise (flat running, uphill, cycling…);\n- number of reps and number of series;\n- recovery between series: duration and intensity.\n\nChange any one and the session's effect on the body changes. So '4 × 4 min' is not a full prescription: how hard, with what recovery?\n\nTwo quick sums describe a session: the total **work time** (series × reps × work duration) and the **work:rest ratio** (30 s on, 15 s off is 2:1).",
+   "claims": [
+    {
+     "id": "nine-variables",
+     "text": "An interval session is set by up to nine variables (work and relief intensity and duration, exercise type, reps, series, and between-series recovery duration and intensity); changing any of them changes the acute response.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2013a"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013a",
+       "quote": "Prescription for HIT consists of the manipulation of up to nine variables, which include the work interval intensity and duration, relief interval intensity and duration, exercise modality, number of repetitions, number of series, as well as the between-series recovery duration and intensity.",
+       "level": "abstract"
+      },
+      {
+       "source": "buchheit2013a",
+       "quote": "The manipulation of any of these variables can affect the acute physiological responses to HIT.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-variables"
+  },
+  {
+   "type": "example",
+   "id": "types-worktime-example",
+   "title": "How much work is in a 30/15 session?",
+   "problem": "A cyclist does 3 series of 13 × 30 s hard with 15 s easy between reps and 3 min easy between series. How much hard work does the session hold, and what is the work:rest ratio within a series?",
+   "steps": [
+    "Work time = series × reps × work duration = 3 × 13 × 30 s = 1170 s.",
+    "1170 s ÷ 60 = 19.5 min of hard work. The 15 s reliefs and the 3 min between series are not work time.",
+    "Work:rest ratio within a series = 30 s : 15 s = 2:1."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-worktime",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "types-sit",
+   "title": "Sprint intervals: all-out, long rests",
+   "text": "At the top end sits [sprint interval training](g:sprint-interval-training) (SIT). A common scheme splits interval training into HIIT, with 'near maximal' efforts, and SIT, with 'supramaximal' ones: harder than the power that draws out [VO₂max](g:vo2max) [[c:hiit-sit-split]].\n\nA classic SIT session is 4–6 all-out 30 s cycle sprints, each followed by 4 min of recovery [[c:sit-protocol]]. That is only 2–3 min of work.\n\nWhy such long rests? Each all-out sprint uses up much of your [PCr](g:pcr) and [W′](g:w-prime), and rebuilding them takes minutes. With a short rest, the next sprint can't be all-out any more. In SIT the long rest is part of the dose.",
+   "claims": [
+    {
+     "id": "hiit-sit-split",
+     "text": "Interval training is commonly split into HIIT ('near maximal' efforts) and SIT ('supramaximal' efforts).",
+     "grade": "strong",
+     "sources": [
+      "macinnis2017a"
+     ],
+     "evidence": [
+      {
+       "source": "macinnis2017a",
+       "quote": "A common classification scheme subdivides this method into high-intensity interval training (HIIT; 'near maximal' efforts) and sprint interval training (SIT; 'supramaximal' efforts).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sit-protocol",
+     "text": "A classic SIT session is 4–6 all-out 30 s cycling sprints, each with 4 min of recovery.",
+     "grade": "moderate",
+     "sources": [
+      "gibala2006"
+     ],
+     "evidence": [
+      {
+       "source": "gibala2006",
+       "quote": "Each session consisted of either four to six repeats of 30 s 'all out' cycling at approximately 250% with 4 min recovery (SIT)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-sit-classify"
+  },
+  {
+   "type": "question",
+   "item": "types-sit-rest"
+  },
+  {
+   "type": "concept",
+   "id": "types-short-long",
+   "title": "Short and long intervals",
+   "text": "Classic HIIT bouts run from short (under 45 s) to long (2–4 min) [[c:short-long-range]].\n\n- **Short intervals.** Billat's 30-30: 30 s at [vVO₂max](g:vvo2max), 30 s at half that speed. Or Rønnestad's cycling **30/15**: 3 series of 13 × 30 s hard with 15 s easy, 3 min between series [[c:short-examples]].\n- **Long intervals.** 4 × 4 min running at 90–95% of [HRmax](g:hrmax) with 3 min easy jogging, or 4 × 5 min on the bike with 2.5 min between [[c:long-examples]].\n\nShort intervals are set as a share of vVO₂max or of [maximal aerobic power](g:maximal-aerobic-power) (MAP), with the relief set too. Long intervals are often set by heart rate or by feel.",
+   "claims": [
+    {
+     "id": "short-long-range",
+     "text": "Classic HIIT uses repeated short (under 45 s) to long (2–4 min) bouts with recovery between.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2013b"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013b",
+       "quote": "HIT involves repeated short (<45 s) to long (2-4 min) bouts of rather high-intensity exercise interspersed with recovery periods",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "short-examples",
+     "text": "Examples of short intervals: 30 s at 100% and 30 s at 50% of vVO₂max (running), or 3 series of 13 × 30 s with 15 s recovery (cycling).",
+     "grade": "moderate",
+     "sources": [
+      "billat2000",
+      "ronnestad2020"
+     ],
+     "evidence": [
+      {
+       "source": "billat2000",
+       "quote": "an interval training protocol consisting of alternately running at 100% and at 50% of vVO2max (30 s each)",
+       "level": "abstract"
+      },
+      {
+       "source": "ronnestad2020",
+       "quote": "3 series with 13 × 30-second work intervals interspersed with 15-second recovery and 3-minutes recovery between series",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "long-examples",
+     "text": "Examples of long intervals: 4 × 4 min at 90–95% HRmax with 3 min active recovery (running), or 4 × 5 min with 2.5 min recovery (cycling).",
+     "grade": "moderate",
+     "sources": [
+      "helgerud2007",
+      "ronnestad2020"
+     ],
+     "evidence": [
+      {
+       "source": "helgerud2007",
+       "quote": "4 x 4 min of interval running (4 min of running at 90-95% HRmax followed by 3 min of active resting at 70%HRmax)",
+       "level": "abstract"
+      },
+      {
+       "source": "ronnestad2020",
+       "quote": "4 series of 5-minute work intervals with 2.5-minutes recovery between series",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-classify",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "types-anchor",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "types-threshold",
+   "title": "Threshold intervals: longer and lower",
+   "text": "[Threshold intervals](g:threshold-interval) are long, about 8–20 min, and a step below HIIT intensity, around [critical power](g:critical-power).\n\nThe longer the bout, the lower the intensity you can hold. Cyclists did 4 × 4, 4 × 8 or 4 × 16 min at the hardest effort they could keep for the whole set [[c:seiler-intensity]]:\n\n| session | % of peak HR | blood lactate |\n|---|---|---|\n| 4 × 4 min | 94% | 13.2 mmol·L⁻¹ |\n| 4 × 8 min | 90% | 9.6 mmol·L⁻¹ |\n| 4 × 16 min | 88% | 4.9 mmol·L⁻¹ |\n\nSo intensity and duration trade off. Which mix trains best is for the next lessons.",
+   "claims": [
+    {
+     "id": "seiler-intensity",
+     "text": "At maximal tolerable effort, 4 × 4, 4 × 8 and 4 × 16 min sessions were done at about 94, 90 and 88% of peak HR, with blood lactate of 13.2, 9.6 and 4.9 mmol·L⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "seiler2011"
+     ],
+     "evidence": [
+      {
+       "source": "seiler2011",
+       "quote": "Interval training was performed at 88 ± 2, 90 ± 2, and 94 ± 2% of HR(peak) and 4.9, 9.6, and 13.2 mmol/L blood lactate in 4 × 16, 4 × 8, and 4 × 4 min groups, respectively (both P<0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-threshold-lactate",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "types-worktime",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "types-beyond",
+   "title": "More than heart and lungs",
+   "text": "Buchheit and Laursen ask coaches to weigh more than time near VO₂max: how much it leans on [glycolysis](g:glycolysis) (shown by blood [lactate](g:lactate)) and how much it strains muscles, tendons and bones [[c:beyond-vo2]]. Runners can cover 6–8 km at vVO₂max in one session: a real load on the legs [[c:run-strain]].\n\nSo exercise type is a dial too: uphill or on a bike, the same heart and lung stimulus costs the legs less.\n\n| type | work bout | set by |\n|---|---|---|\n| SIT | ≤ 30 s | all-out |\n| short HIIT | under 45 s | vVO₂max or MAP |\n| long HIIT | 2–5 min | 90–95% HRmax |\n| threshold | 8–20 min | near CP |",
+   "claims": [
+    {
+     "id": "beyond-vo2",
+     "text": "Besides time near VO₂max, a HIIT session should be described by its cardiovascular work, anaerobic glycolytic contribution and neuromuscular and musculoskeletal strain.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2013a"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013a",
+       "quote": "In addition to T@VO2max, other physiological variables should also be considered to fully characterize the training stimulus when programming HIT, including cardiovascular work, anaerobic glycolytic energy contribution and acute neuromuscular load and musculoskeletal strain.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "run-strain",
+     "text": "Runners can cover 6–8 km at vVO₂max in one session, which strains the neuromuscular and musculoskeletal system.",
+     "grade": "moderate",
+     "sources": [
+      "buchheit2013b"
+     ],
+     "evidence": [
+      {
+       "source": "buchheit2013b",
+       "quote": "the accumulation of high-training volumes at high-exercise intensity (runners can cover up to 6-8 km at v(·)VO(2max) per session) can cause significant strain on the neuromuscular/musculoskeletal system",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "types-strain"
+  },
+  {
+   "type": "question",
+   "item": "types-classify",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "An interval session has up to nine dials: work and relief intensity and duration, exercise type, reps, series, and recovery between series.",
+    "Work time = series × reps × work duration; the work:rest ratio compares work and relief (30/15 = 2:1).",
+    "SIT: all-out sprints of 30 s or less with minutes of rest. Short HIIT: under 45 s near vVO₂max or MAP. Long HIIT: 2–5 min at 90–95% HRmax. Threshold: 8–20 min near CP.",
+    "The longer the bout, the lower the intensity you can hold, and the lower the blood lactate.",
+    "Plan the strain on legs and the glycolytic load too, not only time near VO₂max."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "types-variables",
+   "concept": "types-dials",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "buchheit2013a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach keeps a runner's 6 × 3 min at the same speed but changes the 2 min standing rest to 2 min of jogging. Which HIIT variable did she change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Relief interval intensity",
+       "correct": true,
+       "why": "Right: the recovery lasts as long as before (2 min) but is now done at a higher intensity (jogging, not standing)."
+      },
+      {
+       "id": "b",
+       "text": "Relief interval duration",
+       "why": "The relief still lasts 2 min; only how hard it is changed."
+      },
+      {
+       "id": "c",
+       "text": "Work interval intensity",
+       "why": "The speed of the 3 min reps is unchanged."
+      },
+      {
+       "id": "d",
+       "text": "Number of series",
+       "why": "There is still one series of 6 reps."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist keeps 30 s hard and 15 s easy, but splits 26 reps into 2 series of 13 with 3 min easy between. Which variables did he add?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Number of series, and recovery between series",
+       "correct": true,
+       "why": "Right: the reps are now grouped into 2 series, with a between-series recovery of set duration and intensity."
+      },
+      {
+       "id": "b",
+       "text": "Work interval duration and intensity",
+       "why": "Each work interval is still 30 s at the same power."
+      },
+      {
+       "id": "c",
+       "text": "Relief interval duration",
+       "why": "The 15 s reliefs between reps are unchanged."
+      },
+      {
+       "id": "d",
+       "text": "Exercise type",
+       "why": "He is still cycling."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-worktime",
+   "concept": "types-dials",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "buchheit2013a",
+    "ronnestad2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 3 series of 12 × 30 s fast with 30 s easy jogging, and 3 min between series. How much fast running (work time) is in the session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18 min",
+       "correct": true,
+       "why": "Right: 3 × 12 × 30 s = 1080 s = 18 min."
+      },
+      {
+       "id": "b",
+       "text": "36 min",
+       "why": "This counts the 30 s jogs as work too (3 × 12 × 60 s). Work time counts only the work intervals."
+      },
+      {
+       "id": "c",
+       "text": "6 min",
+       "why": "This counts only one series (12 × 30 s = 360 s)."
+      },
+      {
+       "id": "d",
+       "text": "10.8 min",
+       "why": "This divides 1080 s by 100 instead of 60."
+      }
+     ],
+     "solution": "Work time = series × reps × work duration = 3 × 12 × 30 s = 1080 s; 1080 ÷ 60 = 18 min."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on the bike does 2 series of 10 × 40 s hard with 20 s easy, and 4 min between series. How much hard work (work time) is in the session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13.3 min",
+       "correct": true,
+       "why": "Right: 2 × 10 × 40 s = 800 s = 13.3 min."
+      },
+      {
+       "id": "b",
+       "text": "20 min",
+       "why": "This counts the 20 s easy parts as work too (2 × 10 × 60 s)."
+      },
+      {
+       "id": "c",
+       "text": "6.7 min",
+       "why": "This counts only one series (10 × 40 s = 400 s)."
+      },
+      {
+       "id": "d",
+       "text": "8 min",
+       "why": "This divides 800 s by 100 instead of 60."
+      }
+     ],
+     "solution": "Work time = 2 × 10 × 40 s = 800 s; 800 ÷ 60 = 13.3 min."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist does 4 series of 8 × 30 s hard with 15 s easy, and 3 min between series. How much hard work (work time) is in the session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16 min",
+       "correct": true,
+       "why": "Right: 4 × 8 × 30 s = 960 s = 16 min."
+      },
+      {
+       "id": "b",
+       "text": "24 min",
+       "why": "This counts the 15 s easy parts as work too (4 × 8 × 45 s = 1440 s)."
+      },
+      {
+       "id": "c",
+       "text": "4 min",
+       "why": "This counts only one series (8 × 30 s = 240 s)."
+      },
+      {
+       "id": "d",
+       "text": "9.6 min",
+       "why": "This divides 960 s by 100 instead of 60."
+      }
+     ],
+     "solution": "Work time = 4 × 8 × 30 s = 960 s; 960 ÷ 60 = 16 min."
+    }
+   ]
+  },
+  {
+   "id": "types-sit-classify",
+   "concept": "types-sit",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "macinnis2017a",
+    "gibala2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider does 6 × 30 s flat-out sprints on a bike, with 4 min of easy pedalling after each. What kind of interval session is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sprint interval training (SIT)",
+       "correct": true,
+       "why": "Right: all-out, 'supramaximal' 30 s efforts with long recoveries are the classic SIT format."
+      },
+      {
+       "id": "b",
+       "text": "Short-interval HIIT",
+       "why": "Short HIIT is done near vVO₂max or MAP with short reliefs, not flat out with 4 min rests."
+      },
+      {
+       "id": "c",
+       "text": "Long-interval HIIT",
+       "why": "Long intervals last 2–5 min each; these bouts are 30 s."
+      },
+      {
+       "id": "d",
+       "text": "Threshold intervals",
+       "why": "Threshold intervals last 8–20 min near critical power, far below sprint power."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-sit-rest",
+   "concept": "types-sit",
+   "bloom": "analyse",
+   "sources": [
+    "gibala2006",
+    "macinnis2017a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner copies a SIT plan (6 × 30 s all-out) but cuts the 4 min recoveries to 30 s to save time. What is most likely to happen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Later reps fall well short of all-out",
+       "correct": true,
+       "why": "Right: 30 s rebuilds only part of the PCr and W′ used, so the later sprints can't be as hard; the session stops being SIT."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: rest length doesn't matter in SIT",
+       "why": "Rest length is one of the nine dials; in SIT it is what lets every sprint be all-out."
+      },
+      {
+       "id": "c",
+       "text": "Each sprint gets faster as she warms up",
+       "why": "Warming up helps the first rep, but with little recovery, PCr and W′ keep falling across reps."
+      },
+      {
+       "id": "d",
+       "text": "She trains threshold instead",
+       "why": "Threshold work means long bouts near critical power, not repeated 30 s sprints."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-classify",
+   "concept": "types-short-long",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "buchheit2013b",
+    "helgerud2007",
+    "billat2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 5 × 4 min at 92% of HRmax with 3 min of easy jogging. Which type of session is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Long-interval HIIT",
+       "correct": true,
+       "why": "Right: 2–5 min bouts at 90–95% of HRmax are long intervals."
+      },
+      {
+       "id": "b",
+       "text": "Short-interval HIIT",
+       "why": "Short intervals last under 45 s, such as 30-30 or 30/15."
+      },
+      {
+       "id": "c",
+       "text": "Sprint interval training",
+       "why": "SIT is all-out efforts of 30 s or less; 4 min can't be all-out."
+      },
+      {
+       "id": "d",
+       "text": "Threshold intervals",
+       "why": "Threshold intervals are longer (8–20 min) at a lower intensity, near critical power."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist does 3 × 15 min at about critical power with 5 min easy between. Which type of session is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Threshold intervals",
+       "correct": true,
+       "why": "Right: 8–20 min bouts near critical power are threshold intervals."
+      },
+      {
+       "id": "b",
+       "text": "Long-interval HIIT",
+       "why": "Long HIIT bouts are 2–5 min, at a higher intensity (90–95% HRmax)."
+      },
+      {
+       "id": "c",
+       "text": "Short-interval HIIT",
+       "why": "Short intervals last under 45 s."
+      },
+      {
+       "id": "d",
+       "text": "Sprint interval training",
+       "why": "SIT is all-out sprints of 30 s or less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-anchor",
+   "concept": "types-short-long",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "billat2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's vVO₂max is 18 km·h⁻¹. Following Billat's 30-30 format, what does each 1 min block look like?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 s at 18 km·h⁻¹, then 30 s at 9 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 30 s at 100% of vVO₂max, then 30 s at 50% of it."
+      },
+      {
+       "id": "b",
+       "text": "30 s at 9 km·h⁻¹, then 30 s at 18 km·h⁻¹",
+       "why": "Same speeds, wrong order: the work is the fast part and comes first."
+      },
+      {
+       "id": "c",
+       "text": "30 s at 27 km·h⁻¹, then 30 s at 18 km·h⁻¹",
+       "why": "27 km·h⁻¹ is 150% of vVO₂max, near sprint speed, and the relief would be at full vVO₂max."
+      },
+      {
+       "id": "d",
+       "text": "30 s at 18 km·h⁻¹, then 30 s standing still",
+       "why": "The format uses active recovery at half of vVO₂max, not standing rest."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's maximal aerobic power (MAP) is 400 W. A 30-30 set at 100% and 50% of MAP means what?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 s at 400 W, then 30 s at 200 W",
+       "correct": true,
+       "why": "Right: work at 100% of MAP, relief at 50% of it."
+      },
+      {
+       "id": "b",
+       "text": "30 s at 200 W, then 30 s at 400 W",
+       "why": "Same powers, wrong order: the work is the hard part and comes first."
+      },
+      {
+       "id": "c",
+       "text": "30 s at 600 W, then 30 s at 400 W",
+       "why": "600 W is 150% of MAP, a sprint, and the relief would be at full MAP."
+      },
+      {
+       "id": "d",
+       "text": "30 s at 400 W, then 30 s stopped",
+       "why": "The relief here is easy pedalling at half of MAP, not stopping."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-threshold-lactate",
+   "concept": "types-threshold",
+   "bloom": "analyse",
+   "sources": [
+    "seiler2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two groups of cyclists ride either 4 × 4 min or 4 × 16 min, each at the hardest effort they can keep for the whole set. Which group most likely ends with the higher blood lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The 4 × 4 min group",
+       "correct": true,
+       "why": "Right: shorter bouts allow a higher intensity, which leans more on glycolysis: about 13 vs 5 mmol·L⁻¹ in one study."
+      },
+      {
+       "id": "b",
+       "text": "The 4 × 16 min group",
+       "why": "They work longer, but at a lower intensity, near critical power, where lactate stays much lower."
+      },
+      {
+       "id": "c",
+       "text": "Both about the same",
+       "why": "Both sessions feel very hard, but they sit at different intensities, so lactate differs a lot."
+      },
+      {
+       "id": "d",
+       "text": "Neither: lactate stays at rest in intervals",
+       "why": "Hard intervals raise blood lactate well above rest values."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner can do 4 × 4 min at 94% of peak HR, or 4 × 16 min at the hardest effort she can keep for the whole set. What is the most likely heart rate in the 4 × 16 min session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 88% of peak HR",
+       "correct": true,
+       "why": "Right: longer bouts force a lower intensity; cyclists held about 88% of peak HR for 4 × 16 min."
+      },
+      {
+       "id": "b",
+       "text": "About 94% of peak HR, as for 4 × 4 min",
+       "why": "The longer the bout, the lower the intensity you can keep up."
+      },
+      {
+       "id": "c",
+       "text": "About 98% of peak HR, since it lasts longer",
+       "why": "Longer work doesn't push the hardest sustainable effort up; it brings it down."
+      },
+      {
+       "id": "d",
+       "text": "About 70% of peak HR",
+       "why": "70% would be easy aerobic riding or running, far below a maximal 16 min effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "types-strain",
+   "concept": "types-beyond",
+   "bloom": "evaluate",
+   "sources": [
+    "buchheit2013a",
+    "buchheit2013b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner is back from a calf strain and wants HIIT that keeps time near VO₂max high but spares her legs. Which choice fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same intervals uphill or on a bike",
+       "correct": true,
+       "why": "Right: changing exercise type keeps the heart and lung stimulus while cutting the strain on muscles and tendons."
+      },
+      {
+       "id": "b",
+       "text": "Short intervals on a flat track at vVO₂max",
+       "why": "Flat-track work at vVO₂max is exactly the high leg strain she should avoid for now."
+      },
+      {
+       "id": "c",
+       "text": "All-out 30 s sprints on the track",
+       "why": "Sprinting has the highest strain on muscles and tendons of all formats."
+      },
+      {
+       "id": "d",
+       "text": "More reps of the usual session",
+       "why": "More volume at high speed adds to the strain; runners can cover 6–8 km at vVO₂max in one session."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

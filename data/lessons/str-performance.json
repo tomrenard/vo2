@@ -1,0 +1,865 @@
+{
+ "id": "str-performance",
+ "module": "t3-strength",
+ "title": "Strength training for endurance performance",
+ "goal": "Judge how strongly heavy strength training improves endurance performance, durability and the sprint finish in running and cycling, and what limits the trials.",
+ "requires": [
+  "str-concurrent"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "heavy-strength-training",
+    "repetition-maximum",
+    "muscle-csa",
+    "wingate-test"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sp-beyond",
+   "title": "Beyond economy: does performance improve?",
+   "text": "The economy lesson showed that strength training lowers the oxygen cost of running by about 4%. But races are won on time, not on cost. Does performance follow?\n\nA 2018 [meta-analysis](g:meta-analysis) of 28 studies in running, cycling, cross-country skiing and swimming found a moderate gain in middle- and long-distance performance ([effect size](g:effect-size) 0.52, 95% [CI](g:confidence-interval) 0.33–0.70), along with better energy cost, maximal force and maximal power. Training for maximal force, that is [heavy strength training](g:heavy-strength-training), gave bigger gains than lighter loads, and the benefit held at every performance level [[c:berryman]].\n\nAn earlier [systematic review](g:systematic-review) of 26 studies in trained endurance athletes agreed: strength training improved time-trial performance, economy and muscle power [[c:beattie]].",
+   "claims": [
+    {
+     "id": "berryman",
+     "text": "Across 28 studies in four endurance sports, strength training moderately improved middle- and long-distance performance (SMD 0.52, 95% CI 0.33–0.70); maximal-force training gave the largest gains, at every performance level.",
+     "grade": "moderate",
+     "sources": [
+      "berryman2018"
+     ],
+     "evidence": [
+      {
+       "source": "berryman2018",
+       "quote": "The implementation of a strength-training mesocycle in running, cycling, cross-country skiing, and swimming was associated with moderate improvements in middle- and long-distance performance (net SMD [95%CI] = 0.52 [0.33-0.70]).",
+       "level": "abstract"
+      },
+      {
+       "source": "berryman2018",
+       "quote": "Maximal-force training led to greater improvements than other intensities. Subgroup analyses also revealed that beneficial effects on performance were consistent irrespective of the athletes' level.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "beattie",
+     "text": "A systematic review of 26 studies found that strength training improved time-trial performance, economy and muscle power in competitive endurance athletes.",
+     "grade": "moderate",
+     "sources": [
+      "beattie2014"
+     ],
+     "evidence": [
+      {
+       "source": "beattie2014",
+       "quote": "The results showed that strength training improved time-trial performance, economy, [Formula: see text] and vMART in competitive endurance athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sp-berryman"
+  },
+  {
+   "type": "concept",
+   "id": "sp-running",
+   "title": "Running: heavy and mixed work help most",
+   "text": "For runners, a 2024 meta-analysis compared methods on time-trial and time-to-exhaustion performance [[c:llanos-perf]]:\n\n| method | effect on performance |\n|---|---|\n| heavy (≥80% of [1RM](g:one-rep-max)) | moderate (−0.47) |\n| combined (two or more methods) | large (−1.04) |\n| [plyometrics](g:plyometrics) | not significant (−0.21) |\n\nNegative means faster. No method improved [VO2max](g:vo2max), the [maximal metabolic steady state](g:maximal-metabolic-steady-state) or sprint capacity. Certainty was moderate for heavy loads but very low for combined methods (6 studies, signs of publication bias).\n\nA classic trial agrees: replacing 32% of training with explosive work (sprints, jumps) cut 5 km time in 10 trained athletes, through better economy and top running speed, with no change in VO₂max [[c:paavolainen]]. The gain comes from the muscles, not the heart.",
+   "claims": [
+    {
+     "id": "llanos-perf",
+     "text": "In middle- and long-distance runners, heavy and combined strength training improved running performance (moderate and large effects), plyometric training not significantly; no method improved VO₂max, vVO₂max, MMSS or sprint capacity. Certainty was moderate for heavy loads and very low for combined methods, where publication bias was found.",
+     "grade": "moderate",
+     "sources": [
+      "llanoslagos2024b"
+     ],
+     "evidence": [
+      {
+       "source": "llanoslagos2024b",
+       "quote": "High load and combined training methods induced moderate (effect size =  - 0.469, p = 0.029) and large effect (effect size =  - 1.035, p = 0.036) on running performance, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "llanoslagos2024b",
+       "quote": "None of the training methods improved VO<sub>2</sub>max, vVO<sub>2</sub>max, MMSS, or sprint capacity (all p > 0.072).",
+       "level": "abstract"
+      },
+      {
+       "source": "llanoslagos2024b",
+       "quote": "The certainty of the evidence was very low to moderate.",
+       "level": "abstract"
+      },
+      {
+       "source": "llanoslagos2024b",
+       "quote": "Publication bias was found only in the analysis of running performance in the combined group",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "paavolainen",
+     "text": "Replacing 32% of training with explosive-strength training improved 5 km time, running economy and maximal anaerobic running speed in well-trained endurance athletes, without a change in VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "paavolainen1999"
+     ],
+     "evidence": [
+      {
+       "source": "paavolainen1999",
+       "quote": "In conclusion, the present simultaneous explosive-strength and endurance training improved the 5K time in well-trained endurance athletes without changes in their VO2 max.",
+       "level": "abstract"
+      },
+      {
+       "source": "paavolainen1999",
+       "quote": "This improvement was due to improved neuromuscular characteristics that were transferred into improved VMART and running economy.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sp-run-method"
+  },
+  {
+   "type": "question",
+   "item": "sp-run-mech"
+  },
+  {
+   "type": "concept",
+   "id": "sp-cycling",
+   "title": "Cycling: more power, no extra weight",
+   "text": "Most cycling trials come from one Norwegian group and one recipe: heavy strength training of four leg exercises, 3 sets of 4–10 [repetition maximum](g:repetition-maximum) (RM), twice a week.\n\n- **20 well-trained cyclists, 12 weeks:** thigh [cross-sectional area](g:muscle-csa) and 40 min all-out power rose, with no rise in body mass [[c:ron10]].\n- **19 trained women, 11 weeks:** better 40 min power, [fractional utilisation](g:fractional-utilisation) and economy; fewer [IIx](g:type-iix-fibre) and more [IIa](g:type-iia-fibre) fibres [[c:vik16]].\n- **16 young elite cyclists, 25 weeks:** better 40 min power, but no change in VO₂max or economy [[c:ron15]].\n\nAn older review of 5 trials was less sure: the 3 with gains had replaced part of the riding with lifting, while the 2 without had added it on top [[c:yamamoto]].",
+   "claims": [
+    {
+     "id": "ron10",
+     "text": "In well-trained cyclists, 12 weeks of heavy strength training increased thigh muscle CSA and 40 min all-out performance without increasing body mass.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2010a"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2010a",
+       "quote": "In conclusion, adding strength training to usual endurance training improved determinants of cycling performance as well as performance in well-trained cyclists. Of particular note is that the added strength training increased thigh muscle CSA without causing an increase in body mass.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vik16",
+     "text": "In female cyclists, 11 weeks of heavy strength training improved 40 min all-out power, fractional utilisation of VO₂max and cycling economy, with a shift from type IIAX-IIX toward IIA fibres.",
+     "grade": "weak",
+     "sources": [
+      "vikmoen2016"
+     ],
+     "evidence": [
+      {
+       "source": "vikmoen2016",
+       "quote": "In conclusion, adding heavy strength training improved cycling performance, increased fractional utilization of VO2 max , and improved cycling economy.",
+       "level": "abstract"
+      },
+      {
+       "source": "vikmoen2016",
+       "quote": "The main mechanisms behind these improvements seemed to be increased quadriceps muscle CSA and fiber type shifts from type IIAX-IIX toward type IIA.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ron15",
+     "text": "In young elite cyclists, 25 weeks of heavy strength training improved 40 min all-out power without changes in VO₂max or cycling economy.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2015c"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2015c",
+       "quote": "Neither of the groups displayed alterations in VO2max or cycling economy.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "yamamoto",
+     "text": "In a review of 5 trials in highly trained road cyclists, the 3 that improved performance replaced part of endurance training with resistance training; the 2 that added it on top found no improvement.",
+     "grade": "weak",
+     "sources": [
+      "yamamoto2010"
+     ],
+     "evidence": [
+      {
+       "source": "yamamoto2010",
+       "quote": "Two of the 5 studies found no improvement in performance with CT, but these studies added RT on top of the athletes' existing ET. The 3 studies with improved cycling performance replaced a portion of the athletes' ET with RT",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sp-mass"
+  },
+  {
+   "type": "question",
+   "item": "sp-fibre"
+  },
+  {
+   "type": "question",
+   "item": "sp-yamamoto"
+  },
+  {
+   "type": "concept",
+   "id": "sp-durability",
+   "title": "Fresher legs late in long efforts",
+   "text": "[Durability](g:durability) is how well you hold your power after hours of work. Two small trials tested whether strength training helps it.\n\nIn 20 well-trained cyclists, 12 weeks of heavy strength training raised mean power in a 5 min all-out effort done after 185 min of easy riding, from 371 to 400 W; the endurance-only group didn't change. In the last hour of the long ride, the strength group also used less oxygen, with lower heart rate, lactate and effort [[c:ron11]].\n\nIn 19 trained female duathletes, 11 weeks of the same recipe raised 5 min power after 3 h of cycling by 7.0%, and 5 min running performance after 1.5 h of running by 4.7% [[c:vik17]].",
+   "claims": [
+    {
+     "id": "ron11",
+     "text": "In well-trained cyclists, adding 12 weeks of heavy strength training raised 5 min all-out power after 185 min of cycling from 371 to 400 W, and lowered oxygen uptake, heart rate, lactate and RPE in the last hour.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2011"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2011",
+       "quote": "Further, E+S increased the mean power output during the 5-min all-out trial (from 371 ± 9 to 400 ± 13 W, P<0.05), while no change occurred in E.",
+       "level": "abstract"
+      },
+      {
+       "source": "ronnestad2011",
+       "quote": "E+S led to greater reductions than E in oxygen consumption, heart rate, blood lactate concentration, and rate of perceived exertion (P<0.05) during the last hour of the prolonged cycling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vik17",
+     "text": "In well-trained female duathletes, 11 weeks of heavy strength training improved 5 min all-out performance after prolonged work in both cycling (7.0%) and running (4.7%).",
+     "grade": "weak",
+     "sources": [
+      "vikmoen2017"
+     ],
+     "evidence": [
+      {
+       "source": "vikmoen2017",
+       "quote": "Performance during the 5-min all-out test increased in both cycling (7.0 ± 4.5%) and running (4.7 ± 6.0%) in <i>E+S,</i> whereas no changes occurred in <i>E</i>",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "sp-pct-example",
+   "title": "Percentage change in power",
+   "problem": "After strength training, mean 5 min power after 185 min of riding rose from 371 to 400 W. What is the percentage change?",
+   "steps": [
+    "Change = 400 − 371 = 29 W.",
+    "Divide by the starting value, not the end value: 29 ÷ 371 = 0.078.",
+    "× 100 = 7.8%. Dividing by 400 instead gives 7.3%, a common slip."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sp-pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sp-dur-mech"
+  },
+  {
+   "type": "concept",
+   "id": "sp-sprint",
+   "title": "The sprint finish: plausible, not proven",
+   "text": "Strength training should help a finishing kick, and some results agree. In cyclists, heavy strength training raised peak power in a 30 s [Wingate test](g:wingate-test) [[c:wingate]]. In runners, explosive training raised maximal 20 m speed [[c:v20]]. A 2018 review of 24 running studies judged that strength work tended to improve time trials and sprint qualities, though not in every study [[c:blagrove-sprint]].\n\nBut the 2024 running meta-analysis found that no method improved sprint capacity [[c:llanos-sprint]].\n\nPart of the gap is what is measured: a fresh lab sprint is not a sprint at the end of a race, and the trials are small.",
+   "claims": [
+    {
+     "id": "wingate",
+     "text": "In well-trained and elite cyclists, heavy strength training increased peak power in the 30 s Wingate test more than endurance training alone.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2010a",
+      "ronnestad2015c"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2010a",
+       "quote": "E + S increased thigh muscle CSA, maximal isometric force, and peak power in the Wingate test more than E.",
+       "level": "abstract"
+      },
+      {
+       "source": "ronnestad2015c",
+       "quote": "ES, but not E, resulted in increases in isometric half squat performance, lean lower body mass, peak power output during Wingate test",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "v20",
+     "text": "Explosive-strength training increased maximal 20 m speed in well-trained endurance athletes, while it fell in controls.",
+     "grade": "weak",
+     "sources": [
+      "paavolainen1999"
+     ],
+     "evidence": [
+      {
+       "source": "paavolainen1999",
+       "quote": "V20 m and 5J increased in E (P < 0.01) and decreased in C (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "blagrove-sprint",
+     "text": "A systematic review of 24 running studies found good, but not consistent, evidence that strength training improves running economy, time trials and sprint performance.",
+     "grade": "disputed",
+     "sources": [
+      "blagrove2018"
+     ],
+     "evidence": [
+      {
+       "source": "blagrove2018",
+       "quote": "Whilst there was good evidence that ST improves RE, TT, and sprint performance, this was not a consistent finding across all works that were reviewed.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "llanos-sprint",
+     "text": "In a 2024 meta-analysis of runners, no strength training method improved sprint capacity.",
+     "grade": "disputed",
+     "sources": [
+      "llanoslagos2024b"
+     ],
+     "evidence": [
+      {
+       "source": "llanoslagos2024b",
+       "quote": "None of the training methods improved VO<sub>2</sub>max, vVO<sub>2</sub>max, MMSS, or sprint capacity (all p > 0.072).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does strength training improve an endurance athlete's sprint finish?",
+    "sides": [
+     {
+      "position": "Yes: single trials show better Wingate peak power and short sprint speed, and a running review found sprint performance tended to improve.",
+      "sources": [
+       "ronnestad2010a",
+       "paavolainen1999",
+       "blagrove2018"
+      ]
+     },
+     {
+      "position": "Not clearly: pooled across runner trials, no method improved sprint capacity.",
+      "sources": [
+       "llanoslagos2024b"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "sp-sprint-grade"
+  },
+  {
+   "type": "concept",
+   "id": "sp-grade",
+   "title": "Grading it honestly",
+   "text": "Put together, strength training improving endurance performance is **moderate** evidence: several meta-analyses agree, but the trials beneath them are weak.\n\n- **Small:** often 15–20 athletes, split into two groups.\n- **Short:** 6–40 weeks in the running trials, 11–25 in the cycling ones above.\n- **Fair quality:** the running review rated its studies 4–6 out of 10 on the [PEDro scale](g:pedro-scale) [[c:pedro]], and some cycling trials say 'assigned', not 'randomised'.\n- **Unblinded:** athletes know they lift, and no [placebo](g:placebo) is possible.\n\nOne worry can go: in the running review, body composition was not harmed [[c:bodycomp]].\n\nGrades: performance and economy moderate; durability weak; sprint finish disputed.",
+   "claims": [
+    {
+     "id": "pedro",
+     "text": "In a systematic review of 24 strength training studies in distance runners, PEDro scores were 4–6 out of 10.",
+     "grade": "strong",
+     "sources": [
+      "blagrove2018"
+     ],
+     "evidence": [
+      {
+       "source": "blagrove2018",
+       "quote": "PEDro scores revealed internal validity of 4, 5, or 6 for the studies reviewed.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bodycomp",
+     "text": "Strength training did not negatively affect body composition in distance runners.",
+     "grade": "moderate",
+     "sources": [
+      "blagrove2018"
+     ],
+     "evidence": [
+      {
+       "source": "blagrove2018",
+       "quote": "Importantly for the distance runner, measures relating to body composition are not negatively impacted by a ST intervention.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sp-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Strength training improves endurance performance, not only economy: a moderate effect across 28 studies in four sports, largest with heavy loads.",
+    "Runners: heavy and combined methods improved performance; plyometrics alone didn't reach significance. VO₂max doesn't change: the gain comes from the muscles.",
+    "Cyclists: heavy lifting (3 × 4–10 RM, twice a week) raised 40 min power and muscle size without raising body mass. Adding it on top of full riding worked less well in older trials.",
+    "Durability: two small trials found better 5 min power after hours of work (weak evidence).",
+    "Sprint finish: disputed. The trials are small, short, unblinded and rated fair at best."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sp-berryman",
+   "concept": "sp-beyond",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "berryman2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Across 28 studies in four endurance sports, what did the 2018 meta-analysis find for strength training and performance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A moderate gain, largest with maximal-force training, at every level",
+       "correct": true,
+       "why": "Right: SMD 0.52, with heavy (maximal-force) training best and the benefit consistent across performance levels."
+      },
+      {
+       "id": "b",
+       "text": "A gain only in elite athletes, too small to matter for amateurs",
+       "why": "The benefit was consistent irrespective of the athletes' level."
+      },
+      {
+       "id": "c",
+       "text": "Better economy but no change in race performance",
+       "why": "Performance improved too (SMD 0.52), together with energy cost, force and power."
+      },
+      {
+       "id": "d",
+       "text": "A gain mainly from light, high-repetition circuits",
+       "why": "Maximal-force (heavy) training led to greater improvements than other intensities."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-run-method",
+   "concept": "sp-running",
+   "bloom": "apply",
+   "sources": [
+    "llanoslagos2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A half-marathon runner has two gym slots a week for 12 weeks and wants the best chance of a faster race. Based on the 2024 meta-analysis of runners, which programme?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heavy lifting combined with plyometrics",
+       "correct": true,
+       "why": "Right: combined methods gave the largest effect on performance (on very low-certainty evidence), and heavy lifting alone a moderate one; either way, heavy lifting is in it."
+      },
+      {
+       "id": "b",
+       "text": "Plyometrics alone, since jumping is closest to running",
+       "why": "Plyometric training alone didn't have a significant effect on performance in this analysis."
+      },
+      {
+       "id": "c",
+       "text": "Light circuits at about 30% of 1RM, to avoid fatigue",
+       "why": "Loads under 40% of 1RM counted as the control condition in this meta-analysis, not as a strength method."
+      },
+      {
+       "id": "d",
+       "text": "None: strength work only changes VO₂max, which she can train by running",
+       "why": "No method changed VO₂max; the performance gains came without it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-run-mech",
+   "concept": "sp-running",
+   "bloom": "analyse",
+   "sources": [
+    "paavolainen1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Explosive-strength training cut 5 km times in well-trained athletes without any change in their VO₂max. Which explanation fits the data best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Their muscles got better: running economy and top running speed improved",
+       "correct": true,
+       "why": "Right: the 5 km gain tracked changes in economy and maximal anaerobic running speed, i.e. neuromuscular qualities."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max must have risen, but the test missed it",
+       "why": "VO₂max was measured and didn't change in the explosive group; the explanation lies elsewhere."
+      },
+      {
+       "id": "c",
+       "text": "They simply trained more hours than the control group",
+       "why": "Total training volume was kept the same in both groups: part of the endurance training was replaced."
+      },
+      {
+       "id": "d",
+       "text": "They lost body fat, so they carried less weight",
+       "why": "Body fat isn't what the study linked to the gain; it tied the 5 km change to economy and maximal speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-mass",
+   "concept": "sp-cycling",
+   "bloom": "apply",
+   "sources": [
+    "ronnestad2010a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A climber-type road cyclist refuses heavy squats: 'bulk will cost me watts per kilo.' What did the 12-week trial in 20 well-trained cyclists find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Thigh muscle grew, body mass didn't rise, and 40 min power improved",
+       "correct": true,
+       "why": "Right: the added strength training increased thigh CSA without increasing body mass, and 40 min all-out power rose."
+      },
+      {
+       "id": "b",
+       "text": "Body mass rose by several kilos, cancelling out the power gain",
+       "why": "The study specifically noted no increase in body mass."
+      },
+      {
+       "id": "c",
+       "text": "Thigh muscle didn't change at all; only the nerves adapted",
+       "why": "Thigh muscle CSA increased more in the strength group than in the endurance-only group."
+      },
+      {
+       "id": "d",
+       "text": "Power rose, but power per kilo fell because of the extra muscle",
+       "why": "With no rise in body mass, more power means more power per kilo, not less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-fibre",
+   "concept": "sp-cycling",
+   "bloom": "understand",
+   "sources": [
+    "vikmoen2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 11-week trial of female cyclists, which muscle changes went with better 40 min performance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bigger quadriceps, and a shift from IIx toward IIa fibres",
+       "correct": true,
+       "why": "Right: both the rise in quadriceps CSA and the IIAX-IIX to IIA shift correlated with the performance gain."
+      },
+      {
+       "id": "b",
+       "text": "A shift from type IIa to type I fibres",
+       "why": "The shift was from the fastest fibres (IIx) to IIa; type II to type I switches are rare, as the muscle module showed."
+      },
+      {
+       "id": "c",
+       "text": "A smaller quadriceps, so less mass to carry",
+       "why": "Quadriceps CSA increased, and a bigger increase went with a bigger performance gain."
+      },
+      {
+       "id": "d",
+       "text": "A higher VO₂max from the lifting",
+       "why": "The gains were in fractional utilisation and economy; the strength training isn't where VO₂max gains come from."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-yamamoto",
+   "concept": "sp-cycling",
+   "bloom": "analyse",
+   "sources": [
+    "yamamoto2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 2010 review found that 2 of 5 trials of strength training in highly trained road cyclists showed no performance gain. What set those 2 apart, according to the review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They added lifting on top of the usual riding instead of replacing some of it",
+       "correct": true,
+       "why": "Right: the 3 trials with gains replaced part of the endurance training with resistance training."
+      },
+      {
+       "id": "b",
+       "text": "They used heavier loads than the trials that worked",
+       "why": "The review didn't single out heavier loads; 2 of the positive trials used explosive-type exercises, and later trials show heavy loads work."
+      },
+      {
+       "id": "c",
+       "text": "They tested women, who don't respond to strength training",
+       "why": "The review didn't explain the split by sex, and later trials in women found clear gains."
+      },
+      {
+       "id": "d",
+       "text": "They were done in the racing season, not the off-season",
+       "why": "The review didn't explain the split by season; it pointed to adding versus replacing training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-pct-calc",
+   "concept": "sp-durability",
+   "bloom": "apply",
+   "sources": [
+    "ronnestad2011",
+    "vikmoen2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's mean 5 min power after a 3 h ride rises from 250 to 268 W after a winter of heavy lifting. What is the percentage change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.2%",
+       "correct": true,
+       "why": "Right: 18 ÷ 250 = 0.072."
+      },
+      {
+       "id": "b",
+       "text": "6.7%",
+       "why": "This divides by the end value (18 ÷ 268); percentage change uses the starting value."
+      },
+      {
+       "id": "c",
+       "text": "18%",
+       "why": "18 is the change in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "0.72%",
+       "why": "A decimal slip: 0.072 × 100 = 7.2%, not 0.72%."
+      }
+     ],
+     "solution": "Change = 268 − 250 = 18 W. 18 ÷ 250 = 0.072 → 7.2%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner covers 1,500 m in a 5 min all-out effort at the end of a 90 min run. After 11 weeks of heavy lifting, she covers 1,560 m. What is the percentage change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.0%",
+       "correct": true,
+       "why": "Right: 60 ÷ 1,500 = 0.040."
+      },
+      {
+       "id": "b",
+       "text": "3.8%",
+       "why": "This divides by the end value (60 ÷ 1,560); percentage change uses the starting value."
+      },
+      {
+       "id": "c",
+       "text": "60%",
+       "why": "60 is the change in metres, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "0.4%",
+       "why": "A decimal slip: 0.040 × 100 = 4.0%, not 0.4%."
+      }
+     ],
+     "solution": "Change = 1,560 − 1,500 = 60 m. 60 ÷ 1,500 = 0.040 → 4.0%."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's 5 min power after a long ride rises from 320 to 344 W. What is the percentage change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.5%",
+       "correct": true,
+       "why": "Right: 24 ÷ 320 = 0.075."
+      },
+      {
+       "id": "b",
+       "text": "7.0%",
+       "why": "This divides by the end value (24 ÷ 344); percentage change uses the starting value."
+      },
+      {
+       "id": "c",
+       "text": "24%",
+       "why": "24 is the change in watts, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "0.75%",
+       "why": "A decimal slip: 0.075 × 100 = 7.5%, not 0.75%."
+      }
+     ],
+     "solution": "Change = 344 − 320 = 24 W. 24 ÷ 320 = 0.075 → 7.5%."
+    }
+   ]
+  },
+  {
+   "id": "sp-dur-mech",
+   "concept": "sp-durability",
+   "bloom": "analyse",
+   "sources": [
+    "ronnestad2011",
+    "ronnestad2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the last hour of a 185 min ride at a fixed power, cyclists who had done strength training used less oxygen, with lower heart rate and lactate, than before. What does this point to?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Better economy: the same power cost less late on",
+       "correct": true,
+       "why": "Right: same power, less oxygen. A proposed reason is that stronger fibres delay the call-up of less efficient type II fibres as fatigue builds."
+      },
+      {
+       "id": "b",
+       "text": "Their VO₂max had risen, so they had more headroom",
+       "why": "VO₂max is the maximum; using less oxygen at a fixed submaximal power is about economy, not the ceiling."
+      },
+      {
+       "id": "c",
+       "text": "They rode more slowly during the final hour",
+       "why": "The ride was at a fixed power (44% of maximal aerobic power), so they weren't slower."
+      },
+      {
+       "id": "d",
+       "text": "Their hearts had grown bigger from lifting",
+       "why": "Heart size wasn't measured, and the oxygen saving points to the muscles, not to the heart."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-sprint-grade",
+   "concept": "sp-sprint",
+   "bloom": "evaluate",
+   "sources": [
+    "llanoslagos2024b",
+    "blagrove2018",
+    "ronnestad2010a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach sells heavy lifting to triathletes as 'proven to give you a sprint finish'. How should you grade that claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Disputed: small trials show better lab sprints, but a meta-analysis found no effect",
+       "correct": true,
+       "why": "Right: Wingate and 20 m speed gains come from single small trials, while pooled runner data found no improvement in sprint capacity."
+      },
+      {
+       "id": "b",
+       "text": "Strong: every trial agrees that sprint power rises",
+       "why": "Not every trial agrees: the running review called it inconsistent, and the 2024 meta-analysis found no effect."
+      },
+      {
+       "id": "c",
+       "text": "Disproven: lifting makes muscles slower",
+       "why": "No trial showed slower sprints; some showed faster ones. The evidence is mixed, not negative."
+      },
+      {
+       "id": "d",
+       "text": "Strong, because stronger muscles always sprint faster",
+       "why": "That is a mechanism argument; it doesn't replace trial evidence, which is mixed here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sp-appraisal",
+   "concept": "sp-grade",
+   "bloom": "evaluate",
+   "sources": [
+    "ronnestad2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 185 min cycling trial 'assigned' 11 men to strength training and 9 riders (7 men, 2 women) to endurance only. What most weakens it as proof of cause and effect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small groups, not clearly randomised, that differed in make-up",
+       "correct": true,
+       "why": "Right: with about 10 per group, no stated random allocation and different groups, chance or group differences could explain part of the result."
+      },
+      {
+       "id": "b",
+       "text": "A 5 min effort is too short to say anything about endurance",
+       "why": "The 5 min effort came after 185 min of riding: it was designed to test performance under fatigue."
+      },
+      {
+       "id": "c",
+       "text": "Twelve weeks is too long for strength gains to last",
+       "why": "Twelve weeks is a normal training study length; 1RM rose clearly by the end."
+      },
+      {
+       "id": "d",
+       "text": "Power is less reliable to measure than oxygen uptake",
+       "why": "Power on a lab ergometer is measured precisely; measurement isn't the main weakness here."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

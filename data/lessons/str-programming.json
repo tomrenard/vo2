@@ -1,0 +1,787 @@
+{
+ "id": "str-programming",
+ "module": "t3-strength",
+ "title": "Programming strength for endurance",
+ "goal": "Plan strength training for an endurance athlete: which method and load, how many sessions, when to lift around endurance work, how to keep gains through the season, and why it matters more for masters athletes.",
+ "requires": [
+  "str-performance"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "maintenance-training",
+    "osteoporosis"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pg-types",
+   "title": "Three tools, three loads",
+   "text": "Trials sort strength work by load [[c:types]]:\n\n| method | what it is | load |\n|---|---|---|\n| high load | slow, hard lifts such as squats | ≥80% of [1RM](g:one-rep-max) |\n| submaximal load | lighter lifts, often moved as fast as possible | 40–79% of 1RM |\n| [plyometric](g:plyometrics) | hops, bounds, drop jumps | body weight |\n\nUnder 40% of 1RM counted as no real strength training. High loads are [heavy strength training](g:heavy-strength-training): they build maximal force. Fast lifts and jumps target [explosive strength](g:explosive-strength) and stiffness.\n\nAcross four endurance sports, maximal-force training gave the biggest performance gains [[c:berry-int]], and in runners, mixing methods gave the largest effect, though on very low-certainty evidence (last lesson).",
+   "claims": [
+    {
+     "id": "types",
+     "text": "Running trials are classed as high-load (≥80% 1RM), submaximal-load (40–79% 1RM), plyometric or combined training; loads under 40% of 1RM count as control.",
+     "grade": "strong",
+     "sources": [
+      "llanoslagos2024b"
+     ],
+     "evidence": [
+      {
+       "source": "llanoslagos2024b",
+       "quote": "including high load training (≥ 80% of one repetition maximum), submaximal load training (40-79% of one repetition maximum), plyometric training, and combined training (i.e., two or more methods)",
+       "level": "abstract"
+      },
+      {
+       "source": "llanoslagos2024b",
+       "quote": "endurance running training control group under no strength training or under strength training with low loads (< 40% of one repetition maximum)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "berry-int",
+     "text": "Maximal-force strength training led to greater improvements in middle- and long-distance performance than other intensities.",
+     "grade": "moderate",
+     "sources": [
+      "berryman2018"
+     ],
+     "evidence": [
+      {
+       "source": "berryman2018",
+       "quote": "Maximal-force training led to greater improvements than other intensities.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-classify"
+  },
+  {
+   "type": "example",
+   "id": "pg-load-example",
+   "title": "Setting a load from 1RM",
+   "problem": "A cyclist's leg press 1RM is 200 kg. The plan says 85% of 1RM. What load goes on the machine?",
+   "steps": [
+    "Load = 1RM × percentage ÷ 100.",
+    "200 × 85 ÷ 100 = 170 kg.",
+    "Below 80% (here, under 160 kg) the session would count as submaximal, not high load, in the trial definitions."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-load-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "pg-dose",
+   "title": "How much: the dose in the trials",
+   "text": "The programmes that worked used modest doses.\n\n- **Cycling:** four leg exercises, 3 × 4–10 [RM](g:repetition-maximum), twice a week for 11–12 weeks (last lesson) [[c:dose-cyc]].\n- **Running:** programmes of 6–40 weeks with 1–4 sessions a week; a review of 24 running studies suggests two to three sessions a week mixing heavy, explosive and plyometric work [[c:dose-run]].\n- **Length:** economy gains were bigger with near-maximal loads and programmes of 10 weeks or more (economy lesson).\n\nIn the cycling trials, 'RM' meant each set used the most you could lift for that number of reps. Lifts tested include the half squat and the leg press. Two sessions a week for at least 10 weeks is a fair default.",
+   "claims": [
+    {
+     "id": "dose-cyc",
+     "text": "The cycling trials used four lower-body exercises, 3 × 4–10 RM, twice a week for 12 weeks.",
+     "grade": "moderate",
+     "sources": [
+      "ronnestad2010a"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2010a",
+       "quote": "The strength training performed by E + S consisted of four lower body exercises [3 x 4-10 repetition maximum (RM)], which were performed twice a week for 12 weeks.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dose-run",
+     "text": "Running strength programmes lasted 6–40 weeks at 1–4 sessions a week; a systematic review suggests two to three sessions a week with a variety of modalities.",
+     "grade": "moderate",
+     "sources": [
+      "llanoslagos2024b",
+      "blagrove2018"
+     ],
+     "evidence": [
+      {
+       "source": "llanoslagos2024b",
+       "quote": "The strength training programs were between 6 and 40 weeks duration, with one to four intervention sessions per week.",
+       "level": "abstract"
+      },
+      {
+       "source": "blagrove2018",
+       "quote": "The addition of two to three ST sessions per week, which include a variety of ST modalities are likely to provide benefits to the performance of middle- and long-distance runners.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-plan"
+  },
+  {
+   "type": "concept",
+   "id": "pg-timing",
+   "title": "Order and spacing",
+   "text": "When both happen on one day, order matters for strength. Two meta-analyses agree: lifting before endurance work gave bigger lower-body strength gains than the reverse (about 7%, or 4 kg on 1RM), and the order made no difference to VO₂max [[c:order]].\n\nSpacing matters too. In 58 amateur rugby players, maximal strength gains were smaller with no rest between the strength and aerobic sessions than with 6 or 24 h, and some strength and VO₂peak gains were smaller with 6 h than with 24 h. The authors advise at least 6 h between the two [[c:gap]]. Explosive strength also suffers most in same-session training (first lesson).\n\nA common rule follows: lift on easy days, after an easy session, or hours after a hard one.",
+   "claims": [
+    {
+     "id": "order",
+     "text": "Doing strength before endurance exercise in the same session gave greater lower-body dynamic strength gains than the reverse order, with no effect of order on VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "eddens2018",
+      "murlasits2018"
+     ],
+     "evidence": [
+      {
+       "source": "eddens2018",
+       "quote": "Analysis of pooled data indicated that resistance-endurance exercise sequence had a positive effect for lower-body dynamic strength, in comparison to the alternate sequence (weighted mean difference, 6.91% change; 95% confidence interval 1.96, 11.87 change; p = 0.006)",
+       "level": "abstract"
+      },
+      {
+       "source": "murlasits2018",
+       "quote": "Lower body 1RM was significantly higher when strength training preceded endurance with a pooled mean change of 3.96 kg (95%CI: 0.81 to 7.10 kg). However, the training sequence had no impact on aerobic capacity",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gap",
+     "text": "In amateur rugby players, maximal strength gains were lower with 0 h than with 6 or 24 h between strength and aerobic sessions, and some strength and aerobic gains were lower with 6 h than with 24 h; the authors advise at least 6 h.",
+     "grade": "weak",
+     "sources": [
+      "robineau2016"
+     ],
+     "evidence": [
+      {
+       "source": "robineau2016",
+       "quote": "Daily training without a recovery period between sessions (C-0h) and, to a lesser extent, training twice a day (C-6h), is not optimal for neuromuscular and aerobic improvements.",
+       "level": "abstract"
+      },
+      {
+       "source": "robineau2016",
+       "quote": "Fitness coaches should avoid scheduling 2 contradictory qualities, with less than 6-hour recovery between them to obtain full adaptive responses to concurrent training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-order"
+  },
+  {
+   "type": "question",
+   "item": "pg-gap-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "pg-season",
+   "title": "Through the season: build, then maintain",
+   "text": "Strength work fits the season plan: build in the off-season, then switch to [maintenance training](g:maintenance-training).\n\nIn well-trained cyclists, 12 weeks of heavy lifting twice a week, then once a week for the first 13 weeks of racing, kept the gains in muscle size and strength, and cycling performance kept improving [[c:maint]]. Only 6 riders per group took part.\n\nA larger [RCT](g:rct) in 70 adults cut the dose to one third or one ninth after 16 weeks of strength training. Both doses kept the muscle growth in young adults (20–35 y) but not in older adults (60–75 y); strength itself was largely kept, even with no training at all [[c:bickel]]. Older athletes may need a bigger maintenance dose.",
+   "claims": [
+    {
+     "id": "maint",
+     "text": "In well-trained cyclists, one strength session a week during 13 weeks of competition preserved the muscle CSA and strength gained in a 12-week preparatory period and further improved performance.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2010b"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2010b",
+       "quote": "In conclusion, in well-trained cyclists, strength maintenance training in a competition period preserved increases in thigh muscle CSA and leg strength attained in a preceding preparatory period and further improved cycling performance determinants and performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bickel",
+     "text": "After 16 weeks of resistance training, one third or one ninth of the dose preserved hypertrophy in young but not older adults; strength was largely retained even with detraining.",
+     "grade": "weak",
+     "sources": [
+      "bickel2011"
+     ],
+     "evidence": [
+      {
+       "source": "bickel2011",
+       "quote": "Both maintenance prescriptions preserved phase 1 muscle hypertrophy in the young but not the old.",
+       "level": "abstract"
+      },
+      {
+       "source": "bickel2011",
+       "quote": "Strength gained during phase 1 was largely retained throughout detraining with only a slight reduction at the final time point.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-maint"
+  },
+  {
+   "type": "question",
+   "item": "pg-age-maint"
+  },
+  {
+   "type": "concept",
+   "id": "pg-masters",
+   "title": "Masters athletes: muscle and bone",
+   "text": "Strength work may matter more for [masters athletes](g:masters-athlete). In 9 masters endurance athletes (about 51 y), 3 weeks of knee-extension training raised maximal strength by 17.8% and improved cycling [delta efficiency](g:delta-efficiency) [[c:louis]]. In master marathoners, 6 heavy lifters improved running economy by 6% [[c:piacentini]]. Both studies are tiny.\n\nBone is the bigger case. Road cycling builds little bone (body composition module) [[c:cyc-bone]]. In an RCT of 101 women aged about 65 with low bone mass ([osteoporosis](g:osteoporosis) or osteopenia), 8 months of twice-weekly heavy lifting and jumping (5 × 5 at >85% 1RM) raised spine [BMD](g:bone-mineral-density) 2.9% while controls lost 1.2% [[c:liftmor]]. A trial in men aged about 67 agreed [[c:liftmor-m]].",
+   "claims": [
+    {
+     "id": "louis",
+     "text": "In masters endurance athletes, 3 weeks of knee-extensor strength training raised maximal torque by 17.8% and improved cycling delta efficiency.",
+     "grade": "weak",
+     "sources": [
+      "louis2012"
+     ],
+     "evidence": [
+      {
+       "source": "louis2012",
+       "quote": "The strength training induced a significant improvement in MVC torque in all the subjects, more pronounced in masters (+17.8% in masters vs. +5.9% in young, P < 0.05). DE in cycling also significantly increased after training in masters, whereas it was only a trend in young.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "piacentini",
+     "text": "In master marathon runners, maximal strength training improved 1RM by 16% and running economy at marathon pace by 6%.",
+     "grade": "weak",
+     "sources": [
+      "piacentini2013"
+     ],
+     "evidence": [
+      {
+       "source": "piacentini2013",
+       "quote": "The MST group showed significant increases (p < 0.05) in 1RM (+16.34%) and RE (+6.17 %) at marathon pace.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cyc-bone",
+     "text": "Adult road cyclists in regular training have low bone mineral density at key sites; road cycling does not appear to give an osteogenic benefit.",
+     "grade": "weak",
+     "sources": [
+      "olmedillas2012"
+     ],
+     "evidence": [
+      {
+       "source": "olmedillas2012",
+       "quote": "From our comprehensive survey of the current available literature it can be concluded that road cycling does not appear to confer any significant osteogenic benefit.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "liftmor",
+     "text": "In postmenopausal women with low bone mass, 8 months of twice-weekly high-intensity resistance and impact training (5 × 5 at >85% 1RM) raised lumbar spine BMD by 2.9% versus a 1.2% loss in controls, with one minor adverse event.",
+     "grade": "moderate",
+     "sources": [
+      "watson2018"
+     ],
+     "evidence": [
+      {
+       "source": "watson2018",
+       "quote": "HiRIT (n = 49) effects were superior to CON (n = 52) for lumbar spine (LS) BMD (2.9 ± 2.8% versus -1.2 ± 2.8%, p < 0.001)",
+       "level": "abstract"
+      },
+      {
+       "source": "watson2018",
+       "quote": "randomized to either 8 months of twice-weekly, 30-minute, supervised HiRIT (5 sets of 5 repetitions, >85% 1 repetition maximum) or a home-based, low-intensity exercise program (CON)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "liftmor-m",
+     "text": "In older men with low bone mass, high-intensity resistance and impact training improved lumbar spine and hip BMD compared with non-randomised controls.",
+     "grade": "weak",
+     "sources": [
+      "harding2020"
+     ],
+     "evidence": [
+      {
+       "source": "harding2020",
+       "quote": "HiRIT improved trochanteric BMD (2.8 ± 0.8%; -0.1 ± 0.9%, p = .024), LS BMD (4.1 ± 0.7%; 0.9 ± 0.8%, p = .003)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pg-masters-eff"
+  },
+  {
+   "type": "question",
+   "item": "pg-bone"
+  },
+  {
+   "type": "question",
+   "item": "pg-liftmor-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Three tools: high load (≥80% 1RM), submaximal or fast lifts (40–79%), and plyometrics. Heavy, maximal-force work gave the biggest gains; mixing methods helped runners most (very low certainty).",
+    "Trial doses: 2 sessions a week (3 × 4–10 RM) for 10 weeks or more; runners 2–3 sessions mixing methods.",
+    "Same day? Lift first for strength; order doesn't affect VO₂max. Leave hours between hard lifting and hard endurance work.",
+    "Build in the off-season, then keep gains with about one session a week in season; older athletes may need more.",
+    "Masters: strength work helps efficiency and economy (small studies) and, with impact, bone (RCTs in older adults with low bone mass)."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pg-classify",
+   "concept": "pg-types",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "llanoslagos2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 3 sets of 6 squats at 85% of her 1RM, lifted under control. Using the trial definitions, what kind of strength training is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High-load training",
+       "correct": true,
+       "why": "Right: 85% is above the 80% of 1RM cut-off."
+      },
+      {
+       "id": "b",
+       "text": "Submaximal-load training",
+       "why": "Submaximal means 40–79% of 1RM; 85% is above that."
+      },
+      {
+       "id": "c",
+       "text": "Plyometric training",
+       "why": "Plyometrics are jumps and hops with body weight, not barbell squats."
+      },
+      {
+       "id": "d",
+       "text": "Combined training",
+       "why": "Combined means two or more methods together; this is one method."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-load-calc",
+   "concept": "pg-types",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "llanoslagos2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's squat 1RM is 90 kg. The session calls for 85% of 1RM. What load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "76.5 kg",
+       "correct": true,
+       "why": "Right: 90 × 0.85 = 76.5 kg."
+      },
+      {
+       "id": "b",
+       "text": "13.5 kg",
+       "why": "That's the 15% taken off (90 × 0.15), not the working load."
+      },
+      {
+       "id": "c",
+       "text": "105.9 kg",
+       "why": "This divides by 0.85 instead of multiplying: it gives a load above the 1RM."
+      },
+      {
+       "id": "d",
+       "text": "85 kg",
+       "why": "This reads the percentage as kilograms."
+      }
+     ],
+     "solution": "90 × 85 ÷ 100 = 76.5 kg."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's leg press 1RM is 120 kg. The plan says 80% of 1RM. What load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "96 kg",
+       "correct": true,
+       "why": "Right: 120 × 0.80 = 96 kg."
+      },
+      {
+       "id": "b",
+       "text": "24 kg",
+       "why": "That's the 20% taken off (120 × 0.20), not the working load."
+      },
+      {
+       "id": "c",
+       "text": "150 kg",
+       "why": "This divides by 0.80 instead of multiplying: it gives a load above the 1RM."
+      },
+      {
+       "id": "d",
+       "text": "80 kg",
+       "why": "This reads the percentage as kilograms."
+      }
+     ],
+     "solution": "120 × 80 ÷ 100 = 96 kg."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's half-squat 1RM is 160 kg. The plan says 90% of 1RM. What load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "144 kg",
+       "correct": true,
+       "why": "Right: 160 × 0.90 = 144 kg."
+      },
+      {
+       "id": "b",
+       "text": "16 kg",
+       "why": "That's the 10% taken off (160 × 0.10), not the working load."
+      },
+      {
+       "id": "c",
+       "text": "177.8 kg",
+       "why": "This divides by 0.90 instead of multiplying: it gives a load above the 1RM."
+      },
+      {
+       "id": "d",
+       "text": "90 kg",
+       "why": "This reads the percentage as kilograms."
+      }
+     ],
+     "solution": "160 × 90 ÷ 100 = 144 kg."
+    }
+   ]
+  },
+  {
+   "id": "pg-plan",
+   "concept": "pg-dose",
+   "bloom": "apply",
+   "sources": [
+    "ronnestad2010a",
+    "blagrove2018",
+    "llanoslagos2024b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants to add strength work in a 12-week winter block. Which plan best matches the trials?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Two sessions a week: heavy leg lifts at 3 × 4–10 RM, plus some jumps",
+       "correct": true,
+       "why": "Right: twice-weekly heavy work for 10 weeks or more, mixed with plyometrics, matches the cycling recipe and the running advice."
+      },
+      {
+       "id": "b",
+       "text": "One set of 20 light reps once a week, to stay fresh",
+       "why": "Light loads (under 40% of 1RM) counted as no real strength training, and one set a week is far below the trial doses."
+      },
+      {
+       "id": "c",
+       "text": "Five heavy sessions a week, to make up for the short block",
+       "why": "No trial used anything like this dose for endurance athletes; two to three sessions a week worked."
+      },
+      {
+       "id": "d",
+       "text": "Four weeks of heavy lifting, then stop for the rest of the block",
+       "why": "Gains were larger with programmes of about 10 weeks or more; four weeks is short."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-order",
+   "concept": "pg-timing",
+   "bloom": "apply",
+   "sources": [
+    "eddens2018",
+    "murlasits2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has one evening for both a 60 min easy ride and a heavy leg session, and wants the most strength gain. Best order?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lift first, then ride",
+       "correct": true,
+       "why": "Right: strength before endurance gave larger lower-body strength gains in two meta-analyses, with no cost to VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Ride first, as a warm-up, then lift",
+       "why": "Riding first gave smaller strength gains than lifting first."
+      },
+      {
+       "id": "c",
+       "text": "Either: order has no effect on anything",
+       "why": "Order didn't matter for VO₂max, but it did for lower-body strength."
+      },
+      {
+       "id": "d",
+       "text": "Ride first, or else his VO₂max gains will suffer",
+       "why": "Order had no effect on VO₂max in either meta-analysis."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-gap-appraisal",
+   "concept": "pg-timing",
+   "bloom": "evaluate",
+   "sources": [
+    "robineau2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The advice to leave at least 6 h between strength and aerobic sessions comes from 58 amateur rugby players trained for 7 weeks. What most limits applying it to a trained marathoner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Other athletes, other goals, short study: it may not transfer",
+       "correct": true,
+       "why": "Right: rugby players do far less endurance training and value strength more, and 7 weeks is short; the 6 h figure is a guide, not a rule for runners."
+      },
+      {
+       "id": "b",
+       "text": "With 58 people, the study is too large to trust",
+       "why": "More participants make a study more trustworthy, not less."
+      },
+      {
+       "id": "c",
+       "text": "Seven weeks is too long for strength gains to last",
+       "why": "Strength changes within weeks; if anything, 7 weeks is short."
+      },
+      {
+       "id": "d",
+       "text": "Rugby players can't improve their aerobic fitness at all",
+       "why": "They did: VO₂peak increased in all the concurrent groups."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-maint",
+   "concept": "pg-season",
+   "bloom": "apply",
+   "sources": [
+    "ronnestad2010b",
+    "bickel2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner built strength with two heavy sessions a week through the winter. Racing starts and time is short. What does the evidence support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep one heavy session a week through the racing season",
+       "correct": true,
+       "why": "Right: in cyclists, one session a week kept the muscle and strength gains for 13 weeks of racing."
+      },
+      {
+       "id": "b",
+       "text": "Stop lifting: strength gains last indefinitely without training",
+       "why": "Strength was largely kept for months, but muscle gains were lost in older adults, and 'indefinitely' wasn't tested."
+      },
+      {
+       "id": "c",
+       "text": "Keep two sessions: one a week is too little to keep anything",
+       "why": "One session a week was enough to preserve the gains in the cycling trial."
+      },
+      {
+       "id": "d",
+       "text": "Switch to very light, high-rep work to avoid fatigue",
+       "why": "Light work wasn't tested as maintenance; the trials kept heavy loads at a lower frequency."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-age-maint",
+   "concept": "pg-season",
+   "bloom": "analyse",
+   "sources": [
+    "bickel2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 65-year-old triathlete and his 28-year-old daughter both cut their strength training to one ninth of the dose after a 16-week block. Based on the maintenance trial, what is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She keeps her muscle growth; he loses some of his",
+       "correct": true,
+       "why": "Right: one ninth of the dose kept muscle growth in young adults but not in those aged 60–75."
+      },
+      {
+       "id": "b",
+       "text": "Both keep all their muscle growth equally well",
+       "why": "Age mattered: the older group didn't keep its muscle growth on the reduced doses."
+      },
+      {
+       "id": "c",
+       "text": "He keeps more than she does, being more experienced",
+       "why": "The finding was the reverse: older adults needed a bigger dose to keep muscle growth."
+      },
+      {
+       "id": "d",
+       "text": "Both lose all their strength within weeks",
+       "why": "Strength was largely retained, even with no training, in both age groups."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-masters-eff",
+   "concept": "pg-masters",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "louis2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In masters endurance athletes (about 51 y), what did 3 weeks of knee-extension training change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Maximal strength rose 17.8% and cycling delta efficiency improved",
+       "correct": true,
+       "why": "Right: and the gains closed the age-related gaps in strength and efficiency."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max rose, but strength and efficiency didn't change",
+       "why": "The study measured strength and efficiency, and both improved; VO₂max wasn't the outcome."
+      },
+      {
+       "id": "c",
+       "text": "Strength rose, but efficiency fell from the extra fatigue",
+       "why": "Delta efficiency rose in the masters athletes; it didn't fall."
+      },
+      {
+       "id": "d",
+       "text": "Nothing changed in 3 weeks, at any age",
+       "why": "Strength rose in everyone, most in the masters group."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-bone",
+   "concept": "pg-masters",
+   "bloom": "apply",
+   "sources": [
+    "olmedillas2012",
+    "watson2018",
+    "harding2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 55-year-old road cyclist rides 12 h a week and does no other sport. He asks what to add for his bones. Best evidence-based advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Progressive heavy lifting with jumps, about twice a week, ideally supervised",
+       "correct": true,
+       "why": "Right: high-intensity resistance and impact training raised spine BMD in RCTs of older adults with low bone mass; road cycling adds little."
+      },
+      {
+       "id": "b",
+       "text": "More hours on the bike, since total training load builds bone",
+       "why": "Road cycling doesn't appear to give any significant bone benefit, however many hours."
+      },
+      {
+       "id": "c",
+       "text": "Light machine holds at low effort, which load bone safely",
+       "why": "Low-effort loading isn't what the bone trials used; even hard machine-based holds improved spine BMD less than heavy lifting with impact in the trial in men."
+      },
+      {
+       "id": "d",
+       "text": "Higher-cadence riding, to load the bones more often",
+       "why": "Cadence doesn't change the problem: cycling is weight-supported and low-impact."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pg-liftmor-appraisal",
+   "concept": "pg-masters",
+   "bloom": "evaluate",
+   "sources": [
+    "watson2018",
+    "harding2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "LIFTMOR found that heavy lifting and jumping raised spine BMD in women aged about 65 with low bone mass. What most limits applying it to a 50-year-old male masters cyclist with normal BMD?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He differs in sex, age and starting bone, so his gain may be different",
+       "correct": true,
+       "why": "Right: the trial was in older women with low bone mass, under close supervision; a younger man with normal BMD may gain less."
+      },
+      {
+       "id": "b",
+       "text": "101 participants is too few to find any effect",
+       "why": "It did find a clear effect; 101 is a fair size for a training RCT."
+      },
+      {
+       "id": "c",
+       "text": "BMD has nothing to do with fracture risk",
+       "why": "Low BMD is a main marker of fracture risk; that's why the trials measured it."
+      },
+      {
+       "id": "d",
+       "text": "Men don't lose bone, so it can't apply to them",
+       "why": "Men lose bone too: masters road cyclists can have low BMD, and a trial in men found similar gains."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

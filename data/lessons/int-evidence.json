@@ -1,0 +1,695 @@
+{
+ "id": "int-evidence",
+ "module": "t3-intensity",
+ "title": "Distributions on trial",
+ "goal": "Weigh the trials and meta-analyses comparing polarised, pyramidal and threshold training, read their effect sizes, and state both sides of the polarised debate and why athlete level may matter.",
+ "requires": [
+  "int-distributions"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "standardised-mean-difference",
+    "pedro-scale",
+    "network-meta-analysis",
+    "subgroup-analysis"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ie-trials",
+   "title": "The first trials: polarised vs threshold",
+   "text": "Trials began by pitting polarised training against threshold-heavy training. In an [RCT](g:rct) of 48 well-trained runners, cyclists, triathletes and skiers over 9 weeks, the polarised group raised [VO2peak](g:vo2peak) most: **+11.7%** [[c:ie-stoggl]]. In a [crossover study](g:crossover-study) of 12 trained male cyclists, 6 weeks polarised beat 6 weeks threshold for peak power (**8% vs 3%**) and lactate threshold power (**9% vs 2%**), even with about an hour less training per week [[c:ie-neal]].\n\nNote the comparison: these trials tested polarised against **threshold** plans: lots of zone 2 and little or no zone 3 (Neal's was 57/43/0 by time). Elite athletes mostly train **pyramidal**. Beating threshold training says little about beating pyramidal.",
+   "claims": [
+    {
+     "id": "ie-stoggl",
+     "text": "In 48 well-trained endurance athletes over 9 weeks, polarised training gave the largest VO2peak gain (+11.7%), more than threshold, HIIT or high-volume training.",
+     "grade": "weak",
+     "sources": [
+      "stoggl2014"
+     ],
+     "evidence": [
+      {
+       "source": "stoggl2014",
+       "quote": "POL demonstrated the greatest increase in VO2peak (+6.8 ml·min·kg(-1) or 11.7%, P < 0.001), time to exhaustion during the ramp protocol (+17.4%, P < 0.001) and peak velocity/power (+5.1%, P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-neal",
+     "text": "In 12 trained male cyclists, 6 weeks of polarised training improved peak power (8% vs 3%) and lactate threshold (9% vs 2%) more than threshold training, on fewer hours (6.4 vs 7.5 h per week).",
+     "grade": "weak",
+     "sources": [
+      "neal2013"
+     ],
+     "evidence": [
+      {
+       "source": "neal2013",
+       "quote": "Improvements were greater following polarized rather than threshold for PPO [mean (±SE) change of 8 (±2)% vs. 3 (±1)%, P < 0.05], LT [9 (±3)% vs. 2 (±4)%, P < 0.05], and high-intensity exercise capacity [85 (±14)% vs. 37 (±14)%, P < 0.05].",
+       "level": "abstract"
+      },
+      {
+       "source": "neal2013",
+       "quote": "1) a polarized model [6.4 (±1.4 SD) h/wk; 80%, 0%, and 20% of training time in low-, moderate-, and high-intensity zones, respectively]; and 2) a threshold model [7.5 (±2.0 SD) h/wk; 57%, 43%, and 0% training-intensity distribution]",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-comparator"
+  },
+  {
+   "type": "question",
+   "item": "ie-neal-limit"
+  },
+  {
+   "type": "concept",
+   "id": "ie-meta-2019",
+   "title": "The first meta-analysis (2019)",
+   "text": "Rosenblat and colleagues pooled the [RCTs](g:rct) comparing polarised with threshold training in athletes with over 2 years of training. Only **4 studies** qualified, **3** could be pooled. Their quality was fair to poor: 4 or 5 out of 10 on the [PEDro scale](g:pedro-scale) [[c:ie-ros19-quality]].\n\nOn time-trial performance the pooled [effect size](g:effect-size) was **−0.66** (95% [CI](g:confidence-interval) −1.17 to −0.15) [[c:ie-ros19-effect]]. Negative here means a bigger drop in time-trial time, so it favours polarised training, a moderate effect.\n\nA moderate effect, but from three small, fair-quality trials against threshold training only: promising, not settled.",
+   "claims": [
+    {
+     "id": "ie-ros19-quality",
+     "text": "Only four RCTs met the criteria (three meta-analysed), scoring 4–5 out of 10 on the PEDro scale.",
+     "grade": "strong",
+     "sources": [
+      "rosenblat2019"
+     ],
+     "evidence": [
+      {
+       "source": "rosenblat2019",
+       "quote": "Four studies met the inclusion criteria for the qualitative analysis, and 3 for the meta-analysis. Two of the 4 studies included in the review scored a 4/10 on the PEDro Scale and 2 scored a 5/10.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-ros19-effect",
+     "text": "Pooled, polarised training improved time-trial performance more than threshold training (ES −0.66, 95% CI −1.17 to −0.15).",
+     "grade": "weak",
+     "sources": [
+      "rosenblat2019"
+     ],
+     "evidence": [
+      {
+       "source": "rosenblat2019",
+       "quote": "The pooled results demonstrate a moderate effect (ES = -0.66; 95% CI: -1.17 to -0.15) favoring the POL group over the THR group.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-ros19-grade"
+  },
+  {
+   "type": "concept",
+   "id": "ie-meta-2024",
+   "title": "More trials, smaller effects (2024)",
+   "text": "By 2024 there were **17 studies, 437 participants**, now comparing polarised with any other distribution, pyramidal included. Most participants were men (317 men, 89 women) [[c:ie-oli-sample]].\n\nResults, as a [standardised mean difference](g:standardised-mean-difference) (SMD; 0.2 small, 0.5 medium):\n\n- **VO2peak**: polarised slightly better, SMD **0.24** [[c:ie-oli-vo2]]. But only in interventions shorter than 12 weeks and in highly trained athletes [[c:ie-oli-subgroups]].\n- **Time trial, time to exhaustion, threshold speed or power**: no difference [[c:ie-oli-null]].\n\nSo: a small edge on one lab marker, none on performance itself.",
+   "claims": [
+    {
+     "id": "ie-oli-sample",
+     "text": "Seventeen studies (437 participants, 317 men and 89 women) compared polarised with other distributions.",
+     "grade": "strong",
+     "sources": [
+      "silvaoliveira2024"
+     ],
+     "evidence": [
+      {
+       "source": "silvaoliveira2024",
+       "quote": "The total number of participants included was n = 437 (317 males, 89 females, 31 undisclosed), of which 183 participated in POL interventions and 223 in other TIDs.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ie-oli-vo2",
+     "text": "Polarised training improved VO2peak slightly more than other distributions (SMD 0.24).",
+     "grade": "moderate",
+     "sources": [
+      "silvaoliveira2024"
+     ],
+     "evidence": [
+      {
+       "source": "silvaoliveira2024",
+       "quote": "POL is superior to other TIDs for improving VO2peak, particularly in shorter duration interventions and highly trained athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-oli-subgroups",
+     "text": "The VO2peak advantage appeared only in interventions under 12 weeks and in highly trained athletes.",
+     "grade": "weak",
+     "sources": [
+      "silvaoliveira2024"
+     ],
+     "evidence": [
+      {
+       "source": "silvaoliveira2024",
+       "quote": "Superiority, however, only occurred in shorter interventions (< 12 weeks)",
+       "level": "abstract"
+      },
+      {
+       "source": "silvaoliveira2024",
+       "quote": "and for highly trained athletes (SMD = 0.46 [95% CI 0.10, 0.82]",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-oli-null",
+     "text": "Time trial, time to exhaustion and speed or power at the second threshold improved similarly with polarised and other distributions.",
+     "grade": "moderate",
+     "sources": [
+      "silvaoliveira2024"
+     ],
+     "evidence": [
+      {
+       "source": "silvaoliveira2024",
+       "quote": "The remaining endurance performance surrogates were similarly affected by POL and other TIDs",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-smd",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-oli-apply"
+  },
+  {
+   "type": "concept",
+   "id": "ie-level",
+   "title": "Polarised vs pyramidal, and the athlete's level",
+   "text": "A 2025 [network meta-analysis](g:network-meta-analysis) re-analysed each participant's own data from 13 studies (348 athletes). Polarised and pyramidal did not differ for VO2max or time trial, and no distribution beat polarised [[c:ie-ros25-null]]. A [subgroup analysis](g:subgroup-analysis) hinted that competitive athletes gain more VO2max from polarised and recreational athletes from pyramidal [[c:ie-ros25-level]]. A 2026 Bayesian network meta-analysis also found no model clearly better than polarised, though its rankings leaned towards threshold training for VO2max and HIIT for time trial [[c:ie-li]].\n\nTiming may matter more than shape: in 60 well-trained male runners, 8 weeks pyramidal then 8 weeks polarised gave the biggest 5 km gain (about 1.5%) [[c:ie-filipas]].\n\nSubgroup results are hints, not proof: treat 'level matters' as an idea to test, not a finding.",
+   "claims": [
+    {
+     "id": "ie-ros25-null",
+     "text": "In an individual-participant network meta-analysis (13 studies, 348 athletes), no distribution differed significantly from polarised for VO2max or time trial.",
+     "grade": "moderate",
+     "sources": [
+      "rosenblat2025"
+     ],
+     "evidence": [
+      {
+       "source": "rosenblat2025",
+       "quote": "There were no statistically significant differences between POL and any of the other TID interventions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-ros25-level",
+     "text": "Competitive athletes may gain more VO2max from polarised and recreational athletes from pyramidal training.",
+     "grade": "weak",
+     "sources": [
+      "rosenblat2025"
+     ],
+     "evidence": [
+      {
+       "source": "rosenblat2025",
+       "quote": "Athletes at a more competitive level may benefit from a POL TID intervention and recreational athletes from a PYR TID intervention.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-li",
+     "text": "A 2026 Bayesian network meta-analysis found no distribution with a definite advantage over polarised for VO2max or time trial, though its rankings favoured threshold training for VO2max and HIIT for time trial.",
+     "grade": "moderate",
+     "sources": [
+      "li2026"
+     ],
+     "evidence": [
+      {
+       "source": "li2026",
+       "quote": "Compared with polarized training, no other TID model showed a definite advantage for improving V̇ o2 max or TT performance, because all 95% credible intervals crossed zero.",
+       "level": "abstract"
+      },
+      {
+       "source": "li2026",
+       "quote": "However, Bayesian posterior ranking indicated that lactate-threshold training (THR) was most likely to be the optimal model for",
+       "level": "abstract"
+      },
+      {
+       "source": "li2026",
+       "quote": "whereas high-intensity interval training (HIT) was most likely to optimize TT performance",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-filipas",
+     "text": "In 60 well-trained runners over 16 weeks, switching from pyramidal to polarised gave the largest improvements, including about 1.5% in 5 km time.",
+     "grade": "weak",
+     "sources": [
+      "filipas2022"
+     ],
+     "evidence": [
+      {
+       "source": "filipas2022",
+       "quote": "However, the change from pyramidal to polarized distribution maximized performance improvements",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-level-apply"
+  },
+  {
+   "type": "question",
+   "item": "ie-filipas-read"
+  },
+  {
+   "type": "concept",
+   "id": "ie-debate",
+   "title": "The debate, both sides",
+   "text": "In 2022 two groups argued it out in the same journal. Foster, Seiler and colleagues: observational and trial data show polarised (or pyramidal) training beats threshold-centred training, and it may matter most for elites, who train a lot and risk maladaptation [[c:ie-foster]]. Burnley, Bearden and Jones: elites mostly train pyramidal, polarised has not been shown to beat other distributions, and zone 2 work is effective and specific to races lasting about 25 min to 3 h [[c:ie-burnley]].\n\nRead closely, they agree on a lot: mostly zone 1, some hard work, and zone 2 should not be the largest share. The real dispute is how to share the hard part between zones 2 and 3.",
+   "claims": [
+    {
+     "id": "ie-foster",
+     "text": "Foster and colleagues argue a polarised (including pyramidal) distribution has advantages over threshold-centred training, particularly for elite athletes with high training loads.",
+     "grade": "weak",
+     "sources": [
+      "foster2022"
+     ],
+     "evidence": [
+      {
+       "source": "foster2022",
+       "quote": "Abundant observational and interventional data support the concept that this TID has advantages over threshold centric training programs",
+       "level": "full-text"
+      },
+      {
+       "source": "foster2022",
+       "quote": "The polarized/pyradimal TID may be particularly important for elite athletes, with high training frequency/load and a greater risk of training maladaptations",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ie-burnley",
+     "text": "Burnley and colleagues argue polarised distributions are neither more effective than others nor common among endurance athletes, who mostly train pyramidally.",
+     "grade": "weak",
+     "sources": [
+      "burnley2022"
+     ],
+     "evidence": [
+      {
+       "source": "burnley2022",
+       "quote": "Polarized distributions of training volume have neither been shown to be more effective than other distributions, nor are they practiced commonly by endurance athletes; indeed pyramidal distributions are what highly successful athletes typically practice.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is polarised training the best intensity distribution for endurance athletes?",
+    "sides": [
+     {
+      "position": "Yes, broadly: polarised (or pyramidal) beats threshold-centred training, especially for elite athletes with heavy loads.",
+      "sources": [
+       "foster2022",
+       "stoggl2014",
+       "rosenblat2019"
+      ]
+     },
+     {
+      "position": "No: elites mostly train pyramidal, polarised hasn't been shown to beat pyramidal, and zone 2 work is effective and race-specific.",
+      "sources": [
+       "burnley2022",
+       "rosenblat2025",
+       "silvaoliveira2024"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ie-debate-fair"
+  },
+  {
+   "type": "question",
+   "item": "ie-smd",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Early trials (Stöggl 2014, Neal 2013) found polarised beat threshold-heavy training, in small, short studies.",
+    "Rosenblat 2019: moderate effect for polarised over threshold on time trial, but only 3 pooled trials of fair quality.",
+    "Silva Oliveira 2024 (17 studies): small VO2peak edge for polarised (SMD 0.24), mainly in short studies and highly trained athletes; no difference in performance.",
+    "Rosenblat 2025 and Li 2026: no distribution clearly beats polarised; recreational athletes may do better with pyramidal (subgroup hint).",
+    "Both sides of the debate agree: mostly zone 1, some hard work, not zone 2 as the biggest share. The dispute is zone 2 vs zone 3 for the hard part."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ie-comparator",
+   "concept": "ie-trials",
+   "bloom": "analyse",
+   "sources": [
+    "stoggl2014",
+    "neal2013",
+    "stoggl2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: 'Trials show polarised beats threshold training, so my pyramidal runners should switch to polarised.' What is wrong with that step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Those trials compared polarised with threshold, not with pyramidal",
+       "why": "Right: beating a zone 2-heavy plan doesn't show polarised beats a pyramidal one.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The trials were in cyclists, not runners",
+       "why": "Stöggl's trial included runners; the main gap is the comparator, not the sport."
+      },
+      {
+       "id": "c",
+       "text": "Threshold and pyramidal are the same distribution",
+       "why": "Threshold has zone 2 largest; pyramidal has zone 1 largest."
+      },
+      {
+       "id": "d",
+       "text": "Polarised training has never been tested in an RCT",
+       "why": "It has, for example the 48-athlete RCT by Stöggl and Sperlich."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-neal-limit",
+   "concept": "ie-trials",
+   "bloom": "evaluate",
+   "sources": [
+    "neal2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Neal 2013 found polarised beat threshold training in 12 trained male cyclists over 6 weeks. Which limit matters most before applying it to a female age-group triathlete over a season?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small sample, only men, and only 6 weeks",
+       "why": "Right: 12 men over 6 weeks says little about women, other sports or a whole season.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The study used a crossover design",
+       "why": "A crossover makes each rider his own control, which is a strength with small samples."
+      },
+      {
+       "id": "c",
+       "text": "The polarised group trained more hours",
+       "why": "The polarised group trained less: 6.4 vs 7.5 h per week."
+      },
+      {
+       "id": "d",
+       "text": "Cycling performance can't be measured reliably",
+       "why": "A 40 km time trial and power tests are standard, reliable measures."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-ros19-grade",
+   "concept": "ie-meta-2019",
+   "bloom": "evaluate",
+   "sources": [
+    "rosenblat2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis pools 3 small trials (PEDro 4–5/10) and finds a moderate effect for polarised over threshold on time trial. How strong is this evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak: few, small trials of fair quality",
+       "why": "Right: a pooled effect from three fair-quality trials is a promising signal, not a firm answer.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Strong: it is a meta-analysis of RCTs",
+       "why": "Being a meta-analysis isn't enough; it is only as good as the few trials inside it."
+      },
+      {
+       "id": "c",
+       "text": "Moderate: the confidence interval excludes zero",
+       "why": "Excluding zero shows an effect is likely; it doesn't fix small, fair-quality trials."
+      },
+      {
+       "id": "d",
+       "text": "Disputed: the effect is negative",
+       "why": "The negative sign here favours polarised (time trial time fell more)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-smd",
+   "concept": "ie-meta-2024",
+   "bloom": "apply",
+   "sources": [
+    "silvaoliveira2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis reports polarised vs other distributions for VO2peak: SMD = 0.24 (95% CI 0.01 to 0.48). Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small advantage for polarised, whose true size could be close to zero",
+       "why": "Right: 0.24 is small, and the interval runs from almost nothing to under 0.5.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A large advantage: VO2peak rose 24% more",
+       "why": "SMD is in units of spread, not percent; 0.24 is small."
+      },
+      {
+       "id": "c",
+       "text": "No advantage, since 0.24 is below 0.5",
+       "why": "An SMD of 0.24 is small but its interval excludes zero, so there is a small effect."
+      },
+      {
+       "id": "d",
+       "text": "A medium advantage, because the upper limit is near 0.5",
+       "why": "Judge the point estimate first; the upper limit is the most optimistic case."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "The same meta-analysis reports time-trial performance: SMD = −0.01 (95% CI −0.28 to 0.25). Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No detectable difference between polarised and other distributions",
+       "why": "Right: the estimate is almost zero and the interval runs both ways.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A small advantage for the other distributions",
+       "why": "−0.01 is essentially zero; the interval includes clear benefit either way."
+      },
+      {
+       "id": "c",
+       "text": "Polarised is worse by 1%",
+       "why": "SMD is not a percentage; it is in units of spread."
+      },
+      {
+       "id": "d",
+       "text": "A small advantage for polarised, because the upper limit is positive",
+       "why": "An interval spanning zero can't show an advantage for either side."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-oli-apply",
+   "concept": "ie-meta-2024",
+   "bloom": "evaluate",
+   "sources": [
+    "silvaoliveira2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A recreational cyclist on 6 h a week reads that 'polarised is superior for VO2peak (SMD 0.24)'. What should she take from it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little: a small edge, seen mainly in highly trained athletes",
+       "why": "Right: the subgroup and outcome details make it weak guidance for her.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Switch to polarised: it is proven superior",
+       "why": "It was superior only on VO2peak, by a small amount, mostly in highly trained athletes."
+      },
+      {
+       "id": "c",
+       "text": "Avoid polarised: it doesn't improve performance",
+       "why": "It improved performance as much as the other distributions, not less."
+      },
+      {
+       "id": "d",
+       "text": "Ignore it: meta-analyses can't apply to individuals",
+       "why": "Meta-analyses do apply, with care about who was studied."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-level-apply",
+   "concept": "ie-level",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rosenblat2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Based on the 2025 individual-participant network meta-analysis, which athlete is the subgroup result most likely to favour pyramidal for?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A recreational marathon runner",
+       "why": "Right: recreational athletes improved VO2max more with pyramidal in the subgroup analysis.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A national-level rower",
+       "why": "Competitive athletes tended to gain more from polarised."
+      },
+      {
+       "id": "c",
+       "text": "An elite cyclist in a heavy training block",
+       "why": "Higher-level athletes leaned towards polarised."
+      },
+      {
+       "id": "d",
+       "text": "Any athlete: the analysis showed pyramidal beats polarised overall",
+       "why": "Overall there was no difference; only the subgroup hint split by level."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-filipas-read",
+   "concept": "ie-level",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "filipas2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Filipas 2022 (60 well-trained runners, 16 weeks), which plan gave the largest improvements?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8 weeks pyramidal, then 8 weeks polarised",
+       "why": "Right: the pyramidal-to-polarised switch gave the biggest gains, about 1.5% in 5 km time.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "16 weeks polarised",
+       "why": "All groups improved, but the full polarised block was not the best."
+      },
+      {
+       "id": "c",
+       "text": "8 weeks polarised, then 8 weeks pyramidal",
+       "why": "The reverse order did less well."
+      },
+      {
+       "id": "d",
+       "text": "16 weeks pyramidal",
+       "why": "Pyramidal throughout improved, but less than switching to polarised."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-debate-fair",
+   "concept": "ie-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "foster2022",
+    "burnley2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which summary of the 2022 polarised debate is fairest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both favour mostly zone 1 and some hard work; they differ on zone 2 vs zone 3",
+       "why": "Right: they agree on the base and differ on how to share the hard part.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "One side says train mostly easy, the other mostly at threshold",
+       "why": "Burnley's side explicitly does not advocate threshold-centred training."
+      },
+      {
+       "id": "c",
+       "text": "Both sides agree polarised is optimal for elites only",
+       "why": "Burnley's side argues it isn't shown to be optimal for anyone."
+      },
+      {
+       "id": "d",
+       "text": "The debate is settled by the 2024 meta-analysis",
+       "why": "That meta-analysis found no performance difference; it didn't settle the debate."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

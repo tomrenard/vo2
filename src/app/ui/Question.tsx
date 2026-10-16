@@ -216,7 +216,7 @@ function Feedback({
       : "Not quite";
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-1 flex-col gap-4">
       <div
         className="rounded-2xl p-4"
         style={{
@@ -313,7 +313,7 @@ function Feedback({
 
       <button
         type="button"
-        className="btn btn-primary sticky bottom-[max(1rem,env(safe-area-inset-bottom))] mt-auto"
+        className="btn btn-primary mt-auto mb-[env(safe-area-inset-bottom)]"
         onClick={onContinue}
       >
         Continue

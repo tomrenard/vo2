@@ -23,6 +23,14 @@ import g_t2_pacing from "../../data/glossary/t2-pacing.json";
 import g_t2_testing from "../../data/glossary/t2-testing.json";
 import g_t2_thresholds from "../../data/glossary/t2-thresholds.json";
 import g_t2_vo2max from "../../data/glossary/t2-vo2max.json";
+import g_t3_adaptation from "../../data/glossary/t3-adaptation.json";
+import g_t3_detraining from "../../data/glossary/t3-detraining.json";
+import g_t3_hiit from "../../data/glossary/t3-hiit.json";
+import g_t3_intensity from "../../data/glossary/t3-intensity.json";
+import g_t3_load from "../../data/glossary/t3-load.json";
+import g_t3_periodization from "../../data/glossary/t3-periodization.json";
+import g_t3_strength from "../../data/glossary/t3-strength.json";
+import g_t3_trainability from "../../data/glossary/t3-trainability.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -47,6 +55,14 @@ import s_t2_pacing from "../../data/sources/t2-pacing.json";
 import s_t2_testing from "../../data/sources/t2-testing.json";
 import s_t2_thresholds from "../../data/sources/t2-thresholds.json";
 import s_t2_vo2max from "../../data/sources/t2-vo2max.json";
+import s_t3_adaptation from "../../data/sources/t3-adaptation.json";
+import s_t3_detraining from "../../data/sources/t3-detraining.json";
+import s_t3_hiit from "../../data/sources/t3-hiit.json";
+import s_t3_intensity from "../../data/sources/t3-intensity.json";
+import s_t3_load from "../../data/sources/t3-load.json";
+import s_t3_periodization from "../../data/sources/t3-periodization.json";
+import s_t3_strength from "../../data/sources/t3-strength.json";
+import s_t3_trainability from "../../data/sources/t3-trainability.json";
 import type { Glossary, Source } from "./content";
 
 export const GLOSSARY = {
@@ -73,6 +89,14 @@ export const GLOSSARY = {
   ...g_t2_testing,
   ...g_t2_thresholds,
   ...g_t2_vo2max,
+  ...g_t3_adaptation,
+  ...g_t3_detraining,
+  ...g_t3_hiit,
+  ...g_t3_intensity,
+  ...g_t3_load,
+  ...g_t3_periodization,
+  ...g_t3_strength,
+  ...g_t3_trainability,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -99,4 +123,12 @@ export const SOURCES = {
   ...s_t2_testing,
   ...s_t2_thresholds,
   ...s_t2_vo2max,
+  ...s_t3_adaptation,
+  ...s_t3_detraining,
+  ...s_t3_hiit,
+  ...s_t3_intensity,
+  ...s_t3_load,
+  ...s_t3_periodization,
+  ...s_t3_strength,
+  ...s_t3_trainability,
 } as Record<string, Source>;

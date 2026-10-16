@@ -1,0 +1,646 @@
+{
+ "id": "ad-heart",
+ "module": "t3-adaptation",
+ "title": "The athlete's heart: bigger chambers, slower beats",
+ "goal": "Explain how endurance training enlarges the heart, how fast it happens, how to read heart-size data fairly, and why a bigger stroke volume lowers resting heart rate and raises maximal cardiac output.",
+ "requires": [
+  "ad-mitochondria"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "eccentric-hypertrophy",
+    "concentric-hypertrophy",
+    "echocardiography",
+    "cardiac-mri",
+    "lv-mass",
+    "athletes-heart"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "heart-loads",
+   "title": "Volume load, pressure load",
+   "text": "The heart grows to fit the work it is given, and the kind of work shapes how it grows.\n\n- **Volume load.** Hours of running or riding send large volumes of blood back to the heart. The chamber gets bigger and the wall thickens in proportion: [eccentric hypertrophy](g:eccentric-hypertrophy).\n- **Pressure load.** Heavy lifting raises blood pressure in short bursts. The wall thickens without a bigger cavity: [concentric hypertrophy](g:concentric-hypertrophy).\n\nA meta-analysis of 59 [echocardiography](g:echocardiography) studies (1451 male athletes) tested this split. Relative wall thickness (wall thickness vs cavity size) was 0.36 in controls, 0.39 in endurance athletes and 0.44 in strength athletes; endurance athletes' cavity only tended to be wider than strength athletes' (53.7 vs 52.1 mm) [[c:heart-pluim]].",
+   "claims": [
+    {
+     "id": "heart-pluim",
+     "text": "Endurance and strength athletes showed divergent cardiac adaptations, with relative wall thickness 0.36 in controls, 0.39 in endurance and 0.44 in strength athletes.",
+     "grade": "moderate",
+     "sources": [
+      "pluim2000"
+     ],
+     "evidence": [
+      {
+       "source": "pluim2000",
+       "quote": "The overall mean relative left ventricular wall thickness of control subjects (0.36 mm) was significantly smaller than that of endurance-trained athletes (0.39 mm, P=0.001), combined endurance- and strength-trained athletes (0.40 mm, P=0.001), or strength-trained athletes (0.44 mm, P<0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "pluim2000",
+       "quote": "showed a trend toward a difference with respect to posterior wall thickness (10.3 versus 11.0 mm, P=0.078) and left ventricular internal diameter (53.7 versus 52.1 mm, P=0.055)",
+       "level": "abstract"
+      },
+      {
+       "source": "pluim2000",
+       "quote": "Results of this meta-analysis regarding athlete's heart confirm the hypothesis of divergent cardiac adaptations in dynamic and static sports.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "heart-load-type"
+  },
+  {
+   "type": "question",
+   "item": "heart-rower"
+  },
+  {
+   "type": "concept",
+   "id": "heart-update",
+   "title": "A newer look: volume, method and body size",
+   "text": "A later meta-analysis of elite young male athletes refined the picture [[c:heart-utomi]]:\n\n| | endurance | resistance |\n|---|---|---|\n| left ventricle end-diastolic volume | 171 mL | 131 mL |\n| clear concentric pattern? | – | not found |\n\nSo the bigger *volume* of the endurance heart is the robust finding; the thick-walled 'strength heart' was not.\n\nTwo cautions for reading any of these numbers:\n\n- **Method.** [Cardiac MRI](g:cardiac-mri) gave larger volumes than echocardiography: 178 vs 135 mL.\n- **Body size.** Bigger people have bigger hearts; [left ventricular mass](g:lv-mass) rose with body surface area.\n\nCompare hearts only measured the same way and scaled for size.",
+   "claims": [
+    {
+     "id": "heart-utomi",
+     "text": "In elite male athletes, LV end-diastolic volume was larger in endurance than resistance athletes (171 vs 131 mL); a concentric pattern was not found in resistance athletes; MRI gave larger volumes than echocardiography; body size predicted heart mass.",
+     "grade": "moderate",
+     "sources": [
+      "utomi2013"
+     ],
+     "evidence": [
+      {
+       "source": "utomi2013",
+       "quote": "Only LV end-diastolic diameter and volume were higher in endurance athletes than in resistance athletes: 54.8 mm (95% CI 54.1 to 55.6) vs 52.4 mm (95% CI 51.2 to 53.6); p<0.001 and 171 ml (95% CI 157 to 185) vs 131 ml (95% CI 120 to 142); p<0.001, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "utomi2013",
+       "quote": "A training-specific pattern of concentric hypertrophy was not discerned in resistance athletes. Both imaging mode and BSA can have a significant impact on the interpretation of AH data.",
+       "level": "abstract"
+      },
+      {
+       "source": "utomi2013",
+       "quote": "LV end-diastolic volume was larger when CMR was used rather than echocardiography: 178 ml (95% CI Q7 162 to 194) vs 135 ml (95% CI 128 to 142); p<0.001.",
+       "level": "abstract"
+      },
+      {
+       "source": "utomi2013",
+       "quote": "Meta-analysis regression models demonstrated positive and significant associations between body surface area (BSA) and LV mass, RV mass and LA diameter.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "heart-imaging-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "heart-body-size"
+  },
+  {
+   "type": "concept",
+   "id": "heart-year",
+   "title": "One year from couch to marathon",
+   "text": "Cross-sectional comparisons can't separate training from talent. So 12 sedentary adults (7 men, 5 women) trained for a year to run a marathon, with heart MRI every 3 months [[c:heart-arbab]]:\n\n- VO₂max rose from 40.3 to 48.7 mL·kg⁻¹·min⁻¹, with bigger maximal stroke volume and cardiac output.\n- Left and right ventricular mass grew to levels seen in elite athletes.\n- The **right** ventricle enlarged from the start. The **left** first thickened (concentric), and only after 6–9 months did its cavity widen, restoring the usual shape [[c:heart-arbab-sequence]].\n- Its stretchiness (compliance) still fell short of elite hearts.\n\nSo a year builds the size; the elite heart's full filling capacity may take longer, or need talent.",
+   "claims": [
+    {
+     "id": "heart-arbab",
+     "text": "One year of intensive endurance training in sedentary adults raised VO₂max from 40.3 to 48.7 mL·kg⁻¹·min⁻¹ and ventricular mass to elite levels, without reaching elite compliance.",
+     "grade": "weak",
+     "sources": [
+      "arbabzadeh2014"
+     ],
+     "evidence": [
+      {
+       "source": "arbabzadeh2014",
+       "quote": "Mean max rose from 40.3±1.6 to 48.7±2.5 mL/kg per minute after 1 year (P<0.00001), associated with an increase in both maximal cardiac output and stroke volume.",
+       "level": "abstract"
+      },
+      {
+       "source": "arbabzadeh2014",
+       "quote": "One year of prolonged and intensive endurance training leads to cardiac morphological adaptations in previously sedentary young subjects similar to those observed in elite endurance athletes; however, it is not sufficient to achieve similar levels of cardiac compliance and performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heart-arbab-sequence",
+     "text": "The left ventricle first remodelled concentrically for 6–9 months, then dilated; the right ventricle remodelled eccentrically from the outset.",
+     "grade": "weak",
+     "sources": [
+      "arbabzadeh2014"
+     ],
+     "evidence": [
+      {
+       "source": "arbabzadeh2014",
+       "quote": "Contrary to conventional thinking, the left ventricle responds to exercise with initial concentric but not eccentric remodeling during the first 6 to 9 months after commencement of endurance training depending on the duration and intensity of exercise. Thereafter, the left ventricle dilates and restores the baseline mass-to-volume ratio.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "heart-sequence"
+  },
+  {
+   "type": "question",
+   "item": "heart-arbab-limit"
+  },
+  {
+   "type": "concept",
+   "id": "heart-output",
+   "title": "A bigger stroke, a slower beat",
+   "text": "What does a bigger left ventricle buy? A bigger [stroke volume](g:stroke-volume). Since **cardiac output = HR × SV**:\n\n- **At rest**, the body needs about the same 5 L·min⁻¹ as before. With more blood per beat, fewer beats do it: hence the slow resting heart rate of the [athlete's heart](g:athletes-heart). (The heart-rate module covers the nerve and pacemaker side of [sinus bradycardia](g:sinus-bradycardia).)\n- **At maximum**, HRmax barely changes with training, so the bigger SV goes straight into a bigger maximal cardiac output: the main reason VO₂max rises.\n\nPumping function at rest is normal: [ejection fraction](g:ejection-fraction) didn't differ between athletes and controls [[c:heart-normal]]. When athlete's heart overlaps with disease is a medical question, covered in the module *The athlete's heart, AF and sudden cardiac death*.",
+   "claims": [
+    {
+     "id": "heart-normal",
+     "text": "Athletes' hearts showed no difference from controls in ejection fraction and other measures of pumping and filling function.",
+     "grade": "moderate",
+     "sources": [
+      "pluim2000"
+     ],
+     "evidence": [
+      {
+       "source": "pluim2000",
+       "quote": "With respect to cardiac function, there were no significant differences between athletes and control subjects in left ventricular ejection fraction, fractional shortening, and E/A ratio.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "heart-hr-example",
+   "title": "Same output, fewer beats",
+   "problem": "At rest a cyclist needs a cardiac output of 5.6 L·min⁻¹. Before training her stroke volume is 80 mL; after years of training it is 100 mL. What resting heart rate does each need?",
+   "steps": [
+    "HR = cardiac output ÷ SV. Convert to the same unit: 5.6 L·min⁻¹ = 5,600 mL·min⁻¹.",
+    "Before: 5,600 ÷ 80 = 70 beats·min⁻¹.",
+    "After: 5,600 ÷ 100 = 56 beats·min⁻¹. Same output, 14 fewer beats a minute."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "heart-hr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "heart-qmax-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "heart-ef"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Endurance training is a volume load: the left ventricle grows by eccentric hypertrophy (bigger cavity, matching wall).",
+    "The bigger endurance chamber (171 vs 131 mL in one meta-analysis) is the solid finding; a thick-walled 'strength heart' is less clear.",
+    "Compare hearts only by the same method (MRI reads larger than echo) and scaled for body size.",
+    "In one year sedentary adults reached elite ventricular mass; the left ventricle thickened first and widened after 6–9 months; elite compliance wasn't reached.",
+    "Bigger SV gives the same resting output with fewer beats, and more maximal output at the same HRmax; pumping function stays normal."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "heart-load-type",
+   "concept": "heart-loads",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "pluim2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does endurance training mainly enlarge the heart's chamber, rather than just thicken its wall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hours of high blood return load it with volume",
+       "correct": true,
+       "why": "Right: a volume load stretches the chamber, which grows with a matching wall: eccentric hypertrophy."
+      },
+      {
+       "id": "b",
+       "text": "Endurance training raises blood pressure more than lifting",
+       "why": "Brief, very high pressures come from heavy lifting, which favours wall thickening."
+      },
+      {
+       "id": "c",
+       "text": "The heart muscle shrinks to make room for more blood",
+       "why": "The wall thickens a little too; the heart grows overall."
+      },
+      {
+       "id": "d",
+       "text": "Higher heart rates stretch the wall thinner",
+       "why": "Faster beating shortens filling; the chamber grows from volume load, not rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-rower",
+   "concept": "heart-loads",
+   "bloom": "apply",
+   "sources": [
+    "pluim2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cycling and rowing mix long volume loads with high-force strokes. Given the meta-analysis values for endurance (0.39) and strength athletes (0.44), where would you expect these combined-sport athletes to fall for relative wall thickness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Between the two groups; the meta-analysis found 0.40",
+       "correct": true,
+       "why": "Right: a mix of both loads gave a value in between, 0.40."
+      },
+      {
+       "id": "b",
+       "text": "Above strength athletes, because rowing is so hard",
+       "why": "They were at 0.40, below strength athletes' 0.44."
+      },
+      {
+       "id": "c",
+       "text": "Below untrained controls, because the cavity grows most",
+       "why": "Controls had the lowest value, 0.36."
+      },
+      {
+       "id": "d",
+       "text": "Equal to controls, since the two loads cancel",
+       "why": "0.40 was clearly above controls' 0.36."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-imaging-appraisal",
+   "concept": "heart-update",
+   "bloom": "evaluate",
+   "sources": [
+    "utomi2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Study A (echocardiography) reports runners' left ventricle volume as 140 mL; study B (cardiac MRI) reports 175 mL in a similar group. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The gap may be mostly method: MRI reads larger volumes than echo",
+       "correct": true,
+       "why": "Right: in pooled data MRI gave 178 vs 135 mL for echo. Compare like with like."
+      },
+      {
+       "id": "b",
+       "text": "Group B trained far more and has much bigger hearts",
+       "why": "Method alone can explain a gap this size; you can't credit training."
+      },
+      {
+       "id": "c",
+       "text": "Study A is wrong, as echocardiography doesn't measure volume",
+       "why": "Echo does measure volume, just systematically lower than MRI."
+      },
+      {
+       "id": "d",
+       "text": "Group B has heart disease",
+       "why": "A larger MRI volume in athletes is expected and says nothing about disease here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-body-size",
+   "concept": "heart-update",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "utomi2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 95 kg, 1.95 m rower has a heavier left ventricle than a 58 kg, 1.68 m triathlete. What must you do before concluding his heart adapted more?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Scale for body size, such as body surface area",
+       "correct": true,
+       "why": "Right: heart mass rises with body surface area, so raw values favour big athletes."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: heavier heart means more adaptation",
+       "why": "Bigger bodies have bigger hearts regardless of training."
+      },
+      {
+       "id": "c",
+       "text": "Compare their maximal heart rates",
+       "why": "HRmax doesn't tell you how much the heart grew."
+      },
+      {
+       "id": "d",
+       "text": "Check that both were measured with echocardiography only",
+       "why": "Same method matters, but it doesn't remove the body-size effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-sequence",
+   "concept": "heart-year",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "arbabzadeh2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the year-long marathon study, how did the left ventricle first respond to training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its wall thickened first; its cavity widened only after 6–9 months",
+       "correct": true,
+       "why": "Right: initial concentric remodelling, then dilation."
+      },
+      {
+       "id": "b",
+       "text": "Its cavity widened from the first month",
+       "why": "That was the right ventricle; the left lagged."
+      },
+      {
+       "id": "c",
+       "text": "It didn't change in the first year",
+       "why": "Its mass reached elite levels."
+      },
+      {
+       "id": "d",
+       "text": "It shrank as the right ventricle took over",
+       "why": "Both ventricles grew."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-arbab-limit",
+   "concept": "heart-year",
+   "bloom": "evaluate",
+   "sources": [
+    "arbabzadeh2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The one-year study followed 12 sedentary adults with no control group. What does that design limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How general and how certain the size of the changes is",
+       "correct": true,
+       "why": "Right: 12 people, no comparison group, so the exact numbers are rough, though the direction is clear."
+      },
+      {
+       "id": "b",
+       "text": "Whether training rather than talent can enlarge a heart",
+       "why": "That is what the longitudinal design does answer: the same people changed with training."
+      },
+      {
+       "id": "c",
+       "text": "Whether MRI can measure ventricular mass",
+       "why": "MRI is the more exact method; that is not the limit."
+      },
+      {
+       "id": "d",
+       "text": "Whether VO₂max rose",
+       "why": "VO₂max rose from 40.3 to 48.7 mL·kg⁻¹·min⁻¹, a large, clear change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heart-hr-calc",
+   "concept": "heart-output",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "pluim2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner needs a resting cardiac output of 5.4 L·min⁻¹. His stroke volume rises from 75 mL to 90 mL with training. What is his resting heart rate after training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 5,400 ÷ 90 = 60."
+      },
+      {
+       "id": "b",
+       "text": "72 beats·min⁻¹",
+       "why": "That is the before value (5,400 ÷ 75)."
+      },
+      {
+       "id": "c",
+       "text": "0.06 beats·min⁻¹",
+       "why": "This forgets to convert L to mL: 5.4 ÷ 90."
+      },
+      {
+       "id": "d",
+       "text": "486 beats·min⁻¹",
+       "why": "This multiplies: 5.4 × 90. HR = output ÷ SV."
+      }
+     ],
+     "solution": "HR = cardiac output ÷ SV = 5,400 mL·min⁻¹ ÷ 90 mL = 60 beats·min⁻¹ (before: 5,400 ÷ 75 = 72)."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete needs a resting cardiac output of 6.0 L·min⁻¹. Her stroke volume rises from 80 mL to 120 mL over years of training. What is her resting heart rate after?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 6,000 ÷ 120 = 50."
+      },
+      {
+       "id": "b",
+       "text": "75 beats·min⁻¹",
+       "why": "That is the before value (6,000 ÷ 80)."
+      },
+      {
+       "id": "c",
+       "text": "0.05 beats·min⁻¹",
+       "why": "This forgets to convert L to mL: 6.0 ÷ 120."
+      },
+      {
+       "id": "d",
+       "text": "720 beats·min⁻¹",
+       "why": "This multiplies: 6.0 × 120. HR = output ÷ SV."
+      }
+     ],
+     "solution": "HR = cardiac output ÷ SV = 6,000 mL·min⁻¹ ÷ 120 mL = 50 beats·min⁻¹ (before: 6,000 ÷ 80 = 75)."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist needs 5.2 L·min⁻¹ at rest. His stroke volume rises from 65 mL to 104 mL. What is his resting heart rate after?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 5,200 ÷ 104 = 50."
+      },
+      {
+       "id": "b",
+       "text": "80 beats·min⁻¹",
+       "why": "That is the before value (5,200 ÷ 65)."
+      },
+      {
+       "id": "c",
+       "text": "0.05 beats·min⁻¹",
+       "why": "This forgets to convert L to mL: 5.2 ÷ 104."
+      },
+      {
+       "id": "d",
+       "text": "541 beats·min⁻¹",
+       "why": "This multiplies: 5.2 × 104. HR = output ÷ SV."
+      }
+     ],
+     "solution": "HR = cardiac output ÷ SV = 5,200 mL·min⁻¹ ÷ 104 mL = 50 beats·min⁻¹ (before: 5,200 ÷ 65 = 80)."
+    }
+   ]
+  },
+  {
+   "id": "heart-qmax-calc",
+   "concept": "heart-output",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "arbabzadeh2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's HRmax stays at 190 beats·min⁻¹ while training raises her maximal stroke volume from 110 to 130 mL. By how much does her maximal cardiac output rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.8 L·min⁻¹ (20.9 → 24.7)",
+       "correct": true,
+       "why": "Right: 190 × 0.110 = 20.9 and 190 × 0.130 = 24.7 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "20 L·min⁻¹",
+       "why": "20 is the SV change in mL; multiply it by HR and convert: 190 × 20 mL = 3.8 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "0 L·min⁻¹, since HRmax didn't change",
+       "why": "Cardiac output is HR × SV; a bigger SV raises it even at the same HR."
+      },
+      {
+       "id": "d",
+       "text": "3,800 L·min⁻¹",
+       "why": "This forgets to convert mL to L."
+      }
+     ],
+     "solution": "Q = HR × SV. Before: 190 × 110 mL = 20,900 mL·min⁻¹ = 20.9 L·min⁻¹. After: 190 × 130 = 24,700 mL·min⁻¹ = 24.7 L·min⁻¹. Rise: 3.8 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's HRmax stays at 180 beats·min⁻¹ while his maximal stroke volume rises from 120 to 150 mL. By how much does his maximal cardiac output rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.4 L·min⁻¹ (21.6 → 27.0)",
+       "correct": true,
+       "why": "Right: 180 × 0.120 = 21.6 and 180 × 0.150 = 27.0 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "30 L·min⁻¹",
+       "why": "30 is the SV change in mL; multiply by HR and convert: 180 × 30 mL = 5.4 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "0 L·min⁻¹, since HRmax didn't change",
+       "why": "A bigger SV raises Q even at the same HR."
+      },
+      {
+       "id": "d",
+       "text": "5,400 L·min⁻¹",
+       "why": "This forgets to convert mL to L."
+      }
+     ],
+     "solution": "Q = HR × SV. Before: 180 × 120 mL = 21.6 L·min⁻¹. After: 180 × 150 mL = 27.0 L·min⁻¹. Rise: 5.4 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "heart-ef",
+   "concept": "heart-output",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "pluim2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Compared with untrained people, what is the resting ejection fraction of an endurance athlete's heart, typically?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same: pumping function is normal",
+       "correct": true,
+       "why": "Right: the meta-analysis found no difference in ejection fraction."
+      },
+      {
+       "id": "b",
+       "text": "Much higher, which is why stroke volume is bigger",
+       "why": "SV is bigger mainly because the chamber holds more, not because a bigger share is ejected."
+      },
+      {
+       "id": "c",
+       "text": "Much lower, a sign of a weakened heart",
+       "why": "Athletes' hearts showed normal function."
+      },
+      {
+       "id": "d",
+       "text": "Zero at rest, since the heart rate is so slow",
+       "why": "Every beat ejects blood; a slow rate doesn't stop ejection."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

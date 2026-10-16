@@ -1,0 +1,720 @@
+{
+ "id": "ad-mitochondria",
+ "module": "t3-adaptation",
+ "title": "Mitochondrial biogenesis: dose, time and the volume debate",
+ "goal": "Explain how fast mitochondria adapt and fade, how content differs from function and how each is measured, and what the evidence says about volume versus intensity.",
+ "requires": [
+  "ad-signals"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "mtdna",
+    "respirometry",
+    "sprint-interval-training"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mit-time-course",
+   "title": "Biogenesis: how fast?",
+   "text": "[Mitochondrial biogenesis](g:mitochondrial-biogenesis) is the slow end of last lesson's signals: more mitochondrial protein and membrane, and a network that is remodelled as it grows [[c:mit-remodel]].\n\nIt can start fast. In the seven-session interval study, citrate synthase activity and [mtDNA](g:mtdna) were already up by session 3, within the first week [[c:mit-perry]].\n\nBut the dose has to be there. Ten men did interval cycling in three phases [[c:mit-granata16]]:\n\n| phase | mitochondria |\n|---|---|\n| 4 weeks, 3 sessions a week | no change |\n| 20 days, 2 sessions a day | respiration and CS up about 40–50% |\n| 2 weeks, 5 sessions in all | back to baseline, except CS (+36%) |\n\nWhat comes fast with a big dose goes fast when the dose drops.",
+   "claims": [
+    {
+     "id": "mit-remodel",
+     "text": "Training-induced biogenesis involves remodelling of the mitochondrial network as well as more content.",
+     "grade": "weak",
+     "sources": [
+      "perry2010"
+     ],
+     "evidence": [
+      {
+       "source": "perry2010",
+       "quote": "training-induced mitochondrial biogenesis appears to involve re-modelling in addition to increased mitochondrial content",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-perry",
+     "text": "Citrate synthase activity and mtDNA rose by the third of seven interval sessions.",
+     "grade": "weak",
+     "sources": [
+      "perry2010"
+     ],
+     "evidence": [
+      {
+       "source": "perry2010",
+       "quote": "Citrate synthase (CS) and β-HAD mRNA were rapidly increased (1 session), followed 2 sessions later (session 3) by increases in CS and β-HAD activities, and mitochondrial DNA.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-granata16",
+     "text": "No mitochondrial change after 4 weeks of normal-volume training; 40–50% rises after 20 days of twice-daily training, mostly reversed after 2 weeks of reduced volume.",
+     "grade": "weak",
+     "sources": [
+      "granata2016"
+     ],
+     "evidence": [
+      {
+       "source": "granata2016",
+       "quote": "No mitochondrial parameter changed after NVT. After HVT, mitochondrial respiration and citrate synthase activity (∼40-50%), as well as the protein content of electron transport system (ETS) subunits (∼10-40%), and that of peroxisome proliferator-activated receptor γ coactivator-1α (PGC-1α), NRF1, mitochondrial transcription factor A (TFAM), PHF20, and p53 (∼65-170%) all increased compared to baseline",
+       "level": "abstract"
+      },
+      {
+       "source": "granata2016",
+       "quote": "After RVT, all the mitochondrial parameters measured except citrate synthase activity (∼36% above initial) were not significantly different compared to baseline (all P > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mit-dose-phases"
+  },
+  {
+   "type": "question",
+   "item": "mit-reversal"
+  },
+  {
+   "type": "concept",
+   "id": "mit-measures",
+   "title": "Content and function are different numbers",
+   "text": "The muscle module met the markers of mitochondrial *content*: citrate synthase (CS), cardiolipin and complex I tracked electron-microscope counts, while mtDNA did not [[c:mit-mtdna]].\n\n*Function* is measured by [respirometry](g:respirometry): fibres from a [biopsy](g:muscle-biopsy) are given fuel in a sealed chamber and their oxygen use is recorded. Two ways to express it:\n\n- **per mg of muscle** (wet weight): the whole sample's capacity, which rises if there are more mitochondria *or* better ones;\n- **per unit of CS**: capacity per unit of mitochondria, the 'quality' of each.\n\nThe two can split apart: training can change content without changing respiration per mitochondrion, or the reverse [[c:mit-dissociate]].",
+   "claims": [
+    {
+     "id": "mit-mtdna",
+     "text": "CS, cardiolipin and complex I tracked mitochondrial content in human muscle; mtDNA did not.",
+     "grade": "weak",
+     "sources": [
+      "larsen2012"
+     ],
+     "evidence": [
+      {
+       "source": "larsen2012",
+       "quote": "We conclude that cardiolipin content, and CS and complex I activities are the biomarkers that exhibit the strongest association with mitochondrial content, while complex IV activity is strongly associated with OXPHOS capacity in human skeletal muscle.",
+       "level": "abstract"
+      },
+      {
+       "source": "larsen2012",
+       "quote": "mtDNA was not related to mitochondrial content.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-dissociate",
+     "text": "Training-induced changes in mitochondrial content and in respiratory function often dissociate.",
+     "grade": "moderate",
+     "sources": [
+      "granata2018"
+     ],
+     "evidence": [
+      {
+       "source": "granata2018",
+       "quote": "As a consequence, a dissociation between training-induced changes in mitochondrial content and mitochondrial respiratory function is often observed.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mit-mtdna-marker"
+  },
+  {
+   "type": "example",
+   "id": "mit-norm-example",
+   "title": "More mitochondria, or better ones?",
+   "problem": "Before training, a cyclist's fibres respire at 45 pmol O₂·s⁻¹·mg⁻¹ (per mg of wet muscle) with CS activity of 7.5 (lab units). After 6 weeks: 60 pmol O₂·s⁻¹·mg⁻¹ and CS 10. Did each mitochondrion get better?",
+   "steps": [
+    "Respiration per unit of CS = respiration per mg ÷ CS.",
+    "Before: 45 ÷ 7.5 = 6.0. After: 60 ÷ 10 = 6.0.",
+    "Per mg, respiration rose by a third (45 → 60), but per unit of CS it didn't change: the gain came from **more** mitochondria, not better ones."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mit-norm-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mit-content-function"
+  },
+  {
+   "type": "concept",
+   "id": "mit-volume-intensity",
+   "title": "Volume or intensity?",
+   "text": "The muscle module gave the headline: volume seems to drive content, intensity the respiration of each mitochondrion. That comes from a review pooling human training studies [[c:mit-granata18]].\n\nBut a neat trial points to intensity for content too. Ten men trained one leg with intervals and the other continuously, same work and session time, six sessions in two weeks. The interval leg ended with higher CS (10.2 vs 8.4) and higher respiration per mg; respiration per unit of CS didn't change in either leg [[c:mit-singleleg]]. [Sprint interval training](g:sprint-interval-training) raises content about as much as steady training despite far less work [[c:mit-sit]].\n\nA 2019 review: no consensus yet, partly due to methods [[c:mit-bishop]].",
+   "claims": [
+    {
+     "id": "mit-granata18",
+     "text": "Training volume may be a critical factor for mitochondrial content, relative intensity for respiratory function.",
+     "grade": "disputed",
+     "sources": [
+      "granata2018"
+     ],
+     "evidence": [
+      {
+       "source": "granata2018",
+       "quote": "Specifically, we report that training volume may be a critical factor affecting changes in mitochondrial content, whereas relative exercise intensity is an important determinant of changes in mitochondrial respiratory function.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-singleleg",
+     "text": "With work matched, interval single-leg cycling raised CS and mass-specific respiration more than continuous training, without changing respiration per unit of CS.",
+     "grade": "weak",
+     "sources": [
+      "macinnis2017b"
+     ],
+     "evidence": [
+      {
+       "source": "macinnis2017b",
+       "quote": "Post-training, citrate synthase (CS) maximal activity (10.2 ± 0.8 vs. 8.4 ± 0.9 mmol kg protein-1  min-1 ) and mass-specific [pmol O2 •(s•mg wet weight)-1 ] oxidative phosphorylation capacities (complex I: 23.4 ± 3.2 vs. 17.1 ± 2.8; complexes I and II: 58.2 ± 7.5 vs. 42.2 ± 5.3) were greater in HIIT relative to MICT (interaction effects, P < 0.05); however, mitochondrial function [i.e. pmol O2 •(s•CS maximal activity)-1 ] measured under various conditions was unaffected by training (P > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-sit",
+     "text": "Sprint interval training increases mitochondrial content about as much as moderate continuous training despite less volume.",
+     "grade": "moderate",
+     "sources": [
+      "macinnis2017a"
+     ],
+     "evidence": [
+      {
+       "source": "macinnis2017a",
+       "quote": "It is well established that SIT increases mitochondrial content to a similar extent to MICT despite a reduced exercise volume.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mit-bishop",
+     "text": "There is no consensus on how effective high-intensity exercise is for mitochondrial biogenesis in humans.",
+     "grade": "disputed",
+     "sources": [
+      "bishop2019"
+     ],
+     "evidence": [
+      {
+       "source": "bishop2019",
+       "quote": "However, there are conflicting findings in the literature, and a consensus has not been reached regarding the efficacy of high-intensity exercise to promote mitochondrial biogenesis in humans.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "What drives the rise in mitochondrial content: training volume or intensity?",
+    "sides": [
+     {
+      "position": "Volume: across human studies, total training volume tracks the rise in content; intensity mainly improves respiration per mitochondrion.",
+      "sources": [
+       "granata2018",
+       "granata2016"
+      ]
+     },
+     {
+      "position": "Intensity: with work matched in the same person, intervals raised content more, and sprint intervals match steady training with far less volume.",
+      "sources": [
+       "macinnis2017b",
+       "macinnis2017a"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "mit-singleleg-design"
+  },
+  {
+   "type": "question",
+   "item": "mit-debate"
+  },
+  {
+   "type": "question",
+   "item": "mit-sit-volume"
+  },
+  {
+   "type": "concept",
+   "id": "mit-practice",
+   "title": "What it means for training",
+   "text": "Strip the debate down and three practical points survive:\n\n1. **Both levers work.** Steady volume and hard intervals each raise mitochondrial content; which one wins per hour is unsettled.\n2. **Dose matters.** In the three-phase study, three interval sessions a week for 4 weeks did nothing measurable; twice a day for 20 days did.\n3. **It's quickly lost.** Most of the gain was gone after two weeks of much less training.\n\nRemember also what mitochondria buy you. They matter most below VO₂max: more fat burnt and less glycogen used at a given pace [[c:mit-holloszy]], which helps a triathlete hold pace late in the bike and run.",
+   "claims": [
+    {
+     "id": "mit-holloszy",
+     "text": "More mitochondria let trained muscle use less glycogen and more fat, and make less lactate, at the same workload.",
+     "grade": "strong",
+     "sources": [
+      "holloszy1984"
+     ],
+     "evidence": [
+      {
+       "source": "holloszy1984",
+       "quote": "The major metabolic consequences of the adaptations of muscle to endurance exercise are a slower utilization of muscle glycogen and blood glucose, a greater reliance on fat oxidation, and less lactate production during exercise of a given intensity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mit-benefit-submax"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Mitochondrial biogenesis can start within a week (CS and mtDNA up by session 3), but needs enough dose: 3 sessions a week for 4 weeks did nothing measurable in one study.",
+    "Gains made fast are lost fast: two weeks of much less training undid most of a 40–50% rise.",
+    "Content (CS, cardiolipin; not mtDNA) and function (respirometry per mg or per unit of CS) are different numbers that can change separately.",
+    "Volume vs intensity is open: a review links volume to content, a matched-work trial favoured intervals, and sprint intervals match steady training with far less work.",
+    "More mitochondria mainly pay off below VO₂max: more fat, less glycogen and lactate at a given pace."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mit-dose-phases",
+   "concept": "mit-time-course",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "granata2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Ten men did 4 weeks of interval cycling three times a week (no mitochondrial change), then 20 days twice a day (CS and respiration up 40–50%). What does this best show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training volume is a key driver of mitochondrial gains",
+       "correct": true,
+       "why": "Right: the same kind of session gave nothing at a low dose and a big rise at a high dose."
+      },
+      {
+       "id": "b",
+       "text": "Interval training can't build mitochondria",
+       "why": "It did, once the dose was high enough."
+      },
+      {
+       "id": "c",
+       "text": "Mitochondria take months to respond, whatever the dose",
+       "why": "The large rise came within 20 days of high-volume training."
+      },
+      {
+       "id": "d",
+       "text": "The first 4 weeks were wasted, so only the last phase counted",
+       "why": "No change was measured, but the phases came in a fixed order with no control group, so the first block may have prepared the ground."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-reversal",
+   "concept": "mit-time-course",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "granata2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 20-day high-volume training camp raised her mitochondrial markers by about 45%, a runner trains only five times in the next two weeks. What does the evidence predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Most markers fall back to near baseline, CS stays somewhat up",
+       "correct": true,
+       "why": "Right: after the reduced-volume phase only CS stayed raised (+36%); the rest returned to baseline."
+      },
+      {
+       "id": "b",
+       "text": "The gains hold for months, since mitochondria are stable",
+       "why": "They reversed within two weeks of much lower volume."
+      },
+      {
+       "id": "c",
+       "text": "The markers keep rising as she recovers",
+       "why": "Recovery from fatigue isn't the same as adaptation; the markers fell."
+      },
+      {
+       "id": "d",
+       "text": "Everything drops below where she started",
+       "why": "They returned to baseline, not below it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's twice-daily camp raised mitochondrial respiration by about 45%. He then rides only five times in the next fortnight. What does the evidence predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Most of the gain is lost, with CS staying somewhat raised",
+       "correct": true,
+       "why": "Right: in the study, all markers except CS (+36%) were back to baseline after two weeks of reduced volume."
+      },
+      {
+       "id": "b",
+       "text": "The gain holds, because two weeks is too short to lose anything",
+       "why": "Mitochondrial gains reversed within two weeks."
+      },
+      {
+       "id": "c",
+       "text": "Respiration rises further as fatigue clears",
+       "why": "The study measured a fall, not a rise."
+      },
+      {
+       "id": "d",
+       "text": "Respiration falls well below his pre-camp level",
+       "why": "It returned to baseline, not below."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-mtdna-marker",
+   "concept": "mit-measures",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "larsen2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab wants one quick, valid marker of how many mitochondria a biopsy contains. Which of these is the best choice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Citrate synthase activity",
+       "correct": true,
+       "why": "Right: CS activity was among the markers that best tracked electron-microscope counts."
+      },
+      {
+       "id": "b",
+       "text": "Mitochondrial DNA copy number",
+       "why": "mtDNA was not related to mitochondrial content in the validation study."
+      },
+      {
+       "id": "c",
+       "text": "PGC-1α mRNA",
+       "why": "PGC-1α mRNA is a short-lived signal that spikes after a session, not a count of mitochondria."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max",
+       "why": "VO₂max is a whole-body number set mostly by oxygen delivery."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-norm-calc",
+   "concept": "mit-measures",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "granata2018",
+    "macinnis2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's fibres respire at 40 pmol O₂·s⁻¹·mg⁻¹ with CS 8 before training, and 55 pmol O₂·s⁻¹·mg⁻¹ with CS 11 after. What is respiration per unit of CS after training, and what changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.0, unchanged: there are more mitochondria, not better ones",
+       "correct": true,
+       "why": "Right: 40 ÷ 8 = 5.0 and 55 ÷ 11 = 5.0."
+      },
+      {
+       "id": "b",
+       "text": "6.9, up: each mitochondrion respires better",
+       "why": "This divides 55 by the old CS (8). Use the CS measured at the same time."
+      },
+      {
+       "id": "c",
+       "text": "0.2, down: each mitochondrion got worse",
+       "why": "This divides CS by respiration (11 ÷ 55). Respiration per CS = respiration ÷ CS."
+      },
+      {
+       "id": "d",
+       "text": "15, up: respiration rose by 15",
+       "why": "15 is the rise per mg (55 − 40); it ignores that CS rose too."
+      }
+     ],
+     "solution": "Per unit of CS = respiration per mg ÷ CS. Before: 40 ÷ 8 = 5.0. After: 55 ÷ 11 = 5.0. Unchanged: the 38% rise per mg came from more mitochondria (CS +38%)."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's fibres respire at 48 pmol O₂·s⁻¹·mg⁻¹ with CS 8 before a block, and 63 pmol O₂·s⁻¹·mg⁻¹ with CS 9 after. What is respiration per unit of CS after, and what changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7.0, up from 6.0: each mitochondrion respires better",
+       "correct": true,
+       "why": "Right: 48 ÷ 8 = 6.0 and 63 ÷ 9 = 7.0. Content rose a little, function per mitochondrion more."
+      },
+      {
+       "id": "b",
+       "text": "6.0, unchanged: only content changed",
+       "why": "6.0 is the before value; after it is 63 ÷ 9 = 7.0."
+      },
+      {
+       "id": "c",
+       "text": "7.9, up: each mitochondrion respires about 30% better",
+       "why": "63 ÷ 8 = 7.9 uses the pre-training CS; use the CS measured at the same time."
+      },
+      {
+       "id": "d",
+       "text": "0.14, down: each mitochondrion got worse",
+       "why": "This divides CS by respiration (9 ÷ 63)."
+      }
+     ],
+     "solution": "Per unit of CS = respiration per mg ÷ CS. Before: 48 ÷ 8 = 6.0. After: 63 ÷ 9 = 7.0. Up by about 17%: here function per mitochondrion improved as well as content (CS +12.5%)."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's fibres respire at 50 pmol O₂·s⁻¹·mg⁻¹ with CS 10 before, and 60 pmol O₂·s⁻¹·mg⁻¹ with CS 12 after training. What is respiration per unit of CS after, and what changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.0, unchanged: more mitochondria, not better ones",
+       "correct": true,
+       "why": "Right: 50 ÷ 10 = 5.0 and 60 ÷ 12 = 5.0."
+      },
+      {
+       "id": "b",
+       "text": "6.0, up: each mitochondrion respires better",
+       "why": "60 ÷ 10 = 6.0 uses the pre-training CS."
+      },
+      {
+       "id": "c",
+       "text": "10, up: respiration per mitochondrion rose by 10",
+       "why": "10 is the rise per mg; it ignores the 20% rise in CS."
+      },
+      {
+       "id": "d",
+       "text": "0.2, down: each mitochondrion got worse",
+       "why": "12 ÷ 60 = 0.2 is upside down."
+      }
+     ],
+     "solution": "Per unit of CS = respiration per mg ÷ CS. Before: 50 ÷ 10 = 5.0. After: 60 ÷ 12 = 5.0. Unchanged: the 20% rise per mg matches the 20% rise in CS."
+    }
+   ]
+  },
+  {
+   "id": "mit-content-function",
+   "concept": "mit-measures",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "granata2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a training block, a cyclist's CS activity is up 30% but respiration per unit of CS is unchanged. Which description fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More mitochondria of the same quality",
+       "correct": true,
+       "why": "Right: content rose, function per mitochondrion didn't."
+      },
+      {
+       "id": "b",
+       "text": "The same number of mitochondria, each working better",
+       "why": "That would show as higher respiration per unit of CS with CS unchanged."
+      },
+      {
+       "id": "c",
+       "text": "No adaptation, since respiration per CS didn't change",
+       "why": "Content is an adaptation: the muscle's total capacity per mg rose."
+      },
+      {
+       "id": "d",
+       "text": "Fewer but bigger mitochondria",
+       "why": "CS rose, so total mitochondrial content went up, whatever their size."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-singleleg-design",
+   "concept": "mit-volume-intensity",
+   "bloom": "evaluate",
+   "recallFirst": true,
+   "sources": [
+    "macinnis2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the single-leg study, each man trained one leg with intervals and the other continuously. What is the main strength of this design, and its main limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same person, same genes and diet for both legs; but only 10 men for 2 weeks",
+       "correct": true,
+       "why": "Right: within-person control removes many confounders, but the sample and duration are small."
+      },
+      {
+       "id": "b",
+       "text": "It proves volume doesn't matter; but it used women only",
+       "why": "Work was matched, so volume wasn't tested; and the participants were men."
+      },
+      {
+       "id": "c",
+       "text": "It measured performance in races; but legs can't be compared",
+       "why": "It measured muscle markers, not races; comparing legs within a person is the point of the design."
+      },
+      {
+       "id": "d",
+       "text": "It ran for a full season; but there was no randomisation",
+       "why": "It lasted 2 weeks, and legs were randomly assigned."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-debate",
+   "concept": "mit-volume-intensity",
+   "bloom": "evaluate",
+   "recallFirst": true,
+   "sources": [
+    "granata2018",
+    "macinnis2017b",
+    "bishop2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: 'Science has settled it: only volume builds mitochondria.' How should you judge that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: a review favours volume, but a matched-work trial favoured intensity",
+       "correct": true,
+       "why": "Right: the question is open; reviews of the field say no consensus yet."
+      },
+      {
+       "id": "b",
+       "text": "Correct: intensity only changes how each mitochondrion works",
+       "why": "That's one reading of the evidence, contradicted by the single-leg trial."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: only intensity builds mitochondria",
+       "why": "Volume studies show big content gains too; neither side is settled."
+      },
+      {
+       "id": "d",
+       "text": "Correct, because sprint intervals don't change content",
+       "why": "Sprint intervals raise content about as much as steady training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-sit-volume",
+   "concept": "mit-volume-intensity",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "macinnis2017a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does sprint interval training compare with moderate continuous training for raising mitochondrial content?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same rise, with much less total work",
+       "correct": true,
+       "why": "Right: SIT matches continuous training despite a reduced exercise volume."
+      },
+      {
+       "id": "b",
+       "text": "Far smaller rise, because the volume is tiny",
+       "why": "Despite little volume, the rise is similar."
+      },
+      {
+       "id": "c",
+       "text": "No rise at all, since sprints are anaerobic",
+       "why": "Sprints strongly activate AMPK and p38 MAPK, and content does rise."
+      },
+      {
+       "id": "d",
+       "text": "Double the rise for the same total work",
+       "why": "SIT is compared at much less work, not the same work, and gives a similar rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mit-benefit-submax",
+   "concept": "mit-practice",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "holloszy1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a season of base training, a triathlete holds the same bike power with lower blood lactate. Which muscle adaptation best explains it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More mitochondria: more fat and less glycogen used at that power",
+       "correct": true,
+       "why": "Right: more mitochondria disturb the fibre less at the same work, so it uses fat more and makes less lactate."
+      },
+      {
+       "id": "b",
+       "text": "A higher VO₂max, so the power is a smaller share of it",
+       "why": "VO₂max is a ceiling; lactate at a fixed submaximal power falls mainly through muscle adaptation."
+      },
+      {
+       "id": "c",
+       "text": "More type IIx fibres, which make power more cheaply",
+       "why": "Training turns IIx into IIa; more IIx would raise lactate."
+      },
+      {
+       "id": "d",
+       "text": "Lower PGC-1α levels, so the fibres are less stressed",
+       "why": "PGC-1α protein goes up with training, not down."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

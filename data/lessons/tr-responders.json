@@ -1,0 +1,688 @@
+{
+ "id": "tr-responders",
+ "module": "t3-trainability",
+ "title": "Responders, non-responders and dose",
+ "goal": "Judge whether someone is a true non-responder, explain how Montero and Lundby made non-response disappear with more training and what limits that result, and decide what an athlete should do after a flat training block.",
+ "requires": [
+  "tr-genes"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "non-responder",
+    "dose-response"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ir-true",
+   "title": "Real differences, shaky labels",
+   "text": "From *Noise, worthwhile changes and non-responders* you know the trap: one test before and one after can't separate a small gain from noise. So are the differences between people real at all?\n\nOne study tackled it head on. Of 36 untrained middle-aged adults, a training group walked or jogged three times a week for a year, with extra VO₂max tests at 3, 6 and 9 months; the others were a control group for 6 months. With that many tests, true differences in response big enough to matter could be shown [[c:h18-real]].\n\nBut when the 20 people in the training group were sorted into responders and [non-responders](g:non-responder) by different accepted methods, only 11 got the same label every time [[c:h18-labels]]. People truly differ; naming who is who is much harder.",
+   "claims": [
+    {
+     "id": "h18-real",
+     "text": "With repeated testing during a year of training, relevant individual differences in VO₂max response could be shown.",
+     "grade": "weak",
+     "sources": [
+      "hecksteden2018"
+     ],
+     "evidence": [
+      {
+       "source": "hecksteden2018",
+       "quote": "Individual training response of relevant magnitude (>0.2 × baseline variability in V̇o2max) could be demonstrated by several approaches.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "h18-labels",
+     "text": "Only 11 of 20 participants in the training group were classified the same way across methods, which limits responder labels.",
+     "grade": "weak",
+     "sources": [
+      "hecksteden2018"
+     ],
+     "evidence": [
+      {
+       "source": "hecksteden2018",
+       "quote": "Regarding the classification of individuals, only 11 of 20 subjects were consistently classified, demonstrating remarkable disagreement between approaches.",
+       "level": "abstract"
+      },
+      {
+       "source": "hecksteden2018",
+       "quote": "These results are in support of relevant interindividual variability in training efficacy and stress the limitations of a responder classification.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-real-vs-label"
+  },
+  {
+   "type": "question",
+   "item": "ir-repeat-design"
+  },
+  {
+   "type": "concept",
+   "id": "ir-dose",
+   "title": "Montero and Lundby: more sessions, fewer non-responders",
+   "text": "Montero and Lundby asked whether non-response depends on the dose. 78 healthy adults trained for 6 weeks in five groups: one, two, three, four or five 60-minute sessions a week. Fitness was measured as peak power in a ramp test ([maximal aerobic power](g:maximal-aerobic-power)), and a non-responder was anyone whose change stayed within the test's [typical error](g:typical-error), ±3.96% [[c:ml-design]]. Typical error depends on the lab, the test and the people measured, so it can be far bigger than the ~0.9% ramp-test figure in the testing module.\n\nThe share of non-responders fell with each extra session:\n\n| sessions a week | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|\n| non-responders | 69% | 40% | 29% | 0% | 0% |\n\nThat is a [dose–response](g:dose-response): the more training, the fewer people left behind [[c:ml-dose]].",
+   "claims": [
+    {
+     "id": "ml-design",
+     "text": "78 healthy adults trained 1–5 × 60 min a week for 6 weeks; non-response meant a change in maximal power within the typical error (±3.96%).",
+     "grade": "moderate",
+     "sources": [
+      "montero2017"
+     ],
+     "evidence": [
+      {
+       "source": "montero2017",
+       "quote": "Seventy-eight healthy adults were divided into five groups (1-5) respectively comprising one, two, three, four and five 60 min exercise sessions per week but otherwise following an identical 6-week endurance training (ET) programme.",
+       "level": "abstract"
+      },
+      {
+       "source": "montero2017",
+       "quote": "Non-response was defined as any change in CRF, determined by maximal incremental exercise power output (Wmax ), within the typical error of measurement (±3.96%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ml-dose",
+     "text": "Non-responders made up 69%, 40%, 29%, 0% and 0% of the groups training 1–5 times a week.",
+     "grade": "weak",
+     "sources": [
+      "montero2017"
+     ],
+     "evidence": [
+      {
+       "source": "montero2017",
+       "quote": "In groups 1, 2, 3, 4 and 5, 69%, 40%, 29%, 0% and 0% of individuals, respectively, were non-responders.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ir-classify-example",
+   "title": "Responder or not?",
+   "problem": "In a study that calls any change within ±3.96% a non-response, a cyclist's ramp-test peak power goes from 280 to 288 W. How is she classed?",
+   "steps": [
+    "Change = 288 − 280 = 8 W.",
+    "As a percentage: 8 ÷ 280 × 100 = 2.9%.",
+    "2.9% is inside ±3.96%, so she is classed a non-responder, even though her power rose. The label says the gain is too small to tell apart from noise, not that she didn't improve."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-classify-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ir-dose-pattern"
+  },
+  {
+   "type": "concept",
+   "id": "ir-abolish",
+   "title": "Non-response abolished",
+   "text": "Then came the key step. Everyone classed as a non-responder did a second 6-week block with two extra sessions a week. After it, non-response was gone in every single person [[c:ml-abolish]].\n\nWhat made the difference? Gains in power followed gains in VO₂max, and the best predictor of the VO₂max gain was the rise in [haemoglobin mass](g:haemoglobin-mass), the blood's total oxygen carrier [[c:ml-hb]].\n\nA different stimulus can work too. In a [crossover study](g:crossover-study), 21 active adults did 3 weeks of steady training and 3 weeks of sprint intervals. Who gained from one didn't predict who gained from the other [[c:bo-switch]].",
+   "claims": [
+    {
+     "id": "ml-abolish",
+     "text": "After a second 6-week block with two extra sessions a week, non-response was eliminated in all individuals.",
+     "grade": "weak",
+     "sources": [
+      "montero2017"
+     ],
+     "evidence": [
+      {
+       "source": "montero2017",
+       "quote": "After the second ET period, non-response was eliminated in all individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ml-hb",
+     "text": "The change in VO₂max determined the power response, and total haemoglobin mass was the strongest determinant of VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "montero2017"
+     ],
+     "evidence": [
+      {
+       "source": "montero2017",
+       "quote": "The change in V̇O2 max with exercise training independently determined Wmax response",
+       "level": "abstract"
+      },
+      {
+       "source": "montero2017",
+       "quote": "In turn, total haemoglobin mass was the strongest independent determinant of V̇O2 max",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bo-switch",
+     "text": "Individual changes after endurance training and after sprint interval training were not positively related.",
+     "grade": "weak",
+     "sources": [
+      "bonafiglia2016"
+     ],
+     "evidence": [
+      {
+       "source": "bonafiglia2016",
+       "quote": "No significant positive relationships were observed between END and SIT for individual changes in any variable.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do true non-responders to endurance training exist?",
+    "sides": [
+     {
+      "position": "Hardly: most 'non-response' is too small a dose, the wrong stimulus or test noise; raise the dose or change the plan and everyone improves.",
+      "sources": [
+       "montero2017",
+       "bonafiglia2016"
+      ]
+     },
+     {
+      "position": "People truly differ in how much they gain from the same plan, partly through their genes, so some gain very little from a given dose.",
+      "sources": [
+       "bouchard1999",
+       "hecksteden2018",
+       "ross2019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ir-abolish-mech"
+  },
+  {
+   "type": "question",
+   "item": "ir-switch"
+  },
+  {
+   "type": "concept",
+   "id": "ir-appraise",
+   "title": "How strong is 'non-response abolished'?",
+   "text": "Look at the design before you repeat the slogan.\n\n- **No control group:** nobody was tested without training. A critic called this a strong limitation: without one, changes that would have happened anyway (noise, getting used to the test) can't be removed [[c:ml-no-control]].\n- **Dose mixed with time:** the second block added sessions *and* 6 more weeks, so the effect of dose can't be split from the effect of time [[c:ml-time]].\n- **Small groups:** about 16 people per group (78 ÷ 5).\n- **A question to ask:** only those with the smallest first change went on. Would they have scored higher next time anyway, through [regression to the mean](g:regression-to-the-mean)? The design can't tell.\n\nThe direction fits other work; 'everyone, without exception' is the weak part.",
+   "claims": [
+    {
+     "id": "ml-no-control",
+     "text": "Montero and Lundby had no non-exercising control group, a strong limitation, since designs without one can't separate training effects from changes that would have happened anyway.",
+     "grade": "moderate",
+     "sources": [
+      "mazzolari2018",
+      "ross2019"
+     ],
+     "evidence": [
+      {
+       "source": "mazzolari2018",
+       "quote": "The absence of a non‐exercising comparator arm in the study of Montero and Lundby represents a strong limitation in this",
+       "level": "full-text"
+      },
+      {
+       "source": "ross2019",
+       "quote": "Designs without a control group (or control condition) (ie, designs 1, 2 and 3) cannot isolate changes due to treatment (eg, exercise training) from changes that would have occurred in the absence of treatment.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ml-time",
+     "text": "Because the second block added both sessions and weeks, the effect of dose can't be isolated from the effect of time.",
+     "grade": "weak",
+     "sources": [
+      "mazzolari2018"
+     ],
+     "evidence": [
+      {
+       "source": "mazzolari2018",
+       "quote": "difficult to isolate the contribution of the training dose to the CRF response from the contribution of the time component",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-appraise-ml"
+  },
+  {
+   "type": "question",
+   "item": "ir-classify-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ir-athlete",
+   "title": "What it means for you",
+   "text": "Expert consensus: people really do respond differently to the same training dose, and genes are part of it [[c:ro-variable]]. But one flat block doesn't make you a non-responder.\n\nIf a block doesn't move your numbers:\n\n1. **Check the noise:** retest, or track a measure across the block, before deciding.\n2. **Look wider:** in the crossover study, everyone gained in at least one measure (VO₂max, [lactate threshold](g:lactate-threshold) or heart rate at a set workload) [[c:bo-any]].\n3. **Change the dose or the stimulus:** more sessions, or intervals instead of steady work.\n4. **Skip the gene test:** it can't tell you your trainability.\n\nAnd expect smaller gains as you get fitter (*How trainable is VO₂max?*).",
+   "claims": [
+    {
+     "id": "ro-variable",
+     "text": "There is strong evidence that the same training dose leads to variable responses, with a genetic component.",
+     "grade": "strong",
+     "sources": [
+      "ross2019"
+     ],
+     "evidence": [
+      {
+       "source": "ross2019",
+       "quote": "There is strong evidence from both animal and human studies that exercise training doses lead to variable responses. A genetic component contributes to exercise training response variability.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bo-any",
+     "text": "Every participant responded in at least one measure after doing both endurance and sprint interval training.",
+     "grade": "weak",
+     "sources": [
+      "bonafiglia2016"
+     ],
+     "evidence": [
+      {
+       "source": "bonafiglia2016",
+       "quote": "Interestingly, all individuals responded in at least one variable when exposed to both END and SIT.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-athlete-plan"
+  },
+  {
+   "type": "question",
+   "item": "ir-classify-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "With repeated testing and a control group, true differences in training response show up; labelling individuals as non-responders is still unreliable.",
+    "Montero and Lundby: non-responders fell from 69% with one session a week to 0% with four or five; a dose–response.",
+    "Two extra sessions a week for 6 more weeks removed non-response in everyone; VO₂max gains tracked gains in haemoglobin mass.",
+    "The second block had small groups, no control group and added weeks as well as sessions, so time, noise and regression to the mean can't be ruled out.",
+    "For an athlete: check the noise, look at several measures, then raise the dose or change the stimulus before deciding you don't respond."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ir-real-vs-label",
+   "concept": "ir-true",
+   "bloom": "analyse",
+   "sources": [
+    "hecksteden2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A year-long study with repeated VO₂max tests and a control group finds clear individual differences in response, but different methods label only 11 of 20 people the same way. Which conclusion fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "People truly differ in response, but labelling a person is unreliable",
+       "correct": true,
+       "why": "Right: real variability at the group level and shaky individual labels can both be true."
+      },
+      {
+       "id": "b",
+       "text": "Individual differences in response are all noise",
+       "why": "Repeated testing showed differences of relevant size, beyond noise."
+      },
+      {
+       "id": "c",
+       "text": "About half of people are true non-responders",
+       "why": "Labels didn't even agree between methods, so no share of non-responders can be read from it."
+      },
+      {
+       "id": "d",
+       "text": "The training itself didn't work for the group",
+       "why": "VO₂max rose clearly in the training group compared with control."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-repeat-design",
+   "concept": "ir-true",
+   "bloom": "apply",
+   "sources": [
+    "hecksteden2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner wants to know whether a 12-week block really raised his VO₂max. Which plan gives the clearest answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Test several times during and after the block, and look at the trend",
+       "correct": true,
+       "why": "Right: repeated testing spreads the noise over many points, as in the year-long study."
+      },
+      {
+       "id": "b",
+       "text": "One maximal test before and one after, done very carefully",
+       "why": "Care helps, but one test at each end still carries the full noise of a difference."
+      },
+      {
+       "id": "c",
+       "text": "Compare his gain with the average gain in a published study",
+       "why": "Other people's average says nothing about whether his own change is real."
+      },
+      {
+       "id": "d",
+       "text": "Take a genetic test for VO₂max trainability",
+       "why": "No gene test predicts one person's trainability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-classify-calc",
+   "concept": "ir-dose",
+   "bloom": "apply",
+   "sources": [
+    "montero2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study classes any change in ramp-test peak power within ±3.96% as non-response. A cyclist goes from 300 to 310 W. How is he classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Non-responder: +3.3% is inside ±3.96%",
+       "correct": true,
+       "why": "Right: 10 ÷ 300 = 3.3%, inside the noise band."
+      },
+      {
+       "id": "b",
+       "text": "Responder: +10 W is more than 3.96",
+       "why": "This compares watts with a percentage; the threshold is 3.96% of 300 W, about 11.9 W."
+      },
+      {
+       "id": "c",
+       "text": "Responder: any rise in power counts",
+       "why": "The threshold exists because small rises can be noise."
+      },
+      {
+       "id": "d",
+       "text": "Non-responder: he needed at least +10%",
+       "why": "The cut-off was ±3.96%, the test's typical error, not 10%."
+      }
+     ],
+     "solution": "Change = 310 − 300 = 10 W; 10 ÷ 300 × 100 = 3.3%. That is inside ±3.96%, so he is classed a non-responder (3.96% of 300 W ≈ 11.9 W)."
+    },
+    {
+     "id": "b",
+     "stem": "Same rule (±3.96% counts as non-response). A triathlete's peak power goes from 250 to 262 W. How is she classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Responder: +4.8% is beyond 3.96%",
+       "correct": true,
+       "why": "Right: 12 ÷ 250 = 4.8%."
+      },
+      {
+       "id": "b",
+       "text": "Non-responder: +12 W is too small to matter",
+       "why": "Judge the change against the noise band in percent: 3.96% of 250 W is only 9.9 W."
+      },
+      {
+       "id": "c",
+       "text": "Non-responder: +4.8% is within 2 × 3.96%",
+       "why": "The study's cut-off was 1 × the typical error, not 2 ×."
+      },
+      {
+       "id": "d",
+       "text": "Non-responder: +0.048% is inside ±3.96%",
+       "why": "This forgets to multiply by 100: 12 ÷ 250 = 0.048, which is 4.8%."
+      }
+     ],
+     "solution": "Change = 262 − 250 = 12 W; 12 ÷ 250 × 100 = 4.8%, beyond 3.96% (9.9 W), so she is a responder."
+    },
+    {
+     "id": "c",
+     "stem": "Same rule (±3.96% counts as non-response). A cyclist's peak power goes from 320 to 332 W. How is he classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Non-responder: +3.75% is inside ±3.96%",
+       "correct": true,
+       "why": "Right: 12 ÷ 320 = 3.75%, just inside the band."
+      },
+      {
+       "id": "b",
+       "text": "Responder: +12 W is more than 3.96",
+       "why": "This compares watts with a percentage; 3.96% of 320 W is about 12.7 W."
+      },
+      {
+       "id": "c",
+       "text": "Responder: +3.75% rounds up to 4%",
+       "why": "Rounding before comparing changes the answer; 3.75% is below 3.96%."
+      },
+      {
+       "id": "d",
+       "text": "Non-responder: power must rise by 3.96% each week",
+       "why": "The threshold applies to the whole block's change."
+      }
+     ],
+     "solution": "Change = 332 − 320 = 12 W; 12 ÷ 320 × 100 = 3.75%, inside ±3.96% (12.7 W), so he is classed a non-responder."
+    }
+   ]
+  },
+  {
+   "id": "ir-dose-pattern",
+   "concept": "ir-dose",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "montero2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Montero and Lundby's study, how did the share of non-responders change from one to five 60-minute sessions a week?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It fell steadily, to zero at four and five sessions",
+       "correct": true,
+       "why": "Right: 69%, 40%, 29%, 0% and 0%."
+      },
+      {
+       "id": "b",
+       "text": "It stayed about 20% in every group",
+       "why": "The 'one in five' figure comes from public health studies, not from this dose study."
+      },
+      {
+       "id": "c",
+       "text": "It was lowest at three sessions and rose with more",
+       "why": "It kept falling, with no rise at higher doses."
+      },
+      {
+       "id": "d",
+       "text": "It fell only between four and five sessions",
+       "why": "Most of the fall came between one and four sessions."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-abolish-mech",
+   "concept": "ir-abolish",
+   "bloom": "understand",
+   "sources": [
+    "montero2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After the extra training in Montero and Lundby's study, what best explained the gains in VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rise in total haemoglobin mass",
+       "correct": true,
+       "why": "Right: haemoglobin mass was the strongest independent determinant of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Weight loss",
+       "why": "The study pointed to blood oxygen-carrying capacity, not body mass."
+      },
+      {
+       "id": "c",
+       "text": "A higher maximal heart rate",
+       "why": "Maximal heart rate barely changes with training."
+      },
+      {
+       "id": "d",
+       "text": "Better pacing in the ramp test",
+       "why": "Power gains followed VO₂max gains, which followed haemoglobin mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-switch",
+   "concept": "ir-abolish",
+   "bloom": "analyse",
+   "sources": [
+    "bonafiglia2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a crossover study, a runner gained little VO₂max from 3 weeks of steady running but a lot from 3 weeks of sprint intervals. What does the study suggest about this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Response to one type of training doesn't predict response to another",
+       "correct": true,
+       "why": "Right: individual changes after the two programmes weren't positively related."
+      },
+      {
+       "id": "b",
+       "text": "He is a non-responder whose interval gain must be noise",
+       "why": "The study found that people often responded to one stimulus but not the other."
+      },
+      {
+       "id": "c",
+       "text": "Sprint intervals are better for everyone",
+       "why": "Some people gained more from the steady training; the pattern differed between people."
+      },
+      {
+       "id": "d",
+       "text": "His genes block gains from steady running",
+       "why": "Three weeks of one programme can't show a genetic block."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-appraise-ml",
+   "concept": "ir-appraise",
+   "bloom": "evaluate",
+   "sources": [
+    "montero2017",
+    "mazzolari2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Montero and Lundby retrained only the people whose first 6-week change was smallest, adding two sessions a week for 6 more weeks, with no control group. What weakens the conclusion that higher dose 'abolishes' non-response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Regression to the mean and the extra time could raise their scores anyway",
+       "correct": true,
+       "why": "Right: with no control group, people picked for low first scores may score higher next time anyway, and the second block also added weeks, so time and dose are mixed."
+      },
+      {
+       "id": "b",
+       "text": "Six weeks is too short a block for VO₂max to change",
+       "why": "VO₂max can rise within 3 weeks; block length isn't the main problem here."
+      },
+      {
+       "id": "c",
+       "text": "Peak power in a ramp test can't be measured reliably",
+       "why": "Its typical error was known (3.96%) and used as the threshold."
+      },
+      {
+       "id": "d",
+       "text": "The five groups trained at different intensities",
+       "why": "The groups followed the same programme, differing only in sessions per week."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-athlete-plan",
+   "concept": "ir-athlete",
+   "bloom": "evaluate",
+   "sources": [
+    "montero2017",
+    "bonafiglia2016",
+    "hecksteden2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist trains 3 × 1 h a week for 8 weeks. Her ramp-test peak power is flat on one test before and one after. She concludes she is a non-responder. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Retest, check other measures, then add sessions or change the stimulus",
+       "correct": true,
+       "why": "Right: one pair of tests is noisy, other measures may have moved, and more dose or a new stimulus usually brings a response."
+      },
+      {
+       "id": "b",
+       "text": "Accept it: non-response is genetic and fixed",
+       "why": "A dose study removed non-response in everyone with more training; one flat result isn't a verdict."
+      },
+      {
+       "id": "c",
+       "text": "Take a genetic test to confirm it",
+       "why": "No gene test predicts trainability."
+      },
+      {
+       "id": "d",
+       "text": "Cut training to recover, since flat results mean overtraining",
+       "why": "Three hours a week is a modest dose; too little is more likely than too much."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

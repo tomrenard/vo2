@@ -1,0 +1,570 @@
+{
+ "id": "hiit-dose",
+ "module": "t3-hiit",
+ "title": "How much HIIT?",
+ "goal": "Plan how many interval sessions to do, of what size, spread or in blocks, and recognise when too much HIIT turns into non-functional overreaching.",
+ "requires": [
+  "hiit-adaptations"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "microcycle",
+    "block-periodisation",
+    "functional-overreaching",
+    "nonfunctional-overreaching",
+    "overtraining-syndrome"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dose-share",
+   "title": "How much of the week?",
+   "text": "Logs of national and international endurance athletes training 10–13 times a week converge on one pattern: about **80%** of sessions at low intensity, and about **20%** built around hard work such as intervals near 90% of VO₂max [[c:seiler-8020]]. In a [polarised](g:polarised-training) week, HIIT is that hard 20%. For 10 sessions a week, that's about 2 interval sessions.\n\nIs more HIIT better for athletes who are already well trained? Studies that added more of it haven't given convincing proof of long-term gains [[c:seiler-intensify]]. An earlier review argued the other way: once trained, gains come only from HIIT. Both can hold at once: HIIT may be needed, yet more of it may not help.",
+   "claims": [
+    {
+     "id": "seiler-8020",
+     "text": "Elite endurance athletes do about 80% of sessions at low intensity and about 20% with high-intensity work, such as intervals near 90% of VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "seiler2010"
+     ],
+     "evidence": [
+      {
+       "source": "seiler2010",
+       "quote": "about 80% of training sessions are performed at low intensity (2 mM blood lactate), with about 20% dominated by periods of high-intensity work, such as interval training at approx. 90% VO2max",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "seiler-intensify",
+     "text": "Training intensification studies in well-trained athletes give no convincing evidence that more HIIT brings long-term performance gains.",
+     "grade": "weak",
+     "sources": [
+      "seiler2010"
+     ],
+     "evidence": [
+      {
+       "source": "seiler2010",
+       "quote": "Training intensification studies performed on already well-trained athletes do not provide any convincing evidence that a greater emphasis on high-intensity interval training in this highly trained athlete population gives long-term performance gains.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do already well-trained athletes gain from adding more HIIT?",
+    "sides": [
+     {
+      "position": "Yes, in a sense: in highly trained athletes, extra easy volume adds little, and further gains seem to come only through HIIT.",
+      "sources": [
+       "laursen2002"
+      ]
+     },
+     {
+      "position": "Not clearly: intensification studies give no convincing evidence of long-term gains, and elite athletes settle on about 20% hard sessions.",
+      "sources": [
+       "seiler2010"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "dose-sessions"
+  },
+  {
+   "type": "question",
+   "item": "dose-debate"
+  },
+  {
+   "type": "concept",
+   "id": "dose-protocol",
+   "title": "How much per session, for how many weeks?",
+   "text": "A meta-analysis of 53 RCTs sorted HIIT protocols by their VO₂max effect. The largest effects came with long work intervals (**≥ 2 min**), **≥ 15 min** of work per session, and **4–12 weeks** or more. Short (≤ 30 s), low-volume (≤ 5 min of work) and short-term (≤ 4 weeks) HIIT still worked, above all in the general population [[c:wen-protocol]].\n\nFor performance, a meta-analysis of 29 studies found that time-trial gains rose with the number of HIIT sessions, weeks and total work, but not with SIT. Its authors add that going beyond the minimum dose may not add much [[c:rosenblat-dose]].\n\nSo dose matters, up to a point.",
+   "claims": [
+    {
+     "id": "wen-protocol",
+     "text": "HIIT with long intervals (≥2 min), high volume (≥15 min of work) and 4–12 weeks or more gave the largest VO₂max effects; short, low-volume, short-term HIIT is also effective, especially in the general population.",
+     "grade": "moderate",
+     "sources": [
+      "wen2019"
+     ],
+     "evidence": [
+      {
+       "source": "wen2019",
+       "quote": "To maximize the training effects on VO2max, long-interval (≥2min), high-volume (≥15min) and moderate to long-term (≥4-12weeks) HIIT are recommended.",
+       "level": "abstract"
+      },
+      {
+       "source": "wen2019",
+       "quote": "Short-intervals (≤30s), low-volume (≤5min) and short-term (≤4weeks) HIIT represent effective and time-efficient strategies for developing VO2max, especially for the general population.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rosenblat-dose",
+     "text": "Time-trial gains showed a dose–response with HIIT sessions, weeks and total work, but not with SIT; more than the minimum dose may not add to the response.",
+     "grade": "moderate",
+     "sources": [
+      "rosenblat2021"
+     ],
+     "evidence": [
+      {
+       "source": "rosenblat2021",
+       "quote": "There was a dose-response relationship with the number of HIIT sessions, training weeks and total work with changes in TT performance. However, the dose-response was not present with SIT.",
+       "level": "abstract"
+      },
+      {
+       "source": "rosenblat2021",
+       "quote": "Our analysis suggests that increasing interval training dose beyond minimal requirements may not augment the training response.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dose-wen",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dose-response"
+  },
+  {
+   "type": "concept",
+   "id": "dose-blocks",
+   "title": "Spread it out, or pack it in?",
+   "text": "[Block periodisation](g:block-periodisation) packs hard sessions together. Nineteen trained cyclists trained for 4 weeks [[c:block-ronn]]:\n\n| | week 1 | weeks 2–4 |\n|---|---|---|\n| block | 5 HIIT sessions | 1 HIIT session a week |\n| traditional | 2 HIIT sessions | 2 HIIT sessions a week |\n\nBoth groups did the same total HIIT and easy volume. The block group raised VO₂max by 4.6% and peak power by 2.1%; the traditional group didn't change.\n\nA hard [microcycle](g:microcycle) like week 1 is meant to tire you: its gains show up after the easy days that follow. One small trial, not randomised, over 4 weeks: promising, not settled.",
+   "claims": [
+    {
+     "id": "block-ronn",
+     "text": "In trained cyclists, a block of 5 HIIT sessions in week 1 then 1 a week raised VO₂max, peak power and power at 2 mmol·L⁻¹ lactate, while 2 sessions a week for 4 weeks didn't, at the same total volume.",
+     "grade": "weak",
+     "sources": [
+      "ronnestad2012a"
+     ],
+     "evidence": [
+      {
+       "source": "ronnestad2012a",
+       "quote": "While BP increased VO2max , peak power output (Wmax) and power output at 2 mmol/L [la(-)] by 4.6 ± 3.7%, 2.1 ± 2.8%, and 10 ± 12%, respectively (P < 0.05), no changes occurred in TRAD.",
+       "level": "abstract"
+      },
+      {
+       "source": "ronnestad2012a",
+       "quote": "the first week constituted five sessions of high-intensity aerobic training (HIT), followed by 3 weeks of one weekly HIT session and focus on low-intensity training (LIT)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dose-block-diff"
+  },
+  {
+   "type": "question",
+   "item": "dose-wen",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "dose-too-much",
+   "title": "When hard becomes too much",
+   "text": "Training needs overload, but not overload plus too little recovery. A short dip after a hard block that turns into a gain after recovery is [functional overreaching](g:functional-overreaching). Ignore the balance and you get [non-functional overreaching](g:nonfunctional-overreaching): a longer dip with no gain. Telling that apart from the [overtraining syndrome](g:overtraining-syndrome) is very hard, and rests on how things turn out and on ruling out other causes [[c:meeusen-or]].\n\nThe body shows it too. When volunteers' training load was raised step by step over 4 weeks, the heaviest week cut their mitochondrial function and disturbed blood glucose control [[c:flockhart]].\n\nSo a HIIT block is a planned overreach: plan the easy days after it as carefully as the block.",
+   "claims": [
+    {
+     "id": "meeusen-or",
+     "text": "Functional overreaching leads to better performance after recovery; without enough recovery, non-functional overreaching can occur, and telling it from overtraining syndrome is very difficult.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "This functional overreaching will eventually lead to an improvement in performance after recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2013",
+       "quote": "When athletes do not sufficiently respect the balance between training and recovery, nonfunctional overreaching (NFOR) can occur.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2013",
+       "quote": "The distinction between NFOR and overtraining syndrome (OTS) is very difficult and will depend on the clinical outcome and exclusion diagnosis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "flockhart",
+     "text": "After the week with the highest load in a 4-week plan of rising load, mitochondrial function fell sharply and glucose tolerance was disturbed.",
+     "grade": "weak",
+     "sources": [
+      "flockhart2021"
+     ],
+     "evidence": [
+      {
+       "source": "flockhart2021",
+       "quote": "Following the week with the highest exercise load, we found a striking reduction in intrinsic mitochondrial function that coincided with a disturbance in glucose tolerance and insulin secretion.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dose-overreach",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dose-flockhart-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "dose-overreach",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Elite endurance athletes do about 20% of sessions with hard work such as intervals; for most weeks that means 1–3 HIIT sessions.",
+    "Whether more HIIT helps trained athletes is debated: it may be needed, yet adding more hasn't clearly paid off.",
+    "The largest VO₂max effects came from intervals of ≥ 2 min, ≥ 15 min of work per session and 4–12+ weeks; gains rise with dose, but not without limit.",
+    "Block periodisation packs HIIT into a short hard microcycle; it beat even spreading in one small trial, and it needs easy days after it.",
+    "A short dip that turns into a gain is functional overreaching; a long dip with no gain is non-functional overreaching or worse."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dose-sessions",
+   "concept": "dose-share",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "seiler2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An amateur triathlete trains 10 times a week and wants to copy the elite share of hard sessions. About how many should be interval sessions?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2",
+       "correct": true,
+       "why": "Right: about 20% of sessions have high-intensity work; 20% of 10 is 2."
+      },
+      {
+       "id": "b",
+       "text": "About 5",
+       "why": "That would be half of all sessions, far more than the elite pattern of about 20%."
+      },
+      {
+       "id": "c",
+       "text": "About 8",
+       "why": "80% is the share of low-intensity sessions, not hard ones."
+      },
+      {
+       "id": "d",
+       "text": "None: amateurs should only train easy",
+       "why": "The elite pattern includes about 20% hard sessions; it isn't all easy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-debate",
+   "concept": "dose-share",
+   "bloom": "evaluate",
+   "sources": [
+    "laursen2002",
+    "seiler2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained cyclist already does 2 HIIT sessions a week. A forum post says: 'Double it to 4 and you'll keep improving.' What's the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unproven: more HIIT hasn't clearly given long-term gains",
+       "correct": true,
+       "why": "Right: intensification studies in well-trained athletes give no convincing evidence of long-term gains."
+      },
+      {
+       "id": "b",
+       "text": "Proven: trained athletes improve only through HIIT",
+       "why": "An early review argued HIIT is needed once trained, but that doesn't show that more of it keeps working."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: HIIT doesn't work in trained athletes",
+       "why": "Interval training does improve trained athletes, by about 2% in time trials."
+      },
+      {
+       "id": "d",
+       "text": "Proven: elite athletes do half their sessions as HIIT",
+       "why": "Elite logs show about 20% hard sessions, not half."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-wen",
+   "concept": "dose-protocol",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "wen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to the 2019 meta-analysis, which session meets both markers of the largest VO₂max effect: work intervals of at least 2 min, and at least 15 min of work in all?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5 × 3 min",
+       "correct": true,
+       "why": "Right: 3 min intervals, and 5 × 3 = 15 min of work."
+      },
+      {
+       "id": "b",
+       "text": "3 series of 13 × 30 s",
+       "why": "19.5 min of work, but 30 s intervals are short intervals, not ≥ 2 min."
+      },
+      {
+       "id": "c",
+       "text": "4 × 3 min",
+       "why": "Long enough intervals, but only 12 min of work in all."
+      },
+      {
+       "id": "d",
+       "text": "6 × 30 s all-out",
+       "why": "Short intervals and only 3 min of work: a low-volume session."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "According to the 2019 meta-analysis, which running session meets both markers of the largest VO₂max effect: work intervals of at least 2 min, and at least 15 min of work in all?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4 × 4 min",
+       "correct": true,
+       "why": "Right: 4 min intervals, and 4 × 4 = 16 min of work."
+      },
+      {
+       "id": "b",
+       "text": "3 × 4 min",
+       "why": "Long enough intervals, but only 12 min of work in all."
+      },
+      {
+       "id": "c",
+       "text": "2 series of 20 × 30 s",
+       "why": "20 min of work, but 30 s intervals are short intervals, not ≥ 2 min."
+      },
+      {
+       "id": "d",
+       "text": "8 × 1 min",
+       "why": "1 min intervals are under 2 min, and there are only 8 min of work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-response",
+   "concept": "dose-protocol",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "rosenblat2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 2021 meta-analysis of interval training and time-trial performance, how did gains relate to dose?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They rose with HIIT dose, but not with SIT dose",
+       "correct": true,
+       "why": "Right: gains rose with HIIT sessions, weeks and total work; no dose–response was found for SIT."
+      },
+      {
+       "id": "b",
+       "text": "They rose with dose for both HIIT and SIT",
+       "why": "The dose–response was not present with SIT."
+      },
+      {
+       "id": "c",
+       "text": "They fell as HIIT dose rose",
+       "why": "Gains rose with HIIT dose, though more than the minimum may not add much."
+      },
+      {
+       "id": "d",
+       "text": "Dose made no difference at all",
+       "why": "For HIIT, sessions, weeks and total work were all related to gains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-block-diff",
+   "concept": "dose-blocks",
+   "bloom": "analyse",
+   "sources": [
+    "ronnestad2012a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the block study, one group did 5 HIIT sessions in week 1 then 1 a week; the other did 2 a week for 4 weeks. What was the difference between the groups?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How the same HIIT was spread over 4 weeks",
+       "correct": true,
+       "why": "Right: both did 8 HIIT sessions (5 + 3 × 1 and 2 × 4) and similar easy volume; only the spread differed."
+      },
+      {
+       "id": "b",
+       "text": "The block group did twice as much HIIT",
+       "why": "Count them: 5 + 1 + 1 + 1 = 8 and 2 × 4 = 8 sessions."
+      },
+      {
+       "id": "c",
+       "text": "The block group did no easy training",
+       "why": "Weeks 2–4 of the block focused on low-intensity training."
+      },
+      {
+       "id": "d",
+       "text": "The traditional group did SIT instead",
+       "why": "Both groups did high-intensity aerobic intervals; only their timing differed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-overreach",
+   "concept": "dose-too-much",
+   "bloom": "analyse",
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 6-day block of five 30/15 sessions, a cyclist's power is down for a week. After 6 easy days it is better than before the block. Best description?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Functional overreaching",
+       "correct": true,
+       "why": "Right: a short dip that turns into a gain after recovery is functional overreaching."
+      },
+      {
+       "id": "b",
+       "text": "Non-functional overreaching",
+       "why": "NFOR is a longer dip that brings no gain; here power rose above the starting level."
+      },
+      {
+       "id": "c",
+       "text": "Overtraining syndrome",
+       "why": "OTS means a drop lasting months; this one passed in about a week."
+      },
+      {
+       "id": "d",
+       "text": "Detraining",
+       "why": "Detraining is the loss of fitness from training too little, not a dip after a hard block."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner piles HIIT onto every week for 3 months. Her race times have been worse for 6 weeks, she sleeps badly and rest weeks don't help. Best description so far?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Non-functional overreaching, or worse",
+       "correct": true,
+       "why": "Right: a dip lasting weeks with no rebound points to NFOR; ruling out other causes would decide whether it is overtraining syndrome."
+      },
+      {
+       "id": "b",
+       "text": "Functional overreaching",
+       "why": "Functional overreaching rebounds into a gain after a short recovery; hers hasn't."
+      },
+      {
+       "id": "c",
+       "text": "Normal tiredness from one hard week",
+       "why": "Six weeks of falling performance is far more than one hard week."
+      },
+      {
+       "id": "d",
+       "text": "Detraining",
+       "why": "She is training more, not less; detraining comes from training too little."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dose-flockhart-appraisal",
+   "concept": "dose-too-much",
+   "bloom": "evaluate",
+   "sources": [
+    "flockhart2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog cites the 2021 study (load rising for 4 weeks cut mitochondrial function) as proof that HIIT blocks harm cyclists. What most limits that claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One study of healthy volunteers, not trained cyclists",
+       "correct": true,
+       "why": "Right: it is a single mechanistic study in healthy volunteers with a steeply rising load; it doesn't test planned blocks with recovery in athletes."
+      },
+      {
+       "id": "b",
+       "text": "Mitochondria have no role in endurance",
+       "why": "Mitochondrial function is central to endurance; that's why the finding matters."
+      },
+      {
+       "id": "c",
+       "text": "The study found the load improved everything",
+       "why": "Mitochondrial function fell and glucose tolerance was disturbed after the heaviest week."
+      },
+      {
+       "id": "d",
+       "text": "Four weeks is too short for any change",
+       "why": "Changes did show up within the 4 weeks, after the heaviest week."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

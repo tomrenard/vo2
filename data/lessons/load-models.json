@@ -1,0 +1,838 @@
+{
+ "id": "load-models",
+ "module": "t3-load",
+ "title": "Fitness–fatigue models and the PMC",
+ "goal": "Explain the fitness–fatigue model and the CTL/ATL/TSB chart, calculate how they change, and judge how well they predict performance.",
+ "requires": [
+  "load-power-metrics"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "fitness-fatigue-model",
+    "ctl",
+    "atl",
+    "tsb",
+    "overfitting"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "lm-ffm",
+   "title": "Fitness minus fatigue",
+   "text": "The [fitness–fatigue model](g:fitness-fatigue-model), Banister's impulse–response model, treats every session as an impulse with two effects. It raises fitness and it raises fatigue. Fatigue is larger at first but fades fast; fitness is smaller but fades slowly. Predicted performance is fitness minus fatigue [[c:ffm-concept]].\n\nThe model deliberately leaves the physiology out. It says nothing about mitochondria or glycogen; it only describes how performance capacity changes over time as a function of training [[c:ffm-abstract]].\n\nThat is enough to explain two things every athlete knows: a hard training camp makes you slower for a while and faster later, and a taper works because fatigue drains away faster than fitness.",
+   "claims": [
+    {
+     "id": "ffm-concept",
+     "text": "In the Banister model, training raises both fitness and fatigue, and performance equals fitness minus fatigue.",
+     "grade": "strong",
+     "sources": [
+      "kontro2026",
+      "gabbett2016"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "The theory behind the Banister impulse-response model builds on the observation that while increases in training lead to improved fitness (the positive component), they also generate fatigue (the negative component). Performance at a given time point thus equals fitness minus fatigue",
+       "level": "full-text"
+      },
+      {
+       "source": "gabbett2016",
+       "quote": "Banister et al 2 proposed that the performance of an athlete in response to training can be estimated from the difference between a negative function (‘fatigue’) and a positive function (‘fitness’).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ffm-abstract",
+     "text": "The impulse–response model describes how performance capacity changes over time as a function of training, abstracting the underlying physiology.",
+     "grade": "strong",
+     "sources": [
+      "clarke2013"
+     ],
+     "evidence": [
+      {
+       "source": "clarke2013",
+       "quote": "The IR model describes the dynamics by which an individual's performance capacity changes over time as a function of training.",
+       "level": "abstract"
+      },
+      {
+       "source": "clarke2013",
+       "quote": "Both models elegantly abstract the underlying physiology, and both can accurately fit performance data",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lm-ffm-concept"
+  },
+  {
+   "type": "concept",
+   "id": "lm-equation",
+   "title": "The model in numbers",
+   "text": "Each component decays exponentially with its own [time constant](g:time-constant) τ, and each day's load w is added on top [[c:ffm-equations]]:\n\n**fitness today = fitness yesterday × e^(−1/τ₁) + w**\n**fatigue today = fatigue yesterday × e^(−1/τ₂) + w**\n**performance = baseline + k₁ × fitness − k₂ × fatigue**\n\nτ₁ (fitness) is long, τ₂ (fatigue) short. The weights k₁ and k₂ set how much each counts; k₂ is often set larger than k₁, so fatigue outweighs fitness just after a session.\n\nAfter one session, each part is left with e^(−t/τ) of its starting size after t days: after one τ, 37%; after two, 14%; after three, 5%.",
+   "claims": [
+    {
+     "id": "ffm-equations",
+     "text": "Fitness and fatigue each carry over from the previous day with an exponential decay set by their time constants, plus the new training load.",
+     "grade": "strong",
+     "sources": [
+      "marchal2025",
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "marchal2025",
+       "quote": "In the above equation, a 0 denotes the intercept, k G and k H represent the linear coefficients for fitness and fatigue, respectively, and τ G and τ H the time exponents for fitness and fatigue, respectively.",
+       "level": "full-text"
+      },
+      {
+       "source": "kontro2026",
+       "quote": "The time constants τ 1 and τ 2 define the kinetics of fitness and fatigue progression, respectively.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lm-ffm-example",
+   "title": "One hard day, followed for two weeks",
+   "problem": "A rider does one session with load 100, then rests. Take τ₁ = 42 d, τ₂ = 7 d, k₁ = 1 and k₂ = 2 (illustrative values). What is the net effect on day 0 and after 14 days?",
+   "steps": [
+    "Day 0: fitness 100, fatigue 100. Net = 1 × 100 − 2 × 100 = −100: worse than before.",
+    "After 14 days: fitness = 100 × e^(−14/42) = 100 × 0.717 = 71.7; fatigue = 100 × e^(−14/7) = 100 × 0.135 = 13.5.",
+    "Net = 1 × 71.7 − 2 × 13.5 = 71.7 − 27.1 = +44.6 ≈ +45.",
+    "With these illustrative values the net turns positive when 1 × e^(−t/42) = 2 × e^(−t/7), at about 6 days. Other k and τ values move that day; a taper uses the same logic."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lm-decay-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lm-pmc",
+   "title": "CTL, ATL and form",
+   "text": "Training apps run a version of the model as the performance management chart (PMC). Daily TSS feeds two exponentially weighted averages [[c:pmc-ewma]]:\n\n**[CTL](g:ctl) = CTL yesterday × e^(−1/42) + TSS × (1 − e^(−1/42))**\n\n[ATL](g:atl) is the same with 7 days. 42 and 7 days are the usual fixed defaults [[c:pmc-42-7]] (source: authors tied to a training-software firm).\n\n| | keeps | adds |\n|---|---|---|\n| CTL | 0.976 × yesterday | 0.024 × TSS |\n| ATL | 0.867 × yesterday | 0.133 × TSS |\n\n[TSB](g:tsb), or 'form', is CTL − ATL (some apps use yesterday's values). The chart shows fitness, fatigue and form together [[c:pmc-chart]]. Hard weeks push TSB negative; a taper lets ATL fall faster than CTL, so TSB rises.",
+   "claims": [
+    {
+     "id": "pmc-ewma",
+     "text": "Training platforms calculate 'fitness' (CTL) as an exponentially weighted moving average of daily TSS.",
+     "grade": "moderate",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "Popular training platforms use a slight variation of Banister’s original formula, where fitness is calculated as an exponentially weighted moving average of daily training load",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pmc-42-7",
+     "text": "Platforms use fixed time constants, usually 42 days for fitness and 7 days for fatigue.",
+     "grade": "moderate",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "In practice, training platforms use fixed parameters and the τ parameter is often estimated to be 42 days for fitness and 7 days for fatigue.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pmc-chart",
+     "text": "A performance management chart shows fitness, fatigue and form (performance readiness).",
+     "grade": "moderate",
+     "sources": [
+      "kontro2026"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "One-dimensional PMC with overall fitness, fatigue, and form (performance readiness).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pmc-example",
+   "title": "One big day on the PMC",
+   "problem": "A cyclist has CTL 60 and ATL 60. Today she rides a 150-TSS session. What are her new CTL, ATL and TSB?",
+   "steps": [
+    "CTL = 0.976 × 60 + 0.024 × 150 = 58.6 + 3.6 = 62.2.",
+    "ATL = 0.867 × 60 + 0.133 × 150 = 52.0 + 20.0 = 72.0.",
+    "TSB = CTL − ATL = 62.2 − 72.0 = −9.8.",
+    "One big day moves ATL by 12 points but CTL by only 2: fatigue answers fast, the 'fitness' line slowly."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lm-pmc-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lm-taper"
+  },
+  {
+   "type": "concept",
+   "id": "lm-evidence",
+   "title": "Fitting is not predicting",
+   "text": "The model can fit past performances well [[c:ffm-fits]]. In 9 elite swimmers over a season it explained most of the variation (R² 0.79). But its parameters were very uncertain: the fitness time constant was 38 days with a 95% CI of 17–59, and some parameters were so correlated that they could not be read on their own [[c:ffm-ill-conditioned]].\n\nA 2025 analysis tested prediction on data the model hadn't seen. Adding the fatigue part did not improve prediction at all: a sign of [overfitting](g:overfitting) [[c:ffm-overfit]].\n\nSo: good at describing the past, weak at forecasting your race. Most studies are small and of one sport.",
+   "claims": [
+    {
+     "id": "ffm-fits",
+     "text": "The impulse–response model can accurately fit performance data.",
+     "grade": "moderate",
+     "sources": [
+      "clarke2013",
+      "hellard2006"
+     ],
+     "evidence": [
+      {
+       "source": "clarke2013",
+       "quote": "Both models elegantly abstract the underlying physiology, and both can accurately fit performance data",
+       "level": "abstract"
+      },
+      {
+       "source": "hellard2006",
+       "quote": "Performances were related to training loads for all participants (R(2) = 0.79 +/- 0.13, P < 0.05) and the estimation procedure seemed to be stable.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ffm-ill-conditioned",
+     "text": "In 9 elite swimmers, model parameters had wide confidence intervals and some were highly correlated, making them uninterpretable.",
+     "grade": "weak",
+     "sources": [
+      "hellard2006"
+     ],
+     "evidence": [
+      {
+       "source": "hellard2006",
+       "quote": "Nevertheless, the range of 95% CI values of the most useful parameters for monitoring training was wide: t(a) = 38 (17, 59), t(f) = 19 (6, 32), t(n) = 19 (7, 35), t(g) = 43 (25, 61).",
+       "level": "abstract"
+      },
+      {
+       "source": "hellard2006",
+       "quote": "Furthermore, some parameters were highly correlated, making their interpretation worthless.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ffm-overfit",
+     "text": "With cross-validation, the fitness–fatigue model was ill-conditioned and overfitted: its fatigue part did not improve prediction.",
+     "grade": "weak",
+     "sources": [
+      "marchal2025"
+     ],
+     "evidence": [
+      {
+       "source": "marchal2025",
+       "quote": "On the one hand, the model was ill-conditioned, and we illustrated the poor identifiability of fitness and fatigue parameters using Markov chains in the Bayesian framework.",
+       "level": "abstract"
+      },
+      {
+       "source": "marchal2025",
+       "quote": "On the other hand, the model exhibited an overfitting pattern, as adding the fatigue-related parameters did not significantly improve the model's predictive ability (p-value > 0.40).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can the fitness–fatigue model predict an athlete's performance well enough to plan training?",
+    "sides": [
+     {
+      "position": "Yes, as a framework: it fits training and performance data well and underlies today's load-monitoring tools.",
+      "sources": [
+       "clarke2013",
+       "kontro2026"
+      ]
+     },
+     {
+      "position": "Not reliably: its parameters are poorly identified and it overfits; its fatigue term adds no predictive value on new data.",
+      "sources": [
+       "hellard2006",
+       "marchal2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "lm-fit-vs-predict",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lm-tau-ci"
+  },
+  {
+   "type": "concept",
+   "id": "lm-practice",
+   "title": "Using CTL sensibly",
+   "text": "Ideally, τ and k would be set for each athlete and refitted from time to time [[c:individual-params]]. Apps use 42 and 7 days for everyone. And the input matters: in 9 people, the day of training with the most effect on performance shifted by up to 20 days with the load measure used [[c:input-matters]].\n\nSo read the chart for what it is:\n\n- **CTL** is a weighted average of the load you've done, not measured fitness. A rising CTL with flat test results means load went up, not that you got fitter.\n- **TSB** is a rough freshness guide, useful to plan a taper, not a forecast of race day.\n- **Check against reality**: tests, race results, how you feel.",
+   "claims": [
+    {
+     "id": "individual-params",
+     "text": "The model's time constants and weights should ideally be set individually for each athlete and recalibrated periodically.",
+     "grade": "moderate",
+     "sources": [
+      "kontro2026",
+      "marchal2025"
+     ],
+     "evidence": [
+      {
+       "source": "kontro2026",
+       "quote": "Ideally, the values for τ and k are established individually for each athlete and recalibrated periodically.",
+       "level": "full-text"
+      },
+      {
+       "source": "marchal2025",
+       "quote": "All these parameters are written with an s subscript that denotes the athlete identity, as the parameters are estimated at the individual level.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "input-matters",
+     "text": "Different load measures fed into the fitness–fatigue model gave answers differing by up to 19.6 days, so they can't be used interchangeably.",
+     "grade": "weak",
+     "sources": [
+      "vermeire2021"
+     ],
+     "evidence": [
+      {
+       "source": "vermeire2021",
+       "quote": "However, the TL methods evolved differently over time, which was reflected in the differences between the methods in the calculation of the day before performance on which training has the biggest positive influence (range of 19.6 d).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lm-default-tau"
+  },
+  {
+   "type": "question",
+   "item": "lm-ctl-not-fitness",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lm-decay-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "lm-pmc-calc",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Banister's model: each session adds fitness (slow to fade) and fatigue (quick to fade); predicted performance = fitness − fatigue.",
+    "Each part decays as e^(−t/τ): after one τ, 37% is left. A hard day is a net loss at first and a gain some days later (about 6 with the illustrative values).",
+    "Apps use CTL (τ 42 d), ATL (τ 7 d) and TSB = CTL − ATL; a taper drops ATL faster than CTL, so TSB rises.",
+    "The model fits past data well but its parameters are uncertain and it overfits: prediction is weak.",
+    "CTL is a record of load, not measured fitness; check it against tests, races and how you feel."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lm-ffm-concept",
+   "concept": "lm-ffm",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kontro2026",
+    "clarke2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a big 10-day training camp, a runner's 5-km time trial is slower than before the camp. How does the fitness–fatigue model explain this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatigue rose more than fitness, so fitness minus fatigue fell",
+       "why": "Right: right after heavy training, the large, fast fatigue term outweighs the small fitness gain.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Fitness fell because of the extra training",
+       "why": "In the model training always adds fitness; it's the fatigue that hides it."
+      },
+      {
+       "id": "c",
+       "text": "The camp added fatigue only, no fitness",
+       "why": "Every session adds both; fitness just shows later, once fatigue fades."
+      },
+      {
+       "id": "d",
+       "text": "The model can't explain a drop after training",
+       "why": "Explaining that dip is exactly what the fatigue term is for."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lm-decay-calc",
+   "concept": "lm-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A session adds 100 units of fatigue. With a fatigue time constant of 7 days and no more training, how much fatigue is left after 7 days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "37",
+       "why": "Right: 100 × e^(−7/7) = 100 × e^(−1) = 37.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "50",
+       "why": "This treats τ as a half-life. After one time constant, 37% is left, not 50%."
+      },
+      {
+       "id": "c",
+       "text": "0",
+       "why": "This assumes fatigue falls in a straight line to zero in one τ; exponential decay never reaches zero."
+      },
+      {
+       "id": "d",
+       "text": "63",
+       "why": "This is the part that has gone (1 − e^(−1)), not the part left."
+      }
+     ],
+     "solution": "Left = 100 × e^(−t/τ) = 100 × e^(−1) = 37."
+    },
+    {
+     "id": "b",
+     "stem": "A training block adds 100 units of fitness. With a fitness time constant of 42 days and no more training, how much fitness is left after 42 days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "37",
+       "why": "Right: 100 × e^(−42/42) = 100 × e^(−1) = 37.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "50",
+       "why": "This treats τ as a half-life. After one time constant, 37% is left, not 50%."
+      },
+      {
+       "id": "c",
+       "text": "0",
+       "why": "This assumes fitness falls in a straight line to zero in one τ; exponential decay never reaches zero."
+      },
+      {
+       "id": "d",
+       "text": "63",
+       "why": "This is the part that has gone (1 − e^(−1)), not the part left."
+      }
+     ],
+     "solution": "Left = 100 × e^(−42/42) = 100 × 0.37 = 37."
+    },
+    {
+     "id": "c",
+     "stem": "A hard long run adds 100 units of fatigue. With a fatigue time constant of 7 days, how much is left after 14 days of rest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14",
+       "why": "Right: 100 × e^(−14/7) = 100 × e^(−2) = 13.5 ≈ 14.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "25",
+       "why": "This treats τ as a half-life: two halvings give 25."
+      },
+      {
+       "id": "c",
+       "text": "0",
+       "why": "This assumes a straight-line fall to zero; exponential decay never reaches zero."
+      },
+      {
+       "id": "d",
+       "text": "86",
+       "why": "This is the part that has gone (1 − e^(−2)), not the part left."
+      }
+     ],
+     "solution": "Left = 100 × e^(−2) = 100 × 0.135 = 14."
+    }
+   ]
+  },
+  {
+   "id": "lm-pmc-calc",
+   "concept": "lm-pmc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's ATL is 90. Today is a rest day (TSS 0). Using ATL = 0.867 × yesterday + 0.133 × TSS, what is the new ATL?",
+     "options": [
+      {
+       "id": "a",
+       "text": "78.0",
+       "why": "Right: 0.867 × 90 + 0.133 × 0 = 78.0.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "90",
+       "why": "A rest day isn't 'no change': the old ATL decays."
+      },
+      {
+       "id": "c",
+       "text": "12.0",
+       "why": "This uses 0.133 on yesterday's ATL; that multiplier belongs to today's TSS."
+      },
+      {
+       "id": "d",
+       "text": "87.8",
+       "why": "This uses the CTL multiplier (0.976 × 90): CTL decays slowly, ATL fast."
+      }
+     ],
+     "solution": "ATL = 0.867 × 90 + 0.133 × 0 = 78.0."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist has CTL 50 and ATL 50, then rides 200 TSS. Using the PMC multipliers, what is today's TSB (CTL − ATL)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−16.4",
+       "why": "Right: CTL = 48.8 + 4.8 = 53.6; ATL = 43.4 + 26.6 = 70.0; TSB = 53.6 − 70.0 = −16.4.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "+16.4",
+       "why": "This subtracts the wrong way: TSB = CTL − ATL, and a big day makes it negative."
+      },
+      {
+       "id": "c",
+       "text": "−150",
+       "why": "This takes CTL minus TSS (50 − 200); TSB compares the two averages."
+      },
+      {
+       "id": "d",
+       "text": "0",
+       "why": "CTL and ATL don't rise equally: ATL takes 13.3% of the new TSS, CTL only 2.4%."
+      }
+     ],
+     "solution": "CTL = 0.976 × 50 + 0.024 × 200 = 53.6. ATL = 0.867 × 50 + 0.133 × 200 = 70.0. TSB = −16.4."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete has ATL 70. Today he does an easy 40-TSS swim. What is the new ATL?",
+     "options": [
+      {
+       "id": "a",
+       "text": "66.0",
+       "why": "Right: 0.867 × 70 + 0.133 × 40 = 60.7 + 5.3 = 66.0.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "70",
+       "why": "An easy day below the current ATL still pulls ATL down."
+      },
+      {
+       "id": "c",
+       "text": "40",
+       "why": "ATL is an average, not today's TSS."
+      },
+      {
+       "id": "d",
+       "text": "69.3",
+       "why": "This uses the CTL multipliers (0.976 × 70 + 0.024 × 40)."
+      }
+     ],
+     "solution": "ATL = 0.867 × 70 + 0.133 × 40 = 66.0."
+    }
+   ]
+  },
+  {
+   "id": "lm-taper",
+   "concept": "lm-pmc",
+   "bloom": "analyse",
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 2-week taper before a time trial, a cyclist cuts daily TSS sharply. What happens on the PMC?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ATL falls fast, CTL slowly, so TSB rises",
+       "why": "Right: with a 7-day time constant ATL drops quickly; CTL, at 42 days, barely moves, so form climbs.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "CTL and ATL fall equally, so TSB stays the same",
+       "why": "Their time constants differ six-fold, so they fall at very different rates."
+      },
+      {
+       "id": "c",
+       "text": "CTL falls faster than ATL, so TSB falls",
+       "why": "It's the reverse: the short time constant belongs to ATL."
+      },
+      {
+       "id": "d",
+       "text": "Nothing changes until training stops completely",
+       "why": "Every lower-TSS day pulls both averages down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lm-fit-vs-predict",
+   "concept": "lm-evidence",
+   "bloom": "analyse",
+   "sources": [
+    "hellard2006",
+    "marchal2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach fits the fitness–fatigue model to a swimmer's whole season and gets R² = 0.79. Why doesn't this show the model will predict next season's races?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A good fit to past data isn't tested prediction",
+       "why": "Right: a model with several free parameters can fit the data it was tuned on; only data it hasn't seen tests prediction.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "R² = 0.79 is too low to be useful",
+       "why": "0.79 is a high fit; the problem is what it was measured on."
+      },
+      {
+       "id": "c",
+       "text": "The model can't be fitted to swimmers",
+       "why": "It was fitted to elite swimmers; that isn't the issue."
+      },
+      {
+       "id": "d",
+       "text": "R² only measures fatigue, not fitness",
+       "why": "R² describes how well the whole model fits performance."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cycling app's model fits your past year of results almost perfectly. Adding its fatigue term to the model barely changes how well it predicts new races. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The model overfits: the extra parameters fit noise",
+       "why": "Right: parameters that improve the fit but not prediction on new data are fitting noise.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Fatigue doesn't exist in cyclists",
+       "why": "Fatigue is real; the issue is that this term doesn't capture it in a useful way."
+      },
+      {
+       "id": "c",
+       "text": "The model is now proven to predict well",
+       "why": "A close fit to old data says little about prediction."
+      },
+      {
+       "id": "d",
+       "text": "You should add more parameters until it predicts",
+       "why": "More parameters make overfitting worse, not better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lm-tau-ci",
+   "concept": "lm-evidence",
+   "bloom": "evaluate",
+   "sources": [
+    "hellard2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 9 elite swimmers, the fitted fitness time constant was 38 days (95% CI 17–59). A coach wants to use it to time a taper to the day. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too uncertain: the true value could be 17 or 59 days",
+       "why": "Right: an interval that wide, from only 9 swimmers, can't support day-level timing.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Precise enough: 38 days is the best estimate",
+       "why": "The point estimate is the best guess, but the interval shows how little it pins down."
+      },
+      {
+       "id": "c",
+       "text": "Useless: the model doesn't fit swimmers at all",
+       "why": "It fitted well (R² 0.79); its parameters are what's uncertain."
+      },
+      {
+       "id": "d",
+       "text": "Fine, as long as the coach rounds it to 42 days",
+       "why": "Swapping in the app default doesn't make either number more certain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lm-default-tau",
+   "concept": "lm-practice",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kontro2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What time constants do most training apps use by default for CTL ('fitness') and ATL ('fatigue')?",
+     "options": [
+      {
+       "id": "a",
+       "text": "42 days and 7 days",
+       "why": "Right: these are the usual fixed defaults.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "7 days and 42 days",
+       "why": "Swapped: fitness is the slow one (42 days), fatigue the fast one (7 days)."
+      },
+      {
+       "id": "c",
+       "text": "28 days and 7 days",
+       "why": "28 days is the usual chronic window of the ACWR, not CTL's time constant."
+      },
+      {
+       "id": "d",
+       "text": "42 days and 21 days",
+       "why": "Fatigue in these apps uses a much shorter time constant, 7 days."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lm-ctl-not-fitness",
+   "concept": "lm-practice",
+   "bloom": "evaluate",
+   "sources": [
+    "kontro2026",
+    "vermeire2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Over 3 months a rider's CTL rises from 60 to 85, but his 20-min power and lab thresholds haven't changed. What is the best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Load went up; CTL isn't a measure of fitness",
+       "why": "Right: CTL is a weighted average of past TSS. Whether that load made him fitter only tests can show.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "His tests must be wrong, since CTL proves he is fitter",
+       "why": "CTL is calculated from training, not measured from the body."
+      },
+      {
+       "id": "c",
+       "text": "A CTL of 85 always means a higher FTP",
+       "why": "There's no fixed link between a CTL value and FTP."
+      },
+      {
+       "id": "d",
+       "text": "His FTP setting is too high, so CTL is inflated",
+       "why": "An FTP set too high would lower TSS and CTL, not raise them."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's app shows TSB at +25 on race morning, yet she races poorly after a week of bad sleep and a cold. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The PMC only sees load, not sleep or illness",
+       "why": "Right: TSB is computed from training data alone, so it can't see a cold or poor sleep.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A TSB of +25 was too low to race well",
+       "why": "A positive TSB means she was fresh by the model's logic; the model missed other factors."
+      },
+      {
+       "id": "c",
+       "text": "The app's time constants were set wrongly",
+       "why": "Even perfect time constants can't see sleep or illness."
+      },
+      {
+       "id": "d",
+       "text": "Her race shows that tapering doesn't work",
+       "why": "One race doesn't test tapering; the model simply missed what it can't measure."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

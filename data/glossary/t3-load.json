@@ -1,0 +1,102 @@
+{
+ "training-load": {
+  "term": "Training load",
+  "short": "How much training stress a session or a week puts on you, combining how long and how hard. It can be counted from what you did or from how your body responded.",
+  "lesson": "load-internal-external"
+ },
+ "external-load": {
+  "term": "External load",
+  "short": "The work you did, measured outside the body: time, distance, pace, watts, kilojoules. The same for anyone who did the same session.",
+  "lesson": "load-internal-external"
+ },
+ "internal-load": {
+  "term": "Internal load",
+  "short": "How hard a session was for your body: heart rate, perceived effort, lactate. The same external load can give a different internal load on a hot day or when tired.",
+  "lesson": "load-internal-external"
+ },
+ "session-rpe": {
+  "term": "Session RPE (sRPE)",
+  "short": "One effort rating (0–10) for a whole session, given about 30 minutes after it, multiplied by its duration in minutes to give a load score.",
+  "lesson": "load-internal-external"
+ },
+ "arbitrary-unit": {
+  "term": "Arbitrary unit (AU)",
+  "short": "A score with no physical meaning of its own, such as 'RPE × minutes'. Useful to compare one athlete's sessions; not convertible into joules or watts.",
+  "lesson": "load-internal-external"
+ },
+ "trimp": {
+  "term": "TRIMP (training impulse)",
+  "short": "A load score from heart rate: minutes of training weighted by how high the heart rate was. Banister, Edwards and Lucia each proposed a version.",
+  "lesson": "load-internal-external"
+ },
+ "normalised-power": {
+  "term": "Normalised power (NP)",
+  "short": "A power figure that weights the hard parts of a ride more than plain average power: 30-s rolling averages, each raised to the 4th power, averaged, then the 4th root taken.",
+  "lesson": "load-power-metrics"
+ },
+ "intensity-factor": {
+  "term": "Intensity factor (IF)",
+  "short": "Normalised power divided by FTP. IF 1.0 means the ride was, in this sense, as hard as threshold; 0.7 is an easy endurance ride.",
+  "lesson": "load-power-metrics"
+ },
+ "tss": {
+  "term": "TSS (Training Stress Score)",
+  "short": "A load score from power: hours × IF² × 100, so one hour at FTP gives 100. A commercial metric; running and swimming versions use pace instead of power.",
+  "lesson": "load-power-metrics"
+ },
+ "fitness-fatigue-model": {
+  "term": "Fitness–fatigue model (Banister impulse–response model)",
+  "short": "A model in which each session adds both 'fitness' (slow to fade) and 'fatigue' (quick to fade); predicted performance is fitness minus fatigue.",
+  "lesson": "load-models"
+ },
+ "ctl": {
+  "term": "CTL (chronic training load)",
+  "short": "A slowly changing average of daily training load, by default with a 42-day time constant. Often labelled 'fitness' in training apps.",
+  "lesson": "load-models"
+ },
+ "atl": {
+  "term": "ATL (acute training load)",
+  "short": "A quickly changing average of daily training load, by default with a 7-day time constant. Often labelled 'fatigue' in training apps.",
+  "lesson": "load-models"
+ },
+ "tsb": {
+  "term": "TSB (training stress balance)",
+  "short": "CTL minus ATL, often called 'form'. Negative after hard weeks, rising towards positive in a taper.",
+  "lesson": "load-models"
+ },
+ "overfitting": {
+  "term": "Overfitting",
+  "short": "When a model has so many adjustable numbers that it fits past data well but predicts new data badly: it has learned the noise.",
+  "lesson": "load-models"
+ },
+ "acwr": {
+  "term": "ACWR (acute:chronic workload ratio)",
+  "short": "Last week's training load divided by the average weekly load of the last four weeks. Proposed as an injury-risk marker; now heavily criticised.",
+  "lesson": "load-acwr"
+ },
+ "ewma": {
+  "term": "EWMA (exponentially weighted moving average)",
+  "short": "An average in which each older day counts a bit less than the one after it, instead of all days counting equally.",
+  "lesson": "load-acwr"
+ },
+ "mathematical-coupling": {
+  "term": "Mathematical coupling",
+  "short": "When the same number appears on both sides of a comparison (here, last week's load inside both parts of a ratio), creating a correlation that has nothing to do with biology.",
+  "lesson": "load-acwr"
+ },
+ "wellness-questionnaire": {
+  "term": "Wellness questionnaire",
+  "short": "A short daily self-rating of sleep, fatigue, soreness, stress and mood, often each on a 1–5 scale, used to track how an athlete is coping with training.",
+  "lesson": "load-monitoring"
+ },
+ "overreaching": {
+  "term": "Overreaching",
+  "short": "A drop in performance after a block of heavy training. 'Functional' if it recovers in days to a couple of weeks, 'non-functional' if it lasts weeks.",
+  "lesson": "load-monitoring"
+ },
+ "ln-rmssd": {
+  "term": "ln rMSSD",
+  "short": "The natural log of RMSSD, the usual HRV number for daily monitoring. The log evens out its spread so averages behave better. A change of 0.1 in ln rMSSD is roughly a 10% change in RMSSD.",
+  "lesson": "load-monitoring"
+ }
+}

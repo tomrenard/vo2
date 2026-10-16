@@ -1,0 +1,689 @@
+{
+ "id": "ad-vessels-blood",
+ "module": "t3-adaptation",
+ "title": "Capillaries, arteries and blood volume",
+ "goal": "Explain how training grows capillaries and remodels arteries, what triggers each, and how plasma and red-cell volume expand on different timescales.",
+ "requires": [
+  "ad-heart"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "angiogenesis",
+    "shear-stress",
+    "vegf",
+    "endothelium",
+    "nitric-oxide",
+    "flow-mediated-dilation",
+    "red-cell-volume"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "vb-angiogenesis",
+   "title": "Growing new capillaries",
+   "text": "The muscle module showed capillaries growing about 20% in eight weeks. The process is [angiogenesis](g:angiogenesis): new capillaries sprouting from existing ones.\n\nTwo physical triggers are thought to start it: [shear stress](g:shear-stress) from the extra blood flowing through, and the stretch of repeated contraction [[c:vb-triggers]].\n\nThe chemical go-signal is [VEGF](g:vegf). It follows the same saw-tooth you met for PGC-1α: after one session VEGF mRNA rises severalfold and is back to baseline within 4–6 h [[c:vb-vegf-acute]]. VEGF protein stays raised through the first few weeks of training, then returns to baseline by about 4 weeks in humans [[c:vb-vegf-weeks]], as if the main building phase were over.",
+   "claims": [
+    {
+     "id": "vb-triggers",
+     "text": "Shear stress from increased flow and tissue stretch from repeated contraction may stimulate capillary growth.",
+     "grade": "moderate",
+     "sources": [
+      "olfert2016"
+     ],
+     "evidence": [
+      {
+       "source": "olfert2016",
+       "quote": "For example, mechanical factors such as increased shear stress exerted on the capillary lumen by functional hyperemia, or elevated tissue strain as a consequence of repetitive contraction/relaxation cycles may stimulate capillary growth in both cardiac and skeletal muscle ( 65 ).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "vb-vegf-acute",
+     "text": "An acute exercise bout transiently raises VEGF mRNA severalfold, returning to baseline after 4–6 h.",
+     "grade": "moderate",
+     "sources": [
+      "olfert2016"
+     ],
+     "evidence": [
+      {
+       "source": "olfert2016",
+       "quote": "An acute exercise bout leads to a transient, severalfold increase in expression of VEGF mRNA ( 16 , 48 , 108 ) with levels returning to baseline after 4–6 h of recovery ( 46 , 73 ).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "vb-vegf-weeks",
+     "text": "VEGF protein is raised in the first weeks of training and returns to baseline after about 4 weeks in humans.",
+     "grade": "weak",
+     "sources": [
+      "olfert2016"
+     ],
+     "evidence": [
+      {
+       "source": "olfert2016",
+       "quote": "Levels of VEGF protein also increase after an acute exercise bout in rodents ( 99 ) and are elevated during the first few weeks of aerobic exercise training in young healthy individuals ( 47 ) and animals ( 99 ), whereas in humans VEGF protein levels appear to return to baseline after 4 wk of training ( 60 ).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vb-angio-trigger"
+  },
+  {
+   "type": "question",
+   "item": "vb-vegf-timing"
+  },
+  {
+   "type": "question",
+   "item": "vb-vegf-weeks"
+  },
+  {
+   "type": "concept",
+   "id": "vb-arteries",
+   "title": "Arteries: function first, then size",
+   "text": "The big arteries feeding the legs adapt too. Their lining, the [endothelium](g:endothelium), senses shear stress and releases [nitric oxide](g:nitric-oxide), which widens the vessel.\n\nArtery function is tested by [flow-mediated dilation](g:flow-mediated-dilation) (FMD). In 13 young men training 8 weeks on bike and treadmill, with 7 inactive controls [[c:vb-tinken08]]:\n\n| leg artery | wk 2–4 | wk 8 |\n|---|---|---|\n| FMD (function) | 6.2 → about 9.1–9.5% | back near 6.5% |\n| dilator capacity (size) | rising | 8.9 → 12.2% |\n\nFunction rose first; then the artery remodelled to a larger size, and the function boost faded. Is shear the cause? When a cuff blunted shear in one arm during handgrip training, that arm didn't adapt; the other did [[c:vb-tinken10]].",
+   "claims": [
+    {
+     "id": "vb-tinken08",
+     "text": "With training, conduit artery function (FMD) rose within 2–4 weeks and then returned towards baseline, while artery dilator capacity, a marker of remodelling, kept increasing.",
+     "grade": "weak",
+     "sources": [
+      "tinken2008"
+     ],
+     "evidence": [
+      {
+       "source": "tinken2008",
+       "quote": "These data suggest that functional changes in conduit arteries occur rapidly and precede arterial remodelling in vivo.",
+       "level": "abstract"
+      },
+      {
+       "source": "tinken2008",
+       "quote": "Similarly, popliteal artery FMD increased from baseline (6.2 +/- 0.7%) at weeks 2, 4 and 6 (9.1 +/- 0.6, 9.5 +/- 0.6, 7.8 +/- 0.5%, respectively, P < 0.05), but decreased again by week 8 (6.5 +/- 0.6%), whereas popliteal DC progressively increased from baseline (8.9 +/- 0.4%) at week 4 and 8 (10.5 +/- 0.7, 12.2 +/- 0.6%, respectively, P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vb-tinken10",
+     "text": "Blunting shear stress with a cuff during handgrip training prevented the adaptations in endothelial function and vessel remodelling.",
+     "grade": "weak",
+     "sources": [
+      "tinken2010"
+     ],
+     "evidence": [
+      {
+       "source": "tinken2010",
+       "quote": "These results demonstrate that exercise-induced changes in shear provide the principal physiological stimulus to adaptation in flow-mediated endothelial function and vascular remodeling in response to exercise training in healthy humans.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vb-fmd-time"
+  },
+  {
+   "type": "question",
+   "item": "vb-cuff-design"
+  },
+  {
+   "type": "concept",
+   "id": "vb-plasma",
+   "title": "Plasma volume: within days",
+   "text": "You know the order: plasma volume expands first, red cells later [[c:vb-order]]. How fast is 'first'? In 8 trained men, 8 days of 2 h daily rides at 65% VO₂max added **427 mL** of plasma (**+12%**), with red-cell volume essentially unchanged [[c:vb-convertino]].\n\nThe hormone module showed how: during each session, [ADH](g:vasopressin) and [renin](g:renin-angiotensin) rise and the kidney keeps water and sodium, and more albumin in the blood holds water in the vessels.\n\nTwo consequences follow at once. More blood fills the heart better, raising stroke volume. And the same red cells are spread through more fluid, so [haematocrit](g:haematocrit) falls: the dilution you can calculate next.",
+   "claims": [
+    {
+     "id": "vb-order",
+     "text": "With training, plasma volume expands almost immediately, red-cell volume over weeks.",
+     "grade": "strong",
+     "sources": [
+      "sawka2000"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2000",
+       "quote": "Exercise training can induce BV expansion: PV expansion usually occurs immediately, but EV expansion takes weeks.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vb-convertino",
+     "text": "Eight days of training raised plasma volume by 427 mL (12%) with red-cell volume essentially unchanged.",
+     "grade": "weak",
+     "sources": [
+      "convertino1980"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1980",
+       "quote": "After training, BV increased by 457 ml (+8.1% P less than 0.05), due to an increase in PV of 427 ml (+12.1%, P less than 0.05); red cell volume was essentially constant (delta = +30 ml, NS).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vb-camp-days"
+  },
+  {
+   "type": "example",
+   "id": "vb-hct-example",
+   "title": "Why haematocrit falls in a training camp",
+   "problem": "A runner has 2.2 L of red cells and 2.8 L of plasma. Ten days into a camp her plasma has grown 12%, red cells unchanged. What happens to her haematocrit?",
+   "steps": [
+    "Before: blood = 2.2 + 2.8 = 5.0 L. Hct = 2.2 ÷ 5.0 = 44%.",
+    "Plasma after: 2.8 × 1.12 = 3.14 L. Blood = 2.2 + 3.14 = 5.34 L.",
+    "Hct after = 2.2 ÷ 5.34 = 41.2%. Haematocrit fell 2.8 percentage points with not a single red cell lost: dilution, not anaemia."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vb-hct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "vb-redcells",
+   "title": "Red cells: weeks, and they carry the VO₂max gain",
+   "text": "Over 6 weeks of training in 16 untrained men, [red-cell volume](g:red-cell-volume) rose 8%, plasma 4% and [haemoglobin mass](g:haemoglobin-mass) 6%. Their muscles changed too: capillaries per fibre +18%, mitochondrial volume +43% [[c:vb-montero]].\n\nWhich change carried the VO₂peak gain (+9%)? The researchers then removed blood to bring red-cell volume back to its pre-training level. VO₂peak fell 7%, and peak cardiac output, red-cell volume and Hb mass, not the muscle measures, predicted VO₂peak [[c:vb-montero-blood]].\n\nSo early in training, the VO₂max gain is mostly blood and heart. The capillaries and mitochondria pay off below the maximum, in how long you can hold a pace.",
+   "claims": [
+    {
+     "id": "vb-montero",
+     "text": "After 6 weeks of training, red-cell volume, plasma volume and Hb mass rose, as did capillary-to-fibre ratio and mitochondrial volume.",
+     "grade": "weak",
+     "sources": [
+      "montero2015b"
+     ],
+     "evidence": [
+      {
+       "source": "montero2015b",
+       "quote": "RBCV, plasma volume and Hb(mass) all increased (P < 0.05) after ET (8 ± 4, 4 ± 6 and 6 ± 5%).",
+       "level": "abstract"
+      },
+      {
+       "source": "montero2015b",
+       "quote": "As for skeletal muscle adaptations, capillary-to-fibre ratio and total Mito(VD) increased (P < 0.05) following ET (18 ± 16 and 43 ± 30%), but OXPHOS remained unaltered.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vb-montero-blood",
+     "text": "The 6-week VO₂peak gain was explained mainly by peak cardiac output and the blood's oxygen-carrying capacity; it fell when red-cell volume was reset.",
+     "grade": "weak",
+     "sources": [
+      "montero2015b"
+     ],
+     "evidence": [
+      {
+       "source": "montero2015b",
+       "quote": "In conclusion, the improvement in V̇(O2peak) following 6 weeks of ET is primarily attributed to increases in Q̇(peak) and oxygen-carrying capacity of blood in untrained healthy young subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vb-rbc-timing"
+  },
+  {
+   "type": "question",
+   "item": "vb-montero-analysis"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Capillaries grow by angiogenesis, triggered by shear stress and stretch; VEGF mRNA spikes for hours after each session, VEGF protein stays up for the first weeks.",
+    "Artery function (FMD, nitric oxide from the endothelium) improves within 2–4 weeks; then the artery remodels larger and the function boost fades.",
+    "Shear stress is the cause: blunting it with a cuff blocked the artery's adaptation.",
+    "Plasma volume expands within days (+12% in 8 days); red cells and Hb mass over weeks (+6–8% in 6 weeks).",
+    "Early VO₂max gains come mostly from blood and the heart; muscle capillaries and mitochondria matter most below the maximum."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "vb-angio-trigger",
+   "concept": "vb-angiogenesis",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "olfert2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which pair of physical signals is thought to trigger new capillaries in trained muscle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shear stress from more blood flow, and stretch from contraction",
+       "correct": true,
+       "why": "Right: both are proposed mechanical triggers of angiogenesis."
+      },
+      {
+       "id": "b",
+       "text": "Low blood glucose, and high body temperature",
+       "why": "Neither is the main mechanical trigger of capillary growth."
+      },
+      {
+       "id": "c",
+       "text": "Lactate from the muscle, and less oxygen in the lungs",
+       "why": "Lactate isn't the proposed trigger, and lung oxygen doesn't reach the capillaries directly."
+      },
+      {
+       "id": "d",
+       "text": "Higher haemoglobin mass, and thicker blood",
+       "why": "More red cells don't trigger capillary sprouting; flow and stretch do."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-vegf-timing",
+   "concept": "vb-angiogenesis",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "olfert2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers biopsy a cyclist's thigh 24 h after a long ride to look for the VEGF mRNA response. What will they most likely find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little or nothing: VEGF mRNA is back to baseline within 4–6 h",
+       "correct": true,
+       "why": "Right: the mRNA spike is short; a 24 h biopsy misses it."
+      },
+      {
+       "id": "b",
+       "text": "The peak response, since capillaries grow over days",
+       "why": "Capillaries grow over weeks, but the mRNA signal lasts hours."
+      },
+      {
+       "id": "c",
+       "text": "A large fall below baseline",
+       "why": "The mRNA returns to baseline; a fall isn't the typical finding."
+      },
+      {
+       "id": "d",
+       "text": "No VEGF at all, since trained muscle stops making it",
+       "why": "Trained muscle still makes VEGF; the timing is the problem."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A study biopsies runners 24 h after an interval session to measure VEGF mRNA. What will it most likely find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little or nothing: the spike is over within 4–6 h",
+       "correct": true,
+       "why": "Right: VEGF mRNA rises severalfold after a bout, then returns to baseline within hours."
+      },
+      {
+       "id": "b",
+       "text": "The highest values of the whole training response",
+       "why": "The highest values come within hours, not a day later."
+      },
+      {
+       "id": "c",
+       "text": "A large fall below baseline",
+       "why": "Values return to baseline rather than falling below it."
+      },
+      {
+       "id": "d",
+       "text": "No VEGF, since runners don't grow capillaries",
+       "why": "Endurance training is a classic stimulus for capillary growth."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-fmd-time",
+   "concept": "vb-arteries",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "tinken2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's leg-artery FMD rises from 6% to 9% after 3 weeks of training, then falls back to about 6.5% by week 8 while she keeps training. Best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Function rose first; then the artery grew and the boost faded",
+       "correct": true,
+       "why": "Right: in the training study FMD peaked at 2–4 weeks as artery size kept rising."
+      },
+      {
+       "id": "b",
+       "text": "She is overtraining and her arteries are failing",
+       "why": "The same pattern appeared in healthy men on a normal programme: it is the expected time course."
+      },
+      {
+       "id": "c",
+       "text": "Training stopped working after 3 weeks",
+       "why": "The structural change (dilator capacity) kept growing to week 8."
+      },
+      {
+       "id": "d",
+       "text": "The first result was a measurement error",
+       "why": "The rise-then-fall is a reproducible pattern, not noise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-cuff-design",
+   "concept": "vb-arteries",
+   "bloom": "evaluate",
+   "sources": [
+    "tinken2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the handgrip study, both arms trained but a cuff blunted shear stress in one; only the uncuffed arm's artery adapted. What does this design show, and what limits it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "That shear causes the adaptation; but it used handgrip in healthy men only",
+       "correct": true,
+       "why": "Right: the within-person comparison isolates shear; whether whole-body running or cycling works the same is inferred."
+      },
+      {
+       "id": "b",
+       "text": "That shear doesn't matter; but the sample was too large",
+       "why": "The cuffed arm didn't adapt, so shear did matter."
+      },
+      {
+       "id": "c",
+       "text": "That strength gains cause artery adaptation; but there was no training",
+       "why": "Both arms gained strength equally, yet only one adapted, which rules strength out."
+      },
+      {
+       "id": "d",
+       "text": "That nitric oxide is harmful; but it used animals",
+       "why": "It was a human study, and NO-mediated function improved where shear was kept."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-camp-days",
+   "concept": "vb-plasma",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "convertino1980",
+    "sawka2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist does a 10-day training camp of 2 h rides daily. Which change in his blood is most likely by the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bigger plasma volume, with red-cell volume about unchanged",
+       "correct": true,
+       "why": "Right: plasma expands within days (about +12% in 8 days), red cells take weeks."
+      },
+      {
+       "id": "b",
+       "text": "A big rise in red-cell volume",
+       "why": "Red-cell volume takes weeks; in 8 days it was essentially unchanged."
+      },
+      {
+       "id": "c",
+       "text": "A higher haemoglobin concentration",
+       "why": "More plasma dilutes haemoglobin, so its concentration falls."
+      },
+      {
+       "id": "d",
+       "text": "No change, since blood takes months to adapt",
+       "why": "Plasma volume rises within days."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-montero-analysis",
+   "concept": "vb-redcells",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "montero2015b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 6 weeks of training, men had more capillaries (+18%) and mitochondria (+43%), but resetting red-cell volume to pre-training levels removed most of the VO₂peak gain. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Early VO₂max gains come mostly from blood and the heart, not the muscle",
+       "correct": true,
+       "why": "Right: blood volume and cardiac output explained the gain; muscle changes didn't."
+      },
+      {
+       "id": "b",
+       "text": "Muscle adaptations are useless",
+       "why": "They matter for submaximal endurance, which VO₂peak doesn't capture."
+      },
+      {
+       "id": "c",
+       "text": "Removing blood damages the muscle's mitochondria",
+       "why": "Blood removal lowers oxygen delivery; the mitochondria were not affected."
+      },
+      {
+       "id": "d",
+       "text": "Capillaries limit VO₂max more than the heart",
+       "why": "If so, resetting blood volume wouldn't have removed most of the gain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-vegf-weeks",
+   "concept": "vb-angiogenesis",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "olfert2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In human training studies, what happens to VEGF protein in muscle over the first month or so?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raised in the first weeks, back near baseline by about 4 weeks",
+       "correct": true,
+       "why": "Right: as if the main sprouting phase were over."
+      },
+      {
+       "id": "b",
+       "text": "Rises steadily for as long as training continues",
+       "why": "In humans it returned to baseline after about 4 weeks."
+      },
+      {
+       "id": "c",
+       "text": "Never changes; only the mRNA does",
+       "why": "The protein is raised in the first weeks of training."
+      },
+      {
+       "id": "d",
+       "text": "Falls below baseline from the first session",
+       "why": "Training raises VEGF, at least at first."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-rbc-timing",
+   "concept": "vb-redcells",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "montero2015b",
+    "sawka2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner finishes her first 6 weeks of structured training. Compared with the start, what is the most likely change in her blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More red cells (about +8%) and more Hb mass (about +6%)",
+       "correct": true,
+       "why": "Right: by 6 weeks, red-cell volume and Hb mass have had time to grow."
+      },
+      {
+       "id": "b",
+       "text": "More plasma only; red cells take a year",
+       "why": "Red cells take weeks, not a year: +8% in 6 weeks."
+      },
+      {
+       "id": "c",
+       "text": "Fewer red cells, because her haematocrit is lower",
+       "why": "A lower haematocrit is dilution by plasma; total red cells went up."
+      },
+      {
+       "id": "d",
+       "text": "No change in blood, only in muscle",
+       "why": "Blood changed, and it explained most of the VO₂peak gain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb-hct-calc",
+   "concept": "vb-plasma",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sawka2000",
+    "convertino1980"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has 2.4 L of red cells and 3.0 L of plasma. After a week of hard training, plasma is up 10%, red cells unchanged. What is her haematocrit now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "42.1%",
+       "correct": true,
+       "why": "Right: plasma 3.3 L, blood 5.7 L, Hct = 2.4 ÷ 5.7 = 42.1%."
+      },
+      {
+       "id": "b",
+       "text": "44.4%",
+       "why": "That is the before value: 2.4 ÷ 5.4."
+      },
+      {
+       "id": "c",
+       "text": "72.7%",
+       "why": "This divides red cells by plasma (2.4 ÷ 3.3), not by whole blood."
+      },
+      {
+       "id": "d",
+       "text": "40.0%",
+       "why": "This subtracts the 10% from the old Hct (44.4 − 4.4); Hct must be recomputed from volumes."
+      }
+     ],
+     "solution": "Plasma after = 3.0 × 1.10 = 3.3 L. Blood = 2.4 + 3.3 = 5.7 L. Hct = 2.4 ÷ 5.7 = 42.1% (before 2.4 ÷ 5.4 = 44.4%)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist has 2.5 L of red cells and 3.0 L of plasma. After a camp, plasma is up 15%, red cells unchanged. What is his haematocrit now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "42.0%",
+       "correct": true,
+       "why": "Right: plasma 3.45 L, blood 5.95 L, Hct = 2.5 ÷ 5.95 = 42.0%."
+      },
+      {
+       "id": "b",
+       "text": "45.5%",
+       "why": "That is the before value: 2.5 ÷ 5.5."
+      },
+      {
+       "id": "c",
+       "text": "72.5%",
+       "why": "This divides red cells by plasma (2.5 ÷ 3.45), not by whole blood."
+      },
+      {
+       "id": "d",
+       "text": "38.6%",
+       "why": "This takes 15% off the old Hct (45.5 × 0.85); Hct must be recomputed from volumes."
+      }
+     ],
+     "solution": "Plasma after = 3.0 × 1.15 = 3.45 L. Blood = 2.5 + 3.45 = 5.95 L. Hct = 2.5 ÷ 5.95 = 42.0% (before 2.5 ÷ 5.5 = 45.5%)."
+    },
+    {
+     "id": "c",
+     "stem": "A runner has 2.0 L of red cells and 2.5 L of plasma. After 8 days of training, plasma is up 12%, red cells unchanged. What is her haematocrit now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41.7%",
+       "correct": true,
+       "why": "Right: plasma 2.8 L, blood 4.8 L, Hct = 2.0 ÷ 4.8 = 41.7%."
+      },
+      {
+       "id": "b",
+       "text": "44.4%",
+       "why": "That is the before value: 2.0 ÷ 4.5."
+      },
+      {
+       "id": "c",
+       "text": "71.4%",
+       "why": "This divides red cells by plasma (2.0 ÷ 2.8), not by whole blood."
+      },
+      {
+       "id": "d",
+       "text": "39.1%",
+       "why": "This takes 12% off the old Hct (44.4 × 0.88); Hct must be recomputed from volumes."
+      }
+     ],
+     "solution": "Plasma after = 2.5 × 1.12 = 2.8 L. Blood = 2.0 + 2.8 = 4.8 L. Hct = 2.0 ÷ 4.8 = 41.7% (before 2.0 ÷ 4.5 = 44.4%)."
+    }
+   ]
+  }
+ ]
+}
