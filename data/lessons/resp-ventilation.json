@@ -1,0 +1,911 @@
+{
+ "id": "resp-ventilation",
+ "module": "t1b-respiratory",
+ "title": "Minute ventilation: depth, rate and dead space",
+ "goal": "Explain how minute ventilation is built from tidal volume and breathing frequency, how each changes with intensity, and how dead space sets how much air reaches the alveoli.",
+ "requires": [
+  "cv-drift"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "minute-ventilation",
+    "tidal-volume",
+    "breathing-frequency",
+    "alveolar-ventilation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "vent-ve",
+   "title": "Minute ventilation: depth × rate",
+   "text": "[Minute ventilation](g:minute-ventilation) (V̇E) is the volume of air you breathe out each minute. It has two parts, how deep and how often:\n\n**V̇E = [tidal volume](g:tidal-volume) (VT) × [breathing frequency](g:breathing-frequency) (f)**\n\nAt rest a breath is about 500 mL and an adult takes 12–18 breaths a minute [[c:rest-ventilation]], so V̇E is about 6–9 L·min⁻¹.\n\nHard exercise takes it much higher. Twelve healthy people (average VO₂max 61 mL·kg⁻¹·min⁻¹) exercising to exhaustion at 95% of [VO₂max](g:vo2max) breathed about **149 L·min⁻¹** in their final minute [[c:ve-hard]]: more than twenty times rest.\n\nWatch the units: VT is often given in mL, V̇E in L·min⁻¹. Convert before you multiply.",
+   "claims": [
+    {
+     "id": "rest-ventilation",
+     "text": "At rest a breath is about 500 mL and adults breathe 12–18 times a minute.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Tidal volume (TV) is the amount of air that normally enters the lungs during quiet breathing, which is about 500 milliliters.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "By adolescence, the normal respiratory rate is similar to that of adults, 12 to 18 breaths per minute.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ve-hard",
+     "text": "In 12 healthy subjects (VO₂max 40–80 mL·kg⁻¹·min⁻¹) exercising to exhaustion at 95% VO₂max, ventilation in the final minute was about 149 L·min⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "johnson1993"
+     ],
+     "evidence": [
+      {
+       "source": "johnson1993",
+       "quote": "exercised at 95 and 85% VO2, max to exhaustion (mean time = 14 +/- 3 and 31 +/- 8 min, expired ventilation (VE) over final minute of exercise = 149 +/- 9 and 126 +/- 10 l min-1)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "vent-ve-example",
+   "title": "Breathing on the start line",
+   "problem": "Before a race a runner breathes 500 mL per breath, 12 times a minute. What is her minute ventilation?",
+   "steps": [
+    "Convert the breath to litres first: 500 mL = 0.5 L.",
+    "V̇E = VT × f = 0.5 L × 12 min⁻¹ = 6.0 L·min⁻¹.",
+    "Check: 500 × 12 = 6,000 is in mL·min⁻¹, the same 6 L·min⁻¹ once converted. Mixing the two (calling it 6,000 L·min⁻¹) is the classic slip."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vent-ve-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "vent-ve-rest"
+  },
+  {
+   "type": "concept",
+   "id": "vent-pattern",
+   "title": "Deeper first, then faster",
+   "text": "In an incremental test V̇E first rises through both deeper and faster breaths. At high intensity almost all the further rise comes from frequency, and VT levels off [[c:vt-plateau]]. In six subjects that plateau sat near 2.9 L. It came at the same size whether they reached a high V̇E by maximal exercise or by easier exercise plus inhaled CO₂, so it follows how big V̇E is, not effort itself.\n\nThe plateau is common, not universal: 18 of 23 recreational cyclists showed it near the second threshold [[c:vt-plateau-common]].\n\nFrequency is also the fast part. In intervals f rises quickly at the start of each rep and falls quickly in recovery [[c:fr-fast]].",
+   "claims": [
+    {
+     "id": "vt-plateau",
+     "text": "Ventilation first rises through both VT and f; at high intensity further rises are almost all f, and VT plateaus (about 2.9 L in one study), at a level set by the size of ventilation.",
+     "grade": "moderate",
+     "sources": [
+      "gallagher1987",
+      "cross2012"
+     ],
+     "evidence": [
+      {
+       "source": "gallagher1987",
+       "quote": "During progressive exercise ventilation (VI) initially increases through increases in both tidal volume (VT) and respiratory frequency (f) but at high levels of exercise further increases in VI are almost completely due to increases in f and a VT plateau is seen.",
+       "level": "abstract"
+      },
+      {
+       "source": "gallagher1987",
+       "quote": "There was no significant difference in the level of the VT plateau between the ME (2.93 +/- 0.17 liters) and E/CO2 (2.97 +/- 0.12 liters) tests.",
+       "level": "abstract"
+      },
+      {
+       "source": "gallagher1987",
+       "quote": "is not due to a tachypneic stimulus related to very high levels of exercise but is a function of the level of VI",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vt-plateau-common",
+     "text": "A VT plateau near the second gas-exchange threshold was seen in 18 of 23 cyclists: common but not universal.",
+     "grade": "weak",
+     "sources": [
+      "cross2012"
+     ],
+     "evidence": [
+      {
+       "source": "cross2012",
+       "quote": "is a common (but not universal) feature of the breathing pattern response to incremental cycling",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fr-fast",
+     "text": "Breathing frequency responds very fast to changes in workload, at exercise onset and offset and during interval training.",
+     "grade": "moderate",
+     "sources": [
+      "nicolo2017"
+     ],
+     "evidence": [
+      {
+       "source": "nicolo2017",
+       "quote": "An important feature differentiating f R from other physiological variables is the very fast response at exercise onset and offset.",
+       "level": "full-text"
+      },
+      {
+       "source": "nicolo2017",
+       "quote": "f R responds rapidly to variations in workload during high-intensity interval training (HIIT)",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vent-pattern",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "vent-fr-fast"
+  },
+  {
+   "type": "question",
+   "item": "vent-plateau-co2"
+  },
+  {
+   "type": "question",
+   "item": "vent-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "vent-dead-space",
+   "title": "Dead space: the wasted part of each breath",
+   "text": "About 150 mL of each breath (more in tall people, less in short ones) only fills the airways and never reaches the [alveoli](g:alveolus): the [anatomical dead space](g:anatomical-dead-space) from the lungs lesson. At rest that is about 30% of a 500 mL breath [[c:dead-space-150]]. In healthy people the alveoli add almost no dead space of their own [[c:alveolar-dead-small]], so only the rest of the breath counts:\n\n**[Alveolar ventilation](g:alveolar-ventilation) V̇A = (VT − VD) × f**\n\nVD is the dead space. You pay it on *every* breath. So at the same V̇E, shallow fast breathing wastes more air than deep slow breathing, and anything that adds tube to the airway, like a swim snorkel, makes VD bigger.",
+   "claims": [
+    {
+     "id": "dead-space-150",
+     "text": "Anatomical dead space grows with body size: about 150 mL for an adult 175 cm tall, about 30% of a normal 500 mL tidal volume.",
+     "grade": "strong",
+     "sources": [
+      "hart1963",
+      "omole2026"
+     ],
+     "evidence": [
+      {
+       "source": "hart1963",
+       "quote": "The volume of the anatomic dead space correlated closely with height (Vd (ml) = 7.585 x Ht (cm)2.363 x 10-4",
+       "level": "abstract"
+      },
+      {
+       "source": "omole2026",
+       "quote": "This volume approximates 30% of normal tidal volume (500 mL), resulting in an anatomic dead space of 150 mL.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "alveolar-dead-small",
+     "text": "Alveolar dead space is negligible in healthy adults, so physiological dead space is close to anatomical dead space.",
+     "grade": "strong",
+     "sources": [
+      "omole2026"
+     ],
+     "evidence": [
+      {
+       "source": "omole2026",
+       "quote": "Alveolar dead space is negligible in healthy adults. Therefore, physiologic dead space approximates anatomical dead space.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "vent-va-example",
+   "title": "How much air reaches the alveoli?",
+   "problem": "At rest: VT = 0.5 L, dead space = 0.15 L, f = 12 breaths per minute. Find V̇E and V̇A.",
+   "steps": [
+    "V̇E = 0.5 × 12 = 6.0 L·min⁻¹.",
+    "Useful part of each breath = VT − VD = 0.5 − 0.15 = 0.35 L.",
+    "V̇A = 0.35 × 12 = 4.2 L·min⁻¹.",
+    "The other 1.8 L·min⁻¹ (0.15 × 12) only moved in and out of the airways: subtract the dead space once per breath, not once per minute."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "vent-va-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "vent-shallow",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "vent-snorkel",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "vent-numbers",
+   "title": "From rest to the finish line",
+   "text": "| | Rest | Near maximal |\n|---|---|---|\n| VT | 0.5 L | about 2.9 L |\n| f | 12–18 per min | about 50 per min |\n| V̇E | 6–9 L·min⁻¹ | about 150 L·min⁻¹ |\n| Dead space share of a breath (150 mL) | 30% | about 5% |\n\nThe near-maximal f is worked out from the cards above, not measured: 149 ÷ 2.9 ≈ 51 breaths a minute.\n\nThe last row is the point. Holding dead space at 150 mL (a simplification), a 2.9 L breath wastes only 0.15 ÷ 2.9 ≈ 5% of it, so deeper breathing makes ventilation more efficient: almost all the extra air is useful.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "vent-dead-share",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "vent-ve-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "vent-va-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Minute ventilation V̇E = tidal volume × breathing frequency: about 6–9 L·min⁻¹ at rest, about 150 L·min⁻¹ near maximal effort in fit people.",
+    "Early in an incremental test both depth and rate rise; at high intensity VT levels off (often near the second threshold) and the rise comes from frequency.",
+    "Breathing frequency responds within breaths to changes in effort, faster than heart rate or O₂ uptake.",
+    "About 150 mL of each breath is dead space; alveolar ventilation V̇A = (VT − VD) × f, so dead space is paid on every breath.",
+    "Deeper breaths shrink the dead-space share from about 30% at rest to about 5% (taking dead space as a fixed 150 mL); shallow fast breathing and snorkels waste more air."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "vent-pattern",
+   "concept": "vent-pattern",
+   "bloom": "understand",
+   "sources": [
+    "gallagher1987",
+    "cross2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does a treadmill test to exhaustion. Over the last few stages her ventilation keeps rising. Mainly through what?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Faster breathing, with breath size levelling off",
+       "correct": true,
+       "why": "Right: at high intensity almost all the rise in V̇E comes from frequency, while VT plateaus."
+      },
+      {
+       "id": "b",
+       "text": "Bigger breaths, with breathing rate levelling off",
+       "why": "Reversed: depth rises early in the test, but it is depth that levels off near the top, not rate."
+      },
+      {
+       "id": "c",
+       "text": "Bigger and faster breaths, in about equal shares",
+       "why": "That is the early part of the test. At high intensity the split is no longer even: f does almost all of it."
+      },
+      {
+       "id": "d",
+       "text": "Neither: ventilation stops rising near the end",
+       "why": "V̇E keeps rising up to exhaustion; it is VT, one of its two parts, that levels off."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On a ramp test a cyclist's ventilation goes from 100 to 150 L·min⁻¹ between 300 and 400 W. Most of the extra 50 L·min⁻¹ most likely comes from:",
+     "options": [
+      {
+       "id": "a",
+       "text": "A higher breathing frequency",
+       "correct": true,
+       "why": "Right: by this point VT has mostly levelled off, so V̇E = VT × f rises mainly through f."
+      },
+      {
+       "id": "b",
+       "text": "A larger tidal volume",
+       "why": "Depth does most of its rising earlier in the test; near the top VT plateaus."
+      },
+      {
+       "id": "c",
+       "text": "A smaller dead space",
+       "why": "Dead space doesn't shrink with effort, and V̇E counts all air breathed, dead space included."
+      },
+      {
+       "id": "d",
+       "text": "Equal rises in depth and rate",
+       "why": "An even split fits low intensities; at high intensity the rise is almost all frequency."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-ve-calc",
+   "concept": "vent-ve",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner at tempo pace breathes 2,400 mL per breath, 35 breaths a minute. What is his minute ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "84 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.4 L × 35 min⁻¹ = 84 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "84,000 L·min⁻¹",
+       "why": "This multiplies the mL figure and calls the result litres: 2,400 × 35 = 84,000 mL·min⁻¹, which is 84 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "37.4 L·min⁻¹",
+       "why": "This adds depth and rate (2.4 + 35). V̇E is a product: volume per breath × breaths per minute."
+      },
+      {
+       "id": "d",
+       "text": "14.6 L·min⁻¹",
+       "why": "This divides rate by depth (35 ÷ 2.4). V̇E = VT × f."
+      }
+     ],
+     "solution": "V̇E = VT × f = 2.4 L × 35 min⁻¹ = 84 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist on a long climb breathes 2,000 mL per breath, 30 breaths a minute. What is her minute ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 2.0 L × 30 min⁻¹ = 60 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "60,000 L·min⁻¹",
+       "why": "This multiplies the mL figure and calls the result litres: 60,000 mL·min⁻¹ is 60 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "32 L·min⁻¹",
+       "why": "This adds depth and rate (2 + 30). V̇E is a product."
+      },
+      {
+       "id": "d",
+       "text": "15 L·min⁻¹",
+       "why": "This divides rate by depth (30 ÷ 2). V̇E = VT × f."
+      }
+     ],
+     "solution": "V̇E = VT × f = 2.0 L × 30 min⁻¹ = 60 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike leg of a triathlon an athlete breathes 1,600 mL per breath, 25 breaths a minute. What is his minute ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 1.6 L × 25 min⁻¹ = 40 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "40,000 L·min⁻¹",
+       "why": "This multiplies the mL figure and calls the result litres: 40,000 mL·min⁻¹ is 40 L·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "26.6 L·min⁻¹",
+       "why": "This adds depth and rate (1.6 + 25). V̇E is a product."
+      },
+      {
+       "id": "d",
+       "text": "15.6 L·min⁻¹",
+       "why": "This divides rate by depth (25 ÷ 1.6). V̇E = VT × f."
+      }
+     ],
+     "solution": "V̇E = VT × f = 1.6 L × 25 min⁻¹ = 40 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "vent-ve-rest",
+   "concept": "vent-ve",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how much air does a healthy adult breathe per minute at rest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 6–9 L",
+       "correct": true,
+       "why": "Right: about 0.5 L per breath × 12–18 breaths a minute."
+      },
+      {
+       "id": "b",
+       "text": "About 0.5 L",
+       "why": "That is one resting breath (tidal volume), not a whole minute of breathing."
+      },
+      {
+       "id": "c",
+       "text": "About 60–90 L",
+       "why": "Ten times too much: that is the range of moderate to hard exercise."
+      },
+      {
+       "id": "d",
+       "text": "About 150 L",
+       "why": "That is near-maximal ventilation in fit people, about twenty times rest."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-fr-fast",
+   "concept": "vent-pattern",
+   "bloom": "apply",
+   "sources": [
+    "nicolo2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides 30 s hard / 30 s easy intervals wearing a breathing-rate sensor, a heart-rate strap and a mask measuring O₂ uptake. At the start of each hard rep, which signal changes fastest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breathing frequency",
+       "correct": true,
+       "why": "Right: f responds very fast at the onset and offset of effort and follows each work and recovery phase in intervals."
+      },
+      {
+       "id": "b",
+       "text": "Heart rate",
+       "why": "Heart rate rises over tens of seconds and lags short reps; f is quicker."
+      },
+      {
+       "id": "c",
+       "text": "O₂ uptake",
+       "why": "O₂ uptake rises with a delay of a minute or more (the O₂ deficit), so it barely tracks 30 s reps."
+      },
+      {
+       "id": "d",
+       "text": "Blood lactate",
+       "why": "Lactate is slow, needs a blood sample and lags well behind each rep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-plateau-co2",
+   "concept": "vent-pattern",
+   "bloom": "analyse",
+   "sources": [
+    "gallagher1987"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab study, people reached the same high ventilation twice: once by maximal exercise, once by easy exercise while breathing CO₂-enriched air. Their tidal volume levelled off at the same size both times. What does that suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The plateau depends on how large ventilation is, not on the exercise being maximal",
+       "correct": true,
+       "why": "Right: the same VT plateau at the same V̇E, with or without hard exercise, points to the level of V̇E as the cause."
+      },
+      {
+       "id": "b",
+       "text": "Hard exercise itself forces breaths to stay small",
+       "why": "This is what the CO₂ trial rules out: the plateau also appeared with easy exercise."
+      },
+      {
+       "id": "c",
+       "text": "Inhaled CO₂ makes breaths smaller than exercise does",
+       "why": "The plateau was the same size in both trials (about 2.9 L), not smaller with CO₂."
+      },
+      {
+       "id": "d",
+       "text": "The plateau comes from tired leg muscles",
+       "why": "The CO₂ trial used easy exercise, with no tired legs, and still showed the same plateau."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-appraisal",
+   "concept": "vent-pattern",
+   "bloom": "evaluate",
+   "sources": [
+    "gallagher1987",
+    "cross2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The CO₂ study above tested six people. What most limits how far its plateau finding applies to every athlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Six people can't show how much individuals vary",
+       "correct": true,
+       "why": "Right: a tiny sample can hide individual variation; in 23 cyclists (Cross 2012) the plateau showed in only 18."
+      },
+      {
+       "id": "b",
+       "text": "Breathing CO₂-enriched air is unnatural, so the whole result is invalid",
+       "why": "Adding CO₂ was the control: it raised V̇E without hard exercise. It answers a mechanism question; it doesn't invalidate it."
+      },
+      {
+       "id": "c",
+       "text": "It reported tidal volume in litres instead of as a % of vital capacity",
+       "why": "The unit doesn't limit generalisation; the plateau can be expressed either way."
+      },
+      {
+       "id": "d",
+       "text": "It used an incremental test, and races are never run as incremental tests",
+       "why": "Incremental testing was the condition of interest; the issue is how many people were tested."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-va-calc",
+   "concept": "vent-dead-space",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hart1963",
+    "omole2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner breathes 2.0 L per breath, 40 times a minute. Dead space is 0.15 L. What is her alveolar ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "74 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (2.0 − 0.15) × 40 = 1.85 × 40 = 74 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "80 L·min⁻¹",
+       "why": "That is V̇E (2.0 × 40); it forgets the dead space."
+      },
+      {
+       "id": "c",
+       "text": "79.85 L·min⁻¹",
+       "why": "This subtracts the dead space once per minute (80 − 0.15). It is lost on every breath: 0.15 × 40 = 6 L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "6 L·min⁻¹",
+       "why": "That is the dead-space ventilation (0.15 × 40), the wasted part, not the useful part."
+      }
+     ],
+     "solution": "V̇A = (VT − VD) × f = (2.0 − 0.15) × 40 = 74 L·min⁻¹. Of the 80 L·min⁻¹ breathed, 6 L·min⁻¹ only filled the airways."
+    },
+    {
+     "id": "b",
+     "stem": "Near the top of a ramp test a cyclist breathes 3.0 L per breath, 50 times a minute. Dead space is 0.15 L. What is his alveolar ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "142.5 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (3.0 − 0.15) × 50 = 2.85 × 50 = 142.5 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "150 L·min⁻¹",
+       "why": "That is V̇E (3.0 × 50); it forgets the dead space."
+      },
+      {
+       "id": "c",
+       "text": "149.85 L·min⁻¹",
+       "why": "This subtracts the dead space once per minute. It is lost on every breath: 0.15 × 50 = 7.5 L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "7.5 L·min⁻¹",
+       "why": "That is the dead-space ventilation (0.15 × 50), not the useful part."
+      }
+     ],
+     "solution": "V̇A = (VT − VD) × f = (3.0 − 0.15) × 50 = 142.5 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "In an easy swim a triathlete breathes 1.2 L per breath, 25 times a minute. Dead space is 0.15 L. What is her alveolar ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "26.25 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (1.2 − 0.15) × 25 = 1.05 × 25 = 26.25 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "30 L·min⁻¹",
+       "why": "That is V̇E (1.2 × 25); it forgets the dead space."
+      },
+      {
+       "id": "c",
+       "text": "29.85 L·min⁻¹",
+       "why": "This subtracts the dead space once per minute. It is lost on every breath: 0.15 × 25 = 3.75 L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "3.75 L·min⁻¹",
+       "why": "That is the dead-space ventilation (0.15 × 25), not the useful part."
+      }
+     ],
+     "solution": "V̇A = (VT − VD) × f = (1.2 − 0.15) × 25 = 26.25 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "vent-shallow",
+   "concept": "vent-dead-space",
+   "bloom": "analyse",
+   "sources": [
+    "hart1963",
+    "omole2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners both breathe 60 L·min⁻¹, with 0.15 L of dead space. A takes 40 breaths of 1.5 L; B takes 20 breaths of 3.0 L. Who gets more air to the alveoli?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: 57 against 54 L·min⁻¹",
+       "correct": true,
+       "why": "Right: A gets (1.5 − 0.15) × 40 = 54, B gets (3.0 − 0.15) × 20 = 57 L·min⁻¹. Fewer breaths means paying the dead space fewer times."
+      },
+      {
+       "id": "b",
+       "text": "Neither: same V̇E means the same alveolar ventilation",
+       "why": "V̇E counts the dead space too. The dead space is paid per breath, so the pattern matters."
+      },
+      {
+       "id": "c",
+       "text": "A, because more breaths refresh the alveoli more often",
+       "why": "More breaths means paying the 0.15 L dead space more often: 6 L·min⁻¹ wasted for A against 3 for B."
+      },
+      {
+       "id": "d",
+       "text": "It can't be told without their O₂ uptake",
+       "why": "O₂ uptake isn't needed: V̇A = (VT − VD) × f uses only the numbers given."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two cyclists both breathe 60 L·min⁻¹, with 0.15 L of dead space. A takes 60 breaths of 1.0 L; B takes 30 breaths of 2.0 L. Who gets more air to the alveoli?",
+     "options": [
+      {
+       "id": "a",
+       "text": "B: 55.5 against 51 L·min⁻¹",
+       "correct": true,
+       "why": "Right: A gets (1.0 − 0.15) × 60 = 51, B gets (2.0 − 0.15) × 30 = 55.5 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Neither: same V̇E means the same alveolar ventilation",
+       "why": "V̇E counts the dead space too, and the dead space is paid per breath."
+      },
+      {
+       "id": "c",
+       "text": "A, because more breaths refresh the alveoli more often",
+       "why": "More breaths means paying the dead space more often: 9 L·min⁻¹ wasted for A against 4.5 for B."
+      },
+      {
+       "id": "d",
+       "text": "It can't be told without their O₂ uptake",
+       "why": "O₂ uptake isn't needed: V̇A = (VT − VD) × f uses only the numbers given."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vent-snorkel",
+   "concept": "vent-dead-space",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hart1963",
+    "omole2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete trains with a centre snorkel. Suppose it adds 0.15 L of tube to her own 0.15 L of dead space. She breathes 1.5 L per breath, 30 times a minute. What is her alveolar ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "36 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (1.5 − 0.15 − 0.15) × 30 = 1.2 × 30 = 36 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "40.5 L·min⁻¹",
+       "why": "This forgets the snorkel: (1.5 − 0.15) × 30. The tube is dead space too."
+      },
+      {
+       "id": "c",
+       "text": "45 L·min⁻¹",
+       "why": "This is V̇E (1.5 × 30), forgetting all dead space."
+      },
+      {
+       "id": "d",
+       "text": "44.7 L·min⁻¹",
+       "why": "This subtracts the 0.3 L once per minute instead of once per breath."
+      }
+     ],
+     "solution": "Total dead space = 0.15 + 0.15 = 0.30 L. V̇A = (1.5 − 0.30) × 30 = 36 L·min⁻¹: the snorkel costs 4.5 L·min⁻¹ of useful air at the same breathing."
+    },
+    {
+     "id": "b",
+     "stem": "A swimmer's snorkel adds 0.2 L of dead space to her own 0.15 L. She breathes 2.0 L per breath, 25 times a minute. What is her alveolar ventilation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41.25 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (2.0 − 0.15 − 0.2) × 25 = 1.65 × 25 = 41.25 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "46.25 L·min⁻¹",
+       "why": "This forgets the snorkel: (2.0 − 0.15) × 25."
+      },
+      {
+       "id": "c",
+       "text": "50 L·min⁻¹",
+       "why": "This is V̇E (2.0 × 25), forgetting all dead space."
+      },
+      {
+       "id": "d",
+       "text": "49.65 L·min⁻¹",
+       "why": "This subtracts the 0.35 L once per minute instead of once per breath."
+      }
+     ],
+     "solution": "Total dead space = 0.15 + 0.2 = 0.35 L. V̇A = (2.0 − 0.35) × 25 = 41.25 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "vent-dead-share",
+   "concept": "vent-numbers",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hart1963",
+    "omole2026",
+    "gallagher1987"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Dead space is 150 mL. In a hard run a breath is 2.5 L. What share of that breath is dead space?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6%",
+       "correct": true,
+       "why": "Right: 0.15 ÷ 2.5 = 0.06 = 6%."
+      },
+      {
+       "id": "b",
+       "text": "30%",
+       "why": "That is the resting share (150 of 500 mL). Bigger breaths make the share smaller."
+      },
+      {
+       "id": "c",
+       "text": "0.06%",
+       "why": "This leaves the answer as a fraction and adds a % sign: 0.06 is 6%."
+      },
+      {
+       "id": "d",
+       "text": "17%",
+       "why": "This divides the breath by the dead space (2.5 ÷ 0.15 ≈ 17) and calls it a %."
+      }
+     ],
+     "solution": "Share = VD ÷ VT = 0.15 L ÷ 2.5 L = 0.06 = 6%."
+    },
+    {
+     "id": "b",
+     "stem": "Dead space is 150 mL. Near the top of a ramp test a cyclist's breath is 3.0 L. What share of that breath is dead space?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5%",
+       "correct": true,
+       "why": "Right: 0.15 ÷ 3.0 = 0.05 = 5%."
+      },
+      {
+       "id": "b",
+       "text": "30%",
+       "why": "That is the resting share (150 of 500 mL). Bigger breaths make the share smaller."
+      },
+      {
+       "id": "c",
+       "text": "0.05%",
+       "why": "This leaves the answer as a fraction and adds a % sign: 0.05 is 5%."
+      },
+      {
+       "id": "d",
+       "text": "20%",
+       "why": "This divides the breath by the dead space (3.0 ÷ 0.15 = 20) and calls it a %."
+      }
+     ],
+     "solution": "Share = VD ÷ VT = 0.15 L ÷ 3.0 L = 0.05 = 5%."
+    },
+    {
+     "id": "c",
+     "stem": "Dead space is 150 mL. In an easy swim a triathlete's breath is 1.5 L. What share of that breath is dead space?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10%",
+       "correct": true,
+       "why": "Right: 0.15 ÷ 1.5 = 0.10 = 10%."
+      },
+      {
+       "id": "b",
+       "text": "30%",
+       "why": "That is the resting share (150 of 500 mL). Bigger breaths make the share smaller."
+      },
+      {
+       "id": "c",
+       "text": "0.1%",
+       "why": "This leaves the answer as a fraction and adds a % sign: 0.1 is 10%."
+      },
+      {
+       "id": "d",
+       "text": "1%",
+       "why": "This divides 0.15 by 15 instead of by 1.5: a decimal-point slip."
+      }
+     ],
+     "solution": "Share = VD ÷ VT = 0.15 L ÷ 1.5 L = 0.10 = 10%."
+    }
+   ]
+  }
+ ]
+}

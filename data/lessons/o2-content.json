@@ -1,0 +1,752 @@
+{
+ "id": "o2-content",
+ "module": "t1b-oxygen-transport",
+ "title": "How much oxygen is in the blood",
+ "goal": "Calculate arterial O₂ content from haemoglobin, saturation and PO₂, and explain how anaemia and altitude lower it.",
+ "requires": [
+  "o2-hb-curve"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cao2"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cont-two",
+   "title": "Saturation is a share, content is an amount",
+   "text": "Three numbers describe arterial oxygen, and they are easy to mix up:\n\n| number | what it is | typical, sea level |\n|---|---|---|\n| PaO₂ | pressure of the O₂ *dissolved* in plasma | about 100 mmHg |\n| [SaO₂](g:sao2) | share of haemoglobin sites holding O₂ | about 98% |\n| [CaO₂](g:cao2) | mL of O₂ actually carried per litre of blood | about 200 mL·L⁻¹ |\n\nMuscles are supplied with an *amount* of O₂, so for delivery content is the one that counts. And content depends on how much haemoglobin there is, which neither PaO₂ nor SaO₂ shows. With [anaemia](g:anaemia), PaO₂ and SaO₂ can be normal while content is low [[c:pao2-anaemia]].",
+   "claims": [
+    {
+     "id": "pao2-anaemia",
+     "text": "PaO₂ and SaO₂ don't show how much O₂ the blood carries; CaO₂ does, and PaO₂ can stay normal in anaemia.",
+     "grade": "strong",
+     "sources": [
+      "sarkar2017",
+      "collins2015"
+     ],
+     "evidence": [
+      {
+       "source": "sarkar2017",
+       "quote": "PaO 2 and the SaO 2 do not provide information on the number of oxygen molecules in the blood.",
+       "level": "full-text"
+      },
+      {
+       "source": "sarkar2017",
+       "quote": "Since PaO 2 depends on dissolved oxygen, PaO 2 may remain normal in the presence of anemia.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cont-equation",
+   "title": "The content equation",
+   "text": "Add up the O₂ bound to haemoglobin and the O₂ dissolved in plasma [[c:cont-formula]]:\n\n**CaO₂ = 1.34 × Hb × SaO₂ + 0.003 × PaO₂**\n\nwith CaO₂ in **mL O₂ per dL** of blood, Hb in **g·dL⁻¹**, SaO₂ as a **fraction** (0.98, not 98) and PaO₂ in **mmHg**. Multiply by 10 for mL·L⁻¹.\n\n- **1.34**: mL of O₂ one gram of haemoglobin can bind. Some papers use 1.39.\n- **0.003**: mL of O₂ dissolved per dL per mmHg (0.03 per litre).\n\nThe dissolved part is tiny. Haemoglobin lets blood carry about **70 times** more O₂ than plasma alone could [[c:hb-70fold]].",
+   "claims": [
+    {
+     "id": "cont-formula",
+     "text": "Arterial O₂ content is haemoglobin-bound O₂ plus dissolved O₂: CaO₂ = (Hb × 1.34 × SaO₂) + (0.0031 × PaO₂); the dissolved part is normally minimal.",
+     "grade": "strong",
+     "sources": [
+      "sarkar2017",
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "sarkar2017",
+       "quote": "It is calculated by the following equation: CaO 2 = (Hgb × 1.34 × SaO 2 ) + (0.0031 × PaO 2 ).",
+       "level": "full-text"
+      },
+      {
+       "source": "sarkar2017",
+       "quote": "The contribution of the dissolved oxygen to CaO 2 is normally minimal.",
+       "level": "full-text"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "Blood O 2 content e .g ., CaO 2 = 1.39 × Hb × SO 2 + 0.003 × PO 2",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-70fold",
+     "text": "Only about 0.03 mL O₂ per L per mmHg dissolves in blood, while 1 g of Hb binds about 1.34 mL, so haemoglobin raises O₂ carriage about 70-fold.",
+     "grade": "strong",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "Whereas only 0.03 ml O2 * L−1 * mmHg−1 PO2 at 37°C can be transported in blood in physical solution, one gram of Hb can bind ~1.34 ml of O2. Thus, the presence of a normal amount of Hb per volume of blood increases the amount of O2 that can be transported about 70-fold",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cont-example",
+   "title": "Content of one cyclist's arterial blood",
+   "problem": "A cyclist at rest has Hb 15 g·dL⁻¹, SaO₂ 98% and PaO₂ 100 mmHg. What is his CaO₂?",
+   "steps": [
+    "Bound O₂ = 1.34 × 15 × 0.98 = 19.7 mL·dL⁻¹. (SaO₂ goes in as 0.98, not 98.)",
+    "Dissolved O₂ = 0.003 × 100 = 0.3 mL·dL⁻¹.",
+    "CaO₂ = 19.7 + 0.3 = 20.0 mL·dL⁻¹, which is 200 mL·L⁻¹.",
+    "The dissolved part is 0.3 ÷ 20.0 = 1.5% of the total: in quick estimates you can leave it out."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cont-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cont-dissolved"
+  },
+  {
+   "type": "question",
+   "item": "cont-sat-content",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "cont-anaemia",
+   "title": "Anaemia: same saturation, less oxygen",
+   "text": "Content scales with haemoglobin. Halve the Hb and you halve the content, while saturation and PO₂ hardly change [[c:anaemia-halves]].\n\nA milder case, with SaO₂ 98% and PaO₂ 100 mmHg:\n\n| Hb (g·dL⁻¹) | CaO₂ (mL·dL⁻¹) |\n|---|---|\n| 15 | 20.0 |\n| 12 | 16.1 |\n\nA fifth less haemoglobin, a fifth less O₂ in every litre of blood, and a pulse oximeter would still read 98%. To deliver the same O₂, the heart must pump a quarter more blood (1 ÷ 0.8 = 1.25), and at maximal effort it can't.\n\nOne catch for athletes: a low Hb *concentration* can also come from extra plasma, with no loss of haemoglobin. That is the next-but-one lesson.",
+   "claims": [
+    {
+     "id": "anaemia-halves",
+     "text": "Halving haemoglobin concentration halves arterial O₂ content with little or no change in saturation or PO₂.",
+     "grade": "strong",
+     "sources": [
+      "collins2015"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "In simple terms, a reduction of haemoglobin concentration to half of the normal value is accompanied by a similar reduction in arterial oxygen content with no (or very little) change in % saturation or P",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cont-anaemia-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cont-anaemia-spo2"
+  },
+  {
+   "type": "concept",
+   "id": "cont-altitude",
+   "title": "Altitude: same haemoglobin, lower saturation",
+   "text": "At altitude the air's PO₂ is lower, so arterial PO₂ and SaO₂ fall, and content falls with them even though haemoglobin hasn't changed.\n\nIn 8 endurance athletes tested in a chamber, saturation at the end of a VO₂max test fell from 89% at 300 m to 76.5% at 2,800 m. VO₂max fell in a straight line, about **6.3% per 1,000 m**, and was already lower at 800 m than at 300 m [[c:altitude-vo2max]].\n\nWith Hb 15 g·dL⁻¹, Hb-bound O₂ at those saturations is 1.34 × 15 × 0.89 = 17.9 versus 1.34 × 15 × 0.765 = 15.4 mL·dL⁻¹: 14% less.\n\nEven at sea level, hard exercise lowers arterial saturation a little, from about 97.5% to about 95% [[c:exercise-desat]].",
+   "claims": [
+    {
+     "id": "altitude-vo2max",
+     "text": "In endurance-trained athletes acutely exposed to simulated altitude, VO₂max fell linearly by about 6.3% per 1,000 m from 300 to 2,800 m, and saturation at the end of the test fell from 89.0% to 76.5%.",
+     "grade": "weak",
+     "sources": [
+      "wehrlin2006"
+     ],
+     "evidence": [
+      {
+       "source": "wehrlin2006",
+       "quote": "VO(2max) declined linearly from 66+/-1.6 ml kg(-1) min(-1) at 300 m to 55+/-1.6 ml kg(-1) min(-1) at 2,800 m corresponding to a 6.3% decrease per 1,000 m increasing altitude (range 4.6-7.5%).",
+       "level": "abstract"
+      },
+      {
+       "source": "wehrlin2006",
+       "quote": "Arterial haemoglobin oxygen saturation at test cessation (SpO(2min)) declined from 89.0+/-2.9% at 300 m to 76.5+/-4.0% at 2,800 m (P=0.001).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "exercise-desat",
+     "text": "At sea level, the lower Hb–O₂ affinity in hard exercise lowers arterial saturation from about 97.5% at rest to about 95%.",
+     "grade": "weak",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "This decrease in Hb-O2 affinity impairs arterial O2 loading and decreases arterial SO2 from ~97.5% at rest to ~95% during high intensity exercise.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cont-altitude-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cont-altitude-vo2max",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cont-oxygen-breathing"
+  },
+  {
+   "type": "question",
+   "item": "cont-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "cont-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cont-anaemia-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "PaO₂ is a pressure, SaO₂ a share, CaO₂ an amount; muscles need the amount.",
+    "CaO₂ (mL·dL⁻¹) = 1.34 × Hb (g·dL⁻¹) × SaO₂ (fraction) + 0.003 × PaO₂ (mmHg): about 20 mL·dL⁻¹, or 200 mL·L⁻¹, at sea level.",
+    "The dissolved part is about 1.5% of the total; haemoglobin carries the rest.",
+    "Anaemia lowers content in proportion to Hb while saturation and PO₂ stay normal, so a pulse oximeter can't see it.",
+    "Altitude lowers saturation and content with the same Hb; VO₂max fell about 6.3% per 1,000 m in acute exposure."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cont-sat-content",
+   "concept": "cont-two",
+   "bloom": "understand",
+   "sources": [
+    "sarkar2017",
+    "collins2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists both have an arterial saturation of 98%. Rider A's haemoglobin is 15 g·dL⁻¹, rider B's is 12 g·dL⁻¹. Which statement is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A's blood carries about a quarter more O₂ per litre",
+       "correct": true,
+       "why": "Right: same saturation, but content scales with Hb: 15 ÷ 12 = 1.25."
+      },
+      {
+       "id": "b",
+       "text": "Both carry the same O₂, since saturation is equal",
+       "why": "Saturation is a share of the sites; with less Hb there are fewer sites to fill."
+      },
+      {
+       "id": "c",
+       "text": "B's blood carries more O₂, as its Hb is less crowded",
+       "why": "Less Hb means less O₂; there is no crowding effect on binding."
+      },
+      {
+       "id": "d",
+       "text": "You can't tell without their arterial PO₂",
+       "why": "PO₂ adds only a tiny dissolved part; the Hb difference decides it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners have the same arterial PO₂ (100 mmHg) and saturation (98%). One has Hb 16 g·dL⁻¹, the other 13.5 g·dL⁻¹. What differs between their arterial blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its O₂ content: about 18% more in the first",
+       "correct": true,
+       "why": "Right: content ∝ Hb at equal saturation; 16 ÷ 13.5 = 1.19."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: equal PO₂ and saturation mean equal oxygen",
+       "why": "Equal PO₂ and saturation hide different amounts of Hb, so different content."
+      },
+      {
+       "id": "c",
+       "text": "The second's PO₂ must really be lower",
+       "why": "PO₂ reflects dissolved O₂ and stays normal with less Hb."
+      },
+      {
+       "id": "d",
+       "text": "The first's saturation must really be higher",
+       "why": "Saturation is a share of sites; it doesn't depend on how many sites there are."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cont-dissolved",
+   "concept": "cont-equation",
+   "bloom": "understand",
+   "sources": [
+    "sarkar2017",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a sports lab you often see CaO₂ estimated as 1.34 × Hb × SaO₂ alone. Why can the 0.003 × PaO₂ term usually be left out?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Dissolved O₂ is only about 1.5% of the total",
+       "correct": true,
+       "why": "Right: 0.3 of about 20 mL·dL⁻¹ at a PaO₂ of 100 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "Dissolved O₂ can't reach the muscle",
+       "why": "Dissolved O₂ is the form that actually diffuses into tissue; it is just a small amount."
+      },
+      {
+       "id": "c",
+       "text": "PaO₂ is always the same, so the term cancels",
+       "why": "PaO₂ varies (exercise, altitude), but the term stays small either way."
+      },
+      {
+       "id": "d",
+       "text": "The 1.34 factor already includes the dissolved O₂",
+       "why": "1.34 is O₂ bound per gram of Hb; the dissolved part is separate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cont-calc",
+   "concept": "cont-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sarkar2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has Hb 14 g·dL⁻¹, SaO₂ 97% and PaO₂ 95 mmHg. What is her CaO₂, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.5",
+       "correct": true,
+       "why": "Right: 1.34 × 14 × 0.97 = 18.2, plus 0.003 × 95 = 0.3: 18.5 mL·dL⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "13.9",
+       "why": "This leaves out 1.34: it multiplies grams of Hb by saturation, not mL of O₂."
+      },
+      {
+       "id": "c",
+       "text": "21.0",
+       "why": "This uses 0.03 for the dissolved term, the per-litre value, in a per-dL equation."
+      },
+      {
+       "id": "d",
+       "text": "1,820",
+       "why": "This puts saturation in as 97 instead of 0.97."
+      }
+     ],
+     "solution": "Bound = 1.34 × 14 × 0.97 = 18.2. Dissolved = 0.003 × 95 = 0.3. CaO₂ = 18.5 mL·dL⁻¹ (185 mL·L⁻¹)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist has Hb 16 g·dL⁻¹, SaO₂ 96% and PaO₂ 90 mmHg. What is his CaO₂, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20.9",
+       "correct": true,
+       "why": "Right: 1.34 × 16 × 0.96 = 20.6, plus 0.003 × 90 = 0.3: 20.9 mL·dL⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "15.6",
+       "why": "This leaves out 1.34: it multiplies grams of Hb by saturation, not mL of O₂."
+      },
+      {
+       "id": "c",
+       "text": "23.3",
+       "why": "This uses 0.03 for the dissolved term, the per-litre value, in a per-dL equation."
+      },
+      {
+       "id": "d",
+       "text": "2,059",
+       "why": "This puts saturation in as 96 instead of 0.96."
+      }
+     ],
+     "solution": "Bound = 1.34 × 16 × 0.96 = 20.6. Dissolved = 0.003 × 90 = 0.27. CaO₂ = 20.9 mL·dL⁻¹ (209 mL·L⁻¹)."
+    },
+    {
+     "id": "c",
+     "stem": "A runner has Hb 13 g·dL⁻¹, SaO₂ 98% and PaO₂ 100 mmHg. What is her CaO₂, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.4",
+       "correct": true,
+       "why": "Right: 1.34 × 13 × 0.98 = 17.1, plus 0.003 × 100 = 0.3: 17.4 mL·dL⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "13.0",
+       "why": "This leaves out 1.34: it multiplies grams of Hb by saturation, not mL of O₂."
+      },
+      {
+       "id": "c",
+       "text": "20.1",
+       "why": "This uses 0.03 for the dissolved term, the per-litre value, in a per-dL equation."
+      },
+      {
+       "id": "d",
+       "text": "1,708",
+       "why": "This puts saturation in as 98 instead of 0.98."
+      }
+     ],
+     "solution": "Bound = 1.34 × 13 × 0.98 = 17.1. Dissolved = 0.003 × 100 = 0.3. CaO₂ = 17.4 mL·dL⁻¹ (174 mL·L⁻¹)."
+    }
+   ]
+  },
+  {
+   "id": "cont-anaemia-calc",
+   "concept": "cont-anaemia",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "collins2015",
+    "sarkar2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner with iron deficiency drops from Hb 14 to 11 g·dL⁻¹. SaO₂ stays 98% and PaO₂ 100 mmHg. What is her CaO₂ now, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.7",
+       "correct": true,
+       "why": "Right: 1.34 × 11 × 0.98 = 14.4, plus 0.3 dissolved: 14.7 mL·dL⁻¹, down from 18.7."
+      },
+      {
+       "id": "b",
+       "text": "18.7",
+       "why": "That is her old value: it assumes content stays put because saturation did."
+      },
+      {
+       "id": "c",
+       "text": "11.1",
+       "why": "This leaves out 1.34: 11 × 0.98 + 0.3."
+      },
+      {
+       "id": "d",
+       "text": "1,445",
+       "why": "This puts saturation in as 98 instead of 0.98."
+      }
+     ],
+     "solution": "Now: 1.34 × 11 × 0.98 = 14.4; + 0.003 × 100 = 0.3; CaO₂ = 14.7 mL·dL⁻¹. Before: 1.34 × 14 × 0.98 + 0.3 = 18.7. A 21% fall, the same as the fall in Hb."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's Hb falls from 15 to 12.5 g·dL⁻¹ after a stomach bleed. SaO₂ stays 97% and PaO₂ 95 mmHg. What is his CaO₂ now, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16.5",
+       "correct": true,
+       "why": "Right: 1.34 × 12.5 × 0.97 = 16.2, plus 0.3 dissolved: 16.5 mL·dL⁻¹, down from 19.8."
+      },
+      {
+       "id": "b",
+       "text": "19.8",
+       "why": "That is his old value: it assumes content stays put because saturation did."
+      },
+      {
+       "id": "c",
+       "text": "12.4",
+       "why": "This leaves out 1.34: 12.5 × 0.97 + 0.3."
+      },
+      {
+       "id": "d",
+       "text": "1,625",
+       "why": "This puts saturation in as 97 instead of 0.97."
+      }
+     ],
+     "solution": "Now: 1.34 × 12.5 × 0.97 = 16.2; + 0.003 × 95 = 0.3; CaO₂ = 16.5 mL·dL⁻¹. Before: 1.34 × 15 × 0.97 + 0.3 = 19.8."
+    }
+   ]
+  },
+  {
+   "id": "cont-anaemia-spo2",
+   "concept": "cont-anaemia",
+   "bloom": "analyse",
+   "sources": [
+    "sarkar2017",
+    "collins2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A tired marathoner has Hb 11 g·dL⁻¹ and a finger pulse oximeter reading of 98%. She says her blood oxygen must be fine. Best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Saturation is normal, but her blood carries less O₂ per litre",
+       "correct": true,
+       "why": "Right: content scales with Hb; saturation is a share of the sites and can't show a shortage of Hb."
+      },
+      {
+       "id": "b",
+       "text": "She's right: 98% saturation means normal oxygen delivery",
+       "why": "Delivery depends on content and blood flow; 98% of too little Hb is still too little O₂."
+      },
+      {
+       "id": "c",
+       "text": "The oximeter must be wrong: anaemia lowers saturation",
+       "why": "Anaemia leaves saturation and PO₂ nearly unchanged."
+      },
+      {
+       "id": "d",
+       "text": "Her PO₂ must be low, which the oximeter misses",
+       "why": "PO₂ reflects dissolved O₂ and stays normal in anaemia."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cont-altitude-calc",
+   "concept": "cont-altitude",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "wehrlin2006",
+    "sarkar2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete with Hb 14 g·dL⁻¹ has SaO₂ 97% at sea level and 90% on arrival at altitude. Ignoring dissolved O₂, what is her Hb-bound O₂ at altitude, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16.9",
+       "correct": true,
+       "why": "Right: 1.34 × 14 × 0.90 = 16.9, down from 18.2 at sea level."
+      },
+      {
+       "id": "b",
+       "text": "18.2",
+       "why": "That is her sea-level value: same Hb doesn't mean same content when saturation falls."
+      },
+      {
+       "id": "c",
+       "text": "12.6",
+       "why": "This leaves out 1.34: 14 × 0.90."
+      },
+      {
+       "id": "d",
+       "text": "1,688",
+       "why": "This puts saturation in as 90 instead of 0.90."
+      }
+     ],
+     "solution": "Altitude: 1.34 × 14 × 0.90 = 16.9 mL·dL⁻¹. Sea level: 1.34 × 14 × 0.97 = 18.2. A 7% fall with no change in Hb."
+    },
+    {
+     "id": "b",
+     "stem": "At the end of a VO₂max test at altitude, a runner with Hb 15.5 g·dL⁻¹ is 85% saturated. Ignoring dissolved O₂, what is his Hb-bound O₂, in mL·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.7",
+       "correct": true,
+       "why": "Right: 1.34 × 15.5 × 0.85 = 17.7."
+      },
+      {
+       "id": "b",
+       "text": "20.8",
+       "why": "This leaves out saturation: 1.34 × 15.5 assumes every site is full."
+      },
+      {
+       "id": "c",
+       "text": "13.2",
+       "why": "This leaves out 1.34: 15.5 × 0.85."
+      },
+      {
+       "id": "d",
+       "text": "1,765",
+       "why": "This puts saturation in as 85 instead of 0.85."
+      }
+     ],
+     "solution": "1.34 × 15.5 × 0.85 = 17.7 mL·dL⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "cont-altitude-vo2max",
+   "concept": "cont-altitude",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO₂max is 70 mL·kg⁻¹·min⁻¹ at 300 m. Using a linear fall of 6.3% per 1,000 m above 300 m, what would you expect at a 1,800 m race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 63",
+       "correct": true,
+       "why": "Right: 1,500 m above 300 m = 1.5 × 6.3% = 9.5% lower: 70 × 0.905 = 63.4."
+      },
+      {
+       "id": "b",
+       "text": "About 66",
+       "why": "This takes off only one 6.3% step; 1,800 m is 1,500 m above the baseline."
+      },
+      {
+       "id": "c",
+       "text": "About 62",
+       "why": "This counts 1,800 m from sea level (1.8 × 6.3%) instead of from the 300 m baseline."
+      },
+      {
+       "id": "d",
+       "text": "About 70: no loss below 2,000 m",
+       "why": "VO₂max was already lower at 800 m than at 300 m."
+      }
+     ],
+     "solution": "Drop = (1,800 − 300) ÷ 1,000 × 6.3% = 9.45%. 70 × (1 − 0.0945) = 63.4 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO₂max is 60 mL·kg⁻¹·min⁻¹ at 300 m. Using a linear fall of 6.3% per 1,000 m above 300 m, what would you expect at 2,300 m?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 52",
+       "correct": true,
+       "why": "Right: 2,000 m above 300 m = 2 × 6.3% = 12.6% lower: 60 × 0.874 = 52.4."
+      },
+      {
+       "id": "b",
+       "text": "About 56",
+       "why": "This takes off only one 6.3% step; 2,300 m is 2,000 m above the baseline."
+      },
+      {
+       "id": "c",
+       "text": "About 51",
+       "why": "This counts 2,300 m from sea level (2.3 × 6.3%) instead of from the 300 m baseline."
+      },
+      {
+       "id": "d",
+       "text": "About 60: altitude lowers saturation, not VO₂max",
+       "why": "Lower saturation means less O₂ per litre of blood, and VO₂max falls with it."
+      }
+     ],
+     "solution": "Drop = (2,300 − 300) ÷ 1,000 × 6.3% = 12.6%. 60 × (1 − 0.126) = 52.4 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "cont-oxygen-breathing",
+   "concept": "cont-equation",
+   "bloom": "analyse",
+   "sources": [
+    "sarkar2017",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At rest at sea level, a cyclist with Hb 15 g·dL⁻¹ switches from air (PaO₂ 100 mmHg, SaO₂ 98%) to pure O₂ (PaO₂ 500 mmHg, SaO₂ 100%). Where does most of the extra O₂ content come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Dissolved O₂: +1.2 mL·dL⁻¹ versus +0.4 bound",
+       "correct": true,
+       "why": "Right: 0.003 × 400 = 1.2 dissolved; 1.34 × 15 × 0.02 = 0.4 bound, as Hb was nearly full already."
+      },
+      {
+       "id": "b",
+       "text": "Bound O₂: saturation rises a lot with pure O₂",
+       "why": "Saturation can only go from 98% to 100%: Hb was already almost full."
+      },
+      {
+       "id": "c",
+       "text": "Neither: content can't rise above 20 mL·dL⁻¹",
+       "why": "It rises a little, by about 1.6 mL·dL⁻¹, mostly as dissolved O₂."
+      },
+      {
+       "id": "d",
+       "text": "Bound O₂: the 1.34 factor rises with PaO₂",
+       "why": "1.34 is fixed by haemoglobin's chemistry; it doesn't change with PO₂."
+      }
+     ],
+     "solution": "Bound: 1.34 × 15 × (1.00 − 0.98) = 0.4 mL·dL⁻¹. Dissolved: 0.003 × (500 − 100) = 1.2 mL·dL⁻¹. Total gain 1.6 mL·dL⁻¹, about 8%."
+    }
+   ]
+  },
+  {
+   "id": "cont-appraisal",
+   "concept": "cont-altitude",
+   "bloom": "evaluate",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 8 endurance athletes found VO₂max fell 6.3% per 1,000 m in a hypobaric chamber, each altitude tested on arrival. A coach applies it to a team after 3 weeks living at 1,800 m. What most limits that use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It tested acute exposure; weeks at altitude bring acclimatisation",
+       "correct": true,
+       "why": "Right: acute tests can't show how acclimatisation (more ventilation, more red cells) changes the loss."
+      },
+      {
+       "id": "b",
+       "text": "A chamber can't lower PO₂ the way real altitude does",
+       "why": "A hypobaric chamber lowers air pressure, which is what real altitude does."
+      },
+      {
+       "id": "c",
+       "text": "VO₂max can't be measured accurately at altitude",
+       "why": "Douglas bags measure VO₂ fine at altitude; that isn't the main issue."
+      },
+      {
+       "id": "d",
+       "text": "Eight athletes is too few to see any effect",
+       "why": "The effect was large and consistent; small n limits precision, not detection here."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

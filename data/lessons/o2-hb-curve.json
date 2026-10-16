@@ -1,0 +1,769 @@
+{
+ "id": "o2-hb-curve",
+ "module": "t1b-oxygen-transport",
+ "title": "The oxygen–haemoglobin curve",
+ "goal": "Explain the S-shaped dissociation curve, what P50 means, and how acid, CO₂, heat and 2,3-DPG shift it so that blood loads O₂ in the lungs and unloads it in working muscle.",
+ "requires": [
+  "resp-limits"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "odc",
+    "p50",
+    "bohr-effect",
+    "dpg",
+    "hb-affinity"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hbc-shape",
+   "title": "An S-shaped curve",
+   "text": "Plot how saturated [haemoglobin](g:haemoglobin) is ([SaO₂](g:sao2)) against the [oxygen pressure (PO₂)](g:partial-pressure) around it and you get the [dissociation curve](g:odc). It is S-shaped: once one O₂ binds, the next bind more easily, and near full saturation the curve flattens [[c:odc-sigmoid]].\n\n| PO₂ (mmHg) | saturation |\n|---|---|\n| 100 (arterial blood) | 98% |\n| 60 | 91% |\n| 40 | 75% |\n| 27 | 50% |\n| 20 | 32% |\n\n(Standard curve, from the Severinghaus equation.)\n\nTwo zones matter. Above about 60 mmHg the curve is **flat**: PO₂ can fall a lot and saturation barely moves. Below 60 mmHg it is **steep**: a small drop in PO₂ releases a lot of O₂ [[c:odc-zones]].",
+   "claims": [
+    {
+     "id": "odc-sigmoid",
+     "text": "Haemoglobin binds O₂ cooperatively, so the curve of saturation against PO₂ is sigmoid, flattening near full saturation.",
+     "grade": "strong",
+     "sources": [
+      "collins2015"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "This binding of oxygen to the haemoglobin molecule accounts for the increasing slope of the ODC at low levels of oxygenation. At higher oxygenation, the curve flattens off as all the haemoglobin molecules approach full saturation, resulting in the characteristic sigmoid (s-shaped) appearance",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "A simple approach to estimate the SO2 from PO2 and vice versa has been published by Severinghaus (1979).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "odc-zones",
+     "text": "The curve is flat above about 90% saturation, so PO₂ changes there barely change saturation; below about 60 mmHg saturation falls steeply, which also makes unloading to tissues easier.",
+     "grade": "strong",
+     "sources": [
+      "collins2015"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "Since the dissociation curve is relatively flat when the oxygen saturation is >90%, increases in PaO2 have relatively little impact on saturation or content in this range.",
+       "level": "full-text"
+      },
+      {
+       "source": "collins2015",
+       "quote": "By contrast, when PO2 falls below 8 kPa (60 mmHg) there is a steep decline in oxygen saturation",
+       "level": "full-text"
+      },
+      {
+       "source": "collins2015",
+       "quote": "To some extent the reduced oxygen delivery is countered by the greater ease with which oxygen can be “offloaded” to the metabolising tissues.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbc-flat-top",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hbc-steep-part"
+  },
+  {
+   "type": "concept",
+   "id": "hbc-p50",
+   "title": "P50: where the curve sits",
+   "text": "One number describes the curve's position: [P50](g:p50), the PO₂ at which haemoglobin is half saturated. For normal adult blood at pH 7.4 and 37 °C it is about **26–27 mmHg** (26.86 in the standard equation) [[c:p50-value]].\n\n- **Higher P50** (curve shifted *right*): lower [affinity](g:hb-affinity). At a given PO₂ the blood holds less O₂, so it lets go more easily.\n- **Lower P50** (curve shifted *left*): higher affinity. It grabs O₂ at low PO₂ but releases it less readily.\n\nLower affinity helps delivery to working muscle; higher affinity helps loading when PO₂ is low, as at altitude [[c:affinity-tradeoff]].",
+   "claims": [
+    {
+     "id": "p50-value",
+     "text": "The P50 of normal adult blood is about 26–27 mmHg (26.86 mmHg at pH 7.4 and 37 °C).",
+     "grade": "strong",
+     "sources": [
+      "collins2015",
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "The P 50 of normal adult blood is approximately 26 mmHg; low affinity haemoglobins are characterised by higher P 50 and high-affinity haemoglobins by a lower than normal P 50",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "The standard half saturation pressure of O2 (P50value) was given as 26.86 mmHg at a plasma pH = 7.4 and 37°C",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "affinity-tradeoff",
+     "text": "Higher Hb–O₂ affinity improves O₂ binding when PO₂ is low (useful in hypoxia); lower affinity improves O₂ delivery to cells with high demand, such as exercising muscle.",
+     "grade": "strong",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "The physiological significance of an increased Hb-O2 affinity is an improved O2 binding by Hb when the PO2 is low.",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "A decrease in Hb-O2 affinity improves O2 delivery to cells with a high O2 demand such as in exercising muscle (see below).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbc-p50-meaning"
+  },
+  {
+   "type": "question",
+   "item": "hbc-p50-compare"
+  },
+  {
+   "type": "concept",
+   "id": "hbc-bohr",
+   "title": "Working muscle shifts the curve right",
+   "text": "In a working muscle the blood meets more acid (H⁺), more CO₂ and more heat. All three lower haemoglobin's affinity and shift the curve right; the acid and CO₂ part is the [Bohr effect](g:bohr-effect) [[c:right-shift-factors]].\n\nThe shift happens right where it helps. Blood entering the capillaries of exercising muscle is exposed at once: P50 there can be about **34–48 mmHg**, and muscle temperature rises from 37 to about 41 °C [[c:capillary-p50]].\n\nIn the lungs the reverse happens: CO₂ is breathed off, blood becomes less acid and cooler, the curve moves back left and haemoglobin loads well. Not completely: in heavy exercise arterial P50 may still rise from about 27 to 34 mmHg.",
+   "claims": [
+    {
+     "id": "right-shift-factors",
+     "text": "Higher PCO₂, lower pH and higher temperature shift the curve to the right; the CO₂ effect (Bohr effect) works mostly through acidity.",
+     "grade": "strong",
+     "sources": [
+      "collins2015",
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "The curve is shifted to the right ( i.e. lower saturation for a given P O 2 ) by higher P CO 2 , greater acidity (lower pH) and higher temperature.",
+       "level": "full-text"
+      },
+      {
+       "source": "collins2015",
+       "quote": "The effect of P CO 2 (known as the “Bohr effect”) is mediated largely by the accompanying change in acidity",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "Also an increase in temperature decreases Hb-O2 affinity.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "capillary-p50",
+     "text": "In capillaries of exercising muscle, P50 can be estimated at about 34–48 mmHg and temperature rises from 37 to about 41 °C; arterial P50 may rise from about 27 to 34 mmHg in heavy exercise.",
+     "grade": "weak",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "Blood entering capillaries of exercising muscles is acutely exposed to these changes, which causes a rapid decrease in Hb-O2 affinity. P50 values of ~34–48 mmHg can be estimated from changes in blood gasses (provided e.g., in Sun et al., 2000). Temperature increases from 37°C at rest to 41°C during exercise.",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "it can be estimated that the half saturation tension of O2 (P50 value) might increase from about ~27 mmHg at rest to 34 mmHg in arterial blood during heavy exercise.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbc-shift-direction",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hbc-bohr-scenario"
+  },
+  {
+   "type": "question",
+   "item": "hbc-lung-reload"
+  },
+  {
+   "type": "example",
+   "id": "hbc-unload-example",
+   "title": "How much more O₂ does a right shift release?",
+   "problem": "Blood leaves the lungs 98% saturated. In a working thigh muscle the PO₂ at the end of the capillary is 20 mmHg. How much of the haemoglobin unloads on the standard curve (P50 27 mmHg), and on a right-shifted curve with P50 34 mmHg, which saturates 21% at 20 mmHg?",
+   "steps": [
+    "Standard curve: at 20 mmHg saturation is 32% (table above). Unloaded = 98% − 32% = 66 percentage points.",
+    "Right-shifted curve: saturation at 20 mmHg is 21%. Unloaded = 98% − 21% = 77 percentage points.",
+    "Same arterial blood, same capillary PO₂: the right shift releases 11 points more, about 17% more O₂ (77 ÷ 66 = 1.17).",
+    "Arterial saturation is the same in both because blood reloads in the lungs, where the curve has moved back left."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbc-unload-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hbc-dpg",
+   "title": "2,3-DPG: the slow dial",
+   "text": "Red cells run [glycolysis](g:glycolysis) too, and one of its by-products, [2,3-DPG](g:dpg), binds to haemoglobin when it has given up its O₂. More 2,3-DPG shifts the curve right. It rises with long exposure to low oxygen, such as living at altitude [[c:dpg-hypoxia]].\n\nIt is a slow dial, not a fast one. 2,3-DPG does not change during an exercise test, because the red cells take time to adjust it. It is higher after training, probably because training makes red cells younger, and young cells have more 2,3-DPG [[c:dpg-training]].\n\nSo over a session, acid, CO₂ and heat move the curve; over weeks, 2,3-DPG and red-cell age do.",
+   "claims": [
+    {
+     "id": "dpg-hypoxia",
+     "text": "2,3-DPG, a glycolytic intermediate in red cells, binds deoxyhaemoglobin; higher levels, as in chronic hypoxia, shift the curve to the right.",
+     "grade": "strong",
+     "sources": [
+      "collins2015"
+     ],
+     "evidence": [
+      {
+       "source": "collins2015",
+       "quote": "A further compensatory mechanism which aids oxygen delivery by altering the position of the ODC is the concentration in the red cells of 2,3-biphosphoglycerate (also known as diphosphoglycerate (DPG)), an intermediate metabolite in the glycolytic pathway which binds to deoxyhaemoglobin. Higher concentrations of 2,3-DPG, seen, for example, with chronic hypoxia, shift the curve to the right",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dpg-training",
+     "text": "2,3-DPG does not change during exercise tests because it adjusts slowly; it is elevated after training, probably because training lowers mean red-cell age.",
+     "grade": "moderate",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "No changes in 2,3-DPG, one of the major allosteric effectors of Hb-O2 affinity (Benesch and Benesch, 1967), during exercise tests have been observed (Mairbäurl et al., 1986), because 2,3-DPG changes are slow and require adjustments of the glycolytic rate in red blood cells.",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "However, elevated 2,3-DPG has been found after training",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "The elevated 2,3-DPG in trained individuals might be a consequence of the stimulated erythropoiesis, which decreases red blood cell age",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbc-dpg-timing"
+  },
+  {
+   "type": "question",
+   "item": "hbc-altitude-tradeoff"
+  },
+  {
+   "type": "question",
+   "item": "hbc-unload-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hbc-flat-top",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The dissociation curve is S-shaped: flat above about 60 mmHg, so loading in the lungs is safe, and steep below it, so tissues can unload a lot of O₂ for a small drop in PO₂.",
+    "P50, about 26–27 mmHg, marks the curve's position: higher P50 means a right shift and lower affinity.",
+    "Acid, CO₂ (the Bohr effect) and heat shift the curve right in working muscle, where P50 may reach 34–48 mmHg; in the lungs the curve moves back left.",
+    "2,3-DPG shifts the curve right over days to weeks (altitude, training), not within a session.",
+    "Lower affinity helps delivery to muscle; higher affinity helps loading when PO₂ is low, as at altitude."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hbc-shift-direction",
+   "concept": "hbc-bohr",
+   "bloom": "understand",
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Blood flows into the capillaries of a cyclist's quadriceps during a hard climb. Which way does the dissociation curve shift there, and what does that do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Right: less affinity, so O₂ unloads more easily",
+       "correct": true,
+       "why": "Right: acid, CO₂ and heat in working muscle lower affinity and shift the curve right."
+      },
+      {
+       "id": "b",
+       "text": "Left: more affinity, so O₂ unloads more easily",
+       "why": "A left shift raises affinity, which makes haemoglobin hold on to O₂, not release it."
+      },
+      {
+       "id": "c",
+       "text": "Right: more affinity, so haemoglobin holds O₂ tighter",
+       "why": "Right shift and lower affinity go together; this mixes up the direction with its meaning."
+      },
+      {
+       "id": "d",
+       "text": "No shift: the curve is fixed for each person",
+       "why": "The curve's position changes with pH, CO₂, temperature and 2,3-DPG within seconds to weeks."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's calf muscle is warm, acidic and full of CO₂ in the last kilometre of a 10 km race. Compared with resting muscle, at the same PO₂ the haemoglobin there is…",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less saturated, because the curve has shifted right",
+       "correct": true,
+       "why": "Right: higher temperature, H⁺ and CO₂ lower affinity, so saturation is lower at any PO₂ and more O₂ is released."
+      },
+      {
+       "id": "b",
+       "text": "More saturated, because the curve has shifted left",
+       "why": "Heat, acid and CO₂ shift the curve right, not left."
+      },
+      {
+       "id": "c",
+       "text": "Equally saturated, as only PO₂ sets saturation",
+       "why": "Saturation depends on PO₂ and on the curve's position, which these factors move."
+      },
+      {
+       "id": "d",
+       "text": "Fully saturated, as the muscle needs all its O₂",
+       "why": "Saturation in working muscle capillaries falls well below arterial values; that is how O₂ is delivered."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-flat-top",
+   "concept": "hbc-shape",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hard interval a triathlete's arterial PO₂ falls from 100 to 80 mmHg. Using the standard curve (100 mmHg → 98%, 80 mmHg → 96%), what happens to her arterial saturation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls by about 2 points, to about 96%",
+       "correct": true,
+       "why": "Right: the curve is flat above 60 mmHg, so a 20 mmHg drop costs only about 2 points of saturation."
+      },
+      {
+       "id": "b",
+       "text": "It falls by about 20 points, to about 78%",
+       "why": "This assumes saturation falls one point per mmHg; on the flat top it falls far less."
+      },
+      {
+       "id": "c",
+       "text": "It falls by about a fifth, to about 78%",
+       "why": "This scales saturation in proportion to PO₂ (80/100); the curve is not a straight line through zero."
+      },
+      {
+       "id": "d",
+       "text": "It doesn't change at all",
+       "why": "It does fall a little: the flat top is flat, not perfectly level."
+      }
+     ],
+     "solution": "On the standard curve, 100 mmHg gives 98% and 80 mmHg gives 96%: a 2-point fall. Above 60 mmHg the curve is nearly flat."
+    },
+    {
+     "id": "b",
+     "stem": "At altitude a cyclist's arterial PO₂ falls from 100 to 60 mmHg. Using the standard curve (100 mmHg → 98%, 60 mmHg → 91%), how much does his arterial saturation fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7 points, to about 91%",
+       "correct": true,
+       "why": "Right: a 40 mmHg drop costs about 7 points because it stays on the flat part of the curve."
+      },
+      {
+       "id": "b",
+       "text": "About 40 points, to about 58%",
+       "why": "This assumes one point of saturation per mmHg; the top of the curve is flat."
+      },
+      {
+       "id": "c",
+       "text": "By 40%, to about 59%",
+       "why": "This scales saturation in proportion to PO₂ (60/100); the curve is S-shaped, not straight."
+      },
+      {
+       "id": "d",
+       "text": "About 23 points, to about 75%",
+       "why": "75% is the saturation at 40 mmHg, not 60 mmHg."
+      }
+     ],
+     "solution": "Read the curve: 100 mmHg → 98%, 60 mmHg → 91%. Fall = 98 − 91 = 7 points. Below 60 mmHg each further drop would cost much more."
+    }
+   ]
+  },
+  {
+   "id": "hbc-steep-part",
+   "concept": "hbc-shape",
+   "bloom": "understand",
+   "sources": [
+    "collins2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a working muscle the capillary PO₂ falls from 40 to 20 mmHg. Why does that drop release so much O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls on the steep part of the curve, where saturation changes most",
+       "correct": true,
+       "why": "Right: between 40 and 20 mmHg saturation falls from about 75% to 32%, so a lot of O₂ is released."
+      },
+      {
+       "id": "b",
+       "text": "It falls on the flat part of the curve, where saturation changes most",
+       "why": "The flat part is above 60 mmHg, and there saturation changes least."
+      },
+      {
+       "id": "c",
+       "text": "Haemoglobin releases O₂ only below 20 mmHg",
+       "why": "O₂ is released all along the curve; it just releases most per mmHg on the steep part."
+      },
+      {
+       "id": "d",
+       "text": "Because dissolved O₂ in plasma rises as PO₂ falls",
+       "why": "Dissolved O₂ is proportional to PO₂, so it falls too, and it is a tiny share anyway."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-p50-meaning",
+   "concept": "hbc-p50",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is P50, and about what is it for normal adult blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The PO₂ at 50% saturation: about 27 mmHg",
+       "correct": true,
+       "why": "Right: about 26–27 mmHg (26.86 in the standard equation)."
+      },
+      {
+       "id": "b",
+       "text": "The saturation at a PO₂ of 50 mmHg: about 85%",
+       "why": "That reverses the definition: P50 is a pressure, not a saturation."
+      },
+      {
+       "id": "c",
+       "text": "The PO₂ at 50% saturation: about 50 mmHg",
+       "why": "At 50 mmHg normal blood is still about 85% saturated; P50 is much lower."
+      },
+      {
+       "id": "d",
+       "text": "Half the arterial PO₂: about 50 mmHg",
+       "why": "P50 is set by haemoglobin's affinity, not by halving the arterial PO₂."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-p50-compare",
+   "concept": "hbc-p50",
+   "bloom": "analyse",
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two blood samples meet a muscle capillary PO₂ of 20 mmHg. Sample A has a P50 of 30 mmHg, sample B 24 mmHg. Which unloads more O₂ there, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: its higher P50 means lower affinity, so it is less saturated at 20 mmHg",
+       "correct": true,
+       "why": "Right: a right-shifted curve (higher P50) holds less O₂ at any PO₂, so more is released."
+      },
+      {
+       "id": "b",
+       "text": "B: its lower P50 means it releases O₂ more readily",
+       "why": "Lower P50 means higher affinity: B holds on to more O₂ at 20 mmHg."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, because the PO₂ is the same",
+       "why": "Saturation depends on PO₂ and on the curve's position; different P50s give different saturations."
+      },
+      {
+       "id": "d",
+       "text": "A, because a higher P50 means more haemoglobin",
+       "why": "P50 says nothing about how much haemoglobin there is, only how tightly it binds."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-bohr-scenario",
+   "concept": "hbc-bohr",
+   "bloom": "apply",
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete runs the last 10 km in 32 °C heat; her leg muscles reach about 41 °C and are acidic. What does that do to O₂ delivery to those muscles, at the same capillary PO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More O₂ is released: heat and acid shift the curve right",
+       "correct": true,
+       "why": "Right: higher temperature and H⁺ lower affinity, so haemoglobin gives up more O₂ at the same PO₂."
+      },
+      {
+       "id": "b",
+       "text": "Less O₂ is released: heat and acid shift the curve left",
+       "why": "Heat and acid shift the curve right, which favours release."
+      },
+      {
+       "id": "c",
+       "text": "No change: temperature only affects sweating, not haemoglobin",
+       "why": "Temperature directly lowers haemoglobin's O₂ affinity."
+      },
+      {
+       "id": "d",
+       "text": "Less O₂ is released because hot blood holds more O₂",
+       "why": "Warmer blood binds O₂ less tightly, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-lung-reload",
+   "concept": "hbc-bohr",
+   "bloom": "analyse",
+   "sources": [
+    "collins2015",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "If working muscle shifts the curve right, why doesn't that stop a runner's blood loading O₂ in the lungs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the lungs CO₂ is breathed off and blood is cooler, so the curve moves back left",
+       "correct": true,
+       "why": "Right: the shift is local. In the lung capillaries the curve moves back left, though not fully in heavy exercise."
+      },
+      {
+       "id": "b",
+       "text": "The lungs add 2,3-DPG, which shifts the curve left",
+       "why": "2,3-DPG is made in red cells and shifts the curve right; it doesn't change within a session."
+      },
+      {
+       "id": "c",
+       "text": "Loading in the lungs doesn't depend on affinity at all",
+       "why": "Affinity matters for loading too; that is why high P50 in arterial blood costs a little saturation."
+      },
+      {
+       "id": "d",
+       "text": "Blood in the lungs is more acidic, which raises affinity",
+       "why": "Losing CO₂ makes lung blood less acidic, and less acid raises affinity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-unload-calc",
+   "concept": "hbc-bohr",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Blood leaves the lungs 98% saturated. In a rower's working muscle the end-capillary PO₂ is 25 mmHg. The standard curve gives 45% saturation there; a right-shifted curve (P50 34 mmHg) gives 31%. How many more percentage points of haemoglobin unload with the right shift?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14 points",
+       "correct": true,
+       "why": "Right: 98 − 45 = 53 points on the standard curve, 98 − 31 = 67 with the shift: 14 more."
+      },
+      {
+       "id": "b",
+       "text": "31 points",
+       "why": "31% is the saturation left on the shifted curve, not the extra unloading."
+      },
+      {
+       "id": "c",
+       "text": "53 points",
+       "why": "53 points is what the standard curve unloads, not the difference between the curves."
+      },
+      {
+       "id": "d",
+       "text": "7 points",
+       "why": "This is the gap in P50 (34 − 27), not the gap in saturation."
+      }
+     ],
+     "solution": "Standard: 98 − 45 = 53 points unloaded. Shifted: 98 − 31 = 67 points. Extra = 67 − 53 = 14 points."
+    },
+    {
+     "id": "b",
+     "stem": "Blood leaves the lungs 98% saturated. In a runner's calf the end-capillary PO₂ is 40 mmHg. The standard curve gives 75% saturation there; a right-shifted curve (P50 34 mmHg) gives 61%. How many more percentage points unload with the right shift?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14 points",
+       "correct": true,
+       "why": "Right: 98 − 75 = 23 points on the standard curve, 98 − 61 = 37 with the shift: 14 more."
+      },
+      {
+       "id": "b",
+       "text": "61 points",
+       "why": "61% is the saturation left on the shifted curve, not the extra unloading."
+      },
+      {
+       "id": "c",
+       "text": "37 points",
+       "why": "37 points is what the shifted curve unloads in total, not the extra."
+      },
+      {
+       "id": "d",
+       "text": "7 points",
+       "why": "This is the gap in P50 (34 − 27), not the gap in saturation."
+      }
+     ],
+     "solution": "Standard: 98 − 75 = 23 points unloaded. Shifted: 98 − 61 = 37 points. Extra = 37 − 23 = 14 points."
+    }
+   ]
+  },
+  {
+   "id": "hbc-dpg-timing",
+   "concept": "hbc-dpg",
+   "bloom": "understand",
+   "sources": [
+    "mairbaurl2013",
+    "collins2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's red-cell 2,3-DPG is measured before and right after a 1 h time trial. What is the most likely result?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No real change: 2,3-DPG adjusts over days, not within a session",
+       "correct": true,
+       "why": "Right: no changes in 2,3-DPG were seen during exercise tests; it changes slowly."
+      },
+      {
+       "id": "b",
+       "text": "A large rise, which shifts the curve right during the effort",
+       "why": "Within a session, the right shift comes from acid, CO₂ and heat, not 2,3-DPG."
+      },
+      {
+       "id": "c",
+       "text": "A large fall, which shifts the curve left to protect loading",
+       "why": "2,3-DPG doesn't drop during exercise; it is too slow to change."
+      },
+      {
+       "id": "d",
+       "text": "It doubles, because exercise speeds up red-cell glycolysis",
+       "why": "Red-cell 2,3-DPG needs days to adjust; one session doesn't change it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbc-altitude-tradeoff",
+   "concept": "hbc-p50",
+   "bloom": "evaluate",
+   "sources": [
+    "mairbaurl2013",
+    "collins2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner moves to 2,500 m, where her arterial PO₂ is low. Over weeks her 2,3-DPG rises and her curve shifts right. A coach says a right shift can only help her. Best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Partly wrong: it helps muscle unloading but costs some lung loading",
+       "correct": true,
+       "why": "Right: lower affinity helps delivery, but higher affinity is what protects arterial saturation when PO₂ is low."
+      },
+      {
+       "id": "b",
+       "text": "Right: a right shift helps at every step, in lungs and muscle alike",
+       "why": "At low PO₂ a right shift lowers the saturation reached in the lungs."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: a right shift makes unloading in her muscles harder",
+       "why": "A right shift helps muscle unloading; its cost is in loading."
+      },
+      {
+       "id": "d",
+       "text": "Irrelevant: 2,3-DPG doesn't change with living at altitude",
+       "why": "Higher 2,3-DPG is a known response to chronic hypoxia."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

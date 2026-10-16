@@ -1,0 +1,771 @@
+{
+ "id": "cv-hr-control",
+ "module": "t1b-cardio",
+ "title": "Heart rate: the climb, the ceiling and the slow athlete's heart",
+ "goal": "Explain how heart rate rises with work, how well age formulas predict HRmax, why training barely changes HRmax, and the debate over why athletes' resting heart rate is low.",
+ "requires": [
+  "cv-stroke-volume"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hrmax",
+    "sinus-bradycardia",
+    "intrinsic-heart-rate"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hr-rise",
+   "title": "Heart rate climbs with the work",
+   "text": "You've met the two controls in the nervous system module: the [vagal brake](g:vagal-tone) and the [sympathetic](g:sympathetic) accelerator. From rest to maximal exercise the balance shifts step by step, from about 4 : 1 vagal to about 4 : 1 sympathetic [[c:hr-balance]]. The vagus never fully switches off.\n\nThe result is a heart rate that climbs with the workload. Above rest it tracks oxygen uptake closely: the share of your [heart-rate reserve](g:heart-rate-reserve) you use matches the share of your VO₂ reserve (VO₂max − resting VO₂), not the share of VO₂max [[c:hr-hrr-vo2r]].\n\n**%HRR = (HR − HRrest) ÷ (HRmax − HRrest)**\n\nThat is why HR works as an intensity gauge, as long as you know your real HRmax and resting HR.",
+   "claims": [
+    {
+     "id": "hr-balance",
+     "text": "From rest to maximal exercise, autonomic control of HR shifts from about 4 : 1 vagal to about 4 : 1 sympathetic, with the vagus active throughout.",
+     "grade": "moderate",
+     "sources": [
+      "white2014"
+     ],
+     "evidence": [
+      {
+       "source": "white2014",
+       "quote": "Results indicate that the PSNS remains functionally active throughout exercise and that increases in HR from rest to maximal exercise result from an increasing workload-related transition from a 4 : 1 vagal-sympathetic balance to a 4 : 1 sympatho-vagal balance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-hrr-vo2r",
+     "text": "Percentage of heart-rate reserve matches percentage of VO₂ reserve, not percentage of VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "swain1997"
+     ],
+     "evidence": [
+      {
+       "source": "swain1997",
+       "quote": "In conclusion, %HRR should not be considered equivalent to %VO2max. Rather, %HRR is equivalent to %VO2R, and this relationship should be used in exercise prescription.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hr-example-hrr",
+   "title": "What share of the reserve?",
+   "problem": "A cyclist rests at 50 beats·min⁻¹ and has a measured HRmax of 190. On a climb his HR is 155. What percentage of his heart-rate reserve is he using?",
+   "steps": [
+    "Heart-rate reserve = HRmax − HRrest = 190 − 50 = 140 beats·min⁻¹.",
+    "HR above rest = 155 − 50 = 105 beats·min⁻¹.",
+    "%HRR = 105 ÷ 140 = 0.75, so 75%, which is about 75% of his VO₂ reserve.",
+    "Compare: 155 ÷ 190 = 82% of HRmax. %HRmax and %HRR are different scales; don't mix them."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hr-hrr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hr-vagus-max"
+  },
+  {
+   "type": "concept",
+   "id": "hr-max",
+   "title": "HRmax and the age formulas",
+   "text": "[HRmax](g:hrmax) falls with age. The old rule, 220 − age, had never been checked in enough older adults. A meta-analysis of 18,712 people, then a lab study of 514, found [[c:hr-tanaka]]:\n\n**HRmax ≈ 208 − 0.7 × age**\n\nIt held for men and women and at all activity levels; 220 − age underestimates HRmax in older people.\n\nBut a formula predicts the average, not you. In 762 adults, the standard error of the prediction was about **11 beats·min⁻¹** for Tanaka and 12 for 220 − age [[c:hr-formula-error]]. Roughly one person in three misses by more than 11, and one in twenty by more than 22.\n\nMeasure HRmax in a maximal test or hard race when you can [[c:hr-measure]].",
+   "claims": [
+    {
+     "id": "hr-tanaka",
+     "text": "The 220 − age rule had not been tested in enough older adults. In a meta-analysis of 18,712 people, HRmax ≈ 208 − 0.7 × age, independent of sex and activity level; 220 − age underestimates it in older adults.",
+     "grade": "strong",
+     "sources": [
+      "tanaka2001"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2001",
+       "quote": "Despite its importance and widespread use, the validity of the HRmax equation has never been established in a sample that included a sufficient number of older adults.",
+       "level": "abstract"
+      },
+      {
+       "source": "tanaka2001",
+       "quote": "First, a meta-analytic approach was used to collect group mean HRmax values from 351 studies involving 492 groups and 18,712 subjects.",
+       "level": "abstract"
+      },
+      {
+       "source": "tanaka2001",
+       "quote": "2) HRmax is predicted, to a large extent, by age alone and is independent of gender and habitual physical activity status. Our findings suggest that the currently used equation underestimates HRmax in older adults.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-formula-error",
+     "text": "Age formulas predict an individual's HRmax with a standard error of about 11–12 beats·min⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "sarzynski2013",
+      "shookster2020"
+     ],
+     "evidence": [
+      {
+       "source": "sarzynski2013",
+       "quote": "The standard error of estimate (SEE) of predicted HRmax was 12.4 and 11.4 bpm for the Fox and Tanaka formulas, respectively, indicating a wide-spread of measured-HRmax values are compared to their age-predicted values.",
+       "level": "abstract"
+      },
+      {
+       "source": "shookster2020",
+       "quote": "Bland-Altman plots revealed wide limits of agreement for all nine APMHR equations, suggesting poor agreement between measured and predicted",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-measure",
+     "text": "Where possible, HRmax should be measured in a maximal test rather than predicted.",
+     "grade": "moderate",
+     "sources": [
+      "shookster2020"
+     ],
+     "evidence": [
+      {
+       "source": "shookster2020",
+       "quote": "Individuals should use data from GXTs to determine HRmax when applicable to ensure accuracy.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hr-example-tanaka",
+   "title": "Predicting HRmax, and its error",
+   "problem": "Predict HRmax for a 45-year-old triathlete with both formulas, and give the range two in three people of that age would fall into.",
+   "steps": [
+    "220 − age = 220 − 45 = 175 beats·min⁻¹.",
+    "Tanaka: 0.7 × 45 = 31.5, so 208 − 31.5 = 176.5, about 177 beats·min⁻¹. Multiply first, then subtract.",
+    "With a standard error of about 11, two in three 45-year-olds fall between about 166 and 188. The two formulas differ by 2 beats; the person-to-person spread is ten times bigger."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hr-tanaka-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hr-max-error"
+  },
+  {
+   "type": "concept",
+   "id": "hr-training",
+   "title": "Training barely moves HRmax",
+   "text": "The usual view is that HRmax is relatively unchanged by training. A review argues it can still shift by **3–7%**: down a little with training, up a little with detraining or a taper [[c:hr-max-training]].\n\nBelow max, the change is large. At the same absolute power or pace, trained people's HR is lower [[c:hr-submax-lower]]. Their SV is bigger, so the same Q needs fewer beats, and sympathetic drive to the heart is lower.\n\nSo HR at a fixed power or pace falling over a training block is a sign of fitness. A slightly lower HRmax after a big block isn't a loss of fitness, and zones built on an old HRmax may need checking.",
+   "claims": [
+    {
+     "id": "hr-max-training",
+     "text": "HRmax is generally considered relatively unaltered by training; a review estimates it can change by 3–7%, falling with training and rising with tapering or detraining.",
+     "grade": "weak",
+     "sources": [
+      "zavorsky2000"
+     ],
+     "evidence": [
+      {
+       "source": "zavorsky2000",
+       "quote": "While it is known that aerobic training decreases submaximal HR (HRsubmax) at a given absolute exercise workload, the general consensus is that maximum HR (HRmax) is relatively unaltered regardless of training status in a given population.",
+       "level": "abstract"
+      },
+      {
+       "source": "zavorsky2000",
+       "quote": "Therefore, analysis reveals that HRmax can be altered by 3 to 7% with aerobic training/detraining.",
+       "level": "abstract"
+      },
+      {
+       "source": "zavorsky2000",
+       "quote": "Furthermore, evidence suggests that tapering/detraining can increase HRmax.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-submax-lower",
+     "text": "Endurance training lowers HR at a given submaximal workload, partly by reducing sympathetic activity to the heart.",
+     "grade": "strong",
+     "sources": [
+      "zavorsky2000",
+      "carter2003"
+     ],
+     "evidence": [
+      {
+       "source": "carter2003",
+       "quote": "Long-term endurance training also decreases submaximal exercise heart rate by reducing sympathetic activity to the heart.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hr-submax-scenario"
+  },
+  {
+   "type": "question",
+   "item": "hr-max-change"
+  },
+  {
+   "type": "concept",
+   "id": "hr-brady",
+   "title": "The athlete's slow resting heart",
+   "text": "Endurance athletes often have a slow resting HR: [sinus bradycardia](g:sinus-bradycardia) [[c:hr-brady-common]]. Why?\n\n**A stronger vagal brake.** The classic answer: training raises parasympathetic and lowers sympathetic activity at rest, perhaps with a lower intrinsic rate as well [[c:hr-brady-vagal]].\n\n**A slower pacemaker.** With both branches blocked by drugs, world-class oarsmen still had a lower [intrinsic heart rate](g:intrinsic-heart-rate) than non-athletes, 81 against 102 beats·min⁻¹. The authors put the oarsmen's slow resting HR down to the [sinoatrial node](g:sa-node-pacemaker) alone [[c:hr-katona]]. In trained mice the slow rate persisted after blockade, with less of the HCN4 'funny' ion channel in the node [[c:hr-dsouza]].\n\nThe human studies are few and small; the most direct work is in mice.",
+   "claims": [
+    {
+     "id": "hr-brady-common",
+     "text": "Endurance athletes have sinus bradycardia, a slow resting heart rate.",
+     "grade": "strong",
+     "sources": [
+      "dsouza2014",
+      "katona1982"
+     ],
+     "evidence": [
+      {
+       "source": "dsouza2014",
+       "quote": "Endurance athletes exhibit sinus bradycardia, that is a slow resting heart rate, associated with a higher incidence of sinus node (pacemaker) disease and electronic pacemaker implantation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-brady-vagal",
+     "text": "Endurance training raises parasympathetic and lowers sympathetic activity at rest, which, with a possible fall in intrinsic HR, lowers resting HR.",
+     "grade": "disputed",
+     "sources": [
+      "carter2003"
+     ],
+     "evidence": [
+      {
+       "source": "carter2003",
+       "quote": "Endurance training increases parasympathetic activity and decreases sympathetic activity in the human heart at rest. These two training-induced autonomic effects, coupled with a possible reduction in intrinsic heart rate, decrease resting heart rate.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-katona",
+     "text": "Under full autonomic blockade, world-class oarsmen had an intrinsic HR of 81 against 102 beats·min⁻¹ in non-athletes; the authors attributed their low resting HR solely to the lower intrinsic rate.",
+     "grade": "weak",
+     "sources": [
+      "katona1982"
+     ],
+     "evidence": [
+      {
+       "source": "katona1982",
+       "quote": "In athletes the control heart rate [55 +/- 3.3 (SD) beats/min] and R0 (81 +/- 8.3 beats/min) were lower than in nonathletes (62 +/- 6.0, P less than 0.01 and 102 +/- 11, P less than 0.001, respectively).",
+       "level": "abstract"
+      },
+      {
+       "source": "katona1982",
+       "quote": "the lower resting heart rate in oarsmen is solely due to a reduction in intrinsic cardiac rate, and not to an increase in parasympathetic tone.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-dsouza",
+     "text": "In mice, training bradycardia persisted after autonomic blockade and was caused by remodelling of the sinus node, including less HCN4.",
+     "grade": "weak",
+     "sources": [
+      "dsouza2014"
+     ],
+     "evidence": [
+      {
+       "source": "dsouza2014",
+       "quote": "Here we show that training-induced bradycardia is not a consequence of changes in the activity of the autonomic nervous system but is caused by intrinsic electrophysiological changes in the sinus node.",
+       "level": "abstract"
+      },
+      {
+       "source": "dsouza2014",
+       "quote": "We demonstrate that training-induced bradycardia persists after blockade of the autonomous nervous system in vivo in mice and in vitro in the denervated sinus node.",
+       "level": "abstract"
+      },
+      {
+       "source": "dsouza2014",
+       "quote": "We also show that a widespread remodelling of pacemaker ion channels, notably a downregulation of HCN4 and the corresponding ionic current, If.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is athletes' slow resting heart rate mainly a stronger vagal brake or a slower sinoatrial node?",
+    "sides": [
+     {
+      "position": "Mainly autonomic: training raises vagal and lowers sympathetic activity to the heart at rest.",
+      "sources": [
+       "carter2003"
+      ]
+     },
+     {
+      "position": "Mainly intrinsic: the sinoatrial node itself is remodelled and fires more slowly, even with the nerves blocked.",
+      "sources": [
+       "katona1982",
+       "dsouza2014"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hr-brady-blockade"
+  },
+  {
+   "type": "question",
+   "item": "hr-brady-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "hr-hrr-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hr-tanaka-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "HR climbs with workload as control shifts from about 4 : 1 vagal to 4 : 1 sympathetic; %HRR matches %VO₂ reserve.",
+    "HRmax ≈ 208 − 0.7 × age on average, but the error for one person is about 11 beats·min⁻¹: measure it when you can.",
+    "Training barely moves HRmax (a few per cent, usually down) but clearly lowers HR at a given power or pace.",
+    "Athletes' resting bradycardia: classically a stronger vagal brake; blockade studies and mouse work point to a slower sinoatrial node. Still debated."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hr-hrr-calc",
+   "concept": "hr-rise",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "swain1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner rests at 48 beats·min⁻¹ and has a measured HRmax of 188. During a tempo run her HR is 153. What percentage of her heart-rate reserve is she using?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75%",
+       "correct": true,
+       "why": "Right: (153 − 48) ÷ (188 − 48) = 105 ÷ 140 = 75%."
+      },
+      {
+       "id": "b",
+       "text": "81%",
+       "why": "That is %HRmax (153 ÷ 188), a different scale from %HRR."
+      },
+      {
+       "id": "c",
+       "text": "56%",
+       "why": "This divides by HRmax (105 ÷ 188) instead of by the reserve, HRmax − HRrest."
+      },
+      {
+       "id": "d",
+       "text": "69%",
+       "why": "This divides by the current HR (105 ÷ 153) instead of by the reserve."
+      }
+     ],
+     "solution": "Reserve = 188 − 48 = 140. HR above rest = 153 − 48 = 105. %HRR = 105 ÷ 140 = 75%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rests at 55 beats·min⁻¹ and has a measured HRmax of 185. On an endurance ride his HR is 120. What percentage of his heart-rate reserve is he using?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50%",
+       "correct": true,
+       "why": "Right: (120 − 55) ÷ (185 − 55) = 65 ÷ 130 = 50%."
+      },
+      {
+       "id": "b",
+       "text": "65%",
+       "why": "That is %HRmax (120 ÷ 185), a different scale from %HRR."
+      },
+      {
+       "id": "c",
+       "text": "35%",
+       "why": "This divides by HRmax (65 ÷ 185) instead of by the reserve, HRmax − HRrest."
+      },
+      {
+       "id": "d",
+       "text": "54%",
+       "why": "This divides by the current HR (65 ÷ 120) instead of by the reserve."
+      }
+     ],
+     "solution": "Reserve = 185 − 55 = 130. HR above rest = 120 − 55 = 65. %HRR = 65 ÷ 130 = 50%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete rests at 42 beats·min⁻¹ and has a measured HRmax of 182. On the run leg her HR is 133. What percentage of her heart-rate reserve is she using?",
+     "options": [
+      {
+       "id": "a",
+       "text": "65%",
+       "correct": true,
+       "why": "Right: (133 − 42) ÷ (182 − 42) = 91 ÷ 140 = 65%."
+      },
+      {
+       "id": "b",
+       "text": "73%",
+       "why": "That is %HRmax (133 ÷ 182), a different scale from %HRR."
+      },
+      {
+       "id": "c",
+       "text": "50%",
+       "why": "This divides by HRmax (91 ÷ 182) instead of by the reserve, HRmax − HRrest."
+      },
+      {
+       "id": "d",
+       "text": "68%",
+       "why": "This divides by the current HR (91 ÷ 133) instead of by the reserve."
+      }
+     ],
+     "solution": "Reserve = 182 − 42 = 140. HR above rest = 133 − 42 = 91. %HRR = 91 ÷ 140 = 65%."
+    }
+   ]
+  },
+  {
+   "id": "hr-vagus-max",
+   "concept": "hr-rise",
+   "bloom": "understand",
+   "sources": [
+    "white2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist reaches maximal effort at the end of a ramp test. What is the state of the vagal brake on his heart?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Still active, but outweighed about 4 : 1 by sympathetic drive",
+       "correct": true,
+       "why": "Right: the vagus stays functionally active throughout exercise; the balance shifts to about 4 : 1 sympathetic at max."
+      },
+      {
+       "id": "b",
+       "text": "Fully switched off from the first minute of exercise",
+       "why": "That is the older model; the review finds vagal activity active all the way to max."
+      },
+      {
+       "id": "c",
+       "text": "Stronger than at rest, to protect the heart",
+       "why": "Vagal influence falls as the work rises; at rest it is dominant, about 4 : 1."
+      },
+      {
+       "id": "d",
+       "text": "Replaced by the baroreflex, which sets HR alone",
+       "why": "The baroreflex works through the vagal and sympathetic nerves; it doesn't replace them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hr-tanaka-calc",
+   "concept": "hr-max",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tanaka2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the predicted HRmax of a 50-year-old cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "173 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 50 = 35; 208 − 35 = 173."
+      },
+      {
+       "id": "b",
+       "text": "170 beats·min⁻¹",
+       "why": "That is 220 − age, the older rule, not the formula given."
+      },
+      {
+       "id": "c",
+       "text": "157 beats·min⁻¹",
+       "why": "This subtracts 0.7 and 50 separately (208 − 0.7 − 50). Multiply 0.7 × age first."
+      },
+      {
+       "id": "d",
+       "text": "243 beats·min⁻¹",
+       "why": "This adds 0.7 × age instead of subtracting it."
+      }
+     ],
+     "solution": "HRmax = 208 − 0.7 × 50 = 208 − 35 = 173 beats·min⁻¹ (with an error of about ±11 for one person)."
+    },
+    {
+     "id": "b",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the predicted HRmax of a 30-year-old runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "187 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 30 = 21; 208 − 21 = 187."
+      },
+      {
+       "id": "b",
+       "text": "190 beats·min⁻¹",
+       "why": "That is 220 − age, the older rule, not the formula given."
+      },
+      {
+       "id": "c",
+       "text": "177 beats·min⁻¹",
+       "why": "This subtracts 0.7 and 30 separately (208 − 0.7 − 30). Multiply 0.7 × age first."
+      },
+      {
+       "id": "d",
+       "text": "229 beats·min⁻¹",
+       "why": "This adds 0.7 × age instead of subtracting it."
+      }
+     ],
+     "solution": "HRmax = 208 − 0.7 × 30 = 208 − 21 = 187 beats·min⁻¹ (with an error of about ±11 for one person)."
+    },
+    {
+     "id": "c",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the predicted HRmax of a 64-year-old triathlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "163 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 64 = 44.8; 208 − 44.8 = 163.2, about 163."
+      },
+      {
+       "id": "b",
+       "text": "156 beats·min⁻¹",
+       "why": "That is 220 − age, the older rule, which underestimates HRmax in older people."
+      },
+      {
+       "id": "c",
+       "text": "143 beats·min⁻¹",
+       "why": "This subtracts 0.7 and 64 separately (208 − 0.7 − 64). Multiply 0.7 × age first."
+      },
+      {
+       "id": "d",
+       "text": "253 beats·min⁻¹",
+       "why": "This adds 0.7 × age instead of subtracting it."
+      }
+     ],
+     "solution": "HRmax = 208 − 0.7 × 64 = 208 − 44.8 = 163.2 ≈ 163 beats·min⁻¹ (with an error of about ±11 for one person)."
+    }
+   ]
+  },
+  {
+   "id": "hr-max-error",
+   "concept": "hr-max",
+   "bloom": "evaluate",
+   "sources": [
+    "sarzynski2013",
+    "tanaka2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 40-year-old runner set her zones from 208 − 0.7 × age = 180 beats·min⁻¹. In a 10 km race her HR sits at 186 for the last 15 minutes, and she feels fine afterwards. What is the best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her true HRmax is above the formula's estimate",
+       "correct": true,
+       "why": "Right: a formula typically misses one person's HRmax by about 11 beats·min⁻¹. Holding 186 means her HRmax is higher; her zones need resetting."
+      },
+      {
+       "id": "b",
+       "text": "Her heart worked dangerously above its maximum",
+       "why": "Nobody can exceed their own HRmax; it was the estimate that was wrong, not her heart."
+      },
+      {
+       "id": "c",
+       "text": "Her watch must have been misreading",
+       "why": "Possible, but a steady, plausible reading fits the known size of formula error far better."
+      },
+      {
+       "id": "d",
+       "text": "She ran the whole time above her VO₂max",
+       "why": "No one can hold above VO₂max for 15 minutes; and her max was simply underestimated."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hr-submax-scenario",
+   "concept": "hr-training",
+   "bloom": "analyse",
+   "sources": [
+    "zavorsky2000",
+    "carter2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After three months of base training, a cyclist's heart rate at 200 W has dropped from 150 to 138 beats·min⁻¹. What is the most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A bigger stroke volume, so the same Q needs fewer beats",
+       "correct": true,
+       "why": "Right: Q at 200 W stays about the same; with a bigger SV and less sympathetic drive, HR is lower."
+      },
+      {
+       "id": "b",
+       "text": "His HRmax fell by the same 12 beats",
+       "why": "HRmax changes only a few per cent with training, and it doesn't set HR at a submaximal power."
+      },
+      {
+       "id": "c",
+       "text": "His heart got weaker and can't speed up",
+       "why": "A weaker heart would need more beats for the same Q, not fewer."
+      },
+      {
+       "id": "d",
+       "text": "His cardiac output at 200 W fell by half",
+       "why": "The muscles need about the same O₂ at 200 W, so Q stays similar; what changes is how it is made."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hr-max-change",
+   "concept": "hr-training",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "zavorsky2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "According to a review of training studies, by how much can endurance training change HRmax?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A few per cent, usually down",
+       "correct": true,
+       "why": "Right: the review estimates 3–7%, falling with training and rising with detraining or a taper."
+      },
+      {
+       "id": "b",
+       "text": "Not at all, in anyone",
+       "why": "Too strong: the general view is 'relatively unaltered', but studies report shifts of 3–7%."
+      },
+      {
+       "id": "c",
+       "text": "Up by 10–20%",
+       "why": "HRmax doesn't rise with training; if anything it falls slightly."
+      },
+      {
+       "id": "d",
+       "text": "Down by about a third",
+       "why": "Far beyond the 3–7% the review found."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hr-brady-blockade",
+   "concept": "hr-brady",
+   "bloom": "analyse",
+   "sources": [
+    "katona1982"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "With both autonomic branches blocked by drugs, a group of world-class rowers have a heart rate of 81 beats·min⁻¹ and a group of non-athletes 102. What does this most directly suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rowers' sinoatrial node fires more slowly by itself",
+       "correct": true,
+       "why": "Right: with the nerves blocked, what is left is the node's intrinsic rate, and it is lower in the rowers."
+      },
+      {
+       "id": "b",
+       "text": "The rowers have a stronger vagal brake",
+       "why": "The blockade removed the vagal brake, yet the gap remained, so this gap can't be vagal."
+      },
+      {
+       "id": "c",
+       "text": "The rowers have more sympathetic drive",
+       "why": "Sympathetic effects were blocked too, and more sympathetic drive would raise HR, not lower it."
+      },
+      {
+       "id": "d",
+       "text": "The rowers breathe more slowly at rest",
+       "why": "Breathing affects HR through the vagus, which was blocked; it can't explain a gap under full blockade."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hr-brady-appraisal",
+   "concept": "hr-brady",
+   "bloom": "evaluate",
+   "sources": [
+    "dsouza2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 2014 study found that training lowered resting HR through changes in the sinoatrial node itself (less HCN4), not through the nerves. What most limits applying this to human endurance athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It was done in mice",
+       "correct": true,
+       "why": "Right: it is a mechanistic animal study. In humans the evidence comes from a few small drug-blockade studies."
+      },
+      {
+       "id": "b",
+       "text": "It relied on self-reported training",
+       "why": "Training was controlled by the researchers, and the node was studied directly."
+      },
+      {
+       "id": "c",
+       "text": "It only observed retired athletes",
+       "why": "It was an experiment comparing trained with sedentary animals, not an observational study."
+      },
+      {
+       "id": "d",
+       "text": "It found no change in resting heart rate",
+       "why": "It did: the trained animals had a lower resting HR, which persisted under blockade."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,742 @@
+{
+ "id": "endo-basics",
+ "module": "t1b-endocrine",
+ "title": "Hormones: messages in the blood",
+ "goal": "Explain how hormones reach and act on their target cells, how feedback loops keep them in range, how peptide and steroid hormones differ, and why a blood concentration alone doesn't tell you the effect.",
+ "requires": [
+  "o2-muscle-extraction"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hormone",
+    "receptor",
+    "peptide-hormone",
+    "steroid-hormone",
+    "negative-feedback",
+    "lh",
+    "free-hormone"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "eb-what",
+   "title": "Hormones: messages with an address",
+   "text": "A [hormone](g:hormone) is a messenger that a gland releases into the blood. The blood carries it everywhere, but only cells with a matching [receptor](g:receptor) respond: the receptor is the address. Binding sets off a chain of reactions inside the cell that changes what it does [[c:eb-receptors]].\n\nIn the enzymes lesson you saw the end of one such chain: adrenaline switching on glycogen phosphorylase by [phosphorylation](g:phosphorylation). This module is about the start: who sends which message, and when.\n\n| | nerve | hormone |\n|---|---|---|\n| reaches | one muscle or organ | every cell with the receptor |\n| speed | milliseconds | seconds to hours |\n| effect lasts | while the nerve fires | minutes to days |",
+   "claims": [
+    {
+     "id": "eb-receptors",
+     "text": "Hormones act only on target cells that carry receptors for them, on the surface or inside the cell; binding triggers a cascade of reactions that changes the cell's activity.",
+     "grade": "strong",
+     "sources": [
+      "hillersturmhofel1998"
+     ],
+     "evidence": [
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "The target cells for each hormone are characterized by the presence of certain docking molecules (i.e., receptors) for the hormone that are located either on the cell surface or inside the cell.",
+       "level": "full-text"
+      },
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "The interaction between the hormone and its receptor triggers a cascade of biochemical reactions in the target cell that eventually modify the cell’s function or activity.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eb-receptor-target",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "eb-nerve-vs-hormone"
+  },
+  {
+   "type": "concept",
+   "id": "eb-classes",
+   "title": "Two chemical families, two ways in",
+   "text": "**[Peptide hormones](g:peptide-hormone)** (insulin, glucagon, growth hormone, the water-keeping hormone ADH) are chains of [amino acids](g:amino-acid). They dissolve in blood but can't cross the fatty cell membrane, so they bind receptors on the surface [[c:eb-peptide]]. Inside, a relay of [enzymes](g:enzyme) passes the signal on by phosphorylating other enzymes, within seconds to minutes. Adrenaline and noradrenaline, made from an amino acid, also use surface receptors.\n\n**[Steroid hormones](g:steroid-hormone)** (cortisol, aldosterone, testosterone) are built from cholesterol. They pass through the membrane, bind a receptor inside the cell, and the pair switches genes on or off [[c:eb-steroid]]. New proteins take time, so steroid effects build over hours.\n\nRule of thumb: peptide = fast switch on existing enzymes; steroid = slow change in which proteins the cell makes.",
+   "claims": [
+    {
+     "id": "eb-peptide",
+     "text": "Peptide and protein hormones cannot enter cells; they act through receptors on the cell surface.",
+     "grade": "strong",
+     "sources": [
+      "hillersturmhofel1998"
+     ],
+     "evidence": [
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "Because of their chemical structure, the polypeptide and protein hormones cannot enter cells. Instead, they interact with receptors on the cell surface.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "eb-steroid",
+     "text": "Steroid hormones are cholesterol-like molecules that enter their target cells, bind receptors inside, and the hormone–receptor complex regulates genes.",
+     "grade": "strong",
+     "sources": [
+      "hillersturmhofel1998"
+     ],
+     "evidence": [
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "Steroids, which are produced by the gonads and part of the adrenal gland (i.e., the adrenal cortex), have a molecular structure similar to that of cholesterol.",
+       "level": "full-text"
+      },
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "The hormone-receptor complexes then bind to certain regions of the cell’s genetic material (i.e., the DNA), thereby regulating the activity of specific hormone-responsive genes.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eb-class-sort"
+  },
+  {
+   "type": "question",
+   "item": "eb-class-speed"
+  },
+  {
+   "type": "concept",
+   "id": "eb-feedback",
+   "title": "Feedback loops keep hormones in range",
+   "text": "Most hormones limit their own release by [negative feedback](g:negative-feedback), like a thermostat [[c:eb-negative-feedback]]. Glucose rises after a meal, insulin rises, glucose falls, and so does the push for insulin.\n\nMany hormones work in cascades from the brain down:\n\n| axis | hypothalamus → | pituitary → | gland makes |\n|---|---|---|---|\n| HPA | CRH | ACTH | cortisol |\n| HPG | GnRH | [LH](g:lh), FSH | testosterone, oestrogen |\n\nThe end hormone damps the levels above it: cortisol and testosterone both act back on the hypothalamus and pituitary [[c:eb-axis]]. Add the end hormone from outside, and the body makes less of its own.\n\nExercise doesn't break these loops. It adds strong inputs (sympathetic nerves, falling glucose, heat) that push hormones far above rest for a while [[c:eb-exercise-stressor]].",
+   "claims": [
+    {
+     "id": "eb-negative-feedback",
+     "text": "Negative feedback from target glands to the hypothalamus and pituitary keeps hormone systems within set bounds.",
+     "grade": "strong",
+     "sources": [
+      "hillersturmhofel1998"
+     ],
+     "evidence": [
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "Constant feedback from the target glands to the hypothalamus and pituitary gland ensures that the activity of the hormone system involved remains within appropriate boundaries.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "eb-axis",
+     "text": "Cortisol and testosterone each inhibit the hypothalamic and pituitary hormones that drive their own release.",
+     "grade": "strong",
+     "sources": [
+      "hillersturmhofel1998"
+     ],
+     "evidence": [
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "Cortisol also acts back on the hypothalamus and pituitary gland by negative feedback.",
+       "level": "full-text"
+      },
+      {
+       "source": "hillersturmhofel1998",
+       "quote": "For example, testosterone is part of a negative feedback mechanism that inhibits GnRH release by the hypothalamus and LH release by the pituitary.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "eb-exercise-stressor",
+     "text": "Exercise disrupts homeostasis and strongly amplifies hormone responses, with a size that depends on intensity and volume.",
+     "grade": "strong",
+     "sources": [
+      "hackney2015"
+     ],
+     "evidence": [
+      {
+       "source": "hackney2015",
+       "quote": "The introduction of exercise as a stressor to disrupt homeostasis can greatly amplify and impact the actions of these hormones.",
+       "level": "abstract"
+      },
+      {
+       "source": "hackney2015",
+       "quote": "To that end, the endocrine response to an acute exercise session occurs in a progression of phases with the magnitude of the response being relative to the exercise work intensity or volume.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eb-feedback-predict",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eb-feedback-glucose"
+  },
+  {
+   "type": "concept",
+   "id": "eb-concentration",
+   "title": "A blood level isn't the effect",
+   "text": "A lab report gives a concentration. The effect depends on more:\n\n- **Release vs removal.** The level is what the gland releases minus what the liver and kidneys clear.\n- **Plasma volume.** Hard exercise pushes plasma water into the muscles. In one study plasma volume fell 17% at 80% [VO₂max](g:vo2max), so part of the cortisol rise was simply less water [[c:eb-pv]].\n- **Carrier proteins.** Most testosterone and cortisol ride on carrier proteins; the [free](g:free-hormone) part is thought to be the active part [[c:eb-free]].\n- **The target.** Receptor numbers and local levels differ: arterial catecholamines don't tell you what a liver cell sees [[c:eb-local]].\n\nSo \"cortisol went up 40%\" is a starting point, not a verdict.",
+   "claims": [
+    {
+     "id": "eb-pv",
+     "text": "Plasma volume falls with exercise intensity (by about 17% after 30 min at 80% VO₂max), so part of a measured hormone rise is haemoconcentration; plasma volume shifts should be considered when reading blood values.",
+     "grade": "moderate",
+     "sources": [
+      "hill2008",
+      "kargotich1998"
+     ],
+     "evidence": [
+      {
+       "source": "hill2008",
+       "quote": "The calculated changes in plasma volume for the resting-control, 40%, 60%, and 80% sessions were: +2.2+/-3.0%, -9.9+/-5.0%, -15.6+/-3.5%, and -17.2+/-3.3%, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "hill2008",
+       "quote": "These increases seem due to a combination of hemoconcentration and HPA axis stimulus (ACTH).",
+       "level": "abstract"
+      },
+      {
+       "source": "kargotich1998",
+       "quote": "If the levels of plasma constituents are to be routinely measured for research purposes or used as indicators of training adaptation or the health of an athlete, then it is important to consider the dynamic nature of plasma volume.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eb-free",
+     "text": "By the free hormone hypothesis, the free (unbound) rather than total concentration best reflects a hormone's activity; for testosterone, carrier proteins govern tissue exposure.",
+     "grade": "moderate",
+     "sources": [
+      "narinx2022"
+     ],
+     "evidence": [
+      {
+       "source": "narinx2022",
+       "quote": "According to the free hormone hypothesis, biological activity of a certain hormone is best reflected by free rather than total hormone concentrations.",
+       "level": "abstract"
+      },
+      {
+       "source": "narinx2022",
+       "quote": "For testosterone, tissue exposure is governed by a delicate equilibrium between free and total testosterone which is determined through interaction with the binding proteins sex hormone-binding globulin and albumin.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eb-local",
+     "text": "Changes in arterial catecholamine concentrations during exercise do not translate into the same changes at the liver cell.",
+     "grade": "moderate",
+     "sources": [
+      "trefts2015"
+     ],
+     "evidence": [
+      {
+       "source": "trefts2015",
+       "quote": "It is now clear that changes in arterial catecholamine concentrations do not translate to changes in concentrations at the hepatocyte.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "eb-pv-example",
+   "title": "Correcting a hormone rise for plasma volume",
+   "problem": "A cyclist's cortisol is 400 nmol·L⁻¹ before and 560 nmol·L⁻¹ after 30 min at 80% VO₂max: a 40% rise. Plasma volume fell 15%. How much more cortisol is actually in the plasma?",
+   "steps": [
+    "The amount of hormone in plasma = concentration × plasma volume. Call the starting plasma volume 1; after the ride it is 1 − 0.15 = 0.85.",
+    "Before: 400 × 1 = 400 units. After: 560 × 0.85 = 476 units.",
+    "476 ÷ 400 = 1.19: the amount rose by 19%, not 40%.",
+    "About half of the measured rise was more cortisol released; the rest was the same cortisol in less water."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "eb-pv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "eb-free-total"
+  },
+  {
+   "type": "question",
+   "item": "eb-feedback-predict",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "eb-hill-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A hormone travels in the blood to every tissue but acts only where cells carry its receptor.",
+    "Peptide hormones and catecholamines act on surface receptors within seconds to minutes; steroids enter the cell and change gene activity over hours.",
+    "Negative feedback keeps hormones in range: an end hormone such as cortisol or testosterone damps its own drivers.",
+    "A blood concentration is not the effect: plasma volume, clearance, carrier proteins and receptors all sit between the number and the action."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "eb-receptor-target",
+   "concept": "eb-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hard climb, adrenaline in the blood reaches every tissue of a cyclist's body, yet only some tissues respond to it. What decides which cells respond?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Whether the cell carries receptors for adrenaline",
+       "correct": true,
+       "why": "Right: a hormone acts only on cells with a matching receptor; the receptor is its address."
+      },
+      {
+       "id": "b",
+       "text": "How close the cell is to the adrenal glands",
+       "why": "Blood spreads the hormone through the whole body within a minute; distance from the gland doesn't select the targets."
+      },
+      {
+       "id": "c",
+       "text": "Whether the cell is short of ATP at that moment",
+       "why": "Energy state changes how a cell works, but without a receptor the hormone can't signal to it at all."
+      },
+      {
+       "id": "d",
+       "text": "Whether a nerve runs to the cell",
+       "why": "That is how nerve signals choose their targets. Hormones reach cells through the blood, not along nerves."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a long ride, glucagon in the blood reaches liver and leg muscle alike. It makes the liver release glucose but leaves muscle glycogen alone. What is the most likely reason?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle cells carry few or no glucagon receptors",
+       "correct": true,
+       "why": "Right: a hormone acts only where cells carry its receptor. The liver has glucagon receptors; muscle has few, so it doesn't respond."
+      },
+      {
+       "id": "b",
+       "text": "Glucagon is broken down before it reaches muscle",
+       "why": "Glucagon reaches every tissue in the blood; it is cleared mainly by the liver and kidneys, not on the way to muscle."
+      },
+      {
+       "id": "c",
+       "text": "The leg muscles are too far from the pancreas",
+       "why": "Distance from the gland doesn't matter once the hormone is in the circulation."
+      },
+      {
+       "id": "d",
+       "text": "Working muscle already has enough glucose to ignore it",
+       "why": "A cell's fuel state changes how it works, but without a receptor the hormone can't signal to it at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-nerve-vs-hormone",
+   "concept": "eb-what",
+   "bloom": "understand",
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A motor nerve makes one muscle contract within milliseconds. Adrenaline released at the start of a race acts on the heart, liver and fat tissue at once. What explains the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hormones travel in the blood to every cell with the receptor; nerves reach only their own targets",
+       "correct": true,
+       "why": "Right: blood-borne messages are broad and slower; nerve signals are fast and point-to-point."
+      },
+      {
+       "id": "b",
+       "text": "Adrenaline travels along sympathetic nerves to each organ in turn",
+       "why": "Sympathetic nerves release noradrenaline at their endings; adrenaline itself goes into the blood from the adrenal glands."
+      },
+      {
+       "id": "c",
+       "text": "Hormones work faster than nerves, so they can reach more organs",
+       "why": "The other way round: nerve signals take milliseconds, hormones seconds to hours."
+      },
+      {
+       "id": "d",
+       "text": "Each organ makes its own adrenaline when the race starts",
+       "why": "Adrenaline comes mainly from the adrenal medulla; the organs respond to it, they don't make it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-class-sort",
+   "concept": "eb-classes",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these hormones crosses the cell membrane and acts by changing which genes are read?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cortisol",
+       "correct": true,
+       "why": "Right: cortisol is a steroid, built from cholesterol; it binds a receptor inside the cell that acts on DNA."
+      },
+      {
+       "id": "b",
+       "text": "Insulin",
+       "why": "Insulin is a peptide: it can't cross the membrane and acts through a surface receptor."
+      },
+      {
+       "id": "c",
+       "text": "Glucagon",
+       "why": "Glucagon is a peptide hormone acting on surface receptors of liver cells."
+      },
+      {
+       "id": "d",
+       "text": "Adrenaline",
+       "why": "Adrenaline is a catecholamine acting on surface α and β receptors, not on genes directly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-class-speed",
+   "concept": "eb-classes",
+   "bloom": "analyse",
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a long run, glucagon speeds up glucose release from the liver within minutes, while some of cortisol's effects on the liver appear only hours later. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cortisol works by changing gene activity, so new proteins must be made first",
+       "correct": true,
+       "why": "Right: steroid effects need transcription and protein synthesis; peptides such as glucagon switch existing enzymes on via surface receptors."
+      },
+      {
+       "id": "b",
+       "text": "Cortisol travels more slowly in the blood than glucagon",
+       "why": "All hormones are carried at the speed of blood flow; the difference is in how they act inside the cell."
+      },
+      {
+       "id": "c",
+       "text": "Cortisol is only released after the run has finished",
+       "why": "Cortisol rises during hard or long exercise, not only afterwards; its slow action is the reason for the delay."
+      },
+      {
+       "id": "d",
+       "text": "Cortisol has to be converted into glucagon by the liver first",
+       "why": "Steroids are never turned into peptides; cortisol acts through its own receptor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-feedback-predict",
+   "concept": "eb-feedback",
+   "bloom": "apply",
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner takes a cortisol-like drug (a glucocorticoid) for several weeks for an injury. What happens to her own ACTH release?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls, because the drug feeds back on the hypothalamus and pituitary",
+       "correct": true,
+       "why": "Right: the end hormone damps CRH and ACTH, so her own adrenal glands make less cortisol."
+      },
+      {
+       "id": "b",
+       "text": "It rises, to keep up with the higher cortisol",
+       "why": "That would be positive feedback. The HPA axis runs on negative feedback: more cortisol means less ACTH."
+      },
+      {
+       "id": "c",
+       "text": "It doesn't change, because the drug isn't made by her body",
+       "why": "The pituitary senses the hormone's action, not where it came from; a cortisol-like drug feeds back the same way."
+      },
+      {
+       "id": "d",
+       "text": "It rises only on days when she trains hard",
+       "why": "Hard exercise does raise ACTH, but the steady drug level pushes ACTH down overall."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist injects testosterone for months (doping). What happens to his own LH release and to the testosterone his testes make?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both fall, through negative feedback on the hypothalamus and pituitary",
+       "correct": true,
+       "why": "Right: high testosterone damps GnRH and LH, so the testes are driven less and make less of their own."
+      },
+      {
+       "id": "b",
+       "text": "Both rise, because the axis is already active",
+       "why": "This is the positive-feedback misconception. Extra end hormone turns its drivers down."
+      },
+      {
+       "id": "c",
+       "text": "LH rises while his own testosterone falls",
+       "why": "That pattern fits testes that fail on their own, not added testosterone, which suppresses LH."
+      },
+      {
+       "id": "d",
+       "text": "Neither changes, because the injected testosterone is separate",
+       "why": "The hypothalamus and pituitary can't tell injected testosterone from the body's own; both feed back."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-feedback-glucose",
+   "concept": "eb-feedback",
+   "bloom": "understand",
+   "sources": [
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a big pasta dinner the night before a race, a triathlete's blood glucose rises and insulin rises. What stops insulin climbing on and on?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Insulin lowers glucose, and lower glucose damps insulin release",
+       "correct": true,
+       "why": "Right: a negative feedback loop; the result of the signal turns the signal down."
+      },
+      {
+       "id": "b",
+       "text": "The pancreas runs out of stored insulin",
+       "why": "Insulin release follows glucose; it isn't stopped by running out after one meal."
+      },
+      {
+       "id": "c",
+       "text": "Glucagon rises after the meal and blocks insulin",
+       "why": "Glucagon falls after a carbohydrate meal; the brake on insulin is falling glucose."
+      },
+      {
+       "id": "d",
+       "text": "Sleep switches insulin release off overnight",
+       "why": "Insulin follows glucose day and night; it falls because glucose falls, not because of sleep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-pv-calc",
+   "concept": "eb-concentration",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kargotich1998",
+    "hill2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a hard 10 km race, a runner's testosterone rises from 20 to 23 nmol·L⁻¹ (+15%), while plasma volume falls 10%. By how much did the amount of testosterone in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+3.5%",
+       "correct": true,
+       "why": "Right: 23 × 0.90 = 20.7; 20.7 ÷ 20 = 1.035."
+      },
+      {
+       "id": "b",
+       "text": "+15%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+26.5%",
+       "why": "This multiplies by 1.10 instead of 0.90: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+5%",
+       "why": "This subtracts percentages (15 − 10). Volumes multiply: 1.15 × 0.90 = 1.035."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 20 × 1 = 20. After: 23 × 0.90 = 20.7. 20.7 ÷ 20 = 1.035, so +3.5%."
+    },
+    {
+     "id": "b",
+     "stem": "In a 30 min time trial, a cyclist's cortisol rises from 300 to 420 nmol·L⁻¹ (+40%), while plasma volume falls 20%. By how much did the amount of cortisol in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+12%",
+       "correct": true,
+       "why": "Right: 420 × 0.80 = 336; 336 ÷ 300 = 1.12."
+      },
+      {
+       "id": "b",
+       "text": "+40%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+68%",
+       "why": "This multiplies by 1.20 instead of 0.80: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+20%",
+       "why": "This subtracts percentages (40 − 20). Volumes multiply: 1.40 × 0.80 = 1.12."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 300 × 1 = 300. After: 420 × 0.80 = 336. 336 ÷ 300 = 1.12, so +12%."
+    },
+    {
+     "id": "c",
+     "stem": "During a sprint-distance triathlon, an athlete's noradrenaline rises from 2.0 to 6.0 nmol·L⁻¹ (+200%), while plasma volume falls 12%. By how much did the amount of noradrenaline in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+164%",
+       "correct": true,
+       "why": "Right: 6.0 × 0.88 = 5.28; 5.28 ÷ 2.0 = 2.64."
+      },
+      {
+       "id": "b",
+       "text": "+200%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+236%",
+       "why": "This multiplies by 1.12 instead of 0.88: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+188%",
+       "why": "This subtracts percentages (200 − 12). Volumes multiply: 3.0 × 0.88 = 2.64."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 2.0 × 1 = 2.0. After: 6.0 × 0.88 = 5.28. 5.28 ÷ 2.0 = 2.64, so +164%. A big rise survives the correction; a small one may not."
+    }
+   ]
+  },
+  {
+   "id": "eb-free-total",
+   "concept": "eb-concentration",
+   "bloom": "analyse",
+   "sources": [
+    "narinx2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a training camp, a triathlete's total testosterone is unchanged, but SHBG, the protein that carries it in blood, is up 30%. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Free testosterone, the part thought to act, has probably fallen",
+       "correct": true,
+       "why": "Right: more carrier protein binds more of the same total, leaving less free hormone for the tissues."
+      },
+      {
+       "id": "b",
+       "text": "Testosterone action is unchanged, since the total is the same",
+       "why": "Total includes the bound part. By the free hormone hypothesis, the free part is what reaches receptors."
+      },
+      {
+       "id": "c",
+       "text": "Testosterone action has risen, because more is being carried",
+       "why": "Carried testosterone is held back from tissues; more carrier means less free hormone, not more action."
+      },
+      {
+       "id": "d",
+       "text": "SHBG is irrelevant, since only receptor numbers matter",
+       "why": "Receptors matter, but so does how much free hormone reaches them; SHBG sets that."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eb-hill-appraisal",
+   "concept": "eb-concentration",
+   "bloom": "evaluate",
+   "sources": [
+    "hill2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 12 moderately trained men, 30 min at 40% VO₂max did not raise cortisol, while 60% and 80% raised it by about 40% and 83%; plasma volume fell up to 17%. A coach tells a female triathlete: \"cortisol rises above 60% VO₂max\". What limits that advice most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only 12 men were tested, so the threshold may differ in women",
+       "correct": true,
+       "why": "Right: one small study in men only. The pattern is plausible, but the exact threshold for her is uncertain."
+      },
+      {
+       "id": "b",
+       "text": "A 30 min bout is too long to reveal a threshold",
+       "why": "30 min is a normal test length; the bouts differed only in intensity, which is what a threshold needs."
+      },
+      {
+       "id": "c",
+       "text": "The plasma volume fall makes all the cortisol data useless",
+       "why": "Overreach: plasma volume can be measured and corrected for, and the authors did take it into account."
+      },
+      {
+       "id": "d",
+       "text": "Cortisol can't be measured reliably in blood",
+       "why": "Blood cortisol is routinely measured; the limits here are the sample and the single study, not the assay."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

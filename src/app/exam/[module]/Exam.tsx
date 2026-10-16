@@ -11,12 +11,12 @@ type Entry = { item: Item; lessonId: string; reps: number; variant: Item["varian
 
 /** The exam run: no feedback per question; the score and every miss explained at the end. */
 export function Exam({
-  moduleId,
+  scopeId,
   title,
   questions,
   pass,
 }: {
-  moduleId: string;
+  scopeId: string;
   title: string;
   questions: Entry[];
   pass: number;
@@ -32,7 +32,7 @@ export function Exam({
     const misses = questions.filter((_, i) => !results[i]?.correct);
     return (
       <main className="screen">
-        <p className="eyebrow">Module exam · {title}</p>
+        <p className="eyebrow">{title}</p>
         <h1 className="font-serif text-4xl">{score}%</h1>
         <p className="prose-text">
           {score >= pass
@@ -98,7 +98,7 @@ export function Exam({
           {index + 1}/{questions.length}
         </span>
       </div>
-      <p className="eyebrow">Module exam · no feedback until the end</p>
+      <p className="eyebrow">{title} · no feedback until the end</p>
       <Question
         key={index}
         item={entry.item}
@@ -113,7 +113,7 @@ export function Exam({
           window.scrollTo(0, 0);
           if (all.length === questions.length) {
             const score = (100 * all.filter((r) => r.correct).length) / all.length;
-            examFinished(moduleId, score).catch(() => setSaveError(true));
+            examFinished(scopeId, score).catch(() => setSaveError(true));
           }
         }}
       />

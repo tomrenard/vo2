@@ -1,0 +1,714 @@
+{
+ "id": "endo-fluid",
+ "module": "t1b-endocrine",
+ "title": "Water and salt: ADH, renin and aldosterone",
+ "goal": "Explain how vasopressin (ADH) and the renin–angiotensin–aldosterone system respond to exercise, how training expands plasma volume, and why ADH that stays high can turn overdrinking into hyponatraemia in long events.",
+ "requires": [
+  "endo-fuel-hormones"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "osmolality",
+    "vasopressin",
+    "aldosterone",
+    "renin-angiotensin",
+    "hyponatraemia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "efl-why",
+   "title": "Shrinking plasma, two regulators",
+   "text": "Hard exercise shrinks [plasma volume](g:plasma-volume): water moves into working muscle and leaves as sweat. In 15 men cycling, it fell 3.7% at 100 W, 8.8% at 175 W and 12.4% at 225 W [[c:efl-pv-fall]]. Plasma loses more water than salt, so it gets more concentrated: its [osmolality](g:osmolality) rises.\n\nTwo hormone systems defend water and salt:\n\n| | [vasopressin (ADH)](g:vasopressin) | [aldosterone](g:aldosterone) |\n|---|---|---|\n| released from | back of the pituitary (peptide) | adrenal cortex (steroid) |\n| main trigger | rising osmolality | angiotensin II |\n| at the kidney | keeps water | keeps sodium, so water follows |\n| acts within | minutes | hours |\n\nThe heat module covers sweat itself; this lesson is about the hormones.",
+   "claims": [
+    {
+     "id": "efl-pv-fall",
+     "text": "Plasma volume falls during exercise, more at higher intensities (about −4%, −9% and −12% at 100, 175 and 225 W of cycling).",
+     "grade": "moderate",
+     "sources": [
+      "convertino1981",
+      "kargotich1998"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1981",
+       "quote": "The % delta PV was -3.7%* at 100 W, -8.8%* at 175 W, and -12.4%* at 225 W.",
+       "level": "abstract"
+      },
+      {
+       "source": "kargotich1998",
+       "quote": "Bouts of acute exercise have been shown to produce a transient haemoconcentration immediately after long distance running, bicycle ergometry and both maximal and submaximal swimming exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "efl-adh-action",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "efl-osm-why"
+  },
+  {
+   "type": "concept",
+   "id": "efl-adh",
+   "title": "ADH: set by salt, nudged by stress",
+   "text": "In graded cycling, plasma sodium, osmolality and ADH rose only once intensity passed about 40% VO₂max, and ADH tracked osmolality closely [[c:efl-adh-osm]]. That is ADH doing its main job: when plasma gets saltier, keep water.\n\nBut ADH has other triggers. In 82 runners of a 56 km ultramarathon, ADH rose almost fourfold although plasma sodium was unchanged [[c:efl-adh-nonosm]]. Such non-osmotic triggers are thought to include nausea, pain, low blood glucose and inflammatory signals; IL-6, a signal released by working muscle, rose 12.5-fold in the same runners.\n\nWhy it matters: ADH that stays up when plasma is *not* concentrated tells the kidney to keep water it should be getting rid of.",
+   "claims": [
+    {
+     "id": "efl-adh-osm",
+     "text": "In graded cycling, plasma sodium, osmolality and ADH rose curvilinearly and significantly only above about 40% VO₂max, with ADH closely correlated with osmolality.",
+     "grade": "weak",
+     "sources": [
+      "convertino1981"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1981",
+       "quote": "Plasma Na+ concentration, Osm, and AVP increase were curvilinear with graded exercise and were significant only when work intensity exceeded 40% VO2max.",
+       "level": "abstract"
+      },
+      {
+       "source": "convertino1981",
+       "quote": "However, delta AVP was significantly correlated with delta Na+ (r = 0.86*) and delta Osm (r = 0.83*), whereas delta PRA had low correlations with delta Na+ (r = 0.33, NS), delta Osm (r = 0.29, NS), and delta AVP (r = 0.43, NS).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "efl-adh-nonosm",
+     "text": "After a 56 km ultramarathon, ADH was markedly raised (3.9-fold) although plasma sodium was unchanged, pointing to non-osmotic stimuli.",
+     "grade": "weak",
+     "sources": [
+      "hewbutler2008"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2008",
+       "quote": "Increases in the plasma (AVP)(p) (3.9-fold), oxytocin (1.9-fold), brain natriuretic peptide (4.5-fold), and IL-6 (12.5-fold) were highly significant (P < 0.0001).",
+       "level": "abstract"
+      },
+      {
+       "source": "hewbutler2008",
+       "quote": "(AVP)(p) was markedly elevated after the ultramarathon despite unchanged plasma [Na(+)](.)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "efl-adh-threshold"
+  },
+  {
+   "type": "question",
+   "item": "efl-adh-nonosm"
+  },
+  {
+   "type": "concept",
+   "id": "efl-raas",
+   "title": "Renin, angiotensin, aldosterone: the sodium keeper",
+   "text": "The [renin–angiotensin–aldosterone system](g:renin-angiotensin) is a chain:\n\n1. The kidney releases **renin** when sympathetic drive rises and its own blood flow falls.\n2. Renin turns angiotensinogen from the liver into angiotensin I, which becomes **angiotensin II**: it narrows blood vessels and triggers thirst.\n3. Angiotensin II releases **aldosterone**, which makes the kidney keep sodium; water follows the sodium.\n\nIn graded cycling, renin activity rose in a straight line with workload, even at easy loads, and tracked sympathetic drive rather than osmolality [[c:efl-renin]]. So ADH answers \"is the plasma too salty?\", while renin answers \"is the body under strain?\"\n\nAldosterone is a steroid, so its sodium-keeping lasts well beyond the session.",
+   "claims": [
+    {
+     "id": "efl-renin",
+     "text": "Plasma renin activity rose linearly with exercise intensity, significantly at all workloads, behaving as a general stress response to sympathetic activity rather than to osmolality.",
+     "grade": "weak",
+     "sources": [
+      "convertino1981"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1981",
+       "quote": "PRA increase was linear and significant at all work levels.",
+       "level": "abstract"
+      },
+      {
+       "source": "convertino1981",
+       "quote": "c) the stimulation of the renin-angiotensin system is a more general stress response, which responds to increasing sympathetic nervous activity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "efl-raas-chain"
+  },
+  {
+   "type": "question",
+   "item": "efl-renin-trigger"
+  },
+  {
+   "type": "question",
+   "item": "efl-pv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "efl-long",
+   "title": "Bigger plasma volume, and the overdrinking trap",
+   "text": "**Training.** Repeated sessions expand plasma volume. In 8 trained men, 2 h a day of cycling at 65% VO₂max for 8 days raised it by 427 mL (12%); renin and ADH rose about ninefold during each session, helping keep sodium and water [[c:efl-hypervol]]. Over weeks, the kidney keeps more sodium through a more sensitive aldosterone action [[c:efl-aldo]]. A bigger plasma volume helps [stroke volume](g:stroke-volume) and heat loss, and dilutes [haemoglobin](g:haemoglobin) concentration.\n\n**Long events.** [Exercise-associated hyponatraemia](g:hyponatraemia) is caused mainly by drinking more than the kidneys can excrete. ADH that stays up for non-osmotic reasons makes that easier, because the kidney keeps the extra water [[c:efl-eah]]. How much and what to drink is the hydration module's job.",
+   "claims": [
+    {
+     "id": "efl-hypervol",
+     "text": "Eight days of 2 h daily cycling at 65% VO₂max expanded plasma volume by 427 mL (12%), associated with a ninefold rise in renin activity and ADH during exercise.",
+     "grade": "weak",
+     "sources": [
+      "convertino1980"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1980",
+       "quote": "After training, BV increased by 457 ml (+8.1% P less than 0.05), due to an increase in PV of 427 ml (+12.1%, P less than 0.05); red cell volume was essentially constant (delta = +30 ml, NS).",
+       "level": "abstract"
+      },
+      {
+       "source": "convertino1980",
+       "quote": "Plasma hypervolemia during training was associated with two major factors: 1) a ninefold elevation in PRA and AVP during exercise that facilitated Na+ and H2O retention, and 2) a progressive, chronic increase in plasma albumin content that provided increased H2O-binding capacity for the blood.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "efl-aldo",
+     "text": "Endurance training expands plasma volume, with reduced urine output from greater renal sodium reabsorption through a more sensitive aldosterone action.",
+     "grade": "moderate",
+     "sources": [
+      "convertino1991"
+     ],
+     "evidence": [
+      {
+       "source": "convertino1991",
+       "quote": "The mechanism of reduced urine output appears to be increased renal tubular reabsorption of sodium through a more sensitive aldosterone action in man.",
+       "level": "abstract"
+      },
+      {
+       "source": "convertino1991",
+       "quote": "Expansion of blood volume (hypervolemia) has been well documented in both cross-sectional and longitudinal studies as a consequence of endurance exercise training.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "efl-eah",
+     "text": "The primary cause of exercise-associated hyponatraemia is drinking beyond the kidneys' ability to excrete water; failure to suppress ADH, from non-osmotic stimuli, may contribute.",
+     "grade": "moderate",
+     "sources": [
+      "hewbutler2008"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2008",
+       "quote": "Although the primary cause of exercise-associated hyponatremia (EAH) is relative overconsumption of fluids beyond the kidneys' ability to excrete excess fluid, the mechanisms limiting maximum renal excretory ability during exercise remain to be elucidated.",
+       "level": "abstract"
+      },
+      {
+       "source": "hewbutler2008",
+       "quote": "Therefore, an inability to maximally suppress (AVP)(P) during exercise as a result of nonosmotic stimulation of AVP secretion may contribute to the pathogenesis of exercise-associated hyponatremia if voluntary fluid intake were to exceed fluid output.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "efl-hb-dilution"
+  },
+  {
+   "type": "question",
+   "item": "efl-eah-scenario"
+  },
+  {
+   "type": "question",
+   "item": "efl-pv-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "efl-hb2008-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Hard exercise shrinks plasma volume and concentrates the plasma; ADH (keeps water) and aldosterone (keeps sodium) defend it.",
+    "ADH follows osmolality above about 40% VO₂max, but other triggers (thought to include nausea, pain and the stress of the effort) can keep it high even when sodium is normal.",
+    "Renin rises with workload as a stress response to sympathetic drive; angiotensin II then releases aldosterone.",
+    "Training expands plasma volume through these hormones; in long events, ADH that stays high makes overdrinking more likely to cause hyponatraemia."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "efl-adh-action",
+   "concept": "efl-why",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "convertino1981",
+    "hillersturmhofel1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hot 2 h ride, a cyclist's vasopressin (ADH) rises. What does it do at the kidney?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Makes it keep water, so less urine is made",
+       "correct": true,
+       "why": "Right: ADH is the antidiuretic hormone; it lets the kidney take water back into the blood."
+      },
+      {
+       "id": "b",
+       "text": "Makes it keep sodium, so water follows",
+       "why": "That is aldosterone's job. ADH acts on water directly."
+      },
+      {
+       "id": "c",
+       "text": "Makes it release renin, to raise blood pressure",
+       "why": "Renin release is driven mainly by sympathetic nerves and low kidney blood flow, not by ADH."
+      },
+      {
+       "id": "d",
+       "text": "Makes it excrete more water, to cool the body",
+       "why": "The opposite: ADH reduces urine; cooling comes from sweat, not urine."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A marathoner's ADH is high at the finish. What is the hormone telling her kidneys to do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hold on to water and make less urine",
+       "correct": true,
+       "why": "Right: ADH makes the kidney return water to the blood."
+      },
+      {
+       "id": "b",
+       "text": "Hold on to sodium and lose potassium",
+       "why": "That is aldosterone, the steroid from the adrenal cortex."
+      },
+      {
+       "id": "c",
+       "text": "Get rid of water and make more urine",
+       "why": "This is the opposite of ADH's action; low ADH lets the kidney dump water."
+      },
+      {
+       "id": "d",
+       "text": "Make glucose to keep blood sugar up",
+       "why": "The kidney can make some glucose, but that isn't ADH's job; ADH controls water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-osm-why",
+   "concept": "efl-why",
+   "bloom": "understand",
+   "sources": [
+    "convertino1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hard ride, a cyclist's plasma osmolality rises although she hasn't eaten any salt. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plasma loses more water than salt, so what is left is more concentrated",
+       "correct": true,
+       "why": "Right: water moves into muscle and out as sweat, which is more dilute than plasma."
+      },
+      {
+       "id": "b",
+       "text": "Working muscles release extra sodium into the blood",
+       "why": "Muscle releases potassium in hard work, but the main cause is water loss from the plasma."
+      },
+      {
+       "id": "c",
+       "text": "ADH adds salt to the blood",
+       "why": "ADH keeps water; it doesn't add salt. Rising osmolality is its trigger, not its result."
+      },
+      {
+       "id": "d",
+       "text": "Sweat removes more salt than water from the plasma",
+       "why": "The reverse: sweat is usually more dilute than plasma, so it takes more water than salt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-adh-threshold",
+   "concept": "efl-adh",
+   "bloom": "apply",
+   "sources": [
+    "convertino1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 30 min at 30% VO₂max one day and 30 min at 70% VO₂max another day, in cool conditions. Where should you expect a clear rise in ADH?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only at 70%, once osmolality rises",
+       "correct": true,
+       "why": "Right: ADH and osmolality rose significantly only above about 40% VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "Equally in both, as any run raises ADH",
+       "why": "ADH follows osmolality, which barely changes in easy exercise."
+      },
+      {
+       "id": "c",
+       "text": "Only at 30%, since slow runs last longer",
+       "why": "Both runs last 30 min here; the harder one concentrates plasma more."
+      },
+      {
+       "id": "d",
+       "text": "In neither, as ADH only rises with dehydration",
+       "why": "Dehydration raises it more, but hard exercise alone concentrates plasma enough to raise ADH."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-adh-nonosm",
+   "concept": "efl-adh",
+   "bloom": "analyse",
+   "sources": [
+    "hewbutler2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the finish of a 56 km ultramarathon, a runner's plasma sodium is normal, yet her ADH is about four times the pre-race value. What is the best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Non-osmotic triggers such as nausea, pain or stress are driving ADH",
+       "correct": true,
+       "why": "Right: with sodium unchanged, the rise must come from triggers other than osmolality."
+      },
+      {
+       "id": "b",
+       "text": "Her plasma must be very concentrated",
+       "why": "Normal sodium means plasma osmolality is roughly normal; the rise isn't osmotic."
+      },
+      {
+       "id": "c",
+       "text": "The ADH test is wrong, since ADH only follows sodium",
+       "why": "ADH mainly follows osmolality, but other stimuli raise it too; a high value with normal sodium is real."
+      },
+      {
+       "id": "d",
+       "text": "She drank too little, so her blood volume is huge",
+       "why": "Drinking too little would shrink, not enlarge, blood volume, and would usually raise sodium."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-raas-chain",
+   "concept": "efl-raas",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "hillersturmhofel1998",
+    "convertino1991"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the renin–angiotensin–aldosterone chain, which hormone directly tells the kidney to keep sodium?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Aldosterone",
+       "correct": true,
+       "why": "Right: aldosterone, a steroid from the adrenal cortex, makes the kidney reabsorb sodium."
+      },
+      {
+       "id": "b",
+       "text": "Renin",
+       "why": "Renin is the enzyme that starts the chain; it doesn't act on sodium handling itself."
+      },
+      {
+       "id": "c",
+       "text": "Vasopressin (ADH)",
+       "why": "ADH makes the kidney keep water, not sodium."
+      },
+      {
+       "id": "d",
+       "text": "Angiotensinogen",
+       "why": "This is the inactive precursor from the liver that renin acts on."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-renin-trigger",
+   "concept": "efl-raas",
+   "bloom": "understand",
+   "sources": [
+    "convertino1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a ramp test on a cool day, a cyclist's renin activity climbs with every step, even the easy ones, while plasma sodium hasn't changed yet. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rising sympathetic drive to the kidney releases renin",
+       "correct": true,
+       "why": "Right: renin tracked workload and sympathetic activity, not osmolality."
+      },
+      {
+       "id": "b",
+       "text": "Renin responds to salty plasma, like ADH",
+       "why": "That is ADH's trigger; renin barely correlated with sodium or osmolality."
+      },
+      {
+       "id": "c",
+       "text": "Aldosterone rises first and releases renin",
+       "why": "The order is the other way round: renin leads to angiotensin II, which releases aldosterone."
+      },
+      {
+       "id": "d",
+       "text": "The cyclist is already badly dehydrated",
+       "why": "Early in a ramp test there is little fluid loss; the rise comes from sympathetic drive."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-pv-calc",
+   "concept": "efl-why",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kargotich1998",
+    "convertino1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hard 1 h ride, a cyclist's aldosterone rises from 200 to 500 pmol·L⁻¹ (+150%), while plasma volume falls 12%. By how much did the amount of aldosterone in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+120%",
+       "correct": true,
+       "why": "Right: 500 × 0.88 = 440; 440 ÷ 200 = 2.2."
+      },
+      {
+       "id": "b",
+       "text": "+150%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+180%",
+       "why": "This multiplies by 1.12 instead of 0.88: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+138%",
+       "why": "This subtracts percentages (150 − 12). Volumes multiply: 2.5 × 0.88 = 2.2."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 200 × 1 = 200. After: 500 × 0.88 = 440. 440 ÷ 200 = 2.2, so +120%."
+    },
+    {
+     "id": "b",
+     "stem": "During a hilly half marathon, a runner's ADH rises from 2.0 to 5.0 pg·mL⁻¹ (+150%), while plasma volume falls 10%. By how much did the amount of ADH in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+125%",
+       "correct": true,
+       "why": "Right: 5.0 × 0.90 = 4.5; 4.5 ÷ 2.0 = 2.25."
+      },
+      {
+       "id": "b",
+       "text": "+150%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+175%",
+       "why": "This multiplies by 1.10 instead of 0.90: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+140%",
+       "why": "This subtracts percentages (150 − 10). Volumes multiply: 2.5 × 0.90 = 2.25."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 2.0 × 1 = 2.0. After: 5.0 × 0.90 = 4.5. 4.5 ÷ 2.0 = 2.25, so +125%."
+    },
+    {
+     "id": "c",
+     "stem": "After the bike leg of an Olympic-distance triathlon, an athlete's renin activity rises from 1.0 to 4.0 units (+300%), while plasma volume falls 15%. By how much did the amount of renin in the plasma change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+240%",
+       "correct": true,
+       "why": "Right: 4.0 × 0.85 = 3.4; 3.4 ÷ 1.0 = 3.4."
+      },
+      {
+       "id": "b",
+       "text": "+300%",
+       "why": "This is the raw concentration change, with no correction for the smaller plasma volume."
+      },
+      {
+       "id": "c",
+       "text": "+360%",
+       "why": "This multiplies by 1.15 instead of 0.85: the correction goes the wrong way."
+      },
+      {
+       "id": "d",
+       "text": "+285%",
+       "why": "This subtracts percentages (300 − 15). Volumes multiply: 4.0 × 0.85 = 3.4."
+      }
+     ],
+     "solution": "Amount = concentration × volume. Before: 1.0 × 1 = 1.0. After: 4.0 × 0.85 = 3.4. 3.4 ÷ 1.0 = 3.4, so +240%."
+    }
+   ]
+  },
+  {
+   "id": "efl-hb-dilution",
+   "concept": "efl-long",
+   "bloom": "analyse",
+   "sources": [
+    "convertino1980",
+    "convertino1991"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 10-day training camp, a healthy cyclist's haemoglobin concentration is 6% lower than before. He feels fine and rides well. What is the most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His plasma volume has expanded, diluting the same red cells",
+       "correct": true,
+       "why": "Right: in the first weeks of training, plasma expands while red cell volume barely changes."
+      },
+      {
+       "id": "b",
+       "text": "He has lost red cells and is becoming anaemic",
+       "why": "Possible but unlikely in a fit, well rider after a camp; dilution by a bigger plasma volume fits better."
+      },
+      {
+       "id": "c",
+       "text": "Training has slowed down his red cell production",
+       "why": "Training doesn't suppress red cell production; red cell mass, if anything, rises over months."
+      },
+      {
+       "id": "d",
+       "text": "He is dehydrated, which lowers haemoglobin",
+       "why": "Dehydration shrinks plasma and raises haemoglobin concentration, the opposite."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-eah-scenario",
+   "concept": "efl-long",
+   "bloom": "apply",
+   "sources": [
+    "hewbutler2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A slow marathoner drinks a cup of water at every station for 5 h and finishes 1.5 kg heavier, confused, with a blood sodium of 128 mmol·L⁻¹. What is the main cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She drank more than her kidneys could excrete while ADH stayed up",
+       "correct": true,
+       "why": "Right: weight gain shows fluid overload; ADH kept the kidney holding on to the extra water."
+      },
+      {
+       "id": "b",
+       "text": "She lost too much sodium in sweat",
+       "why": "Sweat sodium losses can add to it, but gaining weight shows the main problem is excess water."
+      },
+      {
+       "id": "c",
+       "text": "She is dehydrated, which concentrates the blood",
+       "why": "She gained weight, and dehydration raises, not lowers, blood sodium."
+      },
+      {
+       "id": "d",
+       "text": "Her ADH was too low to hold sodium",
+       "why": "ADH keeps water, not sodium; a high, not low, ADH makes overdrinking dangerous."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "efl-hb2008-appraisal",
+   "concept": "efl-long",
+   "bloom": "evaluate",
+   "sources": [
+    "hewbutler2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 82 ultramarathoners who drank as they wished, ADH rose almost fourfold with plasma sodium unchanged, and the authors suggest non-osmotic ADH may contribute to hyponatraemia. What most limits that conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sodium stayed normal, so the link to hyponatraemia is inferred, not observed",
+       "correct": true,
+       "why": "Right: an observational study with fluid balance maintained; it shows high ADH, not that it caused hyponatraemia."
+      },
+      {
+       "id": "b",
+       "text": "82 runners are too few to measure a hormone change",
+       "why": "82 is a good sample for a 3.9-fold change; the limit is the design, not the size."
+      },
+      {
+       "id": "c",
+       "text": "ADH can't be measured reliably in plasma",
+       "why": "Plasma ADH is measured routinely; the issue is what the data can show, not the assay."
+      },
+      {
+       "id": "d",
+       "text": "A 56 km race is too long for hormones to change",
+       "why": "Hormones changed strongly; long races are exactly where hyponatraemia occurs."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

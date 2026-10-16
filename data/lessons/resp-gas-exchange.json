@@ -1,0 +1,946 @@
+{
+ "id": "resp-gas-exchange",
+ "module": "t1b-respiratory",
+ "title": "Gas exchange: partial pressures and diffusion",
+ "goal": "Explain how partial pressures drive O₂ and CO₂ across the lung, why arterial O₂ stays high in most people during exercise, and why some highly trained athletes become hypoxaemic.",
+ "requires": [
+  "resp-ventilation"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "partial-pressure",
+    "eiah",
+    "sao2"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gx-partial",
+   "title": "Partial pressure: each gas pushes on its own",
+   "text": "Air is a mix of gases. Each one exerts its own [partial pressure](g:partial-pressure), and together they add up to the total pressure (Dalton's law) [[c:dalton]]. A gas's partial pressure is its fraction × the total.\n\nAt sea level the total is 760 mmHg and O₂ is 20.9% of dry air, so air's PO₂ is about **159 mmHg**. In the alveoli it is lower, about **104 mmHg**, while PCO₂ is about **40 mmHg** [[c:alveolar-gas]]. The airways humidify the air, and alveolar air holds more CO₂ and less O₂ than outside air [[c:alveolar-mix]].\n\nThis course gives pressures in mmHg. Divide by 7.5 for kPa: 104 mmHg ≈ 13.9 kPa, 40 mmHg ≈ 5.3 kPa.",
+   "claims": [
+    {
+     "id": "dalton",
+     "text": "Each gas in a mixture exerts its own partial pressure; the total pressure is their sum. At sea level air is 20.9% O₂, a PO₂ of 158.8 of 760 mmHg.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Total pressure is the sum of all the partial pressures of a gaseous mixture.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "Dalton’s law describes the behavior of nonreactive gases in a gaseous mixture and states that a specific gas type in a mixture exerts its own pressure; thus, the total pressure exerted by a mixture of gases is the sum of the partial pressures of the gases in the mixture.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "Partial Pressures of Atmospheric Gases. Oxygen (O₂): percent of total composition 20.9, partial pressure (mm Hg) 158.8.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "alveolar-gas",
+     "text": "Alveolar PO₂ is about 104 mmHg and alveolar PCO₂ about 40 mmHg.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "The partial pressure of oxygen in alveolar air is about 104 mm Hg",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The partial pressure of carbon dioxide in the blood of the capillary is about 45 mm Hg, whereas its partial pressure in the alveoli is about 40 mm Hg.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "alveolar-mix",
+     "text": "Alveolar air holds more water vapour and CO₂ and less O₂ than atmospheric air.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Recall that the respiratory system works to humidify incoming air, thereby causing the air present in the alveoli to have a greater amount of water vapor than atmospheric air.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "In addition, alveolar air contains a greater amount of carbon dioxide and less oxygen than atmospheric air.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "gx-po2-example",
+   "title": "The PO₂ of air at sea level",
+   "problem": "Dry air is 20.9% O₂. At sea level the total (barometric) pressure is 760 mmHg. What is the PO₂ of the air?",
+   "steps": [
+    "Turn the percentage into a fraction: 20.9% = 0.209.",
+    "PO₂ = fraction × total pressure = 0.209 × 760 = 158.8 mmHg, about 159 mmHg.",
+    "In kPa: 158.8 ÷ 7.5 ≈ 21.2 kPa.",
+    "Once the air is warmed and humidified in the airways, water vapour takes 47 mmHg of the total, so O₂'s share is then taken of 760 − 47 mmHg. That is a different question from the PO₂ of the outside air."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gx-po2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gx-gradients",
+   "title": "Diffusion runs downhill",
+   "text": "Gases cross the [respiratory membrane](g:respiratory-membrane) by simple diffusion: from higher to lower partial pressure, and faster when the difference is bigger [[c:diffusion-gradient]].\n\nBlood arriving in a lung capillary has a PO₂ of about 40 mmHg, against 104 mmHg in the alveolus: a 64 mmHg push for O₂. Blood leaving the lung, in the pulmonary veins, is at about 100 mmHg [[c:o2-gradient]].\n\nCO₂ goes the other way, from about 45 mmHg in the blood to 40 mmHg in the alveolus. That is only a 5 mmHg push, yet similar amounts of the two gases cross [[c:co2-gradient]].",
+   "claims": [
+    {
+     "id": "diffusion-gradient",
+     "text": "Gas exchange is simple diffusion down a partial-pressure gradient; a bigger difference gives faster movement.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "A gas will move from an area where its partial pressure is higher to an area where its partial pressure is lower.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "In addition, the greater the partial pressure difference between the two areas, the more rapid is the movement of gases.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The actual exchange of gases occurs due to simple diffusion.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "o2-gradient",
+     "text": "Alveolar PO₂ is about 104 mmHg against about 40 mmHg in blood arriving in the capillary, a gradient of about 64 mmHg; blood in the pulmonary veins is at about 100 mmHg.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "This difference is about 64 mm Hg: The partial pressure of oxygen in the alveoli is about 104 mm Hg, whereas its partial pressure in the blood of the capillary is about 40 mm Hg.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The partial pressure of oxygen in alveolar air is about 104 mm Hg, whereas the partial pressure of oxygenated blood in pulmonary veins is about 100 mm Hg.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "co2-gradient",
+     "text": "The CO₂ gradient is only about 5 mmHg (45 to 40 mmHg), yet similar amounts of O₂ and CO₂ cross.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "However, the partial pressure difference is less than that of oxygen, about 5 mm Hg.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "As a result, the relative concentrations of oxygen and carbon dioxide that diffuse across the respiratory membrane are similar.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gx-direction",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "gx-gradient-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gx-co2-small"
+  },
+  {
+   "type": "concept",
+   "id": "gx-stays-high",
+   "title": "Why arterial O₂ usually stays high",
+   "text": "In exercise, blood flow through the lung rises faster than the capillary blood volume can grow, so each red cell spends less time in the capillary [[c:transit-falls]]. About 0.3–0.4 s is thought to be enough to load it fully. In 16 women and 16 men the average stayed above 0.3 s, even at 90% of peak O₂ uptake [[c:transit-enough]].\n\nVentilation keeps pace too. In healthy people, alveolar ventilation and diffusion rise in step with metabolic rate, so arterial PO₂ doesn't fall and PCO₂ doesn't rise [[c:matched]].\n\nThat is why, in most people, arterial O₂ stays close to resting values even at VO₂max. Some highly trained athletes are the exception.",
+   "claims": [
+    {
+     "id": "transit-falls",
+     "text": "Because cardiac output rises more than pulmonary capillary blood volume, capillary transit time falls progressively with exercise.",
+     "grade": "moderate",
+     "sources": [
+      "bouwsema2017"
+     ],
+     "evidence": [
+      {
+       "source": "bouwsema2017",
+       "quote": "As Q̇ increases with exercise more than capillary blood volume recruitment, mean pulmonary capillary transit time declines progressively with exercise.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "transit-enough",
+     "text": "A transit time of at least 0.3–0.4 s is thought to be needed; in healthy men and women the mean did not drop below 0.3 s up to 90% of peak O₂ uptake.",
+     "grade": "weak",
+     "sources": [
+      "bouwsema2017"
+     ],
+     "evidence": [
+      {
+       "source": "bouwsema2017",
+       "quote": "It has been suggested that pulmonary capillary transit time must be at least 0.3–0.4 s to allow for adequate red blood cell oxygenation",
+       "level": "full-text"
+      },
+      {
+       "source": "bouwsema2017",
+       "quote": "the mean PTT did not drop below 0.3 s in either group",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "matched",
+     "text": "In healthy exercise, alveolar ventilation and alveolar-capillary diffusion rise in proportion to metabolic rate, preventing PaCO₂ from rising and PaO₂ from falling.",
+     "grade": "strong",
+     "sources": [
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "forster2012",
+       "quote": "During exercise by healthy mammals, alveolar ventilation and alveolar-capillary diffusion increase in proportion to the increase in metabolic rate to prevent PaCO2 from increasing and PaO2 from decreasing.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gx-transit"
+  },
+  {
+   "type": "question",
+   "item": "gx-stays-high-apply"
+  },
+  {
+   "type": "concept",
+   "id": "gx-eiah",
+   "title": "When arterial O₂ does fall",
+   "text": "In 16 highly trained runners (VO₂max 72 mL·kg⁻¹·min⁻¹), arterial PO₂ held within 10 mmHg of rest in only four. In eight it fell by 21–35 mmHg, to below 75 mmHg [[c:dempsey-runners]]. This is [exercise-induced arterial hypoxaemia](g:eiah) (EIAH), graded by [SaO₂](g:sao2): mild 93–95%, moderate 88–93%, severe below 88% [[c:eiah-grades]].\n\nTwo things usually combine: a wide alveolar-to-arterial PO₂ gap, and too little extra breathing [[c:eiah-causes]]. It is common in the very fit: 70% of highly trained male runners fell to 91% or less on a treadmill [[c:eiah-men]]. Women can show it at lower fitness: in 67% of 52 young women (VO₂max 28–61 mL·kg⁻¹·min⁻¹), SaO₂ fell 4% or more on a bike [[c:eiah-women]].",
+   "claims": [
+    {
+     "id": "dempsey-runners",
+     "text": "In 16 highly trained runners, 4 kept PaO₂ within 10 mmHg of rest, 4 fell 10–15 mmHg and 8 fell 21–35 mmHg, to below 75 mmHg.",
+     "grade": "weak",
+     "sources": [
+      "dempsey1984"
+     ],
+     "evidence": [
+      {
+       "source": "dempsey1984",
+       "quote": "Four runners maintained arterial PO2 (Pa, O2) within 10 mmHg of resting values, another four showed 10-15 mmHg reductions in Pa, O2, and the remaining eight showed reductions of 21-35 mmHg, i.e. in all cases to a Pa, O2 of less than 75 mmHg and to less than 60 mmHg in two cases.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eiah-grades",
+     "text": "Proposed grades of EIAH: mild SaO₂ 93–95% (or 3–4% below rest), moderate 88–93%, severe below 88%.",
+     "grade": "moderate",
+     "sources": [
+      "dempsey1999"
+     ],
+     "evidence": [
+      {
+       "source": "dempsey1999",
+       "quote": "we suggest that mild EIAH be defined as an arterial O(2) saturation of 93-95% (or 3-4% <rest), moderate EIAH as 88-93%, and severe EIAH as <88%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eiah-causes",
+     "text": "An excessive alveolar-to-arterial PO₂ difference and inadequate compensatory hyperventilation commonly combine to cause EIAH.",
+     "grade": "moderate",
+     "sources": [
+      "dempsey1999",
+      "dempsey1984"
+     ],
+     "evidence": [
+      {
+       "source": "dempsey1999",
+       "quote": "Both an excessive alveolar-to-arterial PO(2) difference (A-a DO(2)) (>25-30 Torr) and inadequate compensatory hyperventilation (arterial PCO(2) >35 Torr) commonly contribute to EIAH",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eiah-men",
+     "text": "In highly trained male runners (VO₂max above 68 mL·kg⁻¹·min⁻¹), 70% desaturated to 91% or less on a maximal treadmill test.",
+     "grade": "weak",
+     "sources": [
+      "constantini2017"
+     ],
+     "evidence": [
+      {
+       "source": "constantini2017",
+       "quote": "55 of 79 subjects (70%) exhibited exercise-induced arterial desaturation",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eiah-women",
+     "text": "In 52 young women of mixed fitness, 67% showed EIAH (a fall of 4% or more in SaO₂) on a maximal cycle test.",
+     "grade": "weak",
+     "sources": [
+      "richards2004"
+     ],
+     "evidence": [
+      {
+       "source": "richards2004",
+       "quote": "EIAH was present in 67% of the women",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "What widens the alveolar-to-arterial PO₂ gap in EIAH?",
+    "sides": [
+     {
+      "position": "Mainly a diffusion limit: in part of the lung, red cells pass through too fast to load fully.",
+      "sources": [
+       "dempsey1984"
+      ]
+     },
+     {
+      "position": "Uneven matching of ventilation to blood flow contributes about as much as diffusion, and how either arises in heavy exercise is still unknown.",
+      "sources": [
+       "dempsey1999"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "gx-eiah-classify",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gx-eiah-causes"
+  },
+  {
+   "type": "question",
+   "item": "gx-eiah-who"
+  },
+  {
+   "type": "question",
+   "item": "gx-eiah-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "gx-po2-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "gx-eiah-classify",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Each gas exerts its own partial pressure (fraction × total): dry air at sea level has a PO₂ of about 159 mmHg; alveolar air about 104 mmHg O₂ and 40 mmHg CO₂.",
+    "O₂ and CO₂ cross the respiratory membrane by simple diffusion, down partial-pressure gradients of about 64 mmHg and 5 mmHg.",
+    "In exercise, red cells spend less time in lung capillaries, but in most people transit time stays long enough and ventilation keeps pace, so arterial PO₂ holds.",
+    "Some highly trained athletes show exercise-induced arterial hypoxaemia: SaO₂ 93–95% mild, 88–93% moderate, below 88% severe.",
+    "EIAH usually comes from a wide alveolar-arterial gap plus too little extra breathing; what widens the gap is still debated."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gx-direction",
+   "concept": "gx-gradients",
+   "bloom": "understand",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lung capillary, which way does O₂ move, and what drives it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Into the blood, because alveolar PO₂ is higher",
+       "correct": true,
+       "why": "Right: O₂ diffuses down its gradient, from about 104 mmHg in the alveolus to about 40 mmHg in arriving blood."
+      },
+      {
+       "id": "b",
+       "text": "Into the alveolus, because blood holds more O₂",
+       "why": "Blood does hold more O₂ in total, but diffusion follows partial pressure, which is higher in the alveolus."
+      },
+      {
+       "id": "c",
+       "text": "Into the blood, pumped across by the membrane",
+       "why": "No pump: gas exchange is simple diffusion down a partial-pressure gradient."
+      },
+      {
+       "id": "d",
+       "text": "Both ways equally, so the net flow is zero",
+       "why": "There is a net flow because the partial pressures differ by about 64 mmHg."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "During a run, which way does CO₂ move across the alveolar wall, and what drives it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Into the alveolus, because blood PCO₂ is higher",
+       "correct": true,
+       "why": "Right: about 45 mmHg in the blood against about 40 mmHg in the alveolus."
+      },
+      {
+       "id": "b",
+       "text": "Into the blood, because alveolar air holds more CO₂ than outside air",
+       "why": "Alveolar air does hold more CO₂ than outside air, but its PCO₂ (about 40 mmHg) is still below the blood's."
+      },
+      {
+       "id": "c",
+       "text": "Into the alveolus, pumped out by the membrane",
+       "why": "No pump: CO₂ crosses by simple diffusion, like O₂."
+      },
+      {
+       "id": "d",
+       "text": "Nowhere: CO₂ leaves only through the kidneys",
+       "why": "The lungs are the main exit for CO₂; it diffuses into the alveoli and is breathed out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-po2-calc",
+   "concept": "gx-partial",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides over a pass where the barometric pressure is 700 mmHg. Dry air is 20.9% O₂. What is the PO₂ of the dry air around her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "146 mmHg",
+       "correct": true,
+       "why": "Right: 0.209 × 700 = 146.3 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "136 mmHg",
+       "why": "This takes off water vapour first, 0.209 × (700 − 47). That is the PO₂ once air is humidified in the airways, not of the dry air outside."
+      },
+      {
+       "id": "c",
+       "text": "159 mmHg",
+       "why": "That is the sea-level value. The O₂ share of air stays 20.9%, but the total pressure here is 700 mmHg, so PO₂ changes with it."
+      },
+      {
+       "id": "d",
+       "text": "14,630 mmHg",
+       "why": "This multiplies by 20.9 instead of 0.209: turn the % into a fraction first."
+      }
+     ],
+     "solution": "PO₂ = 0.209 × 700 mmHg = 146.3 mmHg (≈ 19.5 kPa)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner trains at altitude where the barometric pressure is 630 mmHg. Dry air is 20.9% O₂. What is the PO₂ of the dry air around him?",
+     "options": [
+      {
+       "id": "a",
+       "text": "132 mmHg",
+       "correct": true,
+       "why": "Right: 0.209 × 630 = 131.7 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "122 mmHg",
+       "why": "This takes off water vapour first, 0.209 × (630 − 47). That is the PO₂ once air is humidified in the airways."
+      },
+      {
+       "id": "c",
+       "text": "159 mmHg",
+       "why": "That is the sea-level value. The O₂ share of air stays 20.9%, but the total pressure here is 630 mmHg, so PO₂ changes with it."
+      },
+      {
+       "id": "d",
+       "text": "13,167 mmHg",
+       "why": "This multiplies by 20.9 instead of 0.209."
+      }
+     ],
+     "solution": "PO₂ = 0.209 × 630 mmHg = 131.7 mmHg (≈ 17.6 kPa)."
+    },
+    {
+     "id": "c",
+     "stem": "On a stormy race day by the sea the barometric pressure is 740 mmHg. Dry air is 20.9% O₂. What is the PO₂ of the dry air around the triathletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "155 mmHg",
+       "correct": true,
+       "why": "Right: 0.209 × 740 = 154.7 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "145 mmHg",
+       "why": "This takes off water vapour first, 0.209 × (740 − 47). That is the PO₂ once air is humidified in the airways."
+      },
+      {
+       "id": "c",
+       "text": "159 mmHg",
+       "why": "That is the sea-level value. The O₂ share of air stays 20.9%, but the total pressure here is 740 mmHg, so PO₂ changes with it."
+      },
+      {
+       "id": "d",
+       "text": "15,466 mmHg",
+       "why": "This multiplies by 20.9 instead of 0.209."
+      }
+     ],
+     "solution": "PO₂ = 0.209 × 740 mmHg = 154.7 mmHg (≈ 20.6 kPa)."
+    }
+   ]
+  },
+  {
+   "id": "gx-gradient-calc",
+   "concept": "gx-gradients",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At rest, alveolar PO₂ is 104 mmHg and blood arriving in the lung capillary is at 40 mmHg. What is the PO₂ gradient driving O₂ into the blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "64 mmHg",
+       "correct": true,
+       "why": "Right: 104 − 40 = 64 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "144 mmHg",
+       "why": "This adds the two pressures; the gradient is their difference."
+      },
+      {
+       "id": "c",
+       "text": "4 mmHg",
+       "why": "This uses blood leaving the lung (100 mmHg). The push acts on blood as it arrives, at 40 mmHg."
+      },
+      {
+       "id": "d",
+       "text": "2.6 mmHg",
+       "why": "This divides 104 by 40. The gradient is a difference, in mmHg."
+      }
+     ],
+     "solution": "Gradient = alveolar PO₂ − arriving blood PO₂ = 104 − 40 = 64 mmHg."
+    },
+    {
+     "id": "b",
+     "stem": "Suppose that late in a hard run alveolar PO₂ rises to 115 mmHg and blood arriving in the lung capillary is down to 25 mmHg. What is the PO₂ gradient?",
+     "options": [
+      {
+       "id": "a",
+       "text": "90 mmHg",
+       "correct": true,
+       "why": "Right: 115 − 25 = 90 mmHg, a bigger push than the 64 mmHg at rest."
+      },
+      {
+       "id": "b",
+       "text": "140 mmHg",
+       "why": "This adds the two pressures; the gradient is their difference."
+      },
+      {
+       "id": "c",
+       "text": "64 mmHg",
+       "why": "That is the resting gradient. Both numbers have changed."
+      },
+      {
+       "id": "d",
+       "text": "4.6 mmHg",
+       "why": "This divides 115 by 25. The gradient is a difference, in mmHg."
+      }
+     ],
+     "solution": "Gradient = 115 − 25 = 90 mmHg."
+    }
+   ]
+  },
+  {
+   "id": "gx-co2-small",
+   "concept": "gx-gradients",
+   "bloom": "understand",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "CO₂ crosses the alveolar wall with a gradient of only about 5 mmHg, against about 64 mmHg for O₂. What does that mean for the amounts that cross?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Similar amounts of the two gases still cross",
+       "correct": true,
+       "why": "Right: despite the small gradient, the amounts of O₂ and CO₂ that diffuse are similar."
+      },
+      {
+       "id": "b",
+       "text": "Far less CO₂ crosses, so it builds up at rest",
+       "why": "CO₂ doesn't build up at rest: the small gradient is enough to move it."
+      },
+      {
+       "id": "c",
+       "text": "CO₂ needs an active pump to keep up",
+       "why": "No pump is involved: CO₂ crosses by simple diffusion."
+      },
+      {
+       "id": "d",
+       "text": "CO₂ crosses only once exercise widens the gradient",
+       "why": "CO₂ crosses at rest too; a 5 mmHg gradient is enough."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-transit",
+   "concept": "gx-stays-high",
+   "bloom": "analyse",
+   "sources": [
+    "bouwsema2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a red cell spend less time in a lung capillary during a hard ride than at rest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Blood flow rises more than the capillary blood volume can grow",
+       "correct": true,
+       "why": "Right: transit time = capillary volume ÷ flow, and flow rises faster than the capillary volume is recruited."
+      },
+      {
+       "id": "b",
+       "text": "The respiratory membrane gets thicker and slows it down",
+       "why": "A thicker membrane would slow diffusion, not speed the blood. And the membrane doesn't thicken."
+      },
+      {
+       "id": "c",
+       "text": "Faster breathing pushes the blood through the lungs",
+       "why": "The heart drives lung blood flow; breathing rate doesn't set it."
+      },
+      {
+       "id": "d",
+       "text": "Red cells shrink during exercise and slip through",
+       "why": "Red-cell size doesn't change; it is more flow through a limited capillary volume."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-stays-high-apply",
+   "concept": "gx-stays-high",
+   "bloom": "apply",
+   "sources": [
+    "forster2012",
+    "dempsey1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A male recreational runner with a VO₂max of 45 mL·kg⁻¹·min⁻¹ races 5 km all out. Near the finish, what do you expect of his arterial PO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Close to resting values, around 100 mmHg",
+       "correct": true,
+       "why": "Right: in most people ventilation and diffusion rise in step with metabolism, so arterial PO₂ holds."
+      },
+      {
+       "id": "b",
+       "text": "Down by about 30 mmHg, as in any hard effort",
+       "why": "Falls that large were seen in some highly trained runners, not in hard efforts in general."
+      },
+      {
+       "id": "c",
+       "text": "Near 40 mmHg, like blood coming back from the legs",
+       "why": "40 mmHg is venous blood arriving in the lungs; arterial blood leaving them is far higher."
+      },
+      {
+       "id": "d",
+       "text": "Near 159 mmHg, the PO₂ of outside air",
+       "why": "Arterial PO₂ can't exceed alveolar PO₂ (about 104 mmHg), which is below that of outside air."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-eiah-classify",
+   "concept": "gx-eiah",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "dempsey1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the end of a maximal treadmill test, a runner's SaO₂ is 91%. How is that graded?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Moderate EIAH",
+       "correct": true,
+       "why": "Right: 88–93% is moderate."
+      },
+      {
+       "id": "b",
+       "text": "Mild EIAH",
+       "why": "Mild is 93–95% (or 3–4% below rest); 91% is lower."
+      },
+      {
+       "id": "c",
+       "text": "Severe EIAH",
+       "why": "Severe is below 88%."
+      },
+      {
+       "id": "d",
+       "text": "Normal for maximal exercise",
+       "why": "Most people hold SaO₂ near resting values; 91% is a clear fall."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "At the end of a maximal cycling test, a rider's SaO₂ is 94%. How is that graded?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mild EIAH",
+       "correct": true,
+       "why": "Right: 93–95% (or 3–4% below rest) is mild."
+      },
+      {
+       "id": "b",
+       "text": "Moderate EIAH",
+       "why": "Moderate is 88–93%; 94% is above that."
+      },
+      {
+       "id": "c",
+       "text": "Severe EIAH",
+       "why": "Severe is below 88%."
+      },
+      {
+       "id": "d",
+       "text": "Normal for maximal exercise",
+       "why": "A 3–4% fall from rest already counts as mild EIAH."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "At the end of a maximal run, an elite triathlete's SaO₂ is 86%. How is that graded?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Severe EIAH",
+       "correct": true,
+       "why": "Right: below 88% is severe."
+      },
+      {
+       "id": "b",
+       "text": "Moderate EIAH",
+       "why": "Moderate is 88–93%; 86% is lower."
+      },
+      {
+       "id": "c",
+       "text": "Mild EIAH",
+       "why": "Mild is 93–95%."
+      },
+      {
+       "id": "d",
+       "text": "Normal for maximal exercise",
+       "why": "Most people hold SaO₂ near resting values; 86% is a large fall."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-eiah-who",
+   "concept": "gx-eiah",
+   "bloom": "analyse",
+   "sources": [
+    "dempsey1984",
+    "constantini2017",
+    "richards2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete is most likely to show EIAH at sea level?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A male runner with a VO₂max of 75 mL·kg⁻¹·min⁻¹, at the end of a maximal treadmill test",
+       "correct": true,
+       "why": "Right: EIAH is most common in highly trained athletes at maximal effort; 70% of such runners desaturated."
+      },
+      {
+       "id": "b",
+       "text": "A recreational cyclist with a VO₂max of 40 mL·kg⁻¹·min⁻¹, on an easy ride",
+       "why": "EIAH appears at heavy to maximal effort; an easy ride doesn't stress gas exchange."
+      },
+      {
+       "id": "c",
+       "text": "A triathlete sitting at rest the day after a hard training block",
+       "why": "EIAH is a fall during heavy exercise, not at rest."
+      },
+      {
+       "id": "d",
+       "text": "A runner of any fitness, at 50% of VO₂max",
+       "why": "At moderate effort ventilation and diffusion keep up in almost everyone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-eiah-causes",
+   "concept": "gx-eiah",
+   "bloom": "understand",
+   "sources": [
+    "dempsey1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two things usually combine to cause EIAH. Which two?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wide alveolar-to-arterial PO₂ gap and too little extra breathing",
+       "correct": true,
+       "why": "Right: an A-a gap above 25–30 mmHg plus weak hyperventilation (PaCO₂ above 35 mmHg) commonly combine."
+      },
+      {
+       "id": "b",
+       "text": "Low haemoglobin and a thickened respiratory membrane",
+       "why": "Neither is part of EIAH in healthy athletes; their haemoglobin and lungs are normal."
+      },
+      {
+       "id": "c",
+       "text": "Asthma and breathing cold, dry air",
+       "why": "Those can narrow airways, but EIAH occurs in healthy athletes without asthma."
+      },
+      {
+       "id": "d",
+       "text": "Too much breathing and a low blood CO₂",
+       "why": "Backwards: the problem is too little extra breathing, with PaCO₂ staying high."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gx-eiah-appraisal",
+   "concept": "gx-eiah",
+   "bloom": "evaluate",
+   "sources": [
+    "constantini2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study reports that 70% of highly trained male runners show EIAH. It pooled 124 runners from one lab's past studies and estimated SaO₂ with an ear oximeter. What most limits that 70% figure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SaO₂ was estimated, in men only, from past studies by one lab",
+       "correct": true,
+       "why": "Right: a retrospective, single-lab sample of men with oximeter estimates can't give a firm figure for all athletes."
+      },
+      {
+       "id": "b",
+       "text": "124 runners is too few to learn anything about EIAH",
+       "why": "124 is a large sample for this kind of study; the problems are the design and the measurement."
+      },
+      {
+       "id": "c",
+       "text": "A treadmill test is easier than a cycling test",
+       "why": "Not easier: the authors expected more desaturation on the treadmill, and mode is part of the question."
+      },
+      {
+       "id": "d",
+       "text": "SaO₂ can't fall during exercise, so the result must be an error",
+       "why": "SaO₂ can fall: blood-gas studies measured falls in arterial PO₂ directly."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

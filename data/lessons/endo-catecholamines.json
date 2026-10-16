@@ -1,0 +1,727 @@
+{
+ "id": "endo-catecholamines",
+ "module": "t1b-endocrine",
+ "title": "Adrenaline and noradrenaline: the fast responders",
+ "goal": "Explain how adrenaline and noradrenaline rise with exercise intensity and duration, and how they speed the heart, break down glycogen and release fat.",
+ "requires": [
+  "endo-basics"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "noradrenaline",
+    "adrenaline",
+    "catecholamines",
+    "beta-receptor",
+    "glycogenolysis",
+    "lipolysis"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ec-sources",
+   "title": "Two messengers, two senders",
+   "text": "[Noradrenaline](g:noradrenaline) is released mainly at the endings of [sympathetic](g:sympathetic) nerves, at the heart, blood vessels and other organs. What you measure in blood is the part that spills over.\n\n[Adrenaline](g:adrenaline) comes mainly from the adrenal medulla, the core of the adrenal glands that sit on the kidneys. Sympathetic nerves trigger its release straight into the blood.\n\nTogether they are the [catecholamines](g:catecholamines), and exercise is one of their strongest triggers: they rise from 1.5 to over 20 times their resting levels, depending on how hard and how long you go [[c:ec-rise]]. Low blood glucose, low oxygen and heat raise them as well. Race-start nerves raise them too, before you have moved.",
+   "claims": [
+    {
+     "id": "ec-rise",
+     "text": "Adrenaline and noradrenaline rise markedly during exercise, from about 1.5 to over 20 times basal levels depending on intensity and duration; hypoglycaemia and hypoxia also raise them.",
+     "grade": "strong",
+     "sources": [
+      "zouhal2008"
+     ],
+     "evidence": [
+      {
+       "source": "zouhal2008",
+       "quote": "In fact, since adrenaline and noradrenaline are the main hormones whose concentrations increase markedly during exercise, many researchers have worked on the effect of exercise on these amines and reported 1.5 to >20 times basal concentrations depending on exercise characteristics (e.g. duration and intensity).",
+       "level": "abstract"
+      },
+      {
+       "source": "zouhal2008",
+       "quote": "Since their discovery, thousands of studies have focused on these two catecholamines and their importance in many adaptive processes to different stressors such as exercise, hypoglycaemia, hypoxia and heat exposure, and these studies are now well acknowledged.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ec-sender"
+  },
+  {
+   "type": "question",
+   "item": "ec-other-triggers"
+  },
+  {
+   "type": "concept",
+   "id": "ec-intensity",
+   "title": "Intensity sets the size, duration adds on",
+   "text": "In a classic study, eight men ran at rising intensities to exhaustion [[c:ec-galbo]]:\n\n| | rest | after the heaviest load |\n|---|---|---|\n| noradrenaline | 0.40 ng·mL⁻¹ | 2.22 ng·mL⁻¹ |\n| adrenaline | 0.07 ng·mL⁻¹ | 0.42 ng·mL⁻¹ |\n\nThe rise isn't a straight line. It is small at easy intensities and bends sharply upward near the [lactate threshold](g:lactate-curve): the catecholamine breakpoints line up with the lactate breakpoint [[c:ec-threshold]].\n\nDuration adds on. Hold a steady pace long enough and catecholamines climb toward the levels of a maximal effort: in the same study, running at 76% VO₂max to exhaustion pushed noradrenaline to 1.51 and adrenaline to 0.33 ng·mL⁻¹ [[c:ec-galbo]]. Late in a long ride, as glycogen and blood glucose fall, adrenaline climbs further.",
+   "claims": [
+    {
+     "id": "ec-galbo",
+     "text": "Noradrenaline and adrenaline rose about 5- to 6-fold from rest during graded running to maximum, and rose substantially during prolonged running at 76% VO₂max to exhaustion.",
+     "grade": "weak",
+     "sources": [
+      "galbo1975"
+     ],
+     "evidence": [
+      {
+       "source": "galbo1975",
+       "quote": "Norepinephrine increased from 0.40 plus or minus 0.06 ng/ml to 2.22 plus or minus 0.39, epinephrine from 0.07 plus or minus 0.01 to 0.42 plus or minus 0.13 during graded, and to 1.51 plus or minus 0.08 and 0.33 plus or minus 0.04, respectively, during prolonged exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-threshold",
+     "text": "During incremental exercise, plasma adrenaline and noradrenaline show breakpoints that occur at about the same intensity as the lactate threshold.",
+     "grade": "weak",
+     "sources": [
+      "schneider2000",
+      "podolin1991"
+     ],
+     "evidence": [
+      {
+       "source": "schneider2000",
+       "quote": "The breakpoint in plasma [Epi] shifted in an identical manner and occurred simultaneously with that of T(La) regardless of the mode of exercise (arm or leg).",
+       "level": "abstract"
+      },
+      {
+       "source": "podolin1991",
+       "quote": "The GD protocol resulted in a shift in the TLa to a later work rate; inflections in epinephrine and norepinephrine shifted in a coordinated manner.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ec-intensity-shape",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "ec-fold-example",
+   "title": "Fold change and percent rise",
+   "problem": "In graded running, adrenaline rose from 0.07 ng·mL⁻¹ at rest to 0.42 ng·mL⁻¹ at maximum. How many times the resting value is that, and what percent rise?",
+   "steps": [
+    "Fold change = after ÷ before = 0.42 ÷ 0.07 = 6. Adrenaline is 6 times its resting value.",
+    "Percent rise = (after − before) ÷ before × 100 = (0.42 − 0.07) ÷ 0.07 × 100 = 500%.",
+    "Check: percent rise = (fold − 1) × 100. A 6-fold value is a 500% rise, not 600%."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ec-fold-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ec-duration"
+  },
+  {
+   "type": "concept",
+   "id": "ec-heart",
+   "title": "Heart and blood vessels",
+   "text": "You met the start of this in the nervous system module: the first jump in heart rate is the [vagal brake](g:parasympathetic) letting go. As intensity rises, noradrenaline from sympathetic nerves acts on the heart's β₁ receptors, raising rate and the force of each beat, and circulating adrenaline adds to it [[c:ec-beta1]] [[c:ec-roles]].\n\nSympathetic nerves also steer blood: by narrowing vessels, they set how the cardiac output is shared out between tissues [[c:ec-distribution]].\n\n[β-blockers](g:beta-receptor), drugs some masters athletes take for blood pressure, block the β receptors. Heart rate and cardiac output during exercise are lower, because the sympathetic push on the heart can't fully land [[c:ec-betablock]].",
+   "claims": [
+    {
+     "id": "ec-roles",
+     "text": "Adrenaline and noradrenaline take part in the cardiovascular and respiratory adjustments to exercise and in mobilising and using fuels.",
+     "grade": "strong",
+     "sources": [
+      "zouhal2008"
+     ],
+     "evidence": [
+      {
+       "source": "zouhal2008",
+       "quote": "Similarly, several studies have shown that adrenaline and noradrenaline are involved in cardiovascular and respiratory adjustments and in substrate mobilization and utilization.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-beta1",
+     "text": "β₁ receptors in the heart are activated mainly by noradrenaline from sympathetic nerves; β₂ receptors mainly by circulating adrenaline.",
+     "grade": "strong",
+     "sources": [
+      "shepherd1985"
+     ],
+     "evidence": [
+      {
+       "source": "shepherd1985",
+       "quote": "The beta adrenoceptors involved in the regulation of the cardiovascular system include the beta 1 subtype in the heart, coronary arteries and juxtaglomerular cells of kidney, and the beta 2 subtype in skeletal muscle resistance vessels and on terminals of sympathetic nerves.",
+       "level": "abstract"
+      },
+      {
+       "source": "shepherd1985",
+       "quote": "The beta 1 receptors are activated primarily by norepinephrine released from the sympathetic nerves, the beta 2 by circulating epinephrine from the adrenal medulla.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-distribution",
+     "text": "The sympathetic nervous system controls cardiac output and its distribution, and vascular resistance, at rest and during exercise.",
+     "grade": "strong",
+     "sources": [
+      "delorey2021"
+     ],
+     "evidence": [
+      {
+       "source": "delorey2021",
+       "quote": "The SNS controls cardiac output and its distribution, as well as peripheral vascular resistance and blood pressure at rest and during exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-betablock",
+     "text": "β-blockers lower heart rate and cardiac output during exercise, which can limit exercise.",
+     "grade": "moderate",
+     "sources": [
+      "head1999"
+     ],
+     "evidence": [
+      {
+       "source": "head1999",
+       "quote": "Possible limiting factors to exercise while taking beta-blockers include reduction in heart rate and cardiac output, local alterations to blood flow, changes to muscle and liver glycogenolysis, and alterations to adipose and intra-muscular lipolysis.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ec-betablocker"
+  },
+  {
+   "type": "concept",
+   "id": "ec-fuel",
+   "title": "Unlocking glycogen and fat",
+   "text": "**Glycogen.** In muscle, adrenaline acts on β receptors and, through phosphorylation, switches on [glycogen phosphorylase](g:glycogen-phosphorylase), speeding [glycogenolysis](g:glycogenolysis). In six endurance-trained men cycling 40 min at 71% VO₂max, an infusion that doubled adrenaline raised muscle glycogen use by about a third and pushed [RER](g:rer) from 0.89 to 0.93 [[c:ec-glycogen]].\n\n**Fat.** In fat tissue, adrenaline on β receptors drives [lipolysis](g:lipolysis): stored [triglyceride](g:triglyceride) is split, and the fatty acids travel in the blood to the muscles [[c:ec-fat-mobil]]. At rest, α receptors hold lipolysis back; during exercise, β stimulation drives it [[c:ec-lipolysis]].\n\nWhat about liver glucose? Surprisingly, catecholamines are not the main driver there. The next lesson explains.",
+   "claims": [
+    {
+     "id": "ec-glycogen",
+     "text": "Raising plasma adrenaline during submaximal exercise increases muscle glycogen breakdown and carbohydrate oxidation.",
+     "grade": "weak",
+     "sources": [
+      "febbraio1998",
+      "watt2001"
+     ],
+     "evidence": [
+      {
+       "source": "febbraio1998",
+       "quote": "These data indicate that intramuscular glycogen utilization, glycolysis, and carbohydrate oxidation are augmented by elevated epinephrine during submaximal exercise in trained men.",
+       "level": "abstract"
+      },
+      {
+       "source": "febbraio1998",
+       "quote": "Although oxygen uptake was not different when the two trials were compared, respiratory exchange ratio was higher throughout exercise in Epi compared with Con (0.93 +/- 0.01 vs. 0.89 +/- 0.01; P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "watt2001",
+       "quote": "The data demonstrate that elevated plasma adrenaline levels during moderate exercise in untrained men increase skeletal muscle glycogen breakdown and PDH activation, which results in greater carbohydrate oxidation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-fat-mobil",
+     "text": "To fuel exercise, adipose tissue triglycerides must be hydrolysed and the fatty acids delivered to working muscle.",
+     "grade": "strong",
+     "sources": [
+      "horowitz2003"
+     ],
+     "evidence": [
+      {
+       "source": "horowitz2003",
+       "quote": "To use this rich source of potential energy during exercise, adipose tissue triglycerides must first be hydrolyzed and the resultant fatty acids delivered to the working muscles.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ec-lipolysis",
+     "text": "In subcutaneous fat, α-adrenergic effects restrain lipolysis at rest, while β-adrenergic stimulation drives it during exercise; blocking β receptors locally almost abolished the exercise rise.",
+     "grade": "weak",
+     "sources": [
+      "arner1990"
+     ],
+     "evidence": [
+      {
+       "source": "arner1990",
+       "quote": "Alpha-adrenergic inhibitory effects modulate lipolysis at rest, whereas beta-adrenergic stimulatory effects modulate lipolysis during exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "arner1990",
+       "quote": "Propranolol in the perfusate almost completely inhibited the increase in the tissue dialysate glycerol during the exercise-postexercise period.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ec-glycogen-infusion"
+  },
+  {
+   "type": "question",
+   "item": "ec-lipolysis-block"
+  },
+  {
+   "type": "question",
+   "item": "ec-fuel-recall"
+  },
+  {
+   "type": "question",
+   "item": "ec-fold-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Noradrenaline comes mostly from sympathetic nerve endings, adrenaline from the adrenal medulla; exercise raises them 1.5 to over 20-fold.",
+    "They rise little at easy intensities and steeply above about the lactate threshold, and creep up further the longer you go.",
+    "On the heart's β₁ receptors they raise rate and force; sympathetic nerves also set how blood is shared out between tissues.",
+    "In muscle they speed glycogen breakdown; in fat tissue, β stimulation drives lipolysis and the release of fatty acids."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ec-intensity-shape",
+   "concept": "ec-intensity",
+   "bloom": "understand",
+   "sources": [
+    "schneider2000",
+    "podolin1991",
+    "galbo1975"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist does a ramp test from easy spinning to exhaustion. How does blood noradrenaline change as power rises?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little at first, then steeply from about the lactate threshold",
+       "correct": true,
+       "why": "Right: catecholamine breakpoints line up with the lactate threshold; above it they climb fast."
+      },
+      {
+       "id": "b",
+       "text": "In a straight line, the same amount for each step",
+       "why": "The rise is curved, not linear: small steps at easy power, big ones near the top."
+      },
+      {
+       "id": "c",
+       "text": "Steeply at the start, then levelling off near maximum",
+       "why": "This is the opposite shape. The largest increases come at the highest intensities."
+      },
+      {
+       "id": "d",
+       "text": "Hardly at all until the last minute of the test",
+       "why": "It does rise before the end; the bend comes around the lactate threshold, well before exhaustion."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's adrenaline is measured at the end of each stage of an incremental treadmill test. Which pattern should you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small rise at easy stages, then a sharp bend upward near the lactate threshold",
+       "correct": true,
+       "why": "Right: the adrenaline breakpoint occurs at about the same intensity as the lactate breakpoint."
+      },
+      {
+       "id": "b",
+       "text": "An even, straight-line rise with every stage",
+       "why": "Catecholamine responses to intensity are curved, with a breakpoint, not linear."
+      },
+      {
+       "id": "c",
+       "text": "A jump at the first stage, then a plateau",
+       "why": "The early rise in heart rate is mostly vagal withdrawal; adrenaline climbs most at high intensities."
+      },
+      {
+       "id": "d",
+       "text": "A fall below resting values as the runner warms up",
+       "why": "Exercise raises adrenaline; it doesn't drop below rest during a test."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-sender",
+   "concept": "ec-sources",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "zouhal2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where does most of the adrenaline in a runner's blood during a race come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The adrenal medulla",
+       "correct": true,
+       "why": "Right: the core of the adrenal glands releases adrenaline into the blood when sympathetic nerves fire."
+      },
+      {
+       "id": "b",
+       "text": "Sympathetic nerve endings",
+       "why": "These release mostly noradrenaline; the blood level of noradrenaline is their spillover."
+      },
+      {
+       "id": "c",
+       "text": "The adrenal cortex",
+       "why": "The outer layer of the adrenal glands makes steroids such as cortisol and aldosterone, not adrenaline."
+      },
+      {
+       "id": "d",
+       "text": "The working leg muscles",
+       "why": "Muscles respond to adrenaline; they don't secrete it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-other-triggers",
+   "concept": "ec-sources",
+   "bloom": "understand",
+   "sources": [
+    "zouhal2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Late in a long ride without food, a cyclist's blood glucose drops. What happens to adrenaline, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises, because low blood glucose is itself a trigger for adrenaline",
+       "correct": true,
+       "why": "Right: hypoglycaemia is one of the strongest non-exercise triggers of adrenaline release."
+      },
+      {
+       "id": "b",
+       "text": "It falls, because there is less glucose to burn",
+       "why": "Low glucose works the other way: it is an alarm signal that raises adrenaline."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same, because the power is constant",
+       "why": "Intensity isn't the only input; duration, low glucose and heat raise adrenaline at the same power."
+      },
+      {
+       "id": "d",
+       "text": "It rises, because adrenaline is made from glucose",
+       "why": "Adrenaline is made from the amino acid tyrosine, not from glucose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-fold-calc",
+   "concept": "ec-intensity",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "galbo1975"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In graded running to maximum, noradrenaline rose from 0.40 to 2.22 ng·mL⁻¹. What percent rise is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+455%",
+       "correct": true,
+       "why": "Right: (2.22 − 0.40) ÷ 0.40 = 4.55, so +455%."
+      },
+      {
+       "id": "b",
+       "text": "+555%",
+       "why": "This is the fold change × 100 (5.55 × 100). Percent rise = (fold − 1) × 100."
+      },
+      {
+       "id": "c",
+       "text": "+182%",
+       "why": "This is the difference (1.82) read as a percentage, without dividing by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "+82%",
+       "why": "This divides by the final value (1.82 ÷ 2.22). A rise is measured from the starting value."
+      }
+     ],
+     "solution": "Percent rise = (after − before) ÷ before × 100 = (2.22 − 0.40) ÷ 0.40 × 100 = 1.82 ÷ 0.40 × 100 = 455%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's adrenaline rises from 0.10 ng·mL⁻¹ at rest to 0.80 ng·mL⁻¹ at the end of a 5 km race. What percent rise is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+700%",
+       "correct": true,
+       "why": "Right: (0.80 − 0.10) ÷ 0.10 = 7, so +700%."
+      },
+      {
+       "id": "b",
+       "text": "+800%",
+       "why": "This is the fold change × 100 (8 × 100). Percent rise = (fold − 1) × 100."
+      },
+      {
+       "id": "c",
+       "text": "+70%",
+       "why": "This is the difference (0.70) read as a percentage, without dividing by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "+87.5%",
+       "why": "This divides by the final value (0.70 ÷ 0.80). A rise is measured from the starting value."
+      }
+     ],
+     "solution": "Percent rise = (0.80 − 0.10) ÷ 0.10 × 100 = 0.70 ÷ 0.10 × 100 = 700%. The fold change is 8."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's adrenaline rises from 0.05 ng·mL⁻¹ before the swim to 0.30 ng·mL⁻¹ at the end of the bike. What percent rise is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+500%",
+       "correct": true,
+       "why": "Right: (0.30 − 0.05) ÷ 0.05 = 5, so +500%."
+      },
+      {
+       "id": "b",
+       "text": "+600%",
+       "why": "This is the fold change × 100 (6 × 100). Percent rise = (fold − 1) × 100."
+      },
+      {
+       "id": "c",
+       "text": "+25%",
+       "why": "This is the difference (0.25) read as a percentage, without dividing by the starting value."
+      },
+      {
+       "id": "d",
+       "text": "+83%",
+       "why": "This divides by the final value (0.25 ÷ 0.30). A rise is measured from the starting value."
+      }
+     ],
+     "solution": "Percent rise = (0.30 − 0.05) ÷ 0.05 × 100 = 0.25 ÷ 0.05 × 100 = 500%. The fold change is 6."
+    }
+   ]
+  },
+  {
+   "id": "ec-duration",
+   "concept": "ec-intensity",
+   "bloom": "apply",
+   "sources": [
+    "galbo1975",
+    "zouhal2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 3 h at a steady 65% VO₂max on water only. How does adrenaline change across the ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It creeps upward, most in the last hour as glucose falls",
+       "correct": true,
+       "why": "Right: duration adds to the response at constant power, and falling glucose adds a further push."
+      },
+      {
+       "id": "b",
+       "text": "It stays flat, since the intensity is constant",
+       "why": "Intensity sets the size, but catecholamines keep rising with duration at the same power."
+      },
+      {
+       "id": "c",
+       "text": "It falls, as the body gets used to the effort",
+       "why": "There is no within-ride adaptation of this kind; training blunts the response over weeks, not hours."
+      },
+      {
+       "id": "d",
+       "text": "It peaks in the first 5 min, then returns to rest",
+       "why": "Catecholamines stay above rest throughout prolonged exercise and drift up, not back down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-betablocker",
+   "concept": "ec-heart",
+   "bloom": "analyse",
+   "sources": [
+    "shepherd1985",
+    "head1999",
+    "zouhal2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A masters cyclist starts a β-blocker for high blood pressure. Suppose his heart rate at the end of a ramp test is now clearly lower than before (an illustration, not a measured figure). Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Noradrenaline and adrenaline can't act on the heart's β₁ receptors",
+       "correct": true,
+       "why": "Right: the drug blocks the receptors, so the sympathetic push on rate and force is blunted."
+      },
+      {
+       "id": "b",
+       "text": "His body stops making noradrenaline and adrenaline",
+       "why": "β-blockers block the receptors, not the hormones; catecholamine levels can even be higher."
+      },
+      {
+       "id": "c",
+       "text": "His vagal brake becomes stronger at maximal effort",
+       "why": "At maximal effort the vagal brake is largely off; the drop comes from blocked sympathetic action."
+      },
+      {
+       "id": "d",
+       "text": "The drug weakens his heart muscle",
+       "why": "The muscle itself is fine; it simply can't receive the sympathetic signal to beat faster and harder."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-glycogen-infusion",
+   "concept": "ec-fuel",
+   "bloom": "analyse",
+   "sources": [
+    "febbraio1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Six endurance-trained men cycled 40 min at 71% VO₂max twice: once with saline, once with an adrenaline infusion that doubled their adrenaline. Oxygen uptake was the same, but RER was 0.93 instead of 0.89 and muscle glycogen use was higher. Best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Extra adrenaline shifted fuel use toward glycogen at the same workload",
+       "correct": true,
+       "why": "Right: same VO₂, higher RER and more glycogen used: adrenaline sped glycogen breakdown and carbohydrate use."
+      },
+      {
+       "id": "b",
+       "text": "Extra adrenaline made the cyclists work harder",
+       "why": "Oxygen uptake was the same, so the workload and energy cost were the same; only the fuel mix changed."
+      },
+      {
+       "id": "c",
+       "text": "Extra adrenaline spared glycogen by boosting fat use",
+       "why": "The opposite: a higher RER means more carbohydrate, and more glycogen was used."
+      },
+      {
+       "id": "d",
+       "text": "Extra adrenaline raised RER only by making the cyclists hyperventilate",
+       "why": "Overbreathing can raise RER briefly, but measured muscle glycogen use also rose: a real fuel shift."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-lipolysis-block",
+   "concept": "ec-fuel",
+   "bloom": "apply",
+   "sources": [
+    "arner1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers infuse a β-blocking drug only into a small patch of belly fat, then have the subject cycle. What happens to glycerol released in that patch?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its rise during exercise is almost abolished",
+       "correct": true,
+       "why": "Right: during exercise, lipolysis in fat tissue is driven by β receptors; blocking them almost stopped the rise."
+      },
+      {
+       "id": "b",
+       "text": "It rises more, because the brake is removed",
+       "why": "The brake at rest is α receptors; blocking β receptors removes the accelerator, not the brake."
+      },
+      {
+       "id": "c",
+       "text": "It doesn't change, since insulin drives lipolysis in exercise",
+       "why": "Insulin restrains lipolysis; its fall lets lipolysis go, but the push during exercise comes through β receptors."
+      },
+      {
+       "id": "d",
+       "text": "It doesn't change, since muscle needs the fat anyway",
+       "why": "Muscle demand doesn't break down fat in fat tissue; the fat cell needs the β signal to do it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec-fuel-recall",
+   "concept": "ec-fuel",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "watt2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which muscle enzyme does adrenaline switch on, through phosphorylation, to speed glycogen breakdown?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycogen phosphorylase",
+       "correct": true,
+       "why": "Right: the phosphorylated form of glycogen phosphorylase splits glucose units off glycogen."
+      },
+      {
+       "id": "b",
+       "text": "Glycogen synthase",
+       "why": "Glycogen synthase builds glycogen; adrenaline switches it off, not on."
+      },
+      {
+       "id": "c",
+       "text": "Hormone-sensitive lipase",
+       "why": "This enzyme splits triglyceride in fat cells: adrenaline does activate it, but it breaks down fat, not glycogen."
+      },
+      {
+       "id": "d",
+       "text": "Creatine kinase",
+       "why": "Creatine kinase rebuilds ATP from PCr; it isn't the target of adrenaline's glycogen signal."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

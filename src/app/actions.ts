@@ -1,12 +1,12 @@
 "use server";
 
 import { itemById, lessonById } from "@/lib/course";
-import { moduleLessons, saveExam } from "@/lib/exams";
+import { examScope, saveExam } from "@/lib/exams";
 import { freshPages } from "@/lib/fresh";
 import { requireUser } from "@/lib/session";
 import { type Answer, answer, finishLesson, flag } from "@/lib/study";
 
-const CONTEXTS = new Set(["lesson", "pretest", "review", "exam"]);
+const CONTEXTS = new Set(["lesson", "review", "exam"]);
 
 export async function submitAnswer(a: Answer) {
   const userId = await requireUser();
@@ -47,10 +47,9 @@ export async function sessionFinished() {
  * ponytail: the score comes from the client (it only affects your own record); compute it from
  * the exam's answer rows if exams ever count for something.
  */
-export async function examFinished(moduleId: string, score: number) {
+export async function examFinished(scopeId: string, score: number) {
   const userId = await requireUser();
-  if (!moduleLessons(String(moduleId)).module || !Number.isFinite(score))
-    throw new Error("Bad exam");
-  await saveExam(userId, moduleId, Math.min(Math.max(score, 0), 100));
+  if (!examScope(String(scopeId)) || !Number.isFinite(score)) throw new Error("Bad exam");
+  await saveExam(userId, scopeId, Math.min(Math.max(score, 0), 100));
   freshPages();
 }

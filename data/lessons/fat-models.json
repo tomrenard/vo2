@@ -1,0 +1,813 @@
+{
+ "id": "fat-models",
+ "module": "t1b-fatigue",
+ "title": "What fatigue is, and how it is explained",
+ "goal": "Explain what fatigue means in exercise science, why its causes depend on the task, and the main models used to explain it.",
+ "requires": [
+  "th-measure"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "task-failure",
+    "performance-fatigability",
+    "perceived-fatigability",
+    "central-governor"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "fm-capacity",
+   "title": "Fatigue is a drop in capacity",
+   "text": "In the lab, fatigue means a fall in the **maximal** force or power a muscle can produce. That isn't the same as having to stop: you can keep riding at 200 W long after your best sprint has dropped from 1,100 to 900 W [[c:fat-capacity]].\n\nThe moment you can no longer hold the set pace or power is [task failure](g:task-failure). Fatigue builds from the first minutes; task failure comes at the end.\n\nSo a fatigued muscle can still do submaximal work. To see fatigue early, test a maximal effort before and after: a short sprint, a jump, or a [maximal voluntary contraction](g:mvc) on a force rig.",
+   "claims": [
+    {
+     "id": "fat-capacity",
+     "text": "Muscle fatigue is quantified as a decline in maximal force or power capacity, so submaximal contractions can continue after fatigue begins.",
+     "grade": "strong",
+     "sources": [
+      "enoka2008"
+     ],
+     "evidence": [
+      {
+       "source": "enoka2008",
+       "quote": "The development of muscle fatigue is typically quantified as a decline in the maximal force or power capacity of muscle, which means that submaximal contractions can be sustained after the onset of muscle fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fm-define",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "fm-two-sides",
+   "title": "Two sides: what you can do, what you feel",
+   "text": "Enoka and Duchateau proposed a framework many now use. Fatigue is a symptom shaped by two sides that interact [[c:two-domain]]:\n\n| side | what it is | measured by |\n|---|---|---|\n| [performance fatigability](g:performance-fatigability) | the drop in force, power or endurance for a task | MVC, sprint power, time to task failure |\n| [perceived fatigability](g:perceived-fatigability) | the change in sensations of effort and tiredness | self-report only |\n\nRising effort makes you slow down before muscle capacity runs out; weaker muscles make the same pace feel harder.\n\nThe same authors argue against labels like \"central fatigue\" that imply a location [[c:no-adjective]]. This module still uses *peripheral* and *central* as shorthand for where force is lost.",
+   "claims": [
+    {
+     "id": "two-domain",
+     "text": "Fatigue can be defined as a symptom in which function is limited by interactions between performance fatigability and perceived fatigability.",
+     "grade": "moderate",
+     "sources": [
+      "enoka2016"
+     ],
+     "evidence": [
+      {
+       "source": "enoka2016",
+       "quote": "fatigue is defined as a disabling symptom in which physical and cognitive function is limited by interactions between performance fatigability and perceived fatigability.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "no-adjective",
+     "text": "Enoka and Duchateau argue that 'fatigue' should not carry an adjective (central, peripheral, muscle) that suggests its locus; mechanistic studies should find the locus.",
+     "grade": "moderate",
+     "sources": [
+      "enoka2016"
+     ],
+     "evidence": [
+      {
+       "source": "enoka2016",
+       "quote": "One consequence of such a definition is that the word fatigue should not be preceded by an adjective (e.g., central, mental, muscle, peripheral, and supraspinal) to suggest the locus of the changes responsible for an observed level of fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fm-domains",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fm-adjective"
+  },
+  {
+   "type": "concept",
+   "id": "fm-task",
+   "title": "No single cause: it depends on the task",
+   "text": "There is no global mechanism of fatigue; the causes depend on the task [[c:task-specific]]: intensity, duration, muscle mass, contraction type, environment.\n\nAn example: 13 well-trained cyclists rode 4, 20 and 40 km time trials [[c:tt-task]]. Knee-extensor strength fell by about the same amount (15–18%) after each, but for different reasons:\n\n| TT | time | muscle twitch drop | voluntary activation drop |\n|---|---|---|---|\n| 4 km | 6 min | 40% | 7% |\n| 20 km | 32 min | 31% | 11% |\n| 40 km | 66 min | 29% | 10% |\n\nShort and hard: more fatigue inside the muscle. Longer: more from the nervous system. The *Central fatigue* lesson explains both measures.",
+   "claims": [
+    {
+     "id": "task-specific",
+     "text": "There is no global mechanism of muscle fatigue; the mechanisms are specific to the task performed.",
+     "grade": "strong",
+     "sources": [
+      "enoka2008",
+      "millet2004"
+     ],
+     "evidence": [
+      {
+       "source": "enoka2008",
+       "quote": "there is no global mechanism responsible for muscle fatigue. Rather, the mechanisms that cause fatigue are specific to the task being performed.",
+       "level": "abstract"
+      },
+      {
+       "source": "millet2004",
+       "quote": "This has been termed 'task dependency of muscle fatigue'.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tt-task",
+     "text": "After 4, 20 and 40 km cycling time trials strength fell similarly, but the 4 km caused more peripheral fatigue (twitch −40%) and the longer trials more central fatigue (voluntary activation −10 to −11% vs −7%).",
+     "grade": "weak",
+     "sources": [
+      "thomas2015"
+     ],
+     "evidence": [
+      {
+       "source": "thomas2015",
+       "quote": "Greater peripheral fatigue was evident after 4-km (40% reduction in potentiated twitch) compared with that after 20-km (31%) and 40-km TTs (29%). In contrast, longer TTs were characterized by more central fatigue, with greater reductions in voluntary activation measured by motor nerve (-11% and -10% for 20- and 40-km TTs vs -7% for 4-km TTs)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fm-task-tt",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fm-task-apply"
+  },
+  {
+   "type": "question",
+   "item": "fm-thomas-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "fm-models",
+   "title": "Many models, each right somewhere",
+   "text": "A review of more than 2,000 papers on fatigue in prolonged cycling sorted the explanations into models [[c:models-list]]:\n\n- **Cardiovascular/anaerobic:** oxygen supply can't keep up, so metabolites build up.\n- **Energy supply/depletion:** a fuel runs low ([PCr](g:pcr) in a sprint, [glycogen](g:glycogen) in a long ride).\n- **Neuromuscular:** the signal from brain to muscle, or inside the fibre, weakens.\n- **Muscle trauma:** fibres are damaged, as in long downhill running.\n- **Biomechanical**, **thermoregulatory** (overheating) and **psychological/motivational**.\n- **Central governor:** the brain limits effort to protect the body.\n\nEach model explains some tasks and fails for others. A *complex systems* model was proposed in which all these signals feed the brain, which turns them into the sense of fatigue [[c:complex-model]].",
+   "claims": [
+    {
+     "id": "models-list",
+     "text": "Fatigue in prolonged cycling has been explained by cardiovascular/anaerobic, energy supply/depletion, neuromuscular, muscle trauma, biomechanical, thermoregulatory, psychological/motivational and central governor models.",
+     "grade": "moderate",
+     "sources": [
+      "abbiss2005"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2005",
+       "quote": "These include the following models: (i) cardiovascular/anaerobic; (ii) energy supply/energy depletion; (iii) neuromuscular fatigue; (iv) muscle trauma; (v) biomechanical; (vi) thermoregulatory; (vii) psychological/motivational; and (viii) central governor.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "complex-model",
+     "text": "A complex systems model proposes that the linear models provide feedback integrated by the brain into the perception of fatigue.",
+     "grade": "weak",
+     "sources": [
+      "abbiss2005"
+     ],
+     "evidence": [
+      {
+       "source": "abbiss2005",
+       "quote": "More recently, however, a complex systems model of fatigue has been proposed, whereby these aforementioned linear models provide afferent feedback that is integrated by a central governor into our unconscious perception of fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fm-model-match",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fm-complex"
+  },
+  {
+   "type": "question",
+   "item": "fm-model-match",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "fm-brain",
+   "title": "The brain as regulator: a first look",
+   "text": "Noakes' [central governor](g:central-governor) takes the brain's role furthest: fatigue is mainly an emotion, part of a regulation that protects the body from harm [[c:governor]]. One observation he leans on: athletes speed up near the end of a race, the *end spurt* [[c:end-spurt]]. If they were truly at their limit, he argues, they couldn't.\n\nAmann and colleagues agree that the brain regulates but put the brake in feedback. Signals from working muscles, breathing muscles and organs add up, and you hold an intensity that keeps the total tolerable: a *sensory tolerance limit* [[c:stl]].\n\nThe module *Central fatigue and the central governor debate* takes this further.",
+   "claims": [
+    {
+     "id": "governor",
+     "text": "Noakes proposes that fatigue is predominantly an emotion, part of a complex regulation whose goal is to protect the body from harm.",
+     "grade": "disputed",
+     "sources": [
+      "noakes2012"
+     ],
+     "evidence": [
+      {
+       "source": "noakes2012",
+       "quote": "fatigue is predominantly an emotion, part of a complex regulation, the goal of which is to protect the body from harm.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "end-spurt",
+     "text": "Athletes often speed up near the end of exercise (the end spurt).",
+     "grade": "moderate",
+     "sources": [
+      "noakes2012"
+     ],
+     "evidence": [
+      {
+       "source": "noakes2012",
+       "quote": "The second inexplicable observation is that humans also speed up near the end of exercise, the so-called end spurt.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "stl",
+     "text": "The 'sensory tolerance limit' is a proposed negative feedback loop summing all feedback and feedforward signals to keep exercise intensity tolerable.",
+     "grade": "weak",
+     "sources": [
+      "hureau2016"
+     ],
+     "evidence": [
+      {
+       "source": "hureau2016",
+       "quote": "The 'sensory tolerance limit' can be viewed as a negative feedback loop which accounts for the sum of all feedback (locomotor muscles, respiratory muscles, organs, and muscles not directly involved in exercise) and feedforward signals processed within the central nervous system with the purpose of regulating the intensity of exercise to ensure that voluntary activity remains tolerable.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "How does the brain limit endurance exercise?",
+    "sides": [
+     {
+      "position": "A central governor, partly outside awareness, regulates pace so exercise ends before harm; the sensation of fatigue is its tool (Noakes).",
+      "sources": [
+       "noakes2012"
+      ]
+     },
+     {
+      "position": "The brain sets intensity from summed feedback (muscle afferents, breathing, organs) so the effort stays tolerable; no single protective governor is needed (Amann, Hureau).",
+      "sources": [
+       "hureau2016",
+       "amann2011"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fm-endspurt"
+  },
+  {
+   "type": "question",
+   "item": "fm-debate"
+  },
+  {
+   "type": "question",
+   "item": "fm-model-match",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Fatigue is a fall in maximal force or power capacity; task failure, when you can't hold the task, comes much later.",
+    "Enoka and Duchateau: fatigue has two interacting sides, performance fatigability (measured) and perceived fatigability (self-reported).",
+    "There is no single cause: short hard efforts tire the muscle more, long efforts the nervous system more.",
+    "Models of fatigue (cardiovascular, energy depletion, neuromuscular, trauma, heat, psychology, governor) each fit some tasks; a complex systems view integrates them in the brain.",
+    "How the brain limits exercise, a protective governor or a sensory tolerance limit, is still argued."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fm-define",
+   "concept": "fm-capacity",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "enoka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In exercise physiology, how is fatigue usually measured?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As a fall in maximal force or power capacity",
+       "correct": true,
+       "why": "Right: fatigue is a decline in what the muscle can produce at most, measured with a maximal test."
+      },
+      {
+       "id": "b",
+       "text": "As the moment the athlete has to stop",
+       "why": "That moment is task failure. Fatigue starts well before it; submaximal work can go on."
+      },
+      {
+       "id": "c",
+       "text": "As the blood lactate level reached",
+       "why": "Lactate is a marker of how much glycolysis is running, not a measure of lost capacity (see *Lactate, H⁺ and fatigue*)."
+      },
+      {
+       "id": "d",
+       "text": "As how far heart rate drifts in the session",
+       "why": "Heart-rate drift reflects heat and cardiovascular strain, not the muscle's maximal capacity."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A rider can still hold 200 W after 3 h, but her 5 s sprint has dropped from 1,000 to 820 W. Is she fatigued?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: her maximal power capacity has fallen",
+       "correct": true,
+       "why": "Right: fatigue is the fall in maximal capacity (here 18%), even while 200 W can still be held."
+      },
+      {
+       "id": "b",
+       "text": "No: she can still hold the task, so not yet",
+       "why": "This confuses fatigue with task failure. Submaximal work continues after fatigue starts."
+      },
+      {
+       "id": "c",
+       "text": "Only if her blood lactate is high",
+       "why": "Lactate is not the definition of fatigue; capacity is."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only perceived fatigue",
+       "why": "The sprint test is a measured drop in performance, not a feeling."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-domains",
+   "concept": "fm-two-sides",
+   "bloom": "analyse",
+   "sources": [
+    "enoka2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete says her legs feel heavy and every run feels harder this week, but her 5 km time and jump height match her best. In Enoka and Duchateau's terms, what has changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Perceived fatigability, but not performance fatigability",
+       "correct": true,
+       "why": "Right: sensations changed while measured performance did not."
+      },
+      {
+       "id": "b",
+       "text": "Performance fatigability, but not perceived fatigability",
+       "why": "Reversed: her performance tests are unchanged; her sensations are what changed."
+      },
+      {
+       "id": "c",
+       "text": "Neither: fatigue needs a drop in lactate threshold",
+       "why": "Fatigue isn't defined by a threshold shift; heavier sensations already count."
+      },
+      {
+       "id": "d",
+       "text": "Both, since feelings always mirror capacity",
+       "why": "The two sides interact but can move apart, as here."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Over a session of 1 km repeats, a runner's times get 6% slower, yet he rates each rep's effort the same as usual. Which side of fatigue shows the change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Performance fatigability",
+       "correct": true,
+       "why": "Right: a measured drop in what he can do, with no change in rated effort."
+      },
+      {
+       "id": "b",
+       "text": "Perceived fatigability",
+       "why": "His ratings of effort didn't change; that side stayed flat."
+      },
+      {
+       "id": "c",
+       "text": "Neither: slower reps are pacing, not fatigue",
+       "why": "He tried for the same effort and went slower: that is lost capacity."
+      },
+      {
+       "id": "d",
+       "text": "Central fatigue only",
+       "why": "The framework doesn't say where the loss is; finding that needs mechanistic tests."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-adjective",
+   "concept": "fm-two-sides",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "enoka2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do Enoka and Duchateau advise against terms like \"central fatigue\" or \"muscle fatigue\"?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The adjective claims a location that only mechanistic tests can show",
+       "correct": true,
+       "why": "Right: they want the locus found by experiments, not assumed by the label."
+      },
+      {
+       "id": "b",
+       "text": "Because central fatigue has been shown not to exist",
+       "why": "They don't deny central mechanisms; they object to naming the locus in the word."
+      },
+      {
+       "id": "c",
+       "text": "Because fatigue can only be measured in the muscle",
+       "why": "Perceived fatigability is measured by self-report; both sides count."
+      },
+      {
+       "id": "d",
+       "text": "Because these terms apply only to patients",
+       "why": "Their framework covers athletes, older adults and patients alike."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-task-tt",
+   "concept": "fm-task",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "enoka2008",
+    "thomas2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 4, 20 and 40 km time-trial study, which ride caused the largest drop in the muscle's own twitch force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The 4 km, about 6 min near maximal",
+       "correct": true,
+       "why": "Right: the twitch fell 40% after 4 km versus about 30% after the longer rides."
+      },
+      {
+       "id": "b",
+       "text": "The 40 km, because it lasted longest",
+       "why": "Longer rides caused more central fatigue, not more twitch loss."
+      },
+      {
+       "id": "c",
+       "text": "All three equally, because strength fell equally",
+       "why": "Strength (MVC) fell by similar amounts, but the split between muscle and nerve differed."
+      },
+      {
+       "id": "d",
+       "text": "The 20 km, being in between",
+       "why": "The 20 km twitch drop (31%) was close to the 40 km, well below the 4 km."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the same study, after which rides did voluntary activation fall most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The 20 and 40 km, by about 10–11%",
+       "correct": true,
+       "why": "Right: longer, less intense rides left more central fatigue."
+      },
+      {
+       "id": "b",
+       "text": "The 4 km, by about 40%",
+       "why": "40% was the twitch drop after the 4 km; its voluntary activation fell only 7%."
+      },
+      {
+       "id": "c",
+       "text": "None: voluntary activation doesn't change in cycling",
+       "why": "It fell after every ride, more after the longer ones."
+      },
+      {
+       "id": "d",
+       "text": "Only the 40 km, the longest",
+       "why": "The 20 km fell as much (11%) as the 40 km (10%)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-task-apply",
+   "concept": "fm-task",
+   "bloom": "apply",
+   "sources": [
+    "enoka2008",
+    "thomas2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A running coach finds that fatigue after a 3 min track rep is mostly inside the muscle, and plans marathon recovery on that basis. What's the flaw?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatigue depends on the task: a marathon tires the nervous system more",
+       "correct": true,
+       "why": "Right: causes differ with intensity and duration; longer efforts show more central fatigue."
+      },
+      {
+       "id": "b",
+       "text": "None: fatigue always has one cause, only the size changes",
+       "why": "There is no global mechanism; it is task-specific."
+      },
+      {
+       "id": "c",
+       "text": "Marathon fatigue is only perceived, not measurable",
+       "why": "Strength and activation losses after long running are measurable."
+      },
+      {
+       "id": "d",
+       "text": "Short reps cause no fatigue inside the muscle",
+       "why": "They cause a lot: the 4 km time trial cut the twitch by 40%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-thomas-appraisal",
+   "concept": "fm-task",
+   "bloom": "evaluate",
+   "sources": [
+    "thomas2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The time-trial study tested 13 well-trained male cyclists, measuring the knee extensors before and right after each ride. What most limits using its numbers for a female triathlete's run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only trained men on bikes: sex and running may shift the split",
+       "correct": true,
+       "why": "Right: the sample and the task limit how far the central–peripheral split carries over."
+      },
+      {
+       "id": "b",
+       "text": "13 riders are too few to measure anything",
+       "why": "Small samples widen uncertainty but the within-rider design still measures changes."
+      },
+      {
+       "id": "c",
+       "text": "It had no control group, so it means nothing",
+       "why": "It's a crossover: each rider is compared with himself across rides."
+      },
+      {
+       "id": "d",
+       "text": "Time trials in a lab aren't real exercise",
+       "why": "Simulated time trials are a standard, valid model of racing effort."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-model-match",
+   "concept": "fm-models",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "abbiss2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner slows sharply at 32 km on a cool day. He took no carbohydrate during the race. Which model fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Energy supply/depletion",
+       "correct": true,
+       "why": "Right: a late, sharp slowdown without fuel points to glycogen running low."
+      },
+      {
+       "id": "b",
+       "text": "Thermoregulatory",
+       "why": "On a cool day overheating is unlikely to be the main cause."
+      },
+      {
+       "id": "c",
+       "text": "Muscle trauma",
+       "why": "Damage builds slowly and shows as soreness, not a sudden slowdown at 32 km."
+      },
+      {
+       "id": "d",
+       "text": "Cardiovascular/anaerobic",
+       "why": "Marathon pace is below the intensity where oxygen supply fails to keep up."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a 40 °C lab, a cyclist at a fixed moderate power stops when core temperature reaches 40 °C. Which model fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Thermoregulatory",
+       "correct": true,
+       "why": "Right: stopping at a high core temperature points to heat as the limit."
+      },
+      {
+       "id": "b",
+       "text": "Energy supply/depletion",
+       "why": "Under an hour at moderate power doesn't empty glycogen."
+      },
+      {
+       "id": "c",
+       "text": "Muscle trauma",
+       "why": "Cycling causes little muscle damage, and nothing here suggests it."
+      },
+      {
+       "id": "d",
+       "text": "Cardiovascular/anaerobic",
+       "why": "Heat does strain the heart, but stopping at a set core temperature points to heat itself; in the cool, moderate power is well within oxygen supply."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "After a hilly Ironman run with long descents, a triathlete's quads are sore and weak for several days. Which model fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle trauma",
+       "correct": true,
+       "why": "Right: downhill running damages fibres; soreness and weakness for days fit damage."
+      },
+      {
+       "id": "b",
+       "text": "Energy supply/depletion",
+       "why": "Glycogen refills in about a day with enough carbohydrate; days of sore weakness point elsewhere."
+      },
+      {
+       "id": "c",
+       "text": "Thermoregulatory",
+       "why": "Heat effects pass within hours of cooling down."
+      },
+      {
+       "id": "d",
+       "text": "Cardiovascular/anaerobic",
+       "why": "Oxygen supply limits the effort itself, not strength days later."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-complex",
+   "concept": "fm-models",
+   "bloom": "understand",
+   "sources": [
+    "abbiss2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the complex systems model add to the list of single-cause models?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The brain combines signals from all systems into the sense of fatigue",
+       "correct": true,
+       "why": "Right: the linear models become inputs that the brain integrates."
+      },
+      {
+       "id": "b",
+       "text": "It picks the single model that fits every kind of task",
+       "why": "It does the opposite: no single model fits every task."
+      },
+      {
+       "id": "c",
+       "text": "It replaces all of the physiology with psychology",
+       "why": "It keeps the physiology as feedback; the brain integrates it."
+      },
+      {
+       "id": "d",
+       "text": "It says that fatigue happens only in the muscles",
+       "why": "That's the old peripheral-only view it moves away from."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-endspurt",
+   "concept": "fm-brain",
+   "bloom": "evaluate",
+   "sources": [
+    "noakes2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 10 km race, runners often speed up over the last kilometre despite rising fatigue. What does this end spurt best suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pace before the end was held below the true maximum",
+       "correct": true,
+       "why": "Right: speeding up shows a reserve was kept back, which fits a brain that regulates pace."
+      },
+      {
+       "id": "b",
+       "text": "Fatigue fully recovered in the last kilometre",
+       "why": "There's no time for recovery while running harder."
+      },
+      {
+       "id": "c",
+       "text": "Muscle fatigue doesn't occur in races",
+       "why": "Strength losses after races are measurable; a reserve can coexist with fatigue."
+      },
+      {
+       "id": "d",
+       "text": "Lactate is cleared at the end, releasing a brake",
+       "why": "Lactate isn't the brake, and it rises, not falls, in a final sprint."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fm-debate",
+   "concept": "fm-brain",
+   "bloom": "evaluate",
+   "sources": [
+    "noakes2012",
+    "hureau2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement would both the central governor camp and the sensory tolerance limit camp accept?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The brain helps set exercise intensity using signals from the body",
+       "correct": true,
+       "why": "Right: both give the brain a regulating role; they disagree on how it works."
+      },
+      {
+       "id": "b",
+       "text": "A governor always stops muscles before any harm",
+       "why": "That's Noakes' position; Amann's camp doesn't accept a protective governor."
+      },
+      {
+       "id": "c",
+       "text": "Exercise ends only when muscles are fully exhausted",
+       "why": "Neither camp holds this old peripheral-only view."
+      },
+      {
+       "id": "d",
+       "text": "Feedback from the muscles plays no part",
+       "why": "Muscle feedback is central to the sensory tolerance limit."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

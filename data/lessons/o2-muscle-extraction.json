@@ -1,0 +1,873 @@
+{
+ "id": "o2-muscle-extraction",
+ "module": "t1b-oxygen-transport",
+ "title": "From capillary to mitochondria",
+ "goal": "Explain how O₂ diffuses from capillary to mitochondria, what myoglobin and capillary transit time do, and why training raises O₂ extraction.",
+ "requires": [
+  "o2-hb-mass"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "myoglobin",
+    "transit-time"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ext-path",
+   "title": "The last few micrometres",
+   "text": "Once a red cell is in a muscle capillary, its O₂ still has a journey: off the haemoglobin, through the red-cell membrane, plasma, capillary wall, the gap between cells, the fibre membrane and the cytoplasm, to the [mitochondria](g:mitochondria) [[c:o2-path]].\n\nThe pressure falls steeply along that short path. In trained men working one thigh at maximum, mean capillary PO₂ was about **38 mmHg**, but the PO₂ inside the fibre, measured through myoglobin, only about **3 mmHg** [[c:po2-drop]]. Most of the drop happens across the 1–5 μm from red cell to fibre membrane.\n\nO₂ moves by [diffusion](g:diffusion), and Fick's law of diffusion says the flow is proportional to the surface area and to the PO₂ difference [[c:fick-law]]. More capillary contact, more flux.",
+   "claims": [
+    {
+     "id": "o2-path",
+     "text": "O₂ moving from capillary to mitochondria must unload from haemoglobin and cross the red-cell membrane, plasma, capillary wall, interstitium, sarcolemma and cytoplasm.",
+     "grade": "strong",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "including the dissociation of O 2 from Hb, and diffusion through the erythrocyte membrane, plasma, capillary wall, interstitial space, sarcolemma, cytoplasm (myoglobin facilitated or by diffusion) and into the mitochondria for utilization by the cytochromes",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "po2-drop",
+     "text": "At maximal knee-extension exercise, mean capillary PO₂ was about 38 mmHg while myoglobin-associated (intracellular) PO₂ was about 3 mmHg: a large blood-to-cell PO₂ difference across a 1–5 μm path.",
+     "grade": "weak",
+     "sources": [
+      "richardson1995"
+     ],
+     "evidence": [
+      {
+       "source": "richardson1995",
+       "quote": "Assuming a myoglobin PO2 where 50% of myoglobin binding sites are bound with O2 of 3.2 mmHg, myoglobin-associated PO2 averaged 3.1 +/- .3 (N) and 2.1 +/- .2 mmHg (H).",
+       "level": "abstract"
+      },
+      {
+       "source": "richardson1995",
+       "quote": "resulted in calculated mean capillary PO2 values of 38 +/- 2 (N) and 30 +/- 2 mmHg(H)",
+       "level": "abstract"
+      },
+      {
+       "source": "richardson1995",
+       "quote": "These data are consistent with an O2 diffusion limitation across the 1-5-microns path-length from red cell to the sarcolemma that plays a role in determining maximal muscle O2 uptake in normal humans.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fick-law",
+     "text": "By Fick's law of diffusion, O₂ flux is directly proportional to the PO₂ gradient and to the diffusional surface area, which more capillary-to-fibre contacts increase.",
+     "grade": "strong",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "according to the Fick law of diffusion, the diffusive flux is directly proportional to the PO 2 gradient",
+       "level": "full-text"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "This increases the diffusional surface area that, according to the Fick law of diffusion, increases the diffusive flux in a directly proportional manner.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ext-gradient",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ext-fick-diffusion",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ext-myoglobin",
+   "title": "Myoglobin: the fibre's own carrier",
+   "text": "Inside oxidative fibres sits [myoglobin](g:myoglobin), a one-unit cousin of haemoglobin. It does three jobs: it stores a little O₂, it buffers the fibre's O₂ when activity jumps, and it helps O₂ diffuse through the cytoplasm by carrying it alongside the dissolved O₂ [[c:mb-roles]].\n\nIt binds O₂ far more tightly than haemoglobin: its P50 is about **3 mmHg**, against about 27 for haemoglobin. So in the capillary, haemoglobin lets go and myoglobin takes up. In exercising thigh muscle, myoglobin was already about half unloaded at 50% of maximum and stayed so up to the maximum [[c:mb-desat]]. A half-empty myoglobin means a very low PO₂ inside the fibre, which keeps the gradient from blood to fibre large.",
+   "claims": [
+    {
+     "id": "mb-roles",
+     "text": "Myoglobin stores O₂ in muscle, is thought to buffer intracellular O₂ when activity increases, and to facilitate intracellular O₂ diffusion.",
+     "grade": "moderate",
+     "sources": [
+      "ordway2004"
+     ],
+     "evidence": [
+      {
+       "source": "ordway2004",
+       "quote": "Functionally, myoglobin is well accepted as an O2-storage protein in muscle, capable of releasing O2 during periods of hypoxia or anoxia.",
+       "level": "abstract"
+      },
+      {
+       "source": "ordway2004",
+       "quote": "Myoglobin is also thought to buffer intracellular O2 concentration when muscle activity increases and to facilitate intracellular O2 diffusion by providing a parallel path that augments simple diffusion of dissolved O2.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mb-desat",
+     "text": "Myoglobin (P50 about 3.2 mmHg) was partly desaturated within 20 s even at 50% of maximum and stayed about 51% desaturated up to maximal work in normoxia.",
+     "grade": "weak",
+     "sources": [
+      "richardson1995"
+     ],
+     "evidence": [
+      {
+       "source": "richardson1995",
+       "quote": "Within 20 s of exercise onset partial myoglobin desaturation was evident even at 50% of maximum O2 consumption, was significantly greater in H than N, and was then constant at an average of 51 +/- 3% (N) and 60 +/- 3% (H) throughout the incremental exercise protocol to maximum work rate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ext-mb-p50"
+  },
+  {
+   "type": "question",
+   "item": "ext-mb-roles"
+  },
+  {
+   "type": "concept",
+   "id": "ext-transit",
+   "title": "Time in the capillary",
+   "text": "Unloading takes time. How long a red cell stays in a capillary, its [transit time](g:transit-time), is roughly capillary blood volume ÷ blood flow. It depends on the flow, on how many capillaries there are, how many are open, and how well flow matches demand [[c:mtt-factors]].\n\nTraining raises [cardiac output](g:cardiac-output) and leg blood flow. On its own, that would rush red cells through faster and cut unloading time. But training also grows capillaries: [capillary density](g:capillary-density) typically rises by **10–30%** over 4–24 weeks, about as much as VO₂max. So transit time is probably kept about the same, despite the extra flow [[c:cap-growth]].\n\nYou met capillary growth in the muscle module; this is why it matters for oxygen.",
+   "claims": [
+    {
+     "id": "mtt-factors",
+     "text": "Red-cell capillary mean transit time is determined by blood flow, capillary density, capillary recruitment and the matching of flow to metabolic demand.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "the erythrocyte MTT, which is determined by the blood flow, the capillary density, the capillary recruitment and the degree of matching of blood flow distribution to the metabolic demand",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cap-growth",
+     "text": "Capillary density typically rises 10–30% after 4–24 weeks of endurance training, similar to the change in VO₂max, which probably maintains transit time despite higher blood flow.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "Capillary density typically improves by 10‐30% after 4‐24 weeks of endurance training, which is similar to the changes in V ˙ O 2max for this training duration.",
+       "level": "full-text"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "Therefore, the capillary growth probably maintains the MTT despite elevated Q ˙ max and peripheral blood flow after training.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ext-transit-example",
+   "title": "Does training shorten transit time?",
+   "problem": "After a winter of training, a cyclist's maximal leg blood flow is 15% higher and his capillary blood volume 20% higher. Transit time ∝ capillary blood volume ÷ blood flow. What happens to his transit time at maximum?",
+   "steps": [
+    "Write each change as a factor: volume × 1.20, flow × 1.15.",
+    "New transit time = 1.20 ÷ 1.15 = 1.04 times the old one: 4% longer.",
+    "Without the capillary growth: 1.00 ÷ 1.15 = 0.87, so 13% shorter, and less time to unload.",
+    "Capillary growth more than makes up for the extra flow, so each red cell keeps its time to unload."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ext-transit-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ext-transit-training"
+  },
+  {
+   "type": "concept",
+   "id": "ext-training",
+   "title": "Why extraction rises with training",
+   "text": "Training can raise extraction, and mitochondria seem to matter most. A big oxidative capacity acts like a 'bottomless pit': it keeps myoglobin unloaded and PO₂ inside the fibre low, so O₂ keeps diffusing in even when capillary PO₂ is low [[c:bottomless-pit]].\n\nIn 9 people who trained one leg for 6 weeks, the trained leg extracted a little more O₂ (2–3 points) than the other. The gain tracked mitochondrial proteins, not capillaries per fibre [[c:one-leg]]. In sedentary people, 9 weeks of hard training raised leg extraction from 72% to 82% [[c:extraction-gain]].\n\nYet there is a floor: even in the best trained, about **10 mL O₂** stays in each litre of venous blood leaving the leg, at a PO₂ of about 10 mmHg [[c:extraction-floor]].",
+   "claims": [
+    {
+     "id": "bottomless-pit",
+     "text": "A large muscle oxidative capacity keeps myoglobin saturation and intracellular PO₂ low, maintaining the capillary-to-cell PO₂ gradient and O₂ extraction even at low capillary PO₂.",
+     "grade": "weak",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "By analogy, the oxidative reserve capacity may act as a “bottomless pit”, keeping the myoglobin SO 2 and intracellular PO 2 low. This, in turn, maintains the PO 2 gradient between the capillary and the muscle cell, promoting O 2 diffusion and O 2 extraction even at a very low capillary PO 2 .",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "one-leg",
+     "text": "After 6 weeks of one-leg knee-extension training, the trained leg had higher O₂ extraction than the control leg (largest at 83% of peak power); the difference correlated with mitochondrial proteins, not the capillary-to-fibre ratio.",
+     "grade": "weak",
+     "sources": [
+      "skattebo2020b"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020b",
+       "quote": "TL displayed higher O2 extraction than CON (main effect: 1.7 ± 1.6% points; P = .010; 40%-83% of W˙peak) with the largest between-leg difference at 83% of W˙peak",
+       "level": "abstract"
+      },
+      {
+       "source": "skattebo2020b",
+       "quote": "The between-leg difference in O2 extraction correlated with the between-leg ratio of citrate synthase and COX-IV (r = .72-.73; P = .03), but not with the difference in the capillary-to-fiber ratio (P = .965).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "extraction-gain",
+     "text": "Leg O₂ extraction fraction rose from 72% to 82% after 9 weeks of intense endurance training in previously sedentary people.",
+     "grade": "weak",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "an impressive increase in leg O 2 extraction fraction from 72% to 82% has been reported after only 9 weeks of intense endurance training in previously sedentary subjects",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "extraction-floor",
+     "text": "At least about 10 mL O₂ remains in each litre of femoral venous blood, at a PO₂ of about 10 mmHg, even in the best trained, because diffusive flux becomes very small at low capillary PO₂.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "Hence, a minimum of ~10 mL O 2 remains in each litre of femoral venous blood associated with a PO 2 of ~10 mmHg, even for the best trained individuals.",
+       "level": "full-text"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "the diffusive flux is directly proportional to the PO 2 gradient and will, thus, gradually decrease along the capillary and be very small when approaching low capillary PO 2 values such as 10 mmHg",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does diffusion from capillary to mitochondria limit VO₂max in healthy people?",
+    "sides": [
+     {
+      "position": "Yes, in part: VO₂max falls in step with venous PO₂ when breathing less O₂, and a large PO₂ drop from blood to fibre points to a finite diffusing capacity.",
+      "sources": [
+       "roca1989",
+       "richardson1995"
+      ]
+     },
+     {
+      "position": "Only a little, and less in the fit: delivery is the main limit, and muscle diffusing capacity rises with VO₂max, so diffusion limits shrink as fitness grows.",
+      "sources": [
+       "skattebo2020",
+       "bassett2000"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ext-extraction-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ext-one-leg"
+  },
+  {
+   "type": "question",
+   "item": "ext-floor"
+  },
+  {
+   "type": "question",
+   "item": "ext-debate"
+  },
+  {
+   "type": "question",
+   "item": "ext-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "ext-transit-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "O₂ leaving a capillary crosses several barriers to reach the mitochondria; PO₂ falls from about 38 mmHg in the capillary to about 3 mmHg in the fibre.",
+    "Fick's law of diffusion: flux ∝ surface area × PO₂ difference, so more capillary contact means more O₂ in.",
+    "Myoglobin (P50 about 3 mmHg) pulls O₂ from haemoglobin, buffers it and helps it diffuse.",
+    "Transit time ≈ capillary volume ÷ flow; training grows capillaries about as much as flow, so red cells keep their time to unload.",
+    "Extraction rises with training, mostly through more mitochondria keeping fibre PO₂ low, but about 10 mL O₂ per litre always returns unused."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ext-gradient",
+   "concept": "ext-path",
+   "bloom": "understand",
+   "sources": [
+    "richardson1995",
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Along the O₂ path in a working thigh, from the air you breathe to the mitochondria, where is one of the largest drops in PO₂ at maximal effort?",
+     "options": [
+      {
+       "id": "a",
+       "text": "From the capillary blood into the muscle fibre",
+       "correct": true,
+       "why": "Right: about 38 mmHg in the capillary against about 3 mmHg inside the fibre."
+      },
+      {
+       "id": "b",
+       "text": "From the mitochondria to the cytoplasm",
+       "why": "O₂ moves into the mitochondria, not out; the drop is on the way in."
+      },
+      {
+       "id": "c",
+       "text": "Nowhere: PO₂ is about the same from capillary to mitochondria",
+       "why": "There is a large gradient; without one, no O₂ would diffuse."
+      },
+      {
+       "id": "d",
+       "text": "Along the artery from the heart to the thigh",
+       "why": "PO₂ barely changes along an artery; O₂ leaves the blood in the capillaries."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner is at VO₂max. Mean PO₂ in his calf capillaries is about 38 mmHg. What is the PO₂ inside the muscle fibres most likely to be?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3 mmHg",
+       "correct": true,
+       "why": "Right: myoglobin-based measurements put intracellular PO₂ at about 3 mmHg at maximal effort."
+      },
+      {
+       "id": "b",
+       "text": "About 38 mmHg, the same as the capillary",
+       "why": "If it were the same, no O₂ would diffuse in."
+      },
+      {
+       "id": "c",
+       "text": "About 100 mmHg, as in arterial blood",
+       "why": "Fibre PO₂ can't be higher than capillary PO₂; O₂ flows down the gradient."
+      },
+      {
+       "id": "d",
+       "text": "About 20 mmHg, like the venous blood",
+       "why": "Venous PO₂ is around 20 mmHg, but the fibre is much lower still."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-fick-diffusion",
+   "concept": "ext-path",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Training gives a rider's quadriceps fibres 20% more capillary contact (diffusion surface). If the PO₂ difference from blood to fibre stays the same, how does O₂ flux into the fibres change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises by about 20%",
+       "correct": true,
+       "why": "Right: by Fick's law of diffusion, flux is directly proportional to surface area."
+      },
+      {
+       "id": "b",
+       "text": "It rises by about 40%",
+       "why": "This doubles the effect; flux is proportional to area, not to its square."
+      },
+      {
+       "id": "c",
+       "text": "It doesn't change, as only the PO₂ difference matters",
+       "why": "Area matters as much as the gradient in Fick's law of diffusion."
+      },
+      {
+       "id": "d",
+       "text": "It falls, as O₂ is shared among more capillaries",
+       "why": "More contact area raises total flux; it isn't split."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Late in a long triathlon run, the PO₂ difference from capillary to fibre halves while the diffusion surface stays the same. How does O₂ flux into the fibres change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It halves",
+       "correct": true,
+       "why": "Right: flux is directly proportional to the PO₂ difference."
+      },
+      {
+       "id": "b",
+       "text": "It falls to a quarter",
+       "why": "Flux is proportional to the gradient, not to its square."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same, as surface area sets the flux",
+       "why": "Surface and gradient both set flux; halving the gradient halves it."
+      },
+      {
+       "id": "d",
+       "text": "It doubles, as O₂ moves more easily at lower pressure",
+       "why": "A smaller pressure difference drives less O₂, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-mb-p50",
+   "concept": "ext-myoglobin",
+   "bloom": "understand",
+   "sources": [
+    "richardson1995",
+    "ordway2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does O₂ move from haemoglobin in the capillary to myoglobin inside the fibre, and not the other way?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Myoglobin binds O₂ much more tightly (P50 about 3 vs 27 mmHg)",
+       "correct": true,
+       "why": "Right: at the low PO₂ in the fibre, myoglobin still holds O₂ that haemoglobin has let go."
+      },
+      {
+       "id": "b",
+       "text": "Myoglobin binds O₂ more loosely, so it accepts more",
+       "why": "Looser binding (higher P50) would make it hold less, not more."
+      },
+      {
+       "id": "c",
+       "text": "An enzyme pumps O₂ from haemoglobin to myoglobin",
+       "why": "O₂ moves by diffusion down its pressure gradient; no pump is involved."
+      },
+      {
+       "id": "d",
+       "text": "Myoglobin has four times as many binding sites",
+       "why": "Myoglobin has one haem, haemoglobin four; it is affinity, not sites."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-mb-roles",
+   "concept": "ext-myoglobin",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "ordway2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Name the main jobs of myoglobin in a working muscle fibre.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Store O₂, buffer it, help it diffuse to mitochondria",
+       "correct": true,
+       "why": "Right: storage, buffering of intracellular O₂ and facilitated diffusion."
+      },
+      {
+       "id": "b",
+       "text": "Carry O₂ in blood from the lungs to the muscle",
+       "why": "That is haemoglobin's job; myoglobin stays inside the fibre."
+      },
+      {
+       "id": "c",
+       "text": "Make ATP from O₂ without mitochondria",
+       "why": "Myoglobin binds O₂; ATP is made in the mitochondria."
+      },
+      {
+       "id": "d",
+       "text": "Remove CO₂ from the fibre to the blood",
+       "why": "CO₂ leaves by diffusion and is carried as bicarbonate; myoglobin binds O₂."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-transit-calc",
+   "concept": "ext-transit",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's maximal calf blood flow rises 20% while his capillary blood volume hasn't changed yet. Transit time ∝ capillary volume ÷ flow. What happens to transit time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 17% shorter",
+       "correct": true,
+       "why": "Right: 1.00 ÷ 1.20 = 0.83, so 17% shorter."
+      },
+      {
+       "id": "b",
+       "text": "20% shorter",
+       "why": "This subtracts the 20%; dividing by 1.20 gives a 17% fall."
+      },
+      {
+       "id": "c",
+       "text": "20% longer",
+       "why": "More flow through the same volume makes transit shorter, not longer."
+      },
+      {
+       "id": "d",
+       "text": "Unchanged",
+       "why": "Transit time depends on flow; more flow through the same capillaries shortens it."
+      }
+     ],
+     "solution": "New transit = 1.00 ÷ 1.20 = 0.83 of the old: about 17% shorter."
+    },
+    {
+     "id": "b",
+     "stem": "After a season, a triathlete's maximal leg blood flow is 10% higher and her capillary blood volume 25% higher. Transit time ∝ capillary volume ÷ flow. What happens to transit time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 14% longer",
+       "correct": true,
+       "why": "Right: 1.25 ÷ 1.10 = 1.14, so 14% longer."
+      },
+      {
+       "id": "b",
+       "text": "15% longer",
+       "why": "This subtracts the percentages (25 − 10); dividing the factors gives 14%."
+      },
+      {
+       "id": "c",
+       "text": "About 12% shorter",
+       "why": "This divides flow by volume (1.10 ÷ 1.25): the inverse."
+      },
+      {
+       "id": "d",
+       "text": "37.5% longer",
+       "why": "This multiplies the factors (1.25 × 1.10) instead of dividing."
+      }
+     ],
+     "solution": "New transit = 1.25 ÷ 1.10 = 1.14 of the old: about 14% longer."
+    }
+   ]
+  },
+  {
+   "id": "ext-transit-training",
+   "concept": "ext-transit",
+   "bloom": "analyse",
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Training raises a cyclist's maximal cardiac output and leg blood flow. Why does capillary growth matter for O₂ extraction at the same time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It keeps red cells in the capillary long enough despite faster flow",
+       "correct": true,
+       "why": "Right: more capillary volume offsets more flow, so transit time is maintained."
+      },
+      {
+       "id": "b",
+       "text": "It raises arterial O₂ content",
+       "why": "Capillaries don't change CaO₂; that is set by haemoglobin and the lungs."
+      },
+      {
+       "id": "c",
+       "text": "It lowers the muscle's O₂ demand",
+       "why": "Capillaries supply O₂; they don't reduce how much the muscle uses."
+      },
+      {
+       "id": "d",
+       "text": "It shifts the dissociation curve to the right",
+       "why": "Curve shifts come from acid, CO₂, heat and 2,3-DPG, not capillary number."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-extraction-calc",
+   "concept": "ext-training",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Catheters in an elite cyclist's leg at max show CaO₂ 200 mL·L⁻¹ and femoral venous content 20 mL·L⁻¹. What is his leg O₂ extraction fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "90%",
+       "correct": true,
+       "why": "Right: (200 − 20) ÷ 200 = 0.90."
+      },
+      {
+       "id": "b",
+       "text": "10%",
+       "why": "This is venous ÷ arterial: the share left in the blood."
+      },
+      {
+       "id": "c",
+       "text": "180%",
+       "why": "This reads the a-vO₂ difference (180 mL·L⁻¹) as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "111%",
+       "why": "This divides arterial by the difference (200 ÷ 180); a fraction can't exceed 100%."
+      }
+     ],
+     "solution": "Extraction = (200 − 20) ÷ 200 = 180 ÷ 200 = 90%."
+    },
+    {
+     "id": "b",
+     "stem": "At maximal running, a runner's CaO₂ is 180 mL·L⁻¹ and her leg venous content 27 mL·L⁻¹. What is her leg O₂ extraction fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85%",
+       "correct": true,
+       "why": "Right: (180 − 27) ÷ 180 = 153 ÷ 180 = 0.85."
+      },
+      {
+       "id": "b",
+       "text": "15%",
+       "why": "This is venous ÷ arterial: the share left in the blood."
+      },
+      {
+       "id": "c",
+       "text": "153%",
+       "why": "This reads the a-vO₂ difference (153 mL·L⁻¹) as a percentage."
+      },
+      {
+       "id": "d",
+       "text": "118%",
+       "why": "This divides arterial by the difference (180 ÷ 153); a fraction can't exceed 100%."
+      }
+     ],
+     "solution": "Extraction = (180 − 27) ÷ 180 = 153 ÷ 180 = 85%."
+    }
+   ]
+  },
+  {
+   "id": "ext-one-leg",
+   "concept": "ext-training",
+   "bloom": "analyse",
+   "sources": [
+    "skattebo2020b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "People trained one leg for 6 weeks; the other leg was the control. The trained leg extracted more O₂, and the gain correlated with mitochondrial proteins but not with capillaries per fibre. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More oxidative capacity is a main driver of higher extraction",
+       "correct": true,
+       "why": "Right: more mitochondria keep fibre PO₂ low, which keeps O₂ diffusing in."
+      },
+      {
+       "id": "b",
+       "text": "Capillaries play no role in O₂ delivery",
+       "why": "Capillaries matter for surface area and transit; this study just didn't link the gain to them."
+      },
+      {
+       "id": "c",
+       "text": "Extraction rose because blood flow fell",
+       "why": "Both legs worked at the same power, and the gain tracked mitochondrial proteins; a fall in flow wasn't what the study found."
+      },
+      {
+       "id": "d",
+       "text": "Training changed haemoglobin only in the trained leg",
+       "why": "Both legs share the same blood, so haemoglobin can't differ between them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-floor",
+   "concept": "ext-training",
+   "bloom": "understand",
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does even an elite runner's leg never extract 100% of the O₂ it receives?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Near 10 mmHg capillary PO₂, the gradient and flux become tiny",
+       "correct": true,
+       "why": "Right: about 10 mL O₂ per litre is left at a venous PO₂ of about 10 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "Haemoglobin can't release more than half its O₂",
+       "why": "At max, extraction reaches about 90%; haemoglobin can unload far more than half."
+      },
+      {
+       "id": "c",
+       "text": "Mitochondria stop using O₂ at the highest intensities",
+       "why": "Mitochondria are using O₂ at their highest rate at max."
+      },
+      {
+       "id": "d",
+       "text": "The muscle keeps some O₂ back in the blood for the brain",
+       "why": "Each organ extracts from its own blood; the leg doesn't save O₂ for others."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-debate",
+   "concept": "ext-training",
+   "bloom": "evaluate",
+   "sources": [
+    "roca1989",
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When cyclists breathe less O₂, their VO₂max falls in a straight line with their muscle venous PO₂. One reading: diffusion from capillary to fibre limits VO₂max. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plausible in part, but delivery stays the main limit, more so in the fit",
+       "correct": true,
+       "why": "Right: diffusion contributes, while muscle diffusing capacity rises with fitness and delivery dominates."
+      },
+      {
+       "id": "b",
+       "text": "Proven: diffusion, not delivery, sets VO₂max",
+       "why": "One small study of 6 men supports a diffusion component, not that diffusion is the main limit."
+      },
+      {
+       "id": "c",
+       "text": "Impossible: diffusion can't limit VO₂max",
+       "why": "Large blood-to-fibre PO₂ differences show diffusion has a finite capacity."
+      },
+      {
+       "id": "d",
+       "text": "Irrelevant: breathing less O₂ changes nothing in the muscle",
+       "why": "Lower inspired O₂ lowers arterial, capillary and venous PO₂."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ext-appraisal",
+   "concept": "ext-path",
+   "bloom": "evaluate",
+   "sources": [
+    "richardson1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 3 mmHg figure for PO₂ inside working fibres comes from 6 trained men doing one-leg knee-extension in an MRI scanner. What most limits applying it to a cyclist racing at VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One small muscle group, few people: whole-body work may differ",
+       "correct": true,
+       "why": "Right: knee-extension overperfuses a small muscle mass, unlike cycling; 6 trained men add little precision."
+      },
+      {
+       "id": "b",
+       "text": "Myoglobin can't be measured in humans",
+       "why": "They measured myoglobin desaturation with ¹H MR spectroscopy in humans."
+      },
+      {
+       "id": "c",
+       "text": "Trained men have no myoglobin",
+       "why": "Trained muscle has plenty of myoglobin."
+      },
+      {
+       "id": "d",
+       "text": "PO₂ inside fibres is the same in every muscle and person",
+       "why": "It varies with muscle, fibre type, training and intensity, which is why the sample matters."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

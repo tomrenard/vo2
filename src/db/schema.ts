@@ -85,7 +85,8 @@ export const itemStates = pgTable(
 );
 
 /**
- * Every answer, also unscored ones (pretests, exams): which option, how sure, how fast. For item
+ * Every answer, also unscored ones (exams; "pretest" rows date from before lessons taught
+ * first): which option, how sure, how fast. For item
  * analysis (dead distractors, too-easy questions) and the confidence calibration.
  */
 export const answers = pgTable(

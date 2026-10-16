@@ -1,0 +1,643 @@
+{
+ "id": "th-cardio-strain",
+ "module": "t1b-thermo",
+ "title": "Heat and the heart: why endurance suffers",
+ "goal": "Explain how skin and muscle compete for blood in the heat, why heart rate drifts up, and why hot weather cuts endurance performance even before core temperature gets very high.",
+ "requires": [
+  "th-core-temp"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "skin-blood-flow"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cs-blood-heat",
+   "title": "Blood is the heat pipe",
+   "text": "Heat made in working muscle has to reach the skin to leave. Inside the body, **flowing blood** is by far the main carrier [[c:cs-convective-blood]]: warm blood leaves the muscles, and skin vessels widen so it can pass close to the surface and give up its heat.\n\nHow much [skin blood flow](g:skin-blood-flow) is needed depends on the gap between core and skin temperature. With cool skin (say 30 °C against a 38 °C core), each litre of blood drops a lot of heat. With **hot skin** (36 °C), the gap is small, so far more blood must go to the skin to move the same heat [[c:cs-hot-skin-flow]]. Hot skin is the costly part.",
+   "claims": [
+    {
+     "id": "cs-convective-blood",
+     "text": "Heat transfer by flowing blood is the most important heat-exchange pathway inside the body, especially during exercise.",
+     "grade": "strong",
+     "sources": [
+      "gonzalezalonso2012"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalezalonso2012",
+       "quote": "Heat transfer via the flowing blood (i.e. vascular convective heat transfer) is the most important heat-exchange pathway inside the body.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cs-hot-skin-flow",
+     "text": "Hot skin (above about 35 °C) narrows the core-to-skin gradient and raises the skin blood flow needed.",
+     "grade": "moderate",
+     "sources": [
+      "sawka2012"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2012",
+       "quote": "Hot skin is associated with high skin blood flow requirements and hypohydration is associated with reduced cardiac filling, both of which act to reduce aerobic reserve.",
+       "level": "abstract"
+      },
+      {
+       "source": "sawka2012",
+       "quote": "We conclude that hot skin (high skin blood flow requirements from narrow skin temperature to core temperature gradients), not high core temperature, is the 'primary' factor impairing aerobic exercise performance when euhydrated and that hypohydration exacerbates this effect.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-blood-route"
+  },
+  {
+   "type": "question",
+   "item": "cs-gradient"
+  },
+  {
+   "type": "concept",
+   "id": "cs-competition",
+   "title": "Skin and muscle compete for one heart",
+   "text": "Cardiac output has to serve working muscle *and* skin. In the heat three things squeeze it:\n\n- blood sent to warm skin is blood not sent to muscle, and some of it pools in skin veins, so less returns to fill the heart;\n- sweat loss shrinks plasma volume, filling the heart less again [[c:cs-dehydration-strain]];\n- heat and hot skin lower **VO₂max** [[c:cs-vo2max-drop]].\n\nThe last point is easy to miss. If VO₂max falls, the same 250 W becomes a higher percentage of it. The effort is relatively harder, heart rate and perceived effort climb, and you tire sooner or slow down.",
+   "claims": [
+    {
+     "id": "cs-vo2max-drop",
+     "text": "High skin and core temperatures reduce VO2max, which raises relative intensity at any given workload.",
+     "grade": "moderate",
+     "sources": [
+      "cheuvront2010"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2010",
+       "quote": "The independent (T(sk)) and combined (T(sk) + T(c)) effects of hyperthermia reduce maximal oxygen uptake (Vo(2max)), which leads to higher relative exercise intensity and an exponential decline in aerobic performance at any given exercise workload.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cs-dehydration-strain",
+     "text": "Dehydration adds to hyperthermia and lowers plasma volume, increasing cardiovascular strain and lowering VO2max.",
+     "grade": "moderate",
+     "sources": [
+      "cheuvront2010"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2010",
+       "quote": "Dehydration augments hyperthermia and plasma volume reductions, which combine to accentuate cardiovascular strain and reduce Vo(2max).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-hr-heat",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cs-vo2max"
+  },
+  {
+   "type": "concept",
+   "id": "cs-drift",
+   "title": "Cardiovascular drift, turned up by heat",
+   "text": "Hold the same power for an hour and heart rate creeps up while stroke volume falls: *cardiovascular drift* (the heart module covers it in full). Heat and dehydration make it bigger.\n\nWhy stroke volume falls is argued. The classic story: blood shifts to the skin and less fills the heart. Coyle and González-Alonso proposed instead that the **rising heart rate itself** is the main cause, leaving less time to fill between beats [[c:cs-drift-hr]].\n\nFor training, the message is the same either way: in the heat, heart rate overstates how hard the muscles work, and the same heart rate gives fewer watts. Pace by feel and power, not by a fixed heart-rate cap.",
+   "claims": [
+    {
+     "id": "cs-drift-hr",
+     "text": "The fall in stroke volume during cardiovascular drift has been proposed to be mainly due to the rise in heart rate rather than rising skin blood flow.",
+     "grade": "disputed",
+     "sources": [
+      "coyle2001"
+     ],
+     "evidence": [
+      {
+       "source": "coyle2001",
+       "quote": "We propose that cardiovascular drift, characterized by a progressive decline in stroke volume after 10-20 min of exercise, is primarily due to increased heart rate rather tahn a progressive increase in cutaneous blood flow as body temperature rises.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cs-drift-run"
+  },
+  {
+   "type": "concept",
+   "id": "cs-performance",
+   "title": "How much heat costs, and why",
+   "text": "Heat cuts endurance:\n\n| study | finding |\n|---|---|\n| rides to exhaustion at ~70% VO₂max | 93.5 min at 10.5 °C, 51.6 min at 30.5 °C [[c:cs-galloway]] |\n| 15 min time trial, core only ~38.2 °C | about 17% less work at 40 °C than at 21 °C [[c:cs-ely-tt]] |\n| seven North American marathons | steady slowing as WBGT rises from 5 to 25 °C [[c:cs-marathon]] |\n\nThe cause is debated. One camp: exhaustion comes at a **critical core temperature** near 40 °C. The other: **hot skin** and the cardiovascular strain it brings matter most, since performance drops even with a mildly warm core.\n\nThe best defence is heat acclimation, covered in the *Heat and acclimation* module.",
+   "claims": [
+    {
+     "id": "cs-galloway",
+     "text": "Time to exhaustion at about 70% VO2max was shortest at 30.5 °C and longest at 10.5 °C, an inverted-U relation with temperature.",
+     "grade": "weak",
+     "sources": [
+      "galloway1997"
+     ],
+     "evidence": [
+      {
+       "source": "galloway1997",
+       "quote": "Time to exhaustion was significantly influenced by Ta (P = 0.001): exercise duration was shortest at 30.5 degrees C (51.6 +/- 3.7 min) and longest at 10.5 degrees C (93.5 +/- 6.2 min).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cs-ely-tt",
+     "text": "In a 15 min cycling time trial with only modest hyperthermia, total work was about 17% lower at 40 °C than at 21 °C.",
+     "grade": "weak",
+     "sources": [
+      "ely2010"
+     ],
+     "evidence": [
+      {
+       "source": "ely2010",
+       "quote": "Total work performed in HOT (147.7 +/- 23.9 kJ) was approximately 17% less (P < 0.05) than TEMP (177.0 +/- 25.0 kJ).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cs-marathon",
+     "text": "Marathon performance slows progressively as WBGT rises from 5 to 25 °C, more so for slower runners.",
+     "grade": "weak",
+     "sources": [
+      "ely2007"
+     ],
+     "evidence": [
+      {
+       "source": "ely2007",
+       "quote": "There is a progressive slowing of marathon performance as the WBGT increases from 5 to 25 degrees C.",
+       "level": "abstract"
+      },
+      {
+       "source": "ely2007",
+       "quote": "This seems true for men and women of wide ranging abilities, but performance is more negatively affected for slower populations of runners.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "What mainly limits endurance in the heat: a critical core temperature, or hot skin and cardiovascular strain?",
+    "sides": [
+     {
+      "position": "A critical core temperature: trained cyclists stopped at the same oesophageal temperature (about 40.1–40.2 °C) whatever their starting temperature or rate of heating.",
+      "sources": [
+       "gonzalezalonso1999"
+      ]
+     },
+     {
+      "position": "Hot skin and the cardiovascular strain it causes: performance falls with modest core temperatures when skin is hot, and cyclists keep going with core above 40 °C when skin is cool.",
+      "sources": [
+       "sawka2012",
+       "cheuvront2010",
+       "ely2010"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cs-galloway"
+  },
+  {
+   "type": "question",
+   "item": "cs-ely-tt"
+  },
+  {
+   "type": "question",
+   "item": "cs-debate"
+  },
+  {
+   "type": "question",
+   "item": "cs-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Blood carries heat from muscle to skin; hot skin narrows the core-to-skin gap, so much more skin blood flow is needed.",
+    "Skin and muscle compete for cardiac output; pooling in skin veins and sweat-driven plasma loss reduce heart filling.",
+    "Heat lowers VO₂max, so the same power is a higher % of it: higher heart rate, higher effort, earlier fatigue.",
+    "Cardiovascular drift is larger in the heat; whether rising heart rate or skin blood flow drives it is debated. Pace by feel and power, not a fixed heart rate.",
+    "Heat cuts endurance (51.6 vs 93.5 min to exhaustion; 17% less work in a 15 min TT). Critical core temperature vs hot skin is a live debate; acclimation comes in the heat module."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cs-hr-heat",
+   "concept": "cs-competition",
+   "bloom": "understand",
+   "sources": [
+    "sawka2012",
+    "cheuvront2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's heart rate at 230 W is 145 beats·min⁻¹ in 18 °C and 158 beats·min⁻¹ in 33 °C. Best explanation for the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Blood sent to hot skin means the heart must beat faster",
+       "correct": true,
+       "why": "Right: skin and muscle share cardiac output; with less blood returning to the heart, heart rate rises."
+      },
+      {
+       "id": "b",
+       "text": "Hot muscles need much more oxygen at the same power",
+       "why": "Oxygen cost at a given power changes little; the extra demand is for skin blood flow."
+      },
+      {
+       "id": "c",
+       "text": "Her heart-rate monitor reads too high in the heat",
+       "why": "The rise in heart rate in the heat is real physiology, seen with every method."
+      },
+      {
+       "id": "d",
+       "text": "Heat makes the heart muscle beat with more force",
+       "why": "Heat doesn't strengthen the heart; it adds a second job (skin blood flow) on top of the muscle's demand."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "At the same marathon pace, a runner's heart rate is 10 beats·min⁻¹ higher on a hot day. Which change in her circulation explains it best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less blood returns to fill the heart, so each beat pumps less and rate rises",
+       "correct": true,
+       "why": "Right: blood in warm skin and lower plasma volume cut heart filling; heart rate climbs to hold cardiac output."
+      },
+      {
+       "id": "b",
+       "text": "Her stroke volume rises, so the heart beats faster",
+       "why": "Stroke volume falls in the heat, not rises; heart rate rises to make up for it."
+      },
+      {
+       "id": "c",
+       "text": "Her leg muscles take all the blood away from the skin",
+       "why": "It is the opposite worry: the skin takes blood that the muscles and heart filling would otherwise get."
+      },
+      {
+       "id": "d",
+       "text": "Her VO₂max rises in the heat, raising heart rate",
+       "why": "VO₂max falls in the heat, which makes the pace relatively harder."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-blood-route",
+   "concept": "cs-blood-heat",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "gonzalezalonso2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Inside the body, what carries most of the heat from working muscles to the skin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Flowing blood",
+       "correct": true,
+       "why": "Right: vascular convective heat transfer is the main internal route."
+      },
+      {
+       "id": "b",
+       "text": "Conduction through fat and tissue",
+       "why": "Tissue conducts heat slowly; blood flow moves far more of it."
+      },
+      {
+       "id": "c",
+       "text": "Sweat moving out from the muscles",
+       "why": "Sweat comes from glands in the skin, not from muscle; it removes heat at the surface."
+      },
+      {
+       "id": "d",
+       "text": "Air breathed in and out",
+       "why": "Breathing loses some heat, but it doesn't move heat from muscle to skin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-gradient",
+   "concept": "cs-blood-heat",
+   "bloom": "apply",
+   "sources": [
+    "sawka2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners have the same core temperature, 38.5 °C. Runner A's skin is 31 °C (cool, breezy morning), runner B's is 36 °C (hot afternoon). Who needs more skin blood flow to lose the same heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Runner B: the small core-to-skin gap needs more blood",
+       "correct": true,
+       "why": "Right: a 2.5 °C gap moves much less heat per litre than a 7.5 °C gap, so more blood is needed."
+      },
+      {
+       "id": "b",
+       "text": "Runner A: cool skin needs extra blood to warm it up",
+       "why": "Cool skin is the efficient case; blood gives up a lot of heat per litre."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, as their core temperatures match",
+       "why": "The core-to-skin gap, not core temperature alone, sets how much heat each litre of blood can carry out."
+      },
+      {
+       "id": "d",
+       "text": "Neither: sweat alone handles all of the heat loss",
+       "why": "Sweat removes heat from the skin surface, but blood still has to bring the heat to the skin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-vo2max",
+   "concept": "cs-competition",
+   "bloom": "apply",
+   "sources": [
+    "cheuvront2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's VO₂max allows 400 W in cool air, and he rides a long climb at 300 W. In strong heat his VO₂max drops so that it allows only 370 W. How does the 300 W climb change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It goes from 75% to about 81% of his maximum, so it is relatively harder",
+       "correct": true,
+       "why": "Right: 300 ÷ 400 = 75%; 300 ÷ 370 = 81%. A lower VO₂max makes the same power relatively harder."
+      },
+      {
+       "id": "b",
+       "text": "It stays at 75%, because the power is unchanged",
+       "why": "Relative intensity is power ÷ the maximum, and the maximum has fallen."
+      },
+      {
+       "id": "c",
+       "text": "It goes from 75% to about 69%, so it is easier",
+       "why": "This divides the other way. A smaller maximum gives a *larger* percentage."
+      },
+      {
+       "id": "d",
+       "text": "It becomes 30 W harder: 330 W",
+       "why": "The power on the pedals is still 300 W; what changes is the percentage of the lower maximum."
+      }
+     ],
+     "solution": "Cool: 300 ÷ 400 = 0.75 = 75%. Hot: 300 ÷ 370 = 0.81 = 81%."
+    }
+   ]
+  },
+  {
+   "id": "cs-drift-run",
+   "concept": "cs-drift",
+   "bloom": "analyse",
+   "sources": [
+    "coyle2001",
+    "cheuvront2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's heart rate drifts up 8% at constant pace over 2 h at 30 °C, with little drinking. What is the best summary?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drift: with heat and fluid loss, stroke volume falls as heart rate rises",
+       "correct": true,
+       "why": "Right: heat and dehydration enlarge drift; the exact cause of the stroke volume fall is debated."
+      },
+      {
+       "id": "b",
+       "text": "His aerobic fitness is falling during the long run",
+       "why": "Fitness doesn't change in 2 h; the circulation is under growing heat and fluid strain."
+      },
+      {
+       "id": "c",
+       "text": "His muscles use far more oxygen at the same pace",
+       "why": "Oxygen cost rises only a little; the main change is lower stroke volume and higher heart rate."
+      },
+      {
+       "id": "d",
+       "text": "His heart is pumping more blood with each beat",
+       "why": "The opposite: stroke volume falls, and heart rate rises to make up."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete rides 90 km at a fixed 200 W on a hot day. Her heart rate climbs from 140 to 155 beats·min⁻¹. What should she do in her next hot race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pace by power and feel, expecting heart rate to drift up",
+       "correct": true,
+       "why": "Right: in the heat heart rate overstates muscle effort, and drift is expected."
+      },
+      {
+       "id": "b",
+       "text": "Hold heart rate fixed at 140 whatever the power",
+       "why": "That would force power down steadily as drift grows, often more than needed."
+      },
+      {
+       "id": "c",
+       "text": "Raise power, since higher heart rate means more fitness",
+       "why": "A higher heart rate at the same power means more strain, not more fitness."
+      },
+      {
+       "id": "d",
+       "text": "Ignore heat: drift is the same in any weather",
+       "why": "Drift is larger in the heat, with skin blood flow and fluid loss, so plan for it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-galloway",
+   "concept": "cs-performance",
+   "bloom": "apply",
+   "sources": [
+    "galloway1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab study, men rode to exhaustion at about 70% of VO₂max: 93.5 min at 10.5 °C and 51.6 min at 30.5 °C. By about how much did the heat shorten the ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 45%",
+       "correct": true,
+       "why": "Right: (93.5 − 51.6) ÷ 93.5 = 0.45."
+      },
+      {
+       "id": "b",
+       "text": "About 81%",
+       "why": "This divides the difference by the shorter time (41.9 ÷ 51.6). Use the cool ride as the baseline."
+      },
+      {
+       "id": "c",
+       "text": "About 55%",
+       "why": "That is the hot ride as a share of the cool one (51.6 ÷ 93.5); the reduction is the other 45%."
+      },
+      {
+       "id": "d",
+       "text": "About 20%",
+       "why": "This reads the 20 °C difference as a percentage. Work out the time change: 41.9 of 93.5 min."
+      }
+     ],
+     "solution": "Reduction = (93.5 − 51.6) ÷ 93.5 = 41.9 ÷ 93.5 = 0.45, about 45%."
+    }
+   ]
+  },
+  {
+   "id": "cs-ely-tt",
+   "concept": "cs-performance",
+   "bloom": "analyse",
+   "sources": [
+    "ely2010",
+    "sawka2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 15 min time trial at 40 °C, cyclists did about 17% less work than at 21 °C, yet their core temperature peaked at only about 38.2 °C in both. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heat can cut performance via hot skin, without a very hot core",
+       "correct": true,
+       "why": "Right: skin was about 36 °C vs 31 °C; performance fell well before any 'critical' core temperature."
+      },
+      {
+       "id": "b",
+       "text": "Core temperature must have hit 40 °C unmeasured",
+       "why": "It was measured continuously and stayed near 38.2 °C."
+      },
+      {
+       "id": "c",
+       "text": "Heat has no real effect on short efforts like this",
+       "why": "Work fell by about 17% even in 15 min, a large effect."
+      },
+      {
+       "id": "d",
+       "text": "Dehydration alone explains the drop in work",
+       "why": "They were euhydrated at the start; a 15 min effort causes little dehydration."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-debate",
+   "concept": "cs-performance",
+   "bloom": "evaluate",
+   "sources": [
+    "gonzalezalonso1999",
+    "sawka2012",
+    "cheuvront2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Trained cyclists stopped at the same oesophageal temperature, about 40.1 °C, whatever their starting temperature. Others keep going with core above 40 °C when their skin is cool. What is the fairest conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Core heat matters, but so do hot skin and strain; still argued",
+       "correct": true,
+       "why": "Right: both lines of evidence are real; which dominates depends on conditions and is a live debate."
+      },
+      {
+       "id": "b",
+       "text": "A core temperature near 40 °C is what stops exercise",
+       "why": "Athletes with cool skin have kept going above 40 °C, so it isn't a fixed wall."
+      },
+      {
+       "id": "c",
+       "text": "Skin temperature stops mattering once core passes 39 °C",
+       "why": "Cool skin is what let athletes keep going with core above 40 °C, so skin still matters."
+      },
+      {
+       "id": "d",
+       "text": "Dehydration explains the fatigue in both findings",
+       "why": "Heat cuts performance in euhydrated athletes too; dehydration adds to it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-appraisal",
+   "concept": "cs-performance",
+   "bloom": "evaluate",
+   "sources": [
+    "gonzalezalonso1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 'critical core temperature' study had seven trained cyclists ride at a fixed 60% of VO₂max to exhaustion in 40 °C. What most limits applying it to a self-paced road race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Seven riders at a forced pace, unlike a self-paced race",
+       "correct": true,
+       "why": "Right: a small sample and a forced pace that removes the pacing choices racers make."
+      },
+      {
+       "id": "b",
+       "text": "Trained cyclists can't overheat at 60% of VO₂max",
+       "why": "They clearly did, reaching about 40 °C; training doesn't prevent heat strain."
+      },
+      {
+       "id": "c",
+       "text": "Oesophageal readings don't reflect core temperature",
+       "why": "Oesophageal temperature is one of the best core measures, close to central blood."
+      },
+      {
+       "id": "d",
+       "text": "40 °C air is too cool to tell us anything useful",
+       "why": "40 °C is very hot; the limit is the design, not the heat."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

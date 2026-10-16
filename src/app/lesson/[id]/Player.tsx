@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { Lesson } from "@/lib/content";
+import { GLOSSARY } from "@/lib/refs-index";
 import { lessonFinished } from "../../actions";
 import { Diagram } from "../../diagrams/Diagram";
 import { Go } from "../../Nav";
@@ -91,6 +92,17 @@ export function Player({
         </article>
       )}
 
+      {step.type === "terms" && (
+        <article className="flex flex-1 flex-col gap-4">
+          <p className="eyebrow">{lesson.title}</p>
+          <h1 className="font-serif text-3xl leading-tight">Words in this lesson</h1>
+          <Terms ids={step.terms} />
+          <button type="button" className="btn btn-primary mt-auto" onClick={next}>
+            Start the lesson
+          </button>
+        </article>
+      )}
+
       {step.type === "example" && <Example key={index} step={step} onDone={next} />}
 
       {step.type === "question" &&
@@ -103,14 +115,12 @@ export function Player({
               key={index}
               item={item}
               variant={variant}
-              mode={step.pretest ? "pretest" : "lesson"}
+              mode="lesson"
               reps={counts[item.id] ?? 0}
               conceptHref={`/lesson/${lesson.id}/read#${item.concept}`}
               onDone={(result) => {
-                if (!step.pretest) {
-                  setResults((r) => [...r, result]);
-                  setCounts((c) => ({ ...c, [item.id]: (c[item.id] ?? 0) + 1 }));
-                }
+                setResults((r) => [...r, result]);
+                setCounts((c) => ({ ...c, [item.id]: (c[item.id] ?? 0) + 1 }));
                 next();
               }}
             />
@@ -139,6 +149,20 @@ export function Player({
         </article>
       )}
     </main>
+  );
+}
+
+/** The lesson's new terms, each with its plain definition. Tap a term in the text to see it again. */
+export function Terms({ ids }: { ids: string[] }) {
+  return (
+    <dl className="card flex flex-col gap-4">
+      {ids.map((id) => (
+        <div key={id}>
+          <dt className="font-semibold">{GLOSSARY[id]?.term ?? id}</dt>
+          <dd className="prose-text text-[1.05rem]">{GLOSSARY[id]?.short}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 

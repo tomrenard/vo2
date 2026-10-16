@@ -1,0 +1,763 @@
+{
+ "id": "endo-fuel-hormones",
+ "module": "t1b-endocrine",
+ "title": "Insulin, glucagon, cortisol and GH: keeping glucose up",
+ "goal": "Explain how a fall in insulin and a rise in glucagon, helped by cortisol and growth hormone, keep blood glucose steady during exercise, and how contraction lets glucose into muscle without insulin.",
+ "requires": [
+  "endo-catecholamines"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "insulin",
+    "glucagon",
+    "cortisol",
+    "growth-hormone"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ef-problem",
+   "title": "Four grams to defend",
+   "text": "The blood of a 70 kg adult holds only about **4–5 g of glucose** [[c:ef-four-grams]], and the brain depends on it. Working muscle pulls glucose out of the blood much faster than at rest, so in a long run that small pool would empty quickly if nothing refilled it.\n\nThe refill comes from the liver: it breaks down its glycogen and makes new glucose by [gluconeogenesis](g:gluconeogenesis). In healthy people, exercise raises the liver's glucose output ([rate of appearance](g:rate-of-appearance)) and muscle glucose use together, so blood glucose stays nearly constant [[c:ef-matching]].\n\nThe signals that keep the two matched are mostly hormones from the pancreas. When the liver's glycogen runs low late in a long event, that matching fails and blood glucose falls.",
+   "claims": [
+    {
+     "id": "ef-four-grams",
+     "text": "About 4 g of glucose circulates in the blood of a 70 kg person, defended by a sophisticated control system.",
+     "grade": "strong",
+     "sources": [
+      "wasserman2009"
+     ],
+     "evidence": [
+      {
+       "source": "wasserman2009",
+       "quote": "Four grams of glucose circulates in the blood of a person weighing 70 kg.",
+       "level": "abstract"
+      },
+      {
+       "source": "wasserman2009",
+       "quote": "In accordance with the importance of these 4 g of glucose, a sophisticated control system is in place to maintain blood glucose constant.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ef-matching",
+     "text": "Exercise raises liver glucose production and glucose use together, so blood glucose stays relatively constant.",
+     "grade": "strong",
+     "sources": [
+      "coker2005"
+     ],
+     "evidence": [
+      {
+       "source": "coker2005",
+       "quote": "Under normal healthy conditions, exercise initiates simultaneous elevations in hepatic glucose production (glucose R(a)) and glucose utilisation. As a result, circulating glucose levels are maintained at a relatively constant level.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ef-four-grams-recall"
+  },
+  {
+   "type": "concept",
+   "id": "ef-pancreas",
+   "title": "Insulin down, glucagon up",
+   "text": "In exercise lasting more than about 20 min, [insulin](g:insulin) release falls and [glucagon](g:glucagon) rises [[c:ef-pancreas-shift]]. In prolonged running, glucagon tripled while insulin stayed low [[c:ef-galbo-glucagon]].\n\nBoth changes push the liver the same way. The rise in glucagon drives glycogen breakdown and gluconeogenesis; the fall in insulin is needed for liver glycogen breakdown and makes the liver more sensitive to glucagon [[c:ef-liver]]. Low insulin also lifts the brake on lipolysis, so more fat reaches the muscles.\n\nWhy does insulin fall? It means \"store\", the opposite of what a rider needs. How the pancreas senses exercise is unclear: cutting its nerves doesn't stop the response [[c:ef-pancreas-shift]]. Whether adrenaline takes over at very high intensity is debated (see the box).",
+   "claims": [
+    {
+     "id": "ef-pancreas-shift",
+     "text": "During sustained exercise (more than about 20 min) insulin secretion falls and glucagon, catecholamines and cortisol rise; denervating the pancreas does not stop the glucagon and insulin responses.",
+     "grade": "strong",
+     "sources": [
+      "trefts2015"
+     ],
+     "evidence": [
+      {
+       "source": "trefts2015",
+       "quote": "If exercise is sustained (>~20 min), a decrease in insulin secretion and increases in glucagon, catecholamines, and cortisol secretion, among other hormones, are observed.",
+       "level": "full-text"
+      },
+      {
+       "source": "trefts2015",
+       "quote": "Surprisingly, denervation of the pancreas does not impair the glucagon and insulin responses to exercise, suggesting that an endocrine or a paracrine factor may be involved.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ef-galbo-glucagon",
+     "text": "During prolonged running at 76% VO₂max, glucagon rose progressively to three times its resting value, while insulin was depressed.",
+     "grade": "weak",
+     "sources": [
+      "galbo1975"
+     ],
+     "evidence": [
+      {
+       "source": "galbo1975",
+       "quote": "During prolonged exercise glucagon increased progressively to three times (226 plus or minus 40) the resting value.",
+       "level": "abstract"
+      },
+      {
+       "source": "galbo1975",
+       "quote": "Insulin concentrations were depressed during work except for the heaviest load.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ef-liver",
+     "text": "The rise in glucagon and the fall in insulin are the major drivers of liver glucose output in moderate exercise; the fall in insulin is needed for liver glycogen breakdown and sensitises the liver to glucagon.",
+     "grade": "strong",
+     "sources": [
+      "trefts2015",
+      "coker2005"
+     ],
+     "evidence": [
+      {
+       "source": "trefts2015",
+       "quote": "The rise in glucagon is required for the full increment in hepatic glycogenolysis and gluconeogenesis, 32 , 33 while the fall in insulin 33 , 34 is necessary for hepatic glycogenolysis.",
+       "level": "full-text"
+      },
+      {
+       "source": "trefts2015",
+       "quote": "Finally, exercise causes a fall in insulin that sensitizes the liver to glucagon.",
+       "level": "full-text"
+      },
+      {
+       "source": "coker2005",
+       "quote": "In large part, exercise-induced changes in the pancreatic secretion of glucagon and insulin are primarily responsible for the stimulation of glucose R(a) during moderate exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "In very hard exercise (above about 80% VO₂max), do catecholamines take over control of the liver's glucose output?",
+    "sides": [
+     {
+      "position": "No clear sign: blocking adrenergic receptors, in the whole body (people) or only in the liver (dogs), has not reduced liver glucose output in heavy exercise; glucagon and insulin stay in charge.",
+      "sources": [
+       "trefts2015"
+      ]
+     },
+     {
+      "position": "Possibly: in heavy exercise and poorly controlled diabetes, sympathetic drive rises and has long been thought to add a major push on the liver.",
+      "sources": [
+       "coker2005"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ef-insulin-direction",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ef-liver-signal"
+  },
+  {
+   "type": "example",
+   "id": "ef-ratio-example",
+   "title": "The glucagon-to-insulin ratio",
+   "problem": "During a 90 min ride, glucagon rises from 80 to 160 pg·mL⁻¹ and insulin falls from 10 to 5 µU·mL⁻¹. The liver responds to the two together, so researchers often use the glucagon ÷ insulin ratio. By what factor does the ratio change?",
+   "steps": [
+    "Before: 80 ÷ 10 = 8. After: 160 ÷ 5 = 32. (The ratio has odd units; only its change matters.)",
+    "32 ÷ 8 = 4: the ratio is 4 times higher.",
+    "Shortcut: glucagon × 2 and insulin ÷ 2 multiply: 2 × 2 = 4. Adding them (2 + 2) gives the same answer here only by chance."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ef-ratio-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ef-glut4",
+   "title": "Glucose into muscle without insulin",
+   "text": "If insulin falls, how does working muscle take up *more* glucose? Contraction moves [GLUT4](g:glut4) to the fibre membrane by its own signals, such as calcium (Ca²⁺) and AMPK, an energy-sensing enzyme [[c:ef-contraction]].\n\nIn isolated rat muscle, blocking insulin's signalling pathway stopped insulin's effect on GLUT4 but left contraction's untouched; the two together added up [[c:ef-distinct]].\n\n| | insulin | contraction |\n|---|---|---|\n| signal | insulin receptor | Ca²⁺, AMPK and others |\n| when | after a meal | during exercise |\n| GLUT4 to membrane | yes | yes, by a separate route |\n\nSo muscle can feed itself while low insulin lets the liver and fat tissue release fuel. The catch: with high insulin *and* contraction, both doors are open at once, and blood glucose can drop.",
+   "claims": [
+    {
+     "id": "ef-contraction",
+     "text": "Muscle contraction moves GLUT4 from storage depots to the membrane, through signals including AMPK, Ca²⁺ and NOS.",
+     "grade": "strong",
+     "sources": [
+      "richter2013"
+     ],
+     "evidence": [
+      {
+       "source": "richter2013",
+       "quote": "Glucose enters the muscle cell via facilitated diffusion through the GLUT4 glucose transporter which translocates from intracellular storage depots to the plasma membrane and T-tubules upon muscle contraction.",
+       "level": "abstract"
+      },
+      {
+       "source": "richter2013",
+       "quote": "Contraction-induced molecular signaling is complex and involves a variety of signaling molecules including AMPK, Ca(2+), and NOS in the proximal part of the signaling cascade as well as GTPases, Rab, and SNARE proteins and cytoskeletal components in the distal part.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ef-distinct",
+     "text": "In rat muscle, contraction moved GLUT4 to the surface by a route distinct from insulin's, and the effects of the two added together.",
+     "grade": "weak",
+     "sources": [
+      "lund1995"
+     ],
+     "evidence": [
+      {
+       "source": "lund1995",
+       "quote": "The results provide evidence that contraction stimulates translocation of GLUT4 in skeletal muscle through a mechanism distinct from that of insulin.",
+       "level": "abstract"
+      },
+      {
+       "source": "lund1995",
+       "quote": "The combined effects of contraction and maximal insulin stimulation were greater than either stimulation alone on glucose transport activity",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ef-glut4-route"
+  },
+  {
+   "type": "question",
+   "item": "ef-type1"
+  },
+  {
+   "type": "concept",
+   "id": "ef-cortisol-gh",
+   "title": "Cortisol and growth hormone: the slower helpers",
+   "text": "[Cortisol](g:cortisol), a steroid from the adrenal cortex, supports glucose supply over hours: it promotes gluconeogenesis and the breakdown of protein and fat for fuel. It needs a hard enough effort. In 12 men, 30 min at 40% VO₂max gave no rise, 60% about +40%, and 80% about +83% [[c:ef-cortisol]]. Long sessions raise it too.\n\n[Growth hormone](g:growth-hormone), a peptide from the pituitary, raises fat breakdown. Its strongest exercise trigger seems to be at least 10 min above the lactate threshold [[c:ef-gh]].\n\n| hormone | acts within | main fuel job |\n|---|---|---|\n| glucagon, low insulin | minutes | liver glucose output |\n| adrenaline | seconds | muscle glycogen, fat release |\n| cortisol, GH | hours | gluconeogenesis, fat use |",
+   "claims": [
+    {
+     "id": "ef-cortisol",
+     "text": "Cortisol rose after 30 min at 60% and 80% VO₂max (about +40% and +83%), but not at 40%.",
+     "grade": "weak",
+     "sources": [
+      "hill2008"
+     ],
+     "evidence": [
+      {
+       "source": "hill2008",
+       "quote": "The percent change in cortisol from pre- to post-sampling at each session was: resting-control, 40, 60, and 80% sessions (mean+/-SD) =-6.6+/-3.5%, +5.7+/-11.0%, +39.9+/-11.8%, and +83.1+/-18.5%, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "hill2008",
+       "quote": "Collectively, the cortisol findings support the view that moderate to high intensity exercise provokes increases in circulating cortisol levels.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ef-gh",
+     "text": "The growth hormone response to endurance exercise appears greatest with exercise above the lactate threshold for at least 10 min.",
+     "grade": "moderate",
+     "sources": [
+      "godfrey2003"
+     ],
+     "evidence": [
+      {
+       "source": "godfrey2003",
+       "quote": "An exercise intensity above lactate threshold and for a minimum of 10 minutes appears to elicit the greatest stimulus to the secretion of hGH.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ef-cortisol-intensity"
+  },
+  {
+   "type": "question",
+   "item": "ef-gh-session"
+  },
+  {
+   "type": "question",
+   "item": "ef-ratio-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ef-coach-claim"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Blood holds only about 4–5 g of glucose; in exercise the liver's output rises with muscle uptake to keep it steady.",
+    "In sustained exercise insulin falls and glucagon rises; together they are the main drivers of liver glycogen breakdown and gluconeogenesis.",
+    "Contraction moves GLUT4 to the membrane by its own route, so muscle takes up glucose while insulin is low.",
+    "Cortisol (from about 60% VO₂max in one small study of men, or in long sessions) and growth hormone (above the lactate threshold) support fuel supply over hours."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ef-insulin-direction",
+   "concept": "ef-pancreas",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "trefts2015",
+    "galbo1975"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a steady 90 min ride without food, what happens to the cyclist's blood insulin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls below the resting level",
+       "correct": true,
+       "why": "Right: insulin release falls in sustained exercise, letting the liver release glucose and fat tissue release fatty acids."
+      },
+      {
+       "id": "b",
+       "text": "It rises, to push glucose into the working muscles",
+       "why": "A common belief. Contraction moves GLUT4 by its own route, so muscle doesn't need extra insulin; insulin falls."
+      },
+      {
+       "id": "c",
+       "text": "It stays at the resting level throughout",
+       "why": "Insulin doesn't hold steady: it falls within about 20 min of sustained exercise."
+      },
+      {
+       "id": "d",
+       "text": "It rises at first, then drops to zero",
+       "why": "Insulin falls from the start of sustained exercise, but it doesn't vanish; a low level remains."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A marathoner runs at a steady pace for 2 h without carbohydrate. How do her insulin and glucagon change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Insulin falls and glucagon rises",
+       "correct": true,
+       "why": "Right: this pair of changes drives the liver to release glucose."
+      },
+      {
+       "id": "b",
+       "text": "Insulin rises and glucagon falls",
+       "why": "This is the after-a-meal pattern, the opposite of what sustained exercise does."
+      },
+      {
+       "id": "c",
+       "text": "Both rise together",
+       "why": "Insulin and glucagon pull in opposite directions; in exercise insulin falls while glucagon rises."
+      },
+      {
+       "id": "d",
+       "text": "Both fall together",
+       "why": "Glucagon rises during prolonged exercise; in one study it reached three times its resting value."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-four-grams-recall",
+   "concept": "ef-problem",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "wasserman2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how much glucose circulates in the blood of a 70 kg runner at rest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4–5 g",
+       "correct": true,
+       "why": "Right: a tiny pool, which is why the liver must refill it continuously during exercise."
+      },
+      {
+       "id": "b",
+       "text": "About 100 g",
+       "why": "That is roughly the liver's glycogen store, not the glucose in the blood."
+      },
+      {
+       "id": "c",
+       "text": "About 400 g",
+       "why": "That is roughly the glycogen stored in all the muscles."
+      },
+      {
+       "id": "d",
+       "text": "About 40 g",
+       "why": "Ten times too much: blood holds only about 4–5 g, roughly a teaspoon."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-liver-signal",
+   "concept": "ef-pancreas",
+   "bloom": "understand",
+   "sources": [
+    "trefts2015",
+    "coker2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a moderate 1 h run, what is the main signal that drives the liver to release more glucose?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rise in glucagon together with the fall in insulin",
+       "correct": true,
+       "why": "Right: in moderate exercise these pancreatic changes are mainly responsible for the liver's glucose output."
+      },
+      {
+       "id": "b",
+       "text": "Adrenaline acting on the liver's β receptors",
+       "why": "This was assumed for decades, but blocking adrenergic receptors hasn't reduced liver glucose output."
+      },
+      {
+       "id": "c",
+       "text": "Cortisol switching on liver genes",
+       "why": "Cortisol helps over hours, but its rise is too slow and too small at moderate intensity to drive minute-to-minute output."
+      },
+      {
+       "id": "d",
+       "text": "A fall in blood glucose acting alone",
+       "why": "Blood glucose barely falls in moderate exercise; the liver output rises through the pancreatic hormones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-ratio-calc",
+   "concept": "ef-pancreas",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "trefts2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a 2 h ride, a cyclist's glucagon rises from 90 to 135 pg·mL⁻¹ and insulin falls from 12 to 6 µU·mL⁻¹. By what factor does the glucagon-to-insulin ratio change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 times higher",
+       "correct": true,
+       "why": "Right: 7.5 before, 22.5 after; 22.5 ÷ 7.5 = 3."
+      },
+      {
+       "id": "b",
+       "text": "2 times higher",
+       "why": "This counts only the fall in insulin and ignores the rise in glucagon."
+      },
+      {
+       "id": "c",
+       "text": "1.5 times higher",
+       "why": "This counts only the rise in glucagon and ignores the fall in insulin."
+      },
+      {
+       "id": "d",
+       "text": "3.5 times higher",
+       "why": "This adds the two factors (1.5 + 2). Changes in a ratio multiply: 1.5 × 2 = 3."
+      }
+     ],
+     "solution": "Before: 90 ÷ 12 = 7.5. After: 135 ÷ 6 = 22.5. 22.5 ÷ 7.5 = 3. Or: glucagon × 1.5 and insulin ÷ 2 give 1.5 × 2 = 3."
+    },
+    {
+     "id": "b",
+     "stem": "In the last hour of an Ironman bike leg, a triathlete's glucagon rises from 70 to 210 pg·mL⁻¹ and insulin falls from 10 to 8 µU·mL⁻¹. By what factor does the glucagon-to-insulin ratio change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.75 times higher",
+       "correct": true,
+       "why": "Right: 7 before, 26.25 after; 26.25 ÷ 7 = 3.75."
+      },
+      {
+       "id": "b",
+       "text": "3 times higher",
+       "why": "This counts only the rise in glucagon and ignores the fall in insulin."
+      },
+      {
+       "id": "c",
+       "text": "4.25 times higher",
+       "why": "This adds the two factors (3 + 1.25). Changes in a ratio multiply: 3 × 1.25 = 3.75."
+      },
+      {
+       "id": "d",
+       "text": "2.4 times higher",
+       "why": "This divides the glucagon factor by the insulin factor (3 ÷ 1.25). A fall in insulin raises the ratio, so multiply."
+      }
+     ],
+     "solution": "Before: 70 ÷ 10 = 7. After: 210 ÷ 8 = 26.25. 26.25 ÷ 7 = 3.75. Or: glucagon × 3 and insulin ÷ 1.25 give 3 × 1.25 = 3.75."
+    },
+    {
+     "id": "c",
+     "stem": "Over a 25 km run, a runner's glucagon rises from 60 to 120 pg·mL⁻¹ and insulin falls from 9 to 3 µU·mL⁻¹. By what factor does the glucagon-to-insulin ratio change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 times higher",
+       "correct": true,
+       "why": "Right: about 6.7 before, 40 after; 40 ÷ 6.67 = 6."
+      },
+      {
+       "id": "b",
+       "text": "3 times higher",
+       "why": "This counts only the fall in insulin and ignores the rise in glucagon."
+      },
+      {
+       "id": "c",
+       "text": "5 times higher",
+       "why": "This adds the two factors (2 + 3). Changes in a ratio multiply: 2 × 3 = 6."
+      },
+      {
+       "id": "d",
+       "text": "1.5 times higher",
+       "why": "This divides the insulin factor by the glucagon factor (3 ÷ 2). A fall in insulin raises the ratio, so multiply."
+      }
+     ],
+     "solution": "Before: 60 ÷ 9 ≈ 6.67. After: 120 ÷ 3 = 40. 40 ÷ 6.67 = 6. Or: glucagon × 2 and insulin ÷ 3 give 2 × 3 = 6."
+    }
+   ]
+  },
+  {
+   "id": "ef-glut4-route",
+   "concept": "ef-glut4",
+   "bloom": "understand",
+   "sources": [
+    "richter2013",
+    "lund1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Insulin is low late in a long run, yet the runner's leg muscles take up more glucose than at rest. How?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Contraction moves GLUT4 to the membrane by its own signalling route",
+       "correct": true,
+       "why": "Right: Ca²⁺, AMPK and other contraction signals move GLUT4 independently of insulin."
+      },
+      {
+       "id": "b",
+       "text": "Muscle becomes leaky, so glucose diffuses straight through the membrane",
+       "why": "Glucose can't cross the fat layer of the membrane; it always needs a transporter such as GLUT4."
+      },
+      {
+       "id": "c",
+       "text": "The little insulin that is left becomes ten times stronger",
+       "why": "Exercise does improve insulin sensitivity afterwards, but during exercise the main route is contraction itself."
+      },
+      {
+       "id": "d",
+       "text": "Glucagon moves GLUT4 into the muscle membrane",
+       "why": "Glucagon acts mainly on the liver; muscle has few glucagon receptors."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-type1",
+   "concept": "ef-glut4",
+   "bloom": "apply",
+   "sources": [
+    "trefts2015",
+    "lund1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist with type 1 diabetes injects his usual insulin dose, then rides hard for 2 h. Why is he at higher risk of low blood glucose than a rider without diabetes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Injected insulin can't fall, so the liver stays braked",
+       "correct": true,
+       "why": "Right: the body can't switch the injected dose off, so the normal fall in insulin that frees liver glucose is missing."
+      },
+      {
+       "id": "b",
+       "text": "His muscles can't take up any glucose without extra insulin",
+       "why": "Contraction moves GLUT4 by its own route; the problem is too much insulin, not too little uptake."
+      },
+      {
+       "id": "c",
+       "text": "His kidneys lose glucose into the urine during the ride",
+       "why": "Glucose spills into urine only when blood glucose is very high, not low; his problem is too much insulin that can't be switched off."
+      },
+      {
+       "id": "d",
+       "text": "Hard exercise destroys the insulin he has just injected",
+       "why": "Exercise can speed insulin absorption from the injection site; it doesn't destroy it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete eats a large sugary snack 45 min before a hard run, and her insulin is high when she starts. Some people then feel a glucose dip in the first 20 min. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Insulin and contraction both pull glucose in; the liver is braked",
+       "correct": true,
+       "why": "Right: the two routes add up, and the liver is still braked by the high insulin."
+      },
+      {
+       "id": "b",
+       "text": "The snack has already been used up before the run starts",
+       "why": "Much of the glucose is still being absorbed or stored; the dip comes from faster uptake, not an empty gut."
+      },
+      {
+       "id": "c",
+       "text": "Contraction stops insulin from working in the leg muscles",
+       "why": "The opposite: contraction and insulin act by separate routes and their effects add together."
+      },
+      {
+       "id": "d",
+       "text": "Running drops glucagon to zero in the first minutes",
+       "why": "Glucagon doesn't vanish at the start; the dip is from extra uptake while insulin is still high."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-cortisol-intensity",
+   "concept": "ef-cortisol-gh",
+   "bloom": "apply",
+   "sources": [
+    "hill2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does two 30 min bike sessions on separate days: one at 40% VO₂max, one at 80%. What should you expect for blood cortisol?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No clear rise at 40%; a large rise at 80%",
+       "correct": true,
+       "why": "Right: in 30 min bouts, cortisol rose at 60% and 80% VO₂max but not at 40%."
+      },
+      {
+       "id": "b",
+       "text": "A similar rise in both, as any exercise is a stress",
+       "why": "Cortisol needs a hard enough effort; easy riding for 30 min didn't raise it."
+      },
+      {
+       "id": "c",
+       "text": "A rise at 40% only; at 80% the ride is too short",
+       "why": "The opposite: the harder session gave the bigger rise, even at the same length."
+      },
+      {
+       "id": "d",
+       "text": "A rise in both, but only from plasma volume loss",
+       "why": "Plasma volume loss adds a little, but at 80% ACTH also rose: the adrenal glands were releasing more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-gh-session",
+   "concept": "ef-cortisol-gh",
+   "bloom": "apply",
+   "sources": [
+    "godfrey2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which session is most likely to give a runner the largest growth hormone response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 min at a pace just above the lactate threshold",
+       "correct": true,
+       "why": "Right: at least 10 min above the lactate threshold appears to be the strongest endurance stimulus."
+      },
+      {
+       "id": "b",
+       "text": "60 min of easy jogging well below the threshold",
+       "why": "Length alone isn't the main trigger; intensity above the lactate threshold matters most."
+      },
+      {
+       "id": "c",
+       "text": "5 min at a pace just above the lactate threshold",
+       "why": "Right intensity, but likely too short: the review suggests at least 10 min."
+      },
+      {
+       "id": "d",
+       "text": "20 min of easy jogging below the threshold",
+       "why": "Right length, but too easy: the response appears to need intensity above the lactate threshold."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ef-coach-claim",
+   "concept": "ef-pancreas",
+   "bloom": "evaluate",
+   "sources": [
+    "trefts2015",
+    "coker2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling coach says: \"Adrenaline is what makes your liver pour out glucose when you ride.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mostly wrong: glucagon and falling insulin drive it; adrenaline's role in very hard efforts is debated",
+       "correct": true,
+       "why": "Right: blocking adrenergic receptors hasn't reduced liver glucose output; the pancreatic hormones are in charge."
+      },
+      {
+       "id": "b",
+       "text": "Right: adrenaline is the main driver of liver glucose output at all intensities",
+       "why": "This was the long-held assumption; experiments that block its receptors haven't supported it."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: the liver releases no glucose during exercise",
+       "why": "The liver's glucose output rises markedly in exercise; without it, blood glucose would crash."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: cortisol is the main driver within minutes",
+       "why": "Cortisol acts over hours through genes; minute-to-minute control comes from glucagon and insulin."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

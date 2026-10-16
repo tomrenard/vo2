@@ -1,0 +1,675 @@
+{
+ "id": "fat-long-efforts",
+ "module": "t1b-fatigue",
+ "title": "Fatigue in long efforts",
+ "goal": "Explain how glycogen depletion, low blood glucose, heat and fluid loss cause fatigue in efforts of hours, and how this shows up as durability.",
+ "requires": [
+  "fat-central"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hypoglycaemia",
+    "durability"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "le-wall",
+   "title": "The wall: running out of glycogen",
+   "text": "Muscles hold about 400 g of [glycogen](g:glycogen) and the liver about 80–100 g. In long, hard efforts, running both down is a major cause of fatigue, and more glycogen at the start means more endurance [[c:glycogen-fatigue]]. Runners call the sudden late slowdown this can bring *hitting the wall*.\n\nWhy would low glycogen weaken a muscle, not just slow its fuel supply? Part of the answer is local. In human muscle, low glycogen goes with impaired Ca²⁺ release from the SR, the same link that fails in *Peripheral fatigue* [[c:glycogen-ca]]. This may be a signal that stops the muscle from draining its last energy store.",
+   "claims": [
+    {
+     "id": "glycogen-fatigue",
+     "text": "Glycogen depletion in muscle and liver is a major cause of fatigue in endurance and high-intensity intermittent exercise; high-carbohydrate diets raise muscle glycogen and improve exercise capacity.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "glycogen depletion (in both muscle and liver) is a major cause of fatigue in both endurance and high-intensity (intermittent) type activities.",
+       "level": "full-text"
+      },
+      {
+       "source": "hearris2018",
+       "quote": "high CHO diets increase muscle glycogen storage and subsequently improve exercise capacity",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "glycogen-ca",
+     "text": "In human muscle, low glycogen is associated with impaired SR Ca²⁺ release, which may link energy content to fatigue.",
+     "grade": "weak",
+     "sources": [
+      "ortenblad2011"
+     ],
+     "evidence": [
+      {
+       "source": "ortenblad2011",
+       "quote": "We show that low muscle glycogen is associated with an impairment of muscle ability to release Ca(2+), which is an important signal in the muscle activation.",
+       "level": "abstract"
+      },
+      {
+       "source": "ortenblad2011",
+       "quote": "These data provide indications of a signal that links energy utilization, i.e. muscle contraction, with the energy content in the muscle, thereby inhibiting a detrimental depletion of the muscle energy store.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "le-wall-scenario"
+  },
+  {
+   "type": "question",
+   "item": "le-glycogen-ca"
+  },
+  {
+   "type": "concept",
+   "id": "le-glucose",
+   "title": "Low blood glucose",
+   "text": "The liver keeps blood glucose up, and the brain runs mainly on glucose. When liver glycogen runs low and nothing is eaten, blood glucose falls.\n\nIn a classic study, 7 trained cyclists rode at 71% of [VO2max](g:vo2max) until exhausted [[c:coyle-glucose]]:\n\n| | placebo | carbohydrate drink |\n|---|---|---|\n| time to fatigue | 3.0 h | 4.0 h |\n| blood glucose near the end | 2.5 mmol·L⁻¹ | 4.2–5.2 mmol·L⁻¹ |\n| muscle glycogen use, first 3 h | same | same |\n\nThe drink didn't spare muscle glycogen. It kept blood glucose up, so the riders kept burning carbohydrate from other sources for an extra hour. [Hypoglycaemia](g:hypoglycaemia), not only empty muscles, ended the placebo ride.",
+   "claims": [
+    {
+     "id": "coyle-glucose",
+     "text": "In trained cyclists at 71% VO2max, fatigue at 3 h without carbohydrate followed a fall in plasma glucose to 2.5 mmol·L⁻¹; carbohydrate feeding kept glucose up and extended exercise by about 1 h without sparing muscle glycogen.",
+     "grade": "weak",
+     "sources": [
+      "coyle1986"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1986",
+       "quote": "Fatigue during the placebo trial occurred after 3.02 +/- 0.19 h of exercise and was preceded by a decline (P less than 0.01) in plasma glucose to 2.5 +/- 0.5 mM",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1986",
+       "quote": "The pattern of muscle glycogen utilization, however, was not different during the first 3 h of exercise with the placebo or the carbohydrate feedings.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "le-coyle",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "le-cause-match",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "le-heat",
+   "title": "Heat: the drive backs off",
+   "text": "*Heat and the heart* showed trained cyclists at a fixed power stopping at about the same [core temperature](g:core-temperature), near 40 °C, whatever they started at [[c:critical-temp]], and why that 'critical temperature' is debated.\n\nWhat gives way? Partly the nervous system. After cycling to exhaustion in 40 °C heat, men held a 2 min maximal knee extension with voluntary activation of 54%, against 82% after riding in cool air (worked out a slightly different way from the formula in *Central fatigue*). Electrical stimulation brought total force to the same level in both [[c:heat-va]]. The muscle could still work; the drive to it had dropped.",
+   "claims": [
+    {
+     "id": "critical-temp",
+     "text": "In uncompensable heat, trained cyclists at 60% VO2max reached exhaustion at the same core temperature (about 40 °C) regardless of starting temperature; time to exhaustion fell as starting temperature rose.",
+     "grade": "weak",
+     "sources": [
+      "gonzalezalonso1999"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalezalonso1999",
+       "quote": "Despite different initial temperatures, all subjects fatigued at an identical level of hyperthermia (Tes = 40. 1-40.2 degrees C, muscle temperature = 40.7-40.9 degrees C, skin temperature = 37.0-37.2 degrees C)",
+       "level": "abstract"
+      },
+      {
+       "source": "gonzalezalonso1999",
+       "quote": "Time to exhaustion was inversely related to the initial body temperature: 63 +/- 3, 46 +/- 3, and 28 +/- 2 min with initial Tes of approximately 36, 37, and 38 degrees C, respectively",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "heat-va",
+     "text": "After exhausting exercise in the heat, voluntary activation during a sustained maximal contraction was 54% versus 82% in the control trial, while total force with stimulation did not differ.",
+     "grade": "weak",
+     "sources": [
+      "nybo2001"
+     ],
+     "evidence": [
+      {
+       "source": "nybo2001",
+       "quote": "Calculation of the voluntary activation percentage (MVC/MVC + EL) revealed that the degree of central activation was significantly lower in hyperthermia (54 +/- 7%) compared with control (82 +/- 6%). In contrast, total force of the knee extensors (MVC + force from EL) was not different in the two trials.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "le-heat-va"
+  },
+  {
+   "type": "concept",
+   "id": "le-fluid",
+   "title": "Dehydration: the 2% rule or thirst?",
+   "text": "Long efforts lose body water as sweat. The ACSM advises drinking enough to avoid losing more than 2% of body mass, to prevent a fall in performance [[c:acsm-2pct]].\n\nA [meta-analysis](g:meta-analysis) questioned how much this matters in racing. Across 5 cycling time-trial studies (39 riders), losing up to 4% of body mass didn't change outdoor performance; exercise intensity and duration mattered far more, and drinking to thirst did best [[c:goulet]].\n\nThat evidence is small and cycling-only, so the question is open. Both sides agree that big losses in the heat hurt, and that sweat rates vary a lot between people.",
+   "claims": [
+    {
+     "id": "acsm-2pct",
+     "text": "The ACSM advises drinking during exercise to prevent excessive dehydration (more than 2% body-mass loss) and so avoid compromised performance.",
+     "grade": "disputed",
+     "sources": [
+      "sawka2007"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2007",
+       "quote": "The goal of drinking during exercise is to prevent excessive (>2% body weight loss from water deficit) dehydration and excessive changes in electrolyte balance to avert compromised performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "goulet",
+     "text": "In a meta-analysis of cycling time trials, exercise-induced dehydration of up to 4% body mass did not alter outdoor performance, and drinking to thirst performed best.",
+     "grade": "disputed",
+     "sources": [
+      "goulet2011"
+     ],
+     "evidence": [
+      {
+       "source": "goulet2011",
+       "quote": "Compared with euhydration, EID (up to 4% BW loss) does not alter cycling performances during out-of-door exercise conditions; (2) exercise intensity and duration have a much greater impact on cycling TT performances than EID and; (3) relying on thirst sensation to gauge the need for fluid replacement maximises cycling TT performances.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does losing more than 2% of body mass as sweat impair endurance performance?",
+    "sides": [
+     {
+      "position": "Yes: drink to prevent losses above 2% of body mass to avoid compromised performance (ACSM).",
+      "sources": [
+       "sawka2007"
+      ]
+     },
+     {
+      "position": "Not in self-paced outdoor cycling: up to 4% loss didn't change time-trial performance, and drinking to thirst did best (Goulet).",
+      "sources": [
+       "goulet2011"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "le-fluid-acsm"
+  },
+  {
+   "type": "question",
+   "item": "le-fluid-judge"
+  },
+  {
+   "type": "concept",
+   "id": "le-durability",
+   "title": "Durability: when your numbers drift",
+   "text": "Lab tests are done fresh. But thresholds, efficiency and power don't stay fixed over hours of exercise; they drift. Maunder and colleagues call an athlete's resistance to this [durability](g:durability): how soon, and how much, the profile worsens during prolonged exercise [[c:durability]].\n\nEverything in this lesson feeds it: falling glycogen and blood glucose, heat, fluid loss, and central and peripheral fatigue building up.\n\nThe practical result: zones from a fresh test overestimate what you can hold in hour five, which matters for pacing long races and planning long sessions. The module *Durability: the fourth dimension* covers how to measure and train it.",
+   "claims": [
+    {
+     "id": "durability",
+     "text": "Physiological-profiling attributes change during prolonged exercise; durability is the time of onset and magnitude of their deterioration, which affects intensity regulation in long sessions and races.",
+     "grade": "moderate",
+     "sources": [
+      "maunder2021"
+     ],
+     "evidence": [
+      {
+       "source": "maunder2021",
+       "quote": "the attributes measured during routine physiological-profiling assessments are not static, but change over time during prolonged exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "maunder2021",
+       "quote": "here defined as the time of onset and magnitude of deterioration in physiological-profiling characteristics over time during prolonged exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "maunder2021",
+       "quote": "If not accounted for, shifts in these physiological attributes during prolonged exercise have implications for the accuracy of their use in intensity regulation during prolonged training sessions or competitions",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "le-durability-def"
+  },
+  {
+   "type": "question",
+   "item": "le-durability-apply"
+  },
+  {
+   "type": "question",
+   "item": "le-cause-match",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Depleting muscle and liver glycogen is a major cause of fatigue in long efforts; low glycogen also impairs Ca²⁺ release.",
+    "Without carbohydrate, blood glucose can fall to about 2.5 mmol·L⁻¹ and end a ride; feeding kept riders going an hour longer without sparing muscle glycogen.",
+    "In heat the body can't shed, fixed-power exercise ended at a core temperature near 40 °C, with a drop in voluntary activation rather than muscle failure.",
+    "Whether more than 2% body-mass loss hurts self-paced performance is debated; thirst-guided drinking did well in outdoor cycling.",
+    "Durability is how soon and how much your profile drifts in long exercise; fresh-test zones overestimate late-race capacity."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "le-coyle",
+   "concept": "le-glucose",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "coyle1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Trained cyclists riding to exhaustion at 71% of VO2max lasted about an hour longer when they drank carbohydrate. How did the drink help?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It kept blood glucose up as a fuel source",
+       "correct": true,
+       "why": "Right: glucose stayed at 4.2–5.2 mmol·L⁻¹ and carbohydrate oxidation was maintained."
+      },
+      {
+       "id": "b",
+       "text": "It slowed the use of muscle glycogen",
+       "why": "Muscle glycogen was used at the same rate in the first 3 h in both trials."
+      },
+      {
+       "id": "c",
+       "text": "It kept the riders cooler",
+       "why": "The study was about fuel; nothing points to a cooling effect."
+      },
+      {
+       "id": "d",
+       "text": "It lowered their blood lactate",
+       "why": "Lactate wasn't what ended the placebo ride."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In that study, what happened just before the riders on placebo had to stop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Blood glucose fell to about 2.5 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: fatigue followed a fall in plasma glucose."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen use suddenly sped up",
+       "why": "Glycogen use slowed in the final hour, to less than half its earlier rate."
+      },
+      {
+       "id": "c",
+       "text": "Core temperature reached about 40 °C",
+       "why": "That's the heat studies; this ride wasn't heat-limited."
+      },
+      {
+       "id": "d",
+       "text": "Blood lactate rose sharply",
+       "why": "At 71% of VO2max lactate stays fairly steady."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-wall-scenario",
+   "concept": "le-wall",
+   "bloom": "apply",
+   "sources": [
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a cool morning, a marathoner is on target pace at 30 km, then slows by 90 s per km over the next 3 km. He ate a light breakfast and took no gels. Most likely cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle and liver glycogen running low",
+       "correct": true,
+       "why": "Right: a late, sharp slowdown without fuel is the classic wall."
+      },
+      {
+       "id": "b",
+       "text": "Core temperature passing 40 °C",
+       "why": "On a cool morning, overheating is unlikely."
+      },
+      {
+       "id": "c",
+       "text": "Losing more than 2% of body mass as sweat",
+       "why": "Sweat losses are small in the cool, and the slowdown is too sudden."
+      },
+      {
+       "id": "d",
+       "text": "A rise in brain serotonin",
+       "why": "The serotonin hypothesis lacks robust support."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-glycogen-ca",
+   "concept": "le-wall",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "ortenblad2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Besides less fuel, how may low muscle glycogen weaken contraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It impairs Ca²⁺ release from the SR",
+       "correct": true,
+       "why": "Right: low glycogen is linked to impaired Ca²⁺ release in human muscle."
+      },
+      {
+       "id": "b",
+       "text": "It stops action potentials reaching the muscle",
+       "why": "Nerve signals still reach the muscle; the change is inside the fibre."
+      },
+      {
+       "id": "c",
+       "text": "It raises blood lactate to toxic levels",
+       "why": "Low glycogen means less glycolysis, so lactate tends to be lower."
+      },
+      {
+       "id": "d",
+       "text": "It makes the muscle fibres stiffer",
+       "why": "Stiffness isn't the proposed link; Ca²⁺ release is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-cause-match",
+   "concept": "le-glucose",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1986",
+    "gonzalezalonso1999",
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides at 70% of VO2max on a cool day without eating. After 3 h she feels dizzy and weak and has to stop. Most likely cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low blood glucose",
+       "correct": true,
+       "why": "Right: dizziness and fatigue near 3 h without food fit hypoglycaemia."
+      },
+      {
+       "id": "b",
+       "text": "Core temperature near 40 °C",
+       "why": "On a cool day, heat is unlikely to be the limit."
+      },
+      {
+       "id": "c",
+       "text": "Muscle damage from the ride",
+       "why": "Cycling causes little damage, and damage doesn't cause dizziness."
+      },
+      {
+       "id": "d",
+       "text": "K⁺ building up around fibres",
+       "why": "K⁺ shifts matter in intense efforts, not a moderate 3 h ride."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In 32 °C humid heat, a runner slows from 10 km on in a half marathon, with core temperature near 40 °C. He is well fuelled. Most likely cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hyperthermia lowering the drive to the muscles",
+       "correct": true,
+       "why": "Right: high core temperature lowers voluntary activation."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen stores running out",
+       "why": "At 10 km of a half marathon, glycogen is far from empty."
+      },
+      {
+       "id": "c",
+       "text": "Blood glucose falling too low",
+       "why": "He is well fuelled, and it's too early for hypoglycaemia."
+      },
+      {
+       "id": "d",
+       "text": "Pi binding Ca²⁺ inside the SR",
+       "why": "That's a mechanism of intense efforts, not the main problem here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-heat-va",
+   "concept": "le-heat",
+   "bloom": "analyse",
+   "sources": [
+    "nybo2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After riding to exhaustion in 40 °C heat, a cyclist's maximal knee extension is weak. Adding electrical stimulation brings total force to the level seen after a cool ride. Where is the main problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the drive from the nervous system",
+       "correct": true,
+       "why": "Right: stimulation restored force, so the muscle could still produce it."
+      },
+      {
+       "id": "b",
+       "text": "In the muscle's contractile machinery",
+       "why": "With stimulation, the muscle produced normal force."
+      },
+      {
+       "id": "c",
+       "text": "In muscle glycogen running out",
+       "why": "Stimulation restored normal force, so the muscle had the fuel to contract."
+      },
+      {
+       "id": "d",
+       "text": "In dehydrated fibres unable to contract",
+       "why": "The fibres contracted normally when stimulated."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-fluid-acsm",
+   "concept": "le-fluid",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "sawka2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the ACSM position stand advise about drinking during exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drink to prevent losing more than 2% of body mass",
+       "correct": true,
+       "why": "Right: the stated goal is to avoid more than 2% body-mass loss."
+      },
+      {
+       "id": "b",
+       "text": "Drink 1 L per hour, whatever the sweat rate",
+       "why": "It recommends individual plans because sweat rates vary a lot."
+      },
+      {
+       "id": "c",
+       "text": "Drink nothing during exercise, only after",
+       "why": "It advises drinking during exercise."
+      },
+      {
+       "id": "d",
+       "text": "Drink as much as possible to gain body mass",
+       "why": "Gaining mass by over-drinking isn't the goal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-fluid-judge",
+   "concept": "le-fluid",
+   "bloom": "evaluate",
+   "sources": [
+    "goulet2011",
+    "sawka2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 90 min outdoor time trial at 22 °C, a rider who drinks only to thirst will lose about 2.5% of body mass. What does the evidence best support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drinking to thirst is reasonable in these conditions",
+       "correct": true,
+       "why": "Right: up to 4% loss didn't harm outdoor cycling time trials, and thirst did best."
+      },
+      {
+       "id": "b",
+       "text": "She must stay under 2% or she will slow down",
+       "why": "That's the ACSM rule, but the meta-analysis of outdoor time trials found no effect up to 4%."
+      },
+      {
+       "id": "c",
+       "text": "She should drink as much as she can stomach",
+       "why": "Drinking above thirst gave no clear benefit."
+      },
+      {
+       "id": "d",
+       "text": "Fluid never matters in any conditions",
+       "why": "In the heat with large losses, dehydration does matter."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-durability-def",
+   "concept": "le-durability",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "maunder2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does durability describe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How soon and how much your profile worsens in long exercise",
+       "correct": true,
+       "why": "Right: the time of onset and size of the drift."
+      },
+      {
+       "id": "b",
+       "text": "How fast you recover between training sessions",
+       "why": "That's recovery, covered in the next lesson."
+      },
+      {
+       "id": "c",
+       "text": "Your VO2max measured in a fresh test",
+       "why": "Fresh tests are exactly what durability goes beyond."
+      },
+      {
+       "id": "d",
+       "text": "How rarely you get injured over a season",
+       "why": "Durability here is physiological, not injury resistance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "le-durability-apply",
+   "concept": "le-durability",
+   "bloom": "apply",
+   "sources": [
+    "maunder2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's threshold is 280 W when fresh. In a 5 h ride, a test after 3 h puts it at 255 W. How should he pace a long climb in hour 4?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At or below about 255 W, the late-ride value",
+       "correct": true,
+       "why": "Right: fresh zones overestimate late-ride capacity; use the drifted value."
+      },
+      {
+       "id": "b",
+       "text": "At 280 W, since thresholds are fixed",
+       "why": "Thresholds drift in long exercise; that's durability."
+      },
+      {
+       "id": "c",
+       "text": "Above 280 W, to make up lost time",
+       "why": "Riding above even his fresh threshold late on would bring early failure."
+      },
+      {
+       "id": "d",
+       "text": "Ignore power: thresholds can't be measured when tired",
+       "why": "He just measured it at 3 h; that is the useful number."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,646 @@
+{
+ "id": "th-core-temp",
+ "module": "t1b-thermo",
+ "title": "Core temperature: what sets it during exercise",
+ "goal": "Explain how the brain controls core temperature, why it rises with work rate rather than air temperature across a wide range of climates, and when the climate takes over.",
+ "requires": [
+  "th-sweat"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "core-temperature",
+    "balance-point",
+    "prescriptive-zone"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ct-control",
+   "title": "A thermostat in the brain, more or less",
+   "text": "[Core temperature](g:core-temperature) (blood, organs, brain) sits near 37 °C at rest. Sensors in the core and the skin report to the brain, and a region called the preoptic hypothalamus turns on **sweating and skin blood flow** to lose heat [[c:ct-hypothalamus]], or shivering and narrowing of skin vessels to keep it.\n\nTextbooks call the defended level a *set point*. A newer view says there is no single thermostat: each response has its own loop, triggered by its own mix of skin and core temperatures, and the level they settle at is better called a [balance point](g:balance-point) [[c:ct-balance-point]]. For athletes the result is the same: the body defends a level.\n\nCore temperature is measured in the rectum, oesophagus or gut (lesson 5).",
+   "claims": [
+    {
+     "id": "ct-hypothalamus",
+     "text": "Rising core temperature is sensed by central and skin thermoreceptors and processed by the preoptic hypothalamus, which drives sweating and skin vasodilation.",
+     "grade": "strong",
+     "sources": [
+      "baker2017",
+      "morrison2019"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "The resultant increase in body core temperature ( T c ) is sensed by central and skin thermoreceptors and this information is processed by the preoptic hypothalamic region of the brain to stimulate sweating and cutaneous vasodilation to dissipate heat [ 20 – 22 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "morrison2019",
+       "quote": "Maintenance of a homeostatic body core temperature is a critical brain function accomplished by a central neural network.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ct-balance-point",
+     "text": "Body temperature may be regulated by independent thermoeffector loops rather than one controller with a single set point; 'balance point' has been proposed instead.",
+     "grade": "moderate",
+     "sources": [
+      "romanovsky2007"
+     ],
+     "evidence": [
+      {
+       "source": "romanovsky2007",
+       "quote": "It is proposed that T(b) is regulated by independent thermoeffector loops, each having its own afferent and efferent branches.",
+       "level": "abstract"
+      },
+      {
+       "source": "romanovsky2007",
+       "quote": "The term balance point is proposed to designate the regulated level of T(b) and to attract attention to the multiple feedback, feedforward, and open-loop components that contribute to thermal balance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ct-brain"
+  },
+  {
+   "type": "question",
+   "item": "ct-balance-point"
+  },
+  {
+   "type": "concept",
+   "id": "ct-work-rate",
+   "title": "Work rate sets the plateau, not the weather",
+   "text": "Start riding and core temperature climbs for a while, then levels off at a plateau. The surprise, shown in a classic 1963 study by Lind: across a wide range of climates, the height of that plateau depends on **how hard you work**, hardly on how warm the air is. He called that range of climates the [prescriptive zone](g:prescriptive-zone), and later lab work agrees [[c:ct-prescriptive]].\n\nWhy? In cool air dry heat loss is large and you sweat less; in warm air dry loss shrinks and sweating makes up the gap.\n\nThe zone has an upper edge, and it is **lower at higher work rates** [[c:ct-zone-edge]]: a hard effort leaves the zone in milder weather than an easy one.",
+   "claims": [
+    {
+     "id": "ct-prescriptive",
+     "text": "At a given work rate, steady core (rectal) temperature is practically independent of the environment across a wide range of climates, the prescriptive zone.",
+     "grade": "strong",
+     "sources": [
+      "lind1963",
+      "cramer2014"
+     ],
+     "evidence": [
+      {
+       "source": "lind1963",
+       "quote": "At each rate of work rectal thermal equilibrium was practically independent of the influence of environment over a wide range of climates (“prescriptive” zone)",
+       "level": "abstract"
+      },
+      {
+       "source": "cramer2014",
+       "quote": "Furthermore, ΔTre was the same at 9.0 W/kg in a 35°C environment (LG: 1.12 ± 0.30°C, SM: 1.14 ± 0.25°C) as at 25°C (P > 0.230).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ct-zone-edge",
+     "text": "The upper limit of the prescriptive zone is at a lower environmental temperature for higher work rates.",
+     "grade": "weak",
+     "sources": [
+      "lind1963"
+     ],
+     "evidence": [
+      {
+       "source": "lind1963",
+       "quote": "The upper limits of prescriptive zones for work at an energy expenditure of 300 kcal/hr is CET 27.4 C and those for the lower and higher rates of work, respectively, were CET 30.2 C and 26.9 C.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ct-plateau",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ct-intensity"
+  },
+  {
+   "type": "question",
+   "item": "ct-zone-limit"
+  },
+  {
+   "type": "question",
+   "item": "ct-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "ct-per-kg",
+   "title": "Heat per kilogram, not % of VO₂max",
+   "text": "Coaches often say core temperature follows *relative* intensity (% of VO₂max). Controlled studies point instead to **heat production per kilogram**.\n\nFit and less fit men of the same mass, riding at the same heat production, had the same rise in rectal temperature, even though one group was at about 40% and the other at about 58% of VO₂peak [[c:ct-fitness-same]]. At the same 60% of VO₂peak, the fit group made more heat and warmed more.\n\nBody size matters too: at the same 500 W of heat, smaller riders warmed more than larger ones; at the same W·kg⁻¹ they warmed alike [[c:ct-wkg]].\n\nSo to predict who runs hotter, compare heat made per kilogram, not % of VO₂max.",
+   "claims": [
+    {
+     "id": "ct-fitness-same",
+     "text": "In a neutral climate, changes in core temperature depend on heat production, mass and surface area, not on VO2peak.",
+     "grade": "weak",
+     "sources": [
+      "jay2011"
+     ],
+     "evidence": [
+      {
+       "source": "jay2011",
+       "quote": "In conclusion, changes in core temperature and sweating during exercise in a neutral climate are determined by H(prod), mass, and BSA, not Vo(₂ peak).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ct-wkg",
+     "text": "Groups of different size differ in core temperature rise at the same absolute heat production but not at the same heat production per kilogram.",
+     "grade": "weak",
+     "sources": [
+      "cramer2014"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2014",
+       "quote": "ΔTre was different between groups at a prod of 500 W (LG: 0.52 ± 0.15°C, SM: 0.92 ± 0.24°C; P < 0.001) and 600 W (LG: 0.78 ± 0.19°C, SM: 1.14 ± 0.24°C; P = 0.007), but similar at 6.5 W/kg (LG: 0.79 ± 0.21°C, SM: 0.85 ± 0.14°C; P = 0.433) and 9.0 W/kg (LG: 1.02 ± 0.22°C, SM: 1.14 ± 0.24°C; P = 0.303).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ct-fitness"
+  },
+  {
+   "type": "question",
+   "item": "ct-per-kg"
+  },
+  {
+   "type": "concept",
+   "id": "ct-uncompensable",
+   "title": "When the climate wins",
+   "text": "The plateau exists only while the body can lose all the heat it makes. Heat stress is *compensable* when the evaporation needed for balance is below the most the air allows [[c:ct-compensable]].\n\nAbove the zone's edge (hot, humid, still air, sun, or very high work rates) the needed evaporation is more than the air can take. Storage never returns to zero, and core temperature keeps rising for as long as you keep going. That is when performance falls and heat illness becomes a risk (next lesson).\n\n| condition | core temperature |\n|---|---|\n| inside prescriptive zone | plateau set by work rate |\n| above it, compensable | higher plateau |\n| uncompensable | keeps rising |",
+   "claims": [
+    {
+     "id": "ct-compensable",
+     "text": "Heat stress is compensable when the evaporation required for heat balance is lower than the maximum evaporation the environment allows.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "By definition, heat stress is compensable when E req ( Eq. 15 ) is lower than E max ( Eq. 16 ).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ct-uncompensable"
+  },
+  {
+   "type": "question",
+   "item": "ct-plateau",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The brain (preoptic hypothalamus) defends core temperature near 37 °C, using sweating and skin blood flow to lose heat; whether there is one 'set point' or several loops is debated.",
+    "In exercise core temperature rises to a plateau set by work rate, not by air temperature, across the prescriptive zone (Lind 1963).",
+    "The zone's upper edge is lower at higher work rates: hard efforts feel the weather sooner.",
+    "The rise follows heat production per kilogram, not % of VO₂max: fitter riders at the same % make more heat and warm more.",
+    "When needed evaporation exceeds what the air allows, heat stress is uncompensable and core temperature keeps climbing."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ct-plateau",
+   "concept": "ct-work-rate",
+   "bloom": "apply",
+   "sources": [
+    "lind1963",
+    "cramer2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider does the same 60 min at 220 W twice, once at 12 °C and once at 24 °C, in dry, breezy air. How do her core temperature plateaus compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same, because the work rate is the same",
+       "correct": true,
+       "why": "Right: in this range of climates the plateau depends on work rate, not air temperature; sweating makes up for the smaller dry loss."
+      },
+      {
+       "id": "b",
+       "text": "About 1 °C higher at 24 °C",
+       "why": "Within the prescriptive zone the air temperature hardly moves the plateau; she sweats more instead."
+      },
+      {
+       "id": "c",
+       "text": "Higher at 12 °C, because cold makes muscles work harder",
+       "why": "The power is fixed at 220 W, so heat production is about the same in both rides."
+      },
+      {
+       "id": "d",
+       "text": "No plateau at 24 °C: core temperature keeps rising",
+       "why": "24 °C dry and breezy is well inside the zone for this effort; core temperature levels off."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner does two steady 10 km runs at the same pace, in 8 °C and in 20 °C, both dry and breezy. Which comparison of core temperature is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Similar plateaus, with more sweating in the 20 °C run",
+       "correct": true,
+       "why": "Right: same heat production, same plateau; evaporation takes over the heat loss that dry routes lose in warmer air."
+      },
+      {
+       "id": "b",
+       "text": "A much higher plateau in the 20 °C run, with the same sweating",
+       "why": "That would mean the body failed to adjust; in fact sweating rises to keep the plateau about the same."
+      },
+      {
+       "id": "c",
+       "text": "A higher plateau in the 8 °C run, because cold air is denser",
+       "why": "Air density doesn't set core temperature; at the same pace heat production is about the same."
+      },
+      {
+       "id": "d",
+       "text": "No rise at all in the 8 °C run",
+       "why": "Core temperature rises with work in any climate; the heat must be made before it is lost."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete rides the same 180 W in 15 °C and then 25 °C, both dry with good airflow. Which statement fits the classic findings?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her core temperature levels off at about the same value both times",
+       "correct": true,
+       "why": "Right: within the prescriptive zone steady core temperature is set by work rate, not air temperature."
+      },
+      {
+       "id": "b",
+       "text": "Her core temperature rises by the 10 °C difference in air temperature",
+       "why": "Core temperature is defended; the air temperature difference shows up as more sweating, not as a hotter core."
+      },
+      {
+       "id": "c",
+       "text": "Her core temperature stays at 37 °C in the cooler ride",
+       "why": "Exercise raises core temperature in any climate, because heat must be produced before it can be lost."
+      },
+      {
+       "id": "d",
+       "text": "Her core temperature is higher in the cooler ride",
+       "why": "Same watts means about the same heat; there is no reason for a higher plateau in cooler air."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-brain",
+   "concept": "ct-control",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "baker2017",
+    "morrison2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which part of the body processes temperature signals and turns on sweating and skin blood flow?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The preoptic hypothalamus in the brain",
+       "correct": true,
+       "why": "Right: it integrates core and skin temperature signals and drives the heat-loss responses."
+      },
+      {
+       "id": "b",
+       "text": "The sweat glands, each on its own",
+       "why": "Glands respond to nerve signals; the decision is made centrally in the brain."
+      },
+      {
+       "id": "c",
+       "text": "The heart, through heart rate",
+       "why": "Heart rate rises in the heat, but the heart doesn't sense temperature or command sweating."
+      },
+      {
+       "id": "d",
+       "text": "The muscles that produce the heat",
+       "why": "Muscle makes the heat but doesn't control how it is lost."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-balance-point",
+   "concept": "ct-control",
+   "bloom": "understand",
+   "sources": [
+    "romanovsky2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the newer 'balance point' view of temperature control say?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Separate response loops each react to their own mix of skin and core temperature",
+       "correct": true,
+       "why": "Right: no single controller compares one value with a set point; the loops settle where they balance."
+      },
+      {
+       "id": "b",
+       "text": "Core temperature isn't regulated at all during exercise",
+       "why": "It is regulated; the debate is about how, not whether."
+      },
+      {
+       "id": "c",
+       "text": "The set point rises during exercise, like in a fever",
+       "why": "Exercise hyperthermia is heat gain beating heat loss; neither view treats it as a fever."
+      },
+      {
+       "id": "d",
+       "text": "Skin temperature alone drives the responses",
+       "why": "Both skin and core temperatures feed the loops."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-intensity",
+   "concept": "ct-work-rate",
+   "bloom": "apply",
+   "sources": [
+    "lind1963",
+    "jay2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the same mild weather, a rider does one hour at 150 W and, a week later, one hour at 280 W. How do his core temperature plateaus compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher at 280 W, because he makes more heat",
+       "correct": true,
+       "why": "Right: the plateau rises with work rate, since more heat must be made and lost."
+      },
+      {
+       "id": "b",
+       "text": "The same, because the weather is the same",
+       "why": "The weather is not what sets the plateau; work rate is, and it differs here."
+      },
+      {
+       "id": "c",
+       "text": "Lower at 280 W, because he sweats more",
+       "why": "He sweats more because he makes more heat; the plateau still ends up higher."
+      },
+      {
+       "id": "d",
+       "text": "The same, because the brain holds core temperature at 37 °C",
+       "why": "Core temperature rises above resting in exercise, more at higher work rates."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-zone-limit",
+   "concept": "ct-work-rate",
+   "bloom": "analyse",
+   "sources": [
+    "lind1963"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a warm, humid morning, a runner's easy jog feels fine, but in a tempo run at the same conditions his core temperature never levels off. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The prescriptive zone's upper edge is lower at higher work rates",
+       "correct": true,
+       "why": "Right: the harder effort is outside its zone at a climate that is still inside the zone for the easy jog."
+      },
+      {
+       "id": "b",
+       "text": "The tempo run raises his set point like a fever",
+       "why": "Exercise doesn't move the defended level; the rise comes from heat loss falling short."
+      },
+      {
+       "id": "c",
+       "text": "Faster running cools the skin less because of less airflow",
+       "why": "Faster running gives *more* airflow; the issue is more heat to lose than the air can take."
+      },
+      {
+       "id": "d",
+       "text": "The jog makes no heat, so the climate doesn't matter",
+       "why": "The jog makes heat too, just less, so it stays compensable in this climate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-appraisal",
+   "concept": "ct-work-rate",
+   "bloom": "evaluate",
+   "sources": [
+    "lind1963"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Lind's 1963 study defined the prescriptive zone from three people walking on a treadmill. What most limits using its exact numbers for a cyclist racing today?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Three walkers is a tiny sample, at lower work rates than racing",
+       "correct": true,
+       "why": "Right: the idea has held up in later studies, but n = 3 and walking intensities can't give precise limits for racing."
+      },
+      {
+       "id": "b",
+       "text": "It is old, so its findings must be wrong",
+       "why": "Age alone doesn't make a finding wrong; the principle has been confirmed since."
+      },
+      {
+       "id": "c",
+       "text": "Treadmill walking makes no heat",
+       "why": "Walking at 750–1,760 kJ·h⁻¹ (180–420 kcal·h⁻¹), about 200–490 W, makes plenty of heat; the issue is size and intensity."
+      },
+      {
+       "id": "d",
+       "text": "Rectal temperature can't measure core temperature",
+       "why": "Rectal temperature is a standard core measure at steady state."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-fitness",
+   "concept": "ct-per-kg",
+   "bloom": "analyse",
+   "sources": [
+    "jay2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two riders of the same mass both ride 60 min at 60% of their VO₂peak in a 25 °C room. One has a VO₂peak of 60, the other of 40 mL·kg⁻¹·min⁻¹. Whose core temperature rises more?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The fitter rider's, because 60% of a bigger VO₂peak makes more heat",
+       "correct": true,
+       "why": "Right: in the study the fit group made about 834 W vs 600 W of heat and warmed more (1.43 vs 0.89 °C)."
+      },
+      {
+       "id": "b",
+       "text": "The same, because both are at 60% of VO₂peak",
+       "why": "Same % doesn't mean same heat. The fitter rider burns more fuel per minute."
+      },
+      {
+       "id": "c",
+       "text": "The less fit rider's, because 60% feels harder for him",
+       "why": "How hard it feels doesn't set the rise; heat production per kilogram does."
+      },
+      {
+       "id": "d",
+       "text": "The fitter rider's, because fitness lowers sweating",
+       "why": "Fitness doesn't impair sweating; the fitter rider simply makes more heat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-per-kg",
+   "concept": "ct-per-kg",
+   "bloom": "apply",
+   "sources": [
+    "cramer2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg and a 90 kg rider each produce 540 W of heat for an hour in the same room. How do their rises in core temperature compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Larger in the 60 kg rider: 9 W·kg⁻¹ against 6 W·kg⁻¹",
+       "correct": true,
+       "why": "Right: the same watts are more heat per kilogram for the lighter rider."
+      },
+      {
+       "id": "b",
+       "text": "The same: same watts, same rise",
+       "why": "Absolute watts mislead when body sizes differ; per kilogram is what matches the rise."
+      },
+      {
+       "id": "c",
+       "text": "Larger in the 90 kg rider: bigger bodies hold more heat",
+       "why": "Holding more heat per degree is why the heavier rider warms less."
+      },
+      {
+       "id": "d",
+       "text": "It depends only on which one is fitter",
+       "why": "Fitness changes heat production at a given %; here the heat is fixed, so mass decides."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A lab wants to compare core temperature responses of a group of light runners and a group of heavy runners fairly. What should it fix?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heat production per kilogram (W·kg⁻¹)",
+       "correct": true,
+       "why": "Right: at the same W·kg⁻¹ the rise in rectal temperature was similar in large and small groups."
+      },
+      {
+       "id": "b",
+       "text": "The same percentage of VO₂max",
+       "why": "Same % can mean very different heat production per kilogram; core temperature follows heat per kilogram."
+      },
+      {
+       "id": "c",
+       "text": "The same absolute heat production in watts",
+       "why": "At the same watts the smaller group warmed more, so the comparison is biased by size."
+      },
+      {
+       "id": "d",
+       "text": "The same running speed",
+       "why": "Speed fixes neither heat per kilogram nor relative intensity across people of different size and economy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct-uncompensable",
+   "concept": "ct-uncompensable",
+   "bloom": "understand",
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a hot, humid, still gym, a triathlete's core temperature rises minute after minute with no plateau. What is going on in heat balance terms?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Needed evaporation exceeds what the air allows, so storage stays positive",
+       "correct": true,
+       "why": "Right: uncompensable heat stress; S never returns to zero, so temperature keeps climbing."
+      },
+      {
+       "id": "b",
+       "text": "Her body has stopped sweating in the heat",
+       "why": "She is probably sweating hard; the problem is that the sweat can't evaporate fast enough."
+      },
+      {
+       "id": "c",
+       "text": "Her set point has risen to a new, higher level",
+       "why": "A raised set point would give a new plateau, not an endless rise."
+      },
+      {
+       "id": "d",
+       "text": "Her heat production keeps rising at a steady power",
+       "why": "At steady power heat production is about steady; it is the loss that falls short."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

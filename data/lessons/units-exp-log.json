@@ -9,16 +9,20 @@
  "lastReviewed": "2026-10-16",
  "steps": [
   {
-   "type": "question",
-   "item": "exp-linear-vs-exp",
-   "variant": "a",
-   "pretest": true
+   "type": "terms",
+   "terms": [
+    "pcr",
+    "half-life",
+    "time-constant",
+    "o2-deficit",
+    "log-scale"
+   ]
   },
   {
    "type": "concept",
    "id": "exp-growth",
    "title": "Linear or exponential?",
-   "text": "Two ways a quantity can change over time:\n\n- **Linear**: the same *amount* each step. A ramp test adds 20 W every minute.\n- **Exponential**: the same *fraction* each step. A plan that adds 10% of last week's distance each week grows faster and faster.\n\nExponential decay works the same way in reverse: a gap closes by the same fraction each second, so it shrinks quickly at first, then ever more slowly, and never quite reaches zero.\n\nMany body responses follow this \"fast, then slower\" shape: oxygen uptake at the start of exercise, heart rate and PCr in recovery. One number sums up the speed: a half-life or a time constant.",
+   "text": "Two ways a quantity can change over time:\n\n- **Linear**: the same *amount* each step. A ramp test adds 20 W every minute.\n- **Exponential**: the same *fraction* each step. A plan that adds 10% of last week's distance each week grows faster and faster.\n\nExponential decay works the same way in reverse: a gap closes by the same fraction each second, so it shrinks quickly at first, then ever more slowly, and never quite reaches zero.\n\nMany body responses follow this \"fast, then slower\" shape: oxygen uptake at the start of exercise, heart rate and [PCr](g:pcr) in recovery. One number sums up the speed: a half-life or a time constant.",
    "claims": []
   },
   {
@@ -53,7 +57,7 @@
    "type": "concept",
    "id": "exp-tau",
    "title": "The time constant τ",
-   "text": "Physiologists more often use the [time constant](g:time-constant) **τ** (tau). After one τ, a response has covered **63%** of the way to its new level:\n\n| time | % of the way |\n|---|---|\n| 1 τ | 63% |\n| 2 τ | 86% |\n| 3 τ | 95% |\n| 4 τ | 98% |\n\nτ and half-life measure the same speed: **t½ = 0.69 × τ**.\n\nWhen moderate exercise starts, VO2 rises roughly exponentially. In young and trained adults its τ is about 10–30 s, and shorter in trained people [[c:vo2-tau]]. A shorter τ means less oxygen deficit at the start [[c:fast-kinetics]].",
+   "text": "Physiologists more often use the [time constant](g:time-constant) **τ** (tau). After one τ, a response has covered **63%** of the way to its new level:\n\n| time | % of the way |\n|---|---|\n| 1 τ | 63% |\n| 2 τ | 86% |\n| 3 τ | 95% |\n| 4 τ | 98% |\n\nτ and half-life measure the same speed: **t½ = 0.69 × τ**.\n\nWhen moderate exercise starts, VO2 rises roughly exponentially. In young and trained adults its τ is about 10–30 s, and shorter in trained people [[c:vo2-tau]]. A shorter τ means less [oxygen deficit](g:o2-deficit) at the start [[c:fast-kinetics]].",
    "claims": [
     {
      "id": "vo2-tau",

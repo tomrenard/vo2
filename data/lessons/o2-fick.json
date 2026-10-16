@@ -1,0 +1,824 @@
+{
+ "id": "o2-fick",
+ "module": "t1b-oxygen-transport",
+ "title": "The Fick equation: flow times extraction",
+ "goal": "Use the Fick equation to link cardiac output, arterial and venous O₂ content and VO₂, and explain why training raises VO₂max mainly through a bigger cardiac output.",
+ "requires": [
+  "o2-content"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "fick-principle",
+    "o2-extraction",
+    "mixed-venous-blood"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "fick-equation",
+   "title": "The Fick equation, both sides",
+   "text": "The heart module gave you the [Fick principle](g:fick-principle): VO₂ = Q × [a-vO₂ difference](g:a-vo2-difference). Now you can fill in the difference itself [[c:fick-vo2max]]:\n\n**VO₂ = Q × (CaO₂ − CvO₂)**\n\n- Q: [cardiac output](g:cardiac-output), L·min⁻¹;\n- CaO₂: arterial O₂ content, from the last lesson, mL·L⁻¹;\n- CvO₂: O₂ content of [mixed venous blood](g:mixed-venous-blood): all the body's returning blood, mixed in the pulmonary artery.\n\nL·min⁻¹ × mL·L⁻¹ gives mL·min⁻¹. Use mL per **litre**: content in mL·dL⁻¹ must be multiplied by 10 first.\n\nThe share of arriving O₂ that the body takes out is the [extraction fraction](g:o2-extraction): (CaO₂ − CvO₂) ÷ CaO₂ [[c:extraction-def]].",
+   "claims": [
+    {
+     "id": "fick-vo2max",
+     "text": "By the Fick equation, VO₂max is the product of maximal cardiac output and the arterial to mixed venous O₂ difference.",
+     "grade": "strong",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "According to the Fick equation, V ˙ O 2max is determined by the product of the maximal cardiac output ( Q ˙ max ) and the arterial to mixed venous O 2 difference ( a - v ¯ O 2 difference).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "extraction-def",
+     "text": "Systemic O₂ extraction fraction is the a-vO₂ difference divided by arterial O₂ content.",
+     "grade": "strong",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "the systemic O ¯ 2 extraction fraction—ie, the fraction of O 2 that is taken up with respect to the amount available for utilization ( a - v ¯ O 2 difference/CaO 2 )",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "fick-rest-example",
+   "title": "A runner at rest",
+   "problem": "A 70 kg runner sits at rest. Cardiac output is 5 L·min⁻¹, CaO₂ 200 mL·L⁻¹ and mixed venous CvO₂ 150 mL·L⁻¹. Find her VO₂ and extraction fraction.",
+   "steps": [
+    "a-vO₂ difference = 200 − 150 = 50 mL·L⁻¹.",
+    "VO₂ = 5 L·min⁻¹ × 50 mL·L⁻¹ = 250 mL·min⁻¹.",
+    "Per kg: 250 ÷ 70 = 3.6 mL·kg⁻¹·min⁻¹, inside the usual resting range of 3–5.",
+    "Extraction = 50 ÷ 200 = 25%: three quarters of the O₂ goes back to the heart unused. That is a big reserve."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fick-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fick-units"
+  },
+  {
+   "type": "concept",
+   "id": "fick-max",
+   "title": "From rest to maximum",
+   "text": "From rest to VO₂max, VO₂ rises about 15-fold. Both terms of the Fick equation rise:\n\n| | rest | maximum |\n|---|---|---|\n| Q (L·min⁻¹) | about 5 | about 20–40 |\n| a-vO₂ difference (mL·L⁻¹) | about 50 | about 120–170 |\n| extraction | about 25% | up to about 90% |\n\nIn pooled data from 17 studies, Qmax rose about 5–6 L·min⁻¹ for every extra 1 L·min⁻¹ of VO₂max, and the a-vO₂ difference at max rose from 118 to 168 mL·L⁻¹ between VO₂max values of 2 and 4.5 L·min⁻¹ [[c:fick-pooled]]. Extraction climbs to about **90%** and then stops rising [[c:extraction-90]].\n\nSo the pump can still grow a lot; the a-vO₂ difference is near its ceiling.",
+   "claims": [
+    {
+     "id": "fick-pooled",
+     "text": "In pooled individual data, Qmax rose 4.9–6.0 L·min⁻¹ per 1 L·min⁻¹ of VO₂max, and the a-vO₂ difference rose from 118 to 168 mL·L⁻¹ between VO₂max values of 2 and 4.5 L·min⁻¹, then fell.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "Q˙max and two-LBF increased linearly by 4.9-6.0 L · min-1 per 1 L · min-1 increase in V˙O2max (R2 = .73 and R2 = .67, respectively; both P < .001). The a-v¯O2 difference increased from 118-168 mL · L-1 from a V˙O2max of 2-4.5 L · min-1 followed by a reduction",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "extraction-90",
+     "text": "Systemic O₂ extraction fraction rises with VO₂max to about 90% and then plateaus; leg extraction approaches 90–95%.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "systemic O2 extraction fraction increased up to ~90% (V˙O2max: 4.5 L · min-1) with no further change",
+       "level": "abstract"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "Likewise, leg O2 extraction fraction increased with V˙O2max to approach a maximal value of ~90-95%",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "fick-max-example",
+   "title": "The same runner at VO₂max",
+   "problem": "At VO₂max the same runner reaches a cardiac output of 25 L·min⁻¹. CaO₂ is 200 mL·L⁻¹ and CvO₂ falls to 40 mL·L⁻¹. Find her VO₂max and how each term changed from rest.",
+   "steps": [
+    "a-vO₂ difference = 200 − 40 = 160 mL·L⁻¹ (rest: 50).",
+    "VO₂max = 25 × 160 = 4,000 mL·min⁻¹ = 4.0 L·min⁻¹, or 57 mL·kg⁻¹·min⁻¹ at 70 kg.",
+    "Change from rest: Q × 5 (5 → 25), a-vO₂ × 3.2 (50 → 160), VO₂ × 16 (250 → 4,000).",
+    "Extraction = 160 ÷ 200 = 80%. There is little left to squeeze out of each litre; most of any further gain must come from more flow."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fick-solve-avo2",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fick-extraction",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fick-rest-max",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "fick-training",
+   "title": "What training changes: mostly the pump",
+   "text": "When VO₂max rises with training, which term grew? A [meta-analysis](g:meta-analysis) of 13 training studies (130 untrained or moderately trained young adults, 5–13 weeks) found VO₂max and Qmax both rose, but the a-vO₂ difference at max did not change significantly [[c:training-qmax]]. That fits the classic view: in whole-body exercise, delivery is the main limit [[c:delivery-primary]].\n\nNot everyone agrees that extraction stays put. Most studies *calculate* the a-vO₂ difference from VO₂ ÷ Q, so any error in measuring Q lands in it, and small studies can't detect a small change. And CaO₂ tends to fall in the fittest, which hides a rise in extraction [[c:extraction-hidden]].",
+   "claims": [
+    {
+     "id": "training-qmax",
+     "text": "After 5–13 weeks of endurance training in untrained or moderately trained young adults, VO₂max and Qmax increased but the a-vO₂ difference at maximal exercise did not change significantly.",
+     "grade": "moderate",
+     "sources": [
+      "montero2015"
+     ],
+     "evidence": [
+      {
+       "source": "montero2015",
+       "quote": "After data pooling, V˙O2max (SMD = 0.75, P < 0.0001) and Qmax (SMD = 0.64, P < 0.0001), but not a-V˙O2diff at maximal exercise (SMD = 0.21, P = 0.23), were increased after ET.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "delivery-primary",
+     "text": "O₂ delivery, not muscle O₂ extraction, is viewed as the primary limit to VO₂max in whole-body exercise, and the training gain in VO₂max comes mainly from a higher maximal cardiac output.",
+     "grade": "moderate",
+     "sources": [
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "the increase in VO2max with training results primarily from an increase in maximal cardiac output (not an increase in the a-v O2 difference)",
+       "level": "abstract"
+      },
+      {
+       "source": "bassett2000",
+       "quote": "Thus, O2 delivery, not skeletal muscle O2 extraction, is viewed as the primary limiting factor for VO2max in exercising humans.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "extraction-hidden",
+     "text": "Calculating the a-vO₂ difference from VO₂max ÷ Qmax adds measurement error, small studies are underpowered, and lower CaO₂ in the fittest can mask higher extraction; the fittest had about 10% lower CaO₂.",
+     "grade": "moderate",
+     "sources": [
+      "skattebo2020"
+     ],
+     "evidence": [
+      {
+       "source": "skattebo2020",
+       "quote": "First, when the a - v ¯ O 2 difference is calculated by the Fick equation, a large variation is introduced as a result of measurement error in Q ˙ max , especially when non‐invasive methods are used.",
+       "level": "full-text"
+      },
+      {
+       "source": "skattebo2020",
+       "quote": "individuals with the highest V ˙ O 2max displayed a substantially lower CaO 2 (~10%) than those with a low V ˙ O 2max",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does endurance training raise VO₂max through more O₂ extraction, or almost only through a bigger cardiac output?",
+    "sides": [
+     {
+      "position": "Almost only through cardiac output: in pooled training studies Qmax rose and the a-vO₂ difference at max did not change; delivery is the main limit.",
+      "sources": [
+       "montero2015",
+       "bassett2000"
+      ]
+     },
+     {
+      "position": "Extraction contributes too: the fraction extracted rises with VO₂max to about 90%, and training studies are too noisy and small to see a modest change in the a-vO₂ difference.",
+      "sources": [
+       "skattebo2020"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fick-training-source"
+  },
+  {
+   "type": "question",
+   "item": "fick-cao2-elite"
+  },
+  {
+   "type": "question",
+   "item": "fick-debate"
+  },
+  {
+   "type": "concept",
+   "id": "fick-periphery",
+   "title": "The muscle could take more",
+   "text": "If delivery is the main limit, the muscle should be able to use more O₂ when it gets more. It can. When a small muscle mass, such as one thigh in knee-extension, gets far more blood per kg than in cycling, its O₂ uptake per kg is much higher [[c:small-muscle]].\n\nYet the periphery isn't irrelevant. In 6 men cycling at VO₂max while breathing less O₂, VO₂max fell in step with venous PO₂: a sign that diffusion from capillary to muscle also limits uptake [[c:tissue-diffusion]].\n\nThe likely picture: delivery sets most of the ceiling, diffusion trims it. The last lesson of this module looks at the muscle end; the VO₂max module weighs the limits in full.",
+   "claims": [
+    {
+     "id": "small-muscle",
+     "text": "When a small muscle mass is overperfused during exercise, it has an extremely high capacity for consuming O₂, which supports delivery as the main limit in whole-body exercise.",
+     "grade": "moderate",
+     "sources": [
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "when a small muscle mass is overperfused during exercise, it has an extremely high capacity for consuming oxygen",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tissue-diffusion",
+     "text": "When men cycled at VO₂max breathing 21%, 15% and 12% O₂, VO₂max fell linearly with femoral and mixed venous PO₂ through the origin, suggesting tissue diffusion limitation of VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "roca1989"
+     ],
+     "evidence": [
+      {
+       "source": "roca1989",
+       "quote": "Each of the PO2 variables was linearly related to VO2max (r = 0.99 each), with an intercept not different from the origin.",
+       "level": "abstract"
+      },
+      {
+       "source": "roca1989",
+       "quote": "we conclude that tissue diffusion limitation of VO2max may be present in normal humans",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fick-small-muscle"
+  },
+  {
+   "type": "question",
+   "item": "fick-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "fick-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Fick: VO₂ = Q × (CaO₂ − CvO₂), with content in mL·L⁻¹ so that L·min⁻¹ × mL·L⁻¹ gives mL·min⁻¹.",
+    "Extraction fraction = a-vO₂ difference ÷ CaO₂: about 25% at rest, up to about 90% at VO₂max.",
+    "From rest to max, Q rises about 5-fold and the a-vO₂ difference about 3-fold; VO₂ about 15-fold.",
+    "Training raises VO₂max mainly through Qmax; whether extraction adds a little is debated, partly because it is hard to measure.",
+    "A small, overperfused muscle can use far more O₂ than in whole-body work: delivery is the main limit, diffusion a smaller one."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fick-rest-max",
+   "concept": "fick-max",
+   "bloom": "understand",
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "From rest to VO₂max, a cyclist's O₂ uptake rises about 15-fold. Which mix of the Fick terms best explains that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cardiac output about ×5, a-vO₂ difference about ×3",
+       "correct": true,
+       "why": "Right: 5 × 3 = 15. Both terms rise; flow has more room to grow."
+      },
+      {
+       "id": "b",
+       "text": "Cardiac output ×15, a-vO₂ difference unchanged",
+       "why": "The a-vO₂ difference rises a lot too, from about 50 to 150 mL·L⁻¹ or more."
+      },
+      {
+       "id": "c",
+       "text": "a-vO₂ difference ×15, cardiac output unchanged",
+       "why": "Extraction can't rise 15-fold: at rest it is already about 25%, and the ceiling is about 90%."
+      },
+      {
+       "id": "d",
+       "text": "Arterial O₂ content ×3, cardiac output ×5",
+       "why": "Arterial content barely changes; it may even fall slightly in hard exercise."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete goes from rest to an all-out effort. Her VO₂ goes from 0.25 to 3.75 L·min⁻¹. Which change in the Fick terms fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Q from 5 to 25 L·min⁻¹, a-vO₂ from 50 to 150 mL·L⁻¹",
+       "correct": true,
+       "why": "Right: 5 × 50 = 250 mL·min⁻¹; 25 × 150 = 3,750 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Q from 5 to 75 L·min⁻¹, a-vO₂ fixed at 50 mL·L⁻¹",
+       "why": "No human heart pumps 75 L·min⁻¹; the a-vO₂ difference also rises."
+      },
+      {
+       "id": "c",
+       "text": "Q fixed at 5 L·min⁻¹, a-vO₂ from 50 to 750 mL·L⁻¹",
+       "why": "Blood holds only about 200 mL·L⁻¹, so the a-vO₂ difference can't reach 750."
+      },
+      {
+       "id": "d",
+       "text": "Q from 5 to 15 L·min⁻¹, a-vO₂ from 50 to 100 mL·L⁻¹",
+       "why": "15 × 100 = 1,500 mL·min⁻¹: well short of 3,750."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fick-calc",
+   "concept": "fick-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At VO₂max a runner's cardiac output is 30 L·min⁻¹, CaO₂ 190 mL·L⁻¹ and mixed venous CvO₂ 30 mL·L⁻¹. What is her VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.8 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 30 × (190 − 30) = 30 × 160 = 4,800 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "5.7 L·min⁻¹",
+       "why": "This is Q × CaO₂: the O₂ delivered, not the O₂ taken up. It forgets the venous O₂ that returns."
+      },
+      {
+       "id": "c",
+       "text": "0.48 L·min⁻¹",
+       "why": "This treats the a-vO₂ difference as 16 mL·dL⁻¹ without converting to mL·L⁻¹ (factor 10)."
+      },
+      {
+       "id": "d",
+       "text": "0.9 L·min⁻¹",
+       "why": "This is Q × CvO₂: the O₂ that goes back to the heart unused."
+      }
+     ],
+     "solution": "a-vO₂ = 190 − 30 = 160 mL·L⁻¹. VO₂max = 30 L·min⁻¹ × 160 mL·L⁻¹ = 4,800 mL·min⁻¹ = 4.8 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "At VO₂max an elite cyclist's cardiac output is 35 L·min⁻¹, CaO₂ 185 mL·L⁻¹ and mixed venous CvO₂ 25 mL·L⁻¹. What is his VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.6 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 35 × (185 − 25) = 35 × 160 = 5,600 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "6.5 L·min⁻¹",
+       "why": "This is Q × CaO₂ (6,475 mL·min⁻¹): delivery, not uptake."
+      },
+      {
+       "id": "c",
+       "text": "0.56 L·min⁻¹",
+       "why": "This treats the a-vO₂ difference as 16 mL·dL⁻¹ without converting to mL·L⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "0.9 L·min⁻¹",
+       "why": "This is Q × CvO₂ (875 mL·min⁻¹): the O₂ that returns unused."
+      }
+     ],
+     "solution": "a-vO₂ = 185 − 25 = 160 mL·L⁻¹. VO₂max = 35 × 160 = 5,600 mL·min⁻¹ = 5.6 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "At VO₂max a triathlete's cardiac output is 22 L·min⁻¹, CaO₂ 195 mL·L⁻¹ and mixed venous CvO₂ 45 mL·L⁻¹. What is her VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.3 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 22 × (195 − 45) = 22 × 150 = 3,300 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "4.3 L·min⁻¹",
+       "why": "This is Q × CaO₂ (4,290 mL·min⁻¹): delivery, not uptake."
+      },
+      {
+       "id": "c",
+       "text": "0.33 L·min⁻¹",
+       "why": "This treats the a-vO₂ difference as 15 mL·dL⁻¹ without converting to mL·L⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "1.0 L·min⁻¹",
+       "why": "This is Q × CvO₂ (990 mL·min⁻¹): the O₂ that returns unused."
+      }
+     ],
+     "solution": "a-vO₂ = 195 − 45 = 150 mL·L⁻¹. VO₂max = 22 × 150 = 3,300 mL·min⁻¹ = 3.3 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "fick-units",
+   "concept": "fick-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab report gives a cyclist's maximal a-vO₂ difference as 16 mL·dL⁻¹ and his cardiac output as 25 L·min⁻¹. What is his VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.0 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 16 mL·dL⁻¹ = 160 mL·L⁻¹; 25 × 160 = 4,000 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.4 L·min⁻¹",
+       "why": "This multiplies 25 × 16 without converting dL to L: a factor of 10 too low."
+      },
+      {
+       "id": "c",
+       "text": "40 L·min⁻¹",
+       "why": "This multiplies by 100 instead of 10 (1 L = 10 dL); no one has a VO₂max of 40 L·min⁻¹."
+      }
+     ],
+     "solution": "16 mL·dL⁻¹ × 10 = 160 mL·L⁻¹. VO₂max = 25 L·min⁻¹ × 160 mL·L⁻¹ = 4,000 mL·min⁻¹ = 4.0 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "fick-solve-avo2",
+   "concept": "fick-max",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO₂max is 4.2 L·min⁻¹ and her maximal cardiac output 28 L·min⁻¹. What is her a-vO₂ difference at max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150 mL·L⁻¹",
+       "correct": true,
+       "why": "Right: 4,200 mL·min⁻¹ ÷ 28 L·min⁻¹ = 150 mL·L⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "15 mL·L⁻¹",
+       "why": "This is the value in mL·dL⁻¹ given the wrong unit: 150 mL·L⁻¹ = 15 mL·dL⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "6.7 mL·L⁻¹",
+       "why": "This divides Q by VO₂ (28 ÷ 4.2): the inverse."
+      },
+      {
+       "id": "d",
+       "text": "0.15 mL·L⁻¹",
+       "why": "This keeps VO₂ in L·min⁻¹ (4.2 ÷ 28): that gives litres of O₂ per litre of blood, not mL."
+      }
+     ],
+     "solution": "a-vO₂ = VO₂ ÷ Q = 4,200 mL·min⁻¹ ÷ 28 L·min⁻¹ = 150 mL·L⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO₂max is 5.4 L·min⁻¹ and his maximal cardiac output 32 L·min⁻¹. What is his a-vO₂ difference at max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "169 mL·L⁻¹",
+       "correct": true,
+       "why": "Right: 5,400 ÷ 32 = 169 mL·L⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "17 mL·L⁻¹",
+       "why": "This is the value in mL·dL⁻¹ given the wrong unit: 169 mL·L⁻¹ ≈ 17 mL·dL⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "5.9 mL·L⁻¹",
+       "why": "This divides Q by VO₂ (32 ÷ 5.4): the inverse."
+      },
+      {
+       "id": "d",
+       "text": "0.17 mL·L⁻¹",
+       "why": "This keeps VO₂ in L·min⁻¹ (5.4 ÷ 32): that gives litres of O₂ per litre of blood, not mL."
+      }
+     ],
+     "solution": "a-vO₂ = VO₂ ÷ Q = 5,400 mL·min⁻¹ ÷ 32 L·min⁻¹ = 168.75 ≈ 169 mL·L⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "fick-extraction",
+   "concept": "fick-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At VO₂max a trained rider has CaO₂ 200 mL·L⁻¹ and mixed venous CvO₂ 30 mL·L⁻¹. What is his systemic extraction fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85%",
+       "correct": true,
+       "why": "Right: (200 − 30) ÷ 200 = 170 ÷ 200 = 0.85."
+      },
+      {
+       "id": "b",
+       "text": "15%",
+       "why": "This is CvO₂ ÷ CaO₂: the share that goes back unused."
+      },
+      {
+       "id": "c",
+       "text": "118%",
+       "why": "This divides CaO₂ by the a-vO₂ difference (200 ÷ 170); a fraction can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "170%",
+       "why": "This is the a-vO₂ difference in mL·L⁻¹ read as a percentage."
+      }
+     ],
+     "solution": "Extraction = (CaO₂ − CvO₂) ÷ CaO₂ = 170 ÷ 200 = 85%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner at rest has CaO₂ 200 mL·L⁻¹ and mixed venous CvO₂ 150 mL·L⁻¹. What is her systemic extraction fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25%",
+       "correct": true,
+       "why": "Right: (200 − 150) ÷ 200 = 50 ÷ 200 = 0.25."
+      },
+      {
+       "id": "b",
+       "text": "75%",
+       "why": "This is CvO₂ ÷ CaO₂: the share that goes back unused."
+      },
+      {
+       "id": "c",
+       "text": "400%",
+       "why": "This divides CaO₂ by the a-vO₂ difference (200 ÷ 50); a fraction can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "50%",
+       "why": "This is the a-vO₂ difference in mL·L⁻¹ read as a percentage."
+      }
+     ],
+     "solution": "Extraction = (CaO₂ − CvO₂) ÷ CaO₂ = 50 ÷ 200 = 25%."
+    }
+   ]
+  },
+  {
+   "id": "fick-training-source",
+   "concept": "fick-training",
+   "bloom": "understand",
+   "sources": [
+    "montero2015",
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A previously untrained runner raises her VO₂max by 12% over 10 weeks. According to pooled training studies, which Fick term most likely made the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Maximal cardiac output",
+       "correct": true,
+       "why": "Right: in pooled studies Qmax rose with VO₂max, while the a-vO₂ difference at max did not change significantly."
+      },
+      {
+       "id": "b",
+       "text": "The a-vO₂ difference at max",
+       "why": "In the meta-analysis the a-vO₂ difference at max didn't rise significantly after 5–13 weeks."
+      },
+      {
+       "id": "c",
+       "text": "Arterial O₂ content",
+       "why": "Training doesn't raise CaO₂; it may even lower it as plasma expands."
+      },
+      {
+       "id": "d",
+       "text": "Resting heart rate",
+       "why": "Resting HR isn't a Fick term at max; it falls with training but doesn't set VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fick-cao2-elite",
+   "concept": "fick-training",
+   "bloom": "analyse",
+   "sources": [
+    "skattebo2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Elite cyclists extract a larger share of arterial O₂ than moderately trained riders, yet their a-vO₂ difference at max is often similar. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Their CaO₂ is lower, so a bigger share of a smaller amount",
+       "correct": true,
+       "why": "Right: the fittest had about 10% lower CaO₂; a higher fraction of less O₂ gives a similar difference."
+      },
+      {
+       "id": "b",
+       "text": "Their mixed venous O₂ is higher, as muscles waste more",
+       "why": "Higher extraction means lower venous O₂, not higher."
+      },
+      {
+       "id": "c",
+       "text": "Their cardiac output is lower, so blood stays longer",
+       "why": "Elite riders have much higher Qmax, not lower."
+      },
+      {
+       "id": "d",
+       "text": "Extraction can't differ between people",
+       "why": "Systemic extraction rises with VO₂max to about 90%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fick-debate",
+   "concept": "fick-training",
+   "bloom": "evaluate",
+   "sources": [
+    "skattebo2020",
+    "montero2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis found no significant change in the maximal a-vO₂ difference after training. A coach concludes muscle adaptations can't raise VO₂max at all. Best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too strong: small, noisy studies could miss a modest rise in extraction",
+       "correct": true,
+       "why": "Right: the a-vO₂ difference is mostly calculated from VO₂ ÷ Q, so Q's error lands in it, and studies were small."
+      },
+      {
+       "id": "b",
+       "text": "Correct: no significant change proves no change",
+       "why": "Non-significant is not the same as zero, especially with 130 people across 13 small studies."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: the meta-analysis found a large rise in extraction",
+       "why": "It found a small, non-significant effect (SMD 0.21) on the a-vO₂ difference."
+      },
+      {
+       "id": "d",
+       "text": "Correct: muscle adaptations only matter below VO₂max",
+       "why": "They matter most below VO₂max, but that doesn't rule out a small effect at max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fick-small-muscle",
+   "concept": "fick-periphery",
+   "bloom": "analyse",
+   "sources": [
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In one-leg knee-extension, the working thigh gets far more blood per kg than it does in cycling, and its O₂ uptake per kg is much higher. What does this show about VO₂max in cycling?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In cycling the muscle gets less O₂ than it could use",
+       "correct": true,
+       "why": "Right: given more flow, the same muscle uses far more O₂, so in whole-body exercise delivery limits it."
+      },
+      {
+       "id": "b",
+       "text": "In cycling the muscle's mitochondria set the limit",
+       "why": "If mitochondria set the limit, more flow wouldn't raise uptake per kg so much."
+      },
+      {
+       "id": "c",
+       "text": "Knee-extension uses a different fibre type",
+       "why": "It is the same quadriceps; the difference is flow per kg of muscle."
+      },
+      {
+       "id": "d",
+       "text": "The heart is stronger in knee-extension",
+       "why": "Cardiac output is far lower in knee-extension; flow is shared by much less muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fick-appraisal",
+   "concept": "fick-training",
+   "bloom": "evaluate",
+   "sources": [
+    "montero2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The meta-analysis behind 'training raises Qmax, not the a-vO₂ difference' pooled 13 studies of 130 untrained or moderately trained young adults over 5–13 weeks. What most limits applying it to a well-trained triathlete's next season?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It tells us about early gains in untrained people, not trained athletes",
+       "correct": true,
+       "why": "Right: short programmes in untrained people may not show what happens after years of training."
+      },
+      {
+       "id": "b",
+       "text": "A meta-analysis is weaker evidence than one large study",
+       "why": "A good meta-analysis usually ranks above a single study."
+      },
+      {
+       "id": "c",
+       "text": "13 studies is too many to combine",
+       "why": "Combining more studies adds precision; the issue is who was studied."
+      },
+      {
+       "id": "d",
+       "text": "Training can't raise VO₂max in trained people",
+       "why": "It still can, more slowly; the issue is whether the same mechanisms apply."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

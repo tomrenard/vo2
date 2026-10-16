@@ -136,13 +136,13 @@ const Step = z.discriminatedUnion("type", [
     problem: z.string(),
     steps: z.array(z.string()).min(2),
   }),
-  /** A question from `items`. `pretest`: asked before it is taught, never scored. */
-  z.object({
-    type: z.literal("question"),
-    item: id,
-    variant: id.optional(),
-    pretest: z.boolean().optional(),
-  }),
+  /** A question from `items`, asked after the concept it tests. */
+  z.object({ type: z.literal("question"), item: id, variant: id.optional() }),
+  /**
+   * The lesson's first step: the glossary terms it introduces, defined in plain words before
+   * they're used (a term used in a lesson must be introduced in it or in an earlier lesson).
+   */
+  z.object({ type: z.literal("terms"), terms: z.array(id).min(1) }),
   z.object({ type: z.literal("recap"), points: z.array(z.string()).min(2).max(6) }),
 ]);
 export type Step = z.infer<typeof Step>;

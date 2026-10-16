@@ -1,0 +1,763 @@
+{
+ "id": "cv-drift",
+ "module": "t1b-cardio",
+ "title": "Cardiovascular drift: when heart rate creeps up",
+ "goal": "Explain why heart rate rises and stroke volume falls at a constant power or pace, how heat and dehydration add to it, the debate over its cause, and what it means for pacing long events by heart rate.",
+ "requires": [
+  "cv-bp"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cardiovascular-drift"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "drift-what",
+   "title": "Same power, rising heart rate",
+   "text": "Ride at a steady power for an hour and your HR won't stay put. After about 10 minutes it starts to creep up while SV slowly falls: [cardiovascular drift](g:cardiovascular-drift) [[c:drift-definition]].\n\nIn one study, seven active men cycled for 60 min at about 57% of peak VO₂ in a neutral room (27 °C, dry air). From 15 to 55 min, SV fell 13% and HR rose 11%, while Q stayed stable [[c:drift-fritzsche]].\n\nSo drift is mostly a change in how Q is made: more beats, less per beat, about the same output. The work hasn't changed, but HR no longer means what it did at the start, which matters if you pace by it.",
+   "claims": [
+    {
+     "id": "drift-definition",
+     "text": "Cardiovascular drift is the progressive rise in HR and fall in SV that begins after about 10 min of prolonged moderate exercise.",
+     "grade": "strong",
+     "sources": [
+      "wingo2012",
+      "coyle2001"
+     ],
+     "evidence": [
+      {
+       "source": "wingo2012",
+       "quote": "Cardiovascular drift, the progressive increase in heart rate and decrease in stroke volume that begins after approximately 10 min of prolonged moderate-intensity exercise, is associated with decreased maximal oxygen uptake, particularly during heat stress.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-fritzsche",
+     "text": "In 7 active men cycling 60 min at about 57% of peak VO₂ at 27 °C, SV fell 13% and HR rose 11% from 15 to 55 min, with Q stable.",
+     "grade": "weak",
+     "sources": [
+      "fritzsche1999"
+     ],
+     "evidence": [
+      {
+       "source": "fritzsche1999",
+       "quote": "Seven active men cycled for 60 min at approximately 57% peak O2 uptake in a neutral environment (i.e., 27 degrees C, <40% relative humidity).",
+       "level": "abstract"
+      },
+      {
+       "source": "fritzsche1999",
+       "quote": "From 15 to 55 min during CON, a 13% decline in SV was associated with an 11% increase in HR and not with an increase in CBF.",
+       "level": "abstract"
+      },
+      {
+       "source": "fritzsche1999",
+       "quote": "Cardiac output was similar in both treatments and stable throughout the exercise bouts.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "drift-example",
+   "title": "Drift in numbers",
+   "problem": "At 15 min of a steady ride, a cyclist's HR is 140 beats·min⁻¹ and his SV 130 mL. By 55 min, HR is 11% higher and SV 13% lower. What happens to Q?",
+   "steps": [
+    "At 15 min: Q = 140 × 130 mL = 18,200 mL·min⁻¹ = 18.2 L·min⁻¹.",
+    "At 55 min: HR = 140 × 1.11 = 155 beats·min⁻¹; SV = 130 × 0.87 = 113 mL.",
+    "Q = 155 × 113 mL = 17,515 mL·min⁻¹, about 17.5 L·min⁻¹. Quicker: 1.11 × 0.87 = 0.97, so Q is only about 3% lower.",
+    "HR went up 15 beats, yet the heart's output barely changed: the rise in HR mostly makes up for the smaller stroke."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "drift-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "drift-def",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "drift-causes",
+   "title": "Heat and dehydration make it worse",
+   "text": "Drift grows with heat and fluid loss. Eight trained cyclists rode 2 h at 62–67% of VO₂max in 33 °C, drinking nothing or enough to replace 20%, 48% or 81% of their sweat. They lost 1.1% to 4.2% of body mass, and the more they lost, the more their core temperature and HR rose and the more SV fell [[c:drift-dehydration]].\n\nPart of it is lost blood volume: with dehydration, about half the fall in SV comes from a smaller blood volume [[c:drift-blood-volume]].\n\nIn the heat, skin also competes for blood to shed heat: in severe heat stress total skin flow can reach 6–8 L·min⁻¹, one of the circulation's hardest tests [[c:drift-skin-competition]]. The heat module goes further.",
+   "claims": [
+    {
+     "id": "drift-dehydration",
+     "text": "In trained cyclists riding 2 h at 33 °C, the rise in core temperature and HR and the fall in SV were graded with the amount of dehydration (1.1–4.2% of body mass).",
+     "grade": "weak",
+     "sources": [
+      "montain1992"
+     ],
+     "evidence": [
+      {
+       "source": "montain1992",
+       "quote": "The protocol resulted in graded magnitudes of dehydration as body weight declined 4.2 +/- 0.1, 3.4 +/- 0.1, 2.3 +/- 0.1, and 1.1 +/- 0.1%, respectively, during NF, SF, MF, and LF.",
+       "level": "abstract"
+      },
+      {
+       "source": "montain1992",
+       "quote": "In summary, the magnitude of increase in core temperature and HR and the decline in SV are graded in proportion to the amount of dehydration accrued during exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-blood-volume",
+     "text": "With dehydration and hyperthermia, about half the fall in SV is due to reduced blood volume.",
+     "grade": "moderate",
+     "sources": [
+      "coyle1998"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1998",
+       "quote": "Approximately one-half of the reduction in SV is due to reduced blood volume from dehydration during exercise which produces hyperthermia.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-skin-competition",
+     "text": "In severe heat stress, skin blood flow can reach 6–8 L·min⁻¹, so exercise in the heat sets muscle flow, skin flow and blood pressure against each other.",
+     "grade": "moderate",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "During severe thermal stress, total skin blood flow can reach 6–8 l/min in healthy young males. This makes exercise in warm (especially humid) environments perhaps the greatest overall challenge to the human cardiovascular system due to a three-way competition between blood pressure regulation and the need for high levels of both muscle and skin blood flow",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "drift-dehydration-q"
+  },
+  {
+   "type": "question",
+   "item": "drift-heat-q"
+  },
+  {
+   "type": "concept",
+   "id": "drift-debate",
+   "title": "Why does stroke volume fall? Two theories",
+   "text": "Two explanations compete [[c:drift-two-theories]].\n\n**Skin first.** As the body warms, more blood goes to the skin and pools there. Less comes back to the heart, so filling and SV fall, and HR rises to hold Q.\n\n**Heart rate first.** Coyle and González-Alonso argued the reverse: HR rises first, with more sympathetic drive and a warmer body, which shortens filling time and lowers SV [[c:drift-hr-first]].\n\nThe key test: a small dose of a β₁-blocker (a drug that blocks the nerves speeding the heart) at the start of a 60 min ride kept HR flat; SV then didn't fall, though skin blood flow was normal [[c:drift-betablocker]].\n\nDehydration and heat add lost blood volume and skin flow: one cause won't fit every condition.",
+   "claims": [
+    {
+     "id": "drift-two-theories",
+     "text": "Two theories explain drift: skin blood flow displacing blood from the central circulation, or a rising HR shortening diastole; a single factor for all conditions may not exist.",
+     "grade": "disputed",
+     "sources": [
+      "souissi2021"
+     ],
+     "evidence": [
+      {
+       "source": "souissi2021",
+       "quote": "The first is that increased skin blood flow displaces blood volume from central circulation to the periphery, which reduces stroke volume.",
+       "level": "abstract"
+      },
+      {
+       "source": "souissi2021",
+       "quote": "The alternative theory is that an increase in heart rate is due to an increase in sympathetic nervous activity causing reducing time at diastole, and therefore stroke volume.",
+       "level": "abstract"
+      },
+      {
+       "source": "souissi2021",
+       "quote": "It may be difficult to determine a single robust factor accounting for cardiovascular drift, due to the broad range of circumstances.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-hr-first",
+     "text": "Coyle and González-Alonso proposed that the fall in SV in drift is due mainly to the rising HR rather than to rising skin blood flow.",
+     "grade": "disputed",
+     "sources": [
+      "coyle2001"
+     ],
+     "evidence": [
+      {
+       "source": "coyle2001",
+       "quote": "We propose that cardiovascular drift, characterized by a progressive decline in stroke volume after 10-20 min of exercise, is primarily due to increased heart rate rather tahn a progressive increase in cutaneous blood flow as body temperature rises.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-betablocker",
+     "text": "When a low-dose β₁-blocker prevented the HR rise during 60 min of cycling, the fall in SV was also prevented, despite normal skin blood flow.",
+     "grade": "weak",
+     "sources": [
+      "fritzsche1999"
+     ],
+     "evidence": [
+      {
+       "source": "fritzsche1999",
+       "quote": "However, from 15 to 55 min during BB, when the increase in HR was prevented by atenolol, the decline in SV was also prevented, despite a normal CBF response (i.e., similar to CON).",
+       "level": "abstract"
+      },
+      {
+       "source": "fritzsche1999",
+       "quote": "We conclude that during prolonged exercise in a neutral environment the decline in SV is related to the increase in HR and is not affected by CBF.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "In cardiovascular drift, does stroke volume fall because blood shifts to the skin, or because heart rate rises?",
+    "sides": [
+     {
+      "position": "Skin first: rising skin blood flow moves blood away from the heart, filling falls, and HR rises to make up for the lower SV.",
+      "sources": [
+       "souissi2021"
+      ]
+     },
+     {
+      "position": "Heart rate first: HR rises with sympathetic drive and body temperature, shortening filling time, and SV falls as a result.",
+      "sources": [
+       "coyle2001",
+       "fritzsche1999"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "drift-betablock-q"
+  },
+  {
+   "type": "question",
+   "item": "drift-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "drift-pacing",
+   "title": "Pacing long events by heart rate",
+   "text": "In the heat, drift comes with a fall in VO₂max, so a higher HR later on means a higher relative intensity [[c:drift-relative]].\n\nHolding HR flat isn't a clean fix: men cycling at 35 °C had to cut power by 37% from 15 to 45 min to do it, and their %VO₂max fell from about 60% to 50%: an over-correction [[c:drift-constant-hr]].\n\nBetter to reduce drift: in the heat, a fan cut the HR rise from 16% to 4% and the fall in VO₂max from 18% to 6% [[c:drift-cooling]]; drinking limits the dehydration part.\n\nIn practice: pace by power or pace, with HR as a cross-check. HR rising at the same output signals drift: drink, cool, perhaps ease off.",
+   "claims": [
+    {
+     "id": "drift-relative",
+     "text": "During prolonged exercise in the heat, the drift in HR reflects a rise in relative metabolic intensity, because VO₂max falls.",
+     "grade": "moderate",
+     "sources": [
+      "wingo2012"
+     ],
+     "evidence": [
+      {
+       "source": "wingo2012",
+       "quote": "Consequently, the increased heart rate reflects an increased relative metabolic intensity during prolonged exercise in the heat when cardiovascular drift occurs, which has implications for exercise prescription.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-constant-hr",
+     "text": "Holding HR constant at 35 °C required a 37% cut in power from 15 to 45 min and lowered %VO₂max from about 60% to 50%.",
+     "grade": "weak",
+     "sources": [
+      "wingo2006a"
+     ],
+     "evidence": [
+      {
+       "source": "wingo2006a",
+       "quote": "Power output decreased 37%, VO2 decreased 24%, and VO2max decreased 7.5% from 15 to 45 min in HRcon, while HR remained the same.",
+       "level": "abstract"
+      },
+      {
+       "source": "wingo2006a",
+       "quote": "%VO2max was decreased from approximately 60% to 50% to hold HR constant in these conditions, so the HR-%VO2max relationship was not preserved in the absence of CV drift.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "drift-cooling",
+     "text": "In 10 men cycling at 35 °C, fan cooling reduced the HR rise (4% vs 16%), the SV fall (3% vs 12%) and the fall in VO₂max (5.7% vs 18%) from 15 to 45 min.",
+     "grade": "weak",
+     "sources": [
+      "wingo2006b"
+     ],
+     "evidence": [
+      {
+       "source": "wingo2006b",
+       "quote": "In NC, VO(2)(max) decreased 18%, heart rate (HR) increased 16%, and stroke volume (SV) fell 12% (P < 0.05) from min 15 to min 45.",
+       "level": "abstract"
+      },
+      {
+       "source": "wingo2006b",
+       "quote": "In FAN, VO(2)(max) fell less (5.7%, P < 0.05) , HR rose less (4%, P < 0.05) and SV decreased less (3%, P < 0.05) from 15 to 45 min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "drift-pacing-q"
+  },
+  {
+   "type": "question",
+   "item": "drift-constant-hr-q"
+  },
+  {
+   "type": "question",
+   "item": "drift-cooling-q"
+  },
+  {
+   "type": "question",
+   "item": "drift-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Cardiovascular drift: after about 10 min at a constant power or pace, HR creeps up and SV falls while Q stays about the same.",
+    "Dehydration and heat make it bigger: the HR rise and SV fall grow with fluid loss, half the SV fall in dehydration is lost blood volume, and skin competes for blood.",
+    "Why SV falls is debated: blood shifting to the skin, or a rising HR shortening filling time. A β₁-blocker that stopped the HR rise also stopped the SV fall.",
+    "In the heat, drifting HR means a higher relative intensity; holding HR flat over-corrects. Reduce drift with fluids and cooling, and read HR next to power or pace."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "drift-def",
+   "concept": "drift-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "wingo2012",
+    "fritzsche1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner holds an even pace for 90 minutes in mild weather. From about the 10-minute mark, what happens to her heart rate, stroke volume and cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HR rises, SV falls, Q stays about the same",
+       "correct": true,
+       "why": "Right: that is cardiovascular drift. More beats, less per beat, about the same output."
+      },
+      {
+       "id": "b",
+       "text": "HR, SV and Q all stay constant",
+       "why": "That is the idea of a steady state, but HR and SV drift even when the pace doesn't change."
+      },
+      {
+       "id": "c",
+       "text": "HR rises, SV rises, Q rises",
+       "why": "SV falls in drift, and Q stays roughly stable at a constant workload."
+      },
+      {
+       "id": "d",
+       "text": "HR falls, SV rises, Q stays the same",
+       "why": "The directions are reversed: HR rises and SV falls."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides at a steady 200 W for an hour. Between 15 and 55 minutes, what happens to his heart rate, stroke volume and cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HR rises, SV falls, Q stays about the same",
+       "correct": true,
+       "why": "Right: in a 60 min ride, SV fell 13% and HR rose 11% while Q stayed stable."
+      },
+      {
+       "id": "b",
+       "text": "HR, SV and Q all stay constant",
+       "why": "That is the idea of a steady state, but HR and SV drift even when the power doesn't change."
+      },
+      {
+       "id": "c",
+       "text": "HR rises, SV rises, Q rises",
+       "why": "SV falls in drift, and Q stays roughly stable at a constant workload."
+      },
+      {
+       "id": "d",
+       "text": "HR falls, SV rises, Q stays the same",
+       "why": "The directions are reversed: HR rises and SV falls."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-calc",
+   "concept": "drift-what",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "fritzsche1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Early in a long ride, a cyclist's HR is 145 beats·min⁻¹ and SV 120 mL. An hour later, at the same power, HR is 160 and SV 109 mL. What is his cardiac output now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17.4 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 160 × 109 mL = 17,440 mL·min⁻¹ ≈ 17.4 L·min⁻¹, the same as at the start (145 × 120 = 17.4)."
+      },
+      {
+       "id": "b",
+       "text": "19.2 L·min⁻¹",
+       "why": "This uses the new HR with the old SV (160 × 120). SV has fallen."
+      },
+      {
+       "id": "c",
+       "text": "15.8 L·min⁻¹",
+       "why": "This uses the old HR with the new SV (145 × 109). HR has risen."
+      },
+      {
+       "id": "d",
+       "text": "269 L·min⁻¹",
+       "why": "This adds HR and SV (160 + 109). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 160 × 109 mL = 17,440 mL·min⁻¹ ≈ 17.4 L·min⁻¹. At the start: 145 × 120 mL = 17,400 mL·min⁻¹. Q is unchanged; only the mix of HR and SV has drifted."
+    },
+    {
+     "id": "b",
+     "stem": "Early in a marathon, a runner's HR is 150 beats·min⁻¹ and SV 125 mL. Ninety minutes later, at the same pace, HR is 165 and SV 114 mL. What is her cardiac output now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.8 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 165 × 114 mL = 18,810 mL·min⁻¹ ≈ 18.8 L·min⁻¹, about the same as at the start (150 × 125 = 18.75)."
+      },
+      {
+       "id": "b",
+       "text": "20.6 L·min⁻¹",
+       "why": "This uses the new HR with the old SV (165 × 125). SV has fallen."
+      },
+      {
+       "id": "c",
+       "text": "17.1 L·min⁻¹",
+       "why": "This uses the old HR with the new SV (150 × 114). HR has risen."
+      },
+      {
+       "id": "d",
+       "text": "279 L·min⁻¹",
+       "why": "This adds HR and SV (165 + 114). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 165 × 114 mL = 18,810 mL·min⁻¹ ≈ 18.8 L·min⁻¹. At the start: 150 × 125 mL = 18,750 mL·min⁻¹. Q is about unchanged."
+    },
+    {
+     "id": "c",
+     "stem": "Early on the bike leg, a triathlete's HR is 130 beats·min⁻¹ and SV 140 mL. Two hours later, at the same power, HR is 143 and SV 127 mL. What is his cardiac output now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.2 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 143 × 127 mL = 18,161 mL·min⁻¹ ≈ 18.2 L·min⁻¹, the same as at the start (130 × 140 = 18.2)."
+      },
+      {
+       "id": "b",
+       "text": "20.0 L·min⁻¹",
+       "why": "This uses the new HR with the old SV (143 × 140). SV has fallen."
+      },
+      {
+       "id": "c",
+       "text": "16.5 L·min⁻¹",
+       "why": "This uses the old HR with the new SV (130 × 127). HR has risen."
+      },
+      {
+       "id": "d",
+       "text": "270 L·min⁻¹",
+       "why": "This adds HR and SV (143 + 127). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 143 × 127 mL = 18,161 mL·min⁻¹ ≈ 18.2 L·min⁻¹. At the start: 130 × 140 mL = 18,200 mL·min⁻¹. Q is unchanged."
+    }
+   ]
+  },
+  {
+   "id": "drift-dehydration-q",
+   "concept": "drift-causes",
+   "bloom": "analyse",
+   "sources": [
+    "montain1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist does two identical 2 h rides at 33 °C. On one he drinks enough to replace about 80% of his sweat; on the other he drinks nothing. Which ride shows more drift, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The no-drink ride: more fluid loss, more HR rise and SV fall",
+       "correct": true,
+       "why": "Right: the HR rise and the SV fall were graded with the amount of dehydration."
+      },
+      {
+       "id": "b",
+       "text": "Neither: drift depends only on how long you ride",
+       "why": "Ride time was the same; the drift grew with the fluid deficit."
+      },
+      {
+       "id": "c",
+       "text": "The drink ride: extra fluid overloads the heart",
+       "why": "Replacing sweat keeps blood volume up, which supports filling and SV."
+      },
+      {
+       "id": "d",
+       "text": "The no-drink ride, but only because he rode harder",
+       "why": "Power was the same in both rides; the difference came from dehydration."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-heat-q",
+   "concept": "drift-causes",
+   "bloom": "understand",
+   "sources": [
+    "joyner2015",
+    "coyle1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a long run in hot, humid weather put more strain on the circulation than the same run in the cool?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skin needs a large share of blood for cooling, competing with muscle",
+       "correct": true,
+       "why": "Right: skin flow can reach 6–8 L·min⁻¹ in severe heat, a three-way competition with muscle flow and blood pressure; sweat loss shrinks blood volume too."
+      },
+      {
+       "id": "b",
+       "text": "Heat slows the heart's pacemaker",
+       "why": "Heat does the opposite: HR rises in the heat."
+      },
+      {
+       "id": "c",
+       "text": "Working muscles need less blood in the heat",
+       "why": "Muscle still needs its O₂; the problem is that skin wants blood at the same time."
+      },
+      {
+       "id": "d",
+       "text": "Warm blood carries no oxygen",
+       "why": "Warm blood still carries oxygen; the strain comes from sharing a limited Q."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-betablock-q",
+   "concept": "drift-debate",
+   "bloom": "analyse",
+   "sources": [
+    "fritzsche1999",
+    "coyle2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 60 min ride, a small dose of a β₁-blocker stopped the riders' heart rate from drifting up. Their skin blood flow was normal. What happened to stroke volume, and what does that suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SV held steady: the HR rise drives the SV fall",
+       "correct": true,
+       "why": "Right: with HR held, SV didn't fall although skin flow was normal, which supports the heart-rate-first theory."
+      },
+      {
+       "id": "b",
+       "text": "SV fell as usual: skin flow drives the drift",
+       "why": "In fact SV held when HR was held, despite a normal skin flow response."
+      },
+      {
+       "id": "c",
+       "text": "SV fell further: the heart couldn't compensate",
+       "why": "SV didn't fall more; it held steady, and Q was stable in both trials."
+      },
+      {
+       "id": "d",
+       "text": "SV rose sharply, and Q went up with it",
+       "why": "Q stayed similar and stable in both trials."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-appraisal",
+   "concept": "drift-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "fritzsche1999",
+    "montain1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The β-blocker study tested 7 active men cycling for 60 min at 27 °C in dry air. What most limits using it to explain drift in the marathon of a hot Ironman?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small male sample, a neutral room and only one hour",
+       "correct": true,
+       "why": "Right: the authors limit their conclusion to a neutral environment; in heat and dehydration, lost blood volume and skin flow add to the picture."
+      },
+      {
+       "id": "b",
+       "text": "Its placebo-controlled crossover design can't show cause",
+       "why": "A placebo-controlled crossover is a strong design for this question; the limits are the sample and conditions."
+      },
+      {
+       "id": "c",
+       "text": "It measured heart rate but not stroke volume",
+       "why": "It measured both, and cardiac output and skin blood flow as well."
+      },
+      {
+       "id": "d",
+       "text": "The drug dose was too high to be safe in exercise",
+       "why": "The dose was small (about 7 mg of atenolol), just enough to stop the HR rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-pacing-q",
+   "concept": "drift-pacing",
+   "bloom": "evaluate",
+   "sources": [
+    "wingo2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a hot Ironman, a triathlete rides at a steady 200 W. By hour three her HR has risen from 135 to 150 beats·min⁻¹ at the same power. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drift: the same power now costs a higher relative intensity",
+       "correct": true,
+       "why": "Right: in the heat, drift comes with a fall in VO₂max, so the higher HR reflects real extra strain. Drink, cool, and consider easing."
+      },
+      {
+       "id": "b",
+       "text": "Her fitness has dropped since the start",
+       "why": "Fitness doesn't change in three hours; what changed is how her circulation is coping."
+      },
+      {
+       "id": "c",
+       "text": "Her power meter must be reading low",
+       "why": "Possible, but drift is the expected, well-documented cause of this pattern."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: HR always rises with time, so ignore it",
+       "why": "Drift carries information: in the heat it means a higher relative intensity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-constant-hr-q",
+   "concept": "drift-pacing",
+   "bloom": "analyse",
+   "sources": [
+    "wingo2006a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner in 35 °C heat holds her HR at 150 beats·min⁻¹ for 45 minutes, and her pace slows a lot. Based on the cycling study of this, what happened to her relative intensity (%VO₂max)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It fell: holding HR flat over-corrects",
+       "correct": true,
+       "why": "Right: to hold HR constant, cyclists cut power 37% and their %VO₂max fell from about 60% to 50%."
+      },
+      {
+       "id": "b",
+       "text": "It stayed the same: same HR, same intensity",
+       "why": "Drift breaks that link: HR and %VO₂max no longer move together."
+      },
+      {
+       "id": "c",
+       "text": "It rose sharply as the heat built",
+       "why": "That fits holding a constant power or pace, not a constant HR."
+      },
+      {
+       "id": "d",
+       "text": "It doubled, because VO₂max halved",
+       "why": "VO₂max fell by about 7.5% in that condition, not by half."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drift-cooling-q",
+   "concept": "drift-pacing",
+   "bloom": "apply",
+   "sources": [
+    "wingo2006b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a 45 min indoor ride in a hot room, a fan starts blowing on a cyclist after about 18 min. Compared with the same ride without a fan, what do you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A smaller HR rise and a smaller SV fall",
+       "correct": true,
+       "why": "Right: with a fan, HR rose 4% instead of 16% and SV fell 3% instead of 12%; VO₂max fell less too."
+      },
+      {
+       "id": "b",
+       "text": "No difference: drift can't be changed",
+       "why": "Cooling clearly reduced drift in that study."
+      },
+      {
+       "id": "c",
+       "text": "A bigger HR rise, since the fan chills the skin",
+       "why": "Cooling lowers the strain on the circulation; HR rose less, not more."
+      },
+      {
+       "id": "d",
+       "text": "A doubling of cardiac output",
+       "why": "Q at a fixed power stays about the same; cooling changes how it is made."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

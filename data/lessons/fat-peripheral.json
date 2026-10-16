@@ -1,0 +1,717 @@
+{
+ "id": "fat-peripheral",
+ "module": "t1b-fatigue",
+ "title": "Peripheral fatigue: inside the muscle",
+ "goal": "Explain which ion and metabolite changes inside the muscle fibre reduce force and power, and which of these claims are settled or still open.",
+ "requires": [
+  "fat-models"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "peripheral-fatigue",
+    "reactive-oxygen-species"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pe-chain",
+   "title": "Where the chain can break",
+   "text": "[Peripheral fatigue](g:peripheral-fatigue) is force lost at or beyond the [neuromuscular junction](g:neuromuscular-junction). In a working fibre the [action potential](g:action-potential), the ions inside and outside, and many metabolites all change [[c:many-changes]]. They act on three links of one chain:\n\n| link | what happens | what can go wrong |\n|---|---|---|\n| excitation | action potential runs along the [sarcolemma](g:sarcolemma) and T-tubules | K⁺ piling up outside weakens it |\n| Ca²⁺ release | the [sarcoplasmic reticulum](g:sarcoplasmic-reticulum) (SR) releases Ca²⁺ | less Ca²⁺ comes out |\n| [cross-bridges](g:cross-bridge) | [myosin](g:myosin) pulls on [actin](g:actin) | Pi, H⁺ and ADP weaken or slow them |\n\n*Lactate, H⁺ and fatigue* showed that lactate and H⁺ aren't the main culprits. This lesson covers the rest.",
+   "claims": [
+    {
+     "id": "many-changes",
+     "text": "During fatigue the action potential, extracellular and intracellular ions and many intracellular metabolites change.",
+     "grade": "strong",
+     "sources": [
+      "allen2008"
+     ],
+     "evidence": [
+      {
+       "source": "allen2008",
+       "quote": "Many muscle properties change during fatigue including the action potential, extracellular and intracellular ions, and many intracellular metabolites.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pe-sites"
+  },
+  {
+   "type": "concept",
+   "id": "pe-excitation",
+   "title": "Excitation: potassium leaks out",
+   "text": "Each action potential lets K⁺ out of the fibre and Na⁺ in. In intense contractions, K⁺ in the fluid around the fibres can rise to 11–13 mmol·L⁻¹ [[c:k-rise]]. Together these shifts make the membranes less negative (depolarised), so the action potential weakens and the force of strong contractions falls [[c:k-depolarise]].\n\nThe [Na⁺-K⁺ pump](g:na-k-atpase) speeds up during exercise and pushes the ions back, protecting excitability. In very hard work some pumps are inactivated, and the shifts get worse.\n\nA twist: milder ion shifts can *raise* force at low firing rates, possibly helping contraction early in exercise [[c:k-potentiate]]. The big losses come with intense, repeated contractions.",
+   "claims": [
+    {
+     "id": "k-rise",
+     "text": "With intense fatiguing contractions, muscle interstitial K⁺ may rise to 11–13 mmol·L⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "mckenna2008"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2008",
+       "quote": "Muscle interstitial K(+) concentration may increase 1- to 2-fold to 11-13 mM and intracellular K(+) concentration fall by 1.3- to 1.7-fold",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "k-depolarise",
+     "text": "K⁺, Na⁺ and Cl⁻ shifts depolarise sarcolemmal and T-tubular membranes, depressing tetanic force; inactivation of some Na⁺-K⁺ pumps worsens this.",
+     "grade": "moderate",
+     "sources": [
+      "mckenna2008"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2008",
+       "quote": "When considered together, these ionic changes depolarize sarcolemmal and t-tubular membranes to depress tetanic force and are thus likely to contribute to fatigue.",
+       "level": "abstract"
+      },
+      {
+       "source": "mckenna2008",
+       "quote": "However, during intense contraction some Na(+)-K(+) pumps are inactivated and together with further ionic disturbances, likely precipitate muscle fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "k-potentiate",
+     "text": "Less severe ionic changes can augment subtetanic force, possibly potentiating contraction early in exercise.",
+     "grade": "weak",
+     "sources": [
+      "mckenna2008"
+     ],
+     "evidence": [
+      {
+       "source": "mckenna2008",
+       "quote": "Interestingly, less severe local ionic changes can also augment subtetanic force, suggesting that they may potentiate muscle contractility early in exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pe-k"
+  },
+  {
+   "type": "concept",
+   "id": "pe-crossbridge",
+   "title": "Cross-bridges: Pi, H⁺ and ADP",
+   "text": "Splitting [PCr](g:pcr) and ATP leaves [inorganic phosphate](g:inorganic-phosphate) (Pi), ADP and H⁺ in the fibre. In single fibres with plenty of Ca²⁺, each has its own effect [[c:pi-h-adp]]:\n\n| metabolite | main effect |\n|---|---|\n| Pi | lowers maximal force: the main cause of lost force in a static (isometric) contraction |\n| H⁺ | slows shortening velocity |\n| ADP | may also slow shortening |\n\nPower is force × velocity, so slower cross-bridges cost power even when peak force holds up. That loss shows most in sprints and fast efforts.\n\nAt body temperature, [acidosis](g:acidosis) has little direct effect on force in mammalian muscle, while Pi is a major cause of fatigue [[c:h-small]]. Pi also acts in a second place: Ca²⁺ release.",
+   "claims": [
+    {
+     "id": "pi-h-adp",
+     "text": "In single fibres at saturating Ca²⁺, elevated Pi appears to be the primary cause of lost maximal isometric force, while H⁺ and possibly ADP slow unloaded shortening velocity.",
+     "grade": "moderate",
+     "sources": [
+      "debold2012"
+     ],
+     "evidence": [
+      {
+       "source": "debold2012",
+       "quote": "At saturating Ca(++) levels, elevated P(i) appears to be the primary cause for the loss in maximal isometric force, while increased [H(+)] and possibly ADP act to slow unloaded shortening velocity in single muscle fibers, suggesting a causative role in muscular fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "h-small",
+     "text": "Acidosis has little direct effect on mammalian muscle at physiological temperatures; inorganic phosphate appears to be a major cause of fatigue.",
+     "grade": "moderate",
+     "sources": [
+      "westerblad2002"
+     ],
+     "evidence": [
+      {
+       "source": "westerblad2002",
+       "quote": "Recent studies on mammalian muscle, however, show little direct effect of acidosis on muscle function at physiological temperatures. Instead, inorganic phosphate, which increases during fatigue due to breakdown of creatine phosphate, appears to be a major cause of muscle fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pe-pi-force",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "pe-velocity"
+  },
+  {
+   "type": "concept",
+   "id": "pe-calcium",
+   "title": "Calcium release fails",
+   "text": "Late in hard work the SR releases less Ca²⁺ per action potential, so fewer cross-bridges switch on. Two causes have been shown in isolated fibres; the first has more support:\n\n- **Pi takes Ca²⁺ out of play.** Pi can move into the SR and form calcium phosphate there, leaving less Ca²⁺ to release. In fibres without working [creatine kinase](g:creatine-kinase), Pi doesn't rise, and Ca²⁺ release fails later [[c:capi]].\n- **Mg²⁺ rises.** ATP normally carries Mg²⁺, so breaking ATP down frees it. In one study on rat fibres with their outer membrane removed, raising Mg²⁺ from 1 to 3 mmol·L⁻¹ cut Ca²⁺ release by about 40% [[c:mg]].\n\nLow glycogen also impairs Ca²⁺ release: that comes up in *Fatigue in long efforts*.",
+   "claims": [
+    {
+     "id": "capi",
+     "text": "Raised Pi reduces SR Ca²⁺ release, probably by entering the SR and precipitating as calcium phosphate; without creatine kinase, Pi doesn't rise and release failure is delayed.",
+     "grade": "moderate",
+     "sources": [
+      "allen2001",
+      "allen2008"
+     ],
+     "evidence": [
+      {
+       "source": "allen2001",
+       "quote": "In muscle fibres with inoperative creatine kinase the rise of [P(i)](myo) is absent during fatigue and the failure of SR Ca(2+) release is delayed.",
+       "level": "abstract"
+      },
+      {
+       "source": "allen2001",
+       "quote": "These results can all be explained if inorganic phosphate can move from the myoplasm into the SR during fatigue and cause precipitation of CaP(i) within the SR.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mg",
+     "text": "In skinned rat fibres, raising free Mg²⁺ from 1 to 3 mmol·L⁻¹ cut depolarisation-induced Ca²⁺ release by about 40%.",
+     "grade": "weak",
+     "sources": [
+      "blazev1999"
+     ],
+     "evidence": [
+      {
+       "source": "blazev1999",
+       "quote": "Paired comparisons in the same fibres showed that raising the [Mg2+] from 1 to 3 mM reduced the total amount of Ca2+ released by a single depolarization by approximately 40 %.",
+       "level": "abstract"
+      },
+      {
+       "source": "blazev1999",
+       "quote": "the (reversible) reduction in Ca2+ release occurring in a muscle fibre after prolonged exercise could result not only from raised [Mg2+] but also from a severe reduction in [ATP] locally near the Ca2+ release channels",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "In human muscle during hard exercise, does Pi act mainly at the cross-bridges or by making Ca²⁺ release fail?",
+    "sides": [
+     {
+      "position": "Mainly at the cross-bridges: elevated Pi is the primary cause of lost maximal force in single fibres.",
+      "sources": [
+       "debold2012",
+       "westerblad2002"
+      ]
+     },
+     {
+      "position": "Largely through Ca²⁺ release: Pi entering the SR and binding Ca²⁺ explains the late failure of release; how much this applies in humans is still being worked out.",
+      "sources": [
+       "allen2001",
+       "allen2008"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pe-capi"
+  },
+  {
+   "type": "question",
+   "item": "pe-ck-knockout"
+  },
+  {
+   "type": "question",
+   "item": "pe-mg"
+  },
+  {
+   "type": "concept",
+   "id": "pe-ros",
+   "title": "Reactive oxygen species, and what's settled",
+   "text": "Working muscle makes [reactive oxygen species](g:reactive-oxygen-species) (ROS). They are normal signals, with tentative roles in fatigue and recovery [[c:ros-roles]]. In rat fibres, a force loss at low stimulation rates 30 min after fatigue came from lower Ca²⁺ sensitivity and was partly reversed by a reducing agent (a chemical that undoes oxidation) [[c:ros-plffd]].\n\n| claim | status |\n|---|---|\n| Pi lowers force at the cross-bridges | well supported |\n| K⁺ shifts weaken excitation in intense work | well supported |\n| SR Ca²⁺ release fails late in fatigue | well supported |\n| size of each effect in a race | open |\n| role of ROS | tentative |\n\nMost of this comes from isolated animal fibres; applying it to people is hard [[c:isolated]].",
+   "claims": [
+    {
+     "id": "ros-roles",
+     "text": "ROS/RNS have tentative roles in acute fatigue during strenuous exercise, in recovery from fatigue and in training effects.",
+     "grade": "weak",
+     "sources": [
+      "westerblad2011"
+     ],
+     "evidence": [
+      {
+       "source": "westerblad2011",
+       "quote": "The review deals with the tentative roles of ROS/RNS for acute changes that can occur during strenuous exercise resulting in muscle fatigue, for the recovery from fatigue, and for the effects of training/overtraining.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ros-plffd",
+     "text": "In rat fibres, prolonged low-frequency force depression after fatigue came from reduced myofibrillar Ca²⁺ sensitivity, partly reversed by a reducing agent.",
+     "grade": "weak",
+     "sources": [
+      "bruton2008"
+     ],
+     "evidence": [
+      {
+       "source": "bruton2008",
+       "quote": "The decreased Ca(2+) sensitivity in rat fibres could be partially reversed by application of the reducing agent dithiothreitol",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "isolated",
+     "text": "Most mechanistic fatigue studies use isolated animal tissue; applying them to intact humans is a major challenge.",
+     "grade": "moderate",
+     "sources": [
+      "allen2008"
+     ],
+     "evidence": [
+      {
+       "source": "allen2008",
+       "quote": "Most of the mechanistic studies of fatigue are on isolated animal tissues, and another major challenge is to use the knowledge generated in these studies to identify the mechanisms of fatigue in intact animals and particularly in human diseases.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pe-ros"
+  },
+  {
+   "type": "question",
+   "item": "pe-settled"
+  },
+  {
+   "type": "question",
+   "item": "pe-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Peripheral fatigue can break three links: excitation, Ca²⁺ release from the SR, and the cross-bridges.",
+    "K⁺ leaking out of fibres in intense work depolarises membranes and weakens the action potential; the Na⁺-K⁺ pump fights back.",
+    "Pi is the main cause of lost maximal force at the cross-bridges; H⁺ and ADP mostly slow shortening, which costs power.",
+    "Late in fatigue SR Ca²⁺ release fails: Pi binding Ca²⁺ inside the SR is the best-supported cause; rising Mg²⁺ is a candidate from rat-fibre work.",
+    "ROS play a tentative role; most of this evidence is from isolated animal fibres, so the size of each effect in a human race is open."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pe-pi-force",
+   "concept": "pe-crossbridge",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "debold2012",
+    "westerblad2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In single muscle fibres with plenty of Ca²⁺, which metabolite is the main cause of the loss of maximal force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inorganic phosphate (Pi)",
+       "correct": true,
+       "why": "Right: elevated Pi appears to be the primary cause of lost maximal isometric force."
+      },
+      {
+       "id": "b",
+       "text": "Hydrogen ions (H⁺)",
+       "why": "H⁺ mainly slows shortening; at body temperature its direct effect on force is small."
+      },
+      {
+       "id": "c",
+       "text": "Lactate",
+       "why": "Lactate itself isn't a cause of lost force (see *Lactate, H⁺ and fatigue*)."
+      },
+      {
+       "id": "d",
+       "text": "ADP",
+       "why": "ADP may slow shortening velocity; it isn't the main cause of lost force."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a 30 s all-out sprint, a rider's fibres build up Pi, H⁺ and ADP. Which one mainly lowers their maximal isometric force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pi, from the breakdown of PCr and ATP",
+       "correct": true,
+       "why": "Right: Pi is the main cause of lost maximal isometric force in fibres."
+      },
+      {
+       "id": "b",
+       "text": "H⁺, from splitting ATP outside the mitochondria",
+       "why": "H⁺ mostly slows shortening velocity; its direct effect on force is small at body temperature."
+      },
+      {
+       "id": "c",
+       "text": "ADP, from ATP being used faster than it's rebuilt",
+       "why": "ADP may slow shortening; it isn't the main force-lowering metabolite."
+      },
+      {
+       "id": "d",
+       "text": "Lactate, from pyruvate in glycolysis",
+       "why": "Lactate is not what lowers force."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-sites",
+   "concept": "pe-chain",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "allen2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which change acts on the excitation link of the chain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "K⁺ building up in the fluid around the fibres",
+       "correct": true,
+       "why": "Right: K⁺ shifts depolarise the membrane and weaken the action potential."
+      },
+      {
+       "id": "b",
+       "text": "Pi moving into the sarcoplasmic reticulum",
+       "why": "That acts on the Ca²⁺ release link."
+      },
+      {
+       "id": "c",
+       "text": "H⁺ slowing the cross-bridge cycle",
+       "why": "That acts on the cross-bridge link."
+      },
+      {
+       "id": "d",
+       "text": "ADP building up near myosin",
+       "why": "That acts on the cross-bridge link, slowing shortening."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-k",
+   "concept": "pe-excitation",
+   "bloom": "apply",
+   "sources": [
+    "mckenna2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a set of all-out 400 m reps, K⁺ piles up in the fluid around a runner's leg fibres. What does that do to force?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It depolarises membranes, weakening action potentials and force",
+       "correct": true,
+       "why": "Right: K⁺, Na⁺ and Cl⁻ shifts depolarise membranes and depress tetanic force."
+      },
+      {
+       "id": "b",
+       "text": "It hyperpolarises membranes, so fibres fire harder",
+       "why": "K⁺ build-up outside makes the membrane less negative, not more."
+      },
+      {
+       "id": "c",
+       "text": "It binds myosin and blocks the power stroke",
+       "why": "K⁺ acts on the membranes, not on myosin."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: the Na⁺-K⁺ pump clears it at once",
+       "why": "The pump helps, but in intense work some pumps are inactivated and K⁺ still rises."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-velocity",
+   "concept": "pe-crossbridge",
+   "bloom": "analyse",
+   "sources": [
+    "debold2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the last 20 s of a 1 km track time trial, a rider's maximal isometric force has dropped only a little, but his power has fallen a lot. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "H⁺ and ADP slow shortening, and power = force × velocity",
+       "correct": true,
+       "why": "Right: slower cross-bridges cut power even when isometric force holds up."
+      },
+      {
+       "id": "b",
+       "text": "Pi lowering maximal force",
+       "why": "A Pi effect would show as a large drop in isometric force, which isn't the case."
+      },
+      {
+       "id": "c",
+       "text": "Lactate binding to the cross-bridges",
+       "why": "Lactate doesn't bind cross-bridges or slow them."
+      },
+      {
+       "id": "d",
+       "text": "Muscle glycogen running out",
+       "why": "An effort of about 1 min uses only a small part of muscle glycogen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-capi",
+   "concept": "pe-calcium",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "allen2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How can a rise in Pi reduce the Ca²⁺ released from the sarcoplasmic reticulum?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pi enters the SR and binds Ca²⁺ as calcium phosphate",
+       "correct": true,
+       "why": "Right: Ca²⁺ bound as calcium phosphate can't be released."
+      },
+      {
+       "id": "b",
+       "text": "Pi blocks the action potential along the sarcolemma",
+       "why": "Pi acts inside the fibre, not on the surface membrane's excitability."
+      },
+      {
+       "id": "c",
+       "text": "Pi binds troponin in place of Ca²⁺",
+       "why": "Pi doesn't replace Ca²⁺ on troponin."
+      },
+      {
+       "id": "d",
+       "text": "Pi makes the SR pump Ca²⁺ back in faster",
+       "why": "The proposed effect is less releasable Ca²⁺, not faster uptake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-ck-knockout",
+   "concept": "pe-calcium",
+   "bloom": "analyse",
+   "sources": [
+    "allen2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In fibres without working creatine kinase, PCr isn't broken down, Pi doesn't rise during fatigue, and Ca²⁺ release fails later than normal. What does this point to?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pi from PCr breakdown helps make Ca²⁺ release fail",
+       "correct": true,
+       "why": "Right: remove the Pi rise and the failure is delayed."
+      },
+      {
+       "id": "b",
+       "text": "Creatine kinase itself releases Ca²⁺ from the SR",
+       "why": "Creatine kinase makes ATP from PCr; it doesn't release Ca²⁺."
+      },
+      {
+       "id": "c",
+       "text": "High PCr blocks Ca²⁺ release",
+       "why": "PCr stays high in these fibres, yet release fails *later*, not sooner."
+      },
+      {
+       "id": "d",
+       "text": "Ca²⁺ release failure has nothing to do with metabolism",
+       "why": "Changing one metabolite (Pi) changed when release failed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-mg",
+   "concept": "pe-calcium",
+   "bloom": "apply",
+   "sources": [
+    "blazev1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Late in a hard bike surge, a triathlete's fibres break down ATP fast. Why might free Mg²⁺ rise, and with what effect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ATP that held Mg²⁺ is broken down; free Mg²⁺ cuts Ca²⁺ release",
+       "correct": true,
+       "why": "Right: raised Mg²⁺ reduced SR Ca²⁺ release by about 40% in skinned fibres."
+      },
+      {
+       "id": "b",
+       "text": "PCr breakdown frees Mg²⁺, which boosts Ca²⁺ release",
+       "why": "Higher Mg²⁺ reduces Ca²⁺ release, it doesn't boost it."
+      },
+      {
+       "id": "c",
+       "text": "Sweat losses concentrate Mg²⁺, which speeds cross-bridges",
+       "why": "The rise comes from ATP breakdown inside the fibre, and it impairs force."
+      },
+      {
+       "id": "d",
+       "text": "Lactate frees Mg²⁺, which lowers K⁺ outside the fibres",
+       "why": "Lactate isn't the source, and the effect is on Ca²⁺ release."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-ros",
+   "concept": "pe-ros",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "westerblad2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the current status of reactive oxygen species (ROS) as a cause of fatigue?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tentative: they play some part, but how much isn't settled",
+       "correct": true,
+       "why": "Right: their roles in fatigue and recovery are described as tentative."
+      },
+      {
+       "id": "b",
+       "text": "Proven main cause, so antioxidants prevent fatigue",
+       "why": "The evidence doesn't support ROS as the main cause."
+      },
+      {
+       "id": "c",
+       "text": "Irrelevant: muscle doesn't make ROS",
+       "why": "Working muscle does make ROS."
+      },
+      {
+       "id": "d",
+       "text": "Only harmful: they have no normal role",
+       "why": "ROS are also normal signals in muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-settled",
+   "concept": "pe-ros",
+   "bloom": "evaluate",
+   "sources": [
+    "allen2008",
+    "debold2012",
+    "westerblad2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which claim about peripheral fatigue has the strongest support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pi lowers maximal force at the cross-bridges",
+       "correct": true,
+       "why": "Right: shown consistently in single fibres (how much it adds in a human race is still open)."
+      },
+      {
+       "id": "b",
+       "text": "Lactate is the main cause of muscle fatigue",
+       "why": "Lactate and H⁺ are probably of limited importance in mammals."
+      },
+      {
+       "id": "c",
+       "text": "ROS are the main cause of fatigue in races",
+       "why": "Their role is tentative, and race data are lacking."
+      },
+      {
+       "id": "d",
+       "text": "Acidosis cuts force strongly at body temperature",
+       "why": "At body temperature its direct effect on force is small."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe-appraisal",
+   "concept": "pe-ros",
+   "bloom": "evaluate",
+   "sources": [
+    "blazev1999",
+    "allen2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study in skinned rat fibres found that raising Mg²⁺ from 1 to 3 mmol·L⁻¹ cut Ca²⁺ release by 40%. What most limits applying this to a cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rat fibres at set levels: the size of the rise in humans is unknown",
+       "correct": true,
+       "why": "Right: it shows a mechanism, not that a cyclist's Mg²⁺ reaches those levels."
+      },
+      {
+       "id": "b",
+       "text": "Rat muscle contains no Mg²⁺, so the test is artificial",
+       "why": "Mg²⁺ is present in all muscle; that's why it was tested."
+      },
+      {
+       "id": "c",
+       "text": "A 40% fall in Ca²⁺ release is too small to matter",
+       "why": "40% less Ca²⁺ released is a large effect."
+      },
+      {
+       "id": "d",
+       "text": "Skinned fibres can't release any Ca²⁺ at all",
+       "why": "They can: Ca²⁺ release is exactly what was measured."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

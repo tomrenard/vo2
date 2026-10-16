@@ -16,8 +16,8 @@ const LETTERS = ["A", "B", "C", "D"];
 
 /**
  * One multiple-choice question. Pick an option, then say how sure you are (that is the FSRS
- * grade: wrong = Again, guessed = Hard, sure = Good). Feedback explains every option. Pretests
- * have no Sure/Guess and are never scored; exams show no feedback.
+ * grade: wrong = Again, guessed = Hard, sure = Good). Feedback explains every option;
+ * exams show none.
  * Keys: 1–4 pick, Enter = sure, G = guess, Enter again = continue.
  */
 export function Question({
@@ -42,7 +42,7 @@ export function Question({
 }) {
   const [options] = useState(() => seededShuffle(variant.options, `${variant.id}:${reps}`));
   const [picked, setPicked] = useState<string | null>(null);
-  const [shown, setShown] = useState(!item.recallFirst || mode === "pretest");
+  const [shown, setShown] = useState(!item.recallFirst);
   const [result, setResult] = useState<Result | null>(null);
   const [saveError, setSaveError] = useState(false);
   const [, startSaving] = useTransition();
@@ -96,8 +96,8 @@ export function Question({
       const n = Number(event.key);
       if (shown && n >= 1 && n <= options.length) setPicked(options[n - 1]?.id ?? null);
       else if (!shown && event.key === " ") setShown(true);
-      else if (event.key === "Enter" && picked) save(mode !== "pretest");
-      else if (event.key.toLowerCase() === "g" && picked && mode !== "pretest") save(false);
+      else if (event.key === "Enter" && picked) save(true);
+      else if (event.key.toLowerCase() === "g" && picked) save(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -107,9 +107,6 @@ export function Question({
 
   return (
     <div className="flex flex-1 flex-col gap-5">
-      {mode === "pretest" && (
-        <p className="eyebrow text-[var(--brand)]!">Guess first · not scored</p>
-      )}
       <Prose
         text={variant.stem}
         prefix={`stem-${variant.id}`}
@@ -145,36 +142,21 @@ export function Question({
               ))}
             </fieldset>
           )}
-          {shown &&
-            (mode === "pretest" ? (
+          {shown && (
+            <div className="mt-2 grid grid-cols-2 gap-2.5">
+              <button type="button" className="btn" disabled={!picked} onClick={() => save(false)}>
+                Not sure
+              </button>
               <button
                 type="button"
-                className="btn btn-primary mt-2"
+                className="btn btn-primary"
                 disabled={!picked}
-                onClick={() => save(false)}
+                onClick={() => save(true)}
               >
-                Check
+                I'm sure
               </button>
-            ) : (
-              <div className="mt-2 grid grid-cols-2 gap-2.5">
-                <button
-                  type="button"
-                  className="btn"
-                  disabled={!picked}
-                  onClick={() => save(false)}
-                >
-                  Not sure
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  disabled={!picked}
-                  onClick={() => save(true)}
-                >
-                  I'm sure
-                </button>
-              </div>
-            ))}
+            </div>
+          )}
         </div>
       ) : (
         <Feedback
@@ -183,7 +165,6 @@ export function Question({
           picked={picked as string}
           letters={Object.fromEntries(options.map((o, i) => [o.id, LETTERS[i] as string]))}
           result={result}
-          pretest={mode === "pretest"}
           conceptHref={conceptHref}
           onContinue={() => onDone(result)}
           right={right?.id ?? ""}
@@ -208,7 +189,6 @@ function Feedback({
   right,
   letters,
   result,
-  pretest,
   conceptHref,
   onContinue,
 }: {
@@ -218,7 +198,6 @@ function Feedback({
   right: string;
   letters: Record<string, string>;
   result: Result;
-  pretest: boolean;
   conceptHref?: string;
   onContinue: () => void;
 }) {
@@ -229,14 +208,12 @@ function Feedback({
   const [flagged, setFlagged] = useState(false);
 
   const headline = result.correct
-    ? result.sure || pretest
+    ? result.sure
       ? "Right"
       : "Right, but you guessed"
-    : pretest
-      ? "Not yet: this is what the next cards explain"
-      : result.sure
-        ? "Wrong, and you were sure"
-        : "Not quite";
+    : result.sure
+      ? "Wrong, and you were sure"
+      : "Not quite";
 
   return (
     <div className="flex flex-col gap-4">
@@ -248,10 +225,10 @@ function Feedback({
         }}
       >
         <p className="font-semibold">{headline}</p>
-        {!result.correct && result.sure && !pretest && (
+        {!result.correct && result.sure && (
           <p className="text-sm">These are the mistakes worth fixing: it comes back soon.</p>
         )}
-        {result.correct && !result.sure && !pretest && (
+        {result.correct && !result.sure && (
           <p className="text-sm">It comes back sooner than a sure answer would.</p>
         )}
       </div>
@@ -298,7 +275,7 @@ function Feedback({
       </details>
 
       <div className="flex items-center justify-between text-sm">
-        {conceptHref && !pretest ? (
+        {conceptHref ? (
           <Go href={conceptHref} className="text-[var(--brand)] underline">
             Read the concept again
           </Go>

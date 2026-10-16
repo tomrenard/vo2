@@ -19,7 +19,7 @@ export const BACKLOG = 100;
 /** The study day starts at 4:00 Berlin time. */
 const DAY_START = sql`((date_trunc('day', (now() at time zone 'Europe/Berlin') - interval '4 hours') + interval '4 hours') at time zone 'Europe/Berlin')`;
 
-export type Context = "lesson" | "pretest" | "review" | "exam";
+export type Context = "lesson" | "review" | "exam";
 export type Answer = {
   itemId: string;
   variantId: string;

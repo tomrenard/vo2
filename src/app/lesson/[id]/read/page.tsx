@@ -4,7 +4,7 @@ import { requireUser } from "@/lib/session";
 import { Diagram } from "../../../diagrams/Diagram";
 import { Go } from "../../../Nav";
 import { Prose } from "../../../ui/Prose";
-import { Debate } from "../Player";
+import { Debate, Terms } from "../Player";
 
 /** A lesson's concept cards and worked examples as one article: for reading again. */
 export default async function ReadPage({ params }: { params: Promise<{ id: string }> }) {
@@ -23,7 +23,12 @@ export default async function ReadPage({ params }: { params: Promise<{ id: strin
         <p className="prose-text muted">{lesson.goal}</p>
       </header>
       {lesson.steps.map((step) =>
-        step.type === "concept" ? (
+        step.type === "terms" ? (
+          <section key="terms" className="flex flex-col gap-3">
+            <h2 className="eyebrow">Words in this lesson</h2>
+            <Terms ids={step.terms} />
+          </section>
+        ) : step.type === "concept" ? (
           <section key={step.id} id={step.id} className="flex scroll-mt-4 flex-col gap-3">
             <h2 className="font-serif text-2xl">{step.title}</h2>
             <Prose text={step.text} claims={step.claims} prefix={step.id} />

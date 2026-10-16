@@ -1,0 +1,702 @@
+{
+ "id": "th-measure",
+ "module": "t1b-thermo",
+ "title": "Measuring body temperature and heat stress",
+ "goal": "Choose a valid way to measure core temperature in the lab or the field, know which thermometers mislead, and read a WBGT value with its limits in mind.",
+ "requires": [
+  "th-cardio-strain"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "ingestible-sensor",
+    "wbgt"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "me-no-gold",
+   "title": "There is no single 'true' core temperature",
+   "text": "Every thermometer site reads the temperature of the tissue around it, which depends on that tissue's metabolism, blood flow and contact with neighbours. So sites differ, and none is the one true value: a gold standard deep-body temperature **does not exist** [[c:me-no-gold-standard]].\n\nWhat matters is the question. At steady state, most deep sites agree. When temperature changes fast (the start of a race, a surge, a cold drink), pick a site that tracks the **central blood**, because that is what the brain senses [[c:me-central-blood]].\n\nSkin temperature is a separate measure, usually the weighted mean of several sensors on the skin. It tells you about the shell, not the core.",
+   "claims": [
+    {
+     "id": "me-no-gold-standard",
+     "text": "No gold-standard deep-body temperature exists; each measure must be judged against the research question.",
+     "grade": "moderate",
+     "sources": [
+      "taylor2014"
+     ],
+     "evidence": [
+      {
+       "source": "taylor2014",
+       "quote": "Therefore, it is proposed that a gold standard deep-body temperature does not exist.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "me-central-blood",
+     "text": "During fast changes, deep-body temperature should be measured at sites that track the central blood volume.",
+     "grade": "moderate",
+     "sources": [
+      "taylor2014"
+     ],
+     "evidence": [
+      {
+       "source": "taylor2014",
+       "quote": "Thus, during dynamic phases, deep-body temperatures must be measured from sites that track temperature changes in the central blood volume.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "me-no-gold"
+  },
+  {
+   "type": "concept",
+   "id": "me-sites",
+   "title": "Which site, and how good?",
+   "text": "| site | strengths | weak points |\n|---|---|---|\n| oesophagus | fastest, follows central blood | nasal probe: lab only |\n| rectum | field reference | slow in fast changes |\n| gut ([pill](g:ingestible-sensor)) | wireless, for races | timing; cold drinks |\n| ear, mouth, armpit, forehead | quick | **invalid; most read too low** |\n\nThe pill agrees well with the oesophagus (bias under 0.1 °C) and responds faster than the rectum but slower than the oesophagus [[c:me-pill-agree]]. While it is still in the stomach, a cold drink cools it, so swallowing it about 6 h before has been advised [[c:me-pill-timing]].\n\nAgainst rectal temperature, ear, oral, temporal and armpit devices read 0.6–1.3 °C low in exercise in the heat [[c:me-invalid-devices]].",
+   "claims": [
+    {
+     "id": "me-pill-agree",
+     "text": "Intestinal pill temperature agrees with oesophageal temperature (bias under 0.1 °C, limits within ±0.4 °C) and responds faster than rectal but slower than oesophageal temperature.",
+     "grade": "moderate",
+     "sources": [
+      "byrne2007"
+     ],
+     "evidence": [
+      {
+       "source": "byrne2007",
+       "quote": "The agreement between Tintestinal and Toesophageal is suggested to meet our delimitation for an acceptable level of agreement (ie, systematic bias <0.1 degrees C and 95% LoA within +/-0.4 degrees C).",
+       "level": "abstract"
+      },
+      {
+       "source": "byrne2007",
+       "quote": "Tintestinal responds less rapidly than Toesophageal at the start or cessation of exercise or to a change in exercise intensity, but more rapidly than Trectal.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "me-pill-timing",
+     "text": "A pill still in the stomach is affected by the temperature of food and drink; swallowing it about 6 h before measuring has been proposed.",
+     "grade": "weak",
+     "sources": [
+      "byrne2007"
+     ],
+     "evidence": [
+      {
+       "source": "byrne2007",
+       "quote": "If the sensor is located in the stomach, its temperature will be influenced by the temperature of ingested fluid and food.",
+       "level": "full-text"
+      },
+      {
+       "source": "byrne2007",
+       "quote": "Lee et al 17 proposed a sensor ingestion time of 6 h before data collection, which would seem optimal in avoiding both temperature fluctuations in the upper gastrointestinal tract and sensor expulsion before data collection.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "me-invalid-devices",
+     "text": "During exercise in the heat, oral, aural, temporal and axillary thermometers gave invalid estimates of rectal temperature.",
+     "grade": "moderate",
+     "sources": [
+      "ganio2009"
+     ],
+     "evidence": [
+      {
+       "source": "ganio2009",
+       "quote": "The following devices provided invalid estimates of rectal temperature: forehead sticker (0.29 degrees C [0.52 degrees F]), oral temperature using an inexpensive device (-1.13 degrees C [-2.03 degrees F]), temporal temperature measured according to the instruction manual (-0.87 degrees C [-1.56 degrees F]), temporal temperature using a modified technique (-0.63 degrees C [-1.13 degrees F]), oral temperature using an expensive device (-0.86 degrees C, [-1.55 degrees F]), aural temperature (-0.67 degrees C, [-1.20 degrees F]), axillary temperature using an inexpensive device (-1.25 degrees C, [-2.24 degrees F])",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "me-field-valid",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "me-fastest"
+  },
+  {
+   "type": "question",
+   "item": "me-tympanic"
+  },
+  {
+   "type": "question",
+   "item": "me-pill-drink"
+  },
+  {
+   "type": "concept",
+   "id": "me-wbgt",
+   "title": "WBGT: one number for the weather",
+   "text": "To judge the *environment*, sport uses [WBGT](g:wbgt), invented by the US military in the 1950s to cut heat illness in training camps. It weighs three thermometers [[c:me-wbgt-formula]]:\n\n**WBGT = 0.7 × wet bulb + 0.2 × black globe + 0.1 × dry air**\n\n- *Natural wet bulb*: a wetted thermometer in the open air, cooled by evaporation, so it reflects humidity and wind.\n- *Black globe*: a black sphere that soaks up sun and radiant heat.\n- *Dry bulb*: ordinary air temperature.\n\nThe wet bulb counts for 70%, because evaporation is what limits heat loss in the heat. Marathon times slow steadily as WBGT rises from 5 to 25 °C (lesson 4).",
+   "claims": [
+    {
+     "id": "me-wbgt-formula",
+     "text": "WBGT is a weighted average: 0.7 × natural wet bulb + 0.2 × black globe + 0.1 × dry bulb temperature.",
+     "grade": "strong",
+     "sources": [
+      "grundstein2025",
+      "budd2008"
+     ],
+     "evidence": [
+      {
+       "source": "grundstein2025",
+       "quote": "It is computed as a weighted average of the natural wet bulb (WB), black globe (GT), and dry bulb (DB) temperatures as follows: WBGT = 0.7 ∗ WB + 0.2 ∗ GT + 0.1 ∗ DB",
+       "level": "full-text"
+      },
+      {
+       "source": "budd2008",
+       "quote": "WBGT was invented and first used during the 1950s as one element in a successful campaign to control serious outbreaks of heat illness in training camps of the United States Army and Marine Corps.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "me-example-wbgt",
+   "title": "Work out a WBGT",
+   "problem": "Before a triathlon: natural wet bulb 22 °C, black globe 40 °C, dry air 30 °C. What is the WBGT?",
+   "steps": [
+    "Wet bulb part: 0.7 × 22 = 15.4 °C.",
+    "Globe part: 0.2 × 40 = 8.0 °C.",
+    "Dry part: 0.1 × 30 = 3.0 °C.",
+    "WBGT = 15.4 + 8.0 + 3.0 = 26.4 °C. Note it is lower than the air temperature: a WBGT is not an air temperature and has its own thresholds."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "me-wbgt-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "me-wbgt-limits",
+   "title": "What WBGT misses",
+   "text": "WBGT is useful but blunt:\n\n- At the same WBGT, conditions are **more stressful when evaporation is restricted** by high humidity or still air [[c:me-wbgt-humidity]].\n- It describes the weather only. It knows nothing of the athlete's **heat production** or clothing, so it can't predict heat loss [[c:me-wbgt-no-metabolism]]. A WBGT of 26 °C is very different for a 10 km racer and a spectator.\n- Measurement errors creep in when the globe is left out, instruments are non-standard or badly calibrated. Phone apps that estimate WBGT read about 1 °C cooler than on-site devices, and 2–3 °C cooler in the hottest conditions [[c:me-wbgt-apps]].\n\nUse WBGT as a guide to risk, not a measure of heat strain in a person.",
+   "claims": [
+    {
+     "id": "me-wbgt-humidity",
+     "text": "At a given WBGT, environments are more stressful when sweat evaporation is restricted by high humidity or low air movement.",
+     "grade": "strong",
+     "sources": [
+      "budd2008",
+      "racinais2015"
+     ],
+     "evidence": [
+      {
+       "source": "budd2008",
+       "quote": "WBGT's most serious limitation is that environments at a given level of the index are more stressful when the evaporation of sweat is restricted (by high humidity or low air movement) than when evaporation is free.",
+       "level": "abstract"
+      },
+      {
+       "source": "racinais2015",
+       "quote": "However, WBGT might underestimate heat stress risk when sweat evaporation is restricted (ie, high humidity and/or low air movement).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "me-wbgt-no-metabolism",
+     "text": "WBGT is a climatic index that does not account for metabolic heat production or clothing.",
+     "grade": "strong",
+     "sources": [
+      "racinais2015"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2015",
+       "quote": "Moreover, the WBGT is a climatic index and does not account for metabolic heat production or clothing and therefore cannot predict heat dissipation.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "me-wbgt-apps",
+     "text": "A phone app's WBGT estimates were on average about 1 °C cooler than on-site measurements, with 2–3 °C differences at higher WBGT.",
+     "grade": "weak",
+     "sources": [
+      "grundstein2025"
+     ],
+     "evidence": [
+      {
+       "source": "grundstein2025",
+       "quote": "Our findings indicated that while exhibiting high correlation (r = 0.89), PA WBGTs were on average about 1°C cooler, with differences of 2-3°C at higher WBGTs.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "me-wbgt-humid"
+  },
+  {
+   "type": "question",
+   "item": "me-wbgt-person"
+  },
+  {
+   "type": "question",
+   "item": "me-phone"
+  },
+  {
+   "type": "question",
+   "item": "me-wbgt-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "me-wbgt-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No site gives the one true core temperature; during fast changes use a site that follows central blood (oesophagus in the lab).",
+    "In the field, rectal temperature and the swallowed pill are valid; the pill agrees with the oesophagus within about 0.1 °C but needs swallowing hours before and is upset by drinks while in the stomach.",
+    "Ear, mouth, armpit and forehead-scan thermometers read 0.6–1.3 °C too low in exercise in the heat: never use them to rule out heat illness.",
+    "WBGT = 0.7 × wet bulb + 0.2 × globe + 0.1 × dry air: mostly humidity and wind, then sun.",
+    "WBGT ignores heat production and clothing, and understates stress in humid, still air; phone estimates can read low."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "me-field-valid",
+   "concept": "me-sites",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "ganio2009",
+    "byrne2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A team wants to track core temperature during a hot road race, without wires. Which method gives a valid reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A swallowed temperature pill",
+       "correct": true,
+       "why": "Right: the gut pill agrees well with oesophageal temperature and transmits by radio."
+      },
+      {
+       "id": "b",
+       "text": "An infrared ear thermometer at each feed zone",
+       "why": "Ear (aural) readings were about 0.7 °C too low during exercise in the heat."
+      },
+      {
+       "id": "c",
+       "text": "A forehead skin sticker",
+       "why": "Forehead readings read skin, not core, and were invalid against rectal temperature."
+      },
+      {
+       "id": "d",
+       "text": "An oral thermometer after the finish",
+       "why": "Oral readings were about 0.9–1.1 °C too low against rectal temperature."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "At a hot marathon's medical tent, which reading should be trusted to check a collapsed runner's core temperature?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rectal temperature",
+       "correct": true,
+       "why": "Right: rectal temperature is the field reference; the other quick devices read too low."
+      },
+      {
+       "id": "b",
+       "text": "Armpit (axillary) temperature",
+       "why": "Axillary readings were about 0.9–1.3 °C too low in exercise in the heat."
+      },
+      {
+       "id": "c",
+       "text": "Temporal (forehead scan) temperature",
+       "why": "Temporal scans read 0.6–0.9 °C too low against rectal temperature."
+      },
+      {
+       "id": "d",
+       "text": "Ear (aural) temperature",
+       "why": "Aural readings were about 0.7 °C too low; a low reading can hide heat stroke."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-no-gold",
+   "concept": "me-no-gold",
+   "bloom": "understand",
+   "sources": [
+    "taylor2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do experts say there is no single gold-standard core temperature?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Each site reflects its own tissue's metabolism, blood flow and neighbours",
+       "correct": true,
+       "why": "Right: sites are turnover indices; which is best depends on the question asked."
+      },
+      {
+       "id": "b",
+       "text": "Thermometers are too imprecise to measure it",
+       "why": "Modern probes are precise to a few hundredths of a degree; the issue is which tissue they sit in."
+      },
+      {
+       "id": "c",
+       "text": "Core temperature is the same everywhere, so any site will do",
+       "why": "Sites differ, especially during fast changes; that is why choice of site matters."
+      },
+      {
+       "id": "d",
+       "text": "Core temperature can only be measured at rest",
+       "why": "It is measured routinely during exercise, in the lab and in races."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-fastest",
+   "concept": "me-sites",
+   "bloom": "understand",
+   "sources": [
+    "byrne2007",
+    "taylor2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab studies how fast core temperature responds to 30 s sprints in a cycling session. Which site fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oesophagus, because it follows central blood temperature fastest",
+       "correct": true,
+       "why": "Right: in fast changes you need a site that tracks central blood; the oesophagus does."
+      },
+      {
+       "id": "b",
+       "text": "Rectum, because it is the field reference",
+       "why": "Rectal temperature lags fast changes, so it would blur sprint-by-sprint responses."
+      },
+      {
+       "id": "c",
+       "text": "Gut pill, because it responds fastest of all",
+       "why": "The pill is faster than rectal but slower than oesophageal temperature."
+      },
+      {
+       "id": "d",
+       "text": "Forehead skin, because it is closest to the brain",
+       "why": "Forehead readings reflect skin, which is a different measure from core."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-tympanic",
+   "concept": "me-sites",
+   "bloom": "apply",
+   "sources": [
+    "ganio2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner is confused after a hot half-marathon. An ear thermometer reads 38.6 °C. What should the medic conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It may read well below true core temperature: check rectally",
+       "correct": true,
+       "why": "Right: aural readings averaged about 0.7 °C too low in exercise in the heat, so heat stroke can't be ruled out."
+      },
+      {
+       "id": "b",
+       "text": "Heat stroke is ruled out: 38.6 °C is safe",
+       "why": "The device reads low; true core temperature could be much higher."
+      },
+      {
+       "id": "c",
+       "text": "Add exactly 0.7 °C to get the true value",
+       "why": "0.7 °C is an average bias; individual errors are larger and vary, so a correction isn't reliable."
+      },
+      {
+       "id": "d",
+       "text": "Trust it, as the ear is near the brain",
+       "why": "Being near the brain doesn't make it accurate: aural readings were invalid against rectal temperature in the heat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-pill-drink",
+   "concept": "me-sites",
+   "bloom": "analyse",
+   "sources": [
+    "byrne2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider swallows a temperature pill 20 min before a hot time trial, then drinks iced water. His readings drop by 2 °C for a few minutes. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The pill is still in his stomach and is being cooled by the drink",
+       "correct": true,
+       "why": "Right: a pill in the stomach is affected by food and drink; swallowing it hours earlier avoids this."
+      },
+      {
+       "id": "b",
+       "text": "The iced water lowered his core temperature by 2 °C",
+       "why": "A drink can't cool the whole core that much in minutes; the pill is reading the cold drink nearby."
+      },
+      {
+       "id": "c",
+       "text": "The pill is faulty and should be discarded",
+       "why": "It is working; it is just in the wrong place, the stomach, too soon."
+      },
+      {
+       "id": "d",
+       "text": "Pills read about 2 °C low during exercise",
+       "why": "Pills agree with oesophageal temperature within about 0.1 °C once past the stomach."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-wbgt-calc",
+   "concept": "me-wbgt",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "grundstein2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Natural wet bulb 24 °C, black globe 45 °C, dry air 30 °C. What is the WBGT?",
+     "options": [
+      {
+       "id": "a",
+       "text": "28.8 °C",
+       "correct": true,
+       "why": "Right: 0.7 × 24 + 0.2 × 45 + 0.1 × 30 = 16.8 + 9 + 3 = 28.8 °C."
+      },
+      {
+       "id": "b",
+       "text": "33.0 °C",
+       "why": "This is the plain average of the three. WBGT weights the wet bulb most (0.7)."
+      },
+      {
+       "id": "c",
+       "text": "32.4 °C",
+       "why": "This swaps the weights of wet and dry bulb (0.1 × 24 + 0.2 × 45 + 0.7 × 30)."
+      },
+      {
+       "id": "d",
+       "text": "19.8 °C",
+       "why": "This leaves out the globe term (0.2 × 45 = 9)."
+      }
+     ],
+     "solution": "WBGT = 0.7 × 24 + 0.2 × 45 + 0.1 × 30 = 16.8 + 9.0 + 3.0 = 28.8 °C."
+    },
+    {
+     "id": "b",
+     "stem": "On a cloudy morning ride: natural wet bulb 20 °C, black globe 35 °C, dry air 26 °C. What is the WBGT?",
+     "options": [
+      {
+       "id": "a",
+       "text": "23.6 °C",
+       "correct": true,
+       "why": "Right: 0.7 × 20 + 0.2 × 35 + 0.1 × 26 = 14 + 7 + 2.6 = 23.6 °C."
+      },
+      {
+       "id": "b",
+       "text": "27.0 °C",
+       "why": "This is the plain average of the three. WBGT weights the wet bulb most (0.7)."
+      },
+      {
+       "id": "c",
+       "text": "27.2 °C",
+       "why": "This swaps the weights of wet and dry bulb (0.1 × 20 + 0.2 × 35 + 0.7 × 26)."
+      },
+      {
+       "id": "d",
+       "text": "16.6 °C",
+       "why": "This leaves out the globe term (0.2 × 35 = 7)."
+      }
+     ],
+     "solution": "WBGT = 0.7 × 20 + 0.2 × 35 + 0.1 × 26 = 14.0 + 7.0 + 2.6 = 23.6 °C."
+    },
+    {
+     "id": "c",
+     "stem": "At the start of a summer marathon: natural wet bulb 26 °C, black globe 50 °C, dry air 33 °C. What is the WBGT?",
+     "options": [
+      {
+       "id": "a",
+       "text": "31.5 °C",
+       "correct": true,
+       "why": "Right: 0.7 × 26 + 0.2 × 50 + 0.1 × 33 = 18.2 + 10 + 3.3 = 31.5 °C."
+      },
+      {
+       "id": "b",
+       "text": "36.3 °C",
+       "why": "This is the plain average of the three. WBGT weights the wet bulb most (0.7)."
+      },
+      {
+       "id": "c",
+       "text": "35.7 °C",
+       "why": "This swaps the weights of wet and dry bulb (0.1 × 26 + 0.2 × 50 + 0.7 × 33)."
+      },
+      {
+       "id": "d",
+       "text": "21.5 °C",
+       "why": "This leaves out the globe term (0.2 × 50 = 10)."
+      }
+     ],
+     "solution": "WBGT = 0.7 × 26 + 0.2 × 50 + 0.1 × 33 = 18.2 + 10.0 + 3.3 = 31.5 °C."
+    }
+   ]
+  },
+  {
+   "id": "me-wbgt-humid",
+   "concept": "me-wbgt-limits",
+   "bloom": "analyse",
+   "sources": [
+    "budd2008",
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two race days both show WBGT 27 °C. Day 1 is humid and windless; day 2 is drier with a steady breeze. Which is more stressful for a runner, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Day 1: humid, still air limits evaporation more than WBGT shows",
+       "correct": true,
+       "why": "Right: WBGT's main limitation is understating stress when evaporation is restricted."
+      },
+      {
+       "id": "b",
+       "text": "Both the same: equal WBGT means equal stress",
+       "why": "Equal WBGT can hide different evaporation limits; humid, still air is worse."
+      },
+      {
+       "id": "c",
+       "text": "Day 2: wind adds heat to the body",
+       "why": "In air cooler than skin, wind helps both convection and evaporation."
+      },
+      {
+       "id": "d",
+       "text": "Day 2: drier air makes runners sweat less",
+       "why": "Dry air lets sweat evaporate, which is what cools; less wasted sweat is good."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-wbgt-person",
+   "concept": "me-wbgt-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An organiser says: 'WBGT is 25 °C, so the risk is the same for the 10 km racers and the 5 km walkers.' How sound is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unsound: WBGT ignores heat production, which is far higher in the racers",
+       "correct": true,
+       "why": "Right: WBGT describes the weather only; racers make several times the heat of walkers."
+      },
+      {
+       "id": "b",
+       "text": "Sound: WBGT already includes exercise intensity",
+       "why": "It includes only wet bulb, globe and air temperature; no term for the athlete."
+      },
+      {
+       "id": "c",
+       "text": "Unsound: walkers are at higher risk because they are slower",
+       "why": "Slower walkers make much less heat; at the same weather racers face more heat strain."
+      },
+      {
+       "id": "d",
+       "text": "Sound: heat risk is set by the weather",
+       "why": "Heat strain depends on heat production and clothing too, which WBGT can't see."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "me-phone",
+   "concept": "me-wbgt-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "grundstein2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach plans to use a phone weather app's WBGT to decide whether to shorten hot track sessions. What is the main concern?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The app tended to read cooler than on-site devices, most of all when hottest",
+       "correct": true,
+       "why": "Right: about 1 °C cooler on average and 2–3 °C at high WBGT, so it can under-call risk when it matters most."
+      },
+      {
+       "id": "b",
+       "text": "Apps read hotter, so sessions would be cut too often",
+       "why": "The bias found was the other way: apps read cooler."
+      },
+      {
+       "id": "c",
+       "text": "No concern: app and device correlated well (r = 0.89)",
+       "why": "High correlation doesn't mean agreement: a steady 1–3 °C offset can still move the decision."
+      },
+      {
+       "id": "d",
+       "text": "Phones can't estimate humidity at all",
+       "why": "They do estimate it from weather data; the issue is the size of the bias."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

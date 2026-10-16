@@ -1,6 +1,6 @@
 import { CURRICULUM } from "@/lib/content-index";
 import { lessonById } from "@/lib/course";
-import { bestExamScores, PASS } from "@/lib/exams";
+import { bestExamScores, examScope, PASS } from "@/lib/exams";
 import { requireUser } from "@/lib/session";
 import { lessonsDone, recall } from "@/lib/study";
 import { Go } from "../Nav";
@@ -19,6 +19,12 @@ export default async function MapPage() {
     recall(userId),
     bestExamScores(userId),
   ]);
+
+  // A tier exam opens once every lesson of the tier is written and done.
+  const tierDone = (tierId: string) => {
+    const scope = examScope(tierId);
+    return !!scope?.complete && scope.lessons.every((l) => done.has(l.id));
+  };
 
   return (
     <main className="screen with-tabs">
@@ -110,6 +116,14 @@ export default async function MapPage() {
               );
             })}
           </div>
+          {tierDone(tier.id) && (
+            <Go href={`/exam/${tier.id}`} className="btn flex justify-between text-sm">
+              <span>Tier exam: everything in this tier</span>
+              <span className="muted font-mono">
+                {exams.has(tier.id) ? `best ${exams.get(tier.id)}%` : `${PASS}% to pass`}
+              </span>
+            </Go>
+          )}
         </section>
       ))}
       <TabBar active="/map" />

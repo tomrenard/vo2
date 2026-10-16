@@ -18,9 +18,15 @@ Check one module while others are being written: `pnpm content:check --module <i
 ## Writing a lesson
 
 A lesson is a run of steps, 5–8 minutes in all:
-concept → 1–3 questions → concept → … → recap. Start with one `pretest` question on what the
-lesson is about to teach (unscored; the same item comes back scored later, with another variant).
-Never more than one per lesson.
+word card → concept → 1–3 questions → concept → … → recap. Teach first, then ask: no question
+comes before the concept it tests. The learner starts from zero, so:
+
+- **Word card** (`terms`, the first step): every glossary term the lesson uses that no earlier
+  lesson introduced, each with a plain-words definition in `glossary/<module>.json` (no jargon
+  inside a definition that isn't itself defined). `content:check` fails a lesson that uses a term
+  before introducing it.
+- **Link every technical term** the first time it appears in a card: `[stroke volume](g:stroke-volume)`.
+  A word a beginner wouldn't know (VO₂max, MLSS, glycolysis, vasodilation) is a glossary term.
 
 - **Concept cards:** one idea, about 120 words, plain English. Mark the claims that matter with
   `[[c:<claim id>]]` and list them in `claims` with a grade, sources and the quoted sentence from
@@ -70,6 +76,6 @@ Exercise*, McArdle *Exercise Physiology*, Powers & Howley, Jeukendrup & Gleeson 
 Nutrition*). Journals: J Physiol, J Appl Physiol, MSSE, Sports Med, EJAP, IJSPP, SJMSS, IJSNEM,
 BJSM. Preprints are labelled and never the only source of a lesson claim.
 
-Never cite from memory: look the paper up (Crossref, PubMed, OpenAlex), copy its exact title,
+Never cite from memory, and never list a source you couldn't read (at least its abstract): look the paper up (Crossref, PubMed, OpenAlex), copy its exact title,
 first author, year and DOI, and quote the supporting sentence. `pnpm sources:check` fails on a DOI
 whose title or author doesn't match.

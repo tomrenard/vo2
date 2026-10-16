@@ -9,16 +9,21 @@
  "lastReviewed": "2026-10-16",
  "steps": [
   {
-   "type": "question",
-   "item": "var-te-def",
-   "variant": "a",
-   "pretest": true
+   "type": "terms",
+   "terms": [
+    "glycogen",
+    "typical-error",
+    "coefficient-of-variation",
+    "lactate-threshold",
+    "smallest-worthwhile-change",
+    "regression-to-the-mean"
+   ]
   },
   {
    "type": "concept",
    "id": "ev-var-te",
    "title": "The same test never gives the same number",
-   "text": "Do the same 20-minute test on two good days and you won't get the same power. Sleep, glycogen, motivation, heat and the power meter itself all wobble.\n\nThe [typical error](g:typical-error) measures that wobble: the standard deviation of one person's repeated results [[c:te-def]]. It is usually given as a [coefficient of variation](g:coefficient-of-variation) (CV), a percentage of the mean. A typical error of 2% on a 300 W test means about two results in three land within 294–306 W with no real change in fitness.\n\nEvery result, yours or a study's, is true value plus noise. Before calling a change real, you need to know how big the noise is.",
+   "text": "Do the same 20-minute test on two good days and you won't get the same power. Sleep, [glycogen](g:glycogen), motivation, heat and the power meter itself all wobble.\n\nThe [typical error](g:typical-error) measures that wobble: the standard deviation of one person's repeated results [[c:te-def]]. It is usually given as a [coefficient of variation](g:coefficient-of-variation) (CV), a percentage of the mean. A typical error of 2% on a 300 W test means about two results in three land within 294–306 W with no real change in fitness.\n\nEvery result, yours or a study's, is true value plus noise. Before calling a change real, you need to know how big the noise is.",
    "claims": [
     {
      "id": "te-def",
@@ -51,7 +56,7 @@
    "type": "concept",
    "id": "ev-var-tests",
    "title": "How noisy are common tests?",
-   "text": "Typical errors from reliability studies:\n\n| test | typical error (CV) |\n|---|---|\n| time trial or constant-power test, 1 min to 3 h (as power) | 0.9–2.0% [[c:power-cv]] |\n| lactate-threshold power | ~1.5% |\n| time to exhaustion at a set power | over 10% [[c:tte-cv]] |\n| VO2max, repeated tests | ~5.6% [[c:vo2max-cv]] |\n\nNon-athletes are about 1.3 times noisier than athletes. The first trial is special: performance improved 1.2% from the first to the second trial as people learned the test, but only 0.2% after that [[c:practice-effect]]. So a study, or an athlete, needs a practice trial before the baseline.\n\nTime trials are the better choice: they vary less and are closer to racing [[c:tt-validity]].",
+   "text": "Typical errors from reliability studies:\n\n| test | typical error (CV) |\n|---|---|\n| time trial or constant-power test, 1 min to 3 h (as power) | 0.9–2.0% [[c:power-cv]] |\n| [lactate-threshold](g:lactate-threshold) power | ~1.5% |\n| time to exhaustion at a set power | over 10% [[c:tte-cv]] |\n| VO2max, repeated tests | ~5.6% [[c:vo2max-cv]] |\n\nNon-athletes are about 1.3 times noisier than athletes. The first trial is special: performance improved 1.2% from the first to the second trial as people learned the test, but only 0.2% after that [[c:practice-effect]]. So a study, or an athlete, needs a practice trial before the baseline.\n\nTime trials are the better choice: they vary less and are closer to racing [[c:tt-validity]].",
    "claims": [
     {
      "id": "power-cv",

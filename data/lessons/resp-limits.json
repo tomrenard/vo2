@@ -1,0 +1,896 @@
+{
+ "id": "resp-limits",
+ "module": "t1b-respiratory",
+ "title": "Does breathing limit performance?",
+ "goal": "Judge when the respiratory system limits endurance performance, through the cost of breathing, diaphragm fatigue and the metaboreflex, and what respiratory muscle training can and can't do.",
+ "requires": [
+  "resp-thresholds"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "metaboreflex",
+    "rmt"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "lim-cost",
+   "title": "What breathing costs",
+   "text": "Breathing 150 L·min⁻¹ is hard work for the [diaphragm](g:diaphragm) and the other breathing muscles. At maximal exercise the O₂ cost of breathing averaged about **10% of VO₂max**, and 13–15% in people who used most of their breathing reserve. The cost climbs steeply near the top: from heavy to maximal exercise, 39% of the extra O₂ went to breathing, against 8% at moderate intensity [[c:o2-cost]].\n\nBlood follows the O₂. At maximal exercise, up to **14–16% of [cardiac output](g:cardiac-output)** goes to the breathing muscles [[c:co-share]].\n\nSo near the top of a hard climb or a 1,500 m race, the breathing muscles compete with the legs for O₂ and blood.",
+   "claims": [
+    {
+     "id": "o2-cost",
+     "text": "At maximal exercise the O₂ cost of breathing averaged 10% of VO₂max (13–15% in those near their mechanical limits), and its share of each extra step in O₂ uptake rose from 8% at moderate intensity to 39% from heavy to maximal exercise.",
+     "grade": "moderate",
+     "sources": [
+      "aaron1992"
+     ],
+     "evidence": [
+      {
+       "source": "aaron1992",
+       "quote": "At maximum exercise, the O2 cost of ventilation (VE) averaged 10 +/- 0.7% of the VO2max.",
+       "level": "abstract"
+      },
+      {
+       "source": "aaron1992",
+       "quote": "In subjects who used most of their maximum reserve for expiratory flow and for inspiratory muscle pressure development during maximum exercise, the VO2RM required 13-15% of VO2max.",
+       "level": "abstract"
+      },
+      {
+       "source": "aaron1992",
+       "quote": "The O2 cost of increasing VE from one work rate to the next rose from 8% of the increase in total body VO2 (VO2T) during moderate exercise to 39 +/- 10% in the transition from heavy to maximum exercise",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "co-share",
+     "text": "At maximal exercise, up to 14–16% of cardiac output goes to the respiratory muscles.",
+     "grade": "weak",
+     "sources": [
+      "harms1998"
+     ],
+     "evidence": [
+      {
+       "source": "harms1998",
+       "quote": "up to 14-16% of the CO is directed to the respiratory muscles",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "lim-cost-example",
+   "title": "How much O₂ goes to breathing?",
+   "problem": "A cyclist's VO₂max is 4.0 L·min⁻¹. Breathing costs about 10% of that at maximal effort. How much O₂ do his breathing muscles use, and how much is left for everything else?",
+   "steps": [
+    "Turn 10% into a fraction: 0.10.",
+    "Breathing: 0.10 × 4.0 = 0.4 L·min⁻¹ of O₂.",
+    "Left for the legs and the rest of the body: 4.0 − 0.4 = 3.6 L·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-cost-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lim-cost-steep"
+  },
+  {
+   "type": "concept",
+   "id": "lim-fatigue",
+   "title": "Can the diaphragm tire?",
+   "text": "Yes, in hard enough exercise. In 12 healthy people, the diaphragm's force in response to nerve stimulation fell by 8–32% after exercise to exhaustion at 95% of VO₂max. It took about 70 min to recover almost fully, and fatigue became more likely and larger as intensity rose above 85% of VO₂max [[c:diaphragm-fatigue]].\n\nThis fits the cost card: the work of breathing climbs steeply near the top. A long ride or run well below that intensity asks much less of the diaphragm.\n\nThe measurement trick matters: stimulating the phrenic nerve (the nerve to the diaphragm) electrically, through the skin, tests the muscle itself, so a lower force can't be blamed on low motivation.",
+   "claims": [
+    {
+     "id": "diaphragm-fatigue",
+     "text": "After exercise to exhaustion at 95% VO₂max, stimulated diaphragm force fell 8–32%, recovering almost fully by about 70 min; fatigue grows as intensity exceeds 85% VO₂max.",
+     "grade": "weak",
+     "sources": [
+      "johnson1993"
+     ],
+     "evidence": [
+      {
+       "source": "johnson1993",
+       "quote": "Following exercise at 95% of VO2, max, group mean Pdi twitch values were reduced at all lung volumes (range -8 +/- 3 to -32 +/- 5%)",
+       "level": "abstract"
+      },
+      {
+       "source": "johnson1993",
+       "quote": "Stimulated Pdi values recovered partially by 30 min post-exercise and almost completely by an average time of 70 min.",
+       "level": "abstract"
+      },
+      {
+       "source": "johnson1993",
+       "quote": "The magnitude of the fatigue and the likelihood of its occurrence increases as the relative intensity of the exercise exceeds 85% of VO2, max.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-diaphragm"
+  },
+  {
+   "type": "concept",
+   "id": "lim-steal",
+   "title": "The metaboreflex: breathing takes leg blood",
+   "text": "When breathing muscles tire, their metabolites trigger a reflex, the [respiratory muscle metaboreflex](g:metaboreflex), that narrows blood vessels in the limbs. At rest, fatiguing breathing work cut leg blood flow by about 30% [[c:sheel-rest]].\n\nAt VO₂max, cyclists had their breathing work lowered by a ventilator or raised by a resistor. A ±50% change moved leg blood flow by about 2 L·min⁻¹ (11%) [[c:harms-flow]]. At 90% of VO₂max, unloading the breathing muscles lengthened time to exhaustion by 14%; loading shortened it by 15% [[c:harms-tte]].\n\nThe proposed chain: breathing work → breathing-muscle fatigue → reflex → less leg blood flow → earlier leg fatigue [[c:chain]].",
+   "claims": [
+    {
+     "id": "sheel-rest",
+     "text": "At rest, fatiguing diaphragm work reduced leg blood flow by about 30%, attributed to a metaboreflex from the diaphragm.",
+     "grade": "weak",
+     "sources": [
+      "sheel2001"
+     ],
+     "evidence": [
+      {
+       "source": "sheel2001",
+       "quote": "subsequently decreased (-30 %) and LVR increased (50-60 %) relative to control in a time-dependent manner",
+       "level": "abstract"
+      },
+      {
+       "source": "sheel2001",
+       "quote": "We attribute these changes to a metaboreflex originating in the diaphragm.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "harms-flow",
+     "text": "At VO₂max, a ±50% change in the work of breathing changed leg blood flow by about 2 L·min⁻¹ (11%): normal breathing work compromises leg perfusion.",
+     "grade": "weak",
+     "sources": [
+      "harms1997"
+     ],
+     "evidence": [
+      {
+       "source": "harms1997",
+       "quote": "For a +/-50% change from control in Wb, Qlegs changed 2 l/min or 11% of control",
+       "level": "abstract"
+      },
+      {
+       "source": "harms1997",
+       "quote": "We conclude that Wb normally incurred during maximal exercise causes vasoconstriction in locomotor muscles and compromises locomotor muscle perfusion and VO2.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "harms-tte",
+     "text": "At 90% VO₂max, unloading the respiratory muscles increased time to exhaustion by 14% and loading reduced it by 15%, in seven trained male cyclists.",
+     "grade": "weak",
+     "sources": [
+      "harms2000"
+     ],
+     "evidence": [
+      {
+       "source": "harms2000",
+       "quote": "Time to exhaustion was increased with unloading in 76% of the trials by an average of 1.3 +/- 0.4 min or 14 +/- 5% and decreased with loading in 83% of the trials by an average of 1.0 +/- 0.6 min or 15 +/- 3% compared with control",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "chain",
+     "text": "Proposed chain: respiratory muscle fatigue triggers a metaboreflex that raises sympathetic vasoconstriction, cutting locomotor muscle blood flow and causing leg fatigue.",
+     "grade": "weak",
+     "sources": [
+      "dempsey2006",
+      "harms1997",
+      "sheel2001"
+     ],
+     "evidence": [
+      {
+       "source": "dempsey2006",
+       "quote": "A key step in this linkage is a respiratory muscle fatigue-induced metaboreflex, which increases sympathetic vasoconstrictor outflow, causing reduced blood flow to locomotor muscles and locomotor muscle fatigue.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does the respiratory system limit endurance performance in healthy athletes?",
+    "sides": [
+     {
+      "position": "Yes, in fit athletes at high intensity: breathing work steals leg blood flow, unloading it improves endurance, and ventilation can reach limiting levels.",
+      "sources": [
+       "harms2000",
+       "dempsey2006",
+       "ward2007"
+      ]
+     },
+     {
+      "position": "Mostly not: the O₂ cost of breathing is large but not enough to cap useful ventilation, and in most people gas exchange keeps pace with metabolism.",
+      "sources": [
+       "aaron1992",
+       "forster2012"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "lim-steal-chain",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "lim-unloading"
+  },
+  {
+   "type": "question",
+   "item": "lim-harms-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "lim-debate"
+  },
+  {
+   "type": "concept",
+   "id": "lim-rmt",
+   "title": "Does training the breathing muscles help?",
+   "text": "[Respiratory muscle training](g:rmt) (RMT) means breathing against a resistance, or breathing hard for long spells, a few times a week.\n\n- It reliably makes inspiratory muscles stronger: maximal inspiratory pressure (the hardest suck against a blocked mouthpiece) rose by about 29 cmH₂O in athletes, with no change in lung function [[c:rmt-strength]].\n- Performance improves by a moderate amount: an [effect size](g:effect-size) of 0.64 for inspiratory training in athletes, seen in time trials and time-to-exhaustion tests [[c:rmt-performance]].\n- Less fit people gain more, and standard ramp tests often miss the effect [[c:rmt-who]].\n\nThe trials are small and their protocols and outcomes differ [[c:rmt-limits]]. For a trained cyclist or runner: a modest gain is plausible, a big one is not.",
+   "claims": [
+    {
+     "id": "rmt-strength",
+     "text": "Inspiratory muscle training raises maximal inspiratory pressure (about 29 cmH₂O in athletes) without changing lung function.",
+     "grade": "moderate",
+     "sources": [
+      "karsten2018",
+      "hajghanbari2013"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2018",
+       "quote": "IMT-linear improved maximal inspiratory pressure (MD -29.42 cmH2O [-35.65, -23.20]; p < 0.001), independent of sports modality.",
+       "level": "abstract"
+      },
+      {
+       "source": "karsten2018",
+       "quote": "There was no influence of IMT on the maximal expiratory pressure and pulmonary function markers.",
+       "level": "abstract"
+      },
+      {
+       "source": "hajghanbari2013",
+       "quote": "Inspiratory muscle strength and endurance improved in most studies, which in part, was dependent on the type of RMT employed.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rmt-performance",
+     "text": "RMT improves sport performance by a moderate amount (SMD 0.64 for inspiratory training in athletes), shown in time trials and endurance-time tests.",
+     "grade": "moderate",
+     "sources": [
+      "karsten2018",
+      "hajghanbari2013",
+      "illi2012"
+     ],
+     "evidence": [
+      {
+       "source": "karsten2018",
+       "quote": "It was observed that IMT-linear improves the sports performance (SMD 0.64 [0.35, 0.92]; p < 0.0001) with moderate effect size.",
+       "level": "abstract"
+      },
+      {
+       "source": "hajghanbari2013",
+       "quote": "Meta-analyses demonstrated a significant positive effect of RMT on sport performance outcomes of time trials, exercise endurance time, and repetitions on Yo-Yo tests.",
+       "level": "abstract"
+      },
+      {
+       "source": "illi2012",
+       "quote": "RMT improves endurance exercise performance in healthy individuals with greater improvements in less fit individuals and in sports of longer durations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rmt-who",
+     "text": "Less fit people benefit more from RMT (6% more per 10 mL·kg⁻¹·min⁻¹ lower VO₂max), and conventional incremental tests fail to detect the improvement.",
+     "grade": "moderate",
+     "sources": [
+      "illi2012"
+     ],
+     "evidence": [
+      {
+       "source": "illi2012",
+       "quote": "less fit subjects benefit more from RMT than highly trained athletes (6.0% per 10 mL · kg⁻¹ · min⁻¹ decrease in maximal oxygen uptake",
+       "level": "abstract"
+      },
+      {
+       "source": "illi2012",
+       "quote": "The meta-analysis, performed on eight controlled trials revealed a significant improvement in performance after RMT, which was detected by constant load tests, time trials and intermittent incremental tests, but not by conventional incremental tests.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rmt-limits",
+     "text": "The RMT evidence is limited by small samples, differing protocols and differing outcome measures.",
+     "grade": "moderate",
+     "sources": [
+      "hajghanbari2013"
+     ],
+     "evidence": [
+      {
+       "source": "hajghanbari2013",
+       "quote": "Determination of the type of athlete that may benefit most from RMT was limited by small sample sizes, differing RMT protocols, and differences in outcome measures across studies.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lim-rmt-who",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "lim-rmt-test"
+  },
+  {
+   "type": "question",
+   "item": "lim-rmt-expect"
+  },
+  {
+   "type": "question",
+   "item": "lim-rmt-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "lim-cost-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "At maximal exercise breathing costs about 10% of VO₂max (up to 15%) and takes up to 14–16% of cardiac output; the cost rises steeply near the top.",
+    "Exercise to exhaustion above about 85% of VO₂max can fatigue the diaphragm.",
+    "Tiring breathing muscles trigger a metaboreflex that narrows leg vessels and cuts leg blood flow; unloading them extended endurance in small studies of trained men.",
+    "The lung is a limit mainly for fit athletes at high intensity (metaboreflex, EIAH); at moderate intensity it copes.",
+    "Respiratory muscle training reliably strengthens inspiratory muscles and modestly improves performance, more in less fit people; the trials are small and varied."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lim-steal-chain",
+   "concept": "lim-steal",
+   "bloom": "understand",
+   "sources": [
+    "dempsey2006",
+    "harms1997",
+    "sheel2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At VO₂max, how can hard breathing cut blood flow to the legs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tiring breathing muscles trigger a reflex that narrows leg blood vessels",
+       "correct": true,
+       "why": "Right: the respiratory muscle metaboreflex raises sympathetic vasoconstriction in the limbs."
+      },
+      {
+       "id": "b",
+       "text": "The inflated lungs squeeze the heart, so it pumps less",
+       "why": "Cardiac output wasn't lowered by heavier breathing work; it is the share going to the legs that falls."
+      },
+      {
+       "id": "c",
+       "text": "The breathing muscles use up the blood's O₂ before it reaches the legs",
+       "why": "Blood flows in parallel to each muscle; the legs lose flow through a reflex, not empty blood."
+      },
+      {
+       "id": "d",
+       "text": "Fast breathing lowers blood pressure, so less blood reaches the legs",
+       "why": "Mean arterial pressure didn't change with breathing work; leg vessels narrowed."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which order matches the proposed chain from hard breathing to tired legs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breathing-muscle fatigue → reflex → narrower leg vessels → less leg blood flow → leg fatigue",
+       "correct": true,
+       "why": "Right: that is the metaboreflex chain."
+      },
+      {
+       "id": "b",
+       "text": "Leg fatigue → reflex → breathing-muscle fatigue → less leg blood flow",
+       "why": "This puts leg fatigue first; in the chain it is the end result."
+      },
+      {
+       "id": "c",
+       "text": "Less leg blood flow → breathing-muscle fatigue → reflex → leg fatigue",
+       "why": "Less leg blood flow is caused by the reflex, so it can't come before it."
+      },
+      {
+       "id": "d",
+       "text": "Reflex → breathing-muscle fatigue → wider leg vessels → leg fatigue",
+       "why": "The reflex narrows leg vessels, and it follows breathing-muscle fatigue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-cost-calc",
+   "concept": "lim-cost",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "aaron1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO₂max is 3.5 L·min⁻¹. At maximal effort breathing costs about 10% of it. How much O₂ do her breathing muscles use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.35 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.10 × 3.5 = 0.35 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "35 L·min⁻¹",
+       "why": "This multiplies by 10 instead of by 0.10: 10% is a tenth."
+      },
+      {
+       "id": "c",
+       "text": "3.4 L·min⁻¹",
+       "why": "This subtracts 0.10 from 3.5; take a share by multiplying."
+      },
+      {
+       "id": "d",
+       "text": "3.15 L·min⁻¹",
+       "why": "That is what is left for the rest of the body (3.5 − 0.35), not what breathing uses."
+      }
+     ],
+     "solution": "Breathing O₂ = 0.10 × 3.5 L·min⁻¹ = 0.35 L·min⁻¹, leaving 3.15 L·min⁻¹ for everything else."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist near his breathing limits has a VO₂max of 5.0 L·min⁻¹; breathing costs 15% of it at maximal effort. How much O₂ do his breathing muscles use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.75 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.15 × 5.0 = 0.75 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "75 L·min⁻¹",
+       "why": "This multiplies by 15 instead of by 0.15."
+      },
+      {
+       "id": "c",
+       "text": "4.85 L·min⁻¹",
+       "why": "This subtracts 0.15 from 5.0; take a share by multiplying."
+      },
+      {
+       "id": "d",
+       "text": "4.25 L·min⁻¹",
+       "why": "That is what is left for the rest of the body (5.0 − 0.75)."
+      }
+     ],
+     "solution": "Breathing O₂ = 0.15 × 5.0 = 0.75 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO₂max is 4.2 L·min⁻¹; breathing costs 13% of it at maximal effort. How much O₂ do her breathing muscles use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.55 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.13 × 4.2 = 0.546, about 0.55 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "54.6 L·min⁻¹",
+       "why": "This multiplies by 13 instead of by 0.13."
+      },
+      {
+       "id": "c",
+       "text": "4.07 L·min⁻¹",
+       "why": "This subtracts 0.13 from 4.2; take a share by multiplying."
+      },
+      {
+       "id": "d",
+       "text": "3.65 L·min⁻¹",
+       "why": "That is what is left for the rest of the body (4.2 − 0.55)."
+      }
+     ],
+     "solution": "Breathing O₂ = 0.13 × 4.2 = 0.546 ≈ 0.55 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "lim-cost-steep",
+   "concept": "lim-cost",
+   "bloom": "analyse",
+   "sources": [
+    "aaron1992"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider pushes from heavy to maximal effort and his O₂ uptake rises by 0.5 L·min⁻¹. Why do his legs get less of that extra O₂ than at lower intensities?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breathing takes about 39% of each extra step near the top, against 8% at moderate pace",
+       "correct": true,
+       "why": "Right: the O₂ cost of breathing rises steeply near maximal effort."
+      },
+      {
+       "id": "b",
+       "text": "His leg muscles stop using extra O₂ once he passes 90% of VO₂max",
+       "why": "Leg O₂ use keeps rising to VO₂max; the share going to breathing grows."
+      },
+      {
+       "id": "c",
+       "text": "His dead space doubles as he nears maximal effort, wasting the O₂",
+       "why": "Dead space stays about the same; it is the work of the breathing muscles that rises."
+      },
+      {
+       "id": "d",
+       "text": "His heart stops pumping more blood once he passes heavy exercise",
+       "why": "Cardiac output keeps rising toward maximal effort; the change is in where the O₂ goes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-diaphragm",
+   "concept": "lim-fatigue",
+   "bloom": "apply",
+   "sources": [
+    "johnson1993"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which session is most likely to leave a triathlete's diaphragm measurably fatigued?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A run to exhaustion at 95% of VO₂max, about 15 min",
+       "correct": true,
+       "why": "Right: diaphragm fatigue was found after exercise to exhaustion at 95% VO₂max, and it grows above 85%."
+      },
+      {
+       "id": "b",
+       "text": "A 2 h easy ride at 60% of VO₂max",
+       "why": "Well below 85% of VO₂max the work of breathing is too low to fatigue the diaphragm much."
+      },
+      {
+       "id": "c",
+       "text": "Ten 10 s sprints with full recovery",
+       "why": "Short sprints with long rests keep total breathing work low."
+      },
+      {
+       "id": "d",
+       "text": "A 30 min steady swim at 65% of VO₂max",
+       "why": "At this intensity breathing work stays moderate; fatigue becomes likely only above about 85%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-unloading",
+   "concept": "lim-steal",
+   "bloom": "analyse",
+   "sources": [
+    "harms2000",
+    "harms1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 90% of VO₂max, a ventilator took over part of the work of breathing, and cyclists lasted 14% longer. What is the best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less breathing work meant less reflex narrowing of leg vessels, delaying leg fatigue",
+       "correct": true,
+       "why": "Right: that is the authors' explanation, linked to the leg blood flow findings."
+      },
+      {
+       "id": "b",
+       "text": "The ventilator gave them extra O₂ to breathe",
+       "why": "They breathed normal air; the ventilator only reduced the muscle work of breathing."
+      },
+      {
+       "id": "c",
+       "text": "Their arterial PO₂ rose above 150 mmHg",
+       "why": "Arterial PO₂ can't rise above alveolar PO₂ (about 100–120 mmHg) when breathing air."
+      },
+      {
+       "id": "d",
+       "text": "Their breathing muscles no longer needed any O₂ at all",
+       "why": "The breathing muscles still worked, just less; the gain came from sparing blood flow, not from zero cost."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-harms-appraisal",
+   "concept": "lim-steal",
+   "bloom": "evaluate",
+   "sources": [
+    "harms2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The unloading study tested seven trained male cyclists, who could likely tell when the ventilator was helping. What most limits applying it to all endurance athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Seven trained men only, and riders knew which condition they were in",
+       "correct": true,
+       "why": "Right: a tiny, male-only sample, with no blinding, so expectation could add to the effect."
+      },
+      {
+       "id": "b",
+       "text": "Time to exhaustion isn't a valid test of anything",
+       "why": "It is a valid test of endurance capacity, though noisier than a time trial."
+      },
+      {
+       "id": "c",
+       "text": "Unloading lowered O₂ uptake, which proves the study was flawed",
+       "why": "Lower O₂ uptake is expected: the breathing muscles did less work."
+      },
+      {
+       "id": "d",
+       "text": "Cyclists can't tell us anything about breathing at all",
+       "why": "Breathing physiology is similar across sports; the limits are sample and blinding."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-debate",
+   "concept": "lim-steal",
+   "bloom": "evaluate",
+   "sources": [
+    "harms2000",
+    "aaron1992",
+    "forster2012",
+    "dempsey1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Does the lung limit endurance performance in healthy athletes? Which summary fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sometimes: in fit athletes near maximal effort, not at moderate intensity",
+       "correct": true,
+       "why": "Right: breathing work and EIAH can limit highly trained athletes at high intensity; at moderate intensity breathing copes."
+      },
+      {
+       "id": "b",
+       "text": "Always: breathing is the main limit for every athlete at every pace",
+       "why": "In most people gas exchange keeps pace and arterial O₂ holds, even at VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "Never: the lung is overbuilt, so breathing work has no effect",
+       "why": "Loading and unloading breathing work changed leg blood flow and endurance time."
+      },
+      {
+       "id": "d",
+       "text": "Only at altitude: at sea level the lung is never a factor",
+       "why": "EIAH and the metaboreflex were shown at sea level."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-rmt-who",
+   "concept": "lim-rmt",
+   "bloom": "apply",
+   "sources": [
+    "illi2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete is likely to gain most from respiratory muscle training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A recreational runner with a VO₂max of 42 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: less fit people gain more, about 6% more per 10 mL·kg⁻¹·min⁻¹ lower VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "An elite runner with a VO₂max of 78 mL·kg⁻¹·min⁻¹",
+       "why": "Highly trained athletes gain less from RMT."
+      },
+      {
+       "id": "c",
+       "text": "A swimmer, because swimming restricts breathing",
+       "why": "The type of sport (rowing, running, swimming, cycling) didn't change the gain; fitness did."
+      },
+      {
+       "id": "d",
+       "text": "All equally: fitness makes no difference",
+       "why": "The meta-regression found a clear fitness effect."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which cyclist is likely to gain most from respiratory muscle training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A club rider with a VO₂max of 45 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: less fit people gain more from RMT."
+      },
+      {
+       "id": "b",
+       "text": "A professional with a VO₂max of 80 mL·kg⁻¹·min⁻¹",
+       "why": "Highly trained athletes gain less."
+      },
+      {
+       "id": "c",
+       "text": "A track sprinter, because sprints need the most breath",
+       "why": "The clear factor was fitness, not event; and the gains were shown in endurance tests."
+      },
+      {
+       "id": "d",
+       "text": "All equally: fitness makes no difference",
+       "why": "The meta-regression found a clear fitness effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-rmt-test",
+   "concept": "lim-rmt",
+   "bloom": "analyse",
+   "sources": [
+    "illi2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tests 6 weeks of RMT with a standard ramp test to exhaustion, before and after, and finds no change. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ramp tests often miss RMT gains; a time trial would show them better",
+       "correct": true,
+       "why": "Right: in the meta-analysis, constant-load, time-trial and intermittent tests detected gains, conventional incremental tests did not."
+      },
+      {
+       "id": "b",
+       "text": "RMT has no effect on endurance performance at all",
+       "why": "The pooled trials do show an effect; this test type is poor at detecting it."
+      },
+      {
+       "id": "c",
+       "text": "The athlete must have trained the wrong breathing muscles",
+       "why": "Inspiratory muscles are the target, and they do get stronger; the test is the problem."
+      },
+      {
+       "id": "d",
+       "text": "Six weeks is always too short for any training effect",
+       "why": "The pooled trials do show gains; the test choice explains this null result better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-rmt-expect",
+   "concept": "lim-rmt",
+   "bloom": "evaluate",
+   "sources": [
+    "karsten2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete asks: \"Will inspiratory muscle training increase my lung capacity?\" What is the best answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unlikely: it strengthens the inspiratory muscles, not lung function",
+       "correct": true,
+       "why": "Right: maximal inspiratory pressure rose by about 29 cmH₂O, with no effect on pulmonary function."
+      },
+      {
+       "id": "b",
+       "text": "Yes: stronger breathing muscles mean bigger lungs",
+       "why": "Muscle strength rose, but lung function markers didn't change."
+      },
+      {
+       "id": "c",
+       "text": "Yes: bigger lungs are how it improves performance",
+       "why": "Any performance gain isn't through lung size, which didn't change."
+      },
+      {
+       "id": "d",
+       "text": "No: it has no measurable effect of any kind",
+       "why": "It clearly strengthens the inspiratory muscles and modestly helps performance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lim-rmt-appraisal",
+   "concept": "lim-rmt",
+   "bloom": "evaluate",
+   "sources": [
+    "hajghanbari2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Meta-analyses find that RMT improves performance. What most limits how sure we can be?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The trials are small, and their protocols and outcomes differ",
+       "correct": true,
+       "why": "Right: small samples, differing RMT protocols and differing outcomes limit the evidence."
+      },
+      {
+       "id": "b",
+       "text": "Meta-analyses can't be trusted at all",
+       "why": "A meta-analysis is only as good as its trials; the method itself is sound."
+      },
+      {
+       "id": "c",
+       "text": "No trial ever used a control or sham group",
+       "why": "Many did: the athlete trials included sham or control groups."
+      },
+      {
+       "id": "d",
+       "text": "RMT is too new to have been studied",
+       "why": "Dozens of trials exist; the problem is their size and variety, not their number."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

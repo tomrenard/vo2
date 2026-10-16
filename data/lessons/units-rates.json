@@ -9,16 +9,20 @@
  "lastReviewed": "2026-10-16",
  "steps": [
   {
-   "type": "question",
-   "item": "rate-of-what",
-   "variant": "a",
-   "pretest": true
+   "type": "terms",
+   "terms": [
+    "ftp",
+    "critical-power",
+    "heart-rate-reserve",
+    "vo2",
+    "percentage-point"
+   ]
   },
   {
    "type": "concept",
    "id": "rate-percent",
    "title": "Percent of what?",
-   "text": "Training intensity is nearly always a percentage: 75% of [VO2max](g:vo2max), 90% of [FTP](g:ftp), 105% of critical power. A percentage is a part divided by a whole, × 100.\n\nThe question to ask every time: **percent of what?** Each anchor is a different maximum, measured a different way:\n\n| anchor | measured as |\n|---|---|\n| % VO2max | oxygen uptake, lab test |\n| % HRmax | heart rate |\n| % FTP | power, field test |\n\n80% of one is not 80% of another. To turn a percentage into a target, multiply: 90% of a 280 W FTP is 0.90 × 280 = 252 W.",
+   "text": "Training intensity is nearly always a percentage: 75% of [VO2max](g:vo2max), 90% of [FTP](g:ftp), 105% of [critical power](g:critical-power). A percentage is a part divided by a whole, × 100.\n\nThe question to ask every time: **percent of what?** Each anchor is a different maximum, measured a different way:\n\n| anchor | measured as |\n|---|---|\n| % VO2max | oxygen uptake, lab test |\n| % HRmax | heart rate |\n| % FTP | power, field test |\n\n80% of one is not 80% of another. To turn a percentage into a target, multiply: 90% of a 280 W FTP is 0.90 × 280 = 252 W.",
    "claims": []
   },
   {
@@ -30,7 +34,7 @@
    "type": "concept",
    "id": "rate-hrr",
    "title": "Heart-rate reserve",
-   "text": "Heart rate doesn't start at zero: the heart is already beating at rest. So a percentage of maximum heart rate sits on top of a big floor.\n\nThe [heart-rate reserve](g:heart-rate-reserve) (HRR) removes it: **HRR = HRmax − HRrest**. A target at x% HRR is:\n\n**target HR = HRrest + x% × HRR**\n\nThis matters because %HRR lines up with % of VO2 *reserve* (VO2max minus resting VO2), almost one-to-one, but not with % of VO2max [[c:hrr-vo2r]]. Percentages only line up when both start from rest.",
+   "text": "Heart rate doesn't start at zero: the heart is already beating at rest. So a percentage of maximum heart rate sits on top of a big floor.\n\nThe [heart-rate reserve](g:heart-rate-reserve) (HRR) removes it: **HRR = HRmax − HRrest**. A target at x% HRR is:\n\n**target HR = HRrest + x% × HRR**\n\nThis matters because %HRR lines up with % of VO2 *reserve* (VO2max minus resting [VO2](g:vo2)), almost one-to-one, but not with % of VO2max [[c:hrr-vo2r]]. Percentages only line up when both start from rest.",
    "claims": [
     {
      "id": "hrr-vo2r",

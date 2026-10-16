@@ -1,0 +1,764 @@
+{
+ "id": "endo-adaptation",
+ "module": "t1b-endocrine",
+ "title": "Trained hormones: smaller alarms, lower testosterone?",
+ "goal": "Explain why training blunts hormone responses at the same absolute workload but not at the same relative effort, what is and isn't known about low testosterone in endurance-trained men, and how low energy availability disrupts hormones.",
+ "requires": [
+  "endo-fluid"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "testosterone",
+    "hpg-axis",
+    "energy-availability",
+    "reds"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ead-blunt",
+   "title": "Same watts, smaller alarm",
+   "text": "Training makes a given workload a smaller stress, and the hormones show it.\n\nSix untrained people trained for 7 weeks. By week 3, adrenaline in the same 5 min hard test had fallen from 0.5 to 0.17 ng·mL⁻¹ and noradrenaline from 3.0 to 1.5 ng·mL⁻¹: most of the whole drop [[c:ead-winder]]. In seven men, just 10 days of training blunted the changes in insulin, glucagon and catecholamines during 2 h at the same workload, and the liver needed to release less glucose [[c:ead-mendenhall]].\n\nBoth studies are tiny, but they fit a wider pattern: training doesn't remove the acute response, it makes it smaller [[c:ead-attenuate]]. A smaller alarm at the same watts means less glycogen burned and less strain.",
+   "claims": [
+    {
+     "id": "ead-winder",
+     "text": "In a 7-week endurance training programme, the adrenaline response to the same strenuous 5 min test fell to about a third and the noradrenaline response to about half by week 3, which was most of the training-induced drop.",
+     "grade": "weak",
+     "sources": [
+      "winder1978"
+     ],
+     "evidence": [
+      {
+       "source": "winder1978",
+       "quote": "In the test prior to training, plasma epinephrine increased to 0.5 ng/ml and norepinephrine increased to 3.0 ng/ml.",
+       "level": "abstract"
+      },
+      {
+       "source": "winder1978",
+       "quote": "The major proportion of the training-induced decrement in catecholamine response was reached at the end of the 3rd wk when epinephrine increased to 0.17 ng/ml and norepinephrine increased to 1.5 ng/ml in response to the same test.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-mendenhall",
+     "text": "Ten days of endurance training reduced liver glucose release during 2 h of cycling at the same workload and blunted the changes in insulin, glucagon and catecholamines.",
+     "grade": "weak",
+     "sources": [
+      "mendenhall1994"
+     ],
+     "evidence": [
+      {
+       "source": "mendenhall1994",
+       "quote": "Ten days of training reduced mean Ra during exercise from 36.9 +/- 3.3 (SE) to 28.5 +/- 3.4 mumol.min-1.kg-1 (P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "mendenhall1994",
+       "quote": "Exercise-induced changes in insulin, C-peptide, glucagon, norepinephrine, and epinephrine were also significantly blunted.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-attenuate",
+     "text": "Chronic training does not eliminate the acute hormone response to exercise but may attenuate it.",
+     "grade": "moderate",
+     "sources": [
+      "hackney2015"
+     ],
+     "evidence": [
+      {
+       "source": "hackney2015",
+       "quote": "Chronic exercise training does not eliminate the acute exercise response but may attenuate the overall effect of the responsiveness as the body adapts in a positive fashion to the training stimulus.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ead-absolute",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ead-attenuate-recall"
+  },
+  {
+   "type": "concept",
+   "id": "ead-relative",
+   "title": "Same effort, same or bigger response",
+   "text": "Compare at the same **relative** intensity (the same % of each person's maximum) and the picture changes. In all-out efforts, endurance-trained men often secrete *more* adrenaline than untrained men, a pattern called the \"sports adrenal medulla\" [[c:ead-sports-adrenal]]. Studies in women are few and conflicting.\n\n| comparison | trained vs untrained |\n|---|---|\n| same watts (absolute) | smaller response |\n| same % of max (relative) | similar or larger; results mixed |\n| all-out | often larger adrenaline |\n\nHormones aren't the whole story of adaptation. In the 7-week study above, heart rate at the same test kept falling after catecholamines had stopped changing [[c:ead-hr]]: a bigger heart and plasma volume do part of the work.",
+   "claims": [
+    {
+     "id": "ead-sports-adrenal",
+     "text": "In all-out exercise at the same relative intensity, endurance-trained men show a higher adrenaline response than untrained men (the 'sports adrenal medulla'); data in women are scarce and conflicting.",
+     "grade": "moderate",
+     "sources": [
+      "zouhal2008"
+     ],
+     "evidence": [
+      {
+       "source": "zouhal2008",
+       "quote": "Most findings then reported a higher adrenaline response to exercise in endurance-trained compared with untrained subjects in response to intense exercise at the same relative intensity as all-out exercise. This phenomenon is referred to as the 'sports adrenal medulla'.",
+       "level": "abstract"
+      },
+      {
+       "source": "zouhal2008",
+       "quote": "In women, studies remain scarce; the results are more conflicting than in men and the physical training type (aerobic or anaerobic) effects on catecholamine response remain to be specified.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-hr",
+     "text": "Exercise heart rate kept falling with training after the catecholamine response had plateaued, so lower sympathetic drive is not the only cause of the lower training heart rate.",
+     "grade": "weak",
+     "sources": [
+      "winder1978"
+     ],
+     "evidence": [
+      {
+       "source": "winder1978",
+       "quote": "Heart rate during exercise continued to decrease even after the catecholamine response had plateaued, implying that the reduced sympathetic response is not solely responsible for the reduced exercise heart rate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ead-relative-discrim"
+  },
+  {
+   "type": "question",
+   "item": "ead-winder-hr"
+  },
+  {
+   "type": "concept",
+   "id": "ead-testosterone",
+   "title": "Low testosterone in endurance-trained men",
+   "text": "In 1988, 11 men who had trained for endurance for about 12 years had resting [testosterone](g:testosterone) about 30% lower than 11 sedentary men (4.99 vs 7.25 ng·mL⁻¹), while LH was not lower [[c:ead-hackney1988]].\n\nHackney later named the **exercise-hypogonadal male condition**: persistently low resting testosterone without the rise in LH you would expect from the [HPG axis](g:hpg-axis). It seems limited to men with years of endurance training, and seems uncommon, though no one has properly counted [[c:ead-ehmc]]. At Kona, 4 of 22 male Ironman athletes had levels suggesting deficiency and 9 more were in a grey zone [[c:ead-kona]].\n\nWhether this is harm or a healthy readjustment is open (see the box). All of this rests on small studies of men.",
+   "claims": [
+    {
+     "id": "ead-hackney1988",
+     "text": "Endurance-trained men had lower resting total and free testosterone than sedentary men (4.99 vs 7.25 ng·mL⁻¹ total).",
+     "grade": "weak",
+     "sources": [
+      "hackney1988"
+     ],
+     "evidence": [
+      {
+       "source": "hackney1988",
+       "quote": "The overall 4 h mean testosterone and free testosterone levels were significantly (P less than 0.05) lower in the trained group (4.99 +/- 0.46 vs 7.25 +/- 0.67 ng.ml-1, and 17.2 +/- 1.4 vs 23.6 +/- 0.6 pg.ml-1, for the trained and untrained groups, respectively).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-ehmc",
+     "text": "Men with years of endurance training can show persistently low resting testosterone without raised LH (the exercise-hypogonadal male condition); it appears limited to long-term trainers and uncommon, but prevalence has not been studied properly.",
+     "grade": "weak",
+     "sources": [
+      "hackney2008",
+      "hackney2020"
+     ],
+     "evidence": [
+      {
+       "source": "hackney2008",
+       "quote": "Specifically, men chronically exposed to this type of exercise training exhibit persistently reduced basal (resting-state) free and total testosterone concentrations without concurrent LH elevations.",
+       "level": "abstract"
+      },
+      {
+       "source": "hackney2008",
+       "quote": "Present evidence suggests the exercise-hypogonadal condition is limited to men who have been persistently involved in chronic endurance exercise training for an extended period time (i.e., years), and it is not a highly prevalent occurrence (although, a thorough epidemiological investigation on the topic is lacking in the literature).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-kona",
+     "text": "Of 22 male Ironman World Championship athletes, 9 had normal resting testosterone, 9 were in a grey zone and 4 had levels suggestive of deficiency.",
+     "grade": "weak",
+     "sources": [
+      "hooper2019"
+     ],
+     "evidence": [
+      {
+       "source": "hooper2019",
+       "quote": "At BL, 9 men had a normal testosterone concentration, whereas 9 men fell within a \"gray zone\" and 4 other men demonstrated concentrations suggestive of deficiency.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is the low resting testosterone of long-time endurance-trained men a dysfunction or an adaptation?",
+    "sides": [
+     {
+      "position": "A dysfunction: levels can reach the clinically deficient range and may harm testosterone-dependent processes such as sperm production.",
+      "sources": [
+       "hackney2008",
+       "hooper2019"
+      ]
+     },
+     {
+      "position": "An adaptive readjustment of the HPG axis to years of training, distinct from the short-term drops caused by low energy availability or overtraining, which resolve with treatment.",
+      "sources": [
+       "hackney2020"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ead-ehmc-define"
+  },
+  {
+   "type": "question",
+   "item": "ead-appraisal-1988"
+  },
+  {
+   "type": "concept",
+   "id": "ead-lea",
+   "title": "Low energy availability: the hormone brake",
+   "text": "[Energy availability](g:energy-availability) is energy intake minus exercise energy expenditure, per kg of fat-free mass. Too little of it is the root of [REDs](g:reds) in women and men [[c:ead-ea]].\n\nIn one trial, sedentary women spent 5 days at set energy availabilities: LH pulses were normal at 125 kJ (30 kcal) per kg lean mass per day, but disrupted below it [[c:ead-loucks]].\n\nIn men the evidence is thinner. In six exercising men, 4 days at 63 kJ (15 kcal) per kg fat-free mass halved leptin (a hormone from fat tissue) and cut insulin by a third, but testosterone didn't change [[c:ead-koehler]]. Men may cope better with short deficits, or the study was too small to tell. Longer deficits are linked to low testosterone in men.",
+   "claims": [
+    {
+     "id": "ead-ea",
+     "text": "Low energy availability (energy intake inadequate for exercise energy expenditure) causes the health and performance problems of RED-S in female and male athletes.",
+     "grade": "strong",
+     "sources": [
+      "mountjoy2023",
+      "hackney2020"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "Relative Energy Deficiency in Sport (REDs) was first introduced in 2014 by the International Olympic Committee's expert writing panel, identifying a syndrome of deleterious health and performance outcomes experienced by female and male athletes exposed to low energy availability (LEA; inadequate energy intake in relation to exercise energy expenditure).",
+       "level": "abstract"
+      },
+      {
+       "source": "hackney2020",
+       "quote": "Energy availability refers to the amount of energy leftover and available for your body's functions after the energy expended for daily exercise training is subtracted from the energy taken in from daily caloric intake from food.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ead-loucks",
+     "text": "In regularly menstruating sedentary women, LH pulsatility was unaffected at an energy availability of 30 kcal per kg lean body mass per day but disrupted below it.",
+     "grade": "weak",
+     "sources": [
+      "loucks2003"
+     ],
+     "evidence": [
+      {
+       "source": "loucks2003",
+       "quote": "LH pulsatility was unaffected by an energy availability of 30 kcal/kg LBM.d (P > 0.3), but below this threshold LH pulse frequency decreased, whereas LH pulse amplitude increased (all P < 0.04).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ead-koehler",
+     "text": "Four days of low energy availability (15 kcal per kg fat-free mass per day) lowered leptin and insulin in six exercising men but did not significantly change testosterone.",
+     "grade": "weak",
+     "sources": [
+      "koehler2016",
+      "hackney2020"
+     ],
+     "evidence": [
+      {
+       "source": "koehler2016",
+       "quote": "Following both low energy availability conditions, leptin (-53% to -56%) and insulin (-34% to -38%) were reduced (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "koehler2016",
+       "quote": "Low energy availability did not significantly impact ghrelin, triiodothyronine, testosterone and IGF-1 (all P > 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "hackney2020",
+       "quote": "While the state of low energy availability (LEA) produces a myriad of physiological consequences in women and supposedly men, it is associated specifically with the development of low testosterone in men ( 110 ).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ead-ea-example",
+   "title": "Working out energy availability",
+   "problem": "A triathlete eats 11,000 kJ (2,629 kcal) a day. Training uses 4,000 kJ (956 kcal) a day. Her fat-free mass is 56 kg. What is her energy availability?",
+   "steps": [
+    "Energy availability = (intake − exercise expenditure) ÷ fat-free mass.",
+    "11,000 − 4,000 = 7,000 kJ left for everything else.",
+    "7,000 ÷ 56 = 125 kJ·kg FFM⁻¹·day⁻¹ (about 30 kcal).",
+    "That is right at the level below which LH pulses were disrupted in women: a warning sign, not a diagnosis."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ead-ea-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ead-lea-cause"
+  },
+  {
+   "type": "question",
+   "item": "ead-lea-men"
+  },
+  {
+   "type": "question",
+   "item": "ead-ea-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Training blunts hormone responses at the same absolute workload: less adrenaline, noradrenaline and glucagon, less fall in insulin.",
+    "At the same relative or all-out effort, trained men respond as much or more (the \"sports adrenal medulla\"); data in women are scarce.",
+    "Some men with years of endurance training have low resting testosterone without raised LH; whether that is harm or adaptation is debated, and the evidence is small.",
+    "Low energy availability (intake minus training, per kg fat-free mass) disrupted LH pulses in sedentary women below about 125 kJ (30 kcal) per kg a day; the evidence in men is thinner."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ead-absolute",
+   "concept": "ead-blunt",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "winder1978",
+    "mendenhall1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 3 months of training, a cyclist repeats a 30 min ride at the same 200 W as before. Compared with the first time, his adrenaline during the ride is most likely to be:",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower",
+       "correct": true,
+       "why": "Right: 200 W is now a smaller share of his capacity, so the sympathetic alarm is smaller."
+      },
+      {
+       "id": "b",
+       "text": "Higher",
+       "why": "This would fit an all-out effort, where trained men can secrete more; at the same watts the response shrinks."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged",
+       "why": "Training changes how big a stress the same workload is; the response falls within weeks."
+      },
+      {
+       "id": "d",
+       "text": "Zero",
+       "why": "Training blunts the response; it doesn't remove it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A new runner trains for 6 weeks, then repeats the same 10 min treadmill run at 11 km·h⁻¹. How have her catecholamine and glucagon responses most likely changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both are smaller than before",
+       "correct": true,
+       "why": "Right: the same absolute workload is a smaller stress after training, so the hormone changes are blunted."
+      },
+      {
+       "id": "b",
+       "text": "Both are larger than before",
+       "why": "Larger responses appear at all-out efforts in trained people, not at the same absolute pace."
+      },
+      {
+       "id": "c",
+       "text": "Catecholamines smaller, glucagon larger",
+       "why": "In training studies glucagon's rise was blunted along with the catecholamines."
+      },
+      {
+       "id": "d",
+       "text": "Unchanged until after 6 months",
+       "why": "The change is fast: much of it appears within 10 days to 3 weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-attenuate-recall",
+   "concept": "ead-blunt",
+   "bloom": "understand",
+   "sources": [
+    "hackney2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does chronic endurance training do to the acute hormone response to a session at the same workload?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Makes it smaller, without removing it",
+       "correct": true,
+       "why": "Right: training attenuates the acute response; the hormones still rise, just less."
+      },
+      {
+       "id": "b",
+       "text": "Removes it, so hormones no longer change",
+       "why": "Overstatement: trained athletes still show clear hormone changes with exercise."
+      },
+      {
+       "id": "c",
+       "text": "Makes it larger, to supply more fuel",
+       "why": "At the same workload the response shrinks; larger responses appear only in all-out efforts."
+      },
+      {
+       "id": "d",
+       "text": "Delays it to after the session",
+       "why": "The responses still happen during exercise; they are smaller, not later."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-relative-discrim",
+   "concept": "ead-relative",
+   "bloom": "analyse",
+   "sources": [
+    "zouhal2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trained cyclist (FTP 320 W) and an untrained man (FTP 180 W) each ride a 3 min all-out effort. Whose adrenaline at the end is likely higher?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The trained cyclist's",
+       "correct": true,
+       "why": "Right: at the same relative, all-out effort, endurance-trained men often secrete more adrenaline."
+      },
+      {
+       "id": "b",
+       "text": "The untrained man's, as training always lowers it",
+       "why": "Training lowers it at the same absolute watts; at all-out efforts the trained can secrete more."
+      },
+      {
+       "id": "c",
+       "text": "Neither: all-out efforts give identical levels",
+       "why": "Responses differ with training status; the trained often show more at maximal efforts."
+      },
+      {
+       "id": "d",
+       "text": "The untrained man's, as he finds it harder",
+       "why": "Both ride all-out, so the relative effort is the same; the trained man's adrenal glands can release more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-winder-hr",
+   "concept": "ead-relative",
+   "bloom": "analyse",
+   "sources": [
+    "winder1978"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 7-week training study, catecholamines in a standard test stopped falling after week 3, but heart rate in the same test kept falling until week 7. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Other adaptations, such as a bigger stroke volume, also lower heart rate",
+       "correct": true,
+       "why": "Right: if HR keeps falling while sympathetic hormones are flat, something else, such as a larger heart and plasma volume, is at work."
+      },
+      {
+       "id": "b",
+       "text": "The catecholamine measurements must be wrong",
+       "why": "Two outcomes changing on different timelines is a finding, not an error."
+      },
+      {
+       "id": "c",
+       "text": "Heart rate is controlled only by catecholamines",
+       "why": "That is what the result argues against: HR fell further without any further change in catecholamines."
+      },
+      {
+       "id": "d",
+       "text": "Training raises sympathetic drive after week 3",
+       "why": "Catecholamines had plateaued, not risen; a rise in sympathetic drive would raise heart rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-ehmc-define",
+   "concept": "ead-testosterone",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hackney2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which pattern describes the exercise-hypogonadal male condition?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Persistently low resting testosterone without raised LH, after years of endurance training",
+       "correct": true,
+       "why": "Right: low testosterone at rest, an LH that doesn't rise to compensate, and a long training history."
+      },
+      {
+       "id": "b",
+       "text": "A drop in testosterone for a day or two after a hard race",
+       "why": "Short post-race drops are common and normal; the condition is about persistently low resting levels."
+      },
+      {
+       "id": "c",
+       "text": "Low testosterone with very high LH, from failing testes",
+       "why": "Very high LH points to the testes failing on their own; in this condition LH is not raised."
+      },
+      {
+       "id": "d",
+       "text": "Low testosterone from a few days of very low food intake",
+       "why": "That fits short-term low energy availability, which Hackney separates from this long-term condition."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-appraisal-1988",
+   "concept": "ead-testosterone",
+   "bloom": "evaluate",
+   "sources": [
+    "hackney1988"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 1988 study compared resting testosterone in 11 endurance-trained and 11 sedentary men, sampled hourly over one 4 h morning. The trained men's levels were about 30% lower. What most limits concluding that training *caused* the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is cross-sectional: the groups may differ in diet, body fat or who chooses endurance sport",
+       "correct": true,
+       "why": "Right: comparing groups at one time can't separate training from other differences, such as energy intake."
+      },
+      {
+       "id": "b",
+       "text": "Sampling blood every hour for 4 h is too often to be accurate",
+       "why": "Repeated samples average out the hormone's pulses, which makes the comparison better, not worse."
+      },
+      {
+       "id": "c",
+       "text": "LH should not have been measured alongside testosterone",
+       "why": "LH helps locate the cause in the HPG axis; measuring it is a strength."
+      },
+      {
+       "id": "d",
+       "text": "Sedentary men always have abnormally high testosterone",
+       "why": "There's no reason to think sedentary men's levels are abnormal; their values were in the normal range."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-ea-calc",
+   "concept": "ead-lea",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mountjoy2023",
+    "loucks2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner eats 10,000 kJ a day, her training uses 3,500 kJ a day, and her fat-free mass is 50 kg. What is her energy availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "130 kJ·kg FFM⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: (10,000 − 3,500) ÷ 50 = 130."
+      },
+      {
+       "id": "b",
+       "text": "200 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides intake by fat-free mass and forgets to subtract the training."
+      },
+      {
+       "id": "c",
+       "text": "270 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This adds the training to the intake instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "70 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides the training expenditure alone by fat-free mass."
+      }
+     ],
+     "solution": "Energy availability = (intake − exercise) ÷ FFM = (10,000 − 3,500) ÷ 50 = 6,500 ÷ 50 = 130 kJ·kg FFM⁻¹·day⁻¹ (about 31 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist eats 14,000 kJ a day, his training uses 6,000 kJ a day, and his fat-free mass is 64 kg. What is his energy availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "125 kJ·kg FFM⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: (14,000 − 6,000) ÷ 64 = 125."
+      },
+      {
+       "id": "b",
+       "text": "218.8 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides intake by fat-free mass and forgets to subtract the training."
+      },
+      {
+       "id": "c",
+       "text": "312.5 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This adds the training to the intake instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "93.8 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides the training expenditure alone by fat-free mass."
+      }
+     ],
+     "solution": "Energy availability = (14,000 − 6,000) ÷ 64 = 8,000 ÷ 64 = 125 kJ·kg FFM⁻¹·day⁻¹ (about 30 kcal): at the level where LH disruption began in women."
+    },
+    {
+     "id": "c",
+     "stem": "In a big training block, a triathlete eats 12,000 kJ a day, training uses 7,000 kJ a day, and his fat-free mass is 60 kg. What is his energy availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "83.3 kJ·kg FFM⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: (12,000 − 7,000) ÷ 60 = 83.3."
+      },
+      {
+       "id": "b",
+       "text": "200 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides intake by fat-free mass and forgets to subtract the training."
+      },
+      {
+       "id": "c",
+       "text": "316.7 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This adds the training to the intake instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "116.7 kJ·kg FFM⁻¹·day⁻¹",
+       "why": "This divides the training expenditure alone by fat-free mass."
+      }
+     ],
+     "solution": "Energy availability = (12,000 − 7,000) ÷ 60 = 5,000 ÷ 60 = 83.3 kJ·kg FFM⁻¹·day⁻¹ (about 20 kcal): well below the level where LH disruption began in women."
+    }
+   ]
+  },
+  {
+   "id": "ead-lea-cause",
+   "concept": "ead-lea",
+   "bloom": "apply",
+   "sources": [
+    "mountjoy2023",
+    "hackney2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist loses 4 kg in 6 weeks by eating less while keeping 15 h a week of training. His resting testosterone, normal last year, is now low. What should be checked first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Whether he has low energy availability",
+       "correct": true,
+       "why": "Right: eating less while training the same is the classic route to low energy availability, which is linked to low testosterone in men."
+      },
+      {
+       "id": "b",
+       "text": "Whether he has the exercise-hypogonadal male condition",
+       "why": "That condition develops over years of training; a fall over 6 weeks of dieting points to energy first."
+      },
+      {
+       "id": "c",
+       "text": "Whether he should start testosterone treatment",
+       "why": "Treating the number skips the cause; the first step is fixing energy intake and load."
+      },
+      {
+       "id": "d",
+       "text": "Whether his training is too easy to keep testosterone up",
+       "why": "There is no evidence that easy training lowers testosterone; the likely cause is the energy deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ead-lea-men",
+   "concept": "ead-lea",
+   "bloom": "evaluate",
+   "sources": [
+    "koehler2016",
+    "loucks2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In women, LH pulses were disrupted below 125 kJ (30 kcal) per kg lean mass per day. In six exercising men, 4 days at 63 kJ (15 kcal) lowered leptin and insulin but not testosterone. What is the fairest conclusion for male athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Men may cope better with short deficits, but six men for 4 days settles little",
+       "correct": true,
+       "why": "Right: a tiny, short study; it hints at a sex difference but can't rule out effects of longer deficits."
+      },
+      {
+       "id": "b",
+       "text": "Men are immune to low energy availability",
+       "why": "Overreach: leptin and insulin fell, and longer deficits are linked to low testosterone in men."
+      },
+      {
+       "id": "c",
+       "text": "Men's testosterone falls below 125 kJ, just as women's LH does",
+       "why": "The men's study found no change in testosterone even at 63 kJ (15 kcal) over 4 days."
+      },
+      {
+       "id": "d",
+       "text": "Low energy availability only matters when it comes from dieting",
+       "why": "In the men's study, the falls were the same whether the deficit came from exercise or from eating less."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

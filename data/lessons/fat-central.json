@@ -1,0 +1,830 @@
+{
+ "id": "fat-central",
+ "module": "t1b-fatigue",
+ "title": "Central fatigue: when the drive falls",
+ "goal": "Explain how the nervous system's drive to muscle falls during exercise, how voluntary activation is measured, and what the serotonin and muscle-feedback ideas claim.",
+ "requires": [
+  "fat-peripheral"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "central-fatigue",
+    "twitch-interpolation",
+    "voluntary-activation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ce-define",
+   "title": "Central fatigue: the drive falls",
+   "text": "Force can also be lost before the muscle: the nervous system may fail to drive the motoneurons (the spinal nerve cells that fire the muscle) fully. That is [central fatigue](g:central-fatigue) [[c:central-def]].\n\nIt works at two levels:\n\n- **Supraspinal:** the motor cortex sends a weaker command.\n- **Spinal:** motoneurons in the spinal cord fire less, partly because of changed input from stretch and tension sensors (muscle spindles, tendon organs) and [group III/IV afferents](g:group-iii-iv-afferents) in the tiring muscle [[c:spinal-inputs]].\n\nEven fresh, a maximal voluntary effort often doesn't drive a muscle fully, so voluntary strength sits below the muscle's true maximum [[c:suboptimal]]. Central fatigue widens that gap, and motor unit firing rates ([rate coding](g:rate-coding)) drop [[c:firing-drop]].",
+   "claims": [
+    {
+     "id": "central-def",
+     "text": "Muscle fatigue may arise from peripheral changes in the muscle and also because the central nervous system fails to drive the motoneurons adequately.",
+     "grade": "strong",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "It may arise not only because of peripheral changes at the level of the muscle, but also because the central nervous system fails to drive the motoneurons adequately.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "spinal-inputs",
+     "text": "Central changes at the spinal level come from altered input from muscle spindles, tendon organs and group III and IV afferents of the fatiguing muscle.",
+     "grade": "moderate",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "Central changes also occur at a spinal level due to the altered input from muscle spindle, tendon organ, and group III and IV muscle afferents innervating the fatiguing muscle.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "suboptimal",
+     "text": "Voluntary activation of human muscle is commonly suboptimal, so maximal voluntary force is often below true maximal force.",
+     "grade": "strong",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "Much data suggest that voluntary activation of human motoneurons and muscle fibers is suboptimal and thus maximal voluntary force is commonly less than true maximal force.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "firing-drop",
+     "text": "During maximal voluntary isometric tasks voluntary activation usually falls and motor unit firing rates decline.",
+     "grade": "strong",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "Voluntary activation usually diminishes during maximal voluntary isometric tasks, that is central fatigue develops, and motor unit firing rates decline.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-levels"
+  },
+  {
+   "type": "question",
+   "item": "ce-suboptimal"
+  },
+  {
+   "type": "concept",
+   "id": "ce-twitch",
+   "title": "Twitch interpolation: nerve or muscle?",
+   "text": "To tell nerve from muscle, researchers use [twitch interpolation](g:twitch-interpolation) [[c:twitch-interp]]:\n\n1. During a maximal contraction, give the muscle's nerve a strong electric shock. If force jumps a little (the *superimposed twitch*), some [motor units](g:motor-unit) weren't recruited or weren't firing fast enough.\n2. Shock again in the relaxed muscle just after: the *resting twitch*.\n\n**[voluntary activation](g:voluntary-activation) (%) = (1 − superimposed ÷ resting) × 100** [[c:va-formula]]\n\nA fall in voluntary activation is central fatigue. A fall in the resting twitch is peripheral fatigue: the muscle itself answers the same shock less. Magnetic stimulation over the motor cortex picks out the supraspinal part [[c:tms]].",
+   "claims": [
+    {
+     "id": "twitch-interp",
+     "text": "Twitch interpolation reveals changes in the drive to motoneurons; voluntary activation usually falls during maximal fatiguing contractions.",
+     "grade": "strong",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "The technique of twitch interpolation has helped to reveal the changes in drive to motoneurons during fatigue.",
+       "level": "abstract"
+      },
+      {
+       "source": "gandevia2001",
+       "quote": "Voluntary activation usually diminishes during maximal voluntary isometric tasks, that is central fatigue develops, and motor unit firing rates decline.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "va-formula",
+     "text": "Voluntary activation by twitch interpolation is usually calculated as (1 − superimposed twitch ÷ resting twitch) × 100; an older variant, the central activation ratio, uses MVC ÷ (MVC + superimposed twitch).",
+     "grade": "strong",
+     "sources": [
+      "woods2022"
+     ],
+     "evidence": [
+      {
+       "source": "woods2022",
+       "quote": "VA ITT is calculated as follows: (1 − superimposed twitch/resting twitch) × 100",
+       "level": "full-text"
+      },
+      {
+       "source": "woods2022",
+       "quote": "Neural mechanisms resulting in activation deficit include submaximal motor-unit recruitment and/or suboptimal firing rates during volitional contractions.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tms",
+     "text": "Transcranial magnetic stimulation over the motor cortex during fatiguing exercise reveals a decline in supraspinal drive.",
+     "grade": "moderate",
+     "sources": [
+      "gandevia2001"
+     ],
+     "evidence": [
+      {
+       "source": "gandevia2001",
+       "quote": "Transcranial magnetic stimulation over the motor cortex during fatiguing exercise has revealed focal changes in cortical excitability and inhibitability based on electromyographic (EMG) recordings, and a decline in supraspinal \"drive\" based on force recordings.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-define",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "ce-va-example",
+   "title": "Voluntary activation before and after a time trial",
+   "problem": "Before a 20 km time trial, a rider's superimposed twitch during a maximal knee extension is 4 N·m and her resting twitch 80 N·m. After the ride they are 12 N·m and 60 N·m. What changed?",
+   "steps": [
+    "Before: voluntary activation = (1 − 4 ÷ 80) × 100 = (1 − 0.05) × 100 = 95%.",
+    "After: (1 − 12 ÷ 60) × 100 = (1 − 0.20) × 100 = 80%. Voluntary activation fell 15 percentage points: central fatigue.",
+    "Resting twitch fell from 80 to 60 N·m: (80 − 60) ÷ 80 = 25% less. The muscle itself also tired: peripheral fatigue.",
+    "So both were present. The twitch is in N·m because force is measured as [torque](g:torque) at the knee."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-va-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ce-split"
+  },
+  {
+   "type": "question",
+   "item": "ce-va-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "ce-serotonin",
+   "title": "The serotonin hypothesis",
+   "text": "An early central idea: in prolonged exercise, the brain chemical serotonin rises and brings tiredness, lethargy and loss of motivation. Nutrition and drug studies that changed brain serotonin have not yet given robust evidence that it plays a significant role [[c:serotonin-weak]].\n\nThe revised version looks at the **ratio of serotonin to dopamine** (a brain chemical tied to motivation): a high ratio favours tiredness, a low one keeps motivation and arousal [[c:ratio]]. Dopamine and noradrenaline also seem to matter for performance in the heat.\n\nSo a supplement sold to 'block central fatigue' by lowering brain serotonin rests on a hypothesis that hasn't held up well in tests.",
+   "claims": [
+    {
+     "id": "serotonin-weak",
+     "text": "Nutritional and pharmacological studies manipulating brain serotonin have yet to provide robust evidence for a significant role of serotonin in fatigue.",
+     "grade": "moderate",
+     "sources": [
+      "meeusen2006"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2006",
+       "quote": "Several nutritional and pharmacological studies have attempted to manipulate central serotonergic activity during exercise, but this work has yet to provide robust evidence for a significant role of serotonin in the fatigue process.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ratio",
+     "text": "A revised hypothesis proposes that a high brain serotonin-to-dopamine ratio favours tiredness and a low ratio favours performance; dopamine and noradrenaline appear important in the heat.",
+     "grade": "weak",
+     "sources": [
+      "meeusen2006"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2006",
+       "quote": "This revised central fatigue hypothesis suggests that an increase in central ratio of serotonin to dopamine is associated with feelings of tiredness and lethargy, accelerating the onset of fatigue, whereas a low ratio favours improved performance through the maintenance of motivation and arousal.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2006",
+       "quote": "Recent findings have, however, provided support for a significant role of dopamine and noradrenaline (norepinephrine) in performance during exercise in the heat.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-serotonin-evidence"
+  },
+  {
+   "type": "question",
+   "item": "ce-ratio"
+  },
+  {
+   "type": "concept",
+   "id": "ce-afferents",
+   "title": "Feedback from the muscle",
+   "text": "[Group III/IV afferents](g:group-iii-iv-afferents) are thin sensory nerves that sense the metabolites building up in working muscle. Their feedback inhibits the brain's motor drive [[c:afferent-inhibit]].\n\nAmann tested this in 8 cyclists riding 5 km time trials. A spinal injection of fentanyl, an opioid drug, partly blocked the opioid-sensitive afferents [[c:fentanyl]]:\n\n| | fentanyl vs placebo |\n|---|---|\n| power, first 2.5 km | 6% higher |\n| power, last 2.5 km | 11% lower |\n| quad twitch drop after | −46% vs −33% |\n\nWithout the brake, riders started too hard, built more peripheral fatigue and faded. Amann's reading: feedback normally holds peripheral fatigue near an individual *critical threshold* [[c:threshold]]. Later work found that threshold doesn't carry over between exercise types [[c:not-general]].",
+   "claims": [
+    {
+     "id": "afferent-inhibit",
+     "text": "Thin-fibre muscle afferents provide inhibitory feedback to the CNS that influences central motor drive in high-intensity whole-body exercise.",
+     "grade": "moderate",
+     "sources": [
+      "amann2011"
+     ],
+     "evidence": [
+      {
+       "source": "amann2011",
+       "quote": "These neurons provide inhibitory feedback to the CNS and thereby influence the magnitude of central motor drive during high-intensity whole-body endurance exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fentanyl",
+     "text": "Blocking opioid-mediated muscle afferents with intrathecal fentanyl raised power in the first half of a 5 km time trial, lowered it in the second half, and increased peripheral quadriceps fatigue.",
+     "grade": "weak",
+     "sources": [
+      "amann2009"
+     ],
+     "evidence": [
+      {
+       "source": "amann2009",
+       "quote": "Power output was also 6 +/- 2% higher during the first and 11 +/- 2% lower during the second 2.5 km of 5K(Fent) versus 5K(Plac) (both P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "amann2009",
+       "quote": "Exercise-induced DeltaQ(tw) was greater following 5K(Fent) versus 5K(Plac) (-46 +/- 2 versus -33 +/- 2%, P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "threshold",
+     "text": "Amann proposes that afferent feedback restricts peripheral fatigue to an individual critical threshold.",
+     "grade": "disputed",
+     "sources": [
+      "amann2011"
+     ],
+     "evidence": [
+      {
+       "source": "amann2011",
+       "quote": "The purpose of this proposed feedback loop would be to regulate and restrict the development of exercise-induced peripheral muscle fatigue and/or associated sensory feedback to an \"individual critical threshold.\"",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "not-general",
+     "text": "A critical threshold of peripheral fatigue may hold within a task but does not generalise across exercise modalities.",
+     "grade": "weak",
+     "sources": [
+      "hureau2016"
+     ],
+     "evidence": [
+      {
+       "source": "hureau2016",
+       "quote": "While the threshold theory remains to be disproven within a given task, it is not generalisable across different exercise modalities.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-fentanyl"
+  },
+  {
+   "type": "question",
+   "item": "ce-amann-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "ce-practice",
+   "title": "Central fatigue in long efforts",
+   "text": "Central fatigue tends to be larger in longer efforts: voluntary activation fell more after 20 and 40 km time trials than after 4 km (*What fatigue is*).\n\nThe sport matters too. After long running, tests show clear central fatigue; in cycling, which damages muscle less, it is smaller [[c:run-cycle]]. One explanation is spinal: inhibition from group III/IV afferents and less help from muscle spindles in a damaged, tired muscle.\n\nCentral fatigue is never the whole story: after prolonged exercise, [excitation–contraction coupling](g:ec-coupling) and the muscle's own force also suffer [[c:not-whole]].\n\nFor a triathlete, the run is likely where the nervous system takes the biggest hit.",
+   "claims": [
+    {
+     "id": "run-cycle",
+     "text": "Central activation deficits occur after prolonged cycling but are smaller than after running, which causes more muscle damage; spinal inhibition from group III/IV afferents may contribute.",
+     "grade": "moderate",
+     "sources": [
+      "millet2004"
+     ],
+     "evidence": [
+      {
+       "source": "millet2004",
+       "quote": "Some central activation deficit has also been observed for knee extensor muscles in cycling but central fatigue after activities inducing low muscular damage was attenuated compared with running.",
+       "level": "abstract"
+      },
+      {
+       "source": "millet2004",
+       "quote": "it can be suggested that spinal adaptation, such as inhibition from type III and IV group afferents or disfacilitation from muscle spindles, contributes to the reduced neural drive after prolonged exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "not-whole",
+     "text": "Central fatigue alone cannot explain the whole strength loss after prolonged exercise.",
+     "grade": "moderate",
+     "sources": [
+      "millet2004"
+     ],
+     "evidence": [
+      {
+       "source": "millet2004",
+       "quote": "However, central fatigue alone cannot explain the entire strength loss after prolonged exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ce-run-cycle"
+  },
+  {
+   "type": "question",
+   "item": "ce-va-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Central fatigue is lost force because the nervous system drives the muscle less: in the motor cortex (supraspinal) or in the spinal cord.",
+    "Twitch interpolation: voluntary activation = (1 − superimposed ÷ resting twitch) × 100; a smaller resting twitch means peripheral fatigue.",
+    "The serotonin hypothesis lacks robust support; a serotonin-to-dopamine ratio is the revised idea.",
+    "Group III/IV afferents feed back metabolite signals that restrain drive; blocking them made riders start too hard and fade.",
+    "Central fatigue is larger in long efforts and after running than cycling, but never explains all of the strength loss."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ce-define",
+   "concept": "ce-twitch",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "gandevia2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a maximal knee extension, an electric shock to the nerve still adds force. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The nervous system wasn't driving the muscle fully",
+       "correct": true,
+       "why": "Right: the shock recruited force that voluntary drive left unused."
+      },
+      {
+       "id": "b",
+       "text": "The muscle fibres are damaged",
+       "why": "Damaged fibres would add less force to a shock, not more."
+      },
+      {
+       "id": "c",
+       "text": "The muscle has run out of PCr",
+       "why": "The muscle could still produce extra force, so fuel wasn't what was missing."
+      },
+      {
+       "id": "d",
+       "text": "The shock repaired failing Ca²⁺ release",
+       "why": "A single shock doesn't repair the fibre; it shows unused drive."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "After a 30 km run, a runner's maximal knee extension is weaker, and a shock to the femoral nerve during the effort adds clear extra force. What does the extra force reveal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Central fatigue: the drive to the muscle has fallen",
+       "correct": true,
+       "why": "Right: force left unused by voluntary drive is a central deficit."
+      },
+      {
+       "id": "b",
+       "text": "Peripheral fatigue: the muscle responds less",
+       "why": "Peripheral fatigue shows as a smaller resting twitch, not extra force during the effort."
+      },
+      {
+       "id": "c",
+       "text": "Only perceived fatigue, not a measured change",
+       "why": "The shock gives a measured result, not a feeling."
+      },
+      {
+       "id": "d",
+       "text": "No fatigue: the muscle is still at full strength",
+       "why": "His maximal force has fallen, so he is fatigued."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-levels",
+   "concept": "ce-define",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "gandevia2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these is a spinal factor in central fatigue?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inhibition of motoneurons by group III/IV afferents",
+       "correct": true,
+       "why": "Right: afferent input acting at the spinal cord lowers motoneuron output."
+      },
+      {
+       "id": "b",
+       "text": "A weaker command from the motor cortex",
+       "why": "That is supraspinal, above the spinal cord."
+      },
+      {
+       "id": "c",
+       "text": "Pi building up inside the muscle fibres",
+       "why": "That is peripheral, inside the muscle."
+      },
+      {
+       "id": "d",
+       "text": "K⁺ building up around the muscle fibres",
+       "why": "That is peripheral, at the fibre membrane."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-suboptimal",
+   "concept": "ce-define",
+   "bloom": "understand",
+   "sources": [
+    "gandevia2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is maximal voluntary force often below a muscle's true maximum, even when fresh?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Voluntary activation is commonly less than complete",
+       "correct": true,
+       "why": "Right: drive to motoneurons is often suboptimal even without fatigue."
+      },
+      {
+       "id": "b",
+       "text": "Muscles are always partly fatigued at rest",
+       "why": "Rested muscle isn't fatigued; the gap comes from drive."
+      },
+      {
+       "id": "c",
+       "text": "Electrical stimulation adds force by damaging fibres",
+       "why": "Stimulation recruits unused motor units; it doesn't damage them."
+      },
+      {
+       "id": "d",
+       "text": "Only fast fibres can be driven voluntarily",
+       "why": "All fibre types are recruited voluntarily, by size."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-va-calc",
+   "concept": "ce-twitch",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "gandevia2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's superimposed twitch during a maximal knee extension is 6 N·m; the resting twitch just after is 75 N·m. What is her voluntary activation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "92%",
+       "correct": true,
+       "why": "Right: (1 − superimposed ÷ resting) × 100."
+      },
+      {
+       "id": "b",
+       "text": "8%",
+       "why": "This is superimposed ÷ resting × 100: the share of force the nerve left unused, not voluntary activation."
+      },
+      {
+       "id": "c",
+       "text": "69%",
+       "why": "This subtracts the twitches (resting − superimposed) without dividing; voluntary activation needs the ratio."
+      }
+     ],
+     "solution": "Voluntary activation = (1 − 6 ÷ 75) × 100 = (1 − 0.08) × 100 = 92%."
+    },
+    {
+     "id": "b",
+     "stem": "After a marathon, a runner's superimposed twitch is 9 N·m and his resting twitch 60 N·m. What is his voluntary activation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85%",
+       "correct": true,
+       "why": "Right: (1 − superimposed ÷ resting) × 100."
+      },
+      {
+       "id": "b",
+       "text": "15%",
+       "why": "This is superimposed ÷ resting × 100: the share of force the nerve left unused, not voluntary activation."
+      },
+      {
+       "id": "c",
+       "text": "51%",
+       "why": "This subtracts the twitches (resting − superimposed) without dividing; voluntary activation needs the ratio."
+      }
+     ],
+     "solution": "Voluntary activation = (1 − 9 ÷ 60) × 100 = (1 − 0.15) × 100 = 85%."
+    },
+    {
+     "id": "c",
+     "stem": "After an Ironman bike leg, a triathlete's superimposed twitch is 3 N·m and resting twitch 50 N·m. What is her voluntary activation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "94%",
+       "correct": true,
+       "why": "Right: (1 − superimposed ÷ resting) × 100."
+      },
+      {
+       "id": "b",
+       "text": "6%",
+       "why": "This is superimposed ÷ resting × 100: the share of force the nerve left unused, not voluntary activation."
+      },
+      {
+       "id": "c",
+       "text": "47%",
+       "why": "This subtracts the twitches (resting − superimposed) without dividing; voluntary activation needs the ratio."
+      }
+     ],
+     "solution": "Voluntary activation = (1 − 3 ÷ 50) × 100 = (1 − 0.06) × 100 = 94%."
+    }
+   ]
+  },
+  {
+   "id": "ce-split",
+   "concept": "ce-twitch",
+   "bloom": "analyse",
+   "sources": [
+    "gandevia2001",
+    "thomas2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After the same race, rider A's resting twitch fell 35% and voluntary activation fell 2 points; rider B's resting twitch fell 8% and voluntary activation fell 15 points. Which statement fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A's fatigue is mainly peripheral; B's is mainly central",
+       "correct": true,
+       "why": "Right: a smaller resting twitch is muscle fatigue; lower activation is central fatigue."
+      },
+      {
+       "id": "b",
+       "text": "A's fatigue is mainly central; B's is mainly peripheral",
+       "why": "Reversed: the resting twitch measures the muscle, activation measures the drive."
+      },
+      {
+       "id": "c",
+       "text": "Both are mainly central, since both got weaker",
+       "why": "Weaker can come from either; the two measures tell them apart."
+      },
+      {
+       "id": "d",
+       "text": "Neither is fatigued until activation falls below 50%",
+       "why": "Any drop in maximal capacity counts as fatigue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-serotonin-evidence",
+   "concept": "ce-serotonin",
+   "bloom": "evaluate",
+   "sources": [
+    "meeusen2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A supplement claims to delay fatigue in long rides by lowering brain serotonin. What's the fairest judgement from the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Be sceptical: changing brain serotonin hasn't robustly changed fatigue",
+       "correct": true,
+       "why": "Right: manipulation studies have yet to show a robust role for serotonin."
+      },
+      {
+       "id": "b",
+       "text": "Credible: serotonin is the proven main cause of central fatigue",
+       "why": "That was the original hypothesis; tests haven't confirmed it."
+      },
+      {
+       "id": "c",
+       "text": "Irrelevant: the brain plays no part in fatigue",
+       "why": "The brain does play a part; the serotonin route is what's unproven."
+      },
+      {
+       "id": "d",
+       "text": "Credible, but only in hot weather",
+       "why": "In the heat, dopamine and noradrenaline, not serotonin, seem to matter."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-ratio",
+   "concept": "ce-serotonin",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "meeusen2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the revised central fatigue hypothesis, which brain state favours performance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A low ratio of serotonin to dopamine",
+       "correct": true,
+       "why": "Right: a low ratio keeps motivation and arousal."
+      },
+      {
+       "id": "b",
+       "text": "A high ratio of serotonin to dopamine",
+       "why": "A high ratio is linked with tiredness and lethargy."
+      },
+      {
+       "id": "c",
+       "text": "High serotonin, whatever the dopamine",
+       "why": "High serotonin was the original fatigue signal, not a benefit."
+      },
+      {
+       "id": "d",
+       "text": "Low dopamine, whatever the serotonin",
+       "why": "Low dopamine raises the ratio, which favours tiredness."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-fentanyl",
+   "concept": "ce-afferents",
+   "bloom": "analyse",
+   "sources": [
+    "amann2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Blocking opioid-sensitive muscle afferents with fentanyl changed how cyclists rode a 5 km time trial. What happened?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Faster start, slower finish, more peripheral fatigue",
+       "correct": true,
+       "why": "Right: +6% then −11% power, and a −46% vs −33% quad twitch drop."
+      },
+      {
+       "id": "b",
+       "text": "Faster throughout, with less fatigue",
+       "why": "They faded in the second half and had more peripheral fatigue."
+      },
+      {
+       "id": "c",
+       "text": "No change: muscle feedback doesn't affect pacing",
+       "why": "Pacing changed clearly, so feedback does shape it."
+      },
+      {
+       "id": "d",
+       "text": "Slower start, faster finish, less fatigue",
+       "why": "The opposite: without the brake they went out too hard."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-amann-appraisal",
+   "concept": "ce-afferents",
+   "bloom": "evaluate",
+   "sources": [
+    "amann2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the fentanyl study (8 trained cyclists), arterial O₂ saturation was lower with fentanyl than placebo (89% vs 94%). Why does this matter for reading the extra peripheral fatigue?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less O₂ to the muscle could add fatigue by itself",
+       "correct": true,
+       "why": "Right: lower saturation is a second difference between trials, so not all the extra fatigue need come from the missing brake."
+      },
+      {
+       "id": "b",
+       "text": "It doesn't: O₂ saturation has no effect on muscle",
+       "why": "O₂ delivery does affect how fast muscle fatigues."
+      },
+      {
+       "id": "c",
+       "text": "It shows fentanyl improved the riders' breathing",
+       "why": "Lower saturation suggests breathing, if anything, was worse."
+      },
+      {
+       "id": "d",
+       "text": "It shows the riders weren't well trained",
+       "why": "Saturation differed between trials in the same riders; training is the same."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ce-run-cycle",
+   "concept": "ce-practice",
+   "bloom": "apply",
+   "sources": [
+    "millet2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has nerve-stimulation tests after the bike and after the run of a long race. After which leg would you expect the larger central component?",
+     "options": [
+      {
+       "id": "a",
+       "text": "After the run, which damages muscle more",
+       "correct": true,
+       "why": "Right: central fatigue is larger after long running than after cycling."
+      },
+      {
+       "id": "b",
+       "text": "After the bike, since it lasts longer",
+       "why": "Cycling causes less muscle damage and smaller central deficits."
+      },
+      {
+       "id": "c",
+       "text": "Equal: central fatigue doesn't depend on the sport",
+       "why": "It does: running shows more central fatigue than cycling."
+      },
+      {
+       "id": "d",
+       "text": "Neither: central fatigue occurs only in sprints",
+       "why": "Central fatigue is larger in long efforts, not sprints."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

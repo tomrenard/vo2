@@ -1,0 +1,838 @@
+{
+ "id": "cv-output",
+ "module": "t1b-cardio",
+ "title": "Cardiac output: how much the heart pumps",
+ "goal": "Explain cardiac output as heart rate × stroke volume, how big it gets at rest and at maximal exercise in untrained people and elite endurance athletes, and why it sets the ceiling on VO₂max.",
+ "requires": [
+  "cal-daily"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cardiac-output",
+    "stroke-volume"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cvo-equation",
+   "title": "Heart rate × stroke volume",
+   "text": "[Cardiac output](g:cardiac-output) (Q) is the volume of blood one ventricle pumps in a minute. It is the product of two numbers [[c:cvo-q-equation]]:\n\n**Q = HR × SV**\n\n- **HR**, heart rate, in beats·min⁻¹;\n- **SV**, [stroke volume](g:stroke-volume): the blood pushed out per beat, in mL.\n\nBecause the two circuits run in series (anatomy module), the left and right ventricles pump the same Q.\n\nAt rest, a young man's heart beats about 70 times a minute and pushes out about 70 mL each beat: about **5 L·min⁻¹** [[c:cvo-q-rest]]. That is roughly your whole blood volume, once a minute.\n\nWatch the units: mL × beats·min⁻¹ gives mL·min⁻¹. Divide by 1000 for L·min⁻¹.",
+   "claims": [
+    {
+     "id": "cvo-q-equation",
+     "text": "Cardiac output is stroke volume multiplied by heart rate.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "To calculate this value, multiply stroke volume (SV), the amount of blood pumped by each ventricle, by heart rate (HR), in contractions per minute (or beats per minute, bpm).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cvo-q-rest",
+     "text": "At rest, cardiac output is about 5 L·min⁻¹ in young healthy men, from about 70 beats·min⁻¹ and about 70 mL per beat.",
+     "grade": "strong",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "This cardiac output is achieved via a combination of a heart rate of ∼70 beats per minute (bpm) and a stroke volume of ∼70 ml/beat.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cvo-example-q",
+   "title": "Cardiac output at rest",
+   "problem": "A trained triathlete rests at 48 beats·min⁻¹ with a stroke volume of 105 mL. What is her cardiac output?",
+   "steps": [
+    "Q = HR × SV = 48 beats·min⁻¹ × 105 mL = 5,040 mL·min⁻¹.",
+    "Divide by 1000: Q = 5.04 L·min⁻¹, about 5 L·min⁻¹.",
+    "The same sum turned round gives SV: SV = Q ÷ HR = 5,040 mL·min⁻¹ ÷ 48 beats·min⁻¹ = 105 mL. (Turn L·min⁻¹ back into mL·min⁻¹ first.)",
+    "She moves the same 5 L·min⁻¹ as an untrained person at 70 × 70 mL, with fewer, bigger beats."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvo-q-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cvo-sv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "cvo-max",
+   "title": "From 5 to 20, or to 40",
+   "text": "In maximal exercise, Q climbs from about 5 to about **20 L·min⁻¹** in an untrained young man. In elite endurance athletes, values near **40 L·min⁻¹** have been reported [[c:cvo-q-max]].\n\n| | HR (beats·min⁻¹) | SV (mL) | Q (L·min⁻¹) |\n|---|---|---|---|\n| rest | ~70 | ~70 | ~5 |\n| max, untrained | ~200 | ~100 | ~20 |\n| max, elite | similar | up to ~200 | 35–40 |\n\nThe elite heart doesn't beat much faster at max. Almost all the extra comes from a much bigger stroke volume [[c:cvo-elite-sv]]. In one study, five elite runners reached a maximal SV of 187 mL and a Q of 33.8 L·min⁻¹; untrained students reached 128 mL and 21.3 L·min⁻¹ [[c:cvo-zhou]].",
+   "claims": [
+    {
+     "id": "cvo-q-max",
+     "text": "Maximal cardiac output is about 20 L·min⁻¹ in untrained young men (HR about 200 beats·min⁻¹, SV about 100 mL) and 35–40 L·min⁻¹ in elite male endurance athletes.",
+     "grade": "strong",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "At rest, cardiac output is ∼5 l/min and rises to ∼20 l/min in the untrained subject during maximum exercise. Values of ∼40 l/min have been reported in elite endurance athletes.",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2015",
+       "quote": "During maximum exercise, heart rate increases to values of ∼200 bpm in young healthy humans.",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2015",
+       "quote": "In reference man, a stroke volume of ∼100 ml/beat would be typical, meaning that maximum cardiac output might reach a value of ∼20 l/min.",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2015",
+       "quote": "Thus a maximum cardiac output of 35–40 l/min is possible in elite male endurance athletes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cvo-elite-sv",
+     "text": "Elite endurance athletes' high maximal cardiac output comes almost entirely from very large stroke volumes, up to about 200 mL per beat.",
+     "grade": "strong",
+     "sources": [
+      "joyner2015",
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "Almost all of this, compared with their well-trained but nonelite counterparts, is due to very large stroke volumes.",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2015",
+       "quote": "Values of ∼200 ml/beat have been reported using invasive techniques in otherwise normal-sized men",
+       "level": "full-text"
+      },
+      {
+       "source": "levine2008",
+       "quote": "Elite endurance athletes have a high .VO(2,max) due primarily to a high cardiac output from a large compliant cardiac chamber (including the myocardium and pericardium) which relaxes quickly and fills to a large end-diastolic volume.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cvo-zhou",
+     "text": "Elite male distance runners reached a maximal SV of 187 mL and Q of 33.8 L·min⁻¹, against 128 mL and 21.3 L·min⁻¹ in untrained men.",
+     "grade": "weak",
+     "sources": [
+      "zhou2001"
+     ],
+     "evidence": [
+      {
+       "source": "zhou2001",
+       "quote": "Moreover, the elite distance runners showed a further slope increase in SV when heart rate was above 160 bpm, which resulted in an average maximal SV of 187 +/- 14 mL x beat(-1) compared with 145 +/- 8 and 128 +/- 14 mL x beat(-1) in the university runners and untrained students, respectively (P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "zhou2001",
+       "quote": "Similarly, max Q reached 33.8 +/- 2.3, 26.3 +/- 1.7, and 21.3 +/- 1.5 L x min(-1) in the three groups, respectively (P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvo-max-values",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cvo-elite-diff"
+  },
+  {
+   "type": "concept",
+   "id": "cvo-fick",
+   "title": "Why Q sets the ceiling on VO₂max",
+   "text": "Oxygen uptake is blood flow times what each litre of blood gives up: the Fick principle you met for one muscle, now for the whole body [[c:cvo-fick-equation]]:\n\n**VO₂ = Q × [a-vO₂ difference](g:a-vo2-difference)**\n\nIn an untrained man at max, each litre of blood gives up about 140–150 mL of O₂. So 20 L·min⁻¹ of Q supports about 3 L·min⁻¹ of VO₂ [[c:cvo-fick-reference]].\n\nWhich side limits [VO₂max](g:vo2max)? Mainly delivery [[c:cvo-delivery-limit]]. VO₂max moves when O₂ delivery changes (blood doping, low-oxygen air, β-blockers: drugs that slow the heart). And the rise in VO₂max with training comes mainly from a higher maximal Q, not a bigger a-vO₂ difference.\n\nThe oxygen transport module works through the Fick equation; the VO₂max module weighs the limits.",
+   "claims": [
+    {
+     "id": "cvo-fick-equation",
+     "text": "VO₂max is bounded by the Fick equation: stroke volume × heart rate × arteriovenous O₂ difference.",
+     "grade": "strong",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "Maximal oxygen uptake (.VO(2,max)) is a physiological characteristic bounded by the parametric limits of the Fick equation: (left ventricular (LV) end-diastolic volume--LV end-systolic volume) x heart rate x arterio-venous oxygen difference.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cvo-fick-reference",
+     "text": "In an untrained man at maximal exercise, about 140–150 mL of O₂ is extracted per litre of cardiac output, giving a VO₂ of about 3 L·min⁻¹ from about 20 L·min⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "This means that ∼140–150 ml of oxygen is extracted by the peripheral tissues for each liter of cardiac output.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cvo-delivery-limit",
+     "text": "In whole-body exercise, VO₂max is limited mainly by O₂ delivery, and training raises it mainly through a higher maximal cardiac output.",
+     "grade": "strong",
+     "sources": [
+      "bassett2000"
+     ],
+     "evidence": [
+      {
+       "source": "bassett2000",
+       "quote": "This is shown by three major lines of evidence: 1) when oxygen delivery is altered (by blood doping, hypoxia, or beta-blockade), VO2max changes accordingly; 2) the increase in VO2max with training results primarily from an increase in maximal cardiac output (not an increase in the a-v O2 difference); and 3) when a small muscle mass is overperfused during exercise, it has an extremely high capacity for consuming oxygen.",
+       "level": "abstract"
+      },
+      {
+       "source": "bassett2000",
+       "quote": "Thus, O2 delivery, not skeletal muscle O2 extraction, is viewed as the primary limiting factor for VO2max in exercising humans.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cvo-example-fick",
+   "title": "VO₂ from cardiac output",
+   "problem": "At maximal effort a cyclist's Q is 25 L·min⁻¹, and each litre of blood gives up 160 mL of O₂. What is his VO₂?",
+   "steps": [
+    "VO₂ = Q × a-vO₂ difference = 25 L·min⁻¹ × 160 mL·L⁻¹.",
+    "= 4,000 mL·min⁻¹ = 4.0 L·min⁻¹.",
+    "Raise Q by 10% to 27.5 L·min⁻¹ with the same extraction, and VO₂ rises 10% too: 27.5 × 160 = 4,400 mL·min⁻¹ = 4.4 L·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvo-fick-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cvo-delivery-evidence"
+  },
+  {
+   "type": "question",
+   "item": "cvo-training-change"
+  },
+  {
+   "type": "concept",
+   "id": "cvo-ratio",
+   "title": "About 6 litres of blood per litre of oxygen",
+   "text": "How does Q keep up as you go harder? Each litre of arterial blood carries about 200 mL of O₂, and the body never takes all of it. So, roughly, it takes about **6 L of cardiac output for every litre** of whole-body VO₂ [[c:cvo-six-to-one]].\n\nThat ratio explains the numbers you've seen: a VO₂ of 3 L·min⁻¹ needs about 18–20 L·min⁻¹ of Q; an elite 5.5 L·min⁻¹ needs about 33 L·min⁻¹.\n\nSex and size matter too. Maximal Q is about 20–40 L·min⁻¹ in healthy young men and 15–30 L·min⁻¹ in healthy young women, the top of each range being elite endurance athletes [[c:cvo-sex-range]]. Bigger bodies carry bigger hearts, which is one reason VO₂ is often compared per kg.",
+   "claims": [
+    {
+     "id": "cvo-six-to-one",
+     "text": "With about 200 mL of O₂ per litre of arterial blood, it takes about 6 L of cardiac output for every litre of whole-body O₂ uptake.",
+     "grade": "moderate",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "Since oxygen consumption by nonexercising tissues does not increase, and based on the idea that each liter of arterial blood carries 200 ml of oxygen, it then takes ∼6 liters of cardiac output for every liter of whole body oxygen consumption",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cvo-sex-range",
+     "text": "Maximal cardiac output ranges about 20–40 L·min⁻¹ in healthy young men and 15–30 L·min⁻¹ in healthy young women, the upper ends being elite endurance athletes.",
+     "grade": "moderate",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "Thus, if we take the range of cardiac outputs in normal humans to be between 20 and 40 l/min for healthy young men, and 15–30 l/min for healthy young women (the upper limits in both sexes reflecting elite endurance athletes), then total muscle blood flow can reach 30–35 l/min in average-sized men who are elite endurance athletes.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cvo-example-ratio",
+   "title": "How much more blood for more oxygen?",
+   "problem": "A runner's VO₂ rises from 1.5 to 3.0 L·min⁻¹ as she speeds up. Using about 6 L of Q per litre of VO₂, how much does her cardiac output rise?",
+   "steps": [
+    "Rise in VO₂ = 3.0 − 1.5 = 1.5 L·min⁻¹.",
+    "Rise in Q ≈ 6 × 1.5 = 9 L·min⁻¹.",
+    "It is a rule of thumb: the real ratio shifts with haemoglobin and with how much O₂ the muscles extract."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cvo-six-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cvo-q-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cvo-fick-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "cvo-sv-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Cardiac output Q = HR × SV: about 70 beats·min⁻¹ × 70 mL ≈ 5 L·min⁻¹ at rest.",
+    "At max, Q reaches about 20 L·min⁻¹ in untrained young men and 35–40 L·min⁻¹ in elite male endurance athletes (women about 15–30).",
+    "Maximal HR is similar in trained and untrained people: the elite advantage is a much bigger stroke volume.",
+    "VO₂ = Q × a-vO₂ difference. In whole-body exercise O₂ delivery, mainly maximal Q, is the main limit on VO₂max, and training raises VO₂max mainly through Q.",
+    "Roughly 6 L of Q are needed for every litre of VO₂."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cvo-q-calc",
+   "concept": "cvo-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides at 150 beats·min⁻¹ with a stroke volume of 120 mL. What is his cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18.0 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 150 × 120 mL = 18,000 mL·min⁻¹ = 18.0 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.25 L·min⁻¹",
+       "why": "This divides HR by SV (150 ÷ 120). Q is HR multiplied by SV."
+      },
+      {
+       "id": "c",
+       "text": "18,000 L·min⁻¹",
+       "why": "The number is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "270 L·min⁻¹",
+       "why": "This adds HR and SV (150 + 120). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 150 beats·min⁻¹ × 120 mL = 18,000 mL·min⁻¹ = 18.0 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner at the end of a 5 km race is at 180 beats·min⁻¹ with a stroke volume of 160 mL. What is her cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "28.8 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 180 × 160 mL = 28,800 mL·min⁻¹ = 28.8 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.13 L·min⁻¹",
+       "why": "This divides HR by SV (180 ÷ 160). Q is HR multiplied by SV."
+      },
+      {
+       "id": "c",
+       "text": "28,800 L·min⁻¹",
+       "why": "The number is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "340 L·min⁻¹",
+       "why": "This adds HR and SV (180 + 160). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 180 beats·min⁻¹ × 160 mL = 28,800 mL·min⁻¹ = 28.8 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete rests at 45 beats·min⁻¹ with a stroke volume of 110 mL. What is his cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.95 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 45 × 110 mL = 4,950 mL·min⁻¹ = 4.95 L·min⁻¹, a normal resting value."
+      },
+      {
+       "id": "b",
+       "text": "0.41 L·min⁻¹",
+       "why": "This divides HR by SV (45 ÷ 110). Q is HR multiplied by SV."
+      },
+      {
+       "id": "c",
+       "text": "4,950 L·min⁻¹",
+       "why": "The number is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "155 L·min⁻¹",
+       "why": "This adds HR and SV (45 + 110). They multiply."
+      }
+     ],
+     "solution": "Q = HR × SV = 45 beats·min⁻¹ × 110 mL = 4,950 mL·min⁻¹ = 4.95 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "cvo-sv-calc",
+   "concept": "cvo-equation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At maximal effort, a runner's cardiac output is 30 L·min⁻¹ at 185 beats·min⁻¹. What is her stroke volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "162 mL",
+       "correct": true,
+       "why": "Right: 30,000 mL·min⁻¹ ÷ 185 beats·min⁻¹ = 162 mL."
+      },
+      {
+       "id": "b",
+       "text": "0.16 mL",
+       "why": "This divides 30 by 185 without first turning L into mL (30 L = 30,000 mL)."
+      },
+      {
+       "id": "c",
+       "text": "6.2 mL",
+       "why": "This divides HR by Q (185 ÷ 30). SV = Q ÷ HR."
+      },
+      {
+       "id": "d",
+       "text": "5,550 mL",
+       "why": "This multiplies Q by HR. SV = Q ÷ HR."
+      }
+     ],
+     "solution": "SV = Q ÷ HR = 30,000 mL·min⁻¹ ÷ 185 beats·min⁻¹ = 162 mL."
+    },
+    {
+     "id": "b",
+     "stem": "At maximal effort, a cyclist's cardiac output is 22 L·min⁻¹ at 195 beats·min⁻¹. What is his stroke volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "113 mL",
+       "correct": true,
+       "why": "Right: 22,000 mL·min⁻¹ ÷ 195 beats·min⁻¹ = 113 mL."
+      },
+      {
+       "id": "b",
+       "text": "0.11 mL",
+       "why": "This divides 22 by 195 without first turning L into mL (22 L = 22,000 mL)."
+      },
+      {
+       "id": "c",
+       "text": "8.9 mL",
+       "why": "This divides HR by Q (195 ÷ 22). SV = Q ÷ HR."
+      },
+      {
+       "id": "d",
+       "text": "4,290 mL",
+       "why": "This multiplies Q by HR. SV = Q ÷ HR."
+      }
+     ],
+     "solution": "SV = Q ÷ HR = 22,000 mL·min⁻¹ ÷ 195 beats·min⁻¹ = 112.8 ≈ 113 mL."
+    }
+   ]
+  },
+  {
+   "id": "cvo-max-values",
+   "concept": "cvo-max",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "joyner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A healthy, untrained young man goes all out on a bike test. About how high does his cardiac output get?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 20 L·min⁻¹",
+       "correct": true,
+       "why": "Right: from about 5 L·min⁻¹ at rest to about 20 L·min⁻¹, roughly fourfold."
+      },
+      {
+       "id": "b",
+       "text": "About 10 L·min⁻¹",
+       "why": "Only twice the resting value; Q rises about fourfold in an untrained man."
+      },
+      {
+       "id": "c",
+       "text": "About 40 L·min⁻¹",
+       "why": "That is the top of the range, reported only in elite endurance athletes."
+      },
+      {
+       "id": "d",
+       "text": "About 60 L·min⁻¹",
+       "why": "No human heart has been measured pumping that much."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "An elite male endurance runner goes all out on a treadmill test. About how high can his cardiac output get?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 35–40 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 35–40 L·min⁻¹ is possible in elite male endurance athletes."
+      },
+      {
+       "id": "b",
+       "text": "About 20 L·min⁻¹",
+       "why": "That is the untrained value; the elite heart pumps far more."
+      },
+      {
+       "id": "c",
+       "text": "About 10 L·min⁻¹",
+       "why": "That is only twice rest, lower than any untrained person at max."
+      },
+      {
+       "id": "d",
+       "text": "About 70 L·min⁻¹",
+       "why": "No human heart has been measured pumping that much."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvo-elite-diff",
+   "concept": "cvo-max",
+   "bloom": "analyse",
+   "sources": [
+    "joyner2015",
+    "zhou2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists both top out at 190 beats·min⁻¹ in a ramp test. One reaches a cardiac output of 36 L·min⁻¹, the other 22 L·min⁻¹. What explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A much larger stroke volume",
+       "correct": true,
+       "why": "Right: same HR, so SV must differ: 36,000 ÷ 190 ≈ 189 mL against 22,000 ÷ 190 ≈ 116 mL."
+      },
+      {
+       "id": "b",
+       "text": "A higher maximal heart rate",
+       "why": "Both reach 190 beats·min⁻¹. Fitter hearts don't beat faster at max: they beat bigger."
+      },
+      {
+       "id": "c",
+       "text": "A larger a-vO₂ difference",
+       "why": "That raises VO₂, not Q. Q depends only on HR and SV."
+      },
+      {
+       "id": "d",
+       "text": "Thicker, more viscous blood",
+       "why": "Thicker blood raises resistance to flow; it doesn't make the heart pump more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvo-fick-calc",
+   "concept": "cvo-fick",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "levine2008",
+    "joyner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At maximal effort, an untrained runner's cardiac output is 20 L·min⁻¹ and each litre of blood gives up 150 mL of O₂. What is his VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.0 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 20 L·min⁻¹ × 150 mL·L⁻¹ = 3,000 mL·min⁻¹ = 3.0 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.13 L·min⁻¹",
+       "why": "This divides Q by the a-vO₂ difference (20 ÷ 150). They multiply."
+      },
+      {
+       "id": "c",
+       "text": "3,000 L·min⁻¹",
+       "why": "The product is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "7.5 L·min⁻¹",
+       "why": "This divides the a-vO₂ difference by Q (150 ÷ 20). They multiply."
+      }
+     ],
+     "solution": "VO₂ = Q × a-vO₂ difference = 20 L·min⁻¹ × 150 mL·L⁻¹ = 3,000 mL·min⁻¹ = 3.0 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "At maximal effort, an elite cyclist's cardiac output is 35 L·min⁻¹ and each litre of blood gives up 160 mL of O₂. What is his VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.6 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 35 L·min⁻¹ × 160 mL·L⁻¹ = 5,600 mL·min⁻¹ = 5.6 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.22 L·min⁻¹",
+       "why": "This divides Q by the a-vO₂ difference (35 ÷ 160). They multiply."
+      },
+      {
+       "id": "c",
+       "text": "5,600 L·min⁻¹",
+       "why": "The product is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "4.6 L·min⁻¹",
+       "why": "This divides the a-vO₂ difference by Q (160 ÷ 35). They multiply."
+      }
+     ],
+     "solution": "VO₂ = Q × a-vO₂ difference = 35 L·min⁻¹ × 160 mL·L⁻¹ = 5,600 mL·min⁻¹ = 5.6 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "At maximal effort, a triathlete's cardiac output is 28 L·min⁻¹ and each litre of blood gives up 155 mL of O₂. What is her VO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.34 L·min⁻¹",
+       "correct": true,
+       "why": "Right: 28 L·min⁻¹ × 155 mL·L⁻¹ = 4,340 mL·min⁻¹ = 4.34 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.18 L·min⁻¹",
+       "why": "This divides Q by the a-vO₂ difference (28 ÷ 155). They multiply."
+      },
+      {
+       "id": "c",
+       "text": "4,340 L·min⁻¹",
+       "why": "The product is in mL·min⁻¹: divide by 1000 to get L·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "5.54 L·min⁻¹",
+       "why": "This divides the a-vO₂ difference by Q (155 ÷ 28). They multiply."
+      }
+     ],
+     "solution": "VO₂ = Q × a-vO₂ difference = 28 L·min⁻¹ × 155 mL·L⁻¹ = 4,340 mL·min⁻¹ = 4.34 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "cvo-delivery-evidence",
+   "concept": "cvo-fick",
+   "bloom": "evaluate",
+   "sources": [
+    "bassett2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which finding is the strongest sign that O₂ delivery, rather than the muscles' ability to use O₂, limits VO₂max in running or cycling?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO₂max rises after blood doping and falls in low-oxygen air",
+       "correct": true,
+       "why": "Right: changing delivery alone moves VO₂max, one of the three main lines of evidence for a delivery limit."
+      },
+      {
+       "id": "b",
+       "text": "Muscle mitochondrial enzymes rise a lot with training",
+       "why": "That is a muscle adaptation. It mainly improves submaximal endurance, and on its own says nothing about delivery."
+      },
+      {
+       "id": "c",
+       "text": "Blood lactate climbs steeply in the last minutes of a ramp",
+       "why": "Lactate reflects glycolysis and clearance, not which step of O₂ transport is limiting."
+      },
+      {
+       "id": "d",
+       "text": "Venous blood leaving the legs still holds some O₂ at max",
+       "why": "Leftover O₂ fits a delivery limit but doesn't prove one; the experiments that change delivery are the strong evidence."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvo-training-change",
+   "concept": "cvo-fick",
+   "bloom": "analyse",
+   "sources": [
+    "bassett2000",
+    "joyner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a year of structured training, a runner's VO₂max is 15% higher. Her maximal HR is unchanged and her a-vO₂ difference at max barely moved. What most likely went up?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her maximal stroke volume",
+       "correct": true,
+       "why": "Right: VO₂ = HR × SV × a-vO₂ difference. With HRmax and extraction unchanged, maximal SV, and so Q, must have risen: the main route of training gains."
+      },
+      {
+       "id": "b",
+       "text": "Her maximal heart rate",
+       "why": "The stem says it is unchanged, and HRmax barely moves with training."
+      },
+      {
+       "id": "c",
+       "text": "Her muscles' O₂ extraction",
+       "why": "That is the a-vO₂ difference, which the stem says barely moved."
+      },
+      {
+       "id": "d",
+       "text": "Her resting heart rate",
+       "why": "Resting HR usually falls with training, but it doesn't enter VO₂max at all."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cvo-six-calc",
+   "concept": "cvo-ratio",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "joyner2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On the bike leg, a triathlete's VO₂ rises from 2.0 to 4.0 L·min⁻¹. Using about 6 L of cardiac output per litre of VO₂, by how much does her Q rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 12 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (4.0 − 2.0) × 6 = 12 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 2 L·min⁻¹",
+       "why": "This assumes 1 L of blood per litre of O₂. Each litre of blood carries only about 200 mL of O₂."
+      },
+      {
+       "id": "c",
+       "text": "About 0.33 L·min⁻¹",
+       "why": "This divides the VO₂ rise by 6. Q rises by 6 times the VO₂ rise."
+      },
+      {
+       "id": "d",
+       "text": "About 24 L·min⁻¹",
+       "why": "This multiplies the final VO₂ (4.0) by 6, not the rise (2.0)."
+      }
+     ],
+     "solution": "Rise in VO₂ = 4.0 − 2.0 = 2.0 L·min⁻¹. Rise in Q ≈ 6 × 2.0 = 12 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's VO₂ rises from 1.0 to 3.5 L·min⁻¹ between a jog and a hard tempo. Using about 6 L of cardiac output per litre of VO₂, by how much does his Q rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 15 L·min⁻¹",
+       "correct": true,
+       "why": "Right: (3.5 − 1.0) × 6 = 15 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 2.5 L·min⁻¹",
+       "why": "This assumes 1 L of blood per litre of O₂. Each litre of blood carries only about 200 mL of O₂."
+      },
+      {
+       "id": "c",
+       "text": "About 0.42 L·min⁻¹",
+       "why": "This divides the VO₂ rise by 6. Q rises by 6 times the VO₂ rise."
+      },
+      {
+       "id": "d",
+       "text": "About 21 L·min⁻¹",
+       "why": "This multiplies the final VO₂ (3.5) by 6, not the rise (2.5)."
+      }
+     ],
+     "solution": "Rise in VO₂ = 3.5 − 1.0 = 2.5 L·min⁻¹. Rise in Q ≈ 6 × 2.5 = 15 L·min⁻¹."
+    }
+   ]
+  }
+ ]
+}

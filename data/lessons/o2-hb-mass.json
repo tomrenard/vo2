@@ -1,0 +1,855 @@
+{
+ "id": "o2-hb-mass",
+ "module": "t1b-oxygen-transport",
+ "title": "Haemoglobin mass, not concentration",
+ "goal": "Explain why total haemoglobin mass, not concentration, tracks VO₂max, how plasma expansion dilutes concentration, how much VO₂max a gram of haemoglobin is worth, and how CO rebreathing measures it.",
+ "requires": [
+  "o2-fick"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "plasma-volume",
+    "co-rebreathing",
+    "epo"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hbm-conc",
+   "title": "Concentration is mass divided by volume",
+   "text": "A blood test reports haemoglobin *concentration*: grams per dL. The [haemoglobin mass](g:haemoglobin-mass) is the total in grams. They are linked by blood volume:\n\n**Hb concentration = Hb mass ÷ blood volume**\n\nTraining expands [plasma volume](g:plasma-volume) within days, but red cells only over weeks [[c:pv-first]]. So early in a training block the same haemoglobin is spread through more blood, and the concentration falls.\n\nThat is why trained endurance athletes often have a lowish Hb concentration and [haematocrit](g:haematocrit). This 'sports anaemia' is not anaemia: they have *more* total haemoglobin, in an even bigger plasma volume [[c:pseudo-anaemia]]. The anatomy module showed the haematocrit side; here is the haemoglobin side.",
+   "claims": [
+    {
+     "id": "pv-first",
+     "text": "With training, plasma volume expands almost at once, while red-cell volume takes weeks.",
+     "grade": "moderate",
+     "sources": [
+      "sawka2000"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2000",
+       "quote": "Exercise training can induce BV expansion: PV expansion usually occurs immediately, but EV expansion takes weeks.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pseudo-anaemia",
+     "text": "Endurance athletes' lower haematocrit ('sports anaemia') is not clinical anaemia: it reflects a larger plasma volume, while their total red-cell and haemoglobin mass is increased.",
+     "grade": "moderate",
+     "sources": [
+      "mairbaurl2013"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "Trained athletes, particularly in endurance sports, have a decreased hematocrit, which is sometimes called \"sports anemia.\"",
+       "level": "abstract"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "This is not anemia in a clinical sense, because athletes have in fact an increased total mass of red blood cells and hemoglobin in circulation relative to sedentary individuals.",
+       "level": "abstract"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "The slight decrease in hematocrit by training is brought about by an increased plasma volume (PV).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hbm-dilution-example",
+   "title": "Same haemoglobin, lower concentration",
+   "problem": "A cyclist has 900 g of haemoglobin in 6.0 L of blood. In the first two weeks of a training block his plasma grows by 0.5 L and his haemoglobin mass not yet. What happens to his Hb concentration?",
+   "steps": [
+    "Before: 900 g ÷ 6.0 L = 150 g·L⁻¹ = 15.0 g·dL⁻¹.",
+    "After: blood volume = 6.0 + 0.5 = 6.5 L, so 900 ÷ 6.5 = 138 g·L⁻¹ = 13.8 g·dL⁻¹.",
+    "His concentration fell 8% with not a gram of haemoglobin lost.",
+    "Weeks later his mass rises to 950 g and blood to 6.6 L: 950 ÷ 6.6 = 144 g·L⁻¹. Still below where he started, yet he has 50 g more haemoglobin."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbm-dilution-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hbm-conc-mass",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "hbm-pv",
+   "title": "Why the extra plasma helps",
+   "text": "Extra plasma lowers concentration, so why would it help? Because more blood fills the heart better, and the heart pumps more per beat.\n\nIn one study, 9 untrained people trained for 6 weeks. Plasma volume rose 5%, red-cell volume 10% and blood volume 7%; VO₂max rose 10% and maximal cardiac output from 18.9 to 20.4 L·min⁻¹. Then blood was removed to bring volume back to the pre-training value: maximal cardiac output fell back to 18.1 L·min⁻¹ and VO₂max fell 8% [[c:bonne-bv]].\n\nTraining and altitude differ here. Training expands plasma and red cells, raising cardiac output; altitude adds red cells only, raising Hb concentration [[c:training-vs-hypoxia]]. 3–4 weeks above 2,500 m raise haemoglobin mass by about 6.5% on average [[c:altitude-65]].",
+   "claims": [
+    {
+     "id": "bonne-bv",
+     "text": "After 6 weeks of training, blood volume rose 7% (plasma 5%, red cells 10%), VO₂max 10% and Qmax from 18.9 to 20.4 L·min⁻¹; removing blood to restore pre-training volume returned Qmax to 18.1 L·min⁻¹ and lowered VO₂max by 8%.",
+     "grade": "weak",
+     "sources": [
+      "bonne2014"
+     ],
+     "evidence": [
+      {
+       "source": "bonne2014",
+       "quote": "After the training period, plasma volume (PV), red blood cell volume (RBCV), and BV increased (P < 0.05) by 147 ± 168 (5 ± 5%), 235 ± 64 (10 ± 3%), and 382 ± 204 ml (7 ± 4%), respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "bonne2014",
+       "quote": "Vo2max was augmented (P < 0.05) by 10 ± 7% after the training period and decreased (P < 0.05) by 8 ± 7% with phlebotomy.",
+       "level": "abstract"
+      },
+      {
+       "source": "bonne2014",
+       "quote": "Thus the exercise training-induced increase in BV is the main mechanism increasing Qmax after 6 wk of endurance training in previously untrained subjects.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "training-vs-hypoxia",
+     "text": "Training raises blood volume through plasma and red-cell expansion, increasing cardiac output; hypoxia raises only red-cell volume, increasing Hb concentration.",
+     "grade": "moderate",
+     "sources": [
+      "schmidt2010"
+     ],
+     "evidence": [
+      {
+       "source": "schmidt2010",
+       "quote": "Training increases blood volume because of plasma and red cell volume expansion, resulting in increased cardiac output, whereas hypoxia increases only red cell volume, leading to increased hemoglobin concentration and oxygen transport capacity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "altitude-65",
+     "text": "3–4 weeks of altitude training above 2,500 m (classic or live high–train low) raise haemoglobin mass by about 6.5% on average.",
+     "grade": "moderate",
+     "sources": [
+      "schmidt2008"
+     ],
+     "evidence": [
+      {
+       "source": "schmidt2008",
+       "quote": "Altitude training in contrast, using either the conventional altitude training or the live high-train low (>14 h/day in hypoxia) protocol for 3-4 weeks above 2500 m leads to mean increases in tHb-mass of 6.5%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbm-bonne"
+  },
+  {
+   "type": "question",
+   "item": "hbm-hypoxia-vs-training"
+  },
+  {
+   "type": "concept",
+   "id": "hbm-slope",
+   "title": "How much VO₂max per gram?",
+   "text": "Change one person's haemoglobin mass, by removing blood or by [EPO](g:epo), and VO₂max changes by about **4 mL·min⁻¹ per gram** [[c:hbmass-slope]]. Across 24 men in one study, the slope was 3.3 mL·min⁻¹ per gram [[c:hbmass-slope-cs]].\n\nThe anatomy module gave 4.2–4.4 mL·kg⁻¹·min⁻¹ per g·kg⁻¹, from comparing people. Same unit: (mL·min⁻¹ ÷ kg) ÷ (g ÷ kg), the kg cancel, leaving mL·min⁻¹ per g. And a similar size.\n\nA review derived a steeper **5.8** (same units) from one [cross-sectional study](g:cross-sectional-study) that ran from non-athletes to elite professionals [[c:hbmass-58]]. Elite athletes differ in more than blood, so a slope across such different people credits haemoglobin with gains that also come from heart and muscle.",
+   "claims": [
+    {
+     "id": "hbmass-slope",
+     "text": "When haemoglobin mass is changed (blood removal, EPO), VO₂max changes by about 4 mL·min⁻¹ per gram.",
+     "grade": "moderate",
+     "sources": [
+      "schmidt2010",
+      "hoffmeister2018"
+     ],
+     "evidence": [
+      {
+       "source": "schmidt2010",
+       "quote": "Changes in hemoglobin mass by 1g alter V˙O2max by ∼4mL·mn-1 due to changes in blood volume or hemoglobin concentration.",
+       "level": "abstract"
+      },
+      {
+       "source": "hoffmeister2018",
+       "quote": "After phlebotomy or after application of rhEPO, a change of 1 g of hemoglobin causes a change in VO 2max of approx. 4 ml/min (Schmidt and Prommer, 2010 ).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hbmass-slope-cs",
+     "text": "Across 24 men, baseline VO₂max rose 3.3 mL·min⁻¹ per gram of haemoglobin mass (r = 0.775).",
+     "grade": "weak",
+     "sources": [
+      "hoffmeister2018"
+     ],
+     "evidence": [
+      {
+       "source": "hoffmeister2018",
+       "quote": "The slope of the regression line of 3.3 indicates that a change in Hbmass by 1 gram results in a change of VO 2max by 3.3 ml/min, which agrees closely with other data in the literature (4 ml/min)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hbmass-58",
+     "text": "From a cross-sectional comparison of elite athletes and non-athletes, a review derived about 5.8 mL·kg⁻¹·min⁻¹ of VO₂max per 1 g·kg⁻¹ of haemoglobin mass; the same review cites about 3 mL·min⁻¹ per g from EPO studies and 4.2–4.4 from one lab's pooled data comparing people.",
+     "grade": "weak",
+     "sources": [
+      "mairbaurl2013",
+      "heinicke2001"
+     ],
+     "evidence": [
+      {
+       "source": "mairbaurl2013",
+       "quote": "From the correlation shown by Heinicke et al. (2001) it can be derived that an increase in 1 g of tHb per kg body weight (g/kg) increased VO2,max by ~5.8 ml/min/kg",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "In summary, these studies show that an increase in tHb by 1 g achieved e.g., by administration of erythropoietin, increased VO2,max by ~3 ml/min",
+       "level": "full-text"
+      },
+      {
+       "source": "mairbaurl2013",
+       "quote": "found a change in VO2,max of 4.2 ml/min/kg in males and of 4.4 ml/min/kg in females per change in tHb of 1 g/kg with very high correlation coefficients (r ~ 0.79), whereas there was no correlation between VO2,max and Hb or Hct.",
+       "level": "full-text"
+      },
+      {
+       "source": "heinicke2001",
+       "quote": "VO(2)max was significantly related to tHb and BV not only in the whole group but also in all endurance disciplines.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "How much VO₂max does one extra gram of haemoglobin buy?",
+    "sides": [
+     {
+      "position": "About 3–4 mL·min⁻¹ per g: the slope when one person's haemoglobin mass is changed by blood removal or EPO; one lab's data comparing people give a similar 4.2–4.4.",
+      "sources": [
+       "schmidt2010",
+       "hoffmeister2018"
+      ]
+     },
+     {
+      "position": "More, about 5.8 mL·kg⁻¹·min⁻¹ per g·kg⁻¹, from the correlation across elite athletes and non-athletes in one cross-sectional study.",
+      "sources": [
+       "mairbaurl2013",
+       "heinicke2001"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "hbm-slope-example",
+   "title": "What an altitude camp's haemoglobin is worth",
+   "problem": "A cyclist has 900 g of haemoglobin and a VO₂max of 5.0 L·min⁻¹. After 3–4 weeks above 2,500 m his haemoglobin mass rises by 6.5%, the mean gain such camps produce. If nothing else changed, what would that add to his VO₂max?",
+   "steps": [
+    "Extra haemoglobin = 900 × 0.065 = 58.5 g.",
+    "Extra VO₂max = 58.5 g × 4 mL·min⁻¹ per g = 234 mL·min⁻¹.",
+    "New VO₂max ≈ 5.0 + 0.23 = 5.23 L·min⁻¹: about 4.7% more.",
+    "A prediction, not a promise: the slope comes from other people, and training, illness or detraining after the camp change VO₂max too."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbm-slope-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hbm-units"
+  },
+  {
+   "type": "question",
+   "item": "hbm-slope-debate"
+  },
+  {
+   "type": "concept",
+   "id": "hbm-co",
+   "title": "Measuring haemoglobin mass: CO rebreathing",
+   "text": "Haemoglobin mass is measured with [CO rebreathing](g:co-rebreathing). You breathe a small, known dose of carbon monoxide for 2 minutes; it binds to haemoglobin. A drop of blood before and after shows how much the carboxyhaemoglobin share rose. The fewer grams of haemoglobin, the bigger the rise from the same dose.\n\nThe method is precise: a typical error of about **1.7%**. It lowers VO₂max by about 3% for a while afterwards, so do the VO₂max test first [[c:co-method]].\n\nCompare VO₂max itself. A 20 g gain predicts about 60–80 mL·min⁻¹, under 2% of a 4 L·min⁻¹ VO₂max, but a lab's [typical error](g:typical-error) for VO₂max can be 2.5%. Haemoglobin mass can show a change that a VO₂max test would miss [[c:detect-small]].",
+   "claims": [
+    {
+     "id": "co-method",
+     "text": "The optimised CO-rebreathing method (2 min of rebreathing after a CO bolus) measures haemoglobin mass with a typical error of 1.7%; VO₂max was 3% lower after the test.",
+     "grade": "moderate",
+     "sources": [
+      "schmidt2005"
+     ],
+     "evidence": [
+      {
+       "source": "schmidt2005",
+       "quote": "The kinetics of the HbCO formation were compared in arterialised blood sampled from an hyperaemic earlobe after inhaling a CO-bolus (Proc(new)) for 2 min and a CO-O(2) mixture (Proc(com)) for approximately 10 min.",
+       "level": "abstract"
+      },
+      {
+       "source": "schmidt2005",
+       "quote": "The typical error of Proc(new) was 1.7%, corresponding to a limit of agreement (95%) of 3.3%.",
+       "level": "abstract"
+      },
+      {
+       "source": "schmidt2005",
+       "quote": "After application of Proc(new) VO(2max) was reduced by 3.0% (3.7) (P=0.022)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "detect-small",
+     "text": "A change of about 20 g of haemoglobin mass should change VO₂max by about 60 mL·min⁻¹ (1.5%), less than the 2.5% typical error of VO₂max in one lab.",
+     "grade": "weak",
+     "sources": [
+      "hoffmeister2018"
+     ],
+     "evidence": [
+      {
+       "source": "hoffmeister2018",
+       "quote": "The change in Hbmass of ~20 g in this study should result in an increase in VO 2max of ~60 ml/min, corresponding to 1.5%. Such small differences, however, are very difficult to detect with the commonly used spirometry systems; also, in our laboratory, the methodological noise (typical error) for VO 2max determination using incremental cycle ergometer tests is 2.5%.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hbm-co-method"
+  },
+  {
+   "type": "question",
+   "item": "hbm-co-timing"
+  },
+  {
+   "type": "question",
+   "item": "hbm-detect"
+  },
+  {
+   "type": "question",
+   "item": "hbm-slope-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hbm-dilution-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Hb concentration = Hb mass ÷ blood volume: plasma growing within days of training lowers the concentration with no loss of haemoglobin ('sports anaemia').",
+    "A bigger blood volume fills the heart better: in one study, removing the extra blood took maximal cardiac output back to pre-training values.",
+    "Training expands plasma and red cells; altitude adds red cells only.",
+    "Each gram of haemoglobin mass is worth about 4 mL·min⁻¹ of VO₂max, the same as 4 mL·kg⁻¹·min⁻¹ per g·kg⁻¹; the steeper 5.8 comes from comparing elite and non-athletes.",
+    "CO rebreathing measures haemoglobin mass with a typical error of about 1.7%, sharper than a VO₂max test can show its effect."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hbm-conc-mass",
+   "concept": "hbm-conc",
+   "bloom": "understand",
+   "sources": [
+    "sawka2000",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Three weeks into a big training block, a cyclist's Hb concentration falls from 15.0 to 14.2 g·dL⁻¹. He feels fine and is riding well. Most likely explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His plasma volume grew; his haemoglobin mass is the same or higher",
+       "correct": true,
+       "why": "Right: plasma expands within days, diluting the same or more haemoglobin."
+      },
+      {
+       "id": "b",
+       "text": "He has lost haemoglobin and is becoming anaemic",
+       "why": "A small fall early in training, with good form, fits dilution, not a loss."
+      },
+      {
+       "id": "c",
+       "text": "His red cells have shrunk from hard training",
+       "why": "Training doesn't shrink red cells; the drop is in concentration, not cell size."
+      },
+      {
+       "id": "d",
+       "text": "Training has lowered his haemoglobin mass",
+       "why": "Training raises haemoglobin mass a little, if anything."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's blood test after a month of higher mileage shows haematocrit and Hb concentration both slightly down. What does that tell you about her total haemoglobin mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing on its own: plasma expansion can lower both while mass rises",
+       "correct": true,
+       "why": "Right: concentration and haematocrit are ratios; they fall when plasma grows faster than red cells."
+      },
+      {
+       "id": "b",
+       "text": "It has fallen by the same percentage",
+       "why": "That would only hold if blood volume stayed the same, which training changes."
+      },
+      {
+       "id": "c",
+       "text": "It has risen, since lower values mean better fitness",
+       "why": "Lower concentration doesn't prove a higher mass; you'd need a mass measurement."
+      },
+      {
+       "id": "d",
+       "text": "It has fallen, because running breaks red cells",
+       "why": "Footstrike haemolysis destroys only a small share of red cells and doesn't explain this."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-dilution-calc",
+   "concept": "hbm-conc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sawka2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has 850 g of haemoglobin in 5.5 L of blood. Her plasma grows by 0.4 L and her haemoglobin mass not yet. What is her new Hb concentration, in g·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.4",
+       "correct": true,
+       "why": "Right: 850 ÷ (5.5 + 0.4) = 850 ÷ 5.9 = 144 g·L⁻¹ = 14.4 g·dL⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "15.5",
+       "why": "That is her old value (850 ÷ 5.5): it ignores the extra plasma."
+      },
+      {
+       "id": "c",
+       "text": "144",
+       "why": "This is the value in g·L⁻¹; the question asks for g·dL⁻¹ (divide by 10)."
+      },
+      {
+       "id": "d",
+       "text": "1.44",
+       "why": "This divides by 100 instead of 10 when converting g·L⁻¹ to g·dL⁻¹."
+      }
+     ],
+     "solution": "New blood volume = 5.5 + 0.4 = 5.9 L. 850 g ÷ 5.9 L = 144 g·L⁻¹ = 14.4 g·dL⁻¹ (was 15.5)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist has 1,000 g of haemoglobin in 6.5 L of blood. His plasma grows by 0.5 L and his haemoglobin mass not yet. What is his new Hb concentration, in g·dL⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.3",
+       "correct": true,
+       "why": "Right: 1,000 ÷ (6.5 + 0.5) = 1,000 ÷ 7.0 = 143 g·L⁻¹ = 14.3 g·dL⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "15.4",
+       "why": "That is his old value (1,000 ÷ 6.5): it ignores the extra plasma."
+      },
+      {
+       "id": "c",
+       "text": "143",
+       "why": "This is the value in g·L⁻¹; the question asks for g·dL⁻¹ (divide by 10)."
+      },
+      {
+       "id": "d",
+       "text": "1.43",
+       "why": "This divides by 100 instead of 10 when converting g·L⁻¹ to g·dL⁻¹."
+      }
+     ],
+     "solution": "New blood volume = 6.5 + 0.5 = 7.0 L. 1,000 g ÷ 7.0 L = 143 g·L⁻¹ = 14.3 g·dL⁻¹ (was 15.4)."
+    }
+   ]
+  },
+  {
+   "id": "hbm-bonne",
+   "concept": "hbm-pv",
+   "bloom": "analyse",
+   "sources": [
+    "bonne2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 6 weeks of training, volunteers' blood volume, maximal cardiac output and VO₂max all rose. Blood was then removed to bring volume back to pre-training levels, and maximal cardiac output fell back to baseline. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rise in Qmax came mainly from the extra blood volume",
+       "correct": true,
+       "why": "Right: once the extra volume was gone, the training gain in Qmax disappeared."
+      },
+      {
+       "id": "b",
+       "text": "The heart muscle had grown and pumped harder",
+       "why": "If the heart itself had adapted, Qmax would have stayed up after the blood was removed."
+      },
+      {
+       "id": "c",
+       "text": "Blood removal damages the heart",
+       "why": "Removing a few hundred mL lowers filling; it doesn't damage the heart."
+      },
+      {
+       "id": "d",
+       "text": "Haemoglobin concentration sets Qmax",
+       "why": "The blood was removed to restore volume; volume, not concentration, explained Qmax."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-hypoxia-vs-training",
+   "concept": "hbm-pv",
+   "bloom": "understand",
+   "sources": [
+    "schmidt2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How do sea-level endurance training and a stay at altitude differ in what they do to the blood?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training adds plasma and red cells; altitude adds mainly red cells",
+       "correct": true,
+       "why": "Right: training raises volume and cardiac output; altitude raises Hb concentration."
+      },
+      {
+       "id": "b",
+       "text": "Training adds red cells; altitude adds mainly plasma",
+       "why": "It is the other way round: altitude adds red cells, and plasma often shrinks there."
+      },
+      {
+       "id": "c",
+       "text": "Both only add plasma",
+       "why": "Both add red cells too; altitude adds little or no plasma."
+      },
+      {
+       "id": "d",
+       "text": "Both add red cells and plasma equally",
+       "why": "Training expands both; hypoxia increases only red-cell volume."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-units",
+   "concept": "hbm-slope",
+   "bloom": "analyse",
+   "sources": [
+    "schmidt2010",
+    "mairbaurl2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One paper says VO₂max rises 4 mL·min⁻¹ per g of haemoglobin mass; another says 4.2 mL·kg⁻¹·min⁻¹ per g·kg⁻¹. How do these compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same slope: the kg cancel out in the second unit",
+       "correct": true,
+       "why": "Right: (mL·min⁻¹ ÷ kg) ÷ (g ÷ kg) = mL·min⁻¹ per g."
+      },
+      {
+       "id": "b",
+       "text": "The second is about 70 times larger, for a 70 kg person",
+       "why": "Both numerator and denominator are per kg, so body mass cancels."
+      },
+      {
+       "id": "c",
+       "text": "The second is about 70 times smaller, for a 70 kg person",
+       "why": "Dividing both VO₂max and Hb mass by body mass leaves the slope unchanged."
+      },
+      {
+       "id": "d",
+       "text": "They can't be compared: one is absolute, one relative",
+       "why": "They can: the per-kg terms cancel, giving the same unit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-slope-calc",
+   "concept": "hbm-slope",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "schmidt2010",
+    "hoffmeister2018",
+    "schmidt2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner with 800 g of haemoglobin gains 5% after an altitude camp. Using about 4 mL·min⁻¹ per g, how much could that add to her VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 160 mL·min⁻¹",
+       "correct": true,
+       "why": "Right: 800 × 0.05 = 40 g; 40 × 4 = 160 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 40 mL·min⁻¹",
+       "why": "This stops at the grams gained (40 g) and forgets the 4 mL·min⁻¹ per g."
+      },
+      {
+       "id": "c",
+       "text": "About 10 mL·min⁻¹",
+       "why": "This divides the 40 g by 4 instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "About 3,200 mL·min⁻¹",
+       "why": "This multiplies her whole Hb mass by 4, not just the gain."
+      }
+     ],
+     "solution": "Gain = 800 × 0.05 = 40 g. ΔVO₂max ≈ 40 × 4 = 160 mL·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist with Hb 15 g·dL⁻¹ donates 0.5 L of blood. Using about 4 mL·min⁻¹ per g of haemoglobin, how much VO₂max does he lose at first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 300 mL·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.5 L × 150 g·L⁻¹ = 75 g; 75 × 4 = 300 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 30 mL·min⁻¹",
+       "why": "This uses 15 g·dL⁻¹ as if per litre: 0.5 × 15 = 7.5 g, ten times too little."
+      },
+      {
+       "id": "c",
+       "text": "About 2,000 mL·min⁻¹",
+       "why": "This treats 500 mL of blood as 500 g of haemoglobin."
+      },
+      {
+       "id": "d",
+       "text": "About 19 mL·min⁻¹",
+       "why": "This divides the 75 g by 4 instead of multiplying."
+      }
+     ],
+     "solution": "Hb lost = 0.5 L × 150 g·L⁻¹ = 75 g. ΔVO₂max ≈ 75 × 4 = 300 mL·min⁻¹, until the body replaces it over the following weeks."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's haemoglobin mass falls from 1,000 to 970 g during a long illness. Using about 4 mL·min⁻¹ per g, how much VO₂max is that worth?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 120 mL·min⁻¹ lost",
+       "correct": true,
+       "why": "Right: 30 g × 4 = 120 mL·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 30 mL·min⁻¹ lost",
+       "why": "This stops at the grams lost and forgets the 4 mL·min⁻¹ per g."
+      },
+      {
+       "id": "c",
+       "text": "About 7.5 mL·min⁻¹ lost",
+       "why": "This divides 30 g by 4 instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "About 3,880 mL·min⁻¹ lost",
+       "why": "This multiplies the new Hb mass by 4, not the change."
+      }
+     ],
+     "solution": "Loss = 1,000 − 970 = 30 g. ΔVO₂max ≈ 30 × 4 = 120 mL·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hbm-slope-debate",
+   "concept": "hbm-slope",
+   "bloom": "evaluate",
+   "sources": [
+    "mairbaurl2013",
+    "heinicke2001",
+    "schmidt2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Comparing elite athletes with non-athletes gives about 5.8 mL·kg⁻¹·min⁻¹ of VO₂max per g·kg⁻¹ of haemoglobin; changing one person's haemoglobin gives about 4. Why is the first slope steeper?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Elite athletes also differ in heart, muscle and training",
+       "correct": true,
+       "why": "Right: a between-group slope credits haemoglobin with gains that partly come from other differences."
+      },
+      {
+       "id": "b",
+       "text": "Per-kg units always give bigger numbers",
+       "why": "Per-kg units cancel; the unit isn't what makes it steeper."
+      },
+      {
+       "id": "c",
+       "text": "Haemoglobin from EPO works less well than natural haemoglobin",
+       "why": "There is no evidence EPO-made haemoglobin binds O₂ differently."
+      },
+      {
+       "id": "d",
+       "text": "The elite athletes were measured more precisely",
+       "why": "Better precision wouldn't make a slope steeper like this; random error in haemoglobin mass, if anything, flattens a slope."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-co-method",
+   "concept": "hbm-co",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "schmidt2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In CO rebreathing, what does the lab actually measure to work out total haemoglobin mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How much the carboxyhaemoglobin share rises after a known CO dose",
+       "correct": true,
+       "why": "Right: a known dose spread over less haemoglobin raises the share more."
+      },
+      {
+       "id": "b",
+       "text": "The Hb concentration in a single blood sample",
+       "why": "Concentration alone can't give mass without blood volume."
+      },
+      {
+       "id": "c",
+       "text": "How much CO the person breathes out over 24 hours",
+       "why": "CO lost by breathing out is small and is corrected for; the key measure is the HbCO rise."
+      },
+      {
+       "id": "d",
+       "text": "The haematocrit before and after the test",
+       "why": "Haematocrit doesn't change from the tiny CO dose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-co-timing",
+   "concept": "hbm-co",
+   "bloom": "apply",
+   "sources": [
+    "schmidt2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants a runner's haemoglobin mass by CO rebreathing and her VO₂max on the same morning. Best order?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO₂max first, then CO rebreathing",
+       "correct": true,
+       "why": "Right: VO₂max was about 3% lower after CO rebreathing, so test VO₂max first."
+      },
+      {
+       "id": "b",
+       "text": "CO rebreathing first, then VO₂max",
+       "why": "The CO bound to haemoglobin lowered VO₂max by about 3% in the following test."
+      },
+      {
+       "id": "c",
+       "text": "Either order: the CO dose is too small to matter",
+       "why": "Small, but it measurably lowered VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "Neither on the same day: the CO test needs 24 h to wear off",
+       "why": "The bias matters for VO₂max, but doing VO₂max first avoids it the same day."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hbm-detect",
+   "concept": "hbm-co",
+   "bloom": "evaluate",
+   "sources": [
+    "hoffmeister2018",
+    "schmidt2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study gives cyclists a treatment that raises haemoglobin mass by about 20 g on average, and finds no significant change in VO₂max. Best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Expected: about 1.5% more VO₂max is within the test's noise",
+       "correct": true,
+       "why": "Right: 20 g × ~3–4 mL·min⁻¹ ≈ 60–80 mL·min⁻¹, below a typical error of about 2.5%."
+      },
+      {
+       "id": "b",
+       "text": "It proves haemoglobin mass doesn't affect VO₂max",
+       "why": "A non-significant result from a noisy test can't show there is no effect."
+      },
+      {
+       "id": "c",
+       "text": "The haemoglobin change must be measurement error",
+       "why": "CO rebreathing's typical error (about 1.7%) is small enough to detect 20 g in a group."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max should have risen at least 10%",
+       "why": "20 g predicts only about 1.5%, not 10%."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

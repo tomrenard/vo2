@@ -1,0 +1,818 @@
+{
+ "id": "resp-thresholds",
+ "module": "t1b-respiratory",
+ "title": "Ventilatory thresholds",
+ "goal": "Find VT1 and VT2 from ventilatory equivalents and end-tidal pressures, explain what causes each, and judge how they relate to lactate thresholds and critical power.",
+ "requires": [
+  "resp-control"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "ventilatory-equivalent",
+    "end-tidal",
+    "vt1",
+    "gas-exchange-threshold",
+    "isocapnic-buffering",
+    "respiratory-compensation-point"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "thr-equivalents",
+   "title": "Ventilatory equivalents: air per litre of gas",
+   "text": "A [ventilatory equivalent](g:ventilatory-equivalent) is the air you breathe per litre of gas exchanged:\n\n- **V̇E/V̇O₂**: litres of air per litre of O₂ taken up.\n- **V̇E/V̇CO₂**: litres of air per litre of CO₂ breathed out.\n\nThe litres cancel, so both are plain numbers. In a ramp test a [metabolic cart](g:metabolic-cart) plots them breath by breath, with the partial pressures at the end of each breath out ([end-tidal](g:end-tidal) PETO₂ and PETCO₂).\n\nRead them like fuel use: a rising V̇E/V̇O₂ means you pay more air for each litre of O₂. Breathing tracks CO₂ (last lesson), so as intensity rises the two ratios part ways at two points: the ventilatory thresholds.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "thr-equiv-example",
+   "title": "Two ratios from one breath sample",
+   "problem": "In a ramp test a rider breathes 60 L·min⁻¹ while taking up 2.5 L·min⁻¹ of O₂ and breathing out 2.3 L·min⁻¹ of CO₂. Find both ventilatory equivalents.",
+   "steps": [
+    "V̇E/V̇O₂ = 60 ÷ 2.5 = 24: 24 L of air for each litre of O₂.",
+    "V̇E/V̇CO₂ = 60 ÷ 2.3 = 26.1: 26.1 L of air for each litre of CO₂.",
+    "Air goes on top: the ratio is ventilation divided by gas exchanged, never the other way round."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "thr-equiv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "thr-equiv-read"
+  },
+  {
+   "type": "concept",
+   "id": "thr-vt1",
+   "title": "VT1: the first bend",
+   "text": "The first ventilatory threshold ([VT1](g:vt1)) is where V̇E/V̇O₂ and PETO₂ start to rise while V̇E/V̇CO₂ does not [[c:vt1-criteria]].\n\nWhy? As work rises, more H⁺ is made. Blood bicarbonate buffers it and releases extra CO₂, which raises V̇CO₂ and ventilation [[c:buffer-co2]]. Breathing follows CO₂, so V̇E pulls ahead of V̇O₂ but stays in step with V̇CO₂.\n\nThe matching bend in V̇CO₂ against V̇O₂, the [gas exchange threshold](g:gas-exchange-threshold), is the non-invasive estimate of the lactate threshold. It doesn't mean the muscle is short of O₂ [[c:not-anoxia]].\n\nBreathing frequency also speeds up at each threshold, so a breathing-rate sensor can hint at them [[c:fr-breaks]].",
+   "claims": [
+    {
+     "id": "vt1-criteria",
+     "text": "VT1 is identified by a rise in V̇E/V̇O₂ and PETO₂ with no rise in V̇E/V̇CO₂.",
+     "grade": "strong",
+     "sources": [
+      "pallares2016"
+     ],
+     "evidence": [
+      {
+       "source": "pallares2016",
+       "quote": "VT1 was determined using the criteria of an increase in both ventilatory equivalent of oxygen (V̇E/V̇O2) and end-tidal pressure of oxygen (PETO2) with no concomitant increase in ventilatory equivalent of carbon dioxide (V̇E/V̇CO2).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "buffer-co2",
+     "text": "H⁺ buffered by blood bicarbonate releases extra CO₂, raising V̇CO₂ and ventilation.",
+     "grade": "strong",
+     "sources": [
+      "poole2021"
+     ],
+     "evidence": [
+      {
+       "source": "poole2021",
+       "quote": "increased H+ buffered by blood [HCO3−]→increased CO2 release from blood→increased V̇CO2 and pulmonary ventilation",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "not-anoxia",
+     "text": "Insufficient O₂ is not the main cause of rising blood lactate; the gas exchange threshold remains a useful non-invasive estimate of the lactate threshold.",
+     "grade": "strong",
+     "sources": [
+      "poole2021"
+     ],
+     "evidence": [
+      {
+       "source": "poole2021",
+       "quote": "It is now recognized that insufficient O2 is not the primary basis for lactataemia.",
+       "level": "abstract"
+      },
+      {
+       "source": "poole2021",
+       "quote": "Non-invasive estimation of LT using the gas exchange threshold (non-linear increase of V̇CO2 versus V̇O2 ) remains important in exercise training and in the clinic",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fr-breaks",
+     "text": "Breathing frequency shows two distinct accelerations in a ramp test, matching the two gas-exchange thresholds.",
+     "grade": "weak",
+     "sources": [
+      "cross2012"
+     ],
+     "evidence": [
+      {
+       "source": "cross2012",
+       "quote": "two separate and distinct accelerations in respiratory frequency (f (R)) during incremental work were observed",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "thr-vt1-why"
+  },
+  {
+   "type": "question",
+   "item": "thr-not-anoxia"
+  },
+  {
+   "type": "question",
+   "item": "thr-fr-wearable"
+  },
+  {
+   "type": "concept",
+   "id": "thr-vt2",
+   "title": "VT2: respiratory compensation",
+   "text": "Above VT1, V̇E/V̇CO₂ and PETCO₂ stay roughly flat for a while: breathing still matches CO₂. This stretch, from the first threshold to the second, is the [isocapnic buffering](g:isocapnic-buffering) period ('isocapnic' = same CO₂) [[c:isocapnic]].\n\nAt the second ventilatory threshold, VT2 or the [respiratory compensation point](g:respiratory-compensation-point) (RCP), V̇E/V̇CO₂ rises as well and PETCO₂ falls [[c:vt2-criteria]]. Breathing now outruns CO₂ output: the compensatory hyperventilation of the last lesson, driving PCO₂ down to limit the fall in pH.\n\nTo tell them apart, look at V̇E/V̇CO₂: flat at VT1, rising at VT2.",
+   "claims": [
+    {
+     "id": "isocapnic",
+     "text": "The isocapnic buffering period runs from the first threshold (anaerobic threshold) to the respiratory compensation point.",
+     "grade": "strong",
+     "sources": [
+      "carriere2019"
+     ],
+     "evidence": [
+      {
+       "source": "carriere2019",
+       "quote": "During cardiopulmonary exercise test, the isocapnic buffering period ranges between anaerobic threshold (AT) and respiratory compensation point (RCP).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vt2-criteria",
+     "text": "VT2 is identified by a rise in both V̇E/V̇O₂ and V̇E/V̇CO₂ with a fall in PETCO₂.",
+     "grade": "strong",
+     "sources": [
+      "pallares2016"
+     ],
+     "evidence": [
+      {
+       "source": "pallares2016",
+       "quote": "VT2 was determined using the criteria of an increase in both the V̇E/V̇O2 and V̇E/V̇CO2 and a decrease in PETCO2",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "thr-discriminate",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "thr-table",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "thr-lactate",
+   "title": "Ventilatory and lactate thresholds",
+   "text": "In 14 trained male cyclists, power at VT1 matched the first lactate threshold, and power at VT2 matched the lactate threshold + 2.0 mmol·L⁻¹. Both ventilatory thresholds were reliable from test to test (CV 1.6–3.5%) [[c:vt-lt-match]]. Lactate thresholds get their own module in tier 2.\n\nRCP is often used as a stand-in for the highest sustainable intensity. In 12 men it came at the same V̇O₂ as [critical power](g:critical-power) and the [maximal lactate steady state](g:mlss) (MLSS), but at a higher power: 262 W against 226 and 223 W [[c:rcp-vo2-same]]. RCP power also rose with ramp speed, from 243 to 292 W, and agreed poorly with CP [[c:rcp-ramp]].",
+   "claims": [
+    {
+     "id": "vt-lt-match",
+     "text": "In trained male cyclists, power at VT1 and VT2 matched power at the lactate threshold and at LT + 2.0 mmol·L⁻¹; ventilatory thresholds had CVs of 1.6–3.5%.",
+     "grade": "weak",
+     "sources": [
+      "pallares2016"
+     ],
+     "evidence": [
+      {
+       "source": "pallares2016",
+       "quote": "Workloads at lactate threshold (LT) and LT+2.0 mMol·L-1 matched the ones for VT1 and VT2, respectively",
+       "level": "abstract"
+      },
+      {
+       "source": "pallares2016",
+       "quote": "Ventilatory thresholds show high reliability (CV = 1.6%-3.5%; r = 0.90-0.96; Bias = -1.8-2.9) except for RER = 1 and V-Slope",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rcp-vo2-same",
+     "text": "RCP occurred at the same V̇O₂ as CP and MLSS, but at a higher power output in a ramp test.",
+     "grade": "weak",
+     "sources": [
+      "keir2015"
+     ],
+     "evidence": [
+      {
+       "source": "keir2015",
+       "quote": "There were no differences (P > 0.05) among the V˙O2p values associated with CP, RCP, MLSS, and [HHb]BP",
+       "level": "abstract"
+      },
+      {
+       "source": "keir2015",
+       "quote": "the PO associated with RCP (262 ± 48 W) and [HHb]BP (273 ± 41 W) were greater (P < 0.05) than both CP (226 ± 45 W) and MLSS (223 ± 39 W)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rcp-ramp",
+     "text": "The power at RCP rose with the ramp slope and agreed poorly with CP.",
+     "grade": "weak",
+     "sources": [
+      "leo2017"
+     ],
+     "evidence": [
+      {
+       "source": "leo2017",
+       "quote": "Our data confirm that the external work rate associated with the RCP is labile and that these power outputs display poor measurement agreement with the CP.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can the respiratory compensation point stand in for critical power or MLSS?",
+    "sides": [
+     {
+      "position": "Yes, as a metabolic marker: RCP, CP and MLSS fall at the same V̇O₂, so they may reflect the same boundary.",
+      "sources": [
+       "keir2015"
+      ]
+     },
+     {
+      "position": "No, as a power target: RCP power moves with the ramp protocol and agrees poorly with CP.",
+      "sources": [
+       "leo2017"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "thr-lt-match"
+  },
+  {
+   "type": "question",
+   "item": "thr-ramp"
+  },
+  {
+   "type": "question",
+   "item": "thr-rcp-interpret"
+  },
+  {
+   "type": "question",
+   "item": "thr-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "thr-equiv-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Ventilatory equivalents are air per litre of gas: V̇E/V̇O₂ and V̇E/V̇CO₂, plain numbers with no unit.",
+    "VT1: V̇E/V̇O₂ and PETO₂ rise while V̇E/V̇CO₂ stays flat, because bicarbonate buffering adds CO₂ and breathing follows CO₂.",
+    "Between VT1 and VT2 (isocapnic buffering) breathing still matches CO₂; at VT2, the respiratory compensation point, V̇E/V̇CO₂ rises and PETCO₂ falls.",
+    "VT1 tracks the first lactate threshold and VT2 a higher lactate point; neither marks a lack of O₂ in muscle.",
+    "RCP sits at the same V̇O₂ as CP and MLSS, but its ramp power depends on the protocol, so don't use it directly as a power target."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "thr-discriminate",
+   "concept": "thr-vt2",
+   "bloom": "apply",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a cyclist's ramp test, V̇E/V̇O₂ starts to rise at 210 W while V̇E/V̇CO₂ stays flat. Which threshold is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT1, the first ventilatory threshold",
+       "correct": true,
+       "why": "Right: V̇E/V̇O₂ rising with V̇E/V̇CO₂ flat is the VT1 pattern."
+      },
+      {
+       "id": "b",
+       "text": "VT2, the respiratory compensation point",
+       "why": "At VT2 V̇E/V̇CO₂ rises too and PETCO₂ falls; here V̇E/V̇CO₂ is flat."
+      },
+      {
+       "id": "c",
+       "text": "VO₂max",
+       "why": "VO₂max is the top of the test, where V̇O₂ stops rising; the ratios don't define it."
+      },
+      {
+       "id": "d",
+       "text": "No threshold: just noise in the data",
+       "why": "A sustained rise in one ratio while the other stays flat is the classic VT1 signal, not noise."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a runner's treadmill test, at 16 km/h V̇E/V̇CO₂ starts to rise and PETCO₂ falls. Which threshold is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT2, the respiratory compensation point",
+       "correct": true,
+       "why": "Right: V̇E/V̇CO₂ rising and PETCO₂ falling means breathing now outruns CO₂ output."
+      },
+      {
+       "id": "b",
+       "text": "VT1, the first ventilatory threshold",
+       "why": "At VT1 V̇E/V̇CO₂ stays flat; only V̇E/V̇O₂ rises."
+      },
+      {
+       "id": "c",
+       "text": "The start of isocapnic buffering",
+       "why": "Isocapnic buffering is the stretch before this point, where V̇E/V̇CO₂ and PETCO₂ stay flat."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max",
+       "why": "VO₂max is where V̇O₂ stops rising; it is defined by O₂ uptake, not by these ratios."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-equiv-calc",
+   "concept": "thr-equivalents",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 14 km/h a runner breathes 90 L·min⁻¹ and takes up 3.0 L·min⁻¹ of O₂. What is his V̇E/V̇O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30",
+       "correct": true,
+       "why": "Right: 90 ÷ 3.0 = 30 L of air per litre of O₂."
+      },
+      {
+       "id": "b",
+       "text": "0.033",
+       "why": "This divides O₂ by air (3.0 ÷ 90). Air goes on top."
+      },
+      {
+       "id": "c",
+       "text": "270",
+       "why": "This multiplies (90 × 3.0); a ratio divides."
+      },
+      {
+       "id": "d",
+       "text": "87",
+       "why": "This subtracts (90 − 3.0); a ratio divides."
+      }
+     ],
+     "solution": "V̇E/V̇O₂ = 90 L·min⁻¹ ÷ 3.0 L·min⁻¹ = 30 (no unit: the litres cancel)."
+    },
+    {
+     "id": "b",
+     "stem": "Near the top of a ramp test a cyclist breathes 120 L·min⁻¹ and breathes out 4.0 L·min⁻¹ of CO₂. What is her V̇E/V̇CO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30",
+       "correct": true,
+       "why": "Right: 120 ÷ 4.0 = 30 L of air per litre of CO₂."
+      },
+      {
+       "id": "b",
+       "text": "0.033",
+       "why": "This divides CO₂ by air (4.0 ÷ 120). Air goes on top."
+      },
+      {
+       "id": "c",
+       "text": "480",
+       "why": "This multiplies (120 × 4.0); a ratio divides."
+      },
+      {
+       "id": "d",
+       "text": "116",
+       "why": "This subtracts (120 − 4.0); a ratio divides."
+      }
+     ],
+     "solution": "V̇E/V̇CO₂ = 120 L·min⁻¹ ÷ 4.0 L·min⁻¹ = 30."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike leg a triathlete breathes 70 L·min⁻¹ and takes up 2.8 L·min⁻¹ of O₂. What is his V̇E/V̇O₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "25",
+       "correct": true,
+       "why": "Right: 70 ÷ 2.8 = 25 L of air per litre of O₂."
+      },
+      {
+       "id": "b",
+       "text": "0.04",
+       "why": "This divides O₂ by air (2.8 ÷ 70). Air goes on top."
+      },
+      {
+       "id": "c",
+       "text": "196",
+       "why": "This multiplies (70 × 2.8); a ratio divides."
+      },
+      {
+       "id": "d",
+       "text": "67.2",
+       "why": "This subtracts (70 − 2.8); a ratio divides."
+      }
+     ],
+     "solution": "V̇E/V̇O₂ = 70 ÷ 2.8 = 25."
+    }
+   ]
+  },
+  {
+   "id": "thr-equiv-read",
+   "concept": "thr-equivalents",
+   "bloom": "understand",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Over two stages, a runner's V̇E/V̇O₂ rises from 25 to 30. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He now breathes more air for each litre of O₂ taken up",
+       "correct": true,
+       "why": "Right: the ratio is litres of air per litre of O₂, and it went up."
+      },
+      {
+       "id": "b",
+       "text": "He now takes up more O₂ from each litre of air",
+       "why": "The opposite: a higher ratio means less O₂ per litre of air."
+      },
+      {
+       "id": "c",
+       "text": "His O₂ uptake has fallen",
+       "why": "Not necessarily: V̇O₂ can keep rising while V̇E rises faster."
+      },
+      {
+       "id": "d",
+       "text": "His lungs have become worse at diffusion",
+       "why": "The ratio says nothing directly about diffusion; it compares air breathed with O₂ used."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-vt1-why",
+   "concept": "thr-vt1",
+   "bloom": "understand",
+   "sources": [
+    "poole2021",
+    "ward2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At VT1, why does V̇E/V̇O₂ rise while V̇E/V̇CO₂ stays flat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Buffering acid with bicarbonate adds CO₂, and breathing follows CO₂",
+       "correct": true,
+       "why": "Right: extra CO₂ raises V̇CO₂ and V̇E together, so V̇E pulls ahead of V̇O₂ only."
+      },
+      {
+       "id": "b",
+       "text": "The muscles run out of O₂, so O₂ uptake falls",
+       "why": "O₂ uptake keeps rising past VT1, and lack of O₂ is not the main cause of rising lactate."
+      },
+      {
+       "id": "c",
+       "text": "The lungs start leaking O₂ back out",
+       "why": "That doesn't happen: O₂ diffuses into the blood down its gradient."
+      },
+      {
+       "id": "d",
+       "text": "Dead space suddenly grows",
+       "why": "Dead space doesn't jump at VT1; the change comes from extra CO₂."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-not-anoxia",
+   "concept": "thr-vt1",
+   "bloom": "evaluate",
+   "sources": [
+    "poole2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a triathlete: \"VT1 is where your muscles run out of oxygen.\" What is the best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not really: lack of O₂ isn't what raises lactate or CO₂ at VT1",
+       "correct": true,
+       "why": "Right: the extra CO₂ comes from buffering acid, and lactate rises with glycolytic flux, not muscle anoxia."
+      },
+      {
+       "id": "b",
+       "text": "Yes: that is exactly why it's also called the anaerobic threshold",
+       "why": "The name is old; the idea behind it (muscle anoxia) has not held up."
+      },
+      {
+       "id": "c",
+       "text": "No: VT1 has nothing at all to do with blood lactate",
+       "why": "VT1 tracks the lactate threshold closely; it just isn't caused by lack of O₂."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only in runners, and not in cyclists or swimmers",
+       "why": "The physiology is the same in every sport, and the anoxia idea fails in all of them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-fr-wearable",
+   "concept": "thr-vt1",
+   "bloom": "apply",
+   "sources": [
+    "cross2012",
+    "nicolo2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a ramp test on the bike wearing a breathing-rate sensor. Her breathing frequency shows two clear accelerations. What could they mark?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Roughly her two ventilatory thresholds",
+       "correct": true,
+       "why": "Right: in cyclists, two accelerations in f matched the two gas-exchange thresholds."
+      },
+      {
+       "id": "b",
+       "text": "Her VO₂max and her maximal heart rate",
+       "why": "Both come at the end of the test; the accelerations come earlier, at the thresholds."
+      },
+      {
+       "id": "c",
+       "text": "Only sensor noise: breathing rate is too variable",
+       "why": "f is noisy breath to breath, but the two accelerations were consistent findings."
+      },
+      {
+       "id": "d",
+       "text": "The end of warm-up and the start of fatigue",
+       "why": "These are not defined physiological points; the accelerations line up with the thresholds."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-table",
+   "concept": "thr-vt2",
+   "bloom": "analyse",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Ramp test, stage by stage (V̇E/V̇O₂ ; V̇E/V̇CO₂ ; PETCO₂ in mmHg): 150 W: 22 ; 25 ; 42. 180 W: 22 ; 25 ; 43. 210 W: 25 ; 25 ; 43. 240 W: 27 ; 25 ; 43. 270 W: 31 ; 29 ; 39. Where are VT1 and VT2?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT1 at 210 W, VT2 at 270 W",
+       "correct": true,
+       "why": "Right: at 210 W V̇E/V̇O₂ rises while V̇E/V̇CO₂ stays at 25; at 270 W V̇E/V̇CO₂ rises and PETCO₂ falls."
+      },
+      {
+       "id": "b",
+       "text": "VT1 at 270 W, VT2 at 210 W",
+       "why": "Reversed: VT1 is the first bend (V̇E/V̇O₂ alone), VT2 the second (V̇E/V̇CO₂ too)."
+      },
+      {
+       "id": "c",
+       "text": "VT1 at 180 W, VT2 at 210 W",
+       "why": "180 W is the last stage before any change; 210 W is VT1, where only V̇E/V̇O₂ rises."
+      },
+      {
+       "id": "d",
+       "text": "VT1 at 240 W, VT2 at 270 W",
+       "why": "V̇E/V̇O₂ already rose at 210 W; VT1 is where the rise starts."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Treadmill test, stage by stage (V̇E/V̇O₂ ; V̇E/V̇CO₂ ; PETCO₂ in mmHg): 12 km/h: 24 ; 26 ; 41. 13 km/h: 24 ; 26 ; 42. 14 km/h: 27 ; 26 ; 42. 15 km/h: 29 ; 26 ; 42. 16 km/h: 33 ; 30 ; 38. Where are VT1 and VT2?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT1 at 14 km/h, VT2 at 16 km/h",
+       "correct": true,
+       "why": "Right: at 14 km/h V̇E/V̇O₂ rises while V̇E/V̇CO₂ stays at 26; at 16 km/h V̇E/V̇CO₂ rises and PETCO₂ falls."
+      },
+      {
+       "id": "b",
+       "text": "VT1 at 16 km/h, VT2 at 14 km/h",
+       "why": "Reversed: VT1 is the first bend (V̇E/V̇O₂ alone), VT2 the second (V̇E/V̇CO₂ too)."
+      },
+      {
+       "id": "c",
+       "text": "VT1 at 13 km/h, VT2 at 14 km/h",
+       "why": "13 km/h is the last stage before any change; 14 km/h is VT1."
+      },
+      {
+       "id": "d",
+       "text": "VT1 at 15 km/h, VT2 at 16 km/h",
+       "why": "V̇E/V̇O₂ already rose at 14 km/h; VT1 is where the rise starts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-lt-match",
+   "concept": "thr-lactate",
+   "bloom": "understand",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In trained cyclists, how do the ventilatory thresholds line up with blood lactate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VT1 with the first lactate threshold, VT2 with a higher lactate point",
+       "correct": true,
+       "why": "Right: VT1 matched the lactate threshold and VT2 matched the lactate threshold + 2.0 mmol·L⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "VT1 with the highest lactate, VT2 with resting lactate",
+       "why": "Backwards and too extreme: VT1 is the lower threshold, near the first lactate rise."
+      },
+      {
+       "id": "c",
+       "text": "Both with resting lactate",
+       "why": "Lactate is above rest at both thresholds, more so at VT2."
+      },
+      {
+       "id": "d",
+       "text": "Neither: ventilation and lactate are unrelated",
+       "why": "They are related: both reflect the same rise in metabolic rate and acid load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-ramp",
+   "concept": "thr-lactate",
+   "bloom": "analyse",
+   "sources": [
+    "leo2017",
+    "keir2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's respiratory compensation point on a fast ramp (45 W·min⁻¹) is 300 W. His critical power is 250 W. Should he use 300 W as his target for a 40 km time trial?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: RCP power rises with ramp speed and overshoots CP on fast ramps",
+       "correct": true,
+       "why": "Right: RCP power is protocol-dependent; on fast ramps it sat about 45 W above CP."
+      },
+      {
+       "id": "b",
+       "text": "Yes: RCP is the most accurate marker of sustainable power",
+       "why": "RCP power agreed poorly with CP and changed with the ramp; it isn't a reliable power target."
+      },
+      {
+       "id": "c",
+       "text": "Yes, but only if he rides at RCP heart rate instead",
+       "why": "Heart rate drifts in long efforts; that doesn't fix a power target that is too high."
+      },
+      {
+       "id": "d",
+       "text": "No: RCP is always well below CP",
+       "why": "On fast ramps RCP power is above CP, not below it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-rcp-interpret",
+   "concept": "thr-lactate",
+   "bloom": "evaluate",
+   "sources": [
+    "keir2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In one study, RCP, critical power and MLSS all came at the same V̇O₂, but RCP came at a higher power (262 W against 226 and 223 W). Which conclusion do these data best support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same boundary, perhaps, but ramp RCP power isn't a steady power target",
+       "correct": true,
+       "why": "Right: same V̇O₂ points to the same boundary; the higher ramp power shows it isn't a direct power target."
+      },
+      {
+       "id": "b",
+       "text": "RCP is a separate, higher boundary than critical power",
+       "why": "The V̇O₂ values were the same, which argues for one boundary, not two."
+      },
+      {
+       "id": "c",
+       "text": "CP and MLSS are wrong, and RCP is the true limit",
+       "why": "Nothing shows CP or MLSS are wrong; they agreed with each other."
+      },
+      {
+       "id": "d",
+       "text": "V̇O₂ values can't be compared from one test to another",
+       "why": "The study compared V̇O₂ across tests on purpose; that is how the match was found."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thr-appraisal",
+   "concept": "thr-lactate",
+   "bloom": "evaluate",
+   "sources": [
+    "pallares2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A female runner reads that VT1 and VT2 match lactate thresholds closely, from a study of 14 trained male cyclists. What most limits applying it to her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only trained men, cycling, were tested, and n = 14 is small",
+       "correct": true,
+       "why": "Right: sex, sport and test mode differ from hers, and a small sample gives imprecise agreement."
+      },
+      {
+       "id": "b",
+       "text": "Lactate can't be measured in runners",
+       "why": "It can: finger or ear-lobe samples work on a treadmill."
+      },
+      {
+       "id": "c",
+       "text": "The thresholds were unreliable from test to test",
+       "why": "They were reliable (CV 1.6–3.5%); reliability isn't the problem."
+      },
+      {
+       "id": "d",
+       "text": "Ventilatory thresholds only exist in cycling",
+       "why": "They appear in any incremental test, running included."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

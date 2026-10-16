@@ -1,0 +1,781 @@
+{
+ "id": "fat-recovery",
+ "module": "t1b-fatigue",
+ "title": "Recovering from fatigue",
+ "goal": "Explain how fast each kind of fatigue recovers, from minutes to a day, and how labs and athletes can measure it.",
+ "requires": [
+  "fat-long-efforts"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "low-frequency-fatigue"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "re-minutes",
+   "title": "Minutes: metabolites and drive",
+   "text": "After a brief, hard effort, force comes back fast. Central fatigue mostly recovers within about 2 min, and the parts of peripheral fatigue tied to [excitation–contraction coupling](g:ec-coupling) and blood flow returning to the muscle within 3–5 min [[c:fast-recovery]].\n\n[PCr](g:pcr) follows a similar clock. After a 30 s all-out sprint it was back to 65% of rest after 1.5 min and 85% after 6 min, and sprint power recovered in step with it [[c:pcr-power]] (*Phosphocreatine: the first seconds*).\n\nSo for a track rider's repeated efforts or a runner's short reps, a few minutes restore most of what was lost. Most, not all.",
+   "claims": [
+    {
+     "id": "fast-recovery",
+     "text": "After brief high-intensity exercise, central fatigue typically recovers within 2 min and peripheral fatigue linked to excitation–contraction coupling and reperfusion within 3–5 min.",
+     "grade": "moderate",
+     "sources": [
+      "carroll2017"
+     ],
+     "evidence": [
+      {
+       "source": "carroll2017",
+       "quote": "After brief, high-intensity exercise there is typically a rapid restitution of force that is due to recovery of central fatigue (typically within 2 min) and aspects of peripheral fatigue associated with excitation-contraction coupling and reperfusion of muscles (typically within 3-5 min).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pcr-power",
+     "text": "After a 30 s sprint, PCr was at 65% of rest after 1.5 min and 85% after 6 min; power in a second sprint recovered in parallel with PCr.",
+     "grade": "weak",
+     "sources": [
+      "bogdanis1995"
+     ],
+     "evidence": [
+      {
+       "source": "bogdanis1995",
+       "quote": "During recovery, PCr increased rapidly to 65.0 +/- 2.8% of rest after 1.5 min, but reached only 85.5 +/- 3.5% of rest after 6 min of recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "bogdanis1995",
+       "quote": "Recovery of peak power output (PPO), peak pedal speed (maxSp) and mean power during the initial 6 s (MPO6) of sprint 2 did not reach the control values after 6 min of rest, and occurred in parallel with the resynthesis of PCr, despite the low muscle pH.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-order",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "re-sprint-gap"
+  },
+  {
+   "type": "concept",
+   "id": "re-lff",
+   "title": "Hours: low-frequency fatigue",
+   "text": "Some loss lingers. After severe contractions force is largely back in minutes, but not wholly for many hours. This long-lasting part shows mainly when the muscle is stimulated at low rates (20 per second), much less at high rates (80 per second). It isn't due to low PCr or ATP, and probably comes from impaired excitation–contraction coupling [[c:lff]]: [low-frequency fatigue](g:low-frequency-fatigue). Less Ca²⁺ is released, or the fibres respond less to it [[c:hours-ca]].\n\nIt may matter for easy riding and running: they need far less than maximal force, so they are thought to use lower firing rates, where the loss is. It may explain feeling weak after hard exercise [[c:lff-feel]]. A maximal sprint, at high firing rates, can hide it.",
+   "claims": [
+    {
+     "id": "lff",
+     "text": "After severe contraction, force largely recovers in minutes but not fully for many hours; the long-lasting loss occurs mainly at low stimulation frequencies, is not due to high-energy phosphate depletion, and probably reflects impaired excitation–contraction coupling.",
+     "grade": "moderate",
+     "sources": [
+      "edwards1977"
+     ],
+     "evidence": [
+      {
+       "source": "edwards1977",
+       "quote": "After severe muscular contraction in man recovery of force is largely complete in a few minutes, but is not wholly so for many hours. The long-lasting element of fatigue is found to occur primarily for low frequencies of stimulation (e.g. 20/sec), and is much less pronounced, or absent, at high frequencies (80/sec).",
+       "level": "abstract"
+      },
+      {
+       "source": "edwards1977",
+       "quote": "The long-lasting element of fatigue is not due to depletion of high-energy phosphate nor is it due to failure of electrical activity as recorded from surface electrodes. It is probably the result of an impairment of the process of excitation-contraction coupling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hours-ca",
+     "text": "Full recovery of muscle function can take hours because of prolonged impairment of intracellular Ca²⁺ release or sensitivity.",
+     "grade": "moderate",
+     "sources": [
+      "carroll2017",
+      "bruton2008"
+     ],
+     "evidence": [
+      {
+       "source": "carroll2017",
+       "quote": "Complete recovery of muscle function may be incomplete for some hours, however, due to prolonged impairment in intracellular Ca2+ release or sensitivity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lff-feel",
+     "text": "Long-lasting low-frequency fatigue may explain the feeling of weakness after exercise.",
+     "grade": "weak",
+     "sources": [
+      "edwards1977"
+     ],
+     "evidence": [
+      {
+       "source": "edwards1977",
+       "quote": "Its practical importance for man could be significant as an explanation of the subjective feelings of weakness following exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-lff-cause"
+  },
+  {
+   "type": "example",
+   "id": "re-lff-example",
+   "title": "Spotting low-frequency fatigue",
+   "problem": "A rider's quadriceps are stimulated at 20 Hz and 80 Hz before and 2 h after a hard interval session. Before: 300 N and 500 N. After: 210 N and 470 N. Is there low-frequency fatigue?",
+   "steps": [
+    "Before: 20:80 Hz ratio = 300 ÷ 500 = 0.60.",
+    "After: 210 ÷ 470 = 0.45.",
+    "The 20 Hz force fell (300 − 210) ÷ 300 = 30%; the 80 Hz force only (500 − 470) ÷ 500 = 6%.",
+    "The ratio fell from 0.60 to 0.45: force is lost mainly at low frequency. A high-frequency test, or a sprint, would barely show it."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-lff-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "re-lff-why"
+  },
+  {
+   "type": "concept",
+   "id": "re-long",
+   "title": "After long efforts: slower, and partly central",
+   "text": "Long, lower-intensity exercise recovers differently. Voluntary force bounces back partly in the first few minutes, mostly because central fatigue eases. But voluntary activation may still be incomplete 30 min later, and peripheral fatigue is incomplete for at least 20–30 min [[c:long-recovery]].\n\nRunning adds muscle damage and more central fatigue than cycling (*Central fatigue*).\n\nThis matters for testing: *when* you measure changes what you find. A test a few minutes after a short, hard effort misses central fatigue that has already gone. After a marathon or a long ride, the same test still finds it.",
+   "claims": [
+    {
+     "id": "long-recovery",
+     "text": "After long-duration low-intensity exercise, voluntary force partly recovers within minutes, mainly through central recovery, but voluntary activation may not fully recover within 30 min and peripheral fatigue stays incomplete for at least 20–30 min.",
+     "grade": "moderate",
+     "sources": [
+      "carroll2017"
+     ],
+     "evidence": [
+      {
+       "source": "carroll2017",
+       "quote": "After low-intensity exercise of long duration, voluntary force typically shows rapid, partial, recovery within the first few minutes, due largely to recovery of the central, neural component. However, the ability to voluntarily activate muscles may not recover completely within 30 min after exercise. Recovery of peripheral fatigue contributes comparatively little to the fast initial force restitution and is typically incomplete for at least 20-30 min.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-long-test"
+  },
+  {
+   "type": "question",
+   "item": "re-lff-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "re-glycogen",
+   "title": "A day: refilling glycogen",
+   "text": "Glycogen refills in two phases [[c:glycogen-24]]:\n\n| phase | what drives it | what helps |\n|---|---|---|\n| 0–4 h | the depletion itself drives fast resynthesis | about 1 g·kg⁻¹ of carbohydrate early |\n| 4–24 h | slower | enough total carbohydrate for the next session |\n\nIn the later phase, total intake matters more than the type, form or timing of the carbohydrate. If carbohydrate is short, adding protein helps storage.\n\nSo with enough carbohydrate, stores are largely back within a day; with too little, the next long effort starts closer to the wall. That matters in stage races, double training days and a triathlete's long weekend.",
+   "claims": [
+    {
+     "id": "glycogen-24",
+     "text": "Post-exercise glycogen resynthesis is biphasic: in the first 0–4 h depletion drives resynthesis, optimised by about 1 g·kg⁻¹ carbohydrate; from 4 to 24 h total carbohydrate intake matters most; protein helps when carbohydrate is suboptimal.",
+     "grade": "strong",
+     "sources": [
+      "burke2017"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017",
+       "quote": "In the early postexercise period (0-4 h), glycogen depletion provides a strong drive for its own resynthesis, with the provision of CHO (~1 g/kg body mass) optimizing this process. During the later phase of recovery (4-24 h), CHO intake should meet the anticipated fuel needs of the training/competition, with the type, form, and pattern of intake being less important than total intake.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2017",
+       "quote": "in this scenario, the coingestion of protein with CHO can assist glycogen storage.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-biphasic"
+  },
+  {
+   "type": "question",
+   "item": "re-glycogen-plan"
+  },
+  {
+   "type": "question",
+   "item": "re-lff-calc",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "re-measure",
+   "title": "Measuring recovery",
+   "text": "No single marker tells you an athlete has recovered; few have strong evidence behind them [[c:no-single-marker]].\n\n| question | lab | field |\n|---|---|---|\n| is maximal capacity back? | [MVC](g:mvc) | jump height, sprint or power test |\n| central or peripheral? | twitch interpolation | — |\n| low-frequency fatigue? | 20:80 Hz force ratio | — |\n| fuel back? | [muscle biopsy](g:muscle-biopsy) | — |\n| overall state | — | heart rate, effort ratings (RPE), questionnaires, sleep |\n\nField tools are cheap but blunt. Compare each athlete with their own baseline [[c:individual]], and trust agreement across several measures more than any one number.",
+   "claims": [
+    {
+     "id": "no-single-marker",
+     "text": "Few fatigue-monitoring markers have strong scientific support, and no single definitive marker exists.",
+     "grade": "moderate",
+     "sources": [
+      "halson2014"
+     ],
+     "evidence": [
+      {
+       "source": "halson2014",
+       "quote": "However, very few of these markers have strong scientific evidence supporting their use, and there is yet to be a single, definitive marker described in the literature.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "individual",
+     "text": "Monitoring should be individualised to the athlete.",
+     "grade": "moderate",
+     "sources": [
+      "halson2014"
+     ],
+     "evidence": [
+      {
+       "source": "halson2014",
+       "quote": "the importance of individualization of load monitoring cannot be over emphasized.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "re-measure-match",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "re-marker-evaluate"
+  },
+  {
+   "type": "question",
+   "item": "re-measure-match",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "After brief hard efforts, central fatigue recovers in about 2 min and much peripheral fatigue in 3–5 min; PCr and sprint power take several minutes.",
+    "Low-frequency fatigue, from impaired Ca²⁺ release or sensitivity, lasts hours and hides from maximal sprint tests.",
+    "After long efforts, recovery is slower and partly central: activation can still be down 30 min later.",
+    "Glycogen refills in two phases over about 24 h; early carbohydrate, then enough total carbohydrate.",
+    "No single marker shows full recovery: combine lab or field measures and compare with the athlete's own baseline."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "re-order",
+   "concept": "re-minutes",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "carroll2017",
+    "edwards1977",
+    "burke2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a hard 3 min effort, which of these recovers fastest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Central drive to the muscle, within about 2 min",
+       "correct": true,
+       "why": "Right: central fatigue after brief hard exercise usually recovers within 2 min."
+      },
+      {
+       "id": "b",
+       "text": "Low-frequency force, within about 2 min",
+       "why": "Low-frequency fatigue lasts hours."
+      },
+      {
+       "id": "c",
+       "text": "Muscle glycogen, within about 30 min",
+       "why": "Glycogen takes about a day to refill."
+      },
+      {
+       "id": "d",
+       "text": "Muscle damage, within about 10 min",
+       "why": "Damage takes days, not minutes."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "After a set of hard 2 min bike intervals, which part of the lost force comes back first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The central part, mostly within about 2 min",
+       "correct": true,
+       "why": "Right: central recovery is the fastest component after brief hard work."
+      },
+      {
+       "id": "b",
+       "text": "The low-frequency part, within a few minutes",
+       "why": "That part lingers for hours."
+      },
+      {
+       "id": "c",
+       "text": "The glycogen-linked part, within an hour",
+       "why": "Glycogen resynthesis takes about 24 h."
+      },
+      {
+       "id": "d",
+       "text": "All parts together, at the same rate",
+       "why": "Each type of fatigue has its own time course."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-sprint-gap",
+   "concept": "re-minutes",
+   "bloom": "apply",
+   "sources": [
+    "bogdanis1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track rider does two 30 s all-out sprints with 90 s of rest between. What should he expect in the second?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower peak power: PCr is only about two thirds back",
+       "correct": true,
+       "why": "Right: PCr was at about 65% of rest after 1.5 min, and power tracks it."
+      },
+      {
+       "id": "b",
+       "text": "Full power: PCr recovers within 30 s",
+       "why": "After a 30 s sprint, PCr takes minutes to recover."
+      },
+      {
+       "id": "c",
+       "text": "Higher power, because he's now warmed up",
+       "why": "The warm-up effect is far smaller than the PCr deficit."
+      },
+      {
+       "id": "d",
+       "text": "Lower power, because lactate must clear first",
+       "why": "Power recovered in step with PCr despite low muscle pH."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-lff-cause",
+   "concept": "re-lff",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "edwards1977",
+    "carroll2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most likely causes force loss at low stimulation rates that lasts for hours?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Impaired excitation–contraction coupling",
+       "correct": true,
+       "why": "Right: Ca²⁺ release or sensitivity stays impaired."
+      },
+      {
+       "id": "b",
+       "text": "PCr that hasn't been rebuilt yet",
+       "why": "It isn't due to depletion of high-energy phosphates; PCr recovers in minutes."
+      },
+      {
+       "id": "c",
+       "text": "Failing action potentials on the surface",
+       "why": "Surface electrical activity was normal."
+      },
+      {
+       "id": "d",
+       "text": "Lactate still left in the muscle",
+       "why": "Lactate is cleared within an hour or so, and isn't the cause."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-lff-calc",
+   "concept": "re-lff",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "edwards1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a hard track session, a runner's quadriceps give 240 N at 20 Hz and 400 N at 80 Hz. Two hours after, 168 N and 380 N. What is the 20:80 Hz force ratio after?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.44",
+       "correct": true,
+       "why": "Right: 168 ÷ 380 = 0.44, down from 0.60 before: low-frequency fatigue."
+      },
+      {
+       "id": "b",
+       "text": "2.26",
+       "why": "This divides the 80 Hz force by the 20 Hz force (380 ÷ 168); the ratio is 20 Hz ÷ 80 Hz."
+      },
+      {
+       "id": "c",
+       "text": "0.70",
+       "why": "This is the share of 20 Hz force kept (168 ÷ 240), not the 20:80 Hz ratio."
+      },
+      {
+       "id": "d",
+       "text": "0.60",
+       "why": "This is the ratio before the session; the question asks for after."
+      }
+     ],
+     "solution": "After: 20:80 Hz ratio = 168 ÷ 380 = 0.44. Before it was 240 ÷ 400 = 0.60. The fall shows force lost mainly at low frequency."
+    },
+    {
+     "id": "b",
+     "stem": "Before a long ride, a cyclist's quadriceps give 270 N at 20 Hz and 450 N at 80 Hz. The next morning, 180 N and 450 N. What is the 20:80 Hz force ratio now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.40",
+       "correct": true,
+       "why": "Right: 180 ÷ 450 = 0.40, down from 0.60 before: low-frequency fatigue."
+      },
+      {
+       "id": "b",
+       "text": "2.50",
+       "why": "This divides the 80 Hz force by the 20 Hz force (450 ÷ 180); the ratio is 20 Hz ÷ 80 Hz."
+      },
+      {
+       "id": "c",
+       "text": "0.67",
+       "why": "This is the share of 20 Hz force kept (180 ÷ 270), not the 20:80 Hz ratio."
+      },
+      {
+       "id": "d",
+       "text": "0.60",
+       "why": "This is the ratio before the session; the question asks for after."
+      }
+     ],
+     "solution": "After: 20:80 Hz ratio = 180 ÷ 450 = 0.40. Before it was 270 ÷ 450 = 0.60. The fall shows force lost mainly at low frequency."
+    },
+    {
+     "id": "c",
+     "stem": "Before a race-pace brick session, a triathlete's quadriceps give 320 N at 20 Hz and 500 N at 80 Hz. Three hours after, 256 N and 490 N. What is the 20:80 Hz force ratio after?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.52",
+       "correct": true,
+       "why": "Right: 256 ÷ 490 = 0.52, down from 0.64 before: low-frequency fatigue."
+      },
+      {
+       "id": "b",
+       "text": "1.91",
+       "why": "This divides the 80 Hz force by the 20 Hz force (490 ÷ 256); the ratio is 20 Hz ÷ 80 Hz."
+      },
+      {
+       "id": "c",
+       "text": "0.80",
+       "why": "This is the share of 20 Hz force kept (256 ÷ 320), not the 20:80 Hz ratio."
+      },
+      {
+       "id": "d",
+       "text": "0.64",
+       "why": "This is the ratio before the session; the question asks for after."
+      }
+     ],
+     "solution": "After: 20:80 Hz ratio = 256 ÷ 490 = 0.52. Before it was 320 ÷ 500 = 0.64. The fall shows force lost mainly at low frequency."
+    }
+   ]
+  },
+  {
+   "id": "re-lff-why",
+   "concept": "re-lff",
+   "bloom": "analyse",
+   "sources": [
+    "edwards1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The morning after a hard session, a coach tests a rider with a 5 s all-out sprint, and power looks normal. Why might the rider still be fatigued?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low-frequency fatigue can hide in a high-frequency sprint",
+       "correct": true,
+       "why": "Right: the loss is mainly at low firing rates, which a maximal sprint doesn't use."
+      },
+      {
+       "id": "b",
+       "text": "Sprint tests always overstate fatigue",
+       "why": "Here the sprint understates it, not overstates it."
+      },
+      {
+       "id": "c",
+       "text": "Fatigue can't last overnight, so he isn't fatigued",
+       "why": "Low-frequency fatigue lasts many hours."
+      },
+      {
+       "id": "d",
+       "text": "Sprint power depends only on glycogen",
+       "why": "A 5 s sprint relies mainly on PCr, not glycogen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-long-test",
+   "concept": "re-long",
+   "bloom": "analyse",
+   "sources": [
+    "carroll2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two athletes are tested for central fatigue 30 min after finishing: one after a 3 min maximal run, one after a marathon. Who is more likely to still show reduced voluntary activation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The marathoner",
+       "correct": true,
+       "why": "Right: after long exercise, voluntary activation may still be incomplete at 30 min."
+      },
+      {
+       "id": "b",
+       "text": "The 3 min runner",
+       "why": "Central fatigue after brief hard efforts usually recovers within 2 min."
+      },
+      {
+       "id": "c",
+       "text": "Both equally, as activation recovers at one rate",
+       "why": "Recovery depends on the type and length of exercise."
+      },
+      {
+       "id": "d",
+       "text": "Neither: activation is always back within 2 min",
+       "why": "That holds after brief efforts, not after long ones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-biphasic",
+   "concept": "re-glycogen",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "burke2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the first 4 h after exercise, what mainly drives fast glycogen resynthesis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The depletion itself, given carbohydrate",
+       "correct": true,
+       "why": "Right: low glycogen drives its own resynthesis when carbohydrate is provided."
+      },
+      {
+       "id": "b",
+       "text": "The intensity of the next session",
+       "why": "The next session sets how much is needed later, not the early rate."
+      },
+      {
+       "id": "c",
+       "text": "Protein eaten on its own",
+       "why": "Protein helps with carbohydrate when intake is short; alone it isn't the driver."
+      },
+      {
+       "id": "d",
+       "text": "Fat eaten after the session",
+       "why": "Fat isn't the raw material for muscle glycogen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-glycogen-plan",
+   "concept": "re-glycogen",
+   "bloom": "apply",
+   "sources": [
+    "burke2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete runs down much of her glycogen in a long Saturday ride and has a long run on Sunday morning, 20 h later. What best restores her stores?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate soon after, then enough through the day",
+       "correct": true,
+       "why": "Right: use the fast early phase, then match total intake to Sunday's needs."
+      },
+      {
+       "id": "b",
+       "text": "Nothing special: glycogen is full again within 2 h",
+       "why": "Refilling takes about a day and needs carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "Protein only, since glycogen is built from protein",
+       "why": "Glycogen is built from carbohydrate; protein only helps alongside it."
+      },
+      {
+       "id": "d",
+       "text": "A big breakfast on Sunday, nothing before",
+       "why": "That misses the fast early phase and most of the 24 h window."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-measure-match",
+   "concept": "re-measure",
+   "bloom": "analyse",
+   "sources": [
+    "halson2014",
+    "gandevia2001",
+    "edwards1977"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sports scientist wants to know whether a cyclist's remaining fatigue the day after a race is central or peripheral. Which test fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Twitch interpolation with a resting twitch",
+       "correct": true,
+       "why": "Right: activation shows the central part, the resting twitch the peripheral part."
+      },
+      {
+       "id": "b",
+       "text": "A countermovement jump",
+       "why": "A jump shows lost capacity, but not where it comes from."
+      },
+      {
+       "id": "c",
+       "text": "A rating of perceived exertion",
+       "why": "RPE reports how hard it feels, not where force is lost."
+      },
+      {
+       "id": "d",
+       "text": "Morning resting heart rate",
+       "why": "Heart rate reflects overall state, not the site of fatigue."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "The same scientist wants to know whether low-frequency fatigue is still present. Which test fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Force at 20 Hz and 80 Hz stimulation",
+       "correct": true,
+       "why": "Right: a lower 20:80 Hz ratio shows low-frequency fatigue."
+      },
+      {
+       "id": "b",
+       "text": "A maximal voluntary contraction",
+       "why": "MVC uses high firing rates and can miss low-frequency loss."
+      },
+      {
+       "id": "c",
+       "text": "A 5 s all-out sprint",
+       "why": "A sprint also uses high firing rates."
+      },
+      {
+       "id": "d",
+       "text": "A muscle biopsy for glycogen",
+       "why": "That measures fuel, not force at low frequency."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "re-marker-evaluate",
+   "concept": "re-measure",
+   "bloom": "evaluate",
+   "sources": [
+    "halson2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An app says a single morning heart-rate-variability score tells you if you're fully recovered. How should you judge this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sceptically: no single marker is that reliable",
+       "correct": true,
+       "why": "Right: no definitive marker exists; combine several and compare with your own baseline."
+      },
+      {
+       "id": "b",
+       "text": "Trust it: HRV is a proven definitive marker",
+       "why": "No single marker has that level of evidence."
+      },
+      {
+       "id": "c",
+       "text": "Ignore all monitoring, since none of it works",
+       "why": "Several tools help when combined and individualised."
+      },
+      {
+       "id": "d",
+       "text": "Trust it if the score uses population norms",
+       "why": "Comparing with your own baseline matters more than population norms."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

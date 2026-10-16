@@ -3,10 +3,21 @@
  "module": "t1a-muscle",
  "title": "Fibre types: slow, fast and faster",
  "goal": "Tell type I, IIa and IIx fibres apart by their myosin, speed, power, fatigue resistance and oxidative capacity, compare endurance and sprint muscles, and judge what a muscle biopsy can and can't tell you.",
- "requires": ["mus-crossbridge"],
+ "requires": [
+  "mus-crossbridge"
+ ],
  "lastReviewed": "2026-10-16",
  "steps": [
-  { "type": "question", "item": "ft-mhc-name", "variant": "a", "pretest": true },
+  {
+   "type": "terms",
+   "terms": [
+    "myosin-heavy-chain",
+    "type-iix-fibre",
+    "hybrid-fibre",
+    "sds-page",
+    "delta-efficiency"
+   ]
+  },
   {
    "type": "concept",
    "id": "ft-mhc",
@@ -17,7 +28,9 @@
      "id": "ft-mhc-marker",
      "text": "Myosin heavy chain isoforms are the standard marker of fibre type.",
      "grade": "strong",
-     "sources": ["schiaffino2011"],
+     "sources": [
+      "schiaffino2011"
+     ],
      "evidence": [
       {
        "source": "schiaffino2011",
@@ -30,7 +43,9 @@
      "id": "ft-three-types",
      "text": "Human limb muscle has three main fibre types: I, IIA and IIX (formerly called IIB).",
      "grade": "strong",
-     "sources": ["bottinelli2000"],
+     "sources": [
+      "bottinelli2000"
+     ],
      "evidence": [
       {
        "source": "bottinelli2000",
@@ -43,7 +58,9 @@
      "id": "ft-hybrids",
      "text": "Hybrid fibres that express more than one MHC isoform may be a significant share of all fibres.",
      "grade": "moderate",
-     "sources": ["plotkin2021"],
+     "sources": [
+      "plotkin2021"
+     ],
      "evidence": [
       {
        "source": "plotkin2021",
@@ -54,8 +71,15 @@
     }
    ]
   },
-  { "type": "question", "item": "ft-mhc-name", "variant": "b" },
-  { "type": "question", "item": "ft-hybrid" },
+  {
+   "type": "question",
+   "item": "ft-mhc-name",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ft-hybrid"
+  },
   {
    "type": "concept",
    "id": "ft-properties",
@@ -66,7 +90,9 @@
      "id": "ft-fatigue",
      "text": "Type I fibres are slow and fatigue resistant; type IIa are faster and less fatigue resistant; type IIx are fastest and highly fatigable.",
      "grade": "strong",
-     "sources": ["plotkin2021"],
+     "sources": [
+      "plotkin2021"
+     ],
      "evidence": [
       {
        "source": "plotkin2021",
@@ -79,7 +105,9 @@
      "id": "ft-vmax",
      "text": "In human single fibres, maximum shortening velocity and peak power are lower in type I than in fast fibres, and lower in IIA than in the fastest fast fibres.",
      "grade": "strong",
-     "sources": ["bottinelli1996"],
+     "sources": [
+      "bottinelli1996"
+     ],
      "evidence": [
       {
        "source": "bottinelli1996",
@@ -92,7 +120,9 @@
      "id": "ft-power",
      "text": "In one champion sprinter, peak power was about 35 W·L⁻¹ in IIx fibres, 17 in IIa and 2.5 in type I.",
      "grade": "weak",
-     "sources": ["trappe2015"],
+     "sources": [
+      "trappe2015"
+     ],
      "evidence": [
       {
        "source": "trappe2015",
@@ -103,8 +133,14 @@
     }
    ]
   },
-  { "type": "question", "item": "ft-match-fibre" },
-  { "type": "question", "item": "ft-match-sprint" },
+  {
+   "type": "question",
+   "item": "ft-match-fibre"
+  },
+  {
+   "type": "question",
+   "item": "ft-match-sprint"
+  },
   {
    "type": "concept",
    "id": "ft-athletes",
@@ -115,7 +151,9 @@
      "id": "ft-runners",
      "text": "Elite distance runners' gastrocnemius had a high share (79%) of slow-twitch fibres.",
      "grade": "moderate",
-     "sources": ["costill1976"],
+     "sources": [
+      "costill1976"
+     ],
      "evidence": [
       {
        "source": "costill1976",
@@ -128,7 +166,9 @@
      "id": "ft-sprinter",
      "text": "A world-class sprinter's vastus lateralis had 71% fast-twitch fibres, 24% of them pure IIx.",
      "grade": "weak",
-     "sources": ["trappe2015"],
+     "sources": [
+      "trappe2015"
+     ],
      "evidence": [
       {
        "source": "trappe2015",
@@ -141,7 +181,9 @@
      "id": "ft-spread",
      "text": "About 25% of people have under 35% or over 65% type I fibres in the vastus lateralis.",
      "grade": "moderate",
-     "sources": ["simoneau1995"],
+     "sources": [
+      "simoneau1995"
+     ],
      "evidence": [
       {
        "source": "simoneau1995",
@@ -154,7 +196,9 @@
      "id": "ft-iix-rare",
      "text": "In healthy, active young adults, pure type IIx fibres averaged about 0.1% of vastus lateralis fibres.",
      "grade": "moderate",
-     "sources": ["horwath2021"],
+     "sources": [
+      "horwath2021"
+     ],
      "evidence": [
       {
        "source": "horwath2021",
@@ -165,8 +209,14 @@
     }
    ]
   },
-  { "type": "question", "item": "ft-biopsy-athlete" },
-  { "type": "question", "item": "ft-sprinter-appraisal" },
+  {
+   "type": "question",
+   "item": "ft-biopsy-athlete"
+  },
+  {
+   "type": "question",
+   "item": "ft-sprinter-appraisal"
+  },
   {
    "type": "concept",
    "id": "ft-measure",
@@ -177,7 +227,9 @@
      "id": "ft-methods",
      "text": "Whole-sample (homogenate) electrophoresis gives the share of each MHC isoform but can't identify hybrid fibres; single-fibre typing is the best method.",
      "grade": "moderate",
-     "sources": ["plotkin2021"],
+     "sources": [
+      "plotkin2021"
+     ],
      "evidence": [
       {
        "source": "plotkin2021",
@@ -195,7 +247,9 @@
      "id": "ft-carnosine",
      "text": "Muscle carnosine measured by ¹H-MRS correlates with the area share of type II fibres.",
      "grade": "weak",
-     "sources": ["baguet2011"],
+     "sources": [
+      "baguet2011"
+     ],
      "evidence": [
       {
        "source": "baguet2011",
@@ -206,19 +260,27 @@
     }
    ]
   },
-  { "type": "question", "item": "ft-homogenate" },
-  { "type": "question", "item": "ft-carnosine" },
+  {
+   "type": "question",
+   "item": "ft-homogenate"
+  },
+  {
+   "type": "question",
+   "item": "ft-carnosine"
+  },
   {
    "type": "concept",
    "id": "ft-limits",
    "title": "Reading fibre-type numbers with care",
-   "text": "**One biopsy is a small window.** Fibre types are patchy within a muscle. Ten biopsies from the same thigh gave a within-person CV of 13–18% for fibre-type share [[c:ft-variability]]. To get the vastus lateralis within ±10 percentage points you need about three biopsies with at least 200 fibres counted [[c:ft-three-biopsies]].\n\n**Links are not causes.** In 19 trained cyclists, those with more type I fibres were more efficient: r = 0.85 with delta efficiency [[c:ft-efficiency]]. A strong link, but a one-off measurement in one group of cyclists can't show that the fibres cause the efficiency, or rule out training history as a common cause.\n\nSo fibre-type figures are good for comparing groups, and weak for judging one athlete.",
+   "text": "**One biopsy is a small window.** Fibre types are patchy within a muscle. Ten biopsies from the same thigh gave a within-person CV of 13–18% for fibre-type share [[c:ft-variability]]. To get the vastus lateralis within ±10 percentage points you need about three biopsies with at least 200 fibres counted [[c:ft-three-biopsies]].\n\n**Links are not causes.** In 19 trained cyclists, those with more type I fibres were more efficient: r = 0.85 with [delta efficiency](g:delta-efficiency) [[c:ft-efficiency]]. A strong link, but a one-off measurement in one group of cyclists can't show that the fibres cause the efficiency, or rule out training history as a common cause.\n\nSo fibre-type figures are good for comparing groups, and weak for judging one athlete.",
    "claims": [
     {
      "id": "ft-variability",
      "text": "Within-person coefficients of variation for fibre-type share across repeated vastus lateralis biopsies were 13–18%, so single biopsies are unreliable for fibre type.",
      "grade": "moderate",
-     "sources": ["horwath2021"],
+     "sources": [
+      "horwath2021"
+     ],
      "evidence": [
       {
        "source": "horwath2021",
@@ -236,7 +298,9 @@
      "id": "ft-three-biopsies",
      "text": "Three biopsies with at least 200 fibres counted are needed to estimate vastus lateralis fibre type within ±10 percentage points.",
      "grade": "moderate",
-     "sources": ["vandecasteele2024"],
+     "sources": [
+      "vandecasteele2024"
+     ],
      "evidence": [
       {
        "source": "vandecasteele2024",
@@ -249,7 +313,9 @@
      "id": "ft-efficiency",
      "text": "In 19 trained cyclists, % type I fibres correlated with cycling efficiency (r = 0.85 with delta efficiency).",
      "grade": "weak",
-     "sources": ["coyle1992"],
+     "sources": [
+      "coyle1992"
+     ],
      "evidence": [
       {
        "source": "coyle1992",
@@ -260,9 +326,18 @@
     }
    ]
   },
-  { "type": "question", "item": "ft-biopsy-noise" },
-  { "type": "question", "item": "ft-iix-rare" },
-  { "type": "question", "item": "ft-coyle-appraisal" },
+  {
+   "type": "question",
+   "item": "ft-biopsy-noise"
+  },
+  {
+   "type": "question",
+   "item": "ft-iix-rare"
+  },
+  {
+   "type": "question",
+   "item": "ft-coyle-appraisal"
+  },
   {
    "type": "recap",
    "points": [
@@ -279,26 +354,63 @@
    "concept": "ft-mhc",
    "bloom": "remember",
    "recallFirst": true,
-   "sources": ["schiaffino2011", "bottinelli2000"],
+   "sources": [
+    "schiaffino2011",
+    "bottinelli2000"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "Human muscle fibres are classed as type I, IIa or IIx by which protein?",
      "options": [
-      { "id": "a", "text": "The isoform of myosin heavy chain they make", "correct": true, "why": "Right: MHC I, IIa and IIx define the three main types." },
-      { "id": "b", "text": "The isoform of actin they make", "why": "Skeletal muscle actin hardly differs between fibre types; myosin does." },
-      { "id": "c", "text": "The amount of myoglobin they hold", "why": "Myoglobin goes with oxidative capacity, but it isn't how types are defined." },
-      { "id": "d", "text": "The kind of troponin on their thin filaments", "why": "Troponin isoforms do differ, but the standard marker is the myosin heavy chain." }
+      {
+       "id": "a",
+       "text": "The isoform of myosin heavy chain they make",
+       "correct": true,
+       "why": "Right: MHC I, IIa and IIx define the three main types."
+      },
+      {
+       "id": "b",
+       "text": "The isoform of actin they make",
+       "why": "Skeletal muscle actin hardly differs between fibre types; myosin does."
+      },
+      {
+       "id": "c",
+       "text": "The amount of myoglobin they hold",
+       "why": "Myoglobin goes with oxidative capacity, but it isn't how types are defined."
+      },
+      {
+       "id": "d",
+       "text": "The kind of troponin on their thin filaments",
+       "why": "Troponin isoforms do differ, but the standard marker is the myosin heavy chain."
+      }
      ]
     },
     {
      "id": "b",
      "stem": "A lab reports that a cyclist's fibre is \"type IIa\". What has it measured to say so?",
      "options": [
-      { "id": "a", "text": "Which myosin heavy chain isoform the fibre contains", "correct": true, "why": "Right: type IIa means the fibre makes MHC IIa." },
-      { "id": "b", "text": "How many mitochondria the fibre contains", "why": "Mitochondrial content varies with training within each type; it doesn't define the type." },
-      { "id": "c", "text": "How thick the fibre is under the microscope", "why": "Fibre size changes with training and doesn't define the type." },
-      { "id": "d", "text": "How fast the fibre's nerve fires", "why": "Firing rate belongs to the motor neuron; the fibre type is set by its myosin." }
+      {
+       "id": "a",
+       "text": "Which myosin heavy chain isoform the fibre contains",
+       "correct": true,
+       "why": "Right: type IIa means the fibre makes MHC IIa."
+      },
+      {
+       "id": "b",
+       "text": "How many mitochondria the fibre contains",
+       "why": "Mitochondrial content varies with training within each type; it doesn't define the type."
+      },
+      {
+       "id": "c",
+       "text": "How thick the fibre is under the microscope",
+       "why": "Fibre size changes with training and doesn't define the type."
+      },
+      {
+       "id": "d",
+       "text": "How fast the fibre's nerve fires",
+       "why": "Firing rate belongs to the motor neuron; the fibre type is set by its myosin."
+      }
      ]
     }
    ]
@@ -308,16 +420,35 @@
    "concept": "ft-mhc",
    "bloom": "understand",
    "recallFirst": true,
-   "sources": ["plotkin2021"],
+   "sources": [
+    "plotkin2021"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "What is a hybrid fibre?",
      "options": [
-      { "id": "a", "text": "A fibre that makes two or more MHC isoforms at once", "correct": true, "why": "Right: for example I/IIa or IIa/IIx." },
-      { "id": "b", "text": "A fibre supplied by two different motor neurons", "why": "Each adult fibre has one motor neuron; hybrid refers to its myosin." },
-      { "id": "c", "text": "A fibre made of type I and type II cells fused together", "why": "A fibre is one cell; a hybrid is one cell making a mix of myosins." },
-      { "id": "d", "text": "A fibre that switches type within one race", "why": "Type changes take weeks to months of training, not one race." }
+      {
+       "id": "a",
+       "text": "A fibre that makes two or more MHC isoforms at once",
+       "correct": true,
+       "why": "Right: for example I/IIa or IIa/IIx."
+      },
+      {
+       "id": "b",
+       "text": "A fibre supplied by two different motor neurons",
+       "why": "Each adult fibre has one motor neuron; hybrid refers to its myosin."
+      },
+      {
+       "id": "c",
+       "text": "A fibre made of type I and type II cells fused together",
+       "why": "A fibre is one cell; a hybrid is one cell making a mix of myosins."
+      },
+      {
+       "id": "d",
+       "text": "A fibre that switches type within one race",
+       "why": "Type changes take weeks to months of training, not one race."
+      }
      ]
     }
    ]
@@ -326,16 +457,36 @@
    "id": "ft-match-fibre",
    "concept": "ft-properties",
    "bloom": "apply",
-   "sources": ["plotkin2021", "bottinelli1996"],
+   "sources": [
+    "plotkin2021",
+    "bottinelli1996"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "In a lab, a single fibre from a marathoner's calf shortens slowly, makes little power, and keeps its force over many minutes of repeated contractions. Which type is it most likely?",
      "options": [
-      { "id": "a", "text": "Type I", "correct": true, "why": "Right: slow, low power and fatigue resistant is the type I profile." },
-      { "id": "b", "text": "Type IIa", "why": "IIa fibres are faster and more powerful, and less fatigue resistant than type I." },
-      { "id": "c", "text": "Type IIx", "why": "IIx fibres are the fastest and tire quickly: the opposite profile." },
-      { "id": "d", "text": "A IIa/IIx hybrid", "why": "A IIa/IIx hybrid would be fast and fairly fatigable." }
+      {
+       "id": "a",
+       "text": "Type I",
+       "correct": true,
+       "why": "Right: slow, low power and fatigue resistant is the type I profile."
+      },
+      {
+       "id": "b",
+       "text": "Type IIa",
+       "why": "IIa fibres are faster and more powerful, and less fatigue resistant than type I."
+      },
+      {
+       "id": "c",
+       "text": "Type IIx",
+       "why": "IIx fibres are the fastest and tire quickly: the opposite profile."
+      },
+      {
+       "id": "d",
+       "text": "A IIa/IIx hybrid",
+       "why": "A IIa/IIx hybrid would be fast and fairly fatigable."
+      }
      ]
     }
    ]
@@ -344,16 +495,36 @@
    "id": "ft-match-sprint",
    "concept": "ft-properties",
    "bloom": "apply",
-   "sources": ["trappe2015", "plotkin2021"],
+   "sources": [
+    "trappe2015",
+    "plotkin2021"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "In the last 10 s of a criterium sprint, which fibre type gives the most power per volume of muscle, and what is its cost?",
      "options": [
-      { "id": "a", "text": "IIx: the most power, but it fatigues quickly", "correct": true, "why": "Right: IIx had about twice the power of IIa and 14 times type I, and is highly fatigable." },
-      { "id": "b", "text": "Type I: the most power, because it has the most mitochondria", "why": "Mitochondria set endurance, not peak power; type I has the lowest power." },
-      { "id": "c", "text": "IIa: the most power, and it never fatigues", "why": "IIa is powerful and fairly oxidative, but IIx has more power and no fibre is fatigue-free." },
-      { "id": "d", "text": "All three equal, since they share one cross-bridge cycle", "why": "The cycle is the same in kind, but its speed differs with the MHC isoform, so power differs greatly." }
+      {
+       "id": "a",
+       "text": "IIx: the most power, but it fatigues quickly",
+       "correct": true,
+       "why": "Right: IIx had about twice the power of IIa and 14 times type I, and is highly fatigable."
+      },
+      {
+       "id": "b",
+       "text": "Type I: the most power, because it has the most mitochondria",
+       "why": "Mitochondria set endurance, not peak power; type I has the lowest power."
+      },
+      {
+       "id": "c",
+       "text": "IIa: the most power, and it never fatigues",
+       "why": "IIa is powerful and fairly oxidative, but IIx has more power and no fibre is fatigue-free."
+      },
+      {
+       "id": "d",
+       "text": "All three equal, since they share one cross-bridge cycle",
+       "why": "The cycle is the same in kind, but its speed differs with the MHC isoform, so power differs greatly."
+      }
      ]
     }
    ]
@@ -362,16 +533,36 @@
    "id": "ft-biopsy-athlete",
    "concept": "ft-athletes",
    "bloom": "apply",
-   "sources": ["costill1976", "trappe2015"],
+   "sources": [
+    "costill1976",
+    "trappe2015"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "Biopsies of four athletes' calf muscles show 80%, 50%, 35% and 25% type I fibres. Which athlete is most likely the elite 10,000 m runner?",
      "options": [
-      { "id": "a", "text": "The one with 80% type I", "correct": true, "why": "Right: elite distance runners averaged about 79% slow-twitch fibres in the gastrocnemius." },
-      { "id": "b", "text": "The one with 50% type I", "why": "About half type I is typical of untrained people, not elite distance runners." },
-      { "id": "c", "text": "The one with 35% type I", "why": "A low type I share fits a sprint or power profile." },
-      { "id": "d", "text": "The one with 25% type I", "why": "This is a sprinter's profile: the champion hurdler had about 71% fast fibres." }
+      {
+       "id": "a",
+       "text": "The one with 80% type I",
+       "correct": true,
+       "why": "Right: elite distance runners averaged about 79% slow-twitch fibres in the gastrocnemius."
+      },
+      {
+       "id": "b",
+       "text": "The one with 50% type I",
+       "why": "About half type I is typical of untrained people, not elite distance runners."
+      },
+      {
+       "id": "c",
+       "text": "The one with 35% type I",
+       "why": "A low type I share fits a sprint or power profile."
+      },
+      {
+       "id": "d",
+       "text": "The one with 25% type I",
+       "why": "This is a sprinter's profile: the champion hurdler had about 71% fast fibres."
+      }
      ]
     }
    ]
@@ -380,16 +571,35 @@
    "id": "ft-sprinter-appraisal",
    "concept": "ft-athletes",
    "bloom": "evaluate",
-   "sources": ["trappe2015"],
+   "sources": [
+    "trappe2015"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A coach reads that a world-champion hurdler had 24% pure IIx fibres and concludes: \"To sprint at world level you need about a quarter IIx fibres.\" What is the main weakness of this conclusion?",
      "options": [
-      { "id": "a", "text": "It rests on one athlete, who may be unusual even among sprinters", "correct": true, "why": "Right: a case study (n = 1) can describe one person, not set a requirement for a group." },
-      { "id": "b", "text": "IIx fibres don't exist in human muscle", "why": "Human muscle has MHC IIx fibres; they are just rare in most people." },
-      { "id": "c", "text": "Sprinting depends on type I fibres, not type II", "why": "Fast fibres matter more for sprinting; the issue is the sample size, not the direction." },
-      { "id": "d", "text": "Biopsies can't tell IIx from IIa fibres", "why": "Single-fibre SDS-PAGE separates MHC IIa from IIx; this study used it." }
+      {
+       "id": "a",
+       "text": "It rests on one athlete, who may be unusual even among sprinters",
+       "correct": true,
+       "why": "Right: a case study (n = 1) can describe one person, not set a requirement for a group."
+      },
+      {
+       "id": "b",
+       "text": "IIx fibres don't exist in human muscle",
+       "why": "Human muscle has MHC IIx fibres; they are just rare in most people."
+      },
+      {
+       "id": "c",
+       "text": "Sprinting depends on type I fibres, not type II",
+       "why": "Fast fibres matter more for sprinting; the issue is the sample size, not the direction."
+      },
+      {
+       "id": "d",
+       "text": "Biopsies can't tell IIx from IIa fibres",
+       "why": "Single-fibre SDS-PAGE separates MHC IIa from IIx; this study used it."
+      }
      ]
     }
    ]
@@ -398,16 +608,35 @@
    "id": "ft-homogenate",
    "concept": "ft-measure",
    "bloom": "analyse",
-   "sources": ["plotkin2021"],
+   "sources": [
+    "plotkin2021"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A study grinds up a whole biopsy from a triathlete's thigh and runs SDS-PAGE: 55% MHC I, 40% MHC IIa, 5% MHC IIx. What can't this result tell you?",
      "options": [
-      { "id": "a", "text": "How many fibres are hybrids rather than pure types", "correct": true, "why": "Right: a ground-up sample gives total isoform shares, so it can't say which fibres hold a mix." },
-      { "id": "b", "text": "Whether the sample contains any MHC IIx", "why": "It can: the IIx band is measured (5%)." },
-      { "id": "c", "text": "The share of myosin that is the slow isoform", "why": "That is exactly what it reports: 55% MHC I." },
-      { "id": "d", "text": "Whether the sample was taken from muscle", "why": "Finding MHC isoforms at all shows it is muscle; this is no limit of the method." }
+      {
+       "id": "a",
+       "text": "How many fibres are hybrids rather than pure types",
+       "correct": true,
+       "why": "Right: a ground-up sample gives total isoform shares, so it can't say which fibres hold a mix."
+      },
+      {
+       "id": "b",
+       "text": "Whether the sample contains any MHC IIx",
+       "why": "It can: the IIx band is measured (5%)."
+      },
+      {
+       "id": "c",
+       "text": "The share of myosin that is the slow isoform",
+       "why": "That is exactly what it reports: 55% MHC I."
+      },
+      {
+       "id": "d",
+       "text": "Whether the sample was taken from muscle",
+       "why": "Finding MHC isoforms at all shows it is muscle; this is no limit of the method."
+      }
      ]
     }
    ]
@@ -416,16 +645,35 @@
    "id": "ft-carnosine",
    "concept": "ft-measure",
    "bloom": "apply",
-   "sources": ["baguet2011"],
+   "sources": [
+    "baguet2011"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A magnetic resonance scan shows a young runner's calf carnosine is well above the reference value. Without a biopsy, what is the best tentative reading?",
      "options": [
-      { "id": "a", "text": "A larger share of type II fibres, suggesting a sprint profile", "correct": true, "why": "Right: carnosine rises with the type II area share; explosive athletes had about 30% more than average." },
-      { "id": "b", "text": "A larger share of type I fibres, suggesting an endurance profile", "why": "The reverse: endurance athletes had about 20% less carnosine than average." },
-      { "id": "c", "text": "More mitochondria, suggesting heavy endurance training", "why": "Carnosine tracks fibre type area, not mitochondrial content." },
-      { "id": "d", "text": "Nothing, since carnosine has no link with fibre type", "why": "Carnosine correlated with type II area, though the check against biopsies was small." }
+      {
+       "id": "a",
+       "text": "A larger share of type II fibres, suggesting a sprint profile",
+       "correct": true,
+       "why": "Right: carnosine rises with the type II area share; explosive athletes had about 30% more than average."
+      },
+      {
+       "id": "b",
+       "text": "A larger share of type I fibres, suggesting an endurance profile",
+       "why": "The reverse: endurance athletes had about 20% less carnosine than average."
+      },
+      {
+       "id": "c",
+       "text": "More mitochondria, suggesting heavy endurance training",
+       "why": "Carnosine tracks fibre type area, not mitochondrial content."
+      },
+      {
+       "id": "d",
+       "text": "Nothing, since carnosine has no link with fibre type",
+       "why": "Carnosine correlated with type II area, though the check against biopsies was small."
+      }
      ]
     }
    ]
@@ -434,16 +682,36 @@
    "id": "ft-biopsy-noise",
    "concept": "ft-limits",
    "bloom": "analyse",
-   "sources": ["horwath2021", "vandecasteele2024"],
+   "sources": [
+    "horwath2021",
+    "vandecasteele2024"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "A triathlete has one thigh biopsy in spring (55% type I) and one in autumn (63% type I), with a season of training between. What is the best reading?",
      "options": [
-      { "id": "a", "text": "The change fits within single-biopsy noise, so no shift is shown", "correct": true, "why": "Right: one biopsy has a CV of 13–18%, and ±10 percentage points needs about three biopsies." },
-      { "id": "b", "text": "Training turned 8% of her fibres from type II to type I", "why": "8 percentage points is within the sampling error of single biopsies; it may not be a real change." },
-      { "id": "c", "text": "Her muscle grew new type I fibres over the season", "why": "Even if the change were real, it wouldn't show new fibres; and here it may be noise." },
-      { "id": "d", "text": "The spring biopsy must have been taken wrongly", "why": "No error is needed: patchy fibre types make single samples differ." }
+      {
+       "id": "a",
+       "text": "The change fits within single-biopsy noise, so no shift is shown",
+       "correct": true,
+       "why": "Right: one biopsy has a CV of 13–18%, and ±10 percentage points needs about three biopsies."
+      },
+      {
+       "id": "b",
+       "text": "Training turned 8% of her fibres from type II to type I",
+       "why": "8 percentage points is within the sampling error of single biopsies; it may not be a real change."
+      },
+      {
+       "id": "c",
+       "text": "Her muscle grew new type I fibres over the season",
+       "why": "Even if the change were real, it wouldn't show new fibres; and here it may be noise."
+      },
+      {
+       "id": "d",
+       "text": "The spring biopsy must have been taken wrongly",
+       "why": "No error is needed: patchy fibre types make single samples differ."
+      }
      ]
     }
    ]
@@ -452,16 +720,35 @@
    "id": "ft-iix-rare",
    "concept": "ft-athletes",
    "bloom": "understand",
-   "sources": ["horwath2021"],
+   "sources": [
+    "horwath2021"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "How common are pure type IIx fibres in the thigh muscle of healthy, active young adults?",
      "options": [
-      { "id": "a", "text": "Rare: about 0.1% of fibres on average", "correct": true, "why": "Right: most samples had none; pure IIx averaged 0.1% of fibres." },
-      { "id": "b", "text": "About a quarter of all fibres", "why": "24% IIx was found in one champion sprinter, an exception." },
-      { "id": "c", "text": "About half of all fibres", "why": "That is closer to the type I share in many people." },
-      { "id": "d", "text": "Absent, since humans have no IIx myosin", "why": "Humans do have MHC IIx; it is just rare in active muscle." }
+      {
+       "id": "a",
+       "text": "Rare: about 0.1% of fibres on average",
+       "correct": true,
+       "why": "Right: most samples had none; pure IIx averaged 0.1% of fibres."
+      },
+      {
+       "id": "b",
+       "text": "About a quarter of all fibres",
+       "why": "24% IIx was found in one champion sprinter, an exception."
+      },
+      {
+       "id": "c",
+       "text": "About half of all fibres",
+       "why": "That is closer to the type I share in many people."
+      },
+      {
+       "id": "d",
+       "text": "Absent, since humans have no IIx myosin",
+       "why": "Humans do have MHC IIx; it is just rare in active muscle."
+      }
      ]
     }
    ]
@@ -470,16 +757,35 @@
    "id": "ft-coyle-appraisal",
    "concept": "ft-limits",
    "bloom": "evaluate",
-   "sources": ["coyle1992"],
+   "sources": [
+    "coyle1992"
+   ],
    "variants": [
     {
      "id": "a",
      "stem": "In 19 trained cyclists, % type I fibres correlated with cycling efficiency (r = 0.85). What limits the claim that having more type I fibres makes a cyclist more efficient?",
      "options": [
-      { "id": "a", "text": "It measured each rider once, so it shows a link, not cause", "correct": true, "why": "Right: a cross-sectional link can't show which comes first, or rule out a third factor such as years of training." },
-      { "id": "b", "text": "r = 0.85 is too weak to mean anything", "why": "0.85 is a strong correlation; the problem is the design, not the size." },
-      { "id": "c", "text": "Efficiency can't be measured on a cycle ergometer", "why": "Gross and delta efficiency are routinely measured on ergometers from VO₂ and RER." },
-      { "id": "d", "text": "Type I fibres are found only in runners, not cyclists", "why": "Cyclists' thighs had 32–76% type I fibres in this very study." }
+      {
+       "id": "a",
+       "text": "It measured each rider once, so it shows a link, not cause",
+       "correct": true,
+       "why": "Right: a cross-sectional link can't show which comes first, or rule out a third factor such as years of training."
+      },
+      {
+       "id": "b",
+       "text": "r = 0.85 is too weak to mean anything",
+       "why": "0.85 is a strong correlation; the problem is the design, not the size."
+      },
+      {
+       "id": "c",
+       "text": "Efficiency can't be measured on a cycle ergometer",
+       "why": "Gross and delta efficiency are routinely measured on ergometers from VO₂ and RER."
+      },
+      {
+       "id": "d",
+       "text": "Type I fibres are found only in runners, not cyclists",
+       "why": "Cyclists' thighs had 32–76% type I fibres in this very study."
+      }
      ]
     }
    ]

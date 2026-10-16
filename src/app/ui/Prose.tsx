@@ -16,7 +16,10 @@ function inline(text: string, claims: Claim[], prefix: string, pops: ReactNode[]
     .split(/(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[\[c:[a-z0-9-]+\]\]|\[[^\]]+\]\(g:[a-z0-9-]+\))/g)
     .map((part, i) => {
       const key = `${prefix}-${i}`;
-      if (part.startsWith("**")) return <strong key={key}>{part.slice(2, -2)}</strong>;
+      // Bold may hold a term link or a badge: render its inside the same way.
+      if (part.startsWith("**")) {
+        return <strong key={key}>{inline(part.slice(2, -2), claims, `${key}b`, pops)}</strong>;
+      }
       if (part.startsWith("[[c:")) {
         const claim = claims.find((c) => c.id === part.slice(4, -2));
         if (!claim) return null;

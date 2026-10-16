@@ -66,9 +66,7 @@ describe("answer", () => {
     expect(state?.fsrs.reps).toBe(1);
   });
 
-  it("doesn't schedule pretest answers, and a sure right answer is done for the day", async () => {
-    await answer("u1", { ...base, optionId: "b", sure: false, context: "pretest" });
-    expect(await db.select().from(itemStates)).toEqual([]);
+  it("is done for the day after a sure right answer", async () => {
     await answer("u1", { ...base, optionId: "a", sure: true, context: "lesson" });
     expect(await dueItems("u1")).toEqual([]);
     expect((await counts("u1")).confidentMisses).toBe(0);

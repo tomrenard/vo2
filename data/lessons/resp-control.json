@@ -1,0 +1,884 @@
+{
+ "id": "resp-control",
+ "module": "t1b-respiratory",
+ "title": "Control of breathing in exercise",
+ "goal": "Explain what drives breathing during exercise, why CO₂ rather than O₂ sets ventilation at moderate intensity, and what changes in heavy exercise.",
+ "requires": [
+  "resp-gas-exchange"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "central-chemoreceptor",
+    "peripheral-chemoreceptor",
+    "central-command",
+    "group-iii-iv-afferents"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ctl-sensors",
+   "title": "What the breathing centres listen to",
+   "text": "The brainstem runs breathing: the medulla and pons set the rate and depth, in response to what is happening in the blood [[c:centres]].\n\nSurprisingly, the main chemical stimulus is not O₂ but CO₂ [[c:co2-main]]. CO₂ moves easily into the brain, where it raises H⁺. [Central chemoreceptors](g:central-chemoreceptor) sense that H⁺ and drive the breathing muscles [[c:central-chemo]].\n\n[Peripheral chemoreceptors](g:peripheral-chemoreceptor), in the carotid arteries and the aortic arch, sense blood H⁺ and also O₂. But their push on breathing for O₂ becomes strong only when arterial PO₂ drops a long way, to about 60 mmHg or less [[c:o2-60]]. A healthy arterial PO₂ at sea level, about 100 mmHg, is far above that.",
+   "claims": [
+    {
+     "id": "centres",
+     "text": "The medulla oblongata and pons regulate the rate and depth of breathing in response to signals from the blood.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "The respiratory rate and the depth of inspiration are regulated by the medulla oblongata and pons; however, these regions of the brain do so in response to systemic stimuli.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "co2-main",
+     "text": "The main stimulus for breathing is the blood's CO₂ concentration, not its O₂.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "The major factor that stimulates the medulla oblongata and pons to produce respiration is surprisingly not oxygen concentration, but rather the concentration of carbon dioxide in the blood.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "central-chemo",
+     "text": "Rising CO₂ raises H⁺ in the brain, which the central chemoreceptors sense to drive the breathing muscles.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "As will be explained in more detail later, increased carbon dioxide levels lead to increased levels of hydrogen ions, decreasing pH.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The increase in hydrogen ions in the brain triggers the central chemoreceptors to stimulate the respiratory centers to initiate contraction of the diaphragm and intercostal muscles.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "o2-60",
+     "text": "Peripheral chemoreceptors in the aortic arch and carotid arteries sense H⁺, and raise breathing strongly for O₂ only when blood O₂ falls to about 60 mmHg or less.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Peripheral chemoreceptors of the aortic arch and carotid arteries sense arterial levels of hydrogen ions.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "If blood oxygen levels become quite low—about 60 mm Hg or less—then peripheral chemoreceptors stimulate an increase in respiratory activity.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ctl-co2-main",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ctl-receptors"
+  },
+  {
+   "type": "question",
+   "item": "ctl-o2-60"
+  },
+  {
+   "type": "concept",
+   "id": "ctl-co2-drive",
+   "title": "Breathing follows CO₂ at moderate intensity",
+   "text": "Below the [lactate threshold](g:lactate-threshold), ventilation rises in close proportion to CO₂ output, which holds arterial PCO₂ steady near 40 mmHg [[c:ve-vco2]]. Alveolar ventilation is set by the CO₂ to clear: double the CO₂ output, and V̇A must double to keep PCO₂ where it was.\n\nO₂ can't be the driver here. Arterial PO₂ stays near 100 mmHg, far above the 60 mmHg where the O₂ sensors respond. No sensor measures the rate of gas exchange itself [[c:no-sensor]], and how breathing is matched so closely to CO₂ output is still unclear [[c:match-unclear]].\n\nSo on a steady ride your breathing tracks the CO₂ you make. It seems to track O₂ only because, below the threshold, O₂ use and CO₂ output rise together.",
+   "claims": [
+    {
+     "id": "ve-vco2",
+     "text": "Below the lactate threshold, ventilation responds in close proportion to CO₂ output, regulating arterial PCO₂.",
+     "grade": "strong",
+     "sources": [
+      "ward2007",
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "ward2007",
+       "quote": "Below the lactate threshold ((thetaL)), ventilation (V(E))responds in close proportion to CO(2) output to regulate arterial partial pressure of CO(2) (PaCO2).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "no-sensor",
+     "text": "No known mechanism directly senses the rate of gas exchange in the muscles or lungs.",
+     "grade": "strong",
+     "sources": [
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "forster2012",
+       "quote": "There is no known mechanism capable of directly sensing the rate of gas exchange in the muscles or the lungs",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "match-unclear",
+     "text": "How exercise breathing is matched to CO₂ output is unclear: no single stimulus or combination of stimuli explains it.",
+     "grade": "strong",
+     "sources": [
+      "ward2007",
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "ward2007",
+       "quote": "While ventilatory control models have traditionally included proportional feedback (central and carotid chemosensory) and feedforward (central and peripheral neurogenic) elements, the mechanisms involved remain unclear.",
+       "level": "abstract"
+      },
+      {
+       "source": "forster2012",
+       "quote": "First, a single stimulus or combination of stimuli that convincingly and entirely explains the hyperpnea has not been identified.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ctl-vco2-example",
+   "title": "Holding PCO₂ steady on a climb",
+   "problem": "On the flat, a rider's CO₂ output is 1.0 L·min⁻¹ and her alveolar ventilation is 25 L·min⁻¹, which keeps her PCO₂ at 40 mmHg. On a climb her CO₂ output rises to 2.0 L·min⁻¹. What alveolar ventilation keeps PCO₂ at 40 mmHg?",
+   "steps": [
+    "To hold PCO₂ steady, alveolar ventilation must rise in proportion to CO₂ output.",
+    "CO₂ output has gone up by 2.0 ÷ 1.0 = 2 times.",
+    "V̇A = 25 × 2 = 50 L·min⁻¹.",
+    "If V̇A stayed at 25 L·min⁻¹, CO₂ would build up and PCO₂ would rise: that is what the chemoreceptors work to prevent."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ctl-vco2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ctl-why-co2"
+  },
+  {
+   "type": "concept",
+   "id": "ctl-inputs",
+   "title": "Three inputs during exercise",
+   "text": "What drives the rise in breathing during exercise is still argued over, but three inputs are widely accepted.\n\n- **[Central command](g:central-command):** the brain's drive to the muscles also drives breathing. Ventilation jumps as exercise starts and drops the moment it stops, too fast for blood chemistry [[c:onset-neural]].\n- **Muscle feedback:** [group III/IV afferents](g:group-iii-iv-afferents) in working muscle add drive. Blocking them in five men cut ventilation relative to CO₂ output by 8–17% and raised end-tidal PCO₂ by 4–7 mmHg [[c:afferents]].\n- **Chemoreceptors** fine-tune around these to hold PCO₂.\n\nOne model splits the work: f follows central command and muscle feedback, VT follows metabolic inputs [[c:fr-vt-model]].",
+   "claims": [
+    {
+     "id": "onset-neural",
+     "text": "Ventilation rises immediately at the start of exercise and falls immediately when it ends, consistent with neural (central command and limb) inputs; central command is supported by several studies but not proven.",
+     "grade": "moderate",
+     "sources": [
+      "betts2022",
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "These neural factors are consistent with the sudden increase in ventilation that is observed immediately as exercise begins.",
+       "level": "full-text"
+      },
+      {
+       "source": "forster2012",
+       "quote": "neural feed-forward (central command) mediation of the exercise hyperpnea seems intuitive and is supported by data from several studies. However, there is no compelling evidence to accept this concept as an indisputable fact.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "afferents",
+     "text": "Blocking group III/IV muscle afferents with intrathecal fentanyl lowered ventilation relative to CO₂ output by 8–17% and raised end-tidal PCO₂ by 4–7 mmHg; spinal afferents from exercising limbs contribute to exercise breathing.",
+     "grade": "moderate",
+     "sources": [
+      "amann2010",
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "amann2010",
+       "quote": "Compared with placebo, a substantial hypoventilation during fentanyl exercise was indicated by the 8-17% reduction in VE/CO(2) production (VCO(2)) secondary to a reduced breathing frequency, leading to average increases of 4-7 Torr in end-tidal PCO(2)",
+       "level": "abstract"
+      },
+      {
+       "source": "forster2012",
+       "quote": "Fourth, stimuli originating in exercising limbs and conveyed to the brain by spinal afferents contribute to the exercise hyperpnea.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fr-vt-model",
+     "text": "In one model, breathing frequency is mainly set by central command and muscle afferent feedback, while tidal volume is set by metabolic inputs.",
+     "grade": "weak",
+     "sources": [
+      "nicolo2023"
+     ],
+     "evidence": [
+      {
+       "source": "nicolo2023",
+       "quote": "fR is primarily modulated by central command (especially during high-intensity exercise) and muscle afferent feedback (especially during moderate exercise) whereas VT by metabolic inputs.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can we explain what drives breathing during exercise?",
+    "sides": [
+     {
+      "position": "Not yet: no single stimulus or combination explains the rise fully, and even central command, though likely, isn't proven.",
+      "sources": [
+       "forster2012"
+      ]
+     },
+     {
+      "position": "Largely: a model where central command and muscle feedback set breathing frequency and metabolic inputs set tidal volume fits many exercise conditions.",
+      "sources": [
+       "nicolo2023"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ctl-onset",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ctl-fentanyl"
+  },
+  {
+   "type": "question",
+   "item": "ctl-amann-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "ctl-fr-vt"
+  },
+  {
+   "type": "concept",
+   "id": "ctl-heavy",
+   "title": "Heavy exercise: breathing outruns CO₂",
+   "text": "In heavy exercise the pattern changes. As [acid](g:acidosis) builds up beyond the lactate threshold, extra breathing eventually drives arterial PCO₂ *down*, which limits the fall in blood pH [[c:heavy-hyperventilation]]. You now breathe more than CO₂ output alone would need. In the next lesson this shows up as the second ventilatory threshold.\n\nWhere the extra drive comes from is not settled. One review calls it probably carotid-body driven; another concludes it is not mainly lactic acid acting on the carotid chemoreceptors [[c:carotid-debate]].\n\nIn a hard 10 km or a 20 min climb, that is the shift from steady, deep breathing to the fast, ragged breathing of the last minutes.",
+   "claims": [
+    {
+     "id": "heavy-hyperventilation",
+     "text": "Above the lactate threshold, compensatory hyperventilation drives arterial PCO₂ down to limit the fall in arterial pH.",
+     "grade": "moderate",
+     "sources": [
+      "ward2007"
+     ],
+     "evidence": [
+      {
+       "source": "ward2007",
+       "quote": "Above (thetaL), PaCO2 is driven down to constrain the fall of arterial pH by a compensatory hyperventilation, probably of carotid body origin.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "carotid-debate",
+     "text": "What drives the extra breathing of heavy exercise is unsettled: one review says probably the carotid bodies, another that it is not mainly lactic acid acting on the carotid chemoreceptors.",
+     "grade": "disputed",
+     "sources": [
+      "ward2007",
+      "forster2012"
+     ],
+     "evidence": [
+      {
+       "source": "ward2007",
+       "quote": "by a compensatory hyperventilation, probably of carotid body origin",
+       "level": "abstract"
+      },
+      {
+       "source": "forster2012",
+       "quote": "Fifth, the hyperventilation during heavy exercise is not primarily due to lactacidosis stimulation of carotid chemoreceptors.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ctl-heavy"
+  },
+  {
+   "type": "question",
+   "item": "ctl-carotid-debate"
+  },
+  {
+   "type": "question",
+   "item": "ctl-vco2-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The medulla and pons run breathing; the main chemical stimulus is CO₂, sensed as H⁺ by central chemoreceptors in the brainstem.",
+    "Peripheral chemoreceptors (carotid, aortic) respond to O₂ only when arterial PO₂ falls to about 60 mmHg or less, far below normal.",
+    "Below the lactate threshold, ventilation rises in proportion to CO₂ output and holds arterial PCO₂ steady: twice the CO₂, twice the alveolar ventilation.",
+    "Central command, muscle feedback (group III/IV afferents) and chemoreceptors all contribute; no single input fully explains exercise breathing.",
+    "In heavy exercise, extra breathing drives PCO₂ down to limit the fall in pH; where that drive comes from is debated."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ctl-co2-main",
+   "concept": "ctl-sensors",
+   "bloom": "understand",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At sea level, which change in the blood is the main chemical stimulus to breathe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rise in CO₂, and the H⁺ it makes",
+       "correct": true,
+       "why": "Right: CO₂, sensed as H⁺ by the central chemoreceptors, is the main stimulus."
+      },
+      {
+       "id": "b",
+       "text": "A fall in O₂",
+       "why": "O₂ drives breathing strongly only when arterial PO₂ falls to about 60 mmHg or less, far below normal."
+      },
+      {
+       "id": "c",
+       "text": "A rise in lactate",
+       "why": "Lactate doesn't drive normal breathing; acid matters in heavy exercise, and how much is debated."
+      },
+      {
+       "id": "d",
+       "text": "A fall in blood glucose",
+       "why": "Glucose is not sensed by the breathing centres."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist holds her breath at a red light. After 30 s the urge to breathe is strong. What mostly creates it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "CO₂ building up in her blood",
+       "correct": true,
+       "why": "Right: CO₂ rises fast without breathing, and CO₂ (as H⁺) is the main stimulus."
+      },
+      {
+       "id": "b",
+       "text": "O₂ falling below 60 mmHg",
+       "why": "After 30 s arterial PO₂ is still well above 60 mmHg; the O₂ sensors are barely involved."
+      },
+      {
+       "id": "c",
+       "text": "Lactate from her legs",
+       "why": "She is sitting still; no lactate build-up drives the urge."
+      },
+      {
+       "id": "d",
+       "text": "Her lungs stretching",
+       "why": "Stretch receptors guard against over-inflation; they don't create the urge after a breath-hold."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-receptors",
+   "concept": "ctl-sensors",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where are the central chemoreceptors, and what do they sense?",
+     "options": [
+      {
+       "id": "a",
+       "text": "In the brainstem; H⁺ made from CO₂",
+       "correct": true,
+       "why": "Right: CO₂ moves into the brain and raises H⁺, which they sense."
+      },
+      {
+       "id": "b",
+       "text": "In the carotid arteries; low O₂",
+       "why": "Those are the peripheral chemoreceptors."
+      },
+      {
+       "id": "c",
+       "text": "In the lungs; how far they stretch",
+       "why": "Those are stretch receptors, not chemoreceptors."
+      },
+      {
+       "id": "d",
+       "text": "In working muscle; metabolites",
+       "why": "Those are group III/IV muscle afferents, not chemoreceptors."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-o2-60",
+   "concept": "ctl-sensors",
+   "bloom": "apply",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a hard 10 km at sea level, a runner's arterial PO₂ is 95 mmHg. Are her O₂ sensors driving her breathing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hardly: they respond strongly only at about 60 mmHg or less",
+       "correct": true,
+       "why": "Right: 95 mmHg is far above the point where the peripheral chemoreceptors push breathing up for O₂."
+      },
+      {
+       "id": "b",
+       "text": "Yes: any fall below 100 mmHg drives breathing hard",
+       "why": "The O₂ response is weak until PO₂ drops a long way, to about 60 mmHg."
+      },
+      {
+       "id": "c",
+       "text": "Yes: low O₂ is the main driver of exercise breathing",
+       "why": "CO₂ and neural inputs drive exercise breathing; O₂ stays far above the trigger."
+      },
+      {
+       "id": "d",
+       "text": "No: peripheral chemoreceptors sense only CO₂",
+       "why": "They sense O₂ too, plus H⁺; they just need a large fall in O₂ to respond."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-vco2-calc",
+   "concept": "ctl-co2-drive",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "ward2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's CO₂ output rises from 1.2 to 3.0 L·min⁻¹ as she speeds up. At 1.2 L·min⁻¹ her alveolar ventilation was 30 L·min⁻¹. What alveolar ventilation keeps her PCO₂ unchanged?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75 L·min⁻¹",
+       "correct": true,
+       "why": "Right: CO₂ output rose 3.0 ÷ 1.2 = 2.5 times, so V̇A = 30 × 2.5 = 75 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "30 L·min⁻¹",
+       "why": "Unchanged PCO₂ doesn't mean unchanged ventilation: more CO₂ needs more V̇A to clear it."
+      },
+      {
+       "id": "c",
+       "text": "31.8 L·min⁻¹",
+       "why": "This adds the rise in CO₂ (1.8) to V̇A. They scale together: multiply, don't add."
+      },
+      {
+       "id": "d",
+       "text": "12 L·min⁻¹",
+       "why": "This divides by 2.5 instead of multiplying: more CO₂ needs more ventilation, not less."
+      }
+     ],
+     "solution": "V̇A rises in proportion to CO₂ output: 30 × (3.0 ÷ 1.2) = 30 × 2.5 = 75 L·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's CO₂ output rises from 1.0 to 2.0 L·min⁻¹ on a climb. At 1.0 L·min⁻¹ his alveolar ventilation was 24 L·min⁻¹. What alveolar ventilation keeps his PCO₂ unchanged?",
+     "options": [
+      {
+       "id": "a",
+       "text": "48 L·min⁻¹",
+       "correct": true,
+       "why": "Right: CO₂ output doubled, so V̇A doubles: 24 × 2 = 48 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "24 L·min⁻¹",
+       "why": "Unchanged PCO₂ doesn't mean unchanged ventilation: twice the CO₂ needs twice the V̇A."
+      },
+      {
+       "id": "c",
+       "text": "25 L·min⁻¹",
+       "why": "This adds the rise in CO₂ (1.0) to V̇A. Multiply, don't add."
+      },
+      {
+       "id": "d",
+       "text": "12 L·min⁻¹",
+       "why": "This halves V̇A: more CO₂ needs more ventilation, not less."
+      }
+     ],
+     "solution": "V̇A rises in proportion to CO₂ output: 24 × (2.0 ÷ 1.0) = 48 L·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "On the bike leg a triathlete's CO₂ output rises from 0.8 to 2.0 L·min⁻¹. At 0.8 L·min⁻¹ her alveolar ventilation was 20 L·min⁻¹. What alveolar ventilation keeps her PCO₂ unchanged?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 L·min⁻¹",
+       "correct": true,
+       "why": "Right: CO₂ output rose 2.0 ÷ 0.8 = 2.5 times, so V̇A = 20 × 2.5 = 50 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "20 L·min⁻¹",
+       "why": "Unchanged PCO₂ doesn't mean unchanged ventilation: more CO₂ needs more V̇A."
+      },
+      {
+       "id": "c",
+       "text": "21.2 L·min⁻¹",
+       "why": "This adds the rise in CO₂ (1.2) to V̇A. Multiply, don't add."
+      },
+      {
+       "id": "d",
+       "text": "8 L·min⁻¹",
+       "why": "This divides by 2.5 instead of multiplying."
+      }
+     ],
+     "solution": "V̇A rises in proportion to CO₂ output: 20 × (2.0 ÷ 0.8) = 20 × 2.5 = 50 L·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "ctl-why-co2",
+   "concept": "ctl-co2-drive",
+   "bloom": "analyse",
+   "sources": [
+    "ward2007",
+    "forster2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: \"At an easy pace we breathe to get O₂ in.\" Which observation best shows that, below the threshold, CO₂ is what breathing regulates?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ventilation rises in close proportion to CO₂ output and holds arterial PCO₂ steady",
+       "correct": true,
+       "why": "Right: arterial PCO₂ is held near 40 mmHg, while arterial PO₂ sits far above the O₂ sensors' trigger."
+      },
+      {
+       "id": "b",
+       "text": "Arterial PO₂ falls steadily as the pace rises",
+       "why": "It doesn't: in most people arterial PO₂ holds near 100 mmHg."
+      },
+      {
+       "id": "c",
+       "text": "Ventilation starts rising only once lactate appears",
+       "why": "Ventilation rises from the first step, long before any lactate threshold."
+      },
+      {
+       "id": "d",
+       "text": "Breathing pure O₂ doubles ventilation at an easy pace",
+       "why": "Extra O₂ doesn't drive breathing up; this isn't what happens."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-onset",
+   "concept": "ctl-inputs",
+   "bloom": "apply",
+   "sources": [
+    "betts2022",
+    "forster2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist starts a standing lap. Her ventilation jumps within the first breaths, before blood from her legs has reached her lungs. What best explains that first jump?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Central command: the brain drives breathing as it drives the legs",
+       "correct": true,
+       "why": "Right: the jump is too fast for blood chemistry, which fits a neural, feed-forward drive."
+      },
+      {
+       "id": "b",
+       "text": "A rise in arterial CO₂ reaching the brainstem",
+       "why": "Blood carrying the extra CO₂ hasn't reached the lungs or the brain yet."
+      },
+      {
+       "id": "c",
+       "text": "A fall in arterial O₂ sensed by the carotid bodies",
+       "why": "Arterial O₂ hasn't changed in the first breaths."
+      },
+      {
+       "id": "d",
+       "text": "Lactate from the legs stimulating the carotid bodies",
+       "why": "Lactate takes far longer to appear in the blood."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner stops at the end of a hard interval. His ventilation drops at once, even though his blood CO₂ is still high. What best explains the drop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The neural drive from the brain and the moving legs stops",
+       "correct": true,
+       "why": "Right: when central command and limb feedback stop, ventilation falls at once."
+      },
+      {
+       "id": "b",
+       "text": "His blood CO₂ falls instantly",
+       "why": "Blood CO₂ is still high; it takes time to clear."
+      },
+      {
+       "id": "c",
+       "text": "His arterial O₂ suddenly rises above 150 mmHg",
+       "why": "Arterial PO₂ can't exceed alveolar PO₂; this doesn't happen."
+      },
+      {
+       "id": "d",
+       "text": "His breathing muscles fatigue at that moment",
+       "why": "Fatigue wouldn't switch off at the exact moment he stops; the timing points to neural inputs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-fentanyl",
+   "concept": "ctl-inputs",
+   "bloom": "analyse",
+   "sources": [
+    "amann2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a study, a spinal injection blocked feedback from the leg muscles. At the same cycling workloads, ventilation relative to CO₂ output fell by 8–17% and end-tidal PCO₂ rose. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Feedback from working muscle normally adds to the drive to breathe",
+       "correct": true,
+       "why": "Right: without it, riders under-breathed for the CO₂ they made, so PCO₂ rose."
+      },
+      {
+       "id": "b",
+       "text": "The drug made the leg muscles produce less CO₂",
+       "why": "O₂ uptake, muscle activity and lactate were similar; it is breathing that changed."
+      },
+      {
+       "id": "c",
+       "text": "The drug acted directly on the brainstem",
+       "why": "The authors checked: resting CO₂ responses and arm exercise were barely affected."
+      },
+      {
+       "id": "d",
+       "text": "Muscle feedback normally slows breathing down",
+       "why": "Backwards: removing it lowered breathing, so it normally raises it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-amann-appraisal",
+   "concept": "ctl-inputs",
+   "bloom": "evaluate",
+   "sources": [
+    "amann2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "That muscle-feedback study was double-blind and placebo-controlled, in five men. What most limits its conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Five men give an imprecise effect and say little about women",
+       "correct": true,
+       "why": "Right: with n = 5 the 8–17% range is uncertain, and only men were tested."
+      },
+      {
+       "id": "b",
+       "text": "It had no placebo condition to compare against",
+       "why": "It did: placebo saline was injected in the same men."
+      },
+      {
+       "id": "c",
+       "text": "The workloads differed between the two conditions",
+       "why": "Workloads were the same (50, 100, 150 W and about 325 W) in both."
+      },
+      {
+       "id": "d",
+       "text": "Ventilation was guessed rather than measured",
+       "why": "Ventilation and end-tidal PCO₂ were measured breath by breath."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-fr-vt",
+   "concept": "ctl-inputs",
+   "bloom": "understand",
+   "sources": [
+    "nicolo2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Nicolò's model of breathing control, which part of ventilation mainly follows metabolic inputs such as CO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tidal volume",
+       "correct": true,
+       "why": "Right: VT is set by metabolic inputs; f by central command and muscle feedback."
+      },
+      {
+       "id": "b",
+       "text": "Breathing frequency",
+       "why": "In this model f follows central command and muscle feedback, which is why it tracks effort."
+      },
+      {
+       "id": "c",
+       "text": "Dead space",
+       "why": "Dead space is an anatomical volume, not a controlled output."
+      },
+      {
+       "id": "d",
+       "text": "Both equally",
+       "why": "The model's point is that the two are controlled differently."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-heavy",
+   "concept": "ctl-heavy",
+   "bloom": "understand",
+   "sources": [
+    "ward2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In heavy exercise, as acid builds up beyond the lactate threshold, what happens to arterial PCO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is eventually driven down by extra breathing",
+       "correct": true,
+       "why": "Right: compensatory hyperventilation lowers PCO₂, which limits the fall in pH."
+      },
+      {
+       "id": "b",
+       "text": "It rises because more CO₂ is being made",
+       "why": "More CO₂ is made, but breathing outruns it, so PCO₂ falls."
+      },
+      {
+       "id": "c",
+       "text": "It stays at 40 mmHg right to exhaustion",
+       "why": "That holds below the threshold; in heavy exercise breathing outruns CO₂ output."
+      },
+      {
+       "id": "d",
+       "text": "It doubles to clear more acid",
+       "why": "A higher PCO₂ would add acid, not clear it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctl-carotid-debate",
+   "concept": "ctl-heavy",
+   "bloom": "evaluate",
+   "sources": [
+    "ward2007",
+    "forster2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two reviews differ on the extra breathing of heavy exercise. Which statement fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unsettled: carotid bodies may help, but lactic acid acting on them isn't the main cause",
+       "correct": true,
+       "why": "Right: one review calls it probably carotid-body driven, another concludes it isn't mainly lactic acid at the carotid chemoreceptors."
+      },
+      {
+       "id": "b",
+       "text": "It is fully explained by lactate stimulating the carotid bodies in the neck",
+       "why": "That is the view one review argues against; it is not settled."
+      },
+      {
+       "id": "c",
+       "text": "It is caused by arterial O₂ falling below the 60 mmHg trigger point",
+       "why": "Arterial PO₂ stays far above 60 mmHg in most people, so it can't be the general cause."
+      },
+      {
+       "id": "d",
+       "text": "It doesn't happen: arterial PCO₂ holds at 40 mmHg until exhaustion",
+       "why": "Both reviews agree it happens; they disagree about its source."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

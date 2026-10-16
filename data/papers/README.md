@@ -1,6 +1,7 @@
 # Papers of the week
 
-Each week the papers routine adds 1–3 recent studies here, one file per paper
+Each week 1–3 recent studies are added here (by hand with the `/papers` command, see
+`.claude/skills/papers/SKILL.md`, or by a scheduled routine), one file per paper
 (`<YYYY-MM-DD>-<slug>.json`, the date it was added; format `Paper` in `src/lib/content.ts`), and
 opens a pull request. The study itself goes into `data/sources/papers.json`. Read
 `data/README.md` first: its item rules, units and evidence grades apply here too.

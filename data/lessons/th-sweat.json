@@ -1,0 +1,827 @@
+{
+ "id": "th-sweat",
+ "module": "t1b-thermo",
+ "title": "Sweat: cooling by evaporation",
+ "goal": "Explain how evaporating sweat removes heat, work out how much sweat a given heat load needs, and say why humid air, dripping sweat and large differences between athletes matter.",
+ "requires": [
+  "th-heat-balance"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "latent-heat",
+    "evaporative-heat-loss",
+    "sweating-efficiency",
+    "skin-wettedness"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sw-evaporation",
+   "title": "Evaporation: the heat sink that always works",
+   "text": "Turning liquid into vapour takes energy, the [latent heat of vaporisation](g:latent-heat). Each gram of sweat that evaporates from the skin takes **2,426 J** (about 2.4 kJ) with it [[c:sw-latent-heat]]. A litre evaporated removes about 2,400 kJ.\n\nThat makes [evaporation](g:evaporative-heat-loss) the main heat-loss route in warm and hot weather [[c:sw-main-route]]. It is also the only route that still works when air and sun are hotter than skin, because it doesn't need a temperature difference: it needs *dry enough air*.\n\nThe key word is *evaporates*. Sweat on the skin does nothing until it turns to vapour.",
+   "claims": [
+    {
+     "id": "sw-latent-heat",
+     "text": "Each gram of sweat evaporated from the skin removes 2,426 J of heat.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "Since the evaporation of 1 g of sweat off the skin liberates 2,426 J of latent heat energy ( 93 )",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sw-main-route",
+     "text": "Evaporative sweating is the main way the body loses heat in warm and hot environments.",
+     "grade": "strong",
+     "sources": [
+      "cheuvront2010"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2010",
+       "quote": "Evaporative sweating is the principal means of heat loss in warm-hot environments where sweat losses frequently exceed fluid intakes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-latent",
+   "variant": "b"
+  },
+  {
+   "type": "example",
+   "id": "sw-example-litres",
+   "title": "How much sweat to lose 1,000 W?",
+   "problem": "From the last lesson: a rider at 250 W makes about 1,000 W of heat. On a hot day, suppose all of it must leave by evaporation. How much sweat must evaporate in 1 h?",
+   "steps": [
+    "Heat to remove in 1 h: 1,000 W × 3,600 s = 3,600,000 J.",
+    "Each gram evaporated removes 2,426 J.",
+    "Sweat evaporated = 3,600,000 ÷ 2,426 = 1,484 g, about 1.5 L.",
+    "Common slip: forgetting the time and dividing 1,000 by 2,426 (0.41 g). Watts are joules *per second*."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-evap-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sw-dripping",
+   "title": "Dripping sweat doesn't cool",
+   "text": "Sweat that drips off, or soaks into a jersey and stays there, takes almost no heat from the body. The share that evaporates is the [sweating efficiency](g:sweating-efficiency). It falls with **humid air, still air, high work rates and clothing** that blocks vapour [[c:sw-efficiency-falls]].\n\nHumidity is the big one: evaporation needs a gap between the water vapour pressure at wet skin and in the air. Humid air narrows that gap, so you sweat more for the same cooling [[c:sw-humidity]].\n\nOnce about half the skin must be wet ([skin wettedness](g:skin-wettedness) above about 0.5), more sweat starts to drip and cooling per gram falls [[c:sw-wettedness]]. A drenched rider on a muggy turbo session is not cooling better; he is losing water for little cooling.",
+   "claims": [
+    {
+     "id": "sw-efficiency-falls",
+     "text": "Sweating efficiency falls at high absolute intensity, in humid or still air and with clothing of high evaporative resistance, because sweat drips or stays on the skin.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "When exercise is performed at a high absolute intensity, in a humid and/or still-air environment, and/or with clothing with a relatively high evaporative resistance, sweating efficiency declines.",
+       "level": "full-text"
+      },
+      {
+       "source": "cramer2019",
+       "quote": "That is, a proportion of secreted sweat does not evaporate from the skin but instead remains on the skin, drips off the body altogether, and/or becomes trapped in clothing.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sw-wettedness",
+     "text": "Above a required skin wettedness of about 0.50, the evaporative efficiency of sweat is reported to fall below 100%.",
+     "grade": "moderate",
+     "sources": [
+      "cramer2019"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "a skin wettedness required for heat balance (ω req ) of 0.50, the critical value above which the evaporative efficiency of sweat is reported to decline from 100%.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sw-humidity",
+     "text": "High humidity narrows the water vapour gradient, reduces evaporation and requires a higher sweat rate for the same cooling.",
+     "grade": "strong",
+     "sources": [
+      "baker2017"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "↓ Water vapor gradient leads to ↓ evaporation of sweat, which ↑ T c and the need for higher SR than calculated from E req , but prolonged exposure can lead to hidromeiosis and decreased SR",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-drip"
+  },
+  {
+   "type": "question",
+   "item": "sw-humid"
+  },
+  {
+   "type": "question",
+   "item": "sw-efficiency-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sw-rate",
+   "title": "How much do athletes sweat?",
+   "text": "Sweat rate follows the **heat that must be lost by evaporation**, not the percentage of VO₂max: in a well-controlled study, the evaporative requirement explained almost all the differences in sweat rate [[c:sw-rate-ereq]]. More watts, hotter air, more sun: more sweat.\n\nAthletes typically sweat about **0.5–2.0 L·h⁻¹**; above 3.0 L·h⁻¹ is rare [[c:sw-rate-range]] (most of these data come from a sports-drink company's lab: see below).\n\nYou can measure your own: weigh yourself, nude and dry, before and after a session. Add what you drank; 1 kg lost is about 1 L of sweat. That is the simplest accurate method [[c:sw-mass-method]], within small errors from urine and breathing.",
+   "claims": [
+    {
+     "id": "sw-rate-ereq",
+     "text": "Whole-body sweat rate is determined by the evaporative requirement for heat balance, not by relative exercise intensity.",
+     "grade": "moderate",
+     "sources": [
+      "gagnon2013",
+      "jay2011"
+     ],
+     "evidence": [
+      {
+       "source": "gagnon2013",
+       "quote": "These data provide clear evidence that absolute WBSR during exercise is determined by Ereq, not by % .",
+       "level": "abstract"
+      },
+      {
+       "source": "jay2011",
+       "quote": "In conclusion, changes in core temperature and sweating during exercise in a neutral climate are determined by H(prod), mass, and BSA, not Vo(₂ peak).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sw-rate-range",
+     "text": "Athletes' whole-body sweat rate typically ranges from about 0.5 to 2.0 L per hour; above 3.0 L per hour is rare.",
+     "grade": "moderate",
+     "sources": [
+      "baker2017"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "As this and other studies have shown, WBSR typically ranges from approximately 0.5 to approximately 2.0 L/h [ 2 , 24 , 96 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2017",
+       "quote": "WBSR can be >3.0 L/h [ 9 , 15 , 96 , 137 – 141 ] but this is relatively rare (approximately 2% of athletes in Fig. 1 a)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sw-mass-method",
+     "text": "Change in body mass during exercise is the simplest and most accurate way to measure whole-body sweat rate.",
+     "grade": "moderate",
+     "sources": [
+      "baker2017"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "The simplest and most accurate method to assess whole-body SR is via changes in body mass during exercise; however, potential confounding factors to consider are non-sweat sources of mass change and trapped sweat in clothing.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "sw-example-rate",
+   "title": "Sweat rate from the scales",
+   "problem": "A runner weighs 70.0 kg before a 90 min run and 68.6 kg after. She drank 0.5 L during it. What was her sweat rate?",
+   "steps": [
+    "Mass lost: 70.0 − 68.6 = 1.4 kg, about 1.4 L.",
+    "Add what she drank, which she also sweated out: 1.4 + 0.5 = 1.9 L.",
+    "Divide by time in hours: 1.9 L ÷ 1.5 h = 1.27 L·h⁻¹ (ignoring urine and breathing losses)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-rate-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "sw-rate-driver"
+  },
+  {
+   "type": "concept",
+   "id": "sw-sodium",
+   "title": "What is in sweat: sodium",
+   "text": "Sweat starts in the glands as a fluid like plasma (about 135–145 mmol·L⁻¹ of sodium), but the ducts take much of the sodium back before it reaches the skin [[c:sw-duct-reabsorb]]. What arrives is **saltier in some people than others**: about 10–90 mmol·L⁻¹ measured at one patch of skin, about 10–70 mmol·L⁻¹ for the whole body [[c:sw-sodium-range]].\n\nSo two triathletes sweating 1.5 L·h⁻¹ can lose very different amounts of salt. White salt stains on a kit hint at a salty sweater, but only a proper sweat test tells you.\n\nMuch of the sweat-testing data come from one sports-drink company's institute; the method is sound, but keep the source in mind.",
+   "claims": [
+    {
+     "id": "sw-sodium-range",
+     "text": "Local sweat sodium typically ranges from about 10 to 90 mmol per litre, and whole-body sweat sodium from about 10 to 70 mmol per litre.",
+     "grade": "moderate",
+     "sources": [
+      "baker2017"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "Local sweat [Na + ] typically ranges from approximately 10 to approximately 90 mmol/L (Fig.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2017",
+       "quote": "while whole-body sweat [Na + ] is approximately 10–70 mmol/L (predicted, Fig.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sw-duct-reabsorb",
+     "text": "Primary sweat is nearly isotonic with plasma; sodium is reabsorbed as sweat flows through the duct.",
+     "grade": "strong",
+     "sources": [
+      "baker2017"
+     ],
+     "evidence": [
+      {
+       "source": "baker2017",
+       "quote": "Primary sweat is nearly isotonic with blood plasma (e.g. approximately 135–145 mmol/L Na + , approximately 95–110 mmol/L Cl − , and approximately 4–5 mmol/L K + ) [ 29 , 46 – 49 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2017",
+       "quote": "As sweat flows through the duct, Na + is passively reabsorbed via epithelial Na + channels (ENaCs) on the luminal membrane",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sw-sodium"
+  },
+  {
+   "type": "question",
+   "item": "sw-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "sw-evap-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "sw-rate-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "sw-efficiency-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Each gram of sweat that evaporates removes 2,426 J: a litre evaporated takes about 2,400 kJ of heat.",
+    "Evaporation is the main heat sink in the heat, and the only one when air and sun are hotter than skin.",
+    "Dripping or trapped sweat cools almost nothing; humid or still air and clothing cut sweating efficiency.",
+    "Sweat rate follows the heat that must be lost by evaporation; athletes typically sweat 0.5–2.0 L·h⁻¹. Measure it with the scales: mass lost plus fluid drunk, per hour.",
+    "Sweat sodium varies about 10–90 mmol·L⁻¹ between people, so salt losses differ widely at the same sweat rate."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sw-latent",
+   "concept": "sw-evaporation",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how much heat does 1 g of sweat remove from the body when it evaporates?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.4 kJ",
+       "correct": true,
+       "why": "Right: the latent heat of vaporisation of sweat is 2,426 J per gram."
+      },
+      {
+       "id": "b",
+       "text": "About 4.2 J",
+       "why": "That is roughly the heat to warm 1 g of water by 1 °C; turning it to vapour takes about 580 times more."
+      },
+      {
+       "id": "c",
+       "text": "About 24 kJ",
+       "why": "Ten times too much: it is about 2.4 kJ per gram, so 2,400 kJ per litre."
+      },
+      {
+       "id": "d",
+       "text": "About 0.24 kJ",
+       "why": "Ten times too little: it is about 2.4 kJ per gram."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A rider's sweat evaporates completely. Roughly how much heat does 1 L (1,000 g) of it remove?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2,400 kJ",
+       "correct": true,
+       "why": "Right: 1,000 g × 2.426 kJ·g⁻¹ ≈ 2,400 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 240 kJ",
+       "why": "Ten times too little: each gram removes about 2.4 kJ, not 0.24 kJ."
+      },
+      {
+       "id": "c",
+       "text": "About 4.2 kJ",
+       "why": "That is about what warms 1 g of water by 1 °C; evaporation takes far more energy."
+      },
+      {
+       "id": "d",
+       "text": "About 24,000 kJ",
+       "why": "Ten times too much: 1,000 g × 2.4 kJ = 2,400 kJ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-evap-calc",
+   "concept": "sw-evaporation",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner must lose 800 W of heat by evaporation for 1 h. How much sweat must evaporate? (2,426 J per gram)",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1,190 g",
+       "correct": true,
+       "why": "Right: 800 × 3,600 = 2,880,000 J; ÷ 2,426 = 1,187 g."
+      },
+      {
+       "id": "b",
+       "text": "About 0.33 g",
+       "why": "This divides 800 by 2,426 and forgets the time. Watts are joules per second: multiply by 3,600 s."
+      },
+      {
+       "id": "c",
+       "text": "About 20 g",
+       "why": "This multiplies by 60 minutes instead of 3,600 seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 2,880 g",
+       "why": "This assumes 1 g removes 1 kJ. Each gram removes 2.426 kJ: divide 2,880 kJ by 2.426."
+      }
+     ],
+     "solution": "Heat = 800 W × 3,600 s = 2,880,000 J. Sweat = 2,880,000 ÷ 2,426 = 1,187 g ≈ 1.2 L."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist must lose 600 W of heat by evaporation for 1 h. How much sweat must evaporate? (2,426 J per gram)",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 890 g",
+       "correct": true,
+       "why": "Right: 600 × 3,600 = 2,160,000 J; ÷ 2,426 = 890 g."
+      },
+      {
+       "id": "b",
+       "text": "About 0.25 g",
+       "why": "This divides 600 by 2,426 and forgets the time. Watts are joules per second: multiply by 3,600 s."
+      },
+      {
+       "id": "c",
+       "text": "About 15 g",
+       "why": "This multiplies by 60 minutes instead of 3,600 seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 2,160 g",
+       "why": "This assumes 1 g removes 1 kJ. Each gram removes 2.426 kJ: divide 2,160 kJ by 2.426."
+      }
+     ],
+     "solution": "Heat = 600 W × 3,600 s = 2,160,000 J. Sweat = 2,160,000 ÷ 2,426 = 890 g ≈ 0.9 L."
+    },
+    {
+     "id": "c",
+     "stem": "In a 90 min half-Ironman run, a triathlete must lose 700 W of heat by evaporation. How much sweat must evaporate? (2,426 J per gram)",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1,560 g",
+       "correct": true,
+       "why": "Right: 700 × 5,400 = 3,780,000 J; ÷ 2,426 = 1,558 g."
+      },
+      {
+       "id": "b",
+       "text": "About 0.29 g",
+       "why": "This divides 700 by 2,426 and forgets the time. Watts are joules per second: multiply by 5,400 s."
+      },
+      {
+       "id": "c",
+       "text": "About 26 g",
+       "why": "This multiplies by 90 minutes instead of 5,400 seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 3,780 g",
+       "why": "This assumes 1 g removes 1 kJ. Each gram removes 2.426 kJ: divide 3,780 kJ by 2.426."
+      }
+     ],
+     "solution": "Heat = 700 W × 5,400 s = 3,780,000 J. Sweat = 3,780,000 ÷ 2,426 = 1,558 g ≈ 1.6 L."
+    }
+   ]
+  },
+  {
+   "id": "sw-drip",
+   "concept": "sw-dripping",
+   "bloom": "understand",
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On an indoor trainer with no fan, sweat pours off a rider onto the floor. How much does that dripping sweat cool him?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Almost not at all: only sweat that evaporates from the skin removes heat",
+       "correct": true,
+       "why": "Right: the latent heat is taken only when sweat turns to vapour on the skin."
+      },
+      {
+       "id": "b",
+       "text": "A lot: more sweat on the floor means more heat lost",
+       "why": "Volume lost is not heat lost. Dripping sweat leaves as liquid and takes almost no heat."
+      },
+      {
+       "id": "c",
+       "text": "The same 2.4 kJ per gram as evaporated sweat",
+       "why": "The 2.4 kJ·g⁻¹ is paid only for evaporation; dripping sweat carries just a little warmth."
+      },
+      {
+       "id": "d",
+       "text": "Half as much as evaporated sweat, as it evaporates on the floor",
+       "why": "Evaporating on the floor takes heat from the floor, not from the rider."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-humid",
+   "concept": "sw-dripping",
+   "bloom": "apply",
+   "sources": [
+    "cramer2019",
+    "baker2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Same 10 km pace, same 31 °C: one race is in dry desert air, one in muggy coastal air at 85% humidity. Why is the coastal race harder to keep cool in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Humid air slows evaporation, so more sweat drips and less heat leaves",
+       "correct": true,
+       "why": "Right: a smaller vapour-pressure gap cuts evaporation and sweating efficiency."
+      },
+      {
+       "id": "b",
+       "text": "Humid air is hotter than dry air at the same reading",
+       "why": "Both are 31 °C. Humidity doesn't change the air temperature; it limits evaporation."
+      },
+      {
+       "id": "c",
+       "text": "Humid air stops the body from producing sweat",
+       "why": "Sweating goes on, often heavily; the problem is that less of it evaporates."
+      },
+      {
+       "id": "d",
+       "text": "Humid air blocks convection from the skin",
+       "why": "Convection depends on air temperature and speed, which are the same here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-efficiency-calc",
+   "concept": "sw-dripping",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider needs 1.2 L of sweat to evaporate in an hour, but in humid air only 70% of what he sweats evaporates. How much must he sweat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1.7 L",
+       "correct": true,
+       "why": "Right: 1.2 ÷ 0.70 = 1.71 L; the extra 0.5 L drips or soaks in."
+      },
+      {
+       "id": "b",
+       "text": "About 0.84 L",
+       "why": "This multiplies by 0.70. If only 70% evaporates, he must sweat *more* than 1.2 L, not less."
+      },
+      {
+       "id": "c",
+       "text": "1.2 L",
+       "why": "This assumes all sweat evaporates. Here 30% is wasted, so he must sweat more."
+      },
+      {
+       "id": "d",
+       "text": "About 1.56 L",
+       "why": "This adds 30% of 1.2 L (1.2 × 1.3). The 1.2 L must be 70% of the total: divide by 0.70."
+      }
+     ],
+     "solution": "Sweat needed = evaporation needed ÷ sweating efficiency = 1.2 L ÷ 0.70 = 1.71 L."
+    },
+    {
+     "id": "b",
+     "stem": "A runner needs 0.9 L of sweat to evaporate in an hour; in still, humid air only 60% of her sweat evaporates. How much must she sweat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.5 L",
+       "correct": true,
+       "why": "Right: 0.9 ÷ 0.60 = 1.5 L; 0.6 L drips or stays on the skin."
+      },
+      {
+       "id": "b",
+       "text": "About 0.54 L",
+       "why": "This multiplies by 0.60. If only 60% evaporates, she must sweat *more* than 0.9 L, not less."
+      },
+      {
+       "id": "c",
+       "text": "0.9 L",
+       "why": "This assumes all sweat evaporates. Here 40% is wasted, so she must sweat more."
+      },
+      {
+       "id": "d",
+       "text": "About 1.26 L",
+       "why": "This adds 40% of 0.9 L (0.9 × 1.4). The 0.9 L must be 60% of the total: divide by 0.60."
+      }
+     ],
+     "solution": "Sweat needed = evaporation needed ÷ sweating efficiency = 0.9 L ÷ 0.60 = 1.5 L."
+    }
+   ]
+  },
+  {
+   "id": "sw-rate-calc",
+   "concept": "sw-rate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "baker2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighs 70.0 kg before a 90 min run and 68.6 kg after; she drank 0.5 L. What was her sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1.27 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.4 + 0.5) ÷ 1.5 h = 1.27 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 0.93 L·h⁻¹",
+       "why": "This forgets the 0.5 L she drank, which she also sweated out."
+      },
+      {
+       "id": "c",
+       "text": "0.6 L·h⁻¹",
+       "why": "This subtracts the drink instead of adding it."
+      },
+      {
+       "id": "d",
+       "text": "1.9 L·h⁻¹",
+       "why": "That is the total sweat loss; divide by 1.5 h to get a rate per hour."
+      }
+     ],
+     "solution": "Mass lost 1.4 kg ≈ 1.4 L. Sweat = 1.4 + 0.5 = 1.9 L. Rate = 1.9 ÷ 1.5 h = 1.27 L·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist weighs 64.0 kg before a 45 min turbo session and 62.8 kg after; he drank 0.6 L. What was his sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.4 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.2 + 0.6) ÷ 0.75 h = 2.4 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.6 L·h⁻¹",
+       "why": "This forgets the 0.6 L he drank, which he also sweated out."
+      },
+      {
+       "id": "c",
+       "text": "0.8 L·h⁻¹",
+       "why": "This subtracts the drink instead of adding it."
+      },
+      {
+       "id": "d",
+       "text": "1.8 L·h⁻¹",
+       "why": "That is the total sweat loss in 45 min; divide by 0.75 h to get a rate per hour."
+      }
+     ],
+     "solution": "Mass lost 1.2 kg ≈ 1.2 L. Sweat = 1.2 + 0.6 = 1.8 L. Rate = 1.8 ÷ 0.75 h = 2.4 L·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete weighs 80.0 kg before a 2 h brick session and 78.2 kg after; she drank 1.0 L. What was her sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.4 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.8 + 1.0) ÷ 2 h = 1.4 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.9 L·h⁻¹",
+       "why": "This forgets the 1.0 L she drank, which she also sweated out."
+      },
+      {
+       "id": "c",
+       "text": "0.4 L·h⁻¹",
+       "why": "This subtracts the drink instead of adding it."
+      },
+      {
+       "id": "d",
+       "text": "2.8 L·h⁻¹",
+       "why": "That is the total sweat loss over 2 h; divide by 2 to get a rate per hour."
+      }
+     ],
+     "solution": "Mass lost 1.8 kg ≈ 1.8 L. Sweat = 1.8 + 1.0 = 2.8 L. Rate = 2.8 ÷ 2 h = 1.4 L·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "sw-rate-driver",
+   "concept": "sw-rate",
+   "bloom": "analyse",
+   "sources": [
+    "gagnon2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A fit and a less fit cyclist of the same size ride side by side at the same 220 W in the same weather. The fit one is at 45% of VO₂max, the other at 65%. How do their sweat rates compare, roughly?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Similar, because they make about the same heat that must be lost",
+       "correct": true,
+       "why": "Right: same watts and size give the same heat production and evaporative requirement, which sets sweat rate."
+      },
+      {
+       "id": "b",
+       "text": "Higher in the less fit rider, because he is at a higher % of VO₂max",
+       "why": "Sweat rate follows the heat to be lost, not the % of VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "Higher in the fit rider, because training makes everyone sweat more",
+       "why": "Training can shift sweating a little, but at the same heat load the requirement, and so the rate, is about the same."
+      },
+      {
+       "id": "d",
+       "text": "It can't be said without their heart rates",
+       "why": "Heart rate doesn't set sweat rate; the heat to be lost by evaporation does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-sodium",
+   "concept": "sw-sodium",
+   "bloom": "evaluate",
+   "sources": [
+    "baker2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes both sweat 1.5 L·h⁻¹. A coach gives them the same salt plan, based on an average sweat sodium. How good is that plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak: sweat sodium varies several-fold between people",
+       "correct": true,
+       "why": "Right: about 10–90 mmol·L⁻¹ locally, so the same sweat rate can mean very different sodium losses."
+      },
+      {
+       "id": "b",
+       "text": "Good: the same sweat rate means the same salt loss",
+       "why": "Sodium loss = sweat volume × sodium concentration, and the concentration varies widely."
+      },
+      {
+       "id": "c",
+       "text": "Good: sweat is about as salty as blood plasma",
+       "why": "Sweat ducts reabsorb sodium, so sweat is much less salty than plasma (about 135–145 mmol·L⁻¹)."
+      },
+      {
+       "id": "d",
+       "text": "Weak: sweat holds no sodium worth replacing",
+       "why": "Sweat sodium is real and varies; in long races losses can be large for salty sweaters."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sw-appraisal",
+   "concept": "sw-sodium",
+   "bloom": "evaluate",
+   "sources": [
+    "baker2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review of sweat rate and sodium uses data from about 500 athletes tested by a sports-drink company's institute, where the author works. What is the most sensible way to read it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Use the data, but check its claims against independent studies",
+       "correct": true,
+       "why": "Right: funding doesn't make data wrong, but it raises the risk of biased framing, so look for independent support."
+      },
+      {
+       "id": "b",
+       "text": "Set it aside: industry-funded work can't be relied on",
+       "why": "Funding is a reason for care, not proof of error. Methods and independent replication decide."
+      },
+      {
+       "id": "c",
+       "text": "Accept it as it is: it passed peer review",
+       "why": "Peer review doesn't remove conflicts of interest; it is a check, not a guarantee."
+      },
+      {
+       "id": "d",
+       "text": "Accept it as it is: 500 athletes is a large sample",
+       "why": "A large sample cuts random error, not bias from who chose and framed the data."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

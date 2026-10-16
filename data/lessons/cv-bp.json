@@ -1,0 +1,714 @@
+{
+ "id": "cv-bp",
+ "module": "t1b-cardio",
+ "title": "Blood pressure in exercise",
+ "goal": "Explain why systolic pressure rises and diastolic stays steady in endurance exercise, how mean arterial pressure is estimated, which reflexes set it, and why heavy lifting drives both pressures up.",
+ "requires": [
+  "cv-blood-flow"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "pulse-pressure",
+    "mean-arterial-pressure",
+    "exercise-pressor-reflex",
+    "baroreflex",
+    "valsalva"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "bp-basics",
+   "title": "Systolic, diastolic, mean",
+   "text": "Blood pressure is written systolic over diastolic, in mmHg; 120/80 is a normal adult value. Systolic is the peak while the ventricle ejects; diastolic is the low point while it relaxes [[c:bp-sys-dia]].\n\nThe difference is the [pulse pressure](g:pulse-pressure): 120 − 80 = 40 mmHg.\n\nThe pressure that drives blood into the tissues is the [mean arterial pressure](g:mean-arterial-pressure) (MAP). It isn't the simple average of the two: it sits nearer diastolic, and is estimated as [[c:bp-map]]:\n\n**MAP ≈ diastolic + (systolic − diastolic) ÷ 3**\n\nFor 120/80: 80 + 40 ÷ 3 = 93 mmHg. Normal MAP is about 70–110 mmHg.",
+   "claims": [
+    {
+     "id": "bp-sys-dia",
+     "text": "Blood pressure is recorded as systolic (pressure during ejection) over diastolic (pressure during relaxation); 120/80 mmHg is a normal adult value.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "When systemic arterial blood pressure is measured, it is recorded as a ratio of two numbers (e.g., 120/80 is a normal adult blood pressure), expressed as systolic pressure over diastolic pressure.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The diastolic pressure is the lower value (usually about 80 mm Hg) and represents the arterial pressure of blood during ventricular relaxation, or diastole.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bp-map",
+     "text": "MAP ≈ diastolic pressure + one third of the pulse pressure, normally 70–110 mmHg.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Although complicated to measure directly and complicated to calculate, MAP can be approximated by adding the diastolic pressure to one-third of the pulse pressure or systolic pressure minus the diastolic pressure",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "Normally, the MAP falls within the range of 70–110 mm Hg.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bp-example-map",
+   "title": "Mean arterial pressure",
+   "problem": "At the end of a ramp test, a runner's blood pressure is 185/75 mmHg. What are her pulse pressure and MAP?",
+   "steps": [
+    "Pulse pressure = systolic − diastolic = 185 − 75 = 110 mmHg.",
+    "MAP ≈ diastolic + pulse pressure ÷ 3 = 75 + 110 ÷ 3 = 75 + 36.7 = 111.7, about 112 mmHg.",
+    "The simple average, (185 + 75) ÷ 2 = 130, would overstate it. (At very high heart rates the one-third rule is only a rough guide.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bp-map-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "bp-endurance",
+   "title": "Endurance exercise: systolic up, diastolic steady",
+   "text": "In a hard endurance effort, systolic pressure rises a lot and diastolic barely moves. In a textbook illustration (not measured data), a non-athlete goes from 120/80 at rest to 185/75 at max; a well-trained athlete, with a far bigger Q, to about 200/90 [[c:bp-endurance-response]].\n\nWhy? Resistance is pressure divided by flow. Q rises four- to sevenfold, which pushes systolic up. But the vessels in working muscle dilate, so total resistance falls steeply [[c:bp-resistance-falls]]. MAP rises only modestly, and diastolic, the pressure the arteries hold between beats while blood runs off through the open vessels, stays near rest.\n\nA big rise in systolic with a steady diastolic is the normal response to running, cycling or swimming.",
+   "claims": [
+    {
+     "id": "bp-endurance-response",
+     "text": "In endurance exercise systolic pressure rises a lot and diastolic changes little; a textbook illustration has BP rising from about 120/80 to about 185/75 mmHg at max in non-athletes and to about 200/90 in trained athletes.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Accompanying this will be an increase in blood pressure from about 120/80 to 185/75.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "Along with this increase in cardiac output, blood pressure increases from 120/80 at rest to 200/90 at maximum values.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "bp-resistance-falls",
+     "text": "Resistance is pressure divided by flow; vasodilation in exercise lowers resistance and lets more blood flow.",
+     "grade": "strong",
+     "sources": [
+      "betts2022",
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "As vasodilation occurs in selected vessels, resistance drops and more blood rushes into the organs they supply.",
+       "level": "full-text"
+      },
+      {
+       "source": "joyner2015",
+       "quote": "Vascular tone can be expressed as either resistance (pressure/flow) or conductance (flow/pressure).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "bp-example-resistance",
+   "title": "How much does resistance fall?",
+   "problem": "At rest a cyclist's MAP is 93 mmHg with Q of 5 L·min⁻¹. At max his MAP is 112 mmHg with Q of 20 L·min⁻¹. How has total resistance changed?",
+   "steps": [
+    "Resistance = MAP ÷ Q.",
+    "Rest: 93 ÷ 5 = 18.6 mmHg per L·min⁻¹. Max: 112 ÷ 20 = 5.6 mmHg per L·min⁻¹.",
+    "5.6 ÷ 18.6 = 0.30: resistance is down to 30% of rest, so about 70% lower, while MAP rose only 20%."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bp-resistance-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "bp-why-diastolic"
+  },
+  {
+   "type": "concept",
+   "id": "bp-control",
+   "title": "Who sets the pressure in exercise",
+   "text": "Reflexes push BP up as you work, and keep it there.\n\n- **The [exercise pressor reflex](g:exercise-pressor-reflex).** Sensory nerves in working muscle detect stretch, pressure and chemical by-products of work (metabolites), and reflexly raise sympathetic activity and BP [[c:bp-pressor-reflex]]. Trap the metabolites with cuffs on the thighs straight after cycling, and HR stays raised though the pedalling has stopped [[c:bp-metaboreflex]].\n- **A reset [baroreflex](g:baroreflex).** The pressure sensors don't switch off in exercise; they work around a higher set point. That resetting gives the immediate reflex rise in HR as exercise starts [[c:bp-baroreflex-reset]].\n\nAdd the sympathetic rationing of muscle flow from the last lesson, which stops MAP falling as muscle vessels open.",
+   "claims": [
+    {
+     "id": "bp-pressor-reflex",
+     "text": "Feedback from mechanically and metabolically sensitive nerves in active muscle reflexly raises sympathetic activity and blood pressure (the exercise pressor reflex).",
+     "grade": "strong",
+     "sources": [
+      "grotle2023",
+      "fisher2014"
+     ],
+     "evidence": [
+      {
+       "source": "grotle2023",
+       "quote": "Afferent feedback from active skeletal muscles evokes reflex increases in sympathetic nerve activity and blood pressure (BP) (i.e., exercise pressor reflex) and contributes importantly to these primary neurovascular adjustments to exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bp-metaboreflex",
+     "text": "During post-exercise ischaemia after leg cycling, heart rate stays raised, showing a reflex from metabolite-sensing muscle nerves.",
+     "grade": "moderate",
+     "sources": [
+      "fisher2014"
+     ],
+     "evidence": [
+      {
+       "source": "fisher2014",
+       "quote": "During postexercise ischaemia following leg cycling exercise, heart rate appears to remain elevated due to withdrawal of parasympathetic tone and/or the activation of sympathetic activity to the heart.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bp-baroreflex-reset",
+     "text": "In exercise the arterial baroreflex is reset, causing the immediate reflex rise in HR at exercise onset.",
+     "grade": "moderate",
+     "sources": [
+      "white2014"
+     ],
+     "evidence": [
+      {
+       "source": "white2014",
+       "quote": "(iii) resetting of the arterial baroreflex causes immediate exercise-onset reflexive increases in HR, which are parasympathetically mediated, followed by slower increases in sympathetic tone as workloads are increased.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bp-metaboreflex-scenario"
+  },
+  {
+   "type": "question",
+   "item": "bp-baroreflex-q"
+  },
+  {
+   "type": "concept",
+   "id": "bp-lifting",
+   "title": "Heavy lifting: pressure spikes",
+   "text": "Heavy resistance exercise is different. With a thin tube (catheter) in the arm artery, five experienced bodybuilders lifting to failure reached a mean of **320/250 mmHg** in the double-leg press; one went above 480/350. Even a single-arm curl to failure gave 255/190. Pressures shot up as each weight was lifted and fell as it was lowered [[c:bp-lifting-peaks]].\n\nThree things add up [[c:bp-lifting-causes]]:\n\n- contracting muscle **squeezes its own vessels**, raising resistance;\n- a strong pressor response;\n- the [Valsalva manoeuvre](g:valsalva): straining against a closed throat raises chest pressure, which adds to arterial pressure.\n\nSo, unlike running or cycling, both systolic and diastolic soar, if only for seconds at a time.",
+   "claims": [
+    {
+     "id": "bp-lifting-peaks",
+     "text": "In experienced bodybuilders lifting to failure, mean peak BP reached 320/250 mmHg in the double-leg press (one subject above 480/350) and 255/190 in single-arm curls, rising in the lifting phase and falling in the lowering phase.",
+     "grade": "weak",
+     "sources": [
+      "macdougall1985"
+     ],
+     "evidence": [
+      {
+       "source": "macdougall1985",
+       "quote": "Systolic and diastolic blood pressures rose rapidly to extremely high values during the concentric contraction phase for each lift and declined with the eccentric contraction.",
+       "level": "abstract"
+      },
+      {
+       "source": "macdougall1985",
+       "quote": "The greatest peak pressures occurred during the double-leg press where the mean value for the group was 320/250 mmHg, with pressures in one subject exceeding 480/350 mmHg.",
+       "level": "abstract"
+      },
+      {
+       "source": "macdougall1985",
+       "quote": "Peak pressures with the single-arm curl exercise reached a mean group value of 255/190 mmHg when repetitions were continued to failure.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bp-lifting-causes",
+     "text": "In heavy lifting, mechanical compression of vessels, a pressor response and the Valsalva manoeuvre combine to raise BP to extreme values.",
+     "grade": "weak",
+     "sources": [
+      "macdougall1985"
+     ],
+     "evidence": [
+      {
+       "source": "macdougall1985",
+       "quote": "It was concluded that when healthy young subjects perform weight-lifting exercises the mechanical compression of blood vessels combines with a potent pressor response and a Valsalva response to produce extreme elevations in blood pressure.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "bp-lift-vs-run",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "bp-valsalva-q"
+  },
+  {
+   "type": "question",
+   "item": "bp-lift-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "bp-map-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "bp-resistance-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "BP is systolic over diastolic; MAP ≈ diastolic + (systolic − diastolic) ÷ 3, normally 70–110 mmHg.",
+    "In endurance exercise systolic rises a lot (to about 185–200 mmHg at max in a textbook illustration) while diastolic stays near rest, because dilated muscle vessels cut total resistance as Q climbs.",
+    "The exercise pressor reflex from working muscle and a baroreflex reset to a higher set point push BP up; sympathetic rationing of muscle flow stops it falling.",
+    "Heavy lifting drives systolic and diastolic up together, to over 300/250 mmHg in one study, through vessel compression, the pressor response and the Valsalva manoeuvre."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bp-map-calc",
+   "concept": "bp-basics",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the top of a hard climb, a cyclist's blood pressure is 180/75 mmHg. What is his mean arterial pressure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "110 mmHg",
+       "correct": true,
+       "why": "Right: pulse pressure 105; 75 + 105 ÷ 3 = 75 + 35 = 110 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "128 mmHg",
+       "why": "That is the simple average, (180 + 75) ÷ 2. MAP sits nearer diastolic."
+      },
+      {
+       "id": "c",
+       "text": "105 mmHg",
+       "why": "That is the pulse pressure (180 − 75), not the mean pressure."
+      },
+      {
+       "id": "d",
+       "text": "145 mmHg",
+       "why": "This takes a third of the pulse pressure off systolic (180 − 35). Add it to diastolic instead."
+      }
+     ],
+     "solution": "Pulse pressure = 180 − 75 = 105 mmHg. MAP ≈ 75 + 105 ÷ 3 = 75 + 35 = 110 mmHg."
+    },
+    {
+     "id": "b",
+     "stem": "At the end of a maximal treadmill test, a trained runner's blood pressure is 200/90 mmHg. What is her mean arterial pressure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "127 mmHg",
+       "correct": true,
+       "why": "Right: pulse pressure 110; 90 + 110 ÷ 3 = 90 + 36.7 = 126.7, about 127 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "145 mmHg",
+       "why": "That is the simple average, (200 + 90) ÷ 2. MAP sits nearer diastolic."
+      },
+      {
+       "id": "c",
+       "text": "110 mmHg",
+       "why": "That is the pulse pressure (200 − 90), not the mean pressure."
+      },
+      {
+       "id": "d",
+       "text": "163 mmHg",
+       "why": "This takes a third of the pulse pressure off systolic (200 − 36.7). Add it to diastolic instead."
+      }
+     ],
+     "solution": "Pulse pressure = 200 − 90 = 110 mmHg. MAP ≈ 90 + 110 ÷ 3 = 90 + 36.7 = 126.7 ≈ 127 mmHg."
+    },
+    {
+     "id": "c",
+     "stem": "Before the start of a triathlon, a competitor's blood pressure is 130/85 mmHg. What is his mean arterial pressure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "100 mmHg",
+       "correct": true,
+       "why": "Right: pulse pressure 45; 85 + 45 ÷ 3 = 85 + 15 = 100 mmHg."
+      },
+      {
+       "id": "b",
+       "text": "108 mmHg",
+       "why": "That is the simple average, (130 + 85) ÷ 2 = 107.5. MAP sits nearer diastolic."
+      },
+      {
+       "id": "c",
+       "text": "45 mmHg",
+       "why": "That is the pulse pressure (130 − 85), not the mean pressure."
+      },
+      {
+       "id": "d",
+       "text": "115 mmHg",
+       "why": "This takes a third of the pulse pressure off systolic (130 − 15). Add it to diastolic instead."
+      }
+     ],
+     "solution": "Pulse pressure = 130 − 85 = 45 mmHg. MAP ≈ 85 + 45 ÷ 3 = 85 + 15 = 100 mmHg."
+    }
+   ]
+  },
+  {
+   "id": "bp-resistance-calc",
+   "concept": "bp-endurance",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "joyner2015",
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At rest a runner's MAP is 90 mmHg with a cardiac output of 5 L·min⁻¹. In a hard run her MAP is 110 mmHg with Q of 22 L·min⁻¹. How has her total resistance changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 72% lower",
+       "correct": true,
+       "why": "Right: 90 ÷ 5 = 18 at rest, 110 ÷ 22 = 5 in the run; 5 ÷ 18 = 0.28, so about 72% lower."
+      },
+      {
+       "id": "b",
+       "text": "About 22% higher",
+       "why": "This follows MAP alone (110 ÷ 90). Resistance is pressure divided by flow, and flow rose much more."
+      },
+      {
+       "id": "c",
+       "text": "About 4.4 times higher",
+       "why": "This follows Q alone (22 ÷ 5). More flow at a similar pressure means lower resistance, not higher."
+      },
+      {
+       "id": "d",
+       "text": "About 18% lower",
+       "why": "This compares the pressures only (1 − 90 ÷ 110) and ignores the rise in flow."
+      }
+     ],
+     "solution": "Resistance = MAP ÷ Q. Rest: 90 ÷ 5 = 18. Run: 110 ÷ 22 = 5. 5 ÷ 18 = 0.28, so resistance fell by about 72%."
+    },
+    {
+     "id": "b",
+     "stem": "At rest a cyclist's MAP is 95 mmHg with a cardiac output of 6 L·min⁻¹. At max his MAP is 120 mmHg with Q of 30 L·min⁻¹. How has his total resistance changed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 75% lower",
+       "correct": true,
+       "why": "Right: 95 ÷ 6 = 15.8 at rest, 120 ÷ 30 = 4 at max; 4 ÷ 15.8 = 0.25, so about 75% lower."
+      },
+      {
+       "id": "b",
+       "text": "About 26% higher",
+       "why": "This follows MAP alone (120 ÷ 95). Resistance is pressure divided by flow, and flow rose much more."
+      },
+      {
+       "id": "c",
+       "text": "About 5 times higher",
+       "why": "This follows Q alone (30 ÷ 6). More flow at a similar pressure means lower resistance, not higher."
+      },
+      {
+       "id": "d",
+       "text": "About 21% lower",
+       "why": "This compares the pressures only (1 − 95 ÷ 120) and ignores the rise in flow."
+      }
+     ],
+     "solution": "Resistance = MAP ÷ Q. Rest: 95 ÷ 6 = 15.8. Max: 120 ÷ 30 = 4.0. 4.0 ÷ 15.8 = 0.25, so resistance fell by about 75%."
+    }
+   ]
+  },
+  {
+   "id": "bp-why-diastolic",
+   "concept": "bp-endurance",
+   "bloom": "analyse",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a long steady ride, a cyclist's cardiac output is three times his resting value, yet his diastolic pressure is about the same as at rest. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Dilated muscle vessels have cut total resistance",
+       "correct": true,
+       "why": "Right: blood runs off quickly through the widened vessels between beats, so diastolic stays near rest while systolic rises."
+      },
+      {
+       "id": "b",
+       "text": "His heart pumps less blood between beats",
+       "why": "The heart doesn't pump between beats at all; diastolic depends on how fast blood drains through the resistance."
+      },
+      {
+       "id": "c",
+       "text": "His blood volume has fallen by a third",
+       "why": "Sweating lowers volume a little, nowhere near enough to cancel a threefold rise in Q."
+      },
+      {
+       "id": "d",
+       "text": "His baroreflex has stopped his HR from rising",
+       "why": "His HR has clearly risen to triple Q; in exercise the baroreflex resets upwards rather than holding HR down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bp-metaboreflex-scenario",
+   "concept": "bp-control",
+   "bloom": "analyse",
+   "sources": [
+    "fisher2014",
+    "grotle2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Straight after a hard cycling interval, a lab inflates cuffs around a rider's thighs to trap blood in the leg muscles. Pedalling has stopped, yet his heart rate stays well above rest. What best explains this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Metabolite-sensing nerves in the trapped muscle keep a reflex going",
+       "correct": true,
+       "why": "Right: the cuff keeps the metabolites in the muscle, so that arm of the exercise pressor reflex stays switched on."
+      },
+      {
+       "id": "b",
+       "text": "The muscle pump is still pushing blood to the heart",
+       "why": "The legs aren't contracting, so there is no pump; and the cuff blocks flow anyway."
+      },
+      {
+       "id": "c",
+       "text": "His baroreflex senses a fall in blood pressure",
+       "why": "Pressure doesn't fall here; the drive comes from the muscle's own sensory nerves."
+      },
+      {
+       "id": "d",
+       "text": "His HRmax has risen after the interval",
+       "why": "HRmax doesn't change within a session, and he isn't near max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bp-baroreflex-q",
+   "concept": "bp-control",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "white2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What happens to the baroreflex when a runner starts exercising?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It keeps working, around a higher set point",
+       "correct": true,
+       "why": "Right: it resets, and the reset gives the immediate reflex rise in HR at the start of exercise."
+      },
+      {
+       "id": "b",
+       "text": "It switches off so that pressure can rise",
+       "why": "It doesn't switch off; it goes on adjusting HR beat to beat around a new, higher pressure."
+      },
+      {
+       "id": "c",
+       "text": "It pulls BP back down to resting values",
+       "why": "If it did, BP couldn't rise in exercise; it is reset upwards instead."
+      },
+      {
+       "id": "d",
+       "text": "It hands control of BP to the kidneys",
+       "why": "The kidneys adjust BP over hours to days; the baroreflex acts within seconds through the heart and vessels."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bp-lift-vs-run",
+   "concept": "bp-lifting",
+   "bloom": "understand",
+   "sources": [
+    "macdougall1985",
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does blood pressure respond to a heavy leg press compared with a steady run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Press: systolic and diastolic both soar. Run: systolic up, diastolic steady",
+       "correct": true,
+       "why": "Right: lifting drove both up, to 320/250 mmHg in one study; in endurance exercise diastolic stays near rest."
+      },
+      {
+       "id": "b",
+       "text": "Both: systolic up, diastolic steady",
+       "why": "That is the endurance pattern only; heavy lifting drives diastolic up too."
+      },
+      {
+       "id": "c",
+       "text": "Press: systolic up, diastolic steady. Run: both soar",
+       "why": "The patterns are swapped: in running diastolic stays near rest."
+      },
+      {
+       "id": "d",
+       "text": "Press: both fall. Run: both rise steeply",
+       "why": "Pressure rises sharply in lifting, and diastolic barely moves in running."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete does heavy squats, then an easy run. Which blood pressure pattern fits each?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Squats: systolic and diastolic both soar. Run: systolic up, diastolic steady",
+       "correct": true,
+       "why": "Right: heavy lifting drives both pressures up; in endurance exercise diastolic stays near rest."
+      },
+      {
+       "id": "b",
+       "text": "Both: systolic up, diastolic steady",
+       "why": "That is the endurance pattern only; heavy lifting drives diastolic up too."
+      },
+      {
+       "id": "c",
+       "text": "Squats: systolic up, diastolic steady. Run: both soar",
+       "why": "The patterns are swapped: in running diastolic stays near rest."
+      },
+      {
+       "id": "d",
+       "text": "Squats: both fall. Run: both rise steeply",
+       "why": "Pressure rises sharply in lifting, and diastolic barely moves in running."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bp-valsalva-q",
+   "concept": "bp-lifting",
+   "bloom": "understand",
+   "sources": [
+    "macdougall1985"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist in the gym holds her breath and strains to push a heavy leg press. Why does the breath-hold add to her rise in blood pressure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pressure inside the chest rises and adds to arterial pressure",
+       "correct": true,
+       "why": "Right: that is the Valsalva manoeuvre, one of three causes of the pressure spike in lifting."
+      },
+      {
+       "id": "b",
+       "text": "Less oxygen makes the heart beat harder",
+       "why": "A few seconds' breath-hold barely changes blood O₂; the effect is mechanical."
+      },
+      {
+       "id": "c",
+       "text": "It relaxes the vessels in the working muscle",
+       "why": "Straining does the opposite: contracting muscle squeezes its own vessels."
+      },
+      {
+       "id": "d",
+       "text": "It slows the heart, so each beat is bigger",
+       "why": "The extra pressure comes from the chest, not from a slower, bigger heartbeat."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bp-lift-appraisal",
+   "concept": "bp-lifting",
+   "bloom": "evaluate",
+   "sources": [
+    "macdougall1985"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 320/250 mmHg figure comes from 5 experienced bodybuilders lifting to failure, with pressure measured by a catheter in the arm artery. What most limits applying it to everyone who lifts?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only five trained lifters, all going to failure",
+       "correct": true,
+       "why": "Right: a tiny, specialised group at maximal effort; lighter loads, fewer reps or other people may give different peaks."
+      },
+      {
+       "id": "b",
+       "text": "Arm-cuff readings miss the peaks",
+       "why": "They used an arterial catheter, which records every beat: a strength of the study, not a limit."
+      },
+      {
+       "id": "c",
+       "text": "Pressure was measured only at rest",
+       "why": "It was recorded during the lifts, beat by beat."
+      },
+      {
+       "id": "d",
+       "text": "Too many subjects for careful measurement",
+       "why": "Five is very few; the problem is the opposite."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

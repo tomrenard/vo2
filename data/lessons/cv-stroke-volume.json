@@ -1,0 +1,852 @@
+{
+ "id": "cv-stroke-volume",
+ "module": "t1b-cardio",
+ "title": "Stroke volume: filling, squeezing and the plateau debate",
+ "goal": "Explain how preload, contractility and afterload set stroke volume, how Frank–Starling raises it in exercise, and why it is still argued whether trained athletes' stroke volume plateaus.",
+ "requires": [
+  "cv-output"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "end-diastolic-volume",
+    "preload",
+    "contractility",
+    "afterload",
+    "ejection-fraction",
+    "frank-starling"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sv-factors",
+   "title": "Fill, squeeze, push against",
+   "text": "Stroke volume is what fills the ventricle minus what is left once it has contracted: **SV = [EDV](g:end-diastolic-volume) − ESV** (end-diastolic minus end-systolic volume). Three things set it [[c:sv-three-factors]]:\n\n| factor | what it is | in exercise |\n|---|---|---|\n| [preload](g:preload) | stretch from filling | up, as more blood returns |\n| [contractility](g:contractility) | strength of the squeeze | up, with [sympathetic](g:sympathetic) drive |\n| [afterload](g:afterload) | pressure to push against | up, as arterial pressure rises |\n\nFilling takes time. The faster the heart beats, the shorter each filling phase, and the lower EDV and preload are [[c:sv-filling-time]].\n\nThe share of the filled volume pushed out is the [ejection fraction](g:ejection-fraction), SV ÷ EDV: about 55–70% at rest [[c:sv-ef]].",
+   "claims": [
+    {
+     "id": "sv-three-factors",
+     "text": "SV = EDV − ESV, and it is set by preload, contractility and afterload.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "SV is normally measured using an echocardiogram to record EDV and ESV, and calculating the difference: SV = EDV – ESV.",
+       "level": "full-text"
+      },
+      {
+       "source": "betts2022",
+       "quote": "The three primary factors to consider are preload, or the stretch on the ventricles prior to contraction; the contractility, or the force or strength of the contraction itself; and afterload, the force the ventricles must generate to pump blood against the resistance in the vessels.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sv-filling-time",
+     "text": "A faster heart rate shortens filling time and lowers end-diastolic volume and preload.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "The more rapidly the heart contracts, the shorter the filling time becomes, and the lower the EDV and preload are.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sv-ef",
+     "text": "Resting ejection fraction is about 55–70%.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Ejection fractions range from approximately 55–70 percent, with a mean of 58 percent.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "sv-example-ef",
+   "title": "Stroke volume and ejection fraction",
+   "problem": "At rest, a runner's left ventricle fills to 120 mL and holds 50 mL at the end of the beat. What are her stroke volume and ejection fraction?",
+   "steps": [
+    "SV = EDV − ESV = 120 − 50 = 70 mL.",
+    "Ejection fraction = SV ÷ EDV = 70 ÷ 120 = 0.58, so 58%.",
+    "Check: ESV ÷ EDV = 50 ÷ 120 = 42% is the share left behind; the two add up to 100%."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sv-ef-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sv-factor-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "sv-starling",
+   "title": "Frank–Starling: more in, more out",
+   "text": "The [Frank–Starling mechanism](g:frank-starling): within limits, the more the ventricle is stretched by filling, the harder it contracts, so SV rises [[c:sv-starling-law]].\n\nIn exercise, filling goes up. Working leg muscles and deeper breathing push blood back to the heart faster; preload rises, and Frank–Starling makes each beat stronger [[c:sv-venous-return]].\n\nPosture matters. Upright, on foot or on a bike, blood pools in the leg veins. At the start of exercise the muscle pump empties them, and how much SV rises depends partly on posture [[c:sv-posture]].\n\nContractility is a separate lever: sympathetic drive gives a stronger squeeze at the same filling, so less blood is left behind (lower ESV) [[c:sv-contractility]].",
+   "claims": [
+    {
+     "id": "sv-starling-law",
+     "text": "Within physiological limits, the force of heart contraction rises with the stretch of the ventricular muscle by filling.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "This principle states that, within physiological limits, the force of heart contraction is directly proportional to the initial length of the muscle fiber.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sv-venous-return",
+     "text": "In exercise, the skeletal muscle and respiratory pumps raise venous return and preload, so the heart contracts more forcefully.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "Venous return is further enhanced by both the skeletal muscle and respiratory pumps. As blood returns to the heart more quickly, preload rises and the Frank-Starling principle tells us that contraction of the cardiac muscle in the atria and ventricles will be more forceful.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sv-posture",
+     "text": "SV rises at exercise onset through higher contractility and, depending on posture, the muscle pump emptying the leg veins.",
+     "grade": "strong",
+     "sources": [
+      "joyner2015"
+     ],
+     "evidence": [
+      {
+       "source": "joyner2015",
+       "quote": "Stroke volume also increases at the onset of exercise due to a complex interplay of factors including increased myocardial contractility and depending on posture (upright vs. supine) how much blood is returned to the central circulation via the skeletal muscle pump which acts to empty the veins in the lower extremities where blood pools due to gravity",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sv-contractility",
+     "text": "Stronger contraction raises SV and lowers end-systolic volume.",
+     "grade": "strong",
+     "sources": [
+      "betts2022"
+     ],
+     "evidence": [
+      {
+       "source": "betts2022",
+       "quote": "The more forceful the contraction is, the greater the SV and smaller the ESV are.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sv-starling-scenario"
+  },
+  {
+   "type": "question",
+   "item": "sv-hr-filling"
+  },
+  {
+   "type": "concept",
+   "id": "sv-plateau",
+   "title": "The classic plateau, and the athletes who break it",
+   "text": "Textbooks long said that in an incremental test SV rises in the first stages, then **plateaus at about 40% of VO₂max** [[c:sv-classic-plateau]]. Above that, Q would rise only through HR.\n\nIn 1994, Gledhill and colleagues tested 7 endurance-trained and 7 untrained young men on a bike at matched heart rates. The untrained men's SV levelled off at 120 beats·min⁻¹. The trained men's kept rising all the way to their maximal HR [[c:sv-gledhill]]. Their main edge was filling: at 190 beats·min⁻¹ their ventricles filled 71% faster, and emptied 20% faster [[c:sv-gledhill-filling]].\n\nLater studies in elite male runners and in elite women also found no plateau [[c:sv-no-plateau]].",
+   "claims": [
+    {
+     "id": "sv-classic-plateau",
+     "text": "The traditional view is that SV plateaus at about 40% of VO₂max in incremental exercise.",
+     "grade": "disputed",
+     "sources": [
+      "vella2005"
+     ],
+     "evidence": [
+      {
+       "source": "vella2005",
+       "quote": "Traditionally, it has been accepted that, during incremental exercise, stroke volume plateaus at 40% of Vo(2)max.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-gledhill",
+     "text": "In 7 trained and 7 untrained young men, untrained SV plateaued at 120 beats·min⁻¹ while trained SV kept rising to maximal HR.",
+     "grade": "weak",
+     "sources": [
+      "gledhill1994"
+     ],
+     "evidence": [
+      {
+       "source": "gledhill1994",
+       "quote": "Stroke volume of the untrained subjects reached a plateau at 120 bpm, but stroke volume of the trained subjects continued to increase to their maximum heart rate with no plateau.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-gledhill-filling",
+     "text": "At 190 beats·min⁻¹, trained men's ventricles filled 71% and emptied 20% faster than untrained men's.",
+     "grade": "weak",
+     "sources": [
+      "gledhill1994"
+     ],
+     "evidence": [
+      {
+       "source": "gledhill1994",
+       "quote": "At a heart rate of 190 bpm, the corresponding rates of ventricular emptying and ventricular filling of the trained versus the untrained subjects were 20% and 71% greater, respectively (P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-no-plateau",
+     "text": "Studies in elite male runners and in elite (and moderately trained) women found SV rising to maximal exercise.",
+     "grade": "disputed",
+     "sources": [
+      "zhou2001",
+      "wang2012",
+      "vella2005"
+     ],
+     "evidence": [
+      {
+       "source": "zhou2001",
+       "quote": "In contrast, stroke volume in the elite athletes does not plateau but increases continuously with increasing intensity of exercise over the full range of the incremental exercise test.",
+       "level": "abstract"
+      },
+      {
+       "source": "wang2012",
+       "quote": "It is concluded that the SV increases at high aerobic intensities both in elite athlete females and moderately trained females.",
+       "level": "abstract"
+      },
+      {
+       "source": "vella2005",
+       "quote": "However, recent research has documented that stroke volume progressively increases to Vo(2)max in both trained and untrained subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sv-plateau-classic",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "sv-gledhill-mechanism"
+  },
+  {
+   "type": "concept",
+   "id": "sv-debate",
+   "title": "Not settled: plateau, rise or fall",
+   "text": "Other work doesn't fit one story. A critical review of athlete studies found every pattern: SV falling, a true plateau, or a rise of more than 40% to exhaustion. Different methods may explain much of the spread, and which pattern is typical of highly trained athletes is still uncertain [[c:sv-rowland]].\n\nIn men cycling to exhaustion, measured with catheters, Q rose in a straight line up to about 80% of peak power, then levelled off as SV fell, while HR kept climbing [[c:sv-decline-near-max]].\n\nIf trained athletes' SV does keep rising, better filling is the likely reason. Whether that comes from more blood arriving or from a more compliant ventricle is not clear.",
+   "claims": [
+    {
+     "id": "sv-rowland",
+     "text": "Studies of athletes report SV falling, plateauing or rising by over 40% to exhaustion; methods may explain this, and the typical pattern is uncertain.",
+     "grade": "disputed",
+     "sources": [
+      "rowland2009"
+     ],
+     "evidence": [
+      {
+       "source": "rowland2009",
+       "quote": "This review of studies assessing stroke volume changes with exercise in athletes reveals a wide disparity of reported patterns, ranging from those indicating a decline, to stable values (a true plateau), to a progressive increase to exhaustion of over 40%.",
+       "level": "abstract"
+      },
+      {
+       "source": "rowland2009",
+       "quote": "Differences in testing methodology might help to explain these variable results, but which pattern truly reflects that expected in highly trained endurance athletes remains uncertain.",
+       "level": "abstract"
+      },
+      {
+       "source": "rowland2009",
+       "quote": "However, it is not clear whether this might reflect superior upstream (atrial pressure/volume) or downstream (ventricular diastolic function, compliance) factors.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-decline-near-max",
+     "text": "In incremental cycling, cardiac output rose linearly to about 80% of peak power, then plateaued as SV declined.",
+     "grade": "weak",
+     "sources": [
+      "mortensen2005"
+     ],
+     "evidence": [
+      {
+       "source": "mortensen2005",
+       "quote": "During incremental cycling, cardiac output and systemic O2 delivery increased linearly to 80% of peak power (r2 = 0.998, P < 0.001) and then plateaued in parallel to a decline in stroke volume (SV) and an increase in central venous and mean arterial pressures (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "mortensen2005",
+       "quote": "Catheters were placed into the brachial artery and an antecubital vein, with the latter catheter being advanced to the right atrium.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does stroke volume keep rising all the way to VO₂max in trained endurance athletes?",
+    "sides": [
+     {
+      "position": "Yes: in trained athletes SV keeps rising to maximal exercise, mainly through faster, fuller filling of the ventricle.",
+      "sources": [
+       "gledhill1994",
+       "zhou2001",
+       "wang2012",
+       "vella2005"
+      ]
+     },
+     {
+      "position": "Not reliably: studies find plateaus or even falls near maximal exercise, and the different patterns may come from different methods.",
+      "sources": [
+       "rowland2009",
+       "mortensen2005"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "sv-debate-eval"
+  },
+  {
+   "type": "question",
+   "item": "sv-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "sv-training",
+   "title": "Why trained hearts hold more",
+   "text": "However the debate ends, trained athletes have a bigger SV at every intensity [[c:sv-bigger-all]]. The proposed reasons [[c:sv-mechanisms]]:\n\n- **better filling** (diastolic function), so EDV is larger;\n- **stronger contraction**;\n- **more blood volume**, which fills the heart better;\n- **lower afterload**.\n\nElite endurance athletes have a large, compliant ventricle that relaxes quickly and fills to a large volume. How much of this comes from training and how much from genes is still uncertain [[c:sv-elite-heart]].\n\nThis is the main way training raises maximal Q, and with it VO₂max, as the last lesson showed.",
+   "claims": [
+    {
+     "id": "sv-bigger-all",
+     "text": "Elite endurance athletes have a larger SV than less trained people at all intensities.",
+     "grade": "weak",
+     "sources": [
+      "wang2012"
+     ],
+     "evidence": [
+      {
+       "source": "wang2012",
+       "quote": "No differences were observed between groups in these increases, but the elite athletes displayed a larger (p<0.05) SV at all intensities.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-mechanisms",
+     "text": "Proposed mechanisms for trained athletes' rising SV: enhanced diastolic filling, enhanced contractility, larger blood volume and lower afterload.",
+     "grade": "moderate",
+     "sources": [
+      "vella2005"
+     ],
+     "evidence": [
+      {
+       "source": "vella2005",
+       "quote": "For endurance trained subjects, the proposed mechanisms for the progressive increase in stroke volume to Vo(2)max are enhanced diastolic filling, enhanced contractility, larger blood volume, and decreased cardiac afterload.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sv-elite-heart",
+     "text": "Elite athletes' high cardiac output comes from a large, compliant ventricle that relaxes quickly and fills to a large volume; the roles of genes and training are uncertain.",
+     "grade": "moderate",
+     "sources": [
+      "levine2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine2008",
+       "quote": "Elite endurance athletes have a high .VO(2,max) due primarily to a high cardiac output from a large compliant cardiac chamber (including the myocardium and pericardium) which relaxes quickly and fills to a large end-diastolic volume.",
+       "level": "abstract"
+      },
+      {
+       "source": "levine2008",
+       "quote": "The magnitude and mechanisms of cardiac phenotype plasticity remain uncertain and probably involve underlying genetic factors, as well as the length, duration, type, intensity and age of initiation of the training stimulus.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sv-blood-volume"
+  },
+  {
+   "type": "question",
+   "item": "sv-ef-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "SV = EDV − ESV, set by preload (filling), contractility (squeeze) and afterload (pressure to push against).",
+    "Frank–Starling: more filling, stronger beat. In exercise the muscle and breathing pumps raise venous return; a very fast HR shortens filling time.",
+    "The classic view has SV plateauing at about 40% of VO₂max; several studies find trained athletes' SV rising to max, mainly through better filling.",
+    "A critical review finds falls, plateaus and rises, perhaps from different methods: treat the pattern near max as disputed.",
+    "Trained athletes have a bigger SV at every intensity: better filling, more blood volume, stronger contraction. It is the main route to a higher maximal Q."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sv-ef-calc",
+   "concept": "sv-factors",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During easy cycling, a rider's left ventricle fills to 140 mL and holds 50 mL at the end of each beat. What are his stroke volume and ejection fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SV 90 mL, ejection fraction 64%",
+       "correct": true,
+       "why": "Right: 140 − 50 = 90 mL; 90 ÷ 140 = 64%."
+      },
+      {
+       "id": "b",
+       "text": "SV 90 mL, ejection fraction 36%",
+       "why": "36% is ESV ÷ EDV (50 ÷ 140), the share left behind, not the share pushed out."
+      },
+      {
+       "id": "c",
+       "text": "SV 190 mL, ejection fraction 136%",
+       "why": "This adds EDV and ESV. SV is the difference, and an ejection fraction can't top 100%."
+      },
+      {
+       "id": "d",
+       "text": "SV 90 mL, ejection fraction 180%",
+       "why": "This divides SV by ESV (90 ÷ 50). Ejection fraction is SV ÷ EDV."
+      }
+     ],
+     "solution": "SV = EDV − ESV = 140 − 50 = 90 mL. Ejection fraction = SV ÷ EDV = 90 ÷ 140 = 0.64 = 64%."
+    },
+    {
+     "id": "b",
+     "stem": "During a hard run, an elite runner's left ventricle fills to 200 mL and holds 60 mL at the end of each beat. What are her stroke volume and ejection fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SV 140 mL, ejection fraction 70%",
+       "correct": true,
+       "why": "Right: 200 − 60 = 140 mL; 140 ÷ 200 = 70%."
+      },
+      {
+       "id": "b",
+       "text": "SV 140 mL, ejection fraction 30%",
+       "why": "30% is ESV ÷ EDV (60 ÷ 200), the share left behind, not the share pushed out."
+      },
+      {
+       "id": "c",
+       "text": "SV 260 mL, ejection fraction 130%",
+       "why": "This adds EDV and ESV. SV is the difference, and an ejection fraction can't top 100%."
+      },
+      {
+       "id": "d",
+       "text": "SV 140 mL, ejection fraction 233%",
+       "why": "This divides SV by ESV (140 ÷ 60). Ejection fraction is SV ÷ EDV."
+      }
+     ],
+     "solution": "SV = EDV − ESV = 200 − 60 = 140 mL. Ejection fraction = SV ÷ EDV = 140 ÷ 200 = 0.70 = 70%."
+    },
+    {
+     "id": "c",
+     "stem": "At rest before a race, a triathlete's left ventricle fills to 110 mL and holds 45 mL at the end of each beat. What are his stroke volume and ejection fraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "SV 65 mL, ejection fraction 59%",
+       "correct": true,
+       "why": "Right: 110 − 45 = 65 mL; 65 ÷ 110 = 59%."
+      },
+      {
+       "id": "b",
+       "text": "SV 65 mL, ejection fraction 41%",
+       "why": "41% is ESV ÷ EDV (45 ÷ 110), the share left behind, not the share pushed out."
+      },
+      {
+       "id": "c",
+       "text": "SV 155 mL, ejection fraction 141%",
+       "why": "This adds EDV and ESV. SV is the difference, and an ejection fraction can't top 100%."
+      },
+      {
+       "id": "d",
+       "text": "SV 65 mL, ejection fraction 144%",
+       "why": "This divides SV by ESV (65 ÷ 45). Ejection fraction is SV ÷ EDV."
+      }
+     ],
+     "solution": "SV = EDV − ESV = 110 − 45 = 65 mL. Ejection fraction = SV ÷ EDV = 65 ÷ 110 = 0.59 = 59%."
+    }
+   ]
+  },
+  {
+   "id": "sv-factor-scenario",
+   "concept": "sv-factors",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist stands up for a sprint and her arterial blood pressure jumps. Which of the three factors that set stroke volume does this raise directly?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Afterload",
+       "correct": true,
+       "why": "Right: afterload is the pressure the ventricle must push against to open the aortic valve; higher arterial pressure raises it."
+      },
+      {
+       "id": "b",
+       "text": "Preload",
+       "why": "Preload is the stretch from filling, set by venous return and filling time, not by arterial pressure."
+      },
+      {
+       "id": "c",
+       "text": "Contractility",
+       "why": "Contractility is the strength of the squeeze, raised by sympathetic drive, not by arterial pressure itself."
+      },
+      {
+       "id": "d",
+       "text": "Ejection fraction",
+       "why": "Ejection fraction is a result (SV ÷ EDV), not one of the three factors that set SV."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-starling-scenario",
+   "concept": "sv-starling",
+   "bloom": "apply",
+   "sources": [
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner picks up the pace. Her calf and thigh muscles squeeze the leg veins harder, and more blood returns to her heart each beat. By the Frank–Starling mechanism, what happens to her stroke volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises: a more stretched ventricle contracts harder",
+       "correct": true,
+       "why": "Right: more filling stretches the ventricle, and within limits a stretched ventricle contracts more forcefully."
+      },
+      {
+       "id": "b",
+       "text": "It falls: an overfilled ventricle can't empty well",
+       "why": "Within physiological limits, more stretch means a stronger beat; the heart's surroundings stop it overstretching."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same: only nerves change stroke volume",
+       "why": "Nerves change contractility, but filling changes SV on its own: that is the Frank–Starling mechanism."
+      },
+      {
+       "id": "d",
+       "text": "It rises: a faster heart rate pushes out more per beat",
+       "why": "A faster HR doesn't raise SV; it shortens filling time, which tends to lower it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-hr-filling",
+   "concept": "sv-starling",
+   "bloom": "analyse",
+   "sources": [
+    "betts2022",
+    "gledhill1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an all-out effort, an untrained cyclist's heart rate nears 200 beats·min⁻¹. Which mechanism could cap or even lower his stroke volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less filling time between beats lowers EDV",
+       "correct": true,
+       "why": "Right: the faster the heart beats, the shorter each filling phase and the lower EDV, unless filling gets faster, as in trained hearts."
+      },
+      {
+       "id": "b",
+       "text": "Contractility falls as sympathetic drive peaks",
+       "why": "Sympathetic drive raises contractility; it doesn't weaken the squeeze."
+      },
+      {
+       "id": "c",
+       "text": "Afterload falls as the arteries in muscle widen",
+       "why": "Lower afterload would make it easier to push blood out, raising SV, not lowering it."
+      },
+      {
+       "id": "d",
+       "text": "The heart valves start leaking at high rates",
+       "why": "Healthy valves don't leak at high heart rates; a leaking valve is a disease."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-plateau-classic",
+   "concept": "sv-plateau",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "vella2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the classic textbook view, stroke volume stops rising at about what share of VO₂max during an incremental test?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 40%",
+       "correct": true,
+       "why": "Right: the traditional view is a plateau at about 40% of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "About 10%",
+       "why": "Too early: SV is still rising steeply in the first stages of a test."
+      },
+      {
+       "id": "c",
+       "text": "About 70%",
+       "why": "Later than the classic figure of about 40%."
+      },
+      {
+       "id": "d",
+       "text": "Only at 100%",
+       "why": "A rise all the way to max is what some studies find in trained athletes; it isn't the classic view."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Classic textbooks say a cyclist's stroke volume stops rising part-way through a ramp test. At about what share of VO₂max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 40%",
+       "correct": true,
+       "why": "Right: the traditional view is a plateau at about 40% of VO₂max."
+      },
+      {
+       "id": "b",
+       "text": "About 10%",
+       "why": "Too early: SV is still rising steeply in the first stages of a test."
+      },
+      {
+       "id": "c",
+       "text": "About 70%",
+       "why": "Later than the classic figure of about 40%."
+      },
+      {
+       "id": "d",
+       "text": "Only at 100%",
+       "why": "A rise all the way to max is what some studies find in trained athletes; it isn't the classic view."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-gledhill-mechanism",
+   "concept": "sv-plateau",
+   "bloom": "understand",
+   "sources": [
+    "gledhill1994"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Gledhill's 1994 study, what was the trained men's biggest advantage, letting their stroke volume keep rising at high heart rates?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Much faster filling of the ventricle",
+       "correct": true,
+       "why": "Right: at 190 beats·min⁻¹ their ventricles filled 71% faster; the authors called filling the major advantage."
+      },
+      {
+       "id": "b",
+       "text": "A higher maximal heart rate",
+       "why": "The groups were compared at matched heart rates, so HR wasn't the difference."
+      },
+      {
+       "id": "c",
+       "text": "Faster emptying of the ventricle",
+       "why": "Emptying was 20% faster, but filling, 71% faster, was the bigger advantage."
+      },
+      {
+       "id": "d",
+       "text": "Lower afterload from wider arteries",
+       "why": "The study's finding was about filling (diastolic function), not afterload."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-debate-eval",
+   "concept": "sv-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "rowland2009",
+    "gledhill1994",
+    "mortensen2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a triathlete: \"Stroke volume maxes out at 40% of VO₂max, so above that only heart rate matters.\" What is the best judgement on the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Contested: in trained athletes SV often keeps rising, and results vary with method",
+       "correct": true,
+       "why": "Right: several studies find trained athletes' SV rising to max, others find plateaus or falls; a critical review calls the pattern uncertain."
+      },
+      {
+       "id": "b",
+       "text": "Correct: every study finds the plateau at 40%",
+       "why": "Several studies of trained athletes find no plateau at all."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: SV always rises to maximal exercise in everyone",
+       "why": "Too strong: some studies find plateaus or falls near max, including in invasive measurements."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: SV is highest at rest and falls during exercise",
+       "why": "SV rises from rest in every study; the debate is only about the top end."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-appraisal",
+   "concept": "sv-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "zhou2001",
+    "rowland2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The elite-runner \"no plateau\" result came from 5 elite men, with stroke volume estimated by acetylene rebreathing during treadmill running. What most limits the claim that every elite endurance athlete's SV keeps rising to max?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Five men only, and an indirect method that may explain differing results",
+       "correct": true,
+       "why": "Right: a tiny all-male group, and a critical review notes that differences in method may explain the conflicting patterns."
+      },
+      {
+       "id": "b",
+       "text": "A treadmill test can't take runners to VO₂max",
+       "why": "Treadmill running uses a large muscle mass and reaches VO₂max well."
+      },
+      {
+       "id": "c",
+       "text": "There was no less-trained group to compare with",
+       "why": "There were two: 10 university runners and 10 untrained students, whose SV plateaued."
+      },
+      {
+       "id": "d",
+       "text": "Elite runners are too fit to be studied",
+       "why": "Their fitness is the point of the comparison, not a flaw in the study."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sv-blood-volume",
+   "concept": "sv-training",
+   "bloom": "analyse",
+   "sources": [
+    "vella2005",
+    "betts2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a training block, a cyclist's blood volume is higher. Riding at the same heart rate as before, what would you expect for his stroke volume, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher, because more returning blood fills the ventricle more",
+       "correct": true,
+       "why": "Right: more blood volume raises venous return and EDV, and Frank–Starling turns the extra filling into a bigger SV."
+      },
+      {
+       "id": "b",
+       "text": "Lower, because diluted blood makes the heart pump less",
+       "why": "Extra plasma lowers haemoglobin concentration, but SV is about volume, and more volume means more filling."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged, because heart size alone fixes stroke volume",
+       "why": "Heart size matters, but filling (preload) changes SV from beat to beat."
+      },
+      {
+       "id": "d",
+       "text": "Lower, because a fuller heart has to beat faster",
+       "why": "The heart rate is the same by design; more filling raises SV, and at a given power usually lowers HR."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

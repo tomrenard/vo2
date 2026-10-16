@@ -118,6 +118,55 @@ const inCurriculum = new Map(
 const itemOwner = new Map<string, string>();
 const hashes: Record<string, string> = {};
 
+/** Glossary terms linked anywhere in a lesson, in order of first use. */
+const termsUsed = (lesson: Lesson) => [
+  ...new Set(
+    [
+      ...JSON.stringify([lesson.steps.filter((s) => s.type !== "terms"), lesson.items]).matchAll(
+        /\]\(g:([a-z0-9-]+)\)/g,
+      ),
+    ].map((m) => m[1] as string),
+  ),
+];
+
+/**
+ * Terms each lesson introduces in its word card, by lesson id, read from every lesson file (also
+ * with --module: a module's lessons build on earlier ones).
+ */
+const introducedBy = new Map(
+  jsonFiles("lessons").map((id) => {
+    const raw = read(`lessons/${id}.json`) as Lesson;
+    const card = raw.steps?.find((s) => s.type === "terms");
+    return [id, card?.type === "terms" ? card.terms : []] as const;
+  }),
+);
+const courseOrder = curriculum.flatMap((t) => t.modules.flatMap((m) => m.lessons));
+
+/** A beginner meets every term in a word card before (or in the lesson where) it's used. */
+function checkTerms(lesson: Lesson) {
+  const at = lesson.id;
+  const before = new Set(
+    courseOrder
+      .slice(0, Math.max(courseOrder.indexOf(lesson.id), 0))
+      .flatMap((id) => introducedBy.get(id) ?? []),
+  );
+  const cards = lesson.steps.filter((s) => s.type === "terms");
+  const own = cards.flatMap((s) => s.terms);
+  if (cards.length > 1) fail(at, "one word card per lesson");
+  if (cards.length && lesson.steps[0]?.type !== "terms")
+    fail(at, "the word card must be the first step");
+  for (const term of own) {
+    if (!glossary[term]) fail(at, `word card: unknown glossary term ${term}`);
+    if (before.has(term))
+      warnings.push(`${at}: ${term} was already introduced in an earlier lesson`);
+  }
+  for (const term of termsUsed(lesson)) {
+    if (!before.has(term) && !own.includes(term)) {
+      fail(at, `uses term ${term} before introducing it: add it to this lesson's word card`);
+    }
+  }
+}
+
 /** Rules every question follows, in a lesson or a paper. */
 function checkItem(item: Item, owner: string) {
   const where = `${owner}/${item.id}`;
@@ -165,18 +214,16 @@ for (const lesson of lessons) {
   const conceptIds = new Set(lesson.steps.flatMap((s) => (s.type === "concept" ? [s.id] : [])));
   const items = new Map(lesson.items.map((item) => [item.id, item]));
   const scored = new Set<string>();
-  const pretests = lesson.steps.filter((s) => s.type === "question" && s.pretest).length;
-  if (pretests > 1) fail(at, `${pretests} pretest questions: one per lesson at most`);
-  // A pretest item comes back scored later in the lesson, in another wording.
-  lesson.steps.forEach((s, i) => {
-    if (s.type !== "question" || !s.pretest) return;
-    const back = lesson.steps
-      .slice(i + 1)
-      .some(
-        (t) => t.type === "question" && !t.pretest && t.item === s.item && t.variant !== s.variant,
-      );
-    if (!back) fail(at, `pretest ${s.item} never comes back scored later in another variant`);
-  });
+  checkTerms(lesson);
+  // Teach first: a question comes after the concept card it tests.
+  const taught = new Set<string>();
+  for (const step of lesson.steps) {
+    if (step.type === "concept") taught.add(step.id);
+    if (step.type !== "question") continue;
+    const concept = items.get(step.item)?.concept;
+    if (concept && !taught.has(concept))
+      fail(at, `${step.item} is asked before its concept ${concept}`);
+  }
 
   for (const step of lesson.steps) {
     if (step.type === "concept") {
@@ -206,7 +253,7 @@ for (const lesson of lessons) {
       else if (step.variant && !item.variants.some((v) => v.id === step.variant)) {
         fail(at, `item ${step.item} has no variant ${step.variant}`);
       }
-      if (!step.pretest) scored.add(step.item);
+      scored.add(step.item);
     }
     if (step.type === "example")
       lintText(`${at}/${step.id}`, [step.problem, ...step.steps].join("\n"));
@@ -338,7 +385,7 @@ writeFileSync(
 );
 execFileSync(
   "node_modules/.bin/biome",
-  ["format", "--write", "src/lib/content-index.ts", "src/lib/refs-index.ts"],
+  ["check", "--write", "src/lib/content-index.ts", "src/lib/refs-index.ts"],
   {
     stdio: "ignore",
   },
