@@ -1,7 +1,7 @@
 // biome-ignore-all lint/suspicious/noArrayIndexKey: static text that is never reordered
 import { Fragment, type ReactNode } from "react";
 import type { Lesson } from "@/lib/content";
-import { GLOSSARY } from "@/lib/content-index";
+import { GLOSSARY } from "@/lib/refs-index";
 import { EvidenceButton, EvidencePopover } from "./Evidence";
 
 type Claim = Extract<Lesson["steps"][number], { type: "concept" }>["claims"][number];

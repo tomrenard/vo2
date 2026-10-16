@@ -15,7 +15,7 @@ export default async function SessionPage() {
     return [
       {
         item: found.item,
-        lessonId: found.lesson.id,
+        href: found.href,
         reps,
         variantId: reviewVariant(found.item, reps).id,
       },

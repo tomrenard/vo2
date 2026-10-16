@@ -35,9 +35,8 @@ vi.mock("./content-index", () => {
         items: [item],
       },
     ],
-    HASHES: { q1: "h1" },
-    GLOSSARY: {},
-    SOURCES: {},
+    PAPERS: [{ id: "2026-01-01-p", items: [{ ...item, id: "p1", concept: "2026-01-01-p" }] }],
+    HASHES: { q1: "h1", p1: "h2" },
   };
 });
 
@@ -111,6 +110,11 @@ describe("answer", () => {
     });
     expect(await dueItems("u1")).toEqual([]);
     expect((await counts("u1")).due).toBe(0);
+  });
+
+  it("schedules a paper's questions like a lesson's", async () => {
+    await answer("u1", { ...base, itemId: "p1", optionId: "b", sure: false, context: "lesson" });
+    expect((await dueItems("u1")).map((d) => d.itemId)).toEqual(["p1"]);
   });
 
   it("rejects an option that doesn't exist", async () => {

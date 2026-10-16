@@ -25,7 +25,8 @@ lesson is about to teach (unscored; the same item comes back scored later, with 
   `[[c:<claim id>]]` and list them in `claims` with a grade, sources and the quoted sentence from
   the abstract or full text that supports them. A live debate gets a `debate` box with both sides.
 - **Worked example** (`example`) before the first calculation of a kind; later ones fade the steps.
-- **Units:** SI, written as `mL·kg⁻¹·min⁻¹`, `mmol·L⁻¹`, `W·kg⁻¹`, `g·h⁻¹`, `kJ` (kcal only in
+- **Units:** SI, written as `mL·kg⁻¹·min⁻¹`, `mmol·L⁻¹`, `W·kg⁻¹`, `g·h⁻¹`, `g·kg⁻¹·day⁻¹`,
+  `mmol·kg⁻¹ dry mass` (say wet or dry for muscle contents), `kJ` (kcal only in
   brackets: `1,000 kJ (239 kcal)`). Decimal point, thousands comma (`2,151 kcal`), except in a list of numbers, where 4-digit
   numbers have none (`1100, 1180 and 1120 ms`), so the commas only separate the values.
 - **Examples** from running, cycling and triathlon in turn; general science where it applies.

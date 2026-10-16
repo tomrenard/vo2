@@ -28,6 +28,8 @@ export const Source = z.object({
   type: z.enum([
     "consensus",
     "systematic-review",
+    /** A review of reviews. */
+    "umbrella-review",
     "meta-analysis",
     "rct",
     "crossover",
@@ -40,10 +42,11 @@ export const Source = z.object({
     "textbook",
     "preprint",
   ]),
-  /** Participants; trained men only is a reason to downgrade. */
+  /** Participants (for a review: pooled participants; trials go in `sample`). */
   n: z.number().int().optional(),
   sample: z.string().optional().describe("e.g. 'trained male cyclists'"),
-  industryFunded: z.boolean().optional(),
+  /** Set only when the declarations show industry funding or ties. */
+  industryFunded: z.literal(true).optional(),
   url: z.string().url().optional(),
 });
 export type Source = z.infer<typeof Source>;
@@ -158,6 +161,31 @@ export const Lesson = z.object({
   items: z.array(Item).min(1),
 });
 export type Lesson = z.infer<typeof Lesson>;
+
+/**
+ * A paper of the week: a recent study in plain words, what limits it, and a few questions (they
+ * join your reviews like lesson questions). Its items' `concept` is the paper's id.
+ */
+export const Paper = z.object({
+  /** <date added>-<short-slug>, e.g. 2026-10-16-heat-acclimation-women */
+  id: z.string().regex(/^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$/),
+  /** The study, in data/sources/papers.json. */
+  source: id,
+  /** A plain headline of the finding, not the paper's title. */
+  headline: z.string().max(120),
+  question: z.string().describe("what the study asked"),
+  design: z.string().describe("who, how many, what was done; design type"),
+  findings: z.string().describe("the main results, with numbers"),
+  limits: z.string().describe("what limits it: sample, design, funding, spin"),
+  grade: Grade,
+  meaning: z.string().describe("how it fits what the course teaches"),
+  /** Lessons or modules it touches (ids in curriculum.json). */
+  topics: z.array(id),
+  /** True if it should change what a lesson says: the routine opens an issue for it. */
+  challengesLessons: z.boolean(),
+  items: z.array(Item).min(2).max(5),
+});
+export type Paper = z.infer<typeof Paper>;
 
 export const Curriculum = z.array(
   z.object({

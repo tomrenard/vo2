@@ -1,5 +1,5 @@
 import type { Lesson, Source } from "@/lib/content";
-import { SOURCES } from "@/lib/content-index";
+import { SOURCES } from "@/lib/refs-index";
 
 type Claim = Extract<Lesson["steps"][number], { type: "concept" }>["claims"][number];
 type Grade = Claim["grade"];

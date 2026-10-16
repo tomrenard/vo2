@@ -1,5 +1,6 @@
 /**
- * Checks all course content (data/), then writes src/lib/content-index.ts. Fails on any error.
+ * Checks all course content (data/), then writes src/lib/content-index.ts and refs-index.ts.
+ * Fails on any error.
  * `--accept`: questions whose text changed are accepted (a typo fix keeps the id and the
  * learner's progress) and items.lock.json is updated. Removed questions stay there as retired.
  * `--module <id>`: check only that module's lessons and write nothing, so writers working on
@@ -9,7 +10,15 @@ import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import type { z } from "zod";
-import { Curriculum, Facts, Glossary, type Item, Lesson, Sources } from "../src/lib/content.ts";
+import {
+  Curriculum,
+  Facts,
+  Glossary,
+  type Item,
+  Lesson,
+  Paper,
+  Sources,
+} from "../src/lib/content.ts";
 
 const dataUrl = (path: string) => new URL(`../data/${path}`, import.meta.url);
 const read = (path: string) => JSON.parse(readFileSync(dataUrl(path), "utf8"));
@@ -74,6 +83,7 @@ const UNIT_RULES: [RegExp, string][] = [
   [/\bg\s*\/\s*h(our)?\b/i, "write g·h⁻¹"],
   [/\bW\s*\/\s*kg\b/, "write W·kg⁻¹"],
   [/\bL\s*\/\s*min\b/, "write L·min⁻¹"],
+  [/\bg\s*\/\s*kg\s*\/\s*(day|d)\b/i, "write g·kg⁻¹·day⁻¹"],
 ];
 const BANNED: [RegExp, string][] = [
   [/\b(all|none) of the above\b/i, "no all/none of the above"],
@@ -107,6 +117,41 @@ const inCurriculum = new Map(
 );
 const itemOwner = new Map<string, string>();
 const hashes: Record<string, string> = {};
+
+/** Rules every question follows, in a lesson or a paper. */
+function checkItem(item: Item, owner: string) {
+  const where = `${owner}/${item.id}`;
+  if (itemOwner.has(item.id)) fail(where, `item id also used in ${itemOwner.get(item.id)}`);
+  itemOwner.set(item.id, owner);
+  for (const source of item.sources) if (!sources[source]) fail(where, `unknown source ${source}`);
+  const variantIds = new Set<string>();
+  for (const variant of item.variants) {
+    const vWhere = `${where}/${variant.id}`;
+    if (variantIds.has(variant.id)) fail(vWhere, "duplicate variant id");
+    variantIds.add(variant.id);
+    const optionIds = variant.options.map((o) => o.id);
+    if (new Set(optionIds).size !== optionIds.length) fail(vWhere, "duplicate option ids");
+    if (variant.options.filter((o) => o.correct).length !== 1)
+      fail(vWhere, "needs exactly one correct option");
+    const texts = [variant.stem, ...variant.options.map((o) => o.text)];
+    for (const text of texts) {
+      for (const [pattern, message] of BANNED) if (pattern.test(text)) fail(vWhere, message);
+    }
+    lintText(
+      vWhere,
+      [...texts, ...variant.options.map((o) => o.why), variant.solution ?? ""].join("\n"),
+    );
+    // The right answer shouldn't stand out by length.
+    const right = variant.options.find((o) => o.correct)?.text.length ?? 0;
+    const longestWrong = Math.max(
+      ...variant.options.filter((o) => !o.correct).map((o) => o.text.length),
+    );
+    if (right > 1.6 * longestWrong) {
+      warnings.push(`${vWhere}: the correct option is much longer than the others`);
+    }
+  }
+  hashes[item.id] = hashOf(item);
+}
 
 for (const lesson of lessons) {
   const at = lesson.id;
@@ -157,39 +202,35 @@ for (const lesson of lessons) {
 
   for (const item of lesson.items) {
     const where = `${at}/${item.id}`;
-    if (itemOwner.has(item.id)) fail(where, `item id also used in ${itemOwner.get(item.id)}`);
-    itemOwner.set(item.id, at);
     if (!conceptIds.has(item.concept)) fail(where, `concept ${item.concept} is not in this lesson`);
     if (!scored.has(item.id)) fail(where, "never asked as a scored question");
-    for (const source of item.sources)
-      if (!sources[source]) fail(where, `unknown source ${source}`);
-    const variantIds = new Set<string>();
-    for (const variant of item.variants) {
-      const vWhere = `${where}/${variant.id}`;
-      if (variantIds.has(variant.id)) fail(vWhere, "duplicate variant id");
-      variantIds.add(variant.id);
-      const optionIds = variant.options.map((o) => o.id);
-      if (new Set(optionIds).size !== optionIds.length) fail(vWhere, "duplicate option ids");
-      if (variant.options.filter((o) => o.correct).length !== 1)
-        fail(vWhere, "needs exactly one correct option");
-      const texts = [variant.stem, ...variant.options.map((o) => o.text)];
-      for (const text of texts) {
-        for (const [pattern, message] of BANNED) if (pattern.test(text)) fail(vWhere, message);
-      }
-      lintText(
-        vWhere,
-        [...texts, ...variant.options.map((o) => o.why), variant.solution ?? ""].join("\n"),
-      );
-      // The right answer shouldn't stand out by length.
-      const right = variant.options.find((o) => o.correct)?.text.length ?? 0;
-      const longestWrong = Math.max(
-        ...variant.options.filter((o) => !o.correct).map((o) => o.text.length),
-      );
-      if (right > 1.6 * longestWrong) {
-        warnings.push(`${vWhere}: the correct option is much longer than the others`);
-      }
-    }
-    hashes[item.id] = hashOf(item);
+    checkItem(item, at);
+  }
+}
+
+// Papers of the week (data/papers/*.json): skipped by --module.
+const paperIds = onlyModule ? [] : jsonFiles("papers");
+const papers = paperIds.flatMap((file) => {
+  const paper = parse(Paper, read(`papers/${file}.json`), `papers/${file}.json`);
+  if (paper && paper.id !== file) fail(file, `id is ${paper.id}, file name says ${file}`);
+  return paper ? [paper] : [];
+});
+const moduleIds = new Set(curriculum.flatMap((t) => t.modules.map((m) => m.id)));
+for (const paper of papers) {
+  const at = `papers/${paper.id}`;
+  if (!sources[paper.source]) fail(at, `unknown source ${paper.source}`);
+  for (const topic of paper.topics) {
+    if (!inCurriculum.has(topic) && !moduleIds.has(topic))
+      fail(at, `unknown lesson or module ${topic}`);
+  }
+  lintText(
+    at,
+    [paper.question, paper.design, paper.findings, paper.limits, paper.meaning].join("\n"),
+  );
+  for (const item of paper.items) {
+    if (item.concept !== paper.id)
+      fail(`${at}/${item.id}`, "a paper's items have the paper id as concept");
+    checkItem(item, at);
   }
 }
 
@@ -255,22 +296,41 @@ writeFileSync(
   new URL("../src/lib/content-index.ts", import.meta.url),
   [
     "// Generated by `pnpm content:check` from data/. Do not edit.",
-    'import type { Curriculum, Glossary, Lesson, Source } from "./content";',
+    'import type { Curriculum, Lesson, Paper } from "./content";',
     'import curriculum from "../../data/curriculum.json";',
-    ...[...glossaryParts, ...sourceParts].map(([v, path]) => `import ${v} from "${path}";`),
     ...lessonIds.map((id) => `import ${name(id)} from "../../data/lessons/${id}.json";`),
+    ...paperIds.map((id, i) => `import p_${i} from "../../data/papers/${id}.json";`),
     "",
     "export const CURRICULUM = curriculum as Curriculum;",
-    `export const GLOSSARY = { ${spread(glossaryParts)} } as Glossary;`,
-    `export const SOURCES = { ${spread(sourceParts)} } as Record<string, Source>;`,
     `export const LESSONS = [${lessonIds.map(name).join(", ")}] as Lesson[];`,
+    `export const PAPERS = [${paperIds
+      .map((_, i) => `p_${i}`)
+      .reverse()
+      .join(", ")}] as Paper[];`,
     `export const HASHES: Record<string, string> = ${JSON.stringify(hashes)};`,
     "",
   ].join("\n"),
 );
-execFileSync("node_modules/.bin/biome", ["format", "--write", "src/lib/content-index.ts"], {
-  stdio: "ignore",
-});
+// Terms and sources only, for code that runs on the phone (the content index holds every lesson).
+writeFileSync(
+  new URL("../src/lib/refs-index.ts", import.meta.url),
+  [
+    "// Generated by `pnpm content:check` from data/. Do not edit.",
+    'import type { Glossary, Source } from "./content";',
+    ...[...glossaryParts, ...sourceParts].map(([v, path]) => `import ${v} from "${path}";`),
+    "",
+    `export const GLOSSARY = { ${spread(glossaryParts)} } as Glossary;`,
+    `export const SOURCES = { ${spread(sourceParts)} } as Record<string, Source>;`,
+    "",
+  ].join("\n"),
+);
+execFileSync(
+  "node_modules/.bin/biome",
+  ["format", "--write", "src/lib/content-index.ts", "src/lib/refs-index.ts"],
+  {
+    stdio: "ignore",
+  },
+);
 console.log(
-  `ok: ${lessons.length} lessons, ${Object.keys(hashes).length} items, ${Object.keys(sources).length} sources`,
+  `ok: ${lessons.length} lessons, ${papers.length} papers, ${Object.keys(hashes).length} items, ${Object.keys(sources).length} sources`,
 );

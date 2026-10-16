@@ -1,4 +1,5 @@
-import { GLOSSARY, LESSONS, SOURCES } from "@/lib/content-index";
+import { LESSONS } from "@/lib/content-index";
+import { GLOSSARY, SOURCES } from "@/lib/refs-index";
 import { requireUser } from "@/lib/session";
 import { TabBar } from "../TabBar";
 import { Library } from "./Library";
