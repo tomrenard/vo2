@@ -1,0 +1,1147 @@
+{
+ "id": "bio-pcr",
+ "module": "t1a-bioenergetics",
+ "title": "Phosphocreatine: the first seconds",
+ "goal": "Explain how phosphocreatine buffers ATP in the first seconds of a sprint, how fast it runs down and recovers, and what that means for repeated efforts and creatine supplements.",
+ "requires": [
+  "bio-atp"
+ ],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "pcr-fall-sprint",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "pcr-ck",
+   "title": "Creatine kinase: ATP in one step",
+   "text": "[PCr](g:pcr) is creatine with a phosphate attached. The enzyme [creatine kinase](g:creatine-kinase) hands that phosphate to ADP in a single step:\n\n**PCr + ADP + H⁺ ⇌ creatine + ATP**\n\nOne step means it's the fastest way to rebuild ATP: PCr is the muscle's most immediate ATP reserve [[c:pcr-immediate]]. The moment a sprint starts and ADP rises, the reaction runs to the right and holds ATP almost steady.\n\nTwo details matter later:\n\n- It **uses up a proton (H⁺)**, so the start of hard exercise slightly *alkalinises* muscle [[c:ck-proton]].\n- It **runs both ways**. In recovery, ATP from the mitochondria pushes it back to the left and rebuilds PCr.",
+   "claims": [
+    {
+     "id": "pcr-immediate",
+     "text": "PCr is the most immediate reserve for rebuilding ATP at the start of contraction.",
+     "grade": "strong",
+     "sources": [
+      "mcmahon2002",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "mcmahon2002",
+       "quote": "Within the skeletal muscle cell at the onset of muscular contraction, phosphocreatine (PCr) represents the most immediate reserve for the rephosphorylation of adenosine triphosphate (ATP).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ck-proton",
+     "text": "The creatine kinase reaction consumes a proton, slightly alkalinising muscle at the onset of exercise.",
+     "grade": "strong",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "The proton (H + ) consumption during the creatine kinase reaction accounts for the slight alkalinization of muscle at the onset of exercise.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pcr-ck-reaction"
+  },
+  {
+   "type": "question",
+   "item": "pcr-ck-proton"
+  },
+  {
+   "type": "concept",
+   "id": "pcr-store",
+   "title": "A store that empties in seconds",
+   "text": "Resting muscle holds about **80 mmol·kg⁻¹ dry muscle** of PCr: about three times its ATP (25 mmol·kg⁻¹ dry) [[c:pcr-store-size]]. Counting creatine with and without its phosphate, the total pool is about 120 mmol·kg⁻¹ dry, so about two thirds of it is PCr. Some papers use per kg *wet* muscle instead: always check which.\n\nIn an all-out effort PCr falls fast [[c:pcr-fast-fall]]:\n\n- after a **6 s** cycle sprint, down by **57%**;\n- after a **30 s** sprint, down to about **17–20%** of rest.\n\nSo by the last seconds of a 10 s sprint, more than half the store is gone and glycolysis covers much of the ATP.",
+   "claims": [
+    {
+     "id": "pcr-store-size",
+     "text": "Resting muscle PCr is about 80 and ATP about 25 mmol·kg⁻¹ dry muscle; total creatine averages about 120 mmol·kg⁻¹ dry, about two thirds of it PCr.",
+     "grade": "strong",
+     "sources": [
+      "porter2017",
+      "kreider2017"
+     ],
+     "evidence": [
+      {
+       "source": "porter2017",
+       "quote": "Moreover, at rest, ATP (25 mmol/kg dry weight), ADP (3.3 mmol/kg dry weight), AMP (0.1 mmol/kg dry weight), and PCr (80 mmol/kg dry weight) collectively contain about 70 mmol/kg dry weight of Pi.",
+       "level": "full-text"
+      },
+      {
+       "source": "kreider2017",
+       "quote": "About two thirds of intramuscular creatine is phosphocreatine (PCr) with the remaining being free creatine.",
+       "level": "full-text"
+      },
+      {
+       "source": "kreider2017",
+       "quote": "The total creatine pool (PCr + Cr) in the muscle averages about 120 mmol/kg of dry muscle mass for a 70 kg individual",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pcr-fast-fall",
+     "text": "PCr fell by 57% in a 6 s maximal cycle sprint and to about 17–20% of rest after a 30 s sprint.",
+     "grade": "weak",
+     "sources": [
+      "gaitanos1993",
+      "bogdanis1996",
+      "bogdanis1995"
+     ],
+     "evidence": [
+      {
+       "source": "gaitanos1993",
+       "quote": "Indeed, within the first 6-s bout of maximal exercise PCr concentration had fallen by 57% and muscle lactate concentration had increased to 28.6 mmol/kg dry wt, confirming significant glycolytic activity.",
+       "level": "abstract"
+      },
+      {
+       "source": "bogdanis1996",
+       "quote": "At the end of sprint 1, PCr was 16.9 +/- 1.4% of the resting value, and muscle pH dropped to 6.69 +/- 0.02.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pcr-store-example",
+   "title": "How many seconds of PCr?",
+   "problem": "Resting muscle holds 80 mmol·kg⁻¹ dry muscle of PCr. Suppose that in a sprint PCr is used at 8 mmol·kg⁻¹ dry·s⁻¹ and nothing else changed. How long until it is empty?",
+   "steps": [
+    "Each PCr rebuilds one ATP, so time = PCr store ÷ rate of PCr use.",
+    "80 ÷ 8 = 10 s.",
+    "In reality the rate of PCr use falls as the store runs down and glycolysis takes a bigger share, so PCr is rarely fully emptied: about 15–20% is left even after exhaustion."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pcr-store-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pcr-fall-sprint",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pcr-energy-systems",
+   "title": "Where PCr fits in a maximal effort",
+   "text": "The chart splits the energy of maximal efforts lasting 10 s to 4 min into two bands: anaerobic (PCr and glycolysis together) and aerobic.\n\nIn words, since the chart can't split the anaerobic band: in the first **5–6 s** the PCr system leads, both in rate and in share of ATP [[c:pcr-dominates]]. Glycolysis starts within seconds and reaches its top rate within about 10–20 s, so by 10 s it is a big partner. The aerobic share is under 10% at 10 s but grows fast: it matches anaerobic supply at about 75–80 s [[c:pcr-crossover]].\n\nA 10 s sprint, a 400 m lap and a 3 km pursuit are three points on one chart, not three separate systems.",
+   "diagram": {
+    "id": "energy-systems",
+    "caption": "Aerobic vs anaerobic (PCr + glycolysis) share of energy in maximal efforts of 10 s to 4 min.",
+    "params": {
+     "duration": 10
+    }
+   },
+   "claims": [
+    {
+     "id": "pcr-dominates",
+     "text": "In maximal efforts up to about 5–6 s, the PCr (phosphagen) system dominates the rate and share of ATP resynthesis.",
+     "grade": "moderate",
+     "sources": [
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "it has been generally accepted that with an exercise period of maximal effort of up to 5 to 6 seconds duration, the phosphagen energy system dominates in terms of the rate and proportion of total ATP regeneration",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pcr-crossover",
+     "text": "Aerobic and anaerobic supply are about equal at around 75–80 s of maximal effort.",
+     "grade": "moderate",
+     "sources": [
+      "gastin2001",
+      "gastin2026"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2001",
+       "quote": "The duration of maximal exercise at which equal contributions are derived from the anaerobic and aerobic energy systems appears to occur between 1 to 2 minutes and most probably around 75 seconds",
+       "level": "abstract"
+      },
+      {
+       "source": "gastin2026",
+       "quote": "The maximal exercise duration that derived equal contributions from both the anaerobic and aerobic energy systems was 78.6 s (95% confidence interval [95% CI] ± 1.1 s)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pcr-diagram-10s"
+  },
+  {
+   "type": "question",
+   "item": "pcr-occlusion",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "pcr-recovery",
+   "title": "Rebuilding PCr takes oxygen and minutes",
+   "text": "After the effort, creatine kinase runs backwards, using ATP from the mitochondria. That needs oxygen. With blood flow blocked by a cuff, PCr doesn't recover at all [[c:pcr-needs-o2]].\n\nRecovery is roughly exponential: fast, then slower. Its speed is a half-time or a [time constant](g:time-constant) τ (half-time = 0.69 τ):\n\n**fraction of the used PCr rebuilt = 1 − e^(−t/τ)**\n\nHalf-times run from about **21 s** for the fast phase after dynamic exercise to about **57 s** after a 30 s all-out sprint, which is τ of about 30–80 s [[c:pcr-half-time]]. Even 6 minutes after a 30 s sprint, PCr was only back to about 85%.\n\nThe real curve has a fast and a slow phase; one τ is a simplification.",
+   "claims": [
+    {
+     "id": "pcr-needs-o2",
+     "text": "PCr resynthesis depends on oxygen supply: occluding blood flow abolishes it.",
+     "grade": "strong",
+     "sources": [
+      "harris1976",
+      "sahlin1979"
+     ],
+     "evidence": [
+      {
+       "source": "harris1976",
+       "quote": "Occlusion of the circulation of the quadriceps completely abolished the resynthesis of PC.",
+       "level": "abstract"
+      },
+      {
+       "source": "sahlin1979",
+       "quote": "During 15 min incubation in oxygen CP was resynthesized from a starting value of 4% to 68% of the normal value at rest. No resynthesis was observed when parallel muscle samples were incubated for the same time in nitrogen.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pcr-half-time",
+     "text": "PCr recovery half-times range from about 21–22 s (fast phase) to about 57 s after a 30 s sprint; PCr reached only about 85% of rest after 6 min.",
+     "grade": "weak",
+     "sources": [
+      "harris1976",
+      "bogdanis1995"
+     ],
+     "evidence": [
+      {
+       "source": "harris1976",
+       "quote": "The time course of PC resynthesis during recovery was biphasic exhibiting a fast and slow recovery component. The half-time for the fast component was 21-22s",
+       "level": "abstract"
+      },
+      {
+       "source": "bogdanis1995",
+       "quote": "During recovery, PCr increased rapidly to 65.0 +/- 2.8% of rest after 1.5 min, but reached only 85.5 +/- 3.5% of rest after 6 min of recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "bogdanis1995",
+       "quote": "Modelling of the individual PCr resynthesis using a power function curve gave an average half-time for PCr resynthesis of 56.6 +/- 7.3 s.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pcr-recovery-example",
+   "title": "How much PCr is back after 90 s?",
+   "problem": "After a 30 s all-out effort, a rider's PCr is at 20% of rest. Take a recovery half-time of 57 s. How much PCr is back after 90 s of easy spinning?",
+   "steps": [
+    "Half-time to time constant: τ = 57 ÷ 0.69 ≈ 82 s.",
+    "Fraction of the used PCr rebuilt = 1 − e^(−90/82) = 1 − e^(−1.10) = 1 − 0.33 = 0.67.",
+    "PCr used = 100% − 20% = 80% of rest. Rebuilt = 0.67 × 80% ≈ 53%.",
+    "PCr now ≈ 20% + 53% = 73% of rest. (Measured in the study: 65% at 90 s. The model is a little optimistic: the study fitted a power curve, not one exponential, and real recovery has a fast and a slow phase.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pcr-recovery-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pcr-halftime-tau",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pcr-occlusion",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "pcr-repeated",
+   "title": "Repeated sprints, attacks and surges",
+   "text": "In a criterium you sprint out of every corner, and every attack you answer is a short all-out effort. How much power you have for the next one tracks how much PCr you have rebuilt [[c:pcr-power-recovery]].\n\nThe second effort also leans more on the aerobic route: in a repeated 30 s sprint, aerobic metabolism supplied about half the energy [[c:aerobic-second-sprint]].\n\nSince PCr recovery runs on oxidative ATP, fitter athletes should recover faster. Reviews agree aerobic fitness helps repeated-sprint recovery, but the direct link to PCr recovery rate is inconsistent.\n\nTraining point: a short rest (30–60 s) means each rep starts with PCr only partly back; long rests (3–6 min) keep the first seconds of each rep strong.",
+   "claims": [
+    {
+     "id": "pcr-power-recovery",
+     "text": "Recovery of sprint power closely tracks PCr resynthesis between repeated sprints.",
+     "grade": "weak",
+     "sources": [
+      "bogdanis1995",
+      "bogdanis1996"
+     ],
+     "evidence": [
+      {
+       "source": "bogdanis1995",
+       "quote": "High correlations (r = 0.71-0.86; P < 0.05) were found between the percentage resynthesis of PCr and the percentage restoration of PPO, maxSp and MPO6 after 1.5 and 3 min of recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "bogdanis1996",
+       "quote": "High correlations were found between the percentage of PCr resynthesis and the percentage recovery of power output and pedaling speed during the initial 10 s of sprint 2",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "aerobic-second-sprint",
+     "text": "In a second 30 s sprint after 4 min rest, aerobic metabolism supplied about 49% of the energy.",
+     "grade": "weak",
+     "sources": [
+      "bogdanis1996"
+     ],
+     "evidence": [
+      {
+       "source": "bogdanis1996",
+       "quote": "These data suggest that aerobic metabolism provides a significant part (approximately 49%) of the energy during the second sprint, whereas PCr availability is important for high power output during the initial 10 s.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does higher aerobic fitness speed up PCr recovery after intense exercise?",
+    "sides": [
+     {
+      "position": "Yes: aerobic fitness enhances recovery from intermittent high-intensity exercise, partly through faster PCr regeneration, especially with large muscle mass.",
+      "sources": [
+       "tomlin2001"
+      ]
+     },
+     {
+      "position": "Not clearly: the mechanism predicts it, but 31P-MRS studies are inconsistent and limited by method, so the link is unproven.",
+      "sources": [
+       "mcmahon2002"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pcr-track-repeats"
+  },
+  {
+   "type": "question",
+   "item": "pcr-fitness-debate"
+  },
+  {
+   "type": "question",
+   "item": "pcr-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "pcr-creatine",
+   "title": "Creatine supplements, briefly",
+   "text": "Can you make the PCr store bigger? Yes: creatine monohydrate raises muscle creatine and PCr by about **20–40%**. The quick way is about 0.3 g·kg⁻¹ body mass per day for 5–7 days, then 3–5 g per day [[c:creatine-loading]].\n\nThe ISSN position stand finds it improves repeated high-intensity efforts. The one consistent side effect is weight gain: early studies found about 0.5–1 L of extra body water after loading [[c:creatine-effects]]. For a road climber or a runner, that extra mass can cost more than the sprint gains.\n\nThe position stand is a consensus statement, but several authors have creatine-industry ties and it was written at the request of a supplement-industry body, so we grade it one step down.",
+   "claims": [
+    {
+     "id": "creatine-loading",
+     "text": "Creatine supplementation raises muscle creatine and PCr by 20–40%; loading at about 0.3 g·kg⁻¹·day⁻¹ for 5–7 days then 3–5 g·day⁻¹ is the quickest method.",
+     "grade": "moderate",
+     "sources": [
+      "kreider2017"
+     ],
+     "evidence": [
+      {
+       "source": "kreider2017",
+       "quote": "Therefore, dietary supplementation of creatine serves to increase muscle creatine and PCr by 20–40%",
+       "level": "full-text"
+      },
+      {
+       "source": "kreider2017",
+       "quote": "The quickest method of increasing muscle creatine stores may be to consume ~0.3 g/kg/day of creatine monohydrate for 5–7-days followed by 3–5 g/day thereafter to maintain elevated stores.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "creatine-effects",
+     "text": "Creatine loading improves high-intensity and repeated exercise performance; its only consistent side effect is weight gain from fluid retention (about 0.5–1.0 L).",
+     "grade": "moderate",
+     "sources": [
+      "kreider2017"
+     ],
+     "evidence": [
+      {
+       "source": "kreider2017",
+       "quote": "After creatine loading, performance of high intensity and/or repetitive exercise is generally increased by 10–20% depending on the magnitude of increase in muscle PCr",
+       "level": "full-text"
+      },
+      {
+       "source": "kreider2017",
+       "quote": "The only consistently reported side effect from creatine supplementation that has been described in the literature has been weight gain",
+       "level": "full-text"
+      },
+      {
+       "source": "kreider2017",
+       "quote": "For example, initial studies reported that creatine loading promoted a short-term fluid retention (e.g., about 0.5 – 1.0 L) that was generally proportional to the acute weight gain observed",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pcr-creatine-who"
+  },
+  {
+   "type": "question",
+   "item": "pcr-store-calc",
+   "variant": "c"
+  },
+  {
+   "type": "question",
+   "item": "pcr-recovery-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Creatine kinase rebuilds ATP from PCr in one step (PCr + ADP + H⁺ ⇌ Cr + ATP): the fastest route, and it runs backwards in recovery.",
+    "PCr is about 80 mmol·kg⁻¹ dry muscle, three times ATP; it falls by about half in 6 s of all-out work and to about 20% after 30 s.",
+    "PCr resynthesis needs oxygen; half-times of about 20–60 s mean it takes minutes to get most of it back.",
+    "Power in repeated sprints, attacks and surges tracks PCr recovery; the link with aerobic fitness is plausible but inconsistent.",
+    "Creatine loading raises PCr 20–40% and helps repeated hard efforts, at the cost of some weight gain, mostly water."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pcr-ck-reaction",
+   "concept": "pcr-ck",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mcmahon2002",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the first second of a sprint, what does creatine kinase do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Moves a phosphate from PCr to ADP, making ATP",
+       "correct": true,
+       "why": "Right: PCr + ADP + H⁺ → creatine + ATP, in one step."
+      },
+      {
+       "id": "b",
+       "text": "Moves a phosphate from ATP to creatine, making PCr",
+       "why": "That is the reverse direction, which happens in recovery, not at the start of a sprint."
+      },
+      {
+       "id": "c",
+       "text": "Splits PCr with oxygen to release energy for myosin",
+       "why": "The reaction needs no oxygen, and myosin only uses ATP, never PCr directly."
+      },
+      {
+       "id": "d",
+       "text": "Turns creatine into lactate to buffer acid",
+       "why": "Creatine isn't turned into lactate; lactate comes from pyruvate in glycolysis."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-ck-proton",
+   "concept": "pcr-ck",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During the first seconds of a 100 m sprint, the creatine kinase reaction takes up a proton. What does that do to the muscle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Makes it slightly more alkaline at first",
+       "correct": true,
+       "why": "Right: using up H⁺ slightly alkalinises muscle at the onset of exercise."
+      },
+      {
+       "id": "b",
+       "text": "Makes it sharply more acidic at once",
+       "why": "Creatine kinase consumes protons; the acid in sprints comes mainly from ATP turnover with glycolysis."
+      },
+      {
+       "id": "c",
+       "text": "Stops glycolysis from starting",
+       "why": "Glycolysis starts within seconds regardless; in a 6 s sprint it supplies about half the energy."
+      },
+      {
+       "id": "d",
+       "text": "Has no effect on muscle pH",
+       "why": "Consuming H⁺ does raise pH a little; the effect is small but measurable."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-store-calc",
+   "concept": "pcr-store",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "porter2017",
+    "kreider2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Muscle holds 80 mmol·kg⁻¹ dry muscle of PCr. In a sprint finish PCr is used at 6.4 mmol·kg⁻¹ dry·s⁻¹. If the rate stayed constant, how long would PCr last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.5 s",
+       "correct": true,
+       "why": "Right: 80 ÷ 6.4 = 12.5 s."
+      },
+      {
+       "id": "b",
+       "text": "0.08 s",
+       "why": "This divides the rate by the store (6.4 ÷ 80). Time = store ÷ rate."
+      },
+      {
+       "id": "c",
+       "text": "512 s",
+       "why": "This multiplies store by rate (80 × 6.4); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "16.4 s",
+       "why": "This adds the ATP store (25 mmol·kg⁻¹ dry) too: (80 + 25) ÷ 6.4. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 80 mmol·kg⁻¹ dry ÷ 6.4 mmol·kg⁻¹ dry·s⁻¹ = 12.5 s."
+    },
+    {
+     "id": "b",
+     "stem": "Muscle holds 80 mmol·kg⁻¹ dry muscle of PCr. A track sprinter's standing start uses PCr at 10 mmol·kg⁻¹ dry·s⁻¹. If the rate stayed constant, how long would PCr last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8 s",
+       "correct": true,
+       "why": "Right: 80 ÷ 10 = 8 s."
+      },
+      {
+       "id": "b",
+       "text": "0.125 s",
+       "why": "This divides the rate by the store (10 ÷ 80). Time = store ÷ rate."
+      },
+      {
+       "id": "c",
+       "text": "800 s",
+       "why": "This multiplies store by rate (80 × 10); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "10.5 s",
+       "why": "This adds the ATP store (25 mmol·kg⁻¹ dry) too: (80 + 25) ÷ 10. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 80 mmol·kg⁻¹ dry ÷ 10 mmol·kg⁻¹ dry·s⁻¹ = 8 s."
+    },
+    {
+     "id": "c",
+     "stem": "After creatine loading, a rider's PCr rises by 20% to 96 mmol·kg⁻¹ dry muscle. In a sprint PCr is used at 8 mmol·kg⁻¹ dry·s⁻¹. If the rate stayed constant, how long would PCr last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12 s",
+       "correct": true,
+       "why": "Right: 96 ÷ 8 = 12 s, two seconds more than the 10 s from 80 mmol·kg⁻¹ dry."
+      },
+      {
+       "id": "b",
+       "text": "10 s",
+       "why": "This uses the normal store (80 ÷ 8) and forgets the 20% rise."
+      },
+      {
+       "id": "c",
+       "text": "768 s",
+       "why": "This multiplies store by rate (96 × 8); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "15.1 s",
+       "why": "This adds the ATP store (25 mmol·kg⁻¹ dry) too: (96 + 25) ÷ 8. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 96 mmol·kg⁻¹ dry ÷ 8 mmol·kg⁻¹ dry·s⁻¹ = 12 s."
+    }
+   ]
+  },
+  {
+   "id": "pcr-fall-sprint",
+   "concept": "pcr-store",
+   "bloom": "understand",
+   "sources": [
+    "gaitanos1993",
+    "bogdanis1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist does a 6 s all-out sprint. What would a muscle biopsy taken right after most likely show for PCr?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Down by about half",
+       "correct": true,
+       "why": "Right: in a 6 s maximal cycle sprint PCr fell by 57%."
+      },
+      {
+       "id": "b",
+       "text": "Down by less than 10%",
+       "why": "PCr is used from the first second at a very high rate; it falls a lot in 6 s."
+      },
+      {
+       "id": "c",
+       "text": "Completely used up",
+       "why": "6 s isn't enough to empty it; even after 30 s, about 17–20% is left."
+      },
+      {
+       "id": "d",
+       "text": "Slightly higher than at rest",
+       "why": "PCr only rises in recovery, when ATP from the mitochondria rebuilds it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A road sprinter launches a 30 s all-out effort from 300 m out. At the line, what is the most likely state of PCr in the leg muscles?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About a fifth of the resting store left",
+       "correct": true,
+       "why": "Right: after 30 s all-out, PCr is at about 17–20% of rest."
+      },
+      {
+       "id": "b",
+       "text": "About half the resting store left",
+       "why": "That fits a 6 s sprint; after 30 s far more has been used."
+      },
+      {
+       "id": "c",
+       "text": "Completely used up, zero left",
+       "why": "PCr is rarely emptied completely; about 15–20% remains even at exhaustion."
+      },
+      {
+       "id": "d",
+       "text": "Back near rest, rebuilt by glycolysis",
+       "why": "Glycolysis supplies ATP during the sprint, but PCr is rebuilt mainly afterwards, with oxygen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-diagram-10s",
+   "concept": "pcr-energy-systems",
+   "bloom": "understand",
+   "sources": [
+    "gastin2001",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "For a 10 s all-out sprint finish, which statement fits the energy-systems chart best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "PCr and glycolysis supply most; the aerobic share is small",
+       "correct": true,
+       "why": "Right: at 10 s the two anaerobic routes dominate, but the aerobic route already contributes a little."
+      },
+      {
+       "id": "b",
+       "text": "PCr supplies all of it; the others haven't started",
+       "why": "This is the sequential myth: glycolysis is well under way by 10 s and aerobic supply starts at once."
+      },
+      {
+       "id": "c",
+       "text": "Glycolysis and the aerobic route supply equal shares",
+       "why": "Aerobic and anaerobic supply only become equal around 75 s."
+      },
+      {
+       "id": "d",
+       "text": "The aerobic route supplies most of it",
+       "why": "The aerobic route can't reach a high enough rate in 10 s to supply most of the ATP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-occlusion",
+   "concept": "pcr-recovery",
+   "bloom": "analyse",
+   "sources": [
+    "harris1976",
+    "sahlin1979"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Researchers inflate a cuff around the thigh right after exhausting exercise, so no blood reaches the quadriceps. What happens to PCr while the cuff is on?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It stays low until the cuff is released",
+       "correct": true,
+       "why": "Right: occlusion completely abolished PCr resynthesis; it only resumed once blood flow returned."
+      },
+      {
+       "id": "b",
+       "text": "It recovers normally, since creatine kinase needs no oxygen",
+       "why": "The forward reaction needs no oxygen, but rebuilding PCr needs ATP from the mitochondria, which need oxygen."
+      },
+      {
+       "id": "c",
+       "text": "It recovers faster, since glycolysis takes over",
+       "why": "Glycolysis can't rebuild PCr at a useful rate in recovery; resynthesis stopped completely."
+      },
+      {
+       "id": "d",
+       "text": "It recovers about halfway, then stalls",
+       "why": "With the cuff on, there was no resynthesis at all, not partial recovery."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Muscle samples taken after a fatiguing contraction are kept for 15 minutes either in oxygen or in nitrogen. What best predicts the result for PCr?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rebuilt in oxygen, not rebuilt in nitrogen",
+       "correct": true,
+       "why": "Right: in oxygen PCr went from 4% to 68% of rest; in nitrogen there was no resynthesis."
+      },
+      {
+       "id": "b",
+       "text": "Rebuilt equally in both, as it is anaerobic",
+       "why": "PCr breakdown is anaerobic; its resynthesis depends on oxidative ATP."
+      },
+      {
+       "id": "c",
+       "text": "Rebuilt only in nitrogen, as oxygen damages it",
+       "why": "Oxygen doesn't damage PCr; it is required to rebuild it."
+      },
+      {
+       "id": "d",
+       "text": "Rebuilt in neither, as only blood can rebuild it",
+       "why": "Isolated samples rebuilt PCr in oxygen: what blood brings is oxygen, not a special factor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-recovery-calc",
+   "concept": "pcr-recovery",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "harris1976",
+    "bogdanis1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "PCr recovery has a time constant τ of 30 s. What fraction of the PCr used has been rebuilt after 60 s?",
+     "options": [
+      {
+       "id": "a",
+       "text": "86%",
+       "correct": true,
+       "why": "Right: 1 − e^(−60/30) = 1 − e^(−2) = 1 − 0.14 = 0.86."
+      },
+      {
+       "id": "b",
+       "text": "14%",
+       "why": "This is e^(−2): the fraction still missing, not the fraction rebuilt."
+      },
+      {
+       "id": "c",
+       "text": "75%",
+       "why": "This treats τ as a half-time (two half-times = 75%). τ is longer than the half-time."
+      },
+      {
+       "id": "d",
+       "text": "100%",
+       "why": "This assumes linear recovery (60 s is 2 × τ, so done). Exponential recovery never quite reaches 100%."
+      }
+     ],
+     "solution": "Fraction rebuilt = 1 − e^(−t/τ) = 1 − e^(−60/30) = 1 − e^(−2) = 1 − 0.135 = 0.86, so 86%."
+    },
+    {
+     "id": "b",
+     "stem": "After a hard 400 m track rep, a runner's PCr recovers with τ = 40 s. What fraction of the PCr used has been rebuilt after 40 s of rest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "63%",
+       "correct": true,
+       "why": "Right: 1 − e^(−1) = 0.63. After one τ, 63% of the gap is closed."
+      },
+      {
+       "id": "b",
+       "text": "37%",
+       "why": "This is e^(−1): the fraction still missing, not the fraction rebuilt."
+      },
+      {
+       "id": "c",
+       "text": "50%",
+       "why": "This treats τ as a half-time. After one half-time 50% is back; after one τ, 63%."
+      },
+      {
+       "id": "d",
+       "text": "100%",
+       "why": "This assumes linear recovery finishing after one τ. Exponential recovery never quite reaches 100%."
+      }
+     ],
+     "solution": "Fraction rebuilt = 1 − e^(−40/40) = 1 − e^(−1) = 1 − 0.37 = 0.63, so 63%."
+    },
+    {
+     "id": "c",
+     "stem": "In a criterium, a rider's PCr recovers with τ = 25 s. What fraction of the PCr used in one attack has been rebuilt after 75 s?",
+     "options": [
+      {
+       "id": "a",
+       "text": "95%",
+       "correct": true,
+       "why": "Right: 1 − e^(−75/25) = 1 − e^(−3) = 1 − 0.05 = 0.95."
+      },
+      {
+       "id": "b",
+       "text": "5%",
+       "why": "This is e^(−3): the fraction still missing, not the fraction rebuilt."
+      },
+      {
+       "id": "c",
+       "text": "88%",
+       "why": "This treats τ as a half-time (three half-times = 87.5%). τ is longer than the half-time."
+      },
+      {
+       "id": "d",
+       "text": "100%",
+       "why": "This assumes linear recovery (75 s is 3 × τ, so done). Exponential recovery never quite reaches 100%."
+      }
+     ],
+     "solution": "Fraction rebuilt = 1 − e^(−75/25) = 1 − e^(−3) = 1 − 0.050 = 0.95, so 95%."
+    }
+   ]
+  },
+  {
+   "id": "pcr-halftime-tau",
+   "concept": "pcr-recovery",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "harris1976",
+    "bogdanis1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study reports a PCr recovery half-time of 21 s. What is the time constant τ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 s",
+       "correct": true,
+       "why": "Right: τ = half-time ÷ ln 2 = 21 ÷ 0.69 ≈ 30 s."
+      },
+      {
+       "id": "b",
+       "text": "14.5 s",
+       "why": "This multiplies by ln 2 (21 × 0.69) instead of dividing. τ is always longer than the half-time."
+      },
+      {
+       "id": "c",
+       "text": "21 s",
+       "why": "This treats τ and half-time as the same; after one τ, 63% is back, not 50%."
+      },
+      {
+       "id": "d",
+       "text": "42 s",
+       "why": "This doubles the half-time; the factor is 1/ln 2 ≈ 1.44, not 2."
+      }
+     ],
+     "solution": "Half-time = τ × ln 2, so τ = 21 s ÷ 0.693 = 30 s."
+    },
+    {
+     "id": "b",
+     "stem": "After a 30 s all-out sprint, PCr recovery had a half-time of 56 s. What is the time constant τ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "81 s",
+       "correct": true,
+       "why": "Right: τ = 56 ÷ 0.69 ≈ 81 s."
+      },
+      {
+       "id": "b",
+       "text": "39 s",
+       "why": "This multiplies by ln 2 (56 × 0.69) instead of dividing. τ is always longer than the half-time."
+      },
+      {
+       "id": "c",
+       "text": "56 s",
+       "why": "This treats τ and half-time as the same; after one τ, 63% is back, not 50%."
+      },
+      {
+       "id": "d",
+       "text": "112 s",
+       "why": "This doubles the half-time; the factor is 1/ln 2 ≈ 1.44, not 2."
+      }
+     ],
+     "solution": "τ = half-time ÷ ln 2 = 56 s ÷ 0.693 = 81 s."
+    },
+    {
+     "id": "c",
+     "stem": "A 31P-MRS test on a triathlete's calf gives a PCr recovery half-time of 35 s. What is the time constant τ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 s",
+       "correct": true,
+       "why": "Right: τ = 35 ÷ 0.69 ≈ 50 s."
+      },
+      {
+       "id": "b",
+       "text": "24.3 s",
+       "why": "This multiplies by ln 2 (35 × 0.69) instead of dividing. τ is always longer than the half-time."
+      },
+      {
+       "id": "c",
+       "text": "35 s",
+       "why": "This treats τ and half-time as the same; after one τ, 63% is back, not 50%."
+      },
+      {
+       "id": "d",
+       "text": "70 s",
+       "why": "This doubles the half-time; the factor is 1/ln 2 ≈ 1.44, not 2."
+      }
+     ],
+     "solution": "τ = half-time ÷ ln 2 = 35 s ÷ 0.693 = 50 s."
+    }
+   ]
+  },
+  {
+   "id": "pcr-track-repeats",
+   "concept": "pcr-repeated",
+   "bloom": "analyse",
+   "sources": [
+    "bogdanis1995",
+    "harris1976"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does 8 × 400 m hard with 60 s standing rest. Her heart rate falls well between reps, yet the first 50 m of each rep feel flat. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "PCr is only partly rebuilt after 60 s",
+       "correct": true,
+       "why": "Right: with half-times of about 20–60 s, a minute brings back only part of the PCr, and the first seconds of each rep depend on it."
+      },
+      {
+       "id": "b",
+       "text": "Her muscle ATP store is empty",
+       "why": "ATP never runs out: it falls by about a third at most. The limit is how fast it can be rebuilt."
+      },
+      {
+       "id": "c",
+       "text": "Lactate left in the muscle blocks contraction",
+       "why": "Power recovery tracked PCr resynthesis, not muscle pH or lactate, in sprint studies."
+      },
+      {
+       "id": "d",
+       "text": "Her glycogen ran out after a few reps",
+       "why": "Muscle glycogen lasts far longer than 8 × 400 m; it is not what limits early-rep power."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In a criterium, a rider responds to attacks 30 s apart. Each jump gets weaker, then after a 3-minute lull his jump is nearly back to normal. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "PCr recovery needs minutes, not 30 s",
+       "correct": true,
+       "why": "Right: 30 s rebuilds only part of the PCr; a few minutes brings most of it back."
+      },
+      {
+       "id": "b",
+       "text": "His ATP store refills only after 3 minutes",
+       "why": "ATP stays near-constant; it's the PCr buffer behind it that takes minutes to rebuild."
+      },
+      {
+       "id": "c",
+       "text": "Lactate must be fully cleared before he can jump",
+       "why": "Power recovery followed PCr, not muscle pH, which stayed low for minutes."
+      },
+      {
+       "id": "d",
+       "text": "His muscles had no oxygen during the attacks",
+       "why": "Oxygen delivery continues; what differs is the time available to rebuild PCr."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-fitness-debate",
+   "concept": "pcr-repeated",
+   "bloom": "evaluate",
+   "sources": [
+    "tomlin2001",
+    "mcmahon2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post claims: \"A higher VO₂max always means faster PCr recovery.\" What is the best judgement on the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plausible, but measured links are inconsistent",
+       "correct": true,
+       "why": "Right: PCr resynthesis runs on oxidative ATP, but 31P-MRS studies relating aerobic power to PCr recovery are inconsistent."
+      },
+      {
+       "id": "b",
+       "text": "Proven: every study finds the link",
+       "why": "Reviews report that PCr recovery after single intense bouts doesn't always correlate with VO₂max."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: PCr recovery is anaerobic",
+       "why": "PCr breakdown is anaerobic, but its resynthesis needs oxygen: occlusion stops it."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: it depends only on muscle pH",
+       "why": "pH mainly governs the slow phase; the fast phase is linked to oxidative ATP supply."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-appraisal",
+   "concept": "pcr-repeated",
+   "bloom": "evaluate",
+   "sources": [
+    "bogdanis1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A landmark study in 14 young men (biopsies in 8) found r = 0.71–0.86 between PCr resynthesis and recovery of sprint power. What most limits the claim that PCr recovery causes power recovery in all athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small all-male sample and a correlation",
+       "correct": true,
+       "why": "Right: biopsies in only 8 of 14 men limit generalising to women and other groups, and a correlation doesn't prove cause."
+      },
+      {
+       "id": "b",
+       "text": "Correlations of 0.7–0.9 are too weak to mean much",
+       "why": "These are high correlations; the problem is sample and design, not the size of r."
+      },
+      {
+       "id": "c",
+       "text": "PCr was measured in blood, not in muscle",
+       "why": "PCr was measured in muscle biopsies; it is not a blood marker."
+      },
+      {
+       "id": "d",
+       "text": "Cycle ergometers cannot measure sprint power",
+       "why": "Ergometers measure power accurately; this is a misconception about the method."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pcr-creatine-who",
+   "concept": "pcr-creatine",
+   "bloom": "evaluate",
+   "sources": [
+    "kreider2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete is most likely to gain on balance from creatine loading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A track team sprinter doing repeated maximal efforts",
+       "correct": true,
+       "why": "Right: creatine helps repeated high-intensity efforts, and a little extra mass matters less on a flat track."
+      },
+      {
+       "id": "b",
+       "text": "A marathon runner racing at steady pace",
+       "why": "Steady aerobic racing relies little on PCr, and ~1 kg of water costs energy on every stride."
+      },
+      {
+       "id": "c",
+       "text": "A road climber racing a 40-minute ascent",
+       "why": "A 40-minute climb is aerobic, and extra body mass directly lowers W·kg⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "An Ironman triathlete in a steady 9-hour race",
+       "why": "PCr plays almost no role in a 9-hour steady effort; the weight gain is a cost with little gain."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

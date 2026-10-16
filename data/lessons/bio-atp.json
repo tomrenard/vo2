@@ -1,0 +1,745 @@
+{
+ "id": "bio-atp",
+ "module": "t1a-bioenergetics",
+ "title": "ATP: the only currency muscles spend",
+ "goal": "Explain why muscle can only spend ATP, why its tiny store makes the rate of ATP resynthesis what matters, and how the three resynthesis routes trade rate against capacity while always running together.",
+ "requires": [],
+ "lastReviewed": "2026-10-16",
+ "steps": [
+  {
+   "type": "question",
+   "item": "atp-direct-fuel",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "atp-what",
+   "title": "ATP: the energy muscles actually spend",
+   "text": "Glucose, fat and oxygen don't move your legs; muscle spends only [ATP](g:atp). Splitting off its last phosphate by [hydrolysis](g:hydrolysis) (ATP + H₂O → [ADP](g:adp) + Pi) releases energy that the cell can use.\n\nTwo jobs take most of it [[c:atp-uses]]:\n\n- **Cross-bridges.** Each myosin head grabs actin, pulls, and lets go. Each [cross-bridge](g:cross-bridge) cycle splits one ATP. No ATP, no letting go and no next pull.\n- **Ion pumps.** Calcium must be pumped back into its store to relax the muscle, and sodium and potassium pumped back across the membrane so the next nerve signal works. In an isometric (static) contraction these pumps take 30–40% of the ATP.\n\nEverything else in this module exists to rebuild ATP.",
+   "claims": [
+    {
+     "id": "atp-uses",
+     "text": "ATP hydrolysis powers both cross-bridge cycling and the Ca²⁺ and Na⁺ pumps; the pumps take 30–40% of the ATP used in an isometric contraction.",
+     "grade": "strong",
+     "sources": [
+      "barclay2015"
+     ],
+     "evidence": [
+      {
+       "source": "barclay2015",
+       "quote": "Muscles convert energy from ATP into useful work, which can be used to move limbs and to transport ions across membranes.",
+       "level": "abstract"
+      },
+      {
+       "source": "barclay2015",
+       "quote": "Between 30% and 40% of the ATP used during isometric contraction fuels the pumping Ca(2+) and Na(+) out of the myoplasm.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "atp-direct-fuel",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "atp-ion-pumps"
+  },
+  {
+   "type": "concept",
+   "id": "atp-store",
+   "title": "A tiny store, a huge demand",
+   "text": "Resting muscle holds only about **25 mmol·kg⁻¹ dry muscle** of ATP (per kg with the water removed, as biopsy studies report it) [[c:atp-small]]. In an all-out sprint, ATP use can rise up to 1,000-fold over rest, so the store alone would last a few seconds.\n\nYet ATP hardly falls: after a 30 s all-out sprint it is still about 70% of rest [[c:atp-stable]]. The cell rebuilds ATP almost as fast as it spends it, because a big fall in ATP (with ADP and phosphate piling up) would impair contraction.\n\nSo the store's size is not what limits you; **how fast ATP is resynthesised** is. When rebuilding can't keep up, power drops: that is part of fatigue.",
+   "claims": [
+    {
+     "id": "atp-small",
+     "text": "Muscle stores only about 25 mmol·kg⁻¹ dry muscle of ATP, while ATP demand can rise up to 1,000-fold in intense exercise.",
+     "grade": "strong",
+     "sources": [
+      "porter2017",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "porter2017",
+       "quote": "Moreover, at rest, ATP (25 mmol/kg dry weight), ADP (3.3 mmol/kg dry weight), AMP (0.1 mmol/kg dry weight), and PCr (80 mmol/kg dry weight) collectively contain about 70 mmol/kg dry weight of Pi.",
+       "level": "full-text"
+      },
+      {
+       "source": "baker2010",
+       "quote": "High-intensity exercise can result in up to a 1,000-fold increase in the rate of ATP demand compared to that at rest",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "atp-stable",
+     "text": "Muscle ATP falls only modestly even in all-out exercise: to about 70% of rest after a 30 s sprint.",
+     "grade": "strong",
+     "sources": [
+      "baker2010",
+      "bogdanis1995"
+     ],
+     "evidence": [
+      {
+       "source": "baker2010",
+       "quote": "For example, muscle ATP decreases by only 1 to 2 mmol/kg wet wt during these conditions, and even with involuntary maximal contraction to contractile failure, muscle ATP does not get lower than 5 mmol/kg wet wt",
+       "level": "full-text"
+      },
+      {
+       "source": "bogdanis1995",
+       "quote": "At the end of the 30 s sprint phosphocreatine (PCr) and ATP contents were 19.7 +/- 1.2 and 70.5 +/- 6.5% of the resting values (rest), respectively",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "atp-store-example",
+   "title": "How long would the ATP store last?",
+   "problem": "A track cyclist's quadriceps hold 25 mmol·kg⁻¹ dry muscle of ATP. Suppose a standing start uses ATP at 12.5 mmol·kg⁻¹ dry·s⁻¹. If nothing rebuilt ATP, how long would the store last?",
+   "steps": [
+    "Time = store ÷ rate of use. Check the units: (mmol·kg⁻¹) ÷ (mmol·kg⁻¹·s⁻¹) = s.",
+    "25 ÷ 12.5 = 2 s.",
+    "In real muscle ATP never runs out: it falls by about a third at most, so resynthesis is covering almost all of that use from the first second."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "atp-store-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "atp-stable-interpret"
+  },
+  {
+   "type": "question",
+   "item": "atp-route-scenario",
+   "variant": "a",
+   "pretest": true
+  },
+  {
+   "type": "concept",
+   "id": "atp-routes",
+   "title": "Three ways to rebuild ATP",
+   "text": "Muscle rebuilds ATP by three routes, each trading **rate** (ATP per second) against **capacity** (total ATP before it runs out) [[c:routes-tradeoff]]:\n\n| route | max rate | capacity |\n|---|---|---|\n| [PCr](g:pcr) | highest, instant | tiny: seconds |\n| [glycolysis](g:glycolysis) | high; starts within seconds, top rate within ~10–20 s [[c:glycolysis-timing]] | moderate |\n| [oxidative phosphorylation](g:oxidative-phosphorylation) | lowest | huge: hours, from carbohydrate and fat |\n\nThe first two need no oxygen (\"anaerobic\"); the third uses oxygen in the mitochondria (\"aerobic\").\n\nRule of thumb: the shorter and harder the effort, the more it leans on the fast, small routes. Power you can hold for an hour depends mostly on the third.",
+   "claims": [
+    {
+     "id": "routes-tradeoff",
+     "text": "The anaerobic routes rebuild ATP at high rates but have little capacity; the aerobic route has enormous capacity but a lower rate.",
+     "grade": "strong",
+     "sources": [
+      "gastin2001",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2001",
+       "quote": "The anaerobic pathways are capable of regenerating ATP at high rates yet are limited by the amount of energy that can be released in a single bout of intense exercise. In contrast, the aerobic system has an enormous capacity yet is somewhat hampered in its ability to delivery energy quickly.",
+       "level": "abstract"
+      },
+      {
+       "source": "baker2010",
+       "quote": "The three systems differ in the substrates used, products, maximal rate of ATP regeneration, capacity of ATP regeneration, and their associated contributions to fatigue",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "glycolysis-timing",
+     "text": "Glycolysis starts within seconds of maximal exercise and reaches its top rate within roughly the first 10–20 s.",
+     "grade": "moderate",
+     "sources": [
+      "hultman1983",
+      "gaitanos1993",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "hultman1983",
+       "quote": "Glycolysis began within 5 s after initiation of contraction.",
+       "level": "abstract"
+      },
+      {
+       "source": "gaitanos1993",
+       "quote": "The energy required to sustain the high mean power output (MPO) that was generated over the first 6-s sprint (870.0 +/- 159.2 W) was provided by an equal contribution from phosphocreatine (PCr) degradation and anaerobic glycolysis.",
+       "level": "abstract"
+      },
+      {
+       "source": "baker2010",
+       "quote": "ATP production from glycolysis does not reach its maximal rate of regeneration until after about 10 to 15 seconds of exercise and is maintained at a high rate for several more seconds.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "atp-route-rank"
+  },
+  {
+   "type": "question",
+   "item": "atp-route-scenario",
+   "variant": "c"
+  },
+  {
+   "type": "concept",
+   "id": "atp-together",
+   "title": "All three run together, always",
+   "text": "Old textbook charts show the routes taking turns: PCr for 10 s, then glycolysis, then aerobic after 2 minutes. That picture is wrong [[c:systems-together]]. All three run from the first second; only their shares change with intensity and duration.\n\nEven in a 6 s all-out sprint, PCr and glycolysis supply about equal shares [[c:six-second-split]], and the aerobic route is already contributing.\n\nThe aerobic share also grows faster than coaches often think: in a maximal effort, aerobic and anaerobic supply are about equal at around **75–80 s** [[c:equal-75s]]. A 2-minute all-out effort, such as an 800 m run, is already more aerobic than anaerobic.",
+   "claims": [
+    {
+     "id": "systems-together",
+     "text": "Energy systems do not switch on in sequence: all contribute during almost all exercise, in proportions set by intensity and duration.",
+     "grade": "strong",
+     "sources": [
+      "gastin2001",
+      "baker2010"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2001",
+       "quote": "More recent research suggests that energy is derived from each of the energy-producing pathways during almost all exercise activities.",
+       "level": "abstract"
+      },
+      {
+       "source": "baker2010",
+       "quote": "The replenishment of ATP during intense exercise is the result of a coordinated metabolic response in which all energy systems contribute to different degrees based on an interaction between the intensity and duration of the exercise",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "six-second-split",
+     "text": "In a 6 s maximal cycle sprint, PCr breakdown and glycolysis supplied about equal energy.",
+     "grade": "weak",
+     "sources": [
+      "gaitanos1993"
+     ],
+     "evidence": [
+      {
+       "source": "gaitanos1993",
+       "quote": "The energy required to sustain the high mean power output (MPO) that was generated over the first 6-s sprint (870.0 +/- 159.2 W) was provided by an equal contribution from phosphocreatine (PCr) degradation and anaerobic glycolysis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "equal-75s",
+     "text": "Aerobic and anaerobic contributions are about equal in a maximal effort lasting about 75–80 s (between 1 and 2 minutes).",
+     "grade": "moderate",
+     "sources": [
+      "gastin2001",
+      "gastin2026"
+     ],
+     "evidence": [
+      {
+       "source": "gastin2001",
+       "quote": "The duration of maximal exercise at which equal contributions are derived from the anaerobic and aerobic energy systems appears to occur between 1 to 2 minutes and most probably around 75 seconds, a time that is considerably earlier than has traditionally been suggested.",
+       "level": "abstract"
+      },
+      {
+       "source": "gastin2026",
+       "quote": "The maximal exercise duration that derived equal contributions from both the anaerobic and aerobic energy systems was 78.6 s (95% confidence interval [95% CI] ± 1.1 s)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "atp-sequence-myth"
+  },
+  {
+   "type": "question",
+   "item": "atp-800m-split"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Muscle spends only ATP: its hydrolysis drives cross-bridge cycling and the Ca²⁺ and Na⁺/K⁺ pumps.",
+    "The ATP store (about 25 mmol·kg⁻¹ dry) lasts seconds, yet ATP barely falls: the rate of resynthesis is what limits power.",
+    "Three routes rebuild ATP: PCr (fastest, smallest), glycolysis (fast, moderate), oxidative phosphorylation (slowest, almost unlimited).",
+    "All three run together from the first second; aerobic and anaerobic supply are about equal at around 75–80 s of maximal effort."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "atp-direct-fuel",
+   "concept": "atp-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a hard climb, what directly supplies the energy for each pull of a myosin head on actin?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Splitting ATP into ADP and phosphate",
+       "correct": true,
+       "why": "Right: each cross-bridge cycle is powered by the hydrolysis of one ATP."
+      },
+      {
+       "id": "b",
+       "text": "Breaking down phosphocreatine at the myosin head",
+       "why": "PCr never powers the cross-bridge directly. It only rebuilds ATP via creatine kinase."
+      },
+      {
+       "id": "c",
+       "text": "Burning glucose with oxygen at the myosin head",
+       "why": "Glucose and oxygen are used to rebuild ATP in the cytosol and mitochondria; myosin can only use ATP."
+      },
+      {
+       "id": "d",
+       "text": "Converting lactate back into pyruvate",
+       "why": "Lactate is a fuel for ATP resynthesis elsewhere, not a direct energy source for contraction."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's muscles burn fat and carbohydrate during an Ironman run. In what form is that energy actually spent by the contracting fibres?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As ATP, split into ADP and phosphate",
+       "correct": true,
+       "why": "Right: fat and carbohydrate oxidation only rebuild ATP; ATP hydrolysis is what the fibres spend."
+      },
+      {
+       "id": "b",
+       "text": "As fatty acids, split by myosin directly",
+       "why": "Myosin cannot use fatty acids. Fat is oxidised in mitochondria to rebuild ATP."
+      },
+      {
+       "id": "c",
+       "text": "As glucose, split by myosin directly",
+       "why": "Glucose feeds glycolysis and the mitochondria, which rebuild ATP. Myosin only splits ATP."
+      },
+      {
+       "id": "d",
+       "text": "As oxygen, bound by myosin directly",
+       "why": "Oxygen is the final electron acceptor in mitochondria; it is not a fuel for myosin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-ion-pumps",
+   "concept": "atp-what",
+   "bloom": "understand",
+   "sources": [
+    "barclay2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Apart from cross-bridge cycling, which job uses 30–40% of the ATP in an isometric contraction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pumping Ca²⁺ back into its store and Na⁺ out of the fibre",
+       "correct": true,
+       "why": "Right: 30–40% of ATP in an isometric contraction fuels these ion pumps."
+      },
+      {
+       "id": "b",
+       "text": "Turning pyruvate into lactate in the cytosol",
+       "why": "Lactate formation doesn't use ATP; it regenerates NAD⁺ so glycolysis can keep going."
+      },
+      {
+       "id": "c",
+       "text": "Carrying oxygen from the blood into the fibre",
+       "why": "Oxygen moves into the fibre by diffusion, helped by myoglobin; this costs no ATP."
+      },
+      {
+       "id": "d",
+       "text": "Pulling the fibre back out to its resting length",
+       "why": "Lengthening is passive (gravity or the opposing muscle stretches it). ATP is needed to detach myosin and to pump ions, not to push the fibre back out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-store-calc",
+   "concept": "atp-store",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "porter2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Muscle holds 25 mmol·kg⁻¹ dry muscle of ATP. A runner's sprint finish uses ATP at 10 mmol·kg⁻¹ dry·s⁻¹. With no resynthesis, how long would the store last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.5 s",
+       "correct": true,
+       "why": "Right: 25 ÷ 10 = 2.5 s."
+      },
+      {
+       "id": "b",
+       "text": "0.4 s",
+       "why": "This divides the rate by the store (10 ÷ 25). Time = store ÷ rate."
+      },
+      {
+       "id": "c",
+       "text": "250 s",
+       "why": "This multiplies store by rate (25 × 10); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "10.5 s",
+       "why": "This adds the PCr store (80 mmol·kg⁻¹ dry) too: (25 + 80) ÷ 10. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 25 mmol·kg⁻¹ dry ÷ 10 mmol·kg⁻¹ dry·s⁻¹ = 2.5 s."
+    },
+    {
+     "id": "b",
+     "stem": "Muscle holds 25 mmol·kg⁻¹ dry muscle of ATP. A track cyclist's standing start uses ATP at 12.5 mmol·kg⁻¹ dry·s⁻¹. With no resynthesis, how long would the store last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 s",
+       "correct": true,
+       "why": "Right: 25 ÷ 12.5 = 2 s."
+      },
+      {
+       "id": "b",
+       "text": "0.5 s",
+       "why": "This divides the rate by the store (12.5 ÷ 25). Time = store ÷ rate."
+      },
+      {
+       "id": "c",
+       "text": "312.5 s",
+       "why": "This multiplies store by rate (25 × 12.5); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "8.4 s",
+       "why": "This adds the PCr store (80 mmol·kg⁻¹ dry) too: (25 + 80) ÷ 12.5. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 25 mmol·kg⁻¹ dry ÷ 12.5 mmol·kg⁻¹ dry·s⁻¹ = 2 s."
+    },
+    {
+     "id": "c",
+     "stem": "Muscle holds 25 mmol·kg⁻¹ dry muscle of ATP. A hard surge in a cross-country race uses ATP at 5 mmol·kg⁻¹ dry·s⁻¹. With no resynthesis, how long would the store last?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5 s",
+       "correct": true,
+       "why": "Right: 25 ÷ 5 = 5 s."
+      },
+      {
+       "id": "b",
+       "text": "0.2 s",
+       "why": "This divides the rate by the store (5 ÷ 25). Time = store ÷ rate."
+      },
+      {
+       "id": "c",
+       "text": "125 s",
+       "why": "This multiplies store by rate (25 × 5); the units don't give seconds."
+      },
+      {
+       "id": "d",
+       "text": "21 s",
+       "why": "This adds the PCr store (80 mmol·kg⁻¹ dry) too: (25 + 80) ÷ 5. The question asks for one store alone."
+      }
+     ],
+     "solution": "Time = store ÷ rate of use = 25 mmol·kg⁻¹ dry ÷ 5 mmol·kg⁻¹ dry·s⁻¹ = 5 s."
+    }
+   ]
+  },
+  {
+   "id": "atp-stable-interpret",
+   "concept": "atp-store",
+   "bloom": "analyse",
+   "sources": [
+    "bogdanis1995",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 30 s all-out sprint on a cycle ergometer, muscle biopsies show ATP at about 70% of its resting value, while PCr is down to about 20%. What is the best reading of this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ATP was rebuilt almost as fast as it was used, by PCr and glycolysis",
+       "correct": true,
+       "why": "Right: the cell defends ATP. PCr and glycolysis (which over 30 s supplies about twice as much as PCr) rebuilt most of what was spent, so ATP fell only modestly."
+      },
+      {
+       "id": "b",
+       "text": "The sprint used little ATP, so most of the store was left over",
+       "why": "ATP turnover in a 30 s sprint is many times the store. A small fall means fast resynthesis, not little use."
+      },
+      {
+       "id": "c",
+       "text": "The muscle mostly used PCr instead of ATP to contract",
+       "why": "Myosin only splits ATP. PCr was used to rebuild ATP, not in its place."
+      },
+      {
+       "id": "d",
+       "text": "ATP stores are large enough to cover a 30 s sprint",
+       "why": "The ATP store lasts a few seconds at sprint rates; without resynthesis it would be gone long before 30 s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-route-rank",
+   "concept": "atp-routes",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "gastin2001",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which ATP resynthesis route has the highest maximal rate but the smallest capacity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Phosphocreatine via creatine kinase",
+       "correct": true,
+       "why": "Right: PCr rebuilds ATP almost instantly at the highest rate, but the store is used up within seconds."
+      },
+      {
+       "id": "b",
+       "text": "Glycolysis from muscle glycogen",
+       "why": "Glycolysis is fast but takes several seconds to reach its top rate, which is below PCr's, and it lasts longer."
+      },
+      {
+       "id": "c",
+       "text": "Oxidative phosphorylation of fat",
+       "why": "Fat oxidation has the lowest maximal rate and by far the largest capacity: the opposite."
+      },
+      {
+       "id": "d",
+       "text": "Oxidative phosphorylation of carbohydrate",
+       "why": "Aerobic carbohydrate use is faster than fat but far slower than PCr, with a capacity of over an hour."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-route-scenario",
+   "concept": "atp-routes",
+   "bloom": "apply",
+   "sources": [
+    "gastin2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides the 180 km bike leg of an Ironman in about 5 hours. Which route rebuilds most of the ATP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oxidative phosphorylation",
+       "correct": true,
+       "why": "Right: only the aerobic route has the capacity for hours of work."
+      },
+      {
+       "id": "b",
+       "text": "Glycolysis without oxygen",
+       "why": "Glycolysis runs throughout, but its pyruvate is mostly oxidised; anaerobic ATP alone could not last hours."
+      },
+      {
+       "id": "c",
+       "text": "Phosphocreatine breakdown",
+       "why": "PCr lasts seconds of hard work; over 5 hours it only smooths small changes in demand."
+      },
+      {
+       "id": "d",
+       "text": "The muscle's stored ATP",
+       "why": "The ATP store lasts a few seconds at most; it must be rebuilt continuously."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist rides a 40 km time trial in about 55 minutes. Which route rebuilds most of the ATP?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oxidative phosphorylation",
+       "correct": true,
+       "why": "Right: only the aerobic route has the capacity for an hour of hard work."
+      },
+      {
+       "id": "b",
+       "text": "Glycolysis without oxygen",
+       "why": "Glycolysis runs throughout, but its pyruvate is mostly oxidised; anaerobic ATP alone could not last an hour."
+      },
+      {
+       "id": "c",
+       "text": "Phosphocreatine breakdown",
+       "why": "PCr lasts seconds of hard work; over an hour it only smooths short surges in demand."
+      },
+      {
+       "id": "d",
+       "text": "The muscle's stored ATP",
+       "why": "The ATP store lasts a few seconds at most; it must be rebuilt continuously."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-sequence-myth",
+   "concept": "atp-together",
+   "bloom": "evaluate",
+   "sources": [
+    "gastin2001",
+    "baker2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling coach says: \"For the first 10 seconds you're on PCr, then glycolysis takes over, and your aerobic system only kicks in after about 2 minutes.\" What is the best judgement of this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wrong: all three routes run from the start, in changing shares",
+       "correct": true,
+       "why": "Right: this sequential picture is the misconception Gastin's review sets out to correct."
+      },
+      {
+       "id": "b",
+       "text": "Right: each route takes over when the one before runs out",
+       "why": "This is the classic sequential misconception; the routes overlap from the first second."
+      },
+      {
+       "id": "c",
+       "text": "Mostly right, but the aerobic system kicks in at 30 s",
+       "why": "There's no kick-in time: the aerobic route contributes from the start, just at a lower rate."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: the aerobic system supplies most ATP from the start",
+       "why": "In a maximal effort the aerobic share is small at first; it matches anaerobic supply only around 75 s."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running app shows a chart where the energy systems switch on one after another, like relay runners handing over a baton. What is the best judgement of this chart?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Misleading: all three routes contribute together, in shifting shares",
+       "correct": true,
+       "why": "Right: energy comes from every route during almost all exercise."
+      },
+      {
+       "id": "b",
+       "text": "Accurate: each route hands over when the one before is empty",
+       "why": "This is the sequential misconception; PCr isn't empty when glycolysis starts, and aerobic supply starts at once."
+      },
+      {
+       "id": "c",
+       "text": "Accurate for running but not for cycling",
+       "why": "The overlap is a property of muscle metabolism, the same in any sport."
+      },
+      {
+       "id": "d",
+       "text": "Misleading: only the aerobic route matters after 10 s",
+       "why": "Anaerobic routes still supply most ATP in maximal efforts up to about 75 s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atp-800m-split",
+   "concept": "atp-together",
+   "bloom": "apply",
+   "sources": [
+    "gastin2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An 800 m runner races all-out for about 2 minutes. Based on maximal-effort data, which split of energy supply is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Somewhat more aerobic than anaerobic",
+       "correct": true,
+       "why": "Right: aerobic and anaerobic supply are equal near 75 s, so a 2-minute effort is already more than half aerobic."
+      },
+      {
+       "id": "b",
+       "text": "About 80% anaerobic, 20% aerobic",
+       "why": "This comes from the old, overestimated anaerobic figures that Gastin's review corrected."
+      },
+      {
+       "id": "c",
+       "text": "Almost entirely glycolytic",
+       "why": "Glycolysis is big at 2 minutes, but the aerobic route already supplies more than half."
+      },
+      {
+       "id": "d",
+       "text": "Almost entirely aerobic, over 90%",
+       "why": "That share fits efforts of several minutes or more; at 2 minutes the anaerobic share is still large."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A track cyclist rides a 1 km time trial all-out in about 65 s. Based on maximal-effort data, which split of energy supply is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A little more anaerobic than aerobic",
+       "correct": true,
+       "why": "Right: just under the ~75 s crossover, the anaerobic share is slightly larger."
+      },
+      {
+       "id": "b",
+       "text": "About 95% anaerobic",
+       "why": "This ignores the fast rise of aerobic supply; by a minute it covers close to half."
+      },
+      {
+       "id": "c",
+       "text": "Mostly from phosphocreatine",
+       "why": "PCr is largely spent in the first 10–20 s; it can't cover most of 65 s."
+      },
+      {
+       "id": "d",
+       "text": "About 80% aerobic",
+       "why": "That is more like a 4-minute pursuit than a kilo."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

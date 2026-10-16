@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  /* Reading text (concept cards, explanations): a book serif. */
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  /* Numbers and units line up: a mono for data. */
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+/*
+ * A textbook / journal look: warm paper, black ink, one oxblood accent (like a journal's red),
+ * and fixed colours for evidence grades and right/wrong. Every colour is set here.
+ */
+:root {
+  color-scheme: light dark;
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --ink: #1b1d21;
+  --muted: #6b6f78;
+  --line: #e4e0d8;
+  --field: #f7f5f0;
+  --brand: #a8321e;
+  --brand-soft: #f7e7e2;
+  --brand-fill: #a8321e;
+  --right: #1d7a46;
+  --right-soft: #e3f3e9;
+  --wrong: #c0362c;
+  --wrong-soft: #fbe6e3;
+  --strong: #1d7a46;
+  --moderate: #2563c9;
+  --weak: #b26b00;
+  --disputed: #7c3aed;
+  --shadow: 0 1px 2px rgb(30 25 15 / 0.05), 0 2px 10px rgb(30 25 15 / 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121315;
+    --surface: #1c1e22;
+    --ink: #eceae6;
+    --muted: #9b9fa8;
+    --line: #2d3036;
+    --field: #15161a;
+    --brand: #ff8a73;
+    --brand-soft: #3a211c;
+    --brand-fill: #c2412b;
+    --right: #4ccf86;
+    --right-soft: #15301f;
+    --wrong: #ff7b70;
+    --wrong-soft: #3a1b18;
+    --strong: #4ccf86;
+    --moderate: #7aa7ff;
+    --weak: #f0b14a;
+    --disputed: #b896ff;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+  }
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border p-4;
+    background: var(--surface);
+    border-color: var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3.5 text-center text-base font-semibold transition-[scale,background-color] duration-100 select-none disabled:opacity-40;
+    background: var(--surface);
+    border-color: var(--line);
+    color: var(--ink);
+  }
+  .btn:focus-visible,
+  .field:focus-visible,
+  a:focus-visible,
+  summary:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+  }
+  .btn:active:not(:disabled) {
+    @apply scale-[0.98];
+  }
+  .btn-primary {
+    background: var(--brand-fill);
+    border-color: var(--brand-fill);
+    color: white;
+  }
+
+  .field {
+    @apply rounded-xl border px-4 py-3 outline-none;
+    background: var(--field);
+    border-color: var(--line);
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+  .line {
+    border-color: var(--line);
+  }
+  /* Small caps label above a section, journal style. */
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.12em] uppercase;
+    color: var(--muted);
+  }
+
+  .screen {
+    @apply mx-auto flex min-h-dvh max-w-xl flex-col gap-5 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-6;
+  }
+  .with-tabs {
+    @apply pb-[calc(6rem+env(safe-area-inset-bottom))];
+  }
+
+  /* Reading text: serif, comfortable line length. */
+  .prose-text {
+    @apply font-serif text-[1.15rem] leading-[1.6];
+  }
+}
+
+/* Native popovers (glossary terms, evidence badges, flag form). */
+[popover] {
+  @apply m-auto max-w-sm rounded-2xl border p-4 shadow-xl;
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+[popover]::backdrop {
+  background: rgb(0 0 0 / 0.25);
+}
+
+/* Loading feedback for Go links (Nav.tsx): appears after 150 ms, so fast taps show none. */
+.pending-bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: 3px;
+  background: var(--brand);
+  pointer-events: none;
+  animation:
+    pending-show 0s 150ms both,
+    pending-grow 1.2s 150ms ease-out both;
+  opacity: 0;
+  transform-origin: left;
+}
+@keyframes pending-show {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pending-grow {
+  from {
+    transform: scaleX(0.1);
+  }
+  to {
+    transform: scaleX(0.9);
+  }
+}
