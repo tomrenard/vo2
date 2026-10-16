@@ -3,11 +3,15 @@
  * and year must match ours (a made-up citation often has a real DOI of another paper). Also fails
  * on retracted or withdrawn papers (Crossref carries Retraction Watch data). Run monthly too.
  */
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import type { Source } from "../src/lib/content.ts";
 
-const sources: Record<string, Source> = JSON.parse(
-  readFileSync(new URL("../data/sources.json", import.meta.url), "utf8"),
+const dir = new URL("../data/sources/", import.meta.url);
+const sources: Record<string, Source> = Object.assign(
+  {},
+  ...readdirSync(dir)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => JSON.parse(readFileSync(new URL(file, dir), "utf8"))),
 );
 
 const words = (text: string) =>

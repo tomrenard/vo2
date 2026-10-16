@@ -5,10 +5,14 @@ sources, ids) and `pnpm sources:check` (every DOI against Crossref, retractions)
 
 - `curriculum.json`: tiers → modules → lesson ids, in order.
 - `lessons/<id>.json`: one lesson (format: `src/lib/content.ts`).
-- `sources.json`: every source, by id (`<firstauthor><year><letter?>`, e.g. `gastin2001`).
-- `glossary.json`: terms, linked from text as `[MLSS](g:mlss)`.
-- `facts.json`: numbers used in more than one lesson (glycogen stores, PCr content…): use these,
-  never a different figure.
+- `sources/<module>.json`: sources, by id (`<firstauthor><year><letter?>`, e.g. `gastin2001`).
+- `glossary/<module>.json`: terms, linked from text as `[MLSS](g:mlss)`.
+- `facts/<module>.json`: numbers used in more than one lesson (glycogen stores, PCr content…):
+  use these, never a different figure.
+
+One file per module, so modules can be written at the same time. An id may appear in several
+files only with the same content (look for it with `grep -r '"gastin2001"' data/` before adding).
+Check one module while others are being written: `pnpm content:check --module <id>`.
 - `items.lock.json`: content hash per question, written by `pnpm content:check --accept`.
 
 ## Writing a lesson
