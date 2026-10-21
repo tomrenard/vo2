@@ -177,6 +177,8 @@ import l_vo2_sex_age from "../../data/lessons/vo2-sex-age.json";
 import l_vo2_trainability from "../../data/lessons/vo2-trainability.json";
 import p_0 from "../../data/papers/2026-10-16-carb-loading-glycogen.json";
 import p_1 from "../../data/papers/2026-10-16-cold-water-recovery.json";
+import p_2 from "../../data/papers/2026-10-21-carb-100-vs-60-durability.json";
+import p_3 from "../../data/papers/2026-10-21-hypoxic-training-vo2max.json";
 import type { Curriculum, Lesson, Paper } from "./content";
 
 export const CURRICULUM = curriculum as Curriculum;
@@ -356,7 +358,7 @@ export const LESSONS = [
   l_vo2_sex_age,
   l_vo2_trainability,
 ] as Lesson[];
-export const PAPERS = [p_1, p_0] as Paper[];
+export const PAPERS = [p_3, p_2, p_1, p_0] as Paper[];
 export const HASHES: Record<string, string> = {
   "heart-load-type": "9322f53a5864c9a7",
   "heart-rower": "1a8bbebe4c859f57",
@@ -2002,4 +2004,10 @@ export const HASHES: Record<string, string> = {
   "p-cwi-endurance-timing": "c590d9b719274be0",
   "p-cwi-strength-adaptation": "6b0210302b415c11",
   "p-cwi-limits": "f97192e18c4f79e7",
+  "p-carb100-result": "bbd45734b4bec918",
+  "p-carb100-mechanism": "9613a2be868f23d2",
+  "p-carb100-limits": "82cbfc0ade79b959",
+  "p-iht-method": "901b9ae5eb40127e",
+  "p-iht-population": "be65f0b9a798ae2e",
+  "p-iht-limits": "5ff2e75647bd23a7",
 };

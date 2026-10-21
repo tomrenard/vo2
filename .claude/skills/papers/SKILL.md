@@ -25,5 +25,10 @@ straight to `main` (open no issues either: tell Tom instead).
    "Files you may change" may differ (`git status`).
 4. **Show Tom** each paper's headline, grade and why it was picked, and any paper with
    `challengesLessons: true` (with what may need to change in which lesson). Ask before pushing.
+**Token budget** (every tool call resends a subagent's whole context): the writer runs with
+`model: "sonnet"`, the reviewer on the default model, one at a time. Tell both: read the README
+once, `grep`/`jq` other data files instead of `cat`, search and fetch abstracts in one batched
+script (Europe PMC REST), and aim for under 30 tool calls.
+
 5. **Push** on `main` with a commit `feat(papers): <date> (<n> papers)` (the repo's own rules:
    commit on main is fine for vo2). Vercel deploys on push.

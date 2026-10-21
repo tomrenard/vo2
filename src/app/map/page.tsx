@@ -43,6 +43,7 @@ export default async function MapPage() {
               const doneCount = module.lessons.filter((id) => done.has(id)).length;
               const allDone = lessons.length > 0 && doneCount === module.lessons.length;
               const best = exams.get(module.id);
+              const next = lessons.find((l) => !done.has(l.id));
               return (
                 <details key={module.id} className="group px-4 py-3">
                   <summary className="flex cursor-pointer list-none items-center gap-3">
@@ -66,34 +67,58 @@ export default async function MapPage() {
                         />
                       </span>
                     )}
+                    <span
+                      aria-hidden="true"
+                      className="muted inline-block transition-transform group-open:rotate-90"
+                    >
+                      ›
+                    </span>
                   </summary>
                   {lessons.length > 0 && (
-                    <ol className="mt-3 flex flex-col gap-1 pl-9">
-                      {module.lessons.map((id) => {
-                        const lesson = lessonById(id);
-                        if (!lesson) return null;
+                    <ol className="mt-3 flex flex-col gap-1">
+                      {lessons.map((lesson, n) => {
+                        const isDone = done.has(lesson.id);
+                        const isNext = lesson === next;
                         const missing = lesson.requires.filter(
                           (r) => lessonById(r) && !done.has(r),
                         );
                         return (
-                          <li key={id} className="flex items-center gap-2 text-sm">
-                            <span
-                              aria-hidden="true"
-                              className={done.has(id) ? "text-[var(--right)]" : "muted"}
+                          <li key={lesson.id} className="flex items-center gap-2">
+                            <Go
+                              href={`/lesson/${lesson.id}`}
+                              className={`flex min-h-12 flex-1 items-center gap-3 rounded-xl px-2 py-2 ${isNext ? "bg-[var(--line)]/40" : ""}`}
                             >
-                              {done.has(id) ? "✓" : "○"}
-                            </span>
-                            <Go href={`/lesson/${id}`} className="flex-1">
-                              {lesson.title}
-                              {missing.length > 0 && (
-                                <span className="muted block text-xs">
-                                  Builds on: {missing.map((r) => lessonById(r)?.title).join(", ")}
+                              <span
+                                aria-hidden="true"
+                                className={`grid size-8 shrink-0 place-items-center rounded-full border font-mono text-sm ${
+                                  isDone
+                                    ? "border-[var(--right)] bg-[var(--right)] text-white"
+                                    : isNext
+                                      ? "border-[var(--brand)] text-[var(--brand)]"
+                                      : "muted border-[var(--line)]"
+                                }`}
+                              >
+                                {isDone ? "✓" : n + 1}
+                              </span>
+                              <span className="flex flex-1 flex-col">
+                                <span className="leading-snug font-medium">{lesson.title}</span>
+                                <span className="muted text-xs">
+                                  {isNext ? "Next · " : ""}
+                                  {lesson.items.length} questions
+                                  {missing.length > 0 &&
+                                    ` · builds on ${missing.map((r) => lessonById(r)?.title).join(", ")}`}
                                 </span>
-                              )}
+                              </span>
+                              <span aria-hidden="true" className="muted text-lg">
+                                ›
+                              </span>
                             </Go>
-                            {done.has(id) && (
-                              <Go href={`/lesson/${id}/read`} className="muted text-xs underline">
-                                read
+                            {isDone && (
+                              <Go
+                                href={`/lesson/${lesson.id}/read`}
+                                className="muted rounded-lg border border-[var(--line)] px-3 py-2.5 text-xs"
+                              >
+                                Read
                               </Go>
                             )}
                           </li>
@@ -104,7 +129,7 @@ export default async function MapPage() {
                   {allDone && (
                     <Go
                       href={`/exam/${module.id}`}
-                      className="btn mt-3 ml-9 flex justify-between text-sm"
+                      className="btn mt-3 flex justify-between text-sm"
                     >
                       <span>Module exam</span>
                       <span className="muted font-mono">

@@ -1,10 +1,15 @@
-import { PAPERS } from "@/lib/content-index";
+import { CURRICULUM, PAPERS } from "@/lib/content-index";
 import { SOURCES } from "@/lib/refs-index";
 import { requireUser } from "@/lib/session";
 import { repsOf } from "@/lib/study";
-import { Go } from "../Nav";
 import { TabBar } from "../TabBar";
-import { cite, GradeMark } from "../ui/Evidence";
+import { PaperList } from "./PaperList";
+
+/** Tier title of a lesson or module id. */
+const tierOf = (topic: string) =>
+  CURRICULUM.filter((t) => t.modules.some((m) => m.id === topic || m.lessons.includes(topic))).map(
+    (t) => t.title,
+  );
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +20,14 @@ export default async function PapersPage() {
     userId,
     PAPERS.flatMap((p) => p.items.map((i) => i.id)),
   );
+  const papers = PAPERS.map((paper) => ({
+    id: paper.id,
+    headline: paper.headline,
+    grade: paper.grade,
+    source: SOURCES[paper.source],
+    fresh: paper.items.some((i) => !reps.has(i.id)),
+    tiers: [...new Set(paper.topics.flatMap(tierOf))],
+  }));
   return (
     <main className="screen with-tabs">
       <h1 className="pt-2 font-serif text-3xl">Papers</h1>
@@ -27,30 +40,12 @@ export default async function PapersPage() {
           </p>
         </div>
       ) : (
-        <ul className="flex flex-col gap-3">
-          {PAPERS.map((paper) => {
-            const source = SOURCES[paper.source];
-            const fresh = paper.items.some((i) => !reps.has(i.id));
-            return (
-              <li key={paper.id}>
-                <Go href={`/papers/${paper.id}`} className="card flex flex-col gap-1.5">
-                  <span className="flex items-center justify-between gap-2">
-                    <span className="eyebrow">{paper.id.slice(0, 10)}</span>
-                    {fresh && (
-                      <span className="text-xs font-semibold text-[var(--brand)]">new</span>
-                    )}
-                  </span>
-                  <span className="font-serif text-xl leading-snug">{paper.headline}</span>
-                  <span className="muted flex flex-wrap items-center gap-x-2 text-sm">
-                    {source && cite(source)}
-                    <GradeMark grade={paper.grade} />
-                    {source?.type === "preprint" && <span>· preprint</span>}
-                  </span>
-                </Go>
-              </li>
-            );
-          })}
-        </ul>
+        <PaperList
+          papers={papers}
+          tiers={CURRICULUM.map((t) => t.title).filter((t) =>
+            papers.some((p) => p.tiers.includes(t)),
+          )}
+        />
       )}
       <TabBar active="/papers" />
     </main>
