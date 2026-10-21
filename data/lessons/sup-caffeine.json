@@ -1,0 +1,769 @@
+{
+ "id": "sup-caffeine",
+ "module": "t4-supplements",
+ "title": "Caffeine: dose, timing and genes",
+ "goal": "Explain how caffeine works on the brain, work out a dose of 3–6 mg·kg⁻¹, choose timing and form, and judge the evidence on tolerance and CYP1A2 genes.",
+ "requires": [
+  "sup-framework"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "adenosine",
+    "cyp1a2"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "caf-mechanism",
+   "title": "How caffeine works: the brain",
+   "text": "During the day [adenosine](g:adenosine) builds up in the brain. It binds its [receptors](g:receptor) and damps down the release of signalling chemicals such as dopamine: you feel tired.\n\n[Caffeine](g:caffeine) has a similar shape. It sits in those receptors and blocks them, so the signalling stays high [[c:caf-adenosine]]. The result: more alertness, stronger drive to the muscles and less pain, so a hard pace feels easier ([RPE](g:rpe) falls) [[c:caf-effects]].\n\nEarly theories said caffeine helps by sparing [glycogen](g:glycogen). The brain is now accepted as the main target.",
+   "claims": [
+    {
+     "id": "caf-adenosine",
+     "text": "Caffeine acts mainly on the brain by blocking adenosine receptors, which raises neurotransmitter release, motor unit firing and pain suppression.",
+     "grade": "strong",
+     "sources": [
+      "guest2021",
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Caffeine is believed to exert its effects on the CNS via the antagonism of adenosine receptors, leading to increases in neurotransmitter release, motor unit firing rates, and pain suppression",
+       "level": "full-text"
+      },
+      {
+       "source": "guest2021",
+       "quote": "the main target is the CNS, which is now widely accepted as the primary mechanism by which caffeine alters mental and physical performance",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "caf-effects",
+     "text": "Caffeine's effects include adenosine receptor antagonism, improved neuromuscular function, vigilance and alertness, and lower perceived exertion.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Adenosine receptor antagonism; increased endorphin release; improved neuromuscular function; improved vigilance and alertness; reduced the perception of exertion during exercise",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "caf-why"
+  },
+  {
+   "type": "concept",
+   "id": "caf-dose",
+   "title": "How much: 3–6 mg·kg⁻¹, and less can work",
+   "text": "Caffeine improves performance consistently at **3–6 mg·kg⁻¹** body mass. The smallest dose that works isn't known; it may be as low as 2 mg·kg⁻¹. Very high doses (9 mg·kg⁻¹) aren't needed and often bring side effects such as nausea, anxiety and poor sleep [[c:caf-dose-range]].\n\nLower doses also work: under 3 mg·kg⁻¹ (about 200 mg), taken before and during exercise with some carbohydrate [[c:caf-low]].\n\nHow big is the gain? A [meta-analysis](g:meta-analysis) of 44 studies found about 2% faster [time trials](g:time-trial) and 3% more mean power, with wide spread between studies [[c:caf-size]]. Endurance is where caffeine helps most consistently, though the size of the gain varies from person to person [[c:caf-endurance]].",
+   "claims": [
+    {
+     "id": "caf-dose-range",
+     "text": "Caffeine consistently improves performance at 3–6 mg·kg⁻¹; the minimal dose may be about 2 mg·kg⁻¹; 9 mg·kg⁻¹ brings frequent side effects and isn't needed.",
+     "grade": "strong",
+     "sources": [
+      "guest2021",
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Caffeine has consistently been shown to improve exercise performance when consumed in doses of 3-6 mg/kg body mass. Minimal effective doses of caffeine currently remain unclear but they may be as low as 2 mg/kg body mass. Very high doses of caffeine (e.g. 9 mg/kg) are associated with a high incidence of side-effects and do not seem to be required to elicit an ergogenic effect.",
+       "level": "abstract"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "Larger caffeine doses (≥9 mg/kg BM) do not appear to increase the performance benefit,",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "caf-low",
+     "text": "Lower doses (under 3 mg·kg⁻¹, about 200 mg) before and during exercise with carbohydrate are an alternative protocol.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Lower caffeine doses (<3 mg/kg BM, ~200 mg), provided both before and during exercise; consumed with a CHO source",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "caf-size",
+     "text": "Across 44 studies (corrected analysis), caffeine improved time-trial time by about 2% and mean power by about 3%, with wide variation.",
+     "grade": "moderate",
+     "sources": [
+      "southward2018"
+     ],
+     "evidence": [
+      {
+       "source": "southward2018",
+       "quote": "Caffeine has a small but evident effect on endurance performance when taken in moderate doses (3-6 mg/kg) as well as an overall improvement following caffeine compared to placebo in mean power output (3.03 ± 3.07%; effect size = 0.23 ± 0.15) and time-trial completion time (2.22 ± 2.59%; effect size = 0.41 ± 0.2).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caf-endurance",
+     "text": "Aerobic endurance shows the most consistent moderate-to-large benefits from caffeine, with effects that differ between individuals.",
+     "grade": "strong",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Aerobic endurance appears to be the form of exercise with the most consistent moderate-to-large benefits from caffeine use, although the magnitude of its effects differs between individuals.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "caf-dose-example",
+   "title": "Working out a caffeine dose",
+   "problem": "A 68 kg runner wants 3 mg·kg⁻¹ of caffeine before a 10 km race. How much is that, and how many 100 mg caffeine gels?",
+   "steps": [
+    "Dose = body mass × dose per kg.",
+    "68 kg × 3 mg·kg⁻¹ = 204 mg.",
+    "204 mg ÷ 100 mg per gel ≈ 2 gels.",
+    "Check the top of the range: 6 mg·kg⁻¹ would be 408 mg. Starting low and testing it in training is sensible."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "caf-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "caf-high"
+  },
+  {
+   "type": "concept",
+   "id": "caf-timing",
+   "title": "When, and in what form",
+   "text": "The usual timing is a capsule **about 60 min** before the start. The best timing depends on the form [[c:caf-60]].\n\nCaffeine gum is absorbed faster, through the lining of the mouth, so it needs a shorter wait; total uptake ends up the same [[c:caf-gum]]. Caffeine gum has improved endurance cycling. Mouth rinses with caffeine have mostly shown no benefit in aerobic exercise.\n\nMind the [half-life](g:half-life): on average 4–6 h, but anything from 1.5 to 10 h in adults [[c:caf-half-life]]. An evening race dose can still be in your blood at bedtime.",
+   "claims": [
+    {
+     "id": "caf-60",
+     "text": "Caffeine is most often taken 60 min before exercise; optimal timing depends on the source, and gum may need a shorter wait.",
+     "grade": "strong",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "The most commonly used timing of caffeine supplementation is 60 min pre-exercise. Optimal timing of caffeine ingestion likely depends on the source of caffeine. For example, as compared to caffeine capsules, caffeine chewing gums may require a shorter waiting time from consumption to the start of the exercise session.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caf-gum",
+     "text": "Caffeine gum is absorbed faster through the mouth lining than capsules, with the same total uptake; it improved endurance cycling, while caffeine mouth rinses mostly don't help aerobic exercise.",
+     "grade": "moderate",
+     "sources": [
+      "wickham2018"
+     ],
+     "evidence": [
+      {
+       "source": "wickham2018",
+       "quote": "Caffeinated chewing gum is absorbed quicker through the buccal mucosa compared with capsule delivery and absorption in the gut, although total caffeine absorption over time is not different.",
+       "level": "abstract"
+      },
+      {
+       "source": "wickham2018",
+       "quote": "while the majority of the literature indicates no ergogenic effect on aerobic exercise performance",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caf-half-life",
+     "text": "Caffeine's half-life averages 4–6 h but ranges from 1.5 to 10 h in adults.",
+     "grade": "strong",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "While the average half-life (t 1/2 ) of caffeine is generally reported to be between 4 and 6 h, it varies between individuals and even may range from 1.5 to 10 h in adults",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "caf-gum-pick"
+  },
+  {
+   "type": "question",
+   "item": "caf-sleep"
+  },
+  {
+   "type": "question",
+   "item": "caf-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "caf-tolerance",
+   "title": "Does daily coffee blunt the effect?",
+   "text": "Many athletes drink coffee every day. Does that blunt the race-day effect? The evidence is mixed [[c:caf-tolerance-mixed]]:\n\n- In 18 people who normally took little caffeine, 4 weeks of daily caffeine built tolerance: the race-day benefit disappeared.\n- Another study gave caffeine on 20 days in a row; the benefit stayed, though it shrank.\n- 40 trained cyclists were split by daily intake (about 60, 140 and 350 mg). A 6 mg·kg⁻¹ dose improved a ~30 min time trial in all three groups, with no link to habitual intake [[c:caf-habitual]]. But they only went 24 h without caffeine first.\n\nPractical reading: daily coffee probably doesn't cancel the effect, but test it.",
+   "claims": [
+    {
+     "id": "caf-tolerance-mixed",
+     "text": "Four weeks of daily caffeine in low users removed its ergogenic effect in one study; in another, 20 days kept it, though smaller.",
+     "grade": "disputed",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Four weeks of caffeine ingestion resulted in increased tolerance to acute caffeine supplementation in previously low habitual caffeine consumers, with the ergogenic effect of acute caffeine supplementation no longer apparent",
+       "level": "full-text"
+      },
+      {
+       "source": "guest2021",
+       "quote": "These results are in contrast with a recent study in which 20 days of consecutive supplementation with caffeine maintained an ergogenic effect, even though the effect size attenuated over time",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "caf-habitual",
+     "text": "In 40 trained cyclists, 6 mg·kg⁻¹ caffeine improved time-trial performance regardless of habitual caffeine intake, after only 24 h of withdrawal.",
+     "grade": "weak",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Caffeine ingestion improved performance as compared to placebo and control, with no influence of habitual caffeine intake.",
+       "level": "full-text"
+      },
+      {
+       "source": "guest2021",
+       "quote": "However, a limitation of this study is the short 24-h caffeine withdrawal period in all groups",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does daily caffeine use blunt the performance benefit of a pre-race dose?",
+    "sides": [
+     {
+      "position": "Yes, it can: 4 weeks of daily caffeine removed the benefit in previously low users.",
+      "sources": [
+       "guest2021"
+      ]
+     },
+     {
+      "position": "Not much: in 40 trained cyclists, low, moderate and high habitual users all improved with caffeine.",
+      "sources": [
+       "guest2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "caf-habit"
+  },
+  {
+   "type": "concept",
+   "id": "caf-genes",
+   "title": "CYP1A2: do your genes decide?",
+   "text": "Over 95% of caffeine is broken down in the liver by the enzyme [CYP1A2](g:cyp1a2) [[c:caf-liver]]. A common [polymorphism](g:polymorphism) in its gene gives AA ('fast'), AC or CC ('slow') [genotypes](g:genotype).\n\nIn 101 male athletes doing a 10 km cycling time trial, 4 mg·kg⁻¹ made AA riders 6.8% faster, did nothing for AC, and made CC riders 13.7% *slower* [[c:caf-guest2018]]. But a trial in 40 male cyclists found caffeine made a ~30 min time trial faster whatever the genotype [[c:caf-glaister]].\n\nNote: the lead author of the 2018 trial consults for a genetic-testing company [[c:caf-coi]]. Gene tests for caffeine are sold; the evidence doesn't yet support them.",
+   "claims": [
+    {
+     "id": "caf-liver",
+     "text": "Over 95% of caffeine is metabolised in the liver by CYP1A2.",
+     "grade": "strong",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "Over 95% of caffeine is metabolized in the liver by the Cytochrome P450 1A2 (CYP1A2) enzyme",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "caf-guest2018",
+     "text": "In 101 male athletes, 4 mg·kg⁻¹ caffeine improved a 10 km cycling time trial by 6.8% in AA genotypes, had no effect in AC and slowed CC by 13.7%.",
+     "grade": "disputed",
+     "sources": [
+      "guest2018"
+     ],
+     "evidence": [
+      {
+       "source": "guest2018",
+       "quote": "Among those with the AA genotype, cycling time decreased by 4.8% at 2 mg·kg (17.0 ± 0.3 vs 17.8 ± 0.4 min, P = 0.0005) and by 6.8% at 4 mg·kg (16.6 ± 0.3 vs 17.8 ± 0.4 min, P < 0.0001). In those with the CC genotype, 4 mg·kg increased cycling time by 13.7% versus placebo (20.8 ± 0.8 vs 18.3 ± 0.5 min, P = 0.04). No effects were observed among those with the AC genotype.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caf-glaister",
+     "text": "In 40 male cyclists, 5 mg·kg⁻¹ caffeine improved a ~30 min time trial irrespective of ADORA2A or CYP1A2 genotype.",
+     "grade": "disputed",
+     "sources": [
+      "glaister2021"
+     ],
+     "evidence": [
+      {
+       "source": "glaister2021",
+       "quote": "In conclusion, caffeine influences physiological responses to submaximal exercise and improves time-trial performance irrespective of <i>ADORA2A</i> or <i>CYP1A2</i> genotypes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "caf-coi",
+     "text": "The first author of the ISSN caffeine position stand, who led the 2018 genotype trial, consults for a genetic-testing company.",
+     "grade": "strong",
+     "sources": [
+      "guest2021"
+     ],
+     "evidence": [
+      {
+       "source": "guest2021",
+       "quote": "N.S.G consults for and is on the scientific advisory board of Nutrigenomix, a genetic testing company.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does CYP1A2 genotype decide whether caffeine helps endurance performance?",
+    "sides": [
+     {
+      "position": "Yes: in 101 athletes, only AA genotypes improved and CC genotypes got slower at 4 mg·kg⁻¹.",
+      "sources": [
+       "guest2018"
+      ]
+     },
+     {
+      "position": "No: in 40 cyclists, caffeine improved time-trial performance whatever the CYP1A2 or ADORA2A genotype.",
+      "sources": [
+       "glaister2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "caf-gene-test"
+  },
+  {
+   "type": "question",
+   "item": "caf-gene-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Caffeine blocks adenosine receptors in the brain: more alertness and drive, less perceived effort.",
+    "Dose: 3–6 mg·kg⁻¹ works consistently, possibly from 2 mg·kg⁻¹; 9 mg·kg⁻¹ adds side effects, not speed. Dose = body mass × mg per kg.",
+    "Capsules about 60 min before; gum acts faster; the half-life of 4–6 h means evening doses disturb sleep.",
+    "Typical gains: about 2% faster time trials. Daily coffee probably doesn't cancel them, but evidence is mixed.",
+    "Whether CYP1A2 genotype changes the effect is disputed: test caffeine in training rather than buying a gene test."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "caf-why",
+   "concept": "caf-mechanism",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "guest2021",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a hard pace feel easier after caffeine?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It blocks adenosine receptors in the brain",
+       "correct": true,
+       "why": "Right: with adenosine blocked, signalling stays high and perceived effort falls."
+      },
+      {
+       "id": "b",
+       "text": "It spares muscle glycogen by burning more fat",
+       "why": "An early theory; the brain is now accepted as the main target."
+      },
+      {
+       "id": "c",
+       "text": "It supplies extra energy to the muscles",
+       "why": "Caffeine has essentially no energy; it changes signalling."
+      },
+      {
+       "id": "d",
+       "text": "It raises VO₂max for a few hours",
+       "why": "The effect is on drive and perceived effort, not on VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-calc",
+   "concept": "caf-dose",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "guest2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 75 kg cyclist wants 3 mg·kg⁻¹ of caffeine before a time trial. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "225 mg",
+       "correct": true,
+       "why": "Right: 75 × 3 = 225 mg."
+      },
+      {
+       "id": "b",
+       "text": "25 mg",
+       "why": "This divides 75 by 3 instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "450 mg",
+       "why": "This is 6 mg·kg⁻¹, the top of the range, not 3."
+      },
+      {
+       "id": "d",
+       "text": "2,250 mg",
+       "why": "A decimal slip: 10 times the right dose, and a dangerous amount."
+      }
+     ],
+     "solution": "Dose = body mass × dose per kg = 75 kg × 3 mg·kg⁻¹ = 225 mg."
+    },
+    {
+     "id": "b",
+     "stem": "A 58 kg triathlete plans 4 mg·kg⁻¹. How many 100 mg caffeine gels is that, closest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2 gels (232 mg)",
+       "correct": true,
+       "why": "Right: 58 × 4 = 232 mg, a bit over 2 gels."
+      },
+      {
+       "id": "b",
+       "text": "About 6 gels (580 mg)",
+       "why": "This takes 10 mg·kg⁻¹, well above the 3–6 range."
+      },
+      {
+       "id": "c",
+       "text": "About 1 gel (116 mg)",
+       "why": "This takes 2 mg·kg⁻¹, half the planned dose."
+      },
+      {
+       "id": "d",
+       "text": "About 4 gels (400 mg)",
+       "why": "This takes one gel per mg·kg⁻¹: the dose per kg isn't a number of gels. 58 × 4 = 232 mg."
+      }
+     ],
+     "solution": "58 kg × 4 mg·kg⁻¹ = 232 mg; 232 ÷ 100 ≈ 2.3, so about 2 gels."
+    },
+    {
+     "id": "c",
+     "stem": "An 82 kg runner wants the low end, 3 mg·kg⁻¹. How much caffeine?",
+     "options": [
+      {
+       "id": "a",
+       "text": "246 mg",
+       "correct": true,
+       "why": "Right: 82 × 3 = 246 mg."
+      },
+      {
+       "id": "b",
+       "text": "27 mg",
+       "why": "This divides 82 by 3."
+      },
+      {
+       "id": "c",
+       "text": "492 mg",
+       "why": "This is 6 mg·kg⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "85 mg",
+       "why": "This adds 82 + 3 instead of multiplying."
+      }
+     ],
+     "solution": "82 kg × 3 mg·kg⁻¹ = 246 mg."
+    }
+   ]
+  },
+  {
+   "id": "caf-high",
+   "concept": "caf-dose",
+   "bloom": "apply",
+   "sources": [
+    "guest2021",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner reasons: \"If 3 mg·kg⁻¹ helps, 9 mg·kg⁻¹ will help three times as much.\" What does the evidence say?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No extra benefit, and more side effects",
+       "correct": true,
+       "why": "Right: 9 mg·kg⁻¹ brings frequent nausea, anxiety and poor sleep without a bigger gain."
+      },
+      {
+       "id": "b",
+       "text": "Right: the effect rises in step with the dose",
+       "why": "The benefit levels off within 3–6 mg·kg⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "9 mg·kg⁻¹ is needed for endurance events",
+       "why": "Endurance gains are consistent at 3–6 mg·kg⁻¹ and possibly lower."
+      },
+      {
+       "id": "d",
+       "text": "Higher doses work, but only in trained runners",
+       "why": "No such split; very high doses aren't needed by anyone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-gum-pick",
+   "concept": "caf-timing",
+   "bloom": "apply",
+   "sources": [
+    "wickham2018",
+    "guest2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants a quick caffeine lift for the last part of the run, with little time to wait. Which form acts fastest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Caffeine chewing gum",
+       "correct": true,
+       "why": "Right: gum is absorbed through the mouth lining, faster than a swallowed capsule."
+      },
+      {
+       "id": "b",
+       "text": "A caffeine capsule",
+       "why": "Capsules are absorbed in the gut, more slowly; the usual wait is about 60 min."
+      },
+      {
+       "id": "c",
+       "text": "A caffeine mouth rinse, spat out",
+       "why": "Rinses have mostly shown no benefit in aerobic exercise."
+      },
+      {
+       "id": "d",
+       "text": "A strong coffee the night before",
+       "why": "Most of it is gone by morning, and it misses the moment entirely."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-sleep",
+   "concept": "caf-timing",
+   "bloom": "analyse",
+   "sources": [
+    "guest2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist takes 400 mg of caffeine at 18:00 for a 19:00 criterium and lies awake until 2 am. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "With a 4–6 h half-life, a third to a half remains at midnight",
+       "correct": true,
+       "why": "Right: caffeine is cleared slowly, so an evening dose lingers into the night."
+      },
+      {
+       "id": "b",
+       "text": "The race itself, since caffeine is gone within an hour",
+       "why": "Caffeine lasts hours, not one hour."
+      },
+      {
+       "id": "c",
+       "text": "Caffeine only disturbs sleep in non-athletes",
+       "why": "Training doesn't remove the effect on sleep."
+      },
+      {
+       "id": "d",
+       "text": "The dose was too low to wear off quickly",
+       "why": "A smaller dose leaves less, not more, at bedtime."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-habit",
+   "concept": "caf-tolerance",
+   "bloom": "evaluate",
+   "sources": [
+    "guest2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner drinks four coffees a day and asks whether a caffeine dose before her marathon is pointless. Best answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Probably still helps; the data are mixed, so test it",
+       "correct": true,
+       "why": "Right: in 40 cyclists habitual intake didn't matter, but one study found tolerance after 4 weeks."
+      },
+      {
+       "id": "b",
+       "text": "Pointless: daily coffee always cancels the effect",
+       "why": "One study found tolerance, others didn't: 'always' goes too far."
+      },
+      {
+       "id": "c",
+       "text": "She must stop all coffee for a month first",
+       "why": "No study shows a month off is needed; 24 h off was used in the cyclist study."
+      },
+      {
+       "id": "d",
+       "text": "It works better in heavy coffee drinkers",
+       "why": "No study found a bigger effect in heavy users."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-gene-test",
+   "concept": "caf-genes",
+   "bloom": "evaluate",
+   "sources": [
+    "guest2018",
+    "glaister2021",
+    "guest2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist is offered a €150 CYP1A2 gene test 'to know if caffeine works for you'. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skip it: trials disagree; test caffeine in training",
+       "correct": true,
+       "why": "Right: one trial found a gene effect, another found none, so a trial in training tells you more."
+      },
+      {
+       "id": "b",
+       "text": "Buy it: CC riders always get slower",
+       "why": "That came from one trial; another found no genotype effect."
+      },
+      {
+       "id": "c",
+       "text": "Buy it: AA riders gain 7%, so it predicts your gain",
+       "why": "The 6.8% was a group average in one trial, not a prediction for one person."
+      },
+      {
+       "id": "d",
+       "text": "Skip it: CYP1A2 has nothing to do with caffeine",
+       "why": "CYP1A2 breaks down over 95% of caffeine; what's disputed is whether it changes the performance effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "caf-gene-appraisal",
+   "concept": "caf-genes",
+   "bloom": "evaluate",
+   "sources": [
+    "guest2018",
+    "glaister2021",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 2018 trial found CC riders got slower with caffeine. What most limits that finding?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One trial, men only; another found no gene effect",
+       "correct": true,
+       "why": "Right: it isn't confirmed, and women weren't tested."
+      },
+      {
+       "id": "b",
+       "text": "The dose was far too high to be realistic",
+       "why": "4 mg·kg⁻¹ sits inside the usual 3–6 range."
+      },
+      {
+       "id": "c",
+       "text": "A 10 km time trial is too short to test caffeine",
+       "why": "The riders took about 17–18 min: a typical endurance effort where caffeine helps."
+      },
+      {
+       "id": "d",
+       "text": "It had no placebo condition",
+       "why": "It was double-blind and placebo-controlled."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

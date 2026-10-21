@@ -1,0 +1,719 @@
+{
+ "id": "fuel-gut",
+ "module": "t4-fueling",
+ "title": "Gut problems and gut training",
+ "goal": "Explain why gut symptoms are common in long races (blood flow, intensity, running versus cycling, what you swallow) and what training the gut can and can't do.",
+ "requires": [
+  "fuel-transportable"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "gi-symptoms",
+    "splanchnic-blood-flow",
+    "malabsorption",
+    "gut-training"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gut-common",
+   "title": "How common are gut problems?",
+   "text": "[GI symptoms](g:gi-symptoms) are among the commonest reasons for a bad race: studies suggest 30–50% of endurance athletes get them [[c:gut-prevalence]]. Most are mild, but they slow you down or stop you eating, which then costs you fuel.\n\nLonger races are worse. In a survey of 221 athletes, serious symptoms hit about 31% in Ironman races, 14% in a half-Ironman, and 4% in a marathon or a 100–150 km cycle race [[c:gut-pfeiffer]]. A history of gut problems was a strong predictor: athletes who had them before tended to get them again.",
+   "claims": [
+    {
+     "id": "gut-prevalence",
+     "text": "About 30–50% of athletes report gastrointestinal complaints during exercise.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Generally, studies suggest that 30-50% of athletes experience such complaints.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gut-pfeiffer",
+     "text": "Serious GI symptoms were most common in Ironman races (about 31%), less so in half-Ironman (14%), marathon and cycle races (4%), and were linked to a history of GI problems.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Prevalence of serious GI symptoms was highest during the IM races (∼31%, P = 0.001) compared with IM 70.3 (14%), CYCLE (4%), MARATHON (4%), and PRO (7%) and correlated to a history of GI problems.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gut-prevalence"
+  },
+  {
+   "type": "question",
+   "item": "gut-event"
+  },
+  {
+   "type": "concept",
+   "id": "gut-blood",
+   "title": "Less blood for the gut",
+   "text": "During hard exercise, blood is sent to the working muscles and to the skin for cooling. [Splanchnic blood flow](g:splanchnic-blood-flow), the gut's supply, can fall by up to 80% at maximal effort, and more so when you are dehydrated; this is thought to be a main cause of symptoms [[c:gut-blood-flow]].\n\nA systematic review found that the longer and harder the exercise, the more the gut lining is injured and leaky, and the slower the stomach empties and the gut absorbs. Heat and running make it worse [[c:gut-costa-sr]]. That's why a gel that sits fine on an easy ride can come back up in a hot race.",
+   "claims": [
+    {
+     "id": "gut-blood-flow",
+     "text": "Blood flow to the gut falls during intense exercise, by up to 80% at maximal effort and more when dehydrated, and this is thought to be a main cause of GI symptoms.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "During intense exercise, and especially when hypohydrated, mesenteric blood flow is reduced; this is believed to be one of the main contributors to the development of gastrointestinal symptoms.",
+       "level": "abstract"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "During maximal exercise, splanchnic blood flow may be reduced by up to 80 % to provide sufficient blood flow to working muscle and skin.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gut-costa-sr",
+     "text": "As exercise intensity and duration increase, gut injury, permeability and malabsorption rise and gastric emptying slows; heat and running make this worse.",
+     "grade": "moderate",
+     "sources": [
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017",
+       "quote": "As exercise intensity and duration increases, there is considerable evidence for increases in indices of intestinal injury, permeability and endotoxaemia, together with impairment of gastric emptying, slowing of small intestinal transit and malabsorption.",
+       "level": "abstract"
+      },
+      {
+       "source": "costa2017",
+       "quote": "The addition of heat stress and running mode appears to exacerbate these markers of gastrointestinal disturbance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gut-bloodflow"
+  },
+  {
+   "type": "question",
+   "item": "gut-heat-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "gut-mech",
+   "title": "Running, cycling, and what you swallow",
+   "text": "Running jolts the gut thousands of times an hour, and symptoms are more common in runners than in cyclists [[c:gut-run]]. Cyclists aren't spared: bent over in the aero position, the abdomen is squeezed and upper symptoms such as reflux are more common [[c:gut-aero]].\n\nWhat you swallow matters too. Fibre, fat, protein and very concentrated drinks, with a high [osmolality](g:osmolality), are linked with more symptoms [[c:gut-osmo]]. And anti-inflammatory painkillers such as ibuprofen make the gut wall leakier: leave them out before and during long races [[c:gut-nsaid]].",
+   "claims": [
+    {
+     "id": "gut-run",
+     "text": "GI symptoms are more common in runners than in cyclists, probably because of the repeated impact of running.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014",
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "For example, symptoms are more common in runners than in cyclists [ 27 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "This is thought to be a result of the repetitive high-impact mechanics of running and subsequent damage to the intestinal lining [ 38 ].",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gut-aero",
+     "text": "On the bike, upper GI symptoms are more common, possibly because the riding position, especially the aero position, presses on the abdomen.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "For example, on a bicycle, upper gastrointestinal symptoms are more prevalent possibly due to increased pressure on the abdomen as a result of the cycling position, particularly when in the ‘aero’ position.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gut-osmo",
+     "text": "Fibre, fat, protein and concentrated, high-osmolality drinks are associated with more GI symptoms.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Gastrointestinal problems were more likely to occur with the ingestion of fiber, fat, protein, and concentrated carbohydrate solutions during the triathlon.",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "Beverages with high osmolalities (>500 mOsm/L) seemed to be associated with an increased incidence of symptoms.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gut-nsaid",
+     "text": "Aspirin and other anti-inflammatory painkillers increase gut permeability and may increase GI complaints.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Both aspirin and NSAIDs have commonly been shown to increase intestinal permeability and may increase the incidence of gastrointestinal complaints.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gut-run-vs-cycle"
+  },
+  {
+   "type": "question",
+   "item": "gut-ibuprofen"
+  },
+  {
+   "type": "concept",
+   "id": "gut-training",
+   "title": "Training the gut",
+   "text": "The gut adapts. In rodents, a high-carbohydrate diet raises the number and activity of [SGLT1](g:sglt1) transporters; in humans this is likely but not yet measured directly. The stomach can also learn to handle bigger volumes with less fullness [[c:gut-adapt]].\n\nTwo trials show it in athletes. Cyclists who took carbohydrate in every session for 28 days then burned more of a glucose drink: 64 g against 55 g in 100 min [[c:gut-cox]]. Runners who practised taking 90 g·h⁻¹ during runs for 2 weeks had 60% fewer gut symptoms, less [malabsorption](g:malabsorption), and covered 5% more distance in a 1 h test, while a placebo group didn't improve [[c:gut-costa]]. This practice is called [gut training](g:gut-training).",
+   "claims": [
+    {
+     "id": "gut-adapt",
+     "text": "In animals, a high-carbohydrate diet increases intestinal SGLT1 density and activity (human evidence is limited), and gastric emptying and stomach comfort can be trained.",
+     "grade": "weak",
+     "sources": [
+      "jeukendrup2017"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2017",
+       "quote": "For example, a high-carbohydrate diet will increase the density of sodium-dependent glucose-1 (SGLT1) transporters in the intestine as well as the activity of the transporter, allowing greater carbohydrate absorption and oxidation during exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2017",
+       "quote": "Gastric emptying as well as stomach comfort can be “trained” and perceptions of fullness decreased; some studies have suggested that nutrient-specific increases in gastric emptying may occur.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2017",
+       "quote": "Training the gut has been proposed as a way to increase SGLT1 transporter number and/or activity, but evidence in humans thus far is limited",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gut-cox",
+     "text": "28 days of training with high carbohydrate availability increased exogenous glucose oxidation during cycling.",
+     "grade": "weak",
+     "sources": [
+      "cox2010"
+     ],
+     "evidence": [
+      {
+       "source": "cox2010",
+       "quote": "Tracer-derived estimates of exogenous glucose oxidation during 100SS in the glucose trial increased from 54.6 to 63.6 g (P < 0.01) in the High group with no change in the Low group.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gut-costa",
+     "text": "Two weeks of repeated carbohydrate intake during running reduced GI symptoms and malabsorption and improved a distance test compared with placebo.",
+     "grade": "weak",
+     "sources": [
+      "costa2017b"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017b",
+       "quote": "Gastrointestinal symptoms reduced in GC2 on CHO-S (60%; p = 0.008) and CHO-F (63%; p = 0.046); reductions were greater than PLA (p < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "costa2017b",
+       "quote": "Distance test improved on CHO-S (5.2%) and CHO-F (4.3%) in GC2, but not on PLA (-2.1%) (trial × time: p = 0.009).",
+       "level": "abstract"
+      },
+      {
+       "source": "costa2017b",
+       "quote": "CHO-S also reduced malabsorption and increased blood glucose availability during endurance running compared with PLA.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gut-cox-finding"
+  },
+  {
+   "type": "question",
+   "item": "gut-breath-hydrogen"
+  },
+  {
+   "type": "concept",
+   "id": "gut-limits",
+   "title": "How strong is the evidence, and how to do it",
+   "text": "A systematic review found only eight gut-training studies. They were small, mostly in men (79% of participants), and too different in design to pool [[c:gut-martinez]]. They point the same way: less discomfort, perhaps less malabsorption. How long it takes, and whether it makes you faster, is less clear.\n\nIn practice: rehearse race-day fuelling in your long sessions, at race intensity some of the time, with the same products. Start from what you tolerate and build towards your target over a few weeks. The high-carbohydrate days of race week are part of the training too.",
+   "claims": [
+    {
+     "id": "gut-martinez",
+     "text": "Only eight gut-training studies exist, mostly in men and too varied to pool; together they suggest gut training may reduce gut discomfort and possibly malabsorption.",
+     "grade": "moderate",
+     "sources": [
+      "martinez2023"
+     ],
+     "evidence": [
+      {
+       "source": "martinez2023",
+       "quote": "Overall, 304 studies were identified, and eight studies were included after screening.",
+       "level": "abstract"
+      },
+      {
+       "source": "martinez2023",
+       "quote": "Participants in the included studies were between the ages of 15 and 35 years and were mostly males (79%).",
+       "level": "full-text"
+      },
+      {
+       "source": "martinez2023",
+       "quote": "Overall, gut-training or feeding-challenge around exercise may provide advantages in reducing gut discomfort, and potentially improve carbohydrate malabsorption and Ex-GIS, which may have exercise performance implications.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gut-build-up"
+  },
+  {
+   "type": "question",
+   "item": "gut-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "30–50% of endurance athletes get gut symptoms; serious ones are most common in the longest races, and a history of problems predicts more.",
+    "Hard exercise cuts gut blood flow (up to 80% at maximal effort); longer, harder, hotter and dehydrated make it worse.",
+    "Running jolts the gut (more symptoms than cycling); the aero position squeezes it (more reflux).",
+    "Fibre, fat, protein, very concentrated drinks and anti-inflammatory painkillers raise the risk.",
+    "The gut is trainable: practising race fuelling for 2–4 weeks reduced symptoms and raised carbohydrate use in small trials, mostly in men."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gut-prevalence",
+   "concept": "gut-common",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Roughly what share of endurance athletes report gut complaints during exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 30–50%",
+       "correct": true,
+       "why": "Right: studies suggest 30–50% of athletes have them, mostly mild."
+      },
+      {
+       "id": "b",
+       "text": "Under 5%",
+       "why": "Under 5% is about the rate of serious symptoms in a marathon; complaints of any kind are far more common."
+      },
+      {
+       "id": "c",
+       "text": "About 90%",
+       "why": "Common, but not near-universal: estimates are 30–50%."
+      },
+      {
+       "id": "d",
+       "text": "About 10%",
+       "why": "That underestimates it; surveys put it at 30–50%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-event",
+   "concept": "gut-common",
+   "bloom": "analyse",
+   "sources": [
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a survey across races, serious gut symptoms hit about 31% of Ironman athletes but only 4% of marathon runners. Which explanation fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An Ironman stresses the gut for many more hours",
+       "correct": true,
+       "why": "Right: 9–17 h of exercise means many more hours of reduced gut blood flow and much more food and drink to handle than in a 2–4 h marathon."
+      },
+      {
+       "id": "b",
+       "text": "The swim damages the gut lining",
+       "why": "Nothing points to the swim; duration and intake explain the gap."
+      },
+      {
+       "id": "c",
+       "text": "Running is gentler on the gut than cycling",
+       "why": "It's the other way round: running causes more symptoms per hour than cycling."
+      },
+      {
+       "id": "d",
+       "text": "Marathon runners are immune to gut trouble",
+       "why": "Runners get plenty of gut trouble; marathoners in that survey simply raced shorter and ate less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-bloodflow",
+   "concept": "gut-blood",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is thought to be a main physiological cause of gut symptoms during hard exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Blood flow to the gut falls as muscles and skin take more",
+       "correct": true,
+       "why": "Right: splanchnic blood flow can drop by up to 80% at maximal effort."
+      },
+      {
+       "id": "b",
+       "text": "The stomach makes far more acid",
+       "why": "Acid output isn't the main driver; the gut's falling blood supply is."
+      },
+      {
+       "id": "c",
+       "text": "The gut lining runs out of glycogen",
+       "why": "The gut isn't limited by its own glycogen; it is short of blood flow and oxygen."
+      },
+      {
+       "id": "d",
+       "text": "The heart pumps too little blood overall",
+       "why": "Cardiac output rises in exercise; the gut gets a smaller share of it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-heat-scenario",
+   "concept": "gut-blood",
+   "bloom": "apply",
+   "sources": [
+    "deoliveira2014",
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners take the same gels at the same pace in a marathon. One races on a cool day; the other on a hot day, losing 3% of body mass in sweat. Who is more likely to have gut trouble?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The hot-day runner: heat and dehydration cut gut blood flow more",
+       "correct": true,
+       "why": "Right: blood goes to the skin for cooling, and dehydration lowers gut blood flow further; heat worsens gut disturbance."
+      },
+      {
+       "id": "b",
+       "text": "The cool-day runner: cold slows gastric emptying",
+       "why": "A cool day is easier on the gut; heat and dehydration are the aggravating factors."
+      },
+      {
+       "id": "c",
+       "text": "Neither: with the same gels, the risk is the same",
+       "why": "Conditions matter as much as the product: heat and dehydration change gut blood flow."
+      },
+      {
+       "id": "d",
+       "text": "The hot-day runner, because sweat is lost from the gut",
+       "why": "Sweat comes from the skin's glands; the gut suffers because its blood supply falls."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-run-vs-cycle",
+   "concept": "gut-mech",
+   "bloom": "analyse",
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Runners get more gut symptoms than cyclists, yet cyclists on aero bars report more reflux. What best explains both?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Running jolts the gut; the aero position squeezes the abdomen",
+       "correct": true,
+       "why": "Right: repeated impact affects the gut lining in running, while the bent-over position presses on the stomach in cycling."
+      },
+      {
+       "id": "b",
+       "text": "Runners eat far more per hour than cyclists",
+       "why": "Usually the reverse: marathoners took about 35 g·h⁻¹, cyclists more."
+      },
+      {
+       "id": "c",
+       "text": "Running raises gut blood flow, cycling lowers it",
+       "why": "Hard exercise of either kind lowers gut blood flow; the difference is mechanical."
+      },
+      {
+       "id": "d",
+       "text": "Cyclists swallow no air when they drink",
+       "why": "Cyclists swallow air too, drinking from bottles while breathing hard; that doesn't explain the pattern."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-ibuprofen",
+   "concept": "gut-mech",
+   "bloom": "apply",
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete plans to take ibuprofen before an Ironman for a sore knee. What is the best advice for her gut?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Leave it out: it makes the gut wall leakier",
+       "correct": true,
+       "why": "Right: anti-inflammatory painkillers increase gut permeability and may raise the risk of gut complaints in a long race."
+      },
+      {
+       "id": "b",
+       "text": "Take it with a gel to protect the stomach",
+       "why": "A gel doesn't stop ibuprofen making the gut wall leakier."
+      },
+      {
+       "id": "c",
+       "text": "It's fine, as it only affects the stomach",
+       "why": "The effect reaches the intestine too: ibuprofen has been shown to increase intestinal permeability."
+      },
+      {
+       "id": "d",
+       "text": "Take a double dose on the run instead",
+       "why": "The run is when gut blood flow is already low; more ibuprofen then adds to the risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-cox-finding",
+   "concept": "gut-training",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "cox2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclists took carbohydrate in every training session for 28 days. What changed when they were tested with a glucose drink?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They burned more of the drink's glucose",
+       "correct": true,
+       "why": "Right: exogenous glucose oxidation rose from about 55 to 64 g over 100 min, with no change in the low-carbohydrate group."
+      },
+      {
+       "id": "b",
+       "text": "They absorbed less glucose from the gut",
+       "why": "The opposite: more of the drink was burned, consistent with better absorption."
+      },
+      {
+       "id": "c",
+       "text": "They stopped burning fat altogether",
+       "why": "Fat use doesn't stop; the change was in how much swallowed glucose was burned."
+      },
+      {
+       "id": "d",
+       "text": "Their gut symptoms went up",
+       "why": "Nothing suggests training with carbohydrate worsened the gut; the measured change was better use of the drink."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-breath-hydrogen",
+   "concept": "gut-training",
+   "bloom": "understand",
+   "sources": [
+    "costa2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Gut-training studies measure hydrogen in the breath. What does a high value show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate reached the large bowel unabsorbed",
+       "correct": true,
+       "why": "Right: bacteria there ferment it into hydrogen, which is breathed out; a sign of malabsorption."
+      },
+      {
+       "id": "b",
+       "text": "The athlete is breathing very hard",
+       "why": "Breathing harder doesn't make hydrogen; only gut bacteria fermenting carbohydrate do."
+      },
+      {
+       "id": "c",
+       "text": "Swallowed glucose is being burned fast",
+       "why": "Burning glucose produces CO₂, not hydrogen."
+      },
+      {
+       "id": "d",
+       "text": "The stomach is emptying quickly",
+       "why": "Hydrogen comes from fermentation in the large bowel, not from the stomach emptying."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-build-up",
+   "concept": "gut-limits",
+   "bloom": "apply",
+   "sources": [
+    "costa2017b",
+    "jeukendrup2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner feels sick above 40 g·h⁻¹ but wants 75 g·h⁻¹ in a marathon 8 weeks away. What is the best plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Practise fuelling in long runs, building the intake up over weeks",
+       "correct": true,
+       "why": "Right: repeated practice reduced symptoms in trials; building gradually lets the gut adapt."
+      },
+      {
+       "id": "b",
+       "text": "Try 75 g·h⁻¹ for the first time on race day",
+       "why": "Never try something new on race day; an untrained gut at race intensity is the classic recipe for trouble."
+      },
+      {
+       "id": "c",
+       "text": "Avoid carbohydrate in training so the gut rests",
+       "why": "Low carbohydrate exposure is the opposite of gut training; transporters adapt to what the gut gets."
+      },
+      {
+       "id": "d",
+       "text": "Switch to high-fibre bars, which are gentler",
+       "why": "Fibre is linked with more gut symptoms during exercise, not fewer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gut-appraisal",
+   "concept": "gut-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "martinez2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A systematic review found eight gut-training studies, mostly in men and too different to pool in a meta-analysis. What is the fairest conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gut training probably eases discomfort, but the evidence is thin",
+       "correct": true,
+       "why": "Right: results point the same way, but few, small, mostly male studies with varied methods limit confidence."
+      },
+      {
+       "id": "b",
+       "text": "Gut training is proven to make athletes race faster",
+       "why": "Performance effects are uncertain; the clearest finding is less discomfort."
+      },
+      {
+       "id": "c",
+       "text": "Gut training doesn't work, since no meta-analysis was done",
+       "why": "Not pooling the data reflects varied methods, not evidence of no effect."
+      },
+      {
+       "id": "d",
+       "text": "Eight studies that agree are enough to be certain",
+       "why": "Small, varied studies can agree and still overestimate an effect; certainty needs more and larger trials."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

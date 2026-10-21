@@ -1,0 +1,875 @@
+{
+ "id": "hyd-ean",
+ "module": "t4-hydration",
+ "title": "Exercise-associated hyponatraemia",
+ "goal": "Explain what exercise-associated hyponatraemia is, why drinking more than you lose plus water-holding vasopressin causes it, who is at risk, how it shows, and how to prevent it.",
+ "requires": [
+  "hyd-sodium"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "nsaid",
+    "cerebral-oedema",
+    "hypertonic-saline"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ean-define",
+   "title": "What EAH is",
+   "text": "[Exercise-associated hyponatraemia](g:hyponatraemia), or EAH, is blood sodium below the lab's normal range, for most labs **under 135 mmol·L⁻¹**, during or up to 24 h after exercise [[c:ean-def]].\n\nMost cases cause no symptoms and are found only when researchers test everyone at the finish: 11% of 1,089 Ironman finishers in one study, and 13% of 488 Boston Marathon runners (and 0.6% of all 488 at 120 or lower) [[c:ean-incidence]].\n\nSymptoms depend on how far sodium falls *and how fast*: a fall of about 7–10% within a day can cause them [[c:ean-rate]]. So the same finish-line reading can mean different things in two runners.",
+   "claims": [
+    {
+     "id": "ean-def",
+     "text": "EAH is blood sodium below 135 mmol·L⁻¹ during or after endurance exercise, detectable up to 24 h after it ends.",
+     "grade": "strong",
+     "sources": [
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2019",
+       "quote": "Exercise-associated hyponatremia (EAH) is defined as a plasma sodium concentration of <135 mmol/L during or after endurance and ultra-endurance performance",
+       "level": "abstract"
+      },
+      {
+       "source": "knechtle2019",
+       "quote": "can be detected up to 24 h after the end of the exercise",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-incidence",
+     "text": "Screening finds asymptomatic EAH in about 11% of Ironman finishers; 13% of Boston Marathon finishers had blood sodium of 135 mmol·L⁻¹ or less and 0.6% had 120 or less.",
+     "grade": "moderate",
+     "sources": [
+      "hewbutler2017",
+      "almond2005"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "11% of 1,089 Ironman triathletes tested post-race",
+       "level": "full-text"
+      },
+      {
+       "source": "almond2005",
+       "quote": "Thirteen percent had hyponatremia (a serum sodium concentration of 135 mmol per liter or less); 0.6 percent had critical hyponatremia (120 mmol per liter or less).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ean-rate",
+     "text": "Symptoms depend on both how far and how fast blood sodium falls; a fall of about 7–10% within 24 h can cause symptoms.",
+     "grade": "moderate",
+     "sources": [
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2019",
+       "quote": "The symptoms depend not only on the serum sodium concentration, but also the decrease rate",
+       "level": "full-text"
+      },
+      {
+       "source": "knechtle2019",
+       "quote": "Symptomatic EAH can occur if the rate of fall approaches 7% to 10% within 24 h",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ean-def-recall"
+  },
+  {
+   "type": "question",
+   "item": "ean-rate-why"
+  },
+  {
+   "type": "concept",
+   "id": "ean-cause",
+   "title": "Mostly too much water",
+   "text": "Blood sodium is a ratio: sodium over body water. EAH can come from losing sodium, gaining water, or both, but in most cases the driver is **too much water** [[c:ean-water]].\n\nThe fingerprint is weight gain. In 2,135 weighed athletes, the more weight they gained during the race, the lower their sodium at the finish [[c:ean-noakes]]. In Boston, gaining weight raised the odds of hyponatraemia about fourfold [[c:ean-boston]].\n\nWeight gain during exercise can only come from drinking more than you lose. Yet in the big study 70% of those who gained weight still had normal sodium. So overdrinking is behind most cases, but it doesn't cause EAH in everyone: the kidneys and hormones decide the rest.",
+   "claims": [
+    {
+     "id": "ean-water",
+     "text": "Hyponatraemia can come from sodium loss, water excess or both, but the main driver of EAH is drinking water or hypotonic drinks beyond losses, giving a relative excess of body water.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Exercise-associated hyponatremia typically results from ingesting water or hypotonic beverages (including sports drinks) beyond sweat losses.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-noakes",
+     "text": "Finish blood sodium fell in a straight line with weight gain during exercise, yet 70% of athletes who gained weight kept normal or high sodium.",
+     "grade": "moderate",
+     "sources": [
+      "noakes2005"
+     ],
+     "evidence": [
+      {
+       "source": "noakes2005",
+       "quote": "Serum [Na+] after racing was a linear function with a negative slope of the body weight change during exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "noakes2005",
+       "quote": "Of 231 (11%) athletes who gained weight during exercise, 70% were normonatremic or hypernatremic, 19% had a serum [Na+] between 129-135 mmol/liter, and 11% a serum [Na+] of <129 mmol/liter.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ean-boston",
+     "text": "In Boston Marathon runners, weight gain (odds ratio 4.2), a finish time over 4 h (odds ratio 7.4 versus under 3:30) and BMI extremes were linked to hyponatraemia.",
+     "grade": "moderate",
+     "sources": [
+      "almond2005"
+     ],
+     "evidence": [
+      {
+       "source": "almond2005",
+       "quote": "On multivariate analysis, hyponatremia was associated with weight gain (odds ratio, 4.2; 95 percent confidence interval, 2.2 to 8.2), a racing time of >4:00 hours (odds ratio for the comparison with a time of <3:30 hours, 7.4; 95 percent confidence interval, 2.9 to 23.1), and body-mass-index extremes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ean-weight-pick"
+  },
+  {
+   "type": "question",
+   "item": "ean-ratio"
+  },
+  {
+   "type": "concept",
+   "id": "ean-avp",
+   "title": "Why the kidneys don't fix it",
+   "text": "Healthy kidneys can pass a lot of extra water, but only when [vasopressin](g:vasopressin) (ADH; EAH papers call it AVP) is switched off. The *Water and salt* lesson showed it can stay on during long exercise even when plasma isn't concentrated.\n\nEAH research names the same pair: **drinking beyond thirst plus water held back by AVP** released for reasons other than concentration [[c:ean-avp-cause]]. Triggers include pain, emotion and exercise itself, nausea and vomiting, low blood glucose, heat, and drugs such as [NSAIDs](g:nsaid) [[c:ean-triggers]]. In a New Zealand Ironman, NSAID users had more hyponatraemia [[c:ean-nsaid]].\n\nSo a runner drinking 1 L·h⁻¹ while sweating 0.6 L·h⁻¹ may not simply pass the difference as urine: much of it stays.",
+   "claims": [
+    {
+     "id": "ean-avp-cause",
+     "text": "Drinking beyond thirst together with fluid retention from non-osmotic AVP secretion is the primary cause of EAH in prolonged endurance exercise.",
+     "grade": "strong",
+     "sources": [
+      "hewbutler2017",
+      "noakes2005"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "Collective studies demonstrated that overzealous fluid consumption (above the dictates of thirst) coupled with fluid retention [exercise-induced non-osmotic arginine vasopressin (AVP) secretion] was the primary cause of EAH in athletes participating in prolonged endurance exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "noakes2005",
+       "quote": "Thus, EAH occurs in athletes who (i) drink to excess during exercise, (ii) retain excess fluid because of inadequate suppression of antidiuretic hormone secretion, and (iii) osmotically inactivate circulating Na+ or fail to mobilize osmotically inactive sodium from internal stores.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ean-triggers",
+     "text": "Possible non-osmotic triggers of AVP during exercise include pain, emotion, exercise itself, nausea and vomiting, hypoglycaemia, heat and drugs such as NSAIDs.",
+     "grade": "moderate",
+     "sources": [
+      "hewbutler2017"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "Several potential stimuli to AVP release in exercising athletes include non-specific stresses (pain, emotion, and physical exercise), nausea/vomiting, hypoglycemia, exposure to heat, and medication use (such as non-steroidal anti-inflammatory drugs and selective serotonin reuptake inhibitors)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-nsaid",
+     "text": "In 330 Ironman triathletes, NSAID use was linked to hyponatraemia.",
+     "grade": "weak",
+     "sources": [
+      "wharam2006"
+     ],
+     "evidence": [
+      {
+       "source": "wharam2006",
+       "quote": "NSAID use was related to the incidence of hyponatremia (P = 0.0002).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ean-avp-why"
+  },
+  {
+   "type": "question",
+   "item": "ean-nsaid-pick"
+  },
+  {
+   "type": "concept",
+   "id": "ean-risk",
+   "title": "Who is at risk",
+   "text": "Risk factors from field studies:\n\n- **slow finish**: in Boston, over 4 h against under 3:30 raised the odds about sevenfold [[c:ean-boston-time]];\n- **weight gain**, and very low or very high BMI;\n- **long events**: EAH is more common in ultramarathons, triathlon and open-water swimming than in marathons or cycling [[c:ean-discipline]];\n- **NSAIDs**.\n\nSlow runners have more hours to drink and, at a lower pace, sweat less.\n\nMore of the reported cases are women, but in Boston the gap disappeared once BMI and finish time were taken into account [[c:ean-sex]].",
+   "claims": [
+    {
+     "id": "ean-boston-time",
+     "text": "A Boston Marathon finish time over 4 h was associated with about sevenfold higher odds of hyponatraemia than under 3:30.",
+     "grade": "moderate",
+     "sources": [
+      "almond2005"
+     ],
+     "evidence": [
+      {
+       "source": "almond2005",
+       "quote": "On multivariate analysis, hyponatremia was associated with weight gain (odds ratio, 4.2; 95 percent confidence interval, 2.2 to 8.2), a racing time of >4:00 hours (odds ratio for the comparison with a time of <3:30 hours, 7.4; 95 percent confidence interval, 2.9 to 23.1), and body-mass-index extremes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ean-discipline",
+     "text": "EAH prevalence rises with event duration and differs by sport: rather rare in cycling, more frequent in running and triathlon, very frequent in swimming.",
+     "grade": "weak",
+     "sources": [
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2019",
+       "quote": "The prevalence of EAH depends on the duration of an endurance performance (i.e., low in marathon running, high to very high in ultra-marathon running), the sports discipline (i.e., rather rare in cycling, more frequent in running and triathlon, and very frequent in swimming)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ean-sex",
+     "text": "Most reported EAH cases are women, but in Boston the sex difference disappeared after adjusting for BMI and finish time.",
+     "grade": "moderate",
+     "sources": [
+      "hewbutler2017",
+      "almond2005"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "Although the majority of EAH cases are documented in females, a large study performed on Boston Marathon runners suggested that the apparent sex difference disappeared when data were adjusted for body mass index and racing times",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ean-risk-pick",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ean-signs",
+   "title": "How it shows, and what not to do",
+   "text": "**Early signs:** lightheadedness, dizziness, nausea, puffy hands or face, cramps that don't settle, and weight gain [[c:ean-early]].\n\n**Severe:** as water moves into brain cells, [cerebral oedema](g:cerebral-oedema) builds: worsening headache, confusion, agitation, poor coordination, seizures, unconsciousness [[c:ean-severe]].\n\nMany early signs look like dehydration or exhaustion. The danger is treating a confused, overhydrated runner with more fluid. So the rule is to **measure blood sodium before giving any fluid**; severe cases get [hypertonic saline](g:hypertonic-saline) into a vein, the most effective treatment, and urgent hospital care [[c:ean-test-first]].",
+   "claims": [
+    {
+     "id": "ean-early",
+     "text": "Early signs of EAH include lightheadedness, dizziness, nausea, puffiness of the hands, feet or face, cramps that don't resolve, and weight gain.",
+     "grade": "moderate",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "include milder early indications such as lightheadedness, dizziness, nausea, puffiness of the extremities or face, muscle cramps that do not resolve with the usual care, and body weight gain from baseline",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-severe",
+     "text": "With cerebral oedema, typically below about 120 mmol·L⁻¹, symptoms include headache, confusion, agitation, coordination problems and unconsciousness.",
+     "grade": "moderate",
+     "sources": [
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2019",
+       "quote": "With the formation of cerebral edema at a plasma sodium concentration of <120 mmol/L, symptoms such as headache, confusion, agitation, coordination problems, and unconsciousness can occur",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-test-first",
+     "text": "If EAH is suspected, blood sodium should be measured before any fluid is given; intravenous hypertonic saline is the most effective treatment for symptomatic EAH with brain swelling.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017",
+      "hewbutler2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "If EAH is suspected, a serum or blood sodium level should be measured before oral or IV (hypotonic or isotonic) fluid is administered.",
+       "level": "full-text"
+      },
+      {
+       "source": "hewbutler2017",
+       "quote": "intravenous (IV) administration of a hypertonic saline solution is the most effective treatment for reversing encephalopathy associated with symptomatic EAH",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ean-collapse"
+  },
+  {
+   "type": "concept",
+   "id": "ean-prevent",
+   "title": "Prevention",
+   "text": "The consensus advice fits in three lines [[c:ean-prevent-rules]]:\n\n- **drink to thirst**: the most individual strategy before, during and after exercise;\n- **don't gain weight**: a gain means you've drunk more than you lost;\n- **sports drinks don't protect**: they are less salty than blood, so drinking too much of them still dilutes it [[c:ean-sports-drink]].\n\nWhether sodium supplements lower the risk is still argued [[c:ean-sodium-role]]: salt capsules raised blood sodium in a half-Ironman trial, yet sodium intake barely mattered in the 161 km race (previous lesson).\n\nCheck who paid: some planned-drinking reviews were published with sports-drink industry support. The don't-gain-weight rule is shared by both camps.",
+   "claims": [
+    {
+     "id": "ean-prevent-rules",
+     "text": "To prevent EAH, drink according to thirst and treat any weight gain during exercise as a sign of overdrinking.",
+     "grade": "strong",
+     "sources": [
+      "hewbutler2017",
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "The most individualized hydration strategy before, during, and immediately following exercise is to drink fluids when thirsty.",
+       "level": "full-text"
+      },
+      {
+       "source": "hewbutler2017",
+       "quote": "Weight gain is an indication that fluid intake has been in excess of fluid losses, and water overload is present to some degree",
+       "level": "full-text"
+      },
+      {
+       "source": "mcdermott2017",
+       "quote": "Individuals should not gain body mass (or body weight) during exercise (from pre-exercise to postexercise) unless they begin activity with an unavoidable fluid deficit.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-sports-drink",
+     "text": "Sodium-containing sports drinks are hypotonic and do not prevent EAH in athletes who overdrink.",
+     "grade": "strong",
+     "sources": [
+      "knechtle2019",
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "knechtle2019",
+       "quote": "Sodium-containing sports drinks, which are hypotonic, will not prevent EAH in athletes who overdrink during exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "mcdermott2017",
+       "quote": "Exercise-associated hyponatremia typically results from ingesting water or hypotonic beverages (including sports drinks) beyond sweat losses.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ean-sodium-role",
+     "text": "Avoiding overdrinking is the agreed main prevention; whether sodium supplements reduce EAH risk remains controversial.",
+     "grade": "disputed",
+     "sources": [
+      "hewbutler2017",
+      "hoffman2015",
+      "delcoso2016"
+     ],
+     "evidence": [
+      {
+       "source": "hewbutler2017",
+       "quote": "While there is common consensus that the primary strategy to prevent EAH is to avoid drinking excessive fluids, the role of sodium supplements in decreasing the risk of EAH remains controversial",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do sodium supplements help prevent exercise-associated hyponatraemia?",
+    "sides": [
+     {
+      "position": "Little: overdrinking is the cause, and in a 161 km race sodium intake barely related to finish sodium or to who became hyponatraemic.",
+      "sources": [
+       "hoffman2015",
+       "hewbutler2017"
+      ]
+     },
+     {
+      "position": "Possibly, for some: large sweat sodium losses replaced only with low-sodium drinks are a second route to EAH, and salt capsules raised blood sodium in a half-Ironman.",
+      "sources": [
+       "mcdermott2017",
+       "delcoso2016"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ean-advice"
+  },
+  {
+   "type": "question",
+   "item": "ean-sports-drink-why"
+  },
+  {
+   "type": "question",
+   "item": "ean-risk-pick",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "EAH is blood sodium below 135 mmol·L⁻¹ during or up to 24 h after exercise; most cases are silent, and symptoms depend on how far and how fast sodium falls.",
+    "The main cause is drinking more than you lose, shown by weight gain, with non-osmotic vasopressin (AVP) stopping the kidneys from passing the extra.",
+    "Risk rises with slow finishes, weight gain, BMI extremes, long events (ultras, triathlon, swimming) and NSAIDs.",
+    "Early signs (dizziness, nausea, puffy hands, weight gain) overlap with dehydration; severe EAH swells the brain. Measure sodium before giving fluid; hypertonic saline treats it.",
+    "Prevent it by drinking to thirst and never gaining weight; sports drinks don't protect, and the role of sodium supplements is still argued."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ean-def-recall",
+   "concept": "ean-define",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "knechtle2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "For most labs, below what blood sodium concentration is exercise-associated hyponatraemia diagnosed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "135 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: below the normal range, which for most labs means under 135 mmol·L⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "145 mmol·L⁻¹",
+       "why": "That's about the top of the normal range; too much sodium, not too little, lies above it."
+      },
+      {
+       "id": "c",
+       "text": "120 mmol·L⁻¹",
+       "why": "120 or lower is critical hyponatraemia; EAH starts much higher, below 135."
+      },
+      {
+       "id": "d",
+       "text": "125 mmol·L⁻¹",
+       "why": "Severe brain symptoms are more likely far below 135, but the diagnosis starts below 135."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-rate-why",
+   "concept": "ean-define",
+   "bloom": "understand",
+   "sources": [
+    "knechtle2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners both finish with blood sodium of 129 mmol·L⁻¹. One feels fine; the other is confused. Which factor best explains the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "How fast their sodium fell during the race",
+       "correct": true,
+       "why": "Right: symptoms depend on both how far and how fast sodium falls; a fast fall gives the brain no time to adapt."
+      },
+      {
+       "id": "b",
+       "text": "Whether they drank water or sports drink",
+       "why": "Both are less salty than blood; the drink type doesn't explain different symptoms at the same sodium."
+      },
+      {
+       "id": "c",
+       "text": "Which of them sweated more in total",
+       "why": "Sweat volume alone doesn't decide symptoms; the size and speed of the sodium fall do."
+      },
+      {
+       "id": "d",
+       "text": "Which of them ran the faster time",
+       "why": "Finish time matters for risk, but at the same sodium value the speed of the fall explains symptoms."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-weight-pick",
+   "concept": "ean-cause",
+   "bloom": "apply",
+   "sources": [
+    "noakes2005",
+    "almond2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Four marathoners are weighed before and after. Which is most likely to have hyponatraemia at the finish?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4 h 50 min, finished 1.2 kg heavier",
+       "correct": true,
+       "why": "Right: weight gain and a slow finish are the two strongest risk factors; gaining weight means she drank more than she lost."
+      },
+      {
+       "id": "b",
+       "text": "2 h 55 min, finished 2.5 kg lighter",
+       "why": "A fast finish with weight loss means he drank less than he lost; sodium tends to be normal or high."
+      },
+      {
+       "id": "c",
+       "text": "3 h 40 min, finished 1.0 kg lighter",
+       "why": "A modest loss is the usual, safe pattern; low sodium goes with gaining weight."
+      },
+      {
+       "id": "d",
+       "text": "4 h 20 min, finished 3.5 kg lighter",
+       "why": "Slow, but a big loss points to too little drinking, not EAH; sodium falls as weight goes up, not down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-ratio",
+   "concept": "ean-cause",
+   "bloom": "understand",
+   "sources": [
+    "noakes2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does weight gain during a race point to too much water, rather than salt loss, as the cause of low blood sodium?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The gain is extra water, which dilutes the body's sodium",
+       "correct": true,
+       "why": "Right: blood sodium is sodium over water; gaining water lowers the ratio even if no sodium is lost."
+      },
+      {
+       "id": "b",
+       "text": "The gain shows the body has made extra sodium",
+       "why": "The body can't make sodium; a gain during a race is water drunk in excess."
+      },
+      {
+       "id": "c",
+       "text": "The gain shows the runner sweated very salty sweat",
+       "why": "Salty sweat removes sodium and water and would lower body mass, not raise it."
+      },
+      {
+       "id": "d",
+       "text": "The gain is glycogen stored during the race",
+       "why": "Glycogen is used during a race, not stored; the gain is water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-avp-why",
+   "concept": "ean-avp",
+   "bloom": "analyse",
+   "sources": [
+    "hewbutler2017",
+    "noakes2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A slow marathoner drinks 1 L·h⁻¹ but sweats only 0.6 L·h⁻¹. Why might she not just pass the extra as urine?",
+     "options": [
+      {
+       "id": "a",
+       "text": "AVP released by pain, nausea or exercise keeps her kidneys holding water",
+       "correct": true,
+       "why": "Right: non-osmotic AVP tells the kidney to keep water even though her blood is getting diluted."
+      },
+      {
+       "id": "b",
+       "text": "Running stops the kidneys making urine altogether",
+       "why": "Urine output falls in exercise but doesn't stop; the problem is AVP keeping the water."
+      },
+      {
+       "id": "c",
+       "text": "Aldosterone makes her sweat out the extra instead",
+       "why": "Aldosterone keeps sodium; it doesn't turn extra water into sweat. Sweat rate follows heat load."
+      },
+      {
+       "id": "d",
+       "text": "The extra water stays in her stomach and never reaches the blood",
+       "why": "Most of what she drinks is absorbed; that is why it dilutes her blood sodium."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-nsaid-pick",
+   "concept": "ean-avp",
+   "bloom": "apply",
+   "sources": [
+    "wharam2006",
+    "hewbutler2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which pre-race habit adds to the risk of hyponatraemia in an Ironman, on top of overdrinking?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Taking ibuprofen for a sore knee",
+       "correct": true,
+       "why": "Right: NSAIDs such as ibuprofen are linked to EAH and are a possible trigger of water-holding AVP."
+      },
+      {
+       "id": "b",
+       "text": "Eating a salty breakfast",
+       "why": "Extra salt doesn't add EAH risk; if anything it raises blood sodium slightly."
+      },
+      {
+       "id": "c",
+       "text": "Weighing yourself before the start",
+       "why": "Weighing is how you spot weight gain; it helps prevent EAH."
+      },
+      {
+       "id": "d",
+       "text": "Using a carbohydrate drink instead of water",
+       "why": "Drink type doesn't add risk by itself; the amount drunk compared with losses does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-risk-pick",
+   "concept": "ean-risk",
+   "bloom": "apply",
+   "sources": [
+    "almond2005",
+    "knechtle2019",
+    "wharam2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these athletes is at highest risk of EAH?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 5 h marathoner who drinks a cup at every station",
+       "correct": true,
+       "why": "Right: a slow finish plus drinking by the station rather than by thirst is the classic pattern."
+      },
+      {
+       "id": "b",
+       "text": "A 2 h 50 min marathoner who drinks to thirst",
+       "why": "Fast runners have high sweat rates and little time to drink; their risk is low."
+      },
+      {
+       "id": "c",
+       "text": "A cyclist in a 1 h time trial who drinks nothing",
+       "why": "Short, with no drinking: there is no excess water to dilute sodium."
+      },
+      {
+       "id": "d",
+       "text": "A 4 h road rider who loses 2% of body mass",
+       "why": "Losing mass means drinking less than losses; EAH goes with weight gain. Cycling also has a low EAH rate."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which of these triathletes is at highest risk of EAH?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 15 h Ironman finisher on ibuprofen who drinks at every aid station",
+       "correct": true,
+       "why": "Right: a long event, a slow finish, NSAIDs and drinking by the station all add up."
+      },
+      {
+       "id": "b",
+       "text": "A 9 h Ironman finisher who loses 3% of body mass",
+       "why": "Losing mass means he drank less than he lost; that points away from EAH."
+      },
+      {
+       "id": "c",
+       "text": "A sprint-distance racer who finishes in 70 min",
+       "why": "A short race leaves little time to drink too much."
+      },
+      {
+       "id": "d",
+       "text": "A 12 h finisher who drinks to thirst and finishes 1% lighter",
+       "why": "Thirst-led drinking and a small loss is the pattern consensus advice aims for."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-collapse",
+   "concept": "ean-signs",
+   "bloom": "analyse",
+   "sources": [
+    "mcdermott2017",
+    "hewbutler2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner collapses after a 5 h marathon. She is confused, her hands are puffy and she weighs 1.5 kg more than at the start. What should the medical team do first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Measure blood sodium before giving any fluid",
+       "correct": true,
+       "why": "Right: weight gain, puffiness and confusion suggest EAH; fluid could make brain swelling worse, so sodium is checked first."
+      },
+      {
+       "id": "b",
+       "text": "Give a litre of normal saline into a vein for dehydration",
+       "why": "She gained weight: she is overhydrated, not dehydrated. Giving fluid before testing can be fatal in EAH."
+      },
+      {
+       "id": "c",
+       "text": "Give her a sports drink to restore her sodium",
+       "why": "Sports drinks are less salty than blood; more of them adds water and lowers sodium further."
+      },
+      {
+       "id": "d",
+       "text": "Let her rest and drink water until she feels better",
+       "why": "More water dilutes her sodium further, and confusion needs urgent assessment."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-advice",
+   "concept": "ean-prevent",
+   "bloom": "evaluate",
+   "sources": [
+    "hewbutler2017",
+    "knechtle2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A first-time marathoner expecting to finish in about 5 h asks how to avoid hyponatraemia. Which advice is best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drink when thirsty, and don't finish heavier than you started",
+       "correct": true,
+       "why": "Right: thirst-led drinking and avoiding weight gain are the core consensus advice."
+      },
+      {
+       "id": "b",
+       "text": "Drink at every station to stay ahead of thirst",
+       "why": "Drinking ahead of thirst at every station is how slow runners overdrink."
+      },
+      {
+       "id": "c",
+       "text": "Swap water for sports drink, then drink freely",
+       "why": "Sports drinks are less salty than blood; drinking freely still dilutes it."
+      },
+      {
+       "id": "d",
+       "text": "Take salt capsules so you can drink as much as you like",
+       "why": "Sodium supplements don't reliably prevent EAH when people overdrink."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ean-sports-drink-why",
+   "concept": "ean-prevent",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "knechtle2019",
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why doesn't switching from water to a sports drink protect someone who overdrinks from EAH?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sports drinks are less salty than blood, so the excess still dilutes it",
+       "correct": true,
+       "why": "Right: sports drinks are hypotonic; drinking more than you lose still lowers blood sodium."
+      },
+      {
+       "id": "b",
+       "text": "Sports drinks contain no sodium at all",
+       "why": "Most do contain sodium, just far less than blood."
+      },
+      {
+       "id": "c",
+       "text": "The sugar in sports drinks lowers blood sodium",
+       "why": "The sugar isn't the problem; the volume of low-sodium fluid is."
+      },
+      {
+       "id": "d",
+       "text": "Sports drinks are absorbed too slowly to have an effect",
+       "why": "They are absorbed well; that is why too much of them dilutes the blood."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

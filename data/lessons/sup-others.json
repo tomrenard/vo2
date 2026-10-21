@@ -1,0 +1,649 @@
+{
+ "id": "sup-others",
+ "module": "t4-supplements",
+ "title": "Creatine, iron, vitamin D, antioxidants and the rest",
+ "goal": "Judge creatine for endurance athletes, use iron and vitamin D only to fix a tested shortfall, explain how high-dose antioxidants can blunt adaptation, and filter the many products with weak or no evidence.",
+ "requires": [
+  "sup-buffers"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "creatine-monohydrate",
+    "iron-deficiency",
+    "ferritin",
+    "vitamin-d",
+    "antioxidant"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "oth-creatine",
+   "title": "Creatine: for sprints, not endurance",
+   "text": "In *Phosphocreatine: the first seconds* you met [creatine monohydrate](g:creatine-monohydrate): it fills the [PCr](g:pcr) store and helps repeated sprints. Does it help endurance?\n\nA [meta-analysis](g:meta-analysis) of 13 placebo-controlled studies in trained people found no effect on endurance performance: a [standardised mean difference](g:standardised-mean-difference) of −0.07, which is trivial [[c:oth-creat-endurance]].\n\nIt also has a cost. Loading can add 1–2 kg of body mass, mostly water [[c:oth-creat-mass]]. For a climber or a runner, that mass costs more on every hill than creatine gives back. Its niche in endurance sport is narrow: a track sprinter or a rider who must win sprints.",
+   "claims": [
+    {
+     "id": "oth-creat-endurance",
+     "text": "Across 13 placebo-controlled studies in trained people, creatine monohydrate had no effect on endurance performance (SMD −0.07).",
+     "grade": "moderate",
+     "sources": [
+      "fernandezlanda2023"
+     ],
+     "evidence": [
+      {
+       "source": "fernandezlanda2023",
+       "quote": "The results for the pooled meta-analysis showed a non-significant change in endurance performance after creatine monohydrate supplementation in a trained population (p = 0.47), with a trivial negative effect (pooled standardized mean difference =  - 0.07 [95% confidence interval - 0.32 to 0.18]; I<sup>2</sup> = 34.75%).",
+       "level": "abstract"
+      },
+      {
+       "source": "fernandezlanda2023",
+       "quote": "Creatine monohydrate supplementation was shown to be ineffective on endurance performance in a trained population.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oth-creat-mass",
+     "text": "Creatine loading can add 1–2 kg of body mass, mainly water, which may hurt endurance performance or events against gravity.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "A potential 1–2 kg BM increase after creatine loading",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "may be detrimental for endurance performance or in events where the BM must be moved against gravity",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "oth-creat-climber"
+  },
+  {
+   "type": "concept",
+   "id": "oth-iron",
+   "title": "Iron: only when you're low, so test first",
+   "text": "Iron carries oxygen in [haemoglobin](g:haemoglobin). [Iron deficiency](g:iron-deficiency) is common in athletes: about 15–35% of female and 5–11% of male athletes in published groups [[c:oth-iron-common]].\n\nWhen stores are low, iron helps. In endurance athletes who were iron-deficient but not yet anaemic, iron treatment raised [ferritin](g:ferritin) a lot and [VO₂max](g:vo2max) moderately [[c:oth-iron-burden]].\n\nBut the IOC is clear: test first, through a doctor, with several blood measures (ferritin, transferrin saturation, haemoglobin and others), and don't take high-dose iron unless you are deficient [[c:oth-iron-test]]. A fix only helps someone who was short.",
+   "claims": [
+    {
+     "id": "oth-iron-common",
+     "text": "Iron deficiency affects about 15–35% of female and 5–11% of male athlete cohorts.",
+     "grade": "moderate",
+     "sources": [
+      "sim2019"
+     ],
+     "evidence": [
+      {
+       "source": "sim2019",
+       "quote": "Although iron deficiency is most common in female athletes (~ 15-35% athlete cohorts deficient), approximately 5-11% of male athlete cohorts also present with this issue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oth-iron-burden",
+     "text": "In iron-deficient non-anaemic endurance athletes, iron treatment had a large effect on ferritin and a moderate effect on VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "burden2015"
+     ],
+     "evidence": [
+      {
+       "source": "burden2015",
+       "quote": "Analysis of pooled data indicated that iron treatments had a large effect on improving sFer (Hedges' g=1.088, 95% CI 0.914 to 1.263, p<0.001)",
+       "level": "abstract"
+      },
+      {
+       "source": "burden2015",
+       "quote": "and (VO(2max)) (Hedges' g=0.610, 95% CI 0.399 to 0.821, p<0.001)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oth-iron-test",
+     "text": "Iron status should be assessed with several measures together; high-dose iron should not be taken unless deficiency is present.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Several measures performed simultaneously provide the best assessment and determine the stage of deficiency. Recommended measures: serum ferritin, transferrin saturation, serum iron, transferrin receptor, zinc protoporphyrin, haemoglobin, haematocrit and mean corpuscular volume.",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "High-dose iron supplements, however, should not be taken unless iron deficiency is present.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "oth-iron-tired"
+  },
+  {
+   "type": "question",
+   "item": "oth-iron-normal"
+  },
+  {
+   "type": "concept",
+   "id": "oth-vitamin-d",
+   "title": "Vitamin D: fix a shortfall, don't megadose",
+   "text": "Most [vitamin D](g:vitamin-d) is made in the skin from sunlight. Athletes who train indoors, or live far from the equator, can run low, especially in winter [[c:oth-vitd-winter]].\n\nExperts still disagree on where 'low' starts. The practical rule: test athletes at risk, and supplement on the basis of the result [[c:oth-vitd-test]]. Pushing blood levels far above sufficiency (above about 75 nmol·L⁻¹) gives no performance gain, and very high doses may cause problems [[c:oth-vitd-no-gain]].\n\nSo vitamin D is a 'fix a shortfall' supplement, not a performance booster.",
+   "claims": [
+    {
+     "id": "oth-vitd-winter",
+     "text": "Some athletes are vitamin D deficient, particularly in winter when skin sunlight exposure falls; sunlight normally supplies about 90% of vitamin D.",
+     "grade": "moderate",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Skin exposure to sunlight accounts for 90% of the source of vitamin D.",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "Evidence for deficiency in some athletes and soldiers, particularly in the winter (decreased skin sunlight exposure)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "oth-vitd-test",
+     "text": "Athletes at risk of deficiency should be tested, and supplementation decided by their measured status.",
+     "grade": "moderate",
+     "sources": [
+      "owens2018"
+     ],
+     "evidence": [
+      {
+       "source": "owens2018",
+       "quote": "It is important that athletes at risk of being deficient are tested before proceeding to correct the vitamin D inadequacy.",
+       "level": "full-text"
+      },
+      {
+       "source": "owens2018",
+       "quote": "It is crucial that applied practitioners and scientists are aware that whether athletes should be supplemented is purely based on whether they have sufficient or insufficient/deficient vitamin D concentrations.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "oth-vitd-no-gain",
+     "text": "Raising vitamin D far above sufficiency gives no ergogenic effect, and high-dose supplementation could be problematic.",
+     "grade": "moderate",
+     "sources": [
+      "owens2018"
+     ],
+     "evidence": [
+      {
+       "source": "owens2018",
+       "quote": "There is no ergogenic effect of providing doses of supplemental vitamin D that would elevate 25[OH]D concentrations far above the cut-off for sufficiency (> 75 nmol·L−1)",
+       "level": "full-text"
+      },
+      {
+       "source": "owens2018",
+       "quote": "but data from our laboratory have suggested high-dose supplementation could be problematic.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "oth-vitd-swimmer"
+  },
+  {
+   "type": "concept",
+   "id": "oth-antioxidants",
+   "title": "High-dose antioxidants: a hidden cost",
+   "text": "In *Adaptation: signals to mitochondria* you saw that [reactive oxygen species](g:reactive-oxygen-species) are part of the training signal. [Antioxidant](g:antioxidant) pills can mute it:\n\n- Vitamin C (1,000 mg) and E daily for 4 weeks: the gains in insulin sensitivity from training appeared only without the vitamins [[c:oth-ristow]].\n- 11 weeks of vitamins C and E: VO₂max rose the same as with placebo, but markers of new [mitochondria](g:mitochondria) didn't rise [[c:oth-paulsen]].\n\nNot every trial finds this, so it is debated. But no good evidence shows these pills help adaptation, and the IOC warns high doses of single antioxidants may blunt it [[c:oth-ioc-antiox]]. Antioxidants from fruit and vegetables are a different matter.",
+   "claims": [
+    {
+     "id": "oth-ristow",
+     "text": "With vitamin C (1,000 mg/day) and E for 4 weeks of training, insulin sensitivity improved only without the vitamins, in untrained and pretrained young men.",
+     "grade": "weak",
+     "sources": [
+      "ristow2009"
+     ],
+     "evidence": [
+      {
+       "source": "ristow2009",
+       "quote": "Exercise increased parameters of insulin sensitivity (GIR and plasma adiponectin) only in the absence of antioxidants in both previously untrained (P < 0.001) and pretrained (P < 0.001) individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oth-paulsen",
+     "text": "Over 11 weeks, vitamins C and E didn't change VO₂max gains but blunted increases in markers of mitochondrial biogenesis.",
+     "grade": "moderate",
+     "sources": [
+      "paulsen2014"
+     ],
+     "evidence": [
+      {
+       "source": "paulsen2014",
+       "quote": "Daily vitamin C and E supplementation attenuated increases in markers of mitochondrial biogenesis following endurance training. However, no clear interactions were detected for improvements in VO2 max and running performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "oth-ioc-antiox",
+     "text": "High doses of single antioxidants, particularly vitamins C and E, may blunt training adaptations; there is no convincing evidence they enhance them.",
+     "grade": "disputed",
+     "sources": [
+      "maughan2018",
+      "merry2016"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "high doses of single antioxidants, particularly vitamins C and E, may blunt exercise-induced training adaptations",
+       "level": "full-text"
+      },
+      {
+       "source": "merry2016",
+       "quote": "Importantly there is no convincing evidence to suggest that antioxidant supplementation enhances exercise-training adaptions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "oth-antiox-block"
+  },
+  {
+   "type": "question",
+   "item": "oth-paulsen-read"
+  },
+  {
+   "type": "concept",
+   "id": "oth-rest",
+   "title": "The long tail: weak or no evidence",
+   "text": "After all that, the IOC list of supplements with enough support for possible small performance gains is short: caffeine, creatine monohydrate, nitrate, sodium bicarbonate and possibly beta-alanine [[c:oth-short-list]]. Most other products sold to athletes rest on stories and mechanisms.\n\nSome popular ones fail outright. Vitamin E, sold for immunity, has no support in young healthy people, and high doses may even act as pro-oxidants [[c:oth-vit-e]].\n\nA four-question filter for anything new:\n\n1. Do I have a measured shortfall, or a proven benefit for *my* event?\n2. Is the evidence from controlled human trials?\n3. Is the batch third-party tested?\n4. Have I tried it in training?",
+   "claims": [
+    {
+     "id": "oth-short-list",
+     "text": "Caffeine, creatine monohydrate, nitrate, sodium bicarbonate and possibly beta-alanine have adequate support for possible marginal performance gains.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "These supplements include caffeine, creatine (in the form of creatine monohydrate), nitrate, sodium bicarbonate and possibly also Beta-alanine.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "oth-vit-e",
+     "text": "Vitamin E has no support for immune benefits in young healthy people; high doses may be pro-oxidative.",
+     "grade": "moderate",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Immune-enhancing effects in the frail elderly but no benefit in young, healthy humans",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "High doses may be pro-oxidative.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "oth-sort"
+  },
+  {
+   "type": "question",
+   "item": "oth-new-product"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Creatine doesn't improve endurance performance in trained people, and loading adds 1–2 kg, mostly water.",
+    "Iron deficiency is common (15–35% of female athletes); iron helps deficient athletes, but test first and don't take high-dose iron without a deficiency.",
+    "Vitamin D: test athletes at risk and fix a shortfall; going far above sufficiency gives no gain.",
+    "High-dose vitamins C and E may blunt training adaptation and haven't been shown to help it; food antioxidants are fine.",
+    "Only a short list has good evidence: caffeine, creatine, nitrate, bicarbonate and possibly beta-alanine. For anything new: shortfall or proof, human trials, batch testing, a training trial."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "oth-creat-climber",
+   "concept": "oth-creatine",
+   "bloom": "apply",
+   "sources": [
+    "fernandezlanda2023",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 62 kg cyclist preparing for an Alpine gran fondo asks about creatine. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skip it: no endurance gain, and 1–2 kg extra to climb with",
+       "correct": true,
+       "why": "Right: no effect on endurance performance in trained people, and the extra water mass costs on climbs."
+      },
+      {
+       "id": "b",
+       "text": "Take it: more PCr means more endurance",
+       "why": "PCr is used up in seconds; it doesn't limit a 5-hour ride."
+      },
+      {
+       "id": "c",
+       "text": "Take it, but only in the week before",
+       "why": "Timing doesn't fix a lack of endurance effect, and loading adds the mass right before the event."
+      },
+      {
+       "id": "d",
+       "text": "Skip it: creatine is banned in cycling",
+       "why": "Creatine isn't banned; the reasons are no benefit and extra mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-iron-tired",
+   "concept": "oth-iron",
+   "bloom": "apply",
+   "sources": [
+    "maughan2018",
+    "sim2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A female runner feels unusually tired and wants to start iron tablets. Best first step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A blood test of iron status before any iron",
+       "correct": true,
+       "why": "Right: test first with several measures, through a doctor, then treat only if deficient."
+      },
+      {
+       "id": "b",
+       "text": "Start high-dose iron; women are often low",
+       "why": "Common isn't certain: high-dose iron shouldn't be taken unless deficiency is shown."
+      },
+      {
+       "id": "c",
+       "text": "Start a low dose for a few months and see",
+       "why": "Feeling better or not won't show whether iron was the problem; a test will."
+      },
+      {
+       "id": "d",
+       "text": "Skip iron: it only helps if she is anaemic",
+       "why": "Iron helps deficient athletes even before anaemia."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-iron-normal",
+   "concept": "oth-iron",
+   "bloom": "analyse",
+   "sources": [
+    "burden2015",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis found iron raised VO₂max in iron-deficient athletes. A cyclist with normal ferritin concludes iron will raise his VO₂max too. What's wrong?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The benefit was in deficient athletes; he isn't one",
+       "correct": true,
+       "why": "Right: correcting a shortfall helps; adding iron to normal stores isn't shown to, and the IOC advises against high-dose iron without deficiency."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: iron raises VO₂max in everyone",
+       "why": "The studies were in deficient athletes only."
+      },
+      {
+       "id": "c",
+       "text": "The meta-analysis found no VO₂max effect at all",
+       "why": "It found a moderate effect, in deficient athletes."
+      },
+      {
+       "id": "d",
+       "text": "Ferritin has nothing to do with VO₂max",
+       "why": "Low ferritin was exactly the condition iron corrected, with VO₂max rising."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-vitd-swimmer",
+   "concept": "oth-vitamin-d",
+   "bloom": "apply",
+   "sources": [
+    "owens2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete who trains indoors all winter tests at 95 nmol·L⁻¹ vitamin D (above the 75 sufficiency cut-off). He wants a high-dose supplement 'for performance'. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No need: above sufficiency, more gives no gain",
+       "correct": true,
+       "why": "Right: supplementation is decided by status, and raising it further isn't ergogenic."
+      },
+      {
+       "id": "b",
+       "text": "Yes: indoor athletes always need high doses",
+       "why": "Indoor training is a reason to test; his test is fine."
+      },
+      {
+       "id": "c",
+       "text": "Yes: higher levels mean more power",
+       "why": "No ergogenic effect has been shown from going far above sufficiency."
+      },
+      {
+       "id": "d",
+       "text": "Stop all vitamin D from food too",
+       "why": "Food intake isn't the issue; just no extra high-dose pills."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-antiox-block",
+   "concept": "oth-antioxidants",
+   "bloom": "apply",
+   "sources": [
+    "paulsen2014",
+    "ristow2009",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner in a base-building block takes 1,000 mg vitamin C and 400 IU vitamin E daily 'for recovery'. What's the main concern?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They may blunt the training signal for new mitochondria",
+       "correct": true,
+       "why": "Right: in trials these doses blocked markers of adaptation, with no benefit shown."
+      },
+      {
+       "id": "b",
+       "text": "Vitamin C is a banned substance",
+       "why": "It isn't banned; the concern is blunted adaptation."
+      },
+      {
+       "id": "c",
+       "text": "The doses are too low to help recovery",
+       "why": "Higher doses aren't the answer; no good evidence shows these pills help adaptation."
+      },
+      {
+       "id": "d",
+       "text": "None: antioxidants always help training",
+       "why": "Several trials found the opposite."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-paulsen-read",
+   "concept": "oth-antioxidants",
+   "bloom": "analyse",
+   "sources": [
+    "paulsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 11-week trial, VO₂max rose about 8% with both vitamins and placebo, but mitochondrial markers rose only with placebo. Best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle adaptation was blunted; performance tests didn't show it yet",
+       "correct": true,
+       "why": "Right: the authors advise caution even though VO₂max gains matched."
+      },
+      {
+       "id": "b",
+       "text": "The vitamins are harmless, since VO₂max rose the same",
+       "why": "VO₂max isn't the only adaptation; the muscle markers did differ."
+      },
+      {
+       "id": "c",
+       "text": "The vitamins improved training, since VO₂max rose",
+       "why": "VO₂max rose equally with placebo; the vitamins added nothing."
+      },
+      {
+       "id": "d",
+       "text": "The markers were wrong, since performance matched",
+       "why": "Markers and VO₂max measure different things; one can change before the other."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-sort",
+   "concept": "oth-rest",
+   "bloom": "analyse",
+   "sources": [
+    "maughan2018",
+    "fernandezlanda2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "For a 1500 m runner with normal blood tests, which supplement has the best evidence of a performance gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sodium bicarbonate",
+       "correct": true,
+       "why": "Right: buffers help hard efforts of about 1–10 min, and bicarbonate is on the IOC's short list."
+      },
+      {
+       "id": "b",
+       "text": "Vitamin E capsules",
+       "why": "No support, and high doses may be pro-oxidative."
+      },
+      {
+       "id": "c",
+       "text": "Iron",
+       "why": "Iron helps only when stores are low; these tests are normal."
+      },
+      {
+       "id": "d",
+       "text": "Vitamin D",
+       "why": "A fix for a shortfall, not a performance aid for someone sufficient."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oth-new-product",
+   "concept": "oth-rest",
+   "bloom": "evaluate",
+   "sources": [
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete is offered a new herbal 'VO₂ booster' supported by one mouse study funded by the maker, not batch-tested. Best decision?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skip it: no human trials and an untested batch",
+       "correct": true,
+       "why": "Right: it fails the evidence question and the contamination question."
+      },
+      {
+       "id": "b",
+       "text": "Try it in a race and see",
+       "why": "Never new on race day; and one mouse study is no human evidence."
+      },
+      {
+       "id": "c",
+       "text": "Take it: herbal products are natural and safe",
+       "why": "'Natural' says nothing about effect or contamination."
+      },
+      {
+       "id": "d",
+       "text": "Take it: industry funding guarantees quality control",
+       "why": "Funding isn't testing; industry funding lowers trust in the evidence."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

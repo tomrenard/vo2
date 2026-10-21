@@ -1,0 +1,809 @@
+{
+ "id": "ultra-gi",
+ "module": "t4-ultra-fuel",
+ "title": "The gut in ultra events",
+ "goal": "Explain why gut problems end so many ultra races, what causes them (less gut blood flow, heat, NSAIDs) and which strategies have evidence behind them.",
+ "requires": [
+  "ultra-demands"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "eigs",
+    "intestinal-permeability",
+    "i-fabp",
+    "fodmap"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gi-common",
+   "title": "The gut: the top reason to drop out",
+   "text": "Ask ultrarunners why they dropped out and the gut tops the list. In a survey of 500 runners from two 161 km trail races, nausea and/or vomiting was the main reason for dropping out (23% of non-finishers) [[c:gi-dnf-nausea]].\n\nAt the Western States 100, 96% of 272 runners had [GI symptoms](g:gi-symptoms) at some point. Among finishers, 44% said they hurt their race; among non-finishers, 36% said they were a reason to quit. Nausea was the most common complaint, and was worst in the hottest, hardest part of the course [[c:gi-wser]].\n\nTriathlon is no different: as *Fueling during exercise* showed, about a third of Ironman athletes report serious gut symptoms [[c:gi-ironman]].",
+   "claims": [
+    {
+     "id": "gi-dnf-nausea",
+     "text": "Among non-finishers of two 161 km ultramarathons, the main reason for dropping out was nausea and/or vomiting (23.0%).",
+     "grade": "weak",
+     "sources": [
+      "hoffman2011"
+     ],
+     "evidence": [
+      {
+       "source": "hoffman2011",
+       "quote": "Among nonfinishers, the primary reason for dropping out was nausea and/or vomiting (23.0%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-wser",
+     "text": "At the Western States 100, 96% of runners had GI symptoms; 43.9% of finishers said they affected performance and 35.6% of non-finishers gave them as a reason for dropping out; nausea was most common and worst in the hottest section.",
+     "grade": "weak",
+     "sources": [
+      "stuempfle2015"
+     ],
+     "evidence": [
+      {
+       "source": "stuempfle2015",
+       "quote": "Among race finishers, 43.9% reported that GI symptoms affected their race performance, with nausea being the most common symptom (86.0%). Among race non-finishers, 35.6% reported that GI symptoms were a reason for dropping out of the race, with nausea being the most common symptom (90.5%).",
+       "level": "abstract"
+      },
+      {
+       "source": "stuempfle2015",
+       "quote": "For both finishers and non-finishers, nausea was greatest during the most challenging and hottest part of the race.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-ironman",
+     "text": "Serious GI symptoms were reported by about 31% of Ironman athletes, against 14% in half-Ironman and 4% in a marathon or cycle race.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Prevalence of serious GI symptoms was highest during the IM races (∼31%, P = 0.001) compared with IM 70.3 (14%), CYCLE (4%), MARATHON (4%), and PRO (7%) and correlated to a history of GI problems.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-prevalence"
+  },
+  {
+   "type": "question",
+   "item": "gi-survey-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "gi-eigs",
+   "title": "What long, hard exercise does to the gut",
+   "text": "*Fueling during exercise* covered the basics: hard exercise cuts [splanchnic blood flow](g:splanchnic-blood-flow), and the longer and harder it goes, the more the gut lining is damaged and leaks ([intestinal permeability](g:intestinal-permeability)), and the slower the stomach empties [[c:gi-eigs-pattern]]. The whole pattern has a name: [exercise-induced gastrointestinal syndrome](g:eigs) (EIGS).\n\nWhat matters for ultras is the dose. About **2 h or more at 60% [VO₂max](g:vo2max)** is where these changes become marked, whatever the athlete's fitness [[c:gi-threshold]]. An ultra or Ironman stays past that line for 10–30 h, not 2, often in the heat and on foot. So the question in an ultra isn't whether the gut will be stressed, but how to keep eating while it is.",
+   "claims": [
+    {
+     "id": "gi-eigs-pattern",
+     "text": "As exercise intensity and duration increase, markers of intestinal injury, permeability and endotoxaemia rise, gastric emptying and small-intestinal transit slow, and malabsorption increases.",
+     "grade": "strong",
+     "sources": [
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017",
+       "quote": "As exercise intensity and duration increases, there is considerable evidence for increases in indices of intestinal injury, permeability and endotoxaemia, together with impairment of gastric emptying, slowing of small intestinal transit and malabsorption.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-threshold",
+     "text": "Exercise of 2 h or more at 60% VO₂max appears to be the threshold for marked gut disturbance, irrespective of fitness.",
+     "grade": "moderate",
+     "sources": [
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017",
+       "quote": "Exercise stress of ≥2 hours at 60% VO2max appears to be the threshold whereby significant gastrointestinal perturbations manifest, irrespective of fitness status.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-eigs-what"
+  },
+  {
+   "type": "question",
+   "item": "gi-threshold",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gi-heat",
+   "title": "Less blood, damaged lining, worse in the heat",
+   "text": "How tight is the link between blood flow and damage? In healthy men cycling 60 min at 70% of maximal workload, gut blood flow fell quickly. Blood [I-FABP](g:i-fabp), a marker of damaged gut-lining cells, doubled (309 to 615 pg·mL⁻¹), and the more blood flow fell, the more damage there was. The small intestine became leakier in step with the damage [[c:gi-hypoperfusion]].\n\nThat was one hour. An ultra goes on for 10–30 h, often in the heat. Heat stress and running (more jolting than cycling) both make the gut changes worse [[c:gi-heat-run]], which fits nausea peaking in the hottest section of the Western States.",
+   "claims": [
+    {
+     "id": "gi-hypoperfusion",
+     "text": "In 60 min of cycling at 70% of maximal workload, splanchnic perfusion fell, plasma I-FABP rose from 309 to 615 pg·mL⁻¹, the fall correlated with intestinal damage, and permeability rose.",
+     "grade": "weak",
+     "sources": [
+      "vanwijck2011"
+     ],
+     "evidence": [
+      {
+       "source": "vanwijck2011",
+       "quote": "Hypoperfusion increased plasma I-FABP (615±118 vs. 309±46 pg/ml, p<0.001) and I-BABP (14.30±2.20 vs. 5.06±1.27 ng/ml, p<0.001), and hypoperfusion correlated significantly with this small intestinal damage (r(S) = 0.59; p<0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "vanwijck2011",
+       "quote": "Last of all, plasma analysis revealed an increase in small intestinal permeability after exercise (p<0.001), which correlated with intestinal injury (r(S) = 0.50; p<0.001).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-heat-run",
+     "text": "Heat stress and running mode appear to make exercise-induced gut disturbances worse.",
+     "grade": "moderate",
+     "sources": [
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017",
+       "quote": "The addition of heat stress and running mode appears to exacerbate these markers of gastrointestinal disturbance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-mechanism"
+  },
+  {
+   "type": "question",
+   "item": "gi-heat-section"
+  },
+  {
+   "type": "concept",
+   "id": "gi-nsaid",
+   "title": "Painkillers in ultras",
+   "text": "Reminder from *Fueling during exercise*: ibuprofen makes the gut leakier; in 9 trained men it nearly doubled gut-cell damage during cycling (peak I-FABP 875 vs 474 pg·mL⁻¹) [[c:gi-ibuprofen]].\n\nWhat's specific to ultras is how common it is. In two 161 km races, 60.5% of finishers and 46.4% of non-finishers used [NSAIDs](g:nsaid) [[c:gi-nsaid-use]]. In that survey, NSAID users reported no more nausea than others [[c:gi-nsaid-nausea]], but that doesn't make them safe: gut damage can be silent, and a survey can't show cause.\n\nOver many hours the kidneys are at risk too, and NSAIDs may play a part in low blood sodium ([hyponatraemia](g:hyponatraemia)). With mixed evidence that they even ease pain, the ISSN strongly discourages NSAIDs in ultras [[c:gi-nsaid-advice]].",
+   "claims": [
+    {
+     "id": "gi-nsaid-use",
+     "text": "NSAID use in 161 km ultramarathons was high: 60.5% of finishers and 46.4% of non-finishers.",
+     "grade": "weak",
+     "sources": [
+      "hoffman2011"
+     ],
+     "evidence": [
+      {
+       "source": "hoffman2011",
+       "quote": "Overall use of NSAIDs was high, and greater (P = .006) among finishers (60.5%) than nonfinishers (46.4%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-ibuprofen",
+     "text": "Ibuprofen (400 mg twice) before cycling increased small-intestinal injury (peak I-FABP 875 vs 474 pg·mL⁻¹ after cycling alone) and gut permeability in trained men.",
+     "grade": "weak",
+     "sources": [
+      "vanwijck2012"
+     ],
+     "evidence": [
+      {
+       "source": "vanwijck2012",
+       "quote": "Levels were higher after cycling with ibuprofen than after cycling without ibuprofen, rest with ibuprofen, or rest without ibuprofen (peak I-FABP, 875 ± 137, 474 ± 74, 507 ± 103, and 352 ± 44 pg·mL, respectively, P < 0.002).",
+       "level": "abstract"
+      },
+      {
+       "source": "vanwijck2012",
+       "quote": "This is the first study to reveal that ibuprofen aggravates exercise-induced small intestinal injury and induces gut barrier dysfunction in healthy individuals.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-nsaid-nausea",
+     "text": "In a survey of 161 km ultramarathon runners, nausea and/or vomiting was no more common among NSAID users.",
+     "grade": "weak",
+     "sources": [
+      "hoffman2011"
+     ],
+     "evidence": [
+      {
+       "source": "hoffman2011",
+       "quote": "Nausea and/or vomiting was no more common among those using nonsteroidal anti-inflammatory drugs (NSAIDs), those participating in the event with higher ambient temperatures, those with a lower training volume, or those with less experience at finishing 161-km races.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-nsaid-advice",
+     "text": "The ISSN strongly discourages NSAID use during ultramarathons: evidence of benefit is equivocal, and risks include GI injury, renal effects and a possible role in hyponatraemia.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Given the equivocal evidence-for-efficacy and the acute contraindications, NSAID use during ultra-marathon is strongly discouraged.",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "Frequent prophylactic use of NSAIDs is also associated with increased risk of renal side-effects [192, 193], and concern has been expressed about a possible causative role of NSAIDs on exercise-induced hyponatremia",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-nsaid-advice"
+  },
+  {
+   "type": "question",
+   "item": "gi-nsaid-survey"
+  },
+  {
+   "type": "concept",
+   "id": "gi-strategies",
+   "title": "What helps",
+   "text": "The ISSN lists what has evidence behind it [[c:gi-strategies-issn]]:\n\n- **Train the gut** ([gut training](g:gut-training)). Practise race eating in long sessions for weeks before the race (*Fueling during exercise* covers how).\n- **Low-[FODMAP](g:fodmap) days before the race** if you're prone to symptoms. In 11 runners with exercise gut trouble, 6 low-FODMAP days cut daily symptoms (wind, urgency, loose stools) compared with 6 high-FODMAP days, but symptoms during running didn't differ significantly [[c:gi-fodmap]].\n- **Skip NSAIDs, drink enough, limit fatty food** to limit gut leakiness.\n\nKnow your history, too: athletes with past gut trouble had more symptoms in races. And more carbohydrate per hour went with more nausea but faster Ironman times [[c:gi-history]]: a trade-off to train for, not a reason to stop eating.",
+   "claims": [
+    {
+     "id": "gi-strategies-issn",
+     "text": "Progressive gut training and/or low-FODMAP diets are supported for reducing GI distress in racing; limiting saturated fat, avoiding NSAIDs and drinking enough may limit endotoxin-related symptoms.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Evidence supports progressive gut-training and/or low-FODMAP diets (fermentable oligosaccharide, disaccharide, monosaccharide and polyol) to alleviate symptoms of gastrointestinal distress during racing",
+       "level": "abstract"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "In addition, strategies that could mitigate the likelihood of LPS release into the blood and, thus, endotoxin-associated symptoms, include limiting the consumption of saturated fat [138], avoiding the consumption of non-steroidal anti-inflammatory drugs (NSAIDs) [139], and maintaining an adequate water intake",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gi-fodmap",
+     "text": "In 11 runners with exercise-related GI symptoms, 6 days of low-FODMAP diet reduced daily GI symptoms versus high-FODMAP, with no significant difference in symptoms during exercise.",
+     "grade": "weak",
+     "sources": [
+      "lis2018"
+     ],
+     "evidence": [
+      {
+       "source": "lis2018",
+       "quote": "A significantly smaller area under the curve for daily GI symptoms 6 d during the LFOD compared with HFOD (mean difference, -13.4; 95% confidence interval, -22 to -4.60; P = 0.003) was observed.",
+       "level": "abstract"
+      },
+      {
+       "source": "lis2018",
+       "quote": "No significant differences in during exercise symptoms or Daily Analysis of Life Demand for Athletes responses were observed between diets (P > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-history",
+     "text": "Race GI symptoms correlated with a history of GI distress; higher carbohydrate intake correlated with more nausea and flatulence but faster Ironman finishing times.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "In all data sets, scores for upper and lower GI symptoms correlated with a reported history of GI distress (r = 0.37 and r = 0.51, respectively, P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "pfeiffer2012",
+       "quote": "High CHO intake during exercise was related not only to increased scores for nausea and flatulence but also to better performance during IM races.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-fodmap-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "gi-plan"
+  },
+  {
+   "type": "question",
+   "item": "gi-carb-tradeoff"
+  },
+  {
+   "type": "question",
+   "item": "gi-threshold",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Gut problems, nausea above all, are a leading reason ultrarunners drop out; nearly all have some symptoms, and about a third of Ironman athletes have serious ones.",
+    "EIGS: past about 2 h at 60% VO₂max, gut blood flow falls, the lining is damaged and leaks, emptying slows and absorption suffers.",
+    "Heat and running make it worse, which is why nausea peaks in hot sections.",
+    "Ibuprofen and other NSAIDs add gut damage and kidney risk: the ISSN says don't take them in ultras.",
+    "What helps: gut training, low-FODMAP days if you're prone, no NSAIDs, enough fluid, less fatty food; keep eating carbohydrate, since it went with faster times."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gi-prevalence",
+   "concept": "gi-common",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "stuempfle2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the Western States 100-mile run, about what share of the 272 surveyed runners had gut symptoms at some point?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 96%",
+       "correct": true,
+       "why": "Right: almost every runner had at least some symptoms, most often wind, belching and nausea."
+      },
+      {
+       "id": "b",
+       "text": "About 44%",
+       "why": "That's the share of finishers who said symptoms hurt their race, not the share with any symptoms."
+      },
+      {
+       "id": "c",
+       "text": "About 23%",
+       "why": "That's the share of non-finishers in another survey whose main reason for quitting was nausea or vomiting."
+      },
+      {
+       "id": "d",
+       "text": "About 5%",
+       "why": "Far too low: that's closer to serious symptoms in a marathon, not any symptoms in a 100-mile run."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-survey-appraisal",
+   "concept": "gi-common",
+   "bloom": "evaluate",
+   "sources": [
+    "stuempfle2015",
+    "hoffman2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Both 161 km ultramarathon studies used a questionnaire after the race, answered by about 71% of runners. What most limits their findings?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Symptoms were recalled after the race by those who chose to reply, and a survey can't show cause",
+       "correct": true,
+       "why": "Right: recall errors and self-selection can bias the rates, and links (to heat, NSAIDs) are associations only."
+      },
+      {
+       "id": "b",
+       "text": "The samples were too small to say anything",
+       "why": "272 and 500 runners are large samples for this kind of study; size isn't the main problem."
+      },
+      {
+       "id": "c",
+       "text": "Questionnaires cannot measure nausea at all",
+       "why": "Symptoms like nausea can only be self-reported; the issue is recall and who answers, not the method itself."
+      },
+      {
+       "id": "d",
+       "text": "Only finishers were asked, so dropping out couldn't be studied",
+       "why": "Non-finishers answered too: that's how the reasons for dropping out were found."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-eigs-what",
+   "concept": "gi-eigs",
+   "bloom": "understand",
+   "sources": [
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which change is part of exercise-induced gastrointestinal syndrome (EIGS)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slower gastric emptying and a leakier gut barrier",
+       "correct": true,
+       "why": "Right: EIGS includes gut-lining damage, higher permeability, endotoxin in the blood, slower emptying and transit, and malabsorption."
+      },
+      {
+       "id": "b",
+       "text": "Faster absorption of carbohydrate from the gut",
+       "why": "Absorption gets worse (malabsorption), not better, as exercise gets longer and harder."
+      },
+      {
+       "id": "c",
+       "text": "More blood flowing to the gut during exercise",
+       "why": "Splanchnic blood flow falls during hard exercise; that is a cause of EIGS."
+      },
+      {
+       "id": "d",
+       "text": "A stronger gut lining after every long run",
+       "why": "Each hard bout damages the lining for a while; any adaptation comes from training the gut over weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-threshold",
+   "concept": "gi-eigs",
+   "bloom": "apply",
+   "sources": [
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which session is most likely to cause marked gut disturbance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 3 h trail run at 65% VO₂max on a hot day",
+       "correct": true,
+       "why": "Right: it passes the 2 h at 60% VO₂max threshold, and both heat and running make it worse."
+      },
+      {
+       "id": "b",
+       "text": "45 min of intervals at 90% VO₂max in cool air",
+       "why": "Hard, but well short of 2 h; the threshold depends on duration as well as intensity."
+      },
+      {
+       "id": "c",
+       "text": "A 2 h easy indoor spin at 40% VO₂max",
+       "why": "Below the intensity threshold, cool, and cycling jolts the gut less than running."
+      },
+      {
+       "id": "d",
+       "text": "A 60 min steady swim in a cool pool",
+       "why": "Short, cool and not weight-bearing; far from the 2 h at 60% VO₂max threshold."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete has four key sessions this week. Which one is the best chance to rehearse race fueling under real gut stress?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 4 h warm-weather ride at Ironman pace, then a 45 min run",
+       "correct": true,
+       "why": "Right: long, at about race intensity, ending with running in the heat: the conditions where EIGS appears."
+      },
+      {
+       "id": "b",
+       "text": "A 40 min threshold run on a cool morning",
+       "why": "Too short to cross the 2 h threshold; the gut barely gets stressed."
+      },
+      {
+       "id": "c",
+       "text": "A 90 min easy swim followed by stretching",
+       "why": "Short and low intensity: it won't show how the gut copes with race conditions."
+      },
+      {
+       "id": "d",
+       "text": "A 60 min recovery spin indoors",
+       "why": "Easy and short; below both the intensity and the duration threshold."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-mechanism",
+   "concept": "gi-heat",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "vanwijck2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In cyclists riding 60 min hard, blood I-FABP doubled. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cells lining the small intestine were damaged",
+       "correct": true,
+       "why": "Right: I-FABP lives inside gut-lining cells and leaks into the blood when they are damaged; the damage tracked the fall in gut blood flow."
+      },
+      {
+       "id": "b",
+       "text": "The gut absorbed more fat from food",
+       "why": "Despite its name, I-FABP in blood is a damage marker, not a sign of fat absorption."
+      },
+      {
+       "id": "c",
+       "text": "Blood flow to the gut rose during the ride",
+       "why": "Gut blood flow fell; the more it fell, the more damage there was."
+      },
+      {
+       "id": "d",
+       "text": "The muscles were damaged by the effort",
+       "why": "I-FABP comes from the intestine; muscle damage is shown by markers such as creatine kinase."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-heat-section",
+   "concept": "gi-heat",
+   "bloom": "analyse",
+   "sources": [
+    "stuempfle2015",
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the Western States 100, nausea peaked in the hottest, hardest section of the course. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heat diverts more blood to the skin, cutting gut blood flow further",
+       "correct": true,
+       "why": "Right: heat stress makes the exercise-induced gut changes worse, and running adds jolting."
+      },
+      {
+       "id": "b",
+       "text": "Heat speeds up gastric emptying, flooding the intestine",
+       "why": "Hard exercise in the heat slows gastric emptying; it doesn't speed it up."
+      },
+      {
+       "id": "c",
+       "text": "Runners stop drinking in the heat, so the gut is empty",
+       "why": "Runners usually drink more in the heat; an empty stomach isn't what drives the nausea."
+      },
+      {
+       "id": "d",
+       "text": "Hot air kills gut bacteria, which causes nausea",
+       "why": "There's no evidence for this; the problem is blood flow and gut-lining damage."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-nsaid-advice",
+   "concept": "gi-nsaid",
+   "bloom": "apply",
+   "sources": [
+    "vanwijck2012",
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist plans to take 400 mg of ibuprofen before a 12 h race to prevent knee pain. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skip it: ibuprofen adds to gut damage during exercise and carries kidney risks",
+       "correct": true,
+       "why": "Right: ibuprofen raised gut-cell damage and leakiness during cycling, and the ISSN advises against NSAIDs in ultras."
+      },
+      {
+       "id": "b",
+       "text": "Fine: NSAIDs protect the gut lining from exercise damage",
+       "why": "The opposite: ibuprofen before cycling increased gut damage compared with cycling alone."
+      },
+      {
+       "id": "c",
+       "text": "Fine, as long as he drinks plenty of plain water with it",
+       "why": "Lots of plain water doesn't protect the gut, and NSAIDs may add to the risk of low blood sodium."
+      },
+      {
+       "id": "d",
+       "text": "Take a double dose so it lasts the whole race",
+       "why": "More ibuprofen means more gut and kidney risk, with no clear evidence of benefit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-nsaid-survey",
+   "concept": "gi-nsaid",
+   "bloom": "evaluate",
+   "sources": [
+    "hoffman2011",
+    "vanwijck2012",
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a survey of 161 km runners, those who took NSAIDs reported no more nausea than those who didn't. A runner concludes that ibuprofen is safe for his gut in ultras. Best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: gut damage can occur without nausea, and a survey can't show safety",
+       "correct": true,
+       "why": "Right: in a controlled study ibuprofen nearly doubled gut-cell damage during cycling, and nausea is a poor gauge of damage or kidney risk."
+      },
+      {
+       "id": "b",
+       "text": "Yes: a survey of hundreds of runners outweighs a small lab study",
+       "why": "Size doesn't fix the design: a symptom survey can't measure gut damage, while the lab study measured it directly."
+      },
+      {
+       "id": "c",
+       "text": "Yes: if nausea doesn't rise, the gut isn't affected",
+       "why": "Damage markers rose in the lab without anyone needing to feel sick; symptoms and damage don't track closely."
+      },
+      {
+       "id": "d",
+       "text": "No: the survey proves NSAIDs cause nausea",
+       "why": "The survey found no link with nausea; and a survey can't prove cause either way."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-fodmap-appraisal",
+   "concept": "gi-strategies",
+   "bloom": "evaluate",
+   "sources": [
+    "lis2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach cites the low-FODMAP crossover study (11 runners, 6 days per diet) as proof that low-FODMAP eating prevents gut symptoms in races. Fair?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Overstated: daily symptoms fell, but symptoms during running didn't differ, and no race was tested",
+       "correct": true,
+       "why": "Right: a small, short study of runners with gut trouble; the during-exercise result was not significant, so race benefit is unproven."
+      },
+      {
+       "id": "b",
+       "text": "Fair: a randomised crossover trial proves it works for all athletes",
+       "why": "Good design doesn't fix a tiny sample of runners with gut trouble, or a non-significant result during exercise."
+      },
+      {
+       "id": "c",
+       "text": "Unfair: crossover designs can't test diets at all",
+       "why": "Crossovers suit short diet trials well; each runner acts as their own control."
+      },
+      {
+       "id": "d",
+       "text": "Fair: blinding removes every possible doubt",
+       "why": "It was only single-blinded, and blinding doesn't fix small samples or what was and wasn't measured."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-plan",
+   "concept": "gi-strategies",
+   "bloom": "apply",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner with a history of gut trouble has a hot 100 km trail race in 8 weeks. Which plan has the most evidence behind it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rehearse race eating in long runs, try low-FODMAP days before the race, avoid NSAIDs, drink enough",
+       "correct": true,
+       "why": "Right: gut training and low-FODMAP days are supported by the ISSN, and skipping NSAIDs and drinking enough limit gut leakiness."
+      },
+      {
+       "id": "b",
+       "text": "Eat nothing during the race so the gut has nothing to react to",
+       "why": "That risks running out of carbohydrate; finishing goes with eating more, not less."
+      },
+      {
+       "id": "c",
+       "text": "Try a new high-carbohydrate gel for the first time on race day",
+       "why": "Untested products on race day are a classic cause of gut trouble; rehearse everything first."
+      },
+      {
+       "id": "d",
+       "text": "Take ibuprofen before the start to prevent cramps",
+       "why": "Ibuprofen adds gut damage and kidney risk; the ISSN advises against NSAIDs in ultras."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-carb-tradeoff",
+   "concept": "gi-strategies",
+   "bloom": "analyse",
+   "sources": [
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an Ironman study, athletes who took more carbohydrate per hour had more nausea but finished faster. A triathlete concludes she should take as little carbohydrate as possible. What's wrong with that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The link to faster times argues for building tolerance, not cutting carbohydrate",
+       "correct": true,
+       "why": "Right: it's a trade-off. Gut training aims to keep the performance benefit with fewer symptoms. And these are correlations, not proof of cause."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: the study proves carbohydrate causes nausea",
+       "why": "It's a correlation in a survey, and the same data link carbohydrate to faster finishing."
+      },
+      {
+       "id": "c",
+       "text": "Nausea in Ironman comes only from NSAIDs, not food",
+       "why": "NSAIDs add risk, but many things contribute, including how much is eaten and the athlete's gut history."
+      },
+      {
+       "id": "d",
+       "text": "Carbohydrate has no effect on Ironman performance",
+       "why": "The study found more carbohydrate went with faster finishing times."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

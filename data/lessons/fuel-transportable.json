@@ -1,0 +1,952 @@
+{
+ "id": "fuel-transportable",
+ "module": "t4-fueling",
+ "title": "Glucose plus fructose: beating the absorption limit",
+ "goal": "Explain why glucose alone caps out near 60 g·h⁻¹, how adding fructose raises the cap, which ratio to use, and what is still unknown about 120 g·h⁻¹.",
+ "requires": [
+  "fuel-during"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "exogenous-oxidation-rate",
+    "multiple-transportable-carbohydrates",
+    "oxidation-efficiency"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "tr-limit",
+   "title": "The glucose bottleneck",
+   "text": "Swallowed glucose, and [maltodextrin](g:maltodextrin) (which the gut cuts back to glucose), crosses the gut wall through one transporter, [SGLT1](g:sglt1), and SGLT1 is saturated at around 60 g·h⁻¹ [[c:tr-sglt1]]. Measured with labelled glucose, the [exogenous oxidation rate](g:exogenous-oxidation-rate) of glucose alone tops out near 1 g·min⁻¹ (60 g·h⁻¹), however much more you swallow [[c:tr-limit-oxidation]].\n\nSo the bottleneck is absorption in the gut, not the muscle. Take 90 g·h⁻¹ of glucose alone and the extra 30 g·h⁻¹ isn't burned during the effort: it builds up in the intestine, a recipe for gut trouble.",
+   "claims": [
+    {
+     "id": "tr-sglt1",
+     "text": "Glucose is absorbed through SGLT1, which is thought to saturate at an intake of around 60 g·h⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014",
+      "podlogar2022"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "It is believed that glucose uses the sodium-dependent transporter (SGLT1) for absorption, which becomes saturated at a carbohydrate intake of around 60 g/h.",
+       "level": "full-text"
+      },
+      {
+       "source": "podlogar2022",
+       "quote": "It is believed that at this ingestion rate, the sodium-glucose linked transporters (SGLT1) in the small intestine become saturated",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tr-limit-oxidation",
+     "text": "A single carbohydrate source can be oxidised at up to about 60 g·h⁻¹; the limit lies in absorption, and higher intakes need multiple transportable carbohydrates to avoid carbohydrate accumulating in the intestine.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014",
+      "jeukendrup2010"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "A single carbohydrate source can be oxidized at rates up to approximately 60 g/h and this is the recommendation for exercise that is more prolonged (2-3 h).",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2010",
+       "quote": "It was found that limitations to carbohydrate oxidation were in the absorptive process most likely because of a saturation of carbohydrate transporters.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2014",
+       "quote": "Carbohydrate ingested at such high ingestion rates must be a multiple transportable carbohydrates to allow high oxidation rates and prevent the accumulation of carbohydrate in the intestine.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-sglt1-limit"
+  },
+  {
+   "type": "question",
+   "item": "tr-why-limit"
+  },
+  {
+   "type": "question",
+   "item": "tr-excess-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "tr-mtc",
+   "title": "A second door: fructose",
+   "text": "Fructose enters through a different transporter, [GLUT5](g:glut5), so it doesn't queue behind glucose. In a landmark study, cyclists drank 1.2 g·min⁻¹ of glucose plus 0.6 g·min⁻¹ of fructose: peak exogenous oxidation reached 1.26 g·min⁻¹, against 0.80 g·min⁻¹ with glucose alone [[c:tr-jentjens]]. Later studies pushed it to about 1.75 g·min⁻¹ [[c:tr-mtc-max]].\n\nThis is the idea behind [multiple transportable carbohydrates](g:multiple-transportable-carbohydrates): open two doors and more carbohydrate gets in per hour. It's why the target of up to 90 g·h⁻¹ for long events assumes glucose plus fructose.",
+   "claims": [
+    {
+     "id": "tr-jentjens",
+     "text": "Glucose plus fructose ingested at high rates gave peak exogenous oxidation about 55% higher than glucose alone (1.26 vs 0.80 g·min⁻¹).",
+     "grade": "weak",
+     "sources": [
+      "jentjens2004"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2004",
+       "quote": "Peak exogenous carbohydrate oxidation rates were approximately 55% higher (P < 0.001) in Fruc+Glu (1.26 +/- 0.07 g/min) compared with Med-Glu and High-Glu (0.80 +/- 0.04 and 0.83 +/- 0.05 g/min, respectively).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tr-mtc-max",
+     "text": "With multiple transportable carbohydrates, exogenous oxidation can reach about 1.75 g·min⁻¹, well above the old 1 g·min⁻¹ ceiling.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2010"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2010",
+       "quote": "Exogenous carbohydrate oxidation rates reach values of 1.75 g/min whereas previously it was thought that 1 g/min was the absolute maximum.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-mtc-mech"
+  },
+  {
+   "type": "example",
+   "id": "tr-convert-example",
+   "title": "From g·min⁻¹ to g·h⁻¹",
+   "problem": "Oxidation studies report g·min⁻¹; race plans use g·h⁻¹. Convert 1.26 g·min⁻¹ (glucose + fructose) and 0.80 g·min⁻¹ (glucose alone), and find the gain.",
+   "steps": [
+    "An hour has 60 minutes, so multiply by 60.",
+    "1.26 g·min⁻¹ × 60 = 75.6 g·h⁻¹; 0.80 g·min⁻¹ × 60 = 48 g·h⁻¹.",
+    "Gain = 75.6 − 48 ≈ 28 g·h⁻¹ more carbohydrate burned from what was swallowed, every hour."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-convert-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "tr-performance",
+   "title": "Does it make you faster?",
+   "text": "Burning more only matters if you race faster. In one study, eight male cyclists rode 2 h, then a time trial of about 1 h, drinking 1.8 g·min⁻¹ of glucose alone or of glucose plus fructose. The blend made them 8% faster [[c:tr-currell]]. A review of 14 studies found 1–9% more power over 2.5–3 h with the blends, in men and mostly in cycling [[c:tr-rowlands]].\n\nThe benefits show mainly in efforts of 2.5 h or more, from the third hour on. In shorter races the blend is no better than glucose alone, though no worse either [[c:tr-when]].",
+   "claims": [
+    {
+     "id": "tr-currell",
+     "text": "A glucose + fructose drink improved cycling time-trial performance by 8% compared with glucose alone at the same intake.",
+     "grade": "weak",
+     "sources": [
+      "currell2008b"
+     ],
+     "evidence": [
+      {
+       "source": "currell2008b",
+       "quote": "Ingestion of GF led to an 8% improvement in cycling time-trial performance compared with ingestion of G.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tr-rowlands",
+     "text": "Across 14 studies of 2.5–3 h exercise in men, fructose–glucose blends improved mean power by about 1–9% over glucose or maltodextrin alone.",
+     "grade": "moderate",
+     "sources": [
+      "rowlands2015"
+     ],
+     "evidence": [
+      {
+       "source": "rowlands2015",
+       "quote": "Overall, 14 studies contained estimates of 2.5-3.0-h endurance performance in men, mostly in cycling.",
+       "level": "abstract"
+      },
+      {
+       "source": "rowlands2015",
+       "quote": "Relative to isocaloric glucose/maltodextrin, the ingestion of 0.5-1.0:1-ratio fructose:glucose/maltodextrin beverages at 1.3-2.4 g carbohydrate·min(-1) produced small to moderate enhancements (1-9 %; 95 % confidence interval 0-19) in mean power.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tr-when",
+     "text": "Performance benefits of multiple transportable carbohydrates appear mainly in exercise of 2.5 h or more; in shorter efforts they are at least as good as other carbohydrate.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014",
+      "jeukendrup2010"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "Performance benefits have generally been observed in studies that are 2.5 h or longer and effects start to become visible in the third hour of exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "jeukendrup2014",
+       "quote": "When exercise duration is shorter, multiple transportable carbohydrates may not have the same performance benefits [ 38 ], but it must be noted that the effects are at least similar to other carbohydrate sources.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-performance-when"
+  },
+  {
+   "type": "concept",
+   "id": "tr-ratio",
+   "title": "2:1 or 1:0.8?",
+   "text": "Ratios are written glucose : fructose, with maltodextrin counted as glucose. The classic blend is 2:1: glucose at about the SGLT1 limit plus half as much fructose. It became the standard advice [[c:tr-ratio-classic]].\n\nNewer work favours a ratio nearer 1:0.8. Cyclists drinking 1.8 g·min⁻¹ burned about 11% more of a 1:0.8 blend than of a 2:1 blend, and reported the least stomach fullness, cramping and nausea with it [[c:tr-ratio-08]].\n\nThe case for 1:0.8 rests on a handful of small studies, mostly of male cyclists, so treat it as a good bet rather than settled.",
+   "claims": [
+    {
+     "id": "tr-ratio-classic",
+     "text": "Most studies of glucose + fructose used a 2:1 ratio, which became the standard recommendation.",
+     "grade": "strong",
+     "sources": [
+      "podlogar2022"
+     ],
+     "evidence": [
+      {
+       "source": "podlogar2022",
+       "quote": "Most studies investigating combined ingestion of glucose-based carbohydrates and fructose utilized a 2:1 glucose:fructose ratio, and this has since become a standard recommendation",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tr-ratio-08",
+     "text": "A ratio near 1:0.8 glucose:fructose gives higher oxidation efficiency and better gut comfort than 2:1.",
+     "grade": "weak",
+     "sources": [
+      "obrien2011",
+      "rowlands2015",
+      "podlogar2022"
+     ],
+     "evidence": [
+      {
+       "source": "obrien2011",
+       "quote": "Mean exogenous carbohydrate oxidation rates were 1.04, 1.14, and 1.05 g/min (coefficient of variation 20%) in 0.5-, 0.8-, and 1.25-Ratios, respectively",
+       "level": "abstract"
+      },
+      {
+       "source": "obrien2011",
+       "quote": "Increases in stomach fullness, abdominal cramping, and nausea were lowest with the 0.8- followed by the 1.25-Ratio solution.",
+       "level": "abstract"
+      },
+      {
+       "source": "rowlands2015",
+       "quote": "when ingested at 1.5-1.8 g·min(-1), a 0.8:1 fructose:glucose ratio conveyed the highest exogenous carbohydrate energy and endurance power compared with lower or higher fructose:glucose ratios.",
+       "level": "abstract"
+      },
+      {
+       "source": "podlogar2022",
+       "quote": "However, a closer examination of the literature reveals that a ratio closer to unity (i.e., 1:0.8 glucose:fructose) is superior both from the perspective of oxidation efficiency (i.e., the fraction of ingested carbohydrates being oxidized) as well as gut comfort",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tr-ratio-example",
+   "title": "Splitting an hourly target by ratio",
+   "problem": "A rider wants 90 g·h⁻¹. How much glucose and fructose is that in a 2:1 blend, and in a 1:0.8 blend?",
+   "steps": [
+    "Add the parts of the ratio: 2:1 has 2 + 1 = 3 parts; 1:0.8 has 1 + 0.8 = 1.8 parts.",
+    "2:1: one part = 90 ÷ 3 = 30 g, so 60 g glucose + 30 g fructose.",
+    "1:0.8: one part = 90 ÷ 1.8 = 50 g, so 50 g glucose + 0.8 × 50 = 40 g fructose.",
+    "Check: each pair adds back to 90 g. The 1:0.8 blend puts less glucose through SGLT1 (50 g, below its limit) and more through GLUT5."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-ratio-split-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-ratio-choose"
+  },
+  {
+   "type": "concept",
+   "id": "tr-120",
+   "title": "The 120 g·h⁻¹ debate",
+   "text": "Some professional cyclists and triathletes now take 100–120 g·h⁻¹. In 11 highly trained male cyclists riding 3 h, 120 g·h⁻¹ (1:0.8) raised exogenous oxidation over the last hour to 1.51 g·min⁻¹, against 1.29 g·min⁻¹ with 90 g·h⁻¹ (2:1). But the body's own carbohydrate use was no lower, dose and ratio changed together, and performance wasn't measured [[c:tr-120-podlogar]].\n\nThe [oxidation efficiency](g:oxidation-efficiency) also fell: a bigger share of what was swallowed was still unburned during the ride. In one trial of elite mountain runners, 120 g·h⁻¹ gave lower blood markers of muscle damage than 90 g·h⁻¹ [[c:tr-120-viribay]]. Whether 120 makes you faster is still open.",
+   "claims": [
+    {
+     "id": "tr-120-podlogar",
+     "text": "120 g·h⁻¹ (1:0.8) raised exogenous oxidation compared with 90 g·h⁻¹ (2:1) but did not reduce use of the body's own carbohydrate; performance remains to be tested.",
+     "grade": "weak",
+     "sources": [
+      "podlogar2022b"
+     ],
+     "evidence": [
+      {
+       "source": "podlogar2022b",
+       "quote": "However, higher exogenous CHO oxidation rates did not translate into sparing of endogenous CHO utilisation.",
+       "level": "full-text"
+      },
+      {
+       "source": "podlogar2022b",
+       "quote": "Further studies should investigate potential performance effects of such carbohydrate ingestion strategies.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tr-120-viribay",
+     "text": "In elite male mountain runners, 120 g·h⁻¹ during a mountain marathon gave lower muscle-damage markers the next day than 60 or 90 g·h⁻¹.",
+     "grade": "weak",
+     "sources": [
+      "viribay2020"
+     ],
+     "evidence": [
+      {
+       "source": "viribay2020",
+       "quote": "Conclusion: High CHO intake (120 g/h) during a mountain marathon could limit the EIMD observed by CK, LDH and GOT and internal exercise load compared to CHO ingestion of 60 and 90 g/h.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is 120 g·h⁻¹ better than 90 g·h⁻¹ for long races?",
+    "sides": [
+     {
+      "position": "Possibly: 120 g·h⁻¹ raises exogenous oxidation, is tolerated by trained athletes as drink, gel or chews, and in one trial lowered muscle-damage markers.",
+      "sources": [
+       "podlogar2022b",
+       "hearris2022",
+       "viribay2020"
+      ]
+     },
+     {
+      "position": "Not shown: it didn't spare the body's own carbohydrate, dose–response studies find performance gains flattening near 80–90 g·h⁻¹, and no well-controlled trial shows faster racing.",
+      "sources": [
+       "podlogar2022b",
+       "smith2013",
+       "king2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "tr-efficiency-example",
+   "title": "How much of what you swallow gets burned?",
+   "problem": "At 90 g·h⁻¹, riders burned swallowed carbohydrate at 1.29 g·min⁻¹. What was the oxidation efficiency?",
+   "steps": [
+    "Put both rates in the same units: 1.29 g·min⁻¹ × 60 = 77.4 g·h⁻¹.",
+    "Efficiency = burned ÷ swallowed = 77.4 ÷ 90 = 0.86, so 86%.",
+    "The other 14% (about 13 g·h⁻¹) was still in the gut, stored, or burned later."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-efficiency-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tr-120-evaluate"
+  },
+  {
+   "type": "question",
+   "item": "tr-appraisal"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Glucose and maltodextrin share one gut transporter, SGLT1, which saturates near 60 g·h⁻¹; glucose alone is burned at no more than about 1 g·min⁻¹.",
+    "Fructose enters through GLUT5, so glucose + fructose raises exogenous oxidation to about 1.3–1.75 g·min⁻¹.",
+    "Blends improve performance by about 1–9% in efforts of 2.5 h or more; in shorter races they are no better than glucose.",
+    "2:1 is the classic ratio; 1:0.8 looks a little better for oxidation and gut comfort, from a few small studies.",
+    "120 g·h⁻¹ raises exogenous oxidation but doesn't spare the body's own carbohydrate; a performance benefit over 90 g·h⁻¹ is unproven."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "tr-sglt1-limit",
+   "concept": "tr-limit",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At most, about how fast can the body burn swallowed glucose when glucose is the only carbohydrate taken?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60 g·h⁻¹ (1 g·min⁻¹)",
+       "correct": true,
+       "why": "Right: glucose alone tops out near 1 g·min⁻¹ because its gut transporter saturates."
+      },
+      {
+       "id": "b",
+       "text": "About 90 g·h⁻¹ (1.5 g·min⁻¹)",
+       "why": "Rates like that need fructose as well, through a second transporter."
+      },
+      {
+       "id": "c",
+       "text": "About 30 g·h⁻¹ (0.5 g·min⁻¹)",
+       "why": "30 g·h⁻¹ is the low end of the advice for 1–2.5 h, not the ceiling."
+      },
+      {
+       "id": "d",
+       "text": "No ceiling: it rises with intake",
+       "why": "Oxidation plateaus: swallowing more than about 60 g·h⁻¹ of glucose doesn't raise it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-why-limit",
+   "concept": "tr-limit",
+   "bloom": "understand",
+   "sources": [
+    "jeukendrup2010",
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does oxidation of swallowed glucose level off near 1 g·min⁻¹ even when athletes take more?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its gut transporter, SGLT1, is saturated",
+       "correct": true,
+       "why": "Right: the limit is absorption from the intestine, not what the muscles can burn."
+      },
+      {
+       "id": "b",
+       "text": "Muscle can't burn more than 1 g·min⁻¹ of carbohydrate",
+       "why": "In hard exercise the body burns 2–3 g·min⁻¹ of carbohydrate or more, mostly from glycogen; the cap is on what the gut absorbs."
+      },
+      {
+       "id": "c",
+       "text": "The liver stores all glucose above that rate",
+       "why": "The extra glucose mostly never gets past the gut wall in the first place."
+      },
+      {
+       "id": "d",
+       "text": "Insulin blocks glucose uptake during exercise",
+       "why": "Contraction moves GLUT4 to the muscle membrane during exercise; uptake into muscle isn't the block."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-excess-scenario",
+   "concept": "tr-limit",
+   "bloom": "apply",
+   "sources": [
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner takes 100 g·h⁻¹ from glucose-only gels in a marathon and is bloated with diarrhoea by 90 min. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glucose beyond the SGLT1 limit builds up in his gut",
+       "correct": true,
+       "why": "Right: about 40 g·h⁻¹ more than SGLT1 can absorb stays in the intestine."
+      },
+      {
+       "id": "b",
+       "text": "His muscles are burning too much carbohydrate",
+       "why": "Burning carbohydrate doesn't upset the gut; unabsorbed carbohydrate does."
+      },
+      {
+       "id": "c",
+       "text": "The gels contain too little sodium",
+       "why": "Sodium matters for fluid balance, but it doesn't explain carbohydrate piling up in the gut."
+      },
+      {
+       "id": "d",
+       "text": "Glucose gels raise blood glucose too high",
+       "why": "During hard running, blood glucose is used fast; the problem is in the gut, before absorption."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-mtc-mech",
+   "concept": "tr-mtc",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2004",
+    "jeukendrup2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does adding fructose to glucose raise how much swallowed carbohydrate you can burn per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fructose enters through a different transporter, GLUT5",
+       "correct": true,
+       "why": "Right: with a second door open, more carbohydrate is absorbed per hour."
+      },
+      {
+       "id": "b",
+       "text": "Fructose makes SGLT1 carry glucose faster",
+       "why": "Fructose doesn't speed up SGLT1; it bypasses it."
+      },
+      {
+       "id": "c",
+       "text": "Fructose holds much more energy per gram",
+       "why": "Fructose and glucose have about the same energy per gram; the gain is in absorption."
+      },
+      {
+       "id": "d",
+       "text": "Fructose stops the liver from releasing glucose",
+       "why": "That wouldn't raise exogenous oxidation; the gain comes from absorbing more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-convert-calc",
+   "concept": "tr-mtc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a study, glucose plus fructose was oxidised at 1.3 g·min⁻¹. What is that in g·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "78 g·h⁻¹",
+       "correct": true,
+       "why": "Right: 1.3 × 60 = 78 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "130 g·h⁻¹",
+       "why": "That multiplies by 100, not by the 60 minutes in an hour."
+      },
+      {
+       "id": "c",
+       "text": "46 g·h⁻¹",
+       "why": "That is 60 ÷ 1.3: divided instead of multiplied."
+      },
+      {
+       "id": "d",
+       "text": "7.8 g·h⁻¹",
+       "why": "That multiplies by 6, not 60."
+      }
+     ],
+     "solution": "1.3 g·min⁻¹ × 60 min·h⁻¹ = 78 g·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A trained cyclist burns swallowed carbohydrate at 1.5 g·min⁻¹. What is that in g·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "90 g·h⁻¹",
+       "correct": true,
+       "why": "Right: 1.5 × 60 = 90 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "150 g·h⁻¹",
+       "why": "That multiplies by 100, not by 60."
+      },
+      {
+       "id": "c",
+       "text": "40 g·h⁻¹",
+       "why": "That is 60 ÷ 1.5: divided instead of multiplied."
+      },
+      {
+       "id": "d",
+       "text": "9 g·h⁻¹",
+       "why": "That multiplies by 6, not 60."
+      }
+     ],
+     "solution": "1.5 g·min⁻¹ × 60 min·h⁻¹ = 90 g·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "Glucose alone was oxidised at 0.8 g·min⁻¹. What is that in g·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "48 g·h⁻¹",
+       "correct": true,
+       "why": "Right: 0.8 × 60 = 48 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "80 g·h⁻¹",
+       "why": "That multiplies by 100, not by 60."
+      },
+      {
+       "id": "c",
+       "text": "75 g·h⁻¹",
+       "why": "That is 60 ÷ 0.8: divided instead of multiplied."
+      },
+      {
+       "id": "d",
+       "text": "4.8 g·h⁻¹",
+       "why": "That multiplies by 6, not 60."
+      }
+     ],
+     "solution": "0.8 g·min⁻¹ × 60 min·h⁻¹ = 48 g·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "tr-performance-when",
+   "concept": "tr-performance",
+   "bloom": "analyse",
+   "sources": [
+    "jeukendrup2014",
+    "rowlands2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Who is most likely to race faster by switching from a glucose-only drink to glucose plus fructose at the same high intake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A triathlete on a 5 h Ironman bike leg",
+       "correct": true,
+       "why": "Right: blends help mainly beyond 2.5 h, when absorption above the glucose limit pays off."
+      },
+      {
+       "id": "b",
+       "text": "A cyclist in a 50 min criterium",
+       "why": "In efforts of about 1 h, a blend is no better than glucose; small amounts or a rinse do the job."
+      },
+      {
+       "id": "c",
+       "text": "A runner in a 10 km race",
+       "why": "A 10 km race is too short for the absorption limit to matter."
+      },
+      {
+       "id": "d",
+       "text": "A cyclist doing a 4 km pursuit",
+       "why": "A few minutes of racing doesn't depend on carbohydrate swallowed during it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-ratio-split-calc",
+   "concept": "tr-ratio",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "podlogar2022",
+    "obrien2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants 72 g·h⁻¹ in a 1:0.8 glucose:fructose ratio. How much glucose and fructose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40 g glucose + 32 g fructose",
+       "correct": true,
+       "why": "Right: 72 ÷ 1.8 = 40 g per part; fructose = 0.8 × 40 = 32 g."
+      },
+      {
+       "id": "b",
+       "text": "48 g glucose + 24 g fructose",
+       "why": "That is the 2:1 split (72 ÷ 3 = 24 g per part)."
+      },
+      {
+       "id": "c",
+       "text": "58 g glucose + 14 g fructose",
+       "why": "That treats 0.8 as the glucose share (72 × 0.8 ≈ 58 g); the ratio means 1 part glucose to 0.8 parts fructose."
+      },
+      {
+       "id": "d",
+       "text": "36 g glucose + 36 g fructose",
+       "why": "That is a 1:1 split; 1:0.8 has a little less fructose than glucose."
+      }
+     ],
+     "solution": "Parts = 1 + 0.8 = 1.8. One part = 72 ÷ 1.8 = 40 g. Glucose = 40 g; fructose = 0.8 × 40 = 32 g. Check: 40 + 32 = 72 g."
+    },
+    {
+     "id": "b",
+     "stem": "A drink mix supplies 75 g·h⁻¹ in a 2:1 glucose:fructose ratio. How much glucose and fructose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50 g glucose + 25 g fructose",
+       "correct": true,
+       "why": "Right: 75 ÷ 3 = 25 g per part; glucose = 2 × 25 = 50 g."
+      },
+      {
+       "id": "b",
+       "text": "42 g glucose + 33 g fructose",
+       "why": "That is roughly the 1:0.8 split, not 2:1."
+      },
+      {
+       "id": "c",
+       "text": "37.5 g glucose + 37.5 g fructose",
+       "why": "That is a 1:1 split."
+      },
+      {
+       "id": "d",
+       "text": "56 g glucose + 19 g fructose",
+       "why": "That splits 75 into 4 parts (a 3:1 ratio); 2:1 has 3 parts."
+      }
+     ],
+     "solution": "Parts = 2 + 1 = 3. One part = 75 ÷ 3 = 25 g. Glucose = 2 × 25 = 50 g; fructose = 25 g."
+    },
+    {
+     "id": "c",
+     "stem": "A pro cyclist takes 108 g·h⁻¹ in a 1:0.8 glucose:fructose ratio. How much glucose and fructose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60 g glucose + 48 g fructose",
+       "correct": true,
+       "why": "Right: 108 ÷ 1.8 = 60 g per part; fructose = 0.8 × 60 = 48 g."
+      },
+      {
+       "id": "b",
+       "text": "72 g glucose + 36 g fructose",
+       "why": "That is the 2:1 split (108 ÷ 3 = 36 g per part)."
+      },
+      {
+       "id": "c",
+       "text": "86 g glucose + 22 g fructose",
+       "why": "That treats 0.8 as the glucose share (108 × 0.8 ≈ 86 g)."
+      },
+      {
+       "id": "d",
+       "text": "54 g glucose + 54 g fructose",
+       "why": "That is a 1:1 split."
+      }
+     ],
+     "solution": "Parts = 1.8. One part = 108 ÷ 1.8 = 60 g. Glucose = 60 g, at about the SGLT1 limit; fructose = 0.8 × 60 = 48 g."
+    }
+   ]
+  },
+  {
+   "id": "tr-ratio-choose",
+   "concept": "tr-ratio",
+   "bloom": "evaluate",
+   "sources": [
+    "obrien2011",
+    "rowlands2015",
+    "podlogar2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider wants about 100 g·h⁻¹ in a 5 h gran fondo but gets bloated on 2:1 drinks. What does the evidence suggest she try?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A blend nearer 1:0.8, practised in training first",
+       "correct": true,
+       "why": "Right: small studies find 1:0.8 burned a little better with less fullness and nausea; worth testing in long rides."
+      },
+      {
+       "id": "b",
+       "text": "Glucose only, to keep things simple",
+       "why": "Glucose alone saturates near 60 g·h⁻¹; at 100 g·h⁻¹ even more would sit in her gut."
+      },
+      {
+       "id": "c",
+       "text": "Fructose only, since it uses its own transporter",
+       "why": "GLUT5 alone carries even less than SGLT1; fructose works as an addition, not a replacement."
+      },
+      {
+       "id": "d",
+       "text": "Stay on 2:1, as the ratio can't affect the gut",
+       "why": "In one trial, stomach fullness, cramping and nausea were lowest with the 0.8 ratio."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-efficiency-calc",
+   "concept": "tr-120",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "podlogar2022b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Riders swallowed 120 g·h⁻¹ and burned it at 1.51 g·min⁻¹ over the last hour. What was the oxidation efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 76%",
+       "correct": true,
+       "why": "Right: 1.51 × 60 = 90.6 g·h⁻¹ burned; 90.6 ÷ 120 ≈ 0.76."
+      },
+      {
+       "id": "b",
+       "text": "About 1.3%",
+       "why": "That is 1.51 ÷ 120: g·min⁻¹ was divided by g·h⁻¹ without converting."
+      },
+      {
+       "id": "c",
+       "text": "About 132%",
+       "why": "That is 120 ÷ 90.6, upside down; efficiency can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "About 91%",
+       "why": "That reads 90.6 g·h⁻¹ as a percentage without dividing by the 120 g·h⁻¹ swallowed."
+      }
+     ],
+     "solution": "Burned = 1.51 g·min⁻¹ × 60 = 90.6 g·h⁻¹. Efficiency = 90.6 ÷ 120 = 0.755 ≈ 76%. At 90 g·h⁻¹ it was about 86%: more in, but a smaller share burned."
+    },
+    {
+     "id": "b",
+     "stem": "In a trial, riders swallowed 75 g·h⁻¹ and burned it at 1.0 g·min⁻¹. What was the oxidation efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "80%",
+       "correct": true,
+       "why": "Right: 1.0 × 60 = 60 g·h⁻¹ burned; 60 ÷ 75 = 0.80."
+      },
+      {
+       "id": "b",
+       "text": "1.3%",
+       "why": "That is 1.0 ÷ 75: g·min⁻¹ was divided by g·h⁻¹ without converting."
+      },
+      {
+       "id": "c",
+       "text": "125%",
+       "why": "That is 75 ÷ 60, upside down; efficiency can't exceed 100%."
+      },
+      {
+       "id": "d",
+       "text": "60%",
+       "why": "That reads 60 g·h⁻¹ as a percentage without dividing by the 75 g·h⁻¹ swallowed."
+      }
+     ],
+     "solution": "Burned = 1.0 g·min⁻¹ × 60 = 60 g·h⁻¹. Efficiency = 60 ÷ 75 = 0.80 = 80%."
+    }
+   ]
+  },
+  {
+   "id": "tr-120-evaluate",
+   "concept": "tr-120",
+   "bloom": "evaluate",
+   "sources": [
+    "podlogar2022b",
+    "smith2013",
+    "king2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says 120 g·h⁻¹ is now proven better than 90 g·h⁻¹ for long races. What is the fairest summary?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It raises exogenous oxidation, but faster racing isn't shown",
+       "correct": true,
+       "why": "Right: more swallowed carbohydrate is burned, but the body's own use isn't spared and performance hasn't been tested well."
+      },
+      {
+       "id": "b",
+       "text": "Proven, as it spares muscle and liver glycogen",
+       "why": "The 120 vs 90 g·h⁻¹ study found no sparing of the body's own carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "Disproven, as nobody can burn over 90 g·h⁻¹",
+       "why": "At 120 g·h⁻¹, riders burned about 1.5 g·min⁻¹ (90 g·h⁻¹), and some reached 2.0 g·min⁻¹."
+      },
+      {
+       "id": "d",
+       "text": "Proven, since top professionals use it",
+       "why": "What pros do isn't evidence that it works; it is a reason to test it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-appraisal",
+   "concept": "tr-120",
+   "bloom": "evaluate",
+   "sources": [
+    "podlogar2022b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 120 vs 90 g·h⁻¹ study tested 11 highly trained men, measured fuel use (not race times), and was part-funded by a training-software company. Which claim goes beyond what it can show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Amateur women will race faster on 120 g·h⁻¹",
+       "correct": true,
+       "why": "Right: performance wasn't measured, and the sample was highly trained men; this claim goes past the data on both counts."
+      },
+      {
+       "id": "b",
+       "text": "120 g·h⁻¹ raised exogenous oxidation in these riders",
+       "why": "That is what the study measured and found."
+      },
+      {
+       "id": "c",
+       "text": "Use of their own carbohydrate didn't differ between doses",
+       "why": "That was also measured: endogenous oxidation was about the same."
+      },
+      {
+       "id": "d",
+       "text": "At 90 g·h⁻¹, exogenous oxidation was about 1.3 g·min⁻¹",
+       "why": "That is a measured result (1.29 g·min⁻¹), not an extrapolation."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

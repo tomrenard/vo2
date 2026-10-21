@@ -29,3 +29,8 @@ Never cite from memory, and never list a source you couldn't read (at least the 
 `pnpm content:check --module <module id>` and `pnpm sources:check` both pass in /Users/tom.renard/personal/vo2 (sources:check covers all modules; if it fails only on another module's source, say so and ignore it). Don't commit.
 
 Report under 250 words: lessons written with item counts and Bloom split, sources used, anything scientifically uncertain, any format limits you hit.
+
+## Budget (every tool call resends your whole context, so keep it small)
+- Read data/README.md and src/lib/content.ts once. Don't `cat` other data files: look up what you need with `jq` or `grep` (e.g. `grep -rho '"terms":\[[^]]*\]' data/lessons/`, `jq 'keys' data/glossary/*.json`). Open one example lesson, not both.
+- Research in one batch: one script that queries Europe PMC for all your candidate papers and prints only title, DOI, year, first author and the abstract sentences you'll quote. No paper-by-paper browsing.
+- Write each lesson in one go, run `pnpm content:check --module <id>` once per lesson, fix, move on. Aim for under 40 tool calls for the whole module.

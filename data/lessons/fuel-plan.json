@@ -1,0 +1,756 @@
+{
+ "id": "fuel-plan",
+ "module": "t4-fueling",
+ "title": "Building a race fuelling plan",
+ "goal": "Turn an hourly carbohydrate target into a practical plan of drinks, gels and food for a long ride, a marathon and a triathlon, with the sums for gels and drink concentration.",
+ "requires": [
+  "fuel-gut"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "carbohydrate-concentration"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "plan-forms",
+   "title": "Drinks, gels, chews or food?",
+   "text": "The gut doesn't much care about the form. In trained cyclists taking 120 g·h⁻¹, exogenous oxidation was about the same from a drink, gels, jelly chews or a mix of them [[c:plan-forms-same]]. Bars that are low in fat, protein and fibre work too [[c:plan-solids]].\n\nSo choose by practicality. Drinks bring fluid as well as carbohydrate but are heavy to carry; gels are compact but need water with them; chews and bars suit the bike better than the run. On a long ride, real food (rice cakes, bananas, white-bread jam sandwiches) helps against getting sick of sweet flavours. Most athletes mix and match.",
+   "claims": [
+    {
+     "id": "plan-forms-same",
+     "text": "Exogenous carbohydrate oxidation at 120 g·h⁻¹ was similar whether carbohydrate came as a drink, gel, jelly chew or a mix.",
+     "grade": "weak",
+     "sources": [
+      "hearris2022"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2022",
+       "quote": "We demonstrate comparable rates of exogenous CHO oxidation from fluid, semisolid, solid, or a combination of sources.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "plan-solids",
+     "text": "Carbohydrate targets can be met with drinks, gels or low-fat, low-protein, low-fibre solid foods, chosen by personal preference.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "The recommended carbohydrate intake can be achieved by consuming drinks, gels, or low-fat, low-protein, and low-fiber solid foods (bars), and selection should be based on personal preference.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "plan-forms-ox"
+  },
+  {
+   "type": "question",
+   "item": "plan-solid"
+  },
+  {
+   "type": "concept",
+   "id": "plan-conc",
+   "title": "How strong should the drink be?",
+   "text": "[Carbohydrate concentration](g:carbohydrate-concentration) is grams per 100 mL: concentration (%) = grams ÷ mL × 100. Guidance for drinks sipped through exercise is 6–8% [[c:plan-6-8]]. Much stronger mixes, or gels without water, leave a concentrated load in the stomach, which is linked with gut symptoms: take gels with water, or drink weaker mixes [[c:plan-water]].\n\nThis sets a practical limit. At 8%, getting 90 g·h⁻¹ from a drink alone means over 1.1 L every hour, more than many athletes want to drink. So high intakes combine a drink with gels or food. How much fluid you need is a separate question, covered in the hydration module.",
+   "claims": [
+    {
+     "id": "plan-6-8",
+     "text": "During exercise lasting over an hour, carbohydrate is advised at about 30–60 g·h⁻¹ as a 6–8% carbohydrate-electrolyte drink taken every 10–15 min.",
+     "grade": "strong",
+     "sources": [
+      "kerksick2017"
+     ],
+     "evidence": [
+      {
+       "source": "kerksick2017",
+       "quote": "thus carbohydrate should be consumed at a rate of ~30-60 g of carbohydrate/h in a 6-8% carbohydrate-electrolyte solution (6-12 fluid ounces) every 10-15 min throughout the entire exercise bout, particularly in those exercise bouts that span beyond 70 min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "plan-water",
+     "text": "To avoid very high concentrations in the stomach, carbohydrate should be taken with enough water or as weaker drinks.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Ingest carbohydrates with sufficient water or choose drinks with lower carbohydrate concentrations to prevent very high concentrations and osmolalities in the stomach.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "plan-conc-example",
+   "title": "Mixing a bottle",
+   "problem": "You mix 45 g of carbohydrate powder into a 750 mL bottle. What is the concentration, and is it in the 6–8% range?",
+   "steps": [
+    "Concentration (%) = grams ÷ mL × 100.",
+    "45 ÷ 750 = 0.06; × 100 = 6%.",
+    "6% is at the low end of the range. To reach 8% in 750 mL you'd need 0.08 × 750 = 60 g."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "plan-conc-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "plan-conc-why"
+  },
+  {
+   "type": "question",
+   "item": "plan-volume"
+  },
+  {
+   "type": "concept",
+   "id": "plan-ride",
+   "title": "A long ride, hour by hour",
+   "text": "Take a 5 h gran fondo at 80 g·h⁻¹: 400 g in all. One way to cover each hour: a 750 mL bottle of 8% drink (60 g) plus a 25 g gel or a rice cake, about 85 g.\n\nStart within the first 20–30 min and take a little often, every 10–20 min, rather than a lot once an hour, so the gut gets a steady flow [[c:plan-little-often]]. Plan where you refill bottles, and carry what you'll need between stops. Then ride the plan in training at race pace before race day: it doubles as gut training.",
+   "claims": [
+    {
+     "id": "plan-little-often",
+     "text": "Carbohydrate drinks are best taken in small amounts every 10–15 min throughout exercise.",
+     "grade": "moderate",
+     "sources": [
+      "kerksick2017"
+     ],
+     "evidence": [
+      {
+       "source": "kerksick2017",
+       "quote": "thus carbohydrate should be consumed at a rate of ~30-60 g of carbohydrate/h in a 6-8% carbohydrate-electrolyte solution (6-12 fluid ounces) every 10-15 min throughout the entire exercise bout",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "plan-ride-example",
+   "title": "Gels to fill the gap",
+   "problem": "A cyclist rides 4 h at 75 g·h⁻¹. Each hour she drinks one 750 mL bottle of 6% drink. How many 30 g gels does she need for the ride?",
+   "steps": [
+    "Carbohydrate per bottle: 6% of 750 mL = 0.06 × 750 = 45 g.",
+    "Gap per hour: 75 − 45 = 30 g, so one 30 g gel an hour.",
+    "Whole ride: 4 h × 1 gel = 4 gels (120 g), plus 4 bottles (180 g): 300 g in all, which is 75 g·h⁻¹ × 4 h."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "plan-gels-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "plan-hourly"
+  },
+  {
+   "type": "concept",
+   "id": "plan-marathon",
+   "title": "The marathon",
+   "text": "Running makes eating hard: chewing is awkward, aid stations come every few km, and the gut gets jolted. In one race survey, marathoners took only about 35 g·h⁻¹, against 60–70 g·h⁻¹ in Ironman racing [[c:plan-pfeiffer-intakes]]. Guidance for the longest running races goes up to 75–90 g·h⁻¹, in a plan that has been practised [[c:plan-burke-run]].\n\nA 3 h marathoner aiming at 60 g·h⁻¹ needs 180 g: about seven 25 g gels, one every 25 min from early on, with water at the aid stations, or fewer gels plus the sports drink on the course.",
+   "claims": [
+    {
+     "id": "plan-pfeiffer-intakes",
+     "text": "Mean carbohydrate intake was about 62–71 g·h⁻¹ in Ironman and half-Ironman races, 53 g·h⁻¹ in a cycle race and 35 g·h⁻¹ in a marathon.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Mean CHO intake rates were not significantly different between IM Hawaii, IM GER, and IM 70.3 (62 ± 26, 71 ± 25, and 65 ± 25 g·h(-1), respectively), but lower mean CHO intake rates were reported during CYCLE (53 ± 22 g·h(-1), P = 0.044) and MARATHON (35 ± 26 g·h(-1), P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "plan-burke-run",
+     "text": "In distance running, beneficial carbohydrate intakes range from mouth rinsing in shorter events to 75–90 g·h⁻¹ in the longest, within a personalised, practised plan.",
+     "grade": "strong",
+     "sources": [
+      "burke2019"
+     ],
+     "evidence": [
+      {
+       "source": "burke2019",
+       "quote": "Beneficial CHO intakes range from small amounts, including mouth rinsing, in the case of shorter events to high rates of intake (75-90 g/hr) in the longest races.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2019",
+       "quote": "A personalized and practiced race nutrition plan should balance the benefits of fluid and CHO consumed within practical opportunities, against the time, cost, and risk of gut discomfort.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "plan-gels-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "plan-marathon-reality"
+  },
+  {
+   "type": "concept",
+   "id": "plan-tri",
+   "title": "70.3 and Ironman",
+   "text": "In triathlon, most fuelling happens on the bike: you're sitting, the gut is jolted less, and bottles and bars are easy to carry. A common plan is a high rate on the bike and a lower one on the run (gels, sports drink, cola at aid stations), so the run starts topped up.\n\nIn Ironman athletes, higher carbohydrate intake went with faster finishing times, but also with more nausea and wind [[c:plan-pfeiffer-corr]]. It's a correlation from a survey, so it can't show that eating more made them faster: faster athletes may also be fitter, better trained, and have better-trained guts.",
+   "claims": [
+    {
+     "id": "plan-pfeiffer-corr",
+     "text": "In Ironman races, higher carbohydrate intake was associated with faster finishing times and with more nausea and flatulence.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Total CHO intake rates were positively correlated with nausea and flatulence but were negatively correlated with finishing time during both IM (r = -0.55 and r = -0.48, P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "plan-tri-split"
+  },
+  {
+   "type": "question",
+   "item": "plan-pfeiffer-evaluate"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Drinks, gels, chews and low-fat, low-fibre food are burned about equally well; choose by practicality and mix them.",
+    "Concentration (%) = grams ÷ mL × 100. Aim for 6–8% drinks; take gels with water.",
+    "High hourly targets need drink plus gels or food: 90 g·h⁻¹ from an 8% drink alone is over 1.1 L an hour.",
+    "Plan per hour, start early, take a little every 10–20 min, and rehearse the plan in training.",
+    "Marathoners usually eat far less than triathletes; in triathlon, most carbohydrate goes in on the bike. Race surveys show links, not causes."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "plan-forms-ox",
+   "concept": "plan-forms",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "hearris2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Trained cyclists took 120 g·h⁻¹ as a drink, gels, jelly chews or a mix. How did the oxidation of the swallowed carbohydrate compare?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About the same for every form",
+       "correct": true,
+       "why": "Right: drink, gel, chew and mix gave comparable exogenous oxidation."
+      },
+      {
+       "id": "b",
+       "text": "Highest with the drink, as liquids empty fastest",
+       "why": "The drink was no better than the other forms in that study."
+      },
+      {
+       "id": "c",
+       "text": "Lowest with the chews, as solids are barely absorbed",
+       "why": "Chews gave about the same oxidation as the drink."
+      },
+      {
+       "id": "d",
+       "text": "Highest with the gels, as they are most concentrated",
+       "why": "Gels were no better; being concentrated is, if anything, a risk for the gut without water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-solid",
+   "concept": "plan-forms",
+   "bloom": "apply",
+   "sources": [
+    "jeukendrup2014",
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which solid food suits the middle of a 5 h ride best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rice cake with jam",
+       "correct": true,
+       "why": "Right: mostly carbohydrate, with little fat, protein or fibre to slow the stomach."
+      },
+      {
+       "id": "b",
+       "text": "A handful of mixed nuts",
+       "why": "Mostly fat: slow to empty and low in carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "A high-protein bar",
+       "why": "Protein slows gastric emptying and the bar gives little carbohydrate."
+      },
+      {
+       "id": "d",
+       "text": "A wholemeal bran muffin",
+       "why": "High fibre is linked with gut symptoms during exercise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-conc-calc",
+   "concept": "plan-conc",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kerksick2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider mixes 60 g of carbohydrate into a 750 mL bottle. What is the concentration?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8%",
+       "correct": true,
+       "why": "Right: 60 ÷ 750 × 100 = 8%."
+      },
+      {
+       "id": "b",
+       "text": "12.5%",
+       "why": "That is 750 ÷ 60: the division is upside down."
+      },
+      {
+       "id": "c",
+       "text": "0.08%",
+       "why": "60 ÷ 750 = 0.08 is a fraction; multiply by 100 to get a percentage."
+      },
+      {
+       "id": "d",
+       "text": "6%",
+       "why": "That treats the bottle as 1,000 mL; 60 g in 750 mL is stronger."
+      }
+     ],
+     "solution": "Concentration = 60 g ÷ 750 mL × 100 = 8%, the top of the 6–8% range."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's soft flask holds 500 mL with 45 g of carbohydrate. What is the concentration?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9%",
+       "correct": true,
+       "why": "Right: 45 ÷ 500 × 100 = 9%, a little above the usual 6–8%."
+      },
+      {
+       "id": "b",
+       "text": "11%",
+       "why": "That is 500 ÷ 45: the division is upside down."
+      },
+      {
+       "id": "c",
+       "text": "4.5%",
+       "why": "That treats the flask as 1,000 mL; it holds 500 mL."
+      },
+      {
+       "id": "d",
+       "text": "0.09%",
+       "why": "45 ÷ 500 = 0.09 is a fraction; multiply by 100 for a percentage."
+      }
+     ],
+     "solution": "Concentration = 45 g ÷ 500 mL × 100 = 9%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete makes 1,000 mL of drink with 70 g of carbohydrate. What is the concentration?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7%",
+       "correct": true,
+       "why": "Right: 70 ÷ 1,000 × 100 = 7%."
+      },
+      {
+       "id": "b",
+       "text": "14%",
+       "why": "That is 1,000 ÷ 70: the division is upside down."
+      },
+      {
+       "id": "c",
+       "text": "70%",
+       "why": "That reads the grams as grams per 100 mL; they are per 1,000 mL."
+      },
+      {
+       "id": "d",
+       "text": "0.07%",
+       "why": "70 ÷ 1,000 = 0.07 is a fraction; multiply by 100 for a percentage."
+      }
+     ],
+     "solution": "Concentration = 70 g ÷ 1,000 mL × 100 = 7%."
+    }
+   ]
+  },
+  {
+   "id": "plan-conc-why",
+   "concept": "plan-conc",
+   "bloom": "understand",
+   "sources": [
+    "deoliveira2014",
+    "kerksick2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do guidelines suggest 6–8% drinks rather than a 20% mix that packs more carbohydrate into each bottle?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Very concentrated drinks are linked with gut symptoms",
+       "correct": true,
+       "why": "Right: a concentrated, high-osmolality load in the stomach is linked with more gut trouble."
+      },
+      {
+       "id": "b",
+       "text": "Stronger drinks hold less energy per gram",
+       "why": "A gram of carbohydrate holds the same energy whatever the drink's strength."
+      },
+      {
+       "id": "c",
+       "text": "Muscle can't burn carbohydrate from strong drinks",
+       "why": "Once absorbed, carbohydrate is carbohydrate; the issue is in the gut."
+      },
+      {
+       "id": "d",
+       "text": "Strong drinks make you sweat more",
+       "why": "Drink strength doesn't drive sweat rate; heat and intensity do."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-volume",
+   "concept": "plan-conc",
+   "bloom": "analyse",
+   "sources": [
+    "kerksick2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider wants 90 g·h⁻¹ from an 8% drink alone. Why is that awkward?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It means drinking about 1.1 L every hour",
+       "correct": true,
+       "why": "Right: 90 g ÷ 0.08 g per mL ≈ 1,125 mL each hour, more than many athletes want to drink."
+      },
+      {
+       "id": "b",
+       "text": "It means drinking about 11 L every hour",
+       "why": "A slip of ten: 90 ÷ 0.08 = 1,125 mL, about 1.1 L."
+      },
+      {
+       "id": "c",
+       "text": "It means only 720 mL an hour, too little fluid",
+       "why": "That is 90 × 8: multiplied instead of divided by the concentration."
+      },
+      {
+       "id": "d",
+       "text": "An 8% drink can't give more than 60 g·h⁻¹",
+       "why": "Any carbohydrate rate is possible if you drink enough; the limit is the volume."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-gels-calc",
+   "concept": "plan-ride",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "burke2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner expects a 3 h marathon and aims for 60 g·h⁻¹, all from 25 g gels. About how many gels does she need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7",
+       "correct": true,
+       "why": "Right: 60 × 3 = 180 g; 180 ÷ 25 = 7.2, so about 7."
+      },
+      {
+       "id": "b",
+       "text": "About 2",
+       "why": "That is 60 ÷ 25 for one hour only; the race lasts 3 h."
+      },
+      {
+       "id": "c",
+       "text": "About 3",
+       "why": "One gel per hour gives only 75 g, well short of 180 g."
+      },
+      {
+       "id": "d",
+       "text": "About 18",
+       "why": "That is 180 ÷ 10: a slip in the gel size."
+      }
+     ],
+     "solution": "Total = 60 g·h⁻¹ × 3 h = 180 g. Gels = 180 ÷ 25 = 7.2, so about 7 (one every 25 min or so)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides 4 h at 80 g·h⁻¹. Each hour she drinks a 750 mL bottle of 8% drink, and makes up the rest with 25 g gels. How many gels for the ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3",
+       "correct": true,
+       "why": "Right: the bottle gives 60 g, the gap is 20 g·h⁻¹, so 80 g over 4 h, or about 3 gels."
+      },
+      {
+       "id": "b",
+       "text": "About 13",
+       "why": "That is 320 ÷ 25: the carbohydrate in the bottles was left out."
+      },
+      {
+       "id": "c",
+       "text": "About 1",
+       "why": "That covers the 20 g gap for one hour only; the ride is 4 h."
+      },
+      {
+       "id": "d",
+       "text": "About 10",
+       "why": "That is 240 ÷ 25: the bottles' carbohydrate was taken as the gap instead of subtracted."
+      }
+     ],
+     "solution": "Bottle = 0.08 × 750 = 60 g per hour. Gap = 80 − 60 = 20 g·h⁻¹. Ride = 20 × 4 = 80 g. Gels = 80 ÷ 25 = 3.2, so about 3."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's 70.3 run takes 1 h 30 min. He aims for 60 g·h⁻¹, all from 25 g gels. About how many gels?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4",
+       "correct": true,
+       "why": "Right: 60 × 1.5 = 90 g; 90 ÷ 25 = 3.6, so about 4."
+      },
+      {
+       "id": "b",
+       "text": "About 3",
+       "why": "That reads 1 h 30 min as 1.3 h (78 g); it is 1.5 h."
+      },
+      {
+       "id": "c",
+       "text": "About 2",
+       "why": "That is 60 ÷ 25 for one hour only."
+      },
+      {
+       "id": "d",
+       "text": "About 9",
+       "why": "That is 90 ÷ 10: a slip in the gel size."
+      }
+     ],
+     "solution": "1 h 30 min = 1.5 h. Total = 60 × 1.5 = 90 g. Gels = 90 ÷ 25 = 3.6, so about 4."
+    }
+   ]
+  },
+  {
+   "id": "plan-hourly",
+   "concept": "plan-ride",
+   "bloom": "apply",
+   "sources": [
+    "kerksick2017",
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider plans 90 g·h⁻¹ on a 5 h gran fondo using glucose + fructose products. Which hourly plan fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 750 mL bottle of 8% drink plus one 30 g gel",
+       "correct": true,
+       "why": "Right: 60 g + 30 g = 90 g, with the drink in the 6–8% range."
+      },
+      {
+       "id": "b",
+       "text": "A 750 mL bottle of 12% drink and nothing else",
+       "why": "It does give 90 g, but at 12% the drink is well above 6–8%, a risk for the gut."
+      },
+      {
+       "id": "c",
+       "text": "One 25 g gel with water each hour",
+       "why": "That gives only 25 g·h⁻¹, far below the 90 g·h⁻¹ target."
+      },
+      {
+       "id": "d",
+       "text": "A 60 g nut-and-seed bar each hour",
+       "why": "Nut bars are high in fat and fibre, and the bar wouldn't reach 90 g of carbohydrate anyway."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-marathon-reality",
+   "concept": "plan-marathon",
+   "bloom": "analyse",
+   "sources": [
+    "pfeiffer2012",
+    "burke2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Marathoners in a race survey took about 35 g·h⁻¹, well below what guidance allows for long races. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Eating while running is hard and the gut gets jolted",
+       "correct": true,
+       "why": "Right: chewing, carrying and the jolting of running make intake hard, and many runners haven't trained their gut."
+      },
+      {
+       "id": "b",
+       "text": "Runners need no carbohydrate in races under 4 h",
+       "why": "A 2–4 h marathon falls squarely in the range where carbohydrate helps."
+      },
+      {
+       "id": "c",
+       "text": "The guidelines only apply to cycling",
+       "why": "Running guidance also goes up to 75–90 g·h⁻¹ in the longest races."
+      },
+      {
+       "id": "d",
+       "text": "Runners absorb carbohydrate twice as fast",
+       "why": "Absorption isn't faster in runners; if anything, running is harder on the gut."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-tri-split",
+   "concept": "plan-tri",
+   "bloom": "analyse",
+   "sources": [
+    "deoliveira2014",
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do triathletes usually take most of their race carbohydrate on the bike rather than on the run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sitting still jolts the gut less, and food is easier to carry",
+       "correct": true,
+       "why": "Right: running is harder on the gut and on eating, so the bike is the best window to fuel."
+      },
+      {
+       "id": "b",
+       "text": "Fructose is only absorbed while cycling",
+       "why": "Fructose is absorbed through GLUT5 whatever the sport."
+      },
+      {
+       "id": "c",
+       "text": "Carbohydrate taken on the run arrives too late",
+       "why": "Swallowed carbohydrate starts to be burned within minutes; fuelling on the run still helps."
+      },
+      {
+       "id": "d",
+       "text": "The run is too short to need fuel",
+       "why": "An Ironman marathon lasts 3–6 h; it needs fuel too, just harder to take."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "plan-pfeiffer-evaluate",
+   "concept": "plan-tri",
+   "bloom": "evaluate",
+   "sources": [
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Ironman athletes, higher carbohydrate intake correlated with faster finishing times (r = −0.55). What can you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Intake and speed go together, but it doesn't prove cause",
+       "correct": true,
+       "why": "Right: a survey can't separate cause from confounders such as fitness or a trained gut."
+      },
+      {
+       "id": "b",
+       "text": "Each extra gram per hour saves a fixed amount of time",
+       "why": "A correlation doesn't give a cause-and-effect dose; that needs controlled trials."
+      },
+      {
+       "id": "c",
+       "text": "Eating more made them slower, since r is negative",
+       "why": "Negative r with finishing time means more intake went with shorter times, i.e. faster."
+      },
+      {
+       "id": "d",
+       "text": "The link is too weak to mean anything",
+       "why": "r = −0.55 is a moderate correlation; the limit is causation, not strength."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1056 @@
+{
+ "id": "pr-mps",
+ "module": "t4-protein-recovery",
+ "title": "Muscle protein after exercise",
+ "goal": "Explain how exercise and protein change muscle protein synthesis and breakdown, which proteins endurance work builds, leucine's role, and how much protein of what quality a meal should contain.",
+ "requires": [
+  "lc-periodized"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "muscle-protein-synthesis",
+    "muscle-protein-breakdown",
+    "myofibrillar-protein",
+    "mitochondrial-protein",
+    "essential-amino-acid",
+    "leucine",
+    "whey",
+    "casein"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mps-balance",
+   "title": "Building and breaking down",
+   "text": "Muscle protein is never finished: [protein turnover](g:protein-turnover) takes it apart and rebuilds it all the time (the macros module covers this). After exercise, two rates matter:\n\n- [muscle protein synthesis](g:muscle-protein-synthesis) (MPS): building;\n- [muscle protein breakdown](g:muscle-protein-breakdown) (MPB): taking apart.\n\nWhat you keep is the [net protein balance](g:net-protein-balance): MPS − MPB.\n\nExercise speeds up both. Without food, balance after a strength session improves but stays negative, for up to 48 h [[c:fasted-negative]]. Eating protein turns it positive, mainly by raising MPS [[c:protein-positive]].\n\nEndurance work is no different: after 2 h of cycling, carbohydrate plus protein raised MPS and made whole-body balance positive; carbohydrate alone did neither [[c:protein-after-ride]].",
+   "claims": [
+    {
+     "id": "fasted-negative",
+     "text": "Without food, muscle net protein balance after resistance exercise improves but stays negative for up to 48 h.",
+     "grade": "moderate",
+     "sources": [
+      "phillips1997",
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "phillips1997",
+       "quote": "Muscle net balance was significantly increased after exercise at all time points [(in %/h) rest = -0.0573 +/- 0.003 (SE), 3 h = -0.0298 +/- 0.003, 24 h = -0.0413 +/- 0.004, and 48 h = -0.0440 +/- 0.005], and was significantly different from zero at all time points (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "jager2017",
+       "quote": "In the absence of feeding and in response to resistance exercise, muscle protein balance remains negative.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "protein-positive",
+     "text": "Protein eaten after exercise makes muscle net protein balance positive, mainly by raising muscle protein synthesis.",
+     "grade": "moderate",
+     "sources": [
+      "jager2017",
+      "moore2019"
+     ],
+     "evidence": [
+      {
+       "source": "jager2017",
+       "quote": "When combined with protein feeding, net muscle protein balance after exercise becomes positive",
+       "level": "full-text"
+      },
+      {
+       "source": "moore2019",
+       "quote": "MPS is the primary regulated variable influencing muscle net balance with dietary amino acid ingestion representing the single most important nutritional variable enhancing post-exercise rates of muscle protein synthesis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "protein-after-ride",
+     "text": "After 2 h of cycling, protein added to carbohydrate raised mixed muscle protein synthesis and made whole-body protein balance positive, compared with carbohydrate alone.",
+     "grade": "weak",
+     "sources": [
+      "howarth2009"
+     ],
+     "evidence": [
+      {
+       "source": "howarth2009",
+       "quote": "We conclude that ingesting protein with CHO during recovery from aerobic exercise increased muscle FSR and improved WBNB, compared with feeding strategies that provided CHO only and were matched for total CHO or total energy intake.",
+       "level": "abstract"
+      },
+      {
+       "source": "howarth2009",
+       "quote": "WBNB assessed using [1-(13)C]leucine was positive only during PRO-CHO, and this was mainly attributable to a reduced rate of protein breakdown.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-net-fasted",
+   "variant": "a"
+  },
+  {
+   "type": "example",
+   "id": "mps-net-example",
+   "title": "Net balance over 3 hours",
+   "problem": "After a hard run, a runner's MPS is 0.07 %·h⁻¹ and her MPB is 0.09 %·h⁻¹ (% of muscle protein per hour). What is her net balance over 3 h? And if a protein meal raised MPS to 0.11 %·h⁻¹?",
+   "steps": [
+    "Net balance per hour = MPS − MPB = 0.07 − 0.09 = −0.02 %·h⁻¹.",
+    "Over 3 h: −0.02 × 3 = −0.06% of her muscle protein lost.",
+    "With protein: 0.11 − 0.09 = +0.02 %·h⁻¹, so +0.02 × 3 = +0.06% gained.",
+    "Tiny per session, but repeated after every session and meal for months, this is how muscle is kept, remodelled or lost."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-net-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mps-protein-ride"
+  },
+  {
+   "type": "concept",
+   "id": "mps-fractions",
+   "title": "Mixed, myofibrillar, mitochondrial",
+   "text": "Studies measure either all muscle proteins together (*mixed* muscle protein) or one part:\n\n- [myofibrillar protein](g:myofibrillar-protein): the threads that contract;\n- [mitochondrial protein](g:mitochondrial-protein): the [mitochondria](g:mitochondria) that burn fuel with oxygen.\n\nThe kind of exercise picks the part. After 10 weeks of training, a strength session raised myofibrillar synthesis only; an endurance session raised mitochondrial synthesis (by 105%) but not myofibrillar [[c:fraction-specific]].\n\nProtein eaten after endurance exercise did the opposite: 30 g raised myofibrillar synthesis by about 46% but did not raise the rate of mitochondrial synthesis [[c:protein-myo-not-mito]]. The ride drives the mitochondria; the protein mostly feeds repair of the contracting threads.",
+   "claims": [
+    {
+     "id": "fraction-specific",
+     "text": "In trained young men, resistance exercise raised myofibrillar protein synthesis, while endurance exercise raised mitochondrial (by 105%) but not myofibrillar protein synthesis.",
+     "grade": "weak",
+     "sources": [
+      "wilkinson2008"
+     ],
+     "evidence": [
+      {
+       "source": "wilkinson2008",
+       "quote": "After training, only myofibrillar protein synthesis increased with RE (36%, P = 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "wilkinson2008",
+       "quote": "EE stimulated mitochondrial protein synthesis in both the untrained, 154%, and trained, 105% (both P < 0.05), but not myofibrillar protein synthesis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "protein-myo-not-mito",
+     "text": "After endurance exercise, 30 g of protein raised myofibrillar protein synthesis by about 46% and maximised it, but protein did not raise mitochondrial protein synthesis rates.",
+     "grade": "weak",
+     "sources": [
+      "churchwardvenne2020"
+     ],
+     "evidence": [
+      {
+       "source": "churchwardvenne2020",
+       "quote": "30 g PRO stimulated a ∼46% increase in MyoPS rates (%/h) compared with 0 g PRO and was sufficient to maximize MyoPS rates after endurance exercise. MitoPS rates were not increased after protein ingestion",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-fraction-ride"
+  },
+  {
+   "type": "question",
+   "item": "mps-mito-shake"
+  },
+  {
+   "type": "concept",
+   "id": "mps-leucine",
+   "title": "Leucine: the switch, not the bricks",
+   "text": "Of the 20 [amino acids](g:amino-acid), 9 are [essential amino acids](g:essential-amino-acid) (EAAs): the body can't make them. In older adults, EAAs alone raised muscle protein balance as much as a full mix of all 20 [[c:eaa-drive]].\n\nOne EAA, [leucine](g:leucine), is also a signal: its rise in the blood helps switch on [mTOR](g:mtor), the cell's switch for building protein [[c:leucine-switch]].\n\nBut a switch isn't a building site. After a strength session, 6.25 g of whey topped up with leucine matched 25 g of whey for the first 1–3 h; only the 25 g kept synthesis up at 3–5 h [[c:leucine-not-enough]]. You need the bricks (all the EAAs) as well as the switch. Position stands suggest a serving with about 1–3 g of leucine [[c:leucine-dose]].",
+   "claims": [
+    {
+     "id": "eaa-drive",
+     "text": "In older adults, essential amino acids alone raised muscle protein balance as much as a balanced mix of all amino acids.",
+     "grade": "weak",
+     "sources": [
+      "volpi2003"
+     ],
+     "evidence": [
+      {
+       "source": "volpi2003",
+       "quote": "Essential amino acids are primarily responsible for the amino acid-induced stimulation of muscle protein anabolism in the elderly.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "leucine-switch",
+     "text": "Leucine acts as a nutrient signal for muscle protein synthesis, in part by activating mTOR.",
+     "grade": "moderate",
+     "sources": [
+      "churchwardvenne2012",
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "churchwardvenne2012",
+       "quote": "Leucine is a nutrient regulator of muscle protein synthesis by activating mTOR and possibly other proteins in this pathway.",
+       "level": "abstract"
+      },
+      {
+       "source": "jager2017",
+       "quote": "Multiple human studies have supported the contention that leucine drives protein synthesis",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "leucine-not-enough",
+     "text": "A small whey dose topped up with leucine matched 25 g whey early on, but only the full 25 g kept muscle protein synthesis raised 3–5 h after exercise.",
+     "grade": "weak",
+     "sources": [
+      "churchwardvenne2012"
+     ],
+     "evidence": [
+      {
+       "source": "churchwardvenne2012",
+       "quote": "In summary, a low dose of whey protein supplemented with leucine or all other essential amino acids was as effective as a complete protein (WHEY) in stimulating postprandial MPS; however only WHEY was able to sustain increased rates of MPS post-exercise and may therefore be most suited to increase exercise-induced muscle protein accretion.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "leucine-dose",
+     "text": "A protein serving of 20–40 g provides about 10–12 g of EAAs and 1–3 g of leucine.",
+     "grade": "moderate",
+     "sources": [
+      "jager2017",
+      "vitale2019"
+     ],
+     "evidence": [
+      {
+       "source": "jager2017",
+       "quote": "A protein dose of 20–40 g of protein (10–12 g of EAAs, 1–3 g of leucine) stimulates MPS, which can help to promote a positive nitrogen balance.",
+       "level": "full-text"
+      },
+      {
+       "source": "vitale2019",
+       "quote": "In summary, protein doses of 0.3 g/kg (or ~20–40 g of protein covering the range of typical athlete builds), provides ~10–12 of EAA and ~1–3 g of leucine.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-leucine-role"
+  },
+  {
+   "type": "question",
+   "item": "mps-bcaa"
+  },
+  {
+   "type": "concept",
+   "id": "mps-dose",
+   "title": "How much per meal?",
+   "text": "More protein raises building, up to a point. Pooling studies in young men, [myofibrillar](g:myofibrillar-protein) synthesis levelled off at about **0.24 g·kg⁻¹** of high-quality protein in one serving [[c:dose-plateau]]. A later re-analysis suggests about **0.3 g·kg⁻¹** per meal [[c:dose-03]]: about 15–27 g for athletes of 50–90 kg. Position stands round this to a simple 20–40 g.\n\nAfter endurance exercise the picture is similar. In endurance-trained men, 30 g of milk protein maximised myofibrillar synthesis; 45 g didn't raise it further, though whole-body protein balance kept rising [[c:dose-endurance]].\n\nSo: about 0.3 g·kg⁻¹ per meal, scaled to body mass. Whether a bigger meal is wasted is debated: the daily-protein lesson returns to it.",
+   "claims": [
+    {
+     "id": "dose-plateau",
+     "text": "In young men, myofibrillar protein synthesis reached a plateau after about 0.24 g·kg⁻¹ of high-quality protein in one serving.",
+     "grade": "weak",
+     "sources": [
+      "moore2015"
+     ],
+     "evidence": [
+      {
+       "source": "moore2015",
+       "quote": "Biphase linear regression and breakpoint analysis revealed the slope of first line segment was lower (p < .05) in older men and that MPS reached a plateau after ingestion of 0.40 ± 0.19 and 0.24 ± 0.06 g/kg body mass (p = .055) and 0.60 ± 0.29 and 0.25 ± 0.13 g/kg lean body mass (p < .01) in older and younger men, respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dose-03",
+     "text": "About 0.3 g·kg⁻¹ of high-quality protein per meal (20–40 g for most athletes) is the suggested serving to maximise muscle protein synthesis.",
+     "grade": "moderate",
+     "sources": [
+      "moore2019",
+      "jager2017",
+      "vitale2019"
+     ],
+     "evidence": [
+      {
+       "source": "moore2019",
+       "quote": "Re-analysis of published literature in young adults suggests a relative single meal intake of ~0.31 g/kg of rapidly digested, high quality protein (i.e., whey) should be considered as a nutritional guideline for individuals of average body composition aiming to maximize post-exercise myofibrillar protein synthesis while minimizing irreversible amino acid oxidative catabolism that occurs with excessive intakes of this macronutrient.",
+       "level": "abstract"
+      },
+      {
+       "source": "jager2017",
+       "quote": "General recommendations are 0.25 g of a high-quality protein per kg of body weight, or an absolute dose of 20-40 g.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dose-endurance",
+     "text": "After endurance exercise, 30 g of protein maximised myofibrillar protein synthesis, while whole-body net protein balance kept rising with 45 g.",
+     "grade": "weak",
+     "sources": [
+      "churchwardvenne2020"
+     ],
+     "evidence": [
+      {
+       "source": "churchwardvenne2020",
+       "quote": "Whole-body net protein balance and dietary protein-derived amino acid incorporation into mitochondrial protein respond to increasing protein intake in a dose-dependent manner. Ingestion of 30 g protein is sufficient to maximize MyoPS rates during recovery from a single bout of endurance exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mps-dose-example",
+   "title": "Protein per meal for a 72 kg cyclist",
+   "problem": "A 72 kg cyclist wants about 0.3 g·kg⁻¹ of high-quality protein in her post-ride meal. How many grams is that?",
+   "steps": [
+    "Per-meal protein = body mass × 0.3 g·kg⁻¹.",
+    "72 × 0.3 = 21.6 g, so about 22 g.",
+    "Check: that sits inside the usual 20–40 g range. A 50 kg runner would need only 15 g; a 90 kg triathlete 27 g."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-dose-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mps-dose-endurance"
+  },
+  {
+   "type": "concept",
+   "id": "mps-quality",
+   "title": "Protein quality",
+   "text": "Gram for gram, proteins differ. Quality comes down to how many [EAAs](g:essential-amino-acid) a protein holds, how much [leucine](g:leucine), and how fast it is digested.\n\nMilk proteins score highest. [Whey](g:whey) is fast and about 11% leucine; [casein](g:casein) is slow and about 9%. Egg is about 8.6%, meat 8%, most plant proteins less [[c:leucine-content]].\n\nMatched for 10 g of EAAs, whey raised muscle protein synthesis after a strength session 122% more than casein and 31% more than soy [[c:whey-casein-soy]]. With 6 young men per group in one lab session, it shows a short-term rate, not long-term muscle gain.\n\nHow much plant protein does the same job as whey is still being worked out [[c:plant-dose]].",
+   "claims": [
+    {
+     "id": "leucine-content",
+     "text": "Whey is about 11% and casein about 9% leucine; egg about 8.6%, meat 8%, plant proteins lower. Whey is digested fast, casein slowly.",
+     "grade": "moderate",
+     "sources": [
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "jager2017",
+       "quote": "Comparison of the quality of whey and casein reveal that these two proteins routinely contain the highest leucine content of all other protein sources at 11% and 9.3%, respectively.",
+       "level": "full-text"
+      },
+      {
+       "source": "jager2017",
+       "quote": "In general, the proteins with the greatest leucine content include dairy (9–11%), egg (8.6%), and meat (8%), while sources low in leucine include plant-based proteins.",
+       "level": "full-text"
+      },
+      {
+       "source": "jager2017",
+       "quote": "In contrast, casein and fatty cuts of meat (<80% lean) act as slowly digested sources of protein.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "whey-casein-soy",
+     "text": "Matched for essential amino acids, whey raised muscle protein synthesis after resistance exercise about 122% more than casein and 31% more than soy.",
+     "grade": "weak",
+     "sources": [
+      "tang2009"
+     ],
+     "evidence": [
+      {
+       "source": "tang2009",
+       "quote": "A similar result was observed after exercise (whey > soy > casein); MPS following whey consumption was approximately 122% greater than casein (P < 0.01) and 31% greater than soy (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "plant-dose",
+     "text": "The effective per-meal dose for plant proteins and slowly digested proteins is not yet established.",
+     "grade": "weak",
+     "sources": [
+      "moore2019"
+     ],
+     "evidence": [
+      {
+       "source": "moore2019",
+       "quote": "Additional research is warranted to elucidate the effective dose for proteins with suboptimal amino acid compositions (e.g., plant-based), and/or slower digestion rates as well as whether recommendations are appreciably affected by other physiological conditions such endurance exercise, high habitual daily protein ingestion, aging, obesity, and/or periods of chronic negative energy balance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mps-leucine-example",
+   "title": "Leucine in a serving",
+   "problem": "How much leucine is in 25 g of whey protein, if whey is 11% leucine? Is that enough for one serving?",
+   "steps": [
+    "Leucine = protein × leucine fraction = 25 g × 0.11.",
+    "25 × 0.11 = 2.75 g of leucine.",
+    "That is inside the 1–3 g suggested per serving. Working backwards: grams of protein needed = leucine wanted ÷ leucine fraction."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mps-leucine-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "mps-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "mps-dose-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Net protein balance = synthesis − breakdown. Exercise alone leaves it negative; protein eaten after it turns it positive, mainly by raising synthesis.",
+    "Endurance exercise drives mitochondrial protein synthesis; protein eaten after it mainly raises myofibrillar synthesis.",
+    "Essential amino acids are the bricks; leucine is also the switch (via mTOR), but leucine alone doesn't keep synthesis up.",
+    "About 0.3 g·kg⁻¹ of high-quality protein per meal (about 15–27 g for 50–90 kg) maximises myofibrillar synthesis; 30 g did so after endurance exercise.",
+    "Quality = EAA and leucine content plus digestion speed: whey > soy > casein for short-term synthesis."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mps-net-fasted",
+   "concept": "mps-balance",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "phillips1997",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does a hard interval session and then eats nothing for 3 hours. What is her muscle net protein balance most likely doing in that time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less negative than at rest, but still negative",
+       "correct": true,
+       "why": "Right: exercise raises synthesis more than breakdown, so balance improves, but without food it stays below zero."
+      },
+      {
+       "id": "b",
+       "text": "Positive, since exercise raises synthesis",
+       "why": "Exercise raises breakdown too. Without amino acids from food, balance stays negative."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged, since exercise doesn't touch muscle protein",
+       "why": "Exercise speeds up both synthesis and breakdown for up to 48 h."
+      },
+      {
+       "id": "d",
+       "text": "Much more negative, since exercise only raises breakdown",
+       "why": "Exercise raises synthesis more than breakdown, so balance gets less negative, not more."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides hard before work and skips breakfast until noon. During the morning, what is his muscle net protein balance most likely doing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less negative than at rest, but still negative",
+       "correct": true,
+       "why": "Right: the ride lifts synthesis more than breakdown, but without food, balance stays below zero."
+      },
+      {
+       "id": "b",
+       "text": "Positive, since the ride raised synthesis",
+       "why": "The ride raised breakdown too; it takes amino acids from food to tip balance positive."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged, since riding doesn't touch muscle protein",
+       "why": "Exercise speeds up both synthesis and breakdown for hours to days."
+      },
+      {
+       "id": "d",
+       "text": "Much more negative, since riding only raises breakdown",
+       "why": "Synthesis rises more than breakdown, so balance improves a little, even fasted."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-net-calc",
+   "concept": "mps-balance",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "phillips1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a long run, MPS is 0.09 %·h⁻¹ and MPB is 0.11 %·h⁻¹. What is the net balance over 4 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−0.08%",
+       "correct": true,
+       "why": "Right: (0.09 − 0.11) × 4 = −0.02 × 4 = −0.08%."
+      },
+      {
+       "id": "b",
+       "text": "+0.08%",
+       "why": "This is MPB − MPS. Net balance is synthesis minus breakdown, so it is negative here."
+      },
+      {
+       "id": "c",
+       "text": "−0.02%",
+       "why": "This is the balance per hour; the question asks for 4 h."
+      },
+      {
+       "id": "d",
+       "text": "+0.80%",
+       "why": "This adds the two rates ((0.09 + 0.11) × 4). Breakdown must be subtracted."
+      }
+     ],
+     "solution": "Net balance = (MPS − MPB) × time = (0.09 − 0.11) × 4 = −0.08% of muscle protein."
+    },
+    {
+     "id": "b",
+     "stem": "After a ride and a protein drink, MPS is 0.12 %·h⁻¹ and MPB is 0.08 %·h⁻¹. What is the net balance over 3 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+0.12%",
+       "correct": true,
+       "why": "Right: (0.12 − 0.08) × 3 = 0.04 × 3 = +0.12%."
+      },
+      {
+       "id": "b",
+       "text": "−0.12%",
+       "why": "This is MPB − MPS. Net balance is synthesis minus breakdown, so it is positive here."
+      },
+      {
+       "id": "c",
+       "text": "+0.04%",
+       "why": "This is the balance per hour; the question asks for 3 h."
+      },
+      {
+       "id": "d",
+       "text": "+0.60%",
+       "why": "This adds the two rates ((0.12 + 0.08) × 3). Breakdown must be subtracted."
+      }
+     ],
+     "solution": "Net balance = (MPS − MPB) × time = (0.12 − 0.08) × 3 = +0.12% of muscle protein."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete fasts after a brick session: MPS is 0.06 %·h⁻¹ and MPB is 0.10 %·h⁻¹. What is the net balance over 5 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−0.20%",
+       "correct": true,
+       "why": "Right: (0.06 − 0.10) × 5 = −0.04 × 5 = −0.20%."
+      },
+      {
+       "id": "b",
+       "text": "+0.20%",
+       "why": "This is MPB − MPS. Net balance is synthesis minus breakdown, so it is negative here."
+      },
+      {
+       "id": "c",
+       "text": "−0.04%",
+       "why": "This is the balance per hour; the question asks for 5 h."
+      },
+      {
+       "id": "d",
+       "text": "+0.80%",
+       "why": "This adds the two rates ((0.06 + 0.10) × 5). Breakdown must be subtracted."
+      }
+     ],
+     "solution": "Net balance = (MPS − MPB) × time = (0.06 − 0.10) × 5 = −0.20% of muscle protein."
+    }
+   ]
+  },
+  {
+   "id": "mps-protein-ride",
+   "concept": "mps-balance",
+   "bloom": "analyse",
+   "sources": [
+    "howarth2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 2 h ride, cyclists drink either carbohydrate alone or carbohydrate plus protein with the same total energy. Which result is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher muscle protein synthesis and positive whole-body balance with protein",
+       "correct": true,
+       "why": "Right: in this trial only the protein drink raised synthesis and made whole-body balance positive."
+      },
+      {
+       "id": "b",
+       "text": "No difference, since the drinks had the same energy",
+       "why": "Matching energy didn't match the result: the amino acids, not the calories, drove the difference."
+      },
+      {
+       "id": "c",
+       "text": "Higher synthesis with carbohydrate alone, from a bigger insulin rise",
+       "why": "Insulin alone doesn't supply the amino acids; synthesis was higher with protein."
+      },
+      {
+       "id": "d",
+       "text": "Faster glycogen storage as the main effect of protein",
+       "why": "At 1.2 g·kg⁻¹·h⁻¹ of carbohydrate, glycogen storage was the same with or without protein."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-fraction-ride",
+   "concept": "mps-fractions",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "wilkinson2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trained triathlete does a 90-minute steady ride after breakfast. Which muscle protein does the ride itself speed up most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mitochondrial protein",
+       "correct": true,
+       "why": "Right: endurance exercise raised mitochondrial, not myofibrillar, protein synthesis in trained men."
+      },
+      {
+       "id": "b",
+       "text": "Myofibrillar protein",
+       "why": "That is the strength-session response; endurance work didn't raise it in trained men."
+      },
+      {
+       "id": "c",
+       "text": "All fractions equally",
+       "why": "The kind of exercise picks the fraction; the response is not uniform."
+      },
+      {
+       "id": "d",
+       "text": "None, until protein is eaten",
+       "why": "The ride itself raised mitochondrial synthesis, in the fed state, by about 105%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-mito-shake",
+   "concept": "mps-fractions",
+   "bloom": "evaluate",
+   "sources": [
+    "churchwardvenne2020",
+    "wilkinson2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An advert claims: \"Our recovery shake builds more mitochondria after your run.\" What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not supported: protein raised myofibrillar but not mitochondrial synthesis rates",
+       "correct": true,
+       "why": "Right: in a trial after endurance exercise, protein raised myofibrillar synthesis; mitochondrial rates didn't rise."
+      },
+      {
+       "id": "b",
+       "text": "Supported: protein raises all muscle fractions alike",
+       "why": "The fractions respond differently; mitochondrial rates didn't rise with protein."
+      },
+      {
+       "id": "c",
+       "text": "Supported: runs only build mitochondria if protein is eaten",
+       "why": "The exercise itself drives mitochondrial synthesis, fed or not by extra protein."
+      },
+      {
+       "id": "d",
+       "text": "Not supported: protein after running does nothing for muscle",
+       "why": "Too far: 30 g raised myofibrillar synthesis by about 46%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-leucine-role",
+   "concept": "mps-leucine",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "churchwardvenne2012",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which amino acid also acts as a signal that helps switch on muscle protein building after a meal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Leucine",
+       "correct": true,
+       "why": "Right: leucine is a nutrient signal that activates mTOR."
+      },
+      {
+       "id": "b",
+       "text": "Glutamine",
+       "why": "A popular supplement, but not the amino acid that acts as the switch for muscle protein building."
+      },
+      {
+       "id": "c",
+       "text": "Glycine",
+       "why": "Glycine isn't even essential; the body makes it. The signal is leucine."
+      },
+      {
+       "id": "d",
+       "text": "Creatine",
+       "why": "Creatine isn't one of the 20 amino acids in protein; it stores phosphate for sprints."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-bcaa",
+   "concept": "mps-leucine",
+   "bloom": "analyse",
+   "sources": [
+    "churchwardvenne2012",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist swaps his post-ride meal for a small leucine-rich [BCAA](g:bcaa) drink, since \"leucine is the trigger\". What is the most likely effect on muscle protein synthesis, compared with a 25 g whey shake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A rise that fades sooner; whole protein keeps it up longer",
+       "correct": true,
+       "why": "Right: leucine flips the switch, but without all the EAAs as bricks, synthesis isn't sustained."
+      },
+      {
+       "id": "b",
+       "text": "The same response, since leucine is the trigger",
+       "why": "A small whey dose topped up with leucine matched 25 g of whey only early; only the full dose kept synthesis up at 3–5 h."
+      },
+      {
+       "id": "c",
+       "text": "No effect, since leucine isn't an essential amino acid",
+       "why": "Leucine is one of the 9 essential amino acids."
+      },
+      {
+       "id": "d",
+       "text": "A bigger, longer rise, since free amino acids absorb faster",
+       "why": "Fast absorption doesn't replace the missing amino acids needed to build protein."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-dose-calc",
+   "concept": "mps-dose",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "moore2019",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 58 kg triathlete wants about 0.3 g·kg⁻¹ of protein in her recovery meal. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "17 g",
+       "correct": true,
+       "why": "Right: 58 × 0.3 = 17.4 g."
+      },
+      {
+       "id": "b",
+       "text": "193 g",
+       "why": "This divides mass by the dose (58 ÷ 0.3). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "1.7 g",
+       "why": "A decimal slip: 58 × 0.03. The dose is 0.3 g per kg."
+      },
+      {
+       "id": "d",
+       "text": "40 g",
+       "why": "The top of the 20–40 g range regardless of size; 0.3 g·kg⁻¹ scales with body mass."
+      }
+     ],
+     "solution": "Per-meal protein = 58 kg × 0.3 g·kg⁻¹ = 17.4 g, about 17 g."
+    },
+    {
+     "id": "b",
+     "stem": "An 80 kg cyclist wants about 0.3 g·kg⁻¹ of protein after a ride. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "24 g",
+       "correct": true,
+       "why": "Right: 80 × 0.3 = 24 g."
+      },
+      {
+       "id": "b",
+       "text": "267 g",
+       "why": "This divides mass by the dose (80 ÷ 0.3). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "2.4 g",
+       "why": "A decimal slip: 80 × 0.03. The dose is 0.3 g per kg."
+      },
+      {
+       "id": "d",
+       "text": "40 g",
+       "why": "The top of the 20–40 g range regardless of size; 0.3 g·kg⁻¹ scales with body mass."
+      }
+     ],
+     "solution": "Per-meal protein = 80 kg × 0.3 g·kg⁻¹ = 24 g."
+    },
+    {
+     "id": "c",
+     "stem": "A 65 kg runner wants about 0.3 g·kg⁻¹ of protein after a long run. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "19.5 g",
+       "correct": true,
+       "why": "Right: 65 × 0.3 = 19.5 g."
+      },
+      {
+       "id": "b",
+       "text": "217 g",
+       "why": "This divides mass by the dose (65 ÷ 0.3). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "2.0 g",
+       "why": "A decimal slip: 65 × 0.03. The dose is 0.3 g per kg."
+      },
+      {
+       "id": "d",
+       "text": "40 g",
+       "why": "The top of the 20–40 g range regardless of size; 0.3 g·kg⁻¹ scales with body mass."
+      }
+     ],
+     "solution": "Per-meal protein = 65 kg × 0.3 g·kg⁻¹ = 19.5 g, about 20 g."
+    }
+   ]
+  },
+  {
+   "id": "mps-dose-endurance",
+   "concept": "mps-dose",
+   "bloom": "analyse",
+   "sources": [
+    "churchwardvenne2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After an endurance session, an endurance-trained man drinks 45 g of milk protein instead of 30 g. What does the dose–response trial predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No more myofibrillar synthesis, but a slightly better whole-body balance",
+       "correct": true,
+       "why": "Right: 30 g maximised myofibrillar synthesis; whole-body net balance kept rising with dose."
+      },
+      {
+       "id": "b",
+       "text": "About 50% more myofibrillar synthesis",
+       "why": "This assumes a straight line; myofibrillar synthesis had already levelled off at 30 g."
+      },
+      {
+       "id": "c",
+       "text": "Less synthesis, since excess protein blocks it",
+       "why": "Extra protein didn't lower synthesis; it just didn't raise the myofibrillar rate further."
+      },
+      {
+       "id": "d",
+       "text": "A higher rate of mitochondrial protein synthesis",
+       "why": "Mitochondrial synthesis rates didn't rise with protein at any dose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mps-leucine-calc",
+   "concept": "mps-quality",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Whey is about 11% leucine. How much whey gives 2.2 g of leucine?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 g",
+       "correct": true,
+       "why": "Right: 2.2 ÷ 0.11 = 20 g."
+      },
+      {
+       "id": "b",
+       "text": "0.24 g",
+       "why": "This multiplies (2.2 × 0.11). To find the protein needed, divide by the leucine fraction."
+      },
+      {
+       "id": "c",
+       "text": "24 g",
+       "why": "This uses casein's 9% (2.2 ÷ 0.09) instead of whey's 11%."
+      },
+      {
+       "id": "d",
+       "text": "2 g",
+       "why": "A decimal slip: 2.2 ÷ 1.1. 11% is 0.11, not 1.1."
+      }
+     ],
+     "solution": "Protein needed = leucine ÷ leucine fraction = 2.2 g ÷ 0.11 = 20 g of whey."
+    },
+    {
+     "id": "b",
+     "stem": "Casein is about 9% leucine. How much leucine is in a 30 g casein serving?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.7 g",
+       "correct": true,
+       "why": "Right: 30 × 0.09 = 2.7 g."
+      },
+      {
+       "id": "b",
+       "text": "3.3 g",
+       "why": "This uses whey's 11% (30 × 0.11) instead of casein's 9%."
+      },
+      {
+       "id": "c",
+       "text": "333 g",
+       "why": "This divides (30 ÷ 0.09). Leucine in a serving = protein × fraction."
+      },
+      {
+       "id": "d",
+       "text": "0.27 g",
+       "why": "A decimal slip: 30 × 0.009. 9% is 0.09."
+      }
+     ],
+     "solution": "Leucine = 30 g × 0.09 = 2.7 g."
+    },
+    {
+     "id": "c",
+     "stem": "Meat protein is about 8% leucine. How much leucine is in 25 g of meat protein?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.0 g",
+       "correct": true,
+       "why": "Right: 25 × 0.08 = 2.0 g."
+      },
+      {
+       "id": "b",
+       "text": "2.75 g",
+       "why": "This uses whey's 11% (25 × 0.11) instead of meat's 8%."
+      },
+      {
+       "id": "c",
+       "text": "312 g",
+       "why": "This divides (25 ÷ 0.08). Leucine in a serving = protein × fraction."
+      },
+      {
+       "id": "d",
+       "text": "0.2 g",
+       "why": "A decimal slip: 25 × 0.008. 8% is 0.08."
+      }
+     ],
+     "solution": "Leucine = 25 g × 0.08 = 2.0 g."
+    }
+   ]
+  },
+  {
+   "id": "mps-appraisal",
+   "concept": "mps-quality",
+   "bloom": "evaluate",
+   "sources": [
+    "tang2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 6 young men per group found whey raised muscle protein synthesis more than casein in the hours after leg exercise. What most limits concluding that whey builds more muscle over a season in endurance runners?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small groups and a short-term rate after strength exercise",
+       "correct": true,
+       "why": "Right: a few hours of synthesis in 18 young men after leg resistance work can't show long-term gains in endurance athletes."
+      },
+      {
+       "id": "b",
+       "text": "Muscle protein synthesis can't be measured in humans",
+       "why": "It can: tracer infusions with muscle biopsies measure it, as in this study."
+      },
+      {
+       "id": "c",
+       "text": "The drinks were matched for essential amino acids",
+       "why": "Matching EAAs is a strength: it isolates the effect of protein type."
+      },
+      {
+       "id": "d",
+       "text": "Whey and casein contain different amino acids",
+       "why": "Both contain all 20 amino acids; they differ in amounts and digestion speed."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

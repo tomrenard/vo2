@@ -1,0 +1,818 @@
+{
+ "id": "ultra-demands",
+ "module": "t4-ultra-fuel",
+ "title": "The energy bill of ultra events",
+ "goal": "Explain how much energy ultramarathons, Ironman and multi-day bike races cost, how little of it athletes eat, and where the missing energy comes from.",
+ "requires": [
+  "sup-others"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "energy-deficit",
+    "dietary-recall"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ud-bill",
+   "title": "How big is the bill?",
+   "text": "Ultra-endurance means events of many hours or days: ultramarathons (any run longer than 42.2 km), Ironman triathlon and multi-day bike races. The energy bill is huge.\n\n- **Running** costs about 200–300 kJ per km, mostly depending on body mass. A 70 kg runner covering 161 km at 6.5 km·h⁻¹ uses about 41,400 kJ (9,891 kcal) in about 25 h [[c:ud-run-cost]].\n- **Ironman** (3.8 km swim, 180 km ride, 42.2 km run): about 42,000 kJ (10,036 kcal) in men and 35,900 kJ (8,570 kcal) in women [[c:ud-ironman-ee]].\n- **Race Across America**, a non-stop bike race across the USA: a four-rider relay team used on average 26,879 kJ (6,420 kcal) per rider per day for more than six days, measured with [doubly labelled water](g:doubly-labelled-water) [[c:ud-raam-ee]].",
+   "claims": [
+    {
+     "id": "ud-run-cost",
+     "text": "Running costs about 200–300 kJ per km; a 70 kg runner doing 161 km at 6.5 km·h⁻¹ would use about 9,891 kcal in about 25 h.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Second, a 50 kg athlete undertaking a 100 mile (161 km) ultra-marathon at an average pace of 6.5 km·h− 1 may expend ~ 6922 Kcal in ~ 25 h, whereas at the same pace, a 70 kg athlete would likely expend ~ 9891 Kcal (range of 277–395 Kcal·h− 1).",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "These values are similar to the estimated energy expenditures of 200–300 kJ·km− 1 (47.8–71.7 Kcal·km− 1) reported elsewhere",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ud-ironman-ee",
+     "text": "In an Ironman, estimated energy expenditure was about 10,036 kcal in men and 8,570 kcal in women.",
+     "grade": "weak",
+     "sources": [
+      "kimber2002"
+     ],
+     "evidence": [
+      {
+       "source": "kimber2002",
+       "quote": "Total EE (10,036 +/- 931 and 8,570 +/- 1,014 kcal) was significantly greater than total EI (3,940 +/- 868 and 3,115 +/- 914 kcal, p <.001) for males and females, respectively",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ud-raam-ee",
+     "text": "A four-rider Race Across America relay team used on average 6,420 kcal (26,879 kJ) per day, measured with doubly labelled water.",
+     "grade": "weak",
+     "sources": [
+      "hulton2010"
+     ],
+     "evidence": [
+      {
+       "source": "hulton2010",
+       "quote": "Total mean energy expenditure was found to be 43,401 kcals (181,711 kJ) with a mean daily energy expenditure of 6,420 kcals (26,879 kJ).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ud-bill-example",
+   "title": "Estimating a race's energy cost",
+   "problem": "Estimate the energy used by (1) a 70 kg runner covering 100 km and (2) a cyclist riding 8 h at an average 200 W. Take the cost of running as 4.1 kJ·kg⁻¹·km⁻¹ and gross efficiency as 20%.",
+   "steps": [
+    "Running: energy = mass × distance × cost per kg per km = 70 × 100 × 4.1 = 28,700 kJ (about 6,860 kcal).",
+    "Cycling, step 1, the work on the pedals: 200 W × 8 h × 3,600 s·h⁻¹ = 5,760,000 J = 5,760 kJ. This is the kJ number your power meter shows.",
+    "Cycling, step 2: only about 20% of the energy used becomes work, so energy used = work ÷ 0.20 = 5,760 ÷ 0.20 = 28,800 kJ (about 6,880 kcal).",
+    "Both are estimates to about ±10%: running cost differs between runners, and one point of gross efficiency changes the cycling figure by about 5%. Tiller's running figure (about 3.7 kJ·kg⁻¹·km⁻¹ in the example on the card) is a little lower than the 4.1 used here."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ud-ee-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ud-eat",
+   "title": "What athletes actually eat",
+   "text": "Field studies count food at aid stations or ask athletes afterwards ([dietary recall](g:dietary-recall)). The finding is the same everywhere: athletes eat only about a third to a half of what they use, 36–53% in ultra-endurance races [[c:ud-intake-share]].\n\nIn an Ironman, men ate about 16,500 kJ (3,940 kcal) against about 42,000 kJ used, leaving a gap of about 25,500 kJ [[c:ud-ironman-ei]]. Race Across America riders did better, eating 20,591 kJ (4,918 kcal) a day, but still ended with a total [energy deficit](g:energy-deficit) of 58,104 kJ (13,878 kcal) [[c:ud-raam-deficit]].\n\nWhy the gap? Gut trouble, food that becomes hard to face, aid stations far apart, the weight of what you carry and lack of sleep all get in the way [[c:ud-barriers]].",
+   "claims": [
+    {
+     "id": "ud-intake-share",
+     "text": "Ultra-endurance athletes eat about 36–53% of the energy they use while racing; race completion goes with higher energy and fluid intake.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Indeed, while race completion has been positively correlated with energy and fluid intake [14, 15], the calories consumed by some ultra-endurance athletes is reported to be between 36 and 53% of their racing energy expenditure",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ud-ironman-ei",
+     "text": "In an Ironman, men ate about 3,940 kcal and women about 3,115 kcal, far less than they used.",
+     "grade": "weak",
+     "sources": [
+      "kimber2002"
+     ],
+     "evidence": [
+      {
+       "source": "kimber2002",
+       "quote": "Total EE (10,036 +/- 931 and 8,570 +/- 1,014 kcal) was significantly greater than total EI (3,940 +/- 868 and 3,115 +/- 914 kcal, p <.001) for males and females, respectively",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ud-raam-deficit",
+     "text": "Race Across America riders ate 4,918 kcal (20,591 kJ) a day and ended with a total energy deficit of 13,878 kcal (58,104 kJ).",
+     "grade": "weak",
+     "sources": [
+      "hulton2010"
+     ],
+     "evidence": [
+      {
+       "source": "hulton2010",
+       "quote": "Total mean energy intake from all food and drink consumed was calculated at 29,506 kcals (123,536 kJ) with a mean daily energy intake of 4 918 kcals (20,591 kJ). This resulted in a total mean energy deficit of 13,878 kcals (58,104 kJ)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ud-barriers",
+     "text": "Barriers to eating in ultras include gut distress, irregular checkpoints, pack weight, changing palatability, and sleep deprivation and environmental extremes that affect appetite.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "a high prevalence of athlete gastrointestinal (GI) distress; inconsistent food/fluid timing and rationing at checkpoints; the need to minimize pack-weight in self-sufficient races; placebo effects and confirmation bias from prior race experiences; the changes in food/fluid palatability associated with prolonged endurance exercise; sleep deprivation and extremes of temperature/altitude which are known to influence appetite",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ud-intake-share"
+  },
+  {
+   "type": "question",
+   "item": "ud-why-not-eat"
+  },
+  {
+   "type": "question",
+   "item": "ud-share-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ud-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "ud-stores",
+   "title": "Where the missing energy comes from",
+   "text": "An energy deficit is paid from body stores. [Glycogen](g:glycogen) is small: about 400 g in muscle and 80–100 g in the liver, roughly 8,000–8,500 kJ (about 2,000 kcal) in all. Fat is vast: even a lean athlete carries about 125,000 kJ (over 30,000 kcal).\n\nUltras are done at low intensity, and as glycogen falls the body burns more fat: typically 0.2–0.5 g of fat per minute, and the slow pace of ultras allows high fat use [[c:ud-fat-shift]]. So fat covers most of the gap, and [RER](g:rer) drifts down over the hours.\n\nBut glycogen can still run out if the pace is too high or eating is poor [[c:ud-glycogen-risk]]. In Ironman racing, athletes who ate more carbohydrate per hour tended to finish faster [[c:ud-cho-faster]]. Fat covers the bulk; carbohydrate holds the pace.",
+   "claims": [
+    {
+     "id": "ud-fat-shift",
+     "text": "As muscle glycogen falls, fat oxidation rises (typically 0.2–0.5 g·min⁻¹), and the long durations and slow relative speeds of ultras allow high fat oxidation.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "As muscle glycogen diminishes, there is a compensatory increase in fat oxidation, with rates of 0.2–0.5 g·min− 1 typically observed during endurance exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "The prolonged durations and slower relative running speeds that characterize ultra-marathon appear, therefore, to permit increased rates of fat oxidation for adenosine triphosphate (ATP) re-synthesis",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ud-glycogen-risk",
+     "text": "Glycogen can still run out in an ultra if the work rate is too high or nutrition is poorly managed.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "However, there is still a risk of glycogen depletion during ultra-marathon if work rate is too high, or if nutrition is poorly managed.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ud-cho-faster",
+     "text": "In Ironman races, higher carbohydrate intake per hour went with faster finishing times (observational).",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012",
+      "kimber2002"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Total CHO intake rates were positively correlated with nausea and flatulence but were negatively correlated with finishing time during both IM (r = -0.55 and r = -0.48, P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "kimber2002",
+       "quote": "Finishing time was inversely related to carbohydrate (CHO) intake (g x kg(-1) x h(-1)) during the marathon run for males (r = -.75,p <.05), and not females",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ud-glycogen-size"
+  },
+  {
+   "type": "question",
+   "item": "ud-rer",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ud-fat-not-enough"
+  },
+  {
+   "type": "concept",
+   "id": "ud-sleep",
+   "title": "Sleep loss, appetite and eating anyway",
+   "text": "In races longer than 24 h and in multi-day events, sleep is cut short, and sleep loss is one of the things known to change appetite.\n\nIn a lab study of 23 young adults, one night without sleep changed how the brain responded to food and raised the desire for high-calorie foods [[c:ud-sleep-desire]]. That might even help a depleted rider eat. But it's one night, in people at rest, not athletes: nobody has shown how sleep loss changes eating during a race.\n\nWhat the ISSN does advise: when nausea or low appetite hits, slow down and eat less for a while if you must, but don't stay below about 840 kJ (200 kcal) per hour for long in longer races. Some stubbornness about eating is part of the job [[c:ud-eat-anyway]].",
+   "claims": [
+    {
+     "id": "ud-sleep-desire",
+     "text": "One night of sleep deprivation raised the desire for high-calorie foods and changed brain responses to food in healthy young adults.",
+     "grade": "weak",
+     "sources": [
+      "greer2013"
+     ],
+     "evidence": [
+      {
+       "source": "greer2013",
+       "quote": "Moreover, this bi-directional change in the profile of brain activity is further associated with a significant increase in the desire for weight-gain promoting high-calorie foods following sleep deprivation, the extent of which is predicted by the subjective severity of sleep loss across participants.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ud-eat-anyway",
+     "text": "When symptoms appear, runners can slow down and eat less, but persistent intakes below 200 kcal·h⁻¹ should be avoided in longer races; some perseverance with feeding may be needed.",
+     "grade": "weak",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "When symptoms manifest, runners can slow their pace and decrease their calorie intake, although persistent intakes of < 200 Kcal·h− 1 should be avoided in longer races.",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "However, persistent calorie intakes of < 200 Kcal·h− 1 are not recommended, and when nausea precludes this rate of intake, a degree of perseverance/stubbornness with respect to feeding (within tolerance levels) may be required.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ud-sleep"
+  },
+  {
+   "type": "question",
+   "item": "ud-low-intake"
+  },
+  {
+   "type": "question",
+   "item": "ud-ee-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "ud-share-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Ultra events cost tens of thousands of kJ: about 42,000 kJ (10,000 kcal) for an Ironman, about 27,000 kJ (6,400 kcal) a day in a multi-day bike race.",
+    "Estimate the bill from parts: running ≈ mass × km × about 4.1 kJ; cycling = power-meter kJ ÷ gross efficiency (about 0.20).",
+    "Athletes eat only about 36–53% of what they use in ultra races; gut trouble, food fatigue, logistics and sleep loss get in the way.",
+    "Fat stores cover most of the deficit at ultra intensities, but glycogen can still run out, and more carbohydrate per hour went with faster Ironman times.",
+    "Sleep loss shifts appetite toward high-calorie food in lab studies; in races, keep eating at least about 840 kJ (200 kcal) per hour."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ud-ee-calc",
+   "concept": "ud-bill",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 55 kg runner covers a 161 km ultramarathon. Taking the cost of running as 4.1 kJ·kg⁻¹·km⁻¹, about how much energy does she use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 36,300 kJ",
+       "correct": true,
+       "why": "Right: 55 × 161 × 4.1 = 36,306 kJ, about 8,680 kcal."
+      },
+      {
+       "id": "b",
+       "text": "About 8,860 kJ",
+       "why": "This is 55 × 161 only: it leaves out the 4.1 kJ each kg costs per km."
+      },
+      {
+       "id": "c",
+       "text": "About 660 kJ",
+       "why": "This is 161 × 4.1 only: it leaves out body mass, and the cost is per kg."
+      },
+      {
+       "id": "d",
+       "text": "About 145,200 kJ",
+       "why": "This multiplies the answer by 4 again, as if converting kcal to kJ. The result is already in kJ."
+      }
+     ],
+     "solution": "Energy = mass × distance × cost = 55 kg × 161 km × 4.1 kJ·kg⁻¹·km⁻¹ = 36,306 kJ ≈ 36,300 kJ (about 8,680 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides a 10 h ultra-distance event at an average 180 W with a gross efficiency of 20%. About how much energy does she use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 32,400 kJ",
+       "correct": true,
+       "why": "Right: work = 180 × 36,000 s = 6,480 kJ; energy used = 6,480 ÷ 0.20 = 32,400 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 6,480 kJ",
+       "why": "That's the work on the pedals (the power-meter kJ). It forgets that only about 20% of the energy used becomes work."
+      },
+      {
+       "id": "c",
+       "text": "About 1,300 kJ",
+       "why": "This multiplies the work by 0.20 instead of dividing by it."
+      },
+      {
+       "id": "d",
+       "text": "About 108 kJ",
+       "why": "This uses minutes (600) instead of seconds (36,000) for the time, and leaves out efficiency."
+      }
+     ],
+     "solution": "Work = 180 W × 10 h × 3,600 s·h⁻¹ = 6,480,000 J = 6,480 kJ. Energy used = 6,480 ÷ 0.20 = 32,400 kJ (about 7,740 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "In an Ironman, a triathlete rides the 180 km bike leg in 5.5 h at an average 160 W, with a gross efficiency of 20%. About how much energy does the bike leg use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 15,840 kJ",
+       "correct": true,
+       "why": "Right: work = 160 × 19,800 s = 3,168 kJ; energy used = 3,168 ÷ 0.20 = 15,840 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 3,170 kJ",
+       "why": "That's the work on the pedals. It forgets that only about 20% of the energy used becomes work."
+      },
+      {
+       "id": "c",
+       "text": "About 630 kJ",
+       "why": "This multiplies the work by 0.20 instead of dividing by it."
+      },
+      {
+       "id": "d",
+       "text": "About 53 kJ",
+       "why": "This uses minutes (330) instead of seconds (19,800), and leaves out efficiency."
+      }
+     ],
+     "solution": "Work = 160 W × 5.5 h × 3,600 s·h⁻¹ = 3,168,000 J = 3,168 kJ. Energy used = 3,168 ÷ 0.20 = 15,840 kJ (about 3,790 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "ud-intake-share",
+   "concept": "ud-eat",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In field studies of ultra-endurance races, about what share of the energy they use do athletes eat during the race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 36–53%",
+       "correct": true,
+       "why": "Right: intake covers roughly a third to a half of race energy use."
+      },
+      {
+       "id": "b",
+       "text": "About 90–100%",
+       "why": "Nobody keeps pace with expenditure that high for that long; the gut and logistics don't allow it."
+      },
+      {
+       "id": "c",
+       "text": "Under 10%",
+       "why": "Too low: athletes do eat a lot, just not enough. Even the Ironman men ate about 16,500 kJ."
+      },
+      {
+       "id": "d",
+       "text": "More than they use",
+       "why": "Race studies show a deficit, not a surplus; surplus intake belongs to the days before a race."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-why-not-eat",
+   "concept": "ud-eat",
+   "bloom": "understand",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 100-mile trail runner uses about 40,000 kJ but eats about 15,000 kJ. What mainly explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gut distress, food fatigue, sparse aid stations and pack weight limit intake",
+       "correct": true,
+       "why": "Right: these practical and gut barriers stop athletes from eating what they use."
+      },
+      {
+       "id": "b",
+       "text": "Eating more would stop the body from burning fat during the race",
+       "why": "Eating carbohydrate lowers fat use somewhat, but the body still burns plenty of fat; that isn't why intake is low."
+      },
+      {
+       "id": "c",
+       "text": "The body needs no food in a race because fat covers every need",
+       "why": "Glycogen can still run out, and finishing goes with eating more; food clearly matters."
+      },
+      {
+       "id": "d",
+       "text": "Expenditure estimates are wrong, so there is no real gap",
+       "why": "The estimates have error (about ±10%), but not enough to close a gap of more than half."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-share-calc",
+   "concept": "ud-eat",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hulton2010",
+    "kimber2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Race Across America riders used 26,879 kJ a day and ate 20,591 kJ a day. What share of their daily use did they eat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 77%",
+       "correct": true,
+       "why": "Right: 20,591 ÷ 26,879 = 0.77."
+      },
+      {
+       "id": "b",
+       "text": "About 131%",
+       "why": "This divides use by intake (26,879 ÷ 20,591), the wrong way round."
+      },
+      {
+       "id": "c",
+       "text": "About 23%",
+       "why": "That's the share they did not cover: the deficit, (26,879 − 20,591) ÷ 26,879."
+      },
+      {
+       "id": "d",
+       "text": "About 39%",
+       "why": "That's the Ironman men's figure, not a calculation from these numbers."
+      }
+     ],
+     "solution": "Share eaten = intake ÷ expenditure = 20,591 ÷ 26,879 = 0.766 ≈ 77%. Daily deficit = 26,879 − 20,591 = 6,288 kJ (about 1,500 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "In an Ironman, women used about 35,860 kJ and ate about 13,030 kJ. What share of their use did they eat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 36%",
+       "correct": true,
+       "why": "Right: 13,030 ÷ 35,860 = 0.36."
+      },
+      {
+       "id": "b",
+       "text": "About 275%",
+       "why": "This divides use by intake (35,860 ÷ 13,030), the wrong way round."
+      },
+      {
+       "id": "c",
+       "text": "About 64%",
+       "why": "That's the share they did not cover: the deficit, (35,860 − 13,030) ÷ 35,860."
+      },
+      {
+       "id": "d",
+       "text": "About 77%",
+       "why": "That's the Race Across America figure, not a calculation from these numbers."
+      }
+     ],
+     "solution": "Share eaten = intake ÷ expenditure = 13,030 ÷ 35,860 = 0.363 ≈ 36%. Deficit = 35,860 − 13,030 = 22,830 kJ (about 5,460 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "ud-appraisal",
+   "concept": "ud-eat",
+   "bloom": "evaluate",
+   "sources": [
+    "kimber2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An Ironman study (18 athletes) estimated energy use from lab heart rate–VO₂ equations and intake from dietary recall at 7 points on the course. What most limits trust in the size of the deficit it found?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heart rate drifts up over hours at the same VO₂, and recall can misjudge intake",
+       "correct": true,
+       "why": "Right: [cardiovascular drift](g:cardiovascular-drift) makes heart-rate equations overestimate late-race energy use, and recall errors blur intake. The deficit is real, but its exact size is uncertain."
+      },
+      {
+       "id": "b",
+       "text": "Men and women were mixed, so neither group's data can be read",
+       "why": "They were reported separately (about 42,000 vs 35,900 kJ used), and the deficit was similar in both."
+      },
+      {
+       "id": "c",
+       "text": "Doubly labelled water would have given minute-by-minute values",
+       "why": "Doubly labelled water gives an average over days; it suits multi-day events, not minute-by-minute values."
+      },
+      {
+       "id": "d",
+       "text": "An Ironman is too short to cause any real energy deficit",
+       "why": "Even with generous error bars, using about 42,000 kJ and eating about 16,500 kJ leaves a large deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-glycogen-size",
+   "concept": "ud-stores",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Roughly how much energy does the body store as glycogen, in muscle and liver together?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 8,000–8,500 kJ",
+       "correct": true,
+       "why": "Right: about 400 g in muscle plus 80–100 g in the liver, at about 17 kJ per gram."
+      },
+      {
+       "id": "b",
+       "text": "About 125,000 kJ",
+       "why": "That's the fat stored by a lean athlete, about 15 times more than glycogen."
+      },
+      {
+       "id": "c",
+       "text": "About 800 kJ",
+       "why": "Ten times too small: that's about 50 g of carbohydrate, about two gels."
+      },
+      {
+       "id": "d",
+       "text": "About 42,000 kJ",
+       "why": "That's the energy used in a whole Ironman; glycogen alone could never cover it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-rer",
+   "concept": "ud-stores",
+   "bloom": "analyse",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's RER is 0.90 in hour 1 of a 24 h race and 0.78 in hour 18 at a similar easy pace. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycogen has fallen and fat now supplies a bigger share",
+       "correct": true,
+       "why": "Right: as glycogen falls, fat oxidation rises, and RER moves toward 0.7."
+      },
+      {
+       "id": "b",
+       "text": "Her running economy improved, so she uses less energy",
+       "why": "RER shows the fuel mix, not how much energy is used."
+      },
+      {
+       "id": "c",
+       "text": "She is now burning mainly protein",
+       "why": "Protein's RQ is about 0.8, but it only ever supplies a small share; the fall reflects more fat."
+      },
+      {
+       "id": "d",
+       "text": "She is working harder than in hour 1",
+       "why": "Harder work raises RER toward 1.0 as carbohydrate use rises; this went the other way."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On day 3 of a multi-day bike race, a rider's RER at his usual easy pace is 0.79, against 0.88 on day 1. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower glycogen, so fat supplies a bigger share",
+       "correct": true,
+       "why": "Right: with glycogen down after days of deficit, fat oxidation rises and RER falls toward 0.7."
+      },
+      {
+       "id": "b",
+       "text": "His gross efficiency has risen sharply",
+       "why": "RER reflects the fuel mix, not efficiency."
+      },
+      {
+       "id": "c",
+       "text": "He is now burning mainly protein",
+       "why": "Protein supplies only a small share; an RER near 0.8 here mostly reflects more fat."
+      },
+      {
+       "id": "d",
+       "text": "He is riding harder than on day 1",
+       "why": "Harder riding raises RER; this fell."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-fat-not-enough",
+   "concept": "ud-stores",
+   "bloom": "analyse",
+   "sources": [
+    "tiller2019",
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete says: \"I carry 125,000 kJ of fat, so in an Ironman I don't need carbohydrate.\" Best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fat covers most of the deficit, but glycogen can still run out at race pace",
+       "correct": true,
+       "why": "Right: fat is the big store, but glycogen sets how hard you can go, and more carbohydrate per hour went with faster Ironman times."
+      },
+      {
+       "id": "b",
+       "text": "True: at Ironman intensity fat supplies all the energy",
+       "why": "At Ironman pace carbohydrate still supplies a large share; fat alone can't hold that intensity."
+      },
+      {
+       "id": "c",
+       "text": "False: fat can only be burned at rest, not in exercise",
+       "why": "Fat is burned during exercise, typically 0.2–0.5 g per minute, more as glycogen falls."
+      },
+      {
+       "id": "d",
+       "text": "False: fat stores are too small to matter in an Ironman",
+       "why": "Fat stores are about 15 times larger than glycogen: they are the main reserve."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-sleep",
+   "concept": "ud-sleep",
+   "bloom": "understand",
+   "sources": [
+    "greer2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On day 4 of a multi-day bike race, after very little sleep, a rider craves crisps and chocolate. What does the evidence say?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sleep loss raised the desire for high-calorie food in a lab study; racing effects are unknown",
+       "correct": true,
+       "why": "Right: one night without sleep did this in 23 young adults at rest; it hasn't been shown in racing athletes."
+      },
+      {
+       "id": "b",
+       "text": "Sleep loss always kills appetite, so the cravings must mean low blood sugar",
+       "why": "The lab study found the opposite: more desire for high-calorie food after sleep loss."
+      },
+      {
+       "id": "c",
+       "text": "Race Across America studies proved that sleep loss doubles intake",
+       "why": "No race study has shown this; the evidence is one lab study of non-athletes."
+      },
+      {
+       "id": "d",
+       "text": "The cravings mean he is eating too much and should cut back",
+       "why": "Multi-day riders run large deficits; the cravings don't signal a surplus."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ud-low-intake",
+   "concept": "ud-sleep",
+   "bloom": "apply",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In hour 15 of a 100-mile run, a runner feels sick and has eaten only about 400 kJ an hour for the last 3 hours. What fits the ISSN advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slow a little and keep taking small amounts, working back to at least about 840 kJ an hour",
+       "correct": true,
+       "why": "Right: slowing and easing intake is fine for a while, but intakes below about 840 kJ (200 kcal) per hour shouldn't persist."
+      },
+      {
+       "id": "b",
+       "text": "Stop eating until the nausea has completely gone, however long it takes",
+       "why": "Long stretches with almost no intake risk running out of carbohydrate and not finishing."
+      },
+      {
+       "id": "c",
+       "text": "Eat a big meal at once to make up the missing 3 hours",
+       "why": "A large load on an upset gut is likely to make the nausea worse; small, frequent amounts are kinder."
+      },
+      {
+       "id": "d",
+       "text": "Switch to plain water only until the finish",
+       "why": "That gives no energy for the rest of the race, and lots of plain water risks low blood sodium."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

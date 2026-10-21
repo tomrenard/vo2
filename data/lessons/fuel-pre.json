@@ -1,0 +1,671 @@
+{
+ "id": "fuel-pre",
+ "module": "t4-fueling",
+ "title": "The pre-event meal",
+ "goal": "Explain why to eat 1–4 g·kg⁻¹ of carbohydrate 1–4 h before a race, what to leave out, and why the rebound hypoglycaemia worry is mostly a myth.",
+ "requires": [
+  "mac-daily-carb"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "gastric-emptying",
+    "rebound-hypoglycaemia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pre-why",
+   "title": "Why eat before a race?",
+   "text": "By race morning, the days of eating before have filled your muscle [glycogen](g:glycogen). The liver is another story. It keeps blood glucose steady by releasing its glycogen, and it keeps doing so all night with no food coming in. After an overnight fast, liver glycogen can be well down, and many races start in the morning [[c:pre-liver-overnight]].\n\nThe pre-event meal is a top-up: it refills the liver and raises blood glucose before the start. It can't make up for days of low-carbohydrate eating, and it isn't meant to be a feast: the aim is to start full of fuel without a heavy stomach.",
+   "claims": [
+    {
+     "id": "pre-liver-overnight",
+     "text": "An overnight fast lowers liver glycogen, so morning races start with a reduced liver store unless breakfast tops it up.",
+     "grade": "strong",
+     "sources": [
+      "podlogar2022",
+      "vitale2019"
+     ],
+     "evidence": [
+      {
+       "source": "podlogar2022",
+       "quote": "It is often overlooked that if competition is to be performed in the morning after an overnight fast (or any period of prolonged fasting), liver glycogen stores may be compromised.",
+       "level": "full-text"
+      },
+      {
+       "source": "vitale2019",
+       "quote": "In the final 1–4 h prior to the event, a single dose of 1–4 g/kg CHO is recommended for a final top-off of liver glycogen stores, as typically endurance events occur in the early morning directly after the overnight fast which depletes liver glycogen",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pre-liver-overnight"
+  },
+  {
+   "type": "question",
+   "item": "pre-skip-breakfast"
+  },
+  {
+   "type": "concept",
+   "id": "pre-amount",
+   "title": "How much, and how soon",
+   "text": "Guidelines give a range: **1–4 g of carbohydrate per kg of body mass, eaten 1–4 h before the start** [[c:pre-guideline]]. A common way to use it: the closer to the start, the smaller the meal, because food needs time to leave the stomach. So about 1 g·kg⁻¹ an hour out, up to 3–4 g·kg⁻¹ three or four hours out.\n\nBefore a 7:00 start, that means breakfast at 4:00–5:00; some athletes eat, then go back to bed for an hour.\n\nThe amount scales with body mass, so a 55 kg runner needs less than an 85 kg triathlete. Before a short race or an easy session, a small snack or nothing is fine.",
+   "claims": [
+    {
+     "id": "pre-guideline",
+     "text": "Current guidelines advise 1–4 g·kg⁻¹ of carbohydrate in the 1–4 h before prolonged exercise.",
+     "grade": "strong",
+     "sources": [
+      "vitale2019",
+      "podlogar2022"
+     ],
+     "evidence": [
+      {
+       "source": "vitale2019",
+       "quote": "with a 1–4 g/kg final “top-off” 1–4 h prior to event",
+       "level": "full-text"
+      },
+      {
+       "source": "podlogar2022",
+       "quote": "It is expected with further research that the general guideline recommending 1–4 g·kg −1 of BM of carbohydrates as a pre-exercise meal",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pre-amount-example",
+   "title": "Sizing a race breakfast",
+   "problem": "A 70 kg cyclist eats breakfast 3 h before a road race and aims for 2 g·kg⁻¹ of carbohydrate. How many grams is that?",
+   "steps": [
+    "The guideline is per kg of body mass, so multiply: grams = body mass × dose.",
+    "70 kg × 2 g·kg⁻¹ = 140 g of carbohydrate.",
+    "The 3 h only sets where in the 1–4 g·kg⁻¹ range to aim; it doesn't enter the sum. Food labels give the carbohydrate per portion: add portions up to about 140 g."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pre-meal-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pre-meal-range"
+  },
+  {
+   "type": "concept",
+   "id": "pre-what",
+   "title": "What to eat, and what to leave out",
+   "text": "The aim is carbohydrate that leaves the stomach quickly. [Gastric emptying](g:gastric-emptying) is slowed by fat, protein and [dietary fibre](g:dietary-fibre), and these foods are linked with more gut trouble in races [[c:pre-fat-fibre]]. So the classic race breakfast is white bread or a bagel with jam or honey, white rice, a ripe banana, juice: high in carbohydrate, low in fat and fibre, with only a little protein.\n\nTwo more rules: eat what you have already tried before hard training sessions, never something new on race day, and drink with it. Caffeine is often part of race morning; it has its own lesson in the supplements module.",
+   "claims": [
+    {
+     "id": "pre-fat-fibre",
+     "text": "Fibre, fat and protein before and during races are associated with more gastrointestinal symptoms.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014",
+      "jeukendrup2011"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Gastrointestinal problems were more likely to occur with the ingestion of fiber, fat, protein, and concentrated carbohydrate solutions during the triathlon.",
+       "level": "full-text"
+      },
+      {
+       "source": "jeukendrup2011",
+       "quote": "Problems seem to be highly individual and perhaps genetically determined but may also be related to the intake of highly concentrated carbohydrate solutions, hyperosmotic drinks, as well as the intake of fibre, fat, and protein.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pre-meal-choice"
+  },
+  {
+   "type": "question",
+   "item": "pre-fibre-why"
+  },
+  {
+   "type": "concept",
+   "id": "pre-rebound",
+   "title": "The rebound hypoglycaemia worry",
+   "text": "Eat carbohydrate 30–60 min before the start and [insulin](g:insulin) is high as you begin. Insulin and contracting muscle then both pull glucose out of the blood at once, so blood glucose can dip in the first 15–30 min: [rebound hypoglycaemia](g:rebound-hypoglycaemia) ([hypoglycaemia](g:hypoglycaemia) means low blood glucose).\n\nIt happens to some athletes, not all: in one study, 10 of 20 dipped below 3.5 mmol·L⁻¹ after 75 g of glucose taken 45 min before [[c:pre-rebound-some]]. But across studies, performance is almost never worse, so advice to avoid carbohydrate in the last hour is unfounded [[c:pre-rebound-myth]]. Athletes who feel shaky can eat in the last 15 min or so, or during the warm-up, instead [[c:pre-rebound-fix]].",
+   "claims": [
+    {
+     "id": "pre-rebound-some",
+     "text": "Carbohydrate eaten 45 min before exercise lowers blood glucose below 3.5 mmol·L⁻¹ in some athletes but not others.",
+     "grade": "weak",
+     "sources": [
+      "jentjens2002"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2002",
+       "quote": "The plasma glucose nadir during submaximal exercise was significantly lower (p <.01) in the Hypo-group (n = 10) compared with the Non-hypo group (n = 10) (2.7 +/- 0.1 vs. 4.1 +/- 0.2 mmol/L, respectively).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pre-rebound-myth",
+     "text": "Carbohydrate in the hour before exercise rarely harms performance; advice to avoid it is unfounded, though some athletes get symptoms.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2010b"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2010b",
+       "quote": "Without performing a meta-analysis, it is clear that the risk of reduced performance is minimal as almost all studies point towards unaltered or even improved performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2010b",
+       "quote": "It can be concluded that advice to avoid carbohydrate feeding in the hour before exercise is unfounded.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pre-rebound-fix",
+     "text": "Eating carbohydrate closer to the start (about 15 min before) or the equivalent of a warm-up limits rebound hypoglycaemia.",
+     "grade": "weak",
+     "sources": [
+      "kerksick2017"
+     ],
+     "evidence": [
+      {
+       "source": "kerksick2017",
+       "quote": "any “rebound hypoglycemia” response is effectively negated by what would be the equivalent of a proper warm-up and that shifting carbohydrate intake closer (15 min vs. 75 min) to when the exercise bout is scheduled to begin can minimize the likelihood of these symptoms.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pre-rebound-mech"
+  },
+  {
+   "type": "question",
+   "item": "pre-rebound-evidence"
+  },
+  {
+   "type": "question",
+   "item": "pre-rebound-fix"
+  },
+  {
+   "type": "question",
+   "item": "pre-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "pre-meal-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "An overnight fast runs down liver glycogen; the pre-event meal tops it up and raises blood glucose. It can't replace days of good fuelling.",
+    "Guideline: 1–4 g·kg⁻¹ of carbohydrate, 1–4 h before the start; smaller the closer you get to the gun.",
+    "Keep fat, fibre and protein low (they slow gastric emptying and are linked with gut trouble), and only eat foods tried in training.",
+    "Carbohydrate 30–60 min before can cause a brief glucose dip in some athletes, but performance rarely suffers; eating in the last 15 min or in the warm-up limits it."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pre-liver-overnight",
+   "concept": "pre-why",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "podlogar2022",
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After an overnight fast, which store of carbohydrate is most reduced on race morning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Liver glycogen",
+       "correct": true,
+       "why": "Right: the liver releases glycogen all night to keep blood glucose steady, with no food coming in."
+      },
+      {
+       "id": "b",
+       "text": "Leg muscle glycogen",
+       "why": "Muscle glycogen is barely used while you sleep; it stays close to where the previous days' eating left it."
+      },
+      {
+       "id": "c",
+       "text": "Blood glucose, which falls close to zero",
+       "why": "Blood glucose stays steady overnight because the liver keeps releasing glucose, and that is exactly what drains the liver."
+      },
+      {
+       "id": "d",
+       "text": "Glycogen in the brain",
+       "why": "The brain holds only a tiny amount of glycogen and runs on blood glucose; it isn't the store that a race breakfast tops up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-skip-breakfast",
+   "concept": "pre-why",
+   "bloom": "apply",
+   "sources": [
+    "podlogar2022",
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has eaten plenty of carbohydrate for two days, then skips breakfast before a 7:00 start of a half-Ironman. What does skipping breakfast mainly cost her?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A lower liver glycogen store to hold blood glucose up",
+       "correct": true,
+       "why": "Right: her muscles are full, but the liver has emptied part of its store overnight, and in a 5 h race blood glucose depends on it."
+      },
+      {
+       "id": "b",
+       "text": "About half of her muscle glycogen, used overnight",
+       "why": "Muscle glycogen is hardly touched during sleep; the overnight loss is in the liver."
+      },
+      {
+       "id": "c",
+       "text": "Nothing, since only muscle glycogen matters",
+       "why": "Over several hours the liver's glucose output matters too; a morning start means that store is already lowered."
+      },
+      {
+       "id": "d",
+       "text": "Her ability to burn fat during the race",
+       "why": "Fasting, if anything, nudges fat use up; the cost is lower liver glycogen, not less fat burning."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-meal-calc",
+   "concept": "pre-amount",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 64 kg cyclist eats breakfast 3 h before a road race and aims for 2.5 g·kg⁻¹ of carbohydrate. How much carbohydrate is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "160 g",
+       "correct": true,
+       "why": "Right: 64 kg × 2.5 g·kg⁻¹ = 160 g."
+      },
+      {
+       "id": "b",
+       "text": "26 g",
+       "why": "That is 64 ÷ 2.5: divided instead of multiplied."
+      },
+      {
+       "id": "c",
+       "text": "192 g",
+       "why": "That is 64 × 3: the hours before the start were used as the dose."
+      },
+      {
+       "id": "d",
+       "text": "480 g",
+       "why": "That is 64 × 2.5 × 3: the dose is a total for the meal, not per hour of waiting."
+      }
+     ],
+     "solution": "Grams = body mass × dose = 64 kg × 2.5 g·kg⁻¹ = 160 g. The 3 h only tells you to aim mid-range; it doesn't enter the sum."
+    },
+    {
+     "id": "b",
+     "stem": "A 58 kg runner has 1 h before a half-marathon and aims for 1 g·kg⁻¹ of carbohydrate. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "58 g",
+       "correct": true,
+       "why": "Right: 58 kg × 1 g·kg⁻¹ = 58 g, the low end of the range, as suits a meal 1 h out."
+      },
+      {
+       "id": "b",
+       "text": "232 g",
+       "why": "That is 58 × 4: the top of the range, meant for a meal 4 h before, not 1 h."
+      },
+      {
+       "id": "c",
+       "text": "15 g",
+       "why": "That is 58 ÷ 4: dividing by the top of the range has no meaning here."
+      },
+      {
+       "id": "d",
+       "text": "580 g",
+       "why": "A slip of ten: 58 × 1 is 58, not 580."
+      }
+     ],
+     "solution": "Grams = 58 kg × 1 g·kg⁻¹ = 58 g. One hour out, the low end of 1–4 g·kg⁻¹ suits, so the stomach has time to empty."
+    },
+    {
+     "id": "c",
+     "stem": "An 80 kg triathlete eats 4 h before an Ironman and aims for 3 g·kg⁻¹ of carbohydrate. How much is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "240 g",
+       "correct": true,
+       "why": "Right: 80 kg × 3 g·kg⁻¹ = 240 g."
+      },
+      {
+       "id": "b",
+       "text": "320 g",
+       "why": "That is 80 × 4: the 4 h before the start were used as the dose."
+      },
+      {
+       "id": "c",
+       "text": "27 g",
+       "why": "That is 80 ÷ 3: divided instead of multiplied."
+      },
+      {
+       "id": "d",
+       "text": "960 g",
+       "why": "That is 80 × 3 × 4: the dose is for the whole meal, not per hour before the start."
+      }
+     ],
+     "solution": "Grams = 80 kg × 3 g·kg⁻¹ = 240 g, eaten about 4 h before so it has time to leave the stomach."
+    }
+   ]
+  },
+  {
+   "id": "pre-meal-range",
+   "concept": "pre-amount",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "podlogar2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What do current guidelines advise for carbohydrate in the meal before a long race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1–4 g·kg⁻¹, eaten 1–4 h before the start",
+       "correct": true,
+       "why": "Right: the pre-event meal guideline, scaled to body mass."
+      },
+      {
+       "id": "b",
+       "text": "8–12 g·kg⁻¹, eaten 1–4 h before the start",
+       "why": "8–12 g·kg⁻¹ is a daily intake for days of loading or very heavy training, not a single meal."
+      },
+      {
+       "id": "c",
+       "text": "30–60 g·h⁻¹ through the hour before the start",
+       "why": "30–60 g·h⁻¹ is the rate advised during exercise of 1–2.5 h, not the pre-event meal."
+      },
+      {
+       "id": "d",
+       "text": "None in the last 4 h, to avoid low blood glucose",
+       "why": "That's the rebound hypoglycaemia myth: carbohydrate before exercise rarely harms performance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-meal-choice",
+   "concept": "pre-what",
+   "bloom": "apply",
+   "sources": [
+    "deoliveira2014",
+    "jeukendrup2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has a road race in 3 h and wants about 150 g of carbohydrate. Which breakfast fits the advice best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Two white bagels with jam, a banana and juice",
+       "correct": true,
+       "why": "Right: lots of carbohydrate, little fat, fibre or protein, so it leaves the stomach quickly."
+      },
+      {
+       "id": "b",
+       "text": "A big bowl of bran cereal with nuts and seeds",
+       "why": "High fibre and fat slow gastric emptying and are linked with gut trouble in races."
+      },
+      {
+       "id": "c",
+       "text": "A cooked breakfast of eggs, bacon and sausages",
+       "why": "Mostly fat and protein: slow to empty and low in the carbohydrate the liver needs."
+      },
+      {
+       "id": "d",
+       "text": "A protein shake and a black coffee",
+       "why": "Very little carbohydrate; protein doesn't top up liver glycogen the way carbohydrate does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-fibre-why",
+   "concept": "pre-what",
+   "bloom": "understand",
+   "sources": [
+    "deoliveira2014",
+    "jeukendrup2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do pre-race guidelines say to keep fat and fibre low in the meal before a race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They slow gastric emptying and are linked with gut trouble",
+       "correct": true,
+       "why": "Right: food stays in the stomach longer, and fibre and fat are associated with more GI complaints in races."
+      },
+      {
+       "id": "b",
+       "text": "They stop the muscles from storing glycogen",
+       "why": "They don't block glycogen storage; the concern is the gut on race day."
+      },
+      {
+       "id": "c",
+       "text": "They spike insulin and cause rebound hypoglycaemia",
+       "why": "Fat and fibre slow and blunt the rise in glucose and insulin; they don't cause the dip."
+      },
+      {
+       "id": "d",
+       "text": "They are only a problem in running, not cycling",
+       "why": "The link with gut symptoms was seen in triathletes and is advised for all endurance sports."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-rebound-mech",
+   "concept": "pre-rebound",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2002",
+    "jeukendrup2010b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner drinks 75 g of glucose 45 min before a hard session. Why might her blood glucose dip in the first 20 min?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High insulin and working muscle both take up glucose at once",
+       "correct": true,
+       "why": "Right: insulin from the drink is still high when the muscles start drawing on blood glucose, so uptake briefly outruns supply."
+      },
+      {
+       "id": "b",
+       "text": "Exercise stops glucose being absorbed from the gut",
+       "why": "Absorption carries on; the dip comes from glucose leaving the blood faster, not from none arriving."
+      },
+      {
+       "id": "c",
+       "text": "The liver turns the glucose into fat",
+       "why": "The liver doesn't turn a drink into fat within the hour; the dip is about uptake into muscle."
+      },
+      {
+       "id": "d",
+       "text": "Glucose is used up by the stomach as it empties",
+       "why": "The stomach uses a trivial amount of glucose; the large draw is from contracting muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-rebound-evidence",
+   "concept": "pre-rebound",
+   "bloom": "evaluate",
+   "sources": [
+    "jeukendrup2010b",
+    "jentjens2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells his cyclists never to eat carbohydrate in the hour before a race because it ruins performance. How well does the evidence support him?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Poorly: performance is almost always unchanged or better",
+       "correct": true,
+       "why": "Right: almost all studies show unchanged or improved performance; a few athletes get symptoms, which can be managed."
+      },
+      {
+       "id": "b",
+       "text": "Well: most riders become hypoglycaemic and slow down",
+       "why": "Only some athletes dip, and even then performance rarely suffers."
+      },
+      {
+       "id": "c",
+       "text": "Well for runners only; cyclists are not affected",
+       "why": "The evidence doesn't split by sport this way; the advice to avoid carbohydrate is unfounded in general."
+      },
+      {
+       "id": "d",
+       "text": "Poorly, because blood glucose never falls after a snack",
+       "why": "Glucose can fall in some athletes; the point is that the dip rarely hurts performance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-rebound-fix",
+   "concept": "pre-rebound",
+   "bloom": "apply",
+   "sources": [
+    "kerksick2017",
+    "jeukendrup2010b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete feels shaky early in races whenever she takes a gel 45 min before the start. What is the best change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Take the gel in the last 15 min or in the warm-up",
+       "correct": true,
+       "why": "Right: carbohydrate taken that close to the start or in the warm-up limits the early dip, because exercise begins before insulin has peaked."
+      },
+      {
+       "id": "b",
+       "text": "Cut out carbohydrate from the evening before",
+       "why": "That lowers her glycogen stores and doesn't address the timing of the gel."
+      },
+      {
+       "id": "c",
+       "text": "Take two gels 45 min before instead of one",
+       "why": "More carbohydrate at the same problem time is likely to make the insulin rise bigger, not smaller."
+      },
+      {
+       "id": "d",
+       "text": "Swap the gel for a high-fat snack at the same time",
+       "why": "Fat empties slowly from the stomach and gives no quick carbohydrate; timing, not the fuel, is the fix."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pre-appraisal",
+   "concept": "pre-rebound",
+   "bloom": "evaluate",
+   "sources": [
+    "jentjens2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Twenty trained athletes drank 75 g of glucose 45 min before cycling; half dipped below 3.5 mmol·L⁻¹. What is the main limit of using this study to say a pre-race snack is a bad idea?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It shows a glucose dip, which is not the same as a slower race",
+       "correct": true,
+       "why": "Right: the study grouped athletes by their glucose low point; a low reading in the first minutes doesn't show that performance suffered, and reviews of many studies find it rarely does."
+      },
+      {
+       "id": "b",
+       "text": "Twenty athletes are too few to detect any glucose dip",
+       "why": "The dip was large and clear (2.7 vs 4.1 mmol·L⁻¹); the sample wasn't too small to see it."
+      },
+      {
+       "id": "c",
+       "text": "75 g is far more than athletes eat before a race",
+       "why": "75 g is about 1 g·kg⁻¹ for a 75 kg athlete, the bottom of the guideline range."
+      },
+      {
+       "id": "d",
+       "text": "Glucose was measured during exercise, too late to matter",
+       "why": "Early exercise is exactly when a rebound dip would occur and matter."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

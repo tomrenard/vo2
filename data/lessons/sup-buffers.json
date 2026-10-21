@@ -1,0 +1,675 @@
+{
+ "id": "sup-buffers",
+ "module": "t4-supplements",
+ "title": "Buffers: bicarbonate and beta-alanine",
+ "goal": "Explain how sodium bicarbonate and beta-alanine buffer acid in blood and muscle, work out a bicarbonate dose, manage gut side effects and beta-alanine loading, and pick the events where they help.",
+ "requires": [
+  "sup-nitrate"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sodium-bicarbonate",
+    "beta-alanine",
+    "carnosine",
+    "alkalosis",
+    "paraesthesia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "buf-why",
+   "title": "Two places to buffer acid",
+   "text": "In *Lactate, H⁺ and fatigue* you saw that H⁺ does less harm inside the fibre than the old story said, yet in people making the blood more alkaline improves events of about **1–10 min** [[c:buf-alkalosis]]. Two supplements add [buffer](g:buffer), in two places:\n\n| supplement | where it buffers | how fast |\n|---|---|---|\n| [sodium bicarbonate](g:sodium-bicarbonate) | blood, outside the muscle | one dose, hours before |\n| [beta-alanine](g:beta-alanine) | inside the muscle, as [carnosine](g:carnosine) | daily for weeks |\n\nBicarbonate causes a mild [alkalosis](g:alkalosis) in the blood. The steeper [pH](g:ph) difference between muscle and blood then pulls more H⁺ and lactate out of the working muscle [[c:buf-gradient]].",
+   "claims": [
+    {
+     "id": "buf-alkalosis",
+     "text": "Induced acidosis worsens fatigue in whole-body exercise and alkalosis can improve performance in events of 1–10 minutes.",
+     "grade": "moderate",
+     "sources": [
+      "cairns2006"
+     ],
+     "evidence": [
+      {
+       "source": "cairns2006",
+       "quote": "In contrast, induced acidosis can exacerbate fatigue during whole-body dynamic exercise and alkalosis can improve exercise performance in events lasting 1-10 minutes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "buf-gradient",
+     "text": "Bicarbonate acts as an extracellular buffer: raising blood pH and bicarbonate creates a gradient that draws H⁺ and lactate out of the exercising muscle; beta-alanine raises the muscle buffer carnosine.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "The resultant pH gradient between the intracellular and extracellular environments leads to efflux of H+ and La− from the exercising muscle.",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "A rate-limiting precursor to the endogenous intracellular (muscle) buffer, carnosine; the immediate defence against proton accumulation in the contracting musculature during exercise",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "buf-route"
+  },
+  {
+   "type": "concept",
+   "id": "buf-bicarb-dose",
+   "title": "Bicarbonate: dose and timing",
+   "text": "The ISSN position stand sets the dose by body mass [[c:buf-dose]]:\n\n- **0.2 g·kg⁻¹** seems the minimum that works; **0.3 g·kg⁻¹** the best single dose.\n- 0.4–0.5 g·kg⁻¹ adds no benefit, only more side effects.\n- Take it **60–180 min** before the start.\n- Or spread it: 0.4–0.5 g·kg⁻¹ a day in small doses for 3–7 days before the event.\n\nThe effect is modest: a [meta-analysis](g:meta-analysis) estimated about 1.7% more mean power in a single 1-min sprint at about 0.3 g·kg⁻¹, less in longer efforts [[c:buf-carr]]. The position stand's authors include several with supplement-industry ties.",
+   "claims": [
+    {
+     "id": "buf-dose",
+     "text": "0.2 g·kg⁻¹ sodium bicarbonate is the minimum and 0.3 g·kg⁻¹ the optimal single dose, taken 60–180 min before; 0.4–0.5 g·kg⁻¹ adds side effects, not benefit; multi-day protocols use 0.4–0.5 g·kg⁻¹ per day for 3–7 days.",
+     "grade": "strong",
+     "sources": [
+      "grgic2021",
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "grgic2021",
+       "quote": "For single-dose supplementation protocols, 0.2 g/kg of sodium bicarbonate seems to be the minimum dose required to experience improvements in exercise performance. The optimal dose of sodium bicarbonate dose for ergogenic effects seems to be 0.3 g/kg.",
+       "level": "abstract"
+      },
+      {
+       "source": "grgic2021",
+       "quote": "For single-dose supplementation protocols, the recommended timing of sodium bicarbonate ingestion is between 60 and 180 min before exercise or competition.",
+       "level": "abstract"
+      },
+      {
+       "source": "grgic2021",
+       "quote": "Higher doses (e.g., 0.4 or 0.5 g/kg) may not be required in single-dose supplementation protocols, because they do not provide additional benefits (compared with 0.3 g/kg) and are associated with a higher incidence and severity of adverse side-effects.",
+       "level": "abstract"
+      },
+      {
+       "source": "grgic2021",
+       "quote": "The duration of these protocols is generally between 3 and 7 days before the exercise test, and a total sodium bicarbonate dose of 0.4 or 0.5 g/kg per day produces ergogenic effects.",
+       "level": "abstract"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "Single acute NaHCO 3 dose of 0.2–0.4 g/kg BM, consumed 60–150 min prior to exercise",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "buf-carr",
+     "text": "Sodium bicarbonate at about 0.3 g·kg⁻¹ raised mean power by about 1.7% in a single 1-min sprint, with smaller effects in longer tests.",
+     "grade": "moderate",
+     "sources": [
+      "carr2011"
+     ],
+     "evidence": [
+      {
+       "source": "carr2011",
+       "quote": "The remaining 38 studies and 137 estimates for sodium bicarbonate produced a possibly moderate performance enhancement of 1.7% (90% CL ± 2.0%) with a typical dose of 3.5 mmoL/kg/BM (∼0.3 g/kg/BM) in a single 1-minute sprint, following blinded consumption by male athletes.",
+       "level": "abstract"
+      },
+      {
+       "source": "carr2011",
+       "quote": "a reduction of 0.6% (±0.9%) for each 10-fold increase in test duration (e.g. 1-10 minutes)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "buf-dose-example",
+   "title": "Working out a bicarbonate dose",
+   "problem": "A 64 kg runner wants the optimal single dose of sodium bicarbonate before a 1500 m race. How many grams?",
+   "steps": [
+    "Optimal single dose: 0.3 g·kg⁻¹.",
+    "64 kg × 0.3 g·kg⁻¹ = 19.2 g, about 19 g.",
+    "Timing: 60–180 min before; the long end of that window (about 180 min), with a meal, is kinder to the gut.",
+    "Compare caffeine at 3–6 mg·kg⁻¹: 0.3 g·kg⁻¹ is 300 mg·kg⁻¹, 50–100 times more, so bicarbonate is counted in grams."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "buf-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "buf-carr-size"
+  },
+  {
+   "type": "concept",
+   "id": "buf-gut",
+   "title": "The catch: the gut",
+   "text": "Bicarbonate's main problem is the gut. The common side effects are bloating, nausea, vomiting and stomach pain; they vary between and within people, and can wreck the performance they were meant to help [[c:buf-gi]].\n\nWays to lower the risk:\n\n- a smaller dose (0.2 or 0.3 g·kg⁻¹, not more)\n- take it about 180 min before, or find your own best time\n- with a carbohydrate-rich meal\n- in enteric-coated capsules (they dissolve past the stomach)\n- a multi-day protocol, so race day needs no big dose\n\nOne more twist: part of bicarbonate's effect seems to come from [placebo](g:placebo) [[c:buf-placebo]].",
+   "claims": [
+    {
+     "id": "buf-gi",
+     "text": "The commonest side effects of sodium bicarbonate are bloating, nausea, vomiting and abdominal pain; smaller doses, ~180 min timing, a high-carbohydrate meal and enteric-coated capsules can reduce them.",
+     "grade": "strong",
+     "sources": [
+      "grgic2021",
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "grgic2021",
+       "quote": "The most common side-effects of sodium bicarbonate supplementation are bloating, nausea, vomiting, and abdominal pain. The incidence and severity of side-effects vary between and within individuals, but it is generally low. Nonetheless, these side-effects following sodium bicarbonate supplementation may negatively impact exercise performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "grgic2021",
+       "quote": "Ingesting sodium bicarbonate (i) in smaller doses (e.g., 0.2 g/kg or 0.3 g/kg), (ii) around 180 min before exercise or adjusting the timing according to individual responses to side-effects, (iii) alongside a high-carbohydrate meal, and (iv) in enteric-coated capsules are possible strategies to minimize the likelihood and severity of these side-effects.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "buf-placebo",
+     "text": "Part of sodium bicarbonate's ergogenic effect seems to be placebo-driven.",
+     "grade": "moderate",
+     "sources": [
+      "grgic2021"
+     ],
+     "evidence": [
+      {
+       "source": "grgic2021",
+       "quote": "Still, a portion of the ergogenic effect of sodium bicarbonate seems to be placebo-driven.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "buf-gut-fix"
+  },
+  {
+   "type": "concept",
+   "id": "buf-beta-alanine",
+   "title": "Beta-alanine: building the muscle's own buffer",
+   "text": "Beta-alanine works differently. The muscle needs it to make carnosine, so a supplement raises carnosine slowly, day by day [[c:buf-ba-carnosine]]:\n\n| daily 4–6 g, split | muscle carnosine |\n|---|---|\n| 2 weeks | +20–30% |\n| 4 weeks | +40–60% |\n| 10 weeks | up to +80% |\n\nOne dose on race morning does nothing for carnosine. Large single doses cause [paraesthesia](g:paraesthesia): harmless pins and needles in the skin. Smaller split doses (about 1.6 g) or slow-release tablets reduce it [[c:buf-ba-tingle]]. Responses vary: some people raise carnosine much less than others [[c:buf-ba-vary]].",
+   "claims": [
+    {
+     "id": "buf-ba-carnosine",
+     "text": "4–6 g of beta-alanine daily raises muscle carnosine by 20–30% after 2 weeks, 40–60% after 4 weeks and up to 80% after 10 weeks.",
+     "grade": "moderate",
+     "sources": [
+      "trexler2015"
+     ],
+     "evidence": [
+      {
+       "source": "trexler2015",
+       "quote": "Four weeks of beta-alanine supplementation (4-6 g daily) significantly augments muscle carnosine concentrations, thereby acting as an intracellular pH buffer",
+       "level": "abstract"
+      },
+      {
+       "source": "trexler2015",
+       "quote": "for a minimum of two weeks (which results in a 20-30 % increase in muscle carnosine concentrations) [ 4 ], with greater benefits seen after 4 weeks (40-60 % increase)",
+       "level": "full-text"
+      },
+      {
+       "source": "trexler2015",
+       "quote": "and up to 80 % after 10 weeks",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "buf-ba-tingle",
+     "text": "The only reported side effect of beta-alanine is paraesthesia, reduced by divided lower doses (1.6 g) or a sustained-release form.",
+     "grade": "moderate",
+     "sources": [
+      "trexler2015"
+     ],
+     "evidence": [
+      {
+       "source": "trexler2015",
+       "quote": "The only reported side effect is paraesthesia (tingling), but studies indicate this can be attenuated by using divided lower doses (1.6 g) or using a sustained-release formula",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "buf-ba-vary",
+     "text": "After 5–6 weeks of 4.8 g·day⁻¹ beta-alanine, high responders raised muscle carnosine by about 55% and low responders by about 15%.",
+     "grade": "weak",
+     "sources": [
+      "trexler2015"
+     ],
+     "evidence": [
+      {
+       "source": "trexler2015",
+       "quote": "individuals vary in the magnitude of response to 5 to 6 weeks of beta-alanine supplementation (4.8 g/day), with high responders increasing muscle carnosine concentrations by an average of 55 %, and low responders increasing by an average of only 15 %",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "buf-ba-race-day"
+  },
+  {
+   "type": "question",
+   "item": "buf-ba-tingle-fix"
+  },
+  {
+   "type": "question",
+   "item": "buf-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "buf-events",
+   "title": "Which events?",
+   "text": "Both buffers help the same window: hard efforts of about **30 s to 10 min**. For bicarbonate, the effect is clearest around 1 min and fades beyond 10 min [[c:buf-ioc-window]].\n\nFor beta-alanine, a meta-analysis of 40 studies (1,461 people) found a small overall effect (0.18). Within 0.5–10 min, it was clear in [time-to-exhaustion](g:time-to-exhaustion) tests (0.50) but not in time trials (0.11, [confidence interval](g:confidence-interval) crossing zero) [[c:buf-saunders]]. Races are time trials, and time-to-exhaustion tests tend to show bigger changes.\n\nSo: a 4 km track pursuit, a 1500 m or a 400 m swim, yes maybe; a marathon or a 70.3, no.",
+   "claims": [
+    {
+     "id": "buf-ioc-window",
+     "text": "Bicarbonate enhances ~60 s sprints by about 2%, with reduced efficacy beyond 10 min; beta-alanine gives small benefits in tasks of 30 s to 10 min, harder to realise in well-trained athletes.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Enhanced performance (~2%) of short-term, high-intensity sprints lasting ~60 s in duration, with a reduced efficacy as the effort duration exceeds 10 min",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "Small, but potentially meaningful performance benefits (~0.2%–3%) during both continuous and intermittent exercise tasks of 30 s to 10 min in duration",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "buf-saunders",
+     "text": "Across 40 studies (1,461 participants), beta-alanine had a small overall effect (0.18); within 0.5–10 min, effects were larger for exercise capacity (0.50) than performance (0.11, CI crossing zero).",
+     "grade": "moderate",
+     "sources": [
+      "saunders2017"
+     ],
+     "evidence": [
+      {
+       "source": "saunders2017",
+       "quote": "40 individual studies employing 65 different exercise protocols and totalling 70 exercise measures in 1461 participants were included in the analyses. A significant overall effect size of 0.18 (95% CI 0.08 to 0.28) was shown.",
+       "level": "abstract"
+      },
+      {
+       "source": "saunders2017",
+       "quote": "Subgroup analyses also identified the type of exercise as a significant (p=0.013) moderator of effect sizes within an exercise time frame of 0.5-10 min with greater effect sizes for exercise capacity (0.4998 (95% CI 0.246 to 0.753)) versus performance (0.1078 (95% CI -0.201 to 0.416)).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "buf-event"
+  },
+  {
+   "type": "question",
+   "item": "buf-capacity"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Bicarbonate buffers in the blood and draws H⁺ out of muscle; beta-alanine builds carnosine, a buffer inside the muscle.",
+    "Bicarbonate: 0.2 g·kg⁻¹ minimum, 0.3 g·kg⁻¹ best, 60–180 min before (dose = body mass × g per kg). Gains about 1.7% in a 1-min sprint.",
+    "Gut trouble is the catch: smaller dose, about 180 min before, with a carbohydrate meal, or enteric-coated capsules.",
+    "Beta-alanine: 4–6 g a day in split doses for at least 2–4 weeks; one race-day dose only tingles.",
+    "Both help hard efforts of about 30 s to 10 min, not marathons or long triathlons. In time trials, beta-alanine's effect is small and uncertain."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "buf-route",
+   "concept": "buf-why",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where does each supplement add buffering?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bicarbonate in the blood; beta-alanine inside the muscle",
+       "correct": true,
+       "why": "Right: bicarbonate is an extracellular buffer; beta-alanine raises carnosine in the fibres."
+      },
+      {
+       "id": "b",
+       "text": "Bicarbonate inside the muscle; beta-alanine in the blood",
+       "why": "Reversed: carnosine is a muscle buffer, bicarbonate works from the blood."
+      },
+      {
+       "id": "c",
+       "text": "Both inside the muscle",
+       "why": "Bicarbonate stays mostly outside the fibre and draws H⁺ out."
+      },
+      {
+       "id": "d",
+       "text": "Both in the blood",
+       "why": "Carnosine sits inside the muscle fibres."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-calc",
+   "concept": "buf-bicarb-dose",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "grgic2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An 80 kg cyclist wants the optimal single dose of sodium bicarbonate before a 4 km pursuit. How much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "24 g",
+       "correct": true,
+       "why": "Right: 80 kg × 0.3 g·kg⁻¹ = 24 g."
+      },
+      {
+       "id": "b",
+       "text": "24 mg",
+       "why": "Grams per kg read as mg per kg: 1,000 times too small."
+      },
+      {
+       "id": "c",
+       "text": "40 g",
+       "why": "This uses 0.5 g·kg⁻¹, which adds side effects, not benefit."
+      },
+      {
+       "id": "d",
+       "text": "16 g",
+       "why": "This is the minimum, 0.2 g·kg⁻¹, not the optimal 0.3."
+      }
+     ],
+     "solution": "80 kg × 0.3 g·kg⁻¹ = 24 g."
+    },
+    {
+     "id": "b",
+     "stem": "A 55 kg swimmer has gut trouble and wants the lowest dose that works. How much sodium bicarbonate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11 g",
+       "correct": true,
+       "why": "Right: 55 kg × 0.2 g·kg⁻¹ = 11 g."
+      },
+      {
+       "id": "b",
+       "text": "16.5 g",
+       "why": "This is 0.3 g·kg⁻¹, the optimal dose, not the minimum."
+      },
+      {
+       "id": "c",
+       "text": "11 mg",
+       "why": "Grams per kg read as mg per kg: 1,000 times too small."
+      },
+      {
+       "id": "d",
+       "text": "27.5 g",
+       "why": "This uses 0.5 g·kg⁻¹, the worst choice for her gut."
+      }
+     ],
+     "solution": "55 kg × 0.2 g·kg⁻¹ = 11 g."
+    }
+   ]
+  },
+  {
+   "id": "buf-carr-size",
+   "concept": "buf-bicarb-dose",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "carr2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the meta-analysis, about how much did 0.3 g·kg⁻¹ bicarbonate raise mean power in a single 1-min sprint?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1.7%",
+       "correct": true,
+       "why": "Right: a modest gain, with a wide uncertainty (±2.0%)."
+      },
+      {
+       "id": "b",
+       "text": "About 17%",
+       "why": "Ten times too big: buffer gains are small."
+      },
+      {
+       "id": "c",
+       "text": "About 0.1%",
+       "why": "Too small: 1.7% was estimated, though with wide uncertainty."
+      },
+      {
+       "id": "d",
+       "text": "About 7%",
+       "why": "Too big: the estimate was 1.7%, give or take 2.0%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-gut-fix",
+   "concept": "buf-gut",
+   "bloom": "apply",
+   "sources": [
+    "grgic2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 1500 m runner took 0.4 g·kg⁻¹ bicarbonate 45 min before a race and vomited. Best change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.2–0.3 g·kg⁻¹, about 180 min before, with a carb-rich meal",
+       "correct": true,
+       "why": "Right: smaller dose, longer gap, food: the main ways to reduce gut trouble."
+      },
+      {
+       "id": "b",
+       "text": "Same dose, but 15 min before so it can't upset her",
+       "why": "Less time doesn't help; the advice is longer, around 180 min."
+      },
+      {
+       "id": "c",
+       "text": "Same dose on an empty stomach",
+       "why": "A carbohydrate-rich meal reduces side effects."
+      },
+      {
+       "id": "d",
+       "text": "A bigger dose so less is needed later",
+       "why": "Bigger doses raise side effects without extra benefit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-ba-race-day",
+   "concept": "buf-beta-alanine",
+   "bloom": "apply",
+   "sources": [
+    "trexler2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete takes 3 g beta-alanine for the first time 30 min before a sprint-distance race. Will it help?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No: carnosine takes weeks of daily doses to rise",
+       "correct": true,
+       "why": "Right: 2–4 weeks of 4–6 g a day are needed; one dose mostly gives tingling."
+      },
+      {
+       "id": "b",
+       "text": "Yes: it buffers acid in the blood within 30 min",
+       "why": "That's bicarbonate's route; beta-alanine works by building carnosine."
+      },
+      {
+       "id": "c",
+       "text": "Yes, if taken with caffeine",
+       "why": "Caffeine doesn't speed up carnosine loading."
+      },
+      {
+       "id": "d",
+       "text": "No: beta-alanine only works in men",
+       "why": "Nothing suggests a sex difference; the problem is timing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-ba-tingle-fix",
+   "concept": "buf-beta-alanine",
+   "bloom": "apply",
+   "sources": [
+    "trexler2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A track cyclist loading beta-alanine gets strong tingling after each 3.2 g dose. Best fix?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Split it into 1.6 g doses, or use slow-release",
+       "correct": true,
+       "why": "Right: smaller divided doses or a sustained-release form reduce paraesthesia."
+      },
+      {
+       "id": "b",
+       "text": "Stop: tingling means nerve damage",
+       "why": "The tingling is harmless and passes."
+      },
+      {
+       "id": "c",
+       "text": "Take the whole daily dose at once to get it over with",
+       "why": "Large single doses cause the tingling."
+      },
+      {
+       "id": "d",
+       "text": "Switch to taking it only on race day",
+       "why": "Then carnosine never rises: it needs weeks of daily intake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-event",
+   "concept": "buf-events",
+   "bloom": "apply",
+   "sources": [
+    "maughan2018",
+    "carr2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete is most likely to gain from sodium bicarbonate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A cyclist riding a 4 km pursuit (about 4–5 min)",
+       "correct": true,
+       "why": "Right: buffers help hard efforts of about 30 s to 10 min."
+      },
+      {
+       "id": "b",
+       "text": "A runner doing a marathon",
+       "why": "The effect fades beyond 10 min, and the gut risk is high for a long race."
+      },
+      {
+       "id": "c",
+       "text": "A triathlete racing an Ironman",
+       "why": "Far beyond the 1–10 min window where buffering helps."
+      },
+      {
+       "id": "d",
+       "text": "A cyclist riding a 100 km sportive",
+       "why": "Long steady efforts aren't limited by acid build-up in the same way."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buf-capacity",
+   "concept": "buf-events",
+   "bloom": "evaluate",
+   "sources": [
+    "saunders2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Beta-alanine's effect was 0.50 in time-to-exhaustion tests but 0.11 (CI crossing zero) in time trials. Which matters for a racer, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The time-trial effect: races are like time trials",
+       "correct": true,
+       "why": "Right: time-to-exhaustion tests tend to magnify changes; the race-like result is small and uncertain."
+      },
+      {
+       "id": "b",
+       "text": "The 0.50: it's the bigger, clearer number",
+       "why": "Bigger isn't more relevant; the test should look like the race."
+      },
+      {
+       "id": "c",
+       "text": "Neither: effect sizes can't be compared",
+       "why": "Both are standardised effect sizes; comparing them is the point."
+      },
+      {
+       "id": "d",
+       "text": "Their average, 0.30",
+       "why": "Averaging two different tests hides the one that matches the race."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

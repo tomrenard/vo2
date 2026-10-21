@@ -1,0 +1,907 @@
+{
+ "id": "lc-keto",
+ "module": "t4-low-carb",
+ "title": "Keto and low-carb diets: more fat burned, less speed",
+ "goal": "Explain what a ketogenic diet does to fuel use, why it raises the oxygen cost of hard exercise, and why elite trials found it slower.",
+ "requires": [
+  "hyd-ean"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "lchf-diet",
+    "ketogenic-diet",
+    "ketone-bodies",
+    "fat-adaptation",
+    "pdh",
+    "exogenous-ketones"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "keto-what",
+   "title": "What a keto diet is",
+   "text": "A [low-carbohydrate, high-fat (LCHF) diet](g:lchf-diet) gets most of its energy from fat. Its strictest form, the [ketogenic diet](g:ketogenic-diet), typically keeps carbohydrate under **50 g a day** (under 5% of energy), with 15–20% protein and **75–80% fat** [[c:keto-def]]. Compare the high-carbohydrate diet in the trials below: 8.6 g·kg⁻¹·day⁻¹, about 600 g a day for a 70 kg athlete.\n\nWith so little carbohydrate, the liver turns fat into [ketone bodies](g:ketone-bodies), such as β-hydroxybutyrate, which heart, brain and muscle can burn. On the diet, blood β-hydroxybutyrate typically stays above 0.5 mmol·L⁻¹ [[c:keto-ketones]].\n\nThe pitch: the fat tank is huge (see the fat oxidation lesson), so teach the muscle to run on it.",
+   "claims": [
+    {
+     "id": "keto-def",
+     "text": "A ketogenic LCHF diet typically provides under 5% of energy (under 50 g a day) from carbohydrate, 15–20% from protein and 75–80% from fat.",
+     "grade": "strong",
+     "sources": [
+      "burke2021"
+     ],
+     "evidence": [
+      {
+       "source": "burke2021",
+       "quote": "Typically: < 5% CHO energy (<50 g day −1 ), 15–20% protein, 75–80% fat.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "keto-ketones",
+     "text": "On a ketogenic diet the liver makes ketone bodies from fat, an extra fuel for heart, brain and muscle; blood β-hydroxybutyrate typically stays above 0.5 mmol·L⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "burke2021"
+     ],
+     "evidence": [
+      {
+       "source": "burke2021",
+       "quote": "increased hepatic production of ketone bodies (‘ketones’) to provide an additional substrate for the muscle",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2021",
+       "quote": "Ketone bodies provide a substrate for peripheral tissues, including heart, CNS and skeletal muscle",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2021",
+       "quote": "Typically maintains plasma β‐hydroxybutyrate (β‐HB) concentrations >0.5 mmol l −1",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-def-q"
+  },
+  {
+   "type": "question",
+   "item": "keto-ketones-q",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "keto-fat-ox",
+   "title": "Fat adaptation: the tap opens wider",
+   "text": "Weeks on the diet retool the muscle: [fat adaptation](g:fat-adaptation). Fat oxidation can double to about **1.5 g·min⁻¹**, and [Fatmax](g:fatmax) moves from about 45% to about 70% of VO₂max, much of it within 3–4 weeks [[c:keto-retool]].\n\nThe FASTER study compared 20 elite ultra-runners and Ironman triathletes: 10 on high-carbohydrate diets, 10 on low-carbohydrate diets for 9–36 months [[c:keto-faster]]:\n\n| | low-carb | high-carb |\n|---|---|---|\n| peak fat oxidation | 1.54 g·min⁻¹ | 0.67 g·min⁻¹ |\n| at % VO₂max | 70% | 55% |\n| fat's share, 3 h run at 64% VO₂max | 88% | 56% |\n\nMuscle glycogen at rest, and its use in the run, were similar. But this was a snapshot of athletes who chose their own diet, not a trial.",
+   "claims": [
+    {
+     "id": "keto-retool",
+     "text": "Fat oxidation rises substantially within 3–4 weeks (possibly 5–10 days) of a ketogenic diet, to about 1.5 g·min⁻¹, with the peak shifting from about 45% to about 70% of maximal aerobic capacity.",
+     "grade": "strong",
+     "sources": [
+      "burke2021"
+     ],
+     "evidence": [
+      {
+       "source": "burke2021",
+       "quote": "There is robust evidence that substantial increases in fat oxidation occur, even in elite athletes, within 3-4 weeks and possibly 5-10 days of adherence to a K-LCHF diet.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2021",
+       "quote": "Retooling of the muscle can double exercise fat use to ∼1.5 g min -1 , with the intensity of maximal rates of oxidation shifting from ∼45% to ∼70% of maximal aerobic capacity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "keto-faster",
+     "text": "Keto-adapted elite ultra-endurance athletes had 2.3-fold higher peak fat oxidation (1.54 vs 0.67 g·min⁻¹) at a higher %VO₂max (70 vs 55%) than high-carbohydrate athletes, with similar muscle glycogen use in a 3 h run.",
+     "grade": "weak",
+     "sources": [
+      "volek2016"
+     ],
+     "evidence": [
+      {
+       "source": "volek2016",
+       "quote": "Peak fat oxidation was 2.3-fold higher in the LC group (1.54±0.18 vs 0.67±0.14 g/min; P=0.000) and it occurred at a higher percentage of VO2max (70.3±6.3 vs 54.9±7.8%; P=0.000).",
+       "level": "abstract"
+      },
+      {
+       "source": "volek2016",
+       "quote": "Mean fat oxidation during submaximal exercise was 59% higher in the LC group (1.21±0.02 vs 0.76±0.11 g/min; P=0.000) corresponding to a greater relative contribution of fat (88±2 vs 56±8%; P=0.000).",
+       "level": "abstract"
+      },
+      {
+       "source": "volek2016",
+       "quote": "Despite these marked differences in fuel use between LC and HC athletes, there were no significant differences in resting muscle glycogen and the level of depletion after 180 min of running (-64% from pre-exercise) and 120 min of recovery (-36% from pre-exercise).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-fatmax-shift"
+  },
+  {
+   "type": "question",
+   "item": "keto-faster-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "keto-economy",
+   "title": "The price: more oxygen per watt",
+   "text": "Fat is the costly fuel per breath: burning it releases about **19.6 kJ per litre of O₂**, against **21.1 kJ** for carbohydrate [[c:keto-o2-energy]]. At easy pace nobody notices. Near race pace, where oxygen is the limit, it bites.\n\nBurke's first 'Supernova' study trained elite race walkers for 3 weeks on a high-carbohydrate, a periodised-carbohydrate or an LCHF diet. LCHF raised fat oxidation to 1.57 g·min⁻¹, but also the oxygen cost of walking at race speeds: worse [economy](g:economy) [[c:keto-supernova-economy]].\n\nOver 10 km, the two carbohydrate groups got 6.6% and 5.3% faster; the LCHF group didn't improve (−1.6%, not significant) [[c:keto-supernova-race]], even though [VO₂peak](g:vo2peak) rose in all three groups.",
+   "claims": [
+    {
+     "id": "keto-o2-energy",
+     "text": "Carbohydrate oxidation yields about 21.1 kJ per litre of O₂, fat oxidation about 19.6 kJ.",
+     "grade": "strong",
+     "sources": [
+      "cramer2019"
+     ],
+     "evidence": [
+      {
+       "source": "cramer2019",
+       "quote": "For every 1 liter of oxygen that is consumed to catabolize carbohydrates, 21.13 kJ (5.05 kcal) of energy is released, whereas the consumption of 1 liter of oxygen to catabolize fat yields 19.62 kJ (4.69 kcal) of energy",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "keto-supernova-economy",
+     "text": "In elite race walkers, 3 weeks of an LCHF diet raised fat oxidation to about 1.57 g·min⁻¹ but also raised the oxygen cost of walking at race speeds.",
+     "grade": "weak",
+     "sources": [
+      "burke2017b"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017b",
+       "quote": "The increased rates of fat oxidation result in reduced economy (increased oxygen demand for a given speed) at velocities that translate to real-life race performance in elite race walkers.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2017b",
+       "quote": "LCHF was associated with markedly increased rates of whole-body fat oxidation, attaining peak rates of 1.57 ± 0.32 g min-1 during 2 h of walking at ∼80% V̇O2 peak .",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "keto-supernova-race",
+     "text": "High- and periodised-carbohydrate groups improved 10 km race-walk times by 6.6% and 5.3%; the LCHF group did not improve.",
+     "grade": "weak",
+     "sources": [
+      "burke2017b"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017b",
+       "quote": "HCHO and PCHO groups improved times for 10 km race walk: 6.6% (90% CI: 4.1, 9.1%) and 5.3% (3.4, 7.2%), with no improvement (-1.6% (-8.5, 5.3%)) for the LCHF group.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "keto-o2-example",
+   "title": "Same power, more oxygen on fat",
+   "problem": "A cyclist's muscles are using energy at 63 kJ·min⁻¹. How much O₂ per minute does that take if all of it comes from carbohydrate, and if all of it comes from fat?",
+   "steps": [
+    "O₂ needed = energy rate ÷ energy per litre of O₂.",
+    "Carbohydrate: 63 ÷ 21.1 = 2.99 L·min⁻¹.",
+    "Fat: 63 ÷ 19.6 = 3.21 L·min⁻¹.",
+    "Fat costs 0.23 L·min⁻¹ more, about 7.7% (21.1 ÷ 19.6 = 1.077). Real fuel mixes are never 100% one fuel, so a diet that shifts the mix pays part of this, but near VO₂max any extra O₂ means less speed."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-o2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "keto-economy-why"
+  },
+  {
+   "type": "concept",
+   "id": "keto-replicate",
+   "title": "Repeated, with women, and a rebound test",
+   "text": "A surprising result needs repeating. Burke's group ran the study again in 26 elite race walkers, women included. Same picture: fat oxidation rose from 0.6 to 1.3 g·min⁻¹, the oxygen cost of race pace rose, and over 10,000 m the high-carbohydrate group got **4.8% faster** while the LCHF group got **2.3% slower** [[c:keto-replicate-result]]. After 2.5 weeks back on carbohydrate, the ex-LCHF walkers showed no 'rebound' advantage over 20 km.\n\nThis fits the oxygen story: keto-adaptation hurts most above about **80% of VO₂max** [[c:keto-high-intensity]], the intensity of a marathon or a time trial.\n\nOne weakness in both studies: athletes chose their diet group, so allocation wasn't random [[c:keto-preference]].",
+   "claims": [
+    {
+     "id": "keto-replicate-result",
+     "text": "In a repeat study, LCHF again raised fat oxidation (0.6 to 1.3 g·min⁻¹) and the oxygen cost of race-pace walking; 10,000 m times improved 4.8% with high carbohydrate and worsened 2.3% with LCHF, with no rebound benefit after 2.5 weeks of carbohydrate restoration.",
+     "grade": "weak",
+     "sources": [
+      "burke2020"
+     ],
+     "evidence": [
+      {
+       "source": "burke2020",
+       "quote": "LCHF markedly increased whole-body fat oxidation (from 0.6 g∙min-1 to 1.3 g∙min-1), but also the oxygen cost of walking at race-relevant velocities.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2020",
+       "quote": "HCHO improved by 4.8% or 134 s",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2020",
+       "quote": "LCHF were slower by 2.3%",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2020",
+       "quote": "Furthermore, there was no detectable benefit from undertaking an LCHF intervention as a periodised strategy before a 2.5-wk race preparation/taper with high CHO availability.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "keto-high-intensity",
+     "text": "Keto-adaptation may impair the muscle's use of glycogen and so the performance of exercise above about 80% of maximal aerobic capacity, the intensity of events such as the marathon and cycling time trials.",
+     "grade": "moderate",
+     "sources": [
+      "burke2021"
+     ],
+     "evidence": [
+      {
+       "source": "burke2021",
+       "quote": "keto-adaptation may impair the muscle's ability to use glycogen for oxidative fates, compromising the use of a more economical energy source when the oxygen supply becomes limiting and, thus, the performance of higher-intensity exercise (>80% maximal aerobic capacity).",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2021",
+       "quote": "the marathon, cycling time trials, cross‐country skiing events) involves a very high percentage of an individual's maximal aerobic intensity",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "keto-preference",
+     "text": "In both Supernova studies, athletes nominated their preferred diet before allocation; groups were not randomised.",
+     "grade": "strong",
+     "sources": [
+      "burke2017b",
+      "burke2020"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017b",
+       "quote": "asked to nominate their preference(s) for, or non‐acceptance of, each of these interventions",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2020",
+       "quote": "asked to nominate their preference for, or non-acceptance of, each of these interventions",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-replicate-appraise"
+  },
+  {
+   "type": "question",
+   "item": "keto-event-choice"
+  },
+  {
+   "type": "concept",
+   "id": "keto-restore",
+   "title": "Fat-adapt, then refill: the 'dual-fuel' idea",
+   "text": "Why not have both? Adapt to fat for 5–6 days, then eat carbohydrate for a day to refill glycogen before the race.\n\nIn 7 trained cyclists this refilled glycogen fully (873 vs 868 mmol·kg⁻¹ dry), yet in the test the muscle broke glycogen down more slowly, and [PDH](g:pdh), the gate for burning carbohydrate, was less active, even in a 1 min sprint [[c:keto-pdh]]. This is called **glycogen impairment**: the fuel is there, but the muscle won't use it fast.\n\nPerformance followed. In 8 cyclists, a 100 km time trial was no slower overall, but power in its 1 km sprints fell [[c:keto-sprint]]. Races are often decided in those sprints.",
+   "claims": [
+    {
+     "id": "keto-pdh",
+     "text": "After 5 days of fat adaptation and 1 day of carbohydrate restoration, resting glycogen was restored, but PDH activity and glycogen breakdown were lower during cycling and a 1 min sprint.",
+     "grade": "weak",
+     "sources": [
+      "stellingwerff2006"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2006",
+       "quote": "This CHO restoration resulted in similar resting glycogen contents (FAT-adapt 873 +/- 121 vs. HCHO 868 +/- 120 micromol glucosyl units/g dry wt).",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2006",
+       "quote": "PDH activity was lower at rest and throughout exercise at 70% VO2peak (1.69 +/- 0.25 vs. 2.39 +/- 0.19 mmol x kg wet wt(-1) x min(-1)) and the 1-min sprint in the FAT-adapt vs. the HCHO trial.",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2006",
+       "quote": "Estimates of glycogenolysis during the 1st min of exercise at 70% VO2peak and the 1-min sprint were also lower after FAT-adapt",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "keto-sprint",
+     "text": "After 6 days of a high-fat diet and 1 day of carbohydrate loading, 100 km time-trial performance was unchanged but 1 km sprint power was lower.",
+     "grade": "weak",
+     "sources": [
+      "havemann2006"
+     ],
+     "evidence": [
+      {
+       "source": "havemann2006",
+       "quote": "Overall 100-km time-trial performance was not different between diets; however, 1-km sprint power output after HFD-CHO was lower",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-dualfuel"
+  },
+  {
+   "type": "question",
+   "item": "keto-pdh-role"
+  },
+  {
+   "type": "concept",
+   "id": "keto-drinks",
+   "title": "Ketone drinks: a shortcut?",
+   "text": "If ketones are a fuel, why not drink them and keep the carbohydrate? [Exogenous ketones](g:exogenous-ketones), as ketone esters or salts, raise blood ketones without any change of diet.\n\nA [systematic review](g:systematic-review) of 10 randomised trials (112 people, 109 of them men) found 16 performance outcomes: **3 better, 10 no different and 3 worse** than control. Results varied so much between studies that no benefit or harm could be concluded [[c:keto-drinks-review]].\n\nSo for now, ketone drinks are an expensive maybe, not a proven aid. Supplements have their own module.",
+   "claims": [
+    {
+     "id": "keto-drinks-review",
+     "text": "Of 16 performance outcomes in 10 trials of ketone supplements, 3 were positive, 10 null and 3 negative; heterogeneity prevented any conclusion of benefit or harm.",
+     "grade": "weak",
+     "sources": [
+      "margolis2020"
+     ],
+     "evidence": [
+      {
+       "source": "margolis2020",
+       "quote": "Of the 16 performance outcomes identified by the systematic review, 3 reported positive, 10 reported null, and 3 reported negative effects of ketone supplementation on physical performance compared with controls.",
+       "level": "abstract"
+      },
+      {
+       "source": "margolis2020",
+       "quote": "Heterogeneity across studies makes it difficult to conclude any benefit or detriment to consuming ketone supplements on physical performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "keto-drinks-q"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A ketogenic diet keeps carbohydrate under about 50 g a day and gets 75–80% of energy from fat; the liver then makes ketone bodies.",
+    "Within weeks, fat adaptation can double fat oxidation to about 1.5 g·min⁻¹ and move Fatmax to about 70% of VO₂max.",
+    "Fat gives less energy per litre of O₂ (19.6 vs 21.1 kJ), so economy worsens; in two elite race-walking studies LCHF erased the gains that carbohydrate groups made.",
+    "Fat-adapting and then refilling glycogen still blunts PDH and glycogen use, and lowered sprint power.",
+    "Ketone drinks have mixed results: no reliable benefit shown."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "keto-def-q",
+   "concept": "keto-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "burke2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In endurance research, what does a ketogenic diet typically provide each day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Under 50 g carbohydrate, with 75–80% of energy from fat",
+       "correct": true,
+       "why": "Right: under 5% of energy from carbohydrate, 15–20% protein, 75–80% fat."
+      },
+      {
+       "id": "b",
+       "text": "Under 50% of energy from carbohydrate, the rest mainly fat",
+       "why": "That's just a moderately lower-carbohydrate diet; it is far too much carbohydrate for ketosis."
+      },
+      {
+       "id": "c",
+       "text": "Very little fat, with most energy from protein",
+       "why": "That's a high-protein diet. Keto is mostly fat, with moderate protein."
+      },
+      {
+       "id": "d",
+       "text": "About 3 g·kg⁻¹·day⁻¹ of carbohydrate",
+       "why": "For a 70 kg athlete that's about 210 g a day: low for an athlete, but about four times the keto limit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-ketones-q",
+   "concept": "keto-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "burke2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a ketogenic diet, where do ketone bodies come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The liver makes them from fat",
+       "correct": true,
+       "why": "Right: with little carbohydrate, the liver turns fat into ketone bodies such as β-hydroxybutyrate."
+      },
+      {
+       "id": "b",
+       "text": "Muscle makes them from glycogen",
+       "why": "Muscle burns ketones; it doesn't make them, and glycogen is low on this diet anyway."
+      },
+      {
+       "id": "c",
+       "text": "The gut absorbs them from protein",
+       "why": "Ketones aren't in ordinary food; the body makes them (or they come from a supplement)."
+      },
+      {
+       "id": "d",
+       "text": "The kidneys make them from lactate",
+       "why": "Lactate can be turned back into glucose (in the liver), not into ketones."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A trail runner on a keto diet has blood β-hydroxybutyrate of 1.2 mmol·L⁻¹. What is this molecule?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A ketone body made by the liver from fat",
+       "correct": true,
+       "why": "Right: β-hydroxybutyrate is the main ketone body; it rises when carbohydrate is scarce."
+      },
+      {
+       "id": "b",
+       "text": "A breakdown product of muscle glycogen",
+       "why": "Glycogen breaks down to glucose and then pyruvate or lactate, not β-hydroxybutyrate."
+      },
+      {
+       "id": "c",
+       "text": "A marker of muscle damage from long runs",
+       "why": "Damage markers are things like creatine kinase in blood; β-hydroxybutyrate is a fuel."
+      },
+      {
+       "id": "d",
+       "text": "A hormone that tells fat cells to release fat",
+       "why": "That role belongs to hormones such as adrenaline; β-hydroxybutyrate is itself a fuel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-fatmax-shift",
+   "concept": "keto-fat-ox",
+   "bloom": "apply",
+   "sources": [
+    "burke2021",
+    "volek2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's fat oxidation peaked at 0.6 g·min⁻¹ at 45% VO₂max. After 4 weeks of a strict keto diet she is retested. What result is most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A peak near 1.5 g·min⁻¹, at about 70% VO₂max",
+       "correct": true,
+       "why": "Right: fat adaptation roughly doubles peak fat oxidation and moves it to a higher intensity."
+      },
+      {
+       "id": "b",
+       "text": "A peak near 1.5 g·min⁻¹, at about 30% VO₂max",
+       "why": "The peak rises and moves to a higher intensity, not a lower one."
+      },
+      {
+       "id": "c",
+       "text": "Unchanged fat oxidation, with ketones taking over",
+       "why": "Ketones add a little fuel, but the large change is in fat oxidation itself."
+      },
+      {
+       "id": "d",
+       "text": "A lower peak, as the muscle runs on ketones instead",
+       "why": "The opposite: fat oxidation rises a lot within 3–4 weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-faster-appraise",
+   "concept": "keto-fat-ox",
+   "bloom": "evaluate",
+   "sources": [
+    "volek2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A keto blog cites FASTER: 'Low-carb ultra-runners burn 2.3 times more fat, so keto makes you faster.' What is the main gap in this argument?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It measured fuel use, not race times, in self-chosen groups",
+       "correct": true,
+       "why": "Right: a cross-sectional snapshot of self-selected athletes can't show the diet causes anything, and fuel use isn't performance."
+      },
+      {
+       "id": "b",
+       "text": "The low-carb group used up more glycogen in the run",
+       "why": "Glycogen use and refilling were similar between groups."
+      },
+      {
+       "id": "c",
+       "text": "Fat oxidation can't be measured in runners",
+       "why": "It was measured with breath gases on a treadmill, a standard method."
+      },
+      {
+       "id": "d",
+       "text": "The high-carb group actually had the higher fat oxidation",
+       "why": "It's the other way round: 1.54 vs 0.67 g·min⁻¹ in favour of low-carb."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-o2-calc",
+   "concept": "keto-economy",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's muscles use energy at 70 kJ·min⁻¹. Carbohydrate gives 21.1 kJ per litre of O₂, fat 19.6 kJ. How much extra O₂ per minute would running on fat alone take, compared with carbohydrate alone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.25 L·min⁻¹ more",
+       "correct": true,
+       "why": "Right: 70 ÷ 19.6 = 3.57 and 70 ÷ 21.1 = 3.32 L·min⁻¹; the difference is 0.25 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 1.5 L·min⁻¹ more",
+       "why": "This subtracts the kJ per litre (21.1 − 19.6) and reads it as litres of O₂."
+      },
+      {
+       "id": "c",
+       "text": "No extra O₂: the energy needed is the same",
+       "why": "The energy is the same, but fat gives less energy per litre of O₂, so it needs more O₂."
+      },
+      {
+       "id": "d",
+       "text": "About 0.25 L·min⁻¹ less",
+       "why": "Right size, wrong direction: fat needs more O₂ for the same energy."
+      }
+     ],
+     "solution": "O₂ = energy ÷ energy per litre. Fat: 70 ÷ 19.6 = 3.57 L·min⁻¹. Carbohydrate: 70 ÷ 21.1 = 3.32 L·min⁻¹. Difference: 0.25 L·min⁻¹ more on fat (about 7.7%)."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on the bike uses energy at 50 kJ·min⁻¹. Carbohydrate gives 21.1 kJ per litre of O₂, fat 19.6 kJ. How much extra O₂ per minute would fat alone take, compared with carbohydrate alone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.18 L·min⁻¹ more",
+       "correct": true,
+       "why": "Right: 50 ÷ 19.6 = 2.55 and 50 ÷ 21.1 = 2.37 L·min⁻¹; the difference is 0.18 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 1.5 L·min⁻¹ more",
+       "why": "This subtracts the kJ per litre (21.1 − 19.6) and reads it as litres of O₂."
+      },
+      {
+       "id": "c",
+       "text": "No extra O₂: the energy needed is the same",
+       "why": "The energy is the same, but fat gives less energy per litre of O₂, so it needs more O₂."
+      },
+      {
+       "id": "d",
+       "text": "About 0.18 L·min⁻¹ less",
+       "why": "Right size, wrong direction: fat needs more O₂ for the same energy."
+      }
+     ],
+     "solution": "O₂ = energy ÷ energy per litre. Fat: 50 ÷ 19.6 = 2.55 L·min⁻¹. Carbohydrate: 50 ÷ 21.1 = 2.37 L·min⁻¹. Difference: 0.18 L·min⁻¹ more on fat."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist in a time trial uses energy at 80 kJ·min⁻¹. Carbohydrate gives 21.1 kJ per litre of O₂, fat 19.6 kJ. How much extra O₂ per minute would fat alone take, compared with carbohydrate alone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.29 L·min⁻¹ more",
+       "correct": true,
+       "why": "Right: 80 ÷ 19.6 = 4.08 and 80 ÷ 21.1 = 3.79 L·min⁻¹; the difference is 0.29 L·min⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "About 1.5 L·min⁻¹ more",
+       "why": "This subtracts the kJ per litre (21.1 − 19.6) and reads it as litres of O₂."
+      },
+      {
+       "id": "c",
+       "text": "No extra O₂: the energy needed is the same",
+       "why": "The energy is the same, but fat gives less energy per litre of O₂, so it needs more O₂."
+      },
+      {
+       "id": "d",
+       "text": "About 0.29 L·min⁻¹ less",
+       "why": "Right size, wrong direction: fat needs more O₂ for the same energy."
+      }
+     ],
+     "solution": "O₂ = energy ÷ energy per litre. Fat: 80 ÷ 19.6 = 4.08 L·min⁻¹. Carbohydrate: 80 ÷ 21.1 = 3.79 L·min⁻¹. Difference: 0.29 L·min⁻¹ more on fat."
+    }
+   ]
+  },
+  {
+   "id": "keto-economy-why",
+   "concept": "keto-economy",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "burke2017b",
+    "cramer2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 3 weeks of LCHF, elite race walkers needed more oxygen at race pace. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More of their energy came from fat, which gives less energy per litre of O₂",
+       "correct": true,
+       "why": "Right: the shift to fat raised the oxygen cost of each kilometre: worse economy."
+      },
+      {
+       "id": "b",
+       "text": "Their VO₂peak fell, so each speed was a higher share of it",
+       "why": "VO₂peak rose in all groups; the oxygen cost itself went up."
+      },
+      {
+       "id": "c",
+       "text": "Ketones made their lungs less able to take up oxygen",
+       "why": "Nothing like that was found; the cost lies in the fuel mix in the muscle."
+      },
+      {
+       "id": "d",
+       "text": "They lost so much weight that their technique worsened",
+       "why": "Body mass fell a little, which would lower the cost, not raise it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-replicate-appraise",
+   "concept": "keto-replicate",
+   "bloom": "evaluate",
+   "sources": [
+    "burke2017b",
+    "burke2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In both Supernova studies, athletes chose which diet group to join. How could that bias the comparison?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Groups may differ in motivation, not only in diet",
+       "correct": true,
+       "why": "Right: without random allocation, something besides the diet (expectation, commitment) could explain part of the difference."
+      },
+      {
+       "id": "b",
+       "text": "It can't: bias only matters in drug trials",
+       "why": "Allocation bias applies to any intervention, diets included."
+      },
+      {
+       "id": "c",
+       "text": "It makes the groups equal at the start",
+       "why": "Choosing doesn't make groups equal; random allocation is what balances them on average."
+      },
+      {
+       "id": "d",
+       "text": "It makes the samples too large to analyse",
+       "why": "26–29 athletes is small, not large; the issue is how they were split."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-event-choice",
+   "concept": "keto-replicate",
+   "bloom": "apply",
+   "sources": [
+    "burke2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Four athletes are considering keto. In which event is its performance cost likely smallest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 24 h ultra-run at an easy, steady pace",
+       "correct": true,
+       "why": "Right: the cost is biggest above about 80% of VO₂max; at low intensity it matters less (though responses vary and no benefit is proven)."
+      },
+      {
+       "id": "b",
+       "text": "A 10 km road run race",
+       "why": "10 km is run at a high share of VO₂max, exactly where keto hurt race walkers."
+      },
+      {
+       "id": "c",
+       "text": "An Olympic-distance triathlon",
+       "why": "About 2 hours near threshold: high intensity, where economy and glycogen use matter."
+      },
+      {
+       "id": "d",
+       "text": "A 4 km track pursuit on the bike",
+       "why": "About 4–5 min near maximal: the most oxygen-limited of the four."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-dualfuel",
+   "concept": "keto-restore",
+   "bloom": "analyse",
+   "sources": [
+    "stellingwerff2006",
+    "havemann2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A criterium racer adapts to fat for 6 days, then eats high-carbohydrate for 1 day. Her glycogen is full on race morning. What does the research predict for the final sprint?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower sprint power: she breaks glycogen down more slowly",
+       "correct": true,
+       "why": "Right: glycogen was restored, but PDH activity and glycogen breakdown stayed lower, and sprint power fell."
+      },
+      {
+       "id": "b",
+       "text": "Higher sprint power, because glycogen was spared all race",
+       "why": "Sparing glycogen doesn't help if the muscle can't use it fast at the end."
+      },
+      {
+       "id": "c",
+       "text": "No change, since full glycogen is all that matters",
+       "why": "The stores were full in the study too; the problem is how fast they are used."
+      },
+      {
+       "id": "d",
+       "text": "Lower sprint power, because her glycogen is still low",
+       "why": "One day of carbohydrate refilled glycogen fully; the limit is the rate, not the store."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-pdh-role",
+   "concept": "keto-restore",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "stellingwerff2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does pyruvate dehydrogenase (PDH) do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Turns pyruvate into acetyl-CoA so it can be burned",
+       "correct": true,
+       "why": "Right: inside the mitochondria PDH turns pyruvate into acetyl-CoA, the gate for oxidising carbohydrate."
+      },
+      {
+       "id": "b",
+       "text": "Splits stored fat into fatty acids",
+       "why": "That's the job of lipases such as hormone-sensitive lipase."
+      },
+      {
+       "id": "c",
+       "text": "Makes ketone bodies in the liver",
+       "why": "Ketone bodies are made from fat-derived acetyl-CoA by other enzymes."
+      },
+      {
+       "id": "d",
+       "text": "Joins glucose into glycogen for storage",
+       "why": "That's glycogen synthase; PDH works on the burning side."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keto-drinks-q",
+   "concept": "keto-drinks",
+   "bloom": "evaluate",
+   "sources": [
+    "margolis2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist reads that a ketone ester drink raised time-trial power in one study. Based on the systematic review, what's the fairest summary?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mixed results across trials: no reliable benefit shown",
+       "correct": true,
+       "why": "Right: of 16 outcomes, 3 were better, 10 no different and 3 worse; one positive study doesn't outweigh that."
+      },
+      {
+       "id": "b",
+       "text": "Proven to help, since a randomised trial found it",
+       "why": "One trial among many with null and negative results is not proof."
+      },
+      {
+       "id": "c",
+       "text": "Proven to harm performance",
+       "why": "Only 3 of 16 outcomes were worse; harm isn't shown either."
+      },
+      {
+       "id": "d",
+       "text": "It works, but only on top of a keto diet",
+       "why": "The review didn't show that; ketone drinks were tested mostly on normal diets."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

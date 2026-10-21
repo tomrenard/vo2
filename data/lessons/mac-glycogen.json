@@ -1,0 +1,920 @@
+{
+ "id": "mac-glycogen",
+ "module": "t4-macros",
+ "title": "Glycogen: the small tank that sets the limit",
+ "goal": "Explain how much glycogen muscle and liver hold, how fast exercise drains it and why that brings fatigue, and how classic and modern carbohydrate loading fill it before a long race.",
+ "requires": [
+  "mac-carbs"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "carbohydrate-loading"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gly-stores",
+   "title": "Two stores, two jobs",
+   "text": "An adult stores [glycogen](g:glycogen) in two places [[c:gly-amounts]]. At about 17 kJ (4 kcal) per gram:\n\n| store | glycogen | energy |\n|---|---|---|\n| all skeletal muscle | about 400 g | about 6,800 kJ (1,600 kcal) |\n| liver | about 80–100 g | about 1,360–1,700 kJ (320–400 kcal) |\n| blood glucose | about 4–5 g | under 100 kJ |\n\nThe jobs differ. Muscle cells break down their own glycogen and burn the glucose themselves [[c:gly-muscle-own]]. The liver releases its glucose into the blood to keep blood glucose steady for the brain and working muscles [[c:gly-liver-job]].\n\n[Muscle biopsies](g:muscle-biopsy) report it per kg of muscle: in trained, well-fed athletes after rest about **150 mmol·kg⁻¹ wet muscle**, up to about 200 after a few high-carbohydrate days, and below 50 after long hard exercise [[c:gly-concentration]].",
+   "claims": [
+    {
+     "id": "gly-amounts",
+     "text": "The body stores about 400 g of glycogen in muscle and about 100 g in the liver, with about 5 g of glucose in the blood.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018",
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "as glycogen in both the liver (approximately 100 g) and muscle (approximately 400 g) with 5 g also circulating in the blood stream as glucose",
+       "level": "full-text"
+      },
+      {
+       "source": "murray2018",
+       "quote": "The > 80 g of glucose stored as liver glycogen is used to constantly replenish the 4 g of glucose circulating in the blood.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-muscle-own",
+     "text": "Muscle glycogen is broken down to glucose that the same muscle cells oxidise to make ATP.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "muscle glycogen particles are broken down, freeing glucose molecules that muscle cells then oxidize through anaerobic and aerobic processes to produce the adenosine triphosphate (ATP) molecules required for muscle contraction",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-liver-job",
+     "text": "Liver glycogen is released as glucose to keep blood glucose steady, which the brain depends on.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "To ensure the brain has an ample supply of glucose, the liver releases glucose into the bloodstream at a rate similar to the uptake of glucose from the blood into tissues, thereby stabilizing blood glucose concentration between 4.0 and 5.5 mmol/L (70–100 mg/dL).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-concentration",
+     "text": "In trained, well-fed endurance athletes muscle glycogen is about 150 mmol·kg⁻¹ wet muscle after rest, up to about 200 after a few high-carbohydrate days, and can fall below 50 after prolonged intense exercise.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "In trained and well-fed endurance athletes, muscle glycogen concentration is roughly 150 mmol/kg wet weight following at least 8–12 hours of rest but can reach supercompensated levels of 200 mmol/kg wet weight in highly fit, rested athletes after a few days on high-carbohydrate diets",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-leg-blood"
+  },
+  {
+   "type": "question",
+   "item": "gly-kj",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gly-use",
+   "title": "How fast the tank drains",
+   "text": "The harder you go, the faster glycogen goes. Moving from 65% to 85% of [VO₂max](g:vo2max), muscle and liver glycogen breakdown and glucose uptake all rise, and carbohydrate becomes the main fuel [[c:gly-intensity]]. That is the [crossover](g:crossover-point) from tier 1, seen from the fuel tank.\n\nHow full you start matters too. Trained runners who had loaded their muscles used more glycogen per km in a 20.9 km run (about 5 mmol·kg⁻¹ wet per km) than when they had not (about 3) [[c:gly-start-use]]. A full tank is spent more freely.\n\nSo the time a store lasts depends on pace, on how full it was, and on how much carbohydrate you eat on the way.",
+   "claims": [
+    {
+     "id": "gly-intensity",
+     "text": "As intensity rises from 65% to 85% VO₂max, muscle and liver glycogen breakdown and glucose uptake increase and carbohydrate becomes the main fuel.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018",
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "As exercise intensity progresses from moderate (i.e., 65% VO 2max ) to high-intensity (85% VO 2max ), muscle glycogenolysis, liver glycogenolysis and glucose uptake increase such that CHO metabolism predominates",
+       "level": "full-text"
+      },
+      {
+       "source": "murray2018",
+       "quote": "The rate at which muscle glycogen is degraded depends primarily upon the intensity of physical activity; the greater the exercise intensity, the greater the rate at which muscle glycogen is degraded.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-start-use",
+     "text": "Runners who started a 20.9 km run with loaded muscles used more glycogen per km (about 5 vs 3 mmol·kg⁻¹ wet).",
+     "grade": "weak",
+     "sources": [
+      "sherman1981"
+     ],
+     "evidence": [
+      {
+       "source": "sherman1981",
+       "quote": "The performance run in both trials A and B utilized significantly more glycogen than in trial C: 5.0 and 5.1 mmG/km vs. 3.1 mmG/km.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-intensity-rate"
+  },
+  {
+   "type": "example",
+   "id": "gly-example",
+   "title": "How long would the stores last?",
+   "problem": "A cyclist rides hard, burning carbohydrate at 3 g·min⁻¹ and eating nothing. She starts with 400 g of muscle glycogen and 90 g of liver glycogen. Roughly how long until both are gone?",
+   "steps": [
+    "Add the stores: 400 + 90 = 490 g.",
+    "Time = store ÷ rate. Units: g ÷ g·min⁻¹ = min. 490 ÷ 3 ≈ 163 min.",
+    "In hours: 163 ÷ 60 ≈ 2.7 h.",
+    "This is an upper limit. The 400 g sits in all her muscles, but only the leg muscles are working hard; glycogen in her arms and trunk can't help them. Her legs run low sooner, and fat oxidation and food on the way change the sums."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gly-calc-limit"
+  },
+  {
+   "type": "concept",
+   "id": "gly-fatigue",
+   "title": "Running low: the wall",
+   "text": "The muscle biopsy studies of the late 1960s set the rules still used today: glycogen is used faster the harder you go, high-carbohydrate diets raise glycogen and lengthen how long you can keep going, and glycogen refills above normal after it has been run down [[c:gly-scandi]].\n\nIn efforts over about 90 minutes, exhaustion usually comes when muscle glycogen is critically low, around 25 mmol·kg⁻¹ wet, and burning more blood glucose can't make up for it [[c:gly-critical]]. Liver glycogen running out is a major cause of fatigue too, because blood glucose then falls ([hypoglycaemia](g:hypoglycaemia)) [[c:gly-depletion-fatigue]].\n\nIn marathons, the sudden late slowdown is [hitting the wall](g:hitting-the-wall); one analysis puts it at more than two in five runners [[c:wall-common]]. *Fatigue in long efforts* covers why an emptying muscle weakens.",
+   "claims": [
+    {
+     "id": "gly-scandi",
+     "text": "Biopsy studies showed that glycogen use depends on intensity, that high-carbohydrate diets raise glycogen and exercise capacity, and that glycogen refills above normal after depletion.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "These researchers provided the platform for modern day sports nutrition practice in a series of studies that collectively demonstrated that (1) muscle glycogen is depleted during exercise in an intensity dependent manner; (2) high CHO diets increase muscle glycogen storage and subsequently improve exercise capacity and (3) muscle glycogen storage is acutely enhanced following prior glycogen depletion (i.e., the super-compensation effect)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-critical",
+     "text": "In endurance events over 90 min, exhaustion usually coincides with critically low muscle glycogen (about 25 mmol·kg⁻¹ wet).",
+     "grade": "strong",
+     "sources": [
+      "hawley1997"
+     ],
+     "evidence": [
+      {
+       "source": "hawley1997",
+       "quote": "During this type of exercise, exhaustion usually coincides with critically low (25 mmol/kg wet weight) muscle glycogen contents, suggesting the supply of energy from glycogen utilisation cannot be replaced by an increased oxidation of blood glucose.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gly-depletion-fatigue",
+     "text": "Depletion of both muscle and liver glycogen is a major cause of fatigue in endurance exercise.",
+     "grade": "strong",
+     "sources": [
+      "hearris2018"
+     ],
+     "evidence": [
+      {
+       "source": "hearris2018",
+       "quote": "it follows that glycogen depletion (in both muscle and liver) is a major cause of fatigue in both endurance and high-intensity (intermittent) type activities",
+       "level": "full-text"
+      },
+      {
+       "source": "hearris2018",
+       "quote": "As such, it is now generally accepted that liver glycogen depletion is also a major contributing cause of fatigue during endurance exercise.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "wall-common",
+     "text": "More than two in five marathon runners experience performance-limiting carbohydrate depletion ('hitting the wall').",
+     "grade": "weak",
+     "sources": [
+      "rapoport2010"
+     ],
+     "evidence": [
+      {
+       "source": "rapoport2010",
+       "quote": "more than two-fifths experience severe and performance-limiting depletion of physiologic carbohydrate reserves (a phenomenon known as 'hitting the wall')",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-wall-cause"
+  },
+  {
+   "type": "concept",
+   "id": "gly-loading",
+   "title": "Carbohydrate loading: classic and modern",
+   "text": "[Carbohydrate loading](g:carbohydrate-loading) fills muscle glycogen above its usual level before a long race.\n\n| protocol | what you do |\n|---|---|\n| classic (1960s) | 3 days hard training, low carbohydrate (under 5 g·kg⁻¹·day⁻¹), then 3 days of [taper](g:taper), high carbohydrate |\n| modified (Sherman, 1981) | 3-day taper, high carbohydrate, no depletion |\n| short (Bussau, 2002) | 1 day of about 10 g·kg⁻¹·day⁻¹, resting |\n\nThe classic version worked, but its low-carbohydrate days were very hard [[c:load-classic]]. Without depletion, runners reached about the same glycogen [[c:load-sherman]]. Eight trained men resting on 10 g·kg⁻¹·day⁻¹ went from 95 to 180 mmol·kg⁻¹ wet in one day, then no higher [[c:load-1day]]. Today's advice: 10–12 g·kg⁻¹·day⁻¹ for 36–48 h [[c:load-modern]]. Each gram of glycogen holds at least 3 g of water, so the scales show a little more [[c:gly-water]].",
+   "claims": [
+    {
+     "id": "load-classic",
+     "text": "Classic loading (3 days of hard training on low carbohydrate, then 3 days of taper on high carbohydrate) supercompensates glycogen but makes training very hard; a 3-day high-carbohydrate taper without depletion reaches similar stores.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Classic glycogen loading: 3 d of hard training on a low-CHO diet (<5 g/kg BW/d) followed by 3 d of tapered training on a high-CHO diet Supercompensated muscle glycogen stores compared with before the intervention but training is very difficult both physically and psychologically during the low-CHO phase",
+       "level": "full-text"
+      },
+      {
+       "source": "murray2018",
+       "quote": "Modified glycogen loading: 3-d taper on a high-CHO diet with 24-h rest prior to competitions Supercompensated muscle glycogen stores similar to the classic loading regimen",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "load-sherman",
+     "text": "A moderate taper-and-diet regimen without a low-carbohydrate depletion phase raised muscle glycogen as much as the regimen with depletion.",
+     "grade": "weak",
+     "sources": [
+      "sherman1981"
+     ],
+     "evidence": [
+      {
+       "source": "sherman1981",
+       "quote": "Trials A, B, and C elevated muscle glycogen to 207, 203, and 159 mmol glucosyl units/kg wet tissue (mmG), respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "sherman1981",
+       "quote": "These data demonstrate that (1) muscle glycogen can be elevated to high levels with a moderate exercise-diet regimen",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "load-1day",
+     "text": "In 8 trained men who rested and ate 10 g·kg⁻¹·day⁻¹ of carbohydrate, muscle glycogen reached its maximum (95 to 180 mmol·kg⁻¹ wet) after 1 day.",
+     "grade": "weak",
+     "sources": [
+      "bussau2002"
+     ],
+     "evidence": [
+      {
+       "source": "bussau2002",
+       "quote": "Muscle glycogen content increased significantly ( P<0.05) from pre-loading levels of [mean (SE)] 95 (5) to 180 (15) mmol.kg(-1) wet mass after only 1 day, and remained stable afterwards despite another 2 days of carbohydrate-rich diet.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "load-modern",
+     "text": "For events over 90 min, loading in the 36–48 h before may improve performance by 2–3%; 1 day of 10–12 g·kg⁻¹·day⁻¹ after short exercise or rest supercompensates glycogen.",
+     "grade": "moderate",
+     "sources": [
+      "vitale2019"
+     ],
+     "evidence": [
+      {
+       "source": "vitale2019",
+       "quote": "For events lasting >90 min however, glycogen supercompensation, or “carbo loading,” in the preceding 36–48 h may help improve performance by 2–3%",
+       "level": "full-text"
+      },
+      {
+       "source": "vitale2019",
+       "quote": "However recent studies show that short-term high-intensity exercise (or even complete physical inactivity) followed by a 1-day high (10–12 g/kg/day) intake of CHO similarly achieves glycogen supercompensation, and this is maintained for 3 days",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gly-water",
+     "text": "Each gram of glycogen is stored with at least 3 g of water, so loading adds body mass.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Each gram of glycogen is stored with at least 3 g of water, 14 , 15 making weight gain a noticeable response to glycogen super-compensation in many athletes.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-load-recall"
+  },
+  {
+   "type": "question",
+   "item": "gly-classic-dropped"
+  },
+  {
+   "type": "question",
+   "item": "gly-bussau-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "gly-load-who",
+   "title": "Who gains from loading?",
+   "text": "Loading only pays when the race is long enough to run the tank low [[c:load-benefit]]:\n\n| event | effect of more starting glycogen |\n|---|---|\n| all-out, under 5 min | little or none |\n| 60–90 min at moderate pace | none: glycogen is left over at the finish |\n| over 90 min, to exhaustion | fatigue about 20% later |\n| over 90 min, set distance | about 2–3% faster |\n\nIn trained runners, loading didn't change 20.9 km times [[c:load-no-21k]].\n\nSo: marathon, Ironman, a long road race or gran fondo, yes. A 10 km run, a 40 km time trial or a sprint triathlon need a normal high-carbohydrate day before, not a full load. And the water stored with the extra glycogen is a small cost, even on a hilly course.",
+   "claims": [
+    {
+     "id": "load-benefit",
+     "text": "Raising starting glycogen doesn't help all-out efforts under 5 min or moderate exercise of 60–90 min, but delays fatigue by about 20% in events over 90 min and improves set-distance performance by 2–3%.",
+     "grade": "moderate",
+     "sources": [
+      "hawley1997"
+     ],
+     "evidence": [
+      {
+       "source": "hawley1997",
+       "quote": "This review suggests that there is little or no effect of elevating pre-exercise muscle glycogen contents above normal resting values on a single exhaustive bout of high-intensity exercise lasting less than 5 minutes. Nor is there any benefit of increasing starting muscle glycogen content on moderate-intensity running or cycling lasting 60 to 90 minutes.",
+       "level": "abstract"
+      },
+      {
+       "source": "hawley1997",
+       "quote": "However, elevated starting muscle glycogen content will postpone fatigue by approximately equal to 20% in endurance events lasting more than 90 minutes.",
+       "level": "abstract"
+      },
+      {
+       "source": "hawley1997",
+       "quote": "In such exercise, high carbohydrate diets have been reported to improve performance by 2 to 3%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "load-no-21k",
+     "text": "Carbohydrate loading did not improve performance of trained runners over 20.9 km.",
+     "grade": "weak",
+     "sources": [
+      "sherman1981"
+     ],
+     "evidence": [
+      {
+       "source": "sherman1981",
+       "quote": "(3) carbohydrate loading is of no benefit to performance for trained runners during a 20.9-km run.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-load-who",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gly-load-who",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Muscle holds about 400 g of glycogen (about 6,800 kJ) for its own use; the liver holds 80–100 g and keeps blood glucose up.",
+    "Glycogen drains faster at higher intensity, and faster when you start full.",
+    "In efforts over 90 min, critically low muscle glycogen and falling liver glycogen bring fatigue: the wall.",
+    "Loading has gone from 6 punishing days to 36–48 h of 10–12 g·kg⁻¹·day⁻¹ with little training.",
+    "Load for events over 90 min (about 2–3% faster); shorter races need only a normal high-carbohydrate day."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gly-leg-blood",
+   "concept": "gly-stores",
+   "bloom": "understand",
+   "sources": [
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Late in a long fasted ride, a cyclist's leg muscles still hold some glycogen, yet his blood glucose is falling and he feels foggy. What explains this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle glycogen fuels the muscle that stores it; blood glucose depends on the liver",
+       "correct": true,
+       "why": "Right: muscle cells burn their own glycogen; it is the liver that tops up the blood, and its small store is running low."
+      },
+      {
+       "id": "b",
+       "text": "The legs release their glycogen into the blood only after the liver is empty",
+       "why": "Muscle doesn't hand its glycogen to the blood as glucose; it uses it itself."
+      },
+      {
+       "id": "c",
+       "text": "Blood glucose is falling because the brain stores glucose as glycogen during exercise",
+       "why": "The brain holds only a tiny amount of glycogen; the fall comes from the liver's output not keeping up."
+      },
+      {
+       "id": "d",
+       "text": "Blood glucose is falling because fat oxidation turns glucose into fat",
+       "why": "Burning fat doesn't convert blood glucose into fat; the liver's supply is the issue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-kj",
+   "concept": "gly-stores",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hearris2018",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's liver holds 90 g of glycogen. At about 17 kJ per gram, how much energy is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1,530 kJ",
+       "correct": true,
+       "why": "Right: 90 × 17 = 1,530 kJ (about 360 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "About 3,330 kJ",
+       "why": "This uses 37 kJ per gram, the value for fat, not carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "About 360 kJ",
+       "why": "360 is the answer in kcal (90 × 4), not kJ."
+      },
+      {
+       "id": "d",
+       "text": "About 5.3 kJ",
+       "why": "This divides 90 by 17 instead of multiplying."
+      }
+     ],
+     "solution": "Energy = mass × energy per gram = 90 g × 17 kJ·g⁻¹ = 1,530 kJ (90 × 4 = 360 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "After loading, a triathlete's muscles hold about 600 g of glycogen. At about 17 kJ per gram, how much energy is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 10,200 kJ",
+       "correct": true,
+       "why": "Right: 600 × 17 = 10,200 kJ (about 2,400 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "About 22,200 kJ",
+       "why": "This uses 37 kJ per gram, the value for fat, not carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "About 2,400 kJ",
+       "why": "2,400 is the answer in kcal (600 × 4), not kJ."
+      },
+      {
+       "id": "d",
+       "text": "About 35 kJ",
+       "why": "This divides 600 by 17 instead of multiplying."
+      }
+     ],
+     "solution": "Energy = mass × energy per gram = 600 g × 17 kJ·g⁻¹ = 10,200 kJ (600 × 4 = 2,400 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "gly-intensity-rate",
+   "concept": "gly-use",
+   "bloom": "apply",
+   "sources": [
+    "hearris2018",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The same rider does two 90-min rides: one at 65% of VO₂max, one at 85%. What happens to her muscle glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls faster in the 85% ride",
+       "correct": true,
+       "why": "Right: glycogen breakdown rises with intensity, and carbohydrate becomes the main fuel."
+      },
+      {
+       "id": "b",
+       "text": "It falls at the same rate, as both last 90 min",
+       "why": "Duration is the same, but the rate of use depends mainly on intensity."
+      },
+      {
+       "id": "c",
+       "text": "It falls faster in the 65% ride",
+       "why": "At 65% more fat is used; at 85% carbohydrate use, and so glycogen breakdown, is higher."
+      },
+      {
+       "id": "d",
+       "text": "It doesn't fall in either ride",
+       "why": "Muscle glycogen is a major fuel at both intensities."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-calc",
+   "concept": "gly-use",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner burns carbohydrate at 2.5 g·min⁻¹ and eats nothing. He starts with 380 g of muscle glycogen and 70 g of liver glycogen. Roughly how long until both are gone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 180 min",
+       "correct": true,
+       "why": "Right: (380 + 70) ÷ 2.5 = 450 ÷ 2.5 = 180 min, an upper limit."
+      },
+      {
+       "id": "b",
+       "text": "About 152 min",
+       "why": "This uses the muscle store only (380 ÷ 2.5) and forgets the liver."
+      },
+      {
+       "id": "c",
+       "text": "About 1,125 min",
+       "why": "This multiplies store by rate (450 × 2.5); time = store ÷ rate."
+      },
+      {
+       "id": "d",
+       "text": "About 3 min",
+       "why": "This gives the answer in hours (180 ÷ 60 = 3) but labels it minutes."
+      }
+     ],
+     "solution": "Stores = 380 + 70 = 450 g. Time = 450 g ÷ 2.5 g·min⁻¹ = 180 min (3 h). An upper limit: not all muscle glycogen is in the working legs."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on the bike burns carbohydrate at 2 g·min⁻¹ and eats nothing. She starts with 360 g of muscle glycogen and 80 g of liver glycogen. Roughly how long until both are gone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 220 min",
+       "correct": true,
+       "why": "Right: (360 + 80) ÷ 2 = 440 ÷ 2 = 220 min, an upper limit."
+      },
+      {
+       "id": "b",
+       "text": "About 180 min",
+       "why": "This uses the muscle store only (360 ÷ 2) and forgets the liver."
+      },
+      {
+       "id": "c",
+       "text": "About 880 min",
+       "why": "This multiplies store by rate (440 × 2); time = store ÷ rate."
+      },
+      {
+       "id": "d",
+       "text": "About 3.7 min",
+       "why": "This gives the answer in hours (220 ÷ 60 ≈ 3.7) but labels it minutes."
+      }
+     ],
+     "solution": "Stores = 360 + 80 = 440 g. Time = 440 g ÷ 2 g·min⁻¹ = 220 min (about 3.7 h). An upper limit: not all muscle glycogen is in the working legs."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist in a hard road race burns carbohydrate at 4 g·min⁻¹ and eats nothing. He starts with 420 g of muscle glycogen and 100 g of liver glycogen. Roughly how long until both are gone?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 130 min",
+       "correct": true,
+       "why": "Right: (420 + 100) ÷ 4 = 520 ÷ 4 = 130 min, an upper limit."
+      },
+      {
+       "id": "b",
+       "text": "About 105 min",
+       "why": "This uses the muscle store only (420 ÷ 4) and forgets the liver."
+      },
+      {
+       "id": "c",
+       "text": "About 2,080 min",
+       "why": "This multiplies store by rate (520 × 4); time = store ÷ rate."
+      },
+      {
+       "id": "d",
+       "text": "About 2.2 min",
+       "why": "This gives the answer in hours (130 ÷ 60 ≈ 2.2) but labels it minutes."
+      }
+     ],
+     "solution": "Stores = 420 + 100 = 520 g. Time = 520 g ÷ 4 g·min⁻¹ = 130 min (about 2.2 h). An upper limit: not all muscle glycogen is in the working legs."
+    }
+   ]
+  },
+  {
+   "id": "gly-calc-limit",
+   "concept": "gly-use",
+   "bloom": "analyse",
+   "sources": [
+    "rapoport2010",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's sums say her glycogen should last 3 h, but she fades badly at 2 h 20 min with nothing eaten. Which flaw in the sums best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glycogen in her arms and trunk can't fuel her legs, so the legs run low first",
+       "correct": true,
+       "why": "Right: each muscle burns its own glycogen, so the working legs empty before the whole-body total does."
+      },
+      {
+       "id": "b",
+       "text": "Her liver glycogen is held back for after the race",
+       "why": "The liver releases glucose throughout exercise; it doesn't keep a reserve for later."
+      },
+      {
+       "id": "c",
+       "text": "She burned more fat than expected, which uses up glycogen faster",
+       "why": "Burning more fat spares glycogen; it doesn't speed its use."
+      },
+      {
+       "id": "d",
+       "text": "Glycogen gives more energy per gram than the 17 kJ in the sums",
+       "why": "If anything, a higher energy value would make the stores last longer, not shorter."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-wall-cause",
+   "concept": "gly-fatigue",
+   "bloom": "analyse",
+   "sources": [
+    "hawley1997",
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 32 km of a marathon, a runner who ate little before or during the race slows sharply, though she isn't overheating and her breathing feels easy. What is the most likely cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle and liver glycogen have run critically low",
+       "correct": true,
+       "why": "Right: this late, sudden slowdown fits hitting the wall from low carbohydrate stores."
+      },
+      {
+       "id": "b",
+       "text": "Lactate has built up from running above her threshold",
+       "why": "Marathon pace is below the threshold for most runners, and her easy breathing argues against it."
+      },
+      {
+       "id": "c",
+       "text": "Her phosphocreatine stores have run out",
+       "why": "PCr matters for seconds-long efforts and recovers quickly; it doesn't cause a slowdown after 2–3 h."
+      },
+      {
+       "id": "d",
+       "text": "Her fat stores have run out",
+       "why": "Even a lean runner holds enough fat for days; it is the carbohydrate store that empties."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-load-recall",
+   "concept": "gly-loading",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "bussau2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is today's usual carbohydrate-loading advice before an event lasting over 90 minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10–12 g·kg⁻¹·day⁻¹ for 36–48 h, training little",
+       "correct": true,
+       "why": "Right: a day or two of high carbohydrate with reduced training fills muscle glycogen."
+      },
+      {
+       "id": "b",
+       "text": "3 days low carbohydrate, then 3 days high carbohydrate",
+       "why": "That is the classic 1960s protocol, now dropped because the depletion phase is hard and unnecessary."
+      },
+      {
+       "id": "c",
+       "text": "5–7 g·kg⁻¹·day⁻¹ for a week, training as usual",
+       "why": "That is an everyday intake for moderate training; it won't fill glycogen above normal."
+      },
+      {
+       "id": "d",
+       "text": "A large pasta meal the night before only",
+       "why": "One meal rarely supplies 10–12 g·kg⁻¹ over a full day; loading needs high intake across 1–2 days."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-classic-dropped",
+   "concept": "gly-loading",
+   "bloom": "understand",
+   "sources": [
+    "murray2018",
+    "sherman1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why have coaches largely dropped the classic loading protocol with its 3 low-carbohydrate days of hard training?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A high-carbohydrate taper alone fills glycogen about as well",
+       "correct": true,
+       "why": "Right: the modified regimen reached similar glycogen levels and spares athletes the punishing low-carbohydrate phase."
+      },
+      {
+       "id": "b",
+       "text": "It never raised muscle glycogen above normal levels",
+       "why": "It did supercompensate glycogen; the problem was the cost, not the effect."
+      },
+      {
+       "id": "c",
+       "text": "It was shown to make performance worse over 20 km",
+       "why": "Loading didn't help a 20.9 km run, but it didn't harm it either; that isn't why the depletion phase was dropped."
+      },
+      {
+       "id": "d",
+       "text": "It only works in untrained people",
+       "why": "Trained athletes supercompensate too; the 1-day protocol was tested in trained men."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-bussau-appraise",
+   "concept": "gly-loading",
+   "bloom": "evaluate",
+   "sources": [
+    "bussau2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 1-day loading study gave 8 trained men 10 g·kg⁻¹·day⁻¹ while they rested, and measured muscle glycogen by biopsy. What most limits its use as advice for a female triathlete before an Ironman?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only 8 men were tested, and performance was never measured",
+       "correct": true,
+       "why": "Right: a small, all-male sample, and it shows glycogen went up, not that racing got better."
+      },
+      {
+       "id": "b",
+       "text": "Biopsies can't measure muscle glycogen",
+       "why": "Biopsies are the standard way to measure muscle glycogen."
+      },
+      {
+       "id": "c",
+       "text": "The men were trained, so the result is too strong",
+       "why": "Trained athletes are the right group for this question; that is a strength, not a limit."
+      },
+      {
+       "id": "d",
+       "text": "The study lasted 3 days, too long to judge a 1-day protocol",
+       "why": "The extra days showed glycogen didn't keep rising, which supports the 1-day result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-load-who",
+   "concept": "gly-load-who",
+   "bloom": "evaluate",
+   "sources": [
+    "hawley1997",
+    "sherman1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner plans a full 2-day carbohydrate load before a 10 km race she expects to finish in 42 min. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unneeded: glycogen won't run low in 42 min, so a normal high-carbohydrate day will do",
+       "correct": true,
+       "why": "Right: extra glycogen gives no benefit in efforts under 90 min, and the added water weight is a small cost."
+      },
+      {
+       "id": "b",
+       "text": "Wise: loading improves every race by 2–3%",
+       "why": "The 2–3% gain applies to events over 90 min, not a 42-min race."
+      },
+      {
+       "id": "c",
+       "text": "Wise, but only with a low-carbohydrate depletion phase first",
+       "why": "The depletion phase isn't needed even when loading makes sense, and here loading itself isn't needed."
+      },
+      {
+       "id": "d",
+       "text": "Harmful: high carbohydrate before short races lowers glycogen",
+       "why": "Eating more carbohydrate doesn't lower glycogen; it just gives no benefit here."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete expects to finish an Ironman in about 11 h. Should he load carbohydrate in the 36–48 h before?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: in events over 90 min, fuller glycogen improves performance",
+       "correct": true,
+       "why": "Right: for events over 90 min, higher starting glycogen delays fatigue and improves set-distance performance by about 2–3%."
+      },
+      {
+       "id": "b",
+       "text": "No: Ironman pace is so easy that it runs on fat alone",
+       "why": "Even at Ironman pace carbohydrate is a major fuel, and over 11 h the stores run low."
+      },
+      {
+       "id": "c",
+       "text": "No: eating during the race makes the starting stores irrelevant",
+       "why": "Race feeding helps a lot, but the gut can't replace all the carbohydrate burned; starting full still matters."
+      },
+      {
+       "id": "d",
+       "text": "Only with 3 days of low-carbohydrate training first",
+       "why": "The depletion phase is not needed; 1–2 days of high intake fills glycogen."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

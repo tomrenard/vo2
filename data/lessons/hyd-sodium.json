@@ -1,0 +1,641 @@
+{
+ "id": "hyd-sodium",
+ "module": "t4-hydration",
+ "title": "Sodium: losses, intake and what it does",
+ "goal": "Work out sodium losses per hour from sweat rate and sweat sodium, apply the sodium intake guideline for long events, and judge the evidence on sodium for performance and cramps.",
+ "requires": [
+  "hyd-strategies"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sweat-sodium-concentration",
+    "eamc"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hsod-variation",
+   "title": "Salty and not-so-salty sweaters",
+   "text": "The *Sweat* lesson showed why sweat is less salty than plasma and why that differs between people. Now the numbers for planning.\n\nIn 506 athletes tested by a sports-drink company's lab, predicted whole-body [sweat sodium concentration](g:sweat-sodium-concentration) averaged about **36 mmol·L⁻¹**, ranging from about 18 to 71 [[c:hsod-range]]. Sweat rates ranged from 0.26 to 5.7 L·h⁻¹, averaging 1.2 [[c:hsod-rate]].\n\nSo two riders can differ about fourfold in sodium per litre, and severalfold in litres per hour. Sodium lost per hour multiplies the two, which is why one 'sodium per hour' figure fits nobody exactly.",
+   "claims": [
+    {
+     "id": "hsod-range",
+     "text": "In 506 athletes, predicted whole-body sweat sodium averaged about 36 mmol·L⁻¹ (range about 18–71); forearm values averaged about 44 (range about 13–105).",
+     "grade": "moderate",
+     "sources": [
+      "baker2016"
+     ],
+     "evidence": [
+      {
+       "source": "baker2016",
+       "quote": "Forearm sweat [Na+] and predicted whole-body sweat [Na+] were 43.6 ± 18.2 (12.6-104.8) mmol · L(-1) and 35.9 ± 10.4 (18.2-70.8) mmol · L(-1), respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hsod-rate",
+     "text": "In the same athletes, whole-body sweat rate averaged 1.21 L·h⁻¹ (range 0.26–5.73).",
+     "grade": "moderate",
+     "sources": [
+      "baker2016"
+     ],
+     "evidence": [
+      {
+       "source": "baker2016",
+       "quote": "Absolute and relative whole-body sweating rates were 1.21 ± 0.68 (0.26-5.73) L · h(-1) and 15.3 ± 6.8 (3.3-69.7) ml · kg(-1) · h(-1), respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hsod-salty-why"
+  },
+  {
+   "type": "concept",
+   "id": "hsod-losses",
+   "title": "Sodium lost per hour",
+   "text": "**sodium lost per hour = sweat rate × sweat sodium concentration**\n\nL·h⁻¹ × mmol·L⁻¹ gives mmol·h⁻¹. Labels use milligrams, so convert: one mmol of sodium weighs **23 mg**.\n\nThen watch for the commonest label mix-up: **salt is not sodium**. Table salt (sodium chloride) is only about 39% sodium by mass, so:\n\n- 1 g of salt holds about 390 mg of sodium;\n- 1,000 mg of sodium comes in about 2.6 g of salt.\n\nA capsule that says \"500 mg\" might mean either; read which.",
+   "claims": []
+  },
+  {
+   "type": "example",
+   "id": "hsod-loss-example",
+   "title": "How much sodium does this rider lose?",
+   "problem": "A cyclist sweats 1.5 L·h⁻¹ and her sweat sodium is 40 mmol·L⁻¹. How much sodium does she lose per hour, in mg, and how much salt is that?",
+   "steps": [
+    "mmol per hour = 1.5 L·h⁻¹ × 40 mmol·L⁻¹ = 60 mmol·h⁻¹.",
+    "mg per hour = 60 × 23 mg = 1,380 mg·h⁻¹ of sodium (about 1.4 g).",
+    "As salt: 1,380 ÷ 0.39 ≈ 3,500 mg, about 3.5 g of salt per hour. Keep sodium and salt apart when you read labels."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hsod-loss-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hsod-salt-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hsod-intake",
+   "title": "Sodium intake in long events",
+   "text": "The ACSM figure, as reported in a 2022 review, is **300–600 mg of sodium per hour** in prolonged exercise. Several bodies advise it mainly for athletes with high sweat rates (over about 1.2 L·h⁻¹), salty sweat, or events over about 2 h [[c:hsod-guide]]. That is less than many athletes lose: the aim isn't to replace every milligram.\n\nDoes extra sodium keep blood sodium normal? In a 161 km trail race, 94% of runners used sodium supplements. Blood sodium at the finish rose only a little with more sodium, and runners with low blood sodium hadn't taken less than the others. What marked them out was drinking too much [[c:hsod-ws]] (the last lesson of this module).\n\nIn practice: sports drinks, gels and salty food in events over about 2 h.",
+   "claims": [
+    {
+     "id": "hsod-guide",
+     "text": "ACSM's recommendation for sodium intake during prolonged exercise is 300–600 mg·h⁻¹, advised mainly for high sweat rates (>1.2 L·h⁻¹), salty sweat and exercise over 2 h.",
+     "grade": "moderate",
+     "sources": [
+      "veniamakis2022"
+     ],
+     "evidence": [
+      {
+       "source": "veniamakis2022",
+       "quote": "ACSM recommendations for sodium intake are 300–600 mg/h (1.7–2.9 g salt) during prolonged exercise",
+       "level": "full-text"
+      },
+      {
+       "source": "veniamakis2022",
+       "quote": "The Academy of Nutrition and Dietetics (AND), Dietitians of Canada (DC) and The American College of Sports Medicine (ACSM) recommend sodium intake during exercise in athletes with high sweat rates (>1.2 L/h), subjective “salty sweating” and prolonged exercise >2 h",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hsod-ws",
+     "text": "In a 161 km race, sodium supplement intake was only weakly related to post-race blood sodium and did not differ between hyponatraemic and other finishers; overhydration was the main feature of those who became hyponatraemic.",
+     "grade": "weak",
+     "sources": [
+      "hoffman2015"
+     ],
+     "evidence": [
+      {
+       "source": "hoffman2015",
+       "quote": "There was no difference in rate of sodium intake in supplements between the hyponatremic and normonatremic finishers, and none of the hyponatremic finishers lost >4.3% body weight.",
+       "level": "abstract"
+      },
+      {
+       "source": "hoffman2015",
+       "quote": "We conclude that a low sodium intake in supplements has minimal responsibility for development of hyponatremia during continuous exercise up to 30 h, whereas overhydration is the primary characteristic of those developing hyponatremia.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hsod-guide-apply"
+  },
+  {
+   "type": "question",
+   "item": "hsod-ws-analyse"
+  },
+  {
+   "type": "concept",
+   "id": "hsod-performance",
+   "title": "Does salt make you faster, or stop cramps?",
+   "text": "Two trials, two answers [[c:hsod-trials]]:\n\n| study | who, what | result |\n|---|---|---|\n| Del Coso 2016, randomised | 26 triathletes, half-Ironman, salt capsules vs placebo | salt group faster overall, higher blood sodium, a trend to less mass loss |\n| Cosgrove 2013, crossover | 9 cyclists, 72 km time trial at 14 °C, 700 mg·h⁻¹ | 171 vs 172 min: no difference |\n\nBoth are small. The longer race showed a benefit, the cool 3 h ride didn't. Not settled.\n\nCramps are the other reason athletes take salt. In 210 Ironman triathletes, those who cramped had the same blood sodium and body mass changes as those who didn't; faster racing and earlier cramps predicted them [[c:hsod-cramps]]. [Cramps](g:eamc) get their own lesson in the sports medicine module.",
+   "claims": [
+    {
+     "id": "hsod-trials",
+     "text": "Salt capsules shortened half-Ironman race time in one randomised trial, while 700 mg·h⁻¹ sodium did not change a 72 km cycling time trial in cool conditions.",
+     "grade": "disputed",
+     "sources": [
+      "delcoso2016",
+      "cosgrove2013"
+     ],
+     "evidence": [
+      {
+       "source": "delcoso2016",
+       "quote": "Total race time was lower in the salt group than in the control group (P = 0.04).",
+       "level": "abstract"
+      },
+      {
+       "source": "delcoso2016",
+       "quote": "Oral salt supplementation was effective to lessen body mass loss and increase serum electrolyte concentration during a real half-ironman.",
+       "level": "abstract"
+      },
+      {
+       "source": "cosgrove2013",
+       "quote": "Sodium supplements had no effect on time-trial performance (overall time = 171 min sodium vs. 172 min placebo; p = 0.46).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hsod-cramps",
+     "text": "In Ironman triathletes, cramping was not linked to blood sodium or body mass changes; faster racing and a history of cramps were the independent risk factors.",
+     "grade": "weak",
+     "sources": [
+      "schwellnus2011"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2011",
+       "quote": "There were no significant differences between groups in any pre-race-post-race serum electrolyte concentrations and body weight changes.",
+       "level": "abstract"
+      },
+      {
+       "source": "schwellnus2011",
+       "quote": "A regression analysis identified faster overall race time (and cycling time) and a history of cramping (in the last 10 races) as the only two independent risk factors for EAMC.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does taking sodium during long events improve performance?",
+    "sides": [
+     {
+      "position": "Yes, in long races: salt capsules cut half-Ironman time and raised blood sodium.",
+      "sources": [
+       "delcoso2016"
+      ]
+     },
+     {
+      "position": "No clear effect: 700 mg·h⁻¹ did not change a 3 h cycling time trial in cool conditions.",
+      "sources": [
+       "cosgrove2013"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hsod-trial-eval"
+  },
+  {
+   "type": "question",
+   "item": "hsod-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "hsod-cramp"
+  },
+  {
+   "type": "question",
+   "item": "hsod-loss-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hsod-salt-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hsod-loss-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Whole-body sweat sodium is about 18–71 mmol·L⁻¹ (average about 36) and sweat rate about 0.3–5.7 L·h⁻¹, so sodium losses differ severalfold between athletes.",
+    "Sodium lost per hour = sweat rate × sweat sodium; 1 mmol = 23 mg; 1 g of salt holds about 390 mg of sodium.",
+    "Guideline for long events: about 300–600 mg of sodium per hour, mainly for heavy or salty sweaters and events over about 2 h; it isn't meant to replace every milligram.",
+    "Sodium intake barely moved blood sodium in a 161 km race; overdrinking, not too little salt, marked those who became hyponatraemic.",
+    "Performance effects of salt are mixed (one positive half-Ironman trial, one null time trial); cramps tracked pace and cramp history, not blood sodium."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hsod-salty-why",
+   "concept": "hsod-variation",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "baker2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes both sweat 1.5 L·h⁻¹ in the same race. Why might one lose three times more sodium than the other?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sweat sodium concentration differs a lot between people",
+       "correct": true,
+       "why": "Right: whole-body sweat sodium ran from about 18 to 71 mmol·L⁻¹ across athletes, so the same litres can carry very different amounts."
+      },
+      {
+       "id": "b",
+       "text": "The heavier athlete always has saltier sweat",
+       "why": "Body size changes how much you sweat, not reliably how salty each litre is."
+      },
+      {
+       "id": "c",
+       "text": "Sodium loss depends only on sweat rate, so the scale must be off",
+       "why": "Sodium loss = sweat rate × sweat sodium; both factors vary between people."
+      },
+      {
+       "id": "d",
+       "text": "Drinking more water during a race makes sweat saltier",
+       "why": "Drinking doesn't make sweat saltier; sweat sodium differs mainly between people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hsod-loss-calc",
+   "concept": "hsod-losses",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "baker2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner sweats 1.2 L·h⁻¹ with a sweat sodium of 45 mmol·L⁻¹. About how much sodium does he lose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1,240 mg",
+       "correct": true,
+       "why": "Right: 1.2 × 45 = 54 mmol·h⁻¹; 54 × 23 ≈ 1,240 mg."
+      },
+      {
+       "id": "b",
+       "text": "About 54 mg",
+       "why": "54 is in mmol. Multiply by 23 mg per mmol to get mg."
+      },
+      {
+       "id": "c",
+       "text": "About 3,200 mg",
+       "why": "That is the mass of salt holding 1,240 mg of sodium; the question asks for sodium."
+      },
+      {
+       "id": "d",
+       "text": "About 1,040 mg",
+       "why": "This is 45 × 23: sodium in one litre. He sweats 1.2 L each hour."
+      }
+     ],
+     "solution": "Sodium lost = 1.2 L·h⁻¹ × 45 mmol·L⁻¹ = 54 mmol·h⁻¹. 54 × 23 mg = 1,242 mg ≈ 1,240 mg·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete sweats 1.4 L·h⁻¹ with a sweat sodium of 30 mmol·L⁻¹. About how much sodium does she lose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 970 mg",
+       "correct": true,
+       "why": "Right: 1.4 × 30 = 42 mmol·h⁻¹; 42 × 23 = 966 mg."
+      },
+      {
+       "id": "b",
+       "text": "About 42 mg",
+       "why": "42 is in mmol. Multiply by 23 mg per mmol."
+      },
+      {
+       "id": "c",
+       "text": "About 2,480 mg",
+       "why": "That is the salt holding 966 mg of sodium, not the sodium itself."
+      },
+      {
+       "id": "d",
+       "text": "About 690 mg",
+       "why": "This is 30 × 23: sodium in one litre. She sweats 1.4 L each hour."
+      }
+     ],
+     "solution": "Sodium lost = 1.4 × 30 = 42 mmol·h⁻¹. 42 × 23 mg = 966 mg ≈ 970 mg·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist sweats 0.8 L·h⁻¹ with a sweat sodium of 70 mmol·L⁻¹. About how much sodium does he lose per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1,290 mg",
+       "correct": true,
+       "why": "Right: 0.8 × 70 = 56 mmol·h⁻¹; 56 × 23 = 1,288 mg."
+      },
+      {
+       "id": "b",
+       "text": "About 56 mg",
+       "why": "56 is in mmol. Multiply by 23 mg per mmol."
+      },
+      {
+       "id": "c",
+       "text": "About 3,300 mg",
+       "why": "That is the salt holding 1,288 mg of sodium, not the sodium itself."
+      },
+      {
+       "id": "d",
+       "text": "About 1,610 mg",
+       "why": "This is 70 × 23: sodium in one litre. He sweats only 0.8 L each hour."
+      }
+     ],
+     "solution": "Sodium lost = 0.8 × 70 = 56 mmol·h⁻¹. 56 × 23 mg = 1,288 mg ≈ 1,290 mg·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hsod-salt-calc",
+   "concept": "hsod-losses",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "veniamakis2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A capsule label says each one holds 500 mg of salt (sodium chloride). About how much sodium is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 195 mg",
+       "correct": true,
+       "why": "Right: salt is about 39% sodium; 0.39 × 500 ≈ 195 mg."
+      },
+      {
+       "id": "b",
+       "text": "500 mg",
+       "why": "This treats salt as pure sodium; the chloride makes up about 61% of the mass."
+      },
+      {
+       "id": "c",
+       "text": "About 1,280 mg",
+       "why": "This divides by 0.39 instead of multiplying: going from salt to sodium, the number gets smaller."
+      },
+      {
+       "id": "d",
+       "text": "About 22 mg",
+       "why": "500 ÷ 23 ≈ 22 is a number of mmol, not mg, and it treats salt as if it were sodium."
+      }
+     ],
+     "solution": "Sodium ≈ 39% of salt by mass: 0.39 × 500 mg ≈ 195 mg of sodium."
+    },
+    {
+     "id": "b",
+     "stem": "A drink mix gives 1,000 mg of sodium per litre. About how much salt does that correspond to?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.6 g",
+       "correct": true,
+       "why": "Right: 1,000 ÷ 0.39 ≈ 2,560 mg ≈ 2.6 g of salt."
+      },
+      {
+       "id": "b",
+       "text": "About 0.39 g",
+       "why": "This multiplies by 0.39 instead of dividing: going from sodium to salt, the number gets bigger."
+      },
+      {
+       "id": "c",
+       "text": "About 1.0 g",
+       "why": "This treats sodium and salt as the same thing."
+      },
+      {
+       "id": "d",
+       "text": "About 43 g",
+       "why": "1,000 ÷ 23 = 43 is the sodium in mmol, not grams of salt."
+      }
+     ],
+     "solution": "Salt ≈ sodium ÷ 0.39 = 1,000 mg ÷ 0.39 ≈ 2,560 mg ≈ 2.6 g."
+    }
+   ]
+  },
+  {
+   "id": "hsod-guide-apply",
+   "concept": "hsod-intake",
+   "bloom": "apply",
+   "sources": [
+    "veniamakis2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete with salt-streaked kit sweats 1.5 L·h⁻¹ and is racing a 10 h Ironman. Which sodium plan fits current guidance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 300–600 mg of sodium per hour from drinks, gels and food",
+       "correct": true,
+       "why": "Right: high sweat rate, salty sweat and a long event are exactly where the 300–600 mg·h⁻¹ guideline applies."
+      },
+      {
+       "id": "b",
+       "text": "None: sodium makes no difference in any event",
+       "why": "The guideline exists for long events with heavy, salty sweating; ignoring sodium for 10 h isn't the advice."
+      },
+      {
+       "id": "c",
+       "text": "Capsules to replace every milligram lost, 2 g or more per hour",
+       "why": "The guideline is well below typical losses; no study shows replacing all of it helps."
+      },
+      {
+       "id": "d",
+       "text": "300–600 mg of sodium spread over the whole race",
+       "why": "The guideline is per hour, not per race: over 10 h that's 3–6 g."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hsod-ws-analyse",
+   "concept": "hsod-intake",
+   "bloom": "analyse",
+   "sources": [
+    "hoffman2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 161 km race study, runners who finished with low blood sodium had taken as much sodium as the others, and none had lost more than 4.3% of body mass. What best explains their low sodium?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They drank more than they needed",
+       "correct": true,
+       "why": "Right: overhydration was the main feature of hyponatraemic finishers; sodium intake didn't differ."
+      },
+      {
+       "id": "b",
+       "text": "Their capsules held too little sodium",
+       "why": "Their sodium intake was no different from that of runners with normal blood sodium."
+      },
+      {
+       "id": "c",
+       "text": "They lost too much water and became severely dry",
+       "why": "None lost more than 4.3%; low sodium went with drinking too much, not too little."
+      },
+      {
+       "id": "d",
+       "text": "They ran faster and sweated out more sodium",
+       "why": "Nothing in the study points to pace or sweat sodium; overhydration marked them out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hsod-trial-eval",
+   "concept": "hsod-performance",
+   "bloom": "evaluate",
+   "sources": [
+    "delcoso2016",
+    "cosgrove2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One small trial found salt capsules sped up a half-Ironman; another found no effect of sodium in a 3 h cool cycling time trial. Which conclusion is fairest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sodium may help in long races, but the evidence is small and mixed",
+       "correct": true,
+       "why": "Right: two small trials in different settings disagree; that is a possible benefit, not a proven one."
+      },
+      {
+       "id": "b",
+       "text": "Sodium clearly improves endurance performance",
+       "why": "One small positive trial against one null trial doesn't make a clear effect."
+      },
+      {
+       "id": "c",
+       "text": "Sodium clearly has no effect on performance",
+       "why": "The null trial was short and cool; it can't rule out an effect in longer events."
+      },
+      {
+       "id": "d",
+       "text": "Sodium helps triathletes but never cyclists",
+       "why": "The trials differed in duration and conditions, not just sport; this reads too much into two studies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hsod-appraisal",
+   "concept": "hsod-performance",
+   "bloom": "evaluate",
+   "sources": [
+    "delcoso2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Del Coso 2016 randomly split 26 triathletes into a salt group and a placebo group and compared their race times. What most limits the finding that salt made them faster?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small groups: differences between athletes can fake or hide a time gap",
+       "correct": true,
+       "why": "Right: in a between-group design, each athlete is in only one group, so with small groups their own differences in fitness and race day weigh heavily."
+      },
+      {
+       "id": "b",
+       "text": "Using a placebo capsule makes the result less reliable",
+       "why": "A placebo makes the comparison fairer; it is a strength, not a limit."
+      },
+      {
+       "id": "c",
+       "text": "A real race is less relevant to athletes than a lab test is",
+       "why": "A real race is highly relevant; its weakness is less control, not relevance."
+      },
+      {
+       "id": "d",
+       "text": "Measuring blood sodium after the race biases the race time",
+       "why": "Blood was taken after the finish, so it couldn't change the time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hsod-cramp",
+   "concept": "hsod-performance",
+   "bloom": "apply",
+   "sources": [
+    "schwellnus2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A fast age-group triathlete cramps late in every Ironman run despite taking salt capsules. What does the 210-triathlete cramp study point to?",
+     "options": [
+      {
+       "id": "a",
+       "text": "His racing pace and history of cramps, more than his sodium",
+       "correct": true,
+       "why": "Right: faster racing and earlier cramps were the independent risk factors; blood sodium and mass changes didn't differ."
+      },
+      {
+       "id": "b",
+       "text": "Low blood sodium from heavy sweating",
+       "why": "Those who cramped had the same blood sodium changes as those who didn't."
+      },
+      {
+       "id": "c",
+       "text": "Losing too much body mass during the race",
+       "why": "Body mass changes were the same in those who cramped and those who didn't."
+      },
+      {
+       "id": "d",
+       "text": "Taking too few capsules for his size",
+       "why": "Nothing in the study links cramps to sodium intake; the predictors were pace and cramp history."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

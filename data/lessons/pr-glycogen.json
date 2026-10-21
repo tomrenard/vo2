@@ -1,0 +1,854 @@
+{
+ "id": "pr-glycogen",
+ "module": "t4-protein-recovery",
+ "title": "Refilling glycogen after exercise",
+ "goal": "Explain how fast muscle and liver glycogen are refilled after exercise, and plan carbohydrate (and protein) intake for short and long recoveries.",
+ "requires": [
+  "pr-mps"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "glycogen-synthase",
+    "fructose",
+    "sucrose"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gly-phases",
+   "title": "Two phases of refilling",
+   "text": "Long or hard endurance work can empty much of the [glycogen](g:glycogen) in the working muscles (the macros module covers the stores). Refilling runs in two phases [[c:two-phases]]:\n\n- **Fast phase, the first 30–60 min:** contraction has moved [GLUT4](g:glut4) to the fibre surface, so glucose gets in without needing [insulin](g:insulin).\n- **Slow phase, several hours:** glucose entry now leans on insulin.\n\nThe enzyme that sets the pace is [glycogen synthase](g:glycogen-synthase). Recent contraction, insulin and, above all, low glycogen switch it up: an empty store pulls hard to refill itself [[c:synthase-drive]].\n\nEven with plenty of carbohydrate, a full refill takes about a day.",
+   "claims": [
+    {
+     "id": "two-phases",
+     "text": "Post-exercise glycogen synthesis has a rapid, insulin-independent phase of about 30–60 min (driven by GLUT4 at the membrane), then a slower phase lasting several hours.",
+     "grade": "moderate",
+     "sources": [
+      "jentjens2003",
+      "burke2017"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2003",
+       "quote": "Initially, there is a period of rapid synthesis of muscle glycogen that does not require the presence of insulin and lasts about 30-60 minutes. This rapid phase of muscle glycogen synthesis is characterised by an exercise-induced translocation of glucose transporter carrier protein-4 to the cell surface, leading to an increased permeability of the muscle membrane to glucose.",
+       "level": "abstract"
+      },
+      {
+       "source": "jentjens2003",
+       "quote": "Following this rapid phase of glycogen synthesis, muscle glycogen synthesis occurs at a much slower rate and this phase can last for several hours.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "synthase-drive",
+     "text": "Contraction, insulin and low muscle glycogen all raise glycogen synthase activity, so a depleted store drives its own resynthesis.",
+     "grade": "moderate",
+     "sources": [
+      "jentjens2003",
+      "burke2017"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2003",
+       "quote": "Both muscle contraction and insulin have been shown to increase the activity of glycogen synthase, the rate-limiting enzyme in glycogen synthesis. Furthermore, it has been shown that muscle glycogen concentration is a potent regulator of glycogen synthase.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2017",
+       "quote": "In the early postexercise period (0-4 h), glycogen depletion provides a strong drive for its own resynthesis, with the provision of CHO (~1 g/kg body mass) optimizing this process.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-phase-why"
+  },
+  {
+   "type": "question",
+   "item": "gly-empty-faster"
+  },
+  {
+   "type": "concept",
+   "id": "gly-timing",
+   "title": "Start now, or later?",
+   "text": "When the next session is close, eat at once. Cyclists who drank 2 g·kg⁻¹ of carbohydrate straight after a ride stored glycogen at 7.7 mmol·kg⁻¹ wet muscle per hour over the next 2 h. Those who waited 2 h stored 2.5, and even once they drank they stored 45% slower than the early group had [[c:delay-costs]].\n\nOver a longer recovery, a 2 h delay of high-carbohydrate meals made no difference to glycogen at 8 or 24 h, as long as enough carbohydrate was eaten [[c:delay-washes-out]]. From about 4 h on, the total matters more than the type or timing [[c:later-total]].\n\nRule of thumb: next session later the same day → eat straight away. A day or more → just eat enough.",
+   "claims": [
+    {
+     "id": "delay-costs",
+     "text": "Delaying carbohydrate by 2 h after exercise cut glycogen storage from 7.7 to 2.5 mmol·kg⁻¹ wet muscle per hour over the first 2 h; reviews put the loss from delays of several hours at about 50%.",
+     "grade": "moderate",
+     "sources": [
+      "ivy1988",
+      "jentjens2003"
+     ],
+     "evidence": [
+      {
+       "source": "ivy1988",
+       "quote": "During the first 2 h postexercise, the rate of muscle glycogen storage was 7.7 mumol.g wet wt-1.h-1 for the P-EX treatment, but only 2.5 mumol.g wet wt-1.h-1 for the 2P-EX treatment.",
+       "level": "abstract"
+      },
+      {
+       "source": "ivy1988",
+       "quote": "This rate, however, was still 45% slower (P less than 0.05) than that for the P-EX treatment during the first 2 h of recovery.",
+       "level": "abstract"
+      },
+      {
+       "source": "jentjens2003",
+       "quote": "When carbohydrate ingestion is delayed by several hours, this may lead to ~50% lower rates of muscle glycogen synthesis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "delay-washes-out",
+     "text": "A 2 h delay in high-carbohydrate meals made no difference to muscle glycogen at 8 and 24 h when enough carbohydrate was eaten.",
+     "grade": "weak",
+     "sources": [
+      "parkin1997"
+     ],
+     "evidence": [
+      {
+       "source": "parkin1997",
+       "quote": "These data indicate that delayed feeding of a HGI meal by 2 h has no effect on the rate of muscle glycogen resynthesis at 8 and 24 h post-exercise, providing that sufficient carbohydrate is ingested during the recovery period.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "later-total",
+     "text": "From about 4 h after exercise, total carbohydrate intake matters more than its type, form or timing.",
+     "grade": "moderate",
+     "sources": [
+      "burke2017",
+      "kerksick2017"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017",
+       "quote": "During the later phase of recovery (4-24 h), CHO intake should meet the anticipated fuel needs of the training/competition, with the type, form, and pattern of intake being less important than total intake.",
+       "level": "abstract"
+      },
+      {
+       "source": "kerksick2017",
+       "quote": "Outside of situations where rapid recovery is truly needed, and daily carbohydrate intake is matching energy demands, the importance of timed carbohydrate ingestion is notably decreased.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-timing-scenario",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gly-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "gly-dose",
+   "title": "How much, how fast",
+   "text": "For fast refilling, aim for about **1.0–1.2 g·kg⁻¹ of carbohydrate per hour** for the first 4 h, starting straight away, in servings every 15–60 min [[c:rate-target]]. More doesn't help: 1.6 g·kg⁻¹·h⁻¹ stored no more glycogen than 1.2 [[c:no-more]].\n\n| Body mass | Per hour at 1.2 g·kg⁻¹ | 4 h total |\n|---|---|---|\n| 60 kg | 72 g | 288 g |\n| 75 kg | 90 g | 360 g |\n\nThat is a lot of food in a short time, so drinks, white bread, rice, jam and sweets make it easier. And 90 g·h⁻¹ is 1.5 g·min⁻¹: more glucose than the gut can absorb (about 1–1.2 g·min⁻¹) [[c:gut-cap]]. The last card shows the way round it.",
+   "claims": [
+    {
+     "id": "rate-target",
+     "text": "The highest post-exercise glycogen synthesis rates come with about 1.0–1.2 g·kg⁻¹·h⁻¹ of carbohydrate or more, eaten from straight after exercise at 15–60 min intervals for up to 4–5 h.",
+     "grade": "moderate",
+     "sources": [
+      "jentjens2003",
+      "gonzalez2017",
+      "kerksick2017"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2003",
+       "quote": "The highest muscle glycogen synthesis rates have been reported when large amounts of carbohydrate (1.0-1.85 g/kg/h) are consumed immediately post-exercise and at 15-60 minute intervals thereafter, for up to 5 hours post-exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "gonzalez2017",
+       "quote": "Carbohydrate ingestion at a rate of ≥1.2 g carbohydrate per kg body mass per hour appears to maximise post-exercise muscle glycogen repletion rates.",
+       "level": "abstract"
+      },
+      {
+       "source": "kerksick2017",
+       "quote": "Rapid ingestion of high amounts of carbohydrates (≥ 1.2 g/kg/h) for four to 6 h soon after exhausting exercise can rapidly stimulate replenishment of muscle glycogen.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "no-more",
+     "text": "Raising carbohydrate from 1.2 to 1.6 g·kg⁻¹·h⁻¹ after exercise did not increase glycogen synthesis.",
+     "grade": "weak",
+     "sources": [
+      "howarth2009"
+     ],
+     "evidence": [
+      {
+       "source": "howarth2009",
+       "quote": "However, adding protein or additional CHO to a feeding strategy that provided 1.2 g CHO x kg(-1) x h(-1) did not further enhance glycogen resynthesis during recovery.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gut-cap",
+     "text": "The gut can absorb glucose at about 1.2 g·min⁻¹; above that, glucose–fructose mixtures reduce gut distress.",
+     "grade": "moderate",
+     "sources": [
+      "gonzalez2017"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalez2017",
+       "quote": "Furthermore, glucose plus fructose (sucrose) ingestion alleviates gastrointestinal distress when the ingestion rate approaches or exceeds the capacity for intestinal glucose absorption (~1.2 g/min).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "gly-dose-example",
+   "title": "Recovery carbohydrate for a 4-hour gap",
+   "problem": "A 68 kg triathlete finishes a long morning ride and runs again in the afternoon. How much carbohydrate per hour, and in total over 4 h, at 1.2 g·kg⁻¹·h⁻¹?",
+   "steps": [
+    "Per hour = body mass × rate = 68 × 1.2 = 81.6 g, about 82 g·h⁻¹.",
+    "Over 4 h = 81.6 × 4 = 326 g.",
+    "Split into servings every 15–60 min, e.g. about 40 g every 30 min."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-rate-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "gly-rate-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "gly-protein",
+   "title": "When carbohydrate falls short, add protein",
+   "text": "Can't eat that much carbohydrate (no appetite, a touchy gut, a weight goal)? Add protein. With less than about 1.2 g·kg⁻¹·h⁻¹ of carbohydrate, adding protein raises glycogen storage, most likely through a bigger [insulin](g:insulin) rise. One practical mix: about 0.8 g·kg⁻¹·h⁻¹ of carbohydrate plus 0.2–0.4 g·kg⁻¹·h⁻¹ of protein [[c:protein-helps-low]].\n\nOnce carbohydrate reaches about 1.2 g·kg⁻¹·h⁻¹, protein adds no more glycogen [[c:protein-no-extra]].\n\nProtein still earns its place: after a 2 h ride it raised [muscle protein synthesis](g:muscle-protein-synthesis) even though glycogen storage didn't change (first lesson of this module).",
+   "claims": [
+    {
+     "id": "protein-helps-low",
+     "text": "When carbohydrate intake is below about 1.2 g·kg⁻¹·h⁻¹, adding protein (about 0.2–0.4 g·kg⁻¹·h⁻¹) increases post-exercise glycogen synthesis, probably via a larger insulin response.",
+     "grade": "moderate",
+     "sources": [
+      "jentjens2003",
+      "kerksick2017",
+      "burke2017"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2003",
+       "quote": "The addition of certain amino acids and/or proteins to a carbohydrate supplement can increase muscle glycogen synthesis rates, most probably because of an enhanced insulin response.",
+       "level": "abstract"
+      },
+      {
+       "source": "kerksick2017",
+       "quote": "Adding protein (0.2–0.5 g/kg/h) to carbohydrate increases the rate of glycogen resynthesis when ingesting < 1.2 g/kg/h of carbohydrate.",
+       "level": "full-text"
+      },
+      {
+       "source": "kerksick2017",
+       "quote": "combining carbohydrates (0.8 g/kg/h) with protein (0.2–0.4 g/kg/h)",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2017",
+       "quote": "Dietary strategies that can enhance glycogen synthesis from suboptimal amounts of CHO or energy intake are of practical interest to many athletes; in this scenario, the coingestion of protein with CHO can assist glycogen storage.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "protein-no-extra",
+     "text": "With carbohydrate at about 1.2 g·kg⁻¹·h⁻¹ or more, given at regular intervals, added protein does not further increase glycogen synthesis.",
+     "grade": "moderate",
+     "sources": [
+      "jentjens2003",
+      "howarth2009"
+     ],
+     "evidence": [
+      {
+       "source": "jentjens2003",
+       "quote": "However, when carbohydrate intake is high (> or =1.2 g/kg/h) and provided at regular intervals, a further increase in insulin concentrations by additional supplementation of protein and/or amino acids does not further increase the rate of muscle glycogen synthesis.",
+       "level": "abstract"
+      },
+      {
+       "source": "howarth2009",
+       "quote": "However, adding protein or additional CHO to a feeding strategy that provided 1.2 g CHO x kg(-1) x h(-1) did not further enhance glycogen resynthesis during recovery.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-protein-when"
+  },
+  {
+   "type": "question",
+   "item": "gly-protein-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gly-liver",
+   "title": "The liver: add fructose",
+   "text": "The liver holds about 80–100 g of glycogen and keeps blood glucose up; long sessions run it down too. [Fructose](g:fructose) is handled almost entirely by the liver on its first pass, and it crosses the gut wall through its own door ([GLUT5](g:glut5)), not glucose's ([SGLT1](g:sglt1)). So glucose plus fructose is absorbed faster than either alone [[c:fructose-route]].\n\nIn trained cyclists, a recovery drink with fructose added refilled the liver at 8.1 g·h⁻¹, against 3.7 g·h⁻¹ with glucose only [[c:fructose-liver]]. Reviews agree: glucose–fructose mixes, or plain [sucrose](g:sucrose), roughly double liver refilling but don't speed up muscle refilling [[c:sucrose-liver]].\n\nMuscle only: glucose is fine. Liver too, or big intakes: mix in fructose.",
+   "claims": [
+    {
+     "id": "fructose-route",
+     "text": "Fructose is almost completely taken up by the liver on first pass and is absorbed by different gut transporters from glucose, so glucose plus fructose is absorbed faster than either alone.",
+     "grade": "moderate",
+     "sources": [
+      "gonzalez2017"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalez2017",
+       "quote": "In contrast to glucose, which can bypass the liver and enter the systemic circulation, fructose and galactose are almost completely metabolised upon first pass of the liver",
+       "level": "full-text"
+      },
+      {
+       "source": "gonzalez2017",
+       "quote": "Glucose and fructose are primarily absorbed by different intestinal transport proteins; by combining the ingestion of glucose with fructose, both transport pathways are utilised, which increases the total capacity for carbohydrate absorption.",
+       "level": "abstract"
+      },
+      {
+       "source": "gonzalez2017",
+       "quote": "The co-ingestion of glucose and fructose therefore provides faster rates of carbohydrate absorption than the sum of glucose and fructose absorption rates alone.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fructose-liver",
+     "text": "After exhausting exercise, a glucose-polymer drink with fructose added refilled liver glycogen at 8.1 g·h⁻¹, against 3.7 g·h⁻¹ with glucose added.",
+     "grade": "weak",
+     "sources": [
+      "decombaz2011"
+     ],
+     "evidence": [
+      {
+       "source": "decombaz2011",
+       "quote": "Net glycogen synthesis appeared linear and was faster with FRU (8.1 ± 0.6 g·h(-1), P < 0.001) and with GAL (8.6 ± 0.9 g·h(-1), P < 0.001) than with GLU (3.7 ± 0.5 g·h(-1)).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sucrose-liver",
+     "text": "Glucose–fructose mixtures (or sucrose) about double liver glycogen refilling over glucose alone but do not speed up muscle glycogen refilling.",
+     "grade": "moderate",
+     "sources": [
+      "gonzalez2017"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalez2017",
+       "quote": "Providing these carbohydrates in the form of glucose-fructose (sucrose) mixtures does not further enhance muscle glycogen repletion rates over glucose (polymer) ingestion alone. In contrast, liver glycogen repletion rates are approximately doubled with ingestion of glucose-fructose (sucrose) mixtures over isocaloric ingestion of glucose (polymers) alone.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gly-liver-which"
+  },
+  {
+   "type": "question",
+   "item": "gly-liver-plan"
+  },
+  {
+   "type": "question",
+   "item": "gly-timing-scenario",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Glycogen refills fastest in the first 30–60 min (GLUT4 already at the surface, no insulin needed), then more slowly for hours; an emptier store refills faster.",
+    "Next session the same day: start at once, about 1.0–1.2 g·kg⁻¹·h⁻¹ of carbohydrate for 4 h. More than 1.2 adds nothing.",
+    "A day or more to recover: total carbohydrate matters, timing and type much less.",
+    "Below 1.2 g·kg⁻¹·h⁻¹ of carbohydrate, adding 0.2–0.4 g·kg⁻¹·h⁻¹ of protein helps glycogen; above it, protein helps muscle protein but not glycogen.",
+    "Glucose–fructose (or sucrose) about doubles liver refilling and is easier on the gut at high intakes; muscle refilling is the same."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gly-phase-why",
+   "concept": "gly-phases",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is muscle glycogen rebuilt fastest in the first hour after a long run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "GLUT4 is already at the fibre surface and glycogen synthase is switched up",
+       "correct": true,
+       "why": "Right: contraction has moved GLUT4 to the membrane, so glucose enters without insulin, and low glycogen drives the enzyme."
+      },
+      {
+       "id": "b",
+       "text": "Insulin is at its highest straight after the run",
+       "why": "Insulin falls during sustained exercise; the fast phase doesn't need insulin at all."
+      },
+      {
+       "id": "c",
+       "text": "The liver sends its own glycogen to the muscles as a block",
+       "why": "The liver releases glucose, not glycogen, and it is also low after a long run."
+      },
+      {
+       "id": "d",
+       "text": "Lactate from the run is turned straight back into muscle glycogen",
+       "why": "Some lactate ends up as glycogen, but the fast phase is about glucose entry through GLUT4."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-empty-faster",
+   "concept": "gly-phases",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2003",
+    "burke2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two cyclists finish different rides: one with nearly empty leg glycogen, the other with half left. Both eat the same carbohydrate. Who stores glycogen faster in the first hours?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rider with nearly empty glycogen",
+       "correct": true,
+       "why": "Right: low glycogen is a strong regulator of glycogen synthase, so an empty store pulls harder to refill."
+      },
+      {
+       "id": "b",
+       "text": "The rider with half left, as glycogen helps build more",
+       "why": "It is the other way round: a fuller store slows glycogen synthase down."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, since intake sets the rate",
+       "why": "Intake matters, but the muscle's own state, especially how empty it is, changes the rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-timing-scenario",
+   "concept": "gly-timing",
+   "bloom": "analyse",
+   "sources": [
+    "ivy1988",
+    "parkin1997",
+    "burke2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete swims at 6:00 and has a hard bike session at 11:00. Which plan refills her muscle glycogen best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Start carbohydrate straight after the swim, about 1.0–1.2 g·kg⁻¹·h⁻¹",
+       "correct": true,
+       "why": "Right: with only 5 h, a delay costs glycogen, and this rate gives the fastest refill."
+      },
+      {
+       "id": "b",
+       "text": "Wait until 8:00 for appetite, then one big meal",
+       "why": "Waiting 2 h cut storage to a third in the first 2 h and it stayed slower: costly with a 5 h gap."
+      },
+      {
+       "id": "c",
+       "text": "Eat little until 10:00 to teach the body to burn fat",
+       "why": "That is a train-low choice, not a refuelling one: it would leave her short for the hard session."
+      },
+      {
+       "id": "d",
+       "text": "Just a protein shake, since protein refills glycogen best",
+       "why": "Protein helps glycogen only when added to too little carbohydrate; on its own it can't refill the store."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner races a 10 km on Saturday morning; her next run is on Monday. What matters most for refilling her glycogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Enough total carbohydrate over the weekend",
+       "correct": true,
+       "why": "Right: with a day or more to recover, total intake matters far more than timing or type."
+      },
+      {
+       "id": "b",
+       "text": "1.2 g·kg⁻¹·h⁻¹ within 30 min, or the chance is lost",
+       "why": "The fast window matters only when the next session is close; over 24 h a 2 h delay made no difference."
+      },
+      {
+       "id": "c",
+       "text": "Only high-glycaemic foods in the first 24 h",
+       "why": "From about 4 h on, the type of carbohydrate matters much less than the total."
+      },
+      {
+       "id": "d",
+       "text": "A protein shake straight after the race",
+       "why": "Protein supports muscle protein, but glycogen is refilled by carbohydrate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-appraisal",
+   "concept": "gly-timing",
+   "bloom": "evaluate",
+   "sources": [
+    "parkin1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study in 6 trained men found that delaying carbohydrate meals by 2 h made no difference to muscle glycogen at 8 and 24 h. What most limits the conclusion that timing never matters over a day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "With 6 men, a modest real difference could easily be missed",
+       "correct": true,
+       "why": "Right: a small sample has little power, so \"no difference\" is weak evidence of no effect; it also tested only men."
+      },
+      {
+       "id": "b",
+       "text": "Muscle biopsies can't measure glycogen",
+       "why": "Biopsies are the standard way to measure muscle glycogen."
+      },
+      {
+       "id": "c",
+       "text": "24 h is too long a recovery to study",
+       "why": "24 h is a realistic gap between training days and exactly what was asked."
+      },
+      {
+       "id": "d",
+       "text": "The meals were high-glycaemic",
+       "why": "Using the same meals in both trials is good control, not a flaw."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-rate-calc",
+   "concept": "gly-dose",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jentjens2003",
+    "gonzalez2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 55 kg runner has 4 h before her next session. At 1.2 g·kg⁻¹·h⁻¹, how much carbohydrate is that in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "264 g",
+       "correct": true,
+       "why": "Right: 55 × 1.2 = 66 g·h⁻¹, × 4 h = 264 g."
+      },
+      {
+       "id": "b",
+       "text": "66 g",
+       "why": "That is the amount per hour; the question asks for 4 h."
+      },
+      {
+       "id": "c",
+       "text": "183 g",
+       "why": "This divides mass by the rate (55 ÷ 1.2 × 4). Multiply instead."
+      },
+      {
+       "id": "d",
+       "text": "16.5 g",
+       "why": "This divides the hourly amount by 4 instead of multiplying."
+      }
+     ],
+     "solution": "Per hour = 55 kg × 1.2 g·kg⁻¹·h⁻¹ = 66 g·h⁻¹. Total = 66 × 4 = 264 g."
+    },
+    {
+     "id": "b",
+     "stem": "An 80 kg cyclist has a second stage the same evening. How much carbohydrate per hour should he aim for at 1.2 g·kg⁻¹·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "96 g",
+       "correct": true,
+       "why": "Right: 80 × 1.2 = 96 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "384 g",
+       "why": "This multiplies by 4 h; the question asks per hour."
+      },
+      {
+       "id": "c",
+       "text": "67 g",
+       "why": "This divides mass by the rate (80 ÷ 1.2). Multiply instead."
+      },
+      {
+       "id": "d",
+       "text": "80 g",
+       "why": "This uses 1.0 g·kg⁻¹·h⁻¹; the question gives 1.2."
+      }
+     ],
+     "solution": "Per hour = 80 kg × 1.2 g·kg⁻¹·h⁻¹ = 96 g·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A 70 kg triathlete has 3 h between sessions and aims for 1.0 g·kg⁻¹·h⁻¹. How much carbohydrate is that in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "210 g",
+       "correct": true,
+       "why": "Right: 70 × 1.0 = 70 g·h⁻¹, × 3 h = 210 g."
+      },
+      {
+       "id": "b",
+       "text": "70 g",
+       "why": "That is the amount per hour; the question asks for 3 h."
+      },
+      {
+       "id": "c",
+       "text": "280 g",
+       "why": "This uses 4 h; the gap is 3 h."
+      },
+      {
+       "id": "d",
+       "text": "23 g",
+       "why": "This divides mass by hours (70 ÷ 3). Multiply mass × rate × hours."
+      }
+     ],
+     "solution": "Total = 70 kg × 1.0 g·kg⁻¹·h⁻¹ × 3 h = 210 g."
+    }
+   ]
+  },
+  {
+   "id": "gly-protein-when",
+   "concept": "gly-protein",
+   "bloom": "evaluate",
+   "sources": [
+    "jentjens2003",
+    "howarth2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider already eats 1.2 g·kg⁻¹·h⁻¹ of carbohydrate after a stage and adds a 30 g protein shake to refill glycogen faster. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No faster glycogen at this intake, but it helps muscle protein",
+       "correct": true,
+       "why": "Right: at 1.2 g·kg⁻¹·h⁻¹ protein adds no glycogen, yet it raises muscle protein synthesis."
+      },
+      {
+       "id": "b",
+       "text": "Faster glycogen, since protein always adds insulin",
+       "why": "The extra insulin doesn't speed storage once carbohydrate is already at 1.2 g·kg⁻¹·h⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "Slower glycogen, since protein blocks carbohydrate",
+       "why": "Protein didn't slow glycogen storage; it simply added nothing at this intake."
+      },
+      {
+       "id": "d",
+       "text": "No benefit of any kind",
+       "why": "Too far: protein after a ride raised muscle protein synthesis."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-protein-calc",
+   "concept": "gly-protein",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kerksick2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg runner can manage only 0.8 g·kg⁻¹·h⁻¹ of carbohydrate after a race. How much protein per hour should she add at 0.3 g·kg⁻¹·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "18 g",
+       "correct": true,
+       "why": "Right: 60 × 0.3 = 18 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "48 g",
+       "why": "This uses the carbohydrate rate (60 × 0.8), not the protein rate."
+      },
+      {
+       "id": "c",
+       "text": "200 g",
+       "why": "This divides mass by the rate (60 ÷ 0.3). Multiply instead."
+      },
+      {
+       "id": "d",
+       "text": "72 g",
+       "why": "This multiplies by 4 h; the question asks per hour."
+      }
+     ],
+     "solution": "Protein per hour = 60 kg × 0.3 g·kg⁻¹·h⁻¹ = 18 g·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A 75 kg cyclist with a touchy gut takes 0.8 g·kg⁻¹·h⁻¹ of carbohydrate. How much protein per hour at 0.4 g·kg⁻¹·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30 g",
+       "correct": true,
+       "why": "Right: 75 × 0.4 = 30 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "60 g",
+       "why": "This uses the carbohydrate rate (75 × 0.8), not the protein rate."
+      },
+      {
+       "id": "c",
+       "text": "188 g",
+       "why": "This divides mass by the rate (75 ÷ 0.4). Multiply instead."
+      },
+      {
+       "id": "d",
+       "text": "120 g",
+       "why": "This multiplies by 4 h; the question asks per hour."
+      }
+     ],
+     "solution": "Protein per hour = 75 kg × 0.4 g·kg⁻¹·h⁻¹ = 30 g·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "gly-liver-which",
+   "concept": "gly-liver",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "gonzalez2017",
+    "decombaz2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Swapping some of the glucose in a recovery drink for fructose mainly speeds up the refilling of which store?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Liver glycogen",
+       "correct": true,
+       "why": "Right: fructose is handled by the liver, and glucose–fructose about doubles liver refilling."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen",
+       "why": "Muscle refilling was no faster with glucose–fructose than with glucose alone."
+      },
+      {
+       "id": "c",
+       "text": "Both equally",
+       "why": "Only the liver gained; muscle rates were the same."
+      },
+      {
+       "id": "d",
+       "text": "Neither: fructose just sweetens the drink",
+       "why": "Fructose is a real fuel: it refilled liver glycogen about twice as fast."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gly-liver-plan",
+   "concept": "gly-liver",
+   "bloom": "apply",
+   "sources": [
+    "gonzalez2017",
+    "jentjens2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 75 kg stage racer rides 4 h a day and wants to refill both muscle and liver before tomorrow's stage. Which drink suits the first hours after the stage best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glucose plus fructose (or sucrose) at about 1.2 g·kg⁻¹·h⁻¹",
+       "correct": true,
+       "why": "Right: this maximises muscle refilling, doubles liver refilling and is easier on the gut at 90 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Pure fructose at about 1.2 g·kg⁻¹·h⁻¹",
+       "why": "Fructose alone is poorly absorbed in large amounts and adds little to muscle glycogen."
+      },
+      {
+       "id": "c",
+       "text": "Pure glucose at 2 g·kg⁻¹·h⁻¹",
+       "why": "More than 1.2 g·kg⁻¹·h⁻¹ stores no more glycogen, and that much glucose exceeds what the gut absorbs."
+      },
+      {
+       "id": "d",
+       "text": "A protein-only shake",
+       "why": "Protein adds to glycogen only alongside carbohydrate; alone it can't refill either store."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

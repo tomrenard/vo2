@@ -1,0 +1,758 @@
+{
+ "id": "mac-protein",
+ "module": "t4-macros",
+ "title": "Protein: building material, minor fuel",
+ "goal": "Explain protein turnover and net balance, why amino acids are only a small fuel (more when glycogen is low), and how nitrogen balance is worked out and what it can't tell an athlete.",
+ "requires": [
+  "mac-fat"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "protein-turnover",
+    "net-protein-balance",
+    "bcaa",
+    "urea",
+    "nitrogen-balance"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pro-turnover",
+   "title": "Always being rebuilt",
+   "text": "Your muscle may look the same from month to month, but its proteins don't sit still. All the body's proteins are constantly broken down and made again: [protein turnover](g:protein-turnover) [[c:pro-dynamic]].\n\nWhat decides whether you gain or lose protein is the difference between the two: [net protein balance](g:net-protein-balance) = synthesis − breakdown.\n\n- **After a protein-rich drink**, whole-body synthesis rose, breakdown fell, and net balance turned positive [[c:pro-fed-balance]].\n- **Overnight or during hard exercise**, breakdown can outrun synthesis: net balance is negative.\n\nMost [amino acids](g:amino-acid) freed by breakdown are reused to build new protein. A few are broken down further; their nitrogen is turned into [urea](g:urea) and leaves in urine and sweat.",
+   "claims": [
+    {
+     "id": "pro-dynamic",
+     "text": "All cellular proteins are in a dynamic state, constantly broken down and resynthesised.",
+     "grade": "strong",
+     "sources": [
+      "waterlow1984"
+     ],
+     "evidence": [
+      {
+       "source": "waterlow1984",
+       "quote": "Secondly, the fact that all cellular proteins are in a dynamic state poses questions about the relation between structure and function in tissues such as muscle and brain, which physiologists have hardly begun to tackle.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-fed-balance",
+     "text": "A protein-rich drink increased whole-body protein synthesis, suppressed breakdown and made net protein balance positive.",
+     "grade": "moderate",
+     "sources": [
+      "pavis2024"
+     ],
+     "evidence": [
+      {
+       "source": "pavis2024",
+       "quote": "Drink administration increased whole-body protein synthesis (P<0.01), suppressed protein breakdown (P<0.001), and created positive net protein balance (P<0.001), but to a similar degree in ORAL and NG (interactions P>0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pro-turnover-meaning"
+  },
+  {
+   "type": "question",
+   "item": "pro-net-balance",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "pro-fuel",
+   "title": "A minor fuel",
+   "text": "Endurance exercise does burn some amino acids, mainly the [BCAAs](g:bcaa) (leucine, isoleucine, valine), and more the harder you go. If the exercise is hard enough, muscle loses protein during the session; the balance is restored afterwards. Some of the freed amino acids are burned directly; the rest go to the liver to make new glucose by [gluconeogenesis](g:gluconeogenesis) [[c:pro-exercise-ox]].\n\nHow big a share? Usually about **1–5%** of the energy of exercise [[c:pro-share]]. Compare that with carbohydrate and fat, which supply nearly all the rest.\n\nSo for an endurance athlete, protein matters for repair and adaptation, not as a race fuel. Eating protein during a race won't replace the carbohydrate you burn.",
+   "claims": [
+    {
+     "id": "pro-exercise-ox",
+     "text": "Sustained exercise raises amino acid oxidation, mainly of BCAAs, in proportion to intensity; intense enough exercise causes a net loss of muscle protein that is restored afterwards, and some amino acids feed gluconeogenesis.",
+     "grade": "strong",
+     "sources": [
+      "rennie2000"
+     ],
+     "evidence": [
+      {
+       "source": "rennie2000",
+       "quote": "Sustained dynamic exercise stimulates amino acid oxidation, chiefly of the branched-chain amino acids, and ammonia production in proportion to exercise intensity; if the exercise is intense enough, there is a net loss of muscle protein (as a result of decreased protein synthesis, increased breakdown, or both); some of the amino acids are oxidized as fuel, whereas the rest provide substrates for gluconeogenesis and possibly for acid-based regulation.",
+       "level": "abstract"
+      },
+      {
+       "source": "rennie2000",
+       "quote": "Protein balance is restored after exercise, but no hypertrophy occurs with habitual dynamic exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-share",
+     "text": "Oxidation of protein and amino acids supplies about 1–5% of the total energy cost of exercise.",
+     "grade": "strong",
+     "sources": [
+      "campbell2007"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2007",
+       "quote": "oxidation of protein/amino acids during exercise (approximately 1–5% of the total energy cost of exercise)",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pro-share-recall"
+  },
+  {
+   "type": "question",
+   "item": "pro-race-protein"
+  },
+  {
+   "type": "concept",
+   "id": "pro-low-glycogen",
+   "title": "More protein burned when glycogen is low",
+   "text": "The share isn't fixed. In a classic study, six people cycled 1 h at 61% VO₂max twice: once after carbohydrate loading, once after carbohydrate depletion. From the urea in their sweat, protein breakdown in the depleted ride was estimated at **13.7 g·h⁻¹, about 10% of the energy** [[c:pro-lemon]].\n\nLater work agrees on the direction: low muscle glycogen raises amino acid oxidation in exercise [[c:pro-low-cho-aa]]. And when liver glycogen runs low, the liver leans more on making glucose from amino acids and glycerol, but this can't keep up with what the muscles take [[c:pro-gng-limit]].\n\nThe size is less certain: 6 people, and an estimate from sweat urea, not a direct measure. Call it \"a few %, up to around 10% when glycogen is low\".",
+   "claims": [
+    {
+     "id": "pro-lemon",
+     "text": "After carbohydrate depletion, protein breakdown during 1 h of cycling was estimated at 13.7 g·h⁻¹, about 10.4% of the energy cost.",
+     "grade": "weak",
+     "sources": [
+      "lemon1980"
+     ],
+     "evidence": [
+      {
+       "source": "lemon1980",
+       "quote": "Calculations indicate that CHOD sweat urea N excretion was equivalent to a protein breakdown of 13.7 g . h-1 or 10.4% of the total caloric cost.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-low-cho-aa",
+     "text": "Exercise-induced amino acid oxidation is increased when muscle glycogen is low.",
+     "grade": "moderate",
+     "sources": [
+      "gillen2019",
+      "lemon1980"
+     ],
+     "evidence": [
+      {
+       "source": "gillen2019",
+       "quote": "However, exercise-induced amino acid oxidation is increased with low muscle glycogen, which may limit substrate availability for postexercise protein synthesis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-gng-limit",
+     "text": "When liver glycogen is low, the liver makes more glucose from amino acids and glycerol, but this can't keep pace with glucose removal during exercise.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "When liver glycogen stores fall to low levels, the liver can increase its reliance on gluconeogenic metabolism to produce glucose from amino acids and glycerol, although the rate of this production is limited and cannot keep pace with glucose removal from the blood during exercise.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pro-low-glycogen-scenario"
+  },
+  {
+   "type": "question",
+   "item": "pro-lemon-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "pro-nbal",
+   "title": "Nitrogen balance",
+   "text": "Protein is the only macronutrient with much nitrogen. So tracking nitrogen tracks protein. Food protein is usually estimated as nitrogen × **6.25** (protein is about 16% nitrogen) [[c:pro-625]].\n\n[Nitrogen balance](g:nitrogen-balance) compares the nitrogen eaten with the nitrogen lost in urine, faeces and sweat [[c:pro-nbal-def]]:\n\n- **positive**: the body is gaining protein (growth, building muscle);\n- **zero**: intake matches losses;\n- **negative**: the body is losing protein, which impairs recovery.\n\nUsing this method, elite endurance athletes needed about 1.67 times as much protein as sedentary people to stay in balance; the authors put it down to protein burned in training [[c:pro-tarno]]. How much protein to eat each day is for *Protein and recovery*.",
+   "claims": [
+    {
+     "id": "pro-625",
+     "text": "Protein in food is estimated by multiplying its nitrogen content by a conversion factor, 6.25 by default.",
+     "grade": "strong",
+     "sources": [
+      "mariotti2008"
+     ],
+     "evidence": [
+      {
+       "source": "mariotti2008",
+       "quote": "The protein content in foodstuffs is estimated by multiplying the determined nitrogen content by a nitrogen-to-protein conversion factor.",
+       "level": "abstract"
+      },
+      {
+       "source": "mariotti2008",
+       "quote": "Jones' factors for a series of foodstuffs, including 6.25 as the standard, default conversion factor, have now been used for 75 years.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-nbal-def",
+     "text": "Nitrogen balance compares protein (nitrogen) intake with nitrogen excreted; a negative balance means protein breakdown and impaired recovery.",
+     "grade": "strong",
+     "sources": [
+      "campbell2007"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2007",
+       "quote": "The nitrogen balance technique involves quantifying the total amount of dietary protein that enters the body and the total amount of the nitrogen that is excreted",
+       "level": "full-text"
+      },
+      {
+       "source": "campbell2007",
+       "quote": "a negative nitrogen balance will likely be created, leading to increased catabolism and impaired recovery from exercise",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pro-tarno",
+     "text": "By nitrogen balance, elite endurance athletes needed 1.67 times more daily protein than sedentary controls, attributed to protein catabolism during exercise.",
+     "grade": "weak",
+     "sources": [
+      "tarnopolsky1988"
+     ],
+     "evidence": [
+      {
+       "source": "tarnopolsky1988",
+       "quote": "The nitrogen balance data revealed that bodybuilders required 1.12 times and endurance athletes required 1.67 times more daily protein than sedentary controls.",
+       "level": "abstract"
+      },
+      {
+       "source": "tarnopolsky1988",
+       "quote": "endurance athletes require daily protein intakes greater than either bodybuilders or sedentary individuals to meet the needs of protein catabolism during exercise",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pro-example",
+   "title": "Working out nitrogen balance",
+   "problem": "A cyclist eats 120 g of protein in a day. Her measured nitrogen losses (urine, faeces, sweat) add up to 21.0 g. What is her nitrogen balance, and how much protein does it stand for?",
+   "steps": [
+    "Nitrogen eaten = protein ÷ 6.25 = 120 ÷ 6.25 = 19.2 g N.",
+    "Balance = nitrogen in − nitrogen out = 19.2 − 21.0 = −1.8 g N per day.",
+    "As protein: −1.8 × 6.25 ≈ −11 g of body protein lost per day.",
+    "Negative: on this day she broke down more protein than she made."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pro-n-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pro-tarno-reading"
+  },
+  {
+   "type": "concept",
+   "id": "pro-nbal-limits",
+   "title": "What nitrogen balance can't tell you",
+   "text": "Nitrogen balance is how official protein requirements are set. For athletes it has two weak spots.\n\nFirst, it answers \"is the body losing protein?\", not \"is this athlete adapting and performing best?\". Balance can be reached at intakes below what may help training [[c:pro-nbal-perf]].\n\nSecond, the bookkeeping is hard: every route of nitrogen loss has to be caught, and the 6.25 factor itself is an average; one review argues 5.6 fits most foods better [[c:pro-factor-debate]].\n\nSo read \"in nitrogen balance\" as \"not losing protein\", not as \"eating the right amount for training\".",
+   "claims": [
+    {
+     "id": "pro-nbal-perf",
+     "text": "Nitrogen balance studies may underestimate athletes' protein needs because balance does not relate directly to exercise performance or adaptation.",
+     "grade": "moderate",
+     "sources": [
+      "campbell2007",
+      "phillips2012"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2007",
+       "quote": "Nitrogen balance studies may underestimate the amount of protein required for optimal function because these studies do not directly relate to exercise performance.",
+       "level": "full-text"
+      },
+      {
+       "source": "phillips2012",
+       "quote": "That population protein requirements are still based on nitrogen balance may also be a point of contention since achieving balanced nitrogen intake and excretion likely means little to an athlete who has the primary goal of exercise performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pro-factor-debate",
+     "text": "The 6.25 nitrogen-to-protein factor is an approximation; a review proposes 5.6 as a more accurate default.",
+     "grade": "moderate",
+     "sources": [
+      "mariotti2008"
+     ],
+     "evidence": [
+      {
+       "source": "mariotti2008",
+       "quote": "we propose a set of specific conversion factors for different foodstuffs, together with a default conversion factor (5.6)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pro-nbal-limits-judge"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Body proteins are constantly broken down and rebuilt; net protein balance (synthesis − breakdown) decides gain or loss.",
+    "Exercise burns some amino acids, mainly BCAAs: usually about 1–5% of the energy.",
+    "With low glycogen the share rises, estimated up to about 10% in one small study, and the liver makes more glucose from amino acids.",
+    "Nitrogen balance = nitrogen in (protein ÷ 6.25) − nitrogen out; negative means losing body protein.",
+    "Balance shows whether protein is being lost, not whether intake is best for training and performance."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pro-turnover-meaning",
+   "concept": "pro-turnover",
+   "bloom": "understand",
+   "sources": [
+    "waterlow1984"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's thigh muscle mass hasn't changed in a year. What is happening to the proteins in it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They are constantly broken down and rebuilt at matching rates",
+       "correct": true,
+       "why": "Right: stable size means synthesis and breakdown balance, not that nothing is happening."
+      },
+      {
+       "id": "b",
+       "text": "They are left untouched until training changes",
+       "why": "Body proteins are always turning over, even when muscle size is stable."
+      },
+      {
+       "id": "c",
+       "text": "They are slowly burned as fuel and not replaced",
+       "why": "Then muscle mass would fall; here breakdown is matched by new synthesis."
+      },
+      {
+       "id": "d",
+       "text": "They are being converted into fat",
+       "why": "Muscle protein isn't turned into fat; its amino acids are mostly reused to make protein."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-net-balance",
+   "concept": "pro-turnover",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "pavis2024",
+    "rennie2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During a long fasted ride, a cyclist's muscles make 8 g of protein and break down 11 g. What is his net protein balance over that time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−3 g: he is losing muscle protein",
+       "correct": true,
+       "why": "Right: net balance = synthesis − breakdown = 8 − 11 = −3 g."
+      },
+      {
+       "id": "b",
+       "text": "+3 g: he is gaining muscle protein",
+       "why": "This subtracts the wrong way round: net balance = synthesis − breakdown."
+      },
+      {
+       "id": "c",
+       "text": "19 g: total protein turnover",
+       "why": "Adding them gives turnover activity, not the net balance."
+      },
+      {
+       "id": "d",
+       "text": "0 g: turnover always balances",
+       "why": "Turnover balances only on average over time; here breakdown exceeds synthesis."
+      }
+     ],
+     "solution": "Net protein balance = synthesis − breakdown = 8 g − 11 g = −3 g (protein lost)."
+    },
+    {
+     "id": "b",
+     "stem": "After a run and a protein-rich recovery shake, a triathlete's muscles make 12 g of protein over the next hours and break down 9 g. What is her net protein balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+3 g: she is gaining muscle protein",
+       "correct": true,
+       "why": "Right: net balance = synthesis − breakdown = 12 − 9 = +3 g."
+      },
+      {
+       "id": "b",
+       "text": "−3 g: she is losing muscle protein",
+       "why": "This subtracts the wrong way round: net balance = synthesis − breakdown."
+      },
+      {
+       "id": "c",
+       "text": "21 g: total protein turnover",
+       "why": "Adding them gives turnover activity, not the net balance."
+      },
+      {
+       "id": "d",
+       "text": "0 g: turnover always balances",
+       "why": "Feeding protein pushes the balance positive, as in the drink study."
+      }
+     ],
+     "solution": "Net protein balance = synthesis − breakdown = 12 g − 9 g = +3 g (protein gained)."
+    }
+   ]
+  },
+  {
+   "id": "pro-share-recall",
+   "concept": "pro-fuel",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "campbell2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In typical endurance exercise with normal glycogen, about what share of the energy comes from burning protein and amino acids?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1–5%",
+       "correct": true,
+       "why": "Right: amino acids are a minor fuel; carbohydrate and fat supply nearly everything."
+      },
+      {
+       "id": "b",
+       "text": "About 15–20%",
+       "why": "That is far too high; even with low glycogen, estimates reach about 10%."
+      },
+      {
+       "id": "c",
+       "text": "About 30–40%",
+       "why": "Protein is not a major fuel; this would make it rival fat."
+      },
+      {
+       "id": "d",
+       "text": "None at all",
+       "why": "Some amino acids, mainly BCAAs, are burned in exercise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-race-protein",
+   "concept": "pro-fuel",
+   "bloom": "understand",
+   "sources": [
+    "campbell2007",
+    "rennie2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A gran fondo rider swaps half his carbohydrate gels for protein bars during the ride, \"since muscles run on protein\". Why is this a poor plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Protein supplies only a few % of exercise energy; carbohydrate is what runs low",
+       "correct": true,
+       "why": "Right: amino acids are a minor fuel; cutting carbohydrate intake risks emptying glycogen."
+      },
+      {
+       "id": "b",
+       "text": "Protein can't be digested during exercise",
+       "why": "Protein can be digested; the point is that it isn't a major fuel."
+      },
+      {
+       "id": "c",
+       "text": "Protein turns straight into fat during exercise",
+       "why": "That doesn't happen; the issue is how little energy amino acids provide in exercise."
+      },
+      {
+       "id": "d",
+       "text": "Protein raises the burning of BCAAs to dangerous levels",
+       "why": "Nothing dangerous here; the problem is simply too little carbohydrate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-low-glycogen-scenario",
+   "concept": "pro-low-glycogen",
+   "bloom": "apply",
+   "sources": [
+    "lemon1980",
+    "gillen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a hard morning run after a low-carbohydrate day, with muscle glycogen low. Compared with the same run fully fuelled, what happens to her amino acid oxidation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rises, possibly towards 10% of the energy",
+       "correct": true,
+       "why": "Right: low glycogen raises amino acid oxidation; one study estimated about 10% of energy."
+      },
+      {
+       "id": "b",
+       "text": "It falls, because protein is spared when fuel is short",
+       "why": "The opposite: with less carbohydrate the body burns more amino acids."
+      },
+      {
+       "id": "c",
+       "text": "It stays the same: protein use is fixed at 1–5%",
+       "why": "The 1–5% applies with normal glycogen; low glycogen pushes it up."
+      },
+      {
+       "id": "d",
+       "text": "It becomes the main fuel, over 50% of the energy",
+       "why": "Fat and carbohydrate still supply most energy; protein stays a minor fuel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-lemon-appraise",
+   "concept": "pro-low-glycogen",
+   "bloom": "evaluate",
+   "sources": [
+    "lemon1980"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The study behind \"about 10% of energy from protein when glycogen is low\" tested 6 people and estimated protein breakdown from the urea in their sweat. What most limits that figure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A tiny sample and an indirect estimate, so the size is uncertain",
+       "correct": true,
+       "why": "Right: 6 people and a sweat-urea estimate support the direction but give a rough size."
+      },
+      {
+       "id": "b",
+       "text": "It compared the same people in two conditions",
+       "why": "Testing the same people twice is a strength: each person is their own control."
+      },
+      {
+       "id": "c",
+       "text": "Urea has nothing to do with protein breakdown",
+       "why": "Urea carries the nitrogen from broken-down amino acids, so it is a fair marker; the issue is how complete the estimate is."
+      },
+      {
+       "id": "d",
+       "text": "It used cycling, so it can't apply to running",
+       "why": "Fuel use depends on intensity and glycogen, not much on the sport; the sample and method are bigger limits."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-n-calc",
+   "concept": "pro-nbal",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mariotti2008",
+    "campbell2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner eats 100 g of protein in a day and loses 14.0 g of nitrogen. Using 6.25, what is her nitrogen balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+2.0 g N",
+       "correct": true,
+       "why": "Right: 100 ÷ 6.25 = 16.0 g N in; 16.0 − 14.0 = +2.0 g N."
+      },
+      {
+       "id": "b",
+       "text": "−2.0 g N",
+       "why": "This subtracts the wrong way round: balance = nitrogen in − nitrogen out."
+      },
+      {
+       "id": "c",
+       "text": "+86 g N",
+       "why": "This subtracts nitrogen from protein grams without converting protein to nitrogen first."
+      },
+      {
+       "id": "d",
+       "text": "+12.5 g N",
+       "why": "12.5 g is the protein the balance stands for (2.0 × 6.25), not grams of nitrogen."
+      }
+     ],
+     "solution": "Nitrogen in = 100 ÷ 6.25 = 16.0 g. Balance = 16.0 − 14.0 = +2.0 g N (about +12.5 g protein)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist eats 150 g of protein in a day and loses 25.0 g of nitrogen. Using 6.25, what is his nitrogen balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−1.0 g N",
+       "correct": true,
+       "why": "Right: 150 ÷ 6.25 = 24.0 g N in; 24.0 − 25.0 = −1.0 g N."
+      },
+      {
+       "id": "b",
+       "text": "+1.0 g N",
+       "why": "This subtracts the wrong way round: balance = nitrogen in − nitrogen out."
+      },
+      {
+       "id": "c",
+       "text": "+125 g N",
+       "why": "This subtracts nitrogen from protein grams without converting protein to nitrogen first."
+      },
+      {
+       "id": "d",
+       "text": "−6.25 g N",
+       "why": "6.25 g is the protein the balance stands for (1.0 × 6.25), not grams of nitrogen."
+      }
+     ],
+     "solution": "Nitrogen in = 150 ÷ 6.25 = 24.0 g. Balance = 24.0 − 25.0 = −1.0 g N (about −6 g protein)."
+    },
+    {
+     "id": "c",
+     "stem": "During a hard training camp, a triathlete eats 80 g of protein a day and loses 15.0 g of nitrogen. Using 6.25, what is her nitrogen balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−2.2 g N",
+       "correct": true,
+       "why": "Right: 80 ÷ 6.25 = 12.8 g N in; 12.8 − 15.0 = −2.2 g N."
+      },
+      {
+       "id": "b",
+       "text": "+2.2 g N",
+       "why": "This subtracts the wrong way round: balance = nitrogen in − nitrogen out."
+      },
+      {
+       "id": "c",
+       "text": "+65 g N",
+       "why": "This subtracts nitrogen from protein grams without converting protein to nitrogen first."
+      },
+      {
+       "id": "d",
+       "text": "−13.75 g N",
+       "why": "13.75 g is the protein the balance stands for (2.2 × 6.25), not grams of nitrogen."
+      }
+     ],
+     "solution": "Nitrogen in = 80 ÷ 6.25 = 12.8 g. Balance = 12.8 − 15.0 = −2.2 g N (about −14 g protein)."
+    }
+   ]
+  },
+  {
+   "id": "pro-tarno-reading",
+   "concept": "pro-nbal",
+   "bloom": "analyse",
+   "sources": [
+    "tarnopolsky1988"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a nitrogen balance study, elite endurance athletes needed 1.67 times as much protein as sedentary people to stay in balance; bodybuilders needed 1.12 times. What is the best explanation for the endurance athletes' higher need?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Their long training burns some amino acids, which must be replaced",
+       "correct": true,
+       "why": "Right: the authors linked it to protein catabolism during exercise, matching their higher urea output."
+      },
+      {
+       "id": "b",
+       "text": "They were building more muscle than the bodybuilders",
+       "why": "Bodybuilders aim for muscle growth; endurance training doesn't build more muscle than that."
+      },
+      {
+       "id": "c",
+       "text": "Their muscles are bigger, so they need more protein to maintain them",
+       "why": "Endurance athletes carry less muscle than bodybuilders, yet needed more protein; muscle size doesn't explain it."
+      },
+      {
+       "id": "d",
+       "text": "Endurance athletes can't digest protein well",
+       "why": "Nothing suggests poor digestion; the extra need comes from protein burned in training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pro-nbal-limits-judge",
+   "concept": "pro-nbal-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "campbell2007",
+    "phillips2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner is in nitrogen balance eating 0.9 g of protein per kg a day. He concludes his intake is ideal for his training. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too strong: balance shows he isn't losing protein, not that adaptation is best",
+       "correct": true,
+       "why": "Right: nitrogen balance doesn't measure performance or adaptation, and may underestimate needs."
+      },
+      {
+       "id": "b",
+       "text": "Correct: nitrogen balance defines the best intake",
+       "why": "It defines the intake that stops protein loss, which may be below what best supports training."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: being in balance means he is losing muscle",
+       "why": "Zero balance means intake matches losses; he is not losing protein overall."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: nitrogen balance can't be measured in athletes",
+       "why": "It can, as the endurance athlete studies did; its weakness is what it tells you."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

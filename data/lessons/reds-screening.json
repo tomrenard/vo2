@@ -1,0 +1,956 @@
+{
+ "id": "reds-screening",
+ "module": "t4-red-s",
+ "title": "Spotting and treating REDs",
+ "goal": "Explain why REDs has no single test, how the IOC REDs CAT2, LEAF-Q and RMR ratio are used and what limits them, the basics of treatment, and how to raise concerns about eating with care.",
+ "requires": [
+  "reds-consequences"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "reds-cat2",
+    "leaf-q",
+    "sensitivity",
+    "specificity",
+    "rmr-ratio",
+    "disordered-eating",
+    "eating-disorder"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "rs-hard",
+   "title": "Why there is no simple test",
+   "text": "REDs has many causes and signs, and no single validated test can diagnose it [[c:rs-no-test]].\n\nEven energy availability is hard to pin down, mainly because of intake. Across 11 studies that checked athletes' food records against [doubly labelled water](g:doubly-labelled-water), reported intake was on average 19% too low, about 2,800 kJ a day [[c:rs-underreport]]. People forget snacks, guess portions and eat less on recording days.\n\nSo a diary EA tends to look lower than the truth, and for a typical athlete that average error (about 55 kJ per kg FFM) is nearly as big as the gap between 125 and 188 kJ. As the body composition module showed, current periods or testosterone were a more objective marker than diaries [[c:rs-reproductive]].",
+   "claims": [
+    {
+     "id": "rs-no-test",
+     "text": "REDs has numerous risk factors, signs and symptoms, and there is no single validated diagnostic test.",
+     "grade": "strong",
+     "sources": [
+      "stellingwerff2023"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2023",
+       "quote": "Relative Energy Deficiency in Sport (REDs) has various different risk factors, numerous signs and symptoms and is heavily influenced by one's environment.",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2023",
+       "quote": "Accordingly, there is no singular validated diagnostic test.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-underreport",
+     "text": "Compared with doubly labelled water, athletes' self-reported energy intake was under-estimated by 19% on average (about 2,800 kJ·day⁻¹) across 11 studies.",
+     "grade": "strong",
+     "sources": [
+      "capling2017"
+     ],
+     "evidence": [
+      {
+       "source": "capling2017",
+       "quote": "Studies comparing self-reported energy intake (EI) to energy expenditure assessed via doubly labelled water were grouped for comparison (n = 11) and demonstrated mean EI was under-estimated by 19% (-2793 ± 1134 kJ/day).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-reproductive",
+     "text": "Current reproductive function appeared a more objective and accurate marker of energy for health than diet and training estimates of EA.",
+     "grade": "weak",
+     "sources": [
+      "heikura2018"
+     ],
+     "evidence": [
+      {
+       "source": "heikura2018",
+       "quote": "Based on the cross-sectional analysis, current reproductive function (questionnaires/blood hormone concentrations) appears to provide a more objective and accurate marker of optimal energy for health than the more error-prone and time-consuming dietary and training estimation of EA.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rs-diary-example",
+   "title": "Correcting a food diary",
+   "problem": "A cyclist's food diary shows 11,340 kJ a day. If diaries capture about 81% of true intake (19% under-reporting), what is his likely true intake?",
+   "steps": [
+    "Under-reporting is a share of the true intake: reported = 0.81 × true.",
+    "So true = reported ÷ 0.81 = 11,340 ÷ 0.81 = 14,000 kJ (3,346 kcal).",
+    "Not 11,340 × 1.19 = 13,495 kJ: the 19% is of the true value, not of the reported one.",
+    "19% is an average across studies: one athlete may under-report more or less, so treat the result as a rough guide."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rs-underreport-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rs-diary-ea"
+  },
+  {
+   "type": "concept",
+   "id": "rs-cat2",
+   "title": "The IOC REDs CAT2",
+   "text": "So clinicians weigh many signs together. The IOC's 2023 [REDs CAT2](g:reds-cat2) works in three steps [[c:rs-cat2-steps]]:\n\n1. **Screen** athletes for risk.\n2. **Rate severity and risk** from the signs found. Each sign is weighted by how strong the evidence is and how serious it is, giving a **traffic light**: green, yellow, orange or red, each with advice on training and racing.\n3. **A doctor makes the diagnosis** and builds a plan with the athlete, coach and team.\n\nTypical signs: missing periods or low testosterone, low T3, low BMD and bone stress injuries. In the elite distance runners behind the 4.5-fold bone injury figure (body composition module), amenorrhoea and low testosterone also went with lower T3 and, in women, lower BMD [[c:rs-signs]].",
+   "claims": [
+    {
+     "id": "rs-cat2-steps",
+     "text": "The IOC REDs CAT2 uses screening, severity/risk stratification from weighted primary and secondary indicators into four traffic-light levels with participation guidelines, and a physician-led diagnosis and plan.",
+     "grade": "strong",
+     "sources": [
+      "stellingwerff2023"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2023",
+       "quote": "This 2023 International Olympic Committee's REDs Clinical Assessment Tool-V.2 (IOC REDs CAT2) implements a three-step process of: (1) initial screening; (2) severity/risk stratification based on any identified REDs signs/symptoms (primary and secondary indicators) and (3) a physician-led final diagnosis and treatment plan developed with the athlete, coach and their entire health and performance team.",
+       "level": "abstract"
+      },
+      {
+       "source": "stellingwerff2023",
+       "quote": "The CAT2 also introduces a more clinically nuanced four-level traffic-light (green, yellow, orange and red) severity/risk stratification with associated sport participation guidelines.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-signs",
+     "text": "Amenorrhoeic and low-testosterone distance athletes had lower sex hormones, T3 and (in women) BMD, and about 4.5-fold more bone injuries.",
+     "grade": "weak",
+     "sources": [
+      "heikura2018"
+     ],
+     "evidence": [
+      {
+       "source": "heikura2018",
+       "quote": "Sex hormones (p < .001), triiodothyronine (p < .05), and bone mineral density (females, p < .05) were significantly lower in amenorrheic (37%) and low testosterone (40%; 15.1 ± 3.0 nmol/L) athletes, and bone injuries were ∼4.5-fold more prevalent in amenorrheic (effect size = 0.85, large) and low testosterone (effect size = 0.52, moderate) groups compared with others.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rs-cat2-order"
+  },
+  {
+   "type": "question",
+   "item": "rs-signs-pick",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rs-tools",
+   "title": "Screening tools and their limits",
+   "text": "A screen flags who needs a closer look; it does not diagnose.\n\nThe [LEAF-Q](g:leaf-q) asks women 25 questions about injuries, gut function and periods. In its first study, of 45 endurance athletes checked against measured EA, periods and bone, it had a [sensitivity](g:sensitivity) of 78% and a [specificity](g:specificity) of 90% [[c:rs-leafq]]. It isn't for men; male cyclists have been screened with a sport-specific questionnaire plus interview (Keay).\n\nThe [RMR ratio](g:rmr-ratio) compares measured resting energy use with a prediction; below about 0.9 suggests energy saving. But results depend on which prediction equation is used, and mild cases may not show [[c:rs-rmr]].",
+   "claims": [
+    {
+     "id": "rs-leafq",
+     "text": "The 25-item LEAF-Q classified current EA, reproductive function and bone health with 78% sensitivity and 90% specificity.",
+     "grade": "weak",
+     "sources": [
+      "melin2014"
+     ],
+     "evidence": [
+      {
+       "source": "melin2014",
+       "quote": "The 25-item LEAF-Q produced an acceptable sensitivity (78%) and specificity (90%) in order to correctly classify current EA and/or reproductive function and/or bone health.",
+       "level": "abstract"
+      },
+      {
+       "source": "melin2014",
+       "quote": "Discriminant as well as concurrent validity was evaluated by testing self-reported data against measured current EA, menstrual function and bone health in endurance athletes from sports such as long distance running and triathlon (n=45).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-rmr",
+     "text": "An RMR ratio below 0.9 is used as a surrogate for energy deficiency, but methods aren't standardised, milder cases may not show, and the share flagged varies widely with the prediction equation.",
+     "grade": "moderate",
+     "sources": [
+      "sterringer2022",
+      "espinar2025"
+     ],
+     "evidence": [
+      {
+       "source": "sterringer2022",
+       "quote": "Decreased RMR ratio in recent studies often correlates with signs of low EA; however, athletes with less severe cases of energy deficiency may not present with a low RMR ratio.",
+       "level": "abstract"
+      },
+      {
+       "source": "espinar2025",
+       "quote": "The prevalence of athletes classified as having metabolic suppression (RMRratio < 0.9) ranged from 34.7% to 93.9%, depending on the predictive equation used.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rs-screen-example",
+   "title": "What a screen's numbers mean",
+   "problem": "A squad has 50 women: 10 truly at risk of low energy availability, 40 not. The LEAF-Q has 78% sensitivity and 90% specificity. How many are flagged, and how many flags are false alarms? Then: a rider's measured resting energy use is 6,000 kJ a day and an equation predicts 6,500 kJ. What is the RMR ratio?",
+   "steps": [
+    "True cases flagged = sensitivity × at risk = 0.78 × 10 = 7.8, about 8. The other 2 are missed.",
+    "Healthy women wrongly flagged = (1 − specificity) × not at risk = 0.10 × 40 = 4.",
+    "Flagged in total: 8 + 4 = 12, and 4 of the 12 (a third) aren't at risk. A flag means 'look closer', not 'has low energy availability'.",
+    "RMR ratio = measured ÷ predicted = 6,000 ÷ 6,500 = 0.92: just above the 0.9 hint, which can't rule a mild case out."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rs-sens-spec",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rs-rmr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rs-treat",
+   "title": "Treatment: more energy, a team and time",
+   "text": "The first aim of treatment is to raise energy availability: eat more, train less, or both [[c:rs-first]]. Care comes from a team; when eating is disordered, that means at least a doctor, a sports dietitian and a psychologist [[c:rs-team]].\n\nRecovery is slow. When periods have stopped from low energy, it may take more than 6 months for them to return [[c:rs-time]]. Bone takes longer still.\n\nEducation can help. In 50 male road cyclists over a 6-month season, half got advice on eating and on impact exercise. Riders who improved both gained 2.0% lumbar spine BMD; those who got worse at both lost 2.7%. Some feared that eating more would slow them down [[c:rs-keay]].",
+   "claims": [
+    {
+     "id": "rs-first",
+     "text": "The first aim of treatment is to increase energy availability by increasing energy intake and/or reducing exercise energy expenditure.",
+     "grade": "strong",
+     "sources": [
+      "nattiv2007"
+     ],
+     "evidence": [
+      {
+       "source": "nattiv2007",
+       "quote": "The first aim of treatment for any Triad component is to increase energy availability by increasing energy intake and/or reducing exercise energy expenditure.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-team",
+     "text": "Managing disordered eating needs at minimum a doctor, a sports dietitian and a psychologist.",
+     "grade": "strong",
+     "sources": [
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "wells2020",
+       "quote": "The evaluation and management of DE requires a cohesive team of professional practitioners consisting of, at minimum, a doctor, a sports dietitian and a psychologist, termed within this statement as the core multidisciplinary team.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-time",
+     "text": "Restoring energy availability is the first-line treatment of FHA, but menstrual recovery may take more than 6 months.",
+     "grade": "strong",
+     "sources": [
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "wells2020",
+       "quote": "The underlying cause of FHA is LEA rather than exercise volume or body composition, thus optimisation of energy availability (EA) should be the first line treatment of FHA, 37 however it may take more than 6 months for favourable menstrual changes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rs-keay",
+     "text": "In male road cyclists, positive nutrition and loading changes went with a 2.0% rise in lumbar BMD and negative changes with a 2.7% fall over a season; fear of hurting performance was a barrier.",
+     "grade": "weak",
+     "sources": [
+      "keay2019"
+     ],
+     "evidence": [
+      {
+       "source": "keay2019",
+       "quote": "Positive changes in nutrition and skeletal loading were associated with a statistically significant increase of 2.0% in lumbar spine BMD; 7 of 11 cyclists' increases were clinically meaningful.",
+       "level": "abstract"
+      },
+      {
+       "source": "keay2019",
+       "quote": "Negative changes in both behaviours were associated with a significant decrease of 2.7% in lumbar BMD; all nine cyclists' BMD decreases were clinically meaningful.",
+       "level": "abstract"
+      },
+      {
+       "source": "keay2019",
+       "quote": "Cyclists reported psychological barriers to change in behaviours, specifically fear of negatively impacting performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rs-first-step",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rs-keay-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "rs-talk",
+   "title": "Talking about it with care",
+   "text": "Eating sits on a spectrum: from well-fuelled, through [disordered eating](g:disordered-eating) (skipping meals, strict food rules, extra sessions to \"earn\" food), to a diagnosed [eating disorder](g:eating-disorder). Athletes move back and forth along it over a career, and disordered eating is more common than a clinical disorder [[c:rs-spectrum]]. Not all low energy availability comes from disordered eating: often the athlete simply hasn't matched food to training, without meaning to.\n\nShame and stigma keep athletes from speaking up [[c:rs-stigma]]. So talk about energy, health and how training is going, not weight or looks. Say what you've noticed and that you care, and point to a doctor or dietitian. Weigh only with consent, perhaps without showing the number, and leave weighing to someone other than the coach [[c:rs-weighing]].",
+   "claims": [
+    {
+     "id": "rs-spectrum",
+     "text": "Disordered eating lies on a spectrum from optimised nutrition to clinical eating disorders; athletes move along it and more often present with disordered eating than a clinical eating disorder.",
+     "grade": "strong",
+     "sources": [
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "wells2020",
+       "quote": "DE exists along the spectrum from optimised nutrition through to clinical eating disorders (EDs).",
+       "level": "abstract"
+      },
+      {
+       "source": "wells2020",
+       "quote": "Individual athletes can move back and forth along the spectrum of eating behaviour at any point in time over their career and within different stages of a training cycle.",
+       "level": "abstract"
+      },
+      {
+       "source": "wells2020",
+       "quote": "Athletes are more likely to present with DE than a clinical ED.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rs-stigma",
+     "text": "Shame, stigma and fear of discrimination stop athletes disclosing problems and seeking help.",
+     "grade": "moderate",
+     "sources": [
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "wells2020",
+       "quote": "Athletes’ shame, stigma and fear of discrimination prevent them from disclosing problematic behaviour and seeking help, whereas limited knowledge about ED symptoms and reluctance to ask specifically about eating problems inhibit providers’ detection of DE and EDs.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rs-weighing",
+     "text": "Safe practice de-emphasises body weight, gains consent for each measurement, offers blind weighing, and keeps the coach out of body composition assessment.",
+     "grade": "strong",
+     "sources": [
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "wells2020",
+       "quote": "To minimise DE risk and incidence, key points of prevention are identified by Sundgot-Borgen and Torstveit (2010) and include advocating health and well-being, de-emphasising body weight, and making DE a ‘health and safety issue’ not a ‘coaching issue’ among others.",
+       "level": "full-text"
+      },
+      {
+       "source": "wells2020",
+       "quote": "Strategies for safely weighing and assessing an athlete’s body composition include gaining explicit consent for every measurement (verbal), checking in with the athlete prior to the measurement and offering to ‘blind weigh’ the athlete so that they do not see the results of the examination.",
+       "level": "full-text"
+      },
+      {
+       "source": "wells2020",
+       "quote": "It should be considered that the coach is not primarily involved in the body composition assessment process.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rs-raise",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rs-spectrum-q"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No single test diagnoses REDs, and diaries under-report intake by about 19%, so a diary EA is usually too low.",
+    "The IOC REDs CAT2: screen, rate weighted signs into a green-to-red traffic light, then a doctor diagnoses and plans.",
+    "Signs that count: missing periods or low testosterone, low T3, low BMD, bone stress injuries.",
+    "LEAF-Q (women; 78% sensitivity, 90% specificity) and the RMR ratio (< 0.9) are screens, not diagnoses.",
+    "Treatment: raise energy availability (eat more, train less), with a doctor, dietitian and psychologist; periods may take over 6 months to return.",
+    "Talk about health and energy, not weight; act privately and kindly, and weigh only with consent."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "rs-underreport-calc",
+   "concept": "rs-hard",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "capling2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's food diary shows 10,500 kJ a day. If diaries under-estimate intake by 19% (reported = 81% of true), what is her likely true intake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 13,000 kJ",
+       "correct": true,
+       "why": "Right: 10,500 ÷ 0.81 = 12,963, about 13,000 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 12,500 kJ",
+       "why": "This adds 19% of the reported value (× 1.19); the 19% is of the true intake, so divide by 0.81."
+      },
+      {
+       "id": "c",
+       "text": "About 8,500 kJ",
+       "why": "This takes 19% off; under-reporting means the true value is higher."
+      },
+      {
+       "id": "d",
+       "text": "10,500 kJ",
+       "why": "This ignores the known under-reporting."
+      }
+     ],
+     "solution": "Reported = 0.81 × true, so true = 10,500 ÷ 0.81 = 12,963 kJ, about 13,000 kJ (3,098 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's diary shows 8,100 kJ a day. If diaries under-estimate intake by 19% (reported = 81% of true), what is his likely true intake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 10,000 kJ",
+       "correct": true,
+       "why": "Right: 8,100 ÷ 0.81 = 10,000 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 9,640 kJ",
+       "why": "This multiplies by 1.19; the 19% is of the true value, so divide by 0.81."
+      },
+      {
+       "id": "c",
+       "text": "About 6,560 kJ",
+       "why": "This takes 19% off; under-reporting means the true value is higher."
+      },
+      {
+       "id": "d",
+       "text": "8,100 kJ",
+       "why": "This ignores the known under-reporting."
+      }
+     ],
+     "solution": "True = 8,100 ÷ 0.81 = 10,000 kJ (2,390 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "rs-diary-ea",
+   "concept": "rs-hard",
+   "bloom": "analyse",
+   "sources": [
+    "capling2017",
+    "heikura2018",
+    "burke2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's 3-day diary gives an energy availability of 105 kJ (25 kcal) per kg FFM per day, but he has normal testosterone, stable mood and is training well. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The diary EA is probably too low; his normal signs carry more weight",
+       "correct": true,
+       "why": "Right: diaries under-report intake, and current hormone status is a more objective marker."
+      },
+      {
+       "id": "b",
+       "text": "He has REDs, because his EA is below 125 kJ",
+       "why": "No EA value diagnoses REDs, and diary EA is biased low."
+      },
+      {
+       "id": "c",
+       "text": "His testosterone test must be wrong, as EA is the gold standard",
+       "why": "EA from diaries is error-prone, not a gold standard."
+      },
+      {
+       "id": "d",
+       "text": "Diary EA is biased high, so his true EA is even lower",
+       "why": "Under-reporting intake makes diary EA too low, not too high."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-cat2-order",
+   "concept": "rs-cat2",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "stellingwerff2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does the IOC REDs CAT2 reach a REDs diagnosis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Screen, rate weighted signs, then a doctor diagnoses",
+       "correct": true,
+       "why": "Right: three steps, with the final diagnosis made by a physician."
+      },
+      {
+       "id": "b",
+       "text": "A single blood test of T3 decides it on its own",
+       "why": "There is no single validated test; T3 is one of several signs."
+      },
+      {
+       "id": "c",
+       "text": "An EA value below 125 kJ per kg FFM decides it",
+       "why": "EA estimates are too error-prone to diagnose on their own."
+      },
+      {
+       "id": "d",
+       "text": "The athlete's own questionnaire score decides it",
+       "why": "Questionnaires screen; a doctor diagnoses."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-signs-pick",
+   "concept": "rs-cat2",
+   "bloom": "analyse",
+   "sources": [
+    "heikura2018",
+    "stellingwerff2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which finding in a male marathon runner most strongly supports a suspicion of REDs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low testosterone and low T3, with a recent stress fracture",
+       "correct": true,
+       "why": "Right: several weighted signs together point to energy deficiency."
+      },
+      {
+       "id": "b",
+       "text": "Body fat of 8%",
+       "why": "Leanness alone isn't a REDs sign; many healthy runners are lean."
+      },
+      {
+       "id": "c",
+       "text": "A one-day diary showing low intake",
+       "why": "One diary day is unreliable, and diaries under-report."
+      },
+      {
+       "id": "d",
+       "text": "A resting heart rate of 42 beats·min⁻¹",
+       "why": "A low resting heart rate is normal in trained endurance athletes."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which finding in a female triathlete most strongly supports a suspicion of REDs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No period for 5 months, low T3 and low spine BMD",
+       "correct": true,
+       "why": "Right: these weighted signs together point to energy deficiency."
+      },
+      {
+       "id": "b",
+       "text": "A BMI of 20 kg·m⁻²",
+       "why": "BMI says little about energy availability."
+      },
+      {
+       "id": "c",
+       "text": "A one-day diary showing low intake",
+       "why": "One day of self-report is unreliable."
+      },
+      {
+       "id": "d",
+       "text": "A high VO₂max",
+       "why": "High fitness isn't a sign of REDs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-sens-spec",
+   "concept": "rs-tools",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "melin2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A squad has 20 women truly at risk of low energy availability and 80 not at risk. With 78% sensitivity and 90% specificity, how many are flagged in total by the LEAF-Q?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 24",
+       "correct": true,
+       "why": "Right: 0.78 × 20 = 16 true flags, plus 0.10 × 80 = 8 false flags."
+      },
+      {
+       "id": "b",
+       "text": "About 16",
+       "why": "This counts only the true positives and forgets the 8 healthy women wrongly flagged."
+      },
+      {
+       "id": "c",
+       "text": "About 88",
+       "why": "This adds 90% of the 80 (72) instead of the 10% wrongly flagged."
+      },
+      {
+       "id": "d",
+       "text": "About 20",
+       "why": "This assumes a perfect test."
+      }
+     ],
+     "solution": "True positives = 0.78 × 20 = 15.6 ≈ 16. False positives = (1 − 0.90) × 80 = 8. Flagged ≈ 24, of whom a third aren't at risk: a screen needs follow-up."
+    },
+    {
+     "id": "b",
+     "stem": "A club screens 40 women truly at risk and 60 not at risk with the LEAF-Q (78% sensitivity, 90% specificity). How many at-risk women does it miss?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 9",
+       "correct": true,
+       "why": "Right: 22% of 40 = 8.8, about 9."
+      },
+      {
+       "id": "b",
+       "text": "About 6",
+       "why": "This is 10% of the 60 not at risk: the false alarms, not the misses."
+      },
+      {
+       "id": "c",
+       "text": "About 31",
+       "why": "This is the number correctly flagged (78% of 40), not the misses."
+      },
+      {
+       "id": "d",
+       "text": "About 4",
+       "why": "This uses 10% of the 40 at risk; misses come from sensitivity, 22%."
+      }
+     ],
+     "solution": "Misses = (1 − 0.78) × 40 = 8.8 ≈ 9."
+    }
+   ]
+  },
+  {
+   "id": "rs-rmr-calc",
+   "concept": "rs-tools",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sterringer2022",
+    "espinar2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's measured resting energy use is 6,300 kJ a day; an equation predicts 7,350 kJ. What is his RMR ratio and how is it usually read?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.86: a hint of energy saving, not proof",
+       "correct": true,
+       "why": "Right: 6,300 ÷ 7,350 = 0.86; a hint, not a diagnosis."
+      },
+      {
+       "id": "b",
+       "text": "1.17: above 1, so energy is plentiful",
+       "why": "This divides predicted by measured; the ratio is measured ÷ predicted."
+      },
+      {
+       "id": "c",
+       "text": "0.86: enough to diagnose REDs on its own",
+       "why": "The ratio is a surrogate; it depends on the equation and can't diagnose alone."
+      },
+      {
+       "id": "d",
+       "text": "0.14: a sign of severe energy deficiency",
+       "why": "This is 1 minus the ratio, not the ratio."
+      }
+     ],
+     "solution": "RMR ratio = measured ÷ predicted = 6,300 ÷ 7,350 = 0.857 ≈ 0.86."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's measured resting energy use is 5,600 kJ a day; an equation predicts 5,900 kJ. What is her RMR ratio and how is it usually read?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.95: not low, but can't rule REDs out",
+       "correct": true,
+       "why": "Right: 5,600 ÷ 5,900 = 0.95; milder cases may not show a low ratio."
+      },
+      {
+       "id": "b",
+       "text": "1.05: above 1, so she must be fine",
+       "why": "This divides predicted by measured."
+      },
+      {
+       "id": "c",
+       "text": "0.95: proof she has no REDs at all",
+       "why": "A normal ratio doesn't rule REDs out."
+      },
+      {
+       "id": "d",
+       "text": "0.05: a sign of severe energy deficiency",
+       "why": "That is 1 minus the ratio."
+      }
+     ],
+     "solution": "RMR ratio = 5,600 ÷ 5,900 = 0.949 ≈ 0.95."
+    }
+   ]
+  },
+  {
+   "id": "rs-first-step",
+   "concept": "rs-treat",
+   "bloom": "apply",
+   "sources": [
+    "nattiv2007",
+    "wells2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 24-year-old runner has had no period for 6 months; her doctor finds low energy availability and no other cause. What is the first aim of treatment?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raise energy availability: eat more and/or train less",
+       "correct": true,
+       "why": "Right: restoring energy is first-line treatment for this kind of amenorrhoea."
+      },
+      {
+       "id": "b",
+       "text": "Start the contraceptive pill to bring back her periods",
+       "why": "The pill brings bleeds, but doesn't fix the energy deficit or protect bone."
+      },
+      {
+       "id": "c",
+       "text": "Cut body fat further so she can race lighter",
+       "why": "More restriction worsens the cause."
+      },
+      {
+       "id": "d",
+       "text": "Keep training the same and recheck in a year",
+       "why": "Waiting without change lets bone loss continue."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A male cyclist has low testosterone, low T3 and a stress fracture, all traced to low energy availability. What is the first aim of treatment?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raise energy availability: eat more and/or train less",
+       "correct": true,
+       "why": "Right: the fix targets the cause, the energy gap."
+      },
+      {
+       "id": "b",
+       "text": "Testosterone injections to bring the level back",
+       "why": "That treats a marker, not the cause, and is banned in sport."
+      },
+      {
+       "id": "c",
+       "text": "Ride more to keep his fitness while the bone heals",
+       "why": "More training without more food widens the gap."
+      },
+      {
+       "id": "d",
+       "text": "A calcium supplement alone",
+       "why": "Calcium alone doesn't fix the energy deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-keay-appraisal",
+   "concept": "rs-treat",
+   "bloom": "evaluate",
+   "sources": [
+    "keay2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 6-month cyclist trial, riders who improved their eating and loading gained 2.0% spine BMD. Why can't this result alone show that the education caused the gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It compares riders by what they chose to change, not by random group",
+       "correct": true,
+       "why": "Right: riders who changed may differ in other ways; the randomised comparison is the stronger test."
+      },
+      {
+       "id": "b",
+       "text": "2.0% is too small to measure with DXA",
+       "why": "7 of 11 increases passed the clinically meaningful change; the issue is the comparison."
+      },
+      {
+       "id": "c",
+       "text": "Male cyclists' bones can't change in 6 months",
+       "why": "Spine BMD changed in both directions within the season."
+      },
+      {
+       "id": "d",
+       "text": "The trial had no control group at all",
+       "why": "Riders were randomised in pairs; the 2.0% result groups them by behaviour instead."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-raise",
+   "concept": "rs-talk",
+   "bloom": "apply",
+   "sources": [
+    "wells2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You notice a clubmate skips meals before long rides and has had three colds this winter. What is the best way to raise it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Privately say what you've noticed and suggest a doctor or dietitian",
+       "correct": true,
+       "why": "Right: focus on health and support, not weight, and point to help."
+      },
+      {
+       "id": "b",
+       "text": "Tell the whole group so everyone can keep a close eye on her",
+       "why": "Public attention adds shame, which stops people seeking help."
+      },
+      {
+       "id": "c",
+       "text": "Tell her she looks too thin and simply needs to eat more",
+       "why": "Comments on looks and weight tend to backfire; talk about health and energy."
+      },
+      {
+       "id": "d",
+       "text": "Say nothing, since her eating is not your business at all",
+       "why": "Early, kind concern helps; shame and silence delay help."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A coach wants to weigh his triathlon squad every Monday in front of the group. What does good practice suggest instead?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weigh rarely, privately, with consent, perhaps blind",
+       "correct": true,
+       "why": "Right: weigh only when needed, with consent, perhaps without showing the number; this de-emphasises weight."
+      },
+      {
+       "id": "b",
+       "text": "Weigh daily so the numbers become more precise",
+       "why": "More weighing raises the focus on weight and risk of disordered eating."
+      },
+      {
+       "id": "c",
+       "text": "Post the results online so athletes stay motivated",
+       "why": "Public numbers add pressure and shame."
+      },
+      {
+       "id": "d",
+       "text": "Let athletes weigh each other to save the coach time",
+       "why": "Body data are private medical information."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rs-spectrum-q",
+   "concept": "rs-talk",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "wells2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement about eating behaviour in athletes is most accurate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It ranges from well-fuelled to eating disorder, and athletes can move both ways",
+       "correct": true,
+       "why": "Right: a spectrum, with movement back and forth over a career."
+      },
+      {
+       "id": "b",
+       "text": "Athletes either have an eating disorder or eat perfectly",
+       "why": "Most problems sit in between, as disordered eating."
+      },
+      {
+       "id": "c",
+       "text": "Disordered eating only happens in aesthetic sports like gymnastics",
+       "why": "It can occur in any sport, though some carry more risk."
+      },
+      {
+       "id": "d",
+       "text": "Once an athlete eats in a disordered way, it can't change",
+       "why": "Athletes can move back towards healthy eating, especially with support."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

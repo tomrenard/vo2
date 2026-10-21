@@ -1,0 +1,636 @@
+{
+ "id": "sup-nitrate",
+ "module": "t4-supplements",
+ "title": "Dietary nitrate and beetroot juice",
+ "goal": "Explain how dietary nitrate becomes nitric oxide via the mouth's bacteria, how it lowers the oxygen cost of exercise, how to dose and time it, and why highly trained athletes gain little.",
+ "requires": [
+  "sup-caffeine"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "nitrite"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "nit-pathway",
+   "title": "From beetroot to nitric oxide",
+   "text": "The body makes [nitric oxide](g:nitric-oxide) (NO) from an amino acid, but it can also make it from food. [Dietary nitrate](g:dietary-nitrate) (NO₃⁻) is plentiful in leafy greens and beetroot [[c:nit-path]]. The route has a surprising stop:\n\n1. You swallow nitrate; it reaches the blood and is concentrated into saliva.\n2. Bacteria on your tongue turn it into [nitrite](g:nitrite) (NO₂⁻).\n3. Swallowed again, nitrite enters the blood and is turned into NO in the body.\n\nStep 2 is not optional: without the mouth's bacteria, little nitrite reaches the blood [[c:nit-bacteria]]. Concentrated beetroot juice is the usual supplement.",
+   "claims": [
+    {
+     "id": "nit-path",
+     "text": "Besides being made from L-arginine, NO can be formed from nitrate and nitrite, whose stores rise with nitrate-rich foods such as green leafy vegetables.",
+     "grade": "strong",
+     "sources": [
+      "jones2018"
+     ],
+     "evidence": [
+      {
+       "source": "jones2018",
+       "quote": "In addition to its endogenous production through the oxidation of l-arginine, NO can be formed nonenzymatically via the reduction of nitrate and nitrite, and the storage of these anions can be augmented by the consumption of nitrate-rich foodstuffs such as green leafy vegetables.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nit-bacteria",
+     "text": "The rise in plasma nitrite after a nitrate load depends on nitrate being reduced to nitrite by bacteria in the mouth.",
+     "grade": "moderate",
+     "sources": [
+      "govoni2008"
+     ],
+     "evidence": [
+      {
+       "source": "govoni2008",
+       "quote": "We conclude that the acute increase in plasma nitrite seen after a nitrate load is critically dependent on nitrate reduction in the oral cavity by commensal bacteria.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nit-order"
+  },
+  {
+   "type": "concept",
+   "id": "nit-o2-cost",
+   "title": "Same power, less oxygen",
+   "text": "The surprise came in 2007. Nine well-trained men took sodium nitrate (0.1 mmol·kg⁻¹ a day, an amount a vegetable-rich diet could supply) or a [placebo](g:placebo) for 3 days, then cycled at set powers [[c:nit-larsen]]:\n\n| | placebo | nitrate |\n|---|---|---|\n| [VO₂](g:vo2), low powers | 2.98 L·min⁻¹ | 2.82 L·min⁻¹ |\n| [gross efficiency](g:gross-efficiency) | 19.7% | 21.1% |\n\nHeart rate and blood [lactate](g:lactate) didn't change, so no extra anaerobic energy made up the gap. The same work simply cost less oxygen: better [economy](g:economy). Later work showed nitrate can also improve muscle contraction and so sprint power [[c:nit-jones]].",
+   "claims": [
+    {
+     "id": "nit-larsen",
+     "text": "In 9 well-trained men, 3 days of dietary-level nitrate lowered submaximal VO₂ (2.98 to 2.82 L·min⁻¹) and raised gross efficiency (19.7 to 21.1%) without changing heart rate or lactate.",
+     "grade": "weak",
+     "sources": [
+      "larsen2007"
+     ],
+     "evidence": [
+      {
+       "source": "larsen2007",
+       "quote": "On an average Vo(2) decreased from 2.98 +/- 0.57 during CON to 2.82 +/- 0.58 L min(-1) during NIT (P < 0.02) over the four lowest submaximal work rates. Gross efficiency increased from 19.7 +/- 1.6 during CON to 21.1 +/- 1.3% during NIT (P < 0.01) over the four lowest work rates.",
+       "level": "abstract"
+      },
+      {
+       "source": "larsen2007",
+       "quote": "There was no difference in heart rate, lactate [Hla], ventilation (VE), VE/Vo(2) or respiratory exchange ratio between nitrate and placebo during any of the submaximal work rates.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nit-jones",
+     "text": "Dietary nitrate can reduce the O₂ cost of submaximal exercise and enhance muscle contractile function.",
+     "grade": "moderate",
+     "sources": [
+      "jones2018"
+     ],
+     "evidence": [
+      {
+       "source": "jones2018",
+       "quote": "Recent studies indicate that dietary nitrate supplementation, administered most commonly in the form of beetroot juice, can ( a) improve muscle efficiency by reducing the O<sub>2</sub> cost of submaximal exercise and thereby improve endurance exercise performance and ( b) enhance skeletal muscle contractile function and thereby improve muscle power and sprint exercise performance.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "nit-o2-example",
+   "title": "How big is the oxygen saving?",
+   "problem": "In the 2007 study, VO₂ at the same low powers fell from 2.98 to 2.82 L·min⁻¹ with nitrate. By what percentage did the oxygen cost fall?",
+   "steps": [
+    "The placebo value is the reference: divide by it.",
+    "Difference: 2.98 − 2.82 = 0.16 L·min⁻¹.",
+    "0.16 ÷ 2.98 = 0.054, a fall of about 5%.",
+    "Dividing by 2.82 instead (5.7%) uses the wrong reference."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nit-o2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "nit-lactate"
+  },
+  {
+   "type": "concept",
+   "id": "nit-dose",
+   "title": "How much, and when",
+   "text": "A dose–response study gave 10 men 70, 140 or 280 mL of concentrated beetroot juice (4.2, 8.4 or 16.8 mmol nitrate) [[c:nit-wylie]]:\n\n- Blood nitrite peaked **2–3 h** after drinking.\n- 4.2 mmol did nothing measurable.\n- 8.4 mmol extended [time to exhaustion](g:time-to-exhaustion) by 14%; its 1.7% drop in oxygen cost was borderline.\n- 16.8 mmol cut oxygen cost by 3%, but extended exercise by 12%: no better than 8.4.\n\nThe IOC's protocol matches: **5–9 mmol** (310–560 mg) about 2–3 h before. Taking it for more than 3 days also seems to help, and may suit highly trained athletes [[c:nit-ioc]].",
+   "claims": [
+    {
+     "id": "nit-wylie",
+     "text": "Plasma nitrite peaks 2–3 h after beetroot juice; 4.2 mmol nitrate changed nothing; 8.4 and 16.8 mmol extended time to task failure by 14% and 12% (oxygen cost down 1.7%, P = 0.06, and 3.0%), so 16.8 mmol gave no extra gain.",
+     "grade": "weak",
+     "sources": [
+      "wylie2013"
+     ],
+     "evidence": [
+      {
+       "source": "wylie2013",
+       "quote": "Following acute BR ingestion, plasma [NO2(-)] increased in a dose-dependent manner, with the peak changes occurring at approximately 2-3 h. Compared with PL, 70 ml BR did not alter the physiological responses to exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "wylie2013",
+       "quote": "However, 140 and 280 ml BR reduced the steady-state oxygen (O2) uptake during moderate-intensity exercise by 1.7% (P = 0.06) and 3.0% (P < 0.05), whereas time-to-task failure was extended by 14% and 12% (both P < 0.05), respectively, compared with PL.",
+       "level": "abstract"
+      },
+      {
+       "source": "wylie2013",
+       "quote": "there is no additional improvement in exercise tolerance after ingesting BR containing 16.8 compared with 8.4 mmol NO3(-).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nit-ioc",
+     "text": "Acute benefits are generally seen 2–3 h after a 5–9 mmol nitrate bolus; intake over more than 3 days also seems beneficial and may help highly trained athletes.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "Acute performance benefits are generally seen within 2–3 hours following an NO 3 − bolus of 5–9 mmol (310–560 mg).",
+       "level": "full-text"
+      },
+      {
+       "source": "maughan2018",
+       "quote": "Prolonged periods of NO 3 − intake (>3 days) also appear beneficial to performance",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nit-plan"
+  },
+  {
+   "type": "question",
+   "item": "nit-double"
+  },
+  {
+   "type": "concept",
+   "id": "nit-trained",
+   "title": "Smaller gains for the very fit",
+   "text": "A [meta-analysis](g:meta-analysis) of 80 crossover studies found that nitrate improves performance, but the effect is small: d = 0.17 [[c:nit-meta]]. Split by fitness, the gain disappeared in well-trained athletes ([VO₂max](g:vo2max) of 65 mL·kg⁻¹·min⁻¹ or more: d = 0.02). Studies of women alone were too few to show an effect either way.\n\nOne study tested 21 people with [VO₂peak](g:vo2peak) from 28 to 82 mL·kg⁻¹·min⁻¹. The fitter they were, the smaller the drop in oxygen cost and the smaller the gain in a 3 km run, and the less their blood nitrate and nitrite rose [[c:nit-porcelli]]. Why is not settled; the right dose for elite athletes may differ.",
+   "claims": [
+    {
+     "id": "nit-meta",
+     "text": "Across 80 studies nitrate improved exercise performance (d = 0.174), but no effect was seen in well-trained endurance athletes (≥65 mL·kg⁻¹·min⁻¹) or in studies with only women.",
+     "grade": "moderate",
+     "sources": [
+      "senefeld2020"
+     ],
+     "evidence": [
+      {
+       "source": "senefeld2020",
+       "quote": "Random-effects meta-analysis demonstrated that exercise performance improved with NO3 supplementation compared with placebo (d = 0.174; 95% confidence interval (CI), 0.120-0.229; P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "senefeld2020",
+       "quote": "1) not observed in studies with only women (n = 6; d = 0.116; 95% CI, -0.126 to 0.358; P = 0.347), 2) not observed in well-trained endurance athletes (≥65 mL·kg·min; n = 26; d = 0.021; 95% CI, -0.103 to 0.144; P = 0.745)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nit-porcelli",
+     "text": "In 21 people of differing fitness, the fitter they were, the smaller nitrate's reduction in O₂ cost, gain in 3 km time-trial performance and rise in plasma nitrate and nitrite.",
+     "grade": "weak",
+     "sources": [
+      "porcelli2015"
+     ],
+     "evidence": [
+      {
+       "source": "porcelli2015",
+       "quote": "After NITR, a negative correlation between reduction of O2 cost of submaximal exercise and individual aerobic fitness level was observed (r = 0.80; P < 0.0001). A significant inverse correlation was also found between aerobic fitness level and improvement in performance for 3-km time trial after NITR (r = 0.76; P < 0.0001).",
+       "level": "abstract"
+      },
+      {
+       "source": "porcelli2015",
+       "quote": "Additionally, subjects responded differently to dietary nitrate supplementation according to aerobic fitness level with higher-fit subjects showing a lower increase in plasma [NO3] (r = 0.86; P < 0.0001) and [NO2] (r = 0.75; P < 0.0001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nit-who"
+  },
+  {
+   "type": "question",
+   "item": "nit-women"
+  },
+  {
+   "type": "question",
+   "item": "nit-o2-calc",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "nit-mouthwash",
+   "title": "How to lose the effect: mouthwash",
+   "text": "Since the mouth's bacteria do step 2, killing them should break the chain. In 7 volunteers, an antibacterial (chlorhexidine) mouthwash before a nitrate dose left nitrate in saliva and blood unchanged, but stopped its conversion to nitrite in saliva and sharply blunted the rise of nitrite in the blood [[c:nit-mouthwash]]. The authors expect it to blunt nitrate's effects in the body too.\n\nSo: no antibacterial mouthwash on nitrate days. Side effects are few, but some athletes get an upset gut, so try it in training first [[c:nit-gi]].",
+   "claims": [
+    {
+     "id": "nit-mouthwash",
+     "text": "An antibacterial mouthwash abolished salivary conversion of nitrate to nitrite and markedly blunted the rise in plasma nitrite.",
+     "grade": "weak",
+     "sources": [
+      "govoni2008"
+     ],
+     "evidence": [
+      {
+       "source": "govoni2008",
+       "quote": "Rinsing the mouth with the antibacterial mouthwash prior to the nitrate load had no effect on nitrate accumulation in saliva or plasma but abolished its conversion to nitrite in saliva and markedly attenuated the rise in plasma nitrite.",
+       "level": "abstract"
+      },
+      {
+       "source": "govoni2008",
+       "quote": "The removal of these bacteria with an antibacterial mouthwash will very likely attenuate the NO-dependent biological effects of dietary nitrate.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nit-gi",
+     "text": "Nitrate has few side effects, but GI upset is possible in susceptible athletes, so it should be trialled in training.",
+     "grade": "strong",
+     "sources": [
+      "maughan2018"
+     ],
+     "evidence": [
+      {
+       "source": "maughan2018",
+       "quote": "There may exist the potential for GI upset in susceptible athletes, and should therefore be thoroughly trialled in training.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "nit-mouthwash-why"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Nitrate (beetroot, leafy greens) → nitrite, made by bacteria on the tongue → nitric oxide. An antibacterial mouthwash breaks the chain.",
+    "Nitrate can lower the oxygen cost of the same power: 2.98 to 2.82 L·min⁻¹ in one study, with no rise in lactate. Percentage change = difference ÷ reference value.",
+    "Dose 5–9 mmol about 2–3 h before; doubling to 16.8 mmol adds nothing. Several days of intake also seems to help.",
+    "The overall effect is small (d = 0.17) and wasn't seen in well-trained athletes; too few studies in women to tell."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "nit-order",
+   "concept": "nit-pathway",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jones2018",
+    "govoni2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Put the steps from beetroot to nitric oxide in order.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nitrate → (mouth bacteria) nitrite → NO",
+       "correct": true,
+       "why": "Right: bacteria on the tongue turn nitrate into nitrite, which the body turns into NO."
+      },
+      {
+       "id": "b",
+       "text": "Nitrite → (mouth bacteria) nitrate → NO",
+       "why": "Reversed: the food supplies nitrate, and bacteria make nitrite from it."
+      },
+      {
+       "id": "c",
+       "text": "Nitrate → (stomach acid) NO directly",
+       "why": "This skips the nitrite step made by the mouth's bacteria."
+      },
+      {
+       "id": "d",
+       "text": "Nitrate → (liver enzymes) arginine → NO",
+       "why": "Arginine is the body's other route to NO, not a step from nitrate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-o2-calc",
+   "concept": "nit-o2-cost",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "larsen2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After nitrate, a runner's VO₂ at 14 km·h⁻¹ falls from 3.20 to 3.07 L·min⁻¹. By what percentage did the oxygen cost fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4.1%",
+       "correct": true,
+       "why": "Right: (3.20 − 3.07) ÷ 3.20 = 0.041."
+      },
+      {
+       "id": "b",
+       "text": "4.2%",
+       "why": "This divides by 3.07, the new value, instead of the reference 3.20."
+      },
+      {
+       "id": "c",
+       "text": "0.13%",
+       "why": "0.13 is the difference in L·min⁻¹, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "13%",
+       "why": "This reads the 0.13 L·min⁻¹ difference as 13%."
+      }
+     ],
+     "solution": "(3.20 − 3.07) ÷ 3.20 = 0.13 ÷ 3.20 = 0.041, about 4%."
+    },
+    {
+     "id": "b",
+     "stem": "At 200 W a cyclist's VO₂ is 2.50 L·min⁻¹ on placebo and 2.43 L·min⁻¹ on nitrate. By what percentage did the oxygen cost fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.8%",
+       "correct": true,
+       "why": "Right: (2.50 − 2.43) ÷ 2.50 = 0.028."
+      },
+      {
+       "id": "b",
+       "text": "2.9%",
+       "why": "This divides by 2.43 instead of the placebo value."
+      },
+      {
+       "id": "c",
+       "text": "7%",
+       "why": "This reads the 0.07 L·min⁻¹ difference as 7%."
+      },
+      {
+       "id": "d",
+       "text": "0.07%",
+       "why": "0.07 is the difference in L·min⁻¹, not a percentage."
+      }
+     ],
+     "solution": "(2.50 − 2.43) ÷ 2.50 = 0.07 ÷ 2.50 = 0.028, about 3%."
+    }
+   ]
+  },
+  {
+   "id": "nit-lactate",
+   "concept": "nit-o2-cost",
+   "bloom": "analyse",
+   "sources": [
+    "larsen2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "With nitrate, VO₂ at the same power fell but blood lactate didn't rise. Why does the lactate result matter?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rules out extra anaerobic energy filling the gap",
+       "correct": true,
+       "why": "Right: if glycolysis had covered the missing oxygen, lactate would rise; it didn't, so the work truly cost less."
+      },
+      {
+       "id": "b",
+       "text": "It shows nitrate is a buffer",
+       "why": "Nitrate doesn't buffer acid; lactate is the check on anaerobic energy."
+      },
+      {
+       "id": "c",
+       "text": "It shows the riders weren't trying",
+       "why": "Powers were set by the ergometer; effort can't explain a lower VO₂."
+      },
+      {
+       "id": "d",
+       "text": "Lactate always falls when VO₂ falls",
+       "why": "They needn't move together: if glycolysis covered for less oxygen, lactate would rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-plan",
+   "concept": "nit-dose",
+   "bloom": "apply",
+   "sources": [
+    "maughan2018",
+    "wylie2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete's race starts at 08:00. Which nitrate plan fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 8 mmol of beetroot juice at 05:30",
+       "correct": true,
+       "why": "Right: 5–9 mmol, 2–3 h before, when blood nitrite peaks."
+      },
+      {
+       "id": "b",
+       "text": "About 8 mmol at 07:45, just before the start",
+       "why": "Nitrite peaks 2–3 h after drinking, so 15 min is too soon."
+      },
+      {
+       "id": "c",
+       "text": "About 4 mmol the evening before",
+       "why": "4.2 mmol did nothing measurable, and the peak has long passed by morning."
+      },
+      {
+       "id": "d",
+       "text": "About 17 mmol at 05:30, to be sure",
+       "why": "16.8 mmol gave no extra gain over 8.4, with more risk of gut upset."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-double",
+   "concept": "nit-dose",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "wylie2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the dose–response study, what did doubling the nitrate dose from 8.4 to 16.8 mmol do to exercise tolerance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No further improvement",
+       "correct": true,
+       "why": "Right: the benefit plateaued at 8.4 mmol."
+      },
+      {
+       "id": "b",
+       "text": "Doubled the improvement",
+       "why": "Plasma nitrite rose with dose, but exercise tolerance didn't improve further."
+      },
+      {
+       "id": "c",
+       "text": "Turned the benefit into harm",
+       "why": "Not seen: both doses extended time to exhaustion by 12–14%."
+      },
+      {
+       "id": "d",
+       "text": "Made a benefit appear for the first time",
+       "why": "8.4 mmol already worked; 4.2 mmol was the dose that didn't."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-who",
+   "concept": "nit-trained",
+   "bloom": "apply",
+   "sources": [
+    "senefeld2020",
+    "porcelli2015",
+    "maughan2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Who is most likely to gain from beetroot juice before a 10 km race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A club runner with VO₂max 48 mL·kg⁻¹·min⁻¹",
+       "correct": true,
+       "why": "Right: gains are clearer in less fit people and vanish in pooled data on well-trained athletes."
+      },
+      {
+       "id": "b",
+       "text": "An elite runner with VO₂max 78 mL·kg⁻¹·min⁻¹",
+       "why": "In well-trained athletes (65 mL·kg⁻¹·min⁻¹ or more) no effect was seen on average."
+      },
+      {
+       "id": "c",
+       "text": "Both equally: nitrate works the same for everyone",
+       "why": "Fitness changed the effect, both in the meta-analysis and the 21-person study."
+      },
+      {
+       "id": "d",
+       "text": "Neither: nitrate only helps sprinters",
+       "why": "It reduced oxygen cost and helped endurance in less fit people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-women",
+   "concept": "nit-trained",
+   "bloom": "evaluate",
+   "sources": [
+    "senefeld2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the meta-analysis, the 6 studies with only women showed no clear effect of nitrate. Best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Too few studies to tell: not proof of no effect",
+       "correct": true,
+       "why": "Right: the confidence interval was wide (−0.13 to 0.36), so a real effect isn't ruled out."
+      },
+      {
+       "id": "b",
+       "text": "Nitrate doesn't work in women",
+       "why": "A non-significant result from 6 studies is absence of evidence, not evidence of absence."
+      },
+      {
+       "id": "c",
+       "text": "Nitrate works better in women",
+       "why": "Nothing in these data shows that."
+      },
+      {
+       "id": "d",
+       "text": "Women's results were left out of the analysis",
+       "why": "They were analysed as a subgroup; there were just few of them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nit-mouthwash-why",
+   "concept": "nit-mouthwash",
+   "bloom": "analyse",
+   "sources": [
+    "govoni2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist drinks beetroot juice 2.5 h before a time trial and then rinses with antibacterial mouthwash. Why might the juice now do little?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It kills the bacteria that turn nitrate into nitrite",
+       "correct": true,
+       "why": "Right: without them little nitrite reaches the blood, so little NO is made."
+      },
+      {
+       "id": "b",
+       "text": "It washes the nitrate out of the stomach",
+       "why": "The nitrate is already swallowed; mouthwash didn't change nitrate levels in blood or saliva."
+      },
+      {
+       "id": "c",
+       "text": "It destroys nitrate in the blood",
+       "why": "Blood nitrate was unchanged; the conversion to nitrite was blocked."
+      },
+      {
+       "id": "d",
+       "text": "It makes the juice too acidic to absorb",
+       "why": "Absorption wasn't affected; the bacterial step was."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

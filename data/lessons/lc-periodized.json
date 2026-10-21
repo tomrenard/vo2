@@ -1,0 +1,882 @@
+{
+ "id": "lc-periodized",
+ "module": "t4-low-carb",
+ "title": "Fuel for the work required",
+ "goal": "Plan a week that matches carbohydrate to each session, explain the glycogen threshold idea, weigh it against simply eating high-carbohydrate, and name its risks.",
+ "requires": [
+  "lc-train-low"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "carbohydrate-periodisation",
+    "glycogen-threshold",
+    "bone-turnover-markers"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "per-fuel-work",
+   "title": "Match the fuel to the session",
+   "text": "Train-low research left a practical model: [carbohydrate periodisation](g:carbohydrate-periodisation), or 'fuel for the work required'. Instead of restricting carbohydrate for weeks, you adjust it **day by day and meal by meal** to the intensity, duration and goal of the next session [[c:per-model]].\n\nThe rule of thumb: keep hard sessions fuelled. Train-low is best kept to sessions that don't depend on carbohydrate, such as steady riding or running below the [lactate threshold](g:lactate-threshold) [[c:per-easy-only]]. Intervals, races and race-pace work get full stores and carbohydrate during.\n\nHow many grams a day each kind of day needs is in *Carbohydrate, fat and protein metabolism*.",
+   "claims": [
+    {
+     "id": "per-model",
+     "text": "In the 'fuel for the work required' model, carbohydrate availability is adjusted day to day and meal by meal to the intensity, duration and goals of training, rather than restricted chronically.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "As opposed to chronic periods of CHO restriction, this model suggests that CHO availability should be manipulated day-to-day and meal-by-meal according to the intensity, duration and specific training goals.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "per-easy-only",
+     "text": "Train-low may be best kept to sessions that are not carbohydrate-dependent, such as steady sessions below the lactate threshold.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Intuitively, ‘train low’ may be best left to those training sessions that are not CHO-dependent and where the intensity and duration is not likely to be compromised by reduced CHO availability (e.g. steady-state-type training sessions performed at intensities below the lactate threshold).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-which-session",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "per-calendar"
+  },
+  {
+   "type": "concept",
+   "id": "per-threshold",
+   "title": "The glycogen threshold idea",
+   "text": "How low is low enough? Looking across train-low studies, Impey and colleagues saw the extra adaptations mainly when sessions began with muscle glycogen at or below about **300 mmol·kg⁻¹ dry muscle** [[c:per-300]]. (The trained cyclists in the train-low lesson had 478 when fed normally.) Go under about **100**, and signals for building muscle protein may be turned down.\n\nThat gives the [glycogen threshold](g:glycogen-threshold) hypothesis: a window of roughly **100–300 mmol·kg⁻¹ dry** that is low enough to amplify the signal but high enough to still do the planned work [[c:per-window]].\n\nIt is a hypothesis: athletes can't measure their own glycogen before a ride, and the glycogen cost of real sessions is still being worked out.",
+   "claims": [
+    {
+     "id": "per-300",
+     "text": "Adaptations to carbohydrate restriction are particularly evident when pre-exercise muscle glycogen is at or below about 300 mmol·kg⁻¹ dry.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "In this regard, examination of available train-low studies (see Table 1 ) demonstrates that adaptations associated with CHO restriction are particularly evident when absolute pre-exercise muscle glycogen concentrations are ≤ 300 mmol/kg dw.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "per-window",
+     "text": "The glycogen threshold hypothesis proposes a window (about 100–300 mmol·kg⁻¹ dry) that permits the required training and activates adaptive signalling; below about 100 may reduce protein-synthesis signalling. The glycogen cost of habitual sessions still has to be quantified.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Herein, we present our rationale for the glycogen threshold hypothesis, a window of muscle glycogen concentrations that simultaneously permits completion of required training workloads and activation of the molecular machinery regulating training adaptations.",
+       "level": "abstract"
+      },
+      {
+       "source": "impey2018",
+       "quote": "300–100 mmol/kg dw) that is permissive to facilitating the required training intensity, acute cell signalling responses and post-exercise remodelling processes",
+       "level": "full-text"
+      },
+      {
+       "source": "impey2018",
+       "quote": "< 100 mmol/kg dw) may reduce the regulation of protein synthesis pathways",
+       "level": "full-text"
+      },
+      {
+       "source": "impey2018",
+       "quote": "In order to strategically implement train-low sessions, our challenge now is to quantify the glycogen cost of habitual training sessions",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-threshold-apply",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "per-threshold-limit"
+  },
+  {
+   "type": "concept",
+   "id": "per-week",
+   "title": "A periodised week in practice",
+   "text": "Impey's example: eat plenty of carbohydrate before, during and after a hard session on day 1, then cut it at the evening meal. Sleep low, and do day 2's easier session with little or no carbohydrate beforehand [[c:per-example]]. Then refuel for the next hard day.\n\n| day | session | carbohydrate |\n|---|---|---|\n| Tue | intervals (evening) | high before, during, after; low dinner |\n| Wed | easy 90 min (morning) | fasted ride, refuel after |\n| Thu | rest or easy | moderate |\n| Sat | long ride, race-pace blocks | high, plus carbohydrate during |\n\nThe daily total can stay the same. In the sleep-low trial both groups ate 6 g·kg⁻¹·day⁻¹; only the timing moved [[c:per-same-total]].",
+   "claims": [
+    {
+     "id": "per-example",
+     "text": "A practical example: high carbohydrate before, during and after a hard session on day 1, reduced at the evening meal, then sleep-low and train-low for a lower-intensity session on day 2.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "In this example, high CHO intake is advised before, during and after the training session on day 1 (e.g. ‘train high’), but reduced in the evening meal to facilitate sleep low and train low for a lower-intensity session on day 2",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "per-same-total",
+     "text": "In the sleep-low trial both groups ate the same daily carbohydrate (6 g·kg⁻¹·day⁻¹), with different timing around sessions.",
+     "grade": "strong",
+     "sources": [
+      "marquet2016"
+     ],
+     "evidence": [
+      {
+       "source": "marquet2016",
+       "quote": "consumed the same daily carbohydrate (CHO) intake (6 g·kg(-1)·d(-1)) but with different timing over the day to manipulate CHO availability before and after training sessions",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "per-grams-example",
+   "title": "How much carbohydrate moves on a sleep-low night?",
+   "problem": "A 70 kg triathlete eats 6 g·kg⁻¹·day⁻¹ of carbohydrate. Her dinner normally holds a quarter of it. On a sleep-low night, that dinner carbohydrate is moved to after the next morning's easy ride. How many grams move?",
+   "steps": [
+    "Daily total = 70 kg × 6 g·kg⁻¹ = 420 g.",
+    "Dinner share = 420 × ¼ = 105 g.",
+    "So about 105 g moves from dinner to the recovery breakfast and lunch; the day's total is unchanged."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-grams-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "per-week-order"
+  },
+  {
+   "type": "concept",
+   "id": "per-vs-high",
+   "title": "Periodised or simply high-carb?",
+   "text": "Is periodising better than just eating plenty all the time? In the first Supernova study, the periodised group improved its 10 km race walk by 5.3% and the always-high group by 6.6%: both clearly beat LCHF, neither clearly beat the other [[c:per-supernova]]. The meta-analysis in the train-low lesson found no overall gain in well-trained athletes [[c:per-meta]].\n\nSupporters reply that the trials are short (1–4 weeks), and that elite athletes train 20–30 h a week while most studies used under 10 h [[c:per-short]].\n\nFair summary: periodising is a reasonable way to eat, not a proven performance boost.",
+   "claims": [
+    {
+     "id": "per-supernova",
+     "text": "Diets with chronic or periodised high carbohydrate availability both supported performance gains in elite race walkers, unlike LCHF.",
+     "grade": "weak",
+     "sources": [
+      "burke2017b"
+     ],
+     "evidence": [
+      {
+       "source": "burke2017b",
+       "quote": "In contrast to training with diets providing chronic or periodised high carbohydrate availability, adaptation to an LCHF diet impairs performance in elite endurance athletes despite a significant improvement in peak aerobic capacity.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2017b",
+       "quote": "HCHO and PCHO groups improved times for 10 km race walk: 6.6% (90% CI: 4.1, 9.1%) and 5.3% (3.4, 7.2%), with no improvement (-1.6% (-8.5, 5.3%)) for the LCHF group.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-meta",
+     "text": "Periodised carbohydrate restriction does not per se enhance performance in endurance-trained athletes.",
+     "grade": "moderate",
+     "sources": [
+      "gejl2021"
+     ],
+     "evidence": [
+      {
+       "source": "gejl2021",
+       "quote": "Based on the available literature, we therefore conclude that periodized CHO restriction does not per se enhance performance in endurance-trained athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-short",
+     "text": "Included trials lasted 1–4 weeks; elite athletes may train 20–30 h a week, whereas most studies used under 10 h a week.",
+     "grade": "strong",
+     "sources": [
+      "gejl2021",
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "gejl2021",
+       "quote": "The durations of the included training studies varied from one to 4 weeks and the number of participants from 11 to 26",
+       "level": "full-text"
+      },
+      {
+       "source": "impey2018",
+       "quote": "Additionally, elite athletes may also undertake 20–30 h of training per week, whereas many of the study designs reviewed thus far have utilized training programmes of < 10 h per week.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does periodising carbohydrate improve endurance performance more than a consistently high-carbohydrate diet?",
+    "sides": [
+     {
+      "position": "Yes, potentially: low glycogen amplifies training signals, and sleep-low trials improved efficiency and 10 km run times in triathletes.",
+      "sources": [
+       "impey2018",
+       "marquet2016",
+       "psilander2013"
+      ]
+     },
+     {
+      "position": "Not shown: in well-trained athletes, randomised trials and a meta-analysis find no extra performance gain over high carbohydrate.",
+      "sources": [
+       "gejl2017",
+       "gejl2021",
+       "burke2017b"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "per-debate-eval"
+  },
+  {
+   "type": "question",
+   "item": "per-short-q"
+  },
+  {
+   "type": "concept",
+   "id": "per-risks",
+   "title": "The risks: energy, illness, bone",
+   "text": "Cutting carbohydrate often cuts energy too. Endurance athletes already face daily spells of carbohydrate and calorie restriction from multiple sessions a day, and longer spells of low [energy availability](g:energy-availability) [[c:per-lea]]. Repeated daily training with low carbohydrate may also make illness more likely [[c:per-illness]].\n\nBone: in world-class race walkers, 3.5 weeks of a ketogenic diet impaired [bone turnover markers](g:bone-turnover-markers) (less building, more breakdown); a return to carbohydrate restored only the breakdown marker [[c:per-bone]]. These are blood markers, not fractures.\n\nThe 2023 IOC consensus on [REDs](g:reds) names low carbohydrate availability as a growing part of the picture [[c:per-ioc]]. More in *Energy availability and RED-S*.",
+   "claims": [
+    {
+     "id": "per-lea",
+     "text": "Many endurance athletes have daily periods of combined carbohydrate and calorie restriction from multiple sessions a day, and longer periods of suboptimal energy availability.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "many endurance athletes present daily with transient periods of both CHO and calorie restriction due to multiple training sessions per day, as well as longer-term periods of suboptimal energy availability",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "per-illness",
+     "text": "Repeated daily training with reduced carbohydrate availability may increase susceptibility to illness.",
+     "grade": "weak",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Additionally, repetitive daily training in the face of a reduction in CHO availability (so as to reduce pre-exercise muscle glycogen concentration) may increase susceptibility to illness",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "per-bone",
+     "text": "A 3.5-week ketogenic LCHF diet impaired markers of bone modelling/remodelling in elite race walkers; acute carbohydrate restoration recovered only the resorption marker.",
+     "grade": "weak",
+     "sources": [
+      "heikura2020"
+     ],
+     "evidence": [
+      {
+       "source": "heikura2020",
+       "quote": "Markers of bone modeling/remodeling were impaired after short-term LCHF diet, and only a marker of resorption recovered after acute CHO restoration.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "per-ioc",
+     "text": "The 2023 IOC REDs consensus reports emerging data on the growing role of low carbohydrate availability.",
+     "grade": "strong",
+     "sources": [
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "emerging data demonstrating the growing role of low carbohydrate availability",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "per-risk-scenario"
+  },
+  {
+   "type": "question",
+   "item": "per-bone-q"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "'Fuel for the work required': adjust carbohydrate day by day and meal by meal to each session; keep hard sessions fuelled and do train-low only on easy, steady ones.",
+    "The glycogen threshold hypothesis proposes a window of about 100–300 mmol·kg⁻¹ dry: low enough to boost the signal, high enough to do the work.",
+    "A typical pattern: high carbohydrate around a hard session, low dinner, fasted easy session next morning, then refuel; the daily total can stay the same.",
+    "Compared with simply eating high-carbohydrate, periodising has not been shown to improve performance in trained athletes.",
+    "Risks: low energy availability, illness and worse bone markers; see Energy availability and RED-S."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "per-which-session",
+   "concept": "per-fuel-work",
+   "bloom": "apply",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which session in a cyclist's week is the best candidate for low carbohydrate availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 90 min easy endurance ride below the lactate threshold",
+       "correct": true,
+       "why": "Right: steady, low-intensity work isn't carbohydrate-dependent, so quality doesn't suffer."
+      },
+      {
+       "id": "b",
+       "text": "5 × 5 min intervals near VO₂max",
+       "why": "Hard intervals depend on carbohydrate; low availability would cost intensity."
+      },
+      {
+       "id": "c",
+       "text": "A 40 km time-trial rehearsal at race pace",
+       "why": "Race-pace work should be fuelled like the race."
+      },
+      {
+       "id": "d",
+       "text": "A sprint session with 10 all-out efforts",
+       "why": "Sprints run on PCr and glycogen; this needs full stores."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which session in a runner's week is the best candidate for low carbohydrate availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An easy 60 min run at conversational pace",
+       "correct": true,
+       "why": "Right: steady, low-intensity work isn't carbohydrate-dependent, so quality doesn't suffer."
+      },
+      {
+       "id": "b",
+       "text": "A 30 min tempo run at threshold pace",
+       "why": "Threshold work depends heavily on carbohydrate; low availability would cost pace."
+      },
+      {
+       "id": "c",
+       "text": "10 × 400 m repeats",
+       "why": "Hard intervals need full stores to hit their target pace."
+      },
+      {
+       "id": "d",
+       "text": "A half-marathon race",
+       "why": "Races are 'compete high': fully fuelled."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-calendar",
+   "concept": "per-fuel-work",
+   "bloom": "analyse",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete says: 'I periodise my carbs: low Monday to Friday, high at weekends.' Her Tuesday and Thursday hold her hardest bike intervals. What is wrong with her plan, judged by 'fuel for the work required'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her hard weekday sessions go unfuelled",
+       "correct": true,
+       "why": "Right: carbohydrate should follow each session's demand, not the calendar; hard sessions get high availability."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: any weekly rotation counts",
+       "why": "Rotation alone isn't the model; it matches fuel to the work."
+      },
+      {
+       "id": "c",
+       "text": "Her weekends should be low too",
+       "why": "That would make it chronic restriction, close to keto, which impaired performance."
+      },
+      {
+       "id": "d",
+       "text": "It only works for runners",
+       "why": "The sleep-low trial with gains was in triathletes; sport isn't the issue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-threshold-apply",
+   "concept": "per-threshold",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before an easy ride, a cyclist's muscle glycogen is estimated at 150 mmol·kg⁻¹ dry. Under the glycogen threshold hypothesis, where does this sit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inside the window: low enough to amplify the signal, high enough to train",
+       "correct": true,
+       "why": "Right: 150 lies within about 100–300."
+      },
+      {
+       "id": "b",
+       "text": "Above the window: too high to add extra signal",
+       "why": "Above the window means over about 300."
+      },
+      {
+       "id": "c",
+       "text": "Below the window: protein-building signals may be turned down",
+       "why": "That applies under about 100."
+      },
+      {
+       "id": "d",
+       "text": "So low that no exercise is possible",
+       "why": "Exercise is possible at much lower levels; the window is about adaptation, not ability to move."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Before an easy run, a runner's muscle glycogen is estimated at 60 mmol·kg⁻¹ dry. Under the glycogen threshold hypothesis, where does this sit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Below the window: protein-building signals may be turned down",
+       "correct": true,
+       "why": "Right: under about 100 may reduce protein-synthesis signalling."
+      },
+      {
+       "id": "b",
+       "text": "Inside the window: the ideal train-low level",
+       "why": "The window is about 100–300; 60 is under it."
+      },
+      {
+       "id": "c",
+       "text": "Above the window: too high to add extra signal",
+       "why": "Above the window means over about 300."
+      },
+      {
+       "id": "d",
+       "text": "Normal for a fed, rested athlete",
+       "why": "Fed, rested trained muscle holds several hundred (478 in the train-low study)."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "Before a morning swim, a triathlete's muscle glycogen is estimated at 450 mmol·kg⁻¹ dry. Under the glycogen threshold hypothesis, where does this sit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Above the window: little extra signal from low glycogen",
+       "correct": true,
+       "why": "Right: 450 is above about 300, near the normal fed level."
+      },
+      {
+       "id": "b",
+       "text": "Inside the window: the ideal train-low level",
+       "why": "The window is about 100–300; 450 is above it."
+      },
+      {
+       "id": "c",
+       "text": "Below the window: protein-building signals may be turned down",
+       "why": "That applies under about 100."
+      },
+      {
+       "id": "d",
+       "text": "Dangerously low: the session should be cancelled",
+       "why": "450 is a normal, well-fed level."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-threshold-limit",
+   "concept": "per-threshold",
+   "bloom": "evaluate",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is the glycogen threshold still a hypothesis rather than a training rule?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rests on indirect evidence that can't yet be applied",
+       "correct": true,
+       "why": "Right: it comes from comparing studies, athletes can't measure their own glycogen, and the glycogen cost of real sessions still needs measuring."
+      },
+      {
+       "id": "b",
+       "text": "A large randomised trial disproved it",
+       "why": "No such trial exists; it hasn't been tested directly."
+      },
+      {
+       "id": "c",
+       "text": "It applies only to female athletes",
+       "why": "Nothing in it is sex-specific; most data are from men."
+      },
+      {
+       "id": "d",
+       "text": "Glycogen has no link to training signals",
+       "why": "Low glycogen did amplify signals in most studies; the exact threshold is the open question."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-grams-calc",
+   "concept": "per-week",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "marquet2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighing 64 kg eats 6 g·kg⁻¹·day⁻¹ of carbohydrate. On a sleep-low night, dinner, normally a third of the day's carbohydrate, is moved to after the next morning's ride. How many grams move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 128 g",
+       "correct": true,
+       "why": "Right: 64 × 6 = 384 g a day; a third of it is 128 g."
+      },
+      {
+       "id": "b",
+       "text": "About 384 g",
+       "why": "This is the whole day's carbohydrate: the fraction for dinner was left out."
+      },
+      {
+       "id": "c",
+       "text": "About 2.00 g",
+       "why": "This takes the fraction of the g·kg⁻¹ figure and forgets to multiply by body mass."
+      },
+      {
+       "id": "d",
+       "text": "About 192 g",
+       "why": "This uses a half instead of a third."
+      }
+     ],
+     "solution": "Daily total = 64 kg × 6 g·kg⁻¹ = 384 g. Dinner share = 384 × 0.333 = 128 g moved to the next morning."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist weighing 80 kg eats 6 g·kg⁻¹·day⁻¹ of carbohydrate. On a sleep-low night, dinner, normally a quarter of the day's carbohydrate, is moved to after the next morning's ride. How many grams move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 120 g",
+       "correct": true,
+       "why": "Right: 80 × 6 = 480 g a day; a quarter of it is 120 g."
+      },
+      {
+       "id": "b",
+       "text": "About 480 g",
+       "why": "This is the whole day's carbohydrate: the fraction for dinner was left out."
+      },
+      {
+       "id": "c",
+       "text": "About 1.50 g",
+       "why": "This takes the fraction of the g·kg⁻¹ figure and forgets to multiply by body mass."
+      },
+      {
+       "id": "d",
+       "text": "About 160 g",
+       "why": "This uses a third instead of a quarter."
+      }
+     ],
+     "solution": "Daily total = 80 kg × 6 g·kg⁻¹ = 480 g. Dinner share = 480 × 0.25 = 120 g moved to the next morning."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete weighing 55 kg eats 7 g·kg⁻¹·day⁻¹ of carbohydrate. On a sleep-low night, dinner, normally a quarter of the day's carbohydrate, is moved to after the next morning's ride. How many grams move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 96 g",
+       "correct": true,
+       "why": "Right: 55 × 7 = 385 g a day; a quarter of it is 96 g."
+      },
+      {
+       "id": "b",
+       "text": "About 385 g",
+       "why": "This is the whole day's carbohydrate: the fraction for dinner was left out."
+      },
+      {
+       "id": "c",
+       "text": "About 1.75 g",
+       "why": "This takes the fraction of the g·kg⁻¹ figure and forgets to multiply by body mass."
+      },
+      {
+       "id": "d",
+       "text": "About 128 g",
+       "why": "This uses a third instead of a quarter."
+      }
+     ],
+     "solution": "Daily total = 55 kg × 7 g·kg⁻¹ = 385 g. Dinner share = 385 × 0.25 = 96 g moved to the next morning."
+    }
+   ]
+  },
+  {
+   "id": "per-week-order",
+   "concept": "per-week",
+   "bloom": "apply",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has VO₂max intervals on Thursday evening and an easy endurance ride on Friday morning. How does a sleep-low plan arrange carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High for Thursday's intervals, low dinner, Friday's ride fasted",
+       "correct": true,
+       "why": "Right: train high for the hard session, then sleep low and train low for the easy one."
+      },
+      {
+       "id": "b",
+       "text": "Low before Thursday's intervals, high before Friday's ride",
+       "why": "Backwards: the hard session gets the fuel, the easy one goes low."
+      },
+      {
+       "id": "c",
+       "text": "Thursday's intervals fasted, Friday's ride after a big breakfast",
+       "why": "Fasted VO₂max intervals would lose intensity; the easy ride is the one to do low."
+      },
+      {
+       "id": "d",
+       "text": "Low carbohydrate on both days to double the signal",
+       "why": "Two low days in a row would cost the hard session and add to low energy availability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-debate-eval",
+   "concept": "per-vs-high",
+   "bloom": "evaluate",
+   "sources": [
+    "gejl2021",
+    "burke2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach asks: 'Should my well-trained riders switch from always-high carbohydrate to periodised carbohydrate to get faster?' What is the best evidence-based answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No extra speed is proven, but it's a reasonable way to eat",
+       "correct": true,
+       "why": "Right: trials and a meta-analysis show no clear gain over high carbohydrate, and no harm when done this way."
+      },
+      {
+       "id": "b",
+       "text": "Yes: it reliably makes athletes about 3% faster",
+       "why": "Only Marquet's two unblinded trials found gains like that."
+      },
+      {
+       "id": "c",
+       "text": "No: periodising harms performance just as keto does",
+       "why": "In Supernova the periodised group improved 5.3%, much like the high group; it's keto that harmed."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only if they eat keto between hard sessions",
+       "why": "Chronic keto blunted performance; periodising keeps carbohydrate in the diet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-short-q",
+   "concept": "per-vs-high",
+   "bloom": "analyse",
+   "sources": [
+    "gejl2021",
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Supporters of periodisation say the trials don't settle the question. Which limitation is fair?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Trials were short and low-volume",
+       "correct": true,
+       "why": "Right: trials lasted 1–4 weeks, mostly under 10 h a week, while elites train 20–30 h a week for years; effects that build over a career could be missed."
+      },
+      {
+       "id": "b",
+       "text": "Trials had too many athletes",
+       "why": "They had only 11–26 participants each."
+      },
+      {
+       "id": "c",
+       "text": "Blinding hid the effect",
+       "why": "Most weren't blinded; and blinding removes bias, it doesn't hide real effects."
+      },
+      {
+       "id": "d",
+       "text": "Trials only measured fat use",
+       "why": "The meta-analysis included only studies that measured endurance performance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-risk-scenario",
+   "concept": "per-risks",
+   "bloom": "analyse",
+   "sources": [
+    "impey2018",
+    "mountjoy2023"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner does sleep-low four nights a week, has lost 3 kg in a month without meaning to, and keeps catching colds. What is the most likely problem?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate restriction has become low energy availability, a REDs risk",
+       "correct": true,
+       "why": "Right: unplanned weight loss and frequent illness suggest too little energy, not just strategic low-carbohydrate sessions."
+      },
+      {
+       "id": "b",
+       "text": "Train-low is working: weight loss shows good adaptation",
+       "why": "Unplanned weight loss with frequent illness is a warning sign, not a training effect."
+      },
+      {
+       "id": "c",
+       "text": "Too much carbohydrate on her hard days",
+       "why": "Excess carbohydrate wouldn't cause weight loss and colds."
+      },
+      {
+       "id": "d",
+       "text": "Ordinary bad luck with viruses",
+       "why": "Possible, but the pattern of restriction, weight loss and illness points to low energy availability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "per-bone-q",
+   "concept": "per-risks",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "heikura2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the elite race walkers who ate a ketogenic diet for 3.5 weeks, what did the bone turnover markers show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less building, more breakdown; refuelling fixed only breakdown",
+       "correct": true,
+       "why": "Right: formation markers stayed down after carbohydrate came back."
+      },
+      {
+       "id": "b",
+       "text": "More bone building, thanks to the weight-bearing walking",
+       "why": "All groups walked; the keto group's building markers fell."
+      },
+      {
+       "id": "c",
+       "text": "A doubling of stress fractures in the keto group",
+       "why": "These were blood markers over weeks, not fractures."
+      },
+      {
+       "id": "d",
+       "text": "No change from baseline in any marker",
+       "why": "Markers changed clearly in the keto group."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

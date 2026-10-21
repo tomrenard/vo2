@@ -1,0 +1,838 @@
+{
+ "id": "fuel-during",
+ "module": "t4-fueling",
+ "title": "Carbohydrate during exercise",
+ "goal": "Explain how carbohydrate during exercise helps (blood glucose in long efforts, the brain in short ones) and pick an intake rate for a session from its duration.",
+ "requires": [
+  "fuel-pre"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "exogenous-carbohydrate",
+    "maltodextrin",
+    "mouth-rinse"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dur-long",
+   "title": "Long efforts: keeping blood glucose up",
+   "text": "In a classic study, cyclists rode at about 71% of [VO₂max](g:vo2max) until they had to stop. With a placebo drink they lasted about 3 h, and blood glucose had fallen to 2.5 mmol·L⁻¹. Fed carbohydrate, their glucose stayed normal and they rode about 1 h longer [[c:dur-coyle]].\n\nThe surprise: muscle glycogen ran down at the same rate either way. [Exogenous carbohydrate](g:exogenous-carbohydrate), the kind you swallow, mainly stands in for the liver. It keeps blood glucose up and spares liver glycogen, so the muscles can keep burning carbohydrate late in the effort; most studies find little sparing of muscle glycogen [[c:dur-liver-spare]].",
+   "claims": [
+    {
+     "id": "dur-coyle",
+     "text": "Carbohydrate fed during prolonged cycling kept blood glucose normal and delayed fatigue by about 1 h, without changing the rate of muscle glycogen use.",
+     "grade": "weak",
+     "sources": [
+      "coyle1986"
+     ],
+     "evidence": [
+      {
+       "source": "coyle1986",
+       "quote": "When fed carbohydrate, which maintained plasma glucose concentration (4.2-5.2 mM), the subjects exercised for an additional hour before fatiguing (4.02 +/- 0.33 h; P less than 0.01)",
+       "level": "abstract"
+      },
+      {
+       "source": "coyle1986",
+       "quote": "The pattern of muscle glycogen utilization, however, was not different during the first 3 h of exercise with the placebo or the carbohydrate feedings.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dur-liver-spare",
+     "text": "Carbohydrate taken during exercise spares or suppresses liver glycogen breakdown, while most studies find no sparing of muscle glycogen.",
+     "grade": "moderate",
+     "sources": [
+      "podlogar2022"
+     ],
+     "evidence": [
+      {
+       "source": "podlogar2022",
+       "quote": "In addition to this, exogenous carbohydrates can spare or even completely suppress liver glycogen breakdown",
+       "level": "full-text"
+      },
+      {
+       "source": "podlogar2022",
+       "quote": "most of the studies assessing whole muscle glycogen utilization did not see this effect",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dur-glucose-role"
+  },
+  {
+   "type": "question",
+   "item": "dur-coyle-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "dur-short",
+   "title": "One-hour efforts: the mouth and the brain",
+   "text": "In a 1 h race, glycogen doesn't run out, yet carbohydrate still helps. Cyclists who rinsed a 6.4% [maltodextrin](g:maltodextrin) drink around the mouth for 5 s, then spat it out, finished a [time trial](g:time-trial) of about 1 h in 59.6 min, against 61.4 min when rinsing water [[c:dur-rinse-carter]].\n\nNothing was swallowed, so the effect can't be fuel. Brain scans show that glucose in the mouth activates reward-related brain regions that an artificial sweetener doesn't reach [[c:dur-rinse-brain]]. A [mouth rinse](g:mouth-rinse) seems to act on the brain's drive to keep pushing, not on the muscles.",
+   "claims": [
+    {
+     "id": "dur-rinse-carter",
+     "text": "Rinsing (not swallowing) a carbohydrate drink improved 1 h cycling time-trial performance compared with a water rinse.",
+     "grade": "weak",
+     "sources": [
+      "carter2004"
+     ],
+     "evidence": [
+      {
+       "source": "carter2004",
+       "quote": "Performance time was significantly improved with CHO compared with PLA (59.57 +/- 1.50 min vs 61.37 +/- 1.56 min, respectively, P = 0.011).",
+       "level": "abstract"
+      },
+      {
+       "source": "carter2004",
+       "quote": "Subjects were not allowed to swallow either the CHO solution or water, and each mouthful was spat out after a 5-s rinse.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dur-rinse-brain",
+     "text": "Glucose in the mouth activates reward-related brain regions that do not respond to the sweetener saccharin.",
+     "grade": "weak",
+     "sources": [
+      "chambers2009"
+     ],
+     "evidence": [
+      {
+       "source": "chambers2009",
+       "quote": "The corresponding fMRI study (Study 1B) revealed that oral exposure to glucose activated reward-related brain regions, including the anterior cingulate cortex and striatum, which were unresponsive to saccharin.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dur-rinse-mech"
+  },
+  {
+   "type": "question",
+   "item": "dur-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "dur-rinse-size",
+   "title": "How big is the mouth-rinse effect?",
+   "text": "Dozens of trials have tested the rinse since. A 2026 [meta-analysis](g:meta-analysis) of 90 crossover trials found a small benefit for performance time, distance and speed, with an [effect size](g:effect-size) of about 0.15–0.17, mainly in men [[c:dur-rinse-meta]].\n\nIn practice, for efforts of about 45–75 min, a rinse and small sips of a sports drink help about equally [[c:dur-rinse-practice]]. Swallowing is fine if your gut copes; the rinse is the option when drinking makes you feel sick, as on the aero bars in a hard time trial.",
+   "claims": [
+    {
+     "id": "dur-rinse-meta",
+     "text": "Across 90 controlled trials, a carbohydrate mouth rinse gives a small benefit to time, distance and speed performance, shown mainly in men.",
+     "grade": "moderate",
+     "sources": [
+      "zalagkitis2026"
+     ],
+     "evidence": [
+      {
+       "source": "zalagkitis2026",
+       "quote": "The available evidence suggests that CHO mouth rinse can produce a small, outcome-dependent ergogenic effect in distance covered, performance time and speed performance as well as small improvements in workload, with less robust evidence for MVC-evidence that mainly applies to male participants.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dur-rinse-practice",
+     "text": "In efforts of about 1 h, a carbohydrate mouth rinse and drinking small amounts of carbohydrate give similar benefits.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014",
+      "burke2011"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "In most conditions, the performance effects with the mouth rinse were similar to ingesting the carbohydrate drink, so there does not seem to be a disadvantage of consuming the drink",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2011",
+       "quote": "During sustained high-intensity sports lasting ~1 h, small amounts of carbohydrate, including even mouth-rinsing, enhance performance via central nervous system effects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dur-rinse-evidence"
+  },
+  {
+   "type": "question",
+   "item": "dur-rinse-apply"
+  },
+  {
+   "type": "concept",
+   "id": "dur-guide",
+   "title": "How much per hour",
+   "text": "Guidelines scale intake with how long the effort lasts [[c:dur-guidelines]]:\n\n| Duration | Carbohydrate |\n|---|---|\n| under ~45 min | none needed |\n| ~45–75 min | mouth rinse or small amounts |\n| 1–2.5 h | 30–60 g·h⁻¹ |\n| over 2.5 h | up to 90 g·h⁻¹ (glucose + fructose) |\n\nThe targets are absolute, in grams per hour, not per kg: the limit is how fast the gut absorbs, and that doesn't grow with body size [[c:dur-absolute]]. Go lower when the absolute intensity is low: a 5 h marathoner may burn little more carbohydrate than 90 g·h⁻¹ in total [[c:dur-low-intensity]].",
+   "claims": [
+    {
+     "id": "dur-guidelines",
+     "text": "Guidelines advise small amounts or a mouth rinse for efforts of about 1 h, 30–60 g·h⁻¹ for longer efforts, and up to 90 g·h⁻¹ beyond about 2.5 h.",
+     "grade": "strong",
+     "sources": [
+      "burke2011",
+      "jeukendrup2014"
+     ],
+     "evidence": [
+      {
+       "source": "burke2011",
+       "quote": "While 30-60 g · h(-1) is an appropriate target for sports of longer duration, events >2.5 h may benefit from higher intakes of up to 90 g · h(-1).",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2014",
+       "quote": "Studies have shown that during exercise lasting approximately 1 h in duration, a mouth rinse or small amounts of carbohydrate can result in a performance benefit.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dur-absolute",
+     "text": "Carbohydrate intake during exercise is advised in absolute amounts, because absorption, the limiting step, does not depend on body weight.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "Carbohydrate intake advice is independent of body weight as well as training status.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2014",
+       "quote": "The reason for this lack of correlation between BW and exogenous carbohydrate oxidation is probably that the limiting factor is carbohydrate absorption and absorption is largely independent of BW.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dur-low-intensity",
+     "text": "At low absolute intensity, such as a 5 h marathon, total carbohydrate use is low and intake targets should be adjusted down.",
+     "grade": "weak",
+     "sources": [
+      "jeukendrup2014"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "It is unlikely that the runner who completes the marathon in 5 h would not necessarily need an intake of 90 g of carbohydrate per hour as this would be close to, or could even exceed, the total carbohydrate use at that absolute exercise intensity.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dur-guideline-match",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dur-absolute"
+  },
+  {
+   "type": "question",
+   "item": "dur-low-intensity"
+  },
+  {
+   "type": "concept",
+   "id": "dur-dose",
+   "title": "More helps, up to a point",
+   "text": "In the largest dose study, 51 cyclists and triathletes rode 2 h, then a 20 km time trial, taking 0 to 120 g·h⁻¹ of a glucose, fructose and maltodextrin drink. Performance improved with the dose: about 1% at 9 g·h⁻¹, 3% at 31 g·h⁻¹ and 4.7% at 78 g·h⁻¹, and beyond that the gains flattened [[c:dur-dose-curve]].\n\nSo most of the benefit comes from the first 60–80 g·h⁻¹. To plan a session, multiply the rate by the hours: 3 h at 60 g·h⁻¹ is 180 g, which you then split into drinks, gels or food.",
+   "claims": [
+    {
+     "id": "dur-dose-curve",
+     "text": "Performance rises with carbohydrate dose in a curved way, with the best performance around 78 g·h⁻¹ and smaller gains above it.",
+     "grade": "moderate",
+     "sources": [
+      "smith2013"
+     ],
+     "evidence": [
+      {
+       "source": "smith2013",
+       "quote": "We estimate incremental performance improvements of 1.0%, 2.0%, 3.0%, 4.0%, and 4.7% at 9, 19, 31, 48, and 78 g·h, respectively, with diminishing performance enhancement seen at CHO levels >78 g·h(-1).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "dur-dose-example",
+   "title": "Total carbohydrate for a session",
+   "problem": "A triathlete rides 2 h 30 min and aims for 60 g·h⁻¹. How much carbohydrate does she need to carry?",
+   "steps": [
+    "Turn the time into hours: 2 h 30 min = 2.5 h (30 min is half an hour, not 0.3 h).",
+    "Total = rate × time = 60 g·h⁻¹ × 2.5 h = 150 g.",
+    "Check against the guideline: 2.5 h sits at the border, so 60 g·h⁻¹ is sensible; a longer ride could go higher with glucose + fructose."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dur-total-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "dur-dose-response"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "In long efforts, carbohydrate you swallow keeps blood glucose up and spares liver glycogen; it barely slows muscle glycogen use.",
+    "In efforts of about 1 h, a carbohydrate mouth rinse helps through the brain, not as fuel; the benefit is small but real.",
+    "Guidelines: under ~45 min nothing; ~45–75 min rinse or small amounts; 1–2.5 h 30–60 g·h⁻¹; over 2.5 h up to 90 g·h⁻¹ with glucose + fructose.",
+    "Targets are in g·h⁻¹, not per kg, because gut absorption sets the limit; go lower when the absolute intensity is low.",
+    "Benefit rises with dose up to about 80 g·h⁻¹, then flattens. Session total = rate × hours."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dur-glucose-role",
+   "concept": "dur-long",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "coyle1986",
+    "podlogar2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Carbohydrate fed during a long ride let cyclists go about 1 h longer before they had to stop. What did it mainly do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Kept blood glucose up as the liver ran low",
+       "correct": true,
+       "why": "Right: blood glucose stayed normal, and the swallowed carbohydrate stood in for the liver late in the ride."
+      },
+      {
+       "id": "b",
+       "text": "Slowed the use of muscle glycogen",
+       "why": "Muscle glycogen ran down at the same rate with and without carbohydrate in that study."
+      },
+      {
+       "id": "c",
+       "text": "Made fat the main fuel from the start",
+       "why": "Feeding carbohydrate keeps carbohydrate burning high; it doesn't switch the body to fat."
+      },
+      {
+       "id": "d",
+       "text": "Raised VO₂max for the rest of the ride",
+       "why": "VO₂max is a capacity set by the heart and muscles; a drink doesn't raise it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-coyle-scenario",
+   "concept": "dur-long",
+   "bloom": "analyse",
+   "sources": [
+    "coyle1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Three hours into a hard ride with no food, a cyclist's blood glucose is 2.5 mmol·L⁻¹ and her [RER](g:rer) is falling. What best explains why she can't hold the pace?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Carbohydrate supply from the blood is failing as the liver runs low",
+       "correct": true,
+       "why": "Right: low glucose and a falling RER show carbohydrate burning dropping off, as in the placebo trial of the classic study."
+      },
+      {
+       "id": "b",
+       "text": "Lactate has built up and is stopping her muscles",
+       "why": "A falling RER at a steady pace points to less carbohydrate being burned, not a lactate build-up."
+      },
+      {
+       "id": "c",
+       "text": "Her muscles have run out of fat to burn",
+       "why": "Fat stores are huge, enough for days; the falling RER shows she is burning relatively more fat, not less."
+      },
+      {
+       "id": "d",
+       "text": "Her heart has reached its maximum rate",
+       "why": "Nothing here points to the heart; the low glucose is the clue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-rinse-mech",
+   "concept": "dur-short",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "carter2004",
+    "chambers2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A carbohydrate mouth rinse improves a 1 h time trial even though nothing is swallowed. What is the most likely way it works?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sensors in the mouth signal reward and drive areas of the brain",
+       "correct": true,
+       "why": "Right: carbohydrate in the mouth activates reward-related brain regions, raising drive rather than supplying fuel."
+      },
+      {
+       "id": "b",
+       "text": "Carbohydrate soaks through the mouth lining and fuels the muscles",
+       "why": "A 5 s rinse lets through almost nothing, and glycogen isn't limiting in 1 h anyway."
+      },
+      {
+       "id": "c",
+       "text": "Any sweet taste works, sugar or artificial sweetener",
+       "why": "The sweetener saccharin didn't activate the same brain regions or improve performance; the signal seems specific to carbohydrate."
+      },
+      {
+       "id": "d",
+       "text": "The liquid in the mouth cools the body",
+       "why": "The placebo rinses were liquid too and didn't help; it's the carbohydrate that matters."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-appraisal",
+   "concept": "dur-short",
+   "bloom": "evaluate",
+   "sources": [
+    "carter2004",
+    "chambers2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the first mouth-rinse study, nine cyclists rinsed either a carbohydrate drink or plain water. What is the main weakness of that comparison?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Riders could taste the difference, so belief may explain part of it",
+       "correct": true,
+       "why": "Right: water isn't a convincing placebo. Later studies used artificially sweetened placebos and still found an effect, which strengthens the finding."
+      },
+      {
+       "id": "b",
+       "text": "Nine riders are too few for any difference to show up",
+       "why": "A difference did show up; a small sample limits how precise the estimate is, not whether an effect can be seen."
+      },
+      {
+       "id": "c",
+       "text": "A 1 h trial is too short for carbohydrate to matter",
+       "why": "Whether carbohydrate matters in 1 h was the question being tested, not a flaw."
+      },
+      {
+       "id": "d",
+       "text": "The riders swallowed the drink as well as rinsing",
+       "why": "They spat each mouthful out after 5 s; that was the point of the design."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-rinse-evidence",
+   "concept": "dur-rinse-size",
+   "bloom": "evaluate",
+   "sources": [
+    "zalagkitis2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis of 90 crossover trials finds that a carbohydrate mouth rinse improves performance time with an effect size of about 0.15. How should a coach read this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A real but small benefit, shown mostly in men",
+       "correct": true,
+       "why": "Right: the effect is consistent but small, and the evidence comes mainly from male participants."
+      },
+      {
+       "id": "b",
+       "text": "A large benefit that every athlete will feel",
+       "why": "An effect size of 0.15 is small, and an average says little about any one athlete."
+      },
+      {
+       "id": "c",
+       "text": "No benefit, because it is below the 0.2 cut-off",
+       "why": "0.2 is a rough label for 'small', not a line below which effects are zero; here the confidence interval excluded zero."
+      },
+      {
+       "id": "d",
+       "text": "Proof that swallowing carbohydrate is pointless in 1 h",
+       "why": "Rinse trials don't test swallowing; studies that compared them found similar benefits."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-rinse-apply",
+   "concept": "dur-rinse-size",
+   "bloom": "apply",
+   "sources": [
+    "jeukendrup2014",
+    "burke2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides a 40 km time trial (about 55 min) and feels sick if she drinks on the aero bars. What fuelling fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rinse a sports drink now and then and spit it out",
+       "correct": true,
+       "why": "Right: for about 1 h, a rinse gives most of the benefit without loading the stomach."
+      },
+      {
+       "id": "b",
+       "text": "Take 90 g·h⁻¹ of glucose plus fructose",
+       "why": "90 g·h⁻¹ is for efforts over 2.5 h; in 55 min it's far more than needed and likely to upset her gut."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: carbohydrate can't help under 2 h",
+       "why": "It can: about 1 h efforts benefit from small amounts or a rinse, through the brain."
+      },
+      {
+       "id": "d",
+       "text": "A big bowl of pasta 30 min before the start",
+       "why": "A large meal so close to the start sits in the stomach; the pre-event meal belongs 1–4 h out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-guideline-match",
+   "concept": "dur-guide",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "burke2011",
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist races a 2 h road race. Which carbohydrate intake fits current guidance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30–60 g·h⁻¹",
+       "correct": true,
+       "why": "Right: 1–2.5 h efforts call for 30–60 g·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "Up to 90 g·h⁻¹ of glucose plus fructose",
+       "why": "That higher target is for efforts beyond about 2.5 h."
+      },
+      {
+       "id": "c",
+       "text": "A mouth rinse only",
+       "why": "A rinse suits efforts of about 1 h; at 2 h the body benefits from carbohydrate as fuel."
+      },
+      {
+       "id": "d",
+       "text": "None: 2 h is too short to need any",
+       "why": "Even 1 h efforts benefit; at 2 h, 30–60 g·h⁻¹ is advised."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's Ironman bike leg will take about 5 h. Which carbohydrate intake fits current guidance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Up to 90 g·h⁻¹ of glucose plus fructose",
+       "correct": true,
+       "why": "Right: beyond 2.5 h the target rises to about 90 g·h⁻¹, which needs glucose plus fructose."
+      },
+      {
+       "id": "b",
+       "text": "30–60 g·h⁻¹ of glucose only",
+       "why": "That fits 1–2.5 h efforts; a 5 h leg benefits from more."
+      },
+      {
+       "id": "c",
+       "text": "A mouth rinse every 15 min",
+       "why": "A rinse provides no fuel; it suits efforts of about 1 h."
+      },
+      {
+       "id": "d",
+       "text": "1–4 g·kg⁻¹ per hour",
+       "why": "1–4 g·kg⁻¹ is the pre-event meal, eaten 1–4 h before, not an hourly rate."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A runner races 12 km, which will take about 55 min. Which carbohydrate approach fits current guidance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A mouth rinse or small amounts",
+       "correct": true,
+       "why": "Right: for efforts of about 45–75 min, a rinse or small amounts help through the brain."
+      },
+      {
+       "id": "b",
+       "text": "30–60 g·h⁻¹",
+       "why": "That fits efforts of 1–2.5 h; under an hour the fuel isn't needed."
+      },
+      {
+       "id": "c",
+       "text": "Up to 90 g·h⁻¹",
+       "why": "That is for efforts over 2.5 h; in 55 min it would only risk the gut."
+      },
+      {
+       "id": "d",
+       "text": "1 g·kg⁻¹ taken at the start line",
+       "why": "That's a pre-event amount, not a during-race strategy, and a big dose at the start may sit heavily while running."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-absolute",
+   "concept": "dur-guide",
+   "bloom": "understand",
+   "sources": [
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why are carbohydrate targets during exercise given in g·h⁻¹ rather than per kg of body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gut absorption sets the limit, and it doesn't scale with body mass",
+       "correct": true,
+       "why": "Right: how much swallowed carbohydrate can be burned depends on absorption, which is largely independent of body weight."
+      },
+      {
+       "id": "b",
+       "text": "Heavier athletes burn less carbohydrate per kg",
+       "why": "That isn't the reason; the cap is in the gut, not in the muscles."
+      },
+      {
+       "id": "c",
+       "text": "Per-kg targets would be too hard to work out",
+       "why": "Per-kg targets are used for daily intake and the pre-event meal; convenience isn't the reason."
+      },
+      {
+       "id": "d",
+       "text": "Body mass changes too much during a race",
+       "why": "Mass changes by a few percent at most; the reason is the absorption limit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-low-intensity",
+   "concept": "dur-guide",
+   "bloom": "analyse",
+   "sources": [
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner expects to finish a marathon in 5 h 15 min at an easy jog. Why might 90 g·h⁻¹ be more than he needs?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He burns too little carbohydrate at that pace to use it",
+       "correct": true,
+       "why": "Right: at low absolute intensity, total carbohydrate use per hour may barely exceed 90 g, so targets should come down."
+      },
+      {
+       "id": "b",
+       "text": "Slower runners absorb carbohydrate faster",
+       "why": "Absorption isn't faster in slower runners; the point is that they burn less."
+      },
+      {
+       "id": "c",
+       "text": "Over 5 h, his liver glycogen refills itself",
+       "why": "The liver can't refill during exercise without carbohydrate coming in."
+      },
+      {
+       "id": "d",
+       "text": "Guidelines cap marathons at 30 g·h⁻¹",
+       "why": "No such cap exists; targets depend on duration and absolute intensity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur-total-calc",
+   "concept": "dur-dose",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "burke2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 3 h 30 min and aims for 70 g·h⁻¹. How much carbohydrate in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "245 g",
+       "correct": true,
+       "why": "Right: 70 g·h⁻¹ × 3.5 h = 245 g."
+      },
+      {
+       "id": "b",
+       "text": "210 g",
+       "why": "That is 70 × 3: the last half hour was left out."
+      },
+      {
+       "id": "c",
+       "text": "231 g",
+       "why": "That is 70 × 3.3: 3 h 30 min was read as 3.3 h instead of 3.5 h."
+      },
+      {
+       "id": "d",
+       "text": "20 g",
+       "why": "That is 70 ÷ 3.5: divided instead of multiplied."
+      }
+     ],
+     "solution": "3 h 30 min = 3.5 h. Total = 70 g·h⁻¹ × 3.5 h = 245 g."
+    },
+    {
+     "id": "b",
+     "stem": "A runner expects a 2 h 45 min marathon and aims for 60 g·h⁻¹. How much carbohydrate in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "165 g",
+       "correct": true,
+       "why": "Right: 2 h 45 min = 2.75 h; 60 × 2.75 = 165 g."
+      },
+      {
+       "id": "b",
+       "text": "147 g",
+       "why": "That is 60 × 2.45: 2 h 45 min was read as 2.45 h instead of 2.75 h."
+      },
+      {
+       "id": "c",
+       "text": "120 g",
+       "why": "That is 60 × 2: only whole hours were counted."
+      },
+      {
+       "id": "d",
+       "text": "22 g",
+       "why": "That is 60 ÷ 2.75: divided instead of multiplied."
+      }
+     ],
+     "solution": "45 min = 0.75 h, so 2 h 45 min = 2.75 h. Total = 60 g·h⁻¹ × 2.75 h = 165 g."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's half-Ironman bike leg takes 2 h 30 min and she aims for 80 g·h⁻¹. How much carbohydrate in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "200 g",
+       "correct": true,
+       "why": "Right: 80 g·h⁻¹ × 2.5 h = 200 g."
+      },
+      {
+       "id": "b",
+       "text": "184 g",
+       "why": "That is 80 × 2.3: 2 h 30 min was read as 2.3 h instead of 2.5 h."
+      },
+      {
+       "id": "c",
+       "text": "160 g",
+       "why": "That is 80 × 2: the last half hour was left out."
+      },
+      {
+       "id": "d",
+       "text": "32 g",
+       "why": "That is 80 ÷ 2.5: divided instead of multiplied."
+      }
+     ],
+     "solution": "2 h 30 min = 2.5 h. Total = 80 g·h⁻¹ × 2.5 h = 200 g."
+    }
+   ]
+  },
+  {
+   "id": "dur-dose-response",
+   "concept": "dur-dose",
+   "bloom": "analyse",
+   "sources": [
+    "smith2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a dose study, performance improved about 3% at 31 g·h⁻¹ and 4.7% at 78 g·h⁻¹, then gains flattened. A rider on 40 g·h⁻¹ in 3 h races asks what to change. Best advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Build up to about 80 g·h⁻¹; going far beyond adds little",
+       "correct": true,
+       "why": "Right: the curve still rises between 40 and about 80 g·h⁻¹, then flattens."
+      },
+      {
+       "id": "b",
+       "text": "Go straight to 120 g·h⁻¹, since gains rise in a straight line",
+       "why": "The relationship is curved: gains shrink above about 78 g·h⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "Change nothing: above 30 g·h⁻¹ nothing improves",
+       "why": "Performance kept improving up to about 78 g·h⁻¹ in the study."
+      },
+      {
+       "id": "d",
+       "text": "Drop to 10 g·h⁻¹, since small amounts work best",
+       "why": "Small doses gave the smallest gains (about 1% at 9 g·h⁻¹)."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

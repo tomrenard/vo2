@@ -1,0 +1,771 @@
+{
+ "id": "mac-carbs",
+ "module": "t4-macros",
+ "title": "Dietary carbohydrate: from plate to blood",
+ "goal": "Explain the kinds of dietary carbohydrate, how each is digested to single sugars and absorbed through SGLT1, GLUT5 and GLUT2, and what the glycaemic index can and cannot tell an athlete.",
+ "requires": [
+  "det-reduced-training"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "monosaccharide",
+    "disaccharide",
+    "starch",
+    "dietary-fibre",
+    "sglt1",
+    "glut5",
+    "glut2",
+    "glycaemic-index"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "carb-kinds",
+   "title": "Sugars, starch and fibre",
+   "text": "Food carbohydrates are sorted by how many sugar units they hold [[c:carb-classes]]:\n\n| group | units | examples |\n|---|---|---|\n| sugars | 1–2 | glucose, fructose, galactose ([monosaccharides](g:monosaccharide)); sucrose, lactose, maltose ([disaccharides](g:disaccharide)) |\n| oligosaccharides | 3–9 | short chains, some in beans and onions |\n| polysaccharides | 10 or more | [starch](g:starch), [glycogen](g:glycogen), most fibre |\n\nSucrose (table sugar) is glucose + fructose; lactose (milk sugar) is glucose + galactose; maltose is two glucoses.\n\n[Dietary fibre](g:dietary-fibre) is the odd one out: chains our own [enzymes](g:enzyme) can't split, so it is neither digested nor absorbed in the small intestine. It moves on to the large intestine, where bacteria ferment part of it [[c:fibre-def]]. It matters for gut health, but it is not a fuel you can count on for a ride.",
+   "claims": [
+    {
+     "id": "carb-classes",
+     "text": "Dietary carbohydrates are classified by chain length into sugars (1–2 units), oligosaccharides (3–9) and polysaccharides (10 or more).",
+     "grade": "strong",
+     "sources": [
+      "cummings2007"
+     ],
+     "evidence": [
+      {
+       "source": "cummings2007",
+       "quote": "This divides carbohydrates into three main groups, sugars (DP 1-2), oligosaccharides (short-chain carbohydrates) (DP 3-9) and polysaccharides (DP> or =10).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fibre-def",
+     "text": "Dietary fibre is carbohydrate that is neither digested nor absorbed in the human small intestine; it is a main substrate for fermentation by gut bacteria.",
+     "grade": "strong",
+     "sources": [
+      "perezmontesdeoca2020"
+     ],
+     "evidence": [
+      {
+       "source": "perezmontesdeoca2020",
+       "quote": "carbohydrate polymers with three or more monomeric units, which are neither digested nor absorbed in the human small intestine",
+       "level": "full-text"
+      },
+      {
+       "source": "perezmontesdeoca2020",
+       "quote": "DF represents the major non-digestible component in most diets and it exerts a physiological influence throughout the digestive tract from the modulation of digestion processes to acting as a prime substrate for microbial fermentation",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "carb-sucrose"
+  },
+  {
+   "type": "question",
+   "item": "carb-fibre"
+  },
+  {
+   "type": "concept",
+   "id": "carb-digest",
+   "title": "Everything becomes single sugars",
+   "text": "The small intestine absorbs carbohydrate only as monosaccharides [[c:digest-mono]]. So everything bigger is cut down first:\n\n- **Starch**: amylase, an enzyme in saliva and from the pancreas, cuts it into short pieces such as maltose. Enzymes on the gut lining then split those into glucose.\n- **Disaccharides**: enzymes on the gut lining split sucrose into glucose + fructose, lactose into glucose + galactose, maltose into two glucoses.\n\nSo a bowl of rice, a maltodextrin drink (short glucose chains) and a glucose gel all reach the gut wall as glucose. Table sugar adds fructose; milk adds galactose.\n\nFor an athlete, the useful question is not \"simple or complex?\" but **which single sugars** a food delivers, and how fast.",
+   "claims": [
+    {
+     "id": "digest-mono",
+     "text": "The small intestine absorbs sugars only as monosaccharides; starch is broken down by α-amylases, and disaccharides by enzymes on the gut lining.",
+     "grade": "strong",
+     "sources": [
+      "westerbeke2025"
+     ],
+     "evidence": [
+      {
+       "source": "westerbeke2025",
+       "quote": "As the SI only absorbs sugars as monosaccharides, hydrolysis of disaccharides by disaccharidases located on the brush border membrane of the small intestinal enterocytes is necessary",
+       "level": "full-text"
+      },
+      {
+       "source": "westerbeke2025",
+       "quote": "This breakdown of complex carbohydrates by α‐amylases results in the formation of maltose, the trisaccharide maltotriose, and branched oligosaccharides called α‐limit dextrins",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "carb-absorbed-form",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "carb-transporters",
+   "title": "Three doors in the gut wall",
+   "text": "Single sugars cross the cells lining the gut through transporter proteins [[c:transporters]]:\n\n| transporter | side | carries |\n|---|---|---|\n| [SGLT1](g:sglt1) | gut side, in | glucose, galactose (with sodium) |\n| [GLUT5](g:glut5) | gut side, in | fructose |\n| [GLUT2](g:glut2) | blood side, out | all three |\n\nIn mice without SGLT1, glucose uptake fell drastically along the whole small intestine; SGLT1 stayed the main entry door even when a lot of glucose arrived [[c:sglt1-prime]].\n\nSGLT1 can be saturated when glucose floods in. Because fructose uses a different door, glucose plus fructose can be absorbed faster than glucose alone. How much to drink per hour is for *Fueling during exercise and gut training*.",
+   "claims": [
+    {
+     "id": "transporters",
+     "text": "Glucose and galactose enter the gut cell by SGLT1 (sodium-coupled), fructose by GLUT5, and all leave into the blood by GLUT2; SGLT1 can saturate at high glucose levels.",
+     "grade": "strong",
+     "sources": [
+      "westerbeke2025",
+      "ferraris2018"
+     ],
+     "evidence": [
+      {
+       "source": "westerbeke2025",
+       "quote": "Glucose and galactose are actively transported across the brush border membrane through the sodium‐dependent glucose/galactose co‐transporter sodium‐glucose transporter 1 (SGLT1).",
+       "level": "full-text"
+      },
+      {
+       "source": "westerbeke2025",
+       "quote": "However, at high luminal glucose concentrations, SGLT1‐mediated active glucose transport becomes saturated",
+       "level": "full-text"
+      },
+      {
+       "source": "ferraris2018",
+       "quote": "New insights in our knowledge of intestinal fructose absorption mediated by the facilitative glucose transporter GLUT5 in the apical membrane and by GLUT2 in the basolateral membrane are reviewed.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sglt1-prime",
+     "text": "In mice lacking SGLT1, glucose uptake fell drastically throughout the small intestine; SGLT1 is the main glucose entry route even at high glucose levels.",
+     "grade": "weak",
+     "sources": [
+      "roder2014"
+     ],
+     "evidence": [
+      {
+       "source": "roder2014",
+       "quote": "In mice lacking SGLT1, tissue retention of tracer glucose was drastically reduced throughout the entire small intestine whereas GLUT2-deficient animals exhibited higher tracer contents in tissue samples than wild type animals.",
+       "level": "abstract"
+      },
+      {
+       "source": "roder2014",
+       "quote": "SGLT1 is unequivocally the prime intestinal glucose transporter even at high luminal glucose concentrations.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "When a lot of glucose arrives, does GLUT2 move to the gut side of the cell and take extra glucose in?",
+    "sides": [
+     {
+      "position": "Probably yes: SGLT1 saturates at high glucose, yet absorption keeps rising, which suggests GLUT2 is recruited to the gut side.",
+      "sources": [
+       "westerbeke2025"
+      ]
+     },
+     {
+      "position": "No good evidence: in mice, SGLT1 remained the main route and GLUT2 played no role in glucose entry from the gut side.",
+      "sources": [
+       "roder2014"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "carb-fructose-door"
+  },
+  {
+   "type": "question",
+   "item": "carb-glut2-role"
+  },
+  {
+   "type": "question",
+   "item": "carb-sglt1-missing"
+  },
+  {
+   "type": "concept",
+   "id": "carb-gi",
+   "title": "The glycaemic index",
+   "text": "Foods with the same grams of carbohydrate raise blood glucose by different amounts. The [glycaemic index](g:glycaemic-index) (GI) measures this: blood glucose is tracked for 2 h after a food and expressed as a % of the rise from the same amount of carbohydrate taken as glucose [[c:gi-def]].\n\nTypical values from the 2021 international tables [[c:gi-tables]]:\n\n| usually low GI (55 or less) | variable | usually high |\n|---|---|---|\n| dairy, legumes, pasta, fruit | breads, breakfast cereals, rice (even whole-grain) | most potatoes |\n\nThe rest of the meal matters too. In the original GI study, foods with more fat and protein gave smaller glucose rises [[c:gi-fat-protein]]. Toast alone and toast with peanut butter and milk are not the same meal for your blood glucose.",
+   "claims": [
+    {
+     "id": "gi-def",
+     "text": "The GI is the 2-h blood glucose response to a food, as a percentage of the response to the same amount of carbohydrate taken as glucose.",
+     "grade": "strong",
+     "sources": [
+      "jenkins1981",
+      "atkinson2021"
+     ],
+     "evidence": [
+      {
+       "source": "jenkins1981",
+       "quote": "Blood glucose levels were measured over 2 h, and expressed as a percentage of the area under the glucose response curve when the same amount of carbohydrate was taken as glucose.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-tables",
+     "text": "Dairy, legumes, pasta and fruit are usually low GI (55 or less); cereal products vary widely; most potatoes are high GI.",
+     "grade": "strong",
+     "sources": [
+      "atkinson2021"
+     ],
+     "evidence": [
+      {
+       "source": "atkinson2021",
+       "quote": "Dairy products, legumes, pasta, and fruits were usually low-GI foods (≤55 on the 100-point glucose scale) and had consistent values around the world.",
+       "level": "abstract"
+      },
+      {
+       "source": "atkinson2021",
+       "quote": "Cereals and cereal products, however, including whole-grain or whole-meal versions, showed wide variation in GI values, presumably arising from variations in manufacturing methods.",
+       "level": "abstract"
+      },
+      {
+       "source": "atkinson2021",
+       "quote": "Most varieties of potato were high-GI foods, but specific low-GI varieties have now been identified.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-fat-protein",
+     "text": "Foods with more fat and protein produced smaller rises in blood glucose after eating.",
+     "grade": "weak",
+     "sources": [
+      "jenkins1981"
+     ],
+     "evidence": [
+      {
+       "source": "jenkins1981",
+       "quote": "A significant negative relationship was seen between fat (p less than 0.01) and protein (p less than 0.001) and postprandial glucose rise but not with fiber or sugar content.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "carb-gi-meaning"
+  },
+  {
+   "type": "question",
+   "item": "carb-gi-meal"
+  },
+  {
+   "type": "concept",
+   "id": "carb-gi-sport",
+   "title": "GI and the athlete",
+   "text": "The idea sounds good: a low-GI meal before a long session keeps blood glucose steadier and spares glycogen.\n\nA [meta-analysis](g:meta-analysis) tested it. Across 19 crossover studies (188 participants, 91% men), low-GI pre-exercise meals gave no clear performance benefit, whether or not carbohydrate was taken during exercise [[c:gi-meta]]. The authors note the limits: few studies per test type, little statistical power, and meals, timing and fitness that varied between studies.\n\nAlso keep in mind what GI is: a resting test in fasted people eating one food. Before and during a race, what counts more is **how much** carbohydrate, **when**, and whether your gut tolerates it. GI is a health tool first; for sport it is a minor detail.",
+   "claims": [
+    {
+     "id": "gi-meta",
+     "text": "In a meta-analysis of 19 crossover trials (188 participants), a low-GI pre-exercise meal gave no clear benefit for endurance performance, with or without carbohydrate during exercise.",
+     "grade": "moderate",
+     "sources": [
+      "burdon2017"
+     ],
+     "evidence": [
+      {
+       "source": "burdon2017",
+       "quote": "There was no clear benefit of consuming a LGI pre-exercise meal for endurance performance regardless of carbohydrate ingestion during exercise.",
+       "level": "abstract"
+      },
+      {
+       "source": "burdon2017",
+       "quote": "There were small numbers of studies within each exercise testing protocol and limited statistical power within studies.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "carb-gi-coach"
+  },
+  {
+   "type": "question",
+   "item": "carb-gi-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Dietary carbohydrates are sugars (1–2 units), oligosaccharides (3–9) and polysaccharides (starch, glycogen, most fibre); fibre isn't digested in the small intestine.",
+    "The gut absorbs only single sugars: starch and disaccharides are cut down to glucose, fructose and galactose first.",
+    "SGLT1 brings in glucose and galactose, GLUT5 fructose, and GLUT2 lets all three out into the blood; SGLT1 can saturate.",
+    "The GI compares a food's 2-h glucose rise with that of glucose; fat and protein in a meal lower it.",
+    "Low-GI pre-exercise meals gave no clear performance benefit: amount, timing and gut comfort matter more."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "carb-sucrose",
+   "concept": "carb-kinds",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "cummings2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Sucrose, the table sugar in many energy drinks, is made of which two sugar units?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Glucose and fructose",
+       "correct": true,
+       "why": "Right: sucrose is a disaccharide of one glucose and one fructose."
+      },
+      {
+       "id": "b",
+       "text": "Glucose and glucose",
+       "why": "Two glucoses make maltose, not sucrose."
+      },
+      {
+       "id": "c",
+       "text": "Glucose and galactose",
+       "why": "That is lactose, the sugar in milk."
+      },
+      {
+       "id": "d",
+       "text": "Fructose and galactose",
+       "why": "No common dietary disaccharide is built this way; every one of them contains glucose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-fibre",
+   "concept": "carb-kinds",
+   "bloom": "understand",
+   "sources": [
+    "perezmontesdeoca2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Starch and most dietary fibre are both long chains of sugar units. Why does fibre give a cyclist almost no fuel during a ride?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Our enzymes can't split it, so it isn't absorbed in the small intestine",
+       "correct": true,
+       "why": "Right: fibre passes undigested to the large intestine, where bacteria ferment part of it."
+      },
+      {
+       "id": "b",
+       "text": "It is absorbed, but stored straight away as fat",
+       "why": "Fibre isn't absorbed as sugar in the first place; its bonds resist our digestive enzymes."
+      },
+      {
+       "id": "c",
+       "text": "Its sugar units hold less energy than glucose",
+       "why": "The problem is not the energy in its units but that we can't break the links between them."
+      },
+      {
+       "id": "d",
+       "text": "It is burned only at very low intensities",
+       "why": "Fibre is not a muscle fuel at any intensity, because it never reaches the blood as sugar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-absorbed-form",
+   "concept": "carb-digest",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "westerbeke2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathoner eats a big plate of rice (starch) the evening before the race. In what form does that carbohydrate cross the gut wall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As glucose",
+       "correct": true,
+       "why": "Right: starch is a glucose chain; amylase and gut-lining enzymes cut it to glucose before absorption."
+      },
+      {
+       "id": "b",
+       "text": "As short starch chains",
+       "why": "The gut absorbs only single sugars; short chains must be split further first."
+      },
+      {
+       "id": "c",
+       "text": "As maltose",
+       "why": "Maltose is an intermediate; it is split into two glucoses before it can be absorbed."
+      },
+      {
+       "id": "d",
+       "text": "As glycogen",
+       "why": "Glycogen is the body's storage form, built inside liver and muscle after glucose is absorbed."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist takes a gel sweetened with sucrose (table sugar). In what form does that carbohydrate cross the gut wall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As glucose and fructose",
+       "correct": true,
+       "why": "Right: gut-lining enzymes split sucrose into its two single sugars, which are absorbed separately."
+      },
+      {
+       "id": "b",
+       "text": "As intact sucrose",
+       "why": "The gut absorbs only single sugars; sucrose must be split first."
+      },
+      {
+       "id": "c",
+       "text": "As glucose only",
+       "why": "Half of sucrose is fructose, which is absorbed as fructose, not glucose."
+      },
+      {
+       "id": "d",
+       "text": "As glucose and galactose",
+       "why": "Glucose plus galactose comes from lactose (milk sugar), not sucrose."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete drinks a glass of milk after a swim. In what form does the milk sugar (lactose) cross the gut wall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As glucose and galactose",
+       "correct": true,
+       "why": "Right: lactose is split on the gut lining into glucose and galactose."
+      },
+      {
+       "id": "b",
+       "text": "As intact lactose",
+       "why": "The gut absorbs only single sugars; lactose must be split first."
+      },
+      {
+       "id": "c",
+       "text": "As glucose and fructose",
+       "why": "Glucose plus fructose comes from sucrose, not lactose."
+      },
+      {
+       "id": "d",
+       "text": "As glucose only",
+       "why": "Half of lactose is galactose, which is absorbed as galactose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-fructose-door",
+   "concept": "carb-transporters",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "westerbeke2025",
+    "ferraris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which transporter carries fructose from the gut into the cells lining it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "GLUT5",
+       "correct": true,
+       "why": "Right: GLUT5 is the fructose door on the gut side."
+      },
+      {
+       "id": "b",
+       "text": "SGLT1",
+       "why": "SGLT1 carries glucose and galactose, not fructose."
+      },
+      {
+       "id": "c",
+       "text": "GLUT4",
+       "why": "GLUT4 moves glucose into muscle and fat cells, not across the gut wall."
+      },
+      {
+       "id": "d",
+       "text": "GLUT2",
+       "why": "GLUT2 mainly lets sugars out of the gut cell on the blood side."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-glut2-role",
+   "concept": "carb-transporters",
+   "bloom": "understand",
+   "sources": [
+    "westerbeke2025",
+    "ferraris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is GLUT2's main job in the gut wall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Letting glucose, galactose and fructose out of the gut cell into the blood",
+       "correct": true,
+       "why": "Right: GLUT2 sits on the blood side and is the exit door for all three single sugars."
+      },
+      {
+       "id": "b",
+       "text": "Pulling glucose in from the gut along with sodium",
+       "why": "That is SGLT1, on the gut side."
+      },
+      {
+       "id": "c",
+       "text": "Bringing fructose in from the gut contents",
+       "why": "Fructose enters through GLUT5; GLUT2 handles the exit."
+      },
+      {
+       "id": "d",
+       "text": "Moving glucose into muscle when insulin rises",
+       "why": "That is GLUT4 in muscle, not GLUT2 in the gut."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-sglt1-missing",
+   "concept": "carb-transporters",
+   "bloom": "analyse",
+   "sources": [
+    "roder2014",
+    "westerbeke2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rare inherited condition leaves the gut without working SGLT1. Which drink would this person absorb best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A fructose drink",
+       "correct": true,
+       "why": "Right: fructose enters through GLUT5 and leaves through GLUT2, so it doesn't need SGLT1."
+      },
+      {
+       "id": "b",
+       "text": "A glucose drink",
+       "why": "Glucose enters mainly through SGLT1; without it, glucose absorption collapses."
+      },
+      {
+       "id": "c",
+       "text": "A maltodextrin drink",
+       "why": "Maltodextrin is cut to glucose, which then needs SGLT1 to get in."
+      },
+      {
+       "id": "d",
+       "text": "A milk drink (lactose)",
+       "why": "Lactose gives glucose and galactose, and both enter through SGLT1."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-gi-meaning",
+   "concept": "carb-gi",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "jenkins1981",
+    "atkinson2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A food label says a muesli bar has a GI of 40. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its glucose rise is 40% of pure glucose's",
+       "correct": true,
+       "why": "Right: GI compares the blood glucose response with that of pure glucose, gram for gram of carbohydrate."
+      },
+      {
+       "id": "b",
+       "text": "40% of its energy is from carbohydrate",
+       "why": "GI says nothing about how much carbohydrate a food contains, only how it raises blood glucose."
+      },
+      {
+       "id": "c",
+       "text": "It has 40 g of carbohydrate per portion",
+       "why": "That would be its carbohydrate content, not its GI."
+      },
+      {
+       "id": "d",
+       "text": "It is fully absorbed within 40 minutes",
+       "why": "GI is a % of glucose's response, not a time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-gi-meal",
+   "concept": "carb-gi",
+   "bloom": "apply",
+   "sources": [
+    "jenkins1981"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner eats white toast for breakfast. Tomorrow she eats the same toast with peanut butter and a glass of milk. Compared with toast alone, what happens to her blood glucose rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is likely smaller",
+       "correct": true,
+       "why": "Right: added fat and protein go with a smaller glucose rise after the meal."
+      },
+      {
+       "id": "b",
+       "text": "It is likely larger",
+       "why": "The extra food adds little carbohydrate; its fat and protein tend to blunt the rise, not raise it."
+      },
+      {
+       "id": "c",
+       "text": "It is the same, because GI is fixed for each food",
+       "why": "GI is measured on one food alone; a mixed meal changes the response."
+      },
+      {
+       "id": "d",
+       "text": "It drops below fasting level",
+       "why": "Toast still supplies carbohydrate, so glucose rises; the rise is just smaller."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-gi-coach",
+   "concept": "carb-gi-sport",
+   "bloom": "evaluate",
+   "sources": [
+    "burdon2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a cyclist to eat only low-GI foods in the 3 h before a road race, \"to ride faster\". What is the best judgement of this advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not supported: pooled studies found no clear performance benefit",
+       "correct": true,
+       "why": "Right: a meta-analysis of 19 trials found no clear benefit; amount, timing and gut comfort matter more."
+      },
+      {
+       "id": "b",
+       "text": "Well supported: low GI clearly improves endurance performance",
+       "why": "The meta-analysis found only small, non-significant trends, not a clear benefit."
+      },
+      {
+       "id": "c",
+       "text": "Harmful: low-GI foods can't be digested before a race",
+       "why": "Low-GI foods are digested fine; they just raise blood glucose more slowly."
+      },
+      {
+       "id": "d",
+       "text": "Supported only if no carbohydrate is taken during the race",
+       "why": "Even without carbohydrate during exercise, the pooled effect was not significant."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete swaps her usual white-bread breakfast for a low-GI muesli before every long brick session, hoping to race better. What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fine if she likes it, but no clear performance gain is expected",
+       "correct": true,
+       "why": "Right: pooled trials showed no clear benefit of low-GI pre-exercise meals on endurance performance."
+      },
+      {
+       "id": "b",
+       "text": "A proven way to spare glycogen and race faster",
+       "why": "The meta-analysis found no consistent metabolic or performance advantage."
+      },
+      {
+       "id": "c",
+       "text": "A mistake: high-GI meals are proven better before exercise",
+       "why": "Neither type was clearly better; the evidence shows no clear difference."
+      },
+      {
+       "id": "d",
+       "text": "Worth it only for sessions under 30 minutes",
+       "why": "The trials studied sessions of 60 min or more, and still found no clear benefit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carb-gi-appraise",
+   "concept": "carb-gi-sport",
+   "bloom": "evaluate",
+   "sources": [
+    "burdon2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The low-GI meta-analysis pooled 19 crossover studies with 188 participants, 91% of them men. What most limits its use for advising female runners?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Few women, and small studies with little power to find an effect",
+       "correct": true,
+       "why": "Right: the sample was mostly men and the authors themselves flag limited statistical power."
+      },
+      {
+       "id": "b",
+       "text": "Crossover designs can't test diets",
+       "why": "Crossover designs suit diet trials well: each person serves as their own control."
+      },
+      {
+       "id": "c",
+       "text": "A meta-analysis can't pool performance tests",
+       "why": "It can, and it did, grouping studies by test type."
+      },
+      {
+       "id": "d",
+       "text": "GI values were not reported for the meals",
+       "why": "They were: the meals averaged GI 82 (high) and 35 (low)."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

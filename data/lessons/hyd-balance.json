@@ -1,0 +1,806 @@
+{
+ "id": "hyd-balance",
+ "module": "t4-hydration",
+ "title": "Body water and the 2% question",
+ "goal": "Explain where body water sits, how to measure a water deficit, and why the 2% body mass line is both widely used and disputed.",
+ "requires": [
+  "fuel-plan"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "total-body-water",
+    "intracellular-fluid",
+    "extracellular-fluid",
+    "euhydration",
+    "hypohydration",
+    "urine-specific-gravity"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hb-compartments",
+   "title": "Where body water lives",
+   "text": "About 60% of an adult's body mass is water: [total body water](g:total-body-water). It sits in three places [[c:hb-split]]:\n\n| where | share of body mass |\n|---|---|\n| inside cells ([intracellular fluid](g:intracellular-fluid)) | about 40% |\n| between cells ([extracellular fluid](g:extracellular-fluid)) | about 15% |\n| blood [plasma](g:plasma), also extracellular | about 5% |\n\nSo a 70 kg rider holds about 42 L of water, and only about 3.5 L of it is plasma.\n\nSweat is less salty than body fluids (the *Sweat* lesson shows why). Losing it makes the fluid outside cells more concentrated, so water moves out of cells to even it up [[c:hb-shift]]. The loss is shared, but the plasma slice is the one the heart feels.",
+   "claims": [
+    {
+     "id": "hb-split",
+     "text": "At rest about 40% of body mass is intracellular fluid, 15% interstitial fluid and 5% plasma.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "At rest, approximately 40% of the total body mass is intracellular fluid, 15% is interstitial fluid, and 5% is intravascular fluid.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-shift",
+     "text": "Sweat is hypotonic, so sweating concentrates the extracellular fluid and water moves out of cells into it.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Sweat is hypotonic relative to body water, so elevated extracellular tonicity results in water movement from the intracellular to extracellular (interstitial and intravascular) spaces.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-tbw-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hb-shift-source"
+  },
+  {
+   "type": "concept",
+   "id": "hb-measure",
+   "title": "Three ways to measure hydration",
+   "text": "Each tool answers a different question [[c:hb-markers]]:\n\n- **Body mass change.** 1 kg lost in a session is about 1 L of water [[c:hb-kg-litre]]. Best for \"how much did I lose today?\" Weigh nude and dry, bladder emptied, before and after.\n- **Urine.** [Urine specific gravity](g:urine-specific-gravity) or a colour chart, on the first urine of the morning. Cheap; colour is close enough for the field but not for the lab [[c:hb-urine-colour]].\n- **Plasma [osmolality](g:osmolality).** The only marker that works well from a single sample, with no earlier value to compare with, but it needs a blood draw.\n\nFor daily checks, one position statement suggests combining three: first-morning urine, thirst and body mass. The result is your [hypohydration](g:hypohydration), or how far you are from [euhydration](g:euhydration).",
+   "claims": [
+    {
+     "id": "hb-markers",
+     "text": "Plasma osmolality is the only good one-off marker of hydration; plasma osmolality, urine specific gravity and body mass track changes over time; first-morning urine, thirst and body mass together give the best everyday estimate.",
+     "grade": "moderate",
+     "sources": [
+      "cheuvront2010b",
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2010b",
+       "quote": "P(osm) is the only useful marker for static dehydration assessment. P(osm), U(sg), and B(m) are valid markers in the setting of dynamic dehydration assessment.",
+       "level": "abstract"
+      },
+      {
+       "source": "mcdermott2017",
+       "quote": "For the best estimate of hydration status in an athlete, 3 simultaneous measures are recommended: first morning urine color (or USG), thirst sensation, and body mass.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-kg-litre",
+     "text": "A change in body mass during exercise is taken as a change in body water, 1 kg = 1 L, and expressed as a percentage of starting mass.",
+     "grade": "strong",
+     "sources": [
+      "kenefick2018"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "A change in total body water is equated with a change in body mass (1 L = 1 kg), whereby dehydration is then expressed as a percentage of body mass in accordance with: (Δ body mass/initial body mass) × 100",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-urine-colour",
+     "text": "Urine colour is good enough for field use but not for laboratory precision.",
+     "grade": "weak",
+     "sources": [
+      "armstrong1994"
+     ],
+     "evidence": [
+      {
+       "source": "armstrong1994",
+       "quote": "Ucol may be used in athletic/industrial settings or field studies, where close estimates of Usg or Uosm are acceptable, but should not be utilized in laboratories where greater precision and accuracy are required",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-tool-pick",
+   "variant": "a"
+  },
+  {
+   "type": "example",
+   "id": "hb-percent-example",
+   "title": "How big is the deficit?",
+   "problem": "A runner weighs 72.0 kg before a 2 h long run in the heat and 70.4 kg after (nude, dry, bladder emptied). She drank nothing. How large is her hypohydration?",
+   "steps": [
+    "Mass lost = 72.0 − 70.4 = 1.6 kg, which is about 1.6 L of water (1 kg ≈ 1 L).",
+    "As a share of body mass: 1.6 ÷ 72.0 × 100 = 2.2%.",
+    "Divide by the starting mass. If she had drunk during the run, the deficit would still be the mass change alone: what she drank is already inside the 'after' weight."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-percent-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hb-two-percent",
+   "title": "The 2% line",
+   "text": "Guidelines draw a line at **2% of body mass**. The ACSM position stand sets the goal of drinking during exercise as preventing a water deficit of more than 2% [[c:hb-2pct-goal]].\n\nWhy 2%? Around there the body starts to react. Plasma osmolality has risen enough to trigger thirst and water-saving by the kidney, and heat loss and the heart come under more strain. In warm, long or hard sessions, aerobic performance can then fall [[c:hb-2pct-strain]]. The *Heat and the heart* lesson shows why less plasma means a harder-working heart.\n\nFor a 70 kg rider, 2% is 1.4 kg: about 1.4 L.",
+   "claims": [
+    {
+     "id": "hb-2pct-goal",
+     "text": "Position stands set preventing a body mass loss of more than 2% as the goal of drinking during exercise.",
+     "grade": "strong",
+     "sources": [
+      "sawka2007",
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2007",
+       "quote": "The goal of drinking during exercise is to prevent excessive (>2% body weight loss from water deficit) dehydration and excessive changes in electrolyte balance to avert compromised performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "mcdermott2017",
+       "quote": "Athletic trainers should promote euhydration in this range before exercise and a body mass loss of less than 2% at the end of exercise.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-2pct-strain",
+     "text": "From about 2% body mass loss, thirst and renal water-saving are triggered, thermoregulatory and cardiovascular strain rise, and in many conditions aerobic performance falls.",
+     "grade": "moderate",
+     "sources": [
+      "kenefick2018",
+      "cheuvront2014"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "Dehydration of ≥ 2% body mass is associated with impaired thermoregulatory function, elevated cardiovascular strain and, in many conditions (e.g., warmer, longer, more intense), impaired aerobic exercise performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "kenefick2018",
+       "quote": "An ~ 2% increase in Posm (~ 6 mmol/kg) is commonly referenced as an osmotic threshold for compensatory renal water conservation and water acquisition (thirst), which is approximately the equivalent of ≥ 2% loss of body mass",
+       "level": "full-text"
+      },
+      {
+       "source": "cheuvront2014",
+       "quote": "The discussion of physiologic responses further helps inform and explain our analysis of the literature suggesting a ≥ 2% dehydration threshold for impaired endurance exercise performance mediated by volume loss.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-2pct-why"
+  },
+  {
+   "type": "question",
+   "item": "hb-2pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hb-debate",
+   "title": "Does 2% really slow you down?",
+   "text": "Much of the 2% evidence comes from lab rides at a **fixed intensity** until exhaustion, often in still air, by riders who *knew* they were dry. Two meta-analyses by Goulet found that in **time trials**, losses up to about 4% did not lower power; only fixed-intensity tests showed harm from 2% [[c:hb-goulet]].\n\nKnowing you're dry may itself slow you, so some labs hid it, giving water by vein or stomach tube [[c:hb-blinded]]:\n\n| study | deficit | result |\n|---|---|---|\n| Cheung 2015: 20 km TT, 35 °C | 3% | no change |\n| Wall 2013: 25 km TT, 33 °C, strong headwind fan | 3% | no change |\n| James 2017: 15 min test, 34 °C | 2.4% | 8% less work |\n\nAll used 7–11 people. The question is open.",
+   "claims": [
+    {
+     "id": "hb-goulet",
+     "text": "Meta-analyses found that exercise-induced dehydration up to about 4% did not reduce time-trial performance, while it reduced performance in fixed-intensity protocols.",
+     "grade": "disputed",
+     "sources": [
+      "goulet2013",
+      "goulet2011"
+     ],
+     "evidence": [
+      {
+       "source": "goulet2013",
+       "quote": "Compared with euhydration, EID increased (0.09±2.60%, (p=0.9)) EP under time-trial exercise conditions, whereas it reduced it (1.91±1.53%, (p<0.05)) with NEV exercise protocols.",
+       "level": "abstract"
+      },
+      {
+       "source": "goulet2011",
+       "quote": "Compared with euhydration, EID (up to 4% BW loss) does not alter cycling performances during out-of-door exercise conditions",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-blinded",
+     "text": "Blinded studies disagree: two found no effect of about 3% hypohydration on time-trial performance in the heat, one found 2.4% hypohydration cut work in a 15 min test.",
+     "grade": "disputed",
+     "sources": [
+      "cheung2015",
+      "wall2013",
+      "james2017b"
+     ],
+     "evidence": [
+      {
+       "source": "cheung2015",
+       "quote": "Within the range of up to 3% body mass loss, neither the physiologic effects from lowered hydration status nor the perception of thirst, separately or combined, affected sustained submaximal exercise performance in the heat for a healthy and fit population.",
+       "level": "abstract"
+      },
+      {
+       "source": "wall2013",
+       "quote": "When well-trained cyclists performed a 25 km cycling time trial under ecologically valid conditions and were blinded to their hydration status, performance, physiological and perceptual variables were not different between trials.",
+       "level": "abstract"
+      },
+      {
+       "source": "james2017b",
+       "quote": "These results provide novel data demonstrating that exercise performance in the heat is impaired by hypohydration, even when subjects are blinded to the intervention.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does losing 2–4% of body mass slow endurance performance in real racing?",
+    "sides": [
+     {
+      "position": "Yes: from about 2%, heat and heart strain rise and performance falls, especially in the heat; even blinded, 2.4% hypohydration cut work by about 8%.",
+      "sources": [
+       "kenefick2018",
+       "cheuvront2014",
+       "james2017b"
+      ]
+     },
+     {
+      "position": "Not in race-like conditions: in time trials with airflow, even when blinded, losses up to 3–4% did not lower power, so drinking to thirst is enough.",
+      "sources": [
+       "goulet2013",
+       "wall2013",
+       "cheung2015"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hb-protocol"
+  },
+  {
+   "type": "question",
+   "item": "hb-blind-why"
+  },
+  {
+   "type": "question",
+   "item": "hb-appraisal"
+  },
+  {
+   "type": "question",
+   "item": "hb-percent-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hb-tbw-calc",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "About 60% of body mass is water: about 40% inside cells, 15% between cells and 5% in plasma.",
+    "Body mass change gives the loss in a session (1 kg ≈ 1 L, as % of starting mass); first-morning urine tracks day to day; plasma osmolality is the best one-off marker.",
+    "Guidelines aim to keep losses under 2% of body mass, the point where thirst, kidney water-saving and heat and heart strain rise.",
+    "Whether 2–4% slows real racing is disputed: time trials and two blinded studies found no effect, another blinded study found 8% less work."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hb-tbw-calc",
+   "concept": "hb-compartments",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how much total body water does a 65 kg triathlete hold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 39 L",
+       "correct": true,
+       "why": "Right: about 60% of body mass, 0.60 × 65 = 39 L."
+      },
+      {
+       "id": "b",
+       "text": "About 26 L",
+       "why": "That is 40%: only the water inside cells. Add the 15% between cells and 5% in plasma."
+      },
+      {
+       "id": "c",
+       "text": "About 3.3 L",
+       "why": "That is 5%: only the plasma, a small slice of total body water."
+      },
+      {
+       "id": "d",
+       "text": "About 10 L",
+       "why": "That is 15%: only the fluid between cells."
+      }
+     ],
+     "solution": "Total body water ≈ 60% of body mass = 0.60 × 65 kg = 39 kg ≈ 39 L."
+    },
+    {
+     "id": "b",
+     "stem": "About how much water sits inside the cells of an 80 kg cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 32 L",
+       "correct": true,
+       "why": "Right: intracellular fluid is about 40% of body mass, 0.40 × 80 = 32 L."
+      },
+      {
+       "id": "b",
+       "text": "About 48 L",
+       "why": "That is 60%: all body water, not just the part inside cells."
+      },
+      {
+       "id": "c",
+       "text": "About 16 L",
+       "why": "That is 20%: the water outside cells (15% between cells plus 5% plasma)."
+      },
+      {
+       "id": "d",
+       "text": "About 4 L",
+       "why": "That is 5%: only the plasma."
+      }
+     ],
+     "solution": "Intracellular fluid ≈ 40% of body mass = 0.40 × 80 kg = 32 L."
+    }
+   ]
+  },
+  {
+   "id": "hb-shift-source",
+   "concept": "hb-compartments",
+   "bloom": "understand",
+   "sources": [
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist sweats 2 L on a hot ride and drinks nothing. Where does the lost water come from?",
+     "options": [
+      {
+       "id": "a",
+       "text": "From fluid outside cells and, as that gets more concentrated, from inside cells too",
+       "correct": true,
+       "why": "Right: sweat is less salty than body fluids, so the fluid outside cells gets more concentrated and pulls water out of cells. The loss is shared."
+      },
+      {
+       "id": "b",
+       "text": "Only from blood plasma, because sweat glands draw on the blood",
+       "why": "Plasma does lose water, but it is refilled from the fluid between cells and from inside cells; the loss is spread out."
+      },
+      {
+       "id": "c",
+       "text": "Only from inside cells, because that is where most of the water is",
+       "why": "Sweat is made from the fluid outside cells; cells give up water only as that fluid gets more concentrated."
+      },
+      {
+       "id": "d",
+       "text": "From the gut contents, so cells and blood stay as they were",
+       "why": "The gut holds little spare water; a 2 L loss always comes from body fluid compartments."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-tool-pick",
+   "concept": "hb-measure",
+   "bloom": "apply",
+   "sources": [
+    "cheuvront2010b",
+    "mcdermott2017",
+    "kenefick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist wants to know how much water she loses on her usual 3 h summer ride. Which measure answers that best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nude body mass before and after the ride",
+       "correct": true,
+       "why": "Right: within a session, 1 kg of mass lost is about 1 L of water. This is the tool for 'how much today?'"
+      },
+      {
+       "id": "b",
+       "text": "The colour of her urine after the ride",
+       "why": "Urine colour gives a rough idea of how concentrated urine is, not how many litres were lost."
+      },
+      {
+       "id": "c",
+       "text": "One plasma osmolality sample before the ride",
+       "why": "That tells her starting state, not what she lost during the ride."
+      },
+      {
+       "id": "d",
+       "text": "The number of bottles she drank",
+       "why": "Intake is not loss; she may have drunk much less (or more) than she sweated."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A doctor sees a triathlete for the first time and has one blood sample, with no earlier weights or tests. Which marker best tells whether he is hypohydrated?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Plasma osmolality",
+       "correct": true,
+       "why": "Right: it is the only marker that works well from a single sample, with nothing to compare against."
+      },
+      {
+       "id": "b",
+       "text": "Body mass",
+       "why": "Body mass only shows a deficit when compared with an earlier, normal value."
+      },
+      {
+       "id": "c",
+       "text": "Urine colour",
+       "why": "Urine colour is a rough field guide and is best on first-morning urine, tracked over days."
+      },
+      {
+       "id": "d",
+       "text": "Resting heart rate",
+       "why": "Heart rate changes with many things (sleep, illness, stress) and isn't a hydration marker."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-percent-calc",
+   "concept": "hb-measure",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kenefick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighs 60.0 kg before a 90 min run and 58.8 kg after. She drank 0.4 L during the run. What is her hypohydration, as % of body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.0%",
+       "correct": true,
+       "why": "Right: (60.0 − 58.8) ÷ 60.0 × 100 = 2.0%. The drink is already inside the 'after' weight."
+      },
+      {
+       "id": "b",
+       "text": "2.7%",
+       "why": "This adds the 0.4 L drunk: (1.2 + 0.4) ÷ 60 = 2.7%. That gives sweat lost, not the water deficit left."
+      },
+      {
+       "id": "c",
+       "text": "1.2%",
+       "why": "1.2 is the mass lost in kg, not a percentage of body mass."
+      },
+      {
+       "id": "d",
+       "text": "0.02%",
+       "why": "1.2 ÷ 60 = 0.02 is a fraction; multiply by 100 to get a percentage."
+      }
+     ],
+     "solution": "Deficit = 60.0 − 58.8 = 1.2 kg. As % of starting mass = 1.2 ÷ 60.0 × 100 = 2.0%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist weighs 75.0 kg before a 3 h ride and 73.2 kg after. He drank 0.6 L. What is his hypohydration, as % of body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2.4%",
+       "correct": true,
+       "why": "Right: (75.0 − 73.2) ÷ 75.0 × 100 = 2.4%."
+      },
+      {
+       "id": "b",
+       "text": "3.2%",
+       "why": "This adds the 0.6 L drunk: (1.8 + 0.6) ÷ 75 = 3.2%. That is sweat lost, not the deficit left."
+      },
+      {
+       "id": "c",
+       "text": "1.8%",
+       "why": "1.8 is the mass lost in kg, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "0.024%",
+       "why": "1.8 ÷ 75 = 0.024 is a fraction; multiply by 100."
+      }
+     ],
+     "solution": "Deficit = 75.0 − 73.2 = 1.8 kg. As % of starting mass = 1.8 ÷ 75.0 × 100 = 2.4%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete weighs 68.0 kg before a brick session and 67.0 kg after. She drank 1.0 L. What is her hypohydration, as % of body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.5%",
+       "correct": true,
+       "why": "Right: (68.0 − 67.0) ÷ 68.0 × 100 = 1.5%."
+      },
+      {
+       "id": "b",
+       "text": "2.9%",
+       "why": "This adds the 1.0 L drunk: 2.0 ÷ 68 = 2.9%. That is sweat lost, not the deficit left."
+      },
+      {
+       "id": "c",
+       "text": "1.0%",
+       "why": "1.0 is the mass lost in kg, not a percentage."
+      },
+      {
+       "id": "d",
+       "text": "0.015%",
+       "why": "1.0 ÷ 68 = 0.015 is a fraction; multiply by 100."
+      }
+     ],
+     "solution": "Deficit = 68.0 − 67.0 = 1.0 kg. As % of starting mass = 1.0 ÷ 68.0 × 100 = 1.5%."
+    }
+   ]
+  },
+  {
+   "id": "hb-2pct-why",
+   "concept": "hb-two-percent",
+   "bloom": "understand",
+   "sources": [
+    "kenefick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What happens in the body around a 2% body mass loss that makes guidelines use it as a line?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Thirst and kidney water-saving kick in, and heat and heart strain rise",
+       "correct": true,
+       "why": "Right: plasma osmolality has risen about 2%, enough to trigger thirst and water-saving; thermoregulatory and cardiovascular strain rise."
+      },
+      {
+       "id": "b",
+       "text": "Blood sodium falls below the normal range",
+       "why": "Sweat is less salty than plasma, so losing it raises blood sodium; low sodium comes from drinking too much."
+      },
+      {
+       "id": "c",
+       "text": "Sweating stops to save the water that is left",
+       "why": "Sweating carries on; hypohydration only delays and slightly reduces it."
+      },
+      {
+       "id": "d",
+       "text": "Plasma is fully emptied and cells give up their water",
+       "why": "Plasma falls by a small fraction, and cells give water from the start; nothing is emptied at 2%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-2pct-calc",
+   "concept": "hb-two-percent",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "sawka2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighs 68.0 kg before a long run. Below what post-run body mass has she lost more than 2%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "66.6 kg",
+       "correct": true,
+       "why": "Right: 2% of 68.0 = 1.36 kg; 68.0 − 1.36 ≈ 66.6 kg."
+      },
+      {
+       "id": "b",
+       "text": "66.0 kg",
+       "why": "This takes 2% as 2 kg. The line is a percentage of body mass."
+      },
+      {
+       "id": "c",
+       "text": "67.9 kg",
+       "why": "This uses 0.2% (0.136 kg): a decimal slip. 2% is 0.02 × 68."
+      },
+      {
+       "id": "d",
+       "text": "69.4 kg",
+       "why": "This adds 2% instead of taking it away; a deficit lowers body mass."
+      }
+     ],
+     "solution": "2% of 68.0 kg = 0.02 × 68.0 = 1.36 kg. Threshold = 68.0 − 1.36 = 66.64 ≈ 66.6 kg."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist weighs 82.0 kg before a hot race. Below what post-race body mass has he lost more than 2%?",
+     "options": [
+      {
+       "id": "a",
+       "text": "80.4 kg",
+       "correct": true,
+       "why": "Right: 2% of 82.0 = 1.64 kg; 82.0 − 1.64 ≈ 80.4 kg."
+      },
+      {
+       "id": "b",
+       "text": "80.0 kg",
+       "why": "This takes 2% as 2 kg. The line is a percentage of body mass."
+      },
+      {
+       "id": "c",
+       "text": "81.8 kg",
+       "why": "This uses 0.2% (0.164 kg): a decimal slip."
+      },
+      {
+       "id": "d",
+       "text": "83.6 kg",
+       "why": "This adds 2% instead of taking it away."
+      }
+     ],
+     "solution": "2% of 82.0 kg = 1.64 kg. Threshold = 82.0 − 1.64 = 80.36 ≈ 80.4 kg."
+    }
+   ]
+  },
+  {
+   "id": "hb-protocol",
+   "concept": "hb-debate",
+   "bloom": "analyse",
+   "sources": [
+    "goulet2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Goulet's meta-analysis found harm from 2% hypohydration in fixed-intensity rides to exhaustion but not in time trials. What does that suggest about the 2% rule?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It rests mainly on test formats that are less like racing",
+       "correct": true,
+       "why": "Right: Goulet concluded the 2% rule came from fixed-intensity protocols and doesn't carry over to time-trial, out-of-doors conditions."
+      },
+      {
+       "id": "b",
+       "text": "Time-trial riders lost less water, so they weren't really dry",
+       "why": "Both kinds of study included losses around 2% and above; the difference was the test format."
+      },
+      {
+       "id": "c",
+       "text": "Fixed-intensity tests are more precise, so racing must suffer too",
+       "why": "Precision isn't the issue: a ride to exhaustion at a set power measures something different from a race."
+      },
+      {
+       "id": "d",
+       "text": "Hypohydration clearly speeds up time trials by cutting body mass",
+       "why": "The time-trial effect was +0.09% and not significant: no change, not a gain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-blind-why",
+   "concept": "hb-debate",
+   "bloom": "understand",
+   "sources": [
+    "cheung2015",
+    "wall2013",
+    "james2017b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why did Cheung, Wall and James give water by vein or stomach tube so riders couldn't tell their hydration state?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Knowing you're dry can change effort and pacing and bias the result",
+       "correct": true,
+       "why": "Right: blinding separates the effect of the water deficit itself from the effect of knowing about it."
+      },
+      {
+       "id": "b",
+       "text": "Fluid by vein reaches the muscles faster than drinking",
+       "why": "Speed of delivery wasn't the point; the aim was to hide which trial was which."
+      },
+      {
+       "id": "c",
+       "text": "To stop riders from drinking extra during the test",
+       "why": "Intake was controlled in all trials anyway; the tube or vein hid the amount from the rider."
+      },
+      {
+       "id": "d",
+       "text": "To make the riders sweat less in the heat",
+       "why": "Giving water by vein doesn't reduce sweating; it hides the hydration state."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-appraisal",
+   "concept": "hb-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "wall2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Wall 2013 found 3% hypohydration didn't slow a blinded 25 km time trial in 10 well-trained cyclists. What most limits using it to plan drinking for a 6 h Ironman bike and run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A short test in 10 trained cyclists says little about losses that build over many hours",
+       "correct": true,
+       "why": "Right: a 25 km TT lasts under an hour; small sample, one sport, one duration. Longer events can bring bigger deficits and other problems."
+      },
+      {
+       "id": "b",
+       "text": "Blinding makes the results apply to any event length",
+       "why": "Blinding removes one bias; it doesn't make a short test represent a long one."
+      },
+      {
+       "id": "c",
+       "text": "A crossover design can't show cause and effect",
+       "why": "A randomised crossover is a strong design for cause and effect; the limit is who and what was tested."
+      },
+      {
+       "id": "d",
+       "text": "The strong fan made it less realistic than still-air lab tests",
+       "why": "The fan mimics riding airflow: it made the test more realistic, not less."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,716 @@
+{
+ "id": "mac-daily-carb",
+ "module": "t4-macros",
+ "title": "How much carbohydrate a day?",
+ "goal": "Use the 2016 sports nutrition guidelines to work out an athlete's daily carbohydrate in grams from body mass and training load, and explain why intake should follow the day's work.",
+ "requires": [
+  "mac-protein"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "carbohydrate-availability",
+    "fuel-for-the-work-required"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dc-bands",
+   "title": "Scale carbohydrate to the training load",
+   "text": "The 2016 joint position of the American College of Sports Medicine and the dietitians of the USA and Canada gives athletes targets for the amount and timing of what they eat [[c:dc-position]]. For carbohydrate, the daily target is set in **grams per kg of body mass**, scaled to the day's training [[c:dc-targets]]:\n\n| training that day | g·kg⁻¹·day⁻¹ |\n|---|---|\n| light (easy, skill or recovery work) | 3–5 |\n| moderate (about 1 h) | 5–7 |\n| high (1–3 h, moderate to hard) | 6–10 |\n| very high (4–5 h or more, moderate to hard) | 8–12 |\n\nThe goal is good [carbohydrate availability](g:carbohydrate-availability): enough carbohydrate, at the right times, to cover what the muscles and brain need for the work of the day [[c:dc-availability]].",
+   "claims": [
+    {
+     "id": "dc-position",
+     "text": "The 2016 ACSM, Academy of Nutrition and Dietetics and Dietitians of Canada position gives guidelines on the type, amount and timing of intake for athletes.",
+     "grade": "strong",
+     "sources": [
+      "thomas2016"
+     ],
+     "evidence": [
+      {
+       "source": "thomas2016",
+       "quote": "These organizations provide guidelines for the appropriate type, amount, and timing of intake of food, fluids, and supplements to promote optimal health and performance across different scenarios of training and competitive sport.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "dc-targets",
+     "text": "Daily carbohydrate targets, adapted from the 2016 position: 3–5 g·kg⁻¹·day⁻¹ for light activity, 5–7 for about 1 h a day, 6–10 for 1–3 h, 8–12 for 4–5 h of moderate to hard exercise.",
+     "grade": "strong",
+     "sources": [
+      "murray2018",
+      "vitale2019"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Low Easy activity such as yoga, tai chi, walking, or any exercise done at a light effort (can easily talk or sing during the activity) 3–5 g/kg BW/d",
+       "level": "full-text"
+      },
+      {
+       "source": "vitale2019",
+       "quote": "In summary, daily CHO requirements vary according to level of exercise, from 5–7 g/kg/day (1 h/day of moderate exercise), 6–10 g/kg/day (1–3 h/day of exercise), to 8–12 g/kg/day (4≥ h/day of exercise).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dc-availability",
+     "text": "Carbohydrate availability is high when daily intake and its timing keep enough carbohydrate for muscle and brain, and low when carbohydrate limits the day's exercise.",
+     "grade": "strong",
+     "sources": [
+      "burke2011"
+     ],
+     "evidence": [
+      {
+       "source": "burke2011",
+       "quote": "An athlete's carbohydrate intake can be judged by whether total daily intake and the timing of consumption in relation to exercise maintain adequate carbohydrate substrate for the muscle and central nervous system (\"high carbohydrate availability\") or whether carbohydrate fuel sources are limiting for the daily exercise programme (\"low carbohydrate availability\").",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dc-band-recall"
+  },
+  {
+   "type": "question",
+   "item": "dc-choose-band",
+   "variant": "a"
+  },
+  {
+   "type": "example",
+   "id": "dc-example",
+   "title": "From g·kg⁻¹ to grams on the plate",
+   "problem": "A 70 kg cyclist has a 2-h ride with hard intervals today and a rest day tomorrow. How much carbohydrate should he aim for on each day?",
+   "steps": [
+    "Pick the band. Today, 2 h moderate to hard: high, 6–10 g·kg⁻¹·day⁻¹. Tomorrow, rest: light, 3–5 g·kg⁻¹·day⁻¹.",
+    "Multiply by body mass. Today: 6 × 70 = 420 g to 10 × 70 = 700 g. Tomorrow: 3 × 70 = 210 g to 5 × 70 = 350 g.",
+    "As energy, at about 17 kJ per gram: 420 g ≈ 7,140 kJ (1,680 kcal); 700 g ≈ 11,900 kJ (2,800 kcal).",
+    "Same rider, same body: today's target is twice tomorrow's. The training, not the calendar, sets the number."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dc-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "dc-per-kg",
+   "title": "Why grams per kg, not a % of energy",
+   "text": "Old advice often said \"eat 55–60% of your energy as carbohydrate\". The guidelines dropped that, because daily carbohydrate should follow the carbohydrate burned in training: low on light days, much higher on long or hard days [[c:dc-follow-load]].\n\nA percentage hides this. 55% of 2,400 kcal is about 330 g; 55% of 4,000 kcal is about 550 g. Whether either is enough depends on body mass and training, not on the percentage.\n\nSo the band, chosen by the day's training, comes first; body mass turns it into grams.",
+   "claims": [
+    {
+     "id": "dc-follow-load",
+     "text": "Daily carbohydrate intake should reflect carbohydrate oxidation in training: low on light days, substantially higher on intense or prolonged days.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Daily carbohydrate intake should reflect the extent of carbohydrate oxidation during training: low on light training days, substantially higher on days of intense or prolonged training.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dc-percent"
+  },
+  {
+   "type": "question",
+   "item": "dc-rest-day"
+  },
+  {
+   "type": "concept",
+   "id": "dc-reality",
+   "title": "Eating to the band",
+   "text": "The top of the range is a lot of food. For a 50 kg athlete, 10 g·kg⁻¹ is 500 g of carbohydrate, about 8,500 kJ (2,000 kcal) [[c:dc-sizeable]].\n\nMany athletes fall short. In one group, 19 female heptathletes averaged 5.2 g·kg⁻¹·day⁻¹, below the 6–12 recommended for their training [[c:dc-shortfall]]. Fall short day after day and glycogen isn't fully refilled, so the next hard session starts on a part-empty tank.\n\nOn the high and very high days, the guidelines say recovery needs carbohydrate (with protein) after training plus high-carbohydrate meals and snacks to refill muscle glycogen within 24–36 h [[c:dc-refill]]. In practice: carbohydrate at every meal, snacks between, and a recovery feed after the long session. *Protein and recovery* covers the timing.",
+   "claims": [
+    {
+     "id": "dc-sizeable",
+     "text": "10 g·kg⁻¹·day⁻¹ is a sizeable intake: 500 g of carbohydrate (2,000 kcal) for a 50 kg athlete.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Consumption of 10 g carbohydrate/kg BW/day represents a sizable amount of carbohydrate; for a 50-kg (110-lb) athlete, 10 g carbohydrate/kg BW/day is the equivalent of 500 g of carbohydrate (2000 kcal).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dc-shortfall",
+     "text": "Many athletes don't eat enough carbohydrate to restore glycogen daily; female heptathletes averaged 5.2 g·kg⁻¹·day⁻¹ against a recommendation of 6–12.",
+     "grade": "weak",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "For example, Mullins et al. 7 reported that a group of 19 female heptathletes consumed an average of 5.2 g of carbohydrate/kg BW/ day (339 g/d), compared with the current carbohydrate-intake recommendation of 6.0–12.0 g/kg of BW/day.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dc-refill",
+     "text": "On high and very high training days, carbohydrate and protein after exercise plus high-carbohydrate meals and snacks are needed to restore muscle glycogen within 24–36 h.",
+     "grade": "strong",
+     "sources": [
+      "murray2018"
+     ],
+     "evidence": [
+      {
+       "source": "murray2018",
+       "quote": "Postexercise carbohydrate/protein intake, with high-carbohydrate meals and snacks, is needed to fully restore muscle glycogen within 24–36 h",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dc-shortfall-risk",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "dc-fwr",
+   "title": "Fuel for the work required",
+   "text": "If intake should follow the work, why not plan it session by session? That is the idea of [fuel for the work required](g:fuel-for-the-work-required): carbohydrate availability is adjusted to the demands of the next session, day by day and meal by meal, by its intensity, duration and goal [[c:dc-fwr]]. High before a hard interval day or a race simulation; lower around an easy recovery spin.\n\nThe reason to go lower on easy days is that training with little carbohydrate boosts some signals for adaptation in muscle. But the payoff in performance is not proven: of 11 studies, 37% found better performance and 63% no change [[c:dc-trainlow-perf]].\n\nThe details, and the risks, are in *Low-carb, keto and train-low*. Here, the core rule is enough: never short-change the sessions that matter.",
+   "claims": [
+    {
+     "id": "dc-fwr",
+     "text": "In 'fuel for the work required', carbohydrate availability is adjusted day to day and meal by meal to the intensity, duration and goals of upcoming sessions.",
+     "grade": "moderate",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "We also present the 'fuel for the work required' paradigm (representative of an amalgamation of train-low models) whereby CHO availability is adjusted in accordance with the demands of the upcoming training session(s).",
+       "level": "abstract"
+      },
+      {
+       "source": "impey2018",
+       "quote": "As opposed to chronic periods of CHO restriction, this model suggests that CHO availability should be manipulated day-to-day and meal-by-meal according to the intensity, duration and specific training goals.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "dc-trainlow-perf",
+     "text": "Training with low carbohydrate enhances muscle adaptation signals, but of 11 studies only 37% showed better performance; 63% showed no change.",
+     "grade": "disputed",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Nonetheless, such muscle adaptations do not always translate to improved exercise performance (e.g. 37 and 63% of 11 studies show improvements or no change, respectively).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "dc-fwr-plan"
+  },
+  {
+   "type": "question",
+   "item": "dc-availability-def"
+  },
+  {
+   "type": "question",
+   "item": "dc-trainlow-evidence"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Daily carbohydrate is set in g·kg⁻¹·day⁻¹ by training load: 3–5 light, 5–7 about 1 h, 6–10 for 1–3 h, 8–12 for 4–5 h a day.",
+    "Grams = band × body mass; the same athlete needs very different amounts on rest and hard days.",
+    "A % of energy hides whether intake matches the work; many athletes fall below their band.",
+    "Fuel for the work required: plan carbohydrate around the next session, and never short-change key sessions.",
+    "Lower-carbohydrate training boosts adaptation signals, but a performance benefit is unproven."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dc-band-recall",
+   "concept": "dc-bands",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What daily carbohydrate target do the 2016 guidelines give for very high training loads, around 4–5 h a day of moderate to hard exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8–12 g·kg⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: the top band is for 4–5 h or more a day."
+      },
+      {
+       "id": "b",
+       "text": "5–7 g·kg⁻¹·day⁻¹",
+       "why": "That band is for about 1 h a day of moderate exercise."
+      },
+      {
+       "id": "c",
+       "text": "3–5 g·kg⁻¹·day⁻¹",
+       "why": "That band is for light days only."
+      },
+      {
+       "id": "d",
+       "text": "1–2 g·kg⁻¹·day⁻¹",
+       "why": "That is close to the minimum for the brain alone, far below what heavy training burns."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc-choose-band",
+   "concept": "dc-bands",
+   "bloom": "apply",
+   "sources": [
+    "vitale2019",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's day holds a 75-min run with a 30-min tempo block. Which daily carbohydrate band fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6–10 g·kg⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: over an hour including hard running is the high band (1–3 h, moderate to hard)."
+      },
+      {
+       "id": "b",
+       "text": "3–5 g·kg⁻¹·day⁻¹",
+       "why": "That band is for light, easy days; a tempo run is more than that."
+      },
+      {
+       "id": "c",
+       "text": "8–12 g·kg⁻¹·day⁻¹",
+       "why": "That band is for 4–5 h or more a day; 75 min doesn't need it."
+      },
+      {
+       "id": "d",
+       "text": "10–12 g·kg⁻¹·day⁻¹ for 2 days",
+       "why": "That is carbohydrate loading before a long race, not a daily training target."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete on a training camp swims, rides and runs for about 5 h a day, much of it at moderate to hard effort. Which daily carbohydrate band fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8–12 g·kg⁻¹·day⁻¹",
+       "correct": true,
+       "why": "Right: 4–5 h or more a day is the very high band."
+      },
+      {
+       "id": "b",
+       "text": "5–7 g·kg⁻¹·day⁻¹",
+       "why": "That band is for about 1 h a day; it would leave her glycogen falling day after day."
+      },
+      {
+       "id": "c",
+       "text": "3–5 g·kg⁻¹·day⁻¹",
+       "why": "That band is for light days; it is far below what 5 h of training burns."
+      },
+      {
+       "id": "d",
+       "text": "6–10 g·kg⁻¹·day⁻¹",
+       "why": "That band is for 1–3 h a day; 5 h a day needs the top band."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc-calc",
+   "concept": "dc-bands",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg runner trains about 1 h a day at moderate effort (5–7 g·kg⁻¹·day⁻¹). What is her daily carbohydrate target in grams?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300–420 g",
+       "correct": true,
+       "why": "Right: 5 × 60 = 300 g to 7 × 60 = 420 g."
+      },
+      {
+       "id": "b",
+       "text": "180–300 g",
+       "why": "This uses the light-day band (3–5), not the moderate one."
+      },
+      {
+       "id": "c",
+       "text": "360–600 g",
+       "why": "This uses the high band (6–10), meant for 1–3 h a day."
+      },
+      {
+       "id": "d",
+       "text": "30–42 g",
+       "why": "A decimal slip: 5 × 60 is 300, not 30."
+      }
+     ],
+     "solution": "Grams = band × body mass = 5–7 g·kg⁻¹ × 60 kg = 300–420 g a day."
+    },
+    {
+     "id": "b",
+     "stem": "An 80 kg triathlete on a camp trains about 5 h a day (8–12 g·kg⁻¹·day⁻¹). What is his daily carbohydrate target in grams?",
+     "options": [
+      {
+       "id": "a",
+       "text": "640–960 g",
+       "correct": true,
+       "why": "Right: 8 × 80 = 640 g to 12 × 80 = 960 g."
+      },
+      {
+       "id": "b",
+       "text": "480–800 g",
+       "why": "This uses the high band (6–10), meant for 1–3 h a day."
+      },
+      {
+       "id": "c",
+       "text": "400–560 g",
+       "why": "This uses the moderate band (5–7), meant for about 1 h a day."
+      },
+      {
+       "id": "d",
+       "text": "64–96 g",
+       "why": "A decimal slip: 8 × 80 is 640, not 64."
+      }
+     ],
+     "solution": "Grams = band × body mass = 8–12 g·kg⁻¹ × 80 kg = 640–960 g a day."
+    },
+    {
+     "id": "c",
+     "stem": "A 55 kg cyclist has an easy recovery day (3–5 g·kg⁻¹·day⁻¹). What is her daily carbohydrate target in grams?",
+     "options": [
+      {
+       "id": "a",
+       "text": "165–275 g",
+       "correct": true,
+       "why": "Right: 3 × 55 = 165 g to 5 × 55 = 275 g."
+      },
+      {
+       "id": "b",
+       "text": "275–385 g",
+       "why": "This uses the moderate band (5–7), not the light one."
+      },
+      {
+       "id": "c",
+       "text": "330–550 g",
+       "why": "This uses the high band (6–10), meant for 1–3 h a day."
+      },
+      {
+       "id": "d",
+       "text": "1,650–2,750 g",
+       "why": "Out by a factor of ten: 3 × 55 is 165, not 1,650."
+      }
+     ],
+     "solution": "Grams = band × body mass = 3–5 g·kg⁻¹ × 55 kg = 165–275 g a day."
+    }
+   ]
+  },
+  {
+   "id": "dc-percent",
+   "concept": "dc-per-kg",
+   "bloom": "analyse",
+   "recallFirst": true,
+   "sources": [
+    "murray2018",
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 75 kg cyclist eats 2,800 kcal a day, 50% of it as carbohydrate (4 kcal per gram), on days with a 2-h hard ride. How does his intake compare with the guideline?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4.7 g·kg⁻¹·day⁻¹: below the 6–10 target",
+       "correct": true,
+       "why": "Right: 2,800 × 0.5 = 1,400 kcal ÷ 4 = 350 g ÷ 75 kg ≈ 4.7 g·kg⁻¹·day⁻¹, short for a 2-h hard day."
+      },
+      {
+       "id": "b",
+       "text": "About 4.7 g·kg⁻¹·day⁻¹: inside the 3–5 target, so fine",
+       "why": "The arithmetic is right but the band is wrong: 3–5 is for light days, not 2 h of hard riding."
+      },
+      {
+       "id": "c",
+       "text": "About 9.3 g·kg⁻¹·day⁻¹: inside the 6–10 target",
+       "why": "This uses all 2,800 kcal as carbohydrate (2,800 ÷ 4 ÷ 75) and forgets the 50%."
+      },
+      {
+       "id": "d",
+       "text": "About 18.7 g·kg⁻¹·day⁻¹: above any target",
+       "why": "This divides kcal by body mass (1,400 ÷ 75) without converting kcal to grams."
+      }
+     ],
+     "solution": "Carbohydrate energy = 2,800 × 0.50 = 1,400 kcal. Grams = 1,400 ÷ 4 = 350 g. Per kg = 350 ÷ 75 ≈ 4.7 g·kg⁻¹·day⁻¹, below the 6–10 band for 1–3 h of hard training."
+    }
+   ]
+  },
+  {
+   "id": "dc-rest-day",
+   "concept": "dc-per-kg",
+   "bloom": "understand",
+   "sources": [
+    "murray2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 65 kg triathlete has a 3-h ride on Saturday and a full rest day on Sunday. Why should her carbohydrate target differ between the two days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Intake should follow the carbohydrate burned, which differs a lot",
+       "correct": true,
+       "why": "Right: daily carbohydrate should reflect how much is oxidised in training: low on light days, much higher on long or hard ones."
+      },
+      {
+       "id": "b",
+       "text": "It shouldn't: daily carbohydrate is set by body mass alone",
+       "why": "Body mass sets the scale, but the band is chosen by the day's training."
+      },
+      {
+       "id": "c",
+       "text": "Rest days need more, to refill glycogen ahead of time",
+       "why": "Refilling matters, but a rest day burns little; the long-ride day needs the most."
+      },
+      {
+       "id": "d",
+       "text": "It shouldn't: 55–60% of energy covers both days",
+       "why": "A fixed % hides whether intake matches the work; the guidelines use g·kg⁻¹ by load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc-shortfall-risk",
+   "concept": "dc-reality",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "murray2018",
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 58 kg runner trains about 2 h a day and eats 290 g of carbohydrate a day. How does that compare with the guideline for her load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 5 g·kg⁻¹·day⁻¹: below the 6–10 band",
+       "correct": true,
+       "why": "Right: 290 ÷ 58 = 5 g·kg⁻¹·day⁻¹, short of the 6–10 for 1–3 h a day."
+      },
+      {
+       "id": "b",
+       "text": "About 5 g·kg⁻¹·day⁻¹: inside the 5–7 band, so fine",
+       "why": "The arithmetic is right but the band is wrong: 5–7 is for about 1 h a day."
+      },
+      {
+       "id": "c",
+       "text": "About 20 g·kg⁻¹·day⁻¹: well above any band",
+       "why": "This turns grams into kcal (290 × 4) before dividing by body mass; the band is in grams: 290 ÷ 58 = 5."
+      },
+      {
+       "id": "d",
+       "text": "About 0.2 g·kg⁻¹·day⁻¹: far too low",
+       "why": "This divides body mass by intake (58 ÷ 290); grams per kg = intake ÷ mass."
+      }
+     ],
+     "solution": "290 g ÷ 58 kg = 5 g·kg⁻¹·day⁻¹. For 1–3 h a day the band is 6–10, so she is short."
+    },
+    {
+     "id": "b",
+     "stem": "A 72 kg cyclist rides about 4–5 h a day on a training camp and eats 500 g of carbohydrate a day. How does that compare with the guideline for his load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7 g·kg⁻¹·day⁻¹: below the 8–12 band",
+       "correct": true,
+       "why": "Right: 500 ÷ 72 ≈ 6.9 g·kg⁻¹·day⁻¹, short of the 8–12 for 4–5 h a day."
+      },
+      {
+       "id": "b",
+       "text": "About 7 g·kg⁻¹·day⁻¹: inside the 6–10 band, so fine",
+       "why": "The arithmetic is right but the band is wrong: 6–10 is for 1–3 h a day."
+      },
+      {
+       "id": "c",
+       "text": "About 28 g·kg⁻¹·day⁻¹: well above any band",
+       "why": "This turns grams into kcal (500 × 4) before dividing by body mass; the band is in grams: 500 ÷ 72 ≈ 7."
+      },
+      {
+       "id": "d",
+       "text": "About 0.14 g·kg⁻¹·day⁻¹: far too low",
+       "why": "This divides body mass by intake (72 ÷ 500); grams per kg = intake ÷ mass."
+      }
+     ],
+     "solution": "500 g ÷ 72 kg ≈ 6.9 g·kg⁻¹·day⁻¹. For 4–5 h a day the band is 8–12, so he is short."
+    }
+   ]
+  },
+  {
+   "id": "dc-fwr-plan",
+   "concept": "dc-fwr",
+   "bloom": "apply",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has an easy 45-min recovery spin on Tuesday and a session of 5 × 4 min at VO₂max power on Wednesday. Following \"fuel for the work required\", how should he plan his carbohydrate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower around Tuesday's spin, high before and for Wednesday's intervals",
+       "correct": true,
+       "why": "Right: carbohydrate is matched to each session's demand, and the hard session gets full fuel."
+      },
+      {
+       "id": "b",
+       "text": "High on both days, since more carbohydrate is always better",
+       "why": "That ignores the idea of matching intake to the work; an easy spin needs little extra."
+      },
+      {
+       "id": "c",
+       "text": "Low on both days, to maximise training adaptation",
+       "why": "Short-changing the hard session risks poorer quality work; key sessions get full fuel."
+      },
+      {
+       "id": "d",
+       "text": "High on Tuesday and low on Wednesday, to save glycogen for later",
+       "why": "This is backwards: the hard session is the one that needs high carbohydrate availability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc-availability-def",
+   "concept": "dc-fwr",
+   "bloom": "understand",
+   "sources": [
+    "burke2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist skips lunch and starts an evening interval session with little carbohydrate eaten since breakfast. How would you describe his carbohydrate availability for that session?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low: his intake and its timing don't cover what the session needs",
+       "correct": true,
+       "why": "Right: availability is about whether carbohydrate eaten, and when, covers the work."
+      },
+      {
+       "id": "b",
+       "text": "High, because his daily total over the week is fine",
+       "why": "Availability is judged around each session, not as a weekly average."
+      },
+      {
+       "id": "c",
+       "text": "High, because fat stores are always available",
+       "why": "Carbohydrate availability is about carbohydrate, not fat stores."
+      },
+      {
+       "id": "d",
+       "text": "It can only be judged by a muscle biopsy",
+       "why": "It is judged from intake and timing against the training; no biopsy is needed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc-trainlow-evidence",
+   "concept": "dc-fwr",
+   "bloom": "evaluate",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review finds that training with low carbohydrate boosts muscle adaptation signals in most studies, but only 37% of 11 studies found better performance (63% found no change). What is the best conclusion for a runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A promising idea with an unproven performance payoff",
+       "correct": true,
+       "why": "Right: more signalling doesn't reliably turn into better racing; most studies found no change."
+      },
+      {
+       "id": "b",
+       "text": "Proven to improve performance, so all easy runs should be low-carbohydrate",
+       "why": "Most studies found no performance change, so this overstates the evidence."
+      },
+      {
+       "id": "c",
+       "text": "Proven harmful, so it should never be used",
+       "why": "No change is not harm; the studies don't show worse performance on average."
+      },
+      {
+       "id": "d",
+       "text": "Irrelevant, because signalling is all that matters",
+       "why": "Signalling is a means; what athletes care about is whether performance improves."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,872 @@
+{
+ "id": "lc-train-low",
+ "module": "t4-low-carb",
+ "title": "Train-low: low carbohydrate on purpose",
+ "goal": "Explain the train-low methods, why low glycogen amplifies the training signal, and why the performance gain in trained athletes is small or absent.",
+ "requires": [
+  "lc-keto"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "train-low",
+    "twice-a-day-training",
+    "fasted-training",
+    "sleep-low"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "tl-models",
+   "title": "Train low, compete high",
+   "text": "Keto restricts carbohydrate all the time. [Train-low](g:train-low) restricts it only around selected sessions, typically 30–50% of them [[c:tl-models-def]]. Races are still done on full stores.\n\nThe key idea is [carbohydrate availability](g:carbohydrate-availability): whether glycogen and intake cover a session's fuel needs [[c:tl-availability]]. Four common ways to make it low:\n\n| method | how |\n|---|---|\n| [twice a day](g:twice-a-day-training) | 2nd session hours after the 1st, no refuel |\n| [fasted](g:fasted-training) | train before breakfast |\n| restrict after | no carbohydrate for hours after a session |\n| [sleep-low](g:sleep-low) | hard evening session, no carbohydrate overnight, easy session before breakfast |\n\nFasted training mainly lowers liver glycogen and blood glucose; muscle glycogen is no different from the fed state [[c:tl-fasted]].",
+   "claims": [
+    {
+     "id": "tl-models-def",
+     "text": "Train-low means periodically training (about 30–50% of sessions) with reduced carbohydrate availability, via twice-a-day training, fasted training, post-exercise restriction or sleep-low.",
+     "grade": "strong",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Train-low studies involve periodically training (e.g., 30-50% of training sessions) with reduced CHO availability, where train-low models include twice per day training, fasted training, post-exercise CHO restriction and 'sleep low, train low'.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-availability",
+     "text": "Carbohydrate availability describes whether carbohydrate stores and intake cover the fuel needs of the day's exercise.",
+     "grade": "strong",
+     "sources": [
+      "burke2011"
+     ],
+     "evidence": [
+      {
+       "source": "burke2011",
+       "quote": "An athlete's carbohydrate intake can be judged by whether total daily intake and the timing of consumption in relation to exercise maintain adequate carbohydrate substrate for the muscle and central nervous system (\"high carbohydrate availability\") or whether carbohydrate fuel sources are limiting for the daily exercise programme (\"low carbohydrate availability\").",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-fasted",
+     "text": "In fasted training, pre-exercise muscle glycogen is not different from the fed state; liver glycogen and blood glucose are lower.",
+     "grade": "moderate",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "In this model, pre-exercise muscle glycogen is not different between fasted or fed conditions, but liver glycogen and circulating glucose is higher during fed conditions.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-model-id",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tl-vs-keto"
+  },
+  {
+   "type": "question",
+   "item": "tl-fasted-q"
+  },
+  {
+   "type": "concept",
+   "id": "tl-signal",
+   "title": "Why low glycogen: a louder signal",
+   "text": "Recall the [AMPK](g:ampk) fuel gauge and [PGC-1α](g:pgc-1a) from *Exercise signals* in the adaptation module. Starting a session with low [glycogen](g:glycogen) deepens the fuel shortage, so the same work sends a louder signal: in acute studies, starting with low glycogen boosted AMPK and related signals [[c:tl-ampk]].\n\nIn 10 highly trained cyclists, 60 min at about 64% VO₂max begun with low glycogen (166 vs 478 mmol·kg⁻¹ dry) raised PGC-1α [mRNA](g:mrna) **8.1-fold**, against **2.5-fold** with normal glycogen [[c:tl-psilander]].\n\nAcross studies, train-low boosted cell signalling in 73% of 11 studies and oxidative enzymes in 78% of 9. But performance improved in only 37% of 11 [[c:tl-signal-vs-perf]]. A louder signal isn't automatically a faster athlete.",
+   "claims": [
+    {
+     "id": "tl-ampk",
+     "text": "Starting exercise with low muscle glycogen (sleep-low models, under about 200 mmol·kg⁻¹ dry) enhances AMPK, p38 and p53 signalling.",
+     "grade": "moderate",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Acute models of ‘sleep low, train low’ (where morning exercise is commenced with glycogen < 200 mmol/kg dw) enhance the activation of AMPK, p38 mitogen-activated protein kinase (p38) and tumour protein p53 (p53) signalling",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tl-psilander",
+     "text": "In highly trained cyclists, exercise with low glycogen raised PGC-1α mRNA 8.1-fold vs 2.5-fold with normal glycogen.",
+     "grade": "weak",
+     "sources": [
+      "psilander2013"
+     ],
+     "evidence": [
+      {
+       "source": "psilander2013",
+       "quote": "The mRNA of peroxisome proliferator-activated receptor-γ coactivator-1 was enhanced to a greater extent when exercise was performed with low compared with normal glycogen levels (8.1-fold vs. 2.5-fold increase).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-signal-vs-perf",
+     "text": "Train-low augmented cell signalling in 73% of 11 studies, gene expression in 75% of 12 and oxidative enzymes in 78% of 9, but improved performance in only 37% of 11 studies.",
+     "grade": "moderate",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "When compared with high CHO availability, data suggest that augmented cell signalling (73% of 11 studies), gene expression (75% of 12 studies) and training-induced increases in oxidative enzyme activity/protein content (78% of 9 studies) associated with 'train low' are especially apparent when training sessions are commenced within a specific range of muscle glycogen concentrations.",
+       "level": "abstract"
+      },
+      {
+       "source": "impey2018",
+       "quote": "Nonetheless, such muscle adaptations do not always translate to improved exercise performance (e.g. 37 and 63% of 11 studies show improvements or no change, respectively).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-signal-why"
+  },
+  {
+   "type": "question",
+   "item": "tl-mrna-perf"
+  },
+  {
+   "type": "concept",
+   "id": "tl-early",
+   "title": "Twice a day: untrained legs vs trained cyclists",
+   "text": "The first training study used 7 untrained men, one leg each way. For 10 weeks one leg trained twice every second day (its 2nd session with low glycogen), the other once a day, same total work. The low-glycogen leg gained more [citrate synthase](g:citrate-synthase) activity and much more endurance at 90% of its maximum [[c:tl-hansen]].\n\nIn 14 trained cyclists and triathletes over 3 weeks, twice-every-second-day training raised resting glycogen, fat oxidation and oxidative enzymes more. But the hard intervals done second were harder to sustain, and a 1 h time trial improved by about **10% in both groups** [[c:tl-yeo]].\n\nMuscle markers moved; performance didn't.",
+   "claims": [
+    {
+     "id": "tl-hansen",
+     "text": "In untrained men, a leg trained twice every second day (half its sessions with low glycogen) gained more citrate synthase activity and much more time to exhaustion than the leg trained daily.",
+     "grade": "weak",
+     "sources": [
+      "hansen2005"
+     ],
+     "evidence": [
+      {
+       "source": "hansen2005",
+       "quote": "However, time until exhaustion at 90% was markedly more increased in the Low leg compared with the High leg.",
+       "level": "abstract"
+      },
+      {
+       "source": "hansen2005",
+       "quote": "There was a more pronounced increase in citrate synthase activity when Low was compared with High.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-yeo",
+     "text": "In trained cyclists and triathletes, twice-every-second-day training enhanced some muscle markers and compromised high-intensity training capacity, but 1 h time-trial performance improved about 10% with both regimens.",
+     "grade": "weak",
+     "sources": [
+      "yeo2008"
+     ],
+     "evidence": [
+      {
+       "source": "yeo2008",
+       "quote": "Cycling performance improved by approximately 10% in both Low and High.",
+       "level": "abstract"
+      },
+      {
+       "source": "yeo2008",
+       "quote": "We conclude that compared with training daily, training twice every second day compromised high-intensity training capacity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-hansen-transfer"
+  },
+  {
+   "type": "question",
+   "item": "tl-yeo-q"
+  },
+  {
+   "type": "concept",
+   "id": "tl-sleep-low",
+   "title": "Sleep-low in triathletes",
+   "text": "Marquet's group tested [sleep-low](g:sleep-low) in 21 trained triathletes over 3 weeks. Both groups ate the same **6 g·kg⁻¹·day⁻¹** of carbohydrate; only the timing differed. The sleep-low group improved cycling [delta efficiency](g:delta-efficiency) and ran 10 km **2.9%** faster, against almost no change in the control group; rides at 150% of peak aerobic power only tended to last longer. It also lost more fat mass [[c:tl-marquet]].\n\nA big result for 3 weeks. The limits: athletes knew which group they were in (no [placebo](g:placebo), no [blinding](g:blinding)), groups were small, and the effect is larger than most other studies found [[c:tl-marquet-limit]].",
+   "claims": [
+    {
+     "id": "tl-marquet",
+     "text": "Three weeks of sleep-low with the same daily carbohydrate improved submaximal cycling efficiency and 10 km running time (about 2.9%) in trained triathletes; supramaximal cycling capacity only tended to improve (P = 0.06).",
+     "grade": "weak",
+     "sources": [
+      "impey2018",
+      "marquet2016"
+     ],
+     "evidence": [
+      {
+       "source": "marquet2016",
+       "quote": "Short-term periodization of dietary CHO availability around selected training sessions promoted significant improvements in submaximal cycling economy, as well as supramaximal cycling capacity and 10-km running time in trained endurance athletes.",
+       "level": "abstract"
+      },
+      {
+       "source": "impey2018",
+       "quote": "observed that 1–3 weeks of sleep-low training in elite triathletes and cyclists improves cycling efficiency (3.1%), 20 km cycling time-trial performance (3.2%) and 10 km running performance (2.9%) compared with traditional train-high approaches.",
+       "level": "full-text"
+      },
+      {
+       "source": "marquet2016",
+       "quote": "SL also improved supramaximal cycling to exhaustion at 150% of peak aerobic power (CON, +1.63% ± 12.4%; SL, +12.5% ± 19.0%; P = 0.06) and 10-km running performance (CON, -0.10% ± 2.03%; SL, -2.9% ± 2.15%; P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-marquet-limit",
+     "text": "Sleep-low studies lack a placebo-controlled, double-blinded design.",
+     "grade": "strong",
+     "sources": [
+      "impey2018"
+     ],
+     "evidence": [
+      {
+       "source": "impey2018",
+       "quote": "Nonetheless, similar to other train-low models, the sleep-low paradigm is subject to the obvious limitations of lack of a placebo controlled, double-blinded design.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tl-pct-example",
+   "title": "From a percentage to seconds",
+   "problem": "A triathlete runs 10 km off the bike in 40:00. How many seconds is a 2.9% improvement, and what is the new time?",
+   "steps": [
+    "Convert to seconds: 40 × 60 = 2,400 s.",
+    "2.9% of 2,400 s = 2,400 × 0.029 = 69.6 s, about 70 s.",
+    "New time ≈ 2,400 − 70 = 2,330 s = 38:50."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "tl-marquet-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "tl-elite",
+   "title": "In well-trained athletes: no clear extra gain",
+   "text": "Gejl's group randomised 26 elite male endurance athletes (VO₂max 65 mL·kg⁻¹·min⁻¹) to 4 weeks of training with or without carbohydrate restriction on 3 days a week. Both groups improved 30 min time-trial power by about **5%**, with no difference between them [[c:tl-gejl]].\n\nA [meta-analysis](g:meta-analysis) of 9 studies in well-trained athletes found a [standardised mean difference](g:standardised-mean-difference) of **0.17**, 95% [CI](g:confidence-interval) −0.15 to 0.49 [[c:tl-meta]]. Small, and the interval crosses zero: no clear benefit. The only two positive studies were Marquet's sleep-low trials.\n\nWhy less in trained athletes? They are already highly adapted, and restriction can lower the intensity they reach in hard sessions [[c:tl-trained]].",
+   "claims": [
+    {
+     "id": "tl-gejl",
+     "text": "In 26 elite endurance athletes, 4 weeks of periodic carbohydrate restriction gave no extra gains: 30 min time-trial power rose about 5% in both groups.",
+     "grade": "weak",
+     "sources": [
+      "gejl2017"
+     ],
+     "evidence": [
+      {
+       "source": "gejl2017",
+       "quote": "power output during the 30-min TT increased by 5% ± 1%",
+       "level": "abstract"
+      },
+      {
+       "source": "gejl2017",
+       "quote": "Superimposing periodic CHO restriction to 4 wk of regular endurance training had no superior effects on performance and muscle adaptations in elite endurance athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tl-meta",
+     "text": "A meta-analysis of 9 studies in well-trained athletes found no overall performance effect of carbohydrate periodisation (SMD 0.17, 95% CI −0.15 to 0.49); the only two positive studies were by Marquet and colleagues.",
+     "grade": "moderate",
+     "sources": [
+      "gejl2021"
+     ],
+     "evidence": [
+      {
+       "source": "gejl2021",
+       "quote": "The subsequent meta-analysis demonstrated no overall effect of CHO periodization on endurance performance compared to control endurance training with normal (high) CHO availability (standardized mean difference = 0.17 [- 0.15, 0.49]; P = 0.29).",
+       "level": "abstract"
+      },
+      {
+       "source": "gejl2021",
+       "quote": "Interestingly the two only studies displaying beneficial overall effects from CHO restriction belong to this category and were conducted by Marquet and colleagues",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tl-trained",
+     "text": "Trained athletes are highly adapted and less responsive to extra exercise stress than untrained people, and carbohydrate restriction can compromise the intensity of hard sessions.",
+     "grade": "moderate",
+     "sources": [
+      "gejl2021",
+      "yeo2008"
+     ],
+     "evidence": [
+      {
+       "source": "gejl2021",
+       "quote": "since trained endurance athletes are highly metabolically adapted and less susceptible to exercise-induced stress when compared to that of untrained individuals",
+       "level": "full-text"
+      },
+      {
+       "source": "gejl2021",
+       "quote": "Compromised training quality and particularly lower intensities in peak intervals seem to be a major drawback from dietary interventions with chronic carbohydrate (CHO) restriction.",
+       "level": "abstract"
+      },
+      {
+       "source": "yeo2008",
+       "quote": "We conclude that compared with training daily, training twice every second day compromised high-intensity training capacity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tl-meta-interpret"
+  },
+  {
+   "type": "question",
+   "item": "tl-trained-vs-untrained"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Train-low restricts carbohydrate around selected sessions (about 30–50%): twice a day, fasted, restricted after, or sleep-low; races stay fully fuelled.",
+    "Low glycogen deepens the fuel shortage, boosting AMPK signalling and PGC-1α mRNA (8.1- vs 2.5-fold in one study).",
+    "Signals and enzymes improve in most studies, performance in only about a third.",
+    "Untrained and single-leg studies look good; in well-trained athletes a meta-analysis finds no clear performance gain (SMD 0.17, CI crossing zero).",
+    "The positive sleep-low trials were unblinded and small, and low-carbohydrate sessions can cost intensity."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "tl-model-id",
+   "concept": "tl-models",
+   "bloom": "apply",
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides hard intervals at 18:00, eats a dinner of meat and vegetables with no carbohydrate, then rides 90 min easy at 07:00 before breakfast. Which train-low method is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sleep-low",
+       "correct": true,
+       "why": "Right: hard evening session, no carbohydrate overnight, easy fasted session next morning."
+      },
+      {
+       "id": "b",
+       "text": "Twice-a-day training",
+       "why": "Twice a day means two sessions a few hours apart on the same day."
+      },
+      {
+       "id": "c",
+       "text": "A ketogenic diet",
+       "why": "Keto restricts carbohydrate all the time; this restricts it around one night."
+      },
+      {
+       "id": "d",
+       "text": "Fasted training only",
+       "why": "The morning ride is fasted, but the low-carbohydrate night after hard work makes it sleep-low, with lower muscle glycogen."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner does a 1 h tempo run at 07:00, eats only eggs and coffee, and runs again at 11:00. Which train-low method is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Twice-a-day training",
+       "correct": true,
+       "why": "Right: the second session starts hours after the first with no refuelling, so glycogen is low."
+      },
+      {
+       "id": "b",
+       "text": "Sleep-low",
+       "why": "Sleep-low uses an overnight gap after an evening session."
+      },
+      {
+       "id": "c",
+       "text": "A ketogenic diet",
+       "why": "Keto restricts carbohydrate all the time; this restricts it between two sessions."
+      },
+      {
+       "id": "d",
+       "text": "Fasted training only",
+       "why": "The first run wasn't said to be fasted; the low glycogen comes from the unrefuelled gap."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-vs-keto",
+   "concept": "tl-models",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does train-low differ from a ketogenic diet?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It restricts carbohydrate only around selected sessions; races are fully fuelled",
+       "correct": true,
+       "why": "Right: 'train low, compete high'. Keto keeps carbohydrate low all the time."
+      },
+      {
+       "id": "b",
+       "text": "It cuts carbohydrate all the time, just less strictly",
+       "why": "That describes a moderate low-carbohydrate diet, not train-low."
+      },
+      {
+       "id": "c",
+       "text": "It aims to race in ketosis",
+       "why": "Train-low aims to race with full glycogen and carbohydrate during."
+      },
+      {
+       "id": "d",
+       "text": "It cuts fat instead of carbohydrate",
+       "why": "Train-low is about carbohydrate availability, not fat intake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-fasted-q",
+   "concept": "tl-models",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete swims 45 min easy before breakfast instead of after it. What is mainly lower during the fasted swim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Liver glycogen and blood glucose",
+       "correct": true,
+       "why": "Right: the overnight fast lowers liver glycogen; muscle glycogen is about the same as fed."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen, by about half",
+       "why": "Muscle glycogen is not different between fasted and fed; it needs prior exercise to fall."
+      },
+      {
+       "id": "c",
+       "text": "Fat oxidation",
+       "why": "Fat oxidation is higher when fasted, not lower."
+      },
+      {
+       "id": "d",
+       "text": "VO₂max",
+       "why": "One missed breakfast doesn't change VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-signal-why",
+   "concept": "tl-signal",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why might starting a session with low muscle glycogen strengthen the training signal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A deeper fuel shortage switches on more AMPK, which drives PGC-1α",
+       "correct": true,
+       "why": "Right: AMPK senses low fuel; low glycogen adds to the shortage the session already causes."
+      },
+      {
+       "id": "b",
+       "text": "Low glycogen raises VO₂max directly",
+       "why": "VO₂max changes over weeks of training, not from one session's fuel state."
+      },
+      {
+       "id": "c",
+       "text": "Glycogen blocks genes from being read",
+       "why": "Glycogen is a fuel store, not a gene switch; the effect runs through fuel sensors."
+      },
+      {
+       "id": "d",
+       "text": "The session feels easier, so more work gets done",
+       "why": "The opposite: low glycogen makes sessions feel harder, and hard ones may suffer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-mrna-perf",
+   "concept": "tl-signal",
+   "bloom": "analyse",
+   "sources": [
+    "impey2018",
+    "psilander2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study finds PGC-1α mRNA rises 3 times more after a low-glycogen session. A coach concludes that train-low will make his runners faster. What's the best critique?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Signals rise far more often than performance does",
+       "correct": true,
+       "why": "Right: mRNA is an early signal. Signals rose in most studies but performance in only 37% of 11; the step from signal to speed is uncertain."
+      },
+      {
+       "id": "b",
+       "text": "PGC-1α lowers the number of mitochondria",
+       "why": "PGC-1α drives mitochondrial biogenesis; the logic fails elsewhere."
+      },
+      {
+       "id": "c",
+       "text": "mRNA can't be measured in human muscle",
+       "why": "It can and was, from muscle biopsies."
+      },
+      {
+       "id": "d",
+       "text": "The finding applies only to swimmers",
+       "why": "The study was in cyclists; the issue is signal vs performance, not sport."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-hansen-transfer",
+   "concept": "tl-early",
+   "bloom": "analyse",
+   "sources": [
+    "hansen2005",
+    "yeo2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 7 untrained men, the leg trained twice every second day gained much more endurance than the other leg. Why can't a trained cyclist expect the same?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Untrained muscle, one-leg test; trained cyclists gained equally",
+       "correct": true,
+       "why": "Right: Yeo's trained cyclists and triathletes improved about 10% either way."
+      },
+      {
+       "id": "b",
+       "text": "The two legs ate different diets, so the comparison is confounded",
+       "why": "Both legs belong to one person eating one diet; the glycogen difference came from session timing."
+      },
+      {
+       "id": "c",
+       "text": "10 weeks is too long for adaptations to show",
+       "why": "Long studies show more adaptation, not less."
+      },
+      {
+       "id": "d",
+       "text": "Knee-extensor muscles can't adapt to training",
+       "why": "They adapted well; the question is whether the result transfers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-yeo-q",
+   "concept": "tl-early",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "yeo2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the trained cyclists who trained twice every second day, what was worse than in the once-daily group?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Their hard interval sessions",
+       "correct": true,
+       "why": "Right: the intervals done second, with low glycogen, were harder to sustain: high-intensity training capacity was compromised."
+      },
+      {
+       "id": "b",
+       "text": "Their 1 h time-trial improvement",
+       "why": "Both groups improved by about 10%."
+      },
+      {
+       "id": "c",
+       "text": "Their rise in fat oxidation",
+       "why": "Fat oxidation rose more in the twice-a-day group."
+      },
+      {
+       "id": "d",
+       "text": "Their resting muscle glycogen",
+       "why": "Resting glycogen rose only in the twice-a-day group."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-pct-calc",
+   "concept": "tl-sleep-low",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "marquet2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete runs 10 km in 45:00. Sleep-low gives a 2.9% improvement. How many seconds faster is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 78 s",
+       "correct": true,
+       "why": "Right: 45 × 60 = 2,700 s; 2,700 × 0.029 = 78.3 s."
+      },
+      {
+       "id": "b",
+       "text": "About 2.9 s",
+       "why": "This reads the percentage as seconds."
+      },
+      {
+       "id": "c",
+       "text": "About 130 s",
+       "why": "This multiplies the minutes by the percentage (45 × 2.9) instead of taking 2.9% of the time in seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 7.8 s",
+       "why": "A factor-of-ten slip: the percentage was divided by 1000 instead of 100."
+      }
+     ],
+     "solution": "Time in seconds: 45 × 60 = 2,700 s. 2.9% of it: 2,700 × 0.029 = 78.3 s, about 78 s faster."
+    },
+    {
+     "id": "b",
+     "stem": "A club runner runs 10 km in 50:00. Sleep-low gives a 2.9% improvement. How many seconds faster is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 87 s",
+       "correct": true,
+       "why": "Right: 50 × 60 = 3,000 s; 3,000 × 0.029 = 87.0 s."
+      },
+      {
+       "id": "b",
+       "text": "About 2.9 s",
+       "why": "This reads the percentage as seconds."
+      },
+      {
+       "id": "c",
+       "text": "About 145 s",
+       "why": "This multiplies the minutes by the percentage (50 × 2.9) instead of taking 2.9% of the time in seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 8.7 s",
+       "why": "A factor-of-ten slip: the percentage was divided by 1000 instead of 100."
+      }
+     ],
+     "solution": "Time in seconds: 50 × 60 = 3,000 s. 2.9% of it: 3,000 × 0.029 = 87.0 s, about 87 s faster."
+    },
+    {
+     "id": "c",
+     "stem": "A fast age-grouper runs 10 km in 36:00. Sleep-low gives a 2.9% improvement. How many seconds faster is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 63 s",
+       "correct": true,
+       "why": "Right: 36 × 60 = 2,160 s; 2,160 × 0.029 = 62.6 s."
+      },
+      {
+       "id": "b",
+       "text": "About 2.9 s",
+       "why": "This reads the percentage as seconds."
+      },
+      {
+       "id": "c",
+       "text": "About 104 s",
+       "why": "This multiplies the minutes by the percentage (36 × 2.9) instead of taking 2.9% of the time in seconds."
+      },
+      {
+       "id": "d",
+       "text": "About 6.3 s",
+       "why": "A factor-of-ten slip: the percentage was divided by 1000 instead of 100."
+      }
+     ],
+     "solution": "Time in seconds: 36 × 60 = 2,160 s. 2.9% of it: 2,160 × 0.029 = 62.6 s, about 63 s faster."
+    }
+   ]
+  },
+  {
+   "id": "tl-marquet-appraise",
+   "concept": "tl-sleep-low",
+   "bloom": "evaluate",
+   "sources": [
+    "marquet2016",
+    "impey2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits confidence in the 2.9% faster 10 km after 3 weeks of sleep-low?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Athletes knew their group: no placebo",
+       "correct": true,
+       "why": "Right: no placebo or blinding, small groups, and an effect larger than most other studies; expectation could add to the result."
+      },
+      {
+       "id": "b",
+       "text": "Both groups ate the same daily carbohydrate",
+       "why": "That's a strength: only timing differed, so the comparison is fair."
+      },
+      {
+       "id": "c",
+       "text": "3 weeks is too long for a diet study",
+       "why": "Longer would be better; 3 weeks is short."
+      },
+      {
+       "id": "d",
+       "text": "Triathletes can't do sleep-low safely",
+       "why": "They did; safety isn't what limits the result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-meta-interpret",
+   "concept": "tl-elite",
+   "bloom": "evaluate",
+   "sources": [
+    "gejl2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis of carbohydrate periodisation in well-trained athletes reports SMD = 0.17 (95% CI −0.15 to 0.49). What does this mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A small average effect, with no clear benefit: the interval includes zero",
+       "correct": true,
+       "why": "Right: the data fit anything from slight harm to a moderate gain, so no benefit is shown."
+      },
+      {
+       "id": "b",
+       "text": "Periodising makes athletes 17% faster",
+       "why": "An SMD is in standard-deviation units, not a percentage of performance."
+      },
+      {
+       "id": "c",
+       "text": "It proves periodising harms performance",
+       "why": "The interval reaches −0.15 but is centred on a small positive value; harm isn't shown either."
+      },
+      {
+       "id": "d",
+       "text": "It proves a benefit, because 0.17 is above zero",
+       "why": "A point estimate above zero means little when the interval crosses zero."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tl-trained-vs-untrained",
+   "concept": "tl-elite",
+   "bloom": "analyse",
+   "sources": [
+    "gejl2021",
+    "yeo2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why might train-low studies in untrained people overstate what a well-trained cyclist can expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Trained muscle has less room to adapt",
+       "correct": true,
+       "why": "Right: trained muscle is already highly adapted, so there is less room for extra gains, and low-carbohydrate sessions can cost intensity."
+      },
+      {
+       "id": "b",
+       "text": "Untrained people store more glycogen",
+       "why": "Training raises glycogen stores; untrained people store less."
+      },
+      {
+       "id": "c",
+       "text": "Trained athletes can't lower their glycogen",
+       "why": "They can; studies in trained athletes lowered it to under 200 mmol·kg⁻¹ dry."
+      },
+      {
+       "id": "d",
+       "text": "Untrained studies always use larger samples",
+       "why": "The untrained study here had 7 men; sample size isn't the reason."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

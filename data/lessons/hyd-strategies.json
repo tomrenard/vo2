@@ -1,0 +1,783 @@
+{
+ "id": "hyd-strategies",
+ "module": "t4-hydration",
+ "title": "Drinking to thirst or to a plan",
+ "goal": "Choose between drinking to thirst and planned drinking for a given event, work out a sweat rate and a drinking rate from body mass, and plan sensible drinking before the start.",
+ "requires": [
+  "hyd-balance"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "drinking-to-thirst",
+    "planned-drinking",
+    "sweat-rate",
+    "hyperhydration"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hs-thirst",
+   "title": "Thirst as a guide",
+   "text": "[Drinking to thirst](g:drinking-to-thirst) means drinking when, and as much as, you want. Thirst is switched on mainly by rising plasma [osmolality](g:osmolality), at roughly a 2% body mass loss.\n\nTwo catches. Drinking quiets thirst before the water is fully replaced, and during exercise thirst is less sensitive than at rest. So drinking to thirst usually replaces only about half of what you sweat [[c:hs-thirst-half]].\n\nIs that a problem? In Goulet's meta-analysis of cycling time trials, drinking to thirst went with better performance than drinking less than thirst asked for, and no clear difference from drinking more [[c:hs-thirst-tt]]. Its other big plus: replacing about half your losses makes drinking too much unlikely.",
+   "claims": [
+    {
+     "id": "hs-thirst-half",
+     "text": "Thirst is relieved before full rehydration, so drinking to thirst replaces about half of fluid losses, which also makes it protective against hyponatraemia.",
+     "grade": "moderate",
+     "sources": [
+      "kenefick2018"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "In humans, thirst tends to be alleviated before complete rehydration is achieved.",
+       "level": "abstract"
+      },
+      {
+       "source": "kenefick2018",
+       "quote": "As the practice of ad libitum/drink to thirst fluid intake appears to result in fluid replacement of about half of fluid losses",
+       "level": "full-text"
+      },
+      {
+       "source": "kenefick2018",
+       "quote": "this strategy would appear to be successful in the prevention of hyponatremia",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hs-thirst-tt",
+     "text": "In cycling time trials, drinking to thirst was associated with better performance than drinking below thirst, and no clear difference from drinking above it.",
+     "grade": "weak",
+     "sources": [
+      "goulet2011"
+     ],
+     "evidence": [
+      {
+       "source": "goulet2011",
+       "quote": "Drinking according to the dictate of thirst was associated with an increase in TT performance compared with a rate of drinking below (+5.2 ± 4.6%, p=0.01) or above (+2.4 ± 5.0%, p=0.40) thirst.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hs-thirst-half"
+  },
+  {
+   "type": "concept",
+   "id": "hs-when",
+   "title": "Thirst or plan: when each fits",
+   "text": "[Planned drinking](g:planned-drinking) means set amounts on a schedule, based on your own sweat rate. A review sums up when each fits [[c:hs-when-fits]]:\n\n| a plan fits better | thirst is usually enough |\n|---|---|\n| over about 90 min, especially in heat | under about 1 h to 90 min |\n| hard efforts, high sweat rates | cool weather |\n| when performance matters | easy intensity |\n| when drinks carry ~1 g carbohydrate a minute | |\n\nAccess matters too. A plan works only if you can reach the fluid; when you can't stick to it, a position statement says to fall back on thirst [[c:hs-access]].\n\nBoth camps share one rule: never drink so much that you **gain weight** during exercise [[c:hs-no-gain]].",
+   "claims": [
+    {
+     "id": "hs-when-fits",
+     "text": "Planned drinking suits events over about 90 min (especially in heat), high intensity and sweat rates, performance goals and high carbohydrate intake from drinks; drinking to thirst suits events under 1 h to 90 min, cool conditions and low intensity.",
+     "grade": "moderate",
+     "sources": [
+      "kenefick2018"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "Circumstances where planned drinking is optimal include longer duration activities of > 90 min, particularly in the heat; higher-intensity exercise with high sweat rates; exercise where performance is a concern; and when carbohydrate intake of 1 g/min is desired.",
+       "level": "abstract"
+      },
+      {
+       "source": "kenefick2018",
+       "quote": "Circumstances where drinking to thirst may be sufficient include short duration exercise of < 1 h to 90 min; exercise in cooler conditions; and lower-intensity exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hs-access",
+     "text": "When athletes cannot follow a drinking plan matched to their sweat rate, drinking to thirst should be considered.",
+     "grade": "moderate",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Drinking to thirst should also be considered when exercising athletes cannot follow their ideal plan for replacing fluids at a rate similar to their sweat rate.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hs-no-gain",
+     "text": "Athletes should never drink so much that they gain body mass during exercise.",
+     "grade": "strong",
+     "sources": [
+      "kenefick2018",
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "It is recommended to never drink so much that weight is gained.",
+       "level": "abstract"
+      },
+      {
+       "source": "mcdermott2017",
+       "quote": "Individuals should not gain body mass (or body weight) during exercise (from pre-exercise to postexercise) unless they begin activity with an unavoidable fluid deficit.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hs-when-scenario",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hs-gain-meaning"
+  },
+  {
+   "type": "question",
+   "item": "hs-when-scenario",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "hs-sweat-rate",
+   "title": "Measuring your sweat rate",
+   "text": "A plan starts with your [sweat rate](g:sweat-rate). The standard equation [[c:hs-equation]]:\n\n**sweat loss (L) = mass before − mass after + fluid drunk − urine passed**\n\n**sweat rate (L·h⁻¹) = sweat loss ÷ hours**\n\nWeigh nude and dry, in kg. Unlike the deficit in the last lesson, the drink *is* added here: you sweated that out too.\n\nTypical rates run 0.5–2.0 L·h⁻¹ (see the *Sweat* lesson) and change with heat, pace and fitness, so test in conditions like the race [[c:hs-like-race]]. Then plan to replace enough to finish within about 2% of starting mass, and never more than you lose.",
+   "claims": [
+    {
+     "id": "hs-equation",
+     "text": "Sweat loss equals body mass before minus after, plus fluid drunk, minus urine; divided by duration it gives sweat rate.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Sweat loss (L) = Body mass before exercise (kg) – Body mass after exercise (kg) + (Volume of fluid consumed during exercise [L]) – (Urine volume, if any [L])",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hs-like-race",
+     "text": "Athletes with high sweat rates or performance goals should measure sweat rate in race-like intensity and conditions and drink to keep losses under 2%.",
+     "grade": "moderate",
+     "sources": [
+      "kenefick2018"
+     ],
+     "evidence": [
+      {
+       "source": "kenefick2018",
+       "quote": "Individuals with high sweat rates and/or those concerned with exercise performance should determine sweat rates under conditions (exercise intensity, pace) and environments similar to that anticipated when competing and tailor drinking to prevent body mass losses > 2%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hs-sweat-example",
+   "title": "From sweat rate to a drinking plan",
+   "problem": "A cyclist weighs 75.0 kg before a 1.5 h ride at race pace in the heat and 73.6 kg after. He drank 0.75 L and passed no urine. What is his sweat rate, and how much should he drink per hour in a 4 h race in the same conditions to finish about 2% down?",
+   "steps": [
+    "Sweat loss = 75.0 − 73.6 + 0.75 − 0 = 1.4 + 0.75 = 2.15 L.",
+    "Sweat rate = 2.15 ÷ 1.5 h = 1.43 L·h⁻¹.",
+    "In 4 h he would sweat about 1.43 × 4 = 5.7 L. A 2% deficit is 0.02 × 75 = 1.5 L.",
+    "He needs to drink about 5.7 − 1.5 = 4.2 L over 4 h: about 1.05 L·h⁻¹. Drinking the full 1.43 L·h⁻¹ isn't needed, and drinking more than that would mean gaining weight."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hs-sweat-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hs-plan-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hs-pre",
+   "title": "Before the start",
+   "text": "Start [euhydrated](g:euhydration), not overfilled. The ACSM advice is to drink, when needed, at least several hours before, so the kidneys have time to pass any extra [[c:hs-pre-hours]]. A common recipe: about 5–7 mL·kg⁻¹ about 4 h before, then 3–5 mL·kg⁻¹ about 2 h before [[c:hs-pre-volume]]. For a 70 kg runner that is 350–490 mL, then 210–350 mL.\n\nDeliberate [hyperhydration](g:hyperhydration) is a niche tool. NATA sees no advantage outside special cases such as no fluid access or very high sweat losses; Sports Dietitians Australia say it may help in some hot events, with sodium or glycerol so the body keeps the extra water [[c:hs-hyper]].\n\nFor most amateurs: normal meals, normal drinking, no chugging at the start line.",
+   "claims": [
+    {
+     "id": "hs-pre-hours",
+     "text": "Prehydrating, when needed, should start at least several hours before exercise so fluid is absorbed and urine output returns to normal.",
+     "grade": "strong",
+     "sources": [
+      "sawka2007"
+     ],
+     "evidence": [
+      {
+       "source": "sawka2007",
+       "quote": "Prehydrating with beverages, in addition to normal meals and fluid intake, should be initiated when needed at least several hours before the activity to enable fluid absorption and allow urine output to return to normal levels.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hs-pre-volume",
+     "text": "Recommended pre-exercise drinking is about 5–7 mL·kg⁻¹ about 4 h before exercise and 3–5 mL·kg⁻¹ more about 2 h before.",
+     "grade": "moderate",
+     "sources": [
+      "veniamakis2022"
+     ],
+     "evidence": [
+      {
+       "source": "veniamakis2022",
+       "quote": "Before exercise 5–7 mL/kg 4 h before exercise and more 3–5 mL/kg, 2 h before competition",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hs-hyper",
+     "text": "Pre-exercise hyperhydration gives no advantage in most situations; it may be useful in specific cases (no fluid access, very high sweat losses, some hot events), using sodium or glycerol loading.",
+     "grade": "moderate",
+     "sources": [
+      "mcdermott2017",
+      "mccubbin2020"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Hyperhydration confers no physiological or performance advantages and is not recommended, except in specific situations with medical oversight and when factors necessitating hyperhydration before activity (eg, lack of fluid availability during the event, known excessive sweat losses) are present.",
+       "level": "full-text"
+      },
+      {
+       "source": "mccubbin2020",
+       "quote": "Furthermore, preexercise hyperhydration may be desirable in some scenarios and can be achieved through acute sodium or glycerol loading protocols.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hs-pre-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hs-pre-why"
+  },
+  {
+   "type": "question",
+   "item": "hs-hyper-eval"
+  },
+  {
+   "type": "question",
+   "item": "hs-sweat-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hs-plan-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "hs-when-scenario",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Drinking to thirst replaces about half of sweat losses: enough for short, cool or easy sessions, and it rarely leads to overdrinking.",
+    "Planned drinking fits long, hot, hard events, performance goals and high carbohydrate intake from drinks; when you can't follow a plan, use thirst.",
+    "Sweat loss = mass before − mass after + fluid drunk − urine; divide by hours for sweat rate. Measure it in race-like conditions.",
+    "Plan to finish within about 2% of starting mass, and never gain weight during exercise.",
+    "Before the start: about 5–7 mL·kg⁻¹ 4 h before (more 2 h before if needed), so the kidneys can pass the extra; hyperhydration is for special cases."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hs-thirst-half",
+   "concept": "hs-thirst",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kenefick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does drinking to thirst usually leave a runner with some water deficit after a long, hot run?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drinking quiets thirst before the losses are fully replaced",
+       "correct": true,
+       "why": "Right: thirst is relieved before full rehydration, and it is less sensitive during exercise, so about half the losses are replaced."
+      },
+      {
+       "id": "b",
+       "text": "Thirst only switches on after about 5% body mass loss",
+       "why": "Thirst starts at about a 2% rise in plasma osmolality, roughly a 2% body mass loss, not 5%."
+      },
+      {
+       "id": "c",
+       "text": "Thirst tracks blood sugar, not body water",
+       "why": "Thirst is driven mainly by plasma osmolality and, less, by low blood volume, not by blood sugar."
+      },
+      {
+       "id": "d",
+       "text": "The gut can't absorb water during running",
+       "why": "The gut does absorb water during running; the shortfall comes from how much people choose to drink."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hs-when-scenario",
+   "concept": "hs-when",
+   "bloom": "apply",
+   "sources": [
+    "kenefick2018",
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner races a 10 km on a cool morning, finishing in about 40 min. Best drinking approach during the race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drink to thirst, which may mean nothing at all",
+       "correct": true,
+       "why": "Right: short, cool events are where thirst is enough; losses stay well under 2%."
+      },
+      {
+       "id": "b",
+       "text": "A plan that replaces all her sweat as she goes",
+       "why": "Planned drinking pays off in long, hot or hard events; in 40 cool minutes it adds nothing."
+      },
+      {
+       "id": "c",
+       "text": "A cup at every station whether thirsty or not",
+       "why": "Drinking by the station, not by need, is how people overdrink; it isn't needed here."
+      },
+      {
+       "id": "d",
+       "text": "500 mL in the last 5 min before the gun",
+       "why": "A big last-minute drink mostly sloshes in the stomach or ends up as urine; start euhydrated instead."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete faces a 5.5 h Ironman bike leg at 30 °C, aiming for a fast time and taking most of her carbohydrate from drinks. Best drinking approach?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A plan built from her sweat rate measured in similar heat",
+       "correct": true,
+       "why": "Right: long, hot, performance-focused and carbohydrate from drinks: all four point to planned drinking."
+      },
+      {
+       "id": "b",
+       "text": "Drink to thirst only, as in her short races",
+       "why": "Thirst replaces about half of losses; over 5.5 h in the heat the deficit can grow large."
+      },
+      {
+       "id": "c",
+       "text": "As much as possible at every aid station",
+       "why": "Drinking beyond losses causes weight gain and raises the risk of hyponatraemia."
+      },
+      {
+       "id": "d",
+       "text": "Little on the bike, then catch up on the run",
+       "why": "The deficit builds all ride, and drinking is harder while running; plan it on the bike."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist does a 2 h easy endurance ride at 12 °C. Best drinking approach?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Drink to thirst",
+       "correct": true,
+       "why": "Right: easy intensity and cool weather mean low sweat rates; thirst is enough."
+      },
+      {
+       "id": "b",
+       "text": "A plan replacing 100% of sweat losses",
+       "why": "Full replacement is never the goal, and an easy, cool ride needs no plan."
+      },
+      {
+       "id": "c",
+       "text": "1 L every hour, whatever the conditions",
+       "why": "A fixed amount ignores the low sweat rate of a cool, easy ride and risks drinking more than is lost."
+      },
+      {
+       "id": "d",
+       "text": "Nothing at all, even when thirsty",
+       "why": "Ignoring thirst on a 2 h ride has no benefit; drink when you want to."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hs-gain-meaning",
+   "concept": "hs-when",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kenefick2018",
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 4.5 h marathon, a runner weighs 0.8 kg more than at the start. What does that show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She drank more than she lost in sweat and urine",
+       "correct": true,
+       "why": "Right: a gain during exercise can only come from drinking more than was lost. It's the one thing both drinking camps say to avoid."
+      },
+      {
+       "id": "b",
+       "text": "She was perfectly hydrated, which is a good sign",
+       "why": "The target is a small loss, not a gain; gaining weight means overdrinking."
+      },
+      {
+       "id": "c",
+       "text": "The scale must be wrong, since running always loses mass",
+       "why": "Running loses sweat, but drinking can more than make up for it; gains are real and common in slow marathoners."
+      },
+      {
+       "id": "d",
+       "text": "She stored extra glycogen during the race",
+       "why": "Glycogen is used up during a marathon, not stored."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hs-sweat-calc",
+   "concept": "hs-sweat-rate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "mcdermott2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner weighs 64.0 kg before a 75 min run and 62.9 kg after. She drank 0.5 L and passed 0.1 L of urine. What is her sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.2 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.1 + 0.5 − 0.1) ÷ 1.25 h = 1.5 ÷ 1.25 = 1.2 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.88 L·h⁻¹",
+       "why": "This uses the mass change alone (1.1 ÷ 1.25) and forgets the drink and urine."
+      },
+      {
+       "id": "c",
+       "text": "1.36 L·h⁻¹",
+       "why": "This adds the urine instead of taking it away: (1.1 + 0.5 + 0.1) ÷ 1.25."
+      },
+      {
+       "id": "d",
+       "text": "2.0 L·h⁻¹",
+       "why": "This takes 75 min as 0.75 h. 75 min is 1.25 h."
+      }
+     ],
+     "solution": "Sweat loss = 64.0 − 62.9 + 0.5 − 0.1 = 1.5 L. Time = 75 min = 1.25 h. Sweat rate = 1.5 ÷ 1.25 = 1.2 L·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete weighs 70.0 kg before a 2 h brick session and 68.6 kg after. She drank 1.2 L and passed no urine. What is her sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.3 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.4 + 1.2) ÷ 2 = 2.6 ÷ 2 = 1.3 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.7 L·h⁻¹",
+       "why": "This uses the mass change alone (1.4 ÷ 2) and forgets the 1.2 L she drank, which she also sweated."
+      },
+      {
+       "id": "c",
+       "text": "0.1 L·h⁻¹",
+       "why": "This takes the drink away instead of adding it: (1.4 − 1.2) ÷ 2."
+      },
+      {
+       "id": "d",
+       "text": "2.6 L·h⁻¹",
+       "why": "2.6 L is the total sweat loss; divide by the 2 h to get a rate."
+      }
+     ],
+     "solution": "Sweat loss = 70.0 − 68.6 + 1.2 − 0 = 2.6 L. Sweat rate = 2.6 ÷ 2 h = 1.3 L·h⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist weighs 80.0 kg before a 3 h ride and 78.5 kg after. He drank 1.5 L and passed 0.3 L of urine. What is his sweat rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.9 L·h⁻¹",
+       "correct": true,
+       "why": "Right: (1.5 + 1.5 − 0.3) ÷ 3 = 2.7 ÷ 3 = 0.9 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "0.5 L·h⁻¹",
+       "why": "This uses the mass change alone (1.5 ÷ 3) and forgets the drink and urine."
+      },
+      {
+       "id": "c",
+       "text": "1.1 L·h⁻¹",
+       "why": "This adds the urine instead of taking it away: (1.5 + 1.5 + 0.3) ÷ 3."
+      },
+      {
+       "id": "d",
+       "text": "2.7 L·h⁻¹",
+       "why": "2.7 L is the total sweat loss over the ride; divide by the 3 h."
+      }
+     ],
+     "solution": "Sweat loss = 80.0 − 78.5 + 1.5 − 0.3 = 2.7 L. Sweat rate = 2.7 ÷ 3 h = 0.9 L·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hs-plan-calc",
+   "concept": "hs-sweat-rate",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "kenefick2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg runner sweats 1.2 L·h⁻¹ in a 4 h hot marathon. To finish about 2% down, about how much should he drink per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.85 L·h⁻¹",
+       "correct": true,
+       "why": "Right: he loses 4.8 L; 2% of 70 kg is 1.4 L he can leave unreplaced; 3.4 L over 4 h = 0.85 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.2 L·h⁻¹",
+       "why": "That replaces all the sweat. Full replacement isn't needed, and if the sweat rate is overestimated it leads to weight gain."
+      },
+      {
+       "id": "c",
+       "text": "0.35 L·h⁻¹",
+       "why": "This is the allowed deficit per hour (1.4 ÷ 4), not the amount to drink."
+      },
+      {
+       "id": "d",
+       "text": "1.55 L·h⁻¹",
+       "why": "This adds the allowed deficit to the sweat rate instead of taking it away."
+      }
+     ],
+     "solution": "Total sweat = 1.2 × 4 = 4.8 L. Allowed deficit = 0.02 × 70 = 1.4 L. To drink = 4.8 − 1.4 = 3.4 L, so 3.4 ÷ 4 = 0.85 L·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A 60 kg triathlete sweats 1.0 L·h⁻¹ in a 5 h race. To finish about 2% down, about how much should she drink per hour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.76 L·h⁻¹",
+       "correct": true,
+       "why": "Right: she loses 5.0 L; 2% of 60 kg is 1.2 L; 3.8 L over 5 h = 0.76 L·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "1.0 L·h⁻¹",
+       "why": "That replaces all the sweat; full replacement isn't needed and risks weight gain if the rate is overestimated."
+      },
+      {
+       "id": "c",
+       "text": "0.24 L·h⁻¹",
+       "why": "This is the allowed deficit per hour (1.2 ÷ 5), not the amount to drink."
+      },
+      {
+       "id": "d",
+       "text": "1.24 L·h⁻¹",
+       "why": "This adds the allowed deficit to the sweat rate instead of taking it away."
+      }
+     ],
+     "solution": "Total sweat = 1.0 × 5 = 5.0 L. Allowed deficit = 0.02 × 60 = 1.2 L. To drink = 5.0 − 1.2 = 3.8 L, so 3.8 ÷ 5 = 0.76 L·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hs-pre-calc",
+   "concept": "hs-pre",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "veniamakis2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Using 5–7 mL·kg⁻¹ about 4 h before the start, how much should a 60 kg runner drink?",
+     "options": [
+      {
+       "id": "a",
+       "text": "300–420 mL",
+       "correct": true,
+       "why": "Right: 5 × 60 = 300 mL and 7 × 60 = 420 mL."
+      },
+      {
+       "id": "b",
+       "text": "3.0–4.2 L",
+       "why": "Ten times too much: 5 × 60 = 300 mL, which is 0.3 L, not 3.0 L."
+      },
+      {
+       "id": "c",
+       "text": "180–300 mL",
+       "why": "This uses the smaller 3–5 mL·kg⁻¹ top-up meant for about 2 h before."
+      },
+      {
+       "id": "d",
+       "text": "30–42 mL",
+       "why": "Ten times too little: 5 × 60 is 300, not 30."
+      }
+     ],
+     "solution": "5 mL·kg⁻¹ × 60 kg = 300 mL; 7 mL·kg⁻¹ × 60 kg = 420 mL."
+    },
+    {
+     "id": "b",
+     "stem": "Using 5–7 mL·kg⁻¹ about 4 h before the start, how much should an 85 kg cyclist drink?",
+     "options": [
+      {
+       "id": "a",
+       "text": "425–595 mL",
+       "correct": true,
+       "why": "Right: 5 × 85 = 425 mL and 7 × 85 = 595 mL."
+      },
+      {
+       "id": "b",
+       "text": "4.25–5.95 L",
+       "why": "Ten times too much: the result is in mL."
+      },
+      {
+       "id": "c",
+       "text": "255–425 mL",
+       "why": "This uses the 3–5 mL·kg⁻¹ top-up meant for about 2 h before."
+      },
+      {
+       "id": "d",
+       "text": "42–60 mL",
+       "why": "Ten times too little: 5 × 85 is 425."
+      }
+     ],
+     "solution": "5 mL·kg⁻¹ × 85 kg = 425 mL; 7 mL·kg⁻¹ × 85 kg = 595 mL."
+    }
+   ]
+  },
+  {
+   "id": "hs-pre-why",
+   "concept": "hs-pre",
+   "bloom": "understand",
+   "sources": [
+    "sawka2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why drink the pre-race fluid hours before the start rather than all in the last 15 minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "So the kidneys have time to pass what isn't needed",
+       "correct": true,
+       "why": "Right: the advice is to start several hours ahead so fluid is absorbed and urine output is back to normal by the start."
+      },
+      {
+       "id": "b",
+       "text": "Because water takes about 4 h to leave the stomach",
+       "why": "Water leaves the stomach much faster than that; the timing is about the kidneys, not the stomach."
+      },
+      {
+       "id": "c",
+       "text": "So the water can be stored with glycogen in muscle",
+       "why": "Glycogen does hold some water, but that comes from carbohydrate loading, not from timing a drink."
+      },
+      {
+       "id": "d",
+       "text": "Because drinking in the last 15 min always causes hyponatraemia",
+       "why": "A drink before the start won't by itself cause hyponatraemia; the issue is starting with a full bladder and no benefit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hs-hyper-eval",
+   "concept": "hs-pre",
+   "bloom": "evaluate",
+   "sources": [
+    "mcdermott2017",
+    "sawka2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A club cyclist plans to drink 2 L in the hour before a 90 min road race on a cool day, \"to be safe\". Best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not useful: most will end as urine, and starting euhydrated is enough here",
+       "correct": true,
+       "why": "Right: hyperhydration gives no advantage outside special cases, and a cool 90 min race isn't one."
+      },
+      {
+       "id": "b",
+       "text": "Smart: extra body water always improves endurance",
+       "why": "Position statements find no advantage from hyperhydration in normal conditions."
+      },
+      {
+       "id": "c",
+       "text": "Fine, as long as the 2 L is a sports drink",
+       "why": "The drink type doesn't make 2 L in an hour useful; the kidneys still pass the extra."
+      },
+      {
+       "id": "d",
+       "text": "Needed, because thirst doesn't work in cool weather",
+       "why": "Thirst works in cool weather; cool, shorter events are where thirst is enough."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

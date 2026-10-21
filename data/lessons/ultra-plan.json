@@ -1,0 +1,866 @@
+{
+ "id": "ultra-plan",
+ "module": "t4-ultra-fuel",
+ "title": "Building an ultra or Ironman fueling plan",
+ "goal": "Build an hour-by-hour fueling plan for an ultra or Ironman: carbohydrate per hour for the event, real food and gels, taste fatigue, sodium and fluid, and caffeine timing.",
+ "requires": [
+  "ultra-gi"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "taste-fatigue"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "up-cho",
+   "title": "How much carbohydrate per hour?",
+   "text": "*Fueling during exercise* gave the general targets: up to about 60 g·h⁻¹ for 2–3 h, up to about 90 g·h⁻¹ of [multiple transportable carbohydrates](g:multiple-transportable-carbohydrates) for long hard efforts, and less when absolute intensity is low [[c:up-cho-guide]]. Ultras stretch that last rule furthest:\n\n- **Ironman** is long but still fairly hard, so trained athletes can aim high. In real races, Ironman athletes averaged 62–71 g·h⁻¹, and individuals across events ranged from 6 to 136 g·h⁻¹ [[c:up-cho-real]].\n- **Slow ultrarunning** (a 100-mile run at walking-to-jogging pace) burns less carbohydrate per hour: the ISSN suggests about 30–50 g·h⁻¹, as part of mixed food.\n\nWhether ultrarunners should still push toward 90 g·h⁻¹ is debated.",
+   "claims": [
+    {
+     "id": "up-cho-guide",
+     "text": "Up to about 60 g·h⁻¹ of carbohydrate is recommended for 2–3 h and about 90 g·h⁻¹ (multiple transportable carbohydrates) for ultra-endurance events, adjusted down when absolute intensity is low; the ISSN suggests 30–50 g·h⁻¹ for single-stage ultramarathon running.",
+     "grade": "moderate",
+     "sources": [
+      "jeukendrup2014",
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "jeukendrup2014",
+       "quote": "A single carbohydrate source can be oxidized at rates up to approximately 60 g/h and this is the recommendation for exercise that is more prolonged (2-3 h). For ultra-endurance events, the recommendation is higher at approximately 90 g/h.",
+       "level": "abstract"
+      },
+      {
+       "source": "jeukendrup2014",
+       "quote": "the recommendations may need to be adjusted downward when the absolute exercise intensity is low and thus carbohydrate oxidation rates are also low",
+       "level": "abstract"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "To attenuate caloric deficits, runners should aim to consume 150–400 Kcal·h− 1 (carbohydrate, 30–50 g·h− 1; protein, 5–10 g·h− 1) from a variety of calorie-dense foods.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "up-cho-real",
+     "text": "Mean carbohydrate intake in Ironman races was 62–71 g·h⁻¹, with individual intakes ranging from 6 to 136 g·h⁻¹ across events.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Mean CHO intake rates were not significantly different between IM Hawaii, IM GER, and IM 70.3 (62 ± 26, 71 ± 25, and 65 ± 25 g·h(-1), respectively)",
+       "level": "abstract"
+      },
+      {
+       "source": "pfeiffer2012",
+       "quote": "The present study demonstrates that CHO intake rates vary greatly between events and individual athletes (6-136 g·h(-1)).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Should ultrarunners aim for about 90 g·h⁻¹ of carbohydrate?",
+    "sides": [
+     {
+      "position": "Yes, if trained for: about 90 g·h⁻¹ of multiple transportable carbohydrates supports performance in events of 3 h or more, and tolerance can be trained.",
+      "sources": [
+       "jeukendrup2014",
+       "costa2019"
+      ]
+     },
+     {
+      "position": "Not as a default: in races over about 6 h, 90 g·h⁻¹ is unrealistic for most, risks gut distress and clashes with the shift toward savoury, fattier food; 30–50 g·h⁻¹ from mixed food is the realistic target.",
+      "sources": [
+       "tiller2019",
+       "costa2019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "up-target",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "up-debate"
+  },
+  {
+   "type": "example",
+   "id": "up-plan-example",
+   "title": "A 10 h plan, hour by hour",
+   "problem": "An age-group triathlete expects 10 h for the Ironman bike and run and plans 70 g·h⁻¹ of carbohydrate. He drinks one 500 mL bottle of sports drink per hour (40 g carbohydrate each); the rest comes from 25 g gels. He uses about 3,800 kJ per hour. How many gels does he need, how much energy does the carbohydrate give, and what is his energy deficit if carbohydrate is all he takes?",
+   "steps": [
+    "Total carbohydrate: 70 g·h⁻¹ × 10 h = 700 g.",
+    "From drinks: 40 g × 10 bottles = 400 g. Left for gels: 700 − 400 = 300 g, so 300 ÷ 25 = 12 gels (about one every 50 min).",
+    "Energy eaten: 700 g × 17 kJ·g⁻¹ = 11,900 kJ (about 2,840 kcal).",
+    "Energy used: 3,800 kJ·h⁻¹ × 10 h = 38,000 kJ.",
+    "Deficit: 38,000 − 11,900 = 26,100 kJ (about 6,240 kcal), covered mostly by fat stores. Intake covers about 31% of use, in line with field studies."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "up-hourly-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "up-deficit-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "up-food",
+   "title": "Real food, gels and taste fatigue",
+   "text": "Form matters less than you'd think: *Fueling during exercise* showed that bars, gels and drinks are used about equally well. What changes in an ultra is appetite.\n\nLong races bring [taste fatigue](g:taste-fatigue). Runners in races over about 100 km (60 miles) often can't face sweet gels and drinks later on and want savoury food, with more salt and fat [[c:up-savoury]]. So the ISSN sets the target as energy from a variety of energy-dense foods: 150–400 kcal (630–1,670 kJ) per hour, including 5–10 g·h⁻¹ of protein [[c:up-energy-hour]].\n\nIn practice: put both sweet and savoury food (potatoes, sandwiches, soup, salty snacks) at aid stations or in drop bags, and rehearse the savoury food in long training sessions too.",
+   "claims": [
+    {
+     "id": "up-savoury",
+     "text": "In ultramarathons, runners often find sweet foods such as gels and sports drinks unpalatable and prefer savoury foods in the later stages.",
+     "grade": "weak",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "There are several reports of runners complaining of the unpalatability of sweet foods, particularly energy gels and sports drinks, both in the heat [114] and in ultra-marathons > 60 miles contested in thermoneutral environments",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "As race duration increases, runners tend to favor savory foods, likely reflecting energy and electrolyte insufficiencies.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "up-energy-hour",
+     "text": "The ISSN recommends 150–400 kcal·h⁻¹ (carbohydrate 30–50 g·h⁻¹, protein 5–10 g·h⁻¹) from a variety of calorie-dense foods, considering palatability and the preference for savoury foods in longer races.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "To attenuate caloric deficits, runners should aim to consume 150–400 Kcal·h− 1 (carbohydrate, 30–50 g·h− 1; protein, 5–10 g·h− 1) from a variety of calorie-dense foods. Consideration must be given to food palatability, individual tolerance, and the increased preference for savory foods in longer races",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "up-taste"
+  },
+  {
+   "type": "question",
+   "item": "up-food-mix"
+  },
+  {
+   "type": "concept",
+   "id": "up-salt",
+   "title": "Sodium and fluid, briefly",
+   "text": "The *Hydration* module covers why sodium matters and how low blood sodium happens. For the plan, the ISSN's numbers for ultrarunners are [[c:up-fluid-sodium]]:\n\n- fluid: about 450–750 mL·h⁻¹, adjusted for heat, pace and body size;\n- sodium: about 500–700 mg per litre of fluid; in hot conditions about 300–600 mg·h⁻¹.\n\nMost sports drinks hold only about 460–575 mg·L⁻¹, so salty food usually makes up the rest. Drinking well beyond thirst with little sodium is the classic route to [hyponatraemia](g:hyponatraemia); for most ultrarunners, [drinking to thirst](g:drinking-to-thirst) keeps them out of both trouble zones [[c:up-thirst]].",
+   "claims": [
+    {
+     "id": "up-fluid-sodium",
+     "text": "The ISSN recommends 450–750 mL·h⁻¹ of fluid and sodium at 500–700 mg·L⁻¹ of fluid (about 300–600 mg·h⁻¹ in hot conditions); commercial sports drinks contain about 460–575 mg·L⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Fluid volumes of 450–750 mL·h− 1 (~ 150–250 mL every 20 min) are recommended during racing.",
+       "level": "abstract"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "In order to reduce the risk of hyponatremia during long-duration exercise, runners should consume sodium in concentrations of 500–700 mg·L− 1 of fluid",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "in such conditions, runners should target ~ 300–600 mg·h− 1 of sodium (1000–2000 mg of NaCl)",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "The sodium content of commercial sports drinks (~20–25 mmol·L− 1; 460–575 mg·L− 1) is lower than that typically lost in sweat",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "up-thirst",
+     "text": "Ultramarathon runners can develop both hypohydration and hyperhydration with hyponatraemia; euhydration can generally be kept by drinking to thirst.",
+     "grade": "moderate",
+     "sources": [
+      "costa2019"
+     ],
+     "evidence": [
+      {
+       "source": "costa2019",
+       "quote": "To avoid these two extremes, euhydration can generally be maintained through \"drinking to thirst.\"",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "up-sodium-example",
+   "title": "Sodium per hour from a drink",
+   "problem": "A runner drinks 500 mL·h⁻¹ of a drink with 600 mg·L⁻¹ sodium on a hot day. How much sodium does she get per hour, and is it within 300–600 mg·h⁻¹?",
+   "steps": [
+    "Convert the volume to litres: 500 mL = 0.5 L.",
+    "Sodium per hour = concentration × volume = 600 mg·L⁻¹ × 0.5 L·h⁻¹ = 300 mg·h⁻¹.",
+    "That's at the bottom of the 300–600 mg·h⁻¹ range for hot conditions; salty food could add some."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "up-sodium-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "up-caffeine",
+   "title": "Caffeine: save it for later",
+   "text": "Caffeine helps endurance performance (the *Supplements* module covers how). In an ultra the question is timing. The ISSN advises keeping it for the later stages, and in races over 24 h for the night, when sleep loss slows you and makes technical ground dangerous [[c:up-caffeine-late]].\n\nDose: single doses of 4–6 mg·kg⁻¹ are common in short events, but repeating doses that large isn't advised. Smaller repeated doses of 1–2 mg·kg⁻¹ (70–140 mg for 70 kg), or about 50 mg·h⁻¹ in the night, are thought to be easier to tolerate [[c:up-caffeine-dose]]. No ultra-specific trials set these numbers: they are expert advice.",
+   "claims": [
+    {
+     "id": "up-caffeine-late",
+     "text": "Caffeine may help in the later stages of ultras, particularly in events over 24 h when sleep deprivation impairs performance and safety; caffeine is effective when taken late in endurance exercise.",
+     "grade": "moderate",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "Caffeine is a potent stimulant that may be beneficial during racing, particularly in the latter stages of longer events (> 24 h), when sleep deprivation might attenuate performance and jeopardize athlete safety on technical terrain.",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "Importantly, caffeine has been shown to be effective when taken in the latter stages of endurance exercise [160]; accordingly, ultra-marathon runners are encouraged to target any caffeine intake for the latter stages of competition.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "up-caffeine-dose",
+     "text": "Repeated caffeine doses in ultras should be smaller (1–2 mg·kg⁻¹, or about 50 mg·h⁻¹ at night) than the 4–6 mg·kg⁻¹ single doses used in short events.",
+     "grade": "weak",
+     "sources": [
+      "tiller2019"
+     ],
+     "evidence": [
+      {
+       "source": "tiller2019",
+       "quote": "If frequent doses are to be taken during ultra-marathon, then lower (more sustainable) amounts (e.g., 1–2 mg·kg− 1; 70–140 mg for a 70 kg athlete) are more appropriate and safer over several hours.",
+       "level": "full-text"
+      },
+      {
+       "source": "tiller2019",
+       "quote": "Although there are no specific guidelines pertaining to caffeine intake during prolonged ultra-marathon, repeat doses of 50 mg·h− 1 are likely to be well-tolerated, principally reserved for night-running when circadian rhythms are likely to be affected.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "up-caffeine-dose",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "up-caffeine-timing"
+  },
+  {
+   "type": "question",
+   "item": "up-hourly-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "up-deficit-calc",
+   "variant": "b"
+  },
+  {
+   "type": "question",
+   "item": "up-target",
+   "variant": "b"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Carbohydrate per hour scales with duration and intensity: up to about 60 g·h⁻¹ for 2–3 h, up to about 90 g·h⁻¹ for long hard events, about 30–50 g·h⁻¹ for slow ultrarunning.",
+    "Plan by the hour, then add up: total carbohydrate, what drinks supply, what gels and food must cover, and the energy deficit left.",
+    "Appetite, not form, is the ultra problem: mix sweet and savoury food against taste fatigue, aim for 150–400 kcal per hour with some protein, and rehearse it all in training.",
+    "Fluid about 450–750 mL·h⁻¹ and sodium about 500–700 mg·L⁻¹ (300–600 mg·h⁻¹ in the heat); drink to thirst and don't overdrink.",
+    "Caffeine: small repeated doses (1–2 mg·kg⁻¹) in the later stages and at night, not a big dose at the start."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "up-target",
+   "concept": "up-cho",
+   "bloom": "apply",
+   "sources": [
+    "jeukendrup2014",
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner expects to take 22 h for a mountain 100-mile race at a slow pace. Which carbohydrate target fits the guidance best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 30–50 g·h⁻¹ from mixed food, more if trained and tolerated",
+       "correct": true,
+       "why": "Right: the ISSN suggests 30–50 g·h⁻¹ for ultrarunning, and targets go down when absolute intensity is low."
+      },
+      {
+       "id": "b",
+       "text": "About 120 g·h⁻¹ from gels only",
+       "why": "Above even the top targets for hard events, and gels alone for 22 h invite taste fatigue and gut trouble."
+      },
+      {
+       "id": "c",
+       "text": "None: at that pace fat covers everything",
+       "why": "Fat covers most of the deficit, but glycogen can still run out; finishing goes with eating more."
+      },
+      {
+       "id": "d",
+       "text": "About 10 g·h⁻¹, just enough to rinse the mouth",
+       "why": "A mouth rinse helps in efforts of about 1 h; it can't fuel 22 h."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A trained triathlete races an Ironman at a hard pace, expecting 9 h, and has practised high intakes in training. Which carbohydrate target fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 60–90 g·h⁻¹, using glucose–fructose mixes",
+       "correct": true,
+       "why": "Right: long and hard, with a trained gut, is where about 90 g·h⁻¹ of multiple transportable carbohydrates is advised."
+      },
+      {
+       "id": "b",
+       "text": "About 30 g·h⁻¹, as for a slow 100-mile run",
+       "why": "That fits slow ultrarunning; a hard Ironman burns more carbohydrate per hour."
+      },
+      {
+       "id": "c",
+       "text": "About 150 g·h⁻¹ of glucose alone",
+       "why": "Glucose alone is used at up to about 60 g·h⁻¹; much more just sits in the gut."
+      },
+      {
+       "id": "d",
+       "text": "None until the run, to save the gut",
+       "why": "The bike is where eating is easiest; leaving it all to the run means a big early deficit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "up-debate",
+   "concept": "up-cho",
+   "bloom": "evaluate",
+   "sources": [
+    "tiller2019",
+    "costa2019",
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is a target of about 90 g·h⁻¹ of carbohydrate disputed for ultrarunners?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It works in shorter events, but over 6 h tolerance and practicality are doubtful",
+       "correct": true,
+       "why": "Right: the evidence comes mainly from events of a few hours; in long ultras gut distress and the shift to savoury, fattier food make it hard to sustain."
+      },
+      {
+       "id": "b",
+       "text": "Carbohydrate can't be absorbed at all after 6 h of running",
+       "why": "Absorption gets worse with long, hard exercise, but it doesn't stop; runners do use what they eat."
+      },
+      {
+       "id": "c",
+       "text": "Studies show carbohydrate has no effect on endurance",
+       "why": "Carbohydrate during long exercise improves performance; the dispute is about how much is realistic in an ultra."
+      },
+      {
+       "id": "d",
+       "text": "90 g·h⁻¹ is below what ultrarunners usually eat",
+       "why": "The opposite: the ISSN target for ultrarunners is 30–50 g·h⁻¹, well below 90."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "up-hourly-calc",
+   "concept": "up-cho",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "jeukendrup2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist plans 60 g·h⁻¹ of carbohydrate for a 12 h ride. One bottle an hour gives 30 g; the rest comes from 40 g bars. How many bars in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9 bars",
+       "correct": true,
+       "why": "Right: 720 g total − 360 g from drink = 360 g; 360 ÷ 40 = 9."
+      },
+      {
+       "id": "b",
+       "text": "18 bars",
+       "why": "This covers the full 720 g with bars and forgets the 360 g from the drink."
+      },
+      {
+       "id": "c",
+       "text": "27 bars",
+       "why": "This adds the drink to the target instead of subtracting it: (720 + 360) ÷ 40."
+      },
+      {
+       "id": "d",
+       "text": "0.75 bars",
+       "why": "That's per hour (30 ÷ 40), not the total over 12 h."
+      }
+     ],
+     "solution": "Total = 60 × 12 = 720 g. Drink = 30 × 12 = 360 g. Bars must cover 720 − 360 = 360 g, so 360 ÷ 40 = 9 bars."
+    },
+    {
+     "id": "b",
+     "stem": "A runner plans 45 g·h⁻¹ of carbohydrate for a 10 h ultra. Her drink gives 20 g each hour; the rest comes from 25 g gels. How many gels in total?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10 gels",
+       "correct": true,
+       "why": "Right: 450 g total − 200 g from drink = 250 g; 250 ÷ 25 = 10."
+      },
+      {
+       "id": "b",
+       "text": "18 gels",
+       "why": "This covers the full 450 g with gels and forgets the 200 g from the drink."
+      },
+      {
+       "id": "c",
+       "text": "26 gels",
+       "why": "This adds the drink to the target instead of subtracting it: (450 + 200) ÷ 25."
+      },
+      {
+       "id": "d",
+       "text": "1 gel",
+       "why": "That's per hour ((45 − 20) ÷ 25), not the total over 10 h."
+      }
+     ],
+     "solution": "Total = 45 × 10 = 450 g. Drink = 20 × 10 = 200 g. Gels must cover 450 − 200 = 250 g, so 250 ÷ 25 = 10 gels."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete plans 80 g·h⁻¹ for 9 h of Ironman bike and run. Drinks give 45 g each hour; the rest comes from 25 g gels. How many gels should he carry, at least?",
+     "options": [
+      {
+       "id": "a",
+       "text": "13 gels",
+       "correct": true,
+       "why": "Right: 720 g − 405 g = 315 g; 315 ÷ 25 = 12.6, rounded up to 13."
+      },
+      {
+       "id": "b",
+       "text": "29 gels",
+       "why": "This covers the full 720 g with gels and forgets the 405 g from drinks."
+      },
+      {
+       "id": "c",
+       "text": "45 gels",
+       "why": "This adds the drink to the target instead of subtracting it: (720 + 405) ÷ 25."
+      },
+      {
+       "id": "d",
+       "text": "1.4 gels",
+       "why": "That's per hour ((80 − 45) ÷ 25), not the total over 9 h."
+      }
+     ],
+     "solution": "Total = 80 × 9 = 720 g. Drinks = 45 × 9 = 405 g. Gels must cover 720 − 405 = 315 g; 315 ÷ 25 = 12.6, so carry 13 gels."
+    }
+   ]
+  },
+  {
+   "id": "up-deficit-calc",
+   "concept": "up-cho",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner takes 12 h for a 100 km race, using about 2,600 kJ per hour and eating about 1,000 kJ per hour. What is his energy deficit at the finish?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 19,200 kJ",
+       "correct": true,
+       "why": "Right: (2,600 − 1,000) × 12 = 19,200 kJ, about 4,590 kcal."
+      },
+      {
+       "id": "b",
+       "text": "About 31,200 kJ",
+       "why": "That's the total energy used; it forgets to subtract what he ate."
+      },
+      {
+       "id": "c",
+       "text": "About 43,200 kJ",
+       "why": "This adds intake to expenditure instead of subtracting it."
+      },
+      {
+       "id": "d",
+       "text": "About 1,600 kJ",
+       "why": "That's the deficit for one hour, not the whole 12 h race."
+      }
+     ],
+     "solution": "Deficit per hour = 2,600 − 1,000 = 1,600 kJ. Over 12 h: 1,600 × 12 = 19,200 kJ (about 4,590 kcal)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides a 10 h event using about 3,200 kJ per hour and takes only carbohydrate, 70 g per hour (17 kJ per gram). What is her energy deficit at the finish?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 20,100 kJ",
+       "correct": true,
+       "why": "Right: intake = 70 × 17 = 1,190 kJ·h⁻¹; (3,200 − 1,190) × 10 = 20,100 kJ."
+      },
+      {
+       "id": "b",
+       "text": "About 29,200 kJ",
+       "why": "This uses 4 per gram, the kcal figure, as if it were kJ: (3,200 − 280) × 10."
+      },
+      {
+       "id": "c",
+       "text": "About 31,300 kJ",
+       "why": "This subtracts grams from kJ (3,200 − 70) without converting carbohydrate to energy."
+      },
+      {
+       "id": "d",
+       "text": "About 2,010 kJ",
+       "why": "That's the deficit for one hour, not the whole 10 h."
+      }
+     ],
+     "solution": "Intake = 70 g·h⁻¹ × 17 kJ·g⁻¹ = 1,190 kJ·h⁻¹. Deficit per hour = 3,200 − 1,190 = 2,010 kJ. Over 10 h: 20,100 kJ (about 4,800 kcal)."
+    },
+    {
+     "id": "c",
+     "stem": "In a 24 h race, a runner uses about 1,800 kJ per hour and eats about 1,250 kJ (300 kcal) per hour. What is his energy deficit at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 13,200 kJ",
+       "correct": true,
+       "why": "Right: (1,800 − 1,250) × 24 = 13,200 kJ, about 3,150 kcal."
+      },
+      {
+       "id": "b",
+       "text": "About 3,150 kJ",
+       "why": "That's the kcal figure written as kJ: 13,200 kJ ÷ 4.184 = 3,155 kcal."
+      },
+      {
+       "id": "c",
+       "text": "About 43,200 kJ",
+       "why": "That's the total energy used; it forgets to subtract what he ate."
+      },
+      {
+       "id": "d",
+       "text": "About 550 kJ",
+       "why": "That's the deficit for one hour, not the whole 24 h."
+      }
+     ],
+     "solution": "Deficit per hour = 1,800 − 1,250 = 550 kJ. Over 24 h: 550 × 24 = 13,200 kJ (about 3,150 kcal)."
+    }
+   ]
+  },
+  {
+   "id": "up-taste",
+   "concept": "up-food",
+   "bloom": "apply",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In hour 14 of a 24 h mountain bike race, a rider can't face another sweet gel. Best move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Switch to savoury carbohydrate food, such as salted potatoes",
+       "correct": true,
+       "why": "Right: taste fatigue is common late in long races; savoury food keeps energy and salt coming in, so keep eating each hour."
+      },
+      {
+       "id": "b",
+       "text": "Stop eating until a taste for sweet food comes back",
+       "why": "That may take hours; a long stop in eating risks running low on carbohydrate."
+      },
+      {
+       "id": "c",
+       "text": "Force down gels anyway, since taste doesn't matter",
+       "why": "Food you can't face often isn't eaten, or comes back up; palatability matters in long races."
+      },
+      {
+       "id": "d",
+       "text": "Drink plain water only for the rest of the race",
+       "why": "That gives no energy, and lots of plain water risks low blood sodium."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "up-food-mix",
+   "concept": "up-food",
+   "bloom": "evaluate",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's plan for a 160 km trail race is gels and sports drink only, 45 g of carbohydrate an hour, all sweet. Judged against the ISSN advice, what is the main gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No protein and no savoury food for the later hours",
+       "correct": true,
+       "why": "Right: 45 g·h⁻¹ sits in the 30–50 g·h⁻¹ range, but the ISSN also advises 5–10 g·h⁻¹ of protein from varied food, and sweet-only plans often fail late on to taste fatigue."
+      },
+      {
+       "id": "b",
+       "text": "Too little carbohydrate: the ISSN target is 90 g·h⁻¹",
+       "why": "For ultrarunning the ISSN suggests 30–50 g·h⁻¹; 90 g·h⁻¹ is the general target for long, hard efforts."
+      },
+      {
+       "id": "c",
+       "text": "Too much carbohydrate: fat should replace it after 6 h",
+       "why": "Fat covers most of the deficit, but carbohydrate is still needed all race; nobody advises dropping it."
+      },
+      {
+       "id": "d",
+       "text": "Nothing: carbohydrate is the only nutrient that matters in a race",
+       "why": "The ISSN advice includes protein and a variety of energy-dense food, partly because sweet food becomes hard to face."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "up-sodium-calc",
+   "concept": "up-salt",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a hot day, a runner drinks 600 mL·h⁻¹ of a sports drink with 460 mg·L⁻¹ sodium. How much sodium per hour does the drink give, against a hot-weather target of 300–600 mg·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "276 mg·h⁻¹, below the target",
+       "correct": true,
+       "why": "Right: 460 × 0.6 = 276 mg·h⁻¹, so salty food or an electrolyte product should add some."
+      },
+      {
+       "id": "b",
+       "text": "2,760 mg·h⁻¹, far above the target",
+       "why": "A decimal slip: 600 mL is 0.6 L, not 6 L."
+      },
+      {
+       "id": "c",
+       "text": "767 mg·h⁻¹, above the target",
+       "why": "This divides by the volume (460 ÷ 0.6) instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "460 mg·h⁻¹, within the target",
+       "why": "That's the concentration per litre; she drinks only 0.6 L per hour."
+      }
+     ],
+     "solution": "Sodium per hour = 460 mg·L⁻¹ × 0.6 L·h⁻¹ = 276 mg·h⁻¹: below 300–600 mg·h⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "On a hot day, a cyclist drinks 750 mL·h⁻¹ of a drink with 500 mg·L⁻¹ sodium. How much sodium per hour does the drink give, against a hot-weather target of 300–600 mg·h⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "375 mg·h⁻¹, within the target",
+       "correct": true,
+       "why": "Right: 500 × 0.75 = 375 mg·h⁻¹."
+      },
+      {
+       "id": "b",
+       "text": "3,750 mg·h⁻¹, far above the target",
+       "why": "A decimal slip: 750 mL is 0.75 L, not 7.5 L."
+      },
+      {
+       "id": "c",
+       "text": "667 mg·h⁻¹, above the target",
+       "why": "This divides by the volume (500 ÷ 0.75) instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "500 mg·h⁻¹, within the target",
+       "why": "That's the concentration per litre; he drinks only 0.75 L per hour."
+      }
+     ],
+     "solution": "Sodium per hour = 500 mg·L⁻¹ × 0.75 L·h⁻¹ = 375 mg·h⁻¹: within 300–600 mg·h⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "up-caffeine-dose",
+   "concept": "up-caffeine",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg runner in a 30 h race wants repeated caffeine doses through the night. Which dose per serving fits the ISSN advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60–120 mg",
+       "correct": true,
+       "why": "Right: 1–2 mg·kg⁻¹ × 60 kg = 60–120 mg per dose."
+      },
+      {
+       "id": "b",
+       "text": "240–360 mg",
+       "why": "That's 4–6 mg·kg⁻¹, a single dose for short events; repeating it all night isn't advised."
+      },
+      {
+       "id": "c",
+       "text": "6–12 mg",
+       "why": "A factor-of-ten slip: 1–2 mg·kg⁻¹ × 60 kg is 60–120 mg."
+      },
+      {
+       "id": "d",
+       "text": "600 mg",
+       "why": "That's 10 mg·kg⁻¹, far above any advised dose."
+      }
+     ],
+     "solution": "Repeated doses of 1–2 mg·kg⁻¹: 1 × 60 = 60 mg to 2 × 60 = 120 mg per dose."
+    },
+    {
+     "id": "b",
+     "stem": "An 80 kg cyclist in a 36 h race wants repeated caffeine doses in the night. Which dose per serving fits the ISSN advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "80–160 mg",
+       "correct": true,
+       "why": "Right: 1–2 mg·kg⁻¹ × 80 kg = 80–160 mg per dose."
+      },
+      {
+       "id": "b",
+       "text": "320–480 mg",
+       "why": "That's 4–6 mg·kg⁻¹, a single dose for short events; repeating it all night isn't advised."
+      },
+      {
+       "id": "c",
+       "text": "8–16 mg",
+       "why": "A factor-of-ten slip: 1–2 mg·kg⁻¹ × 80 kg is 80–160 mg."
+      },
+      {
+       "id": "d",
+       "text": "800 mg",
+       "why": "That's 10 mg·kg⁻¹, far above any advised dose."
+      }
+     ],
+     "solution": "Repeated doses of 1–2 mg·kg⁻¹: 1 × 80 = 80 mg to 2 × 80 = 160 mg per dose."
+    }
+   ]
+  },
+  {
+   "id": "up-caffeine-timing",
+   "concept": "up-caffeine",
+   "bloom": "understand",
+   "sources": [
+    "tiller2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When does the ISSN suggest taking caffeine in a 36 h ultra?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mainly in the later stages, especially overnight",
+       "correct": true,
+       "why": "Right: caffeine works when taken late, and it counters sleep loss when performance and safety suffer most."
+      },
+      {
+       "id": "b",
+       "text": "All of it before the start",
+       "why": "Its effect wears off over hours; in a 36 h race it's most useful later and at night."
+      },
+      {
+       "id": "c",
+       "text": "Never, because it dehydrates you",
+       "why": "Dehydration isn't a reason the ISSN gives against it: it supports caffeine in the later stages of ultras."
+      },
+      {
+       "id": "d",
+       "text": "Only in the first hours, while you're fresh",
+       "why": "That wastes it when you need it least; it's advised for the later stages."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,641 @@
+{
+ "id": "mac-fat",
+ "module": "t4-macros",
+ "title": "Fat: stores, food and the rate limit",
+ "goal": "Compare the body's fat stores with its glycogen, name the main types of dietary fat, and work out why even a huge fat store can cover only part of a race's energy.",
+ "requires": [
+  "mac-glycogen"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "saturated-fat",
+    "unsaturated-fat",
+    "maximal-fat-oxidation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "fat-stores",
+   "title": "Two fat stores, one of them huge",
+   "text": "Body fat is stored as [triglyceride](g:triglyceride) in two places:\n\n- [Adipose tissue](g:adipose-tissue): even a lean athlete at 7–14% body fat carries about **125,000 kJ** (over 30,000 kcal) [[c:mac-adipose]]. All the body's glycogen, about 490 g, holds roughly 8,300 kJ: about 15 times less.\n- [IMTG](g:imtg): droplets inside the muscle fibres, mostly in [type I fibres](g:type-i-fibre) right next to the [mitochondria](g:mitochondria) [[c:mac-imtg-place]]. No trip through the blood is needed.\n\nHow much IMTG adds to the fuel used in exercise is still argued over (see the box). Methods disagree: biopsies, tracers and magnetic resonance scans each give a different picture.",
+   "claims": [
+    {
+     "id": "mac-adipose",
+     "text": "A lean athlete (7–14% body fat) stores over 30,000 kcal (about 125,000 kJ) in adipose tissue.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "A person with 7–14% body fat has >30,000 kcal of energy reserves stored in adipose tissue",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "mac-imtg-place",
+     "text": "IMTG is stored mainly in type I fibres, close to the mitochondria.",
+     "grade": "strong",
+     "sources": [
+      "purdom2018"
+     ],
+     "evidence": [
+      {
+       "source": "purdom2018",
+       "quote": "Intramuscular triacylglyerides are arranged within striated muscle, primarily in type I fibers in close proximity to the mitochondria",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is IMTG an important fuel during endurance exercise?",
+    "sides": [
+     {
+      "position": "Yes: isotope tracers, magnetic resonance spectroscopy and microscopy all show the IMTG pool can be an important fuel during exercise.",
+      "sources": [
+       "vanloon2004"
+      ]
+     },
+     {
+      "position": "Unclear: IMTG content and its energy contribution are still debated, because tissues vary and methods give different answers.",
+      "sources": [
+       "purdom2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fat-store-ratio",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fat-imtg-where"
+  },
+  {
+   "type": "concept",
+   "id": "fat-diet",
+   "title": "Fats on your plate",
+   "text": "Most dietary fat is triglyceride too. What differs is the [fatty acids](g:fatty-acid) on it [[c:fat-classes]]:\n\n| type | double bonds in the chain | typical foods |\n|---|---|---|\n| [saturated](g:saturated-fat) | none | butter, cheese, meat |\n| [monounsaturated](g:unsaturated-fat) | one | olive oil, avocado, nuts |\n| [polyunsaturated](g:unsaturated-fat) | two or more | fish oil, many seed oils |\n\nThe body can make saturated and some monounsaturated fatty acids itself, but fatty acids with two or more double bonds (the omega-6 and omega-3 families) must come from food.\n\nFor health, the swap matters: replacing saturated fat with polyunsaturated fat lowers heart-disease risk, while replacing it with refined carbohydrate doesn't [[c:fat-health]].\n\nFat is digested slowly, so a fatty meal just before exercise doesn't bring extra fat to the muscles in time [[c:fat-slow-meal]].",
+   "claims": [
+    {
+     "id": "fat-classes",
+     "text": "Fatty acids are saturated (no double bonds), monounsaturated (one) or polyunsaturated (two or more); the body can make saturated and omega-9 fatty acids, but those with two or more double bonds are essential in the diet.",
+     "grade": "strong",
+     "sources": [
+      "kostrakiewicz2025"
+     ],
+     "evidence": [
+      {
+       "source": "kostrakiewicz2025",
+       "quote": "The fatty acids are classified into saturated fatty acids (SFAs), containing no double bonds within the hydrocarbon chain, and unsaturated fatty acids (UFAs), represented by monounsaturated fatty acids (MUFAs) with a single carbon–carbon double bond and polyunsaturated fatty acids (PUFAs) with at least two carbon–carbon double bonds.",
+       "level": "full-text"
+      },
+      {
+       "source": "kostrakiewicz2025",
+       "quote": "Fatty acids containing two or more double bonds must be obtained from the diet, and, therefore, the latter are called essential fatty acids.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "fat-health",
+     "text": "Replacing saturated fat with refined carbohydrate doesn't lower cardiovascular risk; replacing it with polyunsaturated fat does.",
+     "grade": "strong",
+     "sources": [
+      "liu2017"
+     ],
+     "evidence": [
+      {
+       "source": "liu2017",
+       "quote": "However, evidence from observational studies and randomized clinical trials demonstrates that replacing saturated fat with carbohydrates, specifically refined, has no benefit on CVD risk, while substituting polyunsaturated fats for either saturated fat or carbohydrate reduces risk.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fat-slow-meal",
+     "text": "Eating fat just before or during exercise has largely failed to raise fat supply to the muscles enough to spare carbohydrate, because fat is digested slowly.",
+     "grade": "moderate",
+     "sources": [
+      "spriet2014"
+     ],
+     "evidence": [
+      {
+       "source": "spriet2014",
+       "quote": "In contrast, dietary attempts at acutely increasing the availability of FFAs to the working muscles in humans immediately before or during exercise in an attempt to spare carbohydrate have been largely unsuccessful. This is due to the fact that fat is not digested quickly, and therefore prolonged alterations in the normal diet are required to alter the IMTG stores and spare carbohydrate.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-type-recall"
+  },
+  {
+   "type": "question",
+   "item": "fat-premeal"
+  },
+  {
+   "type": "question",
+   "item": "fat-swap"
+  },
+  {
+   "type": "concept",
+   "id": "fat-cap",
+   "title": "A big tank with a narrow tap",
+   "text": "*Fat oxidation* and *The crossover* showed why: [beta-oxidation](g:beta-oxidation) is slow and needs oxygen, and fat use peaks at [Fatmax](g:fatmax), then falls as intensity rises. Here is what that rate limit looks like in numbers.\n\nIn 1,121 athletes from many sports, [maximal fat oxidation](g:maximal-fat-oxidation) averaged **0.59 g·min⁻¹**, ranging from 0.17 to 1.27, at about 49% of VO₂max on average [[c:mfo-athletes]].\n\nSo the store is not the problem; the rate is. Turn that rate into power and you see how much of a race fat can cover at best.",
+   "claims": [
+    {
+     "id": "mfo-athletes",
+     "text": "In 1,121 athletes, maximal fat oxidation averaged 0.59 g·min⁻¹ (range 0.17–1.27), at about 49% of VO₂max on average.",
+     "grade": "moderate",
+     "sources": [
+      "randell2017"
+     ],
+     "evidence": [
+      {
+       "source": "randell2017",
+       "quote": "The average MFO was 0.59 ± 0.18 g·min, ranging from 0.17 to 1.27 g·min. Maximal rates occurred at an average exercise intensity of 49.3% ± 14.8% V˙O2max, ranging from 22.6% to 88.8% V˙O2max.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "fat-example",
+   "title": "How many watts can fat cover?",
+   "problem": "A cyclist's maximal fat oxidation is 0.6 g·min⁻¹. Each gram of fat oxidised gives about 40.8 kJ, and her gross efficiency is 20%. At best, how much power at the pedals can fat alone supply?",
+   "steps": [
+    "Energy per minute: 0.6 g·min⁻¹ × 40.8 kJ·g⁻¹ ≈ 24.5 kJ·min⁻¹.",
+    "Per second (watts = J·s⁻¹): 24,500 J ÷ 60 s ≈ 408 W of metabolic power.",
+    "At the pedals: 408 W × 0.20 ≈ 82 W.",
+    "If she races at 250 W, fat covers at most about a third; carbohydrate supplies the rest. And at 250 W she is probably above her Fatmax, so fat covers even less."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-watts",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "fat-ironman"
+  },
+  {
+   "type": "concept",
+   "id": "fat-variation",
+   "title": "Your rate is personal",
+   "text": "Maximal fat oxidation differs a lot between athletes, even in the same sport. In the 1,121-athlete study, fat-free mass, VO₂max, Fatmax, body fat and how long people had fasted together explained 47% of the differences; more than half stayed unexplained [[c:mfo-variance]].\n\nTwo lessons follow. First, a figure from a chart or a watch is a guess; the [crossover point](g:crossover-point) and Fatmax have to be measured in you. Second, test conditions matter: a longer fast before the test goes with higher fat oxidation, so compare results only when the test was done the same way.\n\nCan diet raise your fat oxidation a lot? Yes, but at a cost; that is the topic of *Low-carb, keto and train-low*.",
+   "claims": [
+    {
+     "id": "mfo-variance",
+     "text": "Maximal fat oxidation varies widely between athletes; fat-free mass, VO₂max, Fatmax, body fat and fasting duration explain 47% of the variance, and more than half remains unexplained.",
+     "grade": "moderate",
+     "sources": [
+      "randell2017"
+     ],
+     "evidence": [
+      {
+       "source": "randell2017",
+       "quote": "Significant positive correlations were found between MFO (g·min) and the following variables: FFM, V˙O2max, FATMAX (the exercise intensity at which the MFO was observed), percent body fat, and duration of fasting. When taken together these variables account for 47% of the variation in MFO.",
+       "level": "abstract"
+      },
+      {
+       "source": "randell2017",
+       "quote": "Although variance in MFO can be explained to some extent by body composition and fitness status, more than 50% of the variance is not explained by these variables and remains unaccounted for.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fat-mfo-compare"
+  },
+  {
+   "type": "question",
+   "item": "fat-mfo-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Adipose tissue holds about 125,000 kJ even in a lean athlete, about 15 times all the glycogen; IMTG sits inside type I fibres, and how much it fuels exercise is debated.",
+    "Dietary fats are saturated (no double bonds), monounsaturated (one) or polyunsaturated (two or more); the last must come from food.",
+    "Fat is digested slowly: a fatty meal just before exercise doesn't add usable fuel.",
+    "Athletes' maximal fat oxidation averages about 0.6 g·min⁻¹: roughly 80 W at the pedals, so fat alone can't fuel race pace.",
+    "Fat oxidation varies a lot between people and with test conditions: measure it, don't guess it."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fat-store-ratio",
+   "concept": "fat-stores",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "purdom2018",
+    "hearris2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lean runner stores about 125,000 kJ in adipose tissue and about 8,300 kJ as glycogen. Roughly how many times more energy is in the fat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 15 times",
+       "correct": true,
+       "why": "Right: 125,000 ÷ 8,300 ≈ 15."
+      },
+      {
+       "id": "b",
+       "text": "About 2 times",
+       "why": "That is the energy per gram (37 vs 17 kJ), not the size of the whole stores."
+      },
+      {
+       "id": "c",
+       "text": "About 150 times",
+       "why": "This is out by a factor of ten: 125,000 ÷ 8,300 is about 15."
+      },
+      {
+       "id": "d",
+       "text": "About the same",
+       "why": "The fat store is far bigger; glycogen is the small, limiting store."
+      }
+     ],
+     "solution": "125,000 kJ ÷ 8,300 kJ ≈ 15."
+    }
+   ]
+  },
+  {
+   "id": "fat-imtg-where",
+   "concept": "fat-stores",
+   "bloom": "remember",
+   "sources": [
+    "purdom2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where is IMTG stored?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Inside muscle fibres, next to the mitochondria",
+       "correct": true,
+       "why": "Right: IMTG sits in the fibres, close to where it is burned."
+      },
+      {
+       "id": "b",
+       "text": "In the fat tissue under the skin",
+       "why": "That is adipose tissue; its fat must travel through the blood to reach muscle."
+      },
+      {
+       "id": "c",
+       "text": "In the liver, alongside liver glycogen",
+       "why": "The liver can hold fat, but IMTG means fat inside the muscle fibres."
+      },
+      {
+       "id": "d",
+       "text": "In the blood, carried by proteins",
+       "why": "Blood carries fatty acids in transit; it is not where IMTG is stored."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-type-recall",
+   "concept": "fat-diet",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kostrakiewicz2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Oleic acid, the main fatty acid in olive oil, has one double bond in its carbon chain. What type of fatty acid is it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Monounsaturated",
+       "correct": true,
+       "why": "Right: one double bond makes a fatty acid monounsaturated."
+      },
+      {
+       "id": "b",
+       "text": "Saturated",
+       "why": "Saturated fatty acids have no double bonds."
+      },
+      {
+       "id": "c",
+       "text": "Polyunsaturated",
+       "why": "Polyunsaturated needs two or more double bonds."
+      },
+      {
+       "id": "d",
+       "text": "Essential omega-3",
+       "why": "Omega-3 fatty acids are polyunsaturated, with two or more double bonds; the body can make oleic acid itself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-premeal",
+   "concept": "fat-diet",
+   "bloom": "apply",
+   "sources": [
+    "spriet2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist eats a big fried breakfast 1 h before a 4-h ride \"to top up the fat tank\". What is the best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It won't help: fat is digested too slowly to fuel the ride, and the tank is already huge",
+       "correct": true,
+       "why": "Right: fat eaten just before exercise arrives too slowly to matter, and fat stores aren't what runs out."
+      },
+      {
+       "id": "b",
+       "text": "Good idea: the fat will be in the muscles within the hour and spare glycogen",
+       "why": "Attempts to raise fat supply just before exercise have largely failed, because fat digests slowly."
+      },
+      {
+       "id": "c",
+       "text": "Good idea: it refills IMTG before the start",
+       "why": "Raising IMTG takes days of a changed diet, not one meal."
+      },
+      {
+       "id": "d",
+       "text": "It won't help, because the body can't burn fat during exercise",
+       "why": "The body burns plenty of fat during a long ride; the problem is the timing of this meal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-swap",
+   "concept": "fat-diet",
+   "bloom": "understand",
+   "sources": [
+    "liu2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants to cut saturated fat for heart health. Which swap does the evidence favour?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Replacing it with polyunsaturated fats, such as oily fish and seed oils",
+       "correct": true,
+       "why": "Right: swapping saturated for polyunsaturated fat lowers cardiovascular risk."
+      },
+      {
+       "id": "b",
+       "text": "Replacing it with refined carbohydrates, such as white bread",
+       "why": "This swap showed no benefit for cardiovascular risk."
+      },
+      {
+       "id": "c",
+       "text": "Removing all dietary fat",
+       "why": "Some polyunsaturated fatty acids are essential and must come from food."
+      },
+      {
+       "id": "d",
+       "text": "Replacing it with more butter and cheese",
+       "why": "Butter and cheese are rich in saturated fat themselves."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-watts",
+   "concept": "fat-cap",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "randell2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's maximal fat oxidation is 0.9 g·min⁻¹. With about 40.8 kJ per gram of fat oxidised and 20% gross efficiency, how much power at the pedals can fat alone supply at best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 122 W",
+       "correct": true,
+       "why": "Right: 0.9 × 40.8 ≈ 36.7 kJ·min⁻¹ = 612 W metabolic; × 0.20 ≈ 122 W."
+      },
+      {
+       "id": "b",
+       "text": "About 612 W",
+       "why": "This is the metabolic power; it forgets that only 20% reaches the pedals."
+      },
+      {
+       "id": "c",
+       "text": "About 7 W",
+       "why": "This multiplies kJ per minute by 0.20 without converting to J per second."
+      },
+      {
+       "id": "d",
+       "text": "About 555 W",
+       "why": "This uses the food-label 37 kJ per gram and forgets the 20% efficiency."
+      }
+     ],
+     "solution": "0.9 g·min⁻¹ × 40.8 kJ·g⁻¹ ≈ 36.7 kJ·min⁻¹ = 36,700 J ÷ 60 s ≈ 612 W metabolic. At the pedals: 612 × 0.20 ≈ 122 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's maximal fat oxidation is 0.5 g·min⁻¹. With about 40.8 kJ per gram of fat oxidised and 20% gross efficiency, how much power at the pedals can fat alone supply at best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 68 W",
+       "correct": true,
+       "why": "Right: 0.5 × 40.8 = 20.4 kJ·min⁻¹ = 340 W metabolic; × 0.20 = 68 W."
+      },
+      {
+       "id": "b",
+       "text": "About 340 W",
+       "why": "This is the metabolic power; it forgets that only 20% reaches the pedals."
+      },
+      {
+       "id": "c",
+       "text": "About 4 W",
+       "why": "This multiplies kJ per minute by 0.20 without converting to J per second."
+      },
+      {
+       "id": "d",
+       "text": "About 308 W",
+       "why": "This uses the food-label 37 kJ per gram and forgets the 20% efficiency."
+      }
+     ],
+     "solution": "0.5 g·min⁻¹ × 40.8 kJ·g⁻¹ = 20.4 kJ·min⁻¹ = 20,400 J ÷ 60 s = 340 W metabolic. At the pedals: 340 × 0.20 = 68 W."
+    },
+    {
+     "id": "c",
+     "stem": "An ultra-cyclist has an unusually high maximal fat oxidation of 1.2 g·min⁻¹. With about 40.8 kJ per gram of fat oxidised and 20% gross efficiency, how much power at the pedals can fat alone supply at best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 163 W",
+       "correct": true,
+       "why": "Right: 1.2 × 40.8 ≈ 49.0 kJ·min⁻¹ = 816 W metabolic; × 0.20 ≈ 163 W."
+      },
+      {
+       "id": "b",
+       "text": "About 816 W",
+       "why": "This is the metabolic power; it forgets that only 20% reaches the pedals."
+      },
+      {
+       "id": "c",
+       "text": "About 10 W",
+       "why": "This multiplies kJ per minute by 0.20 without converting to J per second."
+      },
+      {
+       "id": "d",
+       "text": "About 740 W",
+       "why": "This uses the food-label 37 kJ per gram and forgets the 20% efficiency."
+      }
+     ],
+     "solution": "1.2 g·min⁻¹ × 40.8 kJ·g⁻¹ ≈ 49.0 kJ·min⁻¹ = 49,000 J ÷ 60 s ≈ 816 W metabolic. At the pedals: 816 × 0.20 ≈ 163 W."
+    }
+   ]
+  },
+  {
+   "id": "fat-ironman",
+   "concept": "fat-cap",
+   "bloom": "analyse",
+   "sources": [
+    "randell2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An Ironman athlete with typical fat oxidation (about 0.6 g·min⁻¹ at best, roughly 80 W at the pedals) plans to ride the bike leg at 200 W. A forum post says \"with 125,000 kJ of body fat you'll never run out of fuel\". What is wrong with that reasoning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It confuses store size with rate; carbohydrate is still needed",
+       "correct": true,
+       "why": "Right: the fat tank is huge, but its tap covers at most about 80 W; the rest must come from carbohydrate, a store that can run out."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: at Ironman pace fat covers all the energy",
+       "why": "Even at a modest 200 W, fat oxidation at its peak covers well under half."
+      },
+      {
+       "id": "c",
+       "text": "The fat store is too small for a whole Ironman race",
+       "why": "125,000 kJ is many times what an Ironman costs; size is not the limit."
+      },
+      {
+       "id": "d",
+       "text": "Fat can't be burned at all once carbohydrate is eaten",
+       "why": "Eating carbohydrate lowers fat use somewhat but doesn't stop it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-mfo-compare",
+   "concept": "fat-variation",
+   "bloom": "analyse",
+   "sources": [
+    "randell2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners have the same VO₂max and body fat, yet their maximal fat oxidation is 0.4 and 0.8 g·min⁻¹. How surprising is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not very: over half the differences between athletes are unexplained by such measures",
+       "correct": true,
+       "why": "Right: in 1,121 athletes, body composition, fitness and fasting explained only 47% of the variation."
+      },
+      {
+       "id": "b",
+       "text": "Very: VO₂max and body fat fully determine fat oxidation",
+       "why": "They explain part of it; more than half the variation was unaccounted for."
+      },
+      {
+       "id": "c",
+       "text": "It must be a measurement error",
+       "why": "Large real differences between similar athletes are common in fat oxidation data."
+      },
+      {
+       "id": "d",
+       "text": "It shows the slower one is untrained",
+       "why": "Their VO₂max is the same; fat oxidation varies widely even among trained athletes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fat-mfo-appraise",
+   "concept": "fat-variation",
+   "bloom": "evaluate",
+   "sources": [
+    "randell2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's maximal fat oxidation rose from 0.5 to 0.7 g·min⁻¹ between two lab tests. The first was done 3 h after breakfast, the second after an overnight fast. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rise may come from the longer fast, not from training",
+       "correct": true,
+       "why": "Right: fasting duration is linked to higher fat oxidation, so the tests aren't comparable."
+      },
+      {
+       "id": "b",
+       "text": "His training clearly raised his fat oxidation by 40%",
+       "why": "The test conditions changed, so the rise can't be credited to training."
+      },
+      {
+       "id": "c",
+       "text": "The second test must be wrong, because fasting lowers fat oxidation",
+       "why": "Longer fasting goes with higher, not lower, fat oxidation."
+      },
+      {
+       "id": "d",
+       "text": "Fasting doesn't matter for fat oxidation tests",
+       "why": "Fasting duration was one of the factors linked to maximal fat oxidation."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

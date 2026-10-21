@@ -1,0 +1,906 @@
+{
+ "id": "pr-daily",
+ "module": "t4-protein-recovery",
+ "title": "Daily protein for endurance athletes",
+ "goal": "Work out daily and per-meal protein for an endurance athlete, explain where the figures come from and what limits them, and adjust them for sleep and for weight loss.",
+ "requires": [
+  "pr-glycogen"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "rda",
+    "iaao"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pd-range",
+   "title": "How much protein a day?",
+   "text": "The [RDA](g:rda) for protein, **0.8 g·kg⁻¹·day⁻¹**, is set for the general population, not for athletes. Athletes are advised more: the joint ACSM position puts it at **1.2–2.0 g·kg⁻¹·day⁻¹**, the ISSN at 1.4–2.0. Endurance athletes usually sit in the lower half, strength athletes higher, and short blocks of heavy training can justify more [[c:athlete-range]].\n\nA consensus paper for track and field suggests about **1.6 g·kg⁻¹·day⁻¹** for athletes keeping or gaining weight, and notes that this doesn't call for supplements [[c:target-1-6]].\n\nNormal meals reach it easily for most athletes who eat enough overall.",
+   "claims": [
+    {
+     "id": "athlete-range",
+     "text": "Athletes are advised 1.2–2.0 g·kg⁻¹·day⁻¹ of protein (ACSM joint position; ISSN 1.4–2.0), endurance athletes usually in the lower part of the range, with more in short intensified blocks.",
+     "grade": "moderate",
+     "sources": [
+      "vitale2019",
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "vitale2019",
+       "quote": "The AND, DC, and ACSM all recommend protein ingestion for athletes in the range of 1.2–2.0 g/kg/day [ 8 ], with the ISSN recommending 1.4–2.0 g/kg/day [ 9 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "vitale2019",
+       "quote": "Strength and power athletes are typically recommended to consume in the higher range and endurance athletes the lower range, based on individual needs. Temporary ingestion of higher quantities during intense training may provide additional benefit",
+       "level": "full-text"
+      },
+      {
+       "source": "jager2017",
+       "quote": "For building muscle mass and for maintaining muscle mass through a positive muscle protein balance, an overall daily protein intake in the range of 1.4-2.0 g protein/kg body weight/day (g/kg/d) is sufficient for most exercising individuals",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "target-1-6",
+     "text": "Track and field athletes maintaining or gaining weight should aim for about 1.6 g·kg⁻¹·day⁻¹, which does not require supplements.",
+     "grade": "moderate",
+     "sources": [
+      "witard2019"
+     ],
+     "evidence": [
+      {
+       "source": "witard2019",
+       "quote": "To facilitate the remodeling of protein-containing structures, which are turning over rapidly due to their training volumes, track and field athletes with the goal of weight maintenance or weight gain should aim for protein intakes of ∼1.6 g·kg BM-1·day-1.",
+       "level": "abstract"
+      },
+      {
+       "source": "witard2019",
+       "quote": "Protein intakes at this level would not necessarily require an overemphasis on protein-containing foods and, beyond convenience, does not suggest a need to use protein or amino acid-based supplements.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pd-range-example",
+   "title": "Daily protein for a 68 kg cyclist",
+   "problem": "A 68 kg cyclist wants to know his daily protein range (1.2–2.0 g·kg⁻¹·day⁻¹) and the amount at 1.6 g·kg⁻¹·day⁻¹.",
+   "steps": [
+    "Daily protein = body mass × intake per kg.",
+    "Bottom of range: 68 × 1.2 = 81.6 g. Top: 68 × 2.0 = 136 g.",
+    "At 1.6: 68 × 1.6 = 108.8 g, about 109 g a day."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pd-daily-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pd-rda-misuse"
+  },
+  {
+   "type": "concept",
+   "id": "pd-methods",
+   "title": "Where the numbers come from",
+   "text": "Older figures come from [nitrogen balance](g:nitrogen-balance): the intake at which nitrogen eaten equals nitrogen lost. The newer [IAAO](g:iaao) method gives a [tracer](g:tracer) amino acid and measures how much is burned: once protein intake is enough, burning stops falling.\n\nWith IAAO after a 20 km run, endurance-trained men needed on average **1.65 g·kg⁻¹·day⁻¹**, with **1.83** suggested to cover nearly everyone: above the 1.2–1.4 advised at the time [[c:kato-iaao]]. But it was 6 men, the funder sells amino acids, and critics argue the IAAO bend point marks the intake that *maximises* whole-body protein building, not the minimum you need [[c:iaao-critique]].",
+   "claims": [
+    {
+     "id": "kato-iaao",
+     "text": "Using IAAO after a 20 km run, endurance-trained men had an estimated average protein requirement of 1.65 and a recommended intake of 1.83 g·kg⁻¹·day⁻¹, above the 1.2–1.4 then advised.",
+     "grade": "weak",
+     "sources": [
+      "kato2016"
+     ],
+     "evidence": [
+      {
+       "source": "kato2016",
+       "quote": "13CO2 excretion displayed a robust bi-phase linear relationship (R2 = 0.86) that resulted in an estimated average requirement and a recommended protein intake of 1.65 and 1.83 g protein·kg-1·d-1, respectively, which was similar to values based on phenylalanine oxidation (1.53 and 1.70 g·kg-1·d-1, respectively).",
+       "level": "abstract"
+      },
+      {
+       "source": "kato2016",
+       "quote": "We report a recommended protein intake that is greater than the RDA (0.8 g·kg-1·d-1) and current recommendations for endurance athletes (1.2-1.4 g·kg-1·d-1).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "iaao-critique",
+     "text": "The IAAO breakpoint may mark the intake that maximises whole-body protein anabolism rather than a protein requirement.",
+     "grade": "disputed",
+     "sources": [
+      "malowany2026"
+     ],
+     "evidence": [
+      {
+       "source": "malowany2026",
+       "quote": "However, since breakpoint analysis determines the protein intake at which whole-body protein net balance is maximized, we suggest the value determined by IAAO analysis represents the maximal anabolic protein intake, not a protein requirement.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do endurance athletes need about 1.8 g·kg⁻¹·day⁻¹ of protein after hard training days?",
+    "sides": [
+     {
+      "position": "Yes: IAAO after a long run puts the requirement at 1.65 and the safe intake at 1.83 g·kg⁻¹·day⁻¹, above older nitrogen-balance figures.",
+      "sources": [
+       "kato2016"
+      ]
+     },
+     {
+      "position": "Not shown: the IAAO bend point estimates the intake that maximises protein building, not a requirement, and the method has other caveats (short tests, free amino acids sipped instead of food).",
+      "sources": [
+       "malowany2026"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pd-iaao-signal"
+  },
+  {
+   "type": "question",
+   "item": "pd-iaao-appraisal"
+  },
+  {
+   "type": "concept",
+   "id": "pd-spread",
+   "title": "Spread it across the day",
+   "text": "How the day's protein is split may matter too. After a strength session, 80 g of whey over 12 h given as 4 × 20 g every 3 h raised [myofibrillar](g:myofibrillar-protein) synthesis more than 8 × 10 g or 2 × 40 g [[c:areta-spread]]. Position stands advise about 0.3 g·kg⁻¹ every 3–5 h [[c:spread-advice]].\n\nThe per-meal cap is now debated. In young men after a strength session, 100 g in one go gave a bigger and longer (over 12 h) rise than 25 g, with almost no extra protein burned [[c:no-upper-limit]]. Critics reply that the men were recreationally active, not trained, and that spreading meals still makes sense [[c:spread-still]].",
+   "claims": [
+    {
+     "id": "areta-spread",
+     "text": "After resistance exercise, 4 × 20 g of whey every 3 h raised myofibrillar protein synthesis over 12 h more than 8 × 10 g or 2 × 40 g.",
+     "grade": "weak",
+     "sources": [
+      "areta2013"
+     ],
+     "evidence": [
+      {
+       "source": "areta2013",
+       "quote": "In conclusion, 20 g of whey protein consumed every 3 h was superior to either PULSE or BOLUS feeding patterns for stimulating MPS throughout the day.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "spread-advice",
+     "text": "Guidelines advise spreading protein at about 0.3 g·kg⁻¹ every 3–5 h through the day.",
+     "grade": "moderate",
+     "sources": [
+      "vitale2019",
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "vitale2019",
+       "quote": "Therefore, the AND, DC, and ACSM recommend spreading protein dosing at ~0.3 g/kg every 3–5 h throughout the day [ 8 ].",
+       "level": "full-text"
+      },
+      {
+       "source": "jager2017",
+       "quote": "These protein doses should ideally be evenly distributed, every 3–4 h, across the day.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "no-upper-limit",
+     "text": "After resistance exercise, 100 g of protein gave a greater and longer (>12 h) anabolic response than 25 g, with negligible extra amino acid oxidation.",
+     "grade": "weak",
+     "sources": [
+      "trommelen2023"
+     ],
+     "evidence": [
+      {
+       "source": "trommelen2023",
+       "quote": "Using a comprehensive quadruple isotope tracer feeding-infusion approach, we show that the ingestion of 100 g protein results in a greater and more prolonged (>12 h) anabolic response when compared to the ingestion of 25 g protein.",
+       "level": "abstract"
+      },
+      {
+       "source": "trommelen2023",
+       "quote": "Protein ingestion has a negligible impact on whole-body protein breakdown rates or amino acid oxidation rates.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "spread-still",
+     "text": "Critics caution that the 100 g finding, made in recreationally active young men, should not be read as dismissing protein distribution across meals.",
+     "grade": "weak",
+     "sources": [
+      "witard2024"
+     ],
+     "evidence": [
+      {
+       "source": "witard2024",
+       "quote": "However, we respectfully caution that the practical implications of these findings may have been misinterpreted, at least in terms of dismissing the concept of protein meal distribution as an important factor in optimizing muscle tissue anabolism and/or metabolic health.",
+       "level": "abstract"
+      },
+      {
+       "source": "witard2024",
+       "quote": "recreationally active (but not resistance-trained), young men following resistance exercise",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is there a per-meal limit to how much protein muscle can use after exercise?",
+    "sides": [
+     {
+      "position": "No clear limit: a 100 g dose gave a bigger, longer response than 25 g with little extra burned, so one large meal isn't wasted.",
+      "sources": [
+       "trommelen2023"
+      ]
+     },
+     {
+      "position": "A practical limit still applies: about 20 g (0.3 g·kg⁻¹) every 3–5 h beat fewer large or many small doses, and spreading meals remains sensible.",
+      "sources": [
+       "areta2013",
+       "witard2024"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "pd-spread-example",
+   "title": "Splitting the day's protein",
+   "problem": "A 70 kg runner aims for 1.6 g·kg⁻¹·day⁻¹ over 4 meals. How much protein per meal, and does each meal reach 0.3 g·kg⁻¹?",
+   "steps": [
+    "Daily protein = 70 × 1.6 = 112 g.",
+    "Per meal = 112 ÷ 4 = 28 g.",
+    "0.3 g·kg⁻¹ for 70 kg = 21 g, so 28 g per meal is enough (28 ÷ 70 = 0.4 g·kg⁻¹)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pd-split-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "pd-spread-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "pd-sleep",
+   "title": "Protein before sleep",
+   "text": "The night is the longest gap without food. In young men who trained in the evening, 40 g of [casein](g:casein) taken 30 min before sleep was digested and absorbed during the night. It turned whole-body protein balance from slightly negative to positive, and muscle protein synthesis was about 22% higher, which was borderline significant [[c:presleep]]. The ISSN suggests 30–40 g of casein before bed [[c:presleep-advice]].\n\nSlow casein suits the long night. For endurance athletes the evidence is thinner: the key study used a strength session, and it measured one night, not months of training.",
+   "claims": [
+    {
+     "id": "presleep",
+     "text": "40 g of casein before sleep after evening exercise was digested overnight, made whole-body protein balance positive and raised muscle protein synthesis by about 22% (borderline significant).",
+     "grade": "weak",
+     "sources": [
+      "res2012"
+     ],
+     "evidence": [
+      {
+       "source": "res2012",
+       "quote": "Protein ingestion before sleep increased whole-body protein synthesis rates (311 ± 8 vs 246 ± 9 μmol·kg per 7.5 h) and improved net protein balance (61 ± 5 vs -11 ± 6 μmol·kg per 7.5 h) in the PRO vs the PLA experiment (P < 0.01).",
+       "level": "abstract"
+      },
+      {
+       "source": "res2012",
+       "quote": "Mixed muscle protein synthesis rates were ∼22% higher in the PRO vs the PLA experiment, which reached borderline significance (0.059%·h ± 0.005%·h vs 0.048%·h ± 0.004%·h, P = 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "presleep-advice",
+     "text": "The ISSN position stand advises 30–40 g of casein before sleep to raise overnight muscle protein synthesis.",
+     "grade": "moderate",
+     "sources": [
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "jager2017",
+       "quote": "Pre-sleep casein protein intake (30–40 g) provides increases in overnight MPS and metabolic rate without influencing lipolysis.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pd-sleep-plan"
+  },
+  {
+   "type": "question",
+   "item": "pd-sleep-evidence"
+  },
+  {
+   "type": "concept",
+   "id": "pd-deficit",
+   "title": "Eating less, needing more",
+   "text": "Losing weight raises protein needs. Athletes who ate 60% of their usual energy for 2 weeks lost the same fat on either diet, but those on about 2.3 g·kg⁻¹·day⁻¹ of protein lost 0.3 kg of [lean mass](g:fat-free-mass), against 1.6 kg on about 1.0 g·kg⁻¹·day⁻¹ [[c:deficit-lean]]. Guidelines suggest above 1.6, and up to 2.3–3.1 g·kg⁻¹·day⁻¹ for strength-trained athletes, while cutting energy [[c:deficit-advice]].\n\nTwo cautions. These were resistance-trained athletes, not endurance athletes. And extra protein doesn't make up for too little energy overall: long or severe [low energy availability](g:low-energy-availability) harms health and performance (the RED-S module covers it).",
+   "claims": [
+    {
+     "id": "deficit-lean",
+     "text": "In a 2-week energy deficit, athletes on about 2.3 g·kg⁻¹·day⁻¹ of protein lost 0.3 kg of lean mass against 1.6 kg on about 1.0 g·kg⁻¹·day⁻¹, with no difference in fat loss.",
+     "grade": "weak",
+     "sources": [
+      "mettler2010"
+     ],
+     "evidence": [
+      {
+       "source": "mettler2010",
+       "quote": "Total (-3.0 +/- 0.4 and -1.5 +/- 0.3 kg for the CP and HP, respectively, P = 0.036) and lean body mass loss (-1.6 +/- 0.3 and -0.3 +/- 0.3 kg, P = 0.006) were significantly larger in the CP compared with those in the HP.",
+       "level": "abstract"
+      },
+      {
+       "source": "mettler2010",
+       "quote": "Fat loss, performance, and most blood parameters were not influenced by the diet.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "deficit-advice",
+     "text": "In an energy deficit, protein needs may exceed 1.6 g·kg⁻¹·day⁻¹, with 2.3–3.1 g·kg⁻¹·day⁻¹ suggested for resistance-trained athletes.",
+     "grade": "moderate",
+     "sources": [
+      "witard2019",
+      "jager2017"
+     ],
+     "evidence": [
+      {
+       "source": "witard2019",
+       "quote": "This review also highlights that optimal protein intakes may exceed 1.6 g·kg BM-1·day-1 for athletes who are restricting energy intake and attempting to minimize loss of lean BM.",
+       "level": "abstract"
+      },
+      {
+       "source": "jager2017",
+       "quote": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pd-mettler"
+  },
+  {
+   "type": "question",
+   "item": "pd-deficit-plan"
+  },
+  {
+   "type": "question",
+   "item": "pd-daily-calc",
+   "variant": "c"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The RDA (0.8 g·kg⁻¹·day⁻¹) is for the general population; athletes are advised 1.2–2.0, endurance athletes usually in the lower half, about 1.6 a sensible target.",
+    "IAAO puts endurance athletes' needs after a hard day at about 1.65–1.83 g·kg⁻¹·day⁻¹, but from 6 men, industry-funded, and the method may measure a maximum, not a need.",
+    "Spread protein at about 0.3 g·kg⁻¹ every 3–5 h; whether one large meal is wasted is debated.",
+    "30–40 g of casein before sleep improved overnight protein balance after evening training: promising, thin evidence.",
+    "In an energy deficit, more protein (2.0+ g·kg⁻¹·day⁻¹) protects lean mass, but it can't replace eating enough energy."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pd-daily-calc",
+   "concept": "pd-range",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "witard2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 62 kg runner aims for 1.6 g·kg⁻¹·day⁻¹ of protein. How much is that per day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "99 g",
+       "correct": true,
+       "why": "Right: 62 × 1.6 = 99.2 g."
+      },
+      {
+       "id": "b",
+       "text": "39 g",
+       "why": "This divides mass by the intake (62 ÷ 1.6). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "50 g",
+       "why": "This is the RDA (62 × 0.8), set for the general population, not the target asked."
+      },
+      {
+       "id": "d",
+       "text": "9.9 g",
+       "why": "A decimal slip: 62 × 0.16."
+      }
+     ],
+     "solution": "Daily protein = 62 kg × 1.6 g·kg⁻¹·day⁻¹ = 99.2 g, about 99 g."
+    },
+    {
+     "id": "b",
+     "stem": "A 75 kg cyclist aims for 1.4 g·kg⁻¹·day⁻¹ of protein. How much is that per day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "105 g",
+       "correct": true,
+       "why": "Right: 75 × 1.4 = 105 g."
+      },
+      {
+       "id": "b",
+       "text": "54 g",
+       "why": "This divides mass by the intake (75 ÷ 1.4). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "60 g",
+       "why": "This is the RDA (75 × 0.8), set for the general population, not the target asked."
+      },
+      {
+       "id": "d",
+       "text": "10.5 g",
+       "why": "A decimal slip: 75 × 0.14."
+      }
+     ],
+     "solution": "Daily protein = 75 kg × 1.4 g·kg⁻¹·day⁻¹ = 105 g."
+    },
+    {
+     "id": "c",
+     "stem": "An 85 kg triathlete in a heavy block aims for 1.8 g·kg⁻¹·day⁻¹. How much protein is that per day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "153 g",
+       "correct": true,
+       "why": "Right: 85 × 1.8 = 153 g."
+      },
+      {
+       "id": "b",
+       "text": "47 g",
+       "why": "This divides mass by the intake (85 ÷ 1.8). Multiply instead."
+      },
+      {
+       "id": "c",
+       "text": "68 g",
+       "why": "This is the RDA (85 × 0.8), set for the general population, not the target asked."
+      },
+      {
+       "id": "d",
+       "text": "15.3 g",
+       "why": "A decimal slip: 85 × 0.18."
+      }
+     ],
+     "solution": "Daily protein = 85 kg × 1.8 g·kg⁻¹·day⁻¹ = 153 g."
+    }
+   ]
+  },
+  {
+   "id": "pd-rda-misuse",
+   "concept": "pd-range",
+   "bloom": "understand",
+   "sources": [
+    "vitale2019",
+    "kato2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner training 8 h a week reads that the protein RDA is 0.8 g·kg⁻¹·day⁻¹ and plans to eat exactly that. What is the best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The RDA is for the general population; athletes are advised 1.2–2.0",
+       "correct": true,
+       "why": "Right: the RDA covers non-athletes; training raises the advised intake."
+      },
+      {
+       "id": "b",
+       "text": "Good plan: the RDA already includes a margin for training",
+       "why": "The RDA is set for the general population and doesn't account for training load."
+      },
+      {
+       "id": "c",
+       "text": "The RDA is a maximum, so she should eat less than that",
+       "why": "The RDA is the intake that covers nearly everyone's needs, not an upper limit."
+      },
+      {
+       "id": "d",
+       "text": "The RDA applies per meal, so she needs 0.8 g·kg⁻¹ at each meal",
+       "why": "The RDA is a daily figure; per meal, athletes aim for about 0.3 g·kg⁻¹."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-iaao-signal",
+   "concept": "pd-methods",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kato2016",
+    "malowany2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an IAAO study, what shows that protein intake has become enough?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Burning of the labelled amino acid stops falling",
+       "correct": true,
+       "why": "Right: as intake rises, less of the tracer is burned, until the curve levels off at the bend point."
+      },
+      {
+       "id": "b",
+       "text": "Nitrogen eaten equals nitrogen lost",
+       "why": "That is the nitrogen balance method, the older approach."
+      },
+      {
+       "id": "c",
+       "text": "Blood amino acids fall back to fasting levels",
+       "why": "IAAO tracks breath CO₂ from the labelled amino acid, not blood levels returning."
+      },
+      {
+       "id": "d",
+       "text": "Body mass starts to rise",
+       "why": "IAAO is a short tracer test, over hours; it doesn't track body mass."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-iaao-appraisal",
+   "concept": "pd-methods",
+   "bloom": "evaluate",
+   "sources": [
+    "kato2016",
+    "malowany2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A forum post cites one IAAO study to claim that every endurance athlete needs 1.8 g·kg⁻¹·day⁻¹ of protein every day. What most limits that claim?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 men after one hard run, industry-funded, and IAAO may measure a maximum, not a need",
+       "correct": true,
+       "why": "Right: a tiny all-male sample, a hard-day protocol, funding from an amino acid maker and a debated method all limit it."
+      },
+      {
+       "id": "b",
+       "text": "IAAO can't be used in trained athletes",
+       "why": "It can; it is minimally invasive and was used here in trained runners."
+      },
+      {
+       "id": "c",
+       "text": "1.8 g·kg⁻¹·day⁻¹ is below the RDA",
+       "why": "1.8 is more than double the RDA of 0.8."
+      },
+      {
+       "id": "d",
+       "text": "The study measured strength athletes, not endurance athletes",
+       "why": "It tested endurance-trained men after a 20 km run."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-split-calc",
+   "concept": "pd-spread",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019",
+    "areta2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60 kg triathlete eats 1.5 g·kg⁻¹·day⁻¹ of protein, split evenly over 4 meals. How much protein per meal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "22.5 g",
+       "correct": true,
+       "why": "Right: 60 × 1.5 = 90 g a day, ÷ 4 = 22.5 g."
+      },
+      {
+       "id": "b",
+       "text": "90 g",
+       "why": "That is the daily total; it still needs dividing by 4 meals."
+      },
+      {
+       "id": "c",
+       "text": "0.4 g",
+       "why": "This divides 1.5 by 4 and forgets to multiply by body mass (it's 0.4 g·kg⁻¹, not 0.4 g)."
+      },
+      {
+       "id": "d",
+       "text": "360 g",
+       "why": "This multiplies the daily total by 4 instead of dividing."
+      }
+     ],
+     "solution": "Daily = 60 × 1.5 = 90 g. Per meal = 90 ÷ 4 = 22.5 g."
+    },
+    {
+     "id": "b",
+     "stem": "A 72 kg cyclist eats 1.5 g·kg⁻¹·day⁻¹ of protein over 4 even meals. How much protein per meal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "27 g",
+       "correct": true,
+       "why": "Right: 72 × 1.5 = 108 g, ÷ 4 = 27 g."
+      },
+      {
+       "id": "b",
+       "text": "108 g",
+       "why": "That is the daily total; it still needs dividing by 4 meals."
+      },
+      {
+       "id": "c",
+       "text": "0.4 g",
+       "why": "This divides 1.5 by 4 and forgets to multiply by body mass (it's 0.4 g·kg⁻¹, not 0.4 g)."
+      },
+      {
+       "id": "d",
+       "text": "432 g",
+       "why": "This multiplies the daily total by 4 instead of dividing."
+      }
+     ],
+     "solution": "Daily = 72 × 1.5 = 108 g. Per meal = 108 ÷ 4 = 27 g."
+    },
+    {
+     "id": "c",
+     "stem": "A 55 kg runner eats 1.8 g·kg⁻¹·day⁻¹ of protein over 5 even meals. How much protein per meal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20 g",
+       "correct": true,
+       "why": "Right: 55 × 1.8 = 99 g, ÷ 5 = 19.8 g."
+      },
+      {
+       "id": "b",
+       "text": "99 g",
+       "why": "That is the daily total; it still needs dividing by 5 meals."
+      },
+      {
+       "id": "c",
+       "text": "0.36 g",
+       "why": "This divides 1.8 by 5 and forgets to multiply by body mass (it's 0.36 g·kg⁻¹, not 0.36 g)."
+      },
+      {
+       "id": "d",
+       "text": "495 g",
+       "why": "This multiplies the daily total by 5 instead of dividing."
+      }
+     ],
+     "solution": "Daily = 55 × 1.8 = 99 g. Per meal = 99 ÷ 5 = 19.8 g, about 20 g."
+    }
+   ]
+  },
+  {
+   "id": "pd-spread-scenario",
+   "concept": "pd-spread",
+   "bloom": "analyse",
+   "sources": [
+    "areta2013",
+    "vitale2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist eats 100 g of protein a day: 10 g at breakfast, 10 g at lunch and 80 g at dinner. Which change fits current guidance best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Same total, moved to about 25 g at each of 4 meals",
+       "correct": true,
+       "why": "Right: guidance is about 0.3 g·kg⁻¹ every 3–5 h, and 4 × 20 g beat both small and large doses in a 12 h study."
+      },
+      {
+       "id": "b",
+       "text": "Add a 40 g shake to dinner",
+       "why": "This piles more onto the one big meal and leaves breakfast and lunch short."
+      },
+      {
+       "id": "c",
+       "text": "Cut the total to the RDA of 0.8 g·kg⁻¹·day⁻¹",
+       "why": "The RDA is for non-athletes; the issue here is the split, not too much protein."
+      },
+      {
+       "id": "d",
+       "text": "Move all 100 g into one meal after training",
+       "why": "A bigger single dose isn't wasted, but spreading still fits guidance better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-sleep-plan",
+   "concept": "pd-sleep",
+   "bloom": "apply",
+   "sources": [
+    "res2012",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete finishes an evening run at 20:00, eats a protein-rich dinner at 20:45 and goes to bed at 23:00. What would most likely add to his overnight muscle protein balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 40 g of casein 30 min before bed",
+       "correct": true,
+       "why": "Right: this improved overnight protein balance after evening training."
+      },
+      {
+       "id": "b",
+       "text": "A 40 g whey shake the next morning",
+       "why": "That doesn't help the night; the gap without food is the problem."
+      },
+      {
+       "id": "c",
+       "text": "A large carbohydrate snack before bed",
+       "why": "Carbohydrate helps glycogen, but it doesn't supply the amino acids needed for protein balance."
+      },
+      {
+       "id": "d",
+       "text": "5 g of leucine before bed",
+       "why": "Leucine flips the switch but, without the other EAAs, doesn't sustain building."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-sleep-evidence",
+   "concept": "pd-sleep",
+   "bloom": "evaluate",
+   "sources": [
+    "res2012",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How strong is the evidence that protein before sleep improves endurance athletes' recovery?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Promising but thin: one night, strength exercise, borderline muscle effect",
+       "correct": true,
+       "why": "Right: whole-body balance improved, but muscle synthesis was borderline, in young men after strength work."
+      },
+      {
+       "id": "b",
+       "text": "Strong: many trials in endurance athletes show better racing",
+       "why": "The key study used strength exercise and measured one night, not performance."
+      },
+      {
+       "id": "c",
+       "text": "None: protein isn't digested during sleep",
+       "why": "Casein taken before sleep was digested and absorbed during the night."
+      },
+      {
+       "id": "d",
+       "text": "Strong: it guarantees 22% more muscle",
+       "why": "The 22% was a borderline rise in synthesis over one night, not more muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-mettler",
+   "concept": "pd-deficit",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mettler2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 2-week weight-loss study, what did the higher-protein group mainly keep compared with the lower-protein group?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lean mass",
+       "correct": true,
+       "why": "Right: they lost 0.3 kg of lean mass against 1.6 kg."
+      },
+      {
+       "id": "b",
+       "text": "Fat mass",
+       "why": "Fat loss was the same on both diets."
+      },
+      {
+       "id": "c",
+       "text": "Performance",
+       "why": "Performance was not different between the diets."
+      },
+      {
+       "id": "d",
+       "text": "Energy intake",
+       "why": "Both groups ate 60% of their usual energy; only protein differed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd-deficit-plan",
+   "concept": "pd-deficit",
+   "bloom": "evaluate",
+   "sources": [
+    "mettler2010",
+    "witard2019",
+    "jager2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg cyclist plans 4 weeks of eating 20% less energy to lose fat before a hill climb. Which protein plan fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raise protein to about 2.0–2.3 g·kg⁻¹·day⁻¹, spread over meals",
+       "correct": true,
+       "why": "Right: protein needs rise in a deficit, and higher intakes kept lean mass in a 2-week trial."
+      },
+      {
+       "id": "b",
+       "text": "Cut protein along with everything else, to about 1.0",
+       "why": "At about 1.0 g·kg⁻¹·day⁻¹ athletes lost five times more lean mass."
+      },
+      {
+       "id": "c",
+       "text": "Keep protein at the RDA of 0.8 g·kg⁻¹·day⁻¹",
+       "why": "The RDA is for non-athletes eating enough; in a deficit, needs go up."
+      },
+      {
+       "id": "d",
+       "text": "Drop carbohydrate to near zero and eat protein instead",
+       "why": "Protein can't fuel hard training; cutting carbohydrate that far would hurt the sessions."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

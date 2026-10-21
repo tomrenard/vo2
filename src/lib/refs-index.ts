@@ -31,6 +31,14 @@ import g_t3_load from "../../data/glossary/t3-load.json";
 import g_t3_periodization from "../../data/glossary/t3-periodization.json";
 import g_t3_strength from "../../data/glossary/t3-strength.json";
 import g_t3_trainability from "../../data/glossary/t3-trainability.json";
+import g_t4_fueling from "../../data/glossary/t4-fueling.json";
+import g_t4_hydration from "../../data/glossary/t4-hydration.json";
+import g_t4_low_carb from "../../data/glossary/t4-low-carb.json";
+import g_t4_macros from "../../data/glossary/t4-macros.json";
+import g_t4_protein_recovery from "../../data/glossary/t4-protein-recovery.json";
+import g_t4_red_s from "../../data/glossary/t4-red-s.json";
+import g_t4_supplements from "../../data/glossary/t4-supplements.json";
+import g_t4_ultra_fuel from "../../data/glossary/t4-ultra-fuel.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -63,6 +71,14 @@ import s_t3_load from "../../data/sources/t3-load.json";
 import s_t3_periodization from "../../data/sources/t3-periodization.json";
 import s_t3_strength from "../../data/sources/t3-strength.json";
 import s_t3_trainability from "../../data/sources/t3-trainability.json";
+import s_t4_fueling from "../../data/sources/t4-fueling.json";
+import s_t4_hydration from "../../data/sources/t4-hydration.json";
+import s_t4_low_carb from "../../data/sources/t4-low-carb.json";
+import s_t4_macros from "../../data/sources/t4-macros.json";
+import s_t4_protein_recovery from "../../data/sources/t4-protein-recovery.json";
+import s_t4_red_s from "../../data/sources/t4-red-s.json";
+import s_t4_supplements from "../../data/sources/t4-supplements.json";
+import s_t4_ultra_fuel from "../../data/sources/t4-ultra-fuel.json";
 import type { Glossary, Source } from "./content";
 
 export const GLOSSARY = {
@@ -97,6 +113,14 @@ export const GLOSSARY = {
   ...g_t3_periodization,
   ...g_t3_strength,
   ...g_t3_trainability,
+  ...g_t4_fueling,
+  ...g_t4_hydration,
+  ...g_t4_low_carb,
+  ...g_t4_macros,
+  ...g_t4_protein_recovery,
+  ...g_t4_red_s,
+  ...g_t4_supplements,
+  ...g_t4_ultra_fuel,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -131,4 +155,12 @@ export const SOURCES = {
   ...s_t3_periodization,
   ...s_t3_strength,
   ...s_t3_trainability,
+  ...s_t4_fueling,
+  ...s_t4_hydration,
+  ...s_t4_low_carb,
+  ...s_t4_macros,
+  ...s_t4_protein_recovery,
+  ...s_t4_red_s,
+  ...s_t4_supplements,
+  ...s_t4_ultra_fuel,
 } as Record<string, Source>;

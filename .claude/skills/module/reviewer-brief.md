@@ -13,3 +13,8 @@ Check:
 FIX what you find directly in your module's files. Never change an existing item's meaning under the same id: if a fix changes what a question asks, give it a new id and update the steps. After edits run `pnpm content:check --module <module id>` and `pnpm sources:check` until both pass (if sources:check fails only on another module's source, note it and move on). Don't commit, don't run `content:check` without --module.
 
 Report under 300 words: issues (severity blocker/important/nit, where, what, fix), and anything left unresolved.
+
+## Budget (every tool call resends your whole context, so keep it small)
+- Read data/README.md and src/lib/content.ts once; read your module's files, but `grep`/`jq` other modules' data instead of opening them.
+- Check all quotes in one batch: one script that fetches each DOI's abstract from Europe PMC and prints, per claim, whether its quote appears word for word. Fetch a full text only for quotes the abstract doesn't contain.
+- Aim for under 40 tool calls for the whole module.

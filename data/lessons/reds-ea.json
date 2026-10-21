@@ -1,0 +1,900 @@
+{
+ "id": "reds-ea",
+ "module": "t4-red-s",
+ "title": "Energy availability: the number behind REDs",
+ "goal": "Calculate energy availability from intake, training cost and fat-free mass, explain where the 45 and 30 kcal values come from and why they are debated, and tell adaptable from problematic low energy availability.",
+ "requires": [
+  "pr-daily"
+ ],
+ "lastReviewed": "2026-10-21",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "exercise-energy-expenditure",
+    "energy-balance",
+    "problematic-lea",
+    "adaptable-lea"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ea-define",
+   "title": "What is left after training",
+   "text": "You met [energy availability](g:energy-availability) (EA) in the body composition module. Now we use it properly:\n\n**EA = (energy intake − [exercise energy expenditure](g:exercise-energy-expenditure)) ÷ [fat-free mass](g:fat-free-mass)**, per day, in kJ·kg FFM⁻¹·day⁻¹ (most papers use kcal).\n\nIt is the energy left for everything that isn't training: keeping warm, repairing tissue, hormones, the immune system [[c:ea-def]]. It is divided by fat-free mass because that is the tissue that burns most of it.\n\nEA is not [energy balance](g:energy-balance), which subtracts *all* spending. When intake falls short, the body cuts its own spending, so mass can stay steady while EA is low: the balance settles at a lower level that hides the shortage [[c:ea-balance]].",
+   "claims": [
+    {
+     "id": "ea-def",
+     "text": "EA is energy intake minus exercise energy expenditure, relative to lean (fat-free) mass: the energy available for all functions outside exercise.",
+     "grade": "strong",
+     "sources": [
+      "areta2021",
+      "burke2018"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "The most current description of energy availability (EA) defines it as the difference between energy intake (EI) and exercise energy expenditure (EEE), expressed relative to an individual’s lean body mass (LBM, Table 1 ), representing the daily amount of energy ‘available’ to sustain all physiological functions outside of exercise (Loucks 2020 ).",
+       "level": "full-text"
+      },
+      {
+       "source": "burke2018",
+       "quote": "In sports nutrition, energy availability (EA) is defined as the energy available to support these basic physiological functions and good health once the energy cost of exercise is deducted from energy intake (EI), relative to an athlete's fat-free mass (FFM).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ea-balance",
+     "text": "When intake falls short, energy expenditure falls too, so body mass can stabilise at a lower level while energy for body functions stays short.",
+     "grade": "moderate",
+     "sources": [
+      "areta2021",
+      "wells2020"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "More importantly, the result of these adaptations is that energy balance and consequently weight stability is achieved at a lower set-point, thereby representing an apparent state of homeostasis that masks the real lack of energy available for optimal physiological functions.",
+       "level": "full-text"
+      },
+      {
+       "source": "wells2020",
+       "quote": "An athlete may be stable in weight but deficient in energy.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ea-stable-mass"
+  },
+  {
+   "type": "question",
+   "item": "ea-why-ffm"
+  },
+  {
+   "type": "concept",
+   "id": "ea-parts",
+   "title": "Getting the three numbers",
+   "text": "Each part of the sum has its own problem.\n\n- **Energy intake** comes from food diaries, which are usually too low (screening lesson).\n- **Exercise energy expenditure** is the cost of the planned training. The current definition counts only the *extra* cost: subtract what you'd have burned resting in that time [[c:ea-net]]. A power meter helps: metabolic energy ≈ work ÷ [gross efficiency](g:gross-efficiency), about 20% in cycling. Running and swimming need heart rate or pace estimates, which are rougher.\n- **Fat-free mass** comes from DXA or skinfolds (body composition module).\n\nThere is no single agreed protocol, and each part carries error [[c:ea-pitfalls]]. Treat one EA number as an estimate, not a measurement.",
+   "claims": [
+    {
+     "id": "ea-net",
+     "text": "The current EA definition subtracts the resting and non-exercise energy that would have been spent anyway during exercise, giving a net exercise energy expenditure.",
+     "grade": "moderate",
+     "sources": [
+      "areta2021"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "In the third and most current definition, it is recognised that the value of gross exercise energy expenditure used in the previous definitions includes contribution of resting metabolic rate and non-exercise activity that should be subtracted to provide a net value of exercise energy expenditure (Loucks et al.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ea-pitfalls",
+     "text": "There is no universal protocol for calculating EA, and each component carries residual error.",
+     "grade": "strong",
+     "sources": [
+      "burke2018"
+     ],
+     "evidence": [
+      {
+       "source": "burke2018",
+       "quote": "These include the lack of a universal protocol for the calculation of EA, the resources needed to achieve estimates of each of the components of the equation, and the residual errors in these estimates.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ea-power-meter",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ea-what-counts"
+  },
+  {
+   "type": "example",
+   "id": "ea-example",
+   "title": "A runner's energy availability",
+   "problem": "A runner weighs 58 kg with 14% body fat. On a 16 km run day she eats 11,000 kJ (2,629 kcal). Running costs her about 4.1 kJ·kg⁻¹·km⁻¹, and resting for the 80 min of the run would have cost about 300 kJ. What is her energy availability?",
+   "steps": [
+    "Fat-free mass: 58 kg × (1 − 0.14) = 49.9 kg.",
+    "Gross cost of the run: 58 kg × 16 km × 4.1 kJ·kg⁻¹·km⁻¹ = 3,805 kJ.",
+    "Net exercise energy expenditure: 3,805 − 300 = 3,505 kJ, about 3,500 kJ.",
+    "Energy left: 11,000 − 3,500 = 7,500 kJ.",
+    "EA = 7,500 kJ ÷ 49.9 kg = 150 kJ·kg FFM⁻¹·day⁻¹ (150 ÷ 4.184 = 36 kcal).",
+    "Compare: below the 188 kJ (45 kcal) usually called adequate, above the 125 kJ (30 kcal) of the lab studies. One day tells little: average over a week."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ea-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ea-thresholds",
+   "title": "Where 45 and 30 come from",
+   "text": "The two famous numbers come from Anne Loucks' lab. Sedentary young women exercised under supervision and ate set amounts for 5 days, at an EA of 188 kJ (45 kcal) per kg lean mass per day as the control, or at 125, 84 or 42 kJ (30, 20 or 10 kcal).\n\n- [LH](g:lh) pulses were normal at 125 kJ but disrupted below it [[c:ea-lh]].\n- Bone-building markers fell at *every* level below 45; bone breakdown rose only at 42 kJ [[c:ea-bone-markers]].\n\nSo **188 kJ (45 kcal)** became the \"adequate\" level and **125 kJ (30 kcal)** the line below which most problems appear [[c:ea-30]]. Note that bone formation already suffered at 125 kJ.",
+   "claims": [
+    {
+     "id": "ea-lh",
+     "text": "In 29 sedentary women over 5 days, LH pulsatility was unaffected at 30 kcal·kg LBM⁻¹·day⁻¹ but disrupted below it (control 45).",
+     "grade": "moderate",
+     "sources": [
+      "loucks2003"
+     ],
+     "evidence": [
+      {
+       "source": "loucks2003",
+       "quote": "LH pulsatility was unaffected by an energy availability of 30 kcal/kg LBM.d (P > 0.3), but below this threshold LH pulse frequency decreased, whereas LH pulse amplitude increased (all P < 0.04).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ea-bone-markers",
+     "text": "Bone formation markers were suppressed at all restricted EA levels (30, 20, 10), while bone resorption rose only at 10 kcal·kg LBM⁻¹·day⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "ihle2004"
+     ],
+     "evidence": [
+      {
+       "source": "ihle2004",
+       "quote": "OC and PICP concentrations were suppressed by all restricted energy availability treatments (all p < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "ihle2004",
+       "quote": "NTX concentrations (p < 0.01) and indices of bone resorption/formation uncoupling (Z(NTX-OC) and Z(NTX-PICP); both p < 10(-4)) were increased by the 10 kcal/kgLBM/day treatment.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ea-30",
+     "text": "Most effects of low EA appear below about 30 kcal·kg FFM⁻¹·day⁻¹; about 45 is called healthy.",
+     "grade": "strong",
+     "sources": [
+      "nattiv2007",
+      "burke2018"
+     ],
+     "evidence": [
+      {
+       "source": "nattiv2007",
+       "quote": "Most effects appear to occur below an energy availability of 30 kcal.kg(-1) of fat-free mass per day.",
+       "level": "abstract"
+      },
+      {
+       "source": "burke2018",
+       "quote": "These outcomes are incurred in different dose-response patterns relative to the reduction in EA below a \"healthy\" level of ∼45 kcal·kg FFM−1·day−1.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ea-classify",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ea-bone-first"
+  },
+  {
+   "type": "concept",
+   "id": "ea-debate",
+   "title": "Why the thresholds are debated",
+   "text": "The numbers rest on a few short lab studies; reviewers warn against using them as hard lines [[c:ea-caution]].\n\n- **Short:** most trials lasted 5 days or less. A real season lasts months.\n- **Who:** sedentary young women. Men seem less sensitive: Koehler's six men at 63 kJ (15 kcal) kept their testosterone (endocrine module).\n- **Not a switch:** below 125 kJ (30 kcal), menstrual problems became more likely but weren't guaranteed [[c:ea-not-switch]].\n- **Field error:** a diary-based EA of 134 kJ (32 kcal) can easily really be 105 or 167 kJ.\n\nOne idea is an \"LEA load\": how far below 188 kJ (45 kcal) you are, times the days. So 3 days at 63 kJ (15 kcal) may equal 6 days at 125 kJ (30 kcal) [[c:ea-load]]. It is still untested.",
+   "claims": [
+    {
+     "id": "ea-caution",
+     "text": "Lab thresholds from short, controlled studies should be applied with caution to athletes in the field.",
+     "grade": "moderate",
+     "sources": [
+      "areta2021"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "Caution must be exercised when applying lab-based research findings on the field In line with the previous points, it is important to call for practitioners and researchers to be cautious when extrapolating laboratory-based thresholds established in short-duration, well-controlled studies for interpreting EA levels observed in the field with athletes and general population both in longitudinal and cross-sectional analyses.",
+       "level": "full-text"
+      },
+      {
+       "source": "areta2021",
+       "quote": "However, the body of evidence determining causal effects of LEA on endocrine, and physiological function through prospective studies manipulating EA is comparatively small, with interventions typically lasting ≤ 5 days.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ea-not-switch",
+     "text": "Menstrual disturbances became more likely as EA fell, but a 30 kcal threshold neither guaranteed nor excluded them.",
+     "grade": "moderate",
+     "sources": [
+      "areta2021"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "Additionally, though there was an increase in the likelihood of menstrual disturbances with decreasing EA during this period, a threshold of 30 kcal/kg LBM/day EA did not guarantee menstrual disturbances (or the lack thereof) with this timeline (Lieberman et al.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ea-load",
+     "text": "An untested 'LEA load' idea multiplies the shortfall below 45 kcal·kg LBM⁻¹·day⁻¹ by the days: 3 days at 15 equals 6 days at 30 (90 kcal·kg LBM⁻¹ each).",
+     "grade": "weak",
+     "sources": [
+      "areta2021"
+     ],
+     "evidence": [
+      {
+       "source": "areta2021",
+       "quote": "For example, from a mathematical standpoint, 3 days of EA of 15 kcal/kg LBM/day are equivalent to 6 days of EA of 30 kcal/kg LBM/day (LEA load: 90 kcal/kg LBM).",
+       "level": "full-text"
+      },
+      {
+       "source": "areta2021",
+       "quote": "This theoretical concept will have to be tested with rigorous science before it can be used widely, but we think it could have important implications for assessing EA thresholds and the time and dose that is required to elicit endocrine and metabolic responses of LEA.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Are 188 and 125 kJ (45 and 30 kcal) per kg FFM per day useful cut-offs for athletes?",
+    "sides": [
+     {
+      "position": "Yes, as working guides: most effects of low EA appear below about 125 kJ (30 kcal), and about 188 kJ (45 kcal) keeps hormones and bone markers normal in the lab.",
+      "sources": [
+       "nattiv2007",
+       "loucks2003",
+       "ihle2004"
+      ]
+     },
+     {
+      "position": "Not as hard lines: the data are short-term and mostly from sedentary women, responses differ between people, tissues and sexes, and field estimates are too rough to compare with a cut-off.",
+      "sources": [
+       "areta2021",
+       "burke2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ea-threshold-appraisal",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ea-two-kinds",
+   "title": "Problematic or adaptable",
+   "text": "The body composition module named this split; here it is in full. The IOC's 2023 statement no longer treats every deficit as harmful. It separates [problematic](g:problematic-lea) from [adaptable](g:adaptable-lea) [low energy availability](g:low-energy-availability) [[c:ea-two]].\n\n- **Adaptable:** short and mild, with full recovery once intake matches training again. A 4-day training camp on a cycling trip, or a planned 2-week cut before a hill-climb race, may fit here.\n- **Problematic:** long, deep, or both, and it leads to [REDs](g:reds). A runner restricting for months while periods stop is the classic case.\n\nWhat moves a deficit from one to the other depends on its size, its length and the person. Low *carbohydrate* availability also seems to add harm [[c:ea-cho]] (see the low-carb module).",
+   "claims": [
+    {
+     "id": "ea-two",
+     "text": "The IOC 2023 physiological model distinguishes problematic from adaptable LEA exposure, modified by individual factors.",
+     "grade": "strong",
+     "sources": [
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "This Physiological Model is designed to demonstrate the complexity of either problematic or adaptable LEA exposure, coupled with individual moderating factors, leading to changes in health and performance outcomes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ea-cho",
+     "text": "Emerging data show a growing role of low carbohydrate availability in REDs.",
+     "grade": "moderate",
+     "sources": [
+      "mountjoy2023"
+     ],
+     "evidence": [
+      {
+       "source": "mountjoy2023",
+       "quote": "Since the 2018 REDs consensus, there have been >170 original research publications advancing the field of REDs science, including emerging data demonstrating the growing role of low carbohydrate availability, further evidence of the interplay between mental health and REDs and more data elucidating the impact of LEA in males.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ea-adaptable",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "EA = (energy intake − net exercise energy expenditure) ÷ fat-free mass, per day. It is not energy balance: mass can stay steady while EA is low.",
+    "Each part has error (diaries, exercise cost, FFM), so treat one EA figure as a rough estimate; average over days.",
+    "188 kJ (45 kcal) per kg FFM per day is called adequate; below about 125 kJ (30 kcal) LH pulses broke down in the lab, and bone formation already fell at 30.",
+    "The cut-offs come from ≤5-day trials in sedentary women: guides, not switches, and men seem less sensitive.",
+    "IOC 2023: adaptable LEA is short, mild and recovered from; problematic LEA is long or deep and leads to REDs."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ea-stable-mass",
+   "concept": "ea-define",
+   "bloom": "analyse",
+   "sources": [
+    "areta2021",
+    "wells2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A road cyclist has held 64 kg for three months while training 15 h a week. A teammate says: \"Her weight is stable, so her energy availability must be fine.\" What is the best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stable mass can hide low EA: the body may have cut its own spending",
+       "correct": true,
+       "why": "Right: energy balance can settle at a lower level of spending while too little is left for body functions."
+      },
+      {
+       "id": "b",
+       "text": "Stable mass proves intake matches all her spending, so EA is fine",
+       "why": "Stable mass shows energy balance is near zero, not that EA is adequate; the two differ."
+      },
+      {
+       "id": "c",
+       "text": "Stable mass means EA is exactly zero",
+       "why": "EA is not zero in balance: it is intake minus only the exercise cost, per kg FFM."
+      },
+      {
+       "id": "d",
+       "text": "EA can only be low if she is losing fat mass",
+       "why": "Low EA often comes with stable mass, once spending has adapted downwards."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's scale weight hasn't changed all winter, but he feels flat and keeps getting colds. Can low energy availability still be the cause?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: spending can fall to match intake, so mass holds while EA is low",
+       "correct": true,
+       "why": "Right: weight stability can mask a lack of energy for body functions."
+      },
+      {
+       "id": "b",
+       "text": "No: if mass is stable, energy in equals energy out, so EA is adequate",
+       "why": "That is energy balance; EA only subtracts the training cost, and balance can be reached at a lower spending level."
+      },
+      {
+       "id": "c",
+       "text": "No: low EA always shows up as weight loss within a week",
+       "why": "Mass often stays steady as the body cuts spending."
+      },
+      {
+       "id": "d",
+       "text": "Only if his body fat percentage is below 5%",
+       "why": "Low EA isn't defined by body fat; lean or not, the body can be short of energy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-why-ffm",
+   "concept": "ea-define",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "areta2021",
+    "burke2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is energy availability divided by fat-free mass rather than by body mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fat-free tissue does most of the body's energy-using work",
+       "correct": true,
+       "why": "Right: muscle, organs and bone burn most of the energy; fat tissue uses little."
+      },
+      {
+       "id": "b",
+       "text": "Fat-free mass is easier to measure than body mass",
+       "why": "It is harder: it needs DXA, skinfolds or similar, while body mass needs only a scale."
+      },
+      {
+       "id": "c",
+       "text": "Fat mass is used up first, so it doesn't count",
+       "why": "The point is which tissue uses energy, not which store is used first."
+      },
+      {
+       "id": "d",
+       "text": "Dividing by body mass would give a value in the wrong units",
+       "why": "Both give an energy per kg per day; the choice is about which tissue spends the energy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-power-meter",
+   "concept": "ea-parts",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "areta2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 2-h endurance ride shows 1,800 kJ of work on the power meter. With a gross efficiency of 20%, about how much metabolic energy did the ride cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9,000 kJ",
+       "correct": true,
+       "why": "Right: 1,800 ÷ 0.20 = 9,000 kJ (2,151 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "1,800 kJ",
+       "why": "That is the mechanical work only; the body spent five times as much, and about 80% of it became heat."
+      },
+      {
+       "id": "c",
+       "text": "360 kJ",
+       "why": "This multiplies by 0.20 instead of dividing: the body spends more than the work, not less."
+      },
+      {
+       "id": "d",
+       "text": "2,250 kJ",
+       "why": "This divides by 0.80: efficiency is the share that becomes work, so divide by 0.20."
+      }
+     ],
+     "solution": "Metabolic energy = work ÷ gross efficiency = 1,800 kJ ÷ 0.20 = 9,000 kJ. For EA, you would then subtract what you'd have burned resting in those 2 h."
+    },
+    {
+     "id": "b",
+     "stem": "A 90-min tempo ride shows 1,200 kJ of work. Gross efficiency is 20%. About how much metabolic energy did it cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6,000 kJ",
+       "correct": true,
+       "why": "Right: 1,200 ÷ 0.20 = 6,000 kJ (1,434 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "1,200 kJ",
+       "why": "That is the work done on the pedals, not the energy the body spent."
+      },
+      {
+       "id": "c",
+       "text": "240 kJ",
+       "why": "This multiplies by 0.20; the body spends five times the work."
+      },
+      {
+       "id": "d",
+       "text": "1,500 kJ",
+       "why": "This divides by 0.80, the share lost as heat, instead of by 0.20."
+      }
+     ],
+     "solution": "Metabolic energy = 1,200 kJ ÷ 0.20 = 6,000 kJ. The net EEE is this minus the resting cost of those 90 min."
+    }
+   ]
+  },
+  {
+   "id": "ea-what-counts",
+   "concept": "ea-parts",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "areta2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the current definition of energy availability, which energy is subtracted from intake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The extra cost of planned training, above resting",
+       "correct": true,
+       "why": "Right: net exercise energy expenditure, with the resting cost during the session taken out."
+      },
+      {
+       "id": "b",
+       "text": "All energy spent in the day, including resting",
+       "why": "That gives energy balance, a different concept."
+      },
+      {
+       "id": "c",
+       "text": "Resting metabolism only, not training",
+       "why": "Resting metabolism is part of what EA is meant to pay for, so it isn't subtracted."
+      },
+      {
+       "id": "d",
+       "text": "The gross cost of training, including resting during it",
+       "why": "That was the older definition; the current one subtracts the resting part."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-calc",
+   "concept": "ea-parts",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "areta2021",
+    "burke2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist weighs 70 kg with 14% body fat. Today he eats 14,000 kJ and his ride costs 6,500 kJ (net). What is his energy availability, in kJ·kg FFM⁻¹·day⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "125",
+       "correct": true,
+       "why": "Right: FFM = 70 × 0.86 = 60.2 kg; (14,000 − 6,500) ÷ 60.2 = 125 (30 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "107",
+       "why": "This divides by body mass (70 kg) instead of fat-free mass."
+      },
+      {
+       "id": "c",
+       "text": "233",
+       "why": "This forgets to subtract the ride: 14,000 ÷ 60.2."
+      },
+      {
+       "id": "d",
+       "text": "341",
+       "why": "This adds the ride instead of subtracting it: 20,500 ÷ 60.2."
+      }
+     ],
+     "solution": "FFM = 70 kg × (1 − 0.14) = 60.2 kg. EA = (14,000 − 6,500) ÷ 60.2 = 7,500 ÷ 60.2 = 125 kJ·kg FFM⁻¹·day⁻¹, about 30 kcal."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete weighs 65 kg with 20% body fat. She eats 13,200 kJ and trains for 5,400 kJ (net). What is her energy availability, in kJ·kg FFM⁻¹·day⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "150",
+       "correct": true,
+       "why": "Right: FFM = 65 × 0.80 = 52 kg; (13,200 − 5,400) ÷ 52 = 150 (36 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "120",
+       "why": "This divides by body mass (65 kg) instead of fat-free mass."
+      },
+      {
+       "id": "c",
+       "text": "254",
+       "why": "This forgets to subtract training: 13,200 ÷ 52."
+      },
+      {
+       "id": "d",
+       "text": "358",
+       "why": "This adds training instead of subtracting it: 18,600 ÷ 52."
+      }
+     ],
+     "solution": "FFM = 65 × 0.80 = 52 kg. EA = (13,200 − 5,400) ÷ 52 = 7,800 ÷ 52 = 150 kJ·kg FFM⁻¹·day⁻¹, about 36 kcal."
+    },
+    {
+     "id": "c",
+     "stem": "A runner weighs 56 kg with 20% body fat. He eats 10,500 kJ and runs for 4,200 kJ (net). What is his energy availability, in kJ·kg FFM⁻¹·day⁻¹?",
+     "options": [
+      {
+       "id": "a",
+       "text": "141",
+       "correct": true,
+       "why": "Right: FFM = 56 × 0.80 = 44.8 kg; (10,500 − 4,200) ÷ 44.8 = 141 (34 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "113",
+       "why": "This divides by body mass (56 kg) instead of fat-free mass."
+      },
+      {
+       "id": "c",
+       "text": "234",
+       "why": "This forgets to subtract the run: 10,500 ÷ 44.8."
+      },
+      {
+       "id": "d",
+       "text": "328",
+       "why": "This adds the run instead of subtracting it: 14,700 ÷ 44.8."
+      }
+     ],
+     "solution": "FFM = 56 × 0.80 = 44.8 kg. EA = (10,500 − 4,200) ÷ 44.8 = 6,300 ÷ 44.8 = 141 kJ·kg FFM⁻¹·day⁻¹, about 34 kcal."
+    }
+   ]
+  },
+  {
+   "id": "ea-classify",
+   "concept": "ea-thresholds",
+   "bloom": "apply",
+   "sources": [
+    "loucks2003",
+    "ihle2004",
+    "burke2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's energy availability averages 160 kJ (38 kcal) per kg FFM per day over a week. How does that compare with the lab-based reference values?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Below the 188 kJ called adequate, above the 125 kJ where LH broke down",
+       "correct": true,
+       "why": "Right: it sits between the two reference values."
+      },
+      {
+       "id": "b",
+       "text": "Adequate, since anything above 125 kJ is safe",
+       "why": "125 kJ (30 kcal) is where LH pulses broke down; bone formation markers already fell above it."
+      },
+      {
+       "id": "c",
+       "text": "Low enough to diagnose REDs on its own",
+       "why": "No EA value diagnoses REDs; diagnosis needs signs and a doctor."
+      },
+      {
+       "id": "d",
+       "text": "Above both values, so energy is plentiful",
+       "why": "188 kJ (45 kcal) is the adequate level; 160 kJ is below it."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's energy availability averages 110 kJ (26 kcal) per kg FFM per day over two weeks. How does that compare with the lab-based reference values?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Below both 188 and 125 kJ: in the range where LH pulses were disrupted",
+       "correct": true,
+       "why": "Right: 110 kJ is below the 125 kJ (30 kcal) level."
+      },
+      {
+       "id": "b",
+       "text": "Between the two values: reduced but above the LH level",
+       "why": "125 kJ is the LH level; 110 kJ is below it."
+      },
+      {
+       "id": "c",
+       "text": "Adequate, as men need less energy per kg FFM",
+       "why": "The reference values are per kg FFM already; men may cope with deeper deficits, but 110 kJ is still low."
+      },
+      {
+       "id": "d",
+       "text": "Low enough to diagnose REDs on its own",
+       "why": "An EA estimate never diagnoses REDs; it needs signs and a doctor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-bone-first",
+   "concept": "ea-thresholds",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "ihle2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 5-day lab study of bone turnover, what happened at an energy availability of 125 kJ (30 kcal) per kg lean mass per day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bone formation markers fell; bone breakdown did not yet rise",
+       "correct": true,
+       "why": "Right: formation fell at every restricted level, breakdown rose only at 42 kJ (10 kcal)."
+      },
+      {
+       "id": "b",
+       "text": "Nothing changed: bone only reacts below 42 kJ (10 kcal)",
+       "why": "Formation markers were already suppressed at 125 kJ."
+      },
+      {
+       "id": "c",
+       "text": "Bone breakdown rose sharply, formation stayed normal",
+       "why": "The reverse: formation fell first; breakdown rose only at the most severe level."
+      },
+      {
+       "id": "d",
+       "text": "Both formation and breakdown rose, so bone turned over faster",
+       "why": "Formation fell, it didn't rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-threshold-appraisal",
+   "concept": "ea-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "loucks2003",
+    "areta2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach reads Loucks' 5-day study and tells a male pro cyclist: \"Your diary EA is 134 kJ (32 kcal) per kg FFM, above 125 kJ (30 kcal), so you're safe.\" What is the strongest criticism?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cut-off came from 5-day trials in sedentary women, and a diary EA has large error",
+       "correct": true,
+       "why": "Right: both the source of the threshold and the measurement make the conclusion unsafe."
+      },
+      {
+       "id": "b",
+       "text": "The study was randomised, so its result can't apply to anyone outside it",
+       "why": "Randomisation strengthens a trial; the problem is who was studied and for how long."
+      },
+      {
+       "id": "c",
+       "text": "134 kJ is far below 125 kJ, so he is in danger",
+       "why": "134 kJ is above 125 kJ; the problem is the confidence in the number, not the arithmetic."
+      },
+      {
+       "id": "d",
+       "text": "EA thresholds only apply to runners, not cyclists",
+       "why": "The issue isn't the sport but sex, training status, duration and measurement error."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A sports scientist uses the 125 kJ (30 kcal) per kg lean mass cut-off to decide that a female ultra-runner, 6 months into a heavy block with an estimated EA of 130 kJ (31 kcal), needs no follow-up. What limits this decision most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cut-off comes from ≤5-day trials and isn't a switch; months of borderline EA may still harm",
+       "correct": true,
+       "why": "Right: duration matters, and below or near 125 kJ problems become more likely, not certain either way."
+      },
+      {
+       "id": "b",
+       "text": "The cut-off was set in men, so it can't apply to women",
+       "why": "The Loucks studies were in women; the problem is sedentary participants and short duration."
+      },
+      {
+       "id": "c",
+       "text": "Ultra-runners burn mostly fat, so EA doesn't apply to them",
+       "why": "EA applies whatever the fuel; fuel mix doesn't change the definition."
+      },
+      {
+       "id": "d",
+       "text": "An EA of 130 kJ is below the cut-off, so she must be referred",
+       "why": "130 kJ is above 125 kJ; the issue is how much trust any single cut-off deserves."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea-adaptable",
+   "concept": "ea-two-kinds",
+   "bloom": "analyse",
+   "sources": [
+    "mountjoy2023",
+    "areta2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which case best fits adaptable rather than problematic low energy availability?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A triathlete under-fuels during a 4-day camp, then eats normally and feels fine",
+       "correct": true,
+       "why": "Right: short, mild and fully recovered from."
+      },
+      {
+       "id": "b",
+       "text": "A runner has eaten too little for 5 months and her periods have stopped",
+       "why": "Long and with a clear health sign: problematic."
+      },
+      {
+       "id": "c",
+       "text": "A cyclist has cut food for a whole season and has low testosterone",
+       "why": "Long, with hormone change: problematic."
+      },
+      {
+       "id": "d",
+       "text": "A swimmer has low EA for 3 months with two stress fractures",
+       "why": "Long, with bone injury: problematic."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist eats less for 10 days before a hill-climb race, then refuels and trains normally with no symptoms. How is this best described?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Adaptable low energy availability",
+       "correct": true,
+       "why": "Right: brief, planned and recovered from, with no health or performance signs."
+      },
+      {
+       "id": "b",
+       "text": "Problematic low energy availability",
+       "why": "Problematic LEA is long or deep enough to harm health or performance; none shows here."
+      },
+      {
+       "id": "c",
+       "text": "REDs, since any deficit is REDs",
+       "why": "REDs needs health or performance effects, not just a deficit."
+      },
+      {
+       "id": "d",
+       "text": "Not low energy availability, since he didn't lose weight",
+       "why": "Mass doesn't define LEA; the short deficit was still LEA, just adaptable."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
