@@ -32,6 +32,17 @@
   --weak: #b26b00;
   --disputed: #7c3aed;
   --shadow: 0 1px 2px rgb(30 25 15 / 0.05), 0 2px 10px rgb(30 25 15 / 0.05);
+
+  /* Liquid Glass, kept warm and quiet for the journal look: frosted paper over a faint glow. */
+  --glow-1: rgb(200 70 47 / 0.09);
+  --glow-2: rgb(214 160 70 / 0.1);
+  --glass: linear-gradient(180deg, rgb(255 253 249 / 0.76), rgb(255 253 249 / 0.54));
+  --glass-solid: rgb(255 253 249 / 0.95);
+  --glass-card: rgb(255 254 251 / 0.74);
+  --rim: rgb(255 255 255 / 0.9);
+  --rim-out: rgb(30 25 15 / 0.08);
+  --lift: 0 10px 30px rgb(30 25 15 / 0.13), 0 2px 6px rgb(30 25 15 / 0.05);
+  --pill: rgb(168 50 30 / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,6 +65,16 @@
     --weak: #f0b14a;
     --disputed: #b896ff;
     --shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+
+    --glow-1: rgb(255 138 115 / 0.1);
+    --glow-2: rgb(240 177 74 / 0.06);
+    --glass: linear-gradient(180deg, rgb(255 255 255 / 0.13), rgb(255 255 255 / 0.05));
+    --glass-solid: rgb(28 30 34 / 0.95);
+    --glass-card: rgb(34 36 41 / 0.66);
+    --rim: rgb(255 255 255 / 0.1);
+    --rim-out: rgb(255 255 255 / 0.08);
+    --lift: 0 10px 30px rgb(0 0 0 / 0.45);
+    --pill: rgb(255 255 255 / 0.13);
   }
 }
 
@@ -63,19 +84,34 @@ body {
   color: var(--ink);
   -webkit-tap-highlight-color: transparent;
 }
+/* The page the glass sits on; fixed (iOS ignores background-attachment: fixed). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 45% at 0% 0%, var(--glow-1), transparent 70%),
+    radial-gradient(60% 40% at 100% 35%, var(--glow-2), transparent 70%), var(--bg);
+}
 
 @layer components {
+  /* Glass card: translucent paper, bright top rim. No blur, so long lists stay smooth. */
   .card {
     @apply rounded-2xl border p-4;
-    background: var(--surface);
-    border-color: var(--line);
-    box-shadow: var(--shadow);
+    background: var(--glass-card);
+    border-color: var(--rim-out);
+    box-shadow:
+      inset 0 1px 0 var(--rim),
+      var(--shadow);
   }
 
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3.5 text-center text-base font-semibold transition-[scale,background-color] duration-100 select-none disabled:opacity-40;
-    background: var(--surface);
-    border-color: var(--line);
+    background: var(--glass-card);
+    border-color: var(--rim-out);
+    box-shadow: inset 0 1px 0 var(--rim);
     color: var(--ink);
   }
   .btn:focus-visible,
@@ -89,9 +125,14 @@ body {
   .btn:active:not(:disabled) {
     @apply scale-[0.98];
   }
+  /* Glossy: a light top edge over the fill. */
   .btn-primary {
-    background: var(--brand-fill);
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 0.16), transparent 60%), var(--brand-fill);
     border-color: var(--brand-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.25),
+      0 4px 14px color-mix(in srgb, var(--brand-fill) 30%, transparent);
     color: white;
   }
 
@@ -117,7 +158,7 @@ body {
     @apply mx-auto flex min-h-dvh max-w-xl flex-col gap-5 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-6;
   }
   .with-tabs {
-    @apply pb-[calc(6rem+env(safe-area-inset-bottom))];
+    @apply pb-[calc(6.5rem+env(safe-area-inset-bottom))];
   }
 
   /* Reading text: serif, comfortable line length. */
@@ -126,12 +167,22 @@ body {
   }
 }
 
-/* Native popovers (glossary terms, evidence badges, flag form). */
+/* Native popovers (glossary terms, evidence badges, flag form): frosted glass. */
 [popover] {
-  @apply m-auto max-w-sm rounded-2xl border p-4 shadow-xl;
-  background: var(--surface);
+  @apply m-auto max-w-sm rounded-2xl border p-4;
+  background: var(--glass-solid);
   color: var(--ink);
-  border-color: var(--line);
+  border-color: var(--rim-out);
+  box-shadow:
+    inset 0 1px 0 var(--rim),
+    var(--lift);
+}
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  [popover] {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(24px) saturate(170%);
+    backdrop-filter: blur(24px) saturate(170%);
+  }
 }
 [popover]::backdrop {
   background: rgb(0 0 0 / 0.25);
@@ -162,5 +213,82 @@ body {
   }
   to {
     transform: scaleX(0.9);
+  }
+}
+
+/* Dock: the floating glass tab bar (Dock.tsx). */
+.dock {
+  position: fixed;
+  z-index: 20;
+  left: max(12px, env(safe-area-inset-left, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  max-width: 26rem;
+  margin: 0 auto;
+}
+.glass {
+  position: relative;
+  border-radius: 999px;
+  background: var(--glass-solid);
+  border: 0.5px solid var(--rim-out);
+  box-shadow:
+    inset 0 1px 0 var(--rim),
+    var(--lift);
+}
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+  }
+}
+.dock-tabs {
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  height: 62px;
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+}
+/* The selected tab's lens: a tinted pill sliding between equal columns. */
+.dock-pill {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  width: calc((100% - 10px) / var(--n));
+  border-radius: 999px;
+  background: var(--pill);
+  box-shadow: inset 0 1px 0 var(--rim);
+  transform: translateX(calc(var(--i) * 100%));
+  transition: transform 0.42s cubic-bezier(0.32, 1.25, 0.5, 1);
+}
+.dock-tab {
+  position: relative;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 2px;
+  font-size: 0.68rem;
+  font-weight: 650;
+  color: var(--muted);
+}
+.dock-tab svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s cubic-bezier(0.32, 1.25, 0.5, 1);
+}
+.dock-tab[aria-current="page"] {
+  color: var(--brand);
+}
+.dock-tab[aria-current="page"] svg {
+  fill: color-mix(in srgb, var(--brand) 16%, transparent);
+  transform: translateY(-1px) scale(1.06);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dock-pill,
+  .dock-tab svg {
+    transition: none;
   }
 }

@@ -45,11 +45,12 @@ export function Library({
             <span className="font-semibold">{t.term}</span>
             <span className="text-sm">{t.short}</span>
             {t.lesson && (
+              // A real tap target (≥ 32 px), not an 11 px underlined word.
               <Go
                 href={`/lesson/${t.lesson}/read`}
-                className="text-xs text-[var(--brand)] underline"
+                className="-my-1 self-start py-2 text-sm font-semibold text-[var(--brand)]"
               >
-                lesson
+                Read the lesson →
               </Go>
             )}
           </li>

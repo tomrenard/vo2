@@ -48,10 +48,11 @@ export default async function StudyPage() {
             href={`/lesson/${lesson.id}`}
             className={`btn ${c.due > 0 ? "" : "btn-primary"} flex-col items-start! gap-0.5 text-left`}
           >
-            <span className="eyebrow">
+            {/* On the red button the grey label was unreadable: white, a little faded. */}
+            <span className={`eyebrow ${c.due > 0 ? "" : "text-white/75"}`}>
               {c.due > 0 ? "Then" : "Next lesson"} · {where?.module.title}
             </span>
-            <span>{lesson.title}</span>
+            <span className="font-serif text-lg leading-snug">{lesson.title}</span>
           </Go>
         )}
         {!lesson && COURSE_ORDER.length > 0 && (
@@ -75,12 +76,30 @@ export default async function StudyPage() {
         </section>
       )}
 
-      <section className="flex flex-col gap-2">
-        <p className="eyebrow">Course</p>
-        <p className="muted text-sm">
+      <Go href="/map" className="card flex flex-col gap-2">
+        <span className="flex items-baseline justify-between">
+          <span className="eyebrow">Course</span>
+          <span className="muted font-mono text-xs tabular-nums">
+            {done.size}/{COURSE_ORDER.length}
+          </span>
+        </span>
+        <span
+          className="h-2 overflow-hidden rounded-full bg-[var(--line)]"
+          role="progressbar"
+          aria-label="Lessons done"
+          aria-valuemin={0}
+          aria-valuemax={COURSE_ORDER.length}
+          aria-valuenow={done.size}
+        >
+          <span
+            className="block h-full rounded-full bg-[var(--brand)]"
+            style={{ width: `${(done.size / Math.max(1, COURSE_ORDER.length)) * 100}%` }}
+          />
+        </span>
+        <span className="muted text-sm">
           {done.size} of {COURSE_ORDER.length} lessons done · {c.today} answers today
-        </p>
-      </section>
+        </span>
+      </Go>
       <TabBar active="/" />
     </main>
   );

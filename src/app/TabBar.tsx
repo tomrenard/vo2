@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { Dock } from "./Dock";
 
-/** Line icons (24px, stroke = currentColor), so the active tab simply takes the accent. */
+/** Line icons (24px, stroke = currentColor). */
 const ICONS = {
   "/": "M13 2 4 14h7l-1 8 9-12h-7z",
   "/map": "M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14",
@@ -15,40 +15,13 @@ const TABS = [
   { href: "/library", label: "Library" },
 ] as const;
 
+/** Bottom navigation of the main screens; `active` is the current tab's href. */
 export function TabBar({ active }: { active: (typeof TABS)[number]["href"] }) {
   return (
-    <nav
-      className="line fixed inset-x-0 bottom-0 z-10 border-t pb-[env(safe-area-inset-bottom)]"
-      style={{ background: "var(--surface)" }}
-    >
-      <ul className="mx-auto grid max-w-xl grid-cols-4 px-3 pt-2 pb-1">
-        {TABS.map((tab) => (
-          <li key={tab.href}>
-            <Link
-              href={tab.href}
-              prefetch
-              aria-current={tab.href === active ? "page" : undefined}
-              className={`flex flex-col items-center gap-0.5 py-1 text-xs font-semibold ${
-                tab.href === active ? "text-[var(--brand)]" : "muted"
-              }`}
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="size-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={tab.href === active ? 2.1 : 1.7}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d={ICONS[tab.href]} />
-              </svg>
-              {tab.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <Dock
+      active={active}
+      label="Sections"
+      tabs={TABS.map((tab) => ({ ...tab, icon: ICONS[tab.href] }))}
+    />
   );
 }
