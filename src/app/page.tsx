@@ -49,7 +49,7 @@ export default async function StudyPage() {
             className={`btn ${c.due > 0 ? "" : "btn-primary"} flex-col items-start! gap-0.5 text-left`}
           >
             {/* On the red button the grey label was unreadable: white, a little faded. */}
-            <span className={`eyebrow ${c.due > 0 ? "" : "text-white/75"}`}>
+            <span className={`eyebrow ${c.due > 0 ? "" : "text-white/90"}`}>
               {c.due > 0 ? "Then" : "Next lesson"} · {where?.module.title}
             </span>
             <span className="font-serif text-lg leading-snug">{lesson.title}</span>
