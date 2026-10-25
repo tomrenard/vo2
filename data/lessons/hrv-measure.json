@@ -1,0 +1,929 @@
+{
+  "id": "hrv-measure",
+  "module": "t5-hrv",
+  "title": "Measuring HRV: protocol, devices and noise",
+  "goal": "Set up a repeatable morning HRV routine, pick a device, and read it through a rolling mean, the CV and your own range.",
+  "requires": [
+    "hrv-basics"
+  ],
+  "lastReviewed": "2026-10-25",
+  "steps": [
+    {
+      "type": "terms",
+      "terms": [
+        "ppg",
+        "supine",
+        "rolling-mean",
+        "ecg"
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "hm-protocol",
+      "title": "A morning routine you can repeat",
+      "text": "The usual protocol is a short recording of 5–10 min on waking, in a quiet room, before the day's activity starts [[c:hm-morning]]. Both [supine](g:supine) and standing recordings are used in research. Supine is easier for athletes to do in the field; whether standing adds information is unclear [[c:hm-posture]].\n\nWhat matters more than the choice is doing it the same way every time: same position, same time, same breathing. Mixed conditions add noise that looks like change.\n\nCheck the data too. One skipped or extra beat in a 5-min recording can shift common [HRV](g:hrv) indices by up to 50%, so edit the RR series or repeat the test [[c:hm-artifact]].",
+      "claims": [
+        {
+          "id": "hm-morning",
+          "text": "Best practice for athletes is a short recording on waking in the morning.",
+          "grade": "moderate",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "Currently, the best practice for athletes tends to be short-term (5–10 min) measurements of HR(V) upon awakening in the morning",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hm-posture",
+          "text": "Supine is better tolerated in the field; the extra value of standing is unclear.",
+          "grade": "moderate",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "the supine condition is better tolerated by athletes in the field",
+              "level": "full-text"
+            },
+            {
+              "source": "buchheit2014",
+              "quote": "Whether the more constraining standing recordings reveal extra information compared with supine is unclear at the moment",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hm-artifact",
+          "text": "A single ectopic or skipped beat in a 5-min recording can change common HRV indices by up to 50%.",
+          "grade": "strong",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "the presence of a single ectopic beat (or a skipped beat) over a 5-min recording can modify common HRV indices up to 50%",
+              "level": "full-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hm-protocol-q"
+    },
+    {
+      "type": "question",
+      "item": "hm-artifact-q"
+    },
+    {
+      "type": "concept",
+      "id": "hm-device",
+      "title": "Chest strap or optical sensor?",
+      "text": "A chest strap picks up the heart's electrical signal. Optical sensors ([PPG](g:ppg)) in phones, watches and rings read the pulse in the skin.\n\nIn 29 healthy adults at rest, smartphone PPG and a chest strap each agreed acceptably with [ECG](g:ecg) for [rMSSD](g:rmssd) (technical error about 6%) [[c:hm-ppg]]. Those were 5-min tests at rest, with guided and with normal breathing, so they cover the still morning test.\n\nOvernight wearables are a different case. Across 536 nights in 13 adults, five devices differed in how well they matched ECG: Oura rings were closest for HRV, Garmin and Polar agreed less well [[c:hm-wear]]. Whichever you pick, keep the same device: a switch can look like a change in you.",
+      "claims": [
+        {
+          "id": "hm-ppg",
+          "text": "Smartphone PPG and a chest-strap sensor agree acceptably with ECG for resting rMSSD.",
+          "grade": "weak",
+          "sources": [
+            "plews2017"
+          ],
+          "evidence": [
+            {
+              "source": "plews2017",
+              "quote": "Both PPG and heart-rate sensors provide an acceptable agreement for the measurement of rMSSD when compared with ECG.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hm-wear",
+          "text": "Accuracy of nightly HRV differs between consumer wearables.",
+          "grade": "weak",
+          "sources": [
+            "dial2025"
+          ],
+          "evidence": [
+            {
+              "source": "dial2025",
+              "quote": "Interdevice accuracy varied significantly (p < 0.05).",
+              "level": "abstract"
+            },
+            {
+              "source": "dial2025",
+              "quote": "poor agreement from both Garmin (CCC = 0.87, MAPE = 10.52 ± 8.63%) and Polar (CCC = 0.82, MAPE = 16.32 ± 24.39%)",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hm-device-q"
+    },
+    {
+      "type": "question",
+      "item": "hm-wear-q"
+    },
+    {
+      "type": "concept",
+      "id": "hm-average",
+      "title": "One morning is noisy: average",
+      "text": "Resting rMSSD varies by about 12% from day to day with nothing changing [[c:hm-cv]], so one reading is a poor guide. Take a [rolling mean](g:rolling-mean): the average of the last 7 mornings, updated daily.\n\nHow many mornings are needed? In trained triathletes, 3 randomly chosen valid days a week gave nearly the same picture as all 7 [[c:hm-3days]]. In another trial, one reading a week missed the autonomic changes of overreaching that the weekly mean caught [[c:hm-weekly]].\n\nAim for most mornings, accept at least 3 a week, and judge the trend, not the day.",
+      "claims": [
+        {
+          "id": "hm-cv",
+          "text": "The day-to-day variation (CV) of rMSSD is about 12%.",
+          "grade": "moderate",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "coefficient of variation (CV) for rMSSD ≈12% vs. low-to-high frequency oscillations ratio, LF/HF, CV ≈82%",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hm-3days",
+          "text": "At least 3 valid readings per week are needed to monitor training with HRV.",
+          "grade": "moderate",
+          "sources": [
+            "plews2014"
+          ],
+          "evidence": [
+            {
+              "source": "plews2014",
+              "quote": "Practitioners using HRV to monitor training adaptation should use a minimum of 3 (randomly selected) valid data points per week.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hm-weekly",
+          "text": "Isolated once-weekly recordings may miss autonomic change that weekly means detect.",
+          "grade": "moderate",
+          "sources": [
+            "lemeur2013"
+          ],
+          "evidence": [
+            {
+              "source": "lemeur2013",
+              "quote": "It also revealed that due to a wide day-to-day variability, isolated, once per week HRV recordings may not detect training-induced autonomic modulations in F-OR athletes.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "id": "hm-roll-example",
+      "title": "Updating a 7-day rolling mean",
+      "problem": "A runner's last 7 mornings of rMSSD are 66, 70, 68, 72, 64, 69 and 67 ms. Tomorrow's reading is 63 ms. What is the rolling mean now and tomorrow?",
+      "steps": [
+        "Now: (66 + 70 + 68 + 72 + 64 + 69 + 67) ÷ 7 = 476 ÷ 7 = 68.0 ms.",
+        "Tomorrow the oldest value (66) leaves and 63 joins: 476 − 66 + 63 = 473; 473 ÷ 7 ≈ 67.6 ms.",
+        "Shortcut: new mean = old mean + (new − oldest) ÷ 7 = 68.0 + (63 − 66) ÷ 7 = 68.0 − 0.4 = 67.6 ms.",
+        "A bad morning (−5 ms against the mean) moved the average by less than 1 ms. That damping is the point."
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hm-roll-calc"
+    },
+    {
+      "type": "question",
+      "item": "hm-3days-q"
+    },
+    {
+      "type": "question",
+      "item": "hm-weekly-q"
+    },
+    {
+      "type": "concept",
+      "id": "hm-cvc",
+      "title": "Spread: the CV of the week",
+      "text": "The mean is one number. The other is how much the week bounces about: the [coefficient of variation](g:coefficient-of-variation) (CV) = [standard deviation](g:standard-deviation) ÷ mean × 100.\n\nIn a case study, the athlete heading for non-functional [overreaching](g:overreaching) showed a falling 7-day mean of [ln rMSSD](g:ln-rmssd) and a falling CV of the 7-day window, while the control stayed flat [[c:hm-cvfall]]. A shrinking CV can be a warning as well as a falling mean. It is a case study of two athletes, so treat it as a lead, not a rule.\n\n(The paper worked out the CV on ln rMSSD. Logs squeeze the spread, so a CV on ln values comes out much smaller than one on ms: compare a CV only with CVs worked out the same way. The examples here use ms.)",
+      "claims": [
+        {
+          "id": "hm-cvfall",
+          "text": "In one overreached triathlete, both the 7-day mean and the week-to-week variation of HRV fell before the poor race.",
+          "grade": "weak",
+          "sources": [
+            "plews2012"
+          ],
+          "evidence": [
+            {
+              "source": "plews2012",
+              "quote": "These data suggest that trends in both absolute HRV values and day-to-day variations may be useful measurements indicative of the progression towards mal-adaptation or non-functional over-reaching.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "id": "hm-cv-example",
+      "title": "CV of a week",
+      "problem": "A runner's morning rMSSD over 7 days: 62, 70, 66, 58, 72, 64, 68 ms. Find the mean and the CV.",
+      "steps": [
+        "Mean: 460 ÷ 7 = 65.7 ms.",
+        "Deviations: −3.7, +4.3, +0.3, −7.7, +6.3, −1.7, +2.3. Squares (from the unrounded deviations): 13.8 + 18.4 + 0.1 + 59.5 + 39.5 + 2.9 + 5.2 = 139.4.",
+        "Variance with n − 1 = 6: 139.4 ÷ 6 ≈ 23.2 ms². SD = √23.2 ≈ 4.8 ms.",
+        "CV = 4.8 ÷ 65.7 × 100 ≈ 7.3%. This week bounced less than the typical day-to-day CV of rMSSD, about 12%."
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hm-cv-calc"
+    },
+    {
+      "type": "question",
+      "item": "hm-cvfall-q"
+    },
+    {
+      "type": "concept",
+      "id": "hm-band",
+      "title": "Is this change big enough?",
+      "text": "Judge the 7-day mean against your own range, not a population norm: levels differ by age, sex and recording length, and your noise is yours alone.\n\nTrials set that range from the athlete's own history. Kiviniemi used the 10-day mean minus one SD (of [HF power](g:hf-power)); Vesterinen used an individually determined [smallest worthwhile change](g:smallest-worthwhile-change) [[c:hm-band-def]]. A reading inside the band counts as normal; one below it, or a downward trend over days, counts as low.\n\nTwo habits keep it honest: build the baseline over a few weeks of normal training before using it, and re-set it as fitness changes.",
+      "claims": [
+        {
+          "id": "hm-band-def",
+          "text": "Trials set a personal reference range from the athlete's own recent readings.",
+          "grade": "moderate",
+          "sources": [
+            "kiviniemi2007",
+            "vesterinen2016"
+          ],
+          "evidence": [
+            {
+              "source": "kiviniemi2007",
+              "quote": "If there was significant decrease in HRV (below reference value [10-day mean-SD] or decreasing trend for 2 days), low-intensity training or rest was prescribed.",
+              "level": "abstract"
+            },
+            {
+              "source": "vesterinen2016",
+              "quote": "The MOD/HIT session was programmed if HRV was within an individually determined smallest worthwhile change.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hm-swc-q"
+    },
+    {
+      "type": "recap",
+      "points": [
+        "Measure for 5–10 min on waking, in the same position, at the same time, with the same breathing; edit or repeat if a beat is missed.",
+        "Chest straps and phone PPG agree acceptably with ECG at rest; overnight wearables differ by brand. Keep one device.",
+        "One morning varies by about 12%: use a 7-day rolling mean, with at least 3 valid mornings a week.",
+        "The CV of the week shows the bounce: a shrinking CV together with a falling mean was a warning in a case study.",
+        "Judge changes against your own range (for example 10-day mean minus one SD, or your smallest worthwhile change), not a population norm."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "hm-protocol-q",
+      "concept": "hm-protocol",
+      "bloom": "analyse",
+      "sources": [
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A runner records HRV lying down at 7:00 on Monday, standing after coffee on Tuesday, and lying down at 9:00 after walking the dog on Wednesday. What is the main problem?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Position, timing and activity all changed, so shifts may not reflect recovery",
+              "correct": true,
+              "why": "Right: standard conditions are what make day-to-day changes interpretable."
+            },
+            {
+              "id": "b",
+              "text": "Lying down is not valid for rMSSD",
+              "why": "Supine is common and better tolerated in the field."
+            },
+            {
+              "id": "c",
+              "text": "Recordings shorter than 10 minutes cannot be used",
+              "why": "5–10 min is the usual length for athletes."
+            },
+            {
+              "id": "d",
+              "text": "He should only measure after training, when fatigue shows",
+              "why": "The standard protocol is the morning on waking, not after training."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist uses paced breathing on race weeks and normal breathing in training weeks. His HRV 'jumps' every race week. What is the best explanation?",
+          "options": [
+            {
+              "id": "a",
+              "text": "His vagus is more active before races",
+              "why": "That can be true, but a change in breathing alone can produce the jump, so remove it first."
+            },
+            {
+              "id": "b",
+              "text": "Chest straps are less accurate on race weeks",
+              "why": "Nothing links device accuracy to race weeks."
+            },
+            {
+              "id": "c",
+              "text": "The change in breathing between weeks adds a difference that is not recovery",
+              "correct": true,
+              "why": "Right: breathing pace changes RSA, so conditions need to match."
+            },
+            {
+              "id": "d",
+              "text": "Race-week readings should be thrown out as outliers",
+              "why": "They are real readings; the protocol is what needs fixing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-artifact-q",
+      "concept": "hm-protocol",
+      "bloom": "apply",
+      "sources": [
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A triathlete's 5-min strap recording shows an rMSSD of 120 ms, double his usual 60 ms. The trace shows one large spike, a missed beat. What should he do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Log it as a huge recovery boost and train hard today",
+              "why": "One artefact can double rMSSD; it may not be real."
+            },
+            {
+              "id": "b",
+              "text": "Edit out the missed beat or repeat the test before trusting it",
+              "correct": true,
+              "why": "Right: a single bad beat can shift HRV indices by up to 50%."
+            },
+            {
+              "id": "c",
+              "text": "Delete the whole week's readings to be on the safe side",
+              "why": "One bad beat does not spoil the other days."
+            },
+            {
+              "id": "d",
+              "text": "Switch to standing recordings from now on",
+              "why": "Posture is not the cause; a missed beat is."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner's morning rMSSD is 38 ms against a usual 70 ms. The trace shows one extra beat early in the recording. What is the best step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Rest today: a 46% drop is a clear sign of overreaching",
+              "why": "The drop may come from the artefact."
+            },
+            {
+              "id": "b",
+              "text": "Average it with the next three days without checking",
+              "why": "Averaging keeps the error in the data."
+            },
+            {
+              "id": "c",
+              "text": "Replace rMSSD with LF/HF, which is not affected",
+              "why": "Ratios are noisier; the fix is clean data."
+            },
+            {
+              "id": "d",
+              "text": "Correct the extra beat or repeat the recording, then read the value",
+              "correct": true,
+              "why": "Right: one ectopic or extra beat can distort rMSSD by up to 50%."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-device-q",
+      "concept": "hm-device",
+      "bloom": "evaluate",
+      "sources": [
+        "plews2017",
+        "dial2025"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist wants daily HRV. Option 1 is a chest strap with a phone app each morning; option 2 is a smartwatch's overnight HRV. What does the evidence support?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Optical sensors cannot measure HRV at all in practice",
+              "why": "In a resting test, phone PPG agreed acceptably with ECG."
+            },
+            {
+              "id": "b",
+              "text": "Any wearable's overnight HRV is as accurate as ECG",
+              "why": "Five devices differed: some agreed poorly."
+            },
+            {
+              "id": "c",
+              "text": "Both can work, but device quality varies, so check the model and keep one device",
+              "correct": true,
+              "why": "Right: strap and PPG agreed with ECG at rest, while overnight wearables differed by brand."
+            },
+            {
+              "id": "d",
+              "text": "Chest straps are valid only during exercise",
+              "why": "The strap was validated at rest for rMSSD."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner switches from a Polar strap to a ring in week 6 and sees her HRV 'improve' by 15% with no change in training. What is the likeliest explanation?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Different devices read HRV differently, so a switch can look like a real change",
+              "correct": true,
+              "why": "Right: keep one device or re-set the baseline after a switch."
+            },
+            {
+              "id": "b",
+              "text": "The ring detects extra vagal activity that the strap misses",
+              "why": "The sensor cannot detect vagal activity the heart does not produce; it just reads the pulse differently."
+            },
+            {
+              "id": "c",
+              "text": "Her fitness jumped 15% in one night",
+              "why": "Nothing in the training supports that."
+            },
+            {
+              "id": "d",
+              "text": "Rings are more accurate than ECG",
+              "why": "ECG is the reference; no consumer device beats it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-wear-q",
+      "concept": "hm-device",
+      "bloom": "analyse",
+      "sources": [
+        "dial2025",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Against ECG, one wearable's nightly HRV has a mean absolute error of about 6% (Oura Gen 4: 5.96%), another's about 16% (Polar: 16.32%). Normal day-to-day spread is about 12%. Which statement is best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Both are fine: any error under 20% is acceptable",
+              "why": "An error larger than the day-to-day spread swamps small real changes."
+            },
+            {
+              "id": "b",
+              "text": "6% is small beside the 12% spread; 16% is larger and could hide a real change",
+              "correct": true,
+              "why": "Right: device error should be well below the signal you want to see."
+            },
+            {
+              "id": "c",
+              "text": "Neither can be used, since both have some error",
+              "why": "A 6% error is small against a 12% spread; some error is expected."
+            },
+            {
+              "id": "d",
+              "text": "The 16% device is better because it reports more variation",
+              "why": "More variation from error is noise, not information."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-roll-calc",
+      "concept": "hm-average",
+      "bloom": "apply",
+      "sources": [
+        "plews2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist's 7-day rolling mean of rMSSD is 68 ms. The reading from 7 days ago (leaving the window) was 72 ms and today's is 65 ms. What is the new rolling mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "67.0 ms",
+              "correct": true,
+              "why": "Right: 68 + (65 − 72) ÷ 7 = 68 − 1.0 = 67.0 ms."
+            },
+            {
+              "id": "b",
+              "text": "65.0 ms",
+              "why": "This replaces the mean with today's value, ignoring the other six days."
+            },
+            {
+              "id": "c",
+              "text": "68.5 ms",
+              "why": "This averages the old and new values, (72 + 65) ÷ 2, instead of updating the mean."
+            },
+            {
+              "id": "d",
+              "text": "61.0 ms",
+              "why": "This subtracts the full 7 ms change without dividing by 7."
+            }
+          ],
+          "solution": "New mean = old mean + (new − oldest) ÷ 7 = 68 + (65 − 72) ÷ 7 = 68 − 1 = 67.0 ms."
+        },
+        {
+          "id": "b",
+          "stem": "A runner's 7-day mean is 60 ms. The value leaving the window is 66 ms and today's reading is 63 ms. What is the new mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "63.0 ms",
+              "why": "This replaces the mean with today's value."
+            },
+            {
+              "id": "b",
+              "text": "64.5 ms",
+              "why": "This averages the leaving and new values, (66 + 63) ÷ 2."
+            },
+            {
+              "id": "c",
+              "text": "59.6 ms",
+              "correct": true,
+              "why": "Right: 60 + (63 − 66) ÷ 7 = 60 − 0.43 ≈ 59.6 ms."
+            },
+            {
+              "id": "d",
+              "text": "57.0 ms",
+              "why": "This subtracts the full 3 ms without dividing by 7."
+            }
+          ],
+          "solution": "New mean = 60 + (63 − 66) ÷ 7 = 60 − 0.43 ≈ 59.6 ms."
+        },
+        {
+          "id": "c",
+          "stem": "A triathlete's 7-day mean is 75 ms. The leaving value is 70 ms and today's is 80 ms. What is the new mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "80.0 ms",
+              "why": "This replaces the mean with today's value."
+            },
+            {
+              "id": "b",
+              "text": "76.4 ms",
+              "correct": true,
+              "why": "Right: 75 + (80 − 70) ÷ 7 = 75 + 1.43 ≈ 76.4 ms."
+            },
+            {
+              "id": "c",
+              "text": "75.0 ms",
+              "why": "This ignores today's change altogether."
+            },
+            {
+              "id": "d",
+              "text": "85.0 ms",
+              "why": "This adds the full 10 ms without dividing by 7."
+            }
+          ],
+          "solution": "New mean = 75 + (80 − 70) ÷ 7 = 75 + 1.43 ≈ 76.4 ms."
+        }
+      ]
+    },
+    {
+      "id": "hm-3days-q",
+      "concept": "hm-average",
+      "bloom": "remember",
+      "recallFirst": true,
+      "sources": [
+        "plews2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "In trained triathletes, what is the fewest valid morning HRV readings per week worth averaging?",
+          "options": [
+            {
+              "id": "a",
+              "text": "3",
+              "correct": true,
+              "why": "Right: 3 randomly chosen valid days gave nearly the same picture as all 7."
+            },
+            {
+              "id": "b",
+              "text": "1",
+              "why": "One reading a week missed the changes that weekly means caught."
+            },
+            {
+              "id": "c",
+              "text": "5",
+              "why": "Five is a good aim but not the minimum; gains plateaued after 3–4 days."
+            },
+            {
+              "id": "d",
+              "text": "7",
+              "why": "Daily is ideal but not the minimum."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-weekly-q",
+      "concept": "hm-average",
+      "bloom": "apply",
+      "sources": [
+        "buchheit2014",
+        "lemeur2013"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A runner measures HRV only on Sunday mornings. Over three weeks: 68, 59, 71 ms. He decides he was overreached in week 2. What is the best comment?",
+          "options": [
+            {
+              "id": "a",
+              "text": "He is right: any drop on a recording day signals overreaching",
+              "why": "The 13% drop is about the size of ordinary day-to-day variation."
+            },
+            {
+              "id": "b",
+              "text": "One reading varies about 12% alone and 59 is only 13% below 68: add more mornings",
+              "correct": true,
+              "why": "Right: one reading per week cannot separate a real change from ordinary day-to-day noise."
+            },
+            {
+              "id": "c",
+              "text": "He is wrong: HRV cannot show overreaching in anybody",
+              "why": "Weekly means of HRV did detect changes in overreached athletes."
+            },
+            {
+              "id": "d",
+              "text": "He should use only the highest value of the week",
+              "why": "The mean of several days is the steadier choice."
+            }
+          ],
+          "solution": "(59 − 68) ÷ 68 × 100 = −13.2%. Typical day-to-day variation of rMSSD is about 12%."
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist records HRV on 1 morning each week: 80, 70, 82 ms. She cuts her training after the 70. What is the main flaw?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 12.5% dip is normal day-to-day spread, so one reading a week proves little",
+              "correct": true,
+              "why": "Right: add more mornings, then judge the rolling mean."
+            },
+            {
+              "id": "b",
+              "text": "Training should never be changed on HRV data alone",
+              "why": "HRV can inform training when used on a rolling basis."
+            },
+            {
+              "id": "c",
+              "text": "The later 82 ms reading proves the 70 was a mistake",
+              "why": "A later higher value does not prove the earlier one wrong; the noise is normal."
+            },
+            {
+              "id": "d",
+              "text": "Only a chest strap can detect a change as small as 12%",
+              "why": "Device type does not change the problem."
+            }
+          ],
+          "solution": "(70 − 80) ÷ 80 × 100 = −12.5%, about the typical 12% day-to-day variation."
+        }
+      ]
+    },
+    {
+      "id": "hm-cv-calc",
+      "concept": "hm-cvc",
+      "bloom": "apply",
+      "sources": [
+        "plews2012"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist's morning rMSSD over 7 days: 55, 61, 58, 52, 64, 57, 59 ms (mean 58.0 ms, sample SD 3.9 ms). What is the CV?",
+          "options": [
+            {
+              "id": "a",
+              "text": "3.9%",
+              "why": "This is the SD in ms, not divided by the mean and put on a percent scale."
+            },
+            {
+              "id": "b",
+              "text": "6.8%",
+              "correct": true,
+              "why": "Right: 3.92 ÷ 58.0 × 100 ≈ 6.8%."
+            },
+            {
+              "id": "c",
+              "text": "6.3%",
+              "why": "This divides the squared deviations by n (7) instead of n − 1 (6), shrinking the SD."
+            },
+            {
+              "id": "d",
+              "text": "20.7%",
+              "why": "This uses the range (12 ms) divided by the mean, not the SD."
+            }
+          ],
+          "solution": "SD = 3.92 ms (squares sum 92.0, ÷ 6 = 15.3, √ = 3.92). CV = 3.92 ÷ 58.0 × 100 ≈ 6.8%."
+        },
+        {
+          "id": "b",
+          "stem": "A runner's 7 mornings: 48, 54, 50, 44, 56, 52, 46 ms (mean 50.0 ms, sample SD 4.3 ms). What is the CV?",
+          "options": [
+            {
+              "id": "a",
+              "text": "4.3%",
+              "why": "This is the SD in ms, not divided by the mean."
+            },
+            {
+              "id": "b",
+              "text": "8.0%",
+              "why": "This divides by n instead of n − 1 when finding the SD."
+            },
+            {
+              "id": "c",
+              "text": "24.0%",
+              "why": "This uses the range (12 ms) divided by the mean."
+            },
+            {
+              "id": "d",
+              "text": "8.6%",
+              "correct": true,
+              "why": "Right: 4.32 ÷ 50.0 × 100 ≈ 8.6%."
+            }
+          ],
+          "solution": "Squares of deviations: 4 + 16 + 0 + 36 + 36 + 4 + 16 = 112; ÷ 6 = 18.67; SD = 4.32. CV = 4.32 ÷ 50 × 100 = 8.6%."
+        },
+        {
+          "id": "c",
+          "stem": "A triathlete's 7 mornings: 80, 74, 86, 78, 90, 76, 82 ms (mean 80.9 ms, sample SD 5.6 ms). What is the CV?",
+          "options": [
+            {
+              "id": "a",
+              "text": "7.0%",
+              "correct": true,
+              "why": "Right: 5.64 ÷ 80.9 × 100 ≈ 7.0%."
+            },
+            {
+              "id": "b",
+              "text": "5.6%",
+              "why": "This is the SD in ms, not divided by the mean."
+            },
+            {
+              "id": "c",
+              "text": "6.5%",
+              "why": "This divides by n instead of n − 1 when finding the SD."
+            },
+            {
+              "id": "d",
+              "text": "19.8%",
+              "why": "This uses the range (16 ms) divided by the mean."
+            }
+          ],
+          "solution": "SD = 5.64 ms. CV = 5.64 ÷ 80.9 × 100 ≈ 7.0%."
+        }
+      ]
+    },
+    {
+      "id": "hm-cvfall-q",
+      "concept": "hm-cvc",
+      "bloom": "evaluate",
+      "sources": [
+        "plews2012"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A triathlete's 7-day mean of rMSSD is stable, but the CV of the week has halved over 3 weeks while her training volume rises. What is the best response?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore it: only the mean of the week matters here",
+              "why": "The case study found variation changing too."
+            },
+            {
+              "id": "b",
+              "text": "Celebrate: less variability always means better recovery",
+              "why": "A flat, low-variation pattern preceded overreaching in that case."
+            },
+            {
+              "id": "c",
+              "text": "Treat it as a possible warning: check sleep, mood and a standard session",
+              "correct": true,
+              "why": "Right: in one case study, shrinking variation came before non-functional overreaching; it is a lead, not proof."
+            },
+            {
+              "id": "d",
+              "text": "Stop training completely for two weeks right away",
+              "why": "One weak signal does not justify a long break; check the other measures."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner's 7-day CV of rMSSD drops from 9% to 4% over a hard block, with the mean unchanged. What is the soundest next step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Take it as proof that she is now overreached",
+              "why": "Two athletes cannot prove it."
+            },
+            {
+              "id": "b",
+              "text": "Treat it as a possible warning; check wellness and a standard effort",
+              "correct": true,
+              "why": "Right: the pattern appeared before overreaching in a two-athlete case study, so use it as a prompt to look further."
+            },
+            {
+              "id": "c",
+              "text": "Ignore it because the mean has not changed at all",
+              "why": "Both mean and variation were suggested as useful in the case study."
+            },
+            {
+              "id": "d",
+              "text": "Double the training load to push through the block",
+              "why": "Adding load on a possible warning is the wrong direction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hm-swc-q",
+      "concept": "hm-band",
+      "bloom": "understand",
+      "sources": [
+        "buchheit2014",
+        "kiviniemi2007"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Why compare today's HRV with your own range instead of a published population norm?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Population norms are always wrong",
+              "why": "They are fine for what they cover; they just do not tell you your own normal."
+            },
+            {
+              "id": "b",
+              "text": "Norms depend on recording length, age and sex, and your noise is yours alone",
+              "correct": true,
+              "why": "Right: only your own history shows what is unusual for you."
+            },
+            {
+              "id": "c",
+              "text": "A personal range is not needed if you average 7 days",
+              "why": "The average still needs your own range to judge against."
+            },
+            {
+              "id": "d",
+              "text": "Norms only exist for SDNN",
+              "why": "Norms exist for several indices; recording length and person still matter."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

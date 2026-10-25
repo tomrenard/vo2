@@ -1,0 +1,781 @@
+{
+ "id": "ot-continuum",
+ "module": "t5-overtraining",
+ "title": "From overreaching to overtraining syndrome",
+ "goal": "Tell functional overreaching, non-functional overreaching and overtraining syndrome apart, and explain why the label can only be given after recovery.",
+ "requires": [
+  "hrv-limits"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "diagnosis-of-exclusion",
+    "prolonged-maladaptation",
+    "under-recovery"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ot-balance",
+   "title": "Overload needs recovery",
+   "text": "Training works by overload: a hard block pushes you down and recovery lets you come back higher (see the load lessons). The joint consensus statement of the European College of Sport Science and the American College of Sports Medicine (ECSS/ACSM) starts from this balance. Training must include overload, but it must avoid *excessive overload plus inadequate recovery* [[c:ot-balance-claim]].\n\nThat mix is [under-recovery](g:under-recovery). The load can be too high, the rest too short, or other stress (work, poor sleep, illness, too little food) can use up the rest you planned. The [consensus statement](g:consensus-statement) then describes a ladder of three states: [functional overreaching](g:functional-overreaching), [non-functional overreaching](g:nonfunctional-overreaching) and [overtraining syndrome](g:overtraining-syndrome). The next cards take them in turn.",
+   "claims": [
+    {
+     "id": "ot-balance-claim",
+     "text": "Successful training needs overload but must avoid excessive overload plus inadequate recovery.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "Successful training not only must involve overload but also must avoid the combination of excessive overload plus inadequate recovery.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-balance-def"
+  },
+  {
+   "type": "question",
+   "item": "ot-underrec-case"
+  },
+  {
+   "type": "concept",
+   "id": "ot-for",
+   "title": "Functional overreaching: a dip that pays",
+   "text": "In functional overreaching (FOR), a hard block causes a short dip in performance. With recovery, performance ends up *higher* [[c:ot-for-claim]]. Two studies show how it looks.\n\n- Eight trained cyclists did 2 weeks of intensified training. Maximal power fell from 338 to 319 W and the time trial slowed from 59.4 to 65.3 min [[c:ot-halson]].\n- In 13 triathletes, a 3-week overload cut a run test by 9.0% ± 2.1%, then the 1-week [taper](g:taper) brought a gain above baseline [[c:ot-lemeur]].\n\nFOR is usually planned (see the taper lessons): the dip is the price, the gain after the taper is the point.",
+   "claims": [
+    {
+     "id": "ot-for-claim",
+     "text": "Short-term performance drop that turns into a gain after recovery is functional overreaching.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "Athletes can experience short-term performance decrement without severe psychological or lasting other negative symptoms. This functional overreaching will eventually lead to an improvement in performance after recovery.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-halson",
+     "text": "In 8 trained cyclists, 2 weeks of intensified training cut maximal power and slowed a time trial; overreaching can be induced after 7 days.",
+     "grade": "weak",
+     "sources": [
+      "halson2002"
+     ],
+     "evidence": [
+      {
+       "source": "halson2002",
+       "quote": "A significant decline in maximal power output (N = 338 +/- 17 W, ITP = 319 +/- 17 W) and a significant increase in time to complete a simulated time trial (N = 59.4 +/- 1.9 min, ITP = 65.3 +/- 2.6 min) occurred after ITP in conjunction with a 29% increase in global mood disturbance.",
+       "level": "abstract"
+      },
+      {
+       "source": "halson2002",
+       "quote": "These findings indicate that a state of overreaching can already be induced after 7 days of intensified training with limited recovery.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-lemeur",
+     "text": "In 13 triathletes, 3 weeks of overload cut run test performance by 9%, followed by supercompensation after a taper.",
+     "grade": "weak",
+     "sources": [
+      "lemeur2013"
+     ],
+     "evidence": [
+      {
+       "source": "lemeur2013",
+       "quote": "All the subjects of the intensified training group demonstrated a decrease in maximal incremental running test performance at the end of the overload period (-9.0% ± 2.1% of baseline value) followed by a performance supercompensation after the taper and were therefore diagnosed as F-OR.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ot-pct-example",
+   "title": "Percent change in performance",
+   "problem": "A cyclist's maximal power fell from 338 W to 319 W after 2 weeks of intensified training. What is the percent change?",
+   "steps": [
+    "Change = new − old = 319 − 338 = −19 W.",
+    "Divide by the old (baseline) value: −19 ÷ 338 = −0.0562.",
+    "Times 100: −5.6%. Always divide by the baseline, not by the new value (19 ÷ 319 = 6.0% would be wrong)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ot-for-case"
+  },
+  {
+   "type": "concept",
+   "id": "ot-nfor",
+   "title": "When the dip does not turn",
+   "text": "If the balance between training and recovery is not respected, [non-functional overreaching](g:nonfunctional-overreaching) (NFOR) can occur [[c:ot-nfor-claim]]. Performance stays down and the rest does not bring a gain. [Overtraining syndrome](g:overtraining-syndrome) (OTS) is the longer, deeper end of the same ladder.\n\n| | FOR | NFOR | OTS |\n|---|---|---|---|\n| Performance back after | days to a couple of weeks | weeks to months | many months, despite rest |\n| Ends with | a gain | no gain | slow recovery |\n\nThe cut-offs between the columns are not sharp: one clinician notes that the usual limit of 2–3 months for OTS is arbitrary [[c:ot-arbitrary]].",
+   "claims": [
+    {
+     "id": "ot-nfor-claim",
+     "text": "When athletes do not respect the balance between training and recovery, nonfunctional overreaching can occur.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "When athletes do not sufficiently respect the balance between training and recovery, nonfunctional overreaching (NFOR) can occur.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-arbitrary",
+     "text": "The usual times for telling NFOR from OTS (weeks to months versus many months) are arbitrary cut-offs.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Nonfunctional OR shows decreases in performance for weeks to months while OTS is more severe and requires many months for recovery of performance despite rest",
+       "level": "full-text"
+      },
+      {
+       "source": "kreher2016",
+       "quote": "The results of the two-bout exercise test do question the arbitrary definition of symptoms for 2–3 months despite rest for OTS diagnosis.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-time-recall"
+  },
+  {
+   "type": "question",
+   "item": "ot-two-athletes"
+  },
+  {
+   "type": "concept",
+   "id": "ot-ots",
+   "title": "OTS: the name needs hindsight",
+   "text": "The consensus keyword for OTS is [prolonged maladaptation](g:prolonged-maladaptation): the athlete's hormonal, neurochemical and other control systems stay off balance [[c:ot-maladapt]]. Fatigue, falling performance and low mood are the main signs. They are thought to be worse than in NFOR, but there is no evidence to confirm or refute that [[c:ot-severity]].\n\nBecause FOR, NFOR and OTS can look alike, OTS is a [diagnosis of exclusion](g:diagnosis-of-exclusion): first rule out illness, infection, too little energy, carbohydrate or protein, iron or magnesium deficiency, allergies, and look for the trigger [[c:ot-exclusion]]. In one study athletes were followed by a sports physician so NFOR and OTS could be told apart afterwards [[c:ot-hindsight]].",
+   "claims": [
+    {
+     "id": "ot-maladapt",
+     "text": "A keyword for OTS is prolonged maladaptation of the athlete and of several regulation systems.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "A keyword in the recognition of OTS might be \"prolonged maladaptation\" not only of the athlete but also of several biological, neurochemical, and hormonal regulation mechanisms.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-severity",
+     "text": "OTS symptoms are thought to be more severe than NFOR symptoms, but there is no evidence to confirm or refute this.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "It is generally thought that symptoms of OTS, such as fatigue, performance decline, and mood disturbances, are more severe than those of NFOR. However, there is no scientific evidence to either confirm or refute this suggestion.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-exclusion",
+     "text": "The distinction between NFOR and OTS depends on the clinical outcome and on excluding other causes such as infection, low energy or carbohydrate intake, and iron deficiency.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "One approach to understanding the etiology of OTS involves the exclusion of organic diseases or infections and factors such as dietary caloric restriction (negative energy balance) and insufficient carbohydrate and/or protein intake, iron deficiency, magnesium deficiency, allergies, and others together with identification of initiating events or triggers.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2013",
+       "quote": "The distinction between NFOR and overtraining syndrome (OTS) is very difficult and will depend on the clinical outcome and exclusion diagnosis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-hindsight",
+     "text": "Underperforming athletes were followed to tell NFOR from OTS in hindsight.",
+     "grade": "weak",
+     "sources": [
+      "meeusen2008"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2008",
+       "quote": "Recovery of the athletes was monitored by a sports physician to retrospectively distinguish NFO from OTS.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-hindsight-why"
+  },
+  {
+   "type": "question",
+   "item": "ot-exclude-case"
+  },
+  {
+   "type": "concept",
+   "id": "ot-limits",
+   "title": "What the evidence can and cannot tell",
+   "text": "Most research on this topic comes from athletes with overreaching, not from athletes with OTS [[c:ot-research-gap]]. The cyclists and triathletes above were pushed into a short dip on purpose. Real OTS is rare and cannot be started on purpose, because no ethics board would let researchers push people into months of illness. So results from overreaching studies may not carry over to OTS.\n\nWhen you read a claim about \"overtraining\", ask which state the athletes were in, how it was confirmed, and how many there were. Small samples and hindsight labels, as in the studies above, call for caution.",
+   "claims": [
+    {
+     "id": "ot-research-gap",
+     "text": "Most past research is on athletes with overreaching, not OTS.",
+     "grade": "weak",
+     "sources": [
+      "kreher2012",
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2012",
+       "quote": "However, much remains to be learned given that most past research has been on athletes with overreaching rather than OTS.",
+       "level": "abstract"
+      },
+      {
+       "source": "kreher2016",
+       "quote": "Conclusion OTS is a rare entity in the realm of overreaching in which 1) excessive exercise is not properly matched with recovery and 2) an excessive stressor leads to significant mood disruption in the setting of maladaptive physiology.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-appraise-state"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Training needs overload, but excessive overload plus inadequate recovery is what causes harm.",
+    "Functional overreaching is a short dip that turns into a gain; non-functional overreaching lasts weeks to months with no gain.",
+    "Overtraining syndrome is prolonged maladaptation: a long, deep drop despite rest, with fatigue and low mood.",
+    "It is a diagnosis of exclusion: other causes are ruled out first, and the label is given in hindsight.",
+    "Most studies are on overreaching, so treat claims about OTS with care."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ot-balance-def",
+   "concept": "ot-balance",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which combination does the ECSS/ACSM consensus say training must avoid?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Excessive overload together with inadequate recovery",
+       "correct": true,
+       "why": "Right: overload is needed, the harm comes from too much load with too little recovery."
+      },
+      {
+       "id": "b",
+       "text": "Any overload at all",
+       "why": "Overload is the point of training; it is the lack of recovery that turns it harmful."
+      },
+      {
+       "id": "c",
+       "text": "Easy training for several weeks in a row",
+       "why": "Easy weeks do not cause overreaching; they are a form of recovery."
+      },
+      {
+       "id": "d",
+       "text": "Rest days placed between hard sessions",
+       "why": "Rest days are the recovery that the consensus asks for, not the problem."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the consensus view, what turns a hard block from useful to harmful?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rest that is too short or too poor for the load",
+       "correct": true,
+       "why": "Right: too much load with inadequate recovery is the harmful mix."
+      },
+      {
+       "id": "b",
+       "text": "Using high intensity at all",
+       "why": "Intensity is not the problem by itself; training needs overload."
+      },
+      {
+       "id": "c",
+       "text": "Training in a group instead of alone",
+       "why": "The consensus says nothing like this; the issue is the load-recovery balance."
+      },
+      {
+       "id": "d",
+       "text": "Having a coach plan the block",
+       "why": "Planning is part of avoiding the problem, not the cause of it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-underrec-case",
+   "concept": "ot-balance",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist raises weekly hours by 20%. The same weeks bring a work deadline, 5 h of sleep a night and a cold. Power is flat. Which description fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Under-recovery: training plus other stress outrun recovery",
+       "correct": true,
+       "why": "Right: stress from outside training counts towards the load that recovery has to cover."
+      },
+      {
+       "id": "b",
+       "text": "Overtraining syndrome, since power is flat",
+       "why": "Flat power for a few weeks does not meet the long-lasting definition; the label is not given this early."
+      },
+      {
+       "id": "c",
+       "text": "Only the 20% rise matters; the rest is unrelated",
+       "why": "Recovery is shared by all stress, so work, sleep loss and illness add to the load."
+      },
+      {
+       "id": "d",
+       "text": "Normal adaptation that needs more hard training",
+       "why": "Flat power with poor sleep and illness points to too little recovery, not too little load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-pct-calc",
+   "concept": "ot-for",
+   "bloom": "apply",
+   "sources": [
+    "halson2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After an intensified block a cyclist's maximal power falls from 400 W to 372 W. What is the percent change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−7.0%",
+       "correct": true,
+       "why": "Right: −28 ÷ 400 = −7.0%."
+      },
+      {
+       "id": "b",
+       "text": "−7.5%",
+       "why": "Divided by the new value (28 ÷ 372); the baseline is the old value."
+      },
+      {
+       "id": "c",
+       "text": "−28%",
+       "why": "Forgot to divide by the baseline: 28 is the change in watts."
+      },
+      {
+       "id": "d",
+       "text": "+7.0%",
+       "why": "Sign error: power fell, so the change is negative."
+      }
+     ],
+     "solution": "Change = 372 − 400 = −28 W. −28 ÷ 400 = −0.070, so −7.0%."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's top speed in a test falls from 18.0 to 17.0 km·h⁻¹ after a hard block. What is the percent change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−5.6%",
+       "correct": true,
+       "why": "Right: −1.0 ÷ 18.0 = −5.6%."
+      },
+      {
+       "id": "b",
+       "text": "−5.9%",
+       "why": "Divided by the new value (1.0 ÷ 17.0); use the baseline."
+      },
+      {
+       "id": "c",
+       "text": "−1.0%",
+       "why": "Gave the change in km·h⁻¹ as a percent; divide by 18.0 first."
+      },
+      {
+       "id": "d",
+       "text": "+5.6%",
+       "why": "Sign error: speed fell, so the change is negative."
+      }
+     ],
+     "solution": "Change = 17.0 − 18.0 = −1.0 km·h⁻¹. −1.0 ÷ 18.0 = −0.0556, so −5.6%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's 10 km run time goes from 40.0 to 44.0 min after a hard block. What is the percent change in time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+10.0%",
+       "correct": true,
+       "why": "Right: +4.0 ÷ 40.0 = +10.0%."
+      },
+      {
+       "id": "b",
+       "text": "+9.1%",
+       "why": "Divided by the new value (4.0 ÷ 44.0); use the baseline."
+      },
+      {
+       "id": "c",
+       "text": "+4.0%",
+       "why": "Gave the minutes as a percent; divide by 40.0 first."
+      },
+      {
+       "id": "d",
+       "text": "−10.0%",
+       "why": "Sign error: the time rose, so the change is positive (slower)."
+      }
+     ],
+     "solution": "Change = 44.0 − 40.0 = +4.0 min. +4.0 ÷ 40.0 = 0.100, so +10.0%."
+    }
+   ]
+  },
+  {
+   "id": "ot-for-case",
+   "concept": "ot-for",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2013",
+    "lemeur2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 3-week overload block a triathlete's run test is 9% down. After a 1-week taper it is 3% above the start. What is the state?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Functional overreaching: a dip, then a gain",
+       "correct": true,
+       "why": "Right: the drop turned into a gain after recovery."
+      },
+      {
+       "id": "b",
+       "text": "Non-functional overreaching, since a drop happened",
+       "why": "A drop alone does not make it non-functional; the gain after recovery marks FOR."
+      },
+      {
+       "id": "c",
+       "text": "Overtraining syndrome, since the drop was large",
+       "why": "OTS means a long-lasting drop despite rest, not one that turns after a week."
+      },
+      {
+       "id": "d",
+       "text": "No state; a 9% drop is only a bad test day",
+       "why": "A 9% drop after a hard block is the typical dip of overreaching, not noise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-time-recall",
+   "concept": "ot-nfor",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "For about how long does performance stay down in non-functional overreaching?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weeks to months",
+       "correct": true,
+       "why": "Right: NFOR lasts weeks to months, with no gain at the end."
+      },
+      {
+       "id": "b",
+       "text": "Days to a couple of weeks",
+       "why": "That is functional overreaching, which turns into a gain."
+      },
+      {
+       "id": "c",
+       "text": "Many months despite rest",
+       "why": "That is the usual description of overtraining syndrome."
+      },
+      {
+       "id": "d",
+       "text": "It never recovers",
+       "why": "NFOR does recover; it is the length and the lack of a gain that set it apart."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-two-athletes",
+   "concept": "ot-nfor",
+   "bloom": "analyse",
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners lose 6% after the same 3-week block. Runner A is back above baseline after a 10-day taper. Runner B is still 5% down after 6 weeks of easy training. Which labels fit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A functional overreaching; B at least non-functional overreaching",
+       "correct": true,
+       "why": "Right: A got the gain after rest; B's long dip with no gain is NFOR or worse."
+      },
+      {
+       "id": "b",
+       "text": "Both functional overreaching, since both started the same",
+       "why": "The start is the same but the course differs; the label follows how recovery goes."
+      },
+      {
+       "id": "c",
+       "text": "A non-functional overreaching; B overtraining syndrome",
+       "why": "A improved after rest, which marks functional overreaching."
+      },
+      {
+       "id": "d",
+       "text": "Both overtraining syndrome, since both dropped 6%",
+       "why": "OTS needs a long, deep drop despite rest; A recovered fast."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hindsight-why",
+   "concept": "ot-ots",
+   "bloom": "understand",
+   "sources": [
+    "meeusen2013",
+    "meeusen2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can a slump not be called overtraining syndrome on day 1?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It looks like NFOR; the label follows the recovery course and ruled-out causes",
+       "correct": true,
+       "why": "Right: the state is named by how recovery goes and after other causes are excluded."
+      },
+      {
+       "id": "b",
+       "text": "A blood test confirms it, but results take months to come back",
+       "why": "No single test confirms OTS; waiting is not about lab time."
+      },
+      {
+       "id": "c",
+       "text": "OTS can only occur after a full season of hard training",
+       "why": "OTS is defined by the long-lasting maladaptation, not by the calendar."
+      },
+      {
+       "id": "d",
+       "text": "Only a doctor may use the term, and not before month three",
+       "why": "There is no such rule; the problem is that the state cannot be seen at the start."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "An athlete has been tired and slow for three weeks. What does the consensus approach say about naming the state?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not yet: it depends on how recovery goes and on other causes being excluded",
+       "correct": true,
+       "why": "Right: the label is a diagnosis of exclusion, given in hindsight."
+      },
+      {
+       "id": "b",
+       "text": "It is NFOR, because any slump lasting over two weeks is NFOR",
+       "why": "No time cut-off alone settles it; the course and other causes decide."
+      },
+      {
+       "id": "c",
+       "text": "It is OTS if mood is low",
+       "why": "Low mood occurs in all three states and has other causes."
+      },
+      {
+       "id": "d",
+       "text": "It is FOR, as long as the athlete still feels quite motivated",
+       "why": "How motivated the athlete feels does not give the label; the outcome does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-exclude-case",
+   "concept": "ot-ots",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's 10 km times have been 8% slower for 8 weeks and mood is low. What is the most useful step before calling it OTS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Check for other causes: iron deficiency, infection, too little food",
+       "correct": true,
+       "why": "Right: OTS is a diagnosis of exclusion, so these come first."
+      },
+      {
+       "id": "b",
+       "text": "Add a second hard session to see if form returns",
+       "why": "More load on an unexplained slump risks making it worse."
+      },
+      {
+       "id": "c",
+       "text": "Wait a year and see",
+       "why": "Waiting without checking can miss a fixable cause such as iron deficiency."
+      },
+      {
+       "id": "d",
+       "text": "Start a taper, as a taper cures OTS",
+       "why": "A taper suits FOR; an unexplained long slump needs the causes checked."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-appraise-state",
+   "concept": "ot-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "kreher2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study puts 8 trained cyclists through 2 hard weeks and finds marker X rises. The authors say X can detect overtraining. What limits this claim most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cyclists were briefly overreached, not diagnosed with OTS",
+       "correct": true,
+       "why": "Right: the study never tested athletes with OTS."
+      },
+      {
+       "id": "b",
+       "text": "Cycling is not a sport in which OTS occurs",
+       "why": "OTS is reported across endurance sports; sport is not the main flaw."
+      },
+      {
+       "id": "c",
+       "text": "A marker that rises with load can never signal fatigue",
+       "why": "It can; the issue is that this study does not show it separates OTS."
+      },
+      {
+       "id": "d",
+       "text": "Trained athletes cannot be used in any study",
+       "why": "Trained athletes are the right group; the limit is the state they were in."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlon study induces overreaching for 3 weeks in 13 athletes and reports a hormone change. A coach wants to use it to spot OTS. What is the best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The athletes were overreached, not overtrained, so OTS is untested",
+       "correct": true,
+       "why": "Right: the finding fits overreaching only until tested in OTS."
+      },
+      {
+       "id": "b",
+       "text": "Hormone changes only matter in cycling",
+       "why": "Hormones are studied in all endurance sports; the limit is the athletes' state."
+      },
+      {
+       "id": "c",
+       "text": "Any result from 13 athletes is meaningless",
+       "why": "The sample is small but not meaningless; the key limit is the state studied."
+      },
+      {
+       "id": "d",
+       "text": "A taper at the end makes the data invalid",
+       "why": "A taper is part of how FOR is defined; it does not make the data invalid."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

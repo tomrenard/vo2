@@ -1,0 +1,757 @@
+{
+ "id": "heart-grey-zone",
+ "module": "t5-heart",
+ "title": "Athlete's heart or heart disease?",
+ "goal": "Explain why a trained heart can look like HCM, ARVC or DCM, how the international ECG criteria and imaging help to tell them apart, and why no single test, including detraining, settles it.",
+ "requires": [
+  "mast-training"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cardiomyopathy",
+    "hcm",
+    "arvc",
+    "dcm",
+    "sudden-cardiac-death",
+    "grey-zone",
+    "early-repolarisation",
+    "av-block",
+    "t-wave-inversion",
+    "cpet"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gz-diseases",
+   "title": "Three look-alike diseases",
+   "text": "Training grows the heart (see [athlete's heart](g:athletes-heart)). A few diseases of the heart muscle, the [cardiomyopathies](g:cardiomyopathy), also grow or thicken it. They are a main hidden cause of [sudden cardiac death](g:sudden-cardiac-death) in young athletes [[c:gz-causes]]:\n\n- **[HCM](g:hcm)**: a thick wall, often the wall between the ventricles.\n- **[ARVC](g:arvc)**: scar and fat in the right ventricle, with rhythm problems. Heavy endurance training seems to speed it up in gene carriers (mouse and human data); whether it can cause it alone is unproven [[c:gz-arvc]].\n- **[DCM](g:dcm)**: a big, weak left ventricle.\n\nMost athletes with big hearts are healthy. The hard cases are where health and disease overlap: the [grey zone](g:grey-zone).",
+   "claims": [
+    {
+     "id": "gz-causes",
+     "text": "A variety of mostly hereditary, structural or electrical heart disorders are linked to sudden cardiac death in young athletes; most can be suggested by a resting ECG.",
+     "grade": "strong",
+     "sources": [
+      "drezner2017"
+     ],
+     "evidence": [
+      {
+       "source": "drezner2017",
+       "quote": "A variety of mostly hereditary, structural or electrical cardiac disorders are associated with SCD in young athletes, the majority of which can be identified or suggested by abnormalities on a resting 12-lead electrocardiogram (ECG).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-arvc",
+     "text": "In gene carriers, endurance training speeds up ARVC: in mice, and in a human cohort where more exercise went with earlier and more severe disease. One review proposes it may also cause an ARVC-like state without a gene change.",
+     "grade": "weak",
+     "sources": [
+      "fabritz2024",
+      "james2013",
+      "heidbuchel2012"
+     ],
+     "evidence": [
+      {
+       "source": "fabritz2024",
+       "quote": "Endurance training accelerates the development of the ARVC phenotype, leading to earlier arrhythmic events.",
+       "level": "abstract"
+      },
+      {
+       "source": "james2013",
+       "quote": "Endurance exercise and frequent exercise increase the risk of VT/VF, HF, and ARVD/C in desmosomal mutation carriers.",
+       "level": "abstract"
+      },
+      {
+       "source": "heidbuchel2012",
+       "quote": "ARVC in high-endurance athletes most often develops in the absence of underlying desmosomal abnormalities, probably only as a result of excessive RV wall stress during exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hgz-roles"
+  },
+  {
+   "type": "concept",
+   "id": "gz-size",
+   "title": "Size alone cannot decide",
+   "text": "Wall thickness overlaps. In an MRI study of 150 elite athletes, 47.5% of the men but only 4.1% of the women had a wall of 13–16 mm: the grey zone [[c:gz-overlap]].\n\nShape helps. In an athlete the cavity grows along with the wall. In HCM the wall thickens without that extra cavity. So the ratio of cavity volume to wall mass is lower in HCM [[c:gz-ratio]]:\n\n| | volume | wall mass |\n|---|---|---|\n| healthy athletes | 114 mL·m⁻² | 53 g·m⁻² |\n| healthy non-athletes | 94 mL·m⁻² | 41 g·m⁻² |\n| HCM | 88 mL·m⁻² | 74 g·m⁻² |\n\nValues are per m² of body surface. The study used the ratio in a model with age, sex and sport, not as one cut-off.",
+   "claims": [
+    {
+     "id": "gz-overlap",
+     "text": "Among elite athletes, 47.5% of men but 4.1% of women had a wall thickness in the 13–16 mm grey zone.",
+     "grade": "moderate",
+     "sources": [
+      "czimbalmos2019"
+     ],
+     "evidence": [
+      {
+       "source": "czimbalmos2019",
+       "quote": "Whereas 47.5% of male athletes, only 4.1% of female athletes were in the grey zone of hypertrophy (EDWT 13-16mm).",
+       "level": "abstract"
+      },
+      {
+       "source": "czimbalmos2019",
+       "quote": "CMR based sport indices provide an important tool to distinguish hypertrophic cardiomyopathy from athlete's heart, especially in highly trained athletes in the grey zone of hypertrophy.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-ratio",
+     "text": "Cavity volume relative to wall mass is lower in HCM than in athletes, and helps tell them apart.",
+     "grade": "moderate",
+     "sources": [
+      "luijkx2013",
+      "czimbalmos2019"
+     ],
+     "evidence": [
+      {
+       "source": "luijkx2013",
+       "quote": "LV EDM was greater in patients with HCM (74 g/m2) compared with healthy athletes/non-athletes (53/41 g/m2), while LV EDV was largest in athletes (114 ml/m2) as compared with non-athletes (94 ml/m2) and patients with HCM (88 ml/m2).",
+       "level": "abstract"
+      },
+      {
+       "source": "luijkx2013",
+       "quote": "A model incorporating the LV EDV : EDM ratio can help distinguish HCM from physiological hypertrophy in athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hgz-ratio-ex",
+   "title": "Volume-to-mass ratio",
+   "problem": "Rower P has a cavity volume of 125 mL·m⁻² and a wall mass of 58 g·m⁻². Rower R has 82 mL·m⁻² and 70 g·m⁻². Which pattern is closer to HCM?",
+   "steps": [
+    "The ratio is volume ÷ wall mass, so a thick wall around a small cavity gives a low ratio.",
+    "P: 125 ÷ 58 = 2.16. R: 82 ÷ 70 = 1.17.",
+    "R has far more wall for its cavity, the pattern closer to HCM. It is a clue, not a diagnosis: age, sex, sport and other tests count too."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hgz-overlap"
+  },
+  {
+   "type": "question",
+   "item": "hgz-sex"
+  },
+  {
+   "type": "question",
+   "item": "hgz-ratio",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "gz-ecg",
+   "title": "Reading an athlete's ECG",
+   "text": "A resting 12-lead [ECG](g:ecg) is cheap and picks up many of these diseases. But training changes it too. Common training-related findings include a slow pulse, [first-degree AV block](g:av-block), isolated high-voltage patterns and [early repolarisation](g:early-repolarisation) [[c:gz-train]].\n\nThe 2017 international criteria came from an expert meeting in Seattle in 2015. They separate **normal** findings (training adaptation) from **abnormal** ones, which trigger a second look [[c:gz-criteria]]. Newer standards cut false alarms and keep sensitivity [[c:gz-spec]].\n\nAn abnormal case: lateral [T-wave inversion](g:t-wave-inversion), many extra beats and scar on MRI in a pro footballer, traced to a desmin gene variant [[c:gz-garba]].",
+   "claims": [
+    {
+     "id": "gz-train",
+     "text": "Slow pulse, first-degree AV block, isolated voltage criteria and early repolarisation are typical ECG features of the athlete's heart.",
+     "grade": "moderate",
+     "sources": [
+      "petrone2025"
+     ],
+     "evidence": [
+      {
+       "source": "petrone2025",
+       "quote": "Typical electrocardiogram (ECG) features include sinus bradycardia, first-degree atrioventricular (AV) block, isolated voltage criteria for right and left ventricular hypertrophy and early repolarisation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-criteria",
+     "text": "The international consensus separates normal training adaptations from distinctly abnormal findings and links each abnormality to a second-line work-up.",
+     "grade": "strong",
+     "sources": [
+      "drezner2017"
+     ],
+     "evidence": [
+      {
+       "source": "drezner2017",
+       "quote": "that distinguishes normal physiological adaptations in athletes from distinctly abnormal findings suggestive of underlying pathology.",
+       "level": "abstract"
+      },
+      {
+       "source": "drezner2017",
+       "quote": "provides expert opinion-based recommendations linking specific ECG abnormalities and the secondary evaluation for conditions associated with SCD.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-spec",
+     "text": "Newer ECG standards raised specificity and lowered the false-positive rate while keeping sensitivity.",
+     "grade": "moderate",
+     "sources": [
+      "serratosa2017",
+      "drezner2017"
+     ],
+     "evidence": [
+      {
+       "source": "serratosa2017",
+       "quote": "growing scientific evidence has increased the specificity of ECG standards, thus lowering the false-positive rate while maintaining sensitivity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-garba",
+     "text": "An elite footballer with lateral T-wave inversions, frequent extra beats and progressive scarring on MRI carried a pathogenic desmin variant.",
+     "grade": "weak",
+     "sources": [
+      "garba2026"
+     ],
+     "evidence": [
+      {
+       "source": "garba2026",
+       "quote": "with lateral T-wave inversions, frequent premature ventricular contractions, mildly reduced ejection fraction, and progressive myocardial scarring on cardiac magnetic resonance imaging.",
+       "level": "abstract"
+      },
+      {
+       "source": "garba2026",
+       "quote": "Genetic testing revealed a pathogenic desmin (DES) variant associated with arrhythmogenic and dilated cardiomyopathy spectrum.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hgz-ecg-normal"
+  },
+  {
+   "type": "question",
+   "item": "hgz-ecg-tinv"
+  },
+  {
+   "type": "concept",
+   "id": "gz-work",
+   "title": "How doctors tell them apart",
+   "text": "No single test decides. The usual path [[c:gz-path]]:\n\n1. **History**, including a family history of early heart death or cardiomyopathy.\n2. **ECG and [echocardiography](g:echocardiography)**.\n3. If still unclear: a long ECG recording, an exercise test or [cardiac MRI](g:cardiac-mri).\n\nA [CPET](g:cpet) adds function, but peak VO₂ alone is an unreliable discriminator, and elite fitness does not exclude cardiomyopathy [[c:gz-vo2]]. Indexing heart size to VO₂peak instead of body surface separated 12 DCM patients from athletes better: small, needs replication [[c:gz-dcm]].",
+   "claims": [
+    {
+     "id": "gz-path",
+     "text": "Telling athlete's heart from cardiomyopathy starts with personal and family history, then ECG and echo; second-line tests include long ECG monitoring, exercise testing and cardiac MRI.",
+     "grade": "moderate",
+     "sources": [
+      "petrone2025"
+     ],
+     "evidence": [
+      {
+       "source": "petrone2025",
+       "quote": "Differential diagnosis often requires a comprehensive assessment starting from a detailed personal and family history to baseline tests, such as ECG and echocardiogram.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-vo2",
+     "text": "Peak oxygen uptake alone does not separate athlete's heart from heart disease.",
+     "grade": "weak",
+     "sources": [
+      "caloian2026",
+      "mutebi2026"
+     ],
+     "evidence": [
+      {
+       "source": "caloian2026",
+       "quote": "Across conditions, peak oxygen uptake alone proved an unreliable discriminator.",
+       "level": "abstract"
+      },
+      {
+       "source": "mutebi2026",
+       "quote": "Elite performance does not exclude cardiomyopathy.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-dcm",
+     "text": "Heart size indexed to VO₂peak separated 12 DCM patients from athletes better than size indexed to body surface area.",
+     "grade": "weak",
+     "sources": [
+      "schellenberg2025"
+     ],
+     "evidence": [
+      {
+       "source": "schellenberg2025",
+       "quote": "In a cohort of 12 dilated cardiomyopathy (DCM) patients serving as a pathological reference group, indexing LVEDV and LV mass to VO2peak better differentiated DCM patients from athletes than indexing to BSA.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hgz-steps"
+  },
+  {
+   "type": "question",
+   "item": "hgz-vo2"
+  },
+  {
+   "type": "concept",
+   "id": "gz-detrain",
+   "title": "The detraining test, and its limit",
+   "text": "One old idea: stop training for a while and see if the heart shrinks. In healthy athletes the first change is a thinner left wall and less left mass. Later the left cavity and left atrium shrink, and the right side follows [[c:gz-order]].\n\nBut a drop in wall thickness does not clear the athlete. Reviewers argue detraining cannot be conclusive, so doctors weigh several clues together: history, ECG, imaging, family and genes [[c:gz-limit]].",
+   "claims": [
+    {
+     "id": "gz-order",
+     "text": "After detraining, the earliest change is a thinner left ventricular wall and lower left ventricular mass, then the left cavity and left atrium.",
+     "grade": "weak",
+     "sources": [
+      "zujko2024"
+     ],
+     "evidence": [
+      {
+       "source": "zujko2024",
+       "quote": "According to these data, the earliest change after detraining seems to be a decrease in left ventricular wall thickness and left ventricular mass, followed by decreased performance parameters, diastolic diameter of the left ventricle and size of the left atrium.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gz-limit",
+     "text": "Detraining cannot be conclusive in telling cardiomyopathy from adaptive change.",
+     "grade": "weak",
+     "sources": [
+      "zujko2024"
+     ],
+     "evidence": [
+      {
+       "source": "zujko2024",
+       "quote": "We suggest that detraining cannot be conclusive in differentiating the disease from adaptive changes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Can a rest period separate athlete's heart from cardiomyopathy?",
+    "sides": [
+     {
+      "position": "Yes: reducing training is often proposed as a way to tell them apart, because a healthy heart regresses.",
+      "sources": [
+       "zujko2024"
+      ]
+     },
+     {
+      "position": "No: regression can also happen in people with cardiomyopathy, so detraining cannot be conclusive.",
+      "sources": [
+       "zujko2024"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hgz-detrain"
+  },
+  {
+   "type": "question",
+   "item": "hgz-order"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Athlete's heart overlaps with HCM, ARVC and DCM: wall thickness 13–16 mm is common in healthy male elite athletes.",
+    "Cavity volume relative to wall mass is lower in HCM than in athletes.",
+    "The international ECG criteria split training-related from abnormal findings; abnormal ones start a second-line work-up.",
+    "History, ECG, echo and then MRI, exercise tests or genes work together; peak VO₂ alone cannot rule disease out.",
+    "A shrinking heart after rest supports athlete's heart but is not conclusive."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hgz-roles",
+   "concept": "gz-diseases",
+   "bloom": "remember",
+   "sources": [
+    "drezner2017",
+    "fabritz2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these heart-muscle diseases mainly replaces right-ventricle muscle with scar and fat and brings rhythm problems?",
+     "options": [
+      {
+       "id": "a",
+       "text": "ARVC",
+       "why": "Right: arrhythmogenic right ventricular cardiomyopathy is scar and fat in the right ventricle.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "HCM",
+       "why": "HCM is a thick wall, often between the ventricles, not right-ventricle scar and fat."
+      },
+      {
+       "id": "c",
+       "text": "DCM",
+       "why": "DCM is a big, weak left ventricle."
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "hgz-overlap",
+   "concept": "gz-size",
+   "bloom": "apply",
+   "sources": [
+    "czimbalmos2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 22-year-old male rower has no symptoms, a wall of 14 mm and a large cavity. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HCM, because the wall is thicker than normal",
+       "why": "About half of male elite athletes reach 13 mm; thickness alone does not make the diagnosis."
+      },
+      {
+       "id": "b",
+       "text": "In the grey zone: add history, ECG and imaging before deciding",
+       "why": "Right: 14 mm is common in male elite athletes and overlaps with mild HCM, so no single number settles it.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Athlete's heart, because he rows and needs no tests",
+       "why": "Training explains the size, but the overlap means disease still has to be looked for."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-sex",
+   "concept": "gz-size",
+   "bloom": "analyse",
+   "sources": [
+    "czimbalmos2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a 14 mm wall tell you more in an elite female athlete than in an elite male athlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Women's hearts cannot thicken with training",
+       "why": "They can; the point is that the grey-zone range was rare in women, not impossible."
+      },
+      {
+       "id": "b",
+       "text": "Women have a higher rate of HCM than men",
+       "why": "The study gives no such rate; it compared how common the thick wall was among healthy athletes."
+      },
+      {
+       "id": "c",
+       "text": "It is rare in healthy women (4.1%) but common in men (47.5%)",
+       "why": "Right: the same number sits in the grey zone for men but is less usual for healthy women.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-ratio",
+   "concept": "gz-size",
+   "bloom": "apply",
+   "sources": [
+    "luijkx2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclist X: cavity volume 118 mL·m⁻², wall mass 54 g·m⁻². Cyclist Y: 84 mL·m⁻², 72 g·m⁻². Which pattern is closer to HCM, and what are the ratios (volume ÷ mass)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Y: 84 ÷ 72 = 1.17, below X's 2.19",
+       "why": "Right: the lower ratio means more wall for the cavity, the HCM-like pattern.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "X: 118 ÷ 54 = 2.19, the higher ratio",
+       "why": "A high ratio is the athlete pattern, not HCM."
+      },
+      {
+       "id": "c",
+       "text": "Y: 72 ÷ 84 = 0.86, mass ÷ volume",
+       "why": "This inverts the ratio; the lesson's ratio is volume ÷ wall mass."
+      }
+     ],
+     "solution": "X: 118 ÷ 54 = 2.19. Y: 84 ÷ 72 = 1.17. Y has the lower ratio: more wall for its cavity, closer to HCM."
+    },
+    {
+     "id": "b",
+     "stem": "Runner X: cavity volume 110 mL·m⁻², wall mass 50 g·m⁻². Runner Y: 90 mL·m⁻², 72 g·m⁻². Which pattern is closer to HCM, and what are the ratios (volume ÷ mass)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "X: 110 ÷ 50 = 2.20, the higher ratio",
+       "why": "A high ratio is the athlete pattern."
+      },
+      {
+       "id": "b",
+       "text": "Y: 90 ÷ 72 = 1.25, below X's 2.20",
+       "why": "Right: the lower ratio is the HCM-like pattern.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Y: 72 ÷ 90 = 0.80, mass ÷ volume",
+       "why": "This inverts the ratio."
+      }
+     ],
+     "solution": "X: 110 ÷ 50 = 2.20. Y: 90 ÷ 72 = 1.25. Y is closer to HCM."
+    },
+    {
+     "id": "c",
+     "stem": "Triathlete X: cavity volume 130 mL·m⁻², wall mass 60 g·m⁻². Triathlete Y: 80 mL·m⁻², 70 g·m⁻². Which pattern is closer to HCM, and what are the ratios (volume ÷ mass)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "X: 130 ÷ 60 = 2.17, the higher ratio",
+       "why": "A high ratio is the athlete pattern."
+      },
+      {
+       "id": "b",
+       "text": "Y: 70 ÷ 80 = 0.88, mass ÷ volume",
+       "why": "This inverts the ratio."
+      },
+      {
+       "id": "c",
+       "text": "Y: 80 ÷ 70 = 1.14, below X's 2.17",
+       "why": "Right: the lower ratio is the HCM-like pattern.",
+       "correct": true
+      }
+     ],
+     "solution": "X: 130 ÷ 60 = 2.17. Y: 80 ÷ 70 = 1.14. Y is closer to HCM."
+    }
+   ]
+  },
+  {
+   "id": "hgz-ecg-normal",
+   "concept": "gz-ecg",
+   "bloom": "apply",
+   "sources": [
+    "petrone2025",
+    "drezner2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 25-year-old triathlete with no symptoms has a resting pulse of 44 beats·min⁻¹ and early repolarisation on her ECG, with nothing else unusual. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Typical training-related findings; no extra tests for these alone",
+       "why": "Right: slow pulse and early repolarisation are common in trained people.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Abnormal: send for MRI and a gene test at once",
+       "why": "These findings alone are typical of training; abnormal ones need a second look, these do not."
+      },
+      {
+       "id": "c",
+       "text": "Abnormal: she should stop training until cleared",
+       "why": "Nothing here justifies stopping; the findings are explained by training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-ecg-tinv",
+   "concept": "gz-ecg",
+   "bloom": "evaluate",
+   "sources": [
+    "drezner2017",
+    "garba2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A footballer has lateral T-wave inversions and many extra beats on ECG, but feels fine. What should happen next?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Call it an athlete's ECG, since he has no symptoms",
+       "why": "Having no symptoms does not explain the findings; sudden death can be the first sign."
+      },
+      {
+       "id": "b",
+       "text": "Treat it as abnormal: refer for a second-line work-up such as MRI",
+       "why": "Right: these are not training-related findings, and a similar case turned out to be a gene-linked cardiomyopathy.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Repeat the ECG next year and change nothing meanwhile",
+       "why": "Abnormal findings call for a work-up now, not a wait."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-steps",
+   "concept": "gz-work",
+   "bloom": "understand",
+   "sources": [
+    "petrone2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has a suspicious ECG. What is the usual start of the work-up?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cardiac MRI first, before any other test",
+       "why": "MRI is a second-line test for unclear cases, not the start."
+      },
+      {
+       "id": "b",
+       "text": "A gene test first, then decide what else to do",
+       "why": "Genetic tests come later and are used selectively, not as the opening step."
+      },
+      {
+       "id": "c",
+       "text": "History with family history, then ECG and echo",
+       "why": "Right: the usual path starts with history and baseline tests.",
+       "correct": true
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "hgz-vo2",
+   "concept": "gz-work",
+   "bloom": "analyse",
+   "sources": [
+    "caloian2026",
+    "mutebi2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rower with an abnormal ECG has an excellent peak VO₂ of 60 mL·kg⁻¹·min⁻¹. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nothing decisive: elite fitness does not rule out cardiomyopathy",
+       "why": "Right: peak VO₂ alone is an unreliable discriminator.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It rules out cardiomyopathy, since sick hearts cannot reach it",
+       "why": "People with cardiomyopathy can still show high peak VO₂."
+      },
+      {
+       "id": "c",
+       "text": "It proves the ECG is a normal athlete pattern",
+       "why": "A good VO₂ does not make an abnormal ECG normal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-detrain",
+   "concept": "gz-detrain",
+   "bloom": "evaluate",
+   "sources": [
+    "zujko2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's wall drops from 14 mm to 12 mm after eight weeks off. Can you conclude there is no cardiomyopathy?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: only a healthy heart shrinks when training stops",
+       "why": "Withdrawal of changes can also affect people with cardiomyopathy."
+      },
+      {
+       "id": "b",
+       "text": "No: detraining cannot be conclusive on its own",
+       "why": "Right: regression can also occur in people with cardiomyopathy.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Yes, but only if the right ventricle shrank as well",
+       "why": "No single chamber's change settles it; the review calls the test inconclusive."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hgz-order",
+   "concept": "gz-detrain",
+   "bloom": "remember",
+   "sources": [
+    "zujko2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "During detraining, which change comes first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A smaller right ventricle cavity and wall",
+       "why": "The right ventricle is the last to reverse."
+      },
+      {
+       "id": "b",
+       "text": "A smaller left atrium and left cavity",
+       "why": "These follow later, after wall and mass."
+      },
+      {
+       "id": "c",
+       "text": "A thinner left wall and less left mass",
+       "why": "Right: this is the earliest change reported.",
+       "correct": true
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  }
+ ]
+}

@@ -1,0 +1,674 @@
+{
+ "id": "health-too-much",
+ "module": "t5-health",
+ "title": "Is there such a thing as too much?",
+ "goal": "Weigh the U-shape claim for running against pooled evidence, explain how sitting and exercise relate, and describe how healthy-volunteer bias affects cohort results.",
+ "requires": [
+  "health-mechanisms"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "healthy-volunteer-bias"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "too-schnohr",
+   "title": "The U-shape claim",
+   "text": "Is there such a thing as too much? Schnohr followed 1,098 healthy joggers and 3,950 healthy non-joggers in the Copenhagen City Heart Study [[c:schnohr-design]]. Against sedentary non-joggers, the death hazard ratios were:\n\n| joggers | HR (95% CI) |\n|---|---|\n| light | 0.22 (0.10–0.47) |\n| moderate | 0.66 (0.32–1.38) |\n| strenuous | 1.97 (0.48–8.14) |\n\nThe authors called this a [U-shaped](g:u-shaped-curve) link [[c:schnohr-u]]. Look at the last row: the [confidence interval](g:confidence-interval) runs from 0.48 to 8.14, so the data fit anything from half the risk to eight times. It is not a clear sign of harm.",
+   "claims": [
+    {
+     "id": "schnohr-design",
+     "text": "Schnohr followed 1,098 healthy joggers and 3,950 healthy non-joggers from 2001.",
+     "grade": "weak",
+     "sources": [
+      "schnohr2015"
+     ],
+     "evidence": [
+      {
+       "source": "schnohr2015",
+       "quote": "As part of the Copenhagen City Heart Study, 1,098 healthy joggers and 3,950 healthy nonjoggers have been prospectively followed up since 2001.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "schnohr-u",
+     "text": "Light joggers had the lowest mortality (HR 0.22) and strenuous joggers did not differ clearly from sedentary people (HR 1.97, CI 0.48–8.14); the authors describe a U-shaped association.",
+     "grade": "disputed",
+     "sources": [
+      "schnohr2015"
+     ],
+     "evidence": [
+      {
+       "source": "schnohr2015",
+       "quote": "The joggers were divided into light, moderate, and strenuous joggers. The lowest HR for mortality was found in light joggers (HR: 0.22; 95% CI: 0.10 to 0.47), followed by moderate joggers (HR: 0.66; 95% CI: 0.32 to 1.38) and strenuous joggers (HR: 1.97; 95% CI: 0.48 to 8.14).",
+       "level": "abstract"
+      },
+      {
+       "source": "schnohr2015",
+       "quote": "The findings suggest a U-shaped association between all-cause mortality and dose of jogging as calibrated by pace, quantity, and frequency of jogging.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "htoo-schnohr-read",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "htoo-u-shape"
+  },
+  {
+   "type": "concept",
+   "id": "too-critique",
+   "title": "Where the wider evidence stands",
+   "text": "Pedisic pooled 14 running studies from six cohorts (232,149 people). Running went with a 27% lower death rate (HR 0.73), but there was no significant dose–response trend for frequency, time, pace or total volume [[c:pedisic]]. Arem (lesson 1) found no excess risk at 10 times the guideline minimum, and Mandsager found no upper limit of fitness benefit.",
+   "claims": [
+    {
+     "id": "pedisic",
+     "text": "Running went with a lower death rate, and higher doses were not clearly linked to greater benefit.",
+     "grade": "moderate",
+     "sources": [
+      "pedisic2020"
+     ],
+     "evidence": [
+      {
+       "source": "pedisic2020",
+       "quote": "A meta-regression analysis showed no significant dose-response trends for weekly frequency, weekly duration, pace and the total volume of running.",
+       "level": "abstract"
+      },
+      {
+       "source": "pedisic2020",
+       "quote": "Any amount of running, even just once a week, is better than no running, but higher doses of running may not necessarily be associated with greater mortality benefits.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does a high dose of running raise the death rate?",
+    "sides": [
+     {
+      "position": "Yes: risk rises again at strenuous doses (a U-shape)",
+      "sources": [
+       "schnohr2015"
+      ]
+     },
+     {
+      "position": "No clear sign: benefit flattens and no excess risk shows up in pooled data",
+      "sources": [
+       "pedisic2020",
+       "arem2015"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "htoo-pedisic"
+  },
+  {
+   "type": "question",
+   "item": "htoo-compare"
+  },
+  {
+   "type": "concept",
+   "id": "too-sitting",
+   "title": "Sitting versus exercise",
+   "text": "Ekelund pooled 13 cohorts with sitting data (1,005,791 people). The referent group sat under 4 h a day and was in the most active quarter (over 35.5 MET-h·week⁻¹).\n\n| group | HR |\n|---|---|\n| sits under 4 h, least active | 1.27 |\n| sits over 8 h, least active | 1.59 |\n| sits over 8 h, most active | 1.04 (0.99–1.10) |\n\nAbout 60–75 min a day of moderate activity seemed to cancel the risk of long sitting [[c:sit-cancel]]. For TV time, high activity reduced but did not remove the extra risk: even the most active had higher risk at 5 h or more a day [[c:tv]]. Sitting and exercise are separate risks, and activity can offset one of them. Both are self-reported here.",
+   "claims": [
+    {
+     "id": "sit-cancel",
+     "text": "High moderate-intensity activity (about 60–75 min a day) seemed to eliminate the extra death risk of high sitting time.",
+     "grade": "moderate",
+     "sources": [
+      "ekelund2016"
+     ],
+     "evidence": [
+      {
+       "source": "ekelund2016",
+       "quote": "High levels of moderate intensity physical activity (ie, about 60-75 min per day) seem to eliminate the increased risk of death associated with high sitting time.",
+       "level": "abstract"
+      },
+      {
+       "source": "ekelund2016",
+       "quote": "Daily sitting time was not associated with increased all-cause mortality in those in the most active quartile of physical activity.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tv",
+     "text": "High activity reduced but did not eliminate the extra risk linked to TV-viewing time.",
+     "grade": "moderate",
+     "sources": [
+      "ekelund2016"
+     ],
+     "evidence": [
+      {
+       "source": "ekelund2016",
+       "quote": "However, this high activity level attenuates, but does not eliminate the increased risk associated with high TV-viewing time.",
+       "level": "abstract"
+      },
+      {
+       "source": "ekelund2016",
+       "quote": "Watching TV for 3 h or more per day was associated with increased mortality regardless of physical activity, except in the most active quartile, where mortality was significantly increased only in people who watched TV for 5 h/day or more (HR=1·16, 1·05-1·28).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "htoo-sitting"
+  },
+  {
+   "type": "question",
+   "item": "htoo-tv"
+  },
+  {
+   "type": "concept",
+   "id": "too-volunteer",
+   "title": "Who joins the study?",
+   "text": "[Healthy-volunteer bias](g:healthy-volunteer-bias): people who join studies are healthier than the rest. Fry compared UK Biobank, a big cohort, with the national population. Only 5.5% of those invited took part. At 70–74, mortality was 46.2% lower in men and 55.5% lower in women than in the general population [[c:fry]]. The authors call it a \"healthy volunteer\" bias.\n\nThey add that exposure–disease links may still hold: comparisons inside the cohort stay valid even if the cohort is healthier than average [[c:fry-ok]]. So expect absolute risks to be too low, while the shape of a dose–response curve may be sound. A runners' club study has the same issue.",
+   "claims": [
+    {
+     "id": "fry",
+     "text": "UK Biobank volunteers had much lower mortality than the general population, evidence of healthy-volunteer selection bias.",
+     "grade": "weak",
+     "sources": [
+      "fry2017"
+     ],
+     "evidence": [
+      {
+       "source": "fry2017",
+       "quote": "At age 70-74 years, rates of all-cause mortality and total cancer incidence were 46.2% and 11.8% lower, respectively, in men and 55.5% and 18.1% lower, respectively, in women than in the general population of the same age.",
+       "level": "abstract"
+      },
+      {
+       "source": "fry2017",
+       "quote": "UK Biobank is not representative of the sampling population; there is evidence of a \"healthy volunteer\" selection bias.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fry-ok",
+     "text": "Exposure–disease relationships may still be widely generalisable even if the participants are not representative.",
+     "grade": "weak",
+     "sources": [
+      "fry2017"
+     ],
+     "evidence": [
+      {
+       "source": "fry2017",
+       "quote": "Nonetheless, valid assessment of exposure-disease relationships may be widely generalizable and does not require participants to be representative of the population at large.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "htoo-volunteer-def"
+  },
+  {
+   "type": "question",
+   "item": "htoo-volunteer-apply"
+  },
+  {
+   "type": "concept",
+   "id": "too-where",
+   "title": "Where this leaves a keen athlete",
+   "text": "| claim | status |\n|---|---|\n| Some activity beats none; the first minutes give most of the gain | well supported (observational, consistent) |\n| Benefit levels off near 3–5× the minimum | likely |\n| Excess death risk from very high doses of running or riding | not shown; data thin and mixed |\n| Heart-specific effects of years of extreme endurance work | a separate question |\n\nDeath from any cause is a coarse outcome. The heart module's lessons on atrial fibrillation and coronary calcium cover the heart-specific questions, so do not read \"no sign of excess deaths\" as \"no heart effects at all\".",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "htoo-endpoint"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Schnohr's U-shape rests on a strenuous group with a very wide interval (0.48–8.14): suggestive, not proof of harm.",
+    "Pooled data show a lower death rate with running but no clear extra benefit at higher doses, and Arem found no excess risk at 10× the minimum.",
+    "Long sitting adds risk, and about 60–75 min of daily moderate activity cancelled it for sitting, though not fully for TV time.",
+    "Healthy-volunteer bias lowers absolute risks in cohorts, but comparisons inside the cohort may still hold.",
+    "Total mortality is a coarse outcome; heart-specific questions stay open (see the heart module)."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "htoo-schnohr-read",
+   "concept": "too-schnohr",
+   "bloom": "analyse",
+   "sources": [
+    "schnohr2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Strenuous joggers had HR 1.97 (95% CI 0.48–8.14) against sedentary non-joggers. What is the fairest reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The interval spans 1, so harm is not shown",
+       "correct": true,
+       "why": "Right: the estimate is highly uncertain."
+      },
+      {
+       "id": "b",
+       "text": "Strenuous jogging nearly doubles the risk of death",
+       "why": "Takes the point estimate as fact and ignores the wide interval."
+      },
+      {
+       "id": "c",
+       "text": "Strenuous jogging cuts risk in half",
+       "why": "0.48 is only the lower edge of the interval."
+      },
+      {
+       "id": "d",
+       "text": "The result proves strenuous jogging is as safe as light jogging",
+       "why": "The data are too uncertain to show that either."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Moderate joggers had HR 0.66 (95% CI 0.32–1.38) against sedentary non-joggers. What is the fairest reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A clear 34% lower risk of death",
+       "why": "Takes the point estimate as fact and ignores the interval."
+      },
+      {
+       "id": "b",
+       "text": "The interval includes 1: lower risk is not shown",
+       "correct": true,
+       "why": "Right: the interval runs from 0.32 to 1.38."
+      },
+      {
+       "id": "c",
+       "text": "A clear 66% lower risk of death",
+       "why": "Reads the HR as the reduction."
+      },
+      {
+       "id": "d",
+       "text": "A clear rise in risk for moderate joggers",
+       "why": "The estimate is below 1 and the interval is wide."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-u-shape",
+   "concept": "too-schnohr",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "schnohr2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What shape of link between jogging dose and all-cause mortality did Schnohr's authors report?",
+     "options": [
+      {
+       "id": "a",
+       "text": "U-shaped: light joggers did best, strenuous no better than none",
+       "correct": true,
+       "why": "Right: that is what they concluded."
+      },
+      {
+       "id": "b",
+       "text": "A straight line: more jogging always lowers the risk",
+       "why": "This is not the shape they reported."
+      },
+      {
+       "id": "c",
+       "text": "Flat: the dose of jogging did not matter at all",
+       "why": "Light joggers had a much lower rate."
+      },
+      {
+       "id": "d",
+       "text": "An inverted U: moderate jogging was the worst dose",
+       "why": "The opposite of what they reported."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-pedisic",
+   "concept": "too-critique",
+   "bloom": "understand",
+   "sources": [
+    "pedisic2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What did Pedisic find about the dose of running?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only running over 3 h a week gave any benefit",
+       "why": "Even once a week was linked to benefit."
+      },
+      {
+       "id": "b",
+       "text": "Any running meant lower mortality; more was not clearly better",
+       "correct": true,
+       "why": "Right: no significant trend for frequency, time, pace or volume."
+      },
+      {
+       "id": "c",
+       "text": "Risk rose steadily with more running time",
+       "why": "No significant dose-response trend was found."
+      },
+      {
+       "id": "d",
+       "text": "Running had no link with mortality in these cohorts",
+       "why": "Running went with a 27% lower rate (HR 0.73)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-compare",
+   "concept": "too-critique",
+   "bloom": "evaluate",
+   "sources": [
+    "schnohr2015",
+    "pedisic2020",
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Schnohr (one city cohort, small strenuous group) says high-dose running may raise risk. Pedisic and Arem (hundreds of thousands) show no excess. How should you weigh them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Pooled data count for more; harm is unproven but not excluded",
+       "correct": true,
+       "why": "Right: more data, but cohort limits stay."
+      },
+      {
+       "id": "b",
+       "text": "Schnohr wins because it is more recent",
+       "why": "Date does not decide quality."
+      },
+      {
+       "id": "c",
+       "text": "Schnohr wins because it looked at jogging only",
+       "why": "Narrow focus does not make it stronger than pooled data."
+      },
+      {
+       "id": "d",
+       "text": "Pooled data prove high doses are safe",
+       "why": "Observational data cannot prove safety."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-sitting",
+   "concept": "too-sitting",
+   "bloom": "apply",
+   "sources": [
+    "ekelund2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A software engineer sits over 8 h a day but does more than 35.5 MET-h·week⁻¹ of cycling. A colleague sits under 4 h a day but barely moves. Which has the higher rate of death in Ekelund's data?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The colleague: HR 1.27 against 1.04 for the cyclist",
+       "correct": true,
+       "why": "Right: activity offset the sitting."
+      },
+      {
+       "id": "b",
+       "text": "The engineer, since sitting over 8 h is always worse",
+       "why": "In the most active group long sitting added no clear risk."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, since sitting and activity cancel out",
+       "why": "The inactive person had a clearly higher rate (HR 1.27)."
+      },
+      {
+       "id": "d",
+       "text": "The cyclist, since high activity itself raises risk",
+       "why": "The cyclist group had HR 1.04 (0.99–1.10), no clear rise."
+      }
+     ],
+     "solution": "Engineer: sits over 8 h, most active: HR 1.04 (0.99–1.10). Colleague: sits under 4 h, least active: HR 1.27 (1.22–1.31)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner works at a desk over 8 h a day and does more than 35.5 MET-h·week⁻¹. Another person sits over 8 h and is in the least active quarter. Which has the higher death rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runner, since long sitting always adds risk",
+       "why": "In the most active group long sitting added no clear risk."
+      },
+      {
+       "id": "b",
+       "text": "The inactive person: HR 1.59 against 1.04",
+       "correct": true,
+       "why": "Right: the runner's activity offsets the sitting."
+      },
+      {
+       "id": "c",
+       "text": "Both the same, since sitting decides risk",
+       "why": "The least active, long-sitting group had HR 1.59."
+      },
+      {
+       "id": "d",
+       "text": "The runner, since high activity raises risk",
+       "why": "The runner's HR was 1.04, no clear rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-tv",
+   "concept": "too-sitting",
+   "bloom": "analyse",
+   "sources": [
+    "ekelund2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Ekelund's data, high activity cancelled the risk of long sitting but not of 5 h or more of TV. What does that suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Activity offsets sitting risk, but TV time may carry extra risk",
+       "correct": true,
+       "why": "Right: activity attenuated but did not eliminate TV risk."
+      },
+      {
+       "id": "b",
+       "text": "TV is harmless if you exercise",
+       "why": "High activity attenuated but did not eliminate the TV risk."
+      },
+      {
+       "id": "c",
+       "text": "Sitting at work is worse than TV",
+       "why": "The data say nothing of the sort."
+      },
+      {
+       "id": "d",
+       "text": "The result is chance because TV data were self-reported only",
+       "why": "Self-report is a limit, but it does not explain the pattern."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-volunteer-def",
+   "concept": "too-volunteer",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "fry2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is healthy-volunteer bias?",
+     "options": [
+      {
+       "id": "a",
+       "text": "People who drop out of a study are always sicker",
+       "why": "This is attrition, a different problem."
+      },
+      {
+       "id": "b",
+       "text": "People who join a study are healthier than the general population",
+       "correct": true,
+       "why": "Right: so absolute risks look too low."
+      },
+      {
+       "id": "c",
+       "text": "Researchers pick only the healthiest people to enrol",
+       "why": "The bias arises from who volunteers, not researcher choice."
+      },
+      {
+       "id": "d",
+       "text": "People get healthier because a study watches them",
+       "why": "That would be an effect of being studied, not a bias in who joins."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-volunteer-apply",
+   "concept": "too-volunteer",
+   "bloom": "apply",
+   "sources": [
+    "fry2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling-club cohort has a death rate half that of the national population. What is the right caution?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Absolute risk is too low; comparisons inside the club may still hold",
+       "correct": true,
+       "why": "Right: this is Fry's point."
+      },
+      {
+       "id": "b",
+       "text": "The cohort is useless for any question",
+       "why": "Fry says internal comparisons may still hold."
+      },
+      {
+       "id": "c",
+       "text": "The club proves cycling halves death risk",
+       "why": "Volunteers are healthier to begin with."
+      },
+      {
+       "id": "d",
+       "text": "The result is wrong because clubs are small",
+       "why": "Size is not the issue; who joins is."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A running-club cohort has a death rate 40% below the national rate. What is the right caution?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cohort is useless for any question",
+       "why": "Fry says internal comparisons may still hold."
+      },
+      {
+       "id": "b",
+       "text": "The club proves running cuts death risk by 40%",
+       "why": "Volunteers are healthier to begin with."
+      },
+      {
+       "id": "c",
+       "text": "Absolute risk is too low; comparisons inside the club may still hold",
+       "correct": true,
+       "why": "Right: this is Fry's point."
+      },
+      {
+       "id": "d",
+       "text": "The result is wrong because clubs are small",
+       "why": "Size is not the issue; who joins is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htoo-endpoint",
+   "concept": "too-where",
+   "bloom": "evaluate",
+   "sources": [
+    "arem2015",
+    "schnohr2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cohort finds no excess deaths at 10 times the guideline minimum. What does this show about extreme endurance and the heart?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Little: death from any cause is coarse and may hide heart-specific effects",
+       "correct": true,
+       "why": "Right: the heart questions need their own evidence."
+      },
+      {
+       "id": "b",
+       "text": "It proves there are no heart effects at all",
+       "why": "Total mortality cannot show this."
+      },
+      {
+       "id": "c",
+       "text": "It proves extreme doses are healthier than moderate",
+       "why": "The curve flattened; it did not show extreme was best."
+      },
+      {
+       "id": "d",
+       "text": "It shows the heart is unaffected below 10 times",
+       "why": "The study did not look at heart structure or rhythm."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

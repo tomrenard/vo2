@@ -1,0 +1,688 @@
+{
+ "id": "health-fitness",
+ "module": "t5-health",
+ "title": "Fitness as a vital sign",
+ "goal": "Explain why cardiorespiratory fitness is proposed as a vital sign, use the risk ratio per 1 MET to estimate risk differences, and say what cohort data on fitness cannot show.",
+ "requires": [
+  "health-dose"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cardiorespiratory-fitness",
+    "vital-sign",
+    "risk-factor",
+    "treadmill-test"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "fit-vital-sign",
+   "title": "Fitness as a vital sign",
+   "text": "[Cardiorespiratory fitness](g:cardiorespiratory-fitness) (CRF) is how well heart, lungs and muscles supply and use oxygen in hard exercise; [VO2max](g:vo2max) is its lab measure. In 2016 the American Heart Association argued that clinics should record it like a [vital sign](g:vital-sign), next to pulse and blood pressure [[c:ross-vital]].\n\nIts case: low fitness goes with more heart disease, death and some cancers. CRF may predict death better than the usual [risk factors](g:risk-factor): smoking, high blood pressure, high cholesterol and type 2 diabetes. Adding CRF to those factors also sorts people into risk groups more accurately [[c:ross-predict]]. The statement says \"potentially stronger\", not proven stronger.",
+   "claims": [
+    {
+     "id": "ross-vital",
+     "text": "The AHA statement argues that adding CRF to risk assessment gives clinicians chances to improve patient care and encourage lifestyle change.",
+     "grade": "strong",
+     "sources": [
+      "ross2016"
+     ],
+     "evidence": [
+      {
+       "source": "ross2016",
+       "quote": "The underlying premise of this statement is that the addition of CRF for risk classification presents health professionals with unique opportunities to improve patient management and to encourage lifestyle-based strategies designed to reduce cardiovascular risk.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ross-predict",
+     "text": "CRF is a potentially stronger predictor of death than smoking, hypertension, high cholesterol and type 2 diabetes, and improves risk reclassification.",
+     "grade": "moderate",
+     "sources": [
+      "ross2016"
+     ],
+     "evidence": [
+      {
+       "source": "ross2016",
+       "quote": "A growing body of epidemiological and clinical evidence demonstrates not only that CRF is a potentially stronger predictor of mortality than established risk factors such as smoking, hypertension, high cholesterol, and type 2 diabetes mellitus, but that the addition of CRF to traditional risk factors significantly improves the reclassification of risk for adverse outcomes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hfit-vital-sign"
+  },
+  {
+   "type": "question",
+   "item": "hfit-ross-compare"
+  },
+  {
+   "type": "concept",
+   "id": "fit-mets",
+   "title": "Fitness in METs: the 1-MET step",
+   "text": "Fitness is often written in [METs](g:met). One MET is about 3.5 mL·kg⁻¹·min⁻¹ [[c:met-35]], so a VO2max of 35 mL·kg⁻¹·min⁻¹ is 10 METs.\n\nKodama pooled 33 cohorts of healthy adults (102,980 people for the death analysis) [[c:kodama-rr]]. For each 1 MET higher fitness, the [risk ratio](g:risk-ratio) was 0.87 for death from any cause and 0.85 for heart events. One MET matches running 1 km·h⁻¹ faster. People at 7.9 METs or more had much lower rates than those below [[c:kodama-79]].\n\nIf every extra MET cuts risk by the same ratio, the ratios multiply: 3 METs gives 0.87³ ≈ 0.66.",
+   "claims": [
+    {
+     "id": "met-35",
+     "text": "One MET is the oxygen used sitting at rest, set by convention at 3.5 mL·kg⁻¹·min⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "jette1990"
+     ],
+     "evidence": [
+      {
+       "source": "jette1990",
+       "quote": "One metabolic equivalent (MET) is defined as the amount of oxygen consumed while sitting at rest and is equal to 3.5 ml O2 per kg body weight x min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "kodama-rr",
+     "text": "Per 1-MET higher fitness (about 1 km·h⁻¹ faster running speed), the risk ratio for all-cause death was 0.87 and for heart events 0.85.",
+     "grade": "moderate",
+     "sources": [
+      "kodama2009"
+     ],
+     "evidence": [
+      {
+       "source": "kodama2009",
+       "quote": "Pooled RRs of all-cause mortality and CHD/CVD events per 1-MET higher level of MAC (corresponding to 1-km/h higher running/jogging speed) were 0.87 (95% confidence interval [CI], 0.84-0.90) and 0.85 (95% CI, 0.82-0.88), respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "kodama-79",
+     "text": "Participants at 7.9 METs or more had substantially lower rates of death and heart events than those below.",
+     "grade": "moderate",
+     "sources": [
+      "kodama2009"
+     ],
+     "evidence": [
+      {
+       "source": "kodama2009",
+       "quote": "Participants with a MAC of 7.9 METs or more had substantially lower rates of all-cause mortality and CHD/CVD events compared with those with a MAC of less 7.9 METs.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "fit-met-example",
+   "title": "From VO2max to risk ratio",
+   "problem": "A cyclist's VO2max rises from 31.5 to 42 mL·kg⁻¹·min⁻¹. How many METs is that gain, and what risk ratio does 0.87 per MET imply?",
+   "steps": [
+    "Gain: 42 − 31.5 = 10.5 mL·kg⁻¹·min⁻¹.",
+    "In METs: 10.5 ÷ 3.5 = 3 METs.",
+    "Risk ratio: 0.87 × 0.87 × 0.87 = 0.7569 × 0.87 = 0.6585, about 0.66, a 34% lower rate of death.",
+    "Caution: this compares different people in cohorts, and assumes the same ratio at every MET. It does not promise what training will do to one person."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hfit-met-convert",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hfit-risk-gain",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hfit-kodama-read"
+  },
+  {
+   "type": "question",
+   "item": "hfit-1kmh"
+  },
+  {
+   "type": "concept",
+   "id": "fit-mandsager",
+   "title": "A big clinic cohort: no ceiling",
+   "text": "Mandsager followed 122,007 adults sent for a [treadmill test](g:treadmill-test) at one US medical centre between 1991 and 2014 (median follow-up 8.4 years) [[c:mand-design]]. Fitness, estimated from the test, was ranked for age and sex from low to elite. Death risk fell step by step, and elite performers had the lowest risk: HR 0.20 against the low group [[c:mand-elite]]. The authors saw no upper limit of benefit [[c:mand-ceiling]].\n\nBut the patients were referred for testing, so they were not a random sample of healthy people. And fitness is not assigned: a [confounder](g:confounder) such as underlying health can raise both fitness and survival.",
+   "claims": [
+    {
+     "id": "mand-design",
+     "text": "Mandsager's retrospective cohort enrolled patients referred for exercise treadmill testing at one medical centre, 1991–2014, with median follow-up of 8.4 years.",
+     "grade": "weak",
+     "sources": [
+      "mandsager2018"
+     ],
+     "evidence": [
+      {
+       "source": "mandsager2018",
+       "quote": "This retrospective cohort study enrolled patients at a tertiary care academic medical center from January 1, 1991, to December 31, 2014, with a median follow-up of 8.4 years.",
+       "level": "abstract"
+      },
+      {
+       "source": "mandsager2018",
+       "quote": "Consecutive adult patients referred for symptom-limited exercise treadmill testing",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mand-elite",
+     "text": "All-cause mortality fell as fitness rose and was lowest in elite performers (HR 0.20 against low fitness).",
+     "grade": "weak",
+     "sources": [
+      "mandsager2018"
+     ],
+     "evidence": [
+      {
+       "source": "mandsager2018",
+       "quote": "Risk-adjusted all-cause mortality was inversely proportional to cardiorespiratory fitness and was lowest in elite performers (elite vs low: adjusted hazard ratio [HR], 0.20; 95% CI, 0.16-0.24;",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mand-ceiling",
+     "text": "The authors report no observed upper limit of benefit from fitness.",
+     "grade": "weak",
+     "sources": [
+      "mandsager2018"
+     ],
+     "evidence": [
+      {
+       "source": "mandsager2018",
+       "quote": "Cardiorespiratory fitness is inversely associated with long-term mortality with no observed upper limit of benefit.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hfit-mandsager-limit"
+  },
+  {
+   "type": "question",
+   "item": "hfit-no-ceiling"
+  },
+  {
+   "type": "concept",
+   "id": "fit-vs-activity",
+   "title": "Fitness is not the same as activity",
+   "text": "Activity is what you do; fitness is what a test measures. Training raises fitness, but fitness also reflects genes, age and health. Two people with the same weekly activity can differ a lot in fitness.\n\nA fitness test has two strengths: it is measured, not recalled, and it adds to the usual risk factors (see the AHA statement above). It has a catch too: a low score can be an early sign of illness, so low fitness may be a marker of risk as much as a cause of it. For a trained cyclist the practical message is to keep the engine you have built.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "hfit-fit-vs-active"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The AHA (2016) argued fitness belongs beside pulse and blood pressure as a vital sign, because it may predict death better than the usual risk factors.",
+    "1 MET ≈ 3.5 mL·kg⁻¹·min⁻¹ and ≈ 1 km·h⁻¹ of running speed. Each MET higher went with a risk ratio of 0.87 for death.",
+    "Risk ratios multiply across METs: +3 METs gives about 0.66 if the ratio per MET holds.",
+    "Mandsager found no upper limit of benefit, but the sample was patients referred for tests.",
+    "Fitness and activity are related, not the same: genes, age and health shape fitness too."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hfit-vital-sign",
+   "concept": "fit-vital-sign",
+   "bloom": "understand",
+   "sources": [
+    "ross2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does it mean to treat cardiorespiratory fitness as a vital sign?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Clinics record it routinely, as they do blood pressure",
+       "correct": true,
+       "why": "Right: the AHA wants it in routine risk assessment."
+      },
+      {
+       "id": "b",
+       "text": "It replaces the blood pressure and cholesterol checks",
+       "why": "The AHA said to add it to the usual factors, not replace them."
+      },
+      {
+       "id": "c",
+       "text": "Everyone must reach a fixed VO2max value to count as healthy",
+       "why": "A vital sign is a measure to track, not a pass mark for everyone."
+      },
+      {
+       "id": "d",
+       "text": "It proves that low fitness causes disease",
+       "why": "A vital sign flags risk; it does not show cause."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-ross-compare",
+   "concept": "fit-vital-sign",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "ross2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which set of risk factors did the AHA statement say fitness may predict death better than?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Age, sex, height and body weight together",
+       "why": "These were not the factors compared in the statement."
+      },
+      {
+       "id": "b",
+       "text": "Resting heart rate, sleep length and daily step count",
+       "why": "These were not named in the statement."
+      },
+      {
+       "id": "c",
+       "text": "Smoking, high blood pressure, cholesterol and diabetes",
+       "correct": true,
+       "why": "Right: these are the established risk factors it named."
+      },
+      {
+       "id": "d",
+       "text": "Family history, stress and alcohol intake",
+       "why": "Not the factors named: the statement compared fitness with the established clinical risk factors."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-met-convert",
+   "concept": "fit-mets",
+   "bloom": "apply",
+   "sources": [
+    "kodama2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's VO2max rises from 38.5 to 45.5 mL·kg⁻¹·min⁻¹. How many METs is the gain? (1 MET = 3.5 mL·kg⁻¹·min⁻¹)",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 METs",
+       "correct": true,
+       "why": "Right: 7 ÷ 3.5 = 2."
+      },
+      {
+       "id": "b",
+       "text": "7 METs",
+       "why": "Does not divide by 3.5: that is the gain in mL·kg⁻¹·min⁻¹."
+      },
+      {
+       "id": "c",
+       "text": "13 METs",
+       "why": "This is the final VO2max in METs (45.5 ÷ 3.5), not the gain."
+      },
+      {
+       "id": "d",
+       "text": "24.5 METs",
+       "why": "Multiplies instead of dividing (7 × 3.5)."
+      }
+     ],
+     "solution": "Gain 45.5 − 38.5 = 7 mL·kg⁻¹·min⁻¹. 7 ÷ 3.5 = 2 METs."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's VO2max rises from 42 to 56 mL·kg⁻¹·min⁻¹. How many METs is the gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14 METs",
+       "why": "Does not divide by 3.5."
+      },
+      {
+       "id": "b",
+       "text": "4 METs",
+       "correct": true,
+       "why": "Right: 14 ÷ 3.5 = 4."
+      },
+      {
+       "id": "c",
+       "text": "16 METs",
+       "why": "This is the final VO2max in METs (56 ÷ 3.5), not the gain."
+      },
+      {
+       "id": "d",
+       "text": "49 METs",
+       "why": "Multiplies instead of dividing (14 × 3.5)."
+      }
+     ],
+     "solution": "Gain 14 mL·kg⁻¹·min⁻¹; 14 ÷ 3.5 = 4 METs."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's VO2max rises from 24.5 to 35 mL·kg⁻¹·min⁻¹. How many METs is the gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10.5 METs",
+       "why": "Does not divide by 3.5."
+      },
+      {
+       "id": "b",
+       "text": "10 METs",
+       "why": "This is the final VO2max in METs (35 ÷ 3.5), not the gain."
+      },
+      {
+       "id": "c",
+       "text": "3 METs",
+       "correct": true,
+       "why": "Right: 10.5 ÷ 3.5 = 3."
+      },
+      {
+       "id": "d",
+       "text": "36.75 METs",
+       "why": "Multiplies instead of dividing (10.5 × 3.5)."
+      }
+     ],
+     "solution": "Gain 10.5 mL·kg⁻¹·min⁻¹; 10.5 ÷ 3.5 = 3 METs."
+    }
+   ]
+  },
+  {
+   "id": "hfit-risk-gain",
+   "concept": "fit-mets",
+   "bloom": "apply",
+   "sources": [
+    "kodama2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Assume a risk ratio of 0.87 for each 1 MET higher fitness, the same at every step. What ratio does a gain of 2 METs imply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.76 (0.87 × 0.87)",
+       "correct": true,
+       "why": "Right: ratios multiply."
+      },
+      {
+       "id": "b",
+       "text": "About 0.74 (1 − 2 × 0.13)",
+       "why": "Adds the reductions; ratios multiply, so this overstates the drop."
+      },
+      {
+       "id": "c",
+       "text": "0.87",
+       "why": "Counts one step only."
+      },
+      {
+       "id": "d",
+       "text": "About 0.13",
+       "why": "This is the reduction for one MET, not a ratio for two."
+      }
+     ],
+     "solution": "0.87² = 0.7569, about 0.76: a 24% lower rate."
+    },
+    {
+     "id": "b",
+     "stem": "With the same 0.87 per MET, what ratio does a gain of 3 METs imply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.61 (1 − 3 × 0.13)",
+       "why": "Adds the reductions; this overstates the drop."
+      },
+      {
+       "id": "b",
+       "text": "About 0.66 (0.87³)",
+       "correct": true,
+       "why": "Right: three ratios multiplied."
+      },
+      {
+       "id": "c",
+       "text": "0.87",
+       "why": "Counts one step only."
+      },
+      {
+       "id": "d",
+       "text": "About 0.39",
+       "why": "Takes 3 × 0.13 as the ratio; that is a sum of drops."
+      }
+     ],
+     "solution": "0.87³ = 0.6585, about 0.66: a 34% lower rate."
+    },
+    {
+     "id": "c",
+     "stem": "With the same 0.87 per MET, what ratio does a gain of 4 METs imply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.48 (1 − 4 × 0.13)",
+       "why": "Adds the reductions; this overstates the drop."
+      },
+      {
+       "id": "b",
+       "text": "0.87",
+       "why": "Counts one step only."
+      },
+      {
+       "id": "c",
+       "text": "About 0.57 (0.87⁴)",
+       "correct": true,
+       "why": "Right: four ratios multiplied."
+      },
+      {
+       "id": "d",
+       "text": "About 0.52",
+       "why": "Takes 4 × 0.13 as the ratio; that is a sum of drops."
+      }
+     ],
+     "solution": "0.87⁴ = 0.5729, about 0.57: a 43% lower rate."
+    }
+   ]
+  },
+  {
+   "id": "hfit-kodama-read",
+   "concept": "fit-mets",
+   "bloom": "understand",
+   "sources": [
+    "kodama2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does Kodama's risk ratio of 0.87 per 1 MET tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gaining 1 MET adds 13% to your life span",
+       "why": "A risk ratio compares rates between people, not years of life."
+      },
+      {
+       "id": "b",
+       "text": "People 1 MET fitter had a 13% lower rate of death from any cause",
+       "correct": true,
+       "why": "Right: 1 − 0.87 = 0.13."
+      },
+      {
+       "id": "c",
+       "text": "Each MET cuts your own risk by 87%",
+       "why": "0.87 is the ratio that remains, and it compares groups."
+      },
+      {
+       "id": "d",
+       "text": "Only 13% of fitter people die",
+       "why": "It is a relative rate, not a share of people who die."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-1kmh",
+   "concept": "fit-mets",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kodama2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Kodama's meta-analysis, a 1-MET higher fitness matched running about how much faster?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1 km·h⁻¹",
+       "correct": true,
+       "why": "Right: 1 MET corresponds to 1 km·h⁻¹ faster running or jogging speed."
+      },
+      {
+       "id": "b",
+       "text": "0.1 km·h⁻¹",
+       "why": "Ten times too small."
+      },
+      {
+       "id": "c",
+       "text": "3.5 km·h⁻¹",
+       "why": "This mixes up the 3.5 mL·kg⁻¹·min⁻¹ value of 1 MET."
+      },
+      {
+       "id": "d",
+       "text": "10 km·h⁻¹",
+       "why": "This is a typical running speed, not the step per MET."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-mandsager-limit",
+   "concept": "fit-mandsager",
+   "bloom": "evaluate",
+   "sources": [
+    "mandsager2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits using Mandsager's cohort to tell a healthy rider how much fitness to chase?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Patients were referred for testing, so they are not a healthy sample",
+       "correct": true,
+       "why": "Right: referral selects patients with symptoms or risk."
+      },
+      {
+       "id": "b",
+       "text": "The sample of 122,007 is too large to be trusted at all",
+       "why": "A large sample reduces random error; it does not harm validity."
+      },
+      {
+       "id": "c",
+       "text": "Deaths cannot be counted over 8.4 years",
+       "why": "Follow-up of this length is normal for mortality cohorts."
+      },
+      {
+       "id": "d",
+       "text": "Fitness was graded, which hides all the differences between people",
+       "why": "Grading by age and sex is standard and kept the gradient visible."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-no-ceiling",
+   "concept": "fit-mandsager",
+   "bloom": "understand",
+   "sources": [
+    "mandsager2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What did Mandsager report about the highest fitness group?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Its death rate rose again, giving a U-shape",
+       "why": "The authors saw no rise at the top."
+      },
+      {
+       "id": "b",
+       "text": "Its death rate matched the high group",
+       "why": "The elite group was lowest of all."
+      },
+      {
+       "id": "c",
+       "text": "It had the lowest death rate, and no upper limit of benefit was seen",
+       "correct": true,
+       "why": "Right: elite performers did best, HR 0.20 against low."
+      },
+      {
+       "id": "d",
+       "text": "The data could not rank it",
+       "why": "The elite group was ranked and had the lowest risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hfit-fit-vs-active",
+   "concept": "fit-vs-activity",
+   "bloom": "analyse",
+   "sources": [
+    "ross2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two colleagues ride the same 4 h a week, but one has a VO2max of 12 METs and the other 9. What best explains the gap?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fitness also depends on genes, age and health, not only on activity",
+       "correct": true,
+       "why": "Right: activity is one input to fitness."
+      },
+      {
+       "id": "b",
+       "text": "One of them must be misreporting rides",
+       "why": "Same activity can differ in fitness; no misreport is needed."
+      },
+      {
+       "id": "c",
+       "text": "Fitness depends only on weekly hours, so one test was wrong",
+       "why": "Fitness depends on more than hours; the test can be right."
+      },
+      {
+       "id": "d",
+       "text": "The fitter one rides at a lower MET value",
+       "why": "This would lower fitness if anything; it is not an explanation for it."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

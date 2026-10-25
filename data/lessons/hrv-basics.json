@@ -1,0 +1,813 @@
+{
+  "id": "hrv-basics",
+  "module": "t5-hrv",
+  "title": "HRV basics: what the variation in your heartbeat measures",
+  "goal": "Explain where beat-to-beat variation comes from, how RMSSD, SDNN, HF and LF differ, and what 'vagal HRV' does and does not tell you.",
+  "requires": [
+    "sleep-extension"
+  ],
+  "lastReviewed": "2026-10-25",
+  "steps": [
+    {
+      "type": "terms",
+      "terms": [
+        "respiratory-sinus-arrhythmia",
+        "sdnn",
+        "time-domain-hrv",
+        "frequency-domain-hrv",
+        "hf-power",
+        "lf-power"
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "hb-source",
+      "title": "Where the beat-to-beat variation comes from",
+      "text": "Your [RR intervals](g:rr-interval) are never identical, even at rest. The biggest source is breathing: breathe in and the vagal brake eases, so the heart speeds up; breathe out and it slows again. This is [respiratory sinus arrhythmia](g:respiratory-sinus-arrhythmia) (RSA) [[c:hb-rsa]].\n\nIt runs through the [vagus nerve](g:vagus-nerve), which can change heart rate within one beat. So in short recordings at rest, most of the [HRV](g:hrv) is [parasympathetic](g:parasympathetic) [[c:hb-short-vagal]].\n\nBreathing pace matters. Slow breathing makes bigger swings without any change in vagal firing [[c:hb-breath]]. That is why you breathe the same way every time you measure.",
+      "claims": [
+        {
+          "id": "hb-rsa",
+          "text": "RSA is the speeding and slowing of the heart with breathing, through the vagus nerve.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "RSA refers to the respiration-driven speeding and slowing of the heart via the vagus nerve",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-short-vagal",
+          "text": "In short resting recordings, most of the variation is vagal RSA.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "In short-term resting recordings, the primary source of the variation is parasympathetically-mediated RSA, especially with slow, paced breathing (PB) protocols",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-breath",
+          "text": "Slower breathing can raise RSA size without any change in vagal firing.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "Since longer exhalations allow greater acetylcholine metabolism, slower respiration rates can produce higher RSA amplitudes that are not mediated by changes in vagal firing.",
+              "level": "full-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hb-rsa-q"
+    },
+    {
+      "type": "question",
+      "item": "hb-breath-apply"
+    },
+    {
+      "type": "concept",
+      "id": "hb-time",
+      "title": "Two time-domain numbers",
+      "text": "[Time-domain](g:time-domain-hrv) measures come straight from the RR series, in ms. Two matter most:\n\n| | [SDNN](g:sdnn) | [RMSSD](g:rmssd) |\n|---|---|---|\n| measures | spread of all intervals around their mean | size of beat-to-beat jumps |\n| order of the beats | ignored | matters |\n| slow drifts | included | mostly ignored |\n\nRMSSD is the main time-domain index of vagal change [[c:hb-rmssd]]. SDNN over 24 h also carries slower rhythms and the sympathetic share, while in a 5-min rest recording it is mostly RSA [[c:hb-sdnn]].\n\nSo values from 24 h, 5 min and under-5-min recordings are not interchangeable [[c:hb-notinterchange]].",
+      "claims": [
+        {
+          "id": "hb-rmssd",
+          "text": "RMSSD is the primary time-domain measure of vagally mediated HRV change.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "The RMSSD reflects the beat-to-beat variance in HR and is the primary time-domain measure used to estimate the vagally mediated changes reflected in HRV",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-sdnn",
+          "text": "Over 24 h, SDNN includes slower rhythms and the sympathetic contribution; in short rest recordings it mostly reflects RSA.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "In 24 h recordings, LF band power makes a significant contribution to SDNN",
+              "level": "full-text"
+            },
+            {
+              "source": "shaffer2017",
+              "quote": "Twenty-four-hour recordings reveal the SNS contribution to HRV",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-notinterchange",
+          "text": "Norms from 24 h, short-term and ultra-short-term recordings cannot be swapped.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "They caution that 24 h, short-term, and ultra-short-term normative values are not interchangeable.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "id": "hb-order-example",
+      "title": "Same beats, different order",
+      "problem": "Two mornings give the same five RR intervals in a different order. A: 900, 920, 940, 960, 980 ms (slowly rising). B: 900, 980, 920, 960, 940 ms. Find SDNN and RMSSD for each.",
+      "steps": [
+        "The mean is the same: (900 + 920 + 940 + 960 + 980) ÷ 5 = 940 ms.",
+        "SDNN, A: deviations −40, −20, 0, +20, +40. Squares: 1,600 + 400 + 0 + 400 + 1,600 = 4,000. Divide by n − 1 = 4: 1,000 ms². SDNN = √1,000 ≈ 31.6 ms.",
+        "SDNN, B: deviations −40, +40, −20, +20, 0 give the same squares, so SDNN ≈ 31.6 ms as well. SDNN ignores the order.",
+        "RMSSD, A: every difference is +20 ms, so every square is 400. Mean = 400, RMSSD = √400 = 20 ms.",
+        "RMSSD, B: differences +80, −60, +40, −20. Squares: 6,400 + 3,600 + 1,600 + 400 = 12,000. ÷ 4 = 3,000. RMSSD = √3,000 ≈ 54.8 ms.",
+        "Same SDNN, but B's RMSSD is 2.7 times larger: B zig-zags from beat to beat, A only drifts. RMSSD picks up the fast, vagal swings."
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hb-sdnn-rmssd"
+    },
+    {
+      "type": "question",
+      "item": "hb-interpret"
+    },
+    {
+      "type": "concept",
+      "id": "hb-freq",
+      "title": "Frequency domain: sorting swings by speed",
+      "text": "[Frequency-domain](g:frequency-domain-hrv) analysis sorts the swings by how fast they repeat. Breaths per minute ÷ 60 = Hz. Two bands matter in short recordings:\n\n- [HF power](g:hf-power), 0.15–0.40 Hz: the breathing band, 9–24 breaths·min⁻¹ [[c:hb-hf]]. At rest, with normal breathing, it estimates vagal tone.\n- [LF power](g:lf-power), 0.04–0.15 Hz: one swing every 7–25 s. It mixes vagal and sympathetic influences [[c:hb-lf]].\n\nThe LF/HF ratio was meant to show sympathetic against vagal balance. That reading is disputed [[c:hb-lfhf]].",
+      "claims": [
+        {
+          "id": "hb-hf",
+          "text": "HF power sits in the breathing band; with normal breathing it estimates vagal tone.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "The HF or respiratory band (0.15–0.40 Hz) is influenced by breathing from 9 to 24 bpm",
+              "level": "full-text"
+            },
+            {
+              "source": "shaffer2017",
+              "quote": "Under controlled conditions while breathing at normal rates, we can use LnHF power to estimate vagal tone",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-lf",
+          "text": "LF power covers swings of 7–25 s and is not purely sympathetic.",
+          "grade": "strong",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "The LF band (0.04–0.15 Hz) is comprised of rhythms with periods between 7 and 25 s and is affected by breathing from ~3 to 9 bpm.",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-lfhf",
+          "text": "LF power is not a pure index of sympathetic drive, so LF/HF is a doubtful balance measure.",
+          "grade": "disputed",
+          "sources": [
+            "shaffer2017"
+          ],
+          "evidence": [
+            {
+              "source": "shaffer2017",
+              "quote": "First, LF power is not a pure index of SNS drive.",
+              "level": "full-text"
+            }
+          ]
+        }
+      ],
+      "debate": {
+        "question": "Does the LF/HF ratio measure sympathovagal balance?",
+        "sides": [
+          {
+            "position": "Yes: the model assumes LF power is sympathetic and HF power vagal, so a high ratio means sympathetic dominance.",
+            "sources": [
+              "shaffer2017"
+            ]
+          },
+          {
+            "position": "No: about half of LF power is vagal, the two branches interact in complex ways, and breathing and resting HR confound the ratio. It also varies far more from day to day than RMSSD.",
+            "sources": [
+              "shaffer2017",
+              "buchheit2014"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "question",
+      "item": "hb-bands"
+    },
+    {
+      "type": "question",
+      "item": "hb-hf-apply"
+    },
+    {
+      "type": "question",
+      "item": "hb-lfhf-q"
+    },
+    {
+      "type": "concept",
+      "id": "hb-vagal",
+      "title": "What 'vagal HRV' tells you",
+      "text": "'Vagal HRV' means an index that mostly reflects the vagus nerve: RMSSD and HF power in short resting recordings. Athletes favour RMSSD because it varies less from day to day than [frequency-domain](g:frequency-domain-hrv) indices [[c:hb-why-rmssd]].\n\nWhat it is: a read-out of how strongly the vagus acts on the heart at rest. What it is not: a direct measure of fatigue, fitness or 'sympathetic stress'.\n\nIn a meta-analysis of endurance athletes, training that improved performance came with a small rise in resting RMSSD (SMD 0.58) [[c:hb-bellenger]]. That is a group average. One athlete's daily number still jumps around, which the next lesson tackles.",
+      "claims": [
+        {
+          "id": "hb-why-rmssd",
+          "text": "Day-to-day variation of time-domain indices in short field recordings is lower than that of spectral indices, especially ratios.",
+          "grade": "moderate",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "the day-to-day variations of time domain indices during short (5–10 min) recordings in the field is likely lower than these of spectral indices, especially when considering the ratios",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hb-bellenger",
+          "text": "Training that improved performance came with small rises in resting RMSSD on average.",
+          "grade": "moderate",
+          "sources": [
+            "bellenger2016"
+          ],
+          "evidence": [
+            {
+              "source": "bellenger2016",
+              "quote": "Studies inducing increases in performance showed small increases in resting RMSSD [standardised mean difference (SMD) = 0.58; P < 0.001]",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hb-vagal-q"
+    },
+    {
+      "type": "question",
+      "item": "hb-vagal-meaning"
+    },
+    {
+      "type": "recap",
+      "points": [
+        "Short-term HRV at rest comes mostly from breathing-linked vagal swings (RSA), so breathing pace changes it.",
+        "RMSSD measures beat-to-beat jumps and cares about order; SDNN measures total spread and does not.",
+        "HF power is the breathing band (0.15–0.40 Hz); LF power (0.04–0.15 Hz) mixes vagal and sympathetic influences, so LF/HF is a doubtful balance measure.",
+        "'Vagal HRV' means RMSSD or HF power at rest: a read-out of vagal action on the heart, not of fatigue itself.",
+        "24 h, 5-min and under-5-min values are not interchangeable: compare like with like."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "hb-rsa-q",
+      "concept": "hb-source",
+      "bloom": "remember",
+      "recallFirst": true,
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "At rest, what makes the heart speed up when you breathe in and slow down when you breathe out?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The vagal brake eases on the way in and returns on the way out",
+              "correct": true,
+              "why": "Right: this is RSA, a vagus-nerve effect fast enough to follow single breaths."
+            },
+            {
+              "id": "b",
+              "text": "A burst of sympathetic activity timed to each inhale",
+              "why": "Sympathetic effects build slowly and cannot follow breath by breath."
+            },
+            {
+              "id": "c",
+              "text": "The pacemaker cells firing in a fixed rhythm on their own",
+              "why": "Without nerves the pacemaker fires steadily; the breath-by-breath swing needs the vagus."
+            },
+            {
+              "id": "d",
+              "text": "The leg muscles pumping blood back to the heart",
+              "why": "RSA appears in someone lying still; it is a nerve effect, not a muscle pump."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-breath-apply",
+      "concept": "hb-source",
+      "bloom": "apply",
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist lies still and records rMSSD with 6 slow, deep breaths per minute one morning, and with normal breathing the next. The slow-breathing value is much higher, with no change in training. What is the best reading?",
+          "options": [
+            {
+              "id": "a",
+              "text": "His vagal tone doubled overnight, so he is recovering fast",
+              "why": "The vagus did not change; the breathing pattern did."
+            },
+            {
+              "id": "b",
+              "text": "Sympathetic drive fell, which is what raised rMSSD",
+              "why": "rMSSD is not a sympathetic measure, and the cause here is the breathing pace."
+            },
+            {
+              "id": "c",
+              "text": "Breathing pace raised the swings, so he should breathe the same way each time",
+              "correct": true,
+              "why": "Right: slow breathing enlarges RSA without any change in vagal firing, so mixed breathing gives a false change."
+            },
+            {
+              "id": "d",
+              "text": "The recording failed and should be thrown away",
+              "why": "The numbers are real; they just are not comparable with the normal-breathing mornings."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner relaxes before his morning HRV test by taking slow, deep breaths on Mondays only. His Monday rMSSD readings are always higher than the rest of the week. What explains this best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Mondays follow a rest day, so his vagal tone is always higher",
+              "why": "Possible, but breathing alone can explain it and is the cleaner cause to remove first."
+            },
+            {
+              "id": "b",
+              "text": "Slow breathing enlarges RSA, so Mondays are not comparable with other days",
+              "correct": true,
+              "why": "Right: breathing pace alone can raise HRV, so conditions must be the same every day."
+            },
+            {
+              "id": "c",
+              "text": "Deep breathing raises sympathetic drive, which lifts rMSSD",
+              "why": "rMSSD mainly reflects vagal activity; the breathing effect is on RSA size."
+            },
+            {
+              "id": "d",
+              "text": "Optical and strap sensors disagree on Mondays",
+              "why": "Nothing here points to the sensor; the breathing differs on those days."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-sdnn-rmssd",
+      "concept": "hb-time",
+      "bloom": "analyse",
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A runner's RR intervals on day 1 are 1000, 1010, 1020, 1030, 1040 ms; on day 2 they are 1000, 1040, 1010, 1030, 1020 ms. What is correct?",
+          "options": [
+            {
+              "id": "a",
+              "text": "SDNN is 15.8 ms on both days, but RMSSD is higher on day 2 (27.4 ms vs 10.0 ms)",
+              "correct": true,
+              "why": "Right: the same values give the same SDNN; only RMSSD sees the larger beat-to-beat jumps on day 2."
+            },
+            {
+              "id": "b",
+              "text": "Both SDNN and RMSSD are higher on day 2",
+              "why": "SDNN uses the same set of values, so it cannot change when only the order does."
+            },
+            {
+              "id": "c",
+              "text": "RMSSD is the same on both days because the numbers are the same",
+              "why": "RMSSD uses successive differences, so order changes it (10.0 vs 27.4 ms)."
+            },
+            {
+              "id": "d",
+              "text": "SDNN is higher on day 2 because the intervals jump around more",
+              "why": "SDNN ignores the order of the beats; it is 15.8 ms on both days."
+            }
+          ],
+          "solution": "Mean = 1,020 ms. SDNN: squares of deviations 400 + 100 + 0 + 100 + 400 = 1,000; ÷ 4 = 250; √250 ≈ 15.8 ms on both days. RMSSD day 1: differences all +10, RMSSD = 10.0 ms. Day 2: differences +40, −30, +20, −10; squares 1,600 + 900 + 400 + 100 = 3,000; ÷ 4 = 750; √750 ≈ 27.4 ms."
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist's RR intervals on Monday are 800, 820, 840, 860, 880 ms; on Tuesday they are 800, 880, 820, 860, 840 ms. What is correct?",
+          "options": [
+            {
+              "id": "a",
+              "text": "RMSSD is 20.0 ms on both days because the intervals are the same",
+              "why": "RMSSD depends on the order: Tuesday's jumps give 54.8 ms."
+            },
+            {
+              "id": "b",
+              "text": "SDNN is 31.6 ms on both days, but RMSSD is higher on Tuesday (54.8 ms vs 20.0 ms)",
+              "correct": true,
+              "why": "Right: the order differs, so only RMSSD changes."
+            },
+            {
+              "id": "c",
+              "text": "SDNN is higher on Tuesday, since the intervals zig-zag",
+              "why": "SDNN ignores order and is 31.6 ms on both days."
+            },
+            {
+              "id": "d",
+              "text": "Both indices are higher on Tuesday because the day is more variable",
+              "why": "Only the beat-to-beat jumps differ; the overall spread is the same."
+            }
+          ],
+          "solution": "Mean = 840 ms; deviations give squares summing to 4,000; ÷ 4 = 1,000; SDNN ≈ 31.6 ms both days. Monday: differences all +20, RMSSD = 20.0 ms. Tuesday: +80, −60, +40, −20; squares 12,000; ÷ 4 = 3,000; RMSSD ≈ 54.8 ms."
+        }
+      ]
+    },
+    {
+      "id": "hb-interpret",
+      "concept": "hb-time",
+      "bloom": "apply",
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A runner's watch reports a 24 h SDNN of 80 ms. A friend's 5-minute morning test gives an SDNN of 60 ms. Can you say the friend has lower HRV?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Yes: 60 ms is less than 80 ms, so the friend has less HRV",
+              "why": "This compares numbers from different recording lengths."
+            },
+            {
+              "id": "b",
+              "text": "Yes: 5-minute tests are more accurate, so 60 ms is the true level",
+              "why": "Accuracy is not the issue; the recording length changes what SDNN contains."
+            },
+            {
+              "id": "c",
+              "text": "No: SDNN from 5 minutes is always exactly 20 ms below the 24 h value",
+              "why": "There is no fixed offset; the two simply are not interchangeable."
+            },
+            {
+              "id": "d",
+              "text": "No: 24 h and 5-min values are measured over different periods and are not interchangeable",
+              "correct": true,
+              "why": "Right: longer recordings add slower rhythms, so the two numbers are on different scales."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A triathlete compares his 2-minute rMSSD from a phone app with a published 24 h norm table and concludes he is 'below normal'. What is wrong with this?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Short-term and 24 h values are not interchangeable, so the norm does not apply",
+              "correct": true,
+              "why": "Right: norms come with a recording length; mixing lengths misleads."
+            },
+            {
+              "id": "b",
+              "text": "Nothing: any published norm applies to any recording",
+              "why": "Norms depend on recording length, age and sex."
+            },
+            {
+              "id": "c",
+              "text": "rMSSD can only be compared with SDNN norms",
+              "why": "The issue is recording length, not which index is used."
+            },
+            {
+              "id": "d",
+              "text": "Phone apps cannot measure rMSSD at all",
+              "why": "Phone-based rMSSD can be valid; it is the norm that does not match."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-bands",
+      "concept": "hb-freq",
+      "bloom": "understand",
+      "recallFirst": true,
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Which HRV band covers swings at normal breathing rates of 9–24 breaths per minute?",
+          "options": [
+            {
+              "id": "a",
+              "text": "LF, 0.04–0.15 Hz",
+              "why": "LF holds swings of 7–25 s, which matches only very slow breathing (about 3–9 per minute)."
+            },
+            {
+              "id": "b",
+              "text": "HF, 0.15–0.40 Hz",
+              "correct": true,
+              "why": "Right: HF is the breathing band, and with normal breathing it mostly reflects the vagus."
+            },
+            {
+              "id": "c",
+              "text": "VLF, below 0.04 Hz",
+              "why": "VLF swings repeat every 25–300 s, far slower than any breathing."
+            },
+            {
+              "id": "d",
+              "text": "SDNN, in milliseconds",
+              "why": "SDNN is a time-domain spread, not a frequency band."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-hf-apply",
+      "concept": "hb-freq",
+      "bloom": "apply",
+      "sources": [
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A runner follows a paced-breathing app at 6 breaths per minute during a morning recording. In which band does his RSA fall, and what happens to HF power?",
+          "options": [
+            {
+              "id": "a",
+              "text": "HF band: HF power rises as he breathes more deeply",
+              "why": "0.10 Hz is below 0.15 Hz, so the swing is in the LF band."
+            },
+            {
+              "id": "b",
+              "text": "VLF band: both LF and HF power vanish",
+              "why": "0.10 Hz is well above the VLF limit of 0.04 Hz."
+            },
+            {
+              "id": "c",
+              "text": "LF band (6 ÷ 60 = 0.10 Hz): HF power drops without any change in the vagus",
+              "correct": true,
+              "why": "Right: 0.10 Hz sits in LF (0.04–0.15 Hz), so slow breathing shifts RSA out of HF."
+            },
+            {
+              "id": "d",
+              "text": "LF band: his sympathetic drive must have risen",
+              "why": "Slow breathing moves the RSA swing into LF with no change in sympathetic drive."
+            }
+          ],
+          "solution": "Breaths per minute ÷ 60 = Hz. 6 ÷ 60 = 0.10 Hz. LF is 0.04–0.15 Hz, so the RSA swing lands in LF."
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist breathes 18 times a minute during a recording. In which band does his RSA fall?",
+          "options": [
+            {
+              "id": "a",
+              "text": "HF band (18 ÷ 60 = 0.30 Hz)",
+              "correct": true,
+              "why": "Right: 0.30 Hz lies between 0.15 and 0.40 Hz, the HF band."
+            },
+            {
+              "id": "b",
+              "text": "LF band (0.04–0.15 Hz)",
+              "why": "18 per minute is 0.30 Hz, above the LF band."
+            },
+            {
+              "id": "c",
+              "text": "VLF band (below 0.04 Hz)",
+              "why": "0.30 Hz is far faster than VLF swings."
+            },
+            {
+              "id": "d",
+              "text": "It falls outside all bands because it is too fast",
+              "why": "The HF band runs up to 0.40 Hz (24 breaths per minute)."
+            }
+          ],
+          "solution": "18 ÷ 60 = 0.30 Hz. The HF band is 0.15–0.40 Hz, so RSA falls in HF."
+        }
+      ]
+    },
+    {
+      "id": "hb-lfhf-q",
+      "concept": "hb-freq",
+      "bloom": "evaluate",
+      "sources": [
+        "shaffer2017",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A triathlete's app shows his LF/HF ratio rising from 1.5 to 3.0 and says 'sympathetic overload'. What is the best response?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Accept it: LF/HF is the established measure of sympathetic dominance",
+              "why": "The balance reading is disputed; LF has a large vagal share."
+            },
+            {
+              "id": "b",
+              "text": "Be cautious: LF is not purely sympathetic and breathing can move the ratio, so check rMSSD and context",
+              "correct": true,
+              "why": "Right: the ratio is a doubtful balance measure and noisy from day to day."
+            },
+            {
+              "id": "c",
+              "text": "Ignore all HRV, since it has no use for athletes",
+              "why": "Vagal indices such as rMSSD do carry information; it is this ratio that is weak."
+            },
+            {
+              "id": "d",
+              "text": "Conclude his vagus is switched off",
+              "why": "A higher ratio does not show vagal withdrawal; breathing alone can change it."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist's chest-strap app reports that her LF/HF ratio is 'high', which it labels 'stress'. Which step is best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cut tomorrow's session, because a high ratio proves stress",
+              "why": "One noisy, disputed ratio cannot prove stress."
+            },
+            {
+              "id": "b",
+              "text": "Trust it more than rMSSD because it uses two bands",
+              "why": "Ratios vary far more from day to day than rMSSD."
+            },
+            {
+              "id": "c",
+              "text": "Switch to SDNN from a 24 h recording",
+              "why": "That does not remove the problem and is impractical for daily use."
+            },
+            {
+              "id": "d",
+              "text": "Check her breathing pace and rMSSD, and treat the ratio as weak evidence",
+              "correct": true,
+              "why": "Right: breathing and resting HR confound LF/HF; rMSSD is steadier day to day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-vagal-q",
+      "concept": "hb-vagal",
+      "bloom": "understand",
+      "sources": [
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Why do most athletes choose RMSSD from a short morning recording?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It measures sympathetic drive directly, the key to fatigue",
+              "why": "RMSSD is not a sympathetic measure."
+            },
+            {
+              "id": "b",
+              "text": "It needs a 24 h recording to be reliable",
+              "why": "Short 5–10 min recordings are the standard for athletes."
+            },
+            {
+              "id": "c",
+              "text": "It reflects the vagus and varies less day to day than spectral ratios",
+              "correct": true,
+              "why": "Right: it is vagal-related, needs only minutes, and is steadier day to day."
+            },
+            {
+              "id": "d",
+              "text": "It rises only when fitness rises, so it works as a fitness test",
+              "why": "It moves with many things; it is not a fitness test."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hb-vagal-meaning",
+      "concept": "hb-vagal",
+      "bloom": "analyse",
+      "sources": [
+        "bellenger2016",
+        "shaffer2017"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Over 8 weeks of base training a cyclist's morning rMSSD rises from 55 to 70 ms (+27%). Which reading is best supported?",
+          "options": [
+            {
+              "id": "a",
+              "text": "His resting vagal action rose, fitting adaptation, but one number is no fitness test",
+              "correct": true,
+              "why": "Right: group data link vagal rises with adaptation, but a single athlete's rMSSD is not a fitness test."
+            },
+            {
+              "id": "b",
+              "text": "His VO₂max must have risen by about 27%",
+              "why": "HRV and VO₂max are different measures; there is no 1-to-1 conversion."
+            },
+            {
+              "id": "c",
+              "text": "His sympathetic drive fell, which proves he is less stressed",
+              "why": "rMSSD is a vagal index and does not measure sympathetic drive."
+            },
+            {
+              "id": "d",
+              "text": "His rMSSD now equals that of any other fit athlete",
+              "why": "Levels differ widely between people, so only his own history is a fair comparison."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner's rMSSD rises from 48 to 60 ms (+25%) across a 10-week block, and her 10 km time drops 2%. What is the safest statement?",
+          "options": [
+            {
+              "id": "a",
+              "text": "HRV caused the faster time, so raising HRV is the way to get faster",
+              "why": "Association is not cause; other training effects speed her up."
+            },
+            {
+              "id": "b",
+              "text": "The rise is noise, because rMSSD never changes with training",
+              "why": "On average, rMSSD does rise with positive adaptation."
+            },
+            {
+              "id": "c",
+              "text": "The two moved together, which fits adaptation, but the HRV rise alone does not prove it",
+              "correct": true,
+              "why": "Right: it is consistent with group findings, yet HRV is a read-out of vagal action, not of fitness."
+            },
+            {
+              "id": "d",
+              "text": "A 25% rise in rMSSD equals a 25% gain in aerobic fitness",
+              "why": "The two are not on the same scale."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

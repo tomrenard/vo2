@@ -1,0 +1,804 @@
+{
+ "id": "health-mechanisms",
+ "module": "t5-health",
+ "title": "How exercise protects, and what is causal",
+ "goal": "Name the main ways exercise protects health from trials, explain confounding and reverse causation, and say what Mendelian randomisation adds.",
+ "requires": [
+  "health-fitness"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "systolic-blood-pressure",
+    "hba1c",
+    "c-reactive-protein",
+    "hdl-cholesterol",
+    "hippocampus",
+    "observational-study",
+    "reverse-causation",
+    "mendelian-randomisation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mech-bp-glucose",
+   "title": "Blood pressure and blood sugar",
+   "text": "[Trials](g:rct) assign people to exercise or not, so their results are less open to confounding. Cornelissen pooled 93 trials (5,223 adults): endurance training lowered [systolic blood pressure](g:systolic-blood-pressure) by 3.5 mm Hg on average and diastolic (the lower number) by 2.5 [[c:bp-endurance]]. Isometric work (holding a static effort) lowered systolic by 10.9 mm Hg, but this rests on only five groups [[c:bp-iso]].\n\nIn type 2 diabetes, Umpierre pooled 47 trials: structured exercise cut [HbA1c](g:hba1c) by 0.67 percentage points, while advice to be active, on its own, did not [[c:hba1c]]. Programmes over 150 min·week⁻¹ cut it by 0.89 points, shorter ones by 0.36 [[c:hba1c-dose]].",
+   "claims": [
+    {
+     "id": "bp-endurance",
+     "text": "Endurance training lowered resting systolic blood pressure by 3.5 mm Hg and diastolic by 2.5 mm Hg on average.",
+     "grade": "strong",
+     "sources": [
+      "cornelissen2013"
+     ],
+     "evidence": [
+      {
+       "source": "cornelissen2013",
+       "quote": "Systolic BP (SBP) was reduced after endurance (-3.5 mm Hg [confidence limits -4.6 to -2.3]), dynamic resistance (-1.8 mm Hg [-3.7 to -0.011]), and isometric resistance (-10.9 mm Hg [-14.5 to -7.4]) but not after combined training.",
+       "level": "abstract"
+      },
+      {
+       "source": "cornelissen2013",
+       "quote": "Reductions in diastolic BP (DBP) were observed after endurance (-2.5 mm Hg [-3.2 to -1.7])",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bp-iso",
+     "text": "Isometric training may give the largest drop in systolic pressure, but only a small number of studies tested it.",
+     "grade": "moderate",
+     "sources": [
+      "cornelissen2013"
+     ],
+     "evidence": [
+      {
+       "source": "cornelissen2013",
+       "quote": "Data from a small number of isometric resistance training studies suggest this form of training has the potential for the largest reductions in SBP.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hba1c",
+     "text": "In type 2 diabetes, structured exercise lowered HbA1c by 0.67%, while activity advice alone did not change it.",
+     "grade": "strong",
+     "sources": [
+      "umpierre2011"
+     ],
+     "evidence": [
+      {
+       "source": "umpierre2011",
+       "quote": "Overall, structured exercise training (23 studies) was associated with a decline in HbA(1c) level (-0.67%; 95% confidence interval [CI], -0.84% to -0.49%; I(2), 91.3%) compared with control participants.",
+       "level": "abstract"
+      },
+      {
+       "source": "umpierre2011",
+       "quote": "Physical activity advice alone was not associated with HbA(1c) changes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hba1c-dose",
+     "text": "Structured exercise over 150 min a week lowered HbA1c by 0.89%, against 0.36% for 150 min or less.",
+     "grade": "strong",
+     "sources": [
+      "umpierre2011"
+     ],
+     "evidence": [
+      {
+       "source": "umpierre2011",
+       "quote": "Structured exercise durations of more than 150 minutes per week were associated with HbA(1c) reductions of 0.89%, while structured exercise durations of 150 minutes or less per week were associated with HbA(1C) reductions of 0.36%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hmech-bp-iso"
+  },
+  {
+   "type": "question",
+   "item": "hmech-hba1c",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hmech-hba1c-dose"
+  },
+  {
+   "type": "concept",
+   "id": "mech-lipids-crp",
+   "title": "Blood fats and inflammation",
+   "text": "Kodama pooled 25 trials: aerobic training raised [HDL cholesterol](g:hdl-cholesterol) by 0.065 mmol·L⁻¹ (2.53 mg·dL⁻¹), a modest change [[c:hdl]]. Fedewa pooled 83 controlled trials (3,769 people): training lowered [C-reactive protein](g:c-reactive-protein), a marker of chronic low-grade inflammation, with a small standardised [effect size](g:effect-size) of 0.26 [[c:crp]]. The drop was larger when body mass or body fat fell, so some of it may run through weight loss.\n\nEach change is small. The mortality gains in cohorts are probably the sum of many small shifts, not one big one.",
+   "claims": [
+    {
+     "id": "hdl",
+     "text": "Aerobic exercise training raised HDL cholesterol by a modest 2.53 mg·dL⁻¹ (0.065 mmol·L⁻¹).",
+     "grade": "strong",
+     "sources": [
+      "kodama2007"
+     ],
+     "evidence": [
+      {
+       "source": "kodama2007",
+       "quote": "Mean net change in HDL-C level was statistically significant but modest (2.53 mg/dL [0.065 mmol/L]",
+       "level": "abstract"
+      },
+      {
+       "source": "kodama2007",
+       "quote": "Regular aerobic exercise modestly increases HDL-C level.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "crp",
+     "text": "Exercise training lowered C-reactive protein, more so when BMI or body fat fell.",
+     "grade": "moderate",
+     "sources": [
+      "fedewa2017"
+     ],
+     "evidence": [
+      {
+       "source": "fedewa2017",
+       "quote": "These results suggest that engaging in exercise training is associated with a decrease in CRP levels regardless of the age or sex of the individual; however, greater improvements in CRP level occur with a decrease in BMI or %Fat.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hmech-hdl"
+  },
+  {
+   "type": "question",
+   "item": "hmech-crp"
+  },
+  {
+   "type": "concept",
+   "id": "mech-mind",
+   "title": "Mood and brain",
+   "text": "Noetel pooled 218 trials (14,170 people with major depression). Against usual care or placebo, walking or jogging gave a moderate fall in depression ([Hedges' g](g:effect-size) −0.62; negative means fewer symptoms), with yoga and strength training close behind; harder effort did better [[c:depress]]. But only one trial had a low risk of bias, and the authors rate confidence as low or very low [[c:depress-conf]]. People cannot be blinded to exercise, so expectations may inflate results.\n\nErickson randomised 120 older adults: aerobic training grew the front of the [hippocampus](g:hippocampus) by 2%, undoing 1–2 years of age-related loss, while the controls shrank; spatial memory improved [[c:brain]].",
+   "claims": [
+    {
+     "id": "depress",
+     "text": "Exercise reduced depression: walking or jogging gave a moderate effect (Hedges' g -0.62), and effects grew with intensity.",
+     "grade": "moderate",
+     "sources": [
+      "noetel2024"
+     ],
+     "evidence": [
+      {
+       "source": "noetel2024",
+       "quote": "Compared with active controls (eg, usual care, placebo tablet), moderate reductions in depression were found for walking or jogging (n=1210, κ=51, Hedges' g -0.62, 95% credible interval -0.80 to -0.45)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "depress-conf",
+     "text": "Only one trial met the Cochrane criteria for low risk of bias, so confidence was low for walking or jogging and very low for other treatments.",
+     "grade": "moderate",
+     "sources": [
+      "noetel2024"
+     ],
+     "evidence": [
+      {
+       "source": "noetel2024",
+       "quote": "Results appeared robust to publication bias, but only one study met the Cochrane criteria for low risk of bias. As a result, confidence in accordance with CINeMA was low for walking or jogging and very low for other treatments.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "brain",
+     "text": "In a randomised trial of 120 older adults, aerobic training increased hippocampal volume by 2%, reversing 1–2 years of age-related loss.",
+     "grade": "weak",
+     "sources": [
+      "erickson2011"
+     ],
+     "evidence": [
+      {
+       "source": "erickson2011",
+       "quote": "Exercise training increased hippocampal volume by 2%, effectively reversing age-related loss in volume by 1 to 2 y.",
+       "level": "abstract"
+      },
+      {
+       "source": "erickson2011",
+       "quote": "Hippocampal volume declined in the control group, but higher preintervention fitness partially attenuated the decline, suggesting that fitness protects against volume loss.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hmech-depress-limit"
+  },
+  {
+   "type": "question",
+   "item": "hmech-brain"
+  },
+  {
+   "type": "concept",
+   "id": "mech-causal",
+   "title": "Causal, or just linked?",
+   "text": "The death-rate results in the first two lessons come from [observational studies](g:observational-study): people chose their own activity. Two traps follow.\n\n- **Confounding.** People who move more also smoke less, earn more and eat differently.\n- **[Reverse causation](g:reverse-causation).** Illness can cause inactivity. Someone with early heart disease or cancer slows down and then dies, so inactivity looks deadly. Short follow-up makes this worse.\n\nThe direction of a link can run both ways [[c:two-way]]. Trials avoid both traps by random assignment, but they last weeks to months and measure markers such as blood pressure, not deaths. So the case rests on both: trials show how exercise moves risk factors; cohorts show how risk differs over decades.",
+   "claims": [
+    {
+     "id": "two-way",
+     "text": "Physical activity may protect against depression, and depression may also lower activity: the direction of an association can run both ways.",
+     "grade": "weak",
+     "sources": [
+      "choi2019"
+     ],
+     "evidence": [
+      {
+       "source": "choi2019",
+       "quote": "However, the causality and direction of this association are not clear; physical activity may protect against depression, and/or depression may result in decreased physical activity.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hmech-confound"
+  },
+  {
+   "type": "question",
+   "item": "hmech-reverse"
+  },
+  {
+   "type": "question",
+   "item": "hmech-design"
+  },
+  {
+   "type": "concept",
+   "id": "mech-mr",
+   "title": "Genes as a natural experiment",
+   "text": "[Mendelian randomisation](g:mendelian-randomisation) (MR) uses gene variants linked to a habit, here activity, as a stand-in for the habit. Genes are fixed at conception, before illness or lifestyle, so they cannot be changed by confounders or by reverse causation. This holds only if the variants act through activity alone, which cannot be fully tested.\n\nChoi used variants from large genetic studies. Variants for higher accelerometer activity went with lower risk of major depression ([odds ratio](g:odds-ratio) 0.74 per [standard deviation](g:standard-deviation)); variants for depression did not predict lower activity [[c:mr-protective]]. Variants for self-reported activity showed no link, which hints that questionnaires blur the signal [[c:mr-self]].",
+   "claims": [
+    {
+     "id": "mr-protective",
+     "text": "Genetically higher accelerometer activity went with lower odds of major depression (OR 0.74 per SD), and genetic liability to depression did not predict lower activity.",
+     "grade": "weak",
+     "sources": [
+      "choi2019"
+     ],
+     "evidence": [
+      {
+       "source": "choi2019",
+       "quote": "Mendelian randomization evidence suggested a protective relationship between accelerometer-based activity and MDD (odds ratio [OR], 0.74 for MDD per 1-SD increase in mean acceleration; 95% CI, 0.59-0.92; P = .006).",
+       "level": "abstract"
+      },
+      {
+       "source": "choi2019",
+       "quote": "In contrast, there was no statistically significant relationship between MDD and accelerometer-based activity (β = -0.08 in mean acceleration per MDD vs control status; 95% CI, -0.47 to 0.32; P = .70).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mr-self",
+     "text": "Only objectively measured activity, not self-reported activity, showed a protective link with depression in MR.",
+     "grade": "weak",
+     "sources": [
+      "choi2019"
+     ],
+     "evidence": [
+      {
+       "source": "choi2019",
+       "quote": "Using genetic instruments identified from large-scale GWAS, robust evidence supports a protective relationship between objectively assessed-but not self-reported-physical activity and the risk for MDD.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hmech-mr-why"
+  },
+  {
+   "type": "question",
+   "item": "hmech-mr-read"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Trials show that exercise lowers blood pressure (about 3.5 mm Hg for endurance training), HbA1c in type 2 diabetes (0.67 points for structured exercise), CRP, and modestly raises HDL.",
+    "Exercise reduces depression symptoms in trials, but confidence is low; in older adults it grew the hippocampus by 2%.",
+    "Cohort links face confounding and reverse causation; trials fix both but are short and test markers.",
+    "Mendelian randomisation uses genes as a natural experiment, with its own assumptions.",
+    "Measuring activity with a device, not a questionnaire, made the genetic signal clearer."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hmech-bp-iso",
+   "concept": "mech-bp-glucose",
+   "bloom": "evaluate",
+   "sources": [
+    "cornelissen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cornelissen found isometric training lowered systolic pressure by 10.9 mm Hg against 3.5 for endurance training. How should you read this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Promising, but it rests on few studies, so treat it with caution",
+       "correct": true,
+       "why": "Right: five groups give a wide, uncertain estimate."
+      },
+      {
+       "id": "b",
+       "text": "Isometric training is three times better than endurance training",
+       "why": "Too strong: few studies and wide uncertainty."
+      },
+      {
+       "id": "c",
+       "text": "The result is wrong because it is larger than the others",
+       "why": "Size alone does not make a result wrong; the issue is how few studies it rests on."
+      },
+      {
+       "id": "d",
+       "text": "It proves that combined training is useless",
+       "why": "Combined training lowered diastolic pressure; the isometric result says nothing about it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-hba1c",
+   "concept": "mech-bp-glucose",
+   "bloom": "apply",
+   "sources": [
+    "umpierre2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners with type 2 diabetes: one is told to be more active and left to do it; the other joins a supervised programme 3 days a week. Which result do the pooled trials predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The programme lowers HbA1c; advice alone did not change it",
+       "correct": true,
+       "why": "Right: structured training showed -0.67 points; advice alone showed no change."
+      },
+      {
+       "id": "b",
+       "text": "Both lower HbA1c by the same amount",
+       "why": "Advice alone was not linked to a change."
+      },
+      {
+       "id": "c",
+       "text": "Advice alone lowers it more, since it is easier to keep up",
+       "why": "Advice alone showed no change in these trials."
+      },
+      {
+       "id": "d",
+       "text": "Neither lowers HbA1c without diet change",
+       "why": "Structured exercise lowered it without being combined with diet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-hba1c-dose",
+   "concept": "mech-bp-glucose",
+   "bloom": "apply",
+   "sources": [
+    "umpierre2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist with type 2 diabetes asks whether a structured programme above 150 min·week⁻¹ or one of 150 min or less is likelier to lower HbA1c more. What do the pooled trials say?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The shorter one: less effort, same drop",
+       "why": "Longer programmes gave larger declines."
+      },
+      {
+       "id": "b",
+       "text": "The longer programme: 0.89 points against 0.36 points",
+       "correct": true,
+       "why": "Right: more than 150 min·week⁻¹ gave larger declines."
+      },
+      {
+       "id": "c",
+       "text": "No difference: duration did not matter",
+       "why": "Duration did matter: 0.89 against 0.36 points."
+      },
+      {
+       "id": "d",
+       "text": "Neither: only advice lowers HbA1c",
+       "why": "Advice alone was not linked to a change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-hdl",
+   "concept": "mech-lipids-crp",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "kodama2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How large was the rise in HDL cholesterol with aerobic training in Kodama's meta-analysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Modest: about 0.065 mmol·L⁻¹",
+       "correct": true,
+       "why": "Right: significant but small."
+      },
+      {
+       "id": "b",
+       "text": "Large: about 0.65 mmol·L⁻¹",
+       "why": "Ten times too big."
+      },
+      {
+       "id": "c",
+       "text": "None: it was within chance",
+       "why": "The change was statistically significant."
+      },
+      {
+       "id": "d",
+       "text": "It fell by 0.065 mmol·L⁻¹",
+       "why": "The direction was a rise."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-crp",
+   "concept": "mech-lipids-crp",
+   "bloom": "understand",
+   "sources": [
+    "fedewa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In Fedewa's review, when was the fall in CRP largest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only in young men",
+       "why": "Effects held regardless of age or sex."
+      },
+      {
+       "id": "b",
+       "text": "When no weight was lost",
+       "why": "The opposite: weight loss went with bigger falls."
+      },
+      {
+       "id": "c",
+       "text": "When body mass index or body fat fell too",
+       "correct": true,
+       "why": "Right: bigger improvements went with lower BMI or fat."
+      },
+      {
+       "id": "d",
+       "text": "Only in people with high CRP at the start",
+       "why": "The review reports BMI or fat change as the mover."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-depress-limit",
+   "concept": "mech-mind",
+   "bloom": "evaluate",
+   "sources": [
+    "noetel2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does Noetel rate confidence as low or very low even though 218 trials were pooled?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nearly all trials were at risk of bias; exercise cannot be blinded",
+       "correct": true,
+       "why": "Right: only one trial met the low risk of bias criteria."
+      },
+      {
+       "id": "b",
+       "text": "Meta-analyses cannot pool more than 100 trials in one review",
+       "why": "No such limit exists."
+      },
+      {
+       "id": "c",
+       "text": "Depression cannot be measured reliably inside a trial",
+       "why": "It is measured with standard scales."
+      },
+      {
+       "id": "d",
+       "text": "Publication bias made the whole effect disappear when tested",
+       "why": "The authors found results robust to publication bias."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-brain",
+   "concept": "mech-mind",
+   "bloom": "apply",
+   "sources": [
+    "erickson2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 68-year-old asks whether starting aerobic training can undo age-related brain shrinkage. What does Erickson's trial support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training grew the hippocampus by about 2% while controls shrank",
+       "correct": true,
+       "why": "Right: this reversed 1–2 years of age-related loss."
+      },
+      {
+       "id": "b",
+       "text": "Training stopped all brain change in every brain region",
+       "why": "Caudate and thalamus volumes were unaffected."
+      },
+      {
+       "id": "c",
+       "text": "Fitness at the start had no link with later shrinkage",
+       "why": "Higher starting fitness partly attenuated the decline."
+      },
+      {
+       "id": "d",
+       "text": "The trial shows exercise prevents dementia in later life",
+       "why": "It measured volume and memory, not dementia."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-confound",
+   "concept": "mech-causal",
+   "bloom": "analyse",
+   "sources": [
+    "choi2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cohort finds that active people die later. Which explanation, other than exercise protecting, fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Active people differ in smoking, income and health",
+       "correct": true,
+       "why": "Right: confounding."
+      },
+      {
+       "id": "b",
+       "text": "Deaths were counted wrongly in the inactive group",
+       "why": "Nothing suggests a counting error."
+      },
+      {
+       "id": "c",
+       "text": "Active people are always younger than inactive ones",
+       "why": "Studies adjust for age; the issue is traits that cannot be fully adjusted."
+      },
+      {
+       "id": "d",
+       "text": "Exercise itself causes death among the very old",
+       "why": "The data show lower death rates in active people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-reverse",
+   "concept": "mech-causal",
+   "bloom": "apply",
+   "sources": [
+    "choi2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A short study finds people who cycle less die sooner. Some had undiagnosed heart disease that made them stop riding. What is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Confounding by age alone, which no study can adjust",
+       "why": "Age is not the issue here; illness drove the inactivity."
+      },
+      {
+       "id": "b",
+       "text": "Reverse causation: illness caused inactivity",
+       "correct": true,
+       "why": "Right: the outcome drove the exposure."
+      },
+      {
+       "id": "c",
+       "text": "Publication bias",
+       "why": "This is a bias about which studies get published."
+      },
+      {
+       "id": "d",
+       "text": "A true dose–response effect of low activity",
+       "why": "Illness caused the low activity, so it is not an effect of inactivity."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A study finds runners aged 70 live longer than non-runners. Many non-runners had stopped running after a diagnosis. What is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Confounding by shoe choice",
+       "why": "Shoes are not the issue; illness drove the stopping."
+      },
+      {
+       "id": "b",
+       "text": "Healthy-user effect, solved by trials",
+       "why": "This is a different bias; here illness came first."
+      },
+      {
+       "id": "c",
+       "text": "Reverse causation: illness caused stopping",
+       "correct": true,
+       "why": "Right: the outcome drove the exposure."
+      },
+      {
+       "id": "d",
+       "text": "A true dose–response effect of low activity",
+       "why": "Illness caused the low activity, so it is not an effect of inactivity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-design",
+   "concept": "mech-causal",
+   "bloom": "apply",
+   "sources": [
+    "cornelissen2013",
+    "choi2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which design best answers: does a 12-week running programme lower blood pressure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A randomised trial: one group runs, the other does not",
+       "correct": true,
+       "why": "Right: random assignment removes confounding and reverse causation."
+      },
+      {
+       "id": "b",
+       "text": "A cohort study of lifelong runners",
+       "why": "Runners differ from others in many ways."
+      },
+      {
+       "id": "c",
+       "text": "A survey of people asked how they feel",
+       "why": "Self-reports cannot show change from the programme."
+      },
+      {
+       "id": "d",
+       "text": "A study of famous champions",
+       "why": "Selected winners show nothing about the average person."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-mr-why",
+   "concept": "mech-mr",
+   "bloom": "understand",
+   "sources": [
+    "choi2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can Mendelian randomisation be less open to reverse causation than a cohort study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Variants are fixed at conception, so illness cannot change them",
+       "correct": true,
+       "why": "Right: illness cannot cause the variant."
+      },
+      {
+       "id": "b",
+       "text": "It randomly assigns people to an exercise programme",
+       "why": "MR uses genes that were dealt at conception; nobody is assigned a programme."
+      },
+      {
+       "id": "c",
+       "text": "It measures activity with a questionnaire, which is exact",
+       "why": "It uses gene variants, not questionnaires."
+      },
+      {
+       "id": "d",
+       "text": "It proves that its own assumptions are true",
+       "why": "Its key assumptions cannot be fully tested."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hmech-mr-read",
+   "concept": "mech-mr",
+   "bloom": "analyse",
+   "sources": [
+    "choi2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Choi found a protective link for genes tied to accelerometer activity but none for genes tied to self-reported activity. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Objective measurement may give a clearer signal than questionnaires",
+       "correct": true,
+       "why": "Right: the authors stress objective measurement."
+      },
+      {
+       "id": "b",
+       "text": "Self-reported activity is protective, accelerometers are not",
+       "why": "This reverses the finding."
+      },
+      {
+       "id": "c",
+       "text": "Depression lowers activity, which explains the result",
+       "why": "Genes for depression did not predict lower activity."
+      },
+      {
+       "id": "d",
+       "text": "The study proves running cures depression",
+       "why": "MR links activity and depression risk; it does not test a running programme."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

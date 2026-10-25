@@ -1,0 +1,913 @@
+{
+ "id": "health-dose",
+ "module": "t5-health",
+ "title": "How much activity, and what do you get?",
+ "goal": "State the WHO weekly activity target in MET-minutes, describe the shape of the activity–mortality curve, and judge what cohort data on steps and device-measured activity can and cannot show.",
+ "requires": [
+  "sm-heat-illness"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "met",
+    "mvpa",
+    "all-cause-mortality",
+    "accelerometer",
+    "sedentary-behaviour"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "dose-guideline",
+   "title": "What the guidelines ask for",
+   "text": "The WHO 2020 guidelines ask every adult for **150–300 min of moderate** or **75–150 min of vigorous** aerobic activity a week, or an equal mix [[c:who-dose]]. They add muscle-strengthening work and less sitting, and say that some activity beats none and more is better [[c:who-more]].\n\nTo compare mixed weeks, count in [METs](g:met). Resting is 1 MET, about 3.5 mL·kg⁻¹·min⁻¹ of oxygen [[c:met-def]]; moderate effort is 3 to under 6 METs, vigorous 6 or more [[c:met-bands]]. **MET-minutes** = minutes × METs. Divide by 60 for [MET-hours](g:met-hours). The minimum of 150 min at 3 METs is 450 MET-min, or 7.5 MET-h [[c:min-met]].",
+   "claims": [
+    {
+     "id": "who-dose",
+     "text": "WHO 2020: adults should do 150–300 min of moderate or 75–150 min of vigorous aerobic activity a week, or an equivalent mix.",
+     "grade": "strong",
+     "sources": [
+      "bull2020"
+     ],
+     "evidence": [
+      {
+       "source": "bull2020",
+       "quote": "All adults should undertake 150-300 min of moderate-intensity, or 75-150 min of vigorous-intensity physical activity, or some equivalent combination of moderate-intensity and vigorous-intensity aerobic physical activity, per week.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "who-more",
+     "text": "The WHO guidelines state that some activity is better than none and that more is better for health outcomes.",
+     "grade": "strong",
+     "sources": [
+      "bull2020"
+     ],
+     "evidence": [
+      {
+       "source": "bull2020",
+       "quote": "They reaffirm messages that some physical activity is better than none, that more physical activity is better for optimal health outcomes and provide a new recommendation on reducing sedentary behaviours.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "met-def",
+     "text": "One MET is the oxygen used sitting at rest, set by convention at 3.5 mL·kg⁻¹·min⁻¹.",
+     "grade": "strong",
+     "sources": [
+      "jette1990"
+     ],
+     "evidence": [
+      {
+       "source": "jette1990",
+       "quote": "One metabolic equivalent (MET) is defined as the amount of oxygen consumed while sitting at rest and is equal to 3.5 ml O2 per kg body weight x min.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "met-bands",
+     "text": "WHO defines moderate intensity as 3 to under 6 METs and vigorous as 6 METs or more.",
+     "grade": "strong",
+     "sources": [
+      "bull2020"
+     ],
+     "evidence": [
+      {
+       "source": "bull2020",
+       "quote": "On an absolute scale, moderate-intensity refers to the physical activity that is performed between 3 and <6 times the intensity of rest (METs).",
+       "level": "full-text"
+      },
+      {
+       "source": "bull2020",
+       "quote": "On an absolute scale, vigorous intensity refers to physical activity that is performed at 6.0 or more METs.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "min-met",
+     "text": "The guideline minimum of 75 vigorous or 150 moderate minutes a week equals 7.5 MET-hours a week.",
+     "grade": "strong",
+     "sources": [
+      "arem2015"
+     ],
+     "evidence": [
+      {
+       "source": "arem2015",
+       "quote": "The 2008 Physical Activity Guidelines for Americans recommended a minimum of 75 vigorous-intensity or 150 moderate-intensity minutes per week (7.5 metabolic-equivalent hours per week) of aerobic activity for substantial health benefit",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "dose-met-example",
+   "title": "Counting a week in MET-minutes",
+   "problem": "A runner does 3 runs of 40 min at 9 METs and 1 walk of 45 min at 3 METs. How many MET-minutes is that, and how does it compare with the 450 MET-min minimum?",
+   "steps": [
+    "Group the minutes by effort: runs 3 × 40 = 120 min at 9 METs; walk 45 min at 3 METs.",
+    "MET-min = minutes × METs: 120 × 9 = 1,080 and 45 × 3 = 135. Total 1,215 MET-min.",
+    "Divide by 60 for MET-hours: 1,215 ÷ 60 = 20.25 MET-h.",
+    "Compare: 1,215 ÷ 450 = 2.7, so this week is 2.7 times the minimum."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hdose-minutes"
+  },
+  {
+   "type": "question",
+   "item": "hdose-met-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hdose-meets"
+  },
+  {
+   "type": "concept",
+   "id": "dose-arem",
+   "title": "The curve is steep at first, then flat",
+   "text": "Arem pooled six US and European [cohorts](g:cohort-study): 661,137 adults and 116,686 deaths over a median 14.2 years [[c:arem-curve]]. Leisure activity is shown in multiples of the minimum (7.5 MET-h·week⁻¹), against doing none:\n\n| activity | hazard ratio for death |\n|---|---|\n| under 1× | 0.80 |\n| 1–2× | 0.69 |\n| 2–3× | 0.63 |\n| 3–5× | 0.61 |\n| 10× or more | 0.69 |\n\nA [hazard ratio](g:hazard-ratio) of 0.80 means a 20% lower rate of death. This is a [dose–response](g:dose-response) curve: most of the gain comes early and it levels off near 3–5× the minimum, with no sign of harm even at 10× [[c:arem-flat]].",
+   "claims": [
+    {
+     "id": "arem-curve",
+     "text": "Compared with no leisure activity, the hazard ratio for death was 0.80 below the guideline minimum, 0.69 at 1–2 times, 0.63 at 2–3 times and 0.61 at 3–5 times.",
+     "grade": "moderate",
+     "sources": [
+      "arem2015"
+     ],
+     "evidence": [
+      {
+       "source": "arem2015",
+       "quote": "Compared with individuals reporting no leisure time physical activity, we observed a 20% lower mortality risk among those performing less than the recommended minimum of 7.5 metabolic-equivalent hours per week (HR, 0.80 [95% CI, 0.78-0.82]), a 31% lower risk at 1 to 2 times the recommended minimum (HR, 0.69 [95% CI, 0.67-0.70]), and a 37% lower risk at 2 to 3 times the minimum (HR, 0.63 [95% CI, 0.62-0.65]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "arem-flat",
+     "text": "The mortality benefit levels off at 3–5 times the minimum, and there was no evidence of harm at 10 or more times.",
+     "grade": "moderate",
+     "sources": [
+      "arem2015"
+     ],
+     "evidence": [
+      {
+       "source": "arem2015",
+       "quote": "An upper threshold for mortality benefit occurred at 3 to 5 times the physical activity recommendation (HR, 0.61 [95% CI, 0.59-0.62]); however, compared with the recommended minimum, the additional benefit was modest (31% vs 39%).",
+       "level": "abstract"
+      },
+      {
+       "source": "arem2015",
+       "quote": "There was no evidence of harm at 10 or more times the recommended minimum (HR, 0.69 [95% CI, 0.59-0.78]).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hdose-arem-read",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hdose-arem-marginal",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hdose-no-harm"
+  },
+  {
+   "type": "concept",
+   "id": "dose-device",
+   "title": "Measured by a device, even light movement counts",
+   "text": "Questionnaires miss light movement and are often rounded up. An [accelerometer](g:accelerometer) records it. Ekelund pooled eight cohorts of wearers: 36,383 adults, mean age 62.6, median follow-up 5.8 years [[c:accel-any]]. Split into four equal groups, the death HRs from least to most active were 1.00, 0.48, 0.34 and 0.27. For light activity alone: 1.00, 0.60, 0.44, 0.38 [[c:accel-light]]; for [moderate-to-vigorous](g:mvpa) activity: 1.00, 0.64, 0.55, 0.52.\n\nFor [sedentary time](g:sedentary-behaviour) the HRs climbed: 1.00, 1.28, 1.71, 2.63 [[c:accel-sed]]. The four groups are made inside each study, so they are not minute targets.",
+   "claims": [
+    {
+     "id": "accel-any",
+     "text": "Any activity, at any intensity, went with lower all-cause mortality, and the pattern was non-linear.",
+     "grade": "moderate",
+     "sources": [
+      "ekelund2019"
+     ],
+     "evidence": [
+      {
+       "source": "ekelund2019",
+       "quote": "Any physical activity, regardless of intensity, was associated with lower risk of mortality, with a non-linear dose-response.",
+       "level": "abstract"
+      },
+      {
+       "source": "ekelund2019",
+       "quote": "Hazards ratios for mortality were 1.00 (referent) in the first quarter (least active), 0.48 (95% confidence interval 0.43 to 0.54) in the second quarter, 0.34 (0.26 to 0.45) in the third quarter, and 0.27 (0.23 to 0.32) in the fourth quarter (most active).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "accel-light",
+     "text": "Light activity alone also went with lower mortality: HR 0.38 in the most active quarter against the least active.",
+     "grade": "moderate",
+     "sources": [
+      "ekelund2019"
+     ],
+     "evidence": [
+      {
+       "source": "ekelund2019",
+       "quote": "Corresponding hazards ratios for light physical activity were 1.00, 0.60 (0.54 to 0.68), 0.44 (0.38 to 0.51), and 0.38 (0.28 to 0.51)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "accel-sed",
+     "text": "More sedentary time went with higher mortality: HR 2.63 in the most sedentary quarter against the least.",
+     "grade": "moderate",
+     "sources": [
+      "ekelund2019"
+     ],
+     "evidence": [
+      {
+       "source": "ekelund2019",
+       "quote": "For sedentary time, hazards ratios were 1.00 (referent; least sedentary), 1.28 (1.09 to 1.51), 1.71 (1.36 to 2.15), and 2.63 (1.94 to 3.56).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hdose-accel-why"
+  },
+  {
+   "type": "question",
+   "item": "hdose-accel-light"
+  },
+  {
+   "type": "concept",
+   "id": "dose-steps",
+   "title": "Steps per day",
+   "text": "Steps are easy to count. Paluch pooled 15 cohorts: 47,471 adults, 3,013 deaths, median follow-up 7.1 years. The medians of the four step groups were 3,553, 5,801, 7,842 and 10,901 steps·day⁻¹, with death HRs of 1.00, 0.60, 0.55 and 0.47 [[c:steps-hr]].\n\nRisk kept falling until about 6,000–8,000 steps·day⁻¹ in people aged 60 and over, and 8,000–10,000 in younger adults [[c:steps-plateau]]. The paper opens by noting that the popular 10,000-step target has little evidence behind it [[c:steps-10k]].\n\nLike every result here, this is cohort data: fitter, healthier people walk more, and illness can lower steps.",
+   "claims": [
+    {
+     "id": "steps-hr",
+     "text": "Compared with the lowest step quartile, the death HR was 0.60, 0.55 and 0.47 in quartiles 2, 3 and 4.",
+     "grade": "moderate",
+     "sources": [
+      "paluch2022"
+     ],
+     "evidence": [
+      {
+       "source": "paluch2022",
+       "quote": "Compared with the lowest quartile, the adjusted HR for all-cause mortality was 0·60 (95% CI 0·51-0·71) for quartile 2, 0·55 (0·49-0·62) for quartile 3, and 0·47 (0·39-0·57) for quartile 4.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "steps-plateau",
+     "text": "Risk fell until about 6,000–8,000 steps a day at age 60 and over, and until 8,000–10,000 under 60.",
+     "grade": "moderate",
+     "sources": [
+      "paluch2022"
+     ],
+     "evidence": [
+      {
+       "source": "paluch2022",
+       "quote": "Restricted cubic splines showed progressively decreasing risk of mortality among adults aged 60 years and older with increasing number of steps per day until 6000-8000 steps per day and among adults younger than 60 years until 8000-10 000 steps per day.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "steps-10k",
+     "text": "The 10,000-steps-a-day target is widely promoted but had little evidence behind it.",
+     "grade": "moderate",
+     "sources": [
+      "paluch2022"
+     ],
+     "evidence": [
+      {
+       "source": "paluch2022",
+       "quote": "Although 10 000 steps per day is widely promoted to have health benefits, there is little evidence to support this recommendation.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hdose-steps-plateau",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hdose-steps-10k"
+  },
+  {
+   "type": "question",
+   "item": "hdose-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "WHO 2020: 150–300 min moderate or 75–150 min vigorous a week (or a mix), about 450 MET-min or more, plus strength work.",
+    "MET-minutes = minutes × METs; ÷ 60 gives MET-hours. The minimum is 7.5 MET-h·week⁻¹.",
+    "Death rate falls steeply from none to a little activity and flattens near 3–5× the minimum, with no sign of harm at 10×.",
+    "Device-measured light activity counts too, and more sedentary time goes with higher risk.",
+    "Steps: risk falls until about 6,000–8,000 (60 and over) or 8,000–10,000 (younger); 10,000 is not a magic line.",
+    "All of this is observational: link, not proof of cause."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hdose-minutes",
+   "concept": "dose-guideline",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bull2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Under the WHO 2020 guidelines, how many minutes of vigorous aerobic activity a week is the adult target?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75–150 min a week",
+       "correct": true,
+       "why": "Right: the vigorous range is half the moderate range, because vigorous effort counts about double."
+      },
+      {
+       "id": "b",
+       "text": "150–300 min a week",
+       "why": "This is the moderate-intensity range."
+      },
+      {
+       "id": "c",
+       "text": "30–60 min a week",
+       "why": "Too low: this is below the guideline minimum."
+      },
+      {
+       "id": "d",
+       "text": "300–450 min a week",
+       "why": "Far above the guideline range; a high-volume week, not the target."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-met-calc",
+   "concept": "dose-guideline",
+   "bloom": "apply",
+   "sources": [
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 3 times a week for 60 min at 8 METs and walks 2 times for 30 min at 4 METs. What is the week's total in MET-minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,680 MET-min",
+       "correct": true,
+       "why": "Right: 180 min × 8 + 60 min × 4 = 1,440 + 240 = 1,680."
+      },
+      {
+       "id": "b",
+       "text": "1,440 MET-min",
+       "why": "Forgets the walks: only the rides were counted."
+      },
+      {
+       "id": "c",
+       "text": "240 min",
+       "why": "Adds minutes of activity and ignores the METs: that is time, not MET-minutes."
+      },
+      {
+       "id": "d",
+       "text": "28 MET-min",
+       "why": "28 is the answer in MET-hours (1,680 ÷ 60); the unit is wrong."
+      }
+     ],
+     "solution": "Rides: 3 × 60 = 180 min × 8 METs = 1,440. Walks: 2 × 30 = 60 min × 4 METs = 240. Total 1,680 MET-min (28 MET-h)."
+    },
+    {
+     "id": "b",
+     "stem": "A runner does 4 runs of 45 min at 10 METs and 1 walk of 60 min at 3 METs. What is the week's total in MET-minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,800 MET-min",
+       "why": "Forgets the walk."
+      },
+      {
+       "id": "b",
+       "text": "1,980 MET-min",
+       "correct": true,
+       "why": "Right: 180 min × 10 + 60 min × 3 = 1,800 + 180."
+      },
+      {
+       "id": "c",
+       "text": "240 min",
+       "why": "Adds minutes and ignores the METs."
+      },
+      {
+       "id": "d",
+       "text": "33 MET-min",
+       "why": "33 is the MET-hours figure (1,980 ÷ 60); the unit is wrong."
+      }
+     ],
+     "solution": "Runs: 4 × 45 = 180 min × 10 METs = 1,800. Walk: 60 × 3 = 180. Total 1,980 MET-min (33 MET-h)."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete swims 2 times for 30 min at 8 METs and rides once for 90 min at 6 METs. What is the week's total in MET-minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "480 MET-min",
+       "why": "Forgets the ride."
+      },
+      {
+       "id": "b",
+       "text": "150 min",
+       "why": "Adds minutes and ignores the METs."
+      },
+      {
+       "id": "c",
+       "text": "1,020 MET-min",
+       "correct": true,
+       "why": "Right: 60 min × 8 + 90 min × 6 = 480 + 540."
+      },
+      {
+       "id": "d",
+       "text": "17 MET-min",
+       "why": "17 is the MET-hours figure (1,020 ÷ 60); the unit is wrong."
+      }
+     ],
+     "solution": "Swims: 2 × 30 = 60 min × 8 METs = 480. Ride: 90 × 6 = 540. Total 1,020 MET-min (17 MET-h)."
+    }
+   ]
+  },
+  {
+   "id": "hdose-meets",
+   "concept": "dose-guideline",
+   "bloom": "apply",
+   "sources": [
+    "bull2020",
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Over a week a rider does 70 min of vigorous riding (6 METs) and 40 min of brisk walking (3 METs). Does this reach the 450 MET-min minimum?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: 420 + 120 = 540 MET-min, above 450",
+       "correct": true,
+       "why": "Right: the mix is counted together, so neither 70 nor 40 min must reach its own range."
+      },
+      {
+       "id": "b",
+       "text": "No: 70 vigorous min is under the 75 min minimum",
+       "why": "Treats each intensity separately; the guideline allows an equal mix."
+      },
+      {
+       "id": "c",
+       "text": "No: the walking is under 150 moderate min",
+       "why": "Same error: the minimum is met by the mix, not by each intensity alone."
+      },
+      {
+       "id": "d",
+       "text": "Yes, but only because walking counts as vigorous",
+       "why": "Walking at 3 METs is moderate; the total is enough without changing its label."
+      }
+     ],
+     "solution": "70 × 6 = 420; 40 × 3 = 120; total 540 MET-min ≥ 450."
+    }
+   ]
+  },
+  {
+   "id": "hdose-arem-read",
+   "concept": "dose-arem",
+   "bloom": "apply",
+   "sources": [
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Arem found a hazard ratio of 0.63 at 2–3 times the minimum, compared with no leisure activity. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 63% lower rate of death",
+       "why": "Reads the ratio as the reduction; 0.63 is what remains."
+      },
+      {
+       "id": "b",
+       "text": "A 37% lower rate of death during follow-up",
+       "correct": true,
+       "why": "Right: 1 − 0.63 = 0.37."
+      },
+      {
+       "id": "c",
+       "text": "37% more years of life",
+       "why": "A hazard ratio compares rates of death, not length of life."
+      },
+      {
+       "id": "d",
+       "text": "37 fewer deaths for every 100 people",
+       "why": "It is a relative change in rate; the number of deaths depends on baseline risk."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the same study, the hazard ratio below the guideline minimum was 0.80. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An 80% lower rate of death",
+       "why": "Reads the ratio as the reduction; 0.80 is what remains."
+      },
+      {
+       "id": "b",
+       "text": "20% more years of life",
+       "why": "A hazard ratio compares rates of death, not length of life."
+      },
+      {
+       "id": "c",
+       "text": "A 20% lower rate of death during follow-up",
+       "correct": true,
+       "why": "Right: 1 − 0.80 = 0.20."
+      },
+      {
+       "id": "d",
+       "text": "20 fewer deaths for every 100 people",
+       "why": "It is a relative change in rate, not a count of deaths."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "At 3–5 times the minimum the hazard ratio was 0.61. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A 61% lower rate of death",
+       "why": "Reads the ratio as the reduction; 0.61 is what remains."
+      },
+      {
+       "id": "b",
+       "text": "39% more years of life",
+       "why": "A hazard ratio compares rates of death, not length of life."
+      },
+      {
+       "id": "c",
+       "text": "39 fewer deaths for every 100 people",
+       "why": "It is a relative change in rate, not a count of deaths."
+      },
+      {
+       "id": "d",
+       "text": "A 39% lower rate of death during follow-up",
+       "correct": true,
+       "why": "Right: 1 − 0.61 = 0.39."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-arem-marginal",
+   "concept": "dose-arem",
+   "bloom": "analyse",
+   "sources": [
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Person A goes from no activity to under the minimum (HR 1.00 to 0.80). Person B goes from 2–3 times the minimum to 3–5 times (HR 0.63 to 0.61). Which step shows the larger extra drop in death rate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: it falls 0.20, B only 0.02, so the first minutes matter most",
+       "correct": true,
+       "why": "Right: the curve is steep at the start and flat near the top."
+      },
+      {
+       "id": "b",
+       "text": "B: more activity always brings the bigger gain",
+       "why": "The data show the opposite: gains shrink as the dose grows."
+      },
+      {
+       "id": "c",
+       "text": "Both are equal because each adds one dose level",
+       "why": "Dose levels are not equal steps in effect; the HR change differs ten-fold."
+      },
+      {
+       "id": "d",
+       "text": "B: higher doses raise risk, so it drops more",
+       "why": "At these doses risk does not rise; the curve only flattens."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Person C goes from no activity to under the minimum (HR 1.00 to 0.80). Person D goes from 1–2 times (HR 0.69) to 2–3 times (HR 0.63). Which step gives the larger extra drop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "D: more minutes always bring a larger drop",
+       "why": "The data show shrinking gains at higher doses."
+      },
+      {
+       "id": "b",
+       "text": "C: a fall of 0.20 against D's 0.06",
+       "correct": true,
+       "why": "Right: most of the benefit comes from starting."
+      },
+      {
+       "id": "c",
+       "text": "Equal, since each step is one band up",
+       "why": "Each band gives a different change in HR."
+      },
+      {
+       "id": "d",
+       "text": "D, because it starts from a lower risk",
+       "why": "Starting lower leaves less room to fall, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-no-harm",
+   "concept": "dose-arem",
+   "bloom": "understand",
+   "sources": [
+    "arem2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What did Arem find for people doing 10 or more times the minimum, compared with no leisure activity?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same death rate as inactive people",
+       "why": "The HR was 0.69, a lower rate."
+      },
+      {
+       "id": "b",
+       "text": "A higher death rate than inactive people",
+       "why": "The data showed no evidence of harm at this dose."
+      },
+      {
+       "id": "c",
+       "text": "A lower death rate (HR 0.69), with no sign of extra harm",
+       "correct": true,
+       "why": "Right: the benefit stayed, though it was smaller than at 3–5 times."
+      },
+      {
+       "id": "d",
+       "text": "The lowest death rate of all groups",
+       "why": "The lowest rate was at 3–5 times (HR 0.61)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-accel-why",
+   "concept": "dose-device",
+   "bloom": "understand",
+   "sources": [
+    "ekelund2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do accelerometer studies give a clearer picture of activity and mortality than questionnaire studies?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A device proves that activity causes longer life",
+       "why": "A device improves measurement, not the ability to show cause."
+      },
+      {
+       "id": "b",
+       "text": "A device records movement, including light movement that people forget or round up",
+       "correct": true,
+       "why": "Right: self-report has recall error and misses light activity."
+      },
+      {
+       "id": "c",
+       "text": "A device removes the need to adjust for age and illness",
+       "why": "Confounding stays; only the exposure measure is better."
+      },
+      {
+       "id": "d",
+       "text": "A device records only vigorous exercise, which is the one that counts",
+       "why": "Devices record all intensities; light activity also went with lower risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-accel-light",
+   "concept": "dose-device",
+   "bloom": "apply",
+   "sources": [
+    "ekelund2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 72-year-old cannot jog or ride hard, but walks slowly around the house and garden more than before. Which message fits the accelerometer data?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Light activity also went with lower mortality, so the extra movement counts",
+       "correct": true,
+       "why": "Right: HR 0.38 in the most active quarter for light activity alone."
+      },
+      {
+       "id": "b",
+       "text": "Only moderate-to-vigorous activity counts; light movement does nothing",
+       "why": "Light activity alone showed a clear gradient in the data."
+      },
+      {
+       "id": "c",
+       "text": "Light activity helps only if sitting time stays the same",
+       "why": "The study did not make this condition; both light activity and less sitting went with lower risk."
+      },
+      {
+       "id": "d",
+       "text": "Light movement protects fully, so no harder activity is ever needed",
+       "why": "Moderate-to-vigorous activity also went with lower risk; the data do not rank them as equal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-steps-plateau",
+   "concept": "dose-steps",
+   "bloom": "apply",
+   "sources": [
+    "paluch2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 66-year-old averages 3,500 steps a day. Where do the pooled data say extra steps are linked to the biggest fall in risk?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Moving toward 6,000–8,000 steps a day",
+       "correct": true,
+       "why": "Right: for 60 and over, risk fell until that range."
+      },
+      {
+       "id": "b",
+       "text": "Only after reaching 10,000 steps a day",
+       "why": "The curve had already levelled off before 10,000 at this age."
+      },
+      {
+       "id": "c",
+       "text": "Nowhere: steps do not change risk at this age",
+       "why": "Risk fell clearly with more steps in this age group."
+      },
+      {
+       "id": "d",
+       "text": "Only by walking faster at the same step count",
+       "why": "The pooled data link total steps to risk; pace is a separate question."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A 38-year-old averages 11,000 steps a day. What do the pooled data suggest about adding another 2,000 steps?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A further large fall in risk, as risk always falls with steps",
+       "why": "The curve flattens; it does not keep falling."
+      },
+      {
+       "id": "b",
+       "text": "Little extra mortality link, since the curve flattened by 8,000–10,000",
+       "correct": true,
+       "why": "Right: beyond the plateau the data show no further fall."
+      },
+      {
+       "id": "c",
+       "text": "An increase in risk, since 13,000 steps is excessive",
+       "why": "The data show no rise at higher steps."
+      },
+      {
+       "id": "d",
+       "text": "A fall only if the steps are all taken at once",
+       "why": "The study did not test this; the finding concerns total daily steps."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-steps-10k",
+   "concept": "dose-steps",
+   "bloom": "evaluate",
+   "sources": [
+    "paluch2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A watch app says: you must reach 10,000 steps every day to be healthy. How should you judge this against Paluch?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is right: risk falls until exactly 10,000 steps for all ages",
+       "why": "The plateau came earlier for people aged 60 and over."
+      },
+      {
+       "id": "b",
+       "text": "It is wrong: steps and death rate are not related at all",
+       "why": "More steps clearly went with lower mortality."
+      },
+      {
+       "id": "c",
+       "text": "It is too strict: risk levelled off at 6,000–10,000 steps, by age",
+       "correct": true,
+       "why": "Right: the data support more steps up to a range, not a sharp 10,000 line."
+      },
+      {
+       "id": "d",
+       "text": "It is right: every step above 10,000 keeps cutting risk further",
+       "why": "The curve flattened; extra steps added little in this data."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hdose-appraise",
+   "concept": "dose-device",
+   "bloom": "evaluate",
+   "sources": [
+    "ekelund2019",
+    "paluch2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits the claim that more activity lengthens life, based on cohorts like Ekelund's?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nobody was assigned to be active, so illness and other traits may explain some of the link",
+       "correct": true,
+       "why": "Right: confounding and reverse causation remain in cohort data."
+      },
+      {
+       "id": "b",
+       "text": "Accelerometers cannot record light activity, so the results leave it out",
+       "why": "They record it well; light activity showed a clear link."
+      },
+      {
+       "id": "c",
+       "text": "Meta-analyses cannot include deaths as an outcome",
+       "why": "Deaths are a standard outcome in cohort meta-analyses."
+      },
+      {
+       "id": "d",
+       "text": "A very large sample makes a result less reliable than a small one",
+       "why": "Size reduces random error; it does not remove bias."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,894 @@
+{
+ "id": "sm-rhabdo",
+ "module": "t5-sports-medicine",
+ "title": "Exertional rhabdomyolysis: when muscle leaks",
+ "goal": "Explain what exertional rhabdomyolysis is, why myoglobin threatens the kidneys, who is at risk, which warning signs need a doctor, and why return to training is individual.",
+ "requires": [
+  "sm-gi"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "rhabdomyolysis",
+    "serum-ck",
+    "upper-limit-of-normal",
+    "myoglobinuria",
+    "acute-kidney-injury",
+    "doms",
+    "sickle-cell-trait",
+    "statin"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "rh-what",
+   "title": "Muscle breaking down, in a spectrum",
+   "text": "[Rhabdomyolysis](g:rhabdomyolysis) means muscle fibres break down and spill their contents into the blood. In exercise it is called exertional rhabdomyolysis. There is no universal definition; it is usually a syndrome of severe muscle pain and a sudden rise (then fall) of blood [creatine kinase](g:serum-ck) (CK), with or without [myoglobin](g:myoglobinuria) in the urine [[c:rh-def]].\n\nIt is a spectrum. Soreness a day or so after hard, unaccustomed exercise ([DOMS](g:doms)) is a very mild form [[c:rh-doms]]. Most real cases are mild: aching muscles, some CK rise, slightly dark urine, and often no medical visit [[c:rh-mild]]. A few are severe and threaten the kidneys.",
+   "claims": [
+    {
+     "id": "rh-def",
+     "text": "Exertional rhabdomyolysis is usually defined as severe muscle pain with a sudden rise and later fall of serum CK, with or without myoglobinuria; there is no universally accepted definition.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Although there is no universally accepted definition, ERM is often defined as a clinical syndrome associated with severe muscle pain, sudden elevation (and subsequent fall) of serum creatine kinase (CK) levels with or without myoglobinuria.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-doms",
+     "text": "Delayed-onset muscle soreness after unaccustomed exercise is a very mild form of rhabdomyolysis.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "Delayed-onset muscle soreness (DOMS) experienced a day or so after strenuous unaccustomed exercise is an indicator of muscle damage and signifies a very mild form of rhabdomyolysis.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-mild",
+     "text": "Most cases are mild, with muscle aching, mild-to-moderate CK rise and mild dark urine, and often do not reach a doctor.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "In most cases, the condition has a mild course characterised by postexertional myalgia with mild-to-moderate CK increases, mild pigmenturia, and will often not even come to medical attention.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-define"
+  },
+  {
+   "type": "question",
+   "item": "rh-spectrum"
+  },
+  {
+   "type": "concept",
+   "id": "rh-mechanism",
+   "title": "From a damaged fibre to a damaged kidney",
+   "text": "Why does it happen? Unaccustomed work can injure the muscle membrane directly (especially [eccentric](g:eccentric) work) or exhaust energy supply, so the ion pumps fail [[c:rh-mech]]. The fibre swells, breaks down and leaks CK, [myoglobin](g:myoglobin) and potassium into the blood [[c:rh-leak]].\n\nCK is the marker we measure. Myoglobin is the one that matters for the kidney: the kidneys clear it, and in large amounts it can block the kidney's tubes or be directly toxic, so **acute kidney injury** is the main danger [[c:rh-kidney]]. Dark urine (brown, tea or cola colour) shows the kidneys are clearing myoglobin: a cardinal sign to seek treatment [[c:rh-dark]].",
+   "claims": [
+    {
+     "id": "rh-mech",
+     "text": "Unaccustomed exercise may directly injure the muscle membrane, especially in eccentric work, or fail energy supply so that ion pumps stop working.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Unaccustomed exercise may cause direct injury to the sarcolemma (eg, in eccentric exercise) and/or lead to failure of energy production with subsequent pump dysfunction",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-leak",
+     "text": "In rhabdomyolysis, muscle contents including CK and myoglobin enter the blood.",
+     "grade": "strong",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "ERM results in the entry of skeletal muscle contents, in particular CK and myoglobin, into the systemic circulation.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-kidney",
+     "text": "The kidneys clear myoglobin, and it can precipitate in the kidney or be directly toxic, risking acute kidney failure.",
+     "grade": "strong",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "While other proteins are cleared by the reticulo–endothelial system, myoglobin is cleared by the kidneys.",
+       "level": "full-text"
+      },
+      {
+       "source": "rawson2017",
+       "quote": "Myoglobin, and likely other proteins, can precipitate in the kidney or be directly nephrotoxic (oxidative stress)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-dark",
+     "text": "Dark-coloured urine is a cardinal sign that someone should seek immediate treatment.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "A cardinal sign that an individual should seek immediate treatment is dark-colored urine",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-mech-analyse"
+  },
+  {
+   "type": "question",
+   "item": "rh-dark-apply"
+  },
+  {
+   "type": "concept",
+   "id": "rh-risk",
+   "title": "Who is at risk",
+   "text": "Risk comes from the load, the person and the drugs:\n\n| factor | what the sources say |\n|---|---|\n| unaccustomed [eccentric](g:eccentric) work (downhill running, squats, plyometrics) | lengthening under tension does the most damage [[c:rh-ecc]] |\n| heat | most often untrained people who overexert, particularly in heat [[c:rh-heat]] |\n| [sickle cell trait](g:sickle-cell-trait) | a known genetic risk factor [[c:rh-sct]] |\n| [statins](g:statin) | aches in up to 5% of users; about 0.1% get rhabdomyolysis, defined as CK above 10 times the [upper limit of normal](g:upper-limit-of-normal) [[c:rh-statin]] |\n| repeated or out-of-proportion episodes | may mean an underlying muscle disease [[c:rh-genetic]] |\n\nA big CK rise is not kidney harm: healthy people can reach very high CK after eccentric work with normal kidneys [[c:rh-ck-only]].",
+   "claims": [
+    {
+     "id": "rh-ecc",
+     "text": "The contractions that cause the most muscle damage are those where the muscle lengthens while trying to contract.",
+     "grade": "strong",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "The muscle contractions that cause the most muscle damage are those where the muscle lengthens as it is attempting to contract",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-heat",
+     "text": "Exertional rhabdomyolysis most often affects physically untrained people who overexert, particularly in hot weather.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Most often, ERM affects physically untrained persons who overexert themselves, particularly in hot weather.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-sct",
+     "text": "Sickle cell trait is a known genetic factor that predisposes to rhabdomyolysis.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "There are known genetic factors that will predispose a person to rhabdomyolysis, such as sickle cell trait",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-statin",
+     "text": "Statin myalgias occur in up to 5% of users and about 0.1% of users get rhabdomyolysis, defined as CK above 10 times the upper limit of normal.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "The statins are a very safe group of medications as a whole, but myalgias can be seen in up to 5% of all patients taking the medication",
+       "level": "full-text"
+      },
+      {
+       "source": "rawson2017",
+       "quote": "and ~0.1% of all users will experience rhabdomyolysis, defined as a CK elevation to >10 times the upper limit of normal",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-genetic",
+     "text": "Repeated episodes, or ones more severe than the exercise explains, should raise suspicion of an underlying muscle disorder.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Repeated episodes of exertional rhabdomyolysis should raise the suspicion of such an underlying disorder, in particular in individuals in whom the severity of the rhabdomyolysis episodes exceeds the expected response to the exercise performed.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rh-ck-only",
+     "text": "Healthy individuals can show profound CK and myoglobin elevations after eccentric exercise without renal impairment.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "Thus, exertional muscle damage produced by eccentric exercise in healthy individuals can cause profound CK and myoglobin elevations without renal impairment, and elevated CK is likely a population-specific bio-marker.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-risk-apply"
+  },
+  {
+   "type": "question",
+   "item": "rh-statin-analyse"
+  },
+  {
+   "type": "example",
+   "id": "rh-uln-example",
+   "title": "CK as a multiple of the upper limit",
+   "problem": "A lab's upper limit of normal for CK is 200 U·L⁻¹. A runner's CK after a first downhill race is 2,600 U·L⁻¹. How many times the upper limit is it?",
+   "steps": [
+    "Divide the result by the upper limit: 2,600 ÷ 200.",
+    "2,600 ÷ 200 = 13.",
+    "So CK is 13 times the upper limit of normal, above the 10-times mark used in the statin definition. The number alone says how much muscle leaked, not whether the kidneys are harmed: check urine colour, urine volume and creatinine too."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-ck-calc"
+  },
+  {
+   "type": "question",
+   "item": "rh-ck-evaluate"
+  },
+  {
+   "type": "concept",
+   "id": "rh-signs",
+   "title": "Warning signs and what happens next",
+   "text": "Warning signs after hard or unusual exercise:\n\n- severe muscle pain, swelling or weakness, out of proportion to the session\n- dark urine, or passing little urine\n- feeling unwell, nauseous or very tired, especially after heat or a first-ever hard block\n\nIf these appear, get medical care the same day. The doctor's first question is whether the case is clinically significant enough to need hospital admission and intravenous fluids [[c:rh-step1]]; blood CK, kidney tests and urine are the tools. Do not wait to see if it passes.\n\nMild cases, with only sore muscles and a modest CK rise, are managed by rest and watching, but that call belongs to a clinician with the results.",
+   "claims": [
+    {
+     "id": "rh-step1",
+     "text": "The first step in a person with high CK after strenuous exercise is to decide if the rhabdomyolysis is clinically significant, needing admission and intravenous fluids.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "The first step when encountering a patient with a high CK after strenuous exercise is to determine whether the rhabdomyolysis is clinically significant, requiring hospital admission and intravenous fluid administration.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-warning-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "rh-return",
+   "title": "Back to training",
+   "text": "There are no standard, evidence-based return guidelines [[c:rh-rtp]]. A clinician weighs three issues: the risk of it happening again, how long until a safe return, and any restrictions.\n\nThe key question: a one-off in someone who did too much too soon, or a sign of an underlying problem? Pointers to the second: repeated episodes, CK above 50 times the upper limit or staying high, no unaccustomed exercise, or a family history [[c:rh-cause-signs]]. People with a genetic cause need specific guidance [[c:rh-restart]].\n\nAfter a one-off, recurrence seems rare [[c:rh-low-recur]]. The usual path, common practice rather than a guideline: medical clearance, then a gradual build in load, eccentric work last.",
+   "claims": [
+    {
+     "id": "rh-rtp",
+     "text": "No standard, evidence-based return guidelines exist; clinicians weigh recurrence risk, timeline of safe return and restrictions.",
+     "grade": "moderate",
+     "sources": [
+      "rawson2017",
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "rawson2017",
+       "quote": "Although there are no standard guidelines, we refer the reader to the excellent review by O’Connor et al. [16], who suggest that three issues must be addressed: (1) recurrence risk, (2) timeline of safe return, and (3) potential restrictions.",
+       "level": "full-text"
+      },
+      {
+       "source": "scalco2016",
+       "quote": "No evidence-based guidelines concerning return to physical activity after ERM are currently available.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-cause-signs",
+     "text": "Suspect a genetic cause with recurrent episodes, CK above 50 times the upper limit or persisting, no unaccustomed exercise, no drugs, or a family history.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Consider a genetic cause of the ERM in case of recurrent episodes; high creatine kinase (CK) levels (>50×upper limit of normal) or persisting hyperCKaemia; absence of unaccustomed exercise; absence of (recreational or medical) drugs; or a positive family history of rhabdomyolysis or other exertional symptoms.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-restart",
+     "text": "People with a genetic predisposition to exertional rhabdomyolysis need specific guidance when they recommence exercise.",
+     "grade": "moderate",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "Participants with a genetic predisposition to ERM need specific guidance when they recommence exercise and sporting activities.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rh-low-recur",
+     "text": "Without suspicion of a genetic disorder, return to sport appears safe and long-term recurrence risk is low (one cohort).",
+     "grade": "weak",
+     "sources": [
+      "scalco2016"
+     ],
+     "evidence": [
+      {
+       "source": "scalco2016",
+       "quote": "The natural course of ERM in cases without suspicion of a genetic disorder suggests that return to sports is safe.",
+       "level": "full-text"
+      },
+      {
+       "source": "scalco2016",
+       "quote": "Hence, long-term risk of recurrence is low.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rh-return-three"
+  },
+  {
+   "type": "question",
+   "item": "rh-recurrent"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Exertional rhabdomyolysis is muscle breakdown with CK and myoglobin leaking into the blood; DOMS is its mild end.",
+    "Myoglobin is the kidney's danger: dark urine is a cardinal sign to get care.",
+    "Risks: unaccustomed eccentric work, heat, sickle cell trait, statins, and underlying muscle disease.",
+    "A high CK alone does not mean kidney harm, but it does mean checking.",
+    "Return is individual: recurrence risk, timing and limits; repeated or out-of-proportion episodes call for a search for a cause."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "rh-define",
+   "concept": "rh-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "scalco2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is exertional rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Muscle breakdown with leakage of CK and myoglobin into the blood after strenuous exercise",
+       "why": "Correct: the usual working definition.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A tear of a muscle belly after a sprint",
+       "why": "A tear is a local injury; rhabdomyolysis is cell breakdown with leakage."
+      },
+      {
+       "id": "c",
+       "text": "Normal soreness one to two days after exercise with no blood change",
+       "why": "That is DOMS, the very mild end; CK rise is the mark of rhabdomyolysis."
+      },
+      {
+       "id": "d",
+       "text": "A cramp that lasts longer than a minute",
+       "why": "A cramp passes in minutes and is not fibre breakdown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-spectrum",
+   "concept": "rh-what",
+   "bloom": "understand",
+   "sources": [
+    "rawson2017",
+    "scalco2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How do DOMS and exertional rhabdomyolysis relate?",
+     "options": [
+      {
+       "id": "a",
+       "text": "DOMS is the very mild end of the same spectrum of muscle damage",
+       "why": "Correct: the mark is degree, not a separate process.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "They are unrelated: DOMS is inflammation and rhabdomyolysis is cramping",
+       "why": "Both involve muscle damage; rhabdomyolysis is not a cramp."
+      },
+      {
+       "id": "c",
+       "text": "DOMS only occurs when CK is normal",
+       "why": "DOMS can accompany a CK rise."
+      },
+      {
+       "id": "d",
+       "text": "Rhabdomyolysis is just DOMS in older people",
+       "why": "Age is not the difference; the extent is."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-mech-analyse",
+   "concept": "rh-mechanism",
+   "bloom": "analyse",
+   "sources": [
+    "scalco2016",
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can severe exertional rhabdomyolysis harm the kidneys when most other muscle proteins don't?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The kidneys clear myoglobin, which can block or poison the tubes",
+       "why": "Correct: that is the link to kidney injury.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "CK is toxic to kidney tissue at high levels",
+       "why": "CK is a marker; myoglobin is the kidney's problem."
+      },
+      {
+       "id": "c",
+       "text": "Potassium leaving the fibre lowers blood pressure",
+       "why": "Potassium matters for the heart rhythm, not as the kidney mechanism."
+      },
+      {
+       "id": "d",
+       "text": "Dehydration alone destroys the kidney",
+       "why": "Fluid loss adds risk but myoglobin is the key."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-dark-apply",
+   "concept": "rh-mechanism",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a first hard strength block, a triathlete has severe thigh pain and cola-coloured urine. What should she do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Get medical care the same day: dark urine is a cardinal sign",
+       "why": "Correct: treatment should not wait.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Do a recovery run and drink coffee",
+       "why": "Exercise and diuresis can worsen the situation."
+      },
+      {
+       "id": "c",
+       "text": "Wait three days to see if the colour clears",
+       "why": "Delay risks kidney injury."
+      },
+      {
+       "id": "d",
+       "text": "Take an NSAID for the pain and rest",
+       "why": "Not advised without medical review; the priority is assessment."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-risk-apply",
+   "concept": "rh-risk",
+   "bloom": "apply",
+   "sources": [
+    "rawson2017",
+    "scalco2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Four runners enter a hot trail race with steep descents. Who is at greatest risk of exertional rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A runner back after months off who has never run downhill that hard",
+       "why": "Correct: unaccustomed eccentric work, in heat, after a break.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A well-trained runner who does weekly hill descents",
+       "why": "Training protects through adaptation."
+      },
+      {
+       "id": "c",
+       "text": "A runner who has cramped in past races",
+       "why": "Past cramps predict cramps; the sources do not link them to rhabdomyolysis."
+      },
+      {
+       "id": "d",
+       "text": "A cyclist spectator who rides flat roads",
+       "why": "Not exposed to the eccentric load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-statin-analyse",
+   "concept": "rh-risk",
+   "bloom": "analyse",
+   "sources": [
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A statin user cycling 200 km a week asks if his leg aches could be rhabdomyolysis. What fits the data best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Aches are common (up to 5%) but rhabdomyolysis is rare (about 0.1%)",
+       "why": "Correct: both numbers. Severe pain or dark urine would still need urgent review.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Statin users always develop it with exercise",
+       "why": "Only about 0.1% of users do."
+      },
+      {
+       "id": "c",
+       "text": "Statins cannot affect muscle at all",
+       "why": "Myalgia occurs in up to 5%."
+      },
+      {
+       "id": "d",
+       "text": "Aches mean he must stop taking the statin himself at once",
+       "why": "The decision belongs with his doctor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-ck-calc",
+   "concept": "rh-risk",
+   "bloom": "apply",
+   "sources": [
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist on a statin has a CK of 2,400 U·L⁻¹ after a hard weekend. The lab's upper limit of normal is 200 U·L⁻¹. How many times the upper limit is it, and does it pass the 10-times mark used to define statin-related rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12 times; yes",
+       "why": "Correct: 2,400 ÷ 200 = 12, which is above 10.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "2,200 times; yes",
+       "why": "Subtracted instead of dividing; a multiple needs a ratio."
+      },
+      {
+       "id": "c",
+       "text": "0.083 times; no",
+       "why": "Inverted the ratio: upper limit ÷ result."
+      },
+      {
+       "id": "d",
+       "text": "12 times; no",
+       "why": "Right ratio, wrong comparison with 10."
+      }
+     ],
+     "solution": "2,400 ÷ 200 = 12. Statin-related rhabdomyolysis is defined as more than 10 times the upper limit; 12 is above 10, so the answer is yes."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist on a statin has a CK of 1,500 U·L⁻¹ after a hard weekend. The lab's upper limit of normal is 250 U·L⁻¹. How many times the upper limit is it, and does it pass the 10-times mark used to define statin-related rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6 times; no",
+       "why": "Correct: 1,500 ÷ 250 = 6, which is below 10.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "1,250 times; yes",
+       "why": "Subtracted instead of dividing; a multiple needs a ratio."
+      },
+      {
+       "id": "c",
+       "text": "0.167 times; no",
+       "why": "Inverted the ratio: upper limit ÷ result."
+      },
+      {
+       "id": "d",
+       "text": "6 times; yes",
+       "why": "Right ratio, wrong comparison with 10."
+      }
+     ],
+     "solution": "1,500 ÷ 250 = 6. Statin-related rhabdomyolysis is defined as more than 10 times the upper limit; 6 is below 10, so the answer is no."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist on a statin has a CK of 6,000 U·L⁻¹ after a hard weekend. The lab's upper limit of normal is 150 U·L⁻¹. How many times the upper limit is it, and does it pass the 10-times mark used to define statin-related rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "40 times; yes",
+       "why": "Correct: 6,000 ÷ 150 = 40, which is above 10.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "5,850 times; yes",
+       "why": "Subtracted instead of dividing; a multiple needs a ratio."
+      },
+      {
+       "id": "c",
+       "text": "0.025 times; no",
+       "why": "Inverted the ratio: upper limit ÷ result."
+      },
+      {
+       "id": "d",
+       "text": "40 times; no",
+       "why": "Right ratio, wrong comparison with 10."
+      }
+     ],
+     "solution": "6,000 ÷ 150 = 40. Statin-related rhabdomyolysis is defined as more than 10 times the upper limit; 40 is above 10, so the answer is yes."
+    }
+   ]
+  },
+  {
+   "id": "rh-ck-evaluate",
+   "concept": "rh-risk",
+   "bloom": "evaluate",
+   "sources": [
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's CK is 12,000 U·L⁻¹ after a first downhill race. A friend says, \"That means your kidneys are failing.\" What is the best evaluation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "CK alone can't show kidney harm: check urine and kidney tests",
+       "why": "Correct: CK marks muscle leakage; kidney function must be tested.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Correct: any CK above 10,000 means kidney failure",
+       "why": "Not so: eccentric work can give profound rises without renal impairment."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: CK has no use",
+       "why": "It signals muscle damage and prompts the checks."
+      },
+      {
+       "id": "d",
+       "text": "Right only if she is over 50",
+       "why": "Age does not turn a CK value into kidney failure; kidney tests decide."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-warning-scenario",
+   "concept": "rh-signs",
+   "bloom": "apply",
+   "sources": [
+    "scalco2016",
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist, two days after a charity ride with a hot first-ever 8 h day, has swollen forearms and thighs, little urine, and feels sick. What is the right plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "See a doctor today for CK, kidney and urine tests",
+       "why": "Correct: swelling, dark or low urine and illness are warning signs.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Rest at home and drink plenty of water for a few days",
+       "why": "Home care may delay the tests that guide treatment."
+      },
+      {
+       "id": "c",
+       "text": "Do light spinning to flush it out",
+       "why": "Exercise adds muscle load and no benefit."
+      },
+      {
+       "id": "d",
+       "text": "Ride the next race and see how the legs feel",
+       "why": "Not an assessment, and more load on damaged muscle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-return-three",
+   "concept": "rh-return",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "rawson2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which three issues do clinicians weigh in returning to activity after exertional rhabdomyolysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Recurrence risk, timeline of safe return, and potential restrictions",
+       "why": "Correct: the three issues in the review.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Body weight, race goals and sponsor needs",
+       "why": "Not medical issues for the decision."
+      },
+      {
+       "id": "c",
+       "text": "CK value on the day, age and sex only",
+       "why": "CK is one input, but the three issues are broader."
+      },
+      {
+       "id": "d",
+       "text": "Hydration plan, shoe type and training volume",
+       "why": "Useful details later but not the framework."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rh-recurrent",
+   "concept": "rh-return",
+   "bloom": "evaluate",
+   "sources": [
+    "scalco2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has a second episode after only an easy 5 km run, with CK 60 times the upper limit. Which view is best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Out of proportion: look for an underlying muscle disease first",
+       "why": "Correct: repeated or out-of-proportion episodes should raise that suspicion.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Typical: the second episode is always milder",
+       "why": "Nothing says it is typical or milder."
+      },
+      {
+       "id": "c",
+       "text": "Caused by too little protein",
+       "why": "No such evidence in the sources."
+      },
+      {
+       "id": "d",
+       "text": "He should return to full training at once",
+       "why": "Specific guidance is needed first."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

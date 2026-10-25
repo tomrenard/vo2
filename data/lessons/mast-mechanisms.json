@@ -1,0 +1,814 @@
+{
+ "id": "mast-mechanisms",
+ "module": "t5-masters",
+ "title": "Why endurance falls with age",
+ "goal": "Explain which parts of the oxygen-delivery chain, threshold, economy and muscle change with age, why older muscle responds less to protein, and how much is ageing versus less training.",
+ "requires": [
+  "mast-decline"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sarcopenia",
+    "dynapenia",
+    "anabolic-resistance"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "mm-fick",
+   "title": "Heart rate, stroke volume and a-vO₂ difference",
+   "text": "[VO₂max](g:vo2max) is the product of maximal heart rate, maximal [stroke volume](g:stroke-volume) and the [a-vO₂ difference](g:a-vo2-difference) (the [Fick principle](g:fick-principle)). In endurance-trained athletes all three fall with age [[c:three]].\n\nMaximal heart rate falls by about 0.7 beats·min⁻¹ per year in sedentary, active and trained adults alike [[c:hr-slope]]. The usual formula is 208 − 0.7 × age [[c:hr-eq]]. In the 20-year study of older athletes it fell 5–7 beats·min⁻¹ per decade whatever their training [[c:hr-pollock]]. That part of the fall is ageing itself.\n\nThe a-vO₂ drop may come less from poor oxygen use than from less oxygen delivery to the muscle [[c:avo2]].",
+   "claims": [
+    {
+     "id": "three",
+     "text": "In endurance-trained athletes, falls in maximal stroke volume, heart rate and a-vO₂ difference all contribute to the fall in VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Decreases in maximal stroke volume, heart rate and arterio-venous O(2) difference all appear to contribute to the age-related reductions in",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-slope",
+     "text": "Maximal heart rate falls about 0.7 beats·min⁻¹ per year from early adulthood in sedentary, active and endurance-trained adults.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008",
+      "tanaka2001"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "maximal heart rate declines with age at a rate of ∼0.7 beats min −1 year −1 in healthy sedentary, recreationally active and endurance exercise-trained adults",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hr-eq",
+     "text": "In healthy adults, HRmax is about 208 − 0.7 × age, and is not influenced by habitual physical activity.",
+     "grade": "strong",
+     "sources": [
+      "tanaka2001"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2001",
+       "quote": "A regression equation to predict HRmax is 208 - 0.7 x age in healthy adults.",
+       "level": "abstract"
+      },
+      {
+       "source": "tanaka2001",
+       "quote": "nor was it influenced by wide variations in habitual physical activity levels",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hr-pollock",
+     "text": "In older track athletes followed for 20 years, maximal heart rate fell about 5–7 beats·min⁻¹ per decade, independent of training status.",
+     "grade": "moderate",
+     "sources": [
+      "pollock1997"
+     ],
+     "evidence": [
+      {
+       "source": "pollock1997",
+       "quote": "Maximal heart rate showed a linear decrease of approximately 5-7 beats.min-1.decade-1 and was independent of training status.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "avo2",
+     "text": "In endurance-trained adults, lower oxygen delivery rather than lower extraction is likely a major reason for the lower a-vO₂ difference with age.",
+     "grade": "weak",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "likely that maximal oxygen delivery, rather than oxygen extraction, is a major contributor",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "mm-ex-hr",
+   "title": "Predicting maximal heart rate",
+   "problem": "A 62-year-old cyclist wants an estimate of maximal heart rate from age.",
+   "steps": [
+    "Use HRmax = 208 − 0.7 × age.",
+    "0.7 × 62 = 43.4.",
+    "208 − 43.4 = 164.6, so about 165 beats·min⁻¹. The usual spread between people is about 11 beats·min⁻¹, so treat it as a guess."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mm-hr-calc"
+  },
+  {
+   "type": "question",
+   "item": "mm-hr-train"
+  },
+  {
+   "type": "concept",
+   "id": "mm-lt",
+   "title": "Threshold and economy",
+   "text": "Two other drivers of endurance performance are the [lactate threshold](g:lactate-threshold) and [economy](g:running-economy). With age the threshold falls too, but this may follow the fall in VO₂max [[c:lt]]. In women runners, economy explained little of the age-related fall in 10 km performance once VO₂max and threshold were accounted for [[c:econ-women]].\n\nWhether economy changes at all is a live question.",
+   "claims": [
+    {
+     "id": "lt",
+     "text": "The lactate threshold falls with age in endurance athletes, perhaps as a result of the fall in VO₂max.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "A reduction in lactate threshold, i.e. the exercise intensity at which blood lactate concentration increases significantly above baseline, also contributes to the reduction in endurance performance with ageing",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "econ-women",
+     "text": "In female athletes, running economy explained little of the age-related decrease in running performance once VO₂max and lactate threshold were counted.",
+     "grade": "weak",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "running economy explained little of the variance in age-related decreases in endurance running performance",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does economy get worse with age in trained athletes?",
+    "sides": [
+     {
+      "position": "No: studies in trained runners find no difference in economy between young and older athletes.",
+      "sources": [
+       "tanaka2008"
+      ]
+     },
+     {
+      "position": "Sometimes: masters triathletes around 60 were about 11% less efficient in cycling and used about 11% more energy to run than triathletes of 28; masters also had lower cycling delta efficiency before strength training.",
+      "sources": [
+       "lepers2016",
+       "louis2012"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "mm-main"
+  },
+  {
+   "type": "question",
+   "item": "mm-runner"
+  },
+  {
+   "type": "concept",
+   "id": "mm-muscle",
+   "title": "Muscle: size, strength and quality",
+   "text": "Muscle shrinks and weakens with age. [Sarcopenia](g:sarcopenia) is the age-related loss of muscle mass; [dynapenia](g:dynapenia) is the loss of strength [[c:terms]].\n\nComparing young (18–45) with old (over 65) adults, [cross-sectional](g:cross-sectional-study) studies put the loss of mass at a median of 0.47% a year in men and 0.37% in women. In people aged 75, longitudinal studies show 0.8–1.0% a year in men and 0.6–0.7% in women [[c:mass]]. Strength falls faster: 3–4% a year in men and 2.5–3% in women, two to five times the loss of mass [[c:strength]].\n\nSo size is a poor guide to power. Lifelong exercisers do better: in seniors who trained for 30 years, muscle was more like that of adults than of sedentary peers [[c:zampieri]].",
+   "claims": [
+    {
+     "id": "terms",
+     "text": "Sarcopenia is the age-related loss of muscle or lean mass; dynapenia is the lack of strength.",
+     "grade": "moderate",
+     "sources": [
+      "mitchell2012"
+     ],
+     "evidence": [
+      {
+       "source": "mitchell2012",
+       "quote": "sarcopenia, the age-related loss of muscle or lean mass",
+       "level": "abstract"
+      },
+      {
+       "source": "mitchell2012",
+       "quote": "lack of strength, or dynapenia, is a more constant factor in compromised wellbeing in old age",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "mass",
+     "text": "Across studies the median loss of muscle mass is 0.47% a year in men and 0.37% in women; at 75 longitudinal rates are 0.64–0.70% a year in women and 0.80–0.98% in men.",
+     "grade": "moderate",
+     "sources": [
+      "mitchell2012"
+     ],
+     "evidence": [
+      {
+       "source": "mitchell2012",
+       "quote": "The median of values of rate of loss reported across studies is 0.47% per year in men and 0.37% per year in women.",
+       "level": "abstract"
+      },
+      {
+       "source": "mitchell2012",
+       "quote": "Longitudinal studies show that in people aged 75 years, muscle mass is lost at a rate of 0.64-0.70% per year in women",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "strength",
+     "text": "At age 75, strength is lost at 3–4% a year in men and 2.5–3% in women, 2–5 times faster than mass.",
+     "grade": "moderate",
+     "sources": [
+      "mitchell2012"
+     ],
+     "evidence": [
+      {
+       "source": "mitchell2012",
+       "quote": "Longitudinal studies show that at age 75 years, strength is lost at a rate of 3-4% per year in men and 2.5-3% per year in women.",
+       "level": "abstract"
+      },
+      {
+       "source": "mitchell2012",
+       "quote": "report a loss of strength 2-5 times faster than loss of mass",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "zampieri",
+     "text": "Muscle of senior sportsmen (about 70 y, 30 years of regular exercise) was more like that of adults than of age-matched sedentary people.",
+     "grade": "weak",
+     "sources": [
+      "zampieri2015"
+     ],
+     "evidence": [
+      {
+       "source": "zampieri2015",
+       "quote": "skeletal muscle of senior sportsmen is actually more similar to that of adults than to that of age-matched sedentaries",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mm-dyna"
+  },
+  {
+   "type": "question",
+   "item": "mm-stairs"
+  },
+  {
+   "type": "concept",
+   "id": "mm-anabolic",
+   "title": "Anabolic resistance",
+   "text": "Older muscle also answers building signals less well: [anabolic resistance](g:anabolic-resistance). Resting [muscle protein synthesis](g:muscle-protein-synthesis) did not differ between 72 older and 34 young men. After a protein meal, rates were 16% lower in older men than in young men (40 against 35), and the rise was more than 3 times as large in the young [[c:wall]].\n\nA re-analysis of earlier studies suggests older men need more protein per meal to reach the plateau: about 0.40 g·kg⁻¹ against 0.24 g·kg⁻¹ in young men, a borderline difference [[c:moore]]. Resistance exercise gives a blunted response too, but still works [[c:breen]]. The protein lessons gave young-adult numbers; the next lesson turns this into advice.",
+   "claims": [
+    {
+     "id": "wall",
+     "text": "Resting muscle protein synthesis was the same in young and older men, but after protein it was 16% lower in the older men, and more than 3 times as responsive in the young.",
+     "grade": "moderate",
+     "sources": [
+      "wall2015"
+     ],
+     "evidence": [
+      {
+       "source": "wall2015",
+       "quote": "Post-absorptive muscle protein synthesis rates did not differ significantly between the young and older group. Post-prandial muscle protein synthesis rates were 16% lower in the older subjects when compared with the young.",
+       "level": "abstract"
+      },
+      {
+       "source": "wall2015",
+       "quote": "Muscle protein synthesis rates were >3 fold more responsive to dietary protein ingestion in the young.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "moore",
+     "text": "Healthy older men need a greater relative protein dose in a single meal than young men to maximally stimulate muscle protein synthesis (0.40 against 0.24 g·kg⁻¹; the body-mass difference was borderline, p = 0.055).",
+     "grade": "weak",
+     "sources": [
+      "moore2015"
+     ],
+     "evidence": [
+      {
+       "source": "moore2015",
+       "quote": "healthy older men are less sensitive to low protein intakes and require a greater relative protein intake, in a single meal, than young men to maximally stimulate postprandial rates of MPS",
+       "level": "abstract"
+      },
+      {
+       "source": "moore2015",
+       "quote": "0.40 ± 0.19 and 0.24 ± 0.06 g/kg body mass (p = .055)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "breen",
+     "text": "Basal protein turnover is unchanged with healthy ageing; muscle is resistant to anabolic stimuli such as amino acids and resistance exercise.",
+     "grade": "moderate",
+     "sources": [
+      "breen2011"
+     ],
+     "evidence": [
+      {
+       "source": "breen2011",
+       "quote": "basal rates of muscle protein synthesis and breakdown are unchanged with advancing healthy age. Instead, it appears that the muscles of the elderly are resistant to normally robust anabolic stimuli such as amino acids and resistance exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mm-ar"
+  },
+  {
+   "type": "question",
+   "item": "mm-ar-read"
+  },
+  {
+   "type": "concept",
+   "id": "mm-split",
+   "title": "Ageing, or just less training?",
+   "text": "Three results help to split the two. First, people who trained for 50+ years kept young-like capillaries and aerobic enzymes in the thigh muscle [[c:keep-muscle]]. Second, a review said the declines appear mediated in large part by the lower intensity and volume of training older athletes manage [[c:train-red]]. Third, some falls ignore training: maximal heart rate, and part of VO₂max, which stayed far below that of young athletes even in lifelong exercisers.\n\nA fair summary: less training explains a large share and ageing the rest, and nobody can put exact numbers on the shares. Injury, family and work, and lower motivation all push training down [[c:why-less]].",
+   "claims": [
+    {
+     "id": "keep-muscle",
+     "text": "50+ years of aerobic exercise preserved capillarization and aerobic enzymes in thigh muscle.",
+     "grade": "moderate",
+     "sources": [
+      "gries2018"
+     ],
+     "evidence": [
+      {
+       "source": "gries2018",
+       "quote": "50+ years of aerobic exercise fully preserved capillarization and aerobic enzymes, regardless of intensity",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "train-red",
+     "text": "Declines in endurance performance and its determinants with ageing appear to be mediated in large part by a reduction in the intensity and volume of training.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "appear to be mediated in large part by a reduction in the intensity (velocity) and volume of the exercise that can be performed during training sessions",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "why-less",
+     "text": "Injuries, family and job demands and lower motivation probably reduce masters athletes' training intensity and volume.",
+     "grade": "weak",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Increased prevalence of exercise training-associated injuries among Masters athletes also probably contributes to their reduced training intensity and volume",
+       "level": "full-text"
+      },
+      {
+       "source": "tanaka2008",
+       "quote": "Increases in job- and family-related responsibilities may impinge on the availability of time and energy for the intensive training required to remain competitive",
+       "level": "full-text"
+      },
+      {
+       "source": "tanaka2008",
+       "quote": "the motivation to train may be reduced with advancing age among Masters athletes",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "mm-split-eval"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "VO₂max falls because maximal heart rate, stroke volume and a-vO₂ difference all fall; HRmax follows about 208 − 0.7 × age whatever the training.",
+    "The lactate threshold falls with age, maybe as a result of VO₂max; whether economy gets worse is debated.",
+    "Strength falls faster than muscle mass (2–5 times), so mass alone understates the loss.",
+    "Anabolic resistance: resting muscle protein synthesis is unchanged, but the response to protein and exercise is blunted.",
+    "Less training explains a large share of the decline and ageing the rest, with no exact split."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mm-hr-calc",
+   "concept": "mm-fick",
+   "bloom": "apply",
+   "sources": [
+    "tanaka2001"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the estimated maximal heart rate of a 70-year-old runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "159 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 70 = 49; 208 − 49 = 159."
+      },
+      {
+       "id": "b",
+       "text": "150 beats·min⁻¹",
+       "why": "That is 220 − age, the older formula, which underestimates in older adults."
+      },
+      {
+       "id": "c",
+       "text": "138 beats·min⁻¹",
+       "why": "That subtracts age from 208 and forgets the 0.7."
+      }
+     ],
+     "solution": "0.7 × 70 = 49. 208 − 49 = 159 beats·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the estimated maximal heart rate of a 55-year-old cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "165 beats·min⁻¹",
+       "why": "That is 220 − age, the older formula."
+      },
+      {
+       "id": "b",
+       "text": "153 beats·min⁻¹",
+       "why": "That subtracts age from 208 and forgets the 0.7."
+      },
+      {
+       "id": "c",
+       "text": "170 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 55 = 38.5; 208 − 38.5 = 169.5, about 170."
+      }
+     ],
+     "solution": "0.7 × 55 = 38.5. 208 − 38.5 = 169.5, about 170 beats·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "Using HRmax = 208 − 0.7 × age, what is the estimated maximal heart rate of a 48-year-old triathlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "172 beats·min⁻¹",
+       "why": "That is 220 − age, the older formula."
+      },
+      {
+       "id": "b",
+       "text": "174 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 0.7 × 48 = 33.6; 208 − 33.6 = 174.4, about 174."
+      },
+      {
+       "id": "c",
+       "text": "160 beats·min⁻¹",
+       "why": "That subtracts age from 208 and forgets the 0.7."
+      }
+     ],
+     "solution": "0.7 × 48 = 33.6. 208 − 33.6 = 174.4, about 174 beats·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "mm-hr-train",
+   "concept": "mm-fick",
+   "bloom": "apply",
+   "sources": [
+    "tanaka2001",
+    "pollock1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60-year-old cyclist trains 12 hours a week, a 60-year-old colleague does not exercise. Which gap in maximal heart rate would you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Almost none: training does not change the age fall",
+       "correct": true,
+       "why": "Right: HRmax depends on age and not on habitual activity."
+      },
+      {
+       "id": "b",
+       "text": "About 15 beats·min⁻¹ higher in the cyclist",
+       "why": "Training does not raise HRmax; the cyclist's VO₂max is higher through other terms."
+      },
+      {
+       "id": "c",
+       "text": "About 15 beats·min⁻¹ lower in the cyclist",
+       "why": "Fit people do not have lower maximal heart rates; it is the resting rate that is lower."
+      },
+      {
+       "id": "d",
+       "text": "A gap that widens each decade",
+       "why": "The slope is the same in sedentary and trained adults."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-main",
+   "concept": "mm-lt",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of the three main determinants of endurance performance does the review of masters athletes name as the main reason performance falls with age?",
+     "options": [
+      {
+       "id": "a",
+       "text": "VO₂max",
+       "correct": true,
+       "why": "Right: a progressive fall in VO₂max is the primary mechanism named."
+      },
+      {
+       "id": "b",
+       "text": "Running economy",
+       "why": "The review found economy does not change in endurance-trained adults."
+      },
+      {
+       "id": "c",
+       "text": "Lactate threshold",
+       "why": "It also falls, but this may be secondary to the fall in VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "Body fat",
+       "why": "Body composition is not one of the three determinants."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-runner",
+   "concept": "mm-lt",
+   "bloom": "analyse",
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 58-year-old runner's lab results: running economy unchanged since age 38, VO₂max down 12%, lactate threshold at the same share of VO₂max. What happens to the speed at the lactate threshold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It falls, because the same share of a smaller VO₂max is a lower speed",
+       "correct": true,
+       "why": "Right: the threshold sits at the same percent, but of less oxygen uptake, at the same cost per km."
+      },
+      {
+       "id": "b",
+       "text": "It stays the same, because economy is unchanged",
+       "why": "Equal economy sets the cost per km, but a smaller VO₂max still caps how fast it can be paid."
+      },
+      {
+       "id": "c",
+       "text": "It rises, because threshold is a share of VO₂max",
+       "why": "The share is the same; a share of a smaller number is smaller."
+      },
+      {
+       "id": "d",
+       "text": "It cannot be predicted from these three numbers",
+       "why": "These are the three main determinants, so they predict the direction."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-dyna",
+   "concept": "mm-muscle",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "mitchell2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the name for the loss of muscle strength with age, as opposed to the loss of mass?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sarcopenia",
+       "why": "Sarcopenia is the loss of muscle mass."
+      },
+      {
+       "id": "b",
+       "text": "Dynapenia",
+       "correct": true,
+       "why": "Right: dynapenia is the loss of strength."
+      },
+      {
+       "id": "c",
+       "text": "Atrophy of the heart",
+       "why": "This is not what the term names."
+      },
+      {
+       "id": "d",
+       "text": "Anabolic resistance",
+       "why": "That names a blunted response to protein and exercise, not the loss itself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-stairs",
+   "concept": "mm-muscle",
+   "bloom": "apply",
+   "sources": [
+    "mitchell2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 76-year-old ex-runner's lean mass is the same as 3 years ago, yet he climbs stairs more slowly and his leg press maximum fell. Best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The scan must be wrong: no mass loss means no strength loss",
+       "why": "The two follow different paths; strength falls faster."
+      },
+      {
+       "id": "b",
+       "text": "Only arm muscles weaken with age",
+       "why": "Leg strength falls too, and matters most for function."
+      },
+      {
+       "id": "c",
+       "text": "Strength can fall faster than mass, as muscle quality drops",
+       "correct": true,
+       "why": "Right: strength is lost 2–5 times faster than mass, so mass can look steady."
+      },
+      {
+       "id": "d",
+       "text": "Strength loss always shows first as lost mass",
+       "why": "Mass and strength decline at different rates."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-ar",
+   "concept": "mm-anabolic",
+   "bloom": "understand",
+   "sources": [
+    "wall2015",
+    "breen2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the main difference in muscle protein synthesis between healthy young and older men?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Resting rates are the same; the rise after protein is smaller in older men",
+       "correct": true,
+       "why": "Right: this blunted response is anabolic resistance."
+      },
+      {
+       "id": "b",
+       "text": "Resting rates are about 16% lower in older men",
+       "why": "The 16% gap is after eating; resting rates did not differ."
+      },
+      {
+       "id": "c",
+       "text": "Older men make no new muscle protein after a meal",
+       "why": "They still respond, only by less."
+      },
+      {
+       "id": "d",
+       "text": "Resting rates are higher in older men to make up for it",
+       "why": "Resting rates were similar, not higher."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-ar-read",
+   "concept": "mm-anabolic",
+   "bloom": "analyse",
+   "sources": [
+    "moore2015",
+    "wall2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study gives young and older men 20 g of protein and finds a smaller rise in muscle protein synthesis in the older men. What fits this result, though does not prove it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Older men cannot use protein at all",
+       "why": "They respond, only less at low doses."
+      },
+      {
+       "id": "b",
+       "text": "A 20 g dose sits below the older men's plateau, so more per meal may help",
+       "correct": true,
+       "why": "Right: older men seemed to reach the plateau at a larger relative dose, but one dose cannot show it."
+      },
+      {
+       "id": "c",
+       "text": "Resting muscle protein synthesis must be lower in older men",
+       "why": "Resting rates did not differ."
+      },
+      {
+       "id": "d",
+       "text": "Protein should be avoided in older age",
+       "why": "The evidence points to needing more, not less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mm-split-eval",
+   "concept": "mm-split",
+   "bloom": "evaluate",
+   "sources": [
+    "tanaka2008",
+    "pollock1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 60-year-old runner is 15% slower than at 40, and has cut training volume by 40% and dropped all intervals. What can you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Part of the slowing is likely training, part ageing; the split cannot be measured from this",
+       "correct": true,
+       "why": "Right: less training explains a large share, but ageing effects like lower HRmax remain."
+      },
+      {
+       "id": "b",
+       "text": "All of it is ageing, so training changes would not help",
+       "why": "Reduced intensity and volume are named as a large share of the fall."
+      },
+      {
+       "id": "c",
+       "text": "All of it is lost training, so he can return to 40-year-old times",
+       "why": "HRmax and part of VO₂max fall whatever the training."
+      },
+      {
+       "id": "d",
+       "text": "Ageing cannot play a part in an athlete who trains",
+       "why": "Athletes' VO₂max also falls with age."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

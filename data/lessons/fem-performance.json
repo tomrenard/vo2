@@ -1,0 +1,608 @@
+{
+ "id": "fem-performance",
+ "module": "t5-female",
+ "title": "Cycle phase and performance",
+ "goal": "Say what the evidence shows about cycle phase and endurance and strength performance, why the average hides individuals, and how temperature and fuel use may differ.",
+ "requires": [
+  "fem-cycle"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "credible-interval",
+    "thermoregulation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pooled-effect",
+   "title": "What the biggest review found",
+   "text": "McNulty and colleagues searched for studies of eumenorrheic women tested in two or more phases: 78 studies, 51 in the main pooled comparison. Early follicular phase (bleeding) was compared with all others. Performance there was trivially lower: [effect size](g:effect-size) **−0.06**, 95% [credible interval](g:credible-interval) −0.16 to 0.04, for endurance and strength alike [[c:fem-trivial]]. The interval includes zero, so 'no effect' is still a plausible answer. The largest gap, early vs late follicular, was −0.14, still small.\n\nThe authors rated the evidence 'low' and said general guidelines cannot be formed [[c:fem-no-guideline]]. In short: the average effect is small, and the studies are too weak and too varied to tell any one woman what to do.",
+   "claims": [
+    {
+     "id": "fem-trivial",
+     "text": "Across studies, performance was trivially lower in the early follicular phase than in other phases, for endurance and strength outcomes.",
+     "grade": "moderate",
+     "sources": [
+      "mcnulty2020"
+     ],
+     "evidence": [
+      {
+       "source": "mcnulty2020",
+       "quote": "The three-level hierarchical model indicated a trivial effect for both endurance- and strength-based outcomes, with reduced exercise performance observed in the early follicular phase of the MC",
+       "level": "abstract"
+      },
+      {
+       "source": "mcnulty2020",
+       "quote": "The largest effect was identified between the early follicular and the late follicular phases of the MC",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fem-no-guideline",
+     "text": "The effect is too small, too variable between studies and too poorly studied for general guidelines on training by cycle phase.",
+     "grade": "moderate",
+     "sources": [
+      "mcnulty2020"
+     ],
+     "evidence": [
+      {
+       "source": "mcnulty2020",
+       "quote": "Due to the trivial effect size, the large between-study variation and the number of poor-quality studies included in this review, general guidelines on exercise performance across the MC cannot be formed",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fem-trivial-meaning"
+  },
+  {
+   "type": "question",
+   "item": "fem-ci-read"
+  },
+  {
+   "type": "question",
+   "item": "fem-coach"
+  },
+  {
+   "type": "concept",
+   "id": "individual",
+   "title": "Averages hide individuals",
+   "text": "A tiny average can sit on top of large personal differences: one woman may feel clearly worse in one phase, another sees nothing. Because of this, McNulty and colleagues advise a **personalised approach**, judged on each woman's own response across the cycle [[c:fem-personal]].\n\nA practical way (our suggestion, not a tested protocol), over three or more cycles:\n\n1. Log day 1 of each bleed.\n2. Each day note sleep, mood and how hard a fixed session felt ([RPE](g:rpe)).\n3. Look for a pattern that repeats in the same phase every cycle.\n\nOne cycle is noise. A pattern that repeats is information. No repeating pattern means no special plan.",
+   "claims": [
+    {
+     "id": "fem-personal",
+     "text": "The review recommends a personalised approach based on each woman's own performance response across the cycle.",
+     "grade": "moderate",
+     "sources": [
+      "mcnulty2020"
+     ],
+     "evidence": [
+      {
+       "source": "mcnulty2020",
+       "quote": "it is recommended that a personalised approach should be taken based on each individual's response to exercise performance across the MC",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fem-individual"
+  },
+  {
+   "type": "question",
+   "item": "fem-track"
+  },
+  {
+   "type": "concept",
+   "id": "thermo",
+   "title": "Temperature: oestrogen cools, progesterone warms",
+   "text": "The hormones act on the body's temperature control ([thermoregulation](g:thermoregulation)). Oestrogens generally promote [vasodilation](g:vasodilation), heat loss and lower body temperature, and progesterone generally does the opposite [[c:fem-thermo]]. After ovulation, with progesterone high, you would therefore expect a slightly warmer [core temperature](g:core-temperature).\n\nMen and women respond alike to exercise and heat once fitness and body size match [[c:fem-sex-thermo]]. So heat is not a 'women's problem': the hormone effect is a personal shift on top of the usual heat factors, such as acclimation and fluid.",
+   "claims": [
+    {
+     "id": "fem-thermo",
+     "text": "Oestrogens generally promote heat loss and lower body temperature; progesterone generally has the opposite effect.",
+     "grade": "moderate",
+     "sources": [
+      "charkoudian2014"
+     ],
+     "evidence": [
+      {
+       "source": "charkoudian2014",
+       "quote": "Estrogens generally promote vasodilation, heat dissipation, and lower body temperature and progesterone or progestins generally have the opposite effect.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fem-sex-thermo",
+     "text": "With fitness and body size accounted for, men and women show no major differences in thermoregulation during exercise or heating.",
+     "grade": "moderate",
+     "sources": [
+      "charkoudian2014"
+     ],
+     "evidence": [
+      {
+       "source": "charkoudian2014",
+       "quote": "men and women do not exhibit major quantitative differences in physiological thermoregulatory responses to exercise and/or body heating when factors such as fitness and body size are taken into account",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "fem-thermo-dir"
+  },
+  {
+   "type": "question",
+   "item": "fem-thermo-apply"
+  },
+  {
+   "type": "concept",
+   "id": "fuel",
+   "title": "Fuel use: a tilt, not a switch",
+   "text": "Oosthuyse and Bosch reviewed how the hormones may shift fuel use. In the luteal phase, oestrogen seems to cut reliance on muscle [glycogen](g:glycogen) and to raise fat supply, though human [tracer](g:tracer) studies have not yet shown the fat part; progesterone often works against it [[c:fem-fuel]]. A [carbohydrate-loading](g:carbohydrate-loading) diet can lift early follicular glycogen to luteal levels [[c:fem-carbload]].\n\nDiet and energy demand confound many studies. Whether the shifts change results is disputed.",
+   "claims": [
+    {
+     "id": "fem-fuel",
+     "text": "Luteal-phase oestrogen may reduce reliance on muscle glycogen and raise free fatty acid availability; human tracer studies have not yet supported the fat part. Progesterone often appears to act against oestrogen.",
+     "grade": "weak",
+     "sources": [
+      "oosthuyse2010"
+     ],
+     "evidence": [
+      {
+       "source": "oosthuyse2010",
+       "quote": "Oestrogen concentrations of the luteal phase reduce reliance on muscle glycogen during exercise and although not as yet supported by human tracer studies, oestrogen increases free fatty acid availability and oxidative capacity in exercise, favouring endurance performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "oosthuyse2010",
+       "quote": "The literature suggests that oestrogen may promote endurance performance by altering carbohydrate, fat and protein metabolism, with progesterone often appearing to act antagonistically.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fem-carbload",
+     "text": "Carbohydrate loading can raise muscle glycogen in the early follicular phase to luteal-phase values.",
+     "grade": "weak",
+     "sources": [
+      "oosthuyse2010"
+     ],
+     "evidence": [
+      {
+       "source": "oosthuyse2010",
+       "quote": "following a carbo-loading diet will super-compensate muscle glycogen stores in the early follicular phase to values attained in the luteal phase",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Do phase differences in fuel use change endurance performance?",
+    "sides": [
+     {
+      "position": "Plausibly yes: hormone effects on carbohydrate and fat use may explain why some studies find phase differences in endurance performance.",
+      "sources": [
+       "oosthuyse2010"
+      ]
+     },
+     {
+      "position": "Hardly: pooled performance effects are trivial, and the evidence is low quality.",
+      "sources": [
+       "mcnulty2020"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "fem-fuel-dir"
+  },
+  {
+   "type": "question",
+   "item": "fem-fuel-appraise"
+  },
+  {
+   "type": "question",
+   "item": "fem-fuel-ultra"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "A 78-study review found a trivial average performance effect of cycle phase (−0.06, interval spanning zero), with low-quality evidence.",
+    "The authors advise a personalised approach: log several cycles and act only on a pattern that repeats.",
+    "Oestrogen generally helps heat loss and progesterone works against it, but men and women handle heat alike when fitness and size match.",
+    "Oestrogen may spare glycogen and favour fat, but the evidence is weak; do not change fuelling by phase without your own pattern."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "fem-trivial-meaning",
+   "concept": "pooled-effect",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How did the largest review describe the average effect of cycle phase on endurance and strength outcomes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Trivial, with slightly lower performance early in the cycle",
+       "correct": true,
+       "why": "Right: a pooled effect of −0.06, with a credible interval spanning zero."
+      },
+      {
+       "id": "b",
+       "text": "Large, with the best performance in the luteal phase",
+       "why": "The review found no large effect and no luteal advantage."
+      },
+      {
+       "id": "c",
+       "text": "Moderate for strength but none for endurance",
+       "why": "The trivial effect applied to both strength and endurance outcomes."
+      },
+      {
+       "id": "d",
+       "text": "None at all, in every phase comparison",
+       "why": "There was a small, trivial early follicular dip; the largest phase gap was −0.14."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-ci-read",
+   "concept": "pooled-effect",
+   "bloom": "apply",
+   "sources": [
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A pooled effect for early follicular vs other phases is −0.06 with a 95% credible interval of −0.16 to 0.04. What does the interval tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No effect is still plausible, as the interval includes zero",
+       "correct": true,
+       "why": "Right: both small harm and small benefit are within the interval."
+      },
+      {
+       "id": "b",
+       "text": "Performance is 6% lower in that phase",
+       "why": "An effect size is in standardised units, not a percentage."
+      },
+      {
+       "id": "c",
+       "text": "The effect is certainly negative",
+       "why": "The interval includes positive values up to 0.04."
+      },
+      {
+       "id": "d",
+       "text": "The effect is large, because the interval is wide",
+       "why": "A width of 0.2 on this scale is small, and the estimate itself is trivial."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-coach",
+   "concept": "pooled-effect",
+   "bloom": "evaluate",
+   "sources": [
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cycling coach puts every rider in a recovery week during bleeding and the hardest block just after, citing the McNulty review. What is the best appraisal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not supported: the average effect was trivial and varied between studies",
+       "correct": true,
+       "why": "Right: the authors advised an individual approach."
+      },
+      {
+       "id": "b",
+       "text": "Supported: the review found a large drop in performance during bleeding",
+       "why": "The pooled drop was trivial, not large."
+      },
+      {
+       "id": "c",
+       "text": "Supported: the drop was the same size in every study it pooled",
+       "why": "Between-study variation was large."
+      },
+      {
+       "id": "d",
+       "text": "Supported: the review rated the quality of its evidence as high",
+       "why": "The evidence was rated low quality."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-individual",
+   "concept": "individual",
+   "bloom": "understand",
+   "sources": [
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why can a trivial average effect still matter to one athlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An average can hide people who respond more strongly than the group",
+       "correct": true,
+       "why": "Right: the group mean says little about each woman."
+      },
+      {
+       "id": "b",
+       "text": "Trivial effects grow into large ones with training",
+       "why": "Nothing in the review says effects grow with training."
+      },
+      {
+       "id": "c",
+       "text": "The average is calculated only from the worst phase",
+       "why": "The average pools comparisons across studies and phases."
+      },
+      {
+       "id": "d",
+       "text": "A trivial effect means the study was done wrongly",
+       "why": "Trivial describes the size, not the quality of the work."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-track",
+   "concept": "individual",
+   "bloom": "analyse",
+   "sources": [
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete logs three cycles. On days 1–3 her RPE for the same bike session is higher in cycles 1 and 3, and normal in cycle 2. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The pattern is unclear; keep logging before changing her plan",
+       "correct": true,
+       "why": "Right: two of three cycles is a weak pattern and one cycle is noise."
+      },
+      {
+       "id": "b",
+       "text": "Proven: bleeding days hurt her, so cut sessions then",
+       "why": "Two of three cycles cannot prove it, and a cut would be a guess."
+      },
+      {
+       "id": "c",
+       "text": "Cycle 2 was wrong, so drop it from the data",
+       "why": "Dropping the cycle that disagrees is cherry-picking."
+      },
+      {
+       "id": "d",
+       "text": "Stop tracking: cycle phase does not matter to her",
+       "why": "Too early to say either way with three cycles."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-thermo-dir",
+   "concept": "thermo",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "charkoudian2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which hormone generally promotes vasodilation and heat loss?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Oestrogen",
+       "correct": true,
+       "why": "Right: oestrogens generally lower body temperature."
+      },
+      {
+       "id": "b",
+       "text": "Progesterone",
+       "why": "Progesterone generally has the opposite effect, favouring a warmer core."
+      },
+      {
+       "id": "c",
+       "text": "LH",
+       "why": "LH triggers ovulation; it is not a temperature-control hormone."
+      },
+      {
+       "id": "d",
+       "text": "Insulin",
+       "why": "Insulin handles blood glucose, not heat loss."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-thermo-apply",
+   "concept": "thermo",
+   "bloom": "apply",
+   "sources": [
+    "charkoudian2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete will run a hot half-Ironman in the mid-luteal phase. What is the sensible expectation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One more heat factor for her to check, on top of acclimation and fluid",
+       "correct": true,
+       "why": "Right: hormones shift temperature control a little, personally."
+      },
+      {
+       "id": "b",
+       "text": "Women cannot race in heat during the luteal phase",
+       "why": "Men and women handle heat alike once fitness and body size match."
+      },
+      {
+       "id": "c",
+       "text": "No effect: hormones do not touch temperature control",
+       "why": "Hormones do influence temperature control."
+      },
+      {
+       "id": "d",
+       "text": "A bigger heat risk in the follicular phase, as oestrogen is low",
+       "why": "This reverses the direction: oestrogen helps heat loss, and progesterone works against it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-fuel-dir",
+   "concept": "fuel",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "oosthuyse2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the review propose luteal-phase oestrogen does to fuel use?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less reliance on muscle glycogen, more fat supply",
+       "correct": true,
+       "why": "Right: with the fat part not yet shown in human tracer studies."
+      },
+      {
+       "id": "b",
+       "text": "More muscle glycogen use, less fat supply",
+       "why": "This reverses the proposed direction."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: only progesterone affects fuel use",
+       "why": "Oestrogen is the hormone proposed to spare glycogen."
+      },
+      {
+       "id": "d",
+       "text": "It stops carbohydrate use during exercise",
+       "why": "Carbohydrate use falls a little in the proposal, it does not stop."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-fuel-appraise",
+   "concept": "fuel",
+   "bloom": "evaluate",
+   "sources": [
+    "oosthuyse2010",
+    "mcnulty2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A blog says: \"In the luteal phase eat less carbohydrate, you burn fat.\" How strong is the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Weak: it rests on mechanism, and human tracer data are missing",
+       "correct": true,
+       "why": "Right: diet can also equalise glycogen, and a mechanistic review is not proof that a diet change helps."
+      },
+      {
+       "id": "b",
+       "text": "Strong: human tracer studies have shown it",
+       "why": "The review says tracer studies in humans have not yet supported the fat part."
+      },
+      {
+       "id": "c",
+       "text": "Strong: the McNulty review found large luteal advantages",
+       "why": "McNulty found trivial effects."
+      },
+      {
+       "id": "d",
+       "text": "Irrelevant: oestrogen does not affect fuel use",
+       "why": "Oestrogen is proposed to shift fuel use; the doubt is how much it matters."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fem-fuel-ultra",
+   "concept": "fuel",
+   "bloom": "apply",
+   "sources": [
+    "oosthuyse2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An ultra runner feels low on energy in the mid-luteal phase of two races. What is the best next step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep her fuelling and log several cycles before changing it",
+       "correct": true,
+       "why": "Right: the evidence is too weak for a phase rule, and her own pattern is the test."
+      },
+      {
+       "id": "b",
+       "text": "Cut carbohydrate in the luteal phase, since she burns more fat",
+       "why": "The fat shift is unproven in humans and may be small."
+      },
+      {
+       "id": "c",
+       "text": "Avoid racing in the luteal phase from now on",
+       "why": "Performance effects were trivial on average, so avoidance has no support."
+      },
+      {
+       "id": "d",
+       "text": "Double her fat intake during luteal-phase races",
+       "why": "Nothing in the evidence supports this."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

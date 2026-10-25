@@ -1,0 +1,466 @@
+{
+ "id": "imm-basics",
+ "module": "t5-immunity",
+ "title": "Your immune system and one hard session",
+ "goal": "Describe innate and adaptive immunity in plain words, and what one hard bout of exercise does to the immune cells in your blood.",
+ "requires": [
+  "inj-return"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "innate-immunity",
+    "adaptive-immunity",
+    "leukocyte",
+    "neutrophil",
+    "lymphocyte",
+    "nk-cell",
+    "leukocytosis",
+    "lymphopenia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "imb-arms",
+   "title": "Two lines of defence",
+   "text": "Your body has two lines of defence. [Innate immunity](g:innate-immunity) is fast and general: skin, mucus, and cells such as [neutrophils](g:neutrophil) and [NK cells](g:nk-cell) that attack anything that looks foreign. It reacts within minutes to hours and has no memory.\n\n[Adaptive immunity](g:adaptive-immunity) is slow and specific, run by [lymphocytes](g:lymphocyte). It takes days to learn a new germ, then makes tailored antibodies and keeps a memory, so the next meeting is faster.\n\nThink of innate as generic firewall rules, and adaptive as a signature database that learns from each attack.\n\nBoth lines use [leukocytes](g:leukocyte), the white blood cells. Exercise changes how many of them float in your blood.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "imb-arms-which"
+  },
+  {
+   "type": "question",
+   "item": "imb-arms-flu"
+  },
+  {
+   "type": "concept",
+   "id": "imb-pattern",
+   "title": "One hard session shakes the blood counts",
+   "text": "Hard exercise raises [adrenaline](g:adrenaline) and [cortisol](g:cortisol). Stress hormones are thought to drive what follows [[c:stress-hormones]]. During the effort, leukocytes in the blood rise ([leukocytosis](g:leukocytosis)): cells are released from vessel walls and organs, not newly made.\n\nIn the hours of recovery the two main groups part ways [[c:count-pattern]]:\n\n| cell group | after a hard session |\n|---|---|\n| neutrophils | stay above resting level |\n| lymphocytes | fall below resting level ([lymphopenia](g:lymphopenia)) |\n\nThe fall in lymphocytes is the number that started the whole debate about weak immunity after exercise.",
+   "claims": [
+    {
+     "id": "stress-hormones",
+     "text": "Stress hormones are thought to redeploy immune cells after exercise.",
+     "grade": "weak",
+     "sources": [
+      "campbell2018"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2018",
+       "quote": "sentinel cells of the immune system are redeployed by exercise-induced perturbations to stress hormones",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "count-pattern",
+     "text": "After exercise, circulating neutrophil and monocyte counts rise and circulating lymphocyte count falls during recovery.",
+     "grade": "strong",
+     "sources": [
+      "peake2017"
+     ],
+     "evidence": [
+      {
+       "source": "peake2017",
+       "quote": "Exercise increases circulating neutrophil and monocyte counts and reduces circulating lymphocyte count during recovery.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imb-pattern-blood"
+  },
+  {
+   "type": "question",
+   "item": "imb-pattern-source"
+  },
+  {
+   "type": "question",
+   "item": "imb-pattern-hormones"
+  },
+  {
+   "type": "concept",
+   "id": "imb-where",
+   "title": "Where do the lymphocytes go?",
+   "text": "The fall is not random. It hits lymphocytes with strong attack skills, such as NK cells and some T cells [[c:effector-egress]]. They most likely move to places where germs enter, such as the lungs and gut. Many researchers read this as a patrol, not damage.\n\nThe limit is this: in humans the move is inferred from blood counts. Direct proof of where the cells go comes mainly from animal studies [[c:no-human-proof]].\n\nSo a blood sample after exercise is a poor window on immunity. It sees only the cells in the blood. The same drop could be a patrol or a loss, and counts alone cannot tell which.",
+   "claims": [
+    {
+     "id": "effector-egress",
+     "text": "The post-exercise lymphopenia comes mainly from cells with potent effector functions leaving the blood.",
+     "grade": "moderate",
+     "sources": [
+      "peake2017"
+     ],
+     "evidence": [
+      {
+       "source": "peake2017",
+       "quote": "This lymphopenia results from preferential egress of lymphocyte subtypes with potent effector functions",
+       "level": "abstract"
+      },
+      {
+       "source": "peake2017",
+       "quote": "These lymphocytes most likely translocate to peripheral sites of potential antigen encounter (e.g., lungs and gut).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "no-human-proof",
+     "text": "Movement of immune cells to peripheral tissues after exercise has not been shown directly in humans.",
+     "grade": "moderate",
+     "sources": [
+      "campbell2018"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2018",
+       "quote": "it has not been shown in humans that exercise",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imb-where-sample"
+  },
+  {
+   "type": "question",
+   "item": "imb-where-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "imb-dose",
+   "title": "Bigger session, bigger swing",
+   "text": "The size of the swing follows the size of the stress. The immune system is very responsive to exercise, and the extent and duration of the change reflect the physiological stress of the workload [[c:dose]]. A 30 to 45 minute walk barely moves the counts; a marathon moves them a lot.\n\nFor you this means that a long, hard session or race is the case where the debate in the next lesson matters, and an easy spin is not.",
+   "claims": [
+    {
+     "id": "dose",
+     "text": "The extent and duration of the immune response to exercise reflect the physiological stress imposed by the workload.",
+     "grade": "moderate",
+     "sources": [
+      "nieman2019"
+     ],
+     "evidence": [
+      {
+       "source": "nieman2019",
+       "quote": "The immune system is very responsive to exercise, with the extent and duration reflecting the degree of physiological stress imposed by the workload.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imb-dose-compare"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Innate immunity is fast, general and has no memory; adaptive immunity is slow, specific and remembers.",
+    "One hard session raises leukocytes during exercise, then neutrophils stay up and lymphocytes fall below rest in recovery.",
+    "The lymphocytes that leave the blood are mostly attack-ready types, probably moving to lungs and gut; this is inferred, not proven in humans.",
+    "A blood count is a snapshot of cells in the blood, so it cannot show whether defence got weaker.",
+    "The bigger the session, the bigger and longer the swing."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "imb-arms-which",
+   "concept": "imb-arms",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "nieman2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which line of defence learns one specific germ and remembers it for next time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Adaptive immunity, run by lymphocytes",
+       "correct": true,
+       "why": "Right: it is slow to start but specific and has memory."
+      },
+      {
+       "id": "b",
+       "text": "Innate immunity, run by neutrophils",
+       "why": "Innate cells react the same way every time and keep no memory."
+      },
+      {
+       "id": "c",
+       "text": "The skin and mucus barriers",
+       "why": "Barriers are part of innate defence and do not learn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-arms-flu",
+   "concept": "imb-arms",
+   "bloom": "apply",
+   "sources": [
+    "nieman2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist catches one flu strain, and two winters later meets the same strain and is only mildly ill. Which line of defence best explains the milder illness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Innate: neutrophils learned the strain the first time",
+       "why": "Neutrophils are innate cells and keep no memory of a germ."
+      },
+      {
+       "id": "b",
+       "text": "Adaptive: memory lymphocytes and antibodies from the first illness",
+       "correct": true,
+       "why": "Right: adaptive immunity remembers a germ it has met."
+      },
+      {
+       "id": "c",
+       "text": "Innate: the skin barrier grew thicker after the illness",
+       "why": "Barriers do not change to fit one germ."
+      },
+      {
+       "id": "d",
+       "text": "Neither: milder illness is only about fitness",
+       "why": "Fitness may help a little, but a milder repeat illness is the signature of immune memory."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-pattern-blood",
+   "concept": "imb-pattern",
+   "bloom": "understand",
+   "sources": [
+    "peake2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two hours after a hard 3 h ride, what pattern do blood tests usually show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "All leukocyte types below rest",
+       "why": "Neutrophils stay high; only lymphocytes fall. 'Everything drops' is the myth."
+      },
+      {
+       "id": "b",
+       "text": "Lymphocytes above rest, neutrophils below rest",
+       "why": "This is the reverse of the real pattern."
+      },
+      {
+       "id": "c",
+       "text": "Neutrophils above rest, lymphocytes below rest",
+       "correct": true,
+       "why": "Right: this is the classic recovery pattern."
+      },
+      {
+       "id": "d",
+       "text": "No change unless the rider is ill",
+       "why": "A hard session changes the counts in healthy people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-pattern-source",
+   "concept": "imb-pattern",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "peake2017",
+    "campbell2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do leukocyte counts rise in the blood during hard exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The bone marrow makes billions of new cells within minutes",
+       "why": "Making cells takes far longer than the effort lasts."
+      },
+      {
+       "id": "b",
+       "text": "Cells are released from vessel walls and organs into the blood",
+       "correct": true,
+       "why": "Right: the cells were already in the body and are mobilised."
+      },
+      {
+       "id": "c",
+       "text": "The body has detected an infection and calls for help",
+       "why": "This is a stress response and needs no infection."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-pattern-hormones",
+   "concept": "imb-pattern",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "campbell2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which two hormones are thought to drive the shift of immune cells during exercise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Adrenaline and cortisol",
+       "correct": true,
+       "why": "Right: both rise with hard exercise and act on immune cells."
+      },
+      {
+       "id": "b",
+       "text": "Insulin and glucagon",
+       "why": "These manage blood glucose and are not the main drivers here."
+      },
+      {
+       "id": "c",
+       "text": "Oestrogen and testosterone",
+       "why": "Sex hormones do not drive the acute shift."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-where-sample",
+   "concept": "imb-where",
+   "bloom": "analyse",
+   "sources": [
+    "peake2017",
+    "campbell2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider's blood test 1 h after a 3 h race shows 30% fewer lymphocytes than before the race. Which reading fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cells likely moved out; the count alone cannot show weak defence",
+       "correct": true,
+       "why": "Right: a blood count sees only cells in the blood."
+      },
+      {
+       "id": "b",
+       "text": "The race switched off the immune system for the day",
+       "why": "Fewer cells in the blood do not prove fewer cells in the body, or poor function."
+      },
+      {
+       "id": "c",
+       "text": "The race destroyed 30% of the lymphocytes",
+       "why": "Evidence points to movement to tissues, not destruction."
+      },
+      {
+       "id": "d",
+       "text": "The rider has a new infection",
+       "why": "A drop like this is normal after a hard effort and is not a sign of infection."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-where-appraise",
+   "concept": "imb-where",
+   "bloom": "evaluate",
+   "sources": [
+    "peake2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study takes blood 1 h after a marathon and reports lower lymphocyte counts and weaker NK cell function in the blood sample. What most limits the claim that the runners' immunity was suppressed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A lower count is by itself proof of lower defence",
+       "why": "A lower blood count can come from a move of cells, so it is not proof."
+      },
+      {
+       "id": "b",
+       "text": "Marathon runners are too fit to show any immune change",
+       "why": "They do show changes: the swing is large after a marathon."
+      },
+      {
+       "id": "c",
+       "text": "One blood sample can never be analysed",
+       "why": "Blood samples are valid; the problem is what the number can tell."
+      },
+      {
+       "id": "d",
+       "text": "The blood holds only part of the cells, and many left for tissues",
+       "correct": true,
+       "why": "Right: blood findings can be biased by large shifts between blood and tissues."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imb-dose-compare",
+   "concept": "imb-dose",
+   "bloom": "apply",
+   "sources": [
+    "nieman2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete does a 40 min easy swim on Monday and a 3 h hard ride on Saturday. Which session should cause the bigger and longer immune swing, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The ride, because the swing follows the stress of the session",
+       "correct": true,
+       "why": "Right: extent and duration track the physiological stress."
+      },
+      {
+       "id": "b",
+       "text": "The swim, because swimming works the whole body",
+       "why": "Body parts used do not set the swing; the physiological stress does."
+      },
+      {
+       "id": "c",
+       "text": "Both equally, because any exercise gives the same swing",
+       "why": "The response is graded: more stress gives a bigger swing."
+      },
+      {
+       "id": "d",
+       "text": "The swim, because easy sessions give cells more time to move",
+       "why": "Short easy sessions barely move the counts."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

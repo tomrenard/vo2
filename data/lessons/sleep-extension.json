@@ -1,0 +1,700 @@
+{
+ "id": "sleep-extension",
+ "module": "t5-sleep",
+ "title": "Sleep extension, naps and sleep hygiene",
+ "goal": "Explain what sleep extension, naps and sleep hygiene can do for athletes, and how strong the evidence behind each is.",
+ "requires": [
+  "sleep-athletes"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sleep-extension",
+    "sleep-hygiene",
+    "sleep-inertia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "se-mah",
+   "title": "Sleep extension in basketball players",
+   "text": "[Sleep extension](g:sleep-extension) means spending more time in bed on purpose. In 11 college basketball players, a 5 to 7 week extension (aim: 10 h in bed) added 111 min of sleep a night. Timed sprints got faster (16.2 to 15.5 s), and free-throw and 3-point accuracy each rose by about 9% [[c:mah-ext]].\n\nThe weak point is design: there was no control group. The players could have improved from practice, motivation or the season, with or without extra sleep. Read it as a promising signal, not proof.",
+   "claims": [
+    {
+     "id": "mah-ext",
+     "text": "Sleep extension raised nightly sleep by about 111 min and was followed by faster sprints and better shooting in 11 basketball players, with no control group.",
+     "grade": "weak",
+     "sources": [
+      "mah2011"
+     ],
+     "evidence": [
+      {
+       "source": "mah2011",
+       "quote": "Total objective nightly sleep time increased during sleep extension compared to baseline by 110.9 ± 79.7 min (P < 0.001). Subjects demonstrated a faster timed sprint following sleep extension (16.2 ± 0.61 sec at baseline vs. 15.5 ± 0.54 sec at end of sleep extension, P < 0.001).",
+       "level": "abstract"
+      },
+      {
+       "source": "mah2011",
+       "quote": "Shooting accuracy improved, with free throw percentage increasing by 9% and 3-point field goal percentage increasing by 9.2% (P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "se-mah-limits"
+  },
+  {
+   "type": "example",
+   "id": "se-pct-example",
+   "title": "Percent improvement in a time",
+   "problem": "A runner's 5 km time falls from 40.0 min to 38.0 min. By what percent did the time improve?",
+   "steps": [
+    "Percent change = (new − old) ÷ old × 100, with the old time as the base.",
+    "(38.0 − 40.0) ÷ 40.0 = −2.0 ÷ 40.0 = −0.05.",
+    "−5%: the time fell by 5%, which is a 5% faster run. A lower time is better."
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "se-roberts",
+   "title": "Extension in endurance cyclists",
+   "text": "Nine endurance cyclists and triathletes did three conditions in balanced order: 3 nights with time in bed cut by 30%, normal, or extended by 30%. Extension gave 8.2 to 8.6 h of sleep against 6.5 to 7.1 h normally. A 1 h time trial was faster on day 4 after extension (56.8 vs 58.7 min). On day 3 of restriction, after 2 short nights, it was slower (60.4 vs 58.8 min) [[c:roberts-ext]].\n\nRPE did not differ between conditions, so riders went faster at the same rated effort. Because each rider did all three conditions, the design is strong for its size, but n = 9 is small.",
+   "claims": [
+    {
+     "id": "roberts-ext",
+     "text": "Three nights of sleep extension led to a faster time trial on day 4 (n = 9 cyclists), while restriction slowed the trial; RPE did not differ.",
+     "grade": "weak",
+     "sources": [
+      "roberts2019b"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2019b",
+       "quote": "Compared with NS, TT performance was slower (P < 0.02) on D3 of SR (58.8 ± 2.5 vs 60.4 ± 3.7 min) and faster (P < 0.02) on D4 of SE (58.7 ± 3.4 vs 56.8 ± 3.1 min).",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2019b",
+       "quote": "RPE was not different between or within conditions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "se-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "se-design"
+  },
+  {
+   "type": "question",
+   "item": "se-rpe"
+  },
+  {
+   "type": "concept",
+   "id": "se-naps",
+   "title": "Naps",
+   "text": "A systematic review of 37 studies (moderate quality) found that napping may help athletes' physical and cognitive performance, mood and night-time sleep [[c:nap-benefit]]. But the studies reported nap length, timing and frequency inconsistently.\n\nThe suggested window is a nap of 20 to 90 min between 13:00 and 16:00, with 30 min to shake off [sleep inertia](g:sleep-inertia) before training or competition [[c:nap-window]]. That window rests on messy data, so treat it as a starting point and try it in training, not before a key race.",
+   "claims": [
+    {
+     "id": "nap-benefit",
+     "text": "Napping may benefit athletes' physical and cognitive performance, perceived fatigue, mood and night-time sleep (37 studies of moderate quality).",
+     "grade": "moderate",
+     "sources": [
+      "lastella2021"
+     ],
+     "evidence": [
+      {
+       "source": "lastella2021",
+       "quote": "Napping may be beneficial for a range of outcomes that benefit athletes (eg, physical and cognitive performance, perceptual measures, psychological state and night-time sleep).",
+       "level": "abstract"
+      },
+      {
+       "source": "lastella2021",
+       "quote": "Thirty-seven studies were identified of moderate quality. Most studies did not include consistent information regarding nap frequency, duration, and timing.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "nap-window",
+     "text": "A nap of 20 to 90 min between 13:00 and 16:00, with 30 min allowed to clear sleep inertia, is suggested.",
+     "grade": "weak",
+     "sources": [
+      "lastella2021"
+     ],
+     "evidence": [
+      {
+       "source": "lastella2021",
+       "quote": "Athletes may consider napping between 20 to 90 min in duration and between 13:00 and 16:00 hours.",
+       "level": "abstract"
+      },
+      {
+       "source": "lastella2021",
+       "quote": "Finally, athletes should allow 30 min to reduce sleep inertia prior to training or competition to obtain better performance outcomes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "se-nap-timing"
+  },
+  {
+   "type": "question",
+   "item": "se-nap-evidence"
+  },
+  {
+   "type": "concept",
+   "id": "se-hygiene",
+   "title": "Sleep hygiene and education",
+   "text": "[Sleep hygiene](g:sleep-hygiene) means habits and room conditions that support sleep: regular times, a dark cool room, no late caffeine (typical advice). The consensus statement offers a sleep 'toolbox' for practitioners, covering education and screening [[c:toolbox]].\n\nDoes advice change sleep? In a trial of 66 track-and-field athletes, written or verbal advice for 10 days raised their Sleep Hygiene Index score. Measured sleep did not change significantly, though bedtimes drifted earlier and sleep rose slightly [[c:hygiene-rct]]. Better habits do not guarantee more sleep, at least in the short run.",
+   "claims": [
+    {
+     "id": "toolbox",
+     "text": "The consensus offers a sleep toolbox for practitioners, including sleep education and screening, to reduce athletes' sleep risk factors.",
+     "grade": "strong",
+     "sources": [
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2021",
+       "quote": "This expert consensus culminates with a sleep toolbox for practitioners (eg, covering sleep education and screening) to mitigate these risk factors and optimise athlete sleep.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hygiene-rct",
+     "text": "Sleep hygiene advice improved hygiene scores but not measured sleep significantly in 66 athletes over ten days.",
+     "grade": "weak",
+     "sources": [
+      "borghi2026"
+     ],
+     "evidence": [
+      {
+       "source": "borghi2026",
+       "quote": "No statistical differences were found between and within groups in training and sleep parameters, but SHI scores improved significantly in the intervention groups between T0 and T1, with differences compared to the control group.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "se-hyg-def"
+  },
+  {
+   "type": "question",
+   "item": "se-hyg-rct"
+  },
+  {
+   "type": "concept",
+   "id": "se-evidence",
+   "title": "How strong is the evidence?",
+   "text": "A systematic review of 10 studies (218 athletes aged 18 to 24) found that sleep extension had the most beneficial effects on later performance [[c:ext-review]]. The consensus statement still says research is needed on napping and sleep extension, including 'banking' sleep before a planned short night [[c:banking]].\n\nWhy the caution: few studies, small samples, only young athletes (18 to 24), no way to blind people to their sleep, and some with no control group, like the basketball study. Evidence is encouraging, not settled.",
+   "claims": [
+    {
+     "id": "ext-review",
+     "text": "A systematic review of 10 studies (218 athletes) found sleep extension had the most beneficial effects on later performance.",
+     "grade": "weak",
+     "sources": [
+      "bonnar2018"
+     ],
+     "evidence": [
+      {
+       "source": "bonnar2018",
+       "quote": "Evidence suggests that sleep extension had the most beneficial effects on subsequent performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "bonnar2018",
+       "quote": "Ten studies met our inclusion criteria comprising a total of 218 participants in the age range of 18-24 years with athletes from various sports (e.g., swimming, soccer, basketball, tennis).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "banking",
+     "text": "Banking sleep before a planned sleep-deprived night is a new concept that may improve performance; more research is needed.",
+     "grade": "weak",
+     "sources": [
+      "vitale2019sleep",
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "vitale2019sleep",
+       "quote": "Banking sleep (sleep extension prior to night of intentional sleep deprivation before sporting event) is a new concept that may also improve performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "walsh2021",
+       "quote": "Research is needed into the benefits of napping and sleep extension (eg, banking sleep).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does sleep extension improve athletic performance?",
+    "sides": [
+     {
+      "position": "Promising: small studies in basketball players and cyclists show faster sprints and time trials after extension.",
+      "sources": [
+       "mah2011",
+       "roberts2019b",
+       "bonnar2018"
+      ]
+     },
+     {
+      "position": "Not settled: few small, young samples, some with no control group; the consensus calls for more research on extension and napping.",
+      "sources": [
+       "walsh2021",
+       "bonnar2018"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "se-banking"
+  },
+  {
+   "type": "question",
+   "item": "se-decision"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Sleep extension (more time in bed) was followed by faster sprints in basketball players (no control group) and a faster time trial in cyclists (n = 9, crossover).",
+    "RPE did not differ in the cycling study: riders went faster at the same rated effort.",
+    "Naps of 20 to 90 min between 13:00 and 16:00, with 30 min to clear sleep inertia, are a starting point, based on messy data.",
+    "Sleep hygiene advice improved habits but not measured sleep significantly in one 10-day trial.",
+    "Extension looks promising but the evidence is small and young-athlete based; banking sleep is unproven. Individual tailoring is advised."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "se-mah-limits",
+   "concept": "se-mah",
+   "bloom": "evaluate",
+   "sources": [
+    "mah2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which limit most weakens the claim 'sleep extension made the basketball players faster'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Extra sleep cannot be measured objectively",
+       "why": "Sleep was measured objectively; this is not the limit."
+      },
+      {
+       "id": "b",
+       "text": "11 players is too many to analyse reliably",
+       "why": "Small samples are the problem, not large ones."
+      },
+      {
+       "id": "c",
+       "text": "Sprint time is not a basketball measure",
+       "why": "Timed sprints and shooting are sport-specific measures."
+      },
+      {
+       "id": "d",
+       "text": "No control group, so other causes could explain gains",
+       "correct": true,
+       "why": "Right: without a control group, other causes cannot be ruled out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-calc",
+   "concept": "se-roberts",
+   "bloom": "apply",
+   "sources": [
+    "roberts2019b",
+    "mah2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 1 h time trial took 58.7 min after normal sleep and 56.8 min after extension. What is the percent change in time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−3.2%",
+       "correct": true,
+       "why": "Right: (56.8 − 58.7) ÷ 58.7 = −0.032, a faster ride."
+      },
+      {
+       "id": "b",
+       "text": "−3.3%",
+       "why": "You divided the 1.9 min difference by the new time, 56.8, not 58.7."
+      },
+      {
+       "id": "c",
+       "text": "−96.8%",
+       "why": "That is the share left (56.8 ÷ 58.7), not the change."
+      },
+      {
+       "id": "d",
+       "text": "+3.2%",
+       "why": "The sign is wrong: a shorter time is an improvement."
+      }
+     ],
+     "solution": "(56.8 − 58.7) ÷ 58.7 = −1.9 ÷ 58.7 = −0.032, so about −3.2% (faster)."
+    },
+    {
+     "id": "b",
+     "stem": "A basketball sprint took 16.2 s at baseline and 15.5 s after extension. What is the percent change in time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−0.7%",
+       "why": "You read the 0.7 s difference as a percent."
+      },
+      {
+       "id": "b",
+       "text": "−4.5%",
+       "why": "You divided the 0.7 s difference by the new time, 15.5, not 16.2."
+      },
+      {
+       "id": "c",
+       "text": "−4.3%",
+       "correct": true,
+       "why": "Right: (15.5 − 16.2) ÷ 16.2 = −0.043, a faster sprint."
+      },
+      {
+       "id": "d",
+       "text": "+4.3%",
+       "why": "The sign is wrong: a shorter time is an improvement."
+      }
+     ],
+     "solution": "(15.5 − 16.2) ÷ 16.2 = −0.7 ÷ 16.2 = −0.043, so about −4.3% (faster)."
+    }
+   ]
+  },
+  {
+   "id": "se-design",
+   "concept": "se-roberts",
+   "bloom": "analyse",
+   "sources": [
+    "roberts2019b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the cycling study each rider did restriction, normal sleep and extension, in balanced order. Why does that design help?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It removes the need for statistics",
+       "why": "Statistics were still needed to compare conditions."
+      },
+      {
+       "id": "b",
+       "text": "It blinds riders to their sleep condition",
+       "why": "Riders know how long they slept, so blinding is not possible."
+      },
+      {
+       "id": "c",
+       "text": "It proves extension works in all athletes",
+       "why": "Nine riders cannot show that for all athletes."
+      },
+      {
+       "id": "d",
+       "text": "Each rider is his own control and order effects cancel",
+       "correct": true,
+       "why": "Right: this removes fitness differences between people and balances order."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-rpe",
+   "concept": "se-roberts",
+   "bloom": "analyse",
+   "sources": [
+    "roberts2019b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After extension the time trial was faster but RPE was the same. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Riders went faster at the same rated effort",
+       "correct": true,
+       "why": "Right: the same perceived effort produced a faster time."
+      },
+      {
+       "id": "b",
+       "text": "Extension made the ride feel easier",
+       "why": "RPE did not differ, so it did not feel easier."
+      },
+      {
+       "id": "c",
+       "text": "Riders pushed harder and felt more tired",
+       "why": "RPE did not rise, so perceived effort was the same."
+      },
+      {
+       "id": "d",
+       "text": "The result is invalid because RPE was not measured",
+       "why": "RPE was monitored throughout each trial."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-nap-timing",
+   "concept": "se-naps",
+   "bloom": "apply",
+   "sources": [
+    "lastella2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has a hard session at 16:30 and a free hour from 13:00. Which nap plan matches the review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sleep 13:00 to 13:40, then leave at least 30 min before the session",
+       "correct": true,
+       "why": "Right: 20 to 90 min inside the 13:00 to 16:00 window, plus 30 min to clear inertia."
+      },
+      {
+       "id": "b",
+       "text": "Nap 15:45 to 16:25 and go straight to the session",
+       "why": "No time to clear sleep inertia, so the session may suffer."
+      },
+      {
+       "id": "c",
+       "text": "Nap 3 h from 13:00 to sleep deeply",
+       "why": "Longer than the 20 to 90 min suggested."
+      },
+      {
+       "id": "d",
+       "text": "Skip naps: they ruin night sleep",
+       "why": "The review found naps may supplement sleep without harming quality."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-nap-evidence",
+   "concept": "se-naps",
+   "bloom": "understand",
+   "sources": [
+    "lastella2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How solid is the evidence for naps in athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Proven by many large trials: naps help performance",
+       "why": "The review found 37 studies of moderate quality, not many large RCTs."
+      },
+      {
+       "id": "b",
+       "text": "Moderate-quality studies with patchy reporting: promising, unsettled",
+       "correct": true,
+       "why": "Right: that is the review's summary."
+      },
+      {
+       "id": "c",
+       "text": "None: no study has tested naps in athletes",
+       "why": "Thirty-seven studies were found."
+      },
+      {
+       "id": "d",
+       "text": "Strong: naps clearly harm night-time sleep",
+       "why": "The review found naps can supplement sleep without harming quality."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-hyg-def",
+   "concept": "se-hygiene",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "vitale2019sleep",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is sleep hygiene?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Washing before bed to lower body temperature",
+       "why": "Not what the term means; it covers sleep habits and the room."
+      },
+      {
+       "id": "b",
+       "text": "Habits that support sleep, like regular times and a dark room",
+       "correct": true,
+       "why": "Right: the everyday habits around sleep."
+      },
+      {
+       "id": "c",
+       "text": "Taking melatonin or supplements to induce sleep",
+       "why": "That is a nutritional aid, not hygiene."
+      },
+      {
+       "id": "d",
+       "text": "Sleeping longer than needed to bank hours",
+       "why": "That is sleep extension."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-hyg-rct",
+   "concept": "se-hygiene",
+   "bloom": "analyse",
+   "sources": [
+    "borghi2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the track-and-field trial, hygiene advice raised the Sleep Hygiene Index but not measured sleep. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Advice worked: sleep rose significantly",
+       "why": "No significant differences in measured sleep were found."
+      },
+      {
+       "id": "b",
+       "text": "Advice failed and should be dropped",
+       "why": "Only 10 days were tested, and the trends pointed to earlier bedtimes."
+      },
+      {
+       "id": "c",
+       "text": "Habits improved; an effect on measured sleep was small and not shown in 10 days",
+       "correct": true,
+       "why": "Right: habits changed, but longer trials are needed to see sleep change."
+      },
+      {
+       "id": "d",
+       "text": "Actigraphy is useless, so the trial tells us nothing",
+       "why": "Actigraphy has limits, but the trial still informs about habits and trends."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-banking",
+   "concept": "se-evidence",
+   "bloom": "evaluate",
+   "sources": [
+    "vitale2019sleep",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a night-time ultra start, a runner plans 10 h in bed for 3 nights ('banking'). What is the best view?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Worth trying in training first; the evidence is thin",
+       "correct": true,
+       "why": "Right: banking is new, and research is still needed."
+      },
+      {
+       "id": "b",
+       "text": "Proven to cancel the loss of the sleepless night",
+       "why": "No study shows banking cancels the effect."
+      },
+      {
+       "id": "c",
+       "text": "Useless: the body cannot store sleep",
+       "why": "Not shown either way: banking may help, and research is needed."
+      },
+      {
+       "id": "d",
+       "text": "Dangerous: extension harms health",
+       "why": "No source here suggests harm from extra time in bed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se-decision",
+   "concept": "se-evidence",
+   "bloom": "evaluate",
+   "sources": [
+    "walsh2021",
+    "bonnar2018",
+    "roberts2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A club cyclist has 06:00 group rides three days a week and sleeps 6 h. Which first step best fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Protect time in bed on those nights, add a short early-afternoon nap, and track how he performs",
+       "correct": true,
+       "why": "Right: early starts cut sleep, and extension and naps are the best-supported tools, though evidence is small."
+      },
+      {
+       "id": "b",
+       "text": "Buy a wearable and chase deep-sleep minutes",
+       "why": "Stage minutes from wearables are unreliable."
+      },
+      {
+       "id": "c",
+       "text": "Take a supplement, since nutrition is the best-proven route",
+       "why": "Evidence for sleep supplements is thin, and extension had the most benefit in the review."
+      },
+      {
+       "id": "d",
+       "text": "Drop all morning rides, since early training is never worth it",
+       "why": "Too strong: the problem is lost sleep, which an earlier bedtime can partly offset."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

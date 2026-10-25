@@ -1,0 +1,722 @@
+{
+ "id": "sleep-loss",
+ "module": "t5-sleep",
+ "title": "Sleep loss: performance, effort and metabolism",
+ "goal": "Explain how sleep deprivation and restriction affect endurance performance, effort and metabolism, and how strong that evidence is.",
+ "requires": [
+  "sleep-basics"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sleep-deprivation",
+    "sleep-restriction",
+    "glucose-tolerance"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sl-types",
+   "title": "Not all sleep loss is the same",
+   "text": "[Sleep deprivation](g:sleep-deprivation) means no sleep for a night or more. [Sleep restriction](g:sleep-restriction) means less sleep than you need, for example 4 to 5 h in bed. Restriction has two forms: *early* (you fall asleep later than usual) and *late* (you wake earlier than usual, as with a dawn start).\n\nMost lab studies use one night of total deprivation. Athletes rarely get that. They get partial restriction over 1 to 3 nights, the real-world case where the effect on performance is still unclear [[c:partial-unclear]]. Keep that gap in mind for every result below.",
+   "claims": [
+    {
+     "id": "partial-unclear",
+     "text": "Performance falls after a night or more without sleep; the effect of partial restriction over 1 to 3 nights is unclear.",
+     "grade": "moderate",
+     "sources": [
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2021",
+       "quote": "Athletic performance is reduced by a night or more without sleep, but the influence on performance of partial sleep restriction over 1-3 nights, a more real-world scenario, remains unclear.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sl-types"
+  },
+  {
+   "type": "concept",
+   "id": "sl-pooled",
+   "title": "The pooled effect on performance",
+   "text": "A meta-analysis pooled 69 publications (227 results; 959 participants, 89% men). On average, sleep loss (6 h or less in 24 h) cut exercise performance by 7.56% (95% [confidence interval](g:confidence-interval) -11.9 to -3.13) [[c:craven-mean]]. Every type of task fell: anaerobic power, strength, intervals, endurance and skill.\n\nBut the studies disagreed widely (I² = 98.1%, a measure of how much results differ beyond chance). So 7.56% averages very different results. It is not a number to expect on race day.",
+   "claims": [
+    {
+     "id": "craven-mean",
+     "text": "Sleep loss lowered exercise performance by a mean of 7.56% (95% CI -11.9 to -3.13), with large differences between studies.",
+     "grade": "strong",
+     "sources": [
+      "craven2022"
+     ],
+     "evidence": [
+      {
+       "source": "craven2022",
+       "quote": "Results indicated a negative impact of sleep loss on the percentage change (%Δ) in exercise performance (n = 959 [89%] male; mean %Δ =  - 7.56%, 95% CI - 11.9 to - 3.13, p = 0.001, I2 = 98.1%).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sl-ci"
+  },
+  {
+   "type": "concept",
+   "id": "sl-pattern",
+   "title": "Which pattern of loss, and when you race",
+   "text": "The pattern of loss mattered. Consistent harm appeared only after deprivation and *late* restriction (waking early). Early restriction (going to bed late) gave no consistent harm [[c:craven-pattern]]. For those two patterns, each extra hour awake before the task cost about 0.4% [[c:craven-hour]].\n\nTime of day mattered too: evening tasks were reliably hurt, morning tasks were largely unaffected [[c:craven-tod]]. The authors advise: if loss is unavoidable, avoid deprivation and late restriction, and put the key effort in the morning.\n\nA likely reason (our inference): morning efforts come few hours after waking, so little pressure has built.",
+   "claims": [
+    {
+     "id": "craven-pattern",
+     "text": "Consistent negative effects appeared only with sleep deprivation and late restriction, not early restriction.",
+     "grade": "moderate",
+     "sources": [
+      "craven2022"
+     ],
+     "evidence": [
+      {
+       "source": "craven2022",
+       "quote": "Subgroup analyses indicated that the pattern of sleep loss (i.e., deprivation, early and late restriction) preceding exercise is an important factor, with consistent negative effects only observed with deprivation and late-restriction protocols.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "craven-hour",
+     "text": "With deprivation or late restriction, performance fell about 0.4% for every hour awake before the task.",
+     "grade": "moderate",
+     "sources": [
+      "craven2022"
+     ],
+     "evidence": [
+      {
+       "source": "craven2022",
+       "quote": "(~ 0.4% decrease for every hour awake prior to exercise)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "craven-tod",
+     "text": "After sleep loss, evening tasks were consistently impaired while morning tasks were largely unaffected.",
+     "grade": "moderate",
+     "sources": [
+      "craven2022"
+     ],
+     "evidence": [
+      {
+       "source": "craven2022",
+       "quote": "The negative effects of sleep loss on different exercise tasks performed in the PM were consistent, while tasks performed in the AM were largely unaffected.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sl-pattern"
+  },
+  {
+   "type": "question",
+   "item": "sl-tod"
+  },
+  {
+   "type": "concept",
+   "id": "sl-effort",
+   "title": "Endurance and the feeling of effort",
+   "text": "In one study, 12 active men did a 40 min ride and a ride to failure after a night without sleep, and again after a normal night. After no sleep they quit sooner (1137 vs 1236 s) and rated the 40 min ride harder [[c:temesi-effects]]. Reaction time was slower; the tests of muscle drive showed no extra difference between conditions.\n\nBut other studies did not find higher effort ratings [[c:rpe-mixed]]. In 10 team-sport men, 30 h without sleep slowed day-2 sprints and cut self-paced distance, yet [RPE](g:rpe) did not change.",
+   "claims": [
+    {
+     "id": "temesi-effects",
+     "text": "After one night without sleep, time to failure in cycling was shorter and RPE during submaximal cycling was higher (12 men).",
+     "grade": "weak",
+     "sources": [
+      "temesi2013"
+     ],
+     "evidence": [
+      {
+       "source": "temesi2013",
+       "quote": "After SD, exercise time to task failure was shorter (1137 ± 253 vs 1236 ± 282 s, P = 0.013) and RPE during 40 min submaximal cycling was greater (P = 0.009) than that in CO.",
+       "level": "abstract"
+      },
+      {
+       "source": "temesi2013",
+       "quote": "No other differences in neuromuscular function or cognitive control were observed between conditions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rpe-mixed",
+     "text": "Studies disagree on whether sleep loss raises perceived effort.",
+     "grade": "disputed",
+     "sources": [
+      "skein2011",
+      "roberts2019b",
+      "temesi2013"
+     ],
+     "evidence": [
+      {
+       "source": "skein2011",
+       "quote": "Sleep loss did not affect RPE but negatively affected POMS ratings (P<0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2019b",
+       "quote": "RPE was not different between or within conditions.",
+       "level": "abstract"
+      },
+      {
+       "source": "temesi2013",
+       "quote": "One night of complete SD resulted in decreased time to task failure and cognitive performance and higher RPE compared with the control condition",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does sleep loss make the same effort feel harder?",
+    "sides": [
+     {
+      "position": "Yes: after one sleepless night riders rated a 40 min ride harder and quit sooner (12 men).",
+      "sources": [
+       "temesi2013"
+      ]
+     },
+     {
+      "position": "Not clearly: RPE did not change after 30 h awake in team-sport men, or after restricted sleep in cyclists.",
+      "sources": [
+       "skein2011",
+       "roberts2019b"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "sl-endurance"
+  },
+  {
+   "type": "question",
+   "item": "sl-rpe-limits"
+  },
+  {
+   "type": "concept",
+   "id": "sl-metabolism",
+   "title": "Fuel, hormones and recovery",
+   "text": "After 6 nights of 4 h in bed, 11 young men had lower [glucose tolerance](g:glucose-tolerance), higher evening [cortisol](g:cortisol) and more [sympathetic](g:sympathetic) activity than after 6 nights of 12 h in bed [[c:spiegel-endo]]. A review notes that poor sleep could tilt the autonomic balance in a way that looks like [overtraining](g:overtraining-syndrome) symptoms [[c:fullagar-ans]].\n\nFuel matters too: the men with no sleep started day 2 with about 24% less muscle [glycogen](g:glycogen) (209 vs 274 mmol·kg⁻¹ dry mass) [[c:skein-glycogen]]. That links to the recovery-fuel lessons. Not everything fails: 30 h awake did not change immune responses to hard exercise in 11 men [[c:ricardo-immune]] (immunity gets its own module).",
+   "claims": [
+    {
+     "id": "spiegel-endo",
+     "text": "Six nights of 4 h in bed lowered glucose tolerance and raised evening cortisol and sympathetic activity (11 men).",
+     "grade": "weak",
+     "sources": [
+      "spiegel1999"
+     ],
+     "evidence": [
+      {
+       "source": "spiegel1999",
+       "quote": "Glucose tolerance was lower in the sleep-debt condition than in the fully rested condition (p<0.02), as were thyrotropin concentrations (p<0.01). Evening cortisol concentrations were raised (p=0.0001) and activity of the sympathetic nervous system was increased in the sleep-debt condition (p<0.02).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fullagar-ans",
+     "text": "Reduced sleep quality and quantity could unbalance the autonomic nervous system, simulating overtraining symptoms.",
+     "grade": "weak",
+     "sources": [
+      "fullagar2015"
+     ],
+     "evidence": [
+      {
+       "source": "fullagar2015",
+       "quote": "it appears a reduction in sleep quality and quantity could result in an autonomic nervous system imbalance, simulating symptoms of the overtraining syndrome",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "skein-glycogen",
+     "text": "After 30 h without sleep, pre-exercise muscle glycogen was lower and sprints slower on day 2 (10 men).",
+     "grade": "weak",
+     "sources": [
+      "skein2011"
+     ],
+     "evidence": [
+      {
+       "source": "skein2011",
+       "quote": "Muscle glycogen concentration was lower before exercise on SDEP2 (209±60 mmol·kg dry weight) compared with CONT2 (274±54 mmol·kg dry weight, P=0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "skein2011",
+       "quote": "Mean sprint times were slower on SDEP2 (2.78±0.17 s) compared with SDEP1 (2.70±0.16 s) and CONT2 (2.74±0.15 s, P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ricardo-immune",
+     "text": "30 h of sleep deprivation did not change immune responses to submaximal or strenuous exercise (11 men).",
+     "grade": "weak",
+     "sources": [
+      "ricardo2008"
+     ],
+     "evidence": [
+      {
+       "source": "ricardo2008",
+       "quote": "In conclusion, a 30 h period of sleep deprivation does not alter leukocyte trafficking, neutrophil degranulation or S-IgA responses either at rest or after submaximal and strenuous exercise.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sl-spiegel"
+  },
+  {
+   "type": "question",
+   "item": "sl-sympathetic"
+  },
+  {
+   "type": "example",
+   "id": "sl-pct-example",
+   "title": "Percent change",
+   "problem": "A rider's 20 min test power drops from 250 W to 235 W after poor sleep. What is the percent change?",
+   "steps": [
+    "Percent change = (new − old) ÷ old × 100. The base is the old (normal) value.",
+    "(235 − 250) ÷ 250 = −15 ÷ 250 = −0.06.",
+    "−0.06 × 100 = −6%. Dividing by the new value (235) would give 6.4%, which is wrong."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sl-pct-calc",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Deprivation (no sleep) and restriction (less sleep) differ; real athletes mostly face partial restriction, where evidence is thinner.",
+    "Pooled, sleep loss cut performance by 7.56% on average, but studies varied hugely: do not expect that number on race day.",
+    "Harm was consistent after deprivation and late restriction, about 0.4% per extra hour awake; morning tasks were largely spared.",
+    "One sleepless night shortened a cycling test and raised RPE in one study; others found no RPE change, so this is disputed.",
+    "Sleep debt lowered glucose tolerance, raised evening cortisol and sympathetic activity, and cut glycogen in small trials."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sl-types",
+   "concept": "sl-types",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "craven2022",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner goes to bed at 01:30 instead of 23:00 but still wakes at 07:00. Which kind of sleep loss is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Late restriction: waking earlier than usual",
+       "why": "She woke at her usual time, so this is not late restriction."
+      },
+      {
+       "id": "b",
+       "text": "Sleep deprivation: no sleep at all",
+       "why": "She still slept about 5.5 h, so it is restriction, not deprivation."
+      },
+      {
+       "id": "c",
+       "text": "Early restriction: falling asleep later than usual",
+       "correct": true,
+       "why": "Right: shorter sleep from a delayed sleep onset."
+      },
+      {
+       "id": "d",
+       "text": "No sleep loss: only the wake time counts",
+       "why": "Less total sleep is sleep loss, whatever the wake time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-ci",
+   "concept": "sl-pooled",
+   "bloom": "analyse",
+   "sources": [
+    "craven2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The pooled change was -7.56% with a 95% CI of -11.9 to -3.13. What does the interval tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Every athlete loses between 3% and 12% after sleep loss",
+       "why": "The interval is about the average, not about each athlete."
+      },
+      {
+       "id": "b",
+       "text": "The effect is likely zero, since the interval is wide",
+       "why": "The interval does not include zero, so the average effect is negative."
+      },
+      {
+       "id": "c",
+       "text": "The average effect is negative, but its size is uncertain",
+       "correct": true,
+       "why": "Right: the interval excludes zero and spans a wide range of sizes."
+      },
+      {
+       "id": "d",
+       "text": "You should expect to lose 7.56% in your next race",
+       "why": "The mean hides large differences between studies (I² = 98.1%)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-pattern",
+   "concept": "sl-pattern",
+   "bloom": "apply",
+   "sources": [
+    "craven2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before an evening ride, cyclist A went to bed 3 h late and cyclist B woke 3 h early. Which is likelier to be hurt, per the pooled data?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: going to bed late is the worst pattern",
+       "why": "Early restriction (late bedtime) gave no consistent harm in the pooled data."
+      },
+      {
+       "id": "b",
+       "text": "Both lose exactly 7.56%",
+       "why": "That is an average over many studies, not a rule for individuals."
+      },
+      {
+       "id": "c",
+       "text": "Neither: only a night with no sleep hurts",
+       "why": "Late restriction also gave consistent negative effects."
+      },
+      {
+       "id": "d",
+       "text": "B: late restriction (early waking) gave consistent harm",
+       "correct": true,
+       "why": "Right: only deprivation and late restriction were consistently negative."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-tod",
+   "concept": "sl-pattern",
+   "bloom": "apply",
+   "sources": [
+    "craven2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After the same short night, a rider can race a time trial at 08:00 or at 18:00. What do the pooled data suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The morning effort is hurt more: the body is least ready after waking",
+       "why": "Morning tasks were largely unaffected, not hurt more."
+      },
+      {
+       "id": "b",
+       "text": "No difference: time of day never mattered",
+       "why": "Evening tasks were consistently impaired and morning tasks were not."
+      },
+      {
+       "id": "c",
+       "text": "The evening effort is more reliably impaired; the morning one was largely spared",
+       "correct": true,
+       "why": "Right: this is the AM versus PM result."
+      },
+      {
+       "id": "d",
+       "text": "Both are equally hurt, since only hours awake count",
+       "why": "Hours awake counted, but clock time also changed the result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-endurance",
+   "concept": "sl-effort",
+   "bloom": "analyse",
+   "sources": [
+    "temesi2013",
+    "skein2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a sleepless night a cyclist quits a test about 8% sooner and rates the first 40 min harder. Which reading fits Temesi's study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Central fatigue clearly grew, so the brain set the limit",
+       "why": "The study found no extra neuromuscular difference between conditions."
+      },
+      {
+       "id": "b",
+       "text": "The same work felt harder and he quit sooner, with no muscle-drive difference",
+       "correct": true,
+       "why": "Right: higher RPE and shorter time, without an extra neuromuscular difference."
+      },
+      {
+       "id": "c",
+       "text": "Muscle damage from the sleepless night cut his force output",
+       "why": "The study did not test muscle damage, and force tests did not differ between conditions."
+      },
+      {
+       "id": "d",
+       "text": "Only reaction time changed; cycling was unaffected",
+       "why": "Time to failure was shorter and RPE higher too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-rpe-limits",
+   "concept": "sl-effort",
+   "bloom": "evaluate",
+   "sources": [
+    "temesi2013",
+    "skein2011",
+    "roberts2019b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which limit most weakens the claim 'sleep loss raises perceived effort in athletes'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "RPE is the athlete's own rating, so it can never be studied",
+       "why": "RPE is a standard scale; it can be studied, as these trials did."
+      },
+      {
+       "id": "b",
+       "text": "Crossover designs cannot show effects within people",
+       "why": "Crossover designs are well suited to within-person effects."
+      },
+      {
+       "id": "c",
+       "text": "Sleep loss was not measured in any of the studies",
+       "why": "Sleep loss was set by the design in each study."
+      },
+      {
+       "id": "d",
+       "text": "The results disagree, and the trials were small (12 or fewer) and mostly in men",
+       "correct": true,
+       "why": "Right: mixed results from small samples leave the claim unsettled."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-spiegel",
+   "concept": "sl-metabolism",
+   "bloom": "understand",
+   "sources": [
+    "spiegel1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 6 nights of 4 h in bed, what did Spiegel's young men show compared with full recovery?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Higher glucose tolerance and lower evening cortisol",
+       "why": "Both are reversed: glucose tolerance fell and evening cortisol rose."
+      },
+      {
+       "id": "b",
+       "text": "Lower glucose tolerance, higher evening cortisol, more sympathetic activity",
+       "correct": true,
+       "why": "Right: all three changed in the sleep-debt direction."
+      },
+      {
+       "id": "c",
+       "text": "No hormone changes; only mood changed",
+       "why": "Metabolic and endocrine measures changed clearly."
+      },
+      {
+       "id": "d",
+       "text": "Lower glucose tolerance but less cortisol",
+       "why": "Cortisol rose in the evening, not fell."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-sympathetic",
+   "concept": "sl-metabolism",
+   "bloom": "apply",
+   "sources": [
+    "spiegel1999",
+    "fullagar2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Spiegel's men showed more sympathetic activity after sleep debt. What does that mean for autonomic balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It tilts towards 'fight or flight' and away from 'rest and digest'",
+       "correct": true,
+       "why": "Right: sympathetic up means the balance leans away from the parasympathetic side."
+      },
+      {
+       "id": "b",
+       "text": "The parasympathetic system takes over and the heart slows",
+       "why": "That is the opposite direction."
+      },
+      {
+       "id": "c",
+       "text": "The autonomic system switches off",
+       "why": "The sympathetic system became more active, not inactive."
+      },
+      {
+       "id": "d",
+       "text": "Only cortisol changed; the autonomic system did not",
+       "why": "Sympathetic activity itself was raised."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sl-pct-calc",
+   "concept": "sl-metabolism",
+   "bloom": "apply",
+   "sources": [
+    "skein2011",
+    "temesi2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Muscle glycogen before exercise was 274 mmol·kg⁻¹ dry mass after normal sleep and 209 after no sleep. What is the percent change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−31%",
+       "why": "You divided the 65 difference by the lower value, 209, not 274."
+      },
+      {
+       "id": "b",
+       "text": "−24%",
+       "correct": true,
+       "why": "Right: (209 − 274) ÷ 274 = −0.237."
+      },
+      {
+       "id": "c",
+       "text": "−76%",
+       "why": "That is the share left (209 ÷ 274), not the change."
+      },
+      {
+       "id": "d",
+       "text": "−65%",
+       "why": "That is the raw difference, not a percent."
+      }
+     ],
+     "solution": "(209 − 274) ÷ 274 = −65 ÷ 274 = −0.237, so about −24%."
+    },
+    {
+     "id": "b",
+     "stem": "Time to failure was 1236 s after normal sleep and 1137 s after no sleep. What is the percent change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "−8.7%",
+       "why": "You divided the 99 s difference by the new time, 1137 s."
+      },
+      {
+       "id": "b",
+       "text": "−92%",
+       "why": "That is the share left (1137 ÷ 1236), not the change."
+      },
+      {
+       "id": "c",
+       "text": "−99%",
+       "why": "That is the raw difference in seconds, not a percent."
+      },
+      {
+       "id": "d",
+       "text": "−8.0%",
+       "correct": true,
+       "why": "Right: (1137 − 1236) ÷ 1236 = −0.080."
+      }
+     ],
+     "solution": "(1137 − 1236) ÷ 1236 = −99 ÷ 1236 = −0.080, so about −8.0%."
+    },
+    {
+     "id": "c",
+     "stem": "A 15 m sprint took 2.74 s after normal sleep and 2.78 s after no sleep. What is the percent change in time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "+4%",
+       "why": "You read 0.04 s as 4%."
+      },
+      {
+       "id": "b",
+       "text": "+98.6%",
+       "why": "That is the ratio 2.74 ÷ 2.78, not the change."
+      },
+      {
+       "id": "c",
+       "text": "+1.5%",
+       "correct": true,
+       "why": "Right: 0.04 ÷ 2.74 = 0.0146. A longer time is a slower sprint."
+      },
+      {
+       "id": "d",
+       "text": "−1.5%",
+       "why": "The sign is wrong: a longer sprint time means slower."
+      }
+     ],
+     "solution": "(2.78 − 2.74) ÷ 2.74 = 0.04 ÷ 2.74 = 0.0146, so about +1.5% (slower)."
+    }
+   ]
+  }
+ ]
+}

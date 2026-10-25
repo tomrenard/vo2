@@ -1,0 +1,904 @@
+{
+ "id": "sm-heat-illness",
+ "module": "t5-sports-medicine",
+ "title": "Heat illness: cool first, transport second",
+ "goal": "Tell heat exhaustion from exertional heat stroke, confirm it with a rectal temperature, apply fast whole-body cooling, and explain what we know about return to play.",
+ "requires": [
+  "sm-rhabdo"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hyperthermia",
+    "heat-exhaustion",
+    "exertional-heat-stroke",
+    "cns-dysfunction",
+    "rectal-temperature",
+    "cold-water-immersion",
+    "cooling-rate",
+    "heat-tolerance-test"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hi-spectrum",
+   "title": "Heat exhaustion or heat stroke?",
+   "text": "Exercise in the heat raises [core temperature](g:core-temperature) ([hyperthermia](g:hyperthermia)); illness follows a spectrum. [Heat exhaustion](g:heat-exhaustion) is fatigue, weakness, dizziness, thirst and gut symptoms; it can precede heat stroke [[c:hi-exhaustion]]. [Exertional heat stroke](g:exertional-heat-stroke) (EHS) is the most severe form: core temperature above 40 °C **with** [CNS dysfunction](g:cns-dysfunction) [[c:hi-ehs]].\n\n| | heat exhaustion | EHS |\n|---|---|---|\n| mind | clear, may be anxious | confused, irritable, collapse, odd behaviour |\n| core temp | raised | above 40 °C |\n| urgency | stop, cool, watch | emergency: cool at once |\n\nEHS is one of the leading causes of sudden death in sport [[c:hi-death]]. The line between the two is the mind plus the temperature.",
+   "claims": [
+    {
+     "id": "hi-exhaustion",
+     "text": "Heat exhaustion is a spectrum of fatigue, weakness, dizziness and gastrointestinal symptoms, often a precursor to heat stroke.",
+     "grade": "moderate",
+     "sources": [
+      "bridwell2026"
+     ],
+     "evidence": [
+      {
+       "source": "bridwell2026",
+       "quote": "Heat exhaustion refers to a spectrum of symptoms that include fatigue, malaise, intense thirst, weakness, discomfort, anxiety, dizziness, and gastrointestinal symptoms, often a precursor to heat stroke",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hi-ehs",
+     "text": "Heat stroke is the most severe heat illness: core temperature above 40 °C with central nervous system dysfunction.",
+     "grade": "strong",
+     "sources": [
+      "bridwell2026"
+     ],
+     "evidence": [
+      {
+       "source": "bridwell2026",
+       "quote": "Heatstroke represents the most severe form of heat-related illness and is characterized by core temperature above 40°C with central nervous system dysfunction.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hi-death",
+     "text": "Exertional heat stroke remains one of the leading causes of sudden death during sport.",
+     "grade": "strong",
+     "sources": [
+      "casa2015"
+     ],
+     "evidence": [
+      {
+       "source": "casa2015",
+       "quote": "exertional heat stroke remains one of the leading causes of sudden death during sport",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-spectrum-q"
+  },
+  {
+   "type": "question",
+   "item": "hi-cns-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "hi-diagnose",
+   "title": "Diagnosis: take the rectal temperature",
+   "text": "A collapsed, confused athlete must have core temperature measured **rectally**; it is more accurate than armpit, forehead, mouth or ear readings [[c:hi-rectal]]. In exercise in the heat those quick devices read on average 0.6–1.3 °C low [[c:hi-sites]], so a 38.9 °C armpit reading can hide a rectal temperature above 40 °C.\n\nThe rule: if the athlete is confused or collapsed in the heat, treat as EHS while you get the reading [[c:hi-suspect]].\n\nLook-alikes (differentials only): [hyponatraemia](g:hyponatraemia) after heavy drinking, which also confuses [[c:hi-eah]], cardiac causes (heart modules), low blood sugar. Rectal temperature plus the story separates them.",
+   "claims": [
+    {
+     "id": "hi-rectal",
+     "text": "In the field a core temperature should be measured rectally, as more accurate than axillary, temporal, oral and aural readings.",
+     "grade": "moderate",
+     "sources": [
+      "bridwell2026"
+     ],
+     "evidence": [
+      {
+       "source": "bridwell2026",
+       "quote": "In the field setting, a core temperature should be measured rectally, as this is more accurate than axillary, temporal, oral, and aural temperature measurements.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hi-sites",
+     "text": "During exercise in the heat, oral, aural, temporal and axillary devices gave invalid, mostly too-low estimates of rectal temperature (about 0.6–1.3 °C).",
+     "grade": "moderate",
+     "sources": [
+      "ganio2009"
+     ],
+     "evidence": [
+      {
+       "source": "ganio2009",
+       "quote": "The following devices provided invalid estimates of rectal temperature: forehead sticker (0.29 degrees C [0.52 degrees F]), oral temperature using an inexpensive device (-1.13 degrees C [-2.03 degrees F]), temporal temperature measured according to the instruction manual (-0.87 degrees C [-1.56 degrees F]), temporal temperature using a modified technique (-0.63 degrees C [-1.13 degrees F]), oral temperature using an expensive device (-0.86 degrees C, [-1.55 degrees F]), aural temperature (-0.67 degrees C, [-1.20 degrees F]), axillary temperature using an inexpensive device (-1.25 degrees C, [-2.24 degrees F])",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-suspect",
+     "text": "Suspected EHS must be identified early and cooled at once: time is tissue.",
+     "grade": "strong",
+     "sources": [
+      "roberts2021"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2021",
+       "quote": "Identifying the athlete with suspected EHS early in the course, stopping activity (body heat generation), and providing rapid total body cooling are essential for survival, and like any critical life-threatening situation (cardiac arrest, brain stroke, sepsis), time is tissue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-eah",
+     "text": "Exercise-associated hyponatraemia typically comes from drinking beyond sweat losses, and severe cases bring headache and confusion.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017",
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Exercise-associated hyponatremia typically results from ingesting water or hypotonic beverages (including sports drinks) beyond sweat losses.",
+       "level": "full-text"
+      },
+      {
+       "source": "knechtle2019",
+       "quote": "With the formation of cerebral edema at a plasma sodium concentration of <120 mmol/L, symptoms such as headache, confusion, agitation, coordination problems, and unconsciousness can occur",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-rectal-q"
+  },
+  {
+   "type": "question",
+   "item": "hi-differential"
+  },
+  {
+   "type": "concept",
+   "id": "hi-cool",
+   "title": "Cool first, transport second",
+   "text": "The treatment is fast, whole-body cooling: stop the activity and cool on the spot [[c:hi-time]]. The best method is [cold-water immersion](g:cold-water-immersion) (CWI) in a tub of cold or ice water, which cools fastest [[c:hi-cwi-fast]]. If no tub: keep dousing the athlete with water and fan them, while help arrives [[c:hi-alt]].\n\n\"Cool first, transport second\" means start cooling before the ambulance ride, since outcome tracks how long severe hyperthermia lasts [[c:hi-duration]].\n\nAt the Falmouth Road Race, 274 EHS patients had CWI; the mean [cooling rate](g:cooling-rate) was 0.22 °C·min⁻¹ and all survived [[c:hi-survive]]. Eight more years added 180 cases: 454 in all, 100% survival [[c:hi-454]]. These are observational records (next card).",
+   "claims": [
+    {
+     "id": "hi-time",
+     "text": "Early recognition, stopping activity and rapid total body cooling are essential for survival of exertional heat stroke.",
+     "grade": "strong",
+     "sources": [
+      "roberts2021",
+      "bridwell2026"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2021",
+       "quote": "Identifying the athlete with suspected EHS early in the course, stopping activity (body heat generation), and providing rapid total body cooling are essential for survival",
+       "level": "abstract"
+      },
+      {
+       "source": "bridwell2026",
+       "quote": "Once heatstroke is recognized, treatment of heatstroke should be initiated immediately in the field, and Emergency Medical Services (EMS) should be activated for transportation of the patient to a medical treatment facility.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hi-cwi-fast",
+     "text": "Ice-water or cold-water immersion gives the fastest cooling for exertional hyperthermia.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2009"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2009",
+       "quote": "we concluded that ice-water immersion provides the most efficient cooling",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-alt",
+     "text": "When immersion is not possible, continual dousing with water plus fanning is an alternative.",
+     "grade": "moderate",
+     "sources": [
+      "mcdermott2009"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2009",
+       "quote": "continual dousing with water combined with fanning the patient is an alternative method",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-duration",
+     "text": "EHS outcomes are likely related to how long severe hyperthermia lasts; time is tissue.",
+     "grade": "moderate",
+     "sources": [
+      "roberts2021"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2021",
+       "quote": "Recovery from EHS is variable, and outcomes are likely related to the duration of severe hyperthermia.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-survive",
+     "text": "In 274 EHS patients treated with CWI at one race, mean cooling rate was 0.22 °C·min⁻¹ and survival was 100%.",
+     "grade": "weak",
+     "sources": [
+      "demartini2015"
+     ],
+     "evidence": [
+      {
+       "source": "demartini2015",
+       "quote": "The average initial Tr was 41.44°C ± 0.63°C, and the average cooling rate for patients with EHS was 0.22°C·min ± 0.11°C·min.",
+       "level": "abstract"
+      },
+      {
+       "source": "demartini2015",
+       "quote": "CWI resulted in a 100% survival rate for all patients with EHS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-454",
+     "text": "With 180 more cases, the same race has 454 EHS cases with 100% survival under cold-water immersion.",
+     "grade": "weak",
+     "sources": [
+      "stearns2024"
+     ],
+     "evidence": [
+      {
+       "source": "stearns2024",
+       "quote": "When combined with the previous dataset of EHS survivors from this race, it amounts to 454 EHS cases resulting in 100% survival.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-cool-first"
+  },
+  {
+   "type": "question",
+   "item": "hi-no-tub"
+  },
+  {
+   "type": "example",
+   "id": "hi-time-example",
+   "title": "How long to cool?",
+   "problem": "A runner's rectal temperature is 41.4 °C. You aim to cool her to 39.0 °C at the mean CWI rate of 0.22 °C·min⁻¹. How many minutes?",
+   "steps": [
+    "Degrees to remove: 41.4 − 39.0 = 2.4 °C.",
+    "Time = degrees ÷ rate = 2.4 ÷ 0.22.",
+    "2.4 ÷ 0.22 = 10.9 min, about 11 minutes. Real cooling varies (SD ±0.11 °C·min⁻¹), so keep measuring rather than trust the clock."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-calc"
+  },
+  {
+   "type": "concept",
+   "id": "hi-limits",
+   "title": "How strong is the cooling evidence?",
+   "text": "Nobody will randomise a collapsed athlete to no cooling, so the evidence is observational: case records from one well-staffed race [[c:hi-one-race]], a systematic review of a few cooling studies in exercise-induced hyperthermia [[c:hi-trials]], and expert consensus.\n\nLimits to remember:\n\n- The 100% survival comes from a race with a medical tent, rectal thermometers and tubs ready: it shows what is possible with fast CWI, not what happens everywhere.\n- Cooling studies measured cooling speed in hot volunteers, not survival in true EHS.\n- Survival also depends on how quickly cooling started, which a registry can't fully control.\n\nThe consensus view is still firm: rapid cooling is the cure, and prevention starts with well-known risk factors [[c:hi-prevent]].",
+   "claims": [
+    {
+     "id": "hi-one-race",
+     "text": "The Falmouth survival data are descriptive medical-tent records from one race, with no comparison group.",
+     "grade": "strong",
+     "sources": [
+      "demartini2015",
+      "stearns2024"
+     ],
+     "evidence": [
+      {
+       "source": "demartini2015",
+       "quote": "Eighteen years of finish line medical tent patient records were obtained from the exertional heat illness treatment area at the Falmouth Road Race.",
+       "level": "abstract"
+      },
+      {
+       "source": "stearns2024",
+       "quote": "Descriptive epidemiologic study.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-trials",
+     "text": "The cooling review included only 7 of 89 articles and concluded on cooling rates in exercise-induced hyperthermia.",
+     "grade": "moderate",
+     "sources": [
+      "mcdermott2009"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2009",
+       "quote": "Seven of 89 research articles met all inclusion criteria and a minimum score of 4 out of 10 on the PEDro scale.",
+       "level": "abstract"
+      },
+      {
+       "source": "mcdermott2009",
+       "quote": "Until future investigators identify other acceptable whole-body cooling modalities for exercise-induced hyperthermia, ice-water immersion and cold-water immersion are the methods proven to have the fastest cooling rates.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-prevent",
+     "text": "Most exertional heat illnesses can be prevented by recognising and modifying well-described risk factors.",
+     "grade": "moderate",
+     "sources": [
+      "roberts2021"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2021",
+       "quote": "Most exertional heat illnesses can be prevented with the recognition and modification of well-described risk factors",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "hi-rtp",
+   "title": "Return to play",
+   "text": "Recovery from EHS varies; outcomes seem tied to how long the severe hyperthermia lasted [[c:hi-recovery]]. A past EHS is itself a risk factor for another, so the return decision is hard [[c:hi-prior]].\n\nUnlike rhabdomyolysis, EHS has return-to-activity guidelines in consensus statements (NATA, ACSM) [[c:hi-rtp-guides]], built on expert agreement more than trials. Some centres add a [heat tolerance test](g:heat-tolerance-test) (exercise in a controlled hot room); its role is still being worked out [[c:hi-htt]]. In practice: medical clearance first, then a stepwise return in load and heat (see [heat acclimation](g:heat-acclimation), heat module).\n\nAn athlete with heat exhaustion who does not recover quickly with rest and cooling is treated as a possible EHS.",
+   "claims": [
+    {
+     "id": "hi-recovery",
+     "text": "Recovery from exertional heat stroke is variable and likely related to the duration of severe hyperthermia.",
+     "grade": "moderate",
+     "sources": [
+      "roberts2021"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2021",
+       "quote": "Recovery from EHS is variable, and outcomes are likely related to the duration of severe hyperthermia.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-prior",
+     "text": "A prior exertional heat stroke is an important risk factor for another, which makes return-to-play decisions challenging.",
+     "grade": "weak",
+     "sources": [
+      "oconnor2018"
+     ],
+     "evidence": [
+      {
+       "source": "oconnor2018",
+       "quote": "Since current evidence suggests that the history of a prior event is an important risk factor for an EHS event, sports medicine providers can find post-EHS return to play/duty (RTP/D) decisions challenging.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-rtp-guides",
+     "text": "The NATA and ACSM consensus statements include return-to-activity guidance after exertional heat illness.",
+     "grade": "strong",
+     "sources": [
+      "casa2015",
+      "roberts2021"
+     ],
+     "evidence": [
+      {
+       "source": "casa2015",
+       "quote": "The recommendations presented in this document provide athletic trainers and allied health providers with an integrated scientific and clinically applicable approach to the prevention, recognition, treatment of, and return-to-activity guidelines for EHIs.",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2021",
+       "quote": "Health care providers should be confident in the definitions, etiologies, and nuances of exertional heat exhaustion, exertional heat injury, and EHS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hi-htt",
+     "text": "Heat tolerance testing can help with return decisions; its role is still being explored.",
+     "grade": "weak",
+     "sources": [
+      "oconnor2018"
+     ],
+     "evidence": [
+      {
+       "source": "oconnor2018",
+       "quote": "Heat tolerance testing is a tool that can help with such decisions by exposing the subject to a given heat load under controlled conditions to assess the presence or absence of heat tolerance.",
+       "level": "abstract"
+      },
+      {
+       "source": "oconnor2018",
+       "quote": "This special communication explores the challenge of the RTP/D after an EHS event and the potential role of heat tolerance testing in making this clinical decision.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hi-rtp-q"
+  },
+  {
+   "type": "question",
+   "item": "hi-rtp-evaluate"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Heat exhaustion: tired, dizzy, sick, mind clear. Heat stroke: core temperature above 40 °C with a confused or collapsed mind.",
+    "Measure rectal temperature; ear, mouth, armpit and forehead read too low.",
+    "Cool first, transport second: cold-water immersion cools fastest (about 0.22 °C·min⁻¹) and gave 100% survival in 454 race cases.",
+    "No tub: douse and fan. The evidence is observational but consistent and backed by consensus.",
+    "Return to play is individual: a past EHS is a risk factor for another."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hi-spectrum-q",
+   "concept": "hi-spectrum",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bridwell2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What separates exertional heat stroke from heat exhaustion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Core temperature above 40 °C with CNS dysfunction such as confusion",
+       "why": "Correct: the mind and the temperature.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Heat stroke always comes with vomiting and diarrhoea",
+       "why": "Gut symptoms occur in heat exhaustion too."
+      },
+      {
+       "id": "c",
+       "text": "Heat stroke only occurs in the sun",
+       "why": "It can occur whenever heat gain beats heat loss."
+      },
+      {
+       "id": "d",
+       "text": "Heat stroke only happens once sweating has stopped",
+       "why": "Not the marker: athletes with EHS are often still sweating."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-cns-scenario",
+   "concept": "hi-spectrum",
+   "bloom": "apply",
+   "sources": [
+    "bridwell2026",
+    "roberts2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In an Ironman run in 31 °C heat, athlete A is exhausted, dizzy and nauseated but answers questions normally. Athlete B is stumbling, irritable and gives odd answers. Whom do you treat as heat stroke first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Athlete B: the changed mind suggests CNS dysfunction",
+       "why": "Correct: confusion plus heat marks EHS until proven otherwise.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Athlete A: more tired",
+       "why": "Fatigue and normal thinking fit exhaustion."
+      },
+      {
+       "id": "c",
+       "text": "Neither until both vomit",
+       "why": "Vomiting is not the criterion."
+      },
+      {
+       "id": "d",
+       "text": "Both equally: temperature isn't needed",
+       "why": "Rectal temperature is needed, and A's mind is clear."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-rectal-q",
+   "concept": "hi-diagnose",
+   "bloom": "analyse",
+   "sources": [
+    "bridwell2026",
+    "ganio2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner is confused after a hot 10 km. An ear thermometer reads 38.4 °C. What is the best interpretation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unreliable: ear readings run low in the heat; take a rectal one",
+       "why": "Correct: ear readings averaged about 0.7 °C low in exercise in the heat, and she is confused, so measure rectally.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Normal: she cannot have heat stroke",
+       "why": "That would miss a true EHS."
+      },
+      {
+       "id": "c",
+       "text": "Confirmed heat stroke: any reading above 38 °C",
+       "why": "The criterion is above 40 °C with CNS signs."
+      },
+      {
+       "id": "d",
+       "text": "Ignore temperature: mental state is enough",
+       "why": "Mind and rectal temperature together decide."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-differential",
+   "concept": "hi-diagnose",
+   "bloom": "analyse",
+   "sources": [
+    "bridwell2026",
+    "mcdermott2017",
+    "knechtle2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A slow Ironman athlete who drank heavily is vomiting, headachy and confused at 22 °C. Why not just assume heat stroke?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Over-drinking can lower blood sodium, which also confuses",
+       "why": "Correct: low blood sodium (hyponatraemia) from over-drinking can confuse too; a rectal temperature and the story help tell them apart (hydration module).",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Heat stroke cannot occur at 22 °C",
+       "why": "It can, which is why the rectal temperature matters; a normal one points elsewhere."
+      },
+      {
+       "id": "c",
+       "text": "Confusion never occurs with low blood sodium",
+       "why": "It does: brain swelling causes headache and confusion."
+      },
+      {
+       "id": "d",
+       "text": "Vomiting rules out heat stroke",
+       "why": "Vomiting occurs in heat illness and hyponatraemia alike."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-cool-first",
+   "concept": "hi-cool",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "roberts2021",
+    "bridwell2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist collapses, confused, in a time trial 40 min from a hospital. The race doctor has an ice-water tub. What first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cool in the tub on the spot, then transport",
+       "why": "Correct: cool first, transport second.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Load him into the ambulance and cool at hospital",
+       "why": "Each minute above 40 °C adds injury."
+      },
+      {
+       "id": "c",
+       "text": "Give fluids and wait for a recovery",
+       "why": "Fluids alone do not cool fast enough."
+      },
+      {
+       "id": "d",
+       "text": "Take ear temperature and wait 20 min",
+       "why": "Ear readings are invalid, and waiting delays cooling."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-no-tub",
+   "concept": "hi-cool",
+   "bloom": "apply",
+   "sources": [
+    "mcdermott2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At a small road race there is no tub. A runner has suspected EHS. What is the best fallback?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep dousing with water and fanning while help comes",
+       "why": "Correct: the review's alternative to immersion.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Wrap in a warm blanket to stop shaking",
+       "why": "Raises heat; the opposite of cooling."
+      },
+      {
+       "id": "c",
+       "text": "Walk him to the shade for 30 minutes",
+       "why": "Too slow."
+      },
+      {
+       "id": "d",
+       "text": "Give ice-cold sports drink only",
+       "why": "Drinks do not cool the whole body fast."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-calc",
+   "concept": "hi-cool",
+   "bloom": "apply",
+   "sources": [
+    "demartini2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rectal temperature of 41.4 °C needs to be brought to 39.0 °C. The tub cools at 0.22 °C·min⁻¹. How many minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "10.9 min",
+       "why": "Correct: (41.4 − 39.0) ÷ 0.22 = 2.4 ÷ 0.22 = 10.9.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.53 min",
+       "why": "Multiplied degrees by rate instead of dividing."
+      },
+      {
+       "id": "c",
+       "text": "0.09 min",
+       "why": "Divided rate by degrees: inverted."
+      },
+      {
+       "id": "d",
+       "text": "188 min",
+       "why": "Divided the start temperature, forgetting the target."
+      }
+     ],
+     "solution": "(41.4 − 39.0) ÷ 0.22 = 2.4 ÷ 0.22 = 10.9 min."
+    },
+    {
+     "id": "b",
+     "stem": "A rectal temperature of 42.0 °C needs to be brought to 39.0 °C. The tub cools at 0.2 °C·min⁻¹. How many minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15.0 min",
+       "why": "Correct: (42.0 − 39.0) ÷ 0.2 = 3.0 ÷ 0.2 = 15.0.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.60 min",
+       "why": "Multiplied degrees by rate instead of dividing."
+      },
+      {
+       "id": "c",
+       "text": "0.07 min",
+       "why": "Divided rate by degrees: inverted."
+      },
+      {
+       "id": "d",
+       "text": "210 min",
+       "why": "Divided the start temperature, forgetting the target."
+      }
+     ],
+     "solution": "(42.0 − 39.0) ÷ 0.2 = 3.0 ÷ 0.2 = 15.0 min."
+    },
+    {
+     "id": "c",
+     "stem": "A rectal temperature of 40.8 °C needs to be brought to 39.0 °C. The tub cools at 0.15 °C·min⁻¹. How many minutes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.0 min",
+       "why": "Correct: (40.8 − 39.0) ÷ 0.15 = 1.8 ÷ 0.15 = 12.0.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "0.27 min",
+       "why": "Multiplied degrees by rate instead of dividing."
+      },
+      {
+       "id": "c",
+       "text": "0.08 min",
+       "why": "Divided rate by degrees: inverted."
+      },
+      {
+       "id": "d",
+       "text": "272 min",
+       "why": "Divided the start temperature, forgetting the target."
+      }
+     ],
+     "solution": "(40.8 − 39.0) ÷ 0.15 = 1.8 ÷ 0.15 = 12.0 min."
+    }
+   ]
+  },
+  {
+   "id": "hi-appraise",
+   "concept": "hi-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "demartini2015",
+    "stearns2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The Falmouth cases show 100% survival with CWI. What most limits generalising to any race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One well-equipped race tent and no comparison group",
+       "why": "Correct: setting and no control group.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Observational data can never say anything about treatment",
+       "why": "Too strong: large, consistent case series plus cooling-rate studies do inform practice."
+      },
+      {
+       "id": "c",
+       "text": "The sample was only 20 people",
+       "why": "Hundreds of cases: the sample is large."
+      },
+      {
+       "id": "d",
+       "text": "Rectal temperature was not measured",
+       "why": "It was: mean 41.44 °C."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-rtp-q",
+   "concept": "hi-rtp",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "oconnor2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which fact makes return to play after exertional heat stroke hard to decide?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A prior event is an important risk factor for another",
+       "why": "Correct: the source states this.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Heat stroke is always fatal",
+       "why": "Survival is high with fast cooling."
+      },
+      {
+       "id": "c",
+       "text": "There is a single test that clears everyone",
+       "why": "Heat tolerance testing is debated."
+      },
+      {
+       "id": "d",
+       "text": "Athletes always recover within a week",
+       "why": "Recovery varies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hi-rtp-evaluate",
+   "concept": "hi-rtp",
+   "bloom": "evaluate",
+   "sources": [
+    "oconnor2018",
+    "roberts2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner had heat stroke 3 weeks ago and feels fine. He wants to race a hot half marathon next week. Best judgement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not yet: get medical clearance and return step by step",
+       "why": "Correct: a prior EHS raises risk, and feeling fine does not remove it.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Fine: feeling well shows he has fully recovered",
+       "why": "Recovery varies, and a prior EHS is a risk factor."
+      },
+      {
+       "id": "c",
+       "text": "Fine if he drinks more",
+       "why": "Fluids don't remove the risk."
+      },
+      {
+       "id": "d",
+       "text": "He should never run in the heat again",
+       "why": "Too strong; return is possible with guidance."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

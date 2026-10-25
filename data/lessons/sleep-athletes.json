@@ -1,0 +1,748 @@
+{
+ "id": "sleep-athletes",
+ "module": "t5-sleep",
+ "title": "How athletes sleep, and how it is measured",
+ "goal": "Describe how endurance athletes actually sleep around training, competition and travel, and how far PSG, actigraphy and wearables can be trusted.",
+ "requires": [
+  "sleep-loss"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "polysomnography",
+    "actigraphy",
+    "sleep-efficiency"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sa-habits",
+   "title": "How elite athletes sleep",
+   "text": "In 124 elite athletes tracked with wrist monitors and diaries, sleep averaged 6.8 h a night. Athletes in individual sports slept less than team-sport athletes (6.5 vs 7.0 h) [[c:elite-hours]]. A review of 54 studies agrees: in training, many studies found athletes missed the sleep recommendations [[c:elite-hours]].\n\nQuantity is not the only issue. [Sleep efficiency](g:sleep-efficiency) is time asleep divided by time in bed. In 47 Olympians it was 80.6%, against 88.7% in matched controls, though time asleep was about the same [[c:leeder-eff]]. That is still within the range of healthy sleep.",
+   "claims": [
+    {
+     "id": "elite-hours",
+     "text": "Elite athletes sleep about 6.8 h a night, with individual-sport athletes sleeping less, and many miss sleep recommendations in training.",
+     "grade": "moderate",
+     "sources": [
+      "lastella2014",
+      "roberts2018"
+     ],
+     "evidence": [
+      {
+       "source": "lastella2014",
+       "quote": "Overall, this sample of athletes went to bed at 22:59 ± 1.3, woke up at 07:15 ± 1.2 and obtained 6.8 ± 1.1 h of sleep per night.",
+       "level": "abstract"
+      },
+      {
+       "source": "lastella2014",
+       "quote": "Athletes from individual sports went to bed earlier, woke up earlier and obtained less sleep (individual vs team; 6.5 vs 7.0 h) than athletes from team sports.",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2018",
+       "quote": "During training, many studies reported athletes were unable to achieve TST (n=23/41) and/or SE (n=16/37) recommendations.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "leeder-eff",
+     "text": "Olympic athletes had lower sleep efficiency than controls (80.6% vs 88.7%) with similar time asleep, still within the healthy range.",
+     "grade": "weak",
+     "sources": [
+      "leeder2012"
+     ],
+     "evidence": [
+      {
+       "source": "leeder2012",
+       "quote": "There were significant differences between athletes and controls in all measures apart from 'time asleep' (p = 0.27), suggesting poorer characteristics of sleep in the athlete group.",
+       "level": "abstract"
+      },
+      {
+       "source": "leeder2012",
+       "quote": "Athletes showed poorer markers of sleep quality than an age and sex matched non-athletic control group (Sleep efficiency: 80.6 ± 6.4% and 88.7 ± 3.6%, respectively. Fragmentation Index: 36.0 ± 12.4 and 29.8 ± 9.0, respectively) but remained within the range for healthy sleep.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-avg-sleep"
+  },
+  {
+   "type": "example",
+   "id": "sa-eff-example",
+   "title": "Sleep efficiency",
+   "problem": "A runner is in bed from 23:00 to 06:30 and sleeps 6 h 15 min. What is her sleep efficiency?",
+   "steps": [
+    "Sleep efficiency = time asleep ÷ time in bed × 100.",
+    "Time in bed: 23:00 to 06:30 = 7.5 h. Time asleep: 6 h 15 min = 6.25 h.",
+    "6.25 ÷ 7.5 = 0.833, so about 83%. Compare the Olympians' 80.6% and the controls' 88.7%."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-eff",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sa-control"
+  },
+  {
+   "type": "concept",
+   "id": "sa-early",
+   "title": "Early sessions cut sleep",
+   "text": "Seven world-class swimmers trained at 06:00 on 12 of 14 days. On nights before training they went to bed at 22:05, got up at 05:48 and slept 5.4 h. On nights before rest days they slept 7.1 h [[c:early-train]]. They went to bed early, but not early enough to make up the lost morning.\n\nA review of 54 studies backs the pattern: starts before 07:00, jumps in training load above 25%, late-night or early-morning travel departures, eastward flights and ascent to altitude all impaired sleep [[c:early-train]].\n\nFor you: a 06:00 group ride or a long run before work costs sleep unless the bedtime moves earlier by about the same amount.",
+   "claims": [
+    {
+     "id": "early-train",
+     "text": "Starts before 07:00, a training load rise above 25%, late or early travel departures, eastward flights and altitude ascent impaired athletes' sleep; swimmers with 06:00 sessions slept 5.4 h vs 7.1 h.",
+     "grade": "moderate",
+     "sources": [
+      "sargent2012",
+      "roberts2018"
+     ],
+     "evidence": [
+      {
+       "source": "sargent2012",
+       "quote": "On nights that preceded training days, participants went to bed at 22:05 h (s=00:52), arose at 05:48 h (s=00:24) and obtained 5.4 h (s=1.3) of sleep. On nights that preceded rest days, participants went to bed at 00:32 h (s=01:29), arose at 09:47 h (s=01:47) and obtained 7.1 h (s=1.2) of sleep.",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2018",
+       "quote": "Early morning training (start <07:00), increases in training load (>25%), late night/early morning travel departure times, eastward air travel and altitude ascent impaired sleep.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-early",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "sa-swim"
+  },
+  {
+   "type": "concept",
+   "id": "sa-competition",
+   "title": "Competition nights and travel",
+   "text": "The night of competition is often the worst. Across 54 studies, total sleep time was 60 min shorter on competition night than on earlier nights. After a night competition (start 18:00 or later) it was 80 min shorter; after a day competition, 20 min [[c:comp-night]]. Sleep efficiency also fell 3 to 4% after night competitions.\n\nThe consensus statement adds non-sport risks: being female, stress and anxiety [[c:risk-factors]].\n\nJet lag is a separate topic (see the travel module later). Here we only note that travel, especially eastward and at awkward hours, is on the list of things that impair sleep.",
+   "claims": [
+    {
+     "id": "comp-night",
+     "text": "Total sleep time was about 60 min shorter on the night of competition; 80 min after night competitions and 20 min after day competitions.",
+     "grade": "moderate",
+     "sources": [
+      "roberts2018"
+     ],
+     "evidence": [
+      {
+       "source": "roberts2018",
+       "quote": "TST was shorter (60 min) the night of competition compared with previous nights.",
+       "level": "abstract"
+      },
+      {
+       "source": "roberts2018",
+       "quote": "TST was shorter the night of night competition (start ≥18:00; 80 min) and day competition (20 min) compared with the previous night.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "risk-factors",
+     "text": "Athlete sleep is shaped by sport factors (training, travel, competition) and non-sport factors such as female gender, stress and anxiety.",
+     "grade": "strong",
+     "sources": [
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2021",
+       "quote": "athlete sleep is influenced by sport-specific factors (relating to training, travel and competition) and non-sport factors (eg, female gender, stress and anxiety).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-comp"
+  },
+  {
+   "type": "question",
+   "item": "sa-risk"
+  },
+  {
+   "type": "concept",
+   "id": "sa-measure",
+   "title": "How sleep is measured",
+   "text": "The reference method is [polysomnography](g:polysomnography) (PSG): sensors record the night in a lab, and sleep and its stages are scored from them [[c:psg-ref]]. [Actigraphy](g:actigraphy) uses a wrist motion sensor and costs far less.\n\nAgainst PSG, actigraphy has high sensitivity (0.965: it rightly calls sleep 'sleep') but low specificity (0.329: it often calls quiet wake 'sleep') [[c:actig-accuracy]]. So it tends to miss time awake in bed.\n\nMost athlete studies use actigraphy. The consensus statement warns that athlete sleep studies often question the validity of their tools [[c:tool-validity]].",
+   "claims": [
+    {
+     "id": "psg-ref",
+     "text": "Polysomnography is the gold-standard sleep assessment technique.",
+     "grade": "strong",
+     "sources": [
+      "chinoy2020"
+     ],
+     "evidence": [
+      {
+       "source": "chinoy2020",
+       "quote": "We, therefore, tested the performance of many of the latest consumer sleep-tracking devices, alongside actigraphy, versus the gold-standard sleep assessment technique, polysomnography (PSG).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "actig-accuracy",
+     "text": "Against PSG, wrist actigraphy had high sensitivity (0.965) and accuracy (0.863) but low specificity (0.329).",
+     "grade": "moderate",
+     "sources": [
+      "marino2013"
+     ],
+     "evidence": [
+      {
+       "source": "marino2013",
+       "quote": "Overall, sensitivity (0.965) and accuracy (0.863) were high, whereas specificity (0.329) was low;",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tool-validity",
+     "text": "Athlete sleep studies often have questionable validity of the sleep assessment tools they use.",
+     "grade": "moderate",
+     "sources": [
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2021",
+       "quote": "Studies investigating sleep in athletes often suffer from inadequate experimental control, a lack of females and questions concerning the validity of the chosen sleep assessment tools.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-psg"
+  },
+  {
+   "type": "question",
+   "item": "sa-sens"
+  },
+  {
+   "type": "concept",
+   "id": "sa-wearables",
+   "title": "What your watch can and cannot tell you",
+   "text": "In a lab test of 34 healthy young adults, four wearables and three non-wearable devices were compared with PSG. Most matched or beat actigraphy at telling sleep from wake. Sensitivity was high (all 0.93 or more), but specificity was low to medium (0.18 to 0.54), sleep-stage results were mixed, and devices did worse on nights of poor, broken sleep [[c:wearables-acc]].\n\nIn plain words: total sleep time is a rough guide. The 'deep' and 'REM' minutes are weak guesses, and a bad night is exactly when the watch is least right. Using one for trends over weeks is fair. Planning a hard session from last night's 'deep sleep' number is not.",
+   "claims": [
+    {
+     "id": "wearables-acc",
+     "text": "Consumer sleep trackers detected sleep well but wake poorly, gave mixed stage results and did worse on disrupted nights (34 healthy adults).",
+     "grade": "moderate",
+     "sources": [
+      "chinoy2020"
+     ],
+     "evidence": [
+      {
+       "source": "chinoy2020",
+       "quote": "Overall, epoch-by-epoch sensitivity was high (all ≥0.93), specificity was low-to-medium (0.18-0.54), sleep stage comparisons were mixed, and devices tended to perform worse on nights with poorer/disrupted sleep.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sa-wearable"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Elite athletes sleep about 6.8 h a night (individual sports 6.5 h) and often have lower sleep efficiency than non-athletes.",
+    "Sleep efficiency = time asleep ÷ time in bed × 100; Olympians had 80.6% vs 88.7% in controls.",
+    "Starts before 07:00 cost swimmers about 1.7 h of sleep; training load jumps, eastward travel and altitude also impair sleep.",
+    "On competition night total sleep time falls by about 60 min (80 min after night competitions).",
+    "PSG is the reference; actigraphy and wearables detect sleep well but wake poorly, and stage minutes are unreliable."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sa-avg-sleep",
+   "concept": "sa-habits",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "lastella2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Roughly how much do elite athletes sleep per night in a typical training phase?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 8.5 h, more than average because athletes train hard",
+       "why": "Observed sleep was about 6.8 h, well below 8.5 h."
+      },
+      {
+       "id": "b",
+       "text": "About 6.8 h, and less in individual sports than team sports",
+       "correct": true,
+       "why": "Right: 6.8 h on average; 6.5 h in individual and 7.0 h in team sports."
+      },
+      {
+       "id": "c",
+       "text": "About 5 h, so athletes are chronically deprived",
+       "why": "About 6.8 h was observed, short of the recommendation but not 5 h."
+      },
+      {
+       "id": "d",
+       "text": "About 7.0 h in individual sports and 6.5 h in team sports",
+       "why": "The two are reversed: individual-sport athletes slept less."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-eff",
+   "concept": "sa-habits",
+   "bloom": "apply",
+   "sources": [
+    "leeder2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A swimmer is in bed from 22:00 to 06:00 and sleeps 6 h 24 min. What is her sleep efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "125%",
+       "why": "You divided time in bed by time asleep, upside down."
+      },
+      {
+       "id": "b",
+       "text": "20%",
+       "why": "That is the share of time spent awake, not asleep."
+      },
+      {
+       "id": "c",
+       "text": "27%",
+       "why": "You divided by 24 h instead of time in bed."
+      },
+      {
+       "id": "d",
+       "text": "80%",
+       "correct": true,
+       "why": "Right: 6.4 h ÷ 8 h = 0.80."
+      }
+     ],
+     "solution": "Time in bed 8 h; asleep 6.4 h. 6.4 ÷ 8 = 0.80, so 80%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist is in bed for 7 h 30 min and sleeps 6 h 45 min. What is his sleep efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "90%",
+       "correct": true,
+       "why": "Right: 6.75 h ÷ 7.5 h = 0.90."
+      },
+      {
+       "id": "b",
+       "text": "111%",
+       "why": "You divided time in bed by time asleep, upside down."
+      },
+      {
+       "id": "c",
+       "text": "10%",
+       "why": "That is the share of time spent awake, not asleep."
+      },
+      {
+       "id": "d",
+       "text": "28%",
+       "why": "You divided by 24 h instead of time in bed."
+      }
+     ],
+     "solution": "6 h 45 min = 6.75 h. 6.75 ÷ 7.5 = 0.90, so 90%."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete is in bed for 9 h and sleeps 6 h 30 min. What is her sleep efficiency?",
+     "options": [
+      {
+       "id": "a",
+       "text": "138%",
+       "why": "You divided time in bed by time asleep, upside down."
+      },
+      {
+       "id": "b",
+       "text": "28%",
+       "why": "That is the share of time spent awake, not asleep."
+      },
+      {
+       "id": "c",
+       "text": "27%",
+       "why": "You divided by 24 h instead of time in bed."
+      },
+      {
+       "id": "d",
+       "text": "72%",
+       "correct": true,
+       "why": "Right: 6.5 h ÷ 9 h = 0.722."
+      }
+     ],
+     "solution": "6.5 ÷ 9 = 0.722, so about 72%."
+    }
+   ]
+  },
+  {
+   "id": "sa-control",
+   "concept": "sa-habits",
+   "bloom": "analyse",
+   "sources": [
+    "leeder2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Olympians slept about as long as controls but had sleep efficiency of 80.6% vs 88.7%. Which reading fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They slept less in total than controls",
+       "why": "Time asleep did not differ between the groups."
+      },
+      {
+       "id": "b",
+       "text": "More time awake in bed, despite similar sleep time",
+       "correct": true,
+       "why": "Right: lower efficiency with similar sleep means more time awake in bed."
+      },
+      {
+       "id": "c",
+       "text": "Their sleep was clinically disordered",
+       "why": "The values stayed within the range for healthy sleep."
+      },
+      {
+       "id": "d",
+       "text": "Actigraphy cannot measure efficiency",
+       "why": "Sleep efficiency is a standard actigraphy output."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-early",
+   "concept": "sa-early",
+   "bloom": "apply",
+   "sources": [
+    "sargent2012",
+    "roberts2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Swimmers with 06:00 sessions slept 5.4 h before training days and 7.1 h before rest days. How much less did they sleep before a training day?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.5 h: going to bed earlier made up for it",
+       "why": "The bedtime was earlier, but sleep still fell by much more than 0.5 h."
+      },
+      {
+       "id": "b",
+       "text": "1.7 h",
+       "correct": true,
+       "why": "Right: 7.1 − 5.4 = 1.7 h."
+      },
+      {
+       "id": "c",
+       "text": "3.0 h",
+       "why": "The gap is 1.7 h, not 3 h."
+      },
+      {
+       "id": "d",
+       "text": "0 h: sleep was the same",
+       "why": "The two sleep durations differ clearly."
+      }
+     ],
+     "solution": "7.1 − 5.4 = 1.7 h less sleep on nights before training days."
+    },
+    {
+     "id": "b",
+     "stem": "Using the same swimmers (1.7 h less on 12 training nights), what is the total sleep lost over the camp?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85.2 h",
+       "why": "That is 7.1 h × 12, the total slept on rest-day-style nights."
+      },
+      {
+       "id": "b",
+       "text": "64.8 h",
+       "why": "That is 5.4 h × 12, the total slept, not the loss."
+      },
+      {
+       "id": "c",
+       "text": "20.4 h",
+       "correct": true,
+       "why": "Right: 1.7 h × 12 = 20.4 h."
+      },
+      {
+       "id": "d",
+       "text": "8.5 h",
+       "why": "You used 5 nights instead of 12."
+      }
+     ],
+     "solution": "1.7 h × 12 nights = 20.4 h of lost sleep."
+    }
+   ]
+  },
+  {
+   "id": "sa-swim",
+   "concept": "sa-early",
+   "bloom": "evaluate",
+   "sources": [
+    "sargent2012",
+    "roberts2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which limit matters most when using the swimmer study to advise a club cyclist?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only 7 elite swimmers in one 14-day camp, so it may not carry over",
+       "correct": true,
+       "why": "Right: a small, specific group and period limit how far it generalises."
+      },
+      {
+       "id": "b",
+       "text": "Sleep diaries and wrist monitors cannot measure sleep at all",
+       "why": "They are imperfect but widely used; this is not the main limit."
+      },
+      {
+       "id": "c",
+       "text": "Mixed models are not valid for sleep data",
+       "why": "Mixed models are a standard, valid method for repeated nights."
+      },
+      {
+       "id": "d",
+       "text": "Swimmers' sleep says nothing about any other sport",
+       "why": "Too strong: a larger review found early starts impaired sleep in many athletes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-comp",
+   "concept": "sa-competition",
+   "bloom": "apply",
+   "sources": [
+    "roberts2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist races a criterium that starts at 20:00. Compared with the night before, what does the review suggest about his sleep that night?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 20 min shorter",
+       "why": "That is the figure for day competitions."
+      },
+      {
+       "id": "b",
+       "text": "Longer, since racing tires him out",
+       "why": "The review found shorter sleep on competition night."
+      },
+      {
+       "id": "c",
+       "text": "About 80 min shorter",
+       "correct": true,
+       "why": "Right: this is the shortening after night competitions (start 18:00 or later)."
+      },
+      {
+       "id": "d",
+       "text": "No change, since nerves do not matter",
+       "why": "The review found clear reductions on competition night."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-risk",
+   "concept": "sa-competition",
+   "bloom": "analyse",
+   "sources": [
+    "roberts2018",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete's week carries the highest sleep risk based on the review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Starts at 09:00, steady load, sleeping at home",
+       "why": "None of the listed risk factors apply."
+      },
+      {
+       "id": "b",
+       "text": "Starts at 05:30, load up 40%, eastward flight tonight",
+       "correct": true,
+       "why": "Right: early start, a load jump above 25% and eastward travel all impair sleep."
+      },
+      {
+       "id": "c",
+       "text": "Starts at 10:00, load down 30%, sleeping at home",
+       "why": "A lower load and a late start are not risk factors."
+      },
+      {
+       "id": "d",
+       "text": "Starts at 08:00, steady load, one Friday drive home",
+       "why": "Nothing here is on the review's list of risks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-psg",
+   "concept": "sa-measure",
+   "bloom": "understand",
+   "sources": [
+    "chinoy2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is polysomnography used for in sleep research?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wrist sensor that infers sleep from movement",
+       "why": "That describes actigraphy, not polysomnography."
+      },
+      {
+       "id": "b",
+       "text": "A phone app that listens to breathing at night",
+       "why": "Apps are consumer tools, not the reference method."
+      },
+      {
+       "id": "c",
+       "text": "A questionnaire scoring perceived sleep quality",
+       "why": "A questionnaire is self-report, not a recording of the night."
+      },
+      {
+       "id": "d",
+       "text": "The reference: sensors record the night to score sleep",
+       "correct": true,
+       "why": "Right: it is the gold standard that other tools are checked against."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-sens",
+   "concept": "sa-measure",
+   "bloom": "apply",
+   "sources": [
+    "marino2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A wrist actigraph scores a runner as asleep for 7.5 h. PSG shows 55 min awake in bed during that time. Which property is the weak point?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sensitivity: it often misses real sleep",
+       "why": "Sensitivity was high (0.965); missing sleep is not the weak point."
+      },
+      {
+       "id": "b",
+       "text": "Specificity: it often calls quiet wake 'sleep'",
+       "correct": true,
+       "why": "Right: low specificity (0.329) means wake is often scored as sleep."
+      },
+      {
+       "id": "c",
+       "text": "Accuracy: it is below 50%",
+       "why": "Overall accuracy was 0.863, not below 50%."
+      },
+      {
+       "id": "d",
+       "text": "None: actigraphy and PSG agree on wake",
+       "why": "They do not: actigraphy misses much of the wake that PSG sees."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sa-wearable",
+   "concept": "sa-wearables",
+   "bloom": "evaluate",
+   "sources": [
+    "chinoy2020",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's watch says 'deep sleep 25 min, REM 40 min', so she drops her intervals. What is the best response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Trust the stages: devices are validated against brain recordings",
+       "why": "Stage comparisons with PSG were mixed, not validated."
+      },
+      {
+       "id": "b",
+       "text": "Ignore the watch: it cannot detect sleep at all",
+       "why": "Sensitivity was high (0.93 or more), so sleep itself is detected well."
+      },
+      {
+       "id": "c",
+       "text": "Trust its wake detection most, since specificity is high",
+       "why": "Specificity was low to medium (0.18 to 0.54), so wake is the weak side."
+      },
+      {
+       "id": "d",
+       "text": "Use total sleep time as a rough guide; do not act on stage minutes",
+       "correct": true,
+       "why": "Right: total sleep time is the more reliable output, stage minutes are not."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

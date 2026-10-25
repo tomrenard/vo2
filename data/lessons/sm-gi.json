@@ -1,0 +1,784 @@
+{
+ "id": "sm-gi",
+ "module": "t5-sports-medicine",
+ "title": "Gut problems: common, usually mild, sometimes not",
+ "goal": "Sort exercise-associated GI symptoms by cause, explain what EIGS does and does not show, spot the red flags and look-alikes, and choose prevention steps the evidence supports.",
+ "requires": [
+  "sm-cramps"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "ischaemia",
+    "gastritis",
+    "red-flag-symptom",
+    "endotoxaemia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "gi-scale",
+   "title": "How common, and how serious",
+   "text": "[GI symptoms](g:gi-symptoms) in exercise are common: studies suggest 30–50% of athletes have them [[c:gi-prevalence]]. In races the rate depends on the event: serious symptoms hit about 31% of Ironman athletes, 14% in a half-Ironman, and 4% in a marathon or a 100–150 km bike race [[c:gi-pfeiffer]].\n\nMost cases are mild and pass. But a few are not: haemorrhagic [gastritis](g:gastritis), blood in the stool and [ischaemic](g:ischaemia) bowel can be serious [[c:gi-serious]].\n\nSo the first skill is sorting: ordinary \"gut rot\" you manage with fuelling, versus a [red-flag symptom](g:red-flag-symptom) that needs a doctor.",
+   "claims": [
+    {
+     "id": "gi-prevalence",
+     "text": "About 30–50% of athletes report gastrointestinal complaints during exercise, mostly mild.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Generally, studies suggest that 30-50% of athletes experience such complaints.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-pfeiffer",
+     "text": "Serious GI symptoms were most common in Ironman races (about 31%), against 14% in half-Ironman and 4% in a marathon or cycle race, and linked to a history of GI problems.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "Prevalence of serious GI symptoms was highest during the IM races (∼31%, P = 0.001) compared with IM 70.3 (14%), CYCLE (4%), MARATHON (4%), and PRO (7%) and correlated to a history of GI problems.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-serious",
+     "text": "Most exercise GI symptoms are mild, but hemorrhagic gastritis, hematochezia and ischemic bowel can be serious.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Most gastrointestinal symptoms during exercise are mild and of no risk to health, but hemorrhagic gastritis, hematochezia, and ischemic bowel can present serious medical challenges.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-prev-recall"
+  },
+  {
+   "type": "question",
+   "item": "gi-ironman-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "gi-causes",
+   "title": "Three families of causes",
+   "text": "Reviews sort the causes into three families [[c:gi-three]]:\n\n| family | example in sport |\n|---|---|\n| physiological | less [blood to the gut](g:splanchnic-blood-flow) during hard effort, worse when hypohydrated [[c:gi-flow]] |\n| mechanical | running impact; the aero position pressing the abdomen [[c:gi-mech]] |\n| nutritional | fibre, fat, protein, concentrated drinks; [NSAIDs](g:nsaid) [[c:gi-nutri]] |\n\nSo a triathlete can have three different problems on one day: reflux and nausea on the bike (position, concentrated drink), stitch and urgency on the run (impact), and both worse in the heat (blood flow).\n\nThe fuelling side (gut training, carbohydrate types) is covered in the fuelling modules; here we use the sorting.",
+   "claims": [
+    {
+     "id": "gi-three",
+     "text": "Three main causes of GI symptoms in exercise are physiological, mechanical and nutritional.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Three main causes of gastrointestinal symptoms have been identified, and these are either physiological, mechanical, or nutritional in nature.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-flow",
+     "text": "During intense exercise, especially when hypohydrated, blood flow to the gut falls; this is thought to be a main contributor to GI symptoms.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "During intense exercise, and especially when hypohydrated, mesenteric blood flow is reduced; this is believed to be one of the main contributors to the development of gastrointestinal symptoms.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-mech",
+     "text": "Symptoms are more common in running than in cycling, and on the bike upper GI symptoms are more common, possibly from the riding position.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "For example, symptoms are more common in runners than in cyclists [27].",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "For example, on a bicycle, upper gastrointestinal symptoms are more prevalent possibly due to increased pressure on the abdomen as a result of the cycling position, particularly when in the ‘aero’ position.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gi-nutri",
+     "text": "Fibre, fat, protein, concentrated carbohydrate drinks, and aspirin or NSAIDs are linked with more GI complaints.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Gastrointestinal problems were more likely to occur with the ingestion of fiber, fat, protein, and concentrated carbohydrate solutions during the triathlon.",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "Both aspirin and NSAIDs have commonly been shown to increase intestinal permeability and may increase the incidence of gastrointestinal complaints.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-sort"
+  },
+  {
+   "type": "question",
+   "item": "gi-bike-run"
+  },
+  {
+   "type": "concept",
+   "id": "gi-eigs",
+   "title": "Gut injury is not the same as gut symptoms",
+   "text": "Less gut blood flow can injure the lining. The chain [[c:gi-chain]]: low flow, then damage to the lining, then a leakier gut, then bacterial fragments ([endotoxin](g:endotoxaemia)) entering the blood and inflammation. This chain is called [EIGS](g:eigs) in the fuelling module.\n\nIt grows with intensity and time: about 2 h at 60% VO₂max looks like the threshold for marked disturbance, and heat and running make it worse [[c:gi-eigs-threshold]].\n\nBut damage and symptoms do not map one to one. Poor blood flow may raise gut permeability, but this has \"not yet been definitively linked\" to how often people get symptoms [[c:gi-unlinked]]. A runner can have a leaky gut and feel fine, or feel awful with little injury.",
+   "claims": [
+    {
+     "id": "gi-chain",
+     "text": "Strenuous exercise reduces gut blood flow, leading to hypoperfusion and GI compromise, and loss of epithelial integrity that may raise permeability with bacterial translocation and inflammation.",
+     "grade": "moderate",
+     "sources": [
+      "vanwijck2012b"
+     ],
+     "evidence": [
+      {
+       "source": "vanwijck2012b",
+       "quote": "The redistribution of blood flow, necessary for such an increased blood supply to the periphery, significantly reduces blood flow to the gut, leading to hypoperfusion and gastrointestinal (GI) compromise.",
+       "level": "abstract"
+      },
+      {
+       "source": "vanwijck2012b",
+       "quote": "In addition, strenuous physical exercise leads to loss of epithelial integrity, which may give rise to increased intestinal permeability with bacterial translocation and inflammation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-eigs-threshold",
+     "text": "About 2 h at 60% VO₂max appears to be the threshold for significant gut disturbance, and heat and running make it worse.",
+     "grade": "moderate",
+     "sources": [
+      "costa2017"
+     ],
+     "evidence": [
+      {
+       "source": "costa2017",
+       "quote": "Exercise stress of ≥2 hours at 60% VO2max appears to be the threshold whereby significant gastrointestinal perturbations manifest, irrespective of fitness status.",
+       "level": "abstract"
+      },
+      {
+       "source": "costa2017",
+       "quote": "The addition of heat stress and running mode appears to exacerbate these markers of gastrointestinal disturbance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-unlinked",
+     "text": "Reduced gut blood flow might raise permeability, but this has not been definitively linked to how often GI symptoms occur.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "However, although evidence exists that this might occur, this has not yet been definitively linked to the prevalence of gastrointestinal symptoms.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-injury-vs-symptom"
+  },
+  {
+   "type": "question",
+   "item": "gi-bloodflow-apply"
+  },
+  {
+   "type": "concept",
+   "id": "gi-triage",
+   "title": "Triage: gut problem, or something else?",
+   "text": "Use two checks before blaming the gut.\n\n**1. Red flags.** Get medical help for severe or constant abdominal pain, vomiting blood, black or bloody stool, or keeping no fluid down. Bleeding gastritis, blood in the stool and ischaemic bowel are rare but serious [[c:gi-triage-serious]].\n\n**2. Look-alikes.** Nausea, vomiting and abdominal discomfort are also part of heat exhaustion [[c:gi-heat-ex]]. An athlete who is nauseous and also confused, collapsing, or very hot may have heat stroke, not a gut problem (heat illness lesson). Heavy drinking with vomiting and confusion can be [hyponatraemia](g:hyponatraemia) [[c:gi-eah]].\n\nRule: nausea alone is a gut problem until the rest of the picture says otherwise.",
+   "claims": [
+    {
+     "id": "gi-triage-serious",
+     "text": "Most exercise GI symptoms are mild, but hemorrhagic gastritis, hematochezia and ischemic bowel can be serious.",
+     "grade": "moderate",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Most gastrointestinal symptoms during exercise are mild and of no risk to health, but hemorrhagic gastritis, hematochezia, and ischemic bowel can present serious medical challenges.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-heat-ex",
+     "text": "Heat exhaustion includes fatigue, weakness, dizziness and gastrointestinal symptoms and is often a precursor to heat stroke.",
+     "grade": "moderate",
+     "sources": [
+      "bridwell2026"
+     ],
+     "evidence": [
+      {
+       "source": "bridwell2026",
+       "quote": "Heat exhaustion refers to a spectrum of symptoms that include fatigue, malaise, intense thirst, weakness, discomfort, anxiety, dizziness, and gastrointestinal symptoms, often a precursor to heat stroke",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gi-eah",
+     "text": "Exercise-associated hyponatraemia typically comes from drinking beyond sweat losses; severe cases bring headache, confusion and agitation.",
+     "grade": "strong",
+     "sources": [
+      "mcdermott2017",
+      "knechtle2019"
+     ],
+     "evidence": [
+      {
+       "source": "mcdermott2017",
+       "quote": "Exercise-associated hyponatremia typically results from ingesting water or hypotonic beverages (including sports drinks) beyond sweat losses.",
+       "level": "full-text"
+      },
+      {
+       "source": "knechtle2019",
+       "quote": "With the formation of cerebral edema at a plasma sodium concentration of <120 mmol/L, symptoms such as headache, confusion, agitation, coordination problems, and unconsciousness can occur",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-redflag"
+  },
+  {
+   "type": "question",
+   "item": "gi-lookalike"
+  },
+  {
+   "type": "concept",
+   "id": "gi-prevent",
+   "title": "Prevention that rests on the evidence",
+   "text": "What to do, with the evidence behind it:\n\n- **Use your history.** A past of GI problems predicts race symptoms [[c:gi-history]]: plan for it.\n- **Train the gut** and practise race fuel in training (fuelling module). Higher carbohydrate intake raised nausea and wind but went with faster Ironman times [[c:gi-cho]].\n- **Cut known triggers** in the hours before: fibre, fat, protein, very concentrated drinks [[c:gi-triggers]].\n- **Skip NSAIDs.** They raise gut permeability [[c:gi-triggers]].\n- **Manage heat and fluid** to protect gut blood flow, and **check the bike position** if upper symptoms appear [[c:gi-triggers]].\n\nHonest limit: the review calls the evidence for specific nutrition tweaks lacking, so test each change yourself [[c:gi-prevent-weak]].",
+   "claims": [
+    {
+     "id": "gi-history",
+     "text": "Race GI symptoms correlated with a reported history of GI distress.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "In all data sets, scores for upper and lower GI symptoms correlated with a reported history of GI distress (r = 0.37 and r = 0.51, respectively, P < 0.001).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-cho",
+     "text": "Higher carbohydrate intake went with more nausea and flatulence but also faster Ironman finishing times.",
+     "grade": "weak",
+     "sources": [
+      "pfeiffer2012"
+     ],
+     "evidence": [
+      {
+       "source": "pfeiffer2012",
+       "quote": "High CHO intake during exercise was related not only to increased scores for nausea and flatulence but also to better performance during IM races.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gi-triggers",
+     "text": "Fibre, fat, protein, concentrated carbohydrate drinks, NSAIDs, hypohydration and the aero position are linked with more GI symptoms.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "Gastrointestinal problems were more likely to occur with the ingestion of fiber, fat, protein, and concentrated carbohydrate solutions during the triathlon.",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "Both aspirin and NSAIDs have commonly been shown to increase intestinal permeability and may increase the incidence of gastrointestinal complaints.",
+       "level": "full-text"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "During intense exercise, and especially when hypohydrated, mesenteric blood flow is reduced; this is believed to be one of the main contributors to the development of gastrointestinal symptoms.",
+       "level": "abstract"
+      },
+      {
+       "source": "deoliveira2014",
+       "quote": "For example, on a bicycle, upper gastrointestinal symptoms are more prevalent possibly due to increased pressure on the abdomen as a result of the cycling position, particularly when in the ‘aero’ position.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "gi-prevent-weak",
+     "text": "For several proposed nutritional ways to reduce GI symptoms, evidence of benefit is lacking and more research is needed.",
+     "grade": "weak",
+     "sources": [
+      "deoliveira2014"
+     ],
+     "evidence": [
+      {
+       "source": "deoliveira2014",
+       "quote": "However, at this stage, evidence for beneficial effects of such interventions is lacking, and more research needs to be conducted to obtain a better understanding of the etiology of the problems and to improve the recommendations to athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "gi-race-plan"
+  },
+  {
+   "type": "question",
+   "item": "gi-nsaid-evaluate"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "30–50% of athletes get GI symptoms; most are mild, a few are serious.",
+    "Causes sort into physiological (gut blood flow), mechanical (impact, aero position) and nutritional (fibre, fat, concentrated drinks, NSAIDs).",
+    "Gut injury (EIGS) rises past about 2 h at 60% VO₂max but is not proven to match symptoms one to one.",
+    "Red flags (blood, severe pain, no fluids kept down) and look-alikes (heat illness, hyponatraemia) come before 'it's the gut'.",
+    "Prevention: use your history, practise race fuel, avoid NSAIDs and known triggers, and test changes yourself."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "gi-prev-recall",
+   "concept": "gi-scale",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Roughly what share of athletes report GI complaints during exercise, according to reviews?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30–50%",
+       "why": "Correct: the range given by the review.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "1–5%",
+       "why": "Far too low; GI symptoms are among the commonest sports complaints."
+      },
+      {
+       "id": "c",
+       "text": "60–80%",
+       "why": "Too high for athletes overall in the reviews."
+      },
+      {
+       "id": "d",
+       "text": "Almost none in cycling and all in running",
+       "why": "Cyclists get them too; running is only more common."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-ironman-scenario",
+   "concept": "gi-scale",
+   "bloom": "apply",
+   "sources": [
+    "pfeiffer2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete trains for a full Ironman and had stomach trouble in two earlier long races. Her coach plans her fuelling as if she were a first-timer with a normal gut. What do the data suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She is more likely to have symptoms: past GI problems correlated with race symptoms",
+       "why": "Correct: reported history correlated with both upper and lower symptom scores.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Past problems are irrelevant: symptoms are random",
+       "why": "They correlated with history (r = 0.37 and r = 0.51)."
+      },
+      {
+       "id": "c",
+       "text": "Her risk is lower: the gut learns from past problems automatically",
+       "why": "Learning needs practice; history alone showed higher scores."
+      },
+      {
+       "id": "d",
+       "text": "Only half-Ironman athletes have this link",
+       "why": "The link held in all data sets."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-sort",
+   "concept": "gi-causes",
+   "bloom": "understand",
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's nausea appears only when he rides in a very low aero position. Which family of cause fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mechanical: the position presses on the abdomen",
+       "why": "Correct: pressure on the abdomen is a mechanical cause.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Physiological: gut blood flow falls in any position",
+       "why": "Blood flow is physiological, but the position link points to pressure."
+      },
+      {
+       "id": "c",
+       "text": "Nutritional: low position changes digestion of carbohydrate",
+       "why": "No nutritional change; the trigger is the position."
+      },
+      {
+       "id": "d",
+       "text": "Pharmacological: the position raises NSAID levels",
+       "why": "Not a mechanism; no drug is involved."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-bike-run",
+   "concept": "gi-causes",
+   "bloom": "analyse",
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has reflux and bloating on the bike, but urgency and cramping low in the abdomen on the run, in the same race with the same fuel. Which explanation best fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Bike position presses the stomach; run impact jolts the bowel",
+       "why": "Correct: mechanical causes differ by discipline.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Fuel is the only cause; position cannot matter",
+       "why": "Same fuel, different symptom sites by discipline: mechanics matter."
+      },
+      {
+       "id": "c",
+       "text": "Her gut blood flow rises on the run",
+       "why": "Blood flow falls with harder effort; it does not explain the pattern."
+      },
+      {
+       "id": "d",
+       "text": "Reflux and urgency are the same symptom",
+       "why": "They are upper and lower symptoms with different typical causes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-injury-vs-symptom",
+   "concept": "gi-eigs",
+   "bloom": "evaluate",
+   "sources": [
+    "deoliveira2014",
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study finds that a marathon raises gut-lining injury markers in most runners, but only a third report symptoms. What conclusion do the data support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Injury and symptoms are linked but not one to one: markers alone don't tell who feels ill",
+       "why": "Correct: the link to symptoms is not definitively shown.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Gut injury always causes symptoms, so two-thirds under-reported",
+       "why": "No: the link is unproven, so this is a claim beyond the data."
+      },
+      {
+       "id": "c",
+       "text": "Markers prove the gut is healthy in two-thirds",
+       "why": "Raised markers mean injury, symptom or not."
+      },
+      {
+       "id": "d",
+       "text": "Symptoms prove injury, so markers are useless",
+       "why": "Symptoms can occur with little injury."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-bloodflow-apply",
+   "concept": "gi-eigs",
+   "bloom": "apply",
+   "sources": [
+    "vanwijck2012b",
+    "costa2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner plans a hard 3 h long run at 65% VO₂max in hot weather. Which change most directly protects her gut?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Limit fluid and heat deficits and avoid NSAIDs",
+       "why": "Correct: hypohydration and NSAIDs worsen flow and permeability.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Run faster to finish sooner",
+       "why": "More intensity increases gut disturbance."
+      },
+      {
+       "id": "c",
+       "text": "Skip fuel to keep the stomach empty",
+       "why": "Not shown to protect; fuel practice matters."
+      },
+      {
+       "id": "d",
+       "text": "Train less fit so the gut is stressed less",
+       "why": "The threshold applies irrespective of fitness."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-redflag",
+   "concept": "gi-triage",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Six hours after a 100 km cycle race, a rider has constant abdominal pain and passes black stool. What is the right step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Get medical help now: these are red flags",
+       "why": "Correct: bleeding and severe pain need a doctor.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Treat it as normal race gut and take an NSAID",
+       "why": "NSAIDs can worsen gut injury and bleeding."
+      },
+      {
+       "id": "c",
+       "text": "Wait two days for it to pass",
+       "why": "Delay is unsafe with bleeding signs."
+      },
+      {
+       "id": "d",
+       "text": "Increase carbohydrate intake",
+       "why": "This is not a fuelling problem."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-lookalike",
+   "concept": "gi-triage",
+   "bloom": "analyse",
+   "sources": [
+    "bridwell2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At km 30 of a hot marathon, a runner has nausea and is slurring her words. Which view is best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Think heat illness: confusion with nausea in the heat is not a plain gut problem",
+       "why": "Correct: nausea is part of heat exhaustion, and slurred speech suggests CNS dysfunction.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Treat as a gut problem and give a concentrated gel",
+       "why": "This delays cooling and care."
+      },
+      {
+       "id": "c",
+       "text": "It is hyponatraemia only if she is thin",
+       "why": "Body size does not decide it."
+      },
+      {
+       "id": "d",
+       "text": "Nausea alone proves heat stroke",
+       "why": "Nausea is non-specific; the confusion changes the picture."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-race-plan",
+   "concept": "gi-prevent",
+   "bloom": "apply",
+   "sources": [
+    "pfeiffer2012",
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An Ironman athlete with a history of GI trouble wants a race plan. Which plan fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rehearse race fuel, skip NSAIDs and fibre, test one change at a time",
+       "why": "Correct: it uses history, gut practice and known triggers, and tests changes.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Copy a pro's fuelling plan exactly on race day",
+       "why": "Untested on her gut; individual response varies."
+      },
+      {
+       "id": "c",
+       "text": "Take ibuprofen before the run to prevent aches",
+       "why": "NSAIDs raise gut permeability."
+      },
+      {
+       "id": "d",
+       "text": "Cut all carbohydrate to protect the gut",
+       "why": "Higher carbohydrate went with faster Ironman times."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gi-nsaid-evaluate",
+   "concept": "gi-prevent",
+   "bloom": "evaluate",
+   "sources": [
+    "deoliveira2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A friend says, \"Taking ibuprofen before a long run prevents pain and does no harm.\" What is the fairest assessment?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not supported: NSAIDs raise gut permeability and may add GI complaints",
+       "why": "Correct: aspirin and NSAIDs have been shown to raise permeability.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It is supported: ibuprofen protects the gut",
+       "why": "No: it does the opposite for permeability."
+      },
+      {
+       "id": "c",
+       "text": "It is right: only high doses matter",
+       "why": "No dose threshold was shown in the sources read."
+      },
+      {
+       "id": "d",
+       "text": "It cannot be assessed: no one studied NSAIDs in sport",
+       "why": "Reviews do summarise gut effects."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

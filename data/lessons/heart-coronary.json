@@ -1,0 +1,702 @@
+{
+ "id": "heart-coronary",
+ "module": "t5-heart",
+ "title": "The extreme exercise hypothesis",
+ "goal": "Explain what the extreme exercise hypothesis claims and separate what is known from what is disputed about coronary calcium, troponin release after marathons and myocardial scar.",
+ "requires": [
+  "heart-scd"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "extreme-exercise-hypothesis",
+    "coronary-artery-calcium",
+    "plaque",
+    "atherosclerosis",
+    "late-gadolinium-enhancement"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cor-hypo",
+   "title": "The extreme exercise hypothesis",
+   "text": "Exercise lowers the risk of heart disease and death. The [extreme exercise hypothesis](g:extreme-exercise-hypothesis) asks whether very large amounts of long-term endurance training turn that into a [U-shaped curve](g:u-shaped-curve), with harm at the far end.\n\nFive signals are cited [[c:cor-signals]]: faster build-up of calcium in the coronary arteries, release of the heart-muscle protein [troponin](g:troponin) into the blood after races, scar patches in the heart muscle, atrial fibrillation (previous lesson) and sudden cardiac death. The reviewer's verdict: the evidence is mostly circumstantial.\n\nThe rest of this lesson takes the three heart-wall signals one at a time: what is known and what is disputed.",
+   "claims": [
+    {
+     "id": "cor-signals",
+     "text": "Coronary calcium, troponin release, myocardial fibrosis, AF and sudden death have been reported in veteran endurance athletes, but the support for the hypothesis is mainly circumstantial.",
+     "grade": "weak",
+     "sources": [
+      "eijsvogels2018"
+     ],
+     "evidence": [
+      {
+       "source": "eijsvogels2018",
+       "quote": "Accelerated coronary artery calcification, exercise-induced cardiac biomarker release, myocardial fibrosis, atrial fibrillation, and even higher risk of sudden cardiac death have been reported in athletes. There is primarily circumstantial evidence that supports the \"Extreme Exercise Hypothesis.\"",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcor-hypo"
+  },
+  {
+   "type": "question",
+   "item": "hcor-evidence"
+  },
+  {
+   "type": "concept",
+   "id": "cor-cac",
+   "title": "Calcium in the coronary arteries",
+   "text": "[Coronary artery calcium](g:coronary-artery-calcium) (CAC) is calcium in the walls of the heart's arteries, a sign of [atherosclerosis](g:atherosclerosis). In 284 middle-aged men, those with lifelong exercise above 2,000 MET-min per week had CAC more often (68%, adjusted OR 3.2) and more [plaque](g:plaque) (77%) [[c:cor-aeng]]. But against the least active group their plaque was more benign: fewer mixed plaques (48% vs 69%) and more purely calcified ones (38% vs 16%).\n\nA systematic review of 33 studies: 15 found higher CAC in the highest-volume group, 8 found none or the opposite. Most studies with outcomes found no link, or an inverse one, between volume and deaths or cardiac events [[c:cor-ellingson]].",
+   "claims": [
+    {
+     "id": "cor-aeng",
+     "text": "Men with lifelong exercise above 2,000 MET-min per week had more CAC and plaque, but a more benign plaque type (fewer mixed, more only calcified).",
+     "grade": "moderate",
+     "sources": [
+      "aengevaeren2017"
+     ],
+     "evidence": [
+      {
+       "source": "aengevaeren2017",
+       "quote": "Participants in the >2000 MET-min/wk group had a higher prevalence of CAC and atherosclerotic plaques. The most active group, however, had a more benign composition of plaques, with fewer mixed plaques and more often only calcified plaques.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cor-ellingson",
+     "text": "Across 33 studies, high exercise volume often goes with higher CAC, but studies with clinical outcomes mostly found no relationship or an inverse one with deaths and cardiac events.",
+     "grade": "moderate",
+     "sources": [
+      "ellingson2026"
+     ],
+     "evidence": [
+      {
+       "source": "ellingson2026",
+       "quote": "Nine of 12 comparative studies with participants exercising > 450 min/wk showed higher CAC scores in high-volume exercisers.",
+       "level": "abstract"
+      },
+      {
+       "source": "ellingson2026",
+       "quote": "The majority of the 9 studies reporting clinical outcomes showed no relationship or an inverse association between exercise volume and mortality or CV events.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is the extra coronary calcium in veteran athletes harmful?",
+    "sides": [
+     {
+      "position": "It warns of disease: coronary artery disease is the leading cause of sudden death in athletes over 35, so athletes are not immune.",
+      "sources": [
+       "claessen2025"
+      ]
+     },
+     {
+      "position": "It is mostly a benign calcified type, and event rates have not been shown to rise with athletic activity.",
+      "sources": [
+       "ellingson2026",
+       "aengevaeren2017"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "hcor-conv-ex",
+   "title": "MET-minutes to MET-hours",
+   "problem": "A group trains 2,400 MET-min per week. What is that in MET-hours per week, the unit of the AF lesson?",
+   "steps": [
+    "MET-hours = MET-minutes ÷ 60.",
+    "2,400 ÷ 60 = 40.",
+    "40 MET-h per week: well under the 78 where the AF curve turned up, yet already in the group with more calcium."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcor-conv",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hcor-plaque"
+  },
+  {
+   "type": "question",
+   "item": "hcor-cac-case"
+  },
+  {
+   "type": "concept",
+   "id": "cor-trop",
+   "title": "Troponin after a marathon",
+   "text": "Cardiac troponin, the heart's own form of the protein, leaks from injured heart cells, which is why it is the heart-attack test. After a marathon it rises in many healthy runners too.\n\nA meta-analysis of 69 studies (3,274 runners, mostly men aged 30–55) found troponin T up by about 42 ng·L⁻¹ after the race, along with changes in heart structure and function [[c:cor-laily]].\n\nWhat that rise means is the open question. The authors state that the clinical significance and potential for harm are yet to be established. A rise after a race is common; lasting damage is not shown.",
+   "claims": [
+    {
+     "id": "cor-laily",
+     "text": "Marathon running raises troponin T (about +42 ng/L) and changes heart structure and function, but the clinical meaning and potential for harm are not established.",
+     "grade": "moderate",
+     "sources": [
+      "laily2026"
+     ],
+     "evidence": [
+      {
+       "source": "laily2026",
+       "quote": "Marathon running-induced increases in circulating troponin T (+42 (32.6, 52.3) ng/L",
+       "level": "abstract"
+      },
+      {
+       "source": "laily2026",
+       "quote": "Marathon running induces acute changes in biomarkers of myocardial injury, cardiac structure and function. The clinical significance and potential for harm of these changes are yet to be established.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcor-trop"
+  },
+  {
+   "type": "concept",
+   "id": "cor-lge",
+   "title": "Scar patches on MRI",
+   "text": "[Late gadolinium enhancement](g:late-gadolinium-enhancement) (LGE) marks patches of scar-like [fibrosis](g:fibrosis) on a contrast MRI. In a meta-analysis of 12 studies (1,359 people), 163 of 772 endurance athletes had LGE, against 19 of 587 comparison people (OR 7.20) [[c:cor-zhang]].\n\nIn 296 young and 138 middle-aged male athletes, one fifth of the middle-aged group had fibrosis outside the points where the two ventricles join, against 3% of the young [[c:cor-depaepe]]. It went with more ventricular extra beats but not with weaker pumping.\n\nLarger scar patterns, mostly in veteran men, are not seen as harmless and need follow-up [[c:cor-allwood]]. No one has shown yet that these patches cause events.",
+   "claims": [
+    {
+     "id": "cor-zhang",
+     "text": "LGE was far more common in long-term endurance athletes than in comparison groups (163/772 vs 19/587; OR 7.20).",
+     "grade": "moderate",
+     "sources": [
+      "zhang2020",
+      "allwood2024"
+     ],
+     "evidence": [
+      {
+       "source": "zhang2020",
+       "quote": "The results of the meta-analysis suggested that the prevalence of LGE was higher in the athletes group with long-term endurance exercise (OR 7.20;95%CI: 4.51-11.49).",
+       "level": "abstract"
+      },
+      {
+       "source": "allwood2024",
+       "quote": "Major myocardial fibrosis (nonischaemic and ischaemic patterns) was predominately observed in veteran athletes, particularly in males and infrequently in young athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cor-depaepe",
+     "text": "In middle-aged male endurance athletes, fibrosis was present in up to one fifth and went with more ventricular ectopy, but did not predict reduced systolic function.",
+     "grade": "weak",
+     "sources": [
+      "depaepe2026"
+     ],
+     "evidence": [
+      {
+       "source": "depaepe2026",
+       "quote": "Non-hinge-point fibrosis is present in up to one-fifth of middle-aged athletes and predictive of a higher burden of both unifocal and multifocal ventricular ectopy. Reduced systolic function is more prevalent in athletes and not predicted by fibrosis.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cor-allwood",
+     "text": "Major myocardial fibrosis is found mainly in veteran male athletes, rarely in young ones, and is not considered benign: it needs evaluation and follow-up.",
+     "grade": "weak",
+     "sources": [
+      "allwood2024"
+     ],
+     "evidence": [
+      {
+       "source": "allwood2024",
+       "quote": "Major myocardial fibrosis (nonischaemic and ischaemic patterns) was predominately observed in veteran athletes, particularly in males and infrequently in young athletes.",
+       "level": "abstract"
+      },
+      {
+       "source": "allwood2024",
+       "quote": "Major myocardial fibrosis is not a benign finding and warrants a comprehensive evaluation and follow-up regarding potential cardiac disease.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hcor-lge-ex",
+   "title": "Prevalence from counts",
+   "problem": "In the meta-analysis, 163 of 772 endurance athletes had LGE. What share is that?",
+   "steps": [
+    "Prevalence = people with LGE ÷ people in the group.",
+    "163 ÷ 772 = 0.211.",
+    "About 21%. Use the group's own total (772), not the total of all 1,359 people."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcor-lge-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hcor-lge-read"
+  },
+  {
+   "type": "concept",
+   "id": "cor-known",
+   "title": "Known and disputed",
+   "text": "| Signal | Fairly well shown | Disputed or unknown |\n|---|---|---|\n| Coronary calcium | more CAC at high volume | whether it raises events; plaque type seems benign |\n| Troponin | rises after a marathon | whether it harms |\n| Scar (LGE) | more common in veterans | what it means; its link to events |\n\nThe weak points are shared [[c:cor-gaps]]: most studies compare athletes with others at one point in time, mostly in men, and follow few people for outcomes. Athletes who volunteer may differ in health habits, a [confounder](g:confounder).",
+   "claims": [
+    {
+     "id": "cor-gaps",
+     "text": "Evidence for the extreme exercise hypothesis rests mainly on cross-sectional imaging and biomarker studies; outcome data are lacking.",
+     "grade": "weak",
+     "sources": [
+      "eijsvogels2018",
+      "claessen2025"
+     ],
+     "evidence": [
+      {
+       "source": "claessen2025",
+       "quote": "Whilst the risk of CV events has not been shown to rise with athletic activity, the potential for CAD should not be overlooked",
+       "level": "abstract"
+      },
+      {
+       "source": "eijsvogels2018",
+       "quote": "Future studies are warranted to establish the long-term cardiovascular health effects of these findings in veteran endurance athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcor-appraise"
+  },
+  {
+   "type": "question",
+   "item": "hcor-known"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "The extreme exercise hypothesis asks whether very high training volumes bend the benefit curve back up; the evidence is mostly circumstantial.",
+    "High-volume athletes have more coronary calcium, but the plaque looks more benign and events are not shown to rise.",
+    "Troponin rises after most marathons; whether it ever harms is not established.",
+    "LGE scar patches are more common in veteran endurance athletes (OR 7.20), but their meaning is unknown.",
+    "Most findings come from men, one-time imaging and few outcome data: keep risk-factor checks and keep training."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hcor-hypo",
+   "concept": "cor-hypo",
+   "bloom": "understand",
+   "sources": [
+    "eijsvogels2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the extreme exercise hypothesis predict about health and training volume?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A U-shape: benefit up to a point, then harm at very high volumes",
+       "why": "Right: the U-shape or reverse J is its core.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A straight line: more training always means less heart disease",
+       "why": "That is the older view; the hypothesis questions it."
+      },
+      {
+       "id": "c",
+       "text": "A flat line: training volume makes no difference to the heart",
+       "why": "Moderate exercise clearly helps; the hypothesis is about the far end."
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "hcor-evidence",
+   "concept": "cor-hypo",
+   "bloom": "remember",
+   "sources": [
+    "eijsvogels2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does the cited review describe the support for the hypothesis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Proven by randomised trials",
+       "why": "No randomised trial of extreme exercise is cited."
+      },
+      {
+       "id": "b",
+       "text": "Mostly circumstantial",
+       "why": "Right: signals exist, but links to outcomes are thin.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Disproved by large cohorts",
+       "why": "The review calls it unresolved, not disproved."
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "hcor-conv",
+   "concept": "cor-cac",
+   "bloom": "apply",
+   "sources": [
+    "aengevaeren2017",
+    "davies2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cohort trains 2,000 MET-min per week. What is that in MET-hours per week?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 120,000",
+       "why": "This multiplies by 60 instead of dividing."
+      },
+      {
+       "id": "b",
+       "text": "About 3.3",
+       "why": "This divides by 600, a slip in the factor."
+      },
+      {
+       "id": "c",
+       "text": "About 33",
+       "why": "Right: 2,000 ÷ 60 = 33.3.",
+       "correct": true
+      }
+     ],
+     "solution": "MET-hours = MET-min ÷ 60 = 2,000 ÷ 60 = 33.3."
+    },
+    {
+     "id": "b",
+     "stem": "A cohort trains 3,000 MET-min per week. What is that in MET-hours per week?",
+     "options": [
+      {
+       "id": "a",
+       "text": "50",
+       "why": "Right: 3,000 ÷ 60 = 50.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "180,000",
+       "why": "This multiplies by 60 instead of dividing."
+      },
+      {
+       "id": "c",
+       "text": "5",
+       "why": "This divides by 600, a slip in the factor."
+      }
+     ],
+     "solution": "3,000 ÷ 60 = 50 MET-h."
+    },
+    {
+     "id": "c",
+     "stem": "A cohort trains 4,680 MET-min per week. What is that in MET-hours per week?",
+     "options": [
+      {
+       "id": "a",
+       "text": "280,800",
+       "why": "This multiplies by 60 instead of dividing."
+      },
+      {
+       "id": "b",
+       "text": "78",
+       "why": "Right: 4,680 ÷ 60 = 78.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "7.8",
+       "why": "This divides by 600, a slip in the factor."
+      }
+     ],
+     "solution": "4,680 ÷ 60 = 78 MET-h."
+    }
+   ]
+  },
+  {
+   "id": "hcor-plaque",
+   "concept": "cor-cac",
+   "bloom": "analyse",
+   "sources": [
+    "aengevaeren2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The most active men had more CAC but fewer mixed plaques and more purely calcified ones. What does that suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The plaque is soft and dangerous, as in sedentary men",
+       "why": "The finding is the reverse: fewer mixed plaques."
+      },
+      {
+       "id": "b",
+       "text": "The calcium is a scanner error with no meaning",
+       "why": "CAC and plaque were really higher; the question is their type."
+      },
+      {
+       "id": "c",
+       "text": "More plaque, but a more benign type, so the score alone may overstate risk",
+       "why": "Right: the authors say it may help explain athletes' longevity.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcor-cac-case",
+   "concept": "cor-cac",
+   "bloom": "evaluate",
+   "sources": [
+    "claessen2025",
+    "ellingson2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 58-year-old cyclist, 20 years of 12 h a week, has a CAC score of 120 and no symptoms. What is the fairest summary of what is known?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More CAC with high volume, events not shown to rise: check risk factors, keep training",
+       "why": "Right: evaluate risk factors and, without symptoms or ischaemia, keep exercising.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Exercise caused the disease, so he should stop training now and for good",
+       "why": "Fitness is linked with fewer coronary events even with coronary disease."
+      },
+      {
+       "id": "c",
+       "text": "Athletes' CAC means nothing, so no check of risk factors is needed",
+       "why": "Coronary disease is the leading cause of sudden death in athletes over 35."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcor-trop",
+   "concept": "cor-trop",
+   "bloom": "apply",
+   "sources": [
+    "laily2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A healthy runner's troponin T is up 42 ng·L⁻¹ after a marathon, with no symptoms. What is the best statement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It proves she had a heart attack in the race",
+       "why": "A rise is common in healthy runners and is not a heart attack on its own."
+      },
+      {
+       "id": "b",
+       "text": "Common after races; whether it harms is not established",
+       "why": "Right: rises are common and their significance is yet to be established.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "It proves the heart is unharmed because levels fall again",
+       "why": "The review states potential for harm is unknown, not excluded."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcor-lge-calc",
+   "concept": "cor-lge",
+   "bloom": "apply",
+   "sources": [
+    "zhang2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a meta-analysis, 163 of 772 endurance athletes had LGE. What share is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 12%",
+       "why": "This divides by all 1,359 participants, not the athletes."
+      },
+      {
+       "id": "b",
+       "text": "About 4.7%",
+       "why": "This divides 772 by 163 and inverts the share."
+      },
+      {
+       "id": "c",
+       "text": "About 21%",
+       "why": "Right: 163 ÷ 772 = 0.211.",
+       "correct": true
+      }
+     ],
+     "solution": "163 ÷ 772 = 0.211, about 21%."
+    },
+    {
+     "id": "b",
+     "stem": "In the same meta-analysis, 19 of 587 comparison people had LGE. What share is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3.2%",
+       "why": "Right: 19 ÷ 587 = 0.032.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 1.4%",
+       "why": "This divides by all 1,359 participants."
+      },
+      {
+       "id": "c",
+       "text": "About 31%",
+       "why": "This divides 587 by 19 and inverts the share."
+      }
+     ],
+     "solution": "19 ÷ 587 = 0.032, about 3.2%."
+    }
+   ]
+  },
+  {
+   "id": "hcor-lge-read",
+   "concept": "cor-lge",
+   "bloom": "analyse",
+   "sources": [
+    "depaepe2026",
+    "zhang2020"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement do the LGE studies support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fibrosis in the athletes predicted weaker pumping of the left ventricle",
+       "why": "The study found reduced systolic function was not predicted by fibrosis."
+      },
+      {
+       "id": "b",
+       "text": "Fibrosis was commoner in middle-aged athletes and went with more extra beats",
+       "why": "Right: it was linked to ventricular ectopy.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "LGE shows that endurance training causes heart attacks in veterans",
+       "why": "These are patches seen on MRI; no link to heart attacks is shown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcor-appraise",
+   "concept": "cor-known",
+   "bloom": "evaluate",
+   "sources": [
+    "zhang2020",
+    "eijsvogels2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What most limits the claim that endurance training scars the heart, based on the LGE meta-analysis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An odds ratio of 7.20 is too small to matter",
+       "why": "An OR of 7.20 is large; the limit is the design, not the size of the effect."
+      },
+      {
+       "id": "b",
+       "text": "Too few athletes were studied to trust it",
+       "why": "772 athletes across 12 studies is a fair number; the limit is one-time comparison, not sample size."
+      },
+      {
+       "id": "c",
+       "text": "One-time comparisons with little follow-up for events",
+       "why": "Right: one-time imaging cannot show cause or outcome.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcor-known",
+   "concept": "cor-known",
+   "bloom": "evaluate",
+   "sources": [
+    "eijsvogels2018",
+    "laily2026",
+    "ellingson2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement is best supported today?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High-volume athletes have more coronary calcium and scar patches on average",
+       "why": "Right: both findings are repeated in reviews.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Very high training volumes cause more heart attacks",
+       "why": "Studies with outcomes mostly found no link or an inverse one."
+      },
+      {
+       "id": "c",
+       "text": "A troponin rise after a race means lasting heart damage",
+       "why": "The meaning of the rise is not established."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

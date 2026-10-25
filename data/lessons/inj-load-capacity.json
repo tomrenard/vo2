@@ -1,0 +1,661 @@
+{
+ "id": "inj-load-capacity",
+ "module": "t5-injury",
+ "title": "Load, capacity and the limits of the evidence",
+ "goal": "Use the load–capacity model, sort load rises into groups, and say what the evidence on load spikes can and cannot support.",
+ "requires": [
+  "inj-tendon"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "tissue-capacity",
+    "mechanical-load"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "lc-model",
+   "title": "Load against capacity",
+   "text": "Every tissue has a [capacity](g:tissue-capacity): how much repeated load it can take before damage outruns repair. Each session adds [mechanical load](g:mechanical-load). Injury becomes likely when load runs above capacity for long enough. For bone, risk depends on the load applied and on the bone's ability to resist it [[c:lc-model]].\n\nThe model suggests why a fit cyclist who adds running can get shin pain: heart and lungs may be ready before bone is. That is the model's reading, not a tested rule.\n\nTraining load measures can link to injury through a mechanical pathway (force through tissue), a psycho-physiological pathway (effort, fatigue), or both [[c:lc-pathways]].",
+   "claims": [
+    {
+     "id": "lc-model",
+     "text": "For bone, injury risk depends on both the load applied and the bone's ability to resist it.",
+     "grade": "moderate",
+     "sources": [
+      "warden2014"
+     ],
+     "evidence": [
+      {
+       "source": "warden2014",
+       "quote": "Microdamage accumulation and subsequent risk for development of a BSI are related both to the load applied to a bone and to the ability of the bone to resist load.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lc-pathways",
+     "text": "Training load measures can relate to injury through a mechanical load-response pathway, a psycho-physiological pathway, or both.",
+     "grade": "weak",
+     "sources": [
+      "kalkhoven2021"
+     ],
+     "evidence": [
+      {
+       "source": "kalkhoven2021",
+       "quote": "These measures and metrics can conceptually be related to athletic injury through the mechanical load-response pathway, the psycho-physiological load-response pathway, or both.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lc-model-def"
+  },
+  {
+   "type": "question",
+   "item": "lc-model-apply"
+  },
+  {
+   "type": "question",
+   "item": "lc-pathways"
+  },
+  {
+   "type": "concept",
+   "id": "lc-spike",
+   "title": "Why spikes matter",
+   "text": "A spike is a sudden rise in load that tissue capacity hasn't caught up with. The IOC statement counts load broadly: rapid changes in training and competition load, a crowded calendar, psychological load and travel [[c:lc-soligard]].\n\nIn running, three of four studies found that increases in load went with more injuries [[c:lc-spike-claim]]. Among 874 novices, the group raising distance by over 30% had more distance-related injuries than the under-10% group, though the gap was not statistically clear.\n\nTo sort a rise into a group, divide the rise by the old week, not the new one.",
+   "claims": [
+    {
+     "id": "lc-soligard",
+     "text": "The IOC consensus defines load broadly: rapid changes in training and competition load, calendar congestion, psychological load and travel.",
+     "grade": "strong",
+     "sources": [
+      "soligard2016"
+     ],
+     "evidence": [
+      {
+       "source": "soligard2016",
+       "quote": "The International Olympic Committee convened an expert group to review the scientific evidence for the relationship of load (defined broadly to include rapid changes in training and competition load, competition calendar congestion, psychological load and travel) and health outcomes in sport.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "lc-spike-claim",
+     "text": "Three of four studies in runners found that increases in training load went with more running-related injury.",
+     "grade": "weak",
+     "sources": [
+      "damsted2018",
+      "nielsen2014"
+     ],
+     "evidence": [
+      {
+       "source": "damsted2018",
+       "quote": "Four articles fulfilled the eligibility criteria of which three found an association between increases in training load and an increased risk of running-related injuries",
+       "level": "abstract"
+      },
+      {
+       "source": "nielsen2014",
+       "quote": "Novice runners who progressed their running distance by more than 30% over a 2-week period seem to be more vulnerable to distance-related injuries than runners who increase their running distance by less than 10%.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lc-soligard-def"
+  },
+  {
+   "type": "example",
+   "id": "lc-rise-example",
+   "title": "Sorting a distance rise",
+   "problem": "A runner's weekly distance goes from 20 km to 23 km. How big is the rise, and in which group (under 10%, 10–30%, over 30%) does it fall?",
+   "steps": [
+    "Rise in distance = 23 − 20 = 3 km.",
+    "Divide by the old week: 3 ÷ 20 = 0.15, which is 15%.",
+    "15% is between 10% and 30%, so it falls in the 10–30% group."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lc-spike-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "lc-ten",
+   "title": "The 10% rule has no clean support",
+   "text": "Many coaches teach a '10% rule': never raise weekly volume by more than 10%. The systematic review found no difference in injury rate between a 10% and a 24% average rise in weekly volume (HR 0.8, 95% CI 0.6–1.3) [[c:lc-no10]].\n\nThat doesn't show 24% is safe: the interval runs from 0.6 to 1.3, so the studies could not rule out a real difference. It shows that no sharp line between safe and unsafe has been found.\n\nThe review's overall verdict was very limited evidence.",
+   "claims": [
+    {
+     "id": "lc-no10",
+     "text": "No difference in injury rate was found between a 10% and a 24% average weekly volume rise (HR 0.8, 95% CI 0.6–1.3), and evidence for load change as a cause is very limited.",
+     "grade": "weak",
+     "sources": [
+      "damsted2018"
+     ],
+     "evidence": [
+      {
+       "source": "damsted2018",
+       "quote": "However, no difference was found between a 10% and a 24% average increase in weekly volume (HR = 0.8, 95% CI: 0.6; 1.3).",
+       "level": "abstract"
+      },
+      {
+       "source": "damsted2018",
+       "quote": "Very limited evidence exists supporting that a sudden change in training load is associated with increased risk of running-related injury.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lc-no10-item"
+  },
+  {
+   "type": "concept",
+   "id": "lc-limits",
+   "title": "Limits: can load numbers predict injury?",
+   "text": "Can the load numbers we log predict injury? The IOC panel said poor load management is a major risk factor. A critical review replies that the measures are not tied to tissue damage: there is no validation of current training load measures against tissue-level mechanical loads, and internal measures such as effort scores are probably too far from injury causation to give reliable links [[c:lc-debate-claim]].\n\nSo two things hold at once: load matters in theory, and our tools measure it poorly. The ACWR lesson shows one such tool failing.",
+   "claims": [
+    {
+     "id": "lc-debate-claim",
+     "text": "Whether current training-load measures can predict injury is disputed.",
+     "grade": "disputed",
+     "sources": [
+      "soligard2016",
+      "kalkhoven2021"
+     ],
+     "evidence": [
+      {
+       "source": "soligard2016",
+       "quote": "Emerging evidence indicates that poor load management is a major risk factor for injury.",
+       "level": "abstract"
+      },
+      {
+       "source": "kalkhoven2021",
+       "quote": "Furthermore, considerable challenges in quantifying this pathway exist within applied settings, evidenced by a notable absence of validation between current training load measures and tissue-level mechanical loads.",
+       "level": "abstract"
+      },
+      {
+       "source": "kalkhoven2021",
+       "quote": "these measures are likely too far removed from injury causation to provide meaningful, reliable relationships with injury.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is poor load management a major, measurable risk factor for injury?",
+    "sides": [
+     {
+      "position": "Yes: emerging evidence says poor load management, including rapid changes, is a major risk factor.",
+      "sources": [
+       "soligard2016"
+      ]
+     },
+     {
+      "position": "Not as measured: current load measures are not validated against tissue load and internal measures sit too far from injury causation.",
+      "sources": [
+       "kalkhoven2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "lc-limits-kalk"
+  },
+  {
+   "type": "question",
+   "item": "lc-debate-eval"
+  },
+  {
+   "type": "concept",
+   "id": "lc-use",
+   "title": "Using it with care",
+   "text": "What can you take from this? The authors of the novice-runner cohort advised novices to progress weekly distance by less than 30% per week over a 2-week period [[c:lc-advice]]. Treat that as a loose guide for people who start from little, not a rule.\n\nThe study had volunteers, all novices, using their own plans. Applying it to an experienced triathlete adding run volume stretches it.\n\nThe other side of the model is capacity: strength work and enough fuel raise or protect what the tissue can take. The last lesson looks at strength training.",
+   "claims": [
+    {
+     "id": "lc-advice",
+     "text": "The authors of the novice-runner cohort advised novices to progress weekly distance by less than 30% over a 2-week period; the study was exploratory.",
+     "grade": "weak",
+     "sources": [
+      "nielsen2014"
+     ],
+     "evidence": [
+      {
+       "source": "nielsen2014",
+       "quote": "Still, novice runners may be well advised to progress their weekly distances by less than 30% per week over a 2-week period.",
+       "level": "abstract"
+      },
+      {
+       "source": "nielsen2014",
+       "quote": "Owing to the exploratory nature of the present study, randomized controlled trials are needed to verify these results, and more experimental studies are needed to validate the assumptions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "lc-generalise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Injury risk depends on load and on the tissue's capacity to take it; the model suggests capacity can lag behind aerobic fitness.",
+    "A rise is the increase divided by the old week; sudden rises went with more injuries in most running studies.",
+    "No clean safe threshold such as 10% has been shown; evidence is limited.",
+    "Load measures are not validated against tissue load, so treat dashboards with care; the ACWR lesson shows one tool failing."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "lc-model-def",
+   "concept": "lc-model",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "warden2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does tissue capacity mean in the load–capacity model?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The most weight you can lift once",
+       "why": "That is a one-rep max, not the repeated load a tissue tolerates."
+      },
+      {
+       "id": "b",
+       "text": "How fit your heart and lungs are",
+       "why": "Aerobic fitness is separate and may run ahead of tissue capacity."
+      },
+      {
+       "id": "c",
+       "text": "How much repeated load a tissue takes before damage outruns repair",
+       "correct": true,
+       "why": "Right: capacity is repeated-load tolerance."
+      },
+      {
+       "id": "d",
+       "text": "How much pain you can put up with in training",
+       "why": "Pain tolerance is not a measure of tissue limits."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-model-apply",
+   "concept": "lc-model",
+   "bloom": "apply",
+   "sources": [
+    "warden2014",
+    "kalkhoven2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A well-trained cyclist adds three runs a week. His breathing feels easy, but his shin starts to hurt in week 4. How does the load–capacity model read this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Aerobic fitness protects bone, so something else must be wrong",
+       "why": "Fitness of heart and lungs does not directly raise bone capacity."
+      },
+      {
+       "id": "b",
+       "text": "Load rose above what shin bone could take, though his heart and lungs coped",
+       "correct": true,
+       "why": "Right: in the model, tissue capacity can lag behind aerobic fitness."
+      },
+      {
+       "id": "c",
+       "text": "Cycling already loads the shins the same way as running",
+       "why": "The model asks about the load on the tissue; cycling and running load them differently."
+      },
+      {
+       "id": "d",
+       "text": "The pain shows his heart rate zones were set too high",
+       "why": "Heart rate zones concern effort, not the force through the shin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-pathways",
+   "concept": "lc-model",
+   "bloom": "understand",
+   "sources": [
+    "kalkhoven2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which load measure links to injury through the mechanical pathway?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A daily wellness score of mood and sleep",
+       "why": "That is the psycho-physiological side: how the athlete feels."
+      },
+      {
+       "id": "b",
+       "text": "Session effort rating",
+       "why": "Effort is also psycho-physiological: how hard it felt."
+      },
+      {
+       "id": "c",
+       "text": "Force through the shin at each footstrike",
+       "correct": true,
+       "why": "Right: force through tissue is mechanical load."
+      },
+      {
+       "id": "d",
+       "text": "Resting heart rate on waking",
+       "why": "A body signal of stress or fatigue, not force through tissue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-spike-calc",
+   "concept": "lc-spike",
+   "bloom": "apply",
+   "sources": [
+    "nielsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner's weekly distance goes from 30 km to 36 km. How big is the rise, and which group does it fall in (under 10%, 10–30%, over 30%)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6%: under 10%",
+       "why": "Uses the raw 6 km difference as a percentage."
+      },
+      {
+       "id": "b",
+       "text": "20%: 10–30%",
+       "correct": true,
+       "why": "Right: 6 ÷ 30 = 0.20."
+      },
+      {
+       "id": "c",
+       "text": "17%: 10–30%",
+       "why": "Divides by the new week (6 ÷ 36); divide by the old week."
+      },
+      {
+       "id": "d",
+       "text": "120%: over 30%",
+       "why": "Reads the ratio 36 ÷ 30 × 100 as the rise."
+      }
+     ],
+     "solution": "Rise = 36 − 30 = 6 km. 6 ÷ 30 = 0.20 = 20%: the 10–30% group."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's weekly running goes from 25 km to 33 km. How big is the rise, and which group does it fall in (under 10%, 10–30%, over 30%)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8%: under 10%",
+       "why": "Uses the raw 8 km difference as a percentage."
+      },
+      {
+       "id": "b",
+       "text": "24%: 10–30%",
+       "why": "Divides by the new week (8 ÷ 33); divide by the old week."
+      },
+      {
+       "id": "c",
+       "text": "132%: over 30%",
+       "why": "Reads the ratio 33 ÷ 25 × 100 as the rise."
+      },
+      {
+       "id": "d",
+       "text": "32%: over 30%",
+       "correct": true,
+       "why": "Right: 8 ÷ 25 = 0.32."
+      }
+     ],
+     "solution": "Rise = 33 − 25 = 8 km. 8 ÷ 25 = 0.32 = 32%: the over-30% group."
+    },
+    {
+     "id": "c",
+     "stem": "A runner's weekly distance goes from 50 km to 62 km. How big is the rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12%",
+       "why": "Uses the raw 12 km difference as a percentage."
+      },
+      {
+       "id": "b",
+       "text": "19%",
+       "why": "Divides by the new week (12 ÷ 62); divide by the old week."
+      },
+      {
+       "id": "c",
+       "text": "24%",
+       "correct": true,
+       "why": "Right: 12 ÷ 50 = 0.24, the 10–30% group."
+      },
+      {
+       "id": "d",
+       "text": "124%",
+       "why": "Reads the ratio 62 ÷ 50 × 100 as the rise."
+      }
+     ],
+     "solution": "Rise = 62 − 50 = 12 km. 12 ÷ 50 = 0.24 = 24%: the 10–30% group."
+    }
+   ]
+  },
+  {
+   "id": "lc-no10-item",
+   "concept": "lc-ten",
+   "bloom": "analyse",
+   "sources": [
+    "damsted2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review found no difference in injury rate between a 10% and a 24% weekly volume rise (HR 0.8, 95% CI 0.6–1.3). What does that say about the 10% rule?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The rule is proven right, because 10% was safer",
+       "why": "The interval includes no difference, so neither rise was shown safer."
+      },
+      {
+       "id": "b",
+       "text": "The rule is proven wrong: a 24% rise is as safe as 10%",
+       "why": "The interval from 0.6 to 1.3 cannot show 24% is safe."
+      },
+      {
+       "id": "c",
+       "text": "No sharp safe line was found, but a 24% rise was not shown safe",
+       "correct": true,
+       "why": "Right: no clean threshold, and the data cannot rule out a real difference."
+      },
+      {
+       "id": "d",
+       "text": "The review shows load changes never cause injury",
+       "why": "The review calls the evidence very limited; it does not prove no link."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-soligard-def",
+   "concept": "lc-spike",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "soligard2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which of these does the IOC consensus count as load?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training volume only, in km or hours",
+       "why": "The statement defines load more broadly."
+      },
+      {
+       "id": "b",
+       "text": "Rapid changes in load, calendar congestion, psychological load and travel",
+       "correct": true,
+       "why": "Right: load is defined broadly."
+      },
+      {
+       "id": "c",
+       "text": "Strength sessions only, as they stress tissue most",
+       "why": "Not limited to strength; all loads count."
+      },
+      {
+       "id": "d",
+       "text": "Competition load only, since races hurt most",
+       "why": "Training load counts too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-limits-kalk",
+   "concept": "lc-limits",
+   "bloom": "understand",
+   "sources": [
+    "kalkhoven2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do the critical reviewers doubt that internal load measures, such as effort ratings, predict injury well?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They are too slow and costly to collect from athletes",
+       "why": "The doubt is about meaning, not cost."
+      },
+      {
+       "id": "b",
+       "text": "They exaggerate small differences between sessions",
+       "why": "The concern is the link to injury, not exaggeration."
+      },
+      {
+       "id": "c",
+       "text": "They sit far from tissue damage: they track effort, not force through tendon or bone",
+       "correct": true,
+       "why": "Right: too far removed from injury causation."
+      },
+      {
+       "id": "d",
+       "text": "Only watts and kilometres can ever predict injury",
+       "why": "The reviewers say external measures also lack validation against tissue load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-debate-eval",
+   "concept": "lc-limits",
+   "bloom": "evaluate",
+   "sources": [
+    "kalkhoven2021",
+    "soligard2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: 'Our load dashboard flags spikes, and flagged athletes get hurt, so spikes cause injury and the dashboard can prevent them.' Best response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Agree: the dashboard is validated and spikes cause injury",
+       "why": "The reviewers found no validation against tissue load, and observation does not prove cause."
+      },
+      {
+       "id": "b",
+       "text": "Partly: load matters, but the measures are unvalidated and the link is observational",
+       "correct": true,
+       "why": "Right: the claim goes beyond what the evidence supports."
+      },
+      {
+       "id": "c",
+       "text": "Disagree: load has nothing to do with injury",
+       "why": "The IOC panel names poor load management as a major risk factor."
+      },
+      {
+       "id": "d",
+       "text": "Agree for effort ratings, not for distance",
+       "why": "Neither kind has been validated against tissue-level load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc-generalise",
+   "concept": "lc-use",
+   "bloom": "evaluate",
+   "sources": [
+    "nielsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach wants to use the 30% finding for an experienced triathlete who runs 50 km a week. What is the main reason for care?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cohort was novices on their own plans, and the study was exploratory",
+       "correct": true,
+       "why": "Right: experienced athletes may differ, and the finding needs trials."
+      },
+      {
+       "id": "b",
+       "text": "Hazard ratios do not apply to athletes who swim and cycle",
+       "why": "Hazard ratios apply; the sample is the limit, not the statistic."
+      },
+      {
+       "id": "c",
+       "text": "GPS watches were used, which makes the data unusable",
+       "why": "GPS was used to record distance; it is not a flaw."
+      },
+      {
+       "id": "d",
+       "text": "The study followed runners for too short a time to see injuries",
+       "why": "Hundreds of injuries were recorded; the sample type is the limit."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

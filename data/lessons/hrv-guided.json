@@ -1,0 +1,720 @@
+{
+  "id": "hrv-guided",
+  "module": "t5-hrv",
+  "title": "HRV-guided training: what the trials show",
+  "goal": "Describe how HRV-guided training works, what Kiviniemi, Vesterinen and the pooled data found, and why the evidence is small and uncertain.",
+  "requires": [
+    "hrv-measure"
+  ],
+  "lastReviewed": "2026-10-25",
+  "steps": [
+    {
+      "type": "terms",
+      "terms": [
+        "hrv-guided-training",
+        "predefined-training"
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "hg-idea",
+      "title": "The idea: let the morning reading pick the session",
+      "text": "[HRV-guided training](g:hrv-guided-training) picks the day's session from the morning reading. A typical rule: HRV normal or up, train hard; HRV clearly down, train easy or rest. The comparison is a [predefined plan](g:predefined-training) with hard days fixed in advance.\n\nThe first trial was Kiviniemi 2007: 26 moderately fit men, 4 weeks of running, three groups. The guided group trained hard only when [HRV](g:hrv) was not below its own range (10-day mean minus one SD) and had no 2-day downward trend. Kiviniemi measured [HF power](g:hf-power); the examples here apply the same rule to rMSSD, as most apps do. Their maximal running speed rose more than the predefined group's (adjusted: +0.9 vs +0.5 km·h⁻¹), VO₂peak rose only in the guided group, but the change did not differ significantly between groups [[c:hg-kiviniemi]].",
+      "claims": [
+        {
+          "id": "hg-kiviniemi",
+          "text": "In 26 men over 4 weeks, guided training raised maximal running speed more than predefined training; the change in VO₂peak did not differ significantly between groups.",
+          "grade": "weak",
+          "sources": [
+            "kiviniemi2007"
+          ],
+          "evidence": [
+            {
+              "source": "kiviniemi2007",
+              "quote": "The change in Load(max) was significantly greater in HRV group compared to TRA group (0.5 +/- 0.4 vs. 0.9 +/- 0.2 km h(-1), P = 0.048, adjusted for baseline values).",
+              "level": "abstract"
+            },
+            {
+              "source": "kiviniemi2007",
+              "quote": "No significant differences were observed in the changes of VO(2peak) between the groups.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hg-design"
+    },
+    {
+      "type": "example",
+      "id": "hg-rule-example",
+      "title": "Applying a guided rule",
+      "problem": "A Kiviniemi-style rule, applied to rMSSD: hard day if today's rMSSD is at or above the reference (10-day mean minus 1 SD) and there is no 2-day downward trend; otherwise easy or rest. A cyclist's last 10 mornings average 70 ms with an SD of 6 ms. Today she records 62 ms. Hard or easy?",
+      "steps": [
+        "Reference = mean − 1 SD = 70 − 6 = 64 ms.",
+        "Today's 62 ms is below 64 ms.",
+        "The rule has two separate triggers, so being below the reference is enough: easy day or rest.",
+        "Note what the rule compares with: the lower edge of the personal range (64), not the mean (70). A reading of 66 would still be a hard day."
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hg-rule"
+    },
+    {
+      "type": "concept",
+      "id": "hg-vest",
+      "title": "A longer trial in runners",
+      "text": "Vesterinen 2016 gave 40 recreational runners 4 weeks of base training, then 8 weeks of harder training. The guided group did moderate or hard sessions only when HRV was within its individual [smallest worthwhile change](g:smallest-worthwhile-change). The predefined group followed a fixed plan.\n\nThe guided group did fewer moderate and hard sessions (13.2 vs 17.7) yet improved 3,000 m time by 2.1%, against a non-significant 1.1% in the predefined group (a small between-group effect, 0.42). VO₂max rose in both groups [[c:hg-vesterinen]].\n\nThe promise is less hard work for at least as much gain: HRV mainly helps you skip hard days when you are not ready.",
+      "claims": [
+        {
+          "id": "hg-vesterinen",
+          "text": "Guided runners did fewer moderate and hard sessions and improved 3,000 m time by 2.1% vs 1.1%; VO₂max rose in both groups.",
+          "grade": "weak",
+          "sources": [
+            "vesterinen2016"
+          ],
+          "evidence": [
+            {
+              "source": "vesterinen2016",
+              "quote": "The number of MOD and HIT sessions was significantly lower (P = 0.021, effect size = 0.98) in EXP (13.2 ± 6.0 sessions) compared with TRAD (17.7 ± 2.5 sessions).",
+              "level": "abstract"
+            },
+            {
+              "source": "vesterinen2016",
+              "quote": "A small between-group difference (effect size = 0.42) was found in the change in RS3000m.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "example",
+      "id": "hg-pct-example",
+      "title": "How much less hard training?",
+      "problem": "In Vesterinen 2016 the guided group did 13.2 hard sessions, the predefined group 17.7. How much fewer is that, in percent?",
+      "steps": [
+        "Difference: 17.7 − 13.2 = 4.5 sessions.",
+        "Percent fewer is measured against where you started, the predefined group's 17.7: 4.5 ÷ 17.7 = 0.254.",
+        "About 25% fewer hard sessions. Dividing by 13.2 instead would give 34%, which answers a different question."
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hg-pct-calc"
+    },
+    {
+      "type": "question",
+      "item": "hg-confound"
+    },
+    {
+      "type": "concept",
+      "id": "hg-meta",
+      "title": "What the pooled data say",
+      "text": "Manresa-Rocamora 2021 pooled the randomised trials. HRV-guided training raised vagal HRV more than predefined training ([SMD](g:standardised-mean-difference) 0.50, 95% [CI](g:confidence-interval) 0.09 to 0.91), but not resting heart rate.\n\nFor VO₂max (SMD 0.20, CI −0.07 to 0.47) and endurance performance (SMD 0.20, CI −0.09 to 0.48) the effects were small, and the intervals include zero [[c:hg-meta]]. The authors conclude that guided training may be superior, but only by a small margin, and may carry less risk of negative responses.\n\nNote what rose: HRV is a marker. A higher HRV is not the same as a faster rider.",
+      "claims": [
+        {
+          "id": "hg-meta",
+          "text": "Pooled trials show a small advantage of guided training for vagal HRV and small, uncertain advantages for fitness and performance.",
+          "grade": "moderate",
+          "sources": [
+            "manresarocamora2021"
+          ],
+          "evidence": [
+            {
+              "source": "manresarocamora2021",
+              "quote": "However, if HRV-guided training is superior to predefined training for producing group-level improvements in fitness and performance, current data suggest it is only by a small margin.",
+              "level": "abstract"
+            },
+            {
+              "source": "manresarocamora2021",
+              "quote": "HRV-guided training may be more effective than predefined training for maintaining and improving vagal-mediated HRV, with less likelihood of negative responses.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hg-ci"
+    },
+    {
+      "type": "question",
+      "item": "hg-meta-q"
+    },
+    {
+      "type": "question",
+      "item": "hg-surrogate"
+    },
+    {
+      "type": "concept",
+      "id": "hg-appraise",
+      "title": "Why these trials are hard to read",
+      "text": "Four limits apply to nearly every guided-training trial:\n\n- **Small and short**: 26 men for 4 weeks; 40 runners for 12.\n- **Two things change at once**: the guided group trains differently in both amount (fewer hard days) and timing.\n- **Different rules**: Kiviniemi used the 10-day mean minus one SD, Vesterinen a smallest worthwhile change. The review calls the best methods open questions [[c:hg-methods]].\n- **No blinding**: athletes know their group.\n\nSo the honest reading is 'promising, small, uncertain', not 'proven' and not 'useless'.",
+      "claims": [
+        {
+          "id": "hg-methods",
+          "text": "How to pick the HRV index, recording position and baseline method is not settled.",
+          "grade": "moderate",
+          "sources": [
+            "manresarocamora2021"
+          ],
+          "evidence": [
+            {
+              "source": "manresarocamora2021",
+              "quote": "Best methodological practices pertaining to HRV index selection, recording position, and approaches for establishing baseline reference values and daily changes (i.e., fixed or rolling HRV averages) require further study.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ],
+      "debate": {
+        "question": "Is HRV-guided training better than a well-built fixed plan?",
+        "sides": [
+          {
+            "position": "Yes, modestly: guided runners gained more in maximal speed (Kiviniemi 2007) and 3,000 m time with fewer hard sessions (Vesterinen 2016).",
+            "sources": [
+              "kiviniemi2007",
+              "vesterinen2016"
+            ]
+          },
+          {
+            "position": "Not shown: pooled gains in VO₂max and endurance performance were small and their intervals include zero.",
+            "sources": [
+              "manresarocamora2021"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "question",
+      "item": "hg-appraisal"
+    },
+    {
+      "type": "question",
+      "item": "hg-practical"
+    },
+    {
+      "type": "recap",
+      "points": [
+        "HRV-guided training chooses hard or easy days from the morning reading against your own range; the comparison is a fixed plan.",
+        "Kiviniemi's rule: train hard if HRV is not below the 10-day mean minus one SD and has no 2-day fall; compare with the lower edge of your range, not the mean.",
+        "Guided runners did about 25% fewer hard sessions and still improved (Vesterinen 2016): the gain may be less hard work, not more.",
+        "Pooled: vagal HRV improved more with guidance (SMD 0.50), but VO₂max and performance gains were small (SMD about 0.20) with intervals including zero.",
+        "Trials are small, short, unblinded and use different rules, so the evidence is promising but weak."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "hg-design",
+      "concept": "hg-idea",
+      "bloom": "remember",
+      "recallFirst": true,
+      "sources": [
+        "kiviniemi2007"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "In Kiviniemi's trial, when did the HRV-guided group train hard?",
+          "options": [
+            {
+              "id": "a",
+              "text": "When HRV was not below its recent range and had no 2-day downward trend",
+              "correct": true,
+              "why": "Right: normal or rising HRV meant a hard day; a clear drop meant low intensity or rest."
+            },
+            {
+              "id": "b",
+              "text": "Every day, whatever HRV showed",
+              "why": "That is closer to the predefined group, which trained six days a week on a fixed plan."
+            },
+            {
+              "id": "c",
+              "text": "Only on the days with the highest HRV of the month",
+              "why": "The rule used a personal range, not a record high."
+            },
+            {
+              "id": "d",
+              "text": "Only when resting heart rate was above average",
+              "why": "The rule was built on HRV, not on resting HR."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-rule",
+      "concept": "hg-idea",
+      "bloom": "apply",
+      "sources": [
+        "kiviniemi2007"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Rule: hard day only if rMSSD is at or above (10-day mean − 1 SD) with no 2-day downward trend. A runner's 10-day mean is 55 ms, SD 5 ms. Today she records 52 ms, with no downward trend. What is the plan?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hard day: 52 is above the reference of 50 ms",
+              "correct": true,
+              "why": "Right: reference = 55 − 5 = 50 ms; 52 is above it."
+            },
+            {
+              "id": "b",
+              "text": "Easy day: 52 is below the mean of 55 ms",
+              "why": "The rule compares with the lower edge of the range (50), not the mean."
+            },
+            {
+              "id": "c",
+              "text": "Rest: any value below the mean means stop",
+              "why": "The rule only acts below mean minus one SD."
+            },
+            {
+              "id": "d",
+              "text": "Easy day: SD of 5 means she may only train when above 55 + 5",
+              "why": "The SD sets the lower edge of the range; it is subtracted, not added."
+            }
+          ],
+          "solution": "Reference = 55 − 5 = 50 ms. 52 ≥ 50 and there is no downward trend, so hard day."
+        },
+        {
+          "id": "b",
+          "stem": "Same rule. A cyclist's 10-day mean is 72 ms, SD 8 ms. This morning he records 61 ms. What is the plan?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hard day: yesterday's 70 ms was above the reference",
+              "why": "The rule looks at today's value; one low reading is a trigger."
+            },
+            {
+              "id": "b",
+              "text": "Easy day or rest: 61 is below the reference of 64 ms",
+              "correct": true,
+              "why": "Right: reference = 72 − 8 = 64 ms; 61 is below it."
+            },
+            {
+              "id": "c",
+              "text": "Hard day: the rule only acts after two low days in a row",
+              "why": "A reading below the reference triggers it alone; the 2-day trend is a second trigger."
+            },
+            {
+              "id": "d",
+              "text": "Easy day: because 61 is below 72 minus nothing",
+              "why": "The cut is 64, not the mean of 72."
+            }
+          ],
+          "solution": "Reference = 72 − 8 = 64 ms. 61 < 64, so easy day or rest."
+        },
+        {
+          "id": "c",
+          "stem": "Same rule. A triathlete's 10-day mean is 80 ms, SD 10 ms. This morning she records 66 ms. What is the plan?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hard day: 66 is higher than the SD of 10 ms",
+              "why": "The SD is a spread, not a cut-off for the reading."
+            },
+            {
+              "id": "b",
+              "text": "Hard day: it needs two low mornings in a row",
+              "why": "One reading below the reference is enough."
+            },
+            {
+              "id": "c",
+              "text": "Easy day or rest: 66 is below the reference of 70 ms",
+              "correct": true,
+              "why": "Right: reference = 80 − 10 = 70 ms; 66 is below it."
+            },
+            {
+              "id": "d",
+              "text": "Rest only if 66 falls below 60, which is 80 − 2 × 10",
+              "why": "The rule uses one SD below the mean, not two."
+            }
+          ],
+          "solution": "Reference = 80 − 10 = 70 ms. 66 < 70, so easy day or rest."
+        }
+      ]
+    },
+    {
+      "id": "hg-pct-calc",
+      "concept": "hg-vest",
+      "bloom": "apply",
+      "sources": [
+        "vesterinen2016"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A guided group does 10 hard sessions, a predefined group 16. How many percent fewer hard sessions did the guided group do?",
+          "options": [
+            {
+              "id": "a",
+              "text": "37.5%",
+              "correct": true,
+              "why": "Right: (16 − 10) ÷ 16 = 0.375."
+            },
+            {
+              "id": "b",
+              "text": "60%",
+              "why": "This divides the 6-session gap by the guided group's 10 instead of the predefined 16."
+            },
+            {
+              "id": "c",
+              "text": "62.5%",
+              "why": "This is the guided group as a share of the predefined group (10 ÷ 16), not the gap."
+            },
+            {
+              "id": "d",
+              "text": "6%",
+              "why": "This reads the 6-session gap as a percent."
+            }
+          ],
+          "solution": "(16 − 10) ÷ 16 = 6 ÷ 16 = 0.375 = 37.5% fewer."
+        },
+        {
+          "id": "b",
+          "stem": "A guided group does 14 hard sessions, a predefined group 20. How many percent fewer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "42.9%",
+              "why": "This divides the gap by the guided group's 14."
+            },
+            {
+              "id": "b",
+              "text": "70%",
+              "why": "This is the guided group as a share of the predefined group (14 ÷ 20)."
+            },
+            {
+              "id": "c",
+              "text": "30%",
+              "correct": true,
+              "why": "Right: (20 − 14) ÷ 20 = 0.30."
+            },
+            {
+              "id": "d",
+              "text": "6%",
+              "why": "This reads the 6-session gap as a percent."
+            }
+          ],
+          "solution": "(20 − 14) ÷ 20 = 0.30 = 30% fewer."
+        },
+        {
+          "id": "c",
+          "stem": "A guided group does 8 hard sessions, a predefined group 10. How many percent fewer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "25%",
+              "why": "This divides the gap by the guided group's 8."
+            },
+            {
+              "id": "b",
+              "text": "20%",
+              "correct": true,
+              "why": "Right: (10 − 8) ÷ 10 = 0.20."
+            },
+            {
+              "id": "c",
+              "text": "80%",
+              "why": "This is the guided group as a share of the predefined group (8 ÷ 10)."
+            },
+            {
+              "id": "d",
+              "text": "2%",
+              "why": "This reads the 2-session gap as a percent."
+            }
+          ],
+          "solution": "(10 − 8) ÷ 10 = 0.20 = 20% fewer."
+        }
+      ]
+    },
+    {
+      "id": "hg-confound",
+      "concept": "hg-vest",
+      "bloom": "analyse",
+      "sources": [
+        "vesterinen2016"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "In Vesterinen 2016 the guided group trained hard less often and improved 3,000 m time more. Which question does this trial leave open?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Whether HRV information or just fewer hard sessions gave the gain",
+              "correct": true,
+              "why": "Right: with different amounts of hard training in each group, the HRV rule and the amount of training cannot be separated."
+            },
+            {
+              "id": "b",
+              "text": "Whether the groups differed in how much VO₂max changed",
+              "why": "The trial reported VO₂max for both groups."
+            },
+            {
+              "id": "c",
+              "text": "Whether runners can measure HRV every morning",
+              "why": "The trial used daily morning HRV in the guided group."
+            },
+            {
+              "id": "d",
+              "text": "Whether 3,000 m time was measured before and after",
+              "why": "It was measured before and after both training periods."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-ci",
+      "concept": "hg-meta",
+      "bloom": "apply",
+      "sources": [
+        "manresarocamora2021"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A meta-analysis finds that HRV-guided training improves endurance performance with SMD 0.20 (95% CI −0.09 to 0.48) over predefined training. What does the interval tell you?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It proves a small benefit, since the estimate of 0.20 is positive",
+              "why": "A point estimate alone does not exclude zero; the interval does."
+            },
+            {
+              "id": "b",
+              "text": "It proves no effect, since the result is not significant",
+              "why": "Not significant means not shown, not shown to be absent."
+            },
+            {
+              "id": "c",
+              "text": "It fits a small benefit, no effect or a small harm: the interval crosses zero",
+              "correct": true,
+              "why": "Right: an interval that includes zero cannot rule out no effect, nor a small benefit."
+            },
+            {
+              "id": "d",
+              "text": "It proves guided training is harmful",
+              "why": "The interval reaches +0.48 as well as −0.09; it favours neither conclusion strongly."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "For VO₂max the same review finds SMD 0.20 (95% CI −0.07 to 0.47). Which statement fits?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A small benefit or no effect both fit these data",
+              "correct": true,
+              "why": "Right: the estimate leans positive but is imprecise."
+            },
+            {
+              "id": "b",
+              "text": "Guided training clearly raises VO₂max",
+              "why": "The interval includes zero, so the result is not clear."
+            },
+            {
+              "id": "c",
+              "text": "Guided training clearly lowers VO₂max",
+              "why": "The estimate is positive; the lower end is only slightly below zero."
+            },
+            {
+              "id": "d",
+              "text": "Guided and predefined training are identical",
+              "why": "The data cannot show they are identical; they fit a small difference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-meta-q",
+      "concept": "hg-meta",
+      "bloom": "evaluate",
+      "sources": [
+        "manresarocamora2021"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A coach says: 'The meta-analysis proved HRV-guided training doesn't work.' Is that a fair summary?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Yes: results that are not significant prove there is no effect",
+              "why": "Non-significant means the data were too imprecise to say."
+            },
+            {
+              "id": "b",
+              "text": "No: the effects were small and uncertain, and 'not shown' is not 'shown absent'",
+              "correct": true,
+              "why": "Right: it found small, imprecise benefits and a clearer gain in vagal HRV."
+            },
+            {
+              "id": "c",
+              "text": "No: guided training clearly improved VO₂max by a large amount",
+              "why": "VO₂max gains were small (SMD about 0.20)."
+            },
+            {
+              "id": "d",
+              "text": "Yes: guided training lowered resting heart rate more",
+              "why": "Resting heart rate did not differ (SMD 0.04)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-surrogate",
+      "concept": "hg-meta",
+      "bloom": "analyse",
+      "sources": [
+        "manresarocamora2021",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Guided training raised vagal HRV more than predefined training (SMD 0.50), yet gains in VO₂max were small. Why be careful in reading the HRV result?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Higher HRV always means higher VO₂max, so the VO₂max result must be wrong",
+              "why": "HRV and VO₂max are separate measures with no fixed link."
+            },
+            {
+              "id": "b",
+              "text": "HRV cannot be changed by training",
+              "why": "Vagal HRV did change in these trials."
+            },
+            {
+              "id": "c",
+              "text": "The SMD of 0.50 is too small to count",
+              "why": "0.50 is a medium effect, and its interval excludes zero."
+            },
+            {
+              "id": "d",
+              "text": "HRV is a marker of vagal action, not a performance measure, so higher HRV need not mean a faster athlete",
+              "correct": true,
+              "why": "Right: a marker can move without the outcome that matters moving with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-appraisal",
+      "concept": "hg-appraise",
+      "bloom": "evaluate",
+      "sources": [
+        "kiviniemi2007",
+        "vesterinen2016"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Kiviniemi 2007 had 8 or 9 men per group over 4 weeks. Which limit most weakens the claim that HRV guidance is better?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Such small groups over so short a time can differ by chance",
+              "correct": true,
+              "why": "Right: small, short trials give imprecise, unstable results."
+            },
+            {
+              "id": "b",
+              "text": "It used running rather than cycling for the whole four weeks",
+              "why": "The mode of exercise is not the main problem for a general claim about guidance."
+            },
+            {
+              "id": "c",
+              "text": "It included a control group with no training at all",
+              "why": "A control group is a strength."
+            },
+            {
+              "id": "d",
+              "text": "It measured VO₂peak in a maximal treadmill test",
+              "why": "VO₂peak is a standard fitness measure."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "Vesterinen 2016 had about 20 runners per group and a guided group that trained hard less often. Which limit matters most for the claim that HRV guidance caused the better 3,000 m result?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It was a randomised trial, which weakens the claim",
+              "why": "Randomisation is a strength."
+            },
+            {
+              "id": "b",
+              "text": "The groups trained hard different amounts, and each group was small",
+              "correct": true,
+              "why": "Right: the difference could be due to training amount, and small groups give imprecise estimates."
+            },
+            {
+              "id": "c",
+              "text": "It measured 3,000 m performance before and after",
+              "why": "A performance test is a strength."
+            },
+            {
+              "id": "d",
+              "text": "It used morning HRV recordings in the guided group",
+              "why": "Morning recording is the standard protocol."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hg-practical",
+      "concept": "hg-appraise",
+      "bloom": "evaluate",
+      "sources": [
+        "manresarocamora2021",
+        "vesterinen2016"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist asks whether an HRV app is worth using to pick hard days. Which advice fits the evidence best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Yes: the trials prove large gains in performance for amateurs",
+              "why": "Pooled performance gains were small with intervals including zero."
+            },
+            {
+              "id": "b",
+              "text": "No: the evidence proves that HRV guidance is useless",
+              "why": "The evidence is small and uncertain, not negative."
+            },
+            {
+              "id": "c",
+              "text": "Low-risk to try: expect small gains, keep the plan, skip hard days when HRV is clearly low",
+              "correct": true,
+              "why": "Right: the benefit is small and uncertain, but guidance did not harm and may avoid bad days."
+            },
+            {
+              "id": "d",
+              "text": "Yes: drop the plan and let HRV decide every session",
+              "why": "The trials guided the timing of hard sessions within a plan; none dropped planning altogether."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

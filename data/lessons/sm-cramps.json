@@ -1,0 +1,833 @@
+{
+ "id": "sm-cramps",
+ "module": "t5-sports-medicine",
+ "title": "Muscle cramps: two theories, few fixes",
+ "goal": "Explain the two rival theories for exercise-associated muscle cramps, judge the evidence for each, and say what helps in the moment and what does not yet have proof.",
+ "requires": [
+  "heart-coronary"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "electrolyte-theory",
+    "neuromuscular-control-theory",
+    "muscle-spindle",
+    "golgi-tendon-organ",
+    "induced-cramp-model",
+    "static-stretching",
+    "trp-channel"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cr-what",
+   "title": "A cramp that stops a race",
+   "text": "An [exercise-associated muscle cramp](g:eamc) (EAMC) is a painful, involuntary contraction of a muscle during or just after exercise: the muscle goes hard, often shortened, for seconds to minutes. Calf, hamstring and quadriceps are the usual sites.\n\nIt is one of the most common reasons athletes seek medical help at events [[c:cr-common]]. Yet nobody has proved what causes it.\n\nIn 210 Ironman triathletes, a faster race pace and earlier cramps were the only independent risk factors; blood sodium and body-mass change did not differ between those who cramped and those who didn't [[c:cr-risk]]. That fits with the Ironman data in the hydration module and sets up two rival explanations.",
+   "claims": [
+    {
+     "id": "cr-common",
+     "text": "EAMC is among the most common conditions needing medical attention during or just after sports events.",
+     "grade": "moderate",
+     "sources": [
+      "schwellnus2009"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2009",
+       "quote": "Exercise Associated Muscle Cramps (EAMC) is one of the most common conditions that require medical attention during or immediately after sports events.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-risk",
+     "text": "In 210 Ironman triathletes, faster race time and a history of cramping were the only independent risk factors for EAMC; electrolyte and body-weight changes did not differ.",
+     "grade": "weak",
+     "sources": [
+      "schwellnus2011"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2011",
+       "quote": "A regression analysis identified faster overall race time (and cycling time) and a history of cramping (in the last 10 races) as the only two independent risk factors for EAMC.",
+       "level": "abstract"
+      },
+      {
+       "source": "schwellnus2011",
+       "quote": "There were no significant differences between groups in any pre-race-post-race serum electrolyte concentrations and body weight changes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cr-define"
+  },
+  {
+   "type": "question",
+   "item": "cr-pace-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "cr-theories",
+   "title": "Two theories",
+   "text": "Two explanations compete [[c:cr-theories-claim]]:\n\n| | [electrolyte theory](g:electrolyte-theory) | [neuromuscular control theory](g:neuromuscular-control-theory) |\n|---|---|---|\n| idea | sweat loses water and salt; the shrunken fluid space around nerve endings makes them fire | fatigue upsets the balance of two reflex sensors, so the [motor neuron](g:motor-neuron) over-fires |\n| trigger | water and sodium loss | a tired muscle held short |\n| best predictor | sweat loss | pace and past cramps |\n\nThe two reflex sensors: the [muscle spindle](g:muscle-spindle) senses stretch and excites the muscle; the [Golgi tendon organ](g:golgi-tendon-organ) senses tension and inhibits it. In a fatigued muscle, the excitation may win. Schwellnus argued that the data increasingly favour this second theory, while saying it too needs more proof [[c:cr-schwellnus-view]].",
+   "claims": [
+    {
+     "id": "cr-theories-claim",
+     "text": "The two main explanations for EAMC are the electrolyte-depletion/dehydration hypotheses and the altered neuromuscular control hypothesis.",
+     "grade": "strong",
+     "sources": [
+      "schwellnus2009",
+      "miller2010b"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2009",
+       "quote": "The purpose of this review is to examine current scientific evidence in support of (1) the \"electrolyte depletion\" and \"dehydration\" hypotheses and (2) the \"altered neuromuscular control\" hypothesis in the aetiology of EAMC.",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2010b",
+       "quote": "The theory states that dehydration contracts the interstitial space, thereby increasing the pressure on nerve terminals and cramps ensue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-schwellnus-view",
+     "text": "Schwellnus (2009) judged that accumulating data support altered neuromuscular control as the principal mechanism, while more evidence is still needed.",
+     "grade": "weak",
+     "sources": [
+      "schwellnus2009"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2009",
+       "quote": "Whilst it is clear that further evidence to support the \"altered neuromuscular control\" hypothesis is also required, research data are accumulating that support this as the principal pathophysiological mechanism for the aetiology of EAMC.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cr-theory-match"
+  },
+  {
+   "type": "question",
+   "item": "cr-theory-scenario"
+  },
+  {
+   "type": "concept",
+   "id": "cr-evidence",
+   "title": "What the evidence shows",
+   "text": "For the electrolyte theory, the support is thin: anecdotes, case series totalling 18 cases and one small case-control study. Four prospective cohort studies do not support it [[c:cr-weak-electrolyte]].\n\nA lab test fits the same way. Ten men cycled in 41 °C heat until they lost about 3% of body mass. Their cramp threshold (found with [electrical stimulation](g:induced-cramp-model) of a foot muscle) did not drop [[c:cr-miller-threshold]].\n\nBut the neuromuscular theory is not proven either: it rests on human models, cohort data and animal work, and \"strong experimental evidence for either theory is lacking\" [[c:cr-neither]]. Most reviewers now say several factors add up.",
+   "claims": [
+    {
+     "id": "cr-weak-electrolyte",
+     "text": "Support for the electrolyte and dehydration theories is mostly anecdotal, and four prospective cohort studies do not support them.",
+     "grade": "moderate",
+     "sources": [
+      "schwellnus2009"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2009",
+       "quote": "Scientific evidence in support of the \"electrolyte depletion\" and \"dehydration\" hypotheses for the aetiology of EAMC comes mainly from anecdotal clinical observations, case series totalling 18 cases, and one small (n = 10) case-control study.",
+       "level": "abstract"
+      },
+      {
+       "source": "schwellnus2009",
+       "quote": "Results from four prospective cohort studies do not support these hypotheses.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-miller-threshold",
+     "text": "In ten men, about 3% body-mass loss with little muscle fatigue did not make cramps easier to trigger.",
+     "grade": "weak",
+     "sources": [
+      "miller2010b"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010b",
+       "quote": "Mild hypohydration with minimal neuromuscular fatigue does not seem to predispose individuals to cramping.",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2010b",
+       "quote": "Ten males cycled for 30-min bouts with their nondominant leg at 41°C and 15% relative humidity until they lost ~3% of their body mass (~2 h).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-neither",
+     "text": "Strong experimental evidence is lacking for either theory; EAMC likely has several causes.",
+     "grade": "disputed",
+     "sources": [
+      "miller2010c",
+      "miller2021"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010c",
+       "quote": "Dehydration/electrolyte and neuromuscular causes are the most widely discussed theories for the cause of EAMC; however, strong experimental evidence for either theory is lacking.",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2021",
+       "quote": "recent evidence suggests that EAMCs are due to a confluence of unique intrinsic and extrinsic factors rather than a singular cause",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "What is the main cause of exercise-associated muscle cramps?",
+    "sides": [
+     {
+      "position": "Altered neuromuscular control: fatigue disturbs spinal reflexes, so the motor neuron over-fires.",
+      "sources": [
+       "schwellnus2009",
+       "miller2010b"
+      ]
+     },
+     {
+      "position": "Dehydration and electrolyte loss, the older, widely taught view.",
+      "sources": [
+       "schwellnus2009",
+       "miller2010c"
+      ]
+     },
+     {
+      "position": "Neither alone: several risk factors (fatigue, history, conditioning) add up.",
+      "sources": [
+       "miller2021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cr-appraise"
+  },
+  {
+   "type": "question",
+   "item": "cr-sodium-normal"
+  },
+  {
+   "type": "concept",
+   "id": "cr-treat",
+   "title": "What helps once it starts",
+   "text": "**Gentle static stretching** of the cramping muscle until it eases is the standard first step [[c:cr-stretch]], based on reviews and practice rather than large trials.\n\n**Pickle juice.** Miller's lab gave hypohydrated men 1 mL·kg⁻¹ of pickle juice or water as an electrically induced cramp began. The cramp lasted 84.6 s after pickle juice and 133.7 s after water [[c:cr-pickle]]. That was too fast for the drink to change the blood, so the team suspect a reflex from the mouth and throat, where [TRP channels](g:trp-channel) sense strong tastes [[c:cr-trp]]. An industry-funded study found a TRP-agonist drink delayed and weakened voluntary calf cramps [[c:cr-craighead]].\n\nCaution: small lab studies of induced cramps, none in real races. Grade: weak.",
+   "claims": [
+    {
+     "id": "cr-stretch",
+     "text": "Acute EAMC treatment is gentle static stretching of the cramped muscle until symptoms ease.",
+     "grade": "weak",
+     "sources": [
+      "miller2010c",
+      "miller2021"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010c",
+       "quote": "Acute EAMC treatment should focus on moderate static stretching of the affected muscle",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2021",
+       "quote": "The treatment of acute EAMCs continues to include self-applied or clinician-guided gentle static stretching until symptoms abate.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-pickle",
+     "text": "Pickle juice shortened electrically induced cramps by about 49 s compared with water in hypohydrated men.",
+     "grade": "weak",
+     "sources": [
+      "miller2010a"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010a",
+       "quote": "cramp duration was 49.1 +/- 14.6 s shorter after pickle juice ingestion than water",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2010a",
+       "quote": "Pickle juice, and not deionized water, inhibits electrically induced muscle cramps in hypohydrated humans.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-trp",
+     "text": "The pickle juice effect was too fast to be explained by restored fluid or electrolytes and is thought to be a reflex from the mouth and throat.",
+     "grade": "weak",
+     "sources": [
+      "miller2010a"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010a",
+       "quote": "This effect could not be explained by rapid restoration of body fluids or electrolytes.",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2010a",
+       "quote": "The ingestion of water or pickle juice had little impact on plasma composition 5 min after ingestion.",
+       "level": "abstract"
+      },
+      {
+       "source": "miller2010a",
+       "quote": "We suspect that the rapid inhibition of the electrically induced cramps reflects a neurally mediated reflex that originates in the oropharyngeal region",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-craighead",
+     "text": "In 39 people, an industry-funded TRP-agonist drink delayed and weakened voluntarily induced calf cramps without affecting motor function.",
+     "grade": "weak",
+     "sources": [
+      "craighead2017"
+     ],
+     "evidence": [
+      {
+       "source": "craighead2017",
+       "quote": "TRP agonist ingestion attenuated EAMC characteristics without affecting motor function.",
+       "level": "abstract"
+      },
+      {
+       "source": "craighead2017",
+       "quote": "Funding for this project was provided by Flex Pharma, Inc. (Boston, MA).",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cr-first-aid"
+  },
+  {
+   "type": "question",
+   "item": "cr-pickle-why"
+  },
+  {
+   "type": "example",
+   "id": "cr-pct-example",
+   "title": "How much shorter?",
+   "problem": "In a test, a cramp lasts 100 s after water and 70 s after a new drink. By what percentage did the drink shorten it?",
+   "steps": [
+    "Find the cut: 100 − 70 = 30 s.",
+    "Divide by the comparison (water): 30 ÷ 100 = 0.30.",
+    "Write it as a percentage: 30% shorter than water."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cr-pickle-calc"
+  },
+  {
+   "type": "concept",
+   "id": "cr-prevent",
+   "title": "Prevention: no magic fix",
+   "text": "Because the cause is unclear, prevention advice is weak. The best-supported message: treat each athlete's own risk factors rather than hand out one rule such as \"drink more\" [[c:cr-individual]].\n\n- **Pacing and history.** A fast race pace and past cramps were the risk factors in Ironman athletes [[c:cr-prevent-risk]]: train for the race and don't start too hard.\n- **Fatigue over fluids.** Lab work suggests targeting muscle fatigue rather than dehydration [[c:cr-prevent-fatigue]]. Salt capsules are not shown to prevent cramps (hydration module).\n\n**Not every cramp is a cramp.** Widespread cramping with confusion, or in a hot athlete, needs a check for heat illness or low sodium (heat illness lesson).",
+   "claims": [
+    {
+     "id": "cr-individual",
+     "text": "Individualised prevention is likely more effective than generic advice such as drinking more fluids.",
+     "grade": "weak",
+     "sources": [
+      "miller2021"
+     ],
+     "evidence": [
+      {
+       "source": "miller2021",
+       "quote": "Individualizing EAMC prevention strategies will likely be more effective than generalized advice (eg, drink more fluids).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-prevent-risk",
+     "text": "In 210 Ironman triathletes, faster race time and a history of cramping were the only independent risk factors for EAMC.",
+     "grade": "weak",
+     "sources": [
+      "schwellnus2011"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2011",
+       "quote": "A regression analysis identified faster overall race time (and cycling time) and a history of cramping (in the last 10 races) as the only two independent risk factors for EAMC.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cr-prevent-fatigue",
+     "text": "After a lab test in which 3% hypohydration did not lower the cramp threshold, the authors suggest prevention should target neuromuscular fatigue rather than dehydration.",
+     "grade": "weak",
+     "sources": [
+      "miller2010b"
+     ],
+     "evidence": [
+      {
+       "source": "miller2010b",
+       "quote": "Health care professionals may have more success preventing exercise-associated muscle cramp by focusing on strategies that minimize neuromuscular fatigue rather than dehydration.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cr-prevent-plan"
+  },
+  {
+   "type": "question",
+   "item": "cr-coach-claim"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "EAMC is common; its cause is unproven. Two theories: dehydration and electrolytes, or altered neuromuscular control.",
+    "Prospective cohorts and a controlled test do not support the dehydration view; pace and past cramps predict cramps.",
+    "First aid: gentle static stretching. Pickle juice and other TRP agonists may shorten a cramp via a mouth reflex (weak evidence).",
+    "Prevention should target each athlete's risk factors, not one rule. Widespread cramps with confusion are not a plain cramp."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cr-define",
+   "concept": "cr-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "schwellnus2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is an exercise-associated muscle cramp?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A painful, involuntary muscle contraction during or just after exercise",
+       "why": "Correct: the muscle tightens for seconds to minutes.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Soreness one to two days after unaccustomed exercise",
+       "why": "That is delayed-onset muscle soreness, a different problem with a different timing."
+      },
+      {
+       "id": "c",
+       "text": "A muscle tear that stops the muscle working",
+       "why": "A cramp passes within minutes and leaves the fibres intact; a tear does not."
+      },
+      {
+       "id": "d",
+       "text": "Stiffness from low blood sodium",
+       "why": "Low sodium is one idea about the cause, not the definition of a cramp."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-pace-scenario",
+   "concept": "cr-what",
+   "bloom": "apply",
+   "sources": [
+    "schwellnus2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two Ironman athletes, both 30 years old, both sweat heavily. Athlete A starts the bike far faster than in training and cramped in his last two races. Athlete B rides to plan and has never cramped. Which athlete is more likely to cramp, by the best prospective data?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: fast pace and past cramps were the independent risk factors",
+       "why": "Correct: these were the only two independent risk factors in 210 Ironman triathletes.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "B: sweating less than A means a lower blood sodium",
+       "why": "Blood sodium did not differ between cramping and non-cramping athletes."
+      },
+      {
+       "id": "c",
+       "text": "Equal: only sweat loss predicts cramping",
+       "why": "Sweat and body-mass change did not separate the groups."
+      },
+      {
+       "id": "d",
+       "text": "B: easy pacing wastes salt reserves",
+       "why": "No such reserve effect has been shown; slower pace was protective."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-theory-match",
+   "concept": "cr-theories",
+   "bloom": "understand",
+   "sources": [
+    "schwellnus2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which idea belongs to the altered neuromuscular control theory?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fatigue shifts the balance of muscle-spindle and Golgi-organ signals, so the motor neuron over-fires",
+       "why": "Correct: that is the proposed mechanism.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Sweat loss shrinks the fluid around nerve endings, making them fire",
+       "why": "That is the dehydration part of the electrolyte theory."
+      },
+      {
+       "id": "c",
+       "text": "Low blood sodium makes the muscle membrane unstable",
+       "why": "That is the electrolyte-depletion hypothesis."
+      },
+      {
+       "id": "d",
+       "text": "Lactic acid crystals lock the fibres",
+       "why": "Not a theory in the evidence base; lactate is not the cause of cramps."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-theory-scenario",
+   "concept": "cr-theories",
+   "bloom": "analyse",
+   "sources": [
+    "schwellnus2009",
+    "schwellnus2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner cramps in the quadriceps at km 38 of a cool marathon. She drank to thirst and lost under 1% of body mass. She had gone out faster than planned. Which theory fits her case better?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Neuromuscular control: pace and fatigue, with no real fluid deficit",
+       "why": "Correct: little fluid loss and a hard early pace fit fatigue-related cramping.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Electrolyte: she must have lost a lot of sodium",
+       "why": "Weak fit: a small fluid loss in cool weather makes a big sodium deficit unlikely."
+      },
+      {
+       "id": "c",
+       "text": "Dehydration: all cramps follow weight loss",
+       "why": "Her loss was under 1%; and cramping athletes did not lose more mass in the data."
+      },
+      {
+       "id": "d",
+       "text": "Neither: late-race cramps have a known viral cause",
+       "why": "No such cause is known."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-appraise",
+   "concept": "cr-evidence",
+   "bloom": "evaluate",
+   "sources": [
+    "miller2010b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Miller's study found that about 3% hypohydration did not lower the cramp threshold. What most limits using it to say that dehydration never matters for race cramps?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ten men, a lab cramp in a foot muscle, and only mild water loss",
+       "why": "Correct: small sample, a model cramp, and only about 3% loss.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The men cycled, so the results apply only to cyclists",
+       "why": "The muscle tested was not the one cycled; the cycling was only the way to lose fluid."
+      },
+      {
+       "id": "c",
+       "text": "Hypohydration was measured with blood osmolality",
+       "why": "That is a valid measure of hydration; it is not a weakness."
+      },
+      {
+       "id": "d",
+       "text": "They did not measure the sodium the men lost in sweat",
+       "why": "They did: about 145 mmol of sodium each. Size and the cramp model are the limits."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-sodium-normal",
+   "concept": "cr-evidence",
+   "bloom": "analyse",
+   "sources": [
+    "schwellnus2011",
+    "miller2010b"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a race, cramping and non-cramping triathletes had the same blood sodium before and after. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It argues against low sodium as the cause, but doesn't settle it",
+       "why": "Correct: a measured group difference was expected under the theory and wasn't found.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It proves cramps have no biochemical cause",
+       "why": "One negative finding cannot prove that."
+      },
+      {
+       "id": "c",
+       "text": "It proves cramps are caused by dehydration instead",
+       "why": "Body-mass change did not differ between the groups either."
+      },
+      {
+       "id": "d",
+       "text": "It shows sodium capsules must work",
+       "why": "No capsule was tested; equal sodium gives no reason to expect benefit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-first-aid",
+   "concept": "cr-treat",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "miller2010c",
+    "miller2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the first-line treatment for an acute cramp?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Gentle static stretching of the cramping muscle",
+       "why": "Correct: the standard recommendation until symptoms ease.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Drinking a large volume of water",
+       "why": "No evidence that a big drink ends a cramp; in the lab test water did less than pickle juice."
+      },
+      {
+       "id": "c",
+       "text": "Massaging the muscle hard",
+       "why": "Not a recommendation in the reviews; gentle stretch is."
+      },
+      {
+       "id": "d",
+       "text": "A sodium capsule",
+       "why": "No evidence a capsule works within the cramp's seconds-to-minutes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-pickle-why",
+   "concept": "cr-treat",
+   "bloom": "analyse",
+   "sources": [
+    "miller2010a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Pickle juice shortened electrically induced cramps, which ended about 85 s after drinking. Why do the authors doubt that its salt restored the body's balance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It worked too fast to have changed the blood",
+       "why": "Correct: blood composition barely changed in 5 min, so a reflex from the mouth and throat fits the timing.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Pickle juice contains almost no sodium",
+       "why": "It is salty; the point is timing, not content."
+      },
+      {
+       "id": "c",
+       "text": "Water shortened the cramps just as much",
+       "why": "Water did not; cramps lasted 133.7 s after water."
+      },
+      {
+       "id": "d",
+       "text": "The men were not dehydrated before the test",
+       "why": "They were hypohydrated by about 3%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-pickle-calc",
+   "concept": "cr-treat",
+   "bloom": "apply",
+   "sources": [
+    "miller2010a"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cramps lasted 133.7 s after water and 84.6 s after pickle juice. By what percentage did pickle juice shorten the cramp, relative to water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 37%",
+       "why": "Correct: (133.7 − 84.6) ÷ 133.7 = 49.1 ÷ 133.7 = 0.37.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 58%",
+       "why": "Divided by 84.6 instead of 133.7: 49.1 ÷ 84.6."
+      },
+      {
+       "id": "c",
+       "text": "About 63%",
+       "why": "Used 84.6 ÷ 133.7, the remaining length, not the cut."
+      },
+      {
+       "id": "d",
+       "text": "49%",
+       "why": "Took the 49.1 s difference as a percentage."
+      }
+     ],
+     "solution": "Shortening = (133.7 − 84.6) ÷ 133.7 = 49.1 ÷ 133.7 = 0.367, about 37%. Divide by the water value, the comparison."
+    }
+   ]
+  },
+  {
+   "id": "cr-prevent-plan",
+   "concept": "cr-prevent",
+   "bloom": "apply",
+   "sources": [
+    "miller2021",
+    "schwellnus2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist often cramps in the last 30 minutes of hard hilly races: two of his last ten. His club mate says, \"Take more salt.\" Which plan fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Review pacing and race-specific fitness first, and treat his own risk factors one by one",
+       "why": "Correct: pace and history are the best-supported risk factors; advice should be individual.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Take large salt doses every race, since cramps mean low sodium",
+       "why": "Blood sodium did not predict cramps in the prospective data."
+      },
+      {
+       "id": "c",
+       "text": "Drink as much water as possible",
+       "why": "Fluid advice alone is not shown to prevent cramps."
+      },
+      {
+       "id": "d",
+       "text": "Stretch heavily for an hour before each race",
+       "why": "Stretching treats an acute cramp; there is no evidence it prevents them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cr-coach-claim",
+   "concept": "cr-prevent",
+   "bloom": "evaluate",
+   "sources": [
+    "miller2021",
+    "schwellnus2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says, \"Cramps are just dehydration, so keep drinking to stop them.\" What is the fairest reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Unproven, and cohorts don't back it: check pacing and history too",
+       "why": "Correct: dehydration is one hypothesis among several, not the settled cause.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Correct: dehydration is the established cause of cramps",
+       "why": "Reviews say strong evidence is lacking for either theory."
+      },
+      {
+       "id": "c",
+       "text": "Wrong: dehydration never matters in sport",
+       "why": "Too strong: the evidence is incomplete; heavy losses are untested in the lab work."
+      },
+      {
+       "id": "d",
+       "text": "Wrong: drinking during a race makes cramps worse",
+       "why": "Nothing shows that; drinking just isn't a proven fix for cramps."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

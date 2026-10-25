@@ -1,0 +1,780 @@
+{
+ "id": "imm-urti",
+ "module": "t5-immunity",
+ "title": "Upper respiratory illness in athletes",
+ "goal": "Describe what marathon studies, the J-curve and Games surveillance show about colds in athletes, and why not every sore throat is an infection.",
+ "requires": [
+  "imm-open-window"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "urti",
+    "incidence-rate",
+    "j-curve"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "imu-marathon",
+   "title": "Colds after a marathon",
+   "text": "Early field studies found a pattern. In one, cited in a 2018 review, about a third of 150 runners in the 1982 Two Oceans 56 km ultramarathon reported cold symptoms within 2 weeks [[c:two-oceans]]. In a Los Angeles Marathon survey (published 1990), 12.9% of racers who were well before the race reported an infection in the next week, against 2.2% of runners who did not race (an [odds ratio](g:odds-ratio) of 5.9) [[c:la-marathon]]. In the 2 months before the race, runners at 97 km·week⁻¹ or more had twice the odds of an infection of those under 32 km·week⁻¹ [[c:km-week]].\n\nLimits: illness was self-reported, the groups were not randomised, and only 3 non-racers were ill, so the interval is wide (1.9 to 18.8).",
+   "claims": [
+    {
+     "id": "two-oceans",
+     "text": "One third of 150 runners in the 1982 Two Oceans ultramarathon self-reported URTI symptoms within 2 weeks of the race.",
+     "grade": "weak",
+     "sources": [
+      "campbell2018"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2018",
+       "quote": "One of the first studies from this era found that one third of 150 runners participating in the 1982 Two Oceans 56 km ultramarathon in Cape Town South Africa self-reported symptoms of upper respiratory tract infections",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "la-marathon",
+     "text": "In the week after the Los Angeles Marathon, 12.9% of racers who were well before the race reported infection against 2.2% of non-racing runners.",
+     "grade": "weak",
+     "sources": [
+      "nieman1990"
+     ],
+     "evidence": [
+      {
+       "source": "nieman1990",
+       "quote": "236 (12.9%) reported IE during the week following the LAM vs 3 of 134 (2.2%) similarly experienced runners who did not participate, OR = 5.9 (95% CI 1.9-18.8)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "km-week",
+     "text": "Runners training 97 km per week or more had double the odds of an infection in the 2 months before the marathon, compared with those under 32 km per week.",
+     "grade": "weak",
+     "sources": [
+      "nieman1990"
+     ],
+     "evidence": [
+      {
+       "source": "nieman1990",
+       "quote": "In runners training greater than or equal to 97 vs less than 32 km/wk, the odds ratio (OR) for IE during the 2 month period prior to the LAM was 2.0",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imu-marathon-limit"
+  },
+  {
+   "type": "question",
+   "item": "imu-or-read"
+  },
+  {
+   "type": "concept",
+   "id": "imu-jcurve",
+   "title": "The J-curve, and its challengers",
+   "text": "These findings led to the [J-curve](g:j-curve) model: moderate activity lowers the risk of a cold, and prolonged, intense training raises it [[c:j-curve]]. The IOC consensus group backed the model but warned that its right side may not hold for elite athletes at the very top [[c:ioc-elite]].\n\nSeveral studies found that athletes with the largest loads fell ill less often, not more. This led to an S-shaped curve: elite athletes adapt to their load [[c:s-curve]]. The shape is disputed, and the right side of the J is the weakest part.",
+   "claims": [
+    {
+     "id": "j-curve",
+     "text": "The J-curve links a lower URTI risk to moderate exercise and a higher risk to prolonged, intense exercise.",
+     "grade": "moderate",
+     "sources": [
+      "nieman2019"
+     ],
+     "evidence": [
+      {
+       "source": "nieman2019",
+       "quote": "The protective effect of moderate activity on illness incidence contrasts with the increased illness risk linked with prolonged and intensive exercise, as summarized in the J-curve model",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ioc-elite",
+     "text": "The IOC consensus group supported the J-curve model, but cautioned that its right side may not apply to the highest-level elite athletes.",
+     "grade": "moderate",
+     "sources": [
+      "nieman2019"
+     ],
+     "evidence": [
+      {
+       "source": "nieman2019",
+       "quote": "The IOC consensus group provided support for the J-curve model, but cautioned that the right side of the model may not apply to elite athletes on the highest level, where high training loads are not consistently associated with an increased risk of illness.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "s-curve",
+     "text": "Some studies find that athletes with the largest training loads become ill less often than athletes training less.",
+     "grade": "disputed",
+     "sources": [
+      "campbell2018"
+     ],
+     "evidence": [
+      {
+       "source": "campbell2018",
+       "quote": "a number of studies challenge the “J-shaped curve,” indicating that athletes undertaking the largest training loads, become ill less frequently than athletes competing at, and training at, a lower level",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imu-jcurve-low"
+  },
+  {
+   "type": "question",
+   "item": "imu-elite-fit"
+  },
+  {
+   "type": "concept",
+   "id": "imu-games",
+   "title": "Illness at the Games",
+   "text": "Every Games, medical teams count illnesses daily. At London 2012, 758 illnesses were reported among 10,568 athletes. 41% affected the airways and 46% were due to infection [[c:london]]. At Tokyo 2020 (a 17-day window, with strict COVID rules), 438 illnesses occurred among 11,315 athletes, and marathon swimming and artistic swimming had the highest illness rates, at 8% each [[c:tokyo]].\n\nThe unit is the [incidence rate](g:incidence-rate): cases divided by athletes, times 1,000 for a rate per 1,000. Compare Games only with care: counting rules, window and COVID countermeasures differed.",
+   "claims": [
+    {
+     "id": "london",
+     "text": "At London 2012, 758 illnesses were reported among 10,568 athletes (71.7 per 1,000); 41% were respiratory and 46% were caused by infection.",
+     "grade": "moderate",
+     "sources": [
+      "engebretsen2013"
+     ],
+     "evidence": [
+      {
+       "source": "engebretsen2013",
+       "quote": "A total of 310 illnesses (41%) affected the respiratory system and the most common cause of illness was infection (n=347, 46%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "tokyo",
+     "text": "At Tokyo 2020, 438 illnesses occurred among 11,315 athletes; marathon and artistic swimming had the highest illness incidence (8% each).",
+     "grade": "moderate",
+     "sources": [
+      "soligard2022"
+     ],
+     "evidence": [
+      {
+       "source": "soligard2022",
+       "quote": "Marathon and artistic swimming presented the highest illness incidences (both 8%)",
+       "level": "abstract"
+      },
+      {
+       "source": "soligard2022",
+       "quote": "NOC and Tokyo 2020 medical staff reported 1035 injuries and 438 illnesses, equalling 9.1 injuries and 3.9 illnesses per 100 athletes over the 17-day period.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "imu-rate-example",
+   "title": "From cases to a rate per 1,000",
+   "problem": "At the London 2012 Games, 758 illnesses were reported among 10,568 athletes. What is the incidence rate per 1,000 athletes?",
+   "steps": [
+    "Cases ÷ athletes: 758 ÷ 10,568 = 0.0717.",
+    "Times 1,000: 0.0717 × 1,000 = 71.7 per 1,000 athletes.",
+    "Careful: this counts illnesses, not ill athletes, because one athlete can be ill twice. The paper says 7% of athletes had at least one illness."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imu-rate-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "imu-resp-share"
+  },
+  {
+   "type": "question",
+   "item": "imu-compare-games"
+  },
+  {
+   "type": "concept",
+   "id": "imu-infection",
+   "title": "Infection or something else?",
+   "text": "A sore throat does not always mean a germ. In a season-long study of 63 triathletes and cyclists and 20 sedentary controls, 37 episodes of upper respiratory illness happened, and a pathogen was found in only 11 of them [[c:pathogen]]. The most common pathogen was rhinovirus. Elite athletes had 4.5 times the rate of the recreational athletes [[c:elite-rate]].\n\nThe authors advise doctors to consider both infectious and non-infectious causes when an athlete has symptoms. Limits: 83 people, one season, and swabs only from those with two or more symptoms.",
+   "claims": [
+    {
+     "id": "pathogen",
+     "text": "A pathogen was identified in only 11 of 37 upper respiratory illness episodes in triathletes, cyclists and controls.",
+     "grade": "moderate",
+     "sources": [
+      "spence2007"
+     ],
+     "evidence": [
+      {
+       "source": "spence2007",
+       "quote": "Infectious agents were identified in only 11 (two control, three recreationally competitive, and six elite) out of 37 illness episodes.",
+       "level": "abstract"
+      },
+      {
+       "source": "spence2007",
+       "quote": "physicians should consider both infectious and noninfectious causes when athletes present with symptoms",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "elite-rate",
+     "text": "Elite athletes had a higher incidence rate of illness than recreationally competitive athletes (incidence rate ratio 4.5).",
+     "grade": "moderate",
+     "sources": [
+      "spence2007"
+     ],
+     "evidence": [
+      {
+       "source": "spence2007",
+       "quote": "Incidence rate ratios for illness were higher in both the control subjects (1.93, 95% CI: 0.72-5.18) and elite athletes (4.50, 1.91-10.59) than in the recreationally competitive athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imu-pathogen-share"
+  },
+  {
+   "type": "question",
+   "item": "imu-sore-throat"
+  },
+  {
+   "type": "question",
+   "item": "imu-spence-limit"
+  },
+  {
+   "type": "concept",
+   "id": "imu-risk",
+   "title": "What raises the risk",
+   "text": "Load is only part of it. Reviews list the risk factors seen in athletes [[c:risk-list]]:\n\n- intensified training in winter;\n- long-haul travel;\n- [low energy availability](g:low-energy-availability);\n- high psychological stress and anxiety;\n- depression.\n\nThe IOC consensus statement adds that poor load management, such as fast jumps in training or a crowded calendar, is itself a risk factor for illness [[c:ioc-load]].",
+   "claims": [
+    {
+     "id": "risk-list",
+     "text": "Risk factors for URI symptoms in athletes include intensified winter training, long-haul travel, low energy availability, high psychological stress and anxiety, and depression.",
+     "grade": "moderate",
+     "sources": [
+      "walsh2018"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2018",
+       "quote": "Recent studies have identified prominent risk factors, including: intensified training in the winter; long-haul travel; low energy availability; high levels of psychological stress and anxiety; and depression.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ioc-load",
+     "text": "The IOC consensus states that inappropriate load management is a significant risk factor for acute illness.",
+     "grade": "strong",
+     "sources": [
+      "schwellnus2016"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2016",
+       "quote": "Emerging evidence indicates that inappropriate load management is a significant risk factor for acute illness and the overtraining syndrome.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "imu-risk-stack"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Marathon surveys found more self-reported infections after racing and at very high weekly volume, but they are observational and rely on self-report.",
+    "The J-curve says moderate exercise lowers cold risk and heavy training raises it; at elite level the right side is disputed.",
+    "An incidence rate is cases divided by athletes, times 1,000; compare Games with care.",
+    "Pathogens were found in fewer than 30% of athletes' upper respiratory episodes, so not every sore throat is a germ.",
+    "Risk factors stack: heavy winter load, travel, low energy and stress add up."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "imu-marathon-limit",
+   "concept": "imu-marathon",
+   "bloom": "evaluate",
+   "sources": [
+    "nieman1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The Los Angeles Marathon survey found illness in 12.9% of racers and 2.2% of non-racing runners in the next week. What most limits the claim that racing caused the extra illness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Self-reported illness, no random groups, and race-week travel and stress",
+       "correct": true,
+       "why": "Right: observational design, self-report and confounders."
+      },
+      {
+       "id": "b",
+       "text": "The 1,828 racers are too many people to analyse",
+       "why": "A large sample is a strength, not a limit."
+      },
+      {
+       "id": "c",
+       "text": "An odds ratio of 5.9 means no real difference",
+       "why": "An OR above 1.0 means higher odds."
+      },
+      {
+       "id": "d",
+       "text": "Only women were asked to take part",
+       "why": "The survey asked both sexes and the sample is not limited this way."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-or-read",
+   "concept": "imu-marathon",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "nieman1990"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The marathon survey reported an odds ratio of 5.9 for illness in racers against non-racers. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.9% of racers fell ill",
+       "why": "Here 12.9% of racers were ill; the OR is not a percentage."
+      },
+      {
+       "id": "b",
+       "text": "Finishers were ill for 5.9 days longer",
+       "why": "An odds ratio says nothing about how long illness lasts."
+      },
+      {
+       "id": "c",
+       "text": "Illness was 59% more common in racers",
+       "why": "The odds were about 5.9 times, which is 490% higher."
+      },
+      {
+       "id": "d",
+       "text": "The odds of illness were about 5.9 times higher in racers",
+       "correct": true,
+       "why": "Right: an odds ratio compares the odds in two groups."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-jcurve-low",
+   "concept": "imu-jcurve",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "nieman2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Where does the J-curve model put the lowest risk of a cold?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At moderate amounts of exercise",
+       "correct": true,
+       "why": "Right: moderate activity is protective, and very heavy training lifts the risk again."
+      },
+      {
+       "id": "b",
+       "text": "At no exercise at all",
+       "why": "Sedentary people sit higher on the curve than moderate exercisers."
+      },
+      {
+       "id": "c",
+       "text": "At the highest training loads",
+       "why": "The right side of the J is where the risk rises."
+      },
+      {
+       "id": "d",
+       "text": "The risk is the same at every load",
+       "why": "The J shape says it changes with load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-elite-fit",
+   "concept": "imu-jcurve",
+   "bloom": "apply",
+   "sources": [
+    "nieman2019",
+    "campbell2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A national-team triathlete trains 25 h·week⁻¹ and rarely gets ill. Which statement fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It disproves the J-curve for everyone, including club runners",
+       "why": "One athlete cannot disprove a population model."
+      },
+      {
+       "id": "b",
+       "text": "Plausible: top athletes may adapt to their load",
+       "correct": true,
+       "why": "Right: the IOC group made this caveat, and some studies show the S-shape."
+      },
+      {
+       "id": "c",
+       "text": "The athlete must be hiding illness from the team",
+       "why": "There is no reason to assume this."
+      },
+      {
+       "id": "d",
+       "text": "It proves heavy training never raises illness risk",
+       "why": "The evidence is mixed, not one-sided."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-rate-calc",
+   "concept": "imu-games",
+   "bloom": "apply",
+   "sources": [
+    "engebretsen2013",
+    "soligard2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At the London 2012 Games, 758 illnesses were reported among 10,568 athletes. What is the incidence rate per 1,000 athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "71.7",
+       "correct": true,
+       "why": "Right: 758 ÷ 10,568 × 1,000 = 71.7."
+      },
+      {
+       "id": "b",
+       "text": "7.2",
+       "why": "This is the rate per 100, not per 1,000."
+      },
+      {
+       "id": "c",
+       "text": "13.9",
+       "why": "This divides athletes by cases (10,568 ÷ 758), the wrong way round."
+      },
+      {
+       "id": "d",
+       "text": "758",
+       "why": "This is the case count, not a rate."
+      }
+     ],
+     "solution": "758 ÷ 10,568 = 0.0717; × 1,000 = 71.7 illnesses per 1,000 athletes."
+    },
+    {
+     "id": "b",
+     "stem": "At the Tokyo 2020 Games, 438 illnesses were reported among 11,315 athletes. What is the incidence rate per 1,000 athletes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.9",
+       "why": "This is the rate per 100, not per 1,000."
+      },
+      {
+       "id": "b",
+       "text": "38.7",
+       "correct": true,
+       "why": "Right: 438 ÷ 11,315 × 1,000 = 38.7."
+      },
+      {
+       "id": "c",
+       "text": "25.8",
+       "why": "This divides athletes by cases (11,315 ÷ 438), the wrong way round."
+      },
+      {
+       "id": "d",
+       "text": "387",
+       "why": "This multiplies by 10,000 instead of 1,000."
+      }
+     ],
+     "solution": "438 ÷ 11,315 = 0.0387; × 1,000 = 38.7 illnesses per 1,000 athletes."
+    },
+    {
+     "id": "c",
+     "stem": "A pro cycling team logs 9 illness episodes among its 30 riders during a Grand Tour. What is the incidence rate per 1,000 riders?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30",
+       "why": "This multiplies by 100 and then reads it as per 1,000."
+      },
+      {
+       "id": "b",
+       "text": "3.3",
+       "why": "This divides riders by episodes (30 ÷ 9)."
+      },
+      {
+       "id": "c",
+       "text": "300",
+       "correct": true,
+       "why": "Right: 9 ÷ 30 × 1,000 = 300."
+      },
+      {
+       "id": "d",
+       "text": "0.3",
+       "why": "This is the share as a fraction, not per 1,000."
+      }
+     ],
+     "solution": "9 ÷ 30 = 0.3; × 1,000 = 300 episodes per 1,000 riders."
+    }
+   ]
+  },
+  {
+   "id": "imu-resp-share",
+   "concept": "imu-games",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "engebretsen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At London 2012, about what share of illnesses affected the respiratory system?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 11%",
+       "why": "11% was the share of athletes injured, not respiratory illness."
+      },
+      {
+       "id": "b",
+       "text": "About 41%",
+       "correct": true,
+       "why": "Right: 310 of 758 illnesses."
+      },
+      {
+       "id": "c",
+       "text": "About 70%",
+       "why": "Respiratory illness was the largest group but not 70%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-compare-games",
+   "concept": "imu-games",
+   "bloom": "analyse",
+   "sources": [
+    "engebretsen2013",
+    "soligard2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "London 2012 reported 71.7 illnesses per 1,000 athletes and Tokyo 2020 reported 3.9 per 100. A teammate says Tokyo was healthier because 3.9 is far below 71.7. What is wrong?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Units differ (3.9 per 100 is 39 per 1,000), and so did methods",
+       "correct": true,
+       "why": "Right: convert units first, then remember the different windows and COVID countermeasures."
+      },
+      {
+       "id": "b",
+       "text": "Nothing: 3.9 is below 71.7, so Tokyo had fewer illnesses",
+       "why": "Different units: 3.9 per 100 equals 39 per 1,000."
+      },
+      {
+       "id": "c",
+       "text": "Tokyo cannot be compared because it had COVID",
+       "why": "COVID was one difference but the unit mix-up comes first."
+      },
+      {
+       "id": "d",
+       "text": "The athletes at Tokyo were all healthier",
+       "why": "Nothing in the data shows this."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-pathogen-share",
+   "concept": "imu-infection",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "spence2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the triathlete and cyclist surveillance study, in about what share of upper respiratory illness episodes was a pathogen found?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fewer than 30%",
+       "correct": true,
+       "why": "Right: 11 of 37 episodes."
+      },
+      {
+       "id": "b",
+       "text": "More than 90%",
+       "why": "Most episodes had no identified pathogen."
+      },
+      {
+       "id": "c",
+       "text": "About 60%",
+       "why": "Pathogens were found in fewer than a third."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-sore-throat",
+   "concept": "imu-infection",
+   "bloom": "apply",
+   "sources": [
+    "spence2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete has a sore throat and a blocked nose for two days after a hard week. What is the best way to think about it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is always a virus, so rest for two weeks",
+       "why": "Pathogens were found in fewer than 30% of cases, and rest length depends on symptoms."
+      },
+      {
+       "id": "b",
+       "text": "It is always an allergy, so ignore it",
+       "why": "Infections do occur in these athletes."
+      },
+      {
+       "id": "c",
+       "text": "Maybe not a germ; look at the symptoms first",
+       "correct": true,
+       "why": "Right: the cause is often not infectious."
+      },
+      {
+       "id": "d",
+       "text": "It is the open window, so more training will fix it",
+       "why": "The window is disputed, and training does not fix symptoms."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-spence-limit",
+   "concept": "imu-infection",
+   "bloom": "evaluate",
+   "sources": [
+    "spence2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What limits the Spence study's finding that most episodes had no pathogen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Small sample, a single season, swabs only if symptomatic",
+       "correct": true,
+       "why": "Right: small, short, and a test that may miss some pathogens."
+      },
+      {
+       "id": "b",
+       "text": "It included no elite athletes",
+       "why": "It included 32 elite athletes."
+      },
+      {
+       "id": "c",
+       "text": "Swabs can never detect a virus",
+       "why": "They can; rhinovirus was the most common pathogen found."
+      },
+      {
+       "id": "d",
+       "text": "It covered too many seasons to compare",
+       "why": "It covered one 5-month period."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "imu-risk-stack",
+   "concept": "imu-risk",
+   "bloom": "apply",
+   "sources": [
+    "walsh2018",
+    "schwellnus2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which athlete has the highest risk of a respiratory illness this month?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One who doubled load in two weeks, flew long-haul and eats too little",
+       "correct": true,
+       "why": "Right: heavy load, travel and low energy stack up."
+      },
+      {
+       "id": "b",
+       "text": "One who rides steadily 8 h·week⁻¹ and sleeps well",
+       "why": "Steady moderate load and good sleep lower the risk."
+      },
+      {
+       "id": "c",
+       "text": "One who rests for a week and eats well",
+       "why": "Rest does not raise the risk."
+      },
+      {
+       "id": "d",
+       "text": "One who runs 5 km three times a week",
+       "why": "Moderate exercise sits on the protective side of the J-curve."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

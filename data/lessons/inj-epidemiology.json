@@ -1,0 +1,680 @@
+{
+ "id": "inj-epidemiology",
+ "module": "t5-injury",
+ "title": "How common are overuse injuries?",
+ "goal": "Define overuse injury, read incidence per 1000 h, and say which risk factors the cohort evidence supports and how firmly.",
+ "requires": [
+  "ot-prevention"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "overuse-injury",
+    "incidence",
+    "time-loss-injury",
+    "hazard-ratio"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ie-define",
+   "title": "What counts as an overuse injury",
+   "text": "An [overuse injury](g:overuse-injury) has no single moment of injury: damage builds up over many loads, then pain starts. That makes it hard to count. Is a runner injured if she trains through knee pain at half her usual distance?\n\nResearchers agreed a definition for runners: lower-limb pain from running that restricts or stops running for at least 7 days or 3 scheduled sessions in a row, or that needs a health professional [[c:ie-def]].\n\nCounting only [time-loss injuries](g:time-loss-injury) misses most problems. In a 13-week study of 313 athletes, standard records found 40 overuse injuries of the knee, lower back and shoulder; weekly questionnaires found 419 problems there [[c:ie-undercount]].",
+   "claims": [
+    {
+     "id": "ie-def",
+     "text": "A Delphi panel agreed a definition of running-related injury: lower-limb pain that restricts or stops running for at least 7 days or 3 consecutive scheduled sessions, or that needs a health professional.",
+     "grade": "strong",
+     "sources": [
+      "yamato2015"
+     ],
+     "evidence": [
+      {
+       "source": "yamato2015",
+       "quote": "Running-related (training or competition) musculoskeletal pain in the lower limbs that causes a restriction on or stoppage of running (distance, speed, duration, or training) for at least 7 days or 3 consecutive scheduled training sessions, or that requires the runner to consult a physician or other health professional.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-undercount",
+     "text": "Time-loss records capture only a small share of overuse problems, because few problems lead to time loss.",
+     "grade": "weak",
+     "sources": [
+      "clarsen2013"
+     ],
+     "evidence": [
+      {
+       "source": "clarsen2013",
+       "quote": "Standard injury surveillance methods only capture a small percentage of the overuse problems affecting the athletes, largely because few problems led to time loss from training or competition.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-def-term"
+  },
+  {
+   "type": "question",
+   "item": "ie-def-apply"
+  },
+  {
+   "type": "question",
+   "item": "ie-undercount"
+  },
+  {
+   "type": "concept",
+   "id": "ie-rates",
+   "title": "Incidence: injuries per 1000 hours",
+   "text": "To compare groups, set injuries against exposure. [Incidence](g:incidence) = new injuries ÷ hours run × 1000. Counting per runner misleads: someone who runs 10 h a year has far less chance of injury than someone who runs 300 h.\n\nPooled results from prospective studies [[c:ie-rates]]:\n\n| runners | injuries per 1000 h |\n|---|---|\n| novice | 17.8 |\n| recreational | 7.7 |\n\nSingle studies ranged from 2.5 (long-distance track athletes) to 33.0 (novices). Studies used different injury definitions, so compare with care.",
+   "claims": [
+    {
+     "id": "ie-rates",
+     "text": "Pooled incidence of running-related injury was 17.8 per 1000 h in novice runners and 7.7 in recreational runners.",
+     "grade": "moderate",
+     "sources": [
+      "videbaek2015"
+     ],
+     "evidence": [
+      {
+       "source": "videbaek2015",
+       "quote": "The meta-analyses revealed a weighted injury incidence of 17.8 (95% confidence interval [CI] 16.7-19.1) in novice runners and 7.7 (95% CI 6.9-8.7) in recreational runners.",
+       "level": "abstract"
+      },
+      {
+       "source": "videbaek2015",
+       "quote": "Heterogeneity in definitions of injury, definition of type of runner, and outcome measures in the included full-text articles challenged comparison across studies.",
+       "level": "abstract"
+      },
+      {
+       "source": "videbaek2015",
+       "quote": "Running-related injuries per 1000 h of running ranged from a minimum of 2.5 in a study of long-distance track and field athletes to a maximum of 33.0 in a study of novice runners.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ie-rate-example",
+   "title": "Incidence from raw counts",
+   "problem": "Forty runners log 12 injuries while running 1500 h in total. What is the incidence per 1000 h?",
+   "steps": [
+    "Incidence = injuries ÷ hours × 1000.",
+    "12 ÷ 1500 = 0.008 injuries per hour.",
+    "0.008 × 1000 = 8.0 injuries per 1000 h."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-rate-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ie-rate-why"
+  },
+  {
+   "type": "question",
+   "item": "ie-rate-compare"
+  },
+  {
+   "type": "concept",
+   "id": "ie-other",
+   "title": "Cyclists and triathletes",
+   "text": "Cyclists and triathletes also get overuse injuries, but the data are thinner. In 109 professional road cyclists asked about the last 12 months, 94 injuries were registered: 45% in the lower back and 23% in the knee. Of 23 time-loss injuries, 57% were in the knee [[c:ie-cyclists]].\n\nOf 758 Brazilian triathletes, 425 (56%) reported an injury in the past 12 months, mostly in the lower limbs, the knee most often [[c:ie-triathletes]].\n\nBoth rest on memory of the past year, and the triathlete data came from an online form. A share of people over a year is not a rate per 1000 h, so 56% can't be set next to 17.8.",
+   "claims": [
+    {
+     "id": "ie-cyclists",
+     "text": "In professional road cyclists, overuse injuries were mostly in the lower back (45%) and knee (23%); the knee caused most time-loss injuries (57%).",
+     "grade": "weak",
+     "sources": [
+      "clarsen2010"
+     ],
+     "evidence": [
+      {
+       "source": "clarsen2010",
+       "quote": "A total of 94 injuries were registered; 45% were in the lower back and 23% in the knee.",
+       "level": "abstract"
+      },
+      {
+       "source": "clarsen2010",
+       "quote": "Twenty-three time-loss injuries were registered-57% in the knee, 22% in the lower back, and 13% in the lower leg.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-triathletes",
+     "text": "In a survey of 758 triathletes, 425 reported an injury in the past 12 months, mostly in the lower limbs and most often the knee.",
+     "grade": "weak",
+     "sources": [
+      "anselmo2025"
+     ],
+     "evidence": [
+      {
+       "source": "anselmo2025",
+       "quote": "More than half (n = 425) reported an injury in the past 12 months, most frequently in the lower limbs, particularly the knee (16.88%).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-cyclists"
+  },
+  {
+   "type": "question",
+   "item": "ie-compare-measures"
+  },
+  {
+   "type": "concept",
+   "id": "ie-risk",
+   "title": "Risk factors: previous injury and training errors",
+   "text": "Which factors predict injury? A review of 11 prospective cohorts (4,671 runners) found one main factor: an injury in the previous 12 months [[c:ie-prev]]. Only one had a random sample, and only six followed runners for 6 months or more.\n\nTraining errors are plausible but less certain. Among 874 novices, those who raised weekly distance by more than 30% over 2 weeks had a [hazard ratio](g:hazard-ratio) (HR, a rate ratio) of 1.59 for distance-related injuries against those who raised it by under 10%. The [95% CI](g:confidence-interval) was 0.96–2.66; the authors called the study exploratory. A systematic review found very limited evidence for a link between sudden load change and injury [[c:ie-prog]].\n\nThe critique of the acute:chronic ratio is in the ACWR lesson, not repeated here.",
+   "claims": [
+    {
+     "id": "ie-prev",
+     "text": "The main risk factor for running injury found in prospective cohorts was an injury in the previous 12 months.",
+     "grade": "moderate",
+     "sources": [
+      "saragiotto2014"
+     ],
+     "evidence": [
+      {
+       "source": "saragiotto2014",
+       "quote": "The main risk factor identified in this review was previous injury in the last 12 months, although many risk factors had been investigated in the literature.",
+       "level": "abstract"
+      },
+      {
+       "source": "saragiotto2014",
+       "quote": "Only one article met the criteria for random selection of the sample and only six articles included a follow-up of 6 months or more.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ie-prog",
+     "text": "Large jumps in running distance may raise injury rates, but the evidence is limited and exploratory.",
+     "grade": "weak",
+     "sources": [
+      "nielsen2014",
+      "damsted2018"
+     ],
+     "evidence": [
+      {
+       "source": "nielsen2014",
+       "quote": "Novice runners who progressed their running distance by more than 30% over a 2-week period seem to be more vulnerable to distance-related injuries than runners who increase their running distance by less than 10%.",
+       "level": "abstract"
+      },
+      {
+       "source": "damsted2018",
+       "quote": "Very limited evidence exists supporting that a sudden change in training load is associated with increased risk of running-related injury.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ie-risk-prev"
+  },
+  {
+   "type": "question",
+   "item": "ie-ci"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "An overuse injury builds up from repeated load; a good definition counts restricted training, not just missed sessions.",
+    "Incidence per 1000 h puts exposure in the bottom line: pooled rates were 17.8 for novice and 7.7 for recreational runners.",
+    "Cyclists mostly report lower back and knee problems, triathletes knee and other lower-limb ones: both from recall and surveys.",
+    "Previous injury is the best-supported risk factor; training errors are plausible, but the evidence is thin."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ie-def-term",
+   "concept": "ie-define",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "yamato2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What separates an overuse injury from an acute injury?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It builds up over many loads, with no single moment of injury",
+       "correct": true,
+       "why": "Right: repeated loading adds up until pain starts."
+      },
+      {
+       "id": "b",
+       "text": "It only affects tendons, since they are loaded again and again",
+       "why": "Bone, muscle and other tissues get overuse injuries too."
+      },
+      {
+       "id": "c",
+       "text": "It always stops the athlete from training for a week",
+       "why": "Many overuse injuries are trained through; time loss is not part of the idea."
+      },
+      {
+       "id": "d",
+       "text": "It is caused by poor technique and nothing else",
+       "why": "Technique is one possible cause; load, tissue capacity and other factors also count."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-def-apply",
+   "concept": "ie-define",
+   "bloom": "apply",
+   "sources": [
+    "yamato2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has had shin pain for 10 days. She still does every scheduled session but halves her usual distance. Under the consensus definition, is this a running-related injury?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: pain has restricted her running for at least 7 days",
+       "correct": true,
+       "why": "Right: a cut in distance for 7 days or more counts as a restriction."
+      },
+      {
+       "id": "b",
+       "text": "No: she missed no scheduled session",
+       "why": "Time loss is not needed; restricted distance, speed or duration is enough."
+      },
+      {
+       "id": "c",
+       "text": "No: she has not consulted a health professional",
+       "why": "Seeing a professional is an alternative route, not a requirement."
+      },
+      {
+       "id": "d",
+       "text": "Only if a scan shows damage in the shin",
+       "why": "The definition rests on pain and its effect on running, not on imaging."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-undercount",
+   "concept": "ie-define",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "clarsen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do time-loss records undercount overuse problems?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Many athletes train through pain, so no time is lost",
+       "correct": true,
+       "why": "Right: few problems cause time loss, so they never enter the records."
+      },
+      {
+       "id": "b",
+       "text": "Athletes usually hide their pain from coaches and doctors",
+       "why": "Hiding happens, but the study found the main gap is the definition, not secrecy."
+      },
+      {
+       "id": "c",
+       "text": "Overuse problems are too rare to show up in a season",
+       "why": "Weekly questionnaires found 39% of athletes with overuse problems each week."
+      },
+      {
+       "id": "d",
+       "text": "Time loss is only logged for sudden, acute injuries",
+       "why": "Time-loss records can include overuse injuries; they just miss the milder ones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-rate-calc",
+   "concept": "ie-rates",
+   "bloom": "apply",
+   "sources": [
+    "videbaek2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A running club logs 18 injuries over 1200 h of running by its members. What is the incidence per 1000 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "66.7",
+       "why": "Inverts the fraction: 1200 ÷ 18 is hours per injury."
+      },
+      {
+       "id": "b",
+       "text": "15.0",
+       "correct": true,
+       "why": "Right: 18 ÷ 1200 × 1000 = 15.0."
+      },
+      {
+       "id": "c",
+       "text": "1.5",
+       "why": "Scales to 100 h, not 1000 h."
+      },
+      {
+       "id": "d",
+       "text": "0.015",
+       "why": "Forgets to multiply by 1000."
+      }
+     ],
+     "solution": "18 ÷ 1200 = 0.015 per hour; × 1000 = 15.0 per 1000 h."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlon squad logs 9 injuries over 1500 h of running. What is the incidence per 1000 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "166.7",
+       "why": "Inverts the fraction: 1500 ÷ 9 is hours per injury."
+      },
+      {
+       "id": "b",
+       "text": "0.6",
+       "why": "Scales to 100 h, not 1000 h."
+      },
+      {
+       "id": "c",
+       "text": "6.0",
+       "correct": true,
+       "why": "Right: 9 ÷ 1500 × 1000 = 6.0."
+      },
+      {
+       "id": "d",
+       "text": "0.006",
+       "why": "Forgets to multiply by 1000."
+      }
+     ],
+     "solution": "9 ÷ 1500 = 0.006 per hour; × 1000 = 6.0 per 1000 h."
+    },
+    {
+     "id": "c",
+     "stem": "A novice running group logs 30 injuries over 1250 h of running. What is the incidence per 1000 h?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41.7",
+       "why": "Inverts the fraction: 1250 ÷ 30 is hours per injury."
+      },
+      {
+       "id": "b",
+       "text": "2.4",
+       "why": "Scales to 100 h, not 1000 h."
+      },
+      {
+       "id": "c",
+       "text": "0.024",
+       "why": "Forgets to multiply by 1000."
+      },
+      {
+       "id": "d",
+       "text": "24.0",
+       "correct": true,
+       "why": "Right: 30 ÷ 1250 × 1000 = 24.0."
+      }
+     ],
+     "solution": "30 ÷ 1250 = 0.024 per hour; × 1000 = 24.0 per 1000 h."
+    }
+   ]
+  },
+  {
+   "id": "ie-rate-why",
+   "concept": "ie-rates",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "videbaek2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do studies give injuries per 1000 h instead of injuries per runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It makes groups with different running time comparable",
+       "correct": true,
+       "why": "Right: exposure is in the bottom line, so more hours no longer look like more risk."
+      },
+      {
+       "id": "b",
+       "text": "It turns every overuse problem into a time-loss injury",
+       "why": "The unit says nothing about how an injury is defined."
+      },
+      {
+       "id": "c",
+       "text": "It removes the effect of age and sex on injury",
+       "why": "Rates per hour do not adjust for who the runners are."
+      },
+      {
+       "id": "d",
+       "text": "It gives a higher, more cautious figure for each runner",
+       "why": "The figure is not higher by design; it just changes the unit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-rate-compare",
+   "concept": "ie-rates",
+   "bloom": "analyse",
+   "sources": [
+    "videbaek2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Club A: 40 runners, 20 injuries, 8000 h run in total. Club B: 40 runners, 20 injuries, 4000 h run in total. Which statement fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Club A is worse: it logged more hours in total",
+       "why": "More hours is more exposure, not more risk; it lowers A's rate."
+      },
+      {
+       "id": "b",
+       "text": "The clubs are equal: both had 0.5 injuries per runner",
+       "why": "Per runner ignores exposure; B ran half as many hours for the same injuries."
+      },
+      {
+       "id": "c",
+       "text": "Club B is worse: 5.0 per 1000 h against 2.5 for Club A",
+       "correct": true,
+       "why": "Right: 20 ÷ 4000 × 1000 = 5.0 and 20 ÷ 8000 × 1000 = 2.5."
+      },
+      {
+       "id": "d",
+       "text": "Neither can be judged without the runners' ages",
+       "why": "Age matters for risk factors, but incidence can be compared on exposure alone."
+      }
+     ],
+     "solution": "A: 20 ÷ 8000 × 1000 = 2.5 per 1000 h. B: 20 ÷ 4000 × 1000 = 5.0 per 1000 h. B's rate is twice A's."
+    }
+   ]
+  },
+  {
+   "id": "ie-cyclists",
+   "concept": "ie-other",
+   "bloom": "apply",
+   "sources": [
+    "clarsen2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A pro team doctor wants to cut missed races from overuse injuries. Where should she look first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The lower back, which had the most overuse injuries overall",
+       "why": "Most frequent overall (45%), but only 22% of the time-loss injuries."
+      },
+      {
+       "id": "b",
+       "text": "The shoulder, since cyclists load the arms on the bars",
+       "why": "The shoulder was not among the main regions in this study."
+      },
+      {
+       "id": "c",
+       "text": "The knee, which caused most time-loss injuries",
+       "correct": true,
+       "why": "Right: 57% of the 23 time-loss injuries were in the knee."
+      },
+      {
+       "id": "d",
+       "text": "The lower leg, which is hit hardest in runners",
+       "why": "Only 13% of the time-loss injuries in these cyclists were in the lower leg."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-compare-measures",
+   "concept": "ie-other",
+   "bloom": "analyse",
+   "sources": [
+    "videbaek2015",
+    "anselmo2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One study reports 17.8 injuries per 1000 h in novice runners. Another finds 56% of triathletes injured in the past year. A coach says triathletes get hurt far more. Best reply?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Agree: 56% is far higher than 17.8",
+       "why": "Different units: a share of people over a year, against a rate per hour."
+      },
+      {
+       "id": "b",
+       "text": "The numbers measure different things, so they can't be compared",
+       "correct": true,
+       "why": "Right: one is a 12-month share of people, the other a rate per exposure hour."
+      },
+      {
+       "id": "c",
+       "text": "Agree, because triathletes also swim and cycle",
+       "why": "Extra sports add exposure but cannot be read from these two numbers."
+      },
+      {
+       "id": "d",
+       "text": "Disagree: triathletes train fewer hours, so risk is lower",
+       "why": "Hours are not given in either number; this guesses at a result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-risk-prev",
+   "concept": "ie-risk",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "saragiotto2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In prospective cohorts of runners, which risk factor was reported most often?",
+     "options": [
+      {
+       "id": "a",
+       "text": "An injury in the previous 12 months",
+       "correct": true,
+       "why": "Right: reported in 5 of the 8 studies that looked at it."
+      },
+      {
+       "id": "b",
+       "text": "Being female",
+       "why": "Most studies found no link between sex and running injury."
+      },
+      {
+       "id": "c",
+       "text": "Running more than 50 km a week",
+       "why": "Distance was studied, but it was not the main factor found."
+      },
+      {
+       "id": "d",
+       "text": "Being over 40 years old",
+       "why": "Age was among many factors tested but was not the main one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ie-ci",
+   "concept": "ie-risk",
+   "bloom": "evaluate",
+   "sources": [
+    "nielsen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 874 novice runners, raising weekly distance by over 30% gave a hazard ratio of 1.59 (95% CI 0.96–2.66) for distance-related injury. Which conclusion fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It proves that rises over 30% cause injury",
+       "why": "A CI that reaches 0.96 is compatible with no effect, and cohorts cannot prove cause."
+      },
+      {
+       "id": "b",
+       "text": "It proves rises over 30% are safe, as the CI includes 1",
+       "why": "The CI also reaches 2.66; it cannot rule out a large rise in risk."
+      },
+      {
+       "id": "c",
+       "text": "It is useless, as the P value is above .05",
+       "why": "The estimate is imprecise but still informative; the authors called it exploratory."
+      },
+      {
+       "id": "d",
+       "text": "It is suggestive: the data fit no effect or a large one",
+       "correct": true,
+       "why": "Right: wide interval, exploratory study, so more trials are needed."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

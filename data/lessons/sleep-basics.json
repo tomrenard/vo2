@@ -1,0 +1,666 @@
+{
+ "id": "sleep-basics",
+ "module": "t5-sleep",
+ "title": "Sleep: stages, clocks and recovery",
+ "goal": "Describe sleep stages and cycles, how sleep pressure and the body clock set sleep timing, and what is known and unknown about sleep and recovery.",
+ "requires": [
+  "ultra-plan"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "nrem-sleep",
+    "rem-sleep",
+    "slow-wave-sleep",
+    "sleep-cycle",
+    "sleep-pressure",
+    "circadian-rhythm",
+    "chronotype"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "sb-stages",
+   "title": "Sleep is a loop, not one state",
+   "text": "Sleep has two kinds. [NREM sleep](g:nrem-sleep) has three stages, N1 to N3, from light to deep. The deepest, N3, is [slow-wave sleep](g:slow-wave-sleep). [REM sleep](g:rem-sleep) is the other kind: the eyes move fast, muscle tone is low and most dreaming happens.\n\nYou do not stay in one stage. You pass through them in a loop called a [sleep cycle](g:sleep-cycle). One cycle lasts about 90 minutes, and you go round about 4 to 6 times a night [[c:cycles]]. The pattern of stages and cycles across a night is its *sleep architecture*.",
+   "claims": [
+    {
+     "id": "cycles",
+     "text": "The body cycles through the sleep stages about 4 to 6 times a night, about 90 minutes per cycle.",
+     "grade": "strong",
+     "sources": [
+      "patel2024"
+     ],
+     "evidence": [
+      {
+       "source": "patel2024",
+       "quote": "The body cycles through all stages approximately 4 to 6 times each night, averaging 90 minutes for each cycle.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-cycle-length"
+  },
+  {
+   "type": "question",
+   "item": "sb-sws-stage"
+  },
+  {
+   "type": "example",
+   "id": "sb-cycle-example",
+   "title": "Counting cycles",
+   "problem": "A swimmer sleeps 7 h 30 min. About how many sleep cycles is that?",
+   "steps": [
+    "Cycles = time asleep ÷ cycle length. Put both in minutes: 7 h 30 min = 450 min.",
+    "450 ÷ 90 = 5 cycles.",
+    "The 90 minutes is an average. Cycles run shorter or longer, so read the answer as 'about 5', not exactly 5."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-cycle-count",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "sb-age",
+   "title": "Sleep changes with age",
+   "text": "In adults, total sleep time, sleep efficiency, the share of slow-wave sleep and the share of REM sleep all fall with age. The share of light sleep and the time awake after first falling asleep rise [[c:age-sleep]].\n\nTwo cautions. First, the effects shrank when studies screened out sleep disorders and illness, so part of 'ageing' is poor health. Second, few studies cover middle-aged adults, where many masters athletes sit.\n\nSo deep sleep and unbroken sleep are not fixed traits. A 25-year-old and a 55-year-old training the same hours will usually have different nights.",
+   "claims": [
+    {
+     "id": "age-sleep",
+     "text": "In adults, total sleep time, sleep efficiency, and the shares of slow-wave and REM sleep fall with age.",
+     "grade": "moderate",
+     "sources": [
+      "ohayon2004"
+     ],
+     "evidence": [
+      {
+       "source": "ohayon2004",
+       "quote": "In adults, total sleep time, sleep efficiency, percentage of slow-wave sleep, percentage of REM sleep, and REM latency all significantly decreased with age, while sleep latency, percentage of stage 1 sleep, percentage of stage 2 sleep, and wake after sleep onset significantly increased with age.",
+       "level": "abstract"
+      },
+      {
+       "source": "ohayon2004",
+       "quote": "However, effect sizes for the different sleep parameters were greatly modified by the quality of subject screening, diminishing or even masking age associations with different sleep parameters.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-age-change"
+  },
+  {
+   "type": "concept",
+   "id": "sb-clocks",
+   "title": "Two clocks decide when you sleep",
+   "text": "Two processes work together (the *two-process model*) [[c:two-process]].\n\n[Sleep pressure](g:sleep-pressure) builds the longer you stay awake and falls during sleep. One driver is [adenosine](g:adenosine): in cats it rose during waking and fell slowly in recovery sleep [[c:adenosine-pressure]]. Caffeine blocks adenosine's action (see the caffeine lesson), so it hides the pressure without removing it.\n\nThe [circadian rhythm](g:circadian-rhythm) is a body clock of about 24 hours. It raises alertness at some hours and lowers it at others, whatever your sleep debt.\n\nYou sleep best when high pressure meets the clock's sleep phase.",
+   "claims": [
+    {
+     "id": "two-process",
+     "text": "Sleep timing and depth come from a homeostatic process (sleep pressure) that interacts with a circadian process.",
+     "grade": "moderate",
+     "sources": [
+      "borbely2016"
+     ],
+     "evidence": [
+      {
+       "source": "borbely2016",
+       "quote": "The model posits that a homeostatic process (Process S) interacts with a process controlled by the circadian pacemaker (Process C), with time-courses derived from physiological and behavioural variables.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "adenosine-pressure",
+     "text": "In cats, adenosine in the basal forebrain rose with time awake and fell during recovery sleep.",
+     "grade": "weak",
+     "sources": [
+      "porkkaheiskanen1997"
+     ],
+     "evidence": [
+      {
+       "source": "porkkaheiskanen1997",
+       "quote": "In vivo microdialysis measurements in freely behaving cats showed that adenosine extracellular concentrations in the basal forebrain cholinergic region increased during spontaneous wakefulness as contrasted with slow wave sleep; exhibited progressive increases during sustained, prolonged wakefulness; and declined slowly during recovery sleep.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-pressure"
+  },
+  {
+   "type": "question",
+   "item": "sb-two-process"
+  },
+  {
+   "type": "concept",
+   "id": "sb-chronotype",
+   "title": "Your clock is not your neighbour's",
+   "text": "A [chronotype](g:chronotype) is your natural lean towards mornings (a lark) or evenings (an owl). In a study of athletes, the best predictor of peak performance time was time since waking, not clock time. Larks and owls peaked at different clock times, and performance varied by up to 26% within one day [[c:chrono-perf]].\n\nSo the same start time is a different test for a lark and an owl. A rule such as 'everyone peaks in the evening' fits individuals poorly. This is one study of athletes, so treat the size of the effect with care.",
+   "claims": [
+    {
+     "id": "chrono-perf",
+     "text": "In athletes, time since waking predicted peak performance time better than clock time, with differences between larks and owls.",
+     "grade": "weak",
+     "sources": [
+      "facerchilds2015"
+     ],
+     "evidence": [
+      {
+       "source": "facerchilds2015",
+       "quote": "We found time since entrained awakening to be the major predictor of peak performance times, rather than time of day, as well as significant individual performance variations as large as 26% in the course of a day.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-chrono"
+  },
+  {
+   "type": "concept",
+   "id": "sb-recovery",
+   "title": "What does sleep do for recovery?",
+   "text": "Three links, from firm to thin.\n\n1. In adults the most reliable [growth-hormone](g:growth-hormone) pulse comes soon after falling asleep, with the first slow-wave phase [[c:gh-sws]].\n2. Sleep loss changes hormones, fuel handling and autonomic balance (next lesson).\n3. A hypothesis says sleep debt lowers muscle protein building and raises breakdown, so it slows recovery from muscle damage [[c:recovery-hyp]]. It is a hypothesis, not a test in athletes.\n\nHow much sleep? Many elite athletes habitually sleep under 7 h. The consensus statement says one rule for all (7 to 9 h) is unlikely ideal and advises an individual approach based on the athlete's perceived need [[c:need]].",
+   "claims": [
+    {
+     "id": "gh-sws",
+     "text": "In adults the most reproducible growth-hormone pulse occurs soon after sleep onset, with the first slow-wave phase.",
+     "grade": "moderate",
+     "sources": [
+      "vancauter1996"
+     ],
+     "evidence": [
+      {
+       "source": "vancauter1996",
+       "quote": "In adults the most reproducible pulse of GH secretion occurs shortly after the onset of sleep in association with the first phase of slow-wave sleep (SWS) (stages III and IV).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "recovery-hyp",
+     "text": "Sleep debt may lower muscle protein synthesis and raise breakdown, hindering muscle recovery (a hypothesis).",
+     "grade": "weak",
+     "sources": [
+      "dattilo2011"
+     ],
+     "evidence": [
+      {
+       "source": "dattilo2011",
+       "quote": "Consequently, we hypothesized that sleep debt decreases the activity of protein synthesis pathways and increases the activity of degradation pathways, favoring the loss of muscle mass and thus hindering muscle recovery after damage induced by exercise, injuries and certain conditions associated with muscle atrophy, such as sarcopenia and cachexia.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "need",
+     "text": "Many elite athletes habitually sleep under 7 h, yet a one-size-fits-all sleep rule (7 to 9 h) is unlikely ideal; an individual approach is advised.",
+     "grade": "strong",
+     "sources": [
+      "walsh2021"
+     ],
+     "evidence": [
+      {
+       "source": "walsh2021",
+       "quote": "Elite athletes are particularly susceptible to sleep inadequacies, characterised by habitual short sleep (<7 hours/night) and poor sleep quality (eg, sleep fragmentation).",
+       "level": "abstract"
+      },
+      {
+       "source": "walsh2021",
+       "quote": "A one-size-fits-all approach to athlete sleep recommendations (eg, 7-9 hours/night) is unlikely ideal for health and performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "walsh2021",
+       "quote": "We recommend an individualised approach that should consider the athlete's perceived sleep needs.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "sb-gh"
+  },
+  {
+   "type": "question",
+   "item": "sb-recovery-claim"
+  },
+  {
+   "type": "question",
+   "item": "sb-need"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Sleep is a loop of NREM stages (N1 to N3, N3 = slow-wave sleep) and REM, about 90 minutes per cycle and 4 to 6 cycles a night.",
+    "With age, slow-wave and REM shares and sleep efficiency fall, though screening for illness shrinks the effect.",
+    "Sleep pressure (adenosine is one driver) and the 24 h circadian clock work together; your chronotype shifts when you peak.",
+    "The growth-hormone pulse is tied to early slow-wave sleep; 'sleep repairs muscle' is plausible but a hypothesis in athletes.",
+    "Sleep need differs between people: use an individual approach, not one fixed number."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sb-cycle-length",
+   "concept": "sb-stages",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "patel2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how long is one sleep cycle, and how many do you go through in a night?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 90 minutes, 4 to 6 times a night",
+       "correct": true,
+       "why": "Right: that is the average cycle length and count."
+      },
+      {
+       "id": "b",
+       "text": "About 30 minutes, 12 to 16 times a night",
+       "why": "Far too short: 30 minutes is a nap, not a cycle."
+      },
+      {
+       "id": "c",
+       "text": "About 3 hours, once or twice a night",
+       "why": "Too long: a night holds several 90-minute cycles."
+      },
+      {
+       "id": "d",
+       "text": "About 90 minutes, 10 to 12 times a night",
+       "why": "Cycle length is right, but 10 to 12 cycles would need 15 to 18 hours of sleep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-sws-stage",
+   "concept": "sb-stages",
+   "bloom": "understand",
+   "sources": [
+    "patel2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which stage is called slow-wave sleep?",
+     "options": [
+      {
+       "id": "a",
+       "text": "REM, the stage with the most dreaming",
+       "why": "REM is the other kind of sleep, with fast eye movements. It is not slow-wave sleep."
+      },
+      {
+       "id": "b",
+       "text": "N3, the deepest stage of NREM sleep",
+       "correct": true,
+       "why": "Right: N3 is named for its slow, large brain waves."
+      },
+      {
+       "id": "c",
+       "text": "N1, the light stage just after falling asleep",
+       "why": "N1 is the lightest stage, the opposite of deep."
+      },
+      {
+       "id": "d",
+       "text": "Any stage in which the body lies still",
+       "why": "Lying still is not the definition. The name comes from the brain waves of N3."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-cycle-count",
+   "concept": "sb-stages",
+   "bloom": "apply",
+   "sources": [
+    "patel2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist sleeps 6 h a night. At about 90 minutes per cycle, how many cycles is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "9",
+       "why": "You multiplied 6 h by 1.5 h instead of dividing."
+      },
+      {
+       "id": "b",
+       "text": "6",
+       "why": "You treated one cycle as one hour."
+      },
+      {
+       "id": "c",
+       "text": "4",
+       "correct": true,
+       "why": "Right: 360 min ÷ 90 min = 4 cycles."
+      },
+      {
+       "id": "d",
+       "text": "1.5",
+       "why": "That is the cycle length in hours, not the number of cycles."
+      }
+     ],
+     "solution": "6 h = 360 min. 360 ÷ 90 = 4 cycles."
+    },
+    {
+     "id": "b",
+     "stem": "A runner sleeps 7.5 h a night. At about 90 minutes per cycle, how many cycles is that?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11",
+       "why": "You multiplied 7.5 h by 1.5 h instead of dividing."
+      },
+      {
+       "id": "b",
+       "text": "5",
+       "correct": true,
+       "why": "Right: 450 min ÷ 90 min = 5 cycles."
+      },
+      {
+       "id": "c",
+       "text": "7.5",
+       "why": "You counted hours as cycles."
+      },
+      {
+       "id": "d",
+       "text": "1.5",
+       "why": "That is the cycle length in hours, not the number of cycles."
+      }
+     ],
+     "solution": "7.5 h = 450 min. 450 ÷ 90 = 5 cycles."
+    }
+   ]
+  },
+  {
+   "id": "sb-age-change",
+   "concept": "sb-age",
+   "bloom": "understand",
+   "sources": [
+    "ohayon2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does sleep architecture usually change across adult life?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slow-wave sleep grows to make up for shorter nights",
+       "why": "The opposite: the slow-wave share falls with age."
+      },
+      {
+       "id": "b",
+       "text": "Nothing changes; only time in bed changes",
+       "why": "Several measures change, including sleep efficiency and stage shares."
+      },
+      {
+       "id": "c",
+       "text": "Slow-wave and REM shares fall; light sleep and waking after sleep onset rise",
+       "correct": true,
+       "why": "Right: this is the pattern in the meta-analysis."
+      },
+      {
+       "id": "d",
+       "text": "REM sleep takes over as slow-wave sleep vanishes",
+       "why": "The REM share falls with age too, and slow-wave sleep does not vanish."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-pressure",
+   "concept": "sb-clocks",
+   "bloom": "understand",
+   "sources": [
+    "porkkaheiskanen1997",
+    "borbely2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do you feel sleepier the longer you have been awake?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Your body clock slowly switches off during the day",
+       "why": "The clock is a separate 24 h process. It does not run down with time awake."
+      },
+      {
+       "id": "b",
+       "text": "Muscle glycogen runs out and signals the brain to sleep",
+       "why": "Not the mechanism: sleep pressure is not a fuel gauge."
+      },
+      {
+       "id": "c",
+       "text": "Growth hormone builds up while you are awake",
+       "why": "The growth-hormone pulse comes during sleep, not as a build-up in waking."
+      },
+      {
+       "id": "d",
+       "text": "Sleep pressure builds up, and adenosine is one driver",
+       "correct": true,
+       "why": "Right: pressure rises with time awake and falls in sleep."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-two-process",
+   "concept": "sb-clocks",
+   "bloom": "analyse",
+   "sources": [
+    "borbely2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a sleepless night a cyclist is sleepiest at 05:00 but a little more alert at 10:00, though awake longer. Which explanation fits the two-process model?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sleep pressure keeps rising; the circadian alerting signal climbs in the morning and offsets some of it",
+       "correct": true,
+       "why": "Right: the two processes interact, so alertness does not follow time awake alone."
+      },
+      {
+       "id": "b",
+       "text": "Sleep pressure falls through the morning; the body clock plays no part",
+       "why": "Pressure keeps rising with time awake. Only sleep lowers it."
+      },
+      {
+       "id": "c",
+       "text": "Morning light clears adenosine, so pressure resets without sleep",
+       "why": "Adenosine fell during recovery sleep in the cat study, not from light alone."
+      },
+      {
+       "id": "d",
+       "text": "Only the clock matters; time awake has no effect",
+       "why": "The model has two processes; both affect how sleepy you feel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-chrono",
+   "concept": "sb-chronotype",
+   "bloom": "apply",
+   "sources": [
+    "facerchilds2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An owl-type athlete tests at 08:00, half an hour after waking, and does worse than at 16:00. Which reading fits the athlete study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Everyone peaks in the evening, so 08:00 is always worst",
+       "why": "Larks and owls peaked at different clock times, so no single hour fits all."
+      },
+      {
+       "id": "b",
+       "text": "Performance depends on time since waking and chronotype, so an early test may hide his ability",
+       "correct": true,
+       "why": "Right: time since waking was the best predictor of peak time."
+      },
+      {
+       "id": "c",
+       "text": "Clock time alone sets performance; waking time does not matter",
+       "why": "The study found the opposite: time since waking mattered more."
+      },
+      {
+       "id": "d",
+       "text": "Owls always perform worse than larks at every hour",
+       "why": "The differences were in when each type peaked, not a lower level overall."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-gh",
+   "concept": "sb-recovery",
+   "bloom": "understand",
+   "sources": [
+    "vancauter1996"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When does the largest growth-hormone pulse in adults usually come?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Soon after falling asleep, with the first slow-wave phase",
+       "correct": true,
+       "why": "Right: this is the most reproducible sleep-related pulse."
+      },
+      {
+       "id": "b",
+       "text": "In the last hour before waking, with REM sleep",
+       "why": "The main pulse is early, tied to slow-wave sleep, not to late REM."
+      },
+      {
+       "id": "c",
+       "text": "Only during hard exercise, never in sleep",
+       "why": "Exercise raises growth hormone, but the sleep pulse is also well documented."
+      },
+      {
+       "id": "d",
+       "text": "Evenly across the night, with no peak",
+       "why": "There is a clear pulse soon after sleep onset."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-recovery-claim",
+   "concept": "sb-recovery",
+   "bloom": "evaluate",
+   "sources": [
+    "dattilo2011",
+    "vancauter1996",
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A post says: 'Sleep repairs your muscles because growth hormone peaks at night.' Which appraisal is best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Proven: the growth-hormone pulse shows sleep is the main repair time",
+       "why": "The pulse is documented, but no study shows it drives muscle repair in athletes."
+      },
+      {
+       "id": "b",
+       "text": "The pulse with slow-wave sleep is well supported, but its role in recovery is still a hypothesis",
+       "correct": true,
+       "why": "Right: the link is plausible, yet direct evidence in athletes is thin."
+      },
+      {
+       "id": "c",
+       "text": "False: growth hormone is not released during sleep",
+       "why": "It is: the pulse follows the first slow-wave phase."
+      },
+      {
+       "id": "d",
+       "text": "Irrelevant: sleep has no link with recovery",
+       "why": "Plausible links exist, so the evidence is thin, not absent."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-need",
+   "concept": "sb-recovery",
+   "bloom": "evaluate",
+   "sources": [
+    "walsh2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says: 'Every athlete must sleep exactly 8 h.' What is the best reply, based on the consensus statement?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fine as it is: 7 to 9 h suits all, so keep one rule",
+       "why": "The consensus says a one-size-fits-all rule is unlikely ideal."
+      },
+      {
+       "id": "b",
+       "text": "Wrong: athletes do well on 4 to 5 h",
+       "why": "Habitual short sleep is named as a problem, not a safe habit."
+      },
+      {
+       "id": "c",
+       "text": "Needs differ, so use an individual plan that counts the athlete's perceived need",
+       "correct": true,
+       "why": "Right: the consensus advises an individualised approach."
+      },
+      {
+       "id": "d",
+       "text": "Only total time counts; quality and timing do not matter",
+       "why": "The consensus also names poor quality, such as fragmentation, as a problem."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

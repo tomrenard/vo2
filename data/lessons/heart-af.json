@@ -1,0 +1,634 @@
+{
+ "id": "heart-af",
+ "module": "t5-heart",
+ "title": "Atrial fibrillation in endurance athletes",
+ "goal": "Describe the U-shaped link between training dose and atrial fibrillation, the proposed mechanisms, the sex differences and how much of this evidence is solid.",
+ "requires": [
+  "heart-grey-zone"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "atrial-fibrillation",
+    "met-hours",
+    "u-shaped-curve",
+    "fibrosis"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "af-who",
+   "title": "AF in athletes: the headline",
+   "text": "In [atrial fibrillation](g:atrial-fibrillation) (AF) the two upper chambers (the [atria](g:atrium)) quiver instead of contracting in step, so the pulse turns irregular. It may come and go.\n\nA meta-analysis of studies that compared athletes with non-athletes found higher odds of AF in athletes: an [odds ratio](g:odds-ratio) of 2.46 (95% CI 1.73–3.51). Mixed-sport and younger athletes were at greatest risk [[c:af-newman]].\n\nAn odds ratio is relative. AF is rare in young adults, so a high ratio can still mean few cases. When the outcome is rare, odds are close to risks, so you can multiply the baseline rate by the ratio.",
+   "claims": [
+    {
+     "id": "af-newman",
+     "text": "Athletes have higher odds of atrial fibrillation than non-athlete controls (OR 2.46); mixed-sport and younger athletes were at greatest risk.",
+     "grade": "moderate",
+     "sources": [
+      "newman2021"
+     ],
+     "evidence": [
+      {
+       "source": "newman2021",
+       "quote": "The risk of developing AF was significantly higher in athletes than in non-athlete controls (OR: 2.46; 95% CI 1.73 to 3.51",
+       "level": "abstract"
+      },
+      {
+       "source": "newman2021",
+       "quote": "Athletes have a significantly greater likelihood of developing AF compared with non-athlete controls, with those participating in mixed sport and younger athletes at the greatest risk.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "haf-or-ex",
+   "title": "From odds ratio to cases",
+   "problem": "Among 10,000 non-athletes of the same age, AF is found in 6. With an odds ratio of 2.46, about how many of 10,000 athletes have AF?",
+   "steps": [
+    "AF is rare, so odds are close to risk: multiply the baseline by the ratio.",
+    "6 × 2.46 = 14.8, so about 15 per 10,000.",
+    "Exact odds give 14.7. The shortcut is fine for rare outcomes but would fail at, say, 30% AF."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "haf-or"
+  },
+  {
+   "type": "question",
+   "item": "haf-abs",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "af-dose",
+   "title": "A U-shaped dose",
+   "text": "A meta-analysis of 37 studies (1.3 million people) put activity on one scale, [MET-hours](g:met-hours) per week [[c:af-davies]]:\n\n- In the general population, activity went with 22% lower odds of AF (OR 0.78).\n- Athlete status raised them (OR 2.74).\n- The lowest odds were near 26 MET-h per week. Beyond about 78 MET-h per week, odds of AF were higher: about 6–7 h of endurance training a week [[c:af-turn]].\n\nThat is a [U-shaped curve](g:u-shaped-curve). Most people sit on the protective side; very high volumes cross to the other.",
+   "claims": [
+    {
+     "id": "af-davies",
+     "text": "In the general population activity goes with lower AF odds, while athlete status goes with higher odds: a U-shaped link.",
+     "grade": "moderate",
+     "sources": [
+      "davies2026"
+     ],
+     "evidence": [
+      {
+       "source": "davies2026",
+       "quote": "In the general population, PA was associated with a reduction in odds of AF by 22% (22 studies; OR 0.78; 95% CI 0.68, 0.89).",
+       "level": "abstract"
+      },
+      {
+       "source": "davies2026",
+       "quote": "Athlete status was associated with an increase in the odds of AF (15 studies; OR 2.74; 95% CI 1.72, 4.39).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "af-turn",
+     "text": "In the pooled curve, AF odds were lowest near 26 MET-h per week and higher beyond about 78 MET-h per week (about 6–7 h of endurance training); the exact turning point is uncertain.",
+     "grade": "weak",
+     "sources": [
+      "davies2026"
+     ],
+     "evidence": [
+      {
+       "source": "davies2026",
+       "quote": "26 MET-hr/wk of PA was associated with the greatest reduction in odds of AF, with doses beyond 78 MET-hr/wk associated with increased odds of AF; the equivalent of 6-7 hours per week of endurance training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "haf-met-ex",
+   "title": "MET-hours",
+   "problem": "A cyclist rides 6 h per week at about 8 METs. How many MET-hours is that, and where does it sit on the curve?",
+   "steps": [
+    "MET-hours = MET value × hours.",
+    "8 × 6 = 48 MET-h per week.",
+    "48 is above the 26 MET-h of lowest odds but below the 78 MET-h where odds rise. The cut-offs are averages from pooled studies, not personal limits."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "haf-met",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "haf-ushape"
+  },
+  {
+   "type": "concept",
+   "id": "af-mech",
+   "title": "Why long training may feed AF",
+   "text": "Three ideas, mostly from animal work:\n\n- **Bigger atria**, stretched by years of high filling.\n- **High [vagal tone](g:vagal-tone)**, which slows the heart.\n- **[Fibrosis](g:fibrosis)**: scar-like patches that disturb the electrical signal.\n\nIn rats trained 1 h a day for 16 weeks, AF could be started in 64% against 15% of sedentary rats. After they stopped, AF was soon no easier to start than in sedentary rats, and vagal tone was back to normal within 4 weeks, yet the dilated, scarred atria did not fully recover [[c:af-guasch]]. That is a rat model: it shows a possible path, not that the same happens in people.",
+   "claims": [
+    {
+     "id": "af-guasch",
+     "text": "In rats, 16 weeks of endurance training made AF easier to start, with dilated, scarred atria. After training stopped, AF inducibility and vagal tone returned to normal, while the atrial changes did not fully recover.",
+     "grade": "weak",
+     "sources": [
+      "guasch2013"
+     ],
+     "evidence": [
+      {
+       "source": "guasch2013",
+       "quote": "AF inducibility increased after 16 weeks of training (e.g., AF >30 s in 64% of Ex16 rats vs 15% of Sed rats; p < 0.01) and rapidly returned to baseline levels with detraining.",
+       "level": "abstract"
+      },
+      {
+       "source": "guasch2013",
+       "quote": "Atrial dilation and fibrosis developed after 16 weeks of training and failed to fully recover with exercise cessation. Parasympathetic tone was increased in Ex16 rats and normalized within 4 weeks of detraining.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "haf-rat"
+  },
+  {
+   "type": "question",
+   "item": "haf-proof"
+  },
+  {
+   "type": "concept",
+   "id": "af-sex",
+   "title": "Do women differ?",
+   "text": "Evidence in women is thin, because most AF-in-athletes work was done in men. A narrative review finds a J-shaped curve in both sexes [[c:af-piccolo]]. Women seem to have a wider protective window: in cohort studies the rise starts at an estimated 83 MET-h per week (10–12 h of moderate-to-vigorous training), at lower doses in men.\n\nAtrial remodelling looks similar in both sexes. Sex hormones and vagal tone may change how vulnerable the heart is. Treat the numbers as rough: 83 and 78 come from different data sets, and their hour equivalents assume different intensities.",
+   "claims": [
+    {
+     "id": "af-piccolo",
+     "text": "Both sexes show a J-shaped AF curve; women seem to tolerate more exercise before risk rises (about 83 MET-h per week in cohorts), but evidence in women is limited.",
+     "grade": "weak",
+     "sources": [
+      "piccolo2026"
+     ],
+     "evidence": [
+      {
+       "source": "piccolo2026",
+       "quote": "Women appear to have a broader protective window, tolerating substantially higher exercise doses (estimated up to ~83 MET-h/week in cohort studies, equivalent to approximately 10-12 h of moderate-to-vigorous endurance training per week) before AF risk begins to rise, whereas men show a risk increase at lower exposure levels.",
+       "level": "abstract"
+      },
+      {
+       "source": "piccolo2026",
+       "quote": "Mechanistic evidence indicate that atrial structural remodelling occurs similarly in men and women, yet sex hormones and autonomic tone appear to modulate arrhythmogenic vulnerability.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "haf-sex"
+  },
+  {
+   "type": "concept",
+   "id": "af-quality",
+   "title": "How strong is the evidence?",
+   "text": "The link is repeated, but its weak points matter:\n\n- **Design.** The studies compared athletes with controls in case-control or cohort designs [[c:af-design]]. Nobody was assigned to train, so athletes may differ from controls in more than training: a [confounder](g:confounder) problem.\n- **Dose.** 'Athlete' is a label, not an hour count. Davies had to convert every study to MET-hours.\n- **Who.** Mostly men and endurance sport.\n\nA fair grade: moderate that the association exists, weak for the exact turning point and for cause in people. Studies that record training history and dose should settle more [[c:af-design]].",
+   "claims": [
+    {
+     "id": "af-design",
+     "text": "AF studies in athletes are observational (case-control or cohort), and training-dose data are missing; future work should record dose.",
+     "grade": "moderate",
+     "sources": [
+      "newman2021"
+     ],
+     "evidence": [
+      {
+       "source": "newman2021",
+       "quote": "were case-control or cohort studies and if data allowed calculation of OR.",
+       "level": "abstract"
+      },
+      {
+       "source": "newman2021",
+       "quote": "Future studies of AF prevalence in athletes according to specific exercise dose parameters, including training and competition history, may aid further in delineating those at risk.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "haf-appraise"
+  },
+  {
+   "type": "question",
+   "item": "haf-design"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Meta-analysis: athletes have about 2.5 times the odds of AF of non-athletes (OR 2.46); an odds ratio is relative, and AF is rare in young adults.",
+    "The dose curve is U-shaped: lowest odds near 26 MET-h per week, higher beyond about 78 (about 6–7 h of endurance training).",
+    "Bigger atria, vagal tone and fibrosis are the proposed mechanisms, shown in rats, not proven in people.",
+    "Women may tolerate more before the curve turns, but data in women are limited.",
+    "Observational designs and loose dose data limit the evidence: moderate for the link, weak for the exact turning point."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "haf-or",
+   "concept": "af-who",
+   "bloom": "understand",
+   "sources": [
+    "newman2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis reports an odds ratio of 2.46 for AF in athletes against non-athletes. What does that mean?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Athletes had about 2.5 times the odds of AF",
+       "why": "Right: an odds ratio compares odds between groups.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "2.46% of athletes get AF",
+       "why": "The ratio is a comparison, not a percentage of athletes."
+      },
+      {
+       "id": "c",
+       "text": "Training raises an athlete's chance of AF by 246%",
+       "why": "A ratio of 2.46 means 146% higher odds, and it does not prove training is the cause."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haf-abs",
+   "concept": "af-who",
+   "bloom": "apply",
+   "sources": [
+    "newman2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Among 10,000 young non-athletes, 5 have AF. With an odds ratio of 2.46, about how many of 10,000 comparable athletes have AF?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 7",
+       "why": "This adds 2.46 instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "About 12",
+       "why": "Right: AF is rare, so 5 × 2.46 ≈ 12.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 123",
+       "why": "This multiplies by 24.6, a slip in the ratio."
+      }
+     ],
+     "solution": "AF is rare, so multiply: 5 × 2.46 = 12.3, about 12 per 10,000."
+    },
+    {
+     "id": "b",
+     "stem": "Among 10,000 older non-athletes, 20 have AF. With an odds ratio of 2.46, about how many of 10,000 comparable athletes have AF?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 22",
+       "why": "This adds 2.46 instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "About 492",
+       "why": "This multiplies by 24.6, a slip in the ratio."
+      },
+      {
+       "id": "c",
+       "text": "About 49",
+       "why": "Right: 20 × 2.46 = 49.2, about 49.",
+       "correct": true
+      }
+     ],
+     "solution": "Multiply: 20 × 2.46 = 49.2, about 49 per 10,000."
+    },
+    {
+     "id": "c",
+     "stem": "Among 10,000 middle-aged non-athletes, 8 have AF. With an odds ratio of 2.46, about how many of 10,000 comparable athletes have AF?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 20",
+       "why": "Right: 8 × 2.46 = 19.7, about 20.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 10",
+       "why": "This adds 2.46 instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "About 197",
+       "why": "This multiplies by 24.6, a slip in the ratio."
+      }
+     ],
+     "solution": "Multiply: 8 × 2.46 = 19.7, about 20 per 10,000."
+    }
+   ]
+  },
+  {
+   "id": "haf-met",
+   "concept": "af-dose",
+   "bloom": "apply",
+   "sources": [
+    "davies2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider does 5 h a week at 10 METs. The curve's lowest odds are near 26 MET-h per week and odds rise beyond about 78. Where is she?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15 MET-h: below the 26 mark, so little protection",
+       "why": "This adds 5 + 10 instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "50 MET-h: below the 78 point where odds rise",
+       "why": "Right: 10 × 5 = 50, between the 26 and 78 marks.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "50 MET-h: above 26, so her AF odds are already raised",
+       "why": "26 is where odds are lowest, not where they turn up; the turn is near 78."
+      }
+     ],
+     "solution": "MET-h = 10 × 5 = 50. It is above 26 (lowest odds) and below 78 (where odds rise)."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides 7 h a week at 12 METs. The curve's lowest odds are near 26 MET-h per week and odds rise beyond about 78. Where is he?",
+     "options": [
+      {
+       "id": "a",
+       "text": "19 MET-h: well under the 26 mark",
+       "why": "This adds 7 + 12 instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "84 MET-h: still protective, since all exercise lowers AF odds",
+       "why": "The pooled curve rises beyond about 78 MET-h; more is not always better here."
+      },
+      {
+       "id": "c",
+       "text": "84 MET-h: beyond the 78 point where odds rise",
+       "why": "Right: 12 × 7 = 84.",
+       "correct": true
+      }
+     ],
+     "solution": "MET-h = 12 × 7 = 84, which is beyond 78."
+    },
+    {
+     "id": "c",
+     "stem": "A runner runs 3 h a week at 9 METs. The curve's lowest odds are near 26 MET-h per week and odds rise beyond about 78. Where is she?",
+     "options": [
+      {
+       "id": "a",
+       "text": "27 MET-h: close to the point of lowest odds",
+       "why": "Right: 9 × 3 = 27, next to the 26 mark.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "12 MET-h: far under the 26 mark",
+       "why": "This adds 3 + 9 instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "27 MET-h: past the turning point, so risk is rising",
+       "why": "The rise starts near 78, not 26."
+      }
+     ],
+     "solution": "MET-h = 9 × 3 = 27, about the dose of lowest odds."
+    }
+   ]
+  },
+  {
+   "id": "haf-ushape",
+   "concept": "af-dose",
+   "bloom": "understand",
+   "sources": [
+    "davies2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which statement fits a U-shaped dose–response curve for AF?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Odds fall with every extra hour of training",
+       "why": "That is a straight protective line, which the pooled curve does not show at high doses."
+      },
+      {
+       "id": "b",
+       "text": "Odds are lowest at a moderate dose and higher at both ends",
+       "why": "Right: that is the U shape.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Odds rise with every extra hour, starting from zero",
+       "why": "Moderate activity was linked to lower odds than none."
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "haf-rat",
+   "concept": "af-mech",
+   "bloom": "understand",
+   "sources": [
+    "guasch2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the rat study, what happened after training stopped?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Everything went back to normal within 4 weeks",
+       "why": "The atrial dilation and scarring failed to recover fully."
+      },
+      {
+       "id": "b",
+       "text": "Vagal tone stayed high while the atria returned to normal",
+       "why": "It is the other way round."
+      },
+      {
+       "id": "c",
+       "text": "Vagal tone normalised in 4 weeks; atrial changes did not fully recover",
+       "why": "Right: the two changes behaved differently.",
+       "correct": true
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "haf-proof",
+   "concept": "af-mech",
+   "bloom": "evaluate",
+   "sources": [
+    "guasch2013",
+    "piccolo2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A magazine says: 'A rat study proves marathon training scars the atria and causes AF in people.' What is the best response?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rats show a possible path; people need human studies",
+       "why": "Right: animal work gives mechanism, not proof for humans.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It is correct: a mechanism in rats settles it for humans",
+       "why": "Animal models often differ from humans, so rat results are not proof for people."
+      },
+      {
+       "id": "c",
+       "text": "It is wrong: mechanism studies can never matter",
+       "why": "Mechanism work is useful for ideas to test; it just is not proof in people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haf-sex",
+   "concept": "af-sex",
+   "bloom": "understand",
+   "sources": [
+    "piccolo2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does the review say about sex and the AF curve?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Only men show a rise in AF at high doses",
+       "why": "The upper rise applies to both sexes."
+      },
+      {
+       "id": "b",
+       "text": "Both sexes show a rise at high doses; women's rise seems to start later",
+       "why": "Right: a J-shape in both, with a wider protective window in women.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Women's AF risk rises at lower doses than men's",
+       "why": "The review estimates the opposite."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haf-appraise",
+   "concept": "af-quality",
+   "bloom": "evaluate",
+   "sources": [
+    "newman2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What is the main limit when reading 'OR 2.46' as 'endurance training causes AF'?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A meta-analysis cannot pool studies into an odds ratio",
+       "why": "It can; the ratio is its pooled result."
+      },
+      {
+       "id": "b",
+       "text": "The confidence interval crosses 1, so there is no real link",
+       "why": "The 95% CI is 1.73–3.51, all above 1, so the link is statistically clear; the limit is the design."
+      },
+      {
+       "id": "c",
+       "text": "Nobody was assigned to train, so other differences may explain it",
+       "why": "Right: observational comparison leaves confounding open.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haf-design",
+   "concept": "af-quality",
+   "bloom": "analyse",
+   "sources": [
+    "newman2021",
+    "davies2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You want to find the weekly dose at which AF odds start to rise. Which design helps most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Record hours, years and intensity of training and follow AF over time",
+       "why": "Right: dose data and follow-up show where the curve turns.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Compare athletes with sedentary controls, yes or no",
+       "why": "This gives one ratio and no turning point."
+      },
+      {
+       "id": "c",
+       "text": "Ask more athletes whether they have palpitations",
+       "why": "Symptom questions do not give training dose or confirmed AF."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

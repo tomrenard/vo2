@@ -1,0 +1,737 @@
+{
+ "id": "mast-decline",
+ "module": "t5-masters",
+ "title": "How endurance performance falls with age",
+ "goal": "Describe how endurance performance falls with age, how lifelong exercisers compare with sedentary peers, and judge the limits of the evidence.",
+ "requires": [
+  "fem-life-stages"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "age-group-record",
+    "lifelong-exerciser"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "md-curve",
+   "title": "The shape of the fall",
+   "text": "Endurance performance does not fall in a straight line. Peak running performance holds until about age 35, eases modestly until 50–60, then falls more steeply [[c:curve]]. [Age-group records](g:age-group-record) show how much stays: in the marathon, athletes over 70 have beaten the winning time of the first modern Olympic Games, in 1896 [[c:records]].\n\nThe fall also depends on the sport. Declines in cycling are smaller than in running and swimming [[c:sport]].\n\nThese are patterns across groups, not a forecast for one person. Records show what the best can do, not what a typical masters athlete does.",
+   "claims": [
+    {
+     "id": "curve",
+     "text": "Peak endurance running performance holds until about age 35, falls modestly until 50–60, then more steeply.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "Peak endurance performance is maintained until approximately 35 years of age, followed by modest decreases until 50-60 years of age, with progressively steeper declines thereafter.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "records",
+     "text": "Masters runners over 70 have run marathons faster than the 1896 Olympic winning time.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "In some athletic events (e.g. marathon running), Masters athletes over 70 years of age have surpassed the winning time at the first Olympic games held in Athens",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sport",
+     "text": "Age-related declines in performance are smaller in cycling than in running and swimming.",
+     "grade": "moderate",
+     "sources": [
+      "lepers2016"
+     ],
+     "evidence": [
+      {
+       "source": "lepers2016",
+       "quote": "smaller age-related declines in cycling performance than in running and swimming have been documented",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "md-shape"
+  },
+  {
+   "type": "question",
+   "item": "md-sport"
+  },
+  {
+   "type": "concept",
+   "id": "md-lifelong",
+   "title": "Lifelong exercisers and their peers",
+   "text": "What do decades of training buy? Researchers compared men in their 70s who had exercised about 5 days a week for 52 years with healthy non-exercisers of the same age, and with young exercisers, all on [VO₂max](g:vo2max) [[c:gries-vo2]].\n\n| group (men) | VO₂max, mL·kg⁻¹·min⁻¹ |\n|---|---|\n| young exercisers, 25 y | 53 |\n| [lifelong exercisers](g:lifelong-exerciser), 74 y | 34 |\n| non-exercisers, 75 y | 22 |\n\nWomen show the same order: 44, 26 and 18. In the thigh muscle, lifelong exercisers kept the capillaries and aerobic enzymes of young people [[c:gries-muscle]]. So training buys a lot, but not everything: they still sat well below the young.",
+   "claims": [
+    {
+     "id": "gries-vo2",
+     "text": "In lifelong exercisers aged about 74, VO₂max was between that of young exercisers and healthy non-exercisers, in men and in women.",
+     "grade": "moderate",
+     "sources": [
+      "gries2018"
+     ],
+     "evidence": [
+      {
+       "source": "gries2018",
+       "quote": "had a hierarchical pattern (YE > LLE > OH, P < 0.05) for women (44 ± 2 > 26 ± 2 > 18 ± 1 ml·kg-1·min-1) and men (53 ± 3 > 34 ± 1 > 22 ± 1 ml·kg-1·min-1)",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "gries-muscle",
+     "text": "Over 50 years of aerobic exercise fully preserved capillarization and aerobic enzymes in thigh muscle.",
+     "grade": "moderate",
+     "sources": [
+      "gries2018"
+     ],
+     "evidence": [
+      {
+       "source": "gries2018",
+       "quote": "50+ years of aerobic exercise fully preserved capillarization and aerobic enzymes, regardless of intensity",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "md-ex-pct",
+   "title": "A percent difference needs the right base",
+   "problem": "In the same study, performance-trained lifelong exercisers (men) had a VO₂max of 38 mL·kg⁻¹·min⁻¹ and fitness-trained ones 27. How much higher is the first group?",
+   "steps": [
+    "Difference: 38 − 27 = 11 mL·kg⁻¹·min⁻¹.",
+    "Divide by the group you compare with, the base (27): 11 ÷ 27 = 0.41.",
+    "The first group is about 41% higher. Dividing by 38 instead gives 29%, which answers a different question."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "md-pct"
+  },
+  {
+   "type": "question",
+   "item": "md-gries-read"
+  },
+  {
+   "type": "concept",
+   "id": "md-keep",
+   "title": "Training slows the fall, it does not stop it",
+   "text": "A 20-year study followed 21 older track athletes who started at about age 50. Even the nine who stayed elite lost VO₂max: 8% in the first 10 years and 15% in the next [[c:pollock]]. Those who cut their training lost 18% and 34%. Maximal heart rate fell by 5–7 beats·min⁻¹ per decade whatever they did.\n\nA review agrees: the fall of about 10% per decade holds in men and women regardless of activity level [[c:hawkins]]. Hard training may cut it by up to half in young and middle-aged men, but not in older men [[c:hawkins-men]]. Holding high-intensity training lasts about a decade at best [[c:hawkins-decade]].\n\nWomen seem unable to bring it below 10% per decade, perhaps through [oestrogen](g:oestrogen) [[c:hawkins-women]] (see the menopause lesson).",
+   "claims": [
+    {
+     "id": "pollock",
+     "text": "In 21 older track athletes followed for 20 years, VO₂max fell 8% then 15% per decade in those who stayed elite, and 18% then 34% in those who cut training.",
+     "grade": "moderate",
+     "sources": [
+      "pollock1997"
+     ],
+     "evidence": [
+      {
+       "source": "pollock1997",
+       "quote": "All groups decreased in maximal oxygen uptake at each testing point (H, 8 and 15%; M, 13 and 14%; and L, 18 and 34% from T1 to T2 and T2 to T3, respectively).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hawkins",
+     "text": "VO₂max falls about 10% per decade in men and women regardless of activity level.",
+     "grade": "moderate",
+     "sources": [
+      "hawkins2003"
+     ],
+     "evidence": [
+      {
+       "source": "hawkins2003",
+       "quote": "Current evidence supports a 10% per decade decline in VO(2max) in men and women regardless of activity level.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hawkins-men",
+     "text": "Long-term high-intensity exercise may cut the VO₂max loss by up to 50% in young and middle-aged men, but not in older men.",
+     "grade": "weak",
+     "sources": [
+      "hawkins2003"
+     ],
+     "evidence": [
+      {
+       "source": "hawkins2003",
+       "quote": "High-intensity exercise may reduce this loss by up to 50% in young and middle-aged men, but not older men, if maintained long term.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hawkins-decade",
+     "text": "Keeping up high-intensity training seems limited to about one decade at best and to a select few people.",
+     "grade": "weak",
+     "sources": [
+      "hawkins2003"
+     ],
+     "evidence": [
+      {
+       "source": "hawkins2003",
+       "quote": "maintaining high-intensity training seems limited to approximately one decade at best and to a select few individuals",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hawkins-women",
+     "text": "Middle-aged and older women do not appear able to reduce VO₂max loss below 10% per decade, perhaps because of oestrogen status.",
+     "grade": "weak",
+     "sources": [
+      "hawkins2003"
+     ],
+     "evidence": [
+      {
+       "source": "hawkins2003",
+       "quote": "Middle-aged and older women do not appear to be able to reduce loss rates in VO(2max) to less than 10% per decade, which may be related to estrogen status.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "md-elite-fall"
+  },
+  {
+   "type": "question",
+   "item": "md-coach"
+  },
+  {
+   "type": "concept",
+   "id": "md-late",
+   "title": "Faster after 60–70",
+   "text": "After about 70 the fall speeds up. In track and field results, decline rates accelerate from around that age [[c:ganse-accel]]. In athletes still competing at 100, the individual decline rate was about 2.5 times as steep as in athletes aged 80–96, steepest in the 100 m sprint [[c:ganse-100]]. These are sprint, jump and throwing events, not endurance, but VO₂max shows the same non-linear pattern: extra loss in people over 70 [[c:hawkins-nl]].\n\nSo a straight line fitted through ages 40–60 and extended to 80 flatters the old. [Cross-sectional](g:cross-sectional-study) curves also hide the speed-up, because each age group is a different set of people. Following the same people over time shows it [[c:fleg]].",
+   "claims": [
+    {
+     "id": "ganse-accel",
+     "text": "Performance decline rates in athletes accelerate after about age 70.",
+     "grade": "moderate",
+     "sources": [
+      "ganse2021"
+     ],
+     "evidence": [
+      {
+       "source": "ganse2021",
+       "quote": "While physical performance decline rates accelerate after around the age of 70 years",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ganse-100",
+     "text": "In athletes still competing at 100, the individual decline rate was 2.53 times as steep as in athletes aged 80–96.",
+     "grade": "weak",
+     "sources": [
+      "ganse2021"
+     ],
+     "evidence": [
+      {
+       "source": "ganse2021",
+       "quote": "the individual decline rate of the centenarian group was 2.53 times as steep",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hawkins-nl",
+     "text": "VO₂max loss is not linear: there are non-linear loss rates in people over 70.",
+     "grade": "moderate",
+     "sources": [
+      "hawkins2003"
+     ],
+     "evidence": [
+      {
+       "source": "hawkins2003",
+       "quote": "Non-linear loss rates are also demonstrated in individuals over the age of 70 years.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "fleg",
+     "text": "In 810 healthy adults followed for a median of 8 years, the loss of VO₂max accelerated with age, to over 20% per decade in the 70s.",
+     "grade": "moderate",
+     "sources": [
+      "fleg2005"
+     ],
+     "evidence": [
+      {
+       "source": "fleg2005",
+       "quote": "the rate of decline accelerated from 3% to 6% per 10 years in the 20s and 30s to >20% per 10 years in the 70s and beyond",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "md-line"
+  },
+  {
+   "type": "concept",
+   "id": "md-appraisal",
+   "title": "How far can you trust this?",
+   "text": "Most of this evidence has limits you can name.\n\n- Records and age-group curves are [cross-sectional](g:cross-sectional-study): different people at each age. The few still racing at 75 are [survivors](g:survivorship-bias), fitter than most people of their birth year.\n- Lifelong exercisers chose to exercise. Genes, health and drive may differ from non-exercisers, so the gap of 34 against 22 is not all due to training. The study did not randomise anyone to 50 years of training.\n- Samples are small: 21 athletes in the 20-year study, 28 lifelong exercisers (7 women).\n- Few women run at the oldest ages, so an apparent widening of the sex gap there is confounded [[c:sexconf]].",
+   "claims": [
+    {
+     "id": "sexconf",
+     "text": "The apparent widening of sex differences in older runners is confounded by the smaller number of older women who compete.",
+     "grade": "moderate",
+     "sources": [
+      "tanaka2008"
+     ],
+     "evidence": [
+      {
+       "source": "tanaka2008",
+       "quote": "interpretation of this apparent widening of sex differences with advancing age is confounded by the relatively smaller number of female versus male runners in the older groups",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "md-limit"
+  },
+  {
+   "type": "question",
+   "item": "md-survivors"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Endurance performance holds to about 35, eases until 50–60, then falls faster; the fall is smaller in cycling than in running or swimming.",
+    "Lifelong exercisers keep much more VO₂max than non-exercisers of the same age, but stay well below young exercisers.",
+    "Even athletes who keep training hard lost 8–15% VO₂max per decade; training slows the fall, it does not stop it.",
+    "Decline speeds up after about 70, so a straight-line forecast is too kind to the old.",
+    "Records, small samples and self-selection limit what these data show."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "md-shape",
+   "concept": "md-curve",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Roughly at what age does the fall in peak endurance performance turn from modest to steep?",
+     "options": [
+      {
+       "id": "a",
+       "text": "From about 25",
+       "why": "VO₂max starts to fall around 25–30, but race performance holds until about 35."
+      },
+      {
+       "id": "b",
+       "text": "After about 50–60",
+       "correct": true,
+       "why": "Right: modest decreases from about 35 to 50–60, then progressively steeper."
+      },
+      {
+       "id": "c",
+       "text": "Only after about 85",
+       "why": "The steep part starts much earlier, in the 50s or 60s."
+      },
+      {
+       "id": "d",
+       "text": "It never turns: the fall is a straight line",
+       "why": "Reviews describe a curve that gets steeper with age."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-sport",
+   "concept": "md-curve",
+   "bloom": "apply",
+   "sources": [
+    "lepers2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 58-year-old triathlete compares times with age 30 in each leg. Which leg has most likely slowed the least?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Running",
+       "why": "Running shows larger declines than cycling."
+      },
+      {
+       "id": "b",
+       "text": "Swimming",
+       "why": "Swimming also falls more than cycling."
+      },
+      {
+       "id": "c",
+       "text": "Cycling",
+       "correct": true,
+       "why": "Right: age-related declines are smaller in cycling than in running and swimming."
+      },
+      {
+       "id": "d",
+       "text": "All three by the same amount",
+       "why": "The review found the size of the fall depends on the sport."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-pct",
+   "concept": "md-lifelong",
+   "bloom": "apply",
+   "sources": [
+    "gries2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Men: lifelong exercisers had a VO₂max of 34 mL·kg⁻¹·min⁻¹, young exercisers 53. By what percent are the lifelong exercisers below the young?",
+     "options": [
+      {
+       "id": "a",
+       "text": "36%",
+       "correct": true,
+       "why": "Right: (53 − 34) ÷ 53 = 0.36."
+      },
+      {
+       "id": "b",
+       "text": "56%",
+       "why": "That divides by 34 (the wrong base): 19 ÷ 34."
+      },
+      {
+       "id": "c",
+       "text": "19%",
+       "why": "That is the raw difference in mL·kg⁻¹·min⁻¹, not a percent."
+      },
+      {
+       "id": "d",
+       "text": "64%",
+       "why": "That is 34 ÷ 53: the share they keep, not how far below they are."
+      }
+     ],
+     "solution": "Difference 53 − 34 = 19. Base is the young group: 19 ÷ 53 = 0.358, about 36% below."
+    },
+    {
+     "id": "b",
+     "stem": "Women: lifelong exercisers had a VO₂max of 26 mL·kg⁻¹·min⁻¹, young exercisers 44. By what percent are the lifelong exercisers below the young?",
+     "options": [
+      {
+       "id": "a",
+       "text": "69%",
+       "why": "That divides by 26 (the wrong base): 18 ÷ 26."
+      },
+      {
+       "id": "b",
+       "text": "18%",
+       "why": "That is the raw difference, not a percent."
+      },
+      {
+       "id": "c",
+       "text": "41%",
+       "correct": true,
+       "why": "Right: (44 − 26) ÷ 44 = 0.41."
+      },
+      {
+       "id": "d",
+       "text": "59%",
+       "why": "That is 26 ÷ 44: the share they keep."
+      }
+     ],
+     "solution": "Difference 44 − 26 = 18. Base is the young group: 18 ÷ 44 = 0.409, about 41% below."
+    },
+    {
+     "id": "c",
+     "stem": "Women: lifelong exercisers had a VO₂max of 26 mL·kg⁻¹·min⁻¹, non-exercisers of the same age 18. By what percent are the lifelong exercisers above the non-exercisers?",
+     "options": [
+      {
+       "id": "a",
+       "text": "31%",
+       "why": "That divides by 26 (the wrong base): 8 ÷ 26."
+      },
+      {
+       "id": "b",
+       "text": "44%",
+       "correct": true,
+       "why": "Right: (26 − 18) ÷ 18 = 0.44."
+      },
+      {
+       "id": "c",
+       "text": "8%",
+       "why": "That is the raw difference, not a percent."
+      },
+      {
+       "id": "d",
+       "text": "144%",
+       "why": "That is 26 ÷ 18: how many times as high, not how much higher."
+      }
+     ],
+     "solution": "Difference 26 − 18 = 8. Base is the non-exercisers: 8 ÷ 18 = 0.444, about 44% above."
+    }
+   ]
+  },
+  {
+   "id": "md-gries-read",
+   "concept": "md-lifelong",
+   "bloom": "understand",
+   "sources": [
+    "gries2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which sentence fits the lifelong exercisers' results best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They kept far more VO₂max than non-exercisers but stayed well below young exercisers",
+       "correct": true,
+       "why": "Right: the middle position, in men and in women."
+      },
+      {
+       "id": "b",
+       "text": "Decades of training erased the effect of age on VO₂max",
+       "why": "They were still about 36–41% below the young exercisers."
+      },
+      {
+       "id": "c",
+       "text": "Their VO₂max did not differ from non-exercisers; only muscle did",
+       "why": "Their VO₂max was clearly higher: 34 against 22 in men."
+      },
+      {
+       "id": "d",
+       "text": "Only the performance-trained group gained over non-exercisers",
+       "why": "Even the fitness group (27) was above non-exercisers (22)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-elite-fall",
+   "concept": "md-keep",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "pollock1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the 20-year follow-up of older track athletes, how much did VO₂max fall in the first 10 years in the group that stayed elite?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0%: elite training stops the fall",
+       "why": "Even the elite group lost VO₂max at each testing point."
+      },
+      {
+       "id": "b",
+       "text": "About 8%",
+       "correct": true,
+       "why": "Right: 8% in the first decade, then 15%."
+      },
+      {
+       "id": "c",
+       "text": "About 18%",
+       "why": "That is the loss of the group that greatly reduced training."
+      },
+      {
+       "id": "d",
+       "text": "About 34%",
+       "why": "That is the second-decade loss of the group that cut training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-coach",
+   "concept": "md-keep",
+   "bloom": "evaluate",
+   "sources": [
+    "pollock1997",
+    "hawkins2003"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach tells a 52-year-old: \"Train as hard as at 40 and your VO₂max will still be the same at 70.\" How well does the evidence back this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Poorly: athletes who kept training hard still lost 8–15% per decade",
+       "correct": true,
+       "why": "Right: the 20-year follow-up and the review both show a fall despite hard training."
+      },
+      {
+       "id": "b",
+       "text": "Fully: elite training stops the age-related fall",
+       "why": "The elite group lost 8% and then 15% per decade."
+      },
+      {
+       "id": "c",
+       "text": "Fully: the fall only happens in women",
+       "why": "The fall of about 10% per decade holds for men and women."
+      },
+      {
+       "id": "d",
+       "text": "Not at all: training makes the fall faster",
+       "why": "Training slows the fall; it does not speed it up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-line",
+   "concept": "md-late",
+   "bloom": "analyse",
+   "sources": [
+    "ganse2021",
+    "fleg2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A club fits a straight line to its members' times from age 40 to 60 and uses it to predict times at 80. What is the likely error?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It will predict times that are too fast, because the fall speeds up after about 70",
+       "correct": true,
+       "why": "Right: decline rates accelerate in the 70s and beyond."
+      },
+      {
+       "id": "b",
+       "text": "It will predict times that are too slow, because masters athletes level off",
+       "why": "Decline accelerates; it does not level off."
+      },
+      {
+       "id": "c",
+       "text": "No error: the fall is the same every decade",
+       "why": "Reviews describe a non-linear fall."
+      },
+      {
+       "id": "d",
+       "text": "It will be right for men but wrong for women",
+       "why": "Both sexes show the acceleration."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-limit",
+   "concept": "md-appraisal",
+   "bloom": "evaluate",
+   "sources": [
+    "gries2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study finds lifelong exercisers aged 74 have a VO₂max of 34, non-exercisers 22. Which limit most weakens the claim \"exercise raised VO₂max by 12\"?",
+     "options": [
+      {
+       "id": "a",
+       "text": "People who exercise for 50 years may differ in genes and health",
+       "correct": true,
+       "why": "Right: nobody was randomised, so selection can explain part of the gap."
+      },
+      {
+       "id": "b",
+       "text": "VO₂max cannot be measured reliably in people over 70 years old",
+       "why": "It can: the study measured it in a maximal cycle test."
+      },
+      {
+       "id": "c",
+       "text": "Muscle capillaries were measured as well as VO₂max in the study",
+       "why": "Extra measurements do not weaken the VO₂max result."
+      },
+      {
+       "id": "d",
+       "text": "The lifelong exercisers trained too many hours to be compared",
+       "why": "Training volume is a strength of the design, not a limit on this claim."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "md-survivors",
+   "concept": "md-appraisal",
+   "bloom": "analyse",
+   "sources": [
+    "tanaka2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Marathon times by age group are plotted from race results. Why can the 75-year-old group look better than the typical 75-year-old runner would have done?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Older runners are always faster than the curve predicts",
+       "why": "There is no such rule."
+      },
+      {
+       "id": "b",
+       "text": "Race results are measured in different units by age",
+       "why": "Times are measured the same way at every age."
+      },
+      {
+       "id": "c",
+       "text": "Only the fit and healthy 75-year-olds still enter races",
+       "correct": true,
+       "why": "Right: survivorship bias, since people who stopped through injury or illness are missing."
+      },
+      {
+       "id": "d",
+       "text": "Younger runners train less than older runners",
+       "why": "Nothing in the data suggests so."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

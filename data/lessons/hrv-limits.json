@@ -1,0 +1,859 @@
+{
+  "id": "hrv-limits",
+  "module": "t5-hrv",
+  "title": "HRV limits: saturation, confounders and readiness scores",
+  "goal": "Explain why HRV can mislead (saturation, alcohol, illness, heat), why readiness scores are hard to trust, and how to weigh HRV against how you feel.",
+  "requires": [
+    "hrv-guided"
+  ],
+  "lastReviewed": "2026-10-25",
+  "steps": [
+    {
+      "type": "terms",
+      "terms": [
+        "hrv-saturation",
+        "readiness-score"
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "hl-sat",
+      "title": "When higher HRV stops going up",
+      "text": "At very high vagal activity, vagal indices of [HRV](g:hrv) stop rising and can fall while resting heart rate gets lower. This is [HRV saturation](g:hrv-saturation). It happens without any sign of fatigue [[c:hl-sat]].\n\nSo a falling [rMSSD](g:rmssd) with a falling resting HR can mean more vagal activity, not less [[c:hl-sat-detail]]. Read HRV together with resting HR: a fall in HRV with a falling HR fits saturation; a fall with a rising HR fits lower vagal activity [[c:hl-ratio]].\n\nSaturation mostly matters in very fit athletes with low resting heart rates (the 40s).",
+      "claims": [
+        {
+          "id": "hl-sat",
+          "text": "HRV can fall while resting HR falls, in very fit athletes: saturation.",
+          "grade": "moderate",
+          "sources": [
+            "plews2013"
+          ],
+          "evidence": [
+            {
+              "source": "plews2013",
+              "quote": "the use of specific HRV indices to overcome the issue of HRV saturation in elite athletes (i.e., reductions in HRV despite decreases in resting heart rate)",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-sat-detail",
+          "text": "The fall in vagal HRV in saturation goes with low HR and reflects more vagal activity, not less.",
+          "grade": "moderate",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "This reduction in vagal-related HRV indices is associated with low HR levels, and is the consequence of an increased, not decreased, vagal activity.",
+              "level": "full-text"
+            }
+          ]
+        },
+        {
+          "id": "hl-ratio",
+          "text": "In an elite example, a fall in ln rMSSD was read differently depending on how HR changed.",
+          "grade": "weak",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "the decrease during week 7–8 is likely related to a saturation phenomenon (further increase in vagal activity), while that seen at week 9 is more likely related to a decreased vagal activity/increased sympathetic activity",
+              "level": "full-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hl-sat-q"
+    },
+    {
+      "type": "question",
+      "item": "hl-sat-apply"
+    },
+    {
+      "type": "concept",
+      "id": "hl-dir",
+      "title": "A rise can mean trouble too",
+      "text": "Many people expect fatigue to lower HRV. The data are less tidy. In a trial of 21 trained male triathletes, all 13 given a 3-week overload block became functionally [overreached](g:overreaching) (test performance fell 9%), and their weekly mean of vagal HRV went up more than in the 8 on normal training [[c:hl-lemeur]].\n\nIn the meta-analysis of endurance athletes, resting HRV was largely unaffected by overreaching, and the authors say this may be a methods problem [[c:hl-bellenger]].\n\nSo neither direction is a sure sign. An HRV change is a prompt to look at load, sleep, mood and a standard effort, not a diagnosis.",
+      "claims": [
+        {
+          "id": "hl-lemeur",
+          "text": "In functionally overreached triathletes, weekly means of vagal HRV rose during overload.",
+          "grade": "moderate",
+          "sources": [
+            "lemeur2013"
+          ],
+          "evidence": [
+            {
+              "source": "lemeur2013",
+              "quote": "Using daily HRV recordings averaged over each week, this study detected a progressive increase in the parasympathetic modulation of HR in endurance athletes led to F-OR.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-bellenger",
+          "text": "Across studies, resting HRV was largely unaffected by overreaching.",
+          "grade": "moderate",
+          "sources": [
+            "bellenger2016"
+          ],
+          "evidence": [
+            {
+              "source": "bellenger2016",
+              "quote": "Resting HRV is largely unaffected by overreaching, although this may be the result of methodological issues that warrant further investigation.",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hl-both-dir"
+    },
+    {
+      "type": "concept",
+      "id": "hl-conf",
+      "title": "What else moves HRV",
+      "text": "HRV is a sensitive but not a specific marker of stress [[c:hl-altini]]. In 28,175 app users (about 9 million morning readings), high alcohol intake went with HRV about 12% lower and heart rate about 6% higher; sickness with HRV about 10% lower and heart rate 6% higher; the menstrual cycle with a 3.2% change in HRV [[c:hl-alcohol-size]].\n\nEven low alcohol doses lowered HRV-based recovery during sleep in 4,098 employees [[c:hl-pietila]]. In heat, vagal HRV can go up after heavy work even as wellness falls [[c:hl-heat]].\n\nLog the usual suspects (alcohol, illness, heat, a late night) next to each reading.",
+      "claims": [
+        {
+          "id": "hl-altini",
+          "text": "HRV is a sensitive but not specific marker of stress.",
+          "grade": "moderate",
+          "sources": [
+            "altini2021"
+          ],
+          "evidence": [
+            {
+              "source": "altini2021",
+              "quote": "Acute stressors analysis revealed how HRV is a more sensitive but not specific marker of stress.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-alcohol-size",
+          "text": "High alcohol, sickness and the menstrual cycle each shifted morning HRV by several percent.",
+          "grade": "moderate",
+          "sources": [
+            "altini2021"
+          ],
+          "evidence": [
+            {
+              "source": "altini2021",
+              "quote": "a 6% increase in heart rate (p < 0.05, d = 0.97, effect size = large) and a 12% reduction in HRV (p < 0.05, d = 0.55, effect size = moderate) after high alcohol intake",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-pietila",
+          "text": "Alcohol lowered HRV-based recovery in a dose-dependent way, even at low doses.",
+          "grade": "moderate",
+          "sources": [
+            "pietila2018"
+          ],
+          "evidence": [
+            {
+              "source": "pietila2018",
+              "quote": "Alcohol intake was dose-dependently associated with increased sympathetic regulation, decreased parasympathetic regulation, and insufficient recovery.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-heat",
+          "text": "After heavy training in the heat, vagal HRV has risen despite a fall in perceived wellness.",
+          "grade": "weak",
+          "sources": [
+            "buchheit2014"
+          ],
+          "evidence": [
+            {
+              "source": "buchheit2014",
+              "quote": "Under specific circumstances, such as following heavy training loads in the heat, increased, not decreased, vagal-related HRV indices have been observed within 24 h, despite an acute decrease in perceived wellness",
+              "level": "full-text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hl-conf-calc"
+    },
+    {
+      "type": "question",
+      "item": "hl-conf-analyse"
+    },
+    {
+      "type": "question",
+      "item": "hl-alcohol-q"
+    },
+    {
+      "type": "question",
+      "item": "hl-heat-q"
+    },
+    {
+      "type": "concept",
+      "id": "hl-scores",
+      "title": "Readiness scores",
+      "text": "Apps and wearables blend HRV, resting heart rate, sleep and sometimes load into one [readiness score](g:readiness-score). Two things to know.\n\n**You can't see inside.** A 2026 review lists growing dependence on proprietary metrics whose algorithms lack transparency among the threats to HRV-guided training [[c:hl-prop]]. You can't tell if a 38 came from sleep, from saturation or from last night's wine.\n\n**It is not the tested thing.** The two guided trials we read used simple rules on HRV alone (a range from the athlete's own readings).\n\nUse a score as one input. Look at the raw HRV, heart rate and your notes behind it.",
+      "claims": [
+        {
+          "id": "hl-prop",
+          "text": "Proprietary readiness metrics with opaque algorithms are a threat to sound HRV-guided training.",
+          "grade": "weak",
+          "sources": [
+            "schaffarczyk2026"
+          ],
+          "evidence": [
+            {
+              "source": "schaffarczyk2026",
+              "quote": "growing dependence on proprietary metrics whose underlying algorithms lack transparency and may oversimplify training decisions",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hl-score-q"
+    },
+    {
+      "type": "concept",
+      "id": "hl-subj",
+      "title": "HRV against how you feel",
+      "text": "Do HRV and your own feelings agree? Often not. In a review of 56 studies, subjective and objective well-being measures generally did not correlate, and self-reports tracked training load with more sensitivity and consistency [[c:hl-saw]].\n\nIn 39 adults tracked for 3 months, self-reported stress and nervousness had no link to overnight HRV; feeling 'energised' went with lower HRV [[c:hl-ungaro]]. That study was funded by a drinks maker and was observational, so treat it as weak.\n\nSo don't override a clear wellness answer with a number, and don't ignore HRV. When they disagree, go to a third source: a standard session. This is advice, not a trial result.",
+      "claims": [
+        {
+          "id": "hl-saw",
+          "text": "Subjective and objective well-being measures generally did not agree; subjective ones tracked training load more sensitively.",
+          "grade": "moderate",
+          "sources": [
+            "saw2016"
+          ],
+          "evidence": [
+            {
+              "source": "saw2016",
+              "quote": "Subjective and objective measures of athlete well-being generally did not correlate. Subjective measures reflected acute and chronic training loads with superior sensitivity and consistency than objective measures.",
+              "level": "abstract"
+            }
+          ]
+        },
+        {
+          "id": "hl-ungaro",
+          "text": "Daily self-reported stress and nervousness were not associated with overnight wearable HRV.",
+          "grade": "weak",
+          "sources": [
+            "ungaro2026"
+          ],
+          "evidence": [
+            {
+              "source": "ungaro2026",
+              "quote": "Self-reported stress and nervousness did not have an association with heart rate variability",
+              "level": "abstract"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "item": "hl-disagree"
+    },
+    {
+      "type": "question",
+      "item": "hl-appraise"
+    },
+    {
+      "type": "recap",
+      "points": [
+        "At very high vagal activity HRV can fall while resting HR falls (saturation): read HRV with resting HR and your own history.",
+        "A rise in vagal HRV can come with overreaching; resting HRV was largely unaffected in the pooled data. Neither direction is a sure sign.",
+        "Alcohol (about −12% HRV after a lot), sickness (about −10%), the menstrual cycle and heat all move HRV: log them beside each reading.",
+        "Readiness scores hide their formula and blend signals; treat them as one input, not a verdict.",
+        "HRV and how you feel often disagree; use a standard session as the tie-breaker."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "hl-sat-q",
+      "concept": "hl-sat",
+      "bloom": "understand",
+      "recallFirst": true,
+      "sources": [
+        "plews2013",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "What does 'HRV saturation' mean?",
+          "options": [
+            {
+              "id": "a",
+              "text": "At very high vagal activity, HRV indices stop rising and can fall as resting HR gets lower",
+              "correct": true,
+              "why": "Right: a fall in HRV can then mean more vagal activity, not less."
+            },
+            {
+              "id": "b",
+              "text": "The sensor memory fills up and stops recording beats",
+              "why": "Saturation is a physiological effect, not a device fault."
+            },
+            {
+              "id": "c",
+              "text": "Fatigue makes HRV rise instead of fall",
+              "why": "That describes a different finding, the rise seen in overreaching."
+            },
+            {
+              "id": "d",
+              "text": "Sympathetic overactivity pushes HRV down in tired athletes",
+              "why": "Saturation happens without sympathetic overactivity or fatigue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-sat-apply",
+      "concept": "hl-sat",
+      "bloom": "apply",
+      "sources": [
+        "plews2013",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Over 12 weeks of base training a cyclist's resting heart rate falls from 52 to 46 beats·min⁻¹ and his morning rMSSD slips from 85 to 78 ms. He feels fresh and his power is rising. What is the best interpretation?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Overreaching: the lower HRV shows sympathetic overload in his body",
+              "why": "A falling HR and good form argue against overload."
+            },
+            {
+              "id": "b",
+              "text": "Possibly saturation: more vagal activity, so the HRV dip is no fatigue sign",
+              "correct": true,
+              "why": "Right: reductions in HRV with falling resting HR can reflect more vagal activity."
+            },
+            {
+              "id": "c",
+              "text": "Sensor error, since a fitter heart must always show a higher HRV",
+              "why": "HRV can fall at very high vagal activity; that is saturation, not a sensor fault."
+            },
+            {
+              "id": "d",
+              "text": "Detraining: a lower rMSSD means his heart has become weaker",
+              "why": "His power is rising, which points away from detraining."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner's resting HR falls from 48 to 44 beats·min⁻¹ over a block, her rMSSD slips from 90 to 82 ms, and her pace at a given effort improves. How should she read the rMSSD dip?",
+          "options": [
+            {
+              "id": "a",
+              "text": "As proof that she has become non-functionally overreached",
+              "why": "Improving pace and a falling HR do not fit it."
+            },
+            {
+              "id": "b",
+              "text": "As a recording artefact that she should ignore every time",
+              "why": "Check for artefacts, but the pattern fits a known effect."
+            },
+            {
+              "id": "c",
+              "text": "As possible saturation, checked against her HR and how she feels",
+              "correct": true,
+              "why": "Right: with a falling HR and improving pace, the dip fits saturation."
+            },
+            {
+              "id": "d",
+              "text": "As a sign her vagal activity has dropped",
+              "why": "In saturation, vagal activity is higher, not lower."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-both-dir",
+      "concept": "hl-dir",
+      "bloom": "analyse",
+      "sources": [
+        "lemeur2013",
+        "bellenger2016"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "In a 3-week overload block, a triathlete's weekly mean ln rMSSD rises while her run-test performance falls 9%. Which statement fits the evidence best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A rise always means she is fresh, so the test result must be wrong",
+              "why": "The trial shows rises alongside lost performance."
+            },
+            {
+              "id": "b",
+              "text": "Overload always lowers HRV, so the data are an error",
+              "why": "Pooled data found HRV largely unaffected, and this trial found a rise."
+            },
+            {
+              "id": "c",
+              "text": "Weekly means are useless, only single days count",
+              "why": "Isolated readings missed what weekly means caught."
+            },
+            {
+              "id": "d",
+              "text": "A rise in vagal HRV can accompany functional overreaching, so a rise alone does not show good recovery",
+              "correct": true,
+              "why": "Right: in the trial, weekly means of vagal HRV rose in overreached triathletes."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist's HRV rises during a heavy training camp while his sprint power falls. What is the sound conclusion?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Don't read the rise as recovery: check load, sleep, mood and a standard effort",
+              "correct": true,
+              "why": "Right: HRV can rise with overreaching, and resting HRV may not change at all."
+            },
+            {
+              "id": "b",
+              "text": "The rise proves he is adapting, so add more load",
+              "why": "A rise is not proof of adaptation."
+            },
+            {
+              "id": "c",
+              "text": "The power drop is noise, since HRV is the objective measure",
+              "why": "A performance fall is a key signal."
+            },
+            {
+              "id": "d",
+              "text": "HRV cannot change with training",
+              "why": "It can; the question is how to read it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-conf-calc",
+      "concept": "hl-conf",
+      "bloom": "apply",
+      "sources": [
+        "altini2021"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist's 7-day mean rMSSD is 64 ms. The morning after a night of heavy drinking it is 56 ms. What is the percent change?",
+          "options": [
+            {
+              "id": "a",
+              "text": "−12.5%",
+              "correct": true,
+              "why": "Right: (56 − 64) ÷ 64 = −0.125, about the size of the drop reported after high alcohol intake."
+            },
+            {
+              "id": "b",
+              "text": "−14.3%",
+              "why": "This divides by today's 56 instead of the baseline 64."
+            },
+            {
+              "id": "c",
+              "text": "−8%",
+              "why": "This reads the 8 ms drop as a percent."
+            },
+            {
+              "id": "d",
+              "text": "+12.5%",
+              "why": "This drops the sign: rMSSD fell, it did not rise."
+            }
+          ],
+          "solution": "(56 − 64) ÷ 64 × 100 = −12.5%."
+        },
+        {
+          "id": "b",
+          "stem": "A runner's baseline rMSSD is 75 ms and the morning after a few drinks it is 66 ms. What is the percent change?",
+          "options": [
+            {
+              "id": "a",
+              "text": "−13.6%",
+              "why": "This divides by today's 66 instead of the baseline 75."
+            },
+            {
+              "id": "b",
+              "text": "−9%",
+              "why": "This reads the 9 ms drop as a percent."
+            },
+            {
+              "id": "c",
+              "text": "−12.0%",
+              "correct": true,
+              "why": "Right: (66 − 75) ÷ 75 = −0.12."
+            },
+            {
+              "id": "d",
+              "text": "+12.0%",
+              "why": "This drops the sign."
+            }
+          ],
+          "solution": "(66 − 75) ÷ 75 × 100 = −12.0%."
+        },
+        {
+          "id": "c",
+          "stem": "A triathlete's baseline rMSSD is 90 ms and she records 81 ms with a cold coming on. What is the percent change?",
+          "options": [
+            {
+              "id": "a",
+              "text": "−11.1%",
+              "why": "This divides by today's 81 instead of the baseline 90."
+            },
+            {
+              "id": "b",
+              "text": "−10.0%",
+              "correct": true,
+              "why": "Right: (81 − 90) ÷ 90 = −0.10."
+            },
+            {
+              "id": "c",
+              "text": "−9%",
+              "why": "This reads the 9 ms drop as a percent."
+            },
+            {
+              "id": "d",
+              "text": "+10.0%",
+              "why": "This drops the sign."
+            }
+          ],
+          "solution": "(81 − 90) ÷ 90 × 100 = −10.0%."
+        }
+      ]
+    },
+    {
+      "id": "hl-conf-analyse",
+      "concept": "hl-conf",
+      "bloom": "analyse",
+      "sources": [
+        "altini2021",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "The morning after a big night out, a runner's rMSSD is 12% below baseline. Normal day-to-day variation is also about 12%. What does this tell you?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Alcohol caused the entire drop and nothing else could have done",
+              "why": "A drop of this size also occurs with no cause at all."
+            },
+            {
+              "id": "b",
+              "text": "The drop is too small to matter, so alcohol has no effect on HRV",
+              "why": "Large studies show alcohol lowers HRV; it just is not visible in one day."
+            },
+            {
+              "id": "c",
+              "text": "HRV is useless for any athlete who ever has a drink",
+              "why": "Averaged and logged, it still carries signal."
+            },
+            {
+              "id": "d",
+              "text": "It is about the size of normal noise: log the alcohol and watch the trend",
+              "correct": true,
+              "why": "Right: effects of this size sit inside ordinary scatter, which is why context and averaging matter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-alcohol-q",
+      "concept": "hl-conf",
+      "bloom": "understand",
+      "sources": [
+        "pietila2018"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "In 4,098 free-living Finnish employees, what did alcohol do to HRV-based recovery during the first hours of sleep?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It lowered it in a dose-dependent way, even at low doses",
+              "correct": true,
+              "why": "Right: the effect grew with the dose and showed up at low intake too."
+            },
+            {
+              "id": "b",
+              "text": "It lowered it only after heavy drinking",
+              "why": "Effects were seen with low intake as well."
+            },
+            {
+              "id": "c",
+              "text": "It raised it, because alcohol relaxes you",
+              "why": "Alcohol was linked to less parasympathetic and more sympathetic regulation."
+            },
+            {
+              "id": "d",
+              "text": "It had no effect in physically active people",
+              "why": "Regular activity did not protect against the effect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-heat-q",
+      "concept": "hl-conf",
+      "bloom": "analyse",
+      "sources": [
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A triathlete finishes a hard session in 32 °C heat. Next morning her rMSSD is above her average, yet she reports heavy legs and a low mood. How should she read this?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Her HRV is the objective answer, so she has fully recovered",
+              "why": "Wellness fell although HRV rose, so the two disagree."
+            },
+            {
+              "id": "b",
+              "text": "HRV can rise after heavy heat work while wellness falls, so it is no proof of recovery",
+              "correct": true,
+              "why": "Right: HRV and how you feel can point in opposite directions after hard training in the heat."
+            },
+            {
+              "id": "c",
+              "text": "Her HRV is wrong, because heat always lowers HRV in everybody",
+              "why": "Vagal HRV has risen after heavy training in the heat."
+            },
+            {
+              "id": "d",
+              "text": "Her feelings are wrong and should be ignored",
+              "why": "A drop in perceived wellness is a real signal too."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A cyclist in a hot training camp sees his morning HRV climb for three days while he feels flat and sleeps badly. What is the best response?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Raise the load, since HRV shows he is recovering fast",
+              "why": "A rising HRV is not proof of recovery here."
+            },
+            {
+              "id": "b",
+              "text": "Stop using HRV for the rest of the camp",
+              "why": "It is still useful if read with other measures."
+            },
+            {
+              "id": "c",
+              "text": "Don't take the rise as recovery; weigh how he feels and run a standard effort",
+              "correct": true,
+              "why": "Right: after heavy loads in the heat, HRV can rise despite a drop in perceived wellness."
+            },
+            {
+              "id": "d",
+              "text": "Ignore the way he feels because HRV is rising",
+              "why": "Wellness answers matter and often track load better."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-score-q",
+      "concept": "hl-scores",
+      "bloom": "evaluate",
+      "sources": [
+        "schaffarczyk2026"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "On the morning of a key race, a runner's ring gives a readiness score of 38 out of 100. How should she use it?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cancel the race, because the score is a validated fatigue test",
+              "why": "The formula is not published and was not what the trials tested."
+            },
+            {
+              "id": "b",
+              "text": "As one input beside her heart rate, how she feels and recent training, since the formula is hidden",
+              "correct": true,
+              "why": "Right: with an opaque formula you can't tell what drove the 38."
+            },
+            {
+              "id": "c",
+              "text": "Ignore it, because HRV never relates to fatigue",
+              "why": "HRV can carry information; the issue is the opaque blend."
+            },
+            {
+              "id": "d",
+              "text": "Trust it over how her legs feel, since it is objective",
+              "why": "Feelings and HRV often disagree, and neither is automatically right."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "Two apps give the same cyclist readiness scores of 82 and 55 on the same morning. What best explains the gap?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Each app blends inputs with its own hidden formula, so neither is a ground truth",
+              "correct": true,
+              "why": "Right: undisclosed algorithms and weightings can give different scores from the same data."
+            },
+            {
+              "id": "b",
+              "text": "One app is measuring his heart and the other is not",
+              "why": "Both use similar inputs; the difference lies in how they blend them."
+            },
+            {
+              "id": "c",
+              "text": "The higher score must be right because it is better news",
+              "why": "Neither can be checked without the formula."
+            },
+            {
+              "id": "d",
+              "text": "Readiness changes by 27 points between two breaths",
+              "why": "The day-to-day change is not the issue; the formulas differ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-disagree",
+      "concept": "hl-subj",
+      "bloom": "apply",
+      "sources": [
+        "saw2016",
+        "buchheit2014"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "A cyclist's HRV and 7-day mean are normal, but he wakes flat with heavy legs, and intervals are planned. What is the best plan?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Take the feeling seriously: shorten or ease the session, or test with a warm-up before deciding",
+              "correct": true,
+              "why": "Right: normal HRV does not rule out fatigue, and self-reports track load well."
+            },
+            {
+              "id": "b",
+              "text": "Do the full intervals: objective data beat feelings",
+              "why": "Subjective measures were at least as sensitive to load as objective ones."
+            },
+            {
+              "id": "c",
+              "text": "Stop training for a week because normal HRV hides an illness",
+              "why": "One flat morning does not justify a week off."
+            },
+            {
+              "id": "d",
+              "text": "Re-measure until HRV matches how he feels",
+              "why": "Repeating the test until it fits is not a method."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "stem": "A runner feels great, but this morning her rMSSD is 15% below her 7-day mean after a night of heavy drinking and a late flight. Intervals are planned. What is the best plan?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cancel the intervals: HRV is below range, so it must be fatigue",
+              "why": "Alcohol and travel can lower HRV without real fatigue."
+            },
+            {
+              "id": "b",
+              "text": "Ignore HRV forever, since it moved without a training cause",
+              "why": "It still carries information; it just needs context."
+            },
+            {
+              "id": "c",
+              "text": "Log the likely causes and use a warm-up check: if it feels easy, go ahead",
+              "correct": true,
+              "why": "Right: HRV can be moved by alcohol and travel; the feeling and a standard check decide."
+            },
+            {
+              "id": "d",
+              "text": "Add extra volume to use the good feeling",
+              "why": "A good feeling is not a reason to add load on a poorly understood signal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hl-appraise",
+      "concept": "hl-subj",
+      "bloom": "evaluate",
+      "sources": [
+        "ungaro2026"
+      ],
+      "variants": [
+        {
+          "id": "a",
+          "stem": "Ungaro 2026 followed 39 healthy adults for 3 months and found no link between self-reported stress and overnight wearable HRV. It was funded by a sports-drink company. Which limit most affects how far to trust it?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It used a wearable, so no wearable-based result is ever valid",
+              "why": "Wearables can produce usable data; accuracy varies by device."
+            },
+            {
+              "id": "b",
+              "text": "It lasted 3 months, which is too long to give useful data",
+              "why": "Longer follow-up is a strength."
+            },
+            {
+              "id": "c",
+              "text": "It used self-reports, which are always completely accurate",
+              "why": "Self-reports have their own errors, so agreement is not guaranteed."
+            },
+            {
+              "id": "d",
+              "text": "It is observational, small (39) and funder-linked, so it can't say which is right",
+              "correct": true,
+              "why": "Right: the funder, size and design all limit what it can say."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

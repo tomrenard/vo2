@@ -1,0 +1,826 @@
+{
+ "id": "ot-diagnosis",
+ "module": "t5-overtraining",
+ "title": "Diagnosis: no single marker",
+ "goal": "Explain why OTS is diagnosed by exclusion, and say what the two-bout test, mood questionnaires and heart rate markers can and cannot show.",
+ "requires": [
+  "ot-mechanisms"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "biomarker",
+    "two-bout-test",
+    "poms",
+    "restq",
+    "heart-rate-recovery"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ot-nomarker",
+   "title": "No single marker",
+   "text": "A [biomarker](g:biomarker) is only useful if it flags athletes who have OTS (high [sensitivity](g:sensitivity)) and stays quiet in athletes who do not (high [specificity](g:specificity)). Hormones, performance tests, psychological tests and blood or immune markers have all been tried; none meets all the criteria for general use [[c:ot-nomarker-claim]].\n\nBecause there is no gold standard test, OTS stays a diagnosis of exclusion [[c:ot-goldstd]]. A scoping review of 39 studies found that combinations of variables may be needed, such as the EROS scores. They still need checking in larger samples and in women [[c:ot-combos]].",
+   "claims": [
+    {
+     "id": "ot-nomarker-claim",
+     "text": "Several markers are used for OTS, but none meets all the criteria for general acceptance.",
+     "grade": "strong",
+     "sources": [
+      "meeusen2013"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2013",
+       "quote": "Currently, several markers (hormones, performance tests, psychological tests, and biochemical and immune markers) are used, but none of them meet all the criteria to make their use generally accepted.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-goldstd",
+     "text": "With no gold-standard test, OTS remains a diagnosis of exclusion.",
+     "grade": "moderate",
+     "sources": [
+      "carrard2022"
+     ],
+     "evidence": [
+      {
+       "source": "carrard2022",
+       "quote": "Because of the lack of a gold standard diagnostic test, OTS remains a diagnosis of exclusion.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-combos",
+     "text": "Combinations of variables, such as the EROS scores, may be needed to diagnose OTS, and need validating in larger samples and women.",
+     "grade": "weak",
+     "sources": [
+      "carrard2022"
+     ],
+     "evidence": [
+      {
+       "source": "carrard2022",
+       "quote": "As exemplified by the EROS scores, combinations of these variables may be required to diagnose OTS. These scores must now be validated in larger samples and within female athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-marker-why"
+  },
+  {
+   "type": "question",
+   "item": "ot-marker-spec"
+  },
+  {
+   "type": "concept",
+   "id": "ot-excl",
+   "title": "Diagnosis by exclusion",
+   "text": "The route is a careful history, then ruling out other causes [[c:ot-history]]. The consensus lists:\n\n- organic disease (a physical illness) and infection;\n- too little energy, carbohydrate or protein;\n- iron or magnesium deficiency;\n- allergies;\n- and a search for the trigger.\n\nOrganic causes should be screened for when underperformance and symptoms persist despite a rest period, or at once if the history points to one [[c:ot-screen]].\n\nThis ties to the last lesson: low energy availability is on the list, because it can look exactly like OTS (see the REDs lessons).",
+   "claims": [
+    {
+     "id": "ot-history",
+     "text": "OTS diagnosis follows a thorough history of symptoms, nutrition, sleep, injury, training and social life.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "OTS diagnosis is made after a very thorough history of symptoms, nutrition, sleep, injury, and training in reference to the social history, including home, work, and substance use.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-screen",
+     "text": "Organic conditions should be screened for in persistent underperformance despite rest, or at once if the history indicates.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Organic conditions should be screened for in the athlete with persistent underperformance and symptoms of OTS despite a rest period, or immediately if indicated by history.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-excl-ferritin"
+  },
+  {
+   "type": "question",
+   "item": "ot-excl-history"
+  },
+  {
+   "type": "concept",
+   "id": "ot-twobout",
+   "title": "The two-bout test",
+   "text": "A hallmark of OTS is trouble sustaining intense exercise and recovering for the next session. The [two-bout test](g:two-bout-test) uses this: two maximal tests 4 h apart, with hormones measured. Overreached cyclists did 6% worse in the second test, the overtrained athlete 11% worse [[c:ot-tb-2004]].\n\nIn 10 underperforming athletes (5 NFO, 5 OTS, labelled afterwards), ACTH and prolactin rose far more in the second test in NFO than in OTS. Resting measures were less sensitive. The authors say more data are needed before it is a gold standard [[c:ot-tb-2010]].",
+   "claims": [
+    {
+     "id": "ot-tb-2004",
+     "text": "In a two-bout protocol, performance fell 6% in overreached cyclists and 11% in one overtrained athlete between the first and second test.",
+     "grade": "weak",
+     "sources": [
+      "meeusen2004"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2004",
+       "quote": "Performance decreased by 6% between the first and the second exercise test in the OR group and by 11% in the OT subject.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2004",
+       "quote": "All athletes performed two maximal exercise tests separated by 4 h.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-tb-2010",
+     "text": "ACTH and prolactin reactions to the second bout were much higher in NFO than OTS, but the test is not yet a gold standard.",
+     "grade": "weak",
+     "sources": [
+      "meeusen2008"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2008",
+       "quote": "The ACTH and prolactin reactions to the second exercise bout were much higher in NFO athletes compared with OTS and showed the highest sensitivity for making the distinction.",
+       "level": "abstract"
+      },
+      {
+       "source": "meeusen2008",
+       "quote": "This protocol could be a useful tool for diagnosing NFO and OTS; however, more data should be collected before this test can be used as the gold standard.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-tb-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ot-tb-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "ot-mood",
+   "title": "Mood questionnaires: POMS and RESTQ",
+   "text": "The [POMS](g:poms) scores mood. In 14 female swimmers, tension, depression, anger, vigor, fatigue and global mood changed over a season of rising volume, compared with controls [[c:ot-poms]]. In the cyclists' 2 intensified weeks, global mood disturbance rose 29% [[c:ot-halson-mood]]. The [RESTQ-Sport](g:restq) assesses perceived recovery [[c:ot-restq]].\n\nSelf-reports often beat objective measures: a review of 56 studies found they tracked training load with better sensitivity and consistency [[c:ot-saw]]. But mood change also appears in plain FOR, so it is not specific to OTS. Both forms are long (65 and 77 items), which limits daily use.",
+   "claims": [
+    {
+     "id": "ot-poms",
+     "text": "In female swimmers, POMS mood scores changed across a season of increasing volume compared with controls.",
+     "grade": "weak",
+     "sources": [
+      "oconnor1989"
+     ],
+     "evidence": [
+      {
+       "source": "oconnor1989",
+       "quote": "The swimmers experienced significant (p less than 0.01) alterations in tension, depression, anger, vigor, fatigue and global mood across the training season compared to the controls.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-halson-mood",
+     "text": "Global mood disturbance rose 29% in cyclists after 2 weeks of intensified training.",
+     "grade": "weak",
+     "sources": [
+      "halson2002"
+     ],
+     "evidence": [
+      {
+       "source": "halson2002",
+       "quote": "A significant decline in maximal power output (N = 338 +/- 17 W, ITP = 319 +/- 17 W) and a significant increase in time to complete a simulated time trial (N = 59.4 +/- 1.9 min, ITP = 65.3 +/- 2.6 min) occurred after ITP in conjunction with a 29% increase in global mood disturbance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-restq",
+     "text": "The Recovery-Stress Questionnaire for Athletes provides a tool to assess perceived recovery.",
+     "grade": "weak",
+     "sources": [
+      "kellmann2010"
+     ],
+     "evidence": [
+      {
+       "source": "kellmann2010",
+       "quote": "Monitoring instruments like the Recovery-Stress Questionnaire for Athletes can assist with this research by providing a tool to assess their perceived state of recovery.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-saw",
+     "text": "Subjective measures tracked acute and chronic training load with better sensitivity and consistency than objective measures.",
+     "grade": "moderate",
+     "sources": [
+      "saw2016"
+     ],
+     "evidence": [
+      {
+       "source": "saw2016",
+       "quote": "Subjective measures reflected acute and chronic training loads with superior sensitivity and consistency than objective measures.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-mood-spec"
+  },
+  {
+   "type": "question",
+   "item": "ot-mood-why"
+  },
+  {
+   "type": "concept",
+   "id": "ot-hr",
+   "title": "Heart rate markers",
+   "text": "Resting HR, maximal HR and HRV cannot separate overreaching states, but they show where an athlete stands in recovery [[c:ot-hr-kreher]]. A meta-analysis found that HRV after exercise and [heart rate recovery](g:heart-rate-recovery) (HRR) rise with *good* adaptation, but also with overreaching, so alone they cannot tell the two apart. HR acceleration at the start of exercise fell with overreaching [[c:ot-hr-bell]].\n\nResults are not consistent: in a group of 28 people, the 9 who raised their load by about 55% from one week to the next had a *slower* HRR [[c:ot-hr-borresen]]. Use HR markers as an individual trend alongside performance and mood, not as a test on their own.",
+   "claims": [
+    {
+     "id": "ot-hr-kreher",
+     "text": "Resting HR, maximal HR and HRV do not differentiate overreaching conditions but mark the individual's current state in relation to recovery.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Resting heart, maximal heart rate, and heart rate variabilities do not display ability to differentiate overreaching conditions; however, they do provide a marker for the individual’s current physiologic state in relation to recovery from prior work load.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-hr-bell",
+     "text": "Post-exercise HRV and HRR increase with both positive adaptation and overreaching; HR acceleration appears to decrease with overreaching.",
+     "grade": "moderate",
+     "sources": [
+      "bellenger2016"
+     ],
+     "evidence": [
+      {
+       "source": "bellenger2016",
+       "quote": "However, increases in post-exercise HRV and HRR also occur in response to overreaching, demonstrating that additional measures of training tolerance may be required to determine whether training-induced changes in these parameters are related to positive or negative adaptations.",
+       "level": "abstract"
+      },
+      {
+       "source": "bellenger2016",
+       "quote": "HR acceleration appears to decrease in response to overreaching training, and thus may be a potential indicator of training-induced fatigue.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-hr-borresen",
+     "text": "In 9 of 28 people, a rise in training load from one week to the next slowed heart rate recovery.",
+     "grade": "weak",
+     "sources": [
+      "borresen2007"
+     ],
+     "evidence": [
+      {
+       "source": "borresen2007",
+       "quote": "Thus a negative effect on HRr was observed with increases in training load.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-hr-hrr"
+  },
+  {
+   "type": "question",
+   "item": "ot-hr-use"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No single marker diagnoses OTS; a marker needs both sensitivity and specificity.",
+    "Diagnosis is by exclusion: history first, then rule out disease, infection, low energy or carbohydrate, iron deficiency and other causes.",
+    "The two-bout test looks at the fall from test 1 to test 2 and at ACTH and prolactin, but it rests on tiny samples and is not a gold standard.",
+    "Mood scores (POMS, RESTQ) track load well but also change in plain overreaching.",
+    "HR markers rise with good and poor adaptation alike, so read them as individual trends alongside other markers."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ot-marker-why",
+   "concept": "ot-nomarker",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "meeusen2013",
+    "carrard2022"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is OTS called a diagnosis of exclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No single test confirms it, so other causes are ruled out first",
+       "correct": true,
+       "why": "Right: the lack of a gold-standard test makes exclusion the route."
+      },
+      {
+       "id": "b",
+       "text": "It is always rare, so doctors rarely test for it",
+       "why": "Rarity is not the reason; the missing test is."
+      },
+      {
+       "id": "c",
+       "text": "Every blood marker is normal in OTS",
+       "why": "Some markers differ in OTS, but none is reliable enough to confirm it."
+      },
+      {
+       "id": "d",
+       "text": "It can only be named by the athlete",
+       "why": "The athlete's view matters, but the label follows clinical review."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-marker-spec",
+   "concept": "ot-nomarker",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A lab marker is raised in all 10 athletes with OTS, but also in many healthy athletes after a hard week. Which property is poor?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Specificity: it flags healthy athletes too",
+       "correct": true,
+       "why": "Right: raised in healthy athletes means many false alarms."
+      },
+      {
+       "id": "b",
+       "text": "Sensitivity: it misses athletes with OTS",
+       "why": "It caught all 10 with OTS, so sensitivity is high."
+      },
+      {
+       "id": "c",
+       "text": "Reliability: it gives different numbers on repeat",
+       "why": "Nothing here is about repeat tests."
+      },
+      {
+       "id": "d",
+       "text": "Validity: it has no link to training at all",
+       "why": "It rises after hard training, so the link exists; the issue is false alarms."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-excl-ferritin",
+   "concept": "ot-excl",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2013",
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist has been tired and flat for 3 months. Tests show low iron stores. What does this mean for an OTS diagnosis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A cause was found: treat it first, then see if the symptoms persist",
+       "correct": true,
+       "why": "Right: iron deficiency is on the list to exclude; OTS stays open only if symptoms persist."
+      },
+      {
+       "id": "b",
+       "text": "OTS is confirmed, since iron is low in OTS",
+       "why": "Iron deficiency is a separate cause to exclude, not a sign of OTS."
+      },
+      {
+       "id": "c",
+       "text": "OTS is ruled out for good",
+       "why": "The slump may persist after treatment; the label stays open until then."
+      },
+      {
+       "id": "d",
+       "text": "Ignore the result and rest for a year",
+       "why": "The result is a treatable cause and should be acted on."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner has been slow and drained for 10 weeks. A blood test finds a recent viral infection. What follows?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Treat the infection first; judge OTS later if symptoms persist",
+       "correct": true,
+       "why": "Right: infection is an organic cause to exclude before OTS."
+      },
+      {
+       "id": "b",
+       "text": "Call it OTS, since fatigue lasting this long means OTS",
+       "why": "Long fatigue alone does not give the label; causes come first."
+      },
+      {
+       "id": "c",
+       "text": "Call it FOR, since the runner is sure to recover soon",
+       "why": "FOR is a short dip with a gain; this does not fit a 10-week slump."
+      },
+      {
+       "id": "d",
+       "text": "Increase training load to prove that it is not OTS",
+       "why": "More load on an infection or unexplained slump risks harm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-excl-history",
+   "concept": "ot-excl",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which set of topics belongs in the history for a possible OTS case?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Symptoms, food, sleep, injury, training, home and work",
+       "correct": true,
+       "why": "Right: a thorough history covers all of these."
+      },
+      {
+       "id": "b",
+       "text": "Training volume only, week by week, over the past season",
+       "why": "Volume matters, but other stress and causes must also be covered."
+      },
+      {
+       "id": "c",
+       "text": "Blood results only, from one test taken at a clinic",
+       "why": "Blood tests help, but the history comes first."
+      },
+      {
+       "id": "d",
+       "text": "Race results of the last season only, from the official lists",
+       "why": "Results show performance but not the possible causes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-tb-calc",
+   "concept": "ot-twobout",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a two-bout test, test 1 lasts 14.0 min and test 2 lasts 13.2 min. What is the percent drop in test 2?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.7%",
+       "correct": true,
+       "why": "Right: 0.8 ÷ 14.0 = 5.7%."
+      },
+      {
+       "id": "b",
+       "text": "6.1%",
+       "why": "Divided by test 2 (0.8 ÷ 13.2); use the first test as the base."
+      },
+      {
+       "id": "c",
+       "text": "0.8%",
+       "why": "Gave the minutes as a percent; divide by 14.0 first."
+      },
+      {
+       "id": "d",
+       "text": "57%",
+       "why": "Decimal slip: 0.8 ÷ 14.0 = 0.057, which is 5.7%."
+      }
+     ],
+     "solution": "Change = 13.2 − 14.0 = −0.8 min. −0.8 ÷ 14.0 = −0.057, so a drop of 5.7%, as for any percent change from the baseline."
+    },
+    {
+     "id": "b",
+     "stem": "Test 1 lasts 20.0 min and test 2 lasts 17.8 min. What is the percent drop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11.0%",
+       "correct": true,
+       "why": "Right: 2.2 ÷ 20.0 = 11.0%."
+      },
+      {
+       "id": "b",
+       "text": "12.4%",
+       "why": "Divided by test 2 (2.2 ÷ 17.8); use test 1 as the base."
+      },
+      {
+       "id": "c",
+       "text": "2.2%",
+       "why": "Gave the minutes as a percent; divide by 20.0 first."
+      },
+      {
+       "id": "d",
+       "text": "1.1%",
+       "why": "Decimal slip: 2.2 ÷ 20.0 = 0.110, which is 11.0%."
+      }
+     ],
+     "solution": "Change = 17.8 − 20.0 = −2.2 min. −2.2 ÷ 20.0 = −0.110, so a drop of 11.0%."
+    },
+    {
+     "id": "c",
+     "stem": "Test 1 lasts 12.0 min and test 2 lasts 11.4 min. What is the percent drop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.0%",
+       "correct": true,
+       "why": "Right: 0.6 ÷ 12.0 = 5.0%."
+      },
+      {
+       "id": "b",
+       "text": "5.3%",
+       "why": "Divided by test 2 (0.6 ÷ 11.4); use test 1 as the base."
+      },
+      {
+       "id": "c",
+       "text": "0.6%",
+       "why": "Gave the minutes as a percent; divide by 12.0 first."
+      },
+      {
+       "id": "d",
+       "text": "50%",
+       "why": "Decimal slip: 0.6 ÷ 12.0 = 0.050, which is 5.0%."
+      }
+     ],
+     "solution": "Change = 11.4 − 12.0 = −0.6 min. −0.6 ÷ 12.0 = −0.050, so a drop of 5.0%."
+    }
+   ]
+  },
+  {
+   "id": "ot-tb-appraise",
+   "concept": "ot-twobout",
+   "bloom": "evaluate",
+   "sources": [
+    "meeusen2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The 2008 two-bout study told NFO from OTS using 10 athletes labelled after recovery. What limits it most?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tiny sample and hindsight labels leave accuracy for new athletes unknown",
+       "correct": true,
+       "why": "Right: 5 versus 5 athletes, labelled afterwards, cannot show how well it works in new cases."
+      },
+      {
+       "id": "b",
+       "text": "Hormones cannot be measured after exercise",
+       "why": "They can; the limit is the sample and design."
+      },
+      {
+       "id": "c",
+       "text": "It used athletes from only a few sports",
+       "why": "Sport is less of a limit than sample size and label timing."
+      },
+      {
+       "id": "d",
+       "text": "A maximal test is never safe for a tired athlete",
+       "why": "Safety is a fair concern but not what limits the evidence here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-mood-spec",
+   "concept": "ot-mood",
+   "bloom": "analyse",
+   "sources": [
+    "halson2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's global mood disturbance rises 29% after a 2-week hard block and fades after a taper. What can be said?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It fits overreaching; mood change alone does not signal OTS",
+       "correct": true,
+       "why": "Right: mood changes in plain overreaching too."
+      },
+      {
+       "id": "b",
+       "text": "It proves that overtraining syndrome has started",
+       "why": "The change fades after a taper, which does not fit OTS."
+      },
+      {
+       "id": "c",
+       "text": "It shows that mood tests are of no use for monitoring",
+       "why": "They are sensitive to load; they are just not specific to OTS."
+      },
+      {
+       "id": "d",
+       "text": "It shows that the cyclist has a clinical depression",
+       "why": "A mood shift in a hard block is not a clinical diagnosis."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A swimmer's POMS scores worsen while training volume is raised through a season. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Mood tracks training load, but it does not by itself identify OTS",
+       "correct": true,
+       "why": "Right: mood is a sensitive load marker, not a specific OTS marker."
+      },
+      {
+       "id": "b",
+       "text": "OTS has begun, because mood has changed",
+       "why": "Mood changes occur well before, and without, OTS."
+      },
+      {
+       "id": "c",
+       "text": "The swimmer's cortisol must be low",
+       "why": "Salivary cortisol was higher in the swimmers than in controls, so this does not follow."
+      },
+      {
+       "id": "d",
+       "text": "The questionnaire is faulty, since mood should not change",
+       "why": "Mood is expected to change as load rises."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-mood-why",
+   "concept": "ot-mood",
+   "bloom": "understand",
+   "sources": [
+    "saw2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do monitoring programmes use self-reported questionnaires despite their subjective nature?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They followed training load more sensitively than objective ones",
+       "correct": true,
+       "why": "Right: the systematic review found subjective measures more sensitive and consistent."
+      },
+      {
+       "id": "b",
+       "text": "They are specific to OTS and pick it out from other states",
+       "why": "They are not specific to OTS; mood changes in plain overreaching too."
+      },
+      {
+       "id": "c",
+       "text": "Objective measures were never studied, so there is no comparison",
+       "why": "Many objective measures were studied and compared."
+      },
+      {
+       "id": "d",
+       "text": "Athletes cannot misreport how they feel, so the data are exact",
+       "why": "Self-reports can be biased; their strength is sensitivity to load."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hr-hrr",
+   "concept": "ot-hr",
+   "bloom": "apply",
+   "sources": [
+    "bellenger2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a hard 3-week block a runner's heart rate recovery is faster than before. Why should a coach not read this as simply \"fitter\"?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HRR also rises in response to overreaching, so it cannot separate the two",
+       "correct": true,
+       "why": "Right: the same shift occurs with good and with poor adaptation."
+      },
+      {
+       "id": "b",
+       "text": "HRR can only fall after hard training",
+       "why": "Studies report rises with overreaching and both rises and falls in other designs."
+      },
+      {
+       "id": "c",
+       "text": "A faster HRR is a sign of overtraining syndrome",
+       "why": "It is not a marker of OTS."
+      },
+      {
+       "id": "d",
+       "text": "HRR is not related to the autonomic nervous system",
+       "why": "It is an indirect marker of autonomic function."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hr-use",
+   "concept": "ot-hr",
+   "bloom": "evaluate",
+   "sources": [
+    "kreher2016",
+    "halson2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete wants one number to decide when to ease off. Which plan fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Follow HR trends with mood scores and a standard performance test",
+       "correct": true,
+       "why": "Right: no single marker exists, so markers are read together as individual trends."
+      },
+      {
+       "id": "b",
+       "text": "Use morning HRV alone and ignore the rest",
+       "why": "One marker cannot separate overreaching states; HRV can also be noisy."
+      },
+      {
+       "id": "c",
+       "text": "Use a monthly blood test alone",
+       "why": "No single blood marker is reliable enough on its own."
+      },
+      {
+       "id": "d",
+       "text": "Use the year's best race result as the guide",
+       "why": "A race result comes too late and is not a recovery marker."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,676 @@
+{
+ "id": "inj-return",
+ "module": "t5-injury",
+ "title": "Return to sport and prevention",
+ "goal": "Describe a graded return after injury, read risk ratios from prevention trials, and say why strength training is the best-supported prevention and what limits that evidence.",
+ "requires": [
+  "inj-load-capacity"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "proprioception-training"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ir-continuum",
+   "title": "Return is a continuum, not a date",
+   "text": "Deciding when to return after injury is an exercise in risk management. A consensus of 17 clinicians says return to sport is a continuum that runs alongside recovery and rehab, not a single call at the end [[c:ir-cont]]. Evidence is scarce, so this is expert opinion.\n\nFor bone and tendon, the general shape is a graded return: modified loading, then a progressive return to running [[c:ir-grade]]. An illustration (not a tested protocol):\n\n| stage | example | check before next step |\n|---|---|---|\n| 1 | brisk walking | pain-free |\n| 2 | walk–jog | pain-free, also next day |\n| 3 | easy continuous run | pain-free, also next day |\n| 4 | normal training | steady for a week |",
+   "claims": [
+    {
+     "id": "ir-cont",
+     "text": "Return to sport should be seen as a continuum alongside recovery and rehabilitation, and evidence to support return decisions is scarce.",
+     "grade": "strong",
+     "sources": [
+      "ardern2016"
+     ],
+     "evidence": [
+      {
+       "source": "ardern2016",
+       "quote": "Instead, return to sport should be viewed as a continuum, paralleled with recovery and rehabilitation.",
+       "level": "abstract"
+      },
+      {
+       "source": "ardern2016",
+       "quote": "Research evidence to support return to sport decisions in clinical practice is scarce.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ir-grade",
+     "text": "Most bone stress injuries heal with a period of modified loading and a progressive return to running.",
+     "grade": "moderate",
+     "sources": [
+      "warden2014"
+     ],
+     "evidence": [
+      {
+       "source": "warden2014",
+       "quote": "While most BSIs readily heal following a period of modified loading and a progressive return to running activities, the high recurrence rate of BSIs signals a need to address their underlying causative factors.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-cont"
+  },
+  {
+   "type": "question",
+   "item": "ir-date-apply"
+  },
+  {
+   "type": "concept",
+   "id": "ir-strength",
+   "title": "Strength training: the best-supported prevention",
+   "text": "What cuts injury risk? A [meta-analysis](g:meta-analysis) of 25 trials (26,610 participants, 3,464 injuries) found strength training had the strongest effect: a [risk ratio](g:risk-ratio) (RR) of 0.315, and overuse injuries could be almost halved [[c:ir-s14]]. RR is the risk with the programme divided by the risk without it.",
+   "claims": [
+    {
+     "id": "ir-s14",
+     "text": "In a meta-analysis of 25 trials, strength training cut sports injuries to less than a third and overuse injuries almost by half.",
+     "grade": "moderate",
+     "sources": [
+      "lauersen2014"
+     ],
+     "evidence": [
+      {
+       "source": "lauersen2014",
+       "quote": "Strength training reduced sports injuries to less than 1/3 and overuse injuries could be almost halved.",
+       "level": "abstract"
+      },
+      {
+       "source": "lauersen2014",
+       "quote": "25 trials, including 26 610 participants with 3464 injuries, were analysed.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ir-rr-example",
+   "title": "From risk ratio to injuries",
+   "problem": "Without a programme, 100 of 1000 athletes would be injured over a season. Strength training has an RR of 0.315. How many injuries do you expect with it?",
+   "steps": [
+    "Expected injuries with the programme = injuries without it × RR.",
+    "100 × 0.315 = 31.5, so about 32 injuries.",
+    "That is 100 − 31.5 = 68.5 fewer, a 68.5% cut (1 − RR)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-rr-meaning"
+  },
+  {
+   "type": "question",
+   "item": "ir-rr-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "ir-others",
+   "title": "What did not work, and one caveat",
+   "text": "Not every programme works. Stretching alone had no clear effect: RR 0.963, with a 95% CI of 0.846–1.095, which sits around 1 [[c:ir-stretch]]. Balance training ([proprioception training](g:proprioception-training)) had an RR of 0.55 and programmes mixing several types 0.655.\n\nA caveat: the overall effect was heterogeneous, so the trials differed [[c:ir-het]]. The pooled 0.315 is an average over different sports, ages and programmes, not a promise for one athlete.",
+   "claims": [
+    {
+     "id": "ir-stretch",
+     "text": "Stretching alone showed no clear injury reduction (RR 0.963), while proprioception training, mixed programmes and strength training all reduced injuries.",
+     "grade": "moderate",
+     "sources": [
+      "lauersen2014"
+     ],
+     "evidence": [
+      {
+       "source": "lauersen2014",
+       "quote": "Stratified exposure analyses proved no beneficial effect for stretching (RR 0.963 (0.846-1.095)), whereas studies with multiple exposures (RR 0.655 (0.520-0.826)), proprioception training (RR 0.550 (0.347-0.869)), and strength training (RR 0.315 (0.207-0.480)) showed a tendency towards increasing effect.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ir-het",
+     "text": "The overall effect estimate was heterogeneous across trials.",
+     "grade": "moderate",
+     "sources": [
+      "lauersen2014"
+     ],
+     "evidence": [
+      {
+       "source": "lauersen2014",
+       "quote": "The overall effect estimate on injury prevention was heterogeneous.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-stretch"
+  },
+  {
+   "type": "question",
+   "item": "ir-het"
+  },
+  {
+   "type": "question",
+   "item": "ir-choose-apply"
+  },
+  {
+   "type": "concept",
+   "id": "ir-s18",
+   "title": "A second look, and its limits",
+   "text": "A 2018 review looked only at strength training. Six trials (7,738 participants aged 12–40, 177 injuries) gave an RR of 0.338 (95% CI 0.238–0.480) [[c:ir-s18-claim]]. It agrees with the 2014 result from a smaller, narrower set of studies.\n\nThe authors also report that each 10% more strength training volume cut injury risk by over four percentage points. That came from a post-hoc meta-regression: an extra analysis, chosen after the main one, that fits a line through just six trials [[c:ir-dose]]. Read it as a hint to explore, not a dose to copy.\n\nThe abstract doesn't say how many athletes were endurance athletes, so check before applying it to running or cycling.",
+   "claims": [
+    {
+     "id": "ir-s18-claim",
+     "text": "Six trials of strength training gave a pooled RR of 0.338 for acute and overuse injuries, in 7738 people aged 12 to 40.",
+     "grade": "moderate",
+     "sources": [
+      "lauersen2018"
+     ],
+     "evidence": [
+      {
+       "source": "lauersen2018",
+       "quote": "Cluster-adjusted intention-to-treat analysis established RR 0.338 (0.238-0.480).",
+       "level": "abstract"
+      },
+      {
+       "source": "lauersen2018",
+       "quote": "7738 participants aged 12-40 years were included and sustained 177 acute or overuse injuries.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ir-dose",
+     "text": "A post-hoc meta-regression found that a 10% rise in strength training volume cut injury risk by more than four percentage points.",
+     "grade": "weak",
+     "sources": [
+      "lauersen2018"
+     ],
+     "evidence": [
+      {
+       "source": "lauersen2018",
+       "quote": "A 10% increase in strength training volume reduced the risk of injury by more than four percentage points.",
+       "level": "abstract"
+      },
+      {
+       "source": "lauersen2018",
+       "quote": "Qualitative analyses, relative risk (RR) estimate with robustness and strength of evidence tests, formal tests of publication bias and post-hoc meta-regression were performed.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ir-appraise"
+  },
+  {
+   "type": "question",
+   "item": "ir-dose-item"
+  },
+  {
+   "type": "concept",
+   "id": "ir-together",
+   "title": "Putting it together",
+   "text": "The module's pieces fit. A previous injury is the best-supported risk factor, and bone stress injuries often recur, so do not just wait for the pain to settle. Rebuild in stages, keep load changes modest, make sure energy availability is adequate, and add strength work.\n\nStrength training builds tissue capacity from the capacity side of the model. How to programme it for endurance athletes is in the strength module.\n\nNone of this takes injury risk to zero; it shifts the odds.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "ir-plan"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Return to sport is a continuum alongside rehab and a risk decision; expert evidence is scarce.",
+    "Strength training had the lowest risk ratio (0.315) in the 2014 meta-analysis; stretching alone showed no clear effect.",
+    "Risk ratio: baseline injuries times RR gives expected injuries; 1 minus RR is the relative cut.",
+    "The 2018 review agrees (RR 0.338), but with few trials and a post-hoc dose estimate."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ir-cont",
+   "concept": "ir-continuum",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "ardern2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "How does the 2016 consensus say return to sport should be viewed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As one decision made on the day the pain stops",
+       "why": "The statement says it is not a single call at the end."
+      },
+      {
+       "id": "b",
+       "text": "As a continuum that runs alongside recovery and rehab",
+       "correct": true,
+       "why": "Right: return is paralleled with recovery and rehabilitation."
+      },
+      {
+       "id": "c",
+       "text": "As a test the athlete passes once at the end",
+       "why": "A single test misses the point that return is gradual."
+      },
+      {
+       "id": "d",
+       "text": "As a decision the coach makes alone",
+       "why": "The statement stresses collaboration between clinicians, athletes and coaches."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-date-apply",
+   "concept": "ir-continuum",
+   "bloom": "apply",
+   "sources": [
+    "ardern2016",
+    "warden2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a tibial BSI, a coach sets 'full training in 6 weeks, whatever happens.' What fits the consensus and the review better?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep the date: fixed dates keep athletes disciplined",
+       "why": "A fixed date ignores how the injury is responding."
+      },
+      {
+       "id": "b",
+       "text": "Use the date as a target, and step up only after each stage is tolerated",
+       "correct": true,
+       "why": "Right: return is a graded continuum and a risk decision, not a calendar."
+      },
+      {
+       "id": "c",
+       "text": "Drop all loading until the date, then restart at full volume",
+       "why": "The review describes modified loading, then progressive return, not rest then full load."
+      },
+      {
+       "id": "d",
+       "text": "Let the athlete decide alone, based on mood",
+       "why": "The statement describes a shared decision, weighing risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-rr-meaning",
+   "concept": "ir-strength",
+   "bloom": "understand",
+   "sources": [
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Strength training had a risk ratio of 0.315 for sports injuries. What does it mean in plain words?",
+     "options": [
+      {
+       "id": "a",
+       "text": "68.5% fewer injuries than the comparison groups",
+       "correct": true,
+       "why": "Right: 1 − 0.315 = 0.685."
+      },
+      {
+       "id": "b",
+       "text": "31.5% fewer injuries than the comparison groups",
+       "why": "Reads the RR itself as the cut; the cut is 1 minus RR."
+      },
+      {
+       "id": "c",
+       "text": "31.5% more injuries than the comparison groups",
+       "why": "An RR below 1 means fewer injuries, not more."
+      },
+      {
+       "id": "d",
+       "text": "68.5 fewer injuries per 100 athletes in any group",
+       "why": "Mixes relative and absolute: the count saved depends on the baseline."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-rr-calc",
+   "concept": "ir-strength",
+   "bloom": "apply",
+   "sources": [
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Without a programme, 200 of 1000 runners would be injured over a season. A prevention programme has an RR of 0.55. How many injuries do you expect with it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "90",
+       "why": "Subtracts instead: 200 × (1 − 0.55) is the injuries prevented."
+      },
+      {
+       "id": "b",
+       "text": "364",
+       "why": "Divides by the RR instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "199.45",
+       "why": "Subtracts the RR itself from the count."
+      },
+      {
+       "id": "d",
+       "text": "110",
+       "correct": true,
+       "why": "Right: 200 × 0.55 = 110."
+      }
+     ],
+     "solution": "Expected injuries = baseline × RR = 200 × 0.55 = 110."
+    },
+    {
+     "id": "b",
+     "stem": "Without a programme, 120 of 800 cyclists would be injured over a season. A programme has an RR of 0.40. How many injuries do you expect with it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "48",
+       "correct": true,
+       "why": "Right: 120 × 0.40 = 48."
+      },
+      {
+       "id": "b",
+       "text": "72",
+       "why": "That is the number prevented: 120 × (1 − 0.40)."
+      },
+      {
+       "id": "c",
+       "text": "300",
+       "why": "Divides by the RR instead of multiplying."
+      },
+      {
+       "id": "d",
+       "text": "119.6",
+       "why": "Subtracts the RR itself from the count."
+      }
+     ],
+     "solution": "Expected injuries = baseline × RR = 120 × 0.40 = 48."
+    },
+    {
+     "id": "c",
+     "stem": "Without a programme, 90 of 500 triathletes would be injured over a season. A programme has an RR of 0.70. How many injuries do you expect with it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "27",
+       "why": "That is the number prevented: 90 × (1 − 0.70)."
+      },
+      {
+       "id": "b",
+       "text": "129",
+       "why": "Divides by the RR instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "63",
+       "correct": true,
+       "why": "Right: 90 × 0.70 = 63."
+      },
+      {
+       "id": "d",
+       "text": "89.3",
+       "why": "Subtracts the RR itself from the count."
+      }
+     ],
+     "solution": "Expected injuries = baseline × RR = 90 × 0.70 = 63."
+    }
+   ]
+  },
+  {
+   "id": "ir-stretch",
+   "concept": "ir-others",
+   "bloom": "analyse",
+   "sources": [
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Stretching alone gave an RR of 0.963 (95% CI 0.846–1.095). How should this be read?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No clear effect: the interval runs from below 1 to above 1",
+       "correct": true,
+       "why": "Right: the data fit a small cut, no change or a small rise."
+      },
+      {
+       "id": "b",
+       "text": "Stretching causes injuries, because the RR is near 1",
+       "why": "An RR near 1 means no difference, not harm."
+      },
+      {
+       "id": "c",
+       "text": "Stretching cuts injuries by 96%",
+       "why": "Reads the RR as the size of the cut."
+      },
+      {
+       "id": "d",
+       "text": "It proves stretching is useless for every purpose",
+       "why": "It addresses injury prevention only, and the interval does not rule out a small effect."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-het",
+   "concept": "ir-others",
+   "bloom": "analyse",
+   "sources": [
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The meta-analysis called its overall effect 'heterogeneous'. What does that mean for the pooled RR of 0.315?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The trials differed, so 0.315 is an average, not a promise for one athlete",
+       "correct": true,
+       "why": "Right: sports, ages and programmes varied."
+      },
+      {
+       "id": "b",
+       "text": "The trials agreed closely, which makes the figure very precise",
+       "why": "Heterogeneous means the opposite of agreeing closely."
+      },
+      {
+       "id": "c",
+       "text": "The effect is real only in the strongest sport",
+       "why": "Heterogeneity does not say it is limited to one sport."
+      },
+      {
+       "id": "d",
+       "text": "The pooled figure is invalid and should be ignored",
+       "why": "It is still informative; it needs careful reading."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-choose-apply",
+   "concept": "ir-others",
+   "bloom": "apply",
+   "sources": [
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner can add one 20-minute prevention block twice a week. On the meta-analysis alone, which block fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Static stretching, since it showed the clearest benefit",
+       "why": "Stretching alone showed no clear effect."
+      },
+      {
+       "id": "b",
+       "text": "Strength training, which had the lowest RR",
+       "correct": true,
+       "why": "Right: RR 0.315 against 0.963 for stretching."
+      },
+      {
+       "id": "c",
+       "text": "Easy jogging, as extra load toughens tissue",
+       "why": "Not tested in this analysis, and extra load can raise risk."
+      },
+      {
+       "id": "d",
+       "text": "Foam rolling, as it speeds recovery",
+       "why": "Not tested in this analysis."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-appraise",
+   "concept": "ir-s18",
+   "bloom": "evaluate",
+   "sources": [
+    "lauersen2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach cites the 2018 review (six trials, 177 injuries, ages 12–40) to justify strength work for ultra-runners. What is the main limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The abstract doesn't show how many athletes were endurance athletes, and events were few",
+       "correct": true,
+       "why": "Right: few trials and events, and an unclear match to endurance sport."
+      },
+      {
+       "id": "b",
+       "text": "Meta-analyses of RCTs are never useful for training advice",
+       "why": "Meta-analyses of RCTs are the strongest design here; the match is the issue."
+      },
+      {
+       "id": "c",
+       "text": "Strength training is not safe, as the authors found",
+       "why": "The authors report the studies were safe."
+      },
+      {
+       "id": "d",
+       "text": "A 12–40 age range is too wide to use the data for adults",
+       "why": "The age range includes adults; the unclear sport mix is the larger limit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-dose-item",
+   "concept": "ir-s18",
+   "bloom": "analyse",
+   "sources": [
+    "lauersen2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The review reports that each 10% more strength volume cut injury risk by over four percentage points. Why be careful with this dose figure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It came from a post-hoc meta-regression across six trials, so it is a hint",
+       "correct": true,
+       "why": "Right: not planned in advance, and few trials."
+      },
+      {
+       "id": "b",
+       "text": "Meta-regression has never been used in sports science",
+       "why": "It is a common method; the issue is that it was post hoc."
+      },
+      {
+       "id": "c",
+       "text": "Strength volume cannot be measured in trials",
+       "why": "Trials can record volume; the issue is the analysis."
+      },
+      {
+       "id": "d",
+       "text": "It proves that unlimited volume prevents all injury",
+       "why": "A straight-line fit over six trials cannot show that."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ir-plan",
+   "concept": "ir-together",
+   "bloom": "analyse",
+   "sources": [
+    "saragiotto2014",
+    "warden2014",
+    "lauersen2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete had a tibial stress fracture last year, has low energy availability, and plans to jump from 25 to 40 km a week of running. Which plan fits the module best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wait until the pain settles, then follow the original plan",
+       "why": "Previous injury is a risk factor and BSIs recur: causes must be addressed."
+      },
+      {
+       "id": "b",
+       "text": "Staged build-up with modest rises, fix fuelling and add strength work",
+       "correct": true,
+       "why": "Right: it targets recurrence, low energy and tissue capacity."
+      },
+      {
+       "id": "c",
+       "text": "Stretch daily, as it protects against bone injury",
+       "why": "Stretching alone showed no clear effect, and it ignores the other risks."
+      },
+      {
+       "id": "d",
+       "text": "Cut running to nothing for good, as a repeat injury is certain",
+       "why": "Recurrence is high, but not certain; staged return is the standard."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

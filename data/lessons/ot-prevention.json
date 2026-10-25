@@ -1,0 +1,700 @@
+{
+ "id": "ot-prevention",
+ "module": "t5-overtraining",
+ "title": "Prevention and the way back",
+ "goal": "Plan load, recovery and monitoring to lower the risk of overreaching and OTS, and describe a careful return, knowing how thin the evidence is.",
+ "requires": [
+  "ot-diagnosis"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "progressive-overload",
+    "training-monotony",
+    "training-strain"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ot-load",
+   "title": "Raise load in steps, and vary it",
+   "text": "[Progressive overload](g:progressive-overload) means raising load in steps, so the body adapts before the next step. How to count and watch the steps ([session RPE](g:session-rpe), [ACWR](g:acwr)) is in the load lessons; here only what matters for overtraining: *variety*.\n\nFoster followed 25 experienced athletes, logging session RPE × minutes. Many illnesses, a commonly cited marker of OTS, came when an athlete passed a personal threshold, mostly of *strain* [[c:ot-foster]].\n\n- **Monotony** = daily mean ÷ [standard deviation](g:standard-deviation) (SD) of the daily loads.\n- **Strain** = weekly load × monotony.\n\nWith the same weekly load, a week of hard and easy days has a lower monotony and strain than a week where every day looks alike.",
+   "claims": [
+    {
+     "id": "ot-foster",
+     "text": "In 25 athletes, illnesses (a cited marker of OTS) were largely explained by athletes passing individual thresholds, mostly of training strain (load × monotony).",
+     "grade": "weak",
+     "sources": [
+      "foster1998"
+     ],
+     "evidence": [
+      {
+       "source": "foster1998",
+       "quote": "It was observed that a high percentage of illnesses could be accounted for when individual athletes exceeded individually identifiable training thresholds, mostly related to the strain of training.",
+       "level": "abstract"
+      },
+      {
+       "source": "foster1998",
+       "quote": "Illnesses were noted and correlated with indices of training load (rolling 6 wk average), monotony (daily mean/standard deviation), and strain (load x monotony).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "ot-strain-example",
+   "title": "Monotony and strain of a week",
+   "problem": "Daily loads in one week average 400 AU (arbitrary units, from session RPE × minutes) with an SD of 200 AU. Find monotony, weekly load and strain.",
+   "steps": [
+    "Monotony = daily mean ÷ SD = 400 ÷ 200 = 2.0.",
+    "Weekly load = 7 days × 400 AU = 2,800 AU.",
+    "Strain = weekly load × monotony = 2,800 × 2.0 = 5,600 AU."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-strain-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ot-mono-compare"
+  },
+  {
+   "type": "concept",
+   "id": "ot-recover",
+   "title": "Build recovery into the plan",
+   "text": "Prevention is mostly about education on risk factors and on ways to avoid heavy exercise with too little recovery [[c:ot-edu]]. Clinicians suggest a training log plus simple checks such as weight, morning heart rate and maximal heart rate [[c:ot-log]].\n\nStress from outside sport counts too: as training is periodised, the athlete should try to match life stress to training load, so that busy work weeks are not also peak training weeks [[c:ot-life]]. Planned recovery weeks and tapers (see the periodisation and taper lessons) belong here.\n\nFuel the load. A review notes that preventing under-recovery has many parts, but many rest on energy and carbohydrate availability (see the REDs and fuelling lessons) [[c:ot-fuel]].",
+   "claims": [
+    {
+     "id": "ot-edu",
+     "text": "Much of OTS prevention is education about risk factors and ways to avoid excessive stress without adequate recovery.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Therefore, much of the prevention of OTS is simply education of risk factors and ways to prevent excessive stress in the setting of excessive exercise without adequate recovery.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-log",
+     "text": "A training log and easy markers such as weight, morning heart rate and maximal heart rate are common-sense checks of recovery.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Common sense means to ensure adequate recovery include the following: keeping a training log and measuring easy physiologic markers, such as weight, morning heart rate, and maximal heart rate.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-life",
+     "text": "Athletes should try to periodise life stressors so they run inversely to training load.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "It seems self-evident that as the training schedule is periodized, the committed athlete should try to periodize life stressors of work and family (seeking to have personal stressors inversely related to training load).",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-fuel",
+     "text": "Preventing under-recovery has many parts, but many are based around energy and carbohydrate availability.",
+     "grade": "weak",
+     "sources": [
+      "stellingwerff2021"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2021",
+       "quote": "It is important to note that the prevention of under-recovery is multi-factorial, but many aspects are based around EA and CHO availability.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-recover-case"
+  },
+  {
+   "type": "question",
+   "item": "ot-fuel-plan"
+  },
+  {
+   "type": "concept",
+   "id": "ot-monitor",
+   "title": "Monitor, but with several measures",
+   "text": "No single marker is established [[c:ot-nosingle]]. A practical set from the literature: a training log; daily weight and morning HR; a short wellbeing questionnaire, since self-reports follow load well (see the monitoring lessons); and a repeated standard test, such as a 10 km run or 40 km time trial with the same conditions [[c:ot-standard-test]].\n\nNewer HRV and sleep monitors may help, but are not yet validated in studies [[c:ot-hrv-sleep]]. Read all of it as personal trends: a change that sticks across measures matters more than one odd day.",
+   "claims": [
+    {
+     "id": "ot-nosingle",
+     "text": "There is no single definitive marker of fatigue or overtraining.",
+     "grade": "moderate",
+     "sources": [
+      "halson2014"
+     ],
+     "evidence": [
+      {
+       "source": "halson2014",
+       "quote": "However, very few of these markers have strong scientific evidence supporting their use, and there is yet to be a single, definitive marker described in the literature.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-standard-test",
+     "text": "A repeated standardised workout, such as a 10 km run or 40 km bike time trial, is a common screening tool for prevention.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Another common screening tool to help prevention is repeated measure of a standardized workout, or performance test, such as a 10 km run or 40 km bike time trial just prior to rest period.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "ot-hrv-sleep",
+     "text": "Newer HRV and sleep monitors may give extra signs of inadequate recovery but are not yet validated in studies.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Newer monitors of heart rate variability and sleep may provide additional signs of inadequate recovery but are yet to be validated in studies.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-monitor-plan"
+  },
+  {
+   "type": "question",
+   "item": "ot-monitor-nosingle"
+  },
+  {
+   "type": "concept",
+   "id": "ot-return",
+   "title": "If it has already happened",
+   "text": "Evidence for treatment is thin: a review of the literature does not clearly direct diagnosis, management or prevention, though prevention is still worth the effort [[c:ot-thin]]. Recovery takes weeks to months in NFOR and many months in OTS, despite rest [[c:ot-recovery-time]].\n\nCommon practice, not tested in trials: cut the load that exceeds recovery, find and treat other causes (see the diagnosis lesson), fuel properly, then return in steps and watch symptoms and a repeat standard test before each step up.\n\nTreat this as sensible defaults from expert opinion, not proven rules.",
+   "claims": [
+    {
+     "id": "ot-thin",
+     "text": "The literature does not clearly direct diagnosis, management or prevention of OTS, but prevention should still be considered by all who work with endurance athletes.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Unfortunately, systematic review of the literature does not clearly direct diagnosis, management, or prevention. However, given the severity of symptoms and impairment to quality of life, prevention of overtraining syndrome should be considered by all who interact with endurance athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-recovery-time",
+     "text": "NFOR lasts weeks to months, while OTS needs many months to recover despite rest.",
+     "grade": "weak",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Nonfunctional OR shows decreases in performance for weeks to months while OTS is more severe and requires many months for recovery of performance despite rest",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-return-case"
+  },
+  {
+   "type": "question",
+   "item": "ot-return-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Raise load in steps and vary the days; high monotony and strain went with illness in one small study.",
+    "Strain = weekly load × monotony, with monotony = daily mean ÷ SD of daily loads.",
+    "Build in recovery: planned easy weeks and tapers, sleep, fuelling matched to load, and life stress matched to training load.",
+    "Monitor with several simple measures read as personal trends, since no single marker is established.",
+    "Evidence on treatment is thin: after a slump, check causes and return in steps, treating this as expert opinion."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ot-strain-calc",
+   "concept": "ot-load",
+   "bloom": "apply",
+   "sources": [
+    "foster1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's daily loads in a week average 500 AU with an SD of 250 AU. What is the week's training strain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "7,000 AU",
+       "correct": true,
+       "why": "Right: monotony 500 ÷ 250 = 2.0; load 7 × 500 = 3,500; strain 3,500 × 2.0."
+      },
+      {
+       "id": "b",
+       "text": "3,500 AU",
+       "why": "This is the weekly load; strain also multiplies by monotony."
+      },
+      {
+       "id": "c",
+       "text": "1,000 AU",
+       "why": "Used the daily mean (500) instead of the weekly load (3,500)."
+      },
+      {
+       "id": "d",
+       "text": "1,750 AU",
+       "why": "Inverted monotony (SD ÷ mean = 0.5), giving 3,500 × 0.5."
+      }
+     ],
+     "solution": "Monotony = 500 ÷ 250 = 2.0. Weekly load = 7 × 500 = 3,500 AU. Strain = 3,500 × 2.0 = 7,000 AU."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's daily loads in a week average 600 AU with an SD of 150 AU. What is the week's training strain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16,800 AU",
+       "correct": true,
+       "why": "Right: monotony 600 ÷ 150 = 4.0; load 7 × 600 = 4,200; strain 4,200 × 4.0."
+      },
+      {
+       "id": "b",
+       "text": "4,200 AU",
+       "why": "This is the weekly load; strain also multiplies by monotony."
+      },
+      {
+       "id": "c",
+       "text": "2,400 AU",
+       "why": "Used the daily mean (600) instead of the weekly load (4,200)."
+      },
+      {
+       "id": "d",
+       "text": "1,050 AU",
+       "why": "Inverted monotony (SD ÷ mean = 0.25), giving 4,200 × 0.25."
+      }
+     ],
+     "solution": "Monotony = 600 ÷ 150 = 4.0. Weekly load = 7 × 600 = 4,200 AU. Strain = 4,200 × 4.0 = 16,800 AU."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete's daily loads in a week average 300 AU with an SD of 100 AU. What is the week's training strain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "6,300 AU",
+       "correct": true,
+       "why": "Right: monotony 300 ÷ 100 = 3.0; load 7 × 300 = 2,100; strain 2,100 × 3.0."
+      },
+      {
+       "id": "b",
+       "text": "2,100 AU",
+       "why": "This is the weekly load; strain also multiplies by monotony."
+      },
+      {
+       "id": "c",
+       "text": "900 AU",
+       "why": "Used the daily mean (300) instead of the weekly load (2,100)."
+      },
+      {
+       "id": "d",
+       "text": "700 AU",
+       "why": "Inverted monotony (SD ÷ mean = 0.33), giving 2,100 × 0.33."
+      }
+     ],
+     "solution": "Monotony = 300 ÷ 100 = 3.0. Weekly load = 7 × 300 = 2,100 AU. Strain = 2,100 × 3.0 = 6,300 AU."
+    }
+   ]
+  },
+  {
+   "id": "ot-mono-compare",
+   "concept": "ot-load",
+   "bloom": "analyse",
+   "sources": [
+    "foster1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners each log 2,800 AU in a week. Runner A has an SD of 100 AU (steady days); Runner B has an SD of 300 AU (hard-easy days). Which has the higher strain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A: 11,200 AU, against 3,733 AU for B",
+       "correct": true,
+       "why": "Right: same load, but steady days raise monotony and so strain."
+      },
+      {
+       "id": "b",
+       "text": "B: harder days must mean higher strain",
+       "why": "B's hard-easy pattern lowers monotony; strain is lower, 3,733 AU."
+      },
+      {
+       "id": "c",
+       "text": "Equal: the weekly load is the same",
+       "why": "Strain also multiplies by monotony, which differs (4.0 vs 1.33)."
+      },
+      {
+       "id": "d",
+       "text": "Cannot tell without race results",
+       "why": "Strain follows from the load and the SD alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-recover-case",
+   "concept": "ot-recover",
+   "bloom": "apply",
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete plans a hard 3-week block. Week 3 has a big work deadline and two late nights. What fits the advice best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Move the peak week or cut its load, since life stress adds to the load",
+       "correct": true,
+       "why": "Right: match life stress to training load, not stack them."
+      },
+      {
+       "id": "b",
+       "text": "Keep week 3 as planned, since work stress is not training",
+       "why": "Recovery covers all stress, so work counts."
+      },
+      {
+       "id": "c",
+       "text": "Add a fourth hard week, to make up for the stress",
+       "why": "More load on top of stress is the stacking to avoid."
+      },
+      {
+       "id": "d",
+       "text": "Skip food prep to save time for sleep",
+       "why": "Cutting food undermines recovery; fuelling is part of prevention."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-fuel-plan",
+   "concept": "ot-recover",
+   "bloom": "apply",
+   "sources": [
+    "stellingwerff2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner raises weekly distance from 50 to 80 km but keeps the same food intake and loses weight. What is the best fix?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Raise energy and carbohydrate intake to match the new load",
+       "correct": true,
+       "why": "Right: under-fuelling is a common route to under-recovery."
+      },
+      {
+       "id": "b",
+       "text": "Keep eating the same and add a rest week every month",
+       "why": "Rest weeks help but do not fix an energy shortfall."
+      },
+      {
+       "id": "c",
+       "text": "Cut intake further to protect race weight",
+       "why": "A bigger shortfall raises the risk of under-recovery."
+      },
+      {
+       "id": "d",
+       "text": "Replace food with a recovery drink only",
+       "why": "A drink alone does not replace a day's energy and carbohydrate."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist on a 5-day training camp feels flat and eats the same as at home. What fits the review's advice?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Match energy and carbohydrate intake to the camp's higher load",
+       "correct": true,
+       "why": "Right: the review ties prevention to energy and carbohydrate availability."
+      },
+      {
+       "id": "b",
+       "text": "Eat less to stay light for the camp's last day",
+       "why": "Eating less raises the energy gap."
+      },
+      {
+       "id": "c",
+       "text": "Ignore food and rely on caffeine",
+       "why": "Caffeine masks tiredness; it does not replace energy."
+      },
+      {
+       "id": "d",
+       "text": "Train twice as hard to adapt faster",
+       "why": "More load with the same food widens the gap."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-monitor-plan",
+   "concept": "ot-monitor",
+   "bloom": "evaluate",
+   "sources": [
+    "kreher2016",
+    "halson2014",
+    "saw2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which monitoring routine for a cyclist fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Daily wellbeing and weight, a log and a standard test, as trends",
+       "correct": true,
+       "why": "Right: several simple measures are read together as personal trends."
+      },
+      {
+       "id": "b",
+       "text": "A single HRV reading taken once a week, on a Sunday",
+       "why": "One marker, sampled once a week, can miss real changes."
+      },
+      {
+       "id": "c",
+       "text": "A blood test taken once a season at the sports clinic",
+       "why": "One late marker comes too slowly to guide training."
+      },
+      {
+       "id": "d",
+       "text": "Race results only, as published after each event",
+       "why": "Results arrive too late to warn of under-recovery."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner wants a simple weekly check for under-recovery. Which choice fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A log, a mood score, and the same 10 km test route under the same conditions",
+       "correct": true,
+       "why": "A standardised test plus a log and a mood score covers several angles."
+      },
+      {
+       "id": "b",
+       "text": "The watch's single recovery score, taken as the answer",
+       "why": "Newer monitors are not yet validated; a single score is not enough."
+      },
+      {
+       "id": "c",
+       "text": "Weight alone, checked each Sunday",
+       "why": "Weight is one easy marker but cannot stand alone."
+      },
+      {
+       "id": "d",
+       "text": "How motivated the runner feels, as the only check",
+       "why": "Motivation is one subjective signal and needs support from other measures."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-monitor-nosingle",
+   "concept": "ot-monitor",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "halson2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why is a set of measures preferred to one marker?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No single definitive marker is known, and each has weak spots",
+       "correct": true,
+       "why": "Right: the review states that none is definitive."
+      },
+      {
+       "id": "b",
+       "text": "Single markers are always wrong",
+       "why": "They can be useful; they just cannot stand alone."
+      },
+      {
+       "id": "c",
+       "text": "More measures always raise accuracy to 100%",
+       "why": "More measures help but never make the call certain."
+      },
+      {
+       "id": "d",
+       "text": "The athlete's own judgement is never useful",
+       "why": "Subjective measures track load well and belong in the set."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-return-case",
+   "concept": "ot-return",
+   "bloom": "apply",
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist suspected of NFOR feels better after 10 days off and wants to restart the full old plan tomorrow. What fits the advice best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Return in steps, checking symptoms and a test before each step",
+       "correct": true,
+       "why": "Right: a stepped return with checks is the common-practice advice."
+      },
+      {
+       "id": "b",
+       "text": "Restart the full plan, because ten days off cured it",
+       "why": "A quick full restart risks a relapse into under-recovery."
+      },
+      {
+       "id": "c",
+       "text": "Stop training for a full year just to be on the safe side",
+       "why": "No evidence supports a year off; the return should be graded."
+      },
+      {
+       "id": "d",
+       "text": "Double the training load to make up for the lost fitness",
+       "why": "More load after a slump repeats the cause."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's 10 km time is still 6% slower after 4 weeks of easy training. What is the most sensible step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Re-check causes (food, iron, infection, sleep) and keep load low",
+       "correct": true,
+       "why": "Right: persistent slump after rest means checking causes again."
+      },
+      {
+       "id": "b",
+       "text": "Race a 10 km to see whether the old form is back now",
+       "why": "A race adds a maximal effort to an unresolved slump."
+      },
+      {
+       "id": "c",
+       "text": "Add speed sessions to wake the body up and restore form",
+       "why": "More intensity on an unexplained slump is the opposite of the advice."
+      },
+      {
+       "id": "d",
+       "text": "Conclude that it is OTS and stop all exercise for good",
+       "why": "The label needs exclusion first, and total rest is not proven."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-return-appraise",
+   "concept": "ot-return",
+   "bloom": "evaluate",
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The advice on prevention and return rests mainly on expert opinion. How should an athlete weigh it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "As sensible defaults, not proven rules; watch your own response",
+       "correct": true,
+       "why": "Right: expert opinion is a reasonable guide but untested in trials."
+      },
+      {
+       "id": "b",
+       "text": "As proven rules that come from many large trials",
+       "why": "The text states that the literature does not clearly direct management."
+      },
+      {
+       "id": "c",
+       "text": "As worthless, because it does not come from any trial",
+       "why": "Cheap, low-risk steps are still worth taking given the severity of OTS."
+      },
+      {
+       "id": "d",
+       "text": "As valid only for elite athletes who race at world level",
+       "why": "Nothing limits the advice to elite athletes; its limit is the weak evidence."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

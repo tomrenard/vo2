@@ -1,0 +1,823 @@
+{
+ "id": "heart-scd",
+ "module": "t5-heart",
+ "title": "Sudden cardiac death in sport",
+ "goal": "Describe how often sudden cardiac death occurs in sport, the usual causes by age, the screening debate and why fast CPR and defibrillation matter.",
+ "requires": [
+  "heart-af"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cardiac-arrest",
+    "athlete-year",
+    "case-fatality-rate",
+    "wpw",
+    "pre-participation-screening",
+    "false-positive",
+    "number-needed-to-screen",
+    "cpr",
+    "aed"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "scd-rate",
+   "title": "How rare is it?",
+   "text": "[Sudden cardiac death](g:sudden-cardiac-death) in sport is rare, not zero. It is a [cardiac arrest](g:cardiac-arrest) that was not reversed.\n\nUS high school athletes (14–18 years) were counted from media reports over six school years. The rate of sudden cardiac death was 1 per 101,082 [athlete-years](g:athlete-year); arrest or death, 1 per 67,064. In boys it was 1 per 44,832, in girls 1 per 237,510 (rate ratio 5.3) [[c:scd-harmon]].\n\nMedia-based counting misses cases, so these are minimum estimates [[c:scd-minimum]].",
+   "claims": [
+    {
+     "id": "scd-harmon",
+     "text": "In US high school athletes, sudden cardiac arrest or death occurred in 1 per 67,064 athlete-years: 1 per 44,832 in boys and 1 per 237,510 in girls.",
+     "grade": "moderate",
+     "sources": [
+      "harmon2016"
+     ],
+     "evidence": [
+      {
+       "source": "harmon2016",
+       "quote": "The rate of SCA/D in male athletes was 1:44,832 AY and in female athletes 1:237,510 AY (incidence rate ratio, 5.3",
+       "level": "abstract"
+      },
+      {
+       "source": "harmon2016",
+       "quote": "The rate of SCD was 1:101,082 AY and of SCA/D 1:67,064 AY.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-minimum",
+     "text": "Counting by media reports probably missed cases, so the reported rates are minimum estimates.",
+     "grade": "moderate",
+     "sources": [
+      "harmon2016"
+     ],
+     "evidence": [
+      {
+       "source": "harmon2016",
+       "quote": "It is likely that many cases were not identified because of reliance on media reports, and these numbers represent a minimum estimate.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hscd-rate-ex",
+   "title": "A rate per 100,000",
+   "problem": "Boys in US high school sport had 1 event per 44,832 athlete-years. What is that per 100,000 athlete-years?",
+   "steps": [
+    "Per 100,000 means divide 100,000 by the number in the '1 in …' form.",
+    "100,000 ÷ 44,832 = 2.23.",
+    "About 2.2 events per 100,000 athlete-years. A smaller 1-in number means a higher rate."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hscd-rate",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hscd-minimum"
+  },
+  {
+   "type": "concept",
+   "id": "scd-race",
+   "title": "Marathons and the swim",
+   "text": "US marathons and half-marathons, 2010–2023: 29.3 million finishers, 176 cardiac arrests, 0.54 per 100,000 finishers as the paper reports it. The paper calls this stable against 2000–2009 (0.60). Cardiac deaths fell from 0.39 to 0.20 per 100,000, and the [case-fatality rate](g:case-fatality-rate) from 71% to 34% [[c:scd-kim]]. Rates were higher in men (1.12) than women (0.19), and in the marathon (1.04) than the half (0.47).\n\nSwimming is a separate risk: in swimming deaths, cardiovascular disease was the main cause or a contributor, and unsafe water conditions a possible factor [[c:scd-yao]]. The sources read for this lesson give no triathlon rate.",
+   "claims": [
+    {
+     "id": "scd-kim",
+     "text": "In US marathons and half-marathons 2010–2023 the arrest rate stayed the same as in 2000–2009 while deaths and case fatality fell.",
+     "grade": "moderate",
+     "sources": [
+      "kim2025"
+     ],
+     "evidence": [
+      {
+       "source": "kim2025",
+       "quote": "Despite increased participation in US long distance running races, cardiac arrest incidence remains stable. There has been a marked decline in cardiac arrest mortality, and coronary artery disease was the most common etiology among cases with sufficient cause-related data.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-yao",
+     "text": "In swimming deaths, cardiovascular disease was the main cause or a contributing factor; hazardous conditions were another possible risk.",
+     "grade": "weak",
+     "sources": [
+      "yao2024"
+     ],
+     "evidence": [
+      {
+       "source": "yao2024",
+       "quote": "It is found that cardiovascular disease is the main cause or contributing factor of death in swimming.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hscd-expect-ex",
+   "title": "Expected arrests in a race",
+   "problem": "A marathon has 40,000 finishers. The marathon rate is 1.04 arrests per 100,000 finishers. How many arrests would you expect?",
+   "steps": [
+    "Expected = finishers ÷ 100,000 × rate.",
+    "40,000 ÷ 100,000 = 0.4; 0.4 × 1.04 = 0.416.",
+    "About 0.42 per race: roughly one arrest every 2.4 such marathons. A real race has 0, 1 or more, never 0.42."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hscd-expect",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hscd-cfr"
+  },
+  {
+   "type": "concept",
+   "id": "scd-cause",
+   "title": "Who dies of what",
+   "text": "The cause depends on age.\n\n- **Young athletes.** In US high school boys almost half of cases were due to possible or confirmed cardiomyopathy [[c:scd-harmon2]]. In US college athletes screened with an ECG, the commonest serious find was [Wolff-Parkinson-White](g:wpw) (59% of 66 cases), then HCM (17%) [[c:scd-conway]].\n- **Over 35.** Coronary artery disease is the leading cause [[c:scd-cad]]. A cause was found in 67 of 128 marathon arrests; coronary disease beat HCM. In Catalonia sport deaths (mean age 56, 40% cycling), coronary disease led again [[c:scd-azeli]].",
+   "claims": [
+    {
+     "id": "scd-harmon2",
+     "text": "Almost half of sudden cardiac arrests or deaths in male US high school athletes were due to possible or confirmed cardiomyopathy.",
+     "grade": "moderate",
+     "sources": [
+      "harmon2016"
+     ],
+     "evidence": [
+      {
+       "source": "harmon2016",
+       "quote": "The rate of SCA/D in male high school athletes was 1:44,832 AY, with almost half due to possible or confirmed cardiomyopathy disease.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-conway",
+     "text": "Screening found a serious condition in 0.24% of US college athletes; WPW was the commonest, then HCM.",
+     "grade": "moderate",
+     "sources": [
+      "conway2026"
+     ],
+     "evidence": [
+      {
+       "source": "conway2026",
+       "quote": "A total of 66 (0.24%) athletes were diagnosed with a cardiovascular condition associated with serious morbidity or sudden cardiac arrest/death (SCA/D). Wolff-Parkinson-White was the most common diagnosis (n=39, 59.1%), followed by hypertrophic cardiomyopathy (n=11, 16.7%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-cad",
+     "text": "Coronary artery disease is the leading cause of sudden cardiac death in athletes over 35.",
+     "grade": "moderate",
+     "sources": [
+      "claessen2025",
+      "kim2025"
+     ],
+     "evidence": [
+      {
+       "source": "claessen2025",
+       "quote": "the potential for CAD should not be overlooked as it is the leading cause of sudden cardiac death in athletes >35 years of age",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-azeli",
+     "text": "In Catalan sports-related sudden deaths (mean age 55.8, 40% cycling), coronary artery disease was the leading cause.",
+     "grade": "moderate",
+     "sources": [
+      "azeli2025"
+     ],
+     "evidence": [
+      {
+       "source": "azeli2025",
+       "quote": "Cycling was practiced by 40.0%. Coronary artery disease was the leading cause of death, with no difference before and after lockdown.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hscd-age"
+  },
+  {
+   "type": "question",
+   "item": "hscd-cause-marathon"
+  },
+  {
+   "type": "concept",
+   "id": "scd-screen",
+   "title": "To screen, and how",
+   "text": "The American Heart Association advises a focused history and physical exam; the European Society of Cardiology adds an ECG [[c:scd-policy]]. A 2026 European consensus for children advises history, exam and ECG, starting no later than age 12.\n\nItaly has screened competitive athletes since 1982. In Veneto, athletes' sudden cardiovascular death fell 89% (3.6 to 0.4 per 100,000 person-years) from 1979–80 to 2003–04, mostly from fewer cardiomyopathy deaths [[c:scd-corrado]]. That is an observational trend, not a trial.\n\nIn US college athletes the ECG found 3.5 times more true cases than history and exam ([number needed to screen](g:number-needed-to-screen) 475 vs 1,661), with fewer [false positives](g:false-positive) (5% vs 17%) [[c:scd-conway2]].",
+   "claims": [
+    {
+     "id": "scd-policy",
+     "text": "The AHA recommends history and physical exam; the ESC recommends adding an ECG; a 2026 European consensus for children advises history, exam and ECG starting no later than age 12.",
+     "grade": "strong",
+     "sources": [
+      "patel2011",
+      "pieles2026"
+     ],
+     "evidence": [
+      {
+       "source": "pieles2026",
+       "quote": "This document advises that cardiac screening of paediatric athletes with personal and family medical history, physical examination and 12-lead resting electrocardiogram (ECG) should be performed and should start no later than the age of 12 years.",
+       "level": "abstract"
+      },
+      {
+       "source": "patel2011",
+       "quote": "The American Heart Association recommends a focused history and physical examination. The European Society of Cardiology recommends that all examinations include an electrocardiogram (ECG).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-corrado",
+     "text": "In Veneto, Italy, sudden cardiovascular death in young athletes fell 89% after nationwide ECG screening began, mostly through fewer cardiomyopathy deaths; the study is observational.",
+     "grade": "moderate",
+     "sources": [
+      "corrado2006"
+     ],
+     "evidence": [
+      {
+       "source": "corrado2006",
+       "quote": "A nationwide systematic preparticipation athletic screening was introduced in Italy in 1982.",
+       "level": "abstract"
+      },
+      {
+       "source": "corrado2006",
+       "quote": "The annual incidence of sudden cardiovascular death in athletes decreased by 89% (from 3.6/100,000 person-years in 1979-1980 to 0.4/100,000 person-years in 2003-2004",
+       "level": "abstract"
+      },
+      {
+       "source": "corrado2006",
+       "quote": "Mortality reduction was predominantly due to a lower incidence of sudden death from cardiomyopathies that paralleled the increasing identification of athletes with cardiomyopathies at preparticipation screening.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-conway2",
+     "text": "In US college athletes, ECG screening found 3.5 times more true cases than history and exam, with fewer false positives (5% vs 17%).",
+     "grade": "moderate",
+     "sources": [
+      "conway2026"
+     ],
+     "evidence": [
+      {
+       "source": "conway2026",
+       "quote": "ECG screening resulted in a 3.5-fold higher detection rate of true positive cases (number needed to screen (NNS) =475) compared with H&P alone (NNS=1661). The false positive rate for H&P was 17% versus 5% for ECG",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Should every athlete get an ECG before playing?",
+    "sides": [
+     {
+      "position": "Yes: the ECG finds more true cases than history and exam with fewer false alarms, and Italy's rate fell after screening began.",
+      "sources": [
+       "conway2026",
+       "corrado2006"
+      ]
+     },
+     {
+      "position": "Not as a mandate: too much is unknown, so offer the option and explain the debate.",
+      "sources": [
+       "patel2011"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "example",
+   "id": "hscd-nns-ex",
+   "title": "Number needed to screen",
+   "problem": "A university has 2,000 athletes. ECG screening has a number needed to screen of 475. How many true cases would you expect it to find?",
+   "steps": [
+    "Number needed to screen = people screened per true case found.",
+    "Cases = 2,000 ÷ 475 = 4.2.",
+    "About 4 true cases. Fewer than 1 in 400 people screened is a true case, which is why false positives matter."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hscd-nns",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hscd-policy"
+  },
+  {
+   "type": "concept",
+   "id": "scd-cpr",
+   "title": "The first minutes",
+   "text": "Whatever the screening, survival depends on the first minutes. After a collapse: call for help, start [CPR](g:cpr), fetch an [AED](g:aed).\n\nIn the US races, deaths fell by about half while the arrest rate stayed flat: the case-fatality rate went from 71% to 34% [[c:scd-kim2]]. Survival went with a shorter CPR time and a first rhythm that was a ventricular tachyarrhythmia, the kind a shock can treat. The authors suggest effective emergency planning with immediate access to defibrillation may explain it.\n\nIn Catalan sport deaths only 62.8% of 156 got a CPR attempt [[c:scd-azeli2]].",
+   "claims": [
+    {
+     "id": "scd-kim2",
+     "text": "In US races, survival went with a shorter CPR time and an initial ventricular tachyarrhythmia; the authors suggest emergency action plans with immediate defibrillation may explain falling mortality.",
+     "grade": "moderate",
+     "sources": [
+      "kim2025"
+     ],
+     "evidence": [
+      {
+       "source": "kim2025",
+       "quote": "Decreased cardiopulmonary resuscitation time and an initial ventricular tachyarrhythmia rhythm were associated with survival.",
+       "level": "abstract"
+      },
+      {
+       "source": "kim2025",
+       "quote": "Effective emergency action planning with immediate access to defibrillation may explain the improvement in survival.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "scd-azeli2",
+     "text": "Only 62.8% of 156 autopsied sports-related sudden deaths in Catalonia received a CPR attempt.",
+     "grade": "moderate",
+     "sources": [
+      "azeli2025"
+     ],
+     "evidence": [
+      {
+       "source": "azeli2025",
+       "quote": "Of the total number of SrSD, 98 (62.8%) received a cardiopulmonary resuscitation (CPR) attempt.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hscd-survival"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Sudden cardiac death in sport is rare: about 1 in 44,832 athlete-years in US high school boys, with 5 times fewer events in girls.",
+    "US marathon arrests stayed at 0.54 per 100,000 finishers, but case fatality halved from 71% to 34%.",
+    "Young athletes: mainly cardiomyopathy and rhythm conditions. Over 35: coronary artery disease.",
+    "AHA advises history and exam; ESC adds the ECG. In US college athletes the ECG found 3.5 times more true cases; Italy's decline is observational.",
+    "Quick CPR and a shock for a shockable rhythm are linked to survival."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hscd-rate",
+   "concept": "scd-rate",
+   "bloom": "apply",
+   "sources": [
+    "harmon2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Boys in US high school sport had 1 event per 44,832 athlete-years. What is that per 100,000 athlete-years?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.2",
+       "why": "Right: 100,000 ÷ 44,832 = 2.23.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 0.45",
+       "why": "This divides 44,832 by 100,000, the wrong way round."
+      },
+      {
+       "id": "c",
+       "text": "About 22",
+       "why": "This slips the decimal point by one place."
+      }
+     ],
+     "solution": "100,000 ÷ 44,832 = 2.23 per 100,000 athlete-years."
+    },
+    {
+     "id": "b",
+     "stem": "Girls in US high school sport had 1 event per 237,510 athlete-years. What is that per 100,000 athlete-years?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2.4",
+       "why": "This divides 237,510 by 100,000, the wrong way round."
+      },
+      {
+       "id": "b",
+       "text": "About 0.42",
+       "why": "Right: 100,000 ÷ 237,510 = 0.42.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 4.2",
+       "why": "This slips the decimal point by one place."
+      }
+     ],
+     "solution": "100,000 ÷ 237,510 = 0.42 per 100,000 athlete-years."
+    },
+    {
+     "id": "c",
+     "stem": "All US high school athletes had 1 arrest or death per 67,064 athlete-years. What is that per 100,000 athlete-years?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.67",
+       "why": "This divides 67,064 by 100,000, the wrong way round."
+      },
+      {
+       "id": "b",
+       "text": "About 15",
+       "why": "This slips the decimal point by one place."
+      },
+      {
+       "id": "c",
+       "text": "About 1.5",
+       "why": "Right: 100,000 ÷ 67,064 = 1.49.",
+       "correct": true
+      }
+     ],
+     "solution": "100,000 ÷ 67,064 = 1.49 per 100,000 athlete-years."
+    }
+   ]
+  },
+  {
+   "id": "hscd-minimum",
+   "concept": "scd-rate",
+   "bloom": "analyse",
+   "sources": [
+    "harmon2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why are the US high school rates called minimum estimates?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cases were found through media reports, which miss some",
+       "why": "Right: reliance on media reports likely missed events.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Athlete-years were counted twice for multi-sport athletes",
+       "why": "The authors applied a conversion factor for multi-sport athletes; that is not the reason."
+      },
+      {
+       "id": "c",
+       "text": "Only deaths with an autopsy were counted",
+       "why": "Autopsy reports were reviewed, but the stated limit is media-based case finding."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hscd-expect",
+   "concept": "scd-race",
+   "bloom": "apply",
+   "sources": [
+    "kim2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathon has 40,000 finishers. With 1.04 arrests per 100,000 finishers, how many arrests would you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4.2",
+       "why": "This slips the decimal point by one place."
+      },
+      {
+       "id": "b",
+       "text": "About 0.42",
+       "why": "Right: 40,000 ÷ 100,000 × 1.04 = 0.416.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 416",
+       "why": "This divides by 100 instead of 100,000."
+      }
+     ],
+     "solution": "40,000 ÷ 100,000 = 0.4; × 1.04 = 0.416."
+    },
+    {
+     "id": "b",
+     "stem": "A half-marathon has 25,000 finishers. With 0.47 arrests per 100,000 finishers, how many arrests would you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1.2",
+       "why": "This slips the decimal point by one place."
+      },
+      {
+       "id": "b",
+       "text": "About 118",
+       "why": "This divides by 100 instead of 100,000."
+      },
+      {
+       "id": "c",
+       "text": "About 0.12",
+       "why": "Right: 25,000 ÷ 100,000 × 0.47 = 0.1175.",
+       "correct": true
+      }
+     ],
+     "solution": "25,000 ÷ 100,000 = 0.25; × 0.47 = 0.1175."
+    },
+    {
+     "id": "c",
+     "stem": "A city race has 60,000 finishers. With 0.54 arrests per 100,000 finishers, how many arrests would you expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.32",
+       "why": "Right: 60,000 ÷ 100,000 × 0.54 = 0.324.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 3.2",
+       "why": "This slips the decimal point by one place."
+      },
+      {
+       "id": "c",
+       "text": "About 324",
+       "why": "This divides by 100 instead of 100,000."
+      }
+     ],
+     "solution": "60,000 ÷ 100,000 = 0.6; × 0.54 = 0.324."
+    }
+   ]
+  },
+  {
+   "id": "hscd-cfr",
+   "concept": "scd-race",
+   "bloom": "analyse",
+   "sources": [
+    "kim2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "US race arrests were 0.60 and then 0.54 per 100,000, but case fatality fell from 71% to 34%. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Fewer runners now have heart disease",
+       "why": "The arrest rate, which would show that, did not change."
+      },
+      {
+       "id": "b",
+       "text": "Arrests did not become rarer, but more people survived",
+       "why": "Right: the arrest rate is flat; the share who die fell.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Screening has cut the number of arrests",
+       "why": "The data show no fall in arrests, and screening was not tested."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hscd-age",
+   "concept": "scd-cause",
+   "bloom": "apply",
+   "sources": [
+    "harmon2016",
+    "claessen2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 17-year-old footballer and a 56-year-old cyclist both collapse and die in sport. Which causes are the most likely?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Coronary disease for the teenager, cardiomyopathy for the cyclist",
+       "why": "This swaps the age pattern."
+      },
+      {
+       "id": "b",
+       "text": "HCM for both, since both are athletes",
+       "why": "HCM matters in the young; over 35 coronary artery disease leads."
+      },
+      {
+       "id": "c",
+       "text": "Cardiomyopathy for the teenager, coronary disease for the cyclist",
+       "why": "Right: young cases are mostly inherited heart-muscle disease, older ones coronary disease.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hscd-cause-marathon",
+   "concept": "scd-cause",
+   "bloom": "remember",
+   "sources": [
+    "kim2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Among US marathon arrests with a known cause, which was the most common?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Coronary artery disease",
+       "why": "Right: it was the most common cause.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Hypertrophic cardiomyopathy",
+       "why": "HCM was not the most common in runners with a known cause."
+      },
+      {
+       "id": "c",
+       "text": "Wolff-Parkinson-White",
+       "why": "WPW was the commonest find in college screening, not in race arrests."
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  },
+  {
+   "id": "hscd-nns",
+   "concept": "scd-screen",
+   "bloom": "apply",
+   "sources": [
+    "conway2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A university has 2,000 athletes. ECG screening has a number needed to screen of 475. About how many true cases would it find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.24",
+       "why": "This divides 475 by 2,000, the wrong way round."
+      },
+      {
+       "id": "b",
+       "text": "About 4",
+       "why": "Right: 2,000 ÷ 475 = 4.2.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 950,000",
+       "why": "This multiplies instead of dividing."
+      }
+     ],
+     "solution": "2,000 ÷ 475 = 4.2 true cases."
+    },
+    {
+     "id": "b",
+     "stem": "A league screens 3,000 athletes by history and exam alone, number needed to screen 1,661. About how many true cases would it find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 0.55",
+       "why": "This divides 1,661 by 3,000, the wrong way round."
+      },
+      {
+       "id": "b",
+       "text": "About 3",
+       "why": "This uses a round 1,000 instead of 1,661."
+      },
+      {
+       "id": "c",
+       "text": "About 1.8",
+       "why": "Right: 3,000 ÷ 1,661 = 1.8.",
+       "correct": true
+      }
+     ],
+     "solution": "3,000 ÷ 1,661 = 1.8 true cases."
+    },
+    {
+     "id": "c",
+     "stem": "A national squad screens 5,000 athletes by ECG, number needed to screen 475. About how many true cases would it find?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 11",
+       "why": "Right: 5,000 ÷ 475 = 10.5.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 0.095",
+       "why": "This divides 475 by 5,000, the wrong way round."
+      },
+      {
+       "id": "c",
+       "text": "About 2.4 million",
+       "why": "This multiplies instead of dividing."
+      }
+     ],
+     "solution": "5,000 ÷ 475 = 10.5 true cases."
+    }
+   ]
+  },
+  {
+   "id": "hscd-policy",
+   "concept": "scd-screen",
+   "bloom": "evaluate",
+   "sources": [
+    "patel2011",
+    "corrado2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Italy's athlete deaths fell 89% after ECG screening began. Why is that not proof the ECG caused the fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Italy's data were not about athletes at all",
+       "why": "The study did follow young competitive athletes."
+      },
+      {
+       "id": "b",
+       "text": "It is an observational trend; other changes over 26 years could add",
+       "why": "Right: a trend over time cannot rule out other causes.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Screening only found disease and never changed deaths",
+       "why": "The authors link the fall to fewer cardiomyopathy deaths, but a trend cannot prove it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hscd-survival",
+   "concept": "scd-cpr",
+   "bloom": "understand",
+   "sources": [
+    "kim2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which two things were linked to survival in US race arrests?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runner's age and the finishing time of the race",
+       "why": "The abstract names CPR time and first rhythm, not these."
+      },
+      {
+       "id": "b",
+       "text": "The race distance and the air temperature on the day",
+       "why": "These were not the factors the study tied to survival."
+      },
+      {
+       "id": "c",
+       "text": "Shorter CPR time and a first rhythm of ventricular tachyarrhythmia",
+       "why": "Right: both were associated with survival.",
+       "correct": true
+      }
+     ]
+    }
+   ],
+   "recallFirst": true
+  }
+ ]
+}

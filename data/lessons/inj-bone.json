@@ -1,0 +1,680 @@
+{
+ "id": "inj-bone",
+ "module": "t5-injury",
+ "title": "Bone stress injuries",
+ "goal": "Explain how bone repair and damage balance, sort bone stress injuries by site, and say what raises risk and slows return.",
+ "requires": [
+  "inj-epidemiology"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "bone-remodelling",
+    "microdamage",
+    "cortical-bone",
+    "trabecular-bone"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ib-remodel",
+   "title": "Bone is always rebuilding",
+   "text": "Bone is living tissue. Every stride puts [microdamage](g:microdamage) into it. [Bone remodelling](g:bone-remodelling) repairs it: cells remove the damaged patch and other cells build new bone there. Normally repair keeps up.\n\nA bone stress injury (BSI) develops when damage forms faster than it is removed. The risk rests on two things: the load put through the bone, and the bone's ability to resist load [[c:ib-balance]]. Load is the easier of the two to change.\n\nThese injuries are common: in runners, stress fractures make up 15–20% of all musculoskeletal injuries [[c:ib-share]].",
+   "claims": [
+    {
+     "id": "ib-balance",
+     "text": "A BSI results when microdamage forms faster than it is removed; risk depends on the load applied and on the bone's ability to resist it.",
+     "grade": "moderate",
+     "sources": [
+      "warden2014"
+     ],
+     "evidence": [
+      {
+       "source": "warden2014",
+       "quote": "A BSI results from disruption of the homeostasis between microdamage formation and its removal.",
+       "level": "abstract"
+      },
+      {
+       "source": "warden2014",
+       "quote": "Microdamage accumulation and subsequent risk for development of a BSI are related both to the load applied to a bone and to the ability of the bone to resist load.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ib-share",
+     "text": "In runners, stress fractures account for 15–20% of all musculoskeletal injuries.",
+     "grade": "moderate",
+     "sources": [
+      "wright2015"
+     ],
+     "evidence": [
+      {
+       "source": "wright2015",
+       "quote": "Among runners, stress fractures account for 15-20% of all musculoskeletal injuries.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ib-balance"
+  },
+  {
+   "type": "question",
+   "item": "ib-share"
+  },
+  {
+   "type": "concept",
+   "id": "ib-sites",
+   "title": "A continuum, and sites that differ",
+   "text": "A BSI sits on a continuum. It begins as a stress reaction, can progress to a stress fracture and, in the end, to a complete fracture [[c:ib-continuum]].\n\nSites differ in risk. Researchers sort them into **high-risk** (pelvis, sacrum, femoral neck) and **low-risk** (tibia, fibula, metatarsals) [[c:ib-sites]].\n\nIn 211 collegiate track athletes, a higher MRI grade (a worse-looking injury on the scan), a lower [bone mineral density](g:bone-mineral-density) and injury at sites made mostly of [trabecular bone](g:trabecular-bone) (the spongy inside, against the dense outer shell of [cortical bone](g:cortical-bone)) all went with slower recovery [[c:ib-slow]].",
+   "claims": [
+    {
+     "id": "ib-continuum",
+     "text": "A BSI runs along a continuum from stress reaction to stress fracture to complete fracture.",
+     "grade": "moderate",
+     "sources": [
+      "warden2014"
+     ],
+     "evidence": [
+      {
+       "source": "warden2014",
+       "quote": "A BSI occurs along a pathology continuum that begins with a stress reaction, which can progress to a stress fracture and, ultimately, a complete bone fracture.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ib-sites",
+     "text": "BSIs are classed as high-risk (pelvis, sacrum, femoral neck) or low-risk (tibia, fibula, metatarsals).",
+     "grade": "moderate",
+     "sources": [
+      "tenforde2024"
+     ],
+     "evidence": [
+      {
+       "source": "tenforde2024",
+       "quote": "BSIs can be classified as high-risk (pelvis, sacrum, and femoral neck) or low-risk (tibia, fibula, and metatarsals).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ib-slow",
+     "text": "Higher MRI grade, lower bone density and mostly trabecular sites were linked to slower recovery of BSIs in track and field athletes.",
+     "grade": "moderate",
+     "sources": [
+      "nattiv2013"
+     ],
+     "evidence": [
+      {
+       "source": "nattiv2013",
+       "quote": "Higher MRI grade, lower BMD, and skeletal sites of predominant trabecular bone structures were associated with a delayed recovery of bone stress injuries in track and field athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ib-continuum"
+  },
+  {
+   "type": "question",
+   "item": "ib-sites-class",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "ib-slow"
+  },
+  {
+   "type": "concept",
+   "id": "ib-risk",
+   "title": "Who gets them: low energy matters",
+   "text": "A [meta-analysis](g:meta-analysis) of runner studies found only two risk factors strongly supported by the data: a previous stress fracture and female sex [[c:ib-wright]].\n\nFor women, [low energy availability](g:low-energy-availability) adds to the risk. In 259 active girls and women, 10.8% had a BSI. Risk was about 15–20% with one triad-related factor (low body mass index, irregular or absent periods, strict dietary restraint, low bone density, long training hours) and 30–50% when factors combined [[c:ib-triad]].\n\nIn a small study, women with a past high-risk BSI had lower spine bone density than those with a low-risk one [[c:ib-bmd]]. The REDs module covers why low energy hurts bone, and the effects in men and cyclists.",
+   "claims": [
+    {
+     "id": "ib-wright",
+     "text": "Previous stress fracture and female sex are the only risk factors for lower-limb stress fracture in runners strongly supported by pooled data.",
+     "grade": "moderate",
+     "sources": [
+      "wright2015"
+     ],
+     "evidence": [
+      {
+       "source": "wright2015",
+       "quote": "Currently, only previous history of stress fracture and female sex are risk factors for lower extremity stress fractures strongly supported by the data.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ib-triad",
+     "text": "BSI risk rose from about 15–20% with one triad-related factor to 30–50% with several combined; low energy availability is a named risk factor.",
+     "grade": "moderate",
+     "sources": [
+      "barrack2014",
+      "tenforde2024"
+     ],
+     "evidence": [
+      {
+       "source": "barrack2014",
+       "quote": "the risk of BSIs increased from approximately 15% to 20% for significant single risk factors to 30% to 50% for significant combined female athlete triad-related risk factor variables.",
+       "level": "abstract"
+      },
+      {
+       "source": "tenforde2024",
+       "quote": "Risk factors for BSI include low energy availability, menstrual dysfunction, and poor bone health.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ib-bmd",
+     "text": "Women with a past high-risk BSI were more likely to have poor-bone-health markers such as lower BMD than those with a low-risk BSI; load rates did not tell them apart.",
+     "grade": "weak",
+     "sources": [
+      "tenforde2024"
+     ],
+     "evidence": [
+      {
+       "source": "tenforde2024",
+       "quote": "Women with a history of high-risk BSI were more likely to exhibit risk factors for poor bone health, including lower BMD, while load rates did not distinguish women with a history of BSI.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ib-wright"
+  },
+  {
+   "type": "question",
+   "item": "ib-triad-apply"
+  },
+  {
+   "type": "question",
+   "item": "ib-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "ib-return",
+   "title": "Healing and return to running",
+   "text": "Most BSIs heal with a period of modified loading and a progressive return to running. They often come back, so the causes need work too [[c:ib-recur]]. The review lists three levers: training-programme design, lower impact forces, and stronger local muscle (calf for tibial injuries, foot muscles for metatarsal injuries).\n\nNo fixed number of weeks fits everyone. Grade, site and bone density shift the timeline (see the earlier card), and athletes with low energy availability need the fuelling fixed as well as the load.\n\nThe how and when of building back up is the topic of the last lesson.",
+   "claims": [
+    {
+     "id": "ib-recur",
+     "text": "Most BSIs heal with modified loading and progressive return, but they recur often, so underlying causes must be addressed.",
+     "grade": "moderate",
+     "sources": [
+      "warden2014"
+     ],
+     "evidence": [
+      {
+       "source": "warden2014",
+       "quote": "While most BSIs readily heal following a period of modified loading and a progressive return to running activities, the high recurrence rate of BSIs signals a need to address their underlying causative factors.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ib-recur"
+  },
+  {
+   "type": "question",
+   "item": "ib-lea-analyse"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Remodelling repairs the microdamage each load causes; a BSI is damage outrunning repair.",
+    "A BSI runs from stress reaction to stress fracture to complete fracture; pelvis, sacrum and femoral neck are high-risk sites, tibia, fibula and metatarsals low-risk.",
+    "Previous stress fracture and female sex are the best-supported risk factors; low energy availability and low bone density add to it.",
+    "Most heal with modified loading, but recurrence is high, so fix the causes too."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ib-balance",
+   "concept": "ib-remodel",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "warden2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What lets a bone stress injury develop?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One hard impact cracks the bone, as in an acute fracture",
+       "why": "That describes an acute fracture; a BSI builds up over many loads."
+      },
+      {
+       "id": "b",
+       "text": "Microdamage forms faster than remodelling can repair it",
+       "correct": true,
+       "why": "Right: damage outpaces removal and repair."
+      },
+      {
+       "id": "c",
+       "text": "Training makes bone stop remodelling altogether",
+       "why": "Training does not switch remodelling off; repair is normally keeping up."
+      },
+      {
+       "id": "d",
+       "text": "Bone is dead tissue, so it cannot repair itself",
+       "why": "Bone is living and constantly renewed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-share",
+   "concept": "ib-remodel",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "wright2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What share of runners' musculoskeletal injuries are stress fractures?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1–2%",
+       "why": "Far too low for running: they are a common injury."
+      },
+      {
+       "id": "b",
+       "text": "About 5%",
+       "why": "Still too low; the pooled estimate is higher."
+      },
+      {
+       "id": "c",
+       "text": "About 15–20%",
+       "correct": true,
+       "why": "Right: about one injury in five or six."
+      },
+      {
+       "id": "d",
+       "text": "About 40–50%",
+       "why": "Too high; most runners' injuries are other types."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-continuum",
+   "concept": "ib-sites",
+   "bloom": "understand",
+   "sources": [
+    "warden2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In what order does a bone stress injury progress along its continuum?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Stress fracture, stress reaction, complete fracture",
+       "why": "Reverses the first two stages: the reaction comes first."
+      },
+      {
+       "id": "b",
+       "text": "Complete fracture, stress fracture, stress reaction",
+       "why": "Runs the other way round: damage builds toward a break."
+      },
+      {
+       "id": "c",
+       "text": "Stress reaction, complete fracture, stress fracture",
+       "why": "A complete fracture is the end of the line, not the middle."
+      },
+      {
+       "id": "d",
+       "text": "Stress reaction, stress fracture, complete fracture",
+       "correct": true,
+       "why": "Right: irritation first, then a stress fracture, and at the end a full break."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-sites-class",
+   "concept": "ib-sites",
+   "bloom": "apply",
+   "sources": [
+    "tenforde2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A marathon runner has a bone stress injury at the femoral neck. How is the site classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High-risk, like the pelvis and sacrum",
+       "correct": true,
+       "why": "Right: pelvis, sacrum and femoral neck are the high-risk sites."
+      },
+      {
+       "id": "b",
+       "text": "Low-risk, like the tibia and fibula",
+       "why": "The tibia and fibula are the low-risk sites; the femoral neck is not."
+      },
+      {
+       "id": "c",
+       "text": "Not classed: the scheme covers only the foot",
+       "why": "The scheme covers many sites, not only the foot."
+      },
+      {
+       "id": "d",
+       "text": "Low-risk, as long as it is not a full fracture",
+       "why": "Risk class depends on the site, not on the stage."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete has a bone stress injury in a metatarsal after a run block. How is the site classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "High-risk, like the femoral neck",
+       "why": "The femoral neck is high-risk; a metatarsal is not."
+      },
+      {
+       "id": "b",
+       "text": "Low-risk, like the tibia and fibula",
+       "correct": true,
+       "why": "Right: tibia, fibula and metatarsals are the low-risk sites."
+      },
+      {
+       "id": "c",
+       "text": "High-risk, because the foot takes every impact",
+       "why": "Class follows the site list, not how much impact the foot takes."
+      },
+      {
+       "id": "d",
+       "text": "Not classed: only bones in the leg count",
+       "why": "The metatarsals are on the low-risk list."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "A distance runner has a bone stress injury at the sacrum. How is the site classed?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low-risk, as it is not a weight-bearing leg bone",
+       "why": "The sacrum is on the high-risk list."
+      },
+      {
+       "id": "b",
+       "text": "Low-risk, like the tibia and fibula",
+       "why": "The tibia and fibula are low-risk; the sacrum is not."
+      },
+      {
+       "id": "c",
+       "text": "High-risk, like the pelvis and femoral neck",
+       "correct": true,
+       "why": "Right: pelvis, sacrum and femoral neck are the high-risk sites."
+      },
+      {
+       "id": "d",
+       "text": "Not classed: only the limbs are included",
+       "why": "The scheme includes the pelvis and sacrum."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-slow",
+   "concept": "ib-sites",
+   "bloom": "apply",
+   "sources": [
+    "nattiv2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two runners have a tibial BSI. Runner A has a low MRI grade and normal bone density. Runner B has a higher MRI grade and low bone density. What should the physio expect?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Runner A to take longer, since a milder injury is easy to overdo",
+       "why": "Milder grades went with faster return, not slower."
+      },
+      {
+       "id": "b",
+       "text": "Runner B to take longer to return to sport",
+       "correct": true,
+       "why": "Right: higher MRI grade and lower BMD were linked to slower recovery."
+      },
+      {
+       "id": "c",
+       "text": "Both to take the same time, since the site is the same",
+       "why": "Site is one predictor, but grade and density add to it."
+      },
+      {
+       "id": "d",
+       "text": "Neither can be forecast: recovery time is random",
+       "why": "The cohort found grade and density predicted time to return."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-wright",
+   "concept": "ib-risk",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "wright2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which two risk factors for lower-limb stress fracture in runners were strongly supported in the pooled data?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A previous stress fracture and female sex",
+       "correct": true,
+       "why": "Right: the two factors the meta-analysis named."
+      },
+      {
+       "id": "b",
+       "text": "High weekly distance and hard running surfaces",
+       "why": "Studied, but not strongly supported by the pooled data."
+      },
+      {
+       "id": "c",
+       "text": "Low body mass index and age over 40",
+       "why": "Not among the two supported factors in this analysis."
+      },
+      {
+       "id": "d",
+       "text": "Flat feet and a short leg",
+       "why": "Common ideas, but not strongly supported in the pooled data."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-triad-apply",
+   "concept": "ib-risk",
+   "bloom": "apply",
+   "sources": [
+    "barrack2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Runner A trains 14 h a week and has a normal BMI, regular periods and normal bone density. Runner B also trains 14 h a week, but has a BMI of 19.8, irregular periods and strict dietary restraint. What do the cohort figures suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both have the same risk, since training hours are equal",
+       "why": "Hours are one factor; B also has several others."
+      },
+      {
+       "id": "b",
+       "text": "Runner A is at higher risk: more bone mass hides injury",
+       "why": "Normal bone density does not raise risk."
+      },
+      {
+       "id": "c",
+       "text": "Runner B has higher risk: about 30–50% against 15–20% for one factor",
+       "correct": true,
+       "why": "Right: risk rose as triad-related factors combined."
+      },
+      {
+       "id": "d",
+       "text": "Runner B is safe, as periods return after training stops",
+       "why": "Irregular periods are a risk factor in themselves."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-appraise",
+   "concept": "ib-risk",
+   "bloom": "evaluate",
+   "sources": [
+    "tenforde2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study measured bone density in 15 women with past high-risk BSI, 15 with low-risk BSI and 15 with none. High-risk women had lower spine density. What limits the claim that low density causes high-risk BSI?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The women were too young for bone density to matter",
+       "why": "Low bone density matters at any adult age; the design is the problem."
+      },
+      {
+       "id": "b",
+       "text": "Spine bone-density scans are too inexact to compare groups",
+       "why": "These scans are a standard tool; the design is the problem."
+      },
+      {
+       "id": "c",
+       "text": "It is a snapshot: density was measured after injury, so cause and effect are mixed",
+       "correct": true,
+       "why": "Right: a cross-sectional study cannot say which came first, and 15 per group is small."
+      },
+      {
+       "id": "d",
+       "text": "P values were reported, which makes any result unreliable",
+       "why": "Reporting P values does not make a result invalid."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-recur",
+   "concept": "ib-return",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "warden2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does the review say the causes of a BSI need work, not just time to heal?",
+     "options": [
+      {
+       "id": "a",
+       "text": "BSIs recur often, so causes left alone bring them back",
+       "correct": true,
+       "why": "Right: the high recurrence rate signals a need to address the causes."
+      },
+      {
+       "id": "b",
+       "text": "Bone only heals if its cause has been found first",
+       "why": "Most BSIs do heal with modified loading, cause found or not."
+      },
+      {
+       "id": "c",
+       "text": "A BSI that heals once is stronger and never returns",
+       "why": "The review says the opposite: recurrence is high."
+      },
+      {
+       "id": "d",
+       "text": "Healing needs complete rest from all activity",
+       "why": "The review describes modified loading and a progressive return, not complete rest."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ib-lea-analyse",
+   "concept": "ib-return",
+   "bloom": "analyse",
+   "sources": [
+    "warden2014",
+    "barrack2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach says a runner's BSI was purely a mileage problem: cut km and it is solved. What does the evidence suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "He is right: stress fractures come from distance alone",
+       "why": "Load is easier to change, but it is not the only factor."
+      },
+      {
+       "id": "b",
+       "text": "He is wrong: load plays no role; only diet matters",
+       "why": "Load is a main driver; diet adds to it."
+      },
+      {
+       "id": "c",
+       "text": "He is half right: load is easier to change, but energy and bone health set risk too",
+       "correct": true,
+       "why": "Right: bone load and bone ability to resist load both matter, and low energy availability is a risk factor."
+      },
+      {
+       "id": "d",
+       "text": "He is right for men, wrong for women",
+       "why": "These sources do not split the answer that way; the REDs module covers men."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

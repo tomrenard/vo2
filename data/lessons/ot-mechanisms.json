@@ -1,0 +1,810 @@
+{
+ "id": "ot-mechanisms",
+ "module": "t5-overtraining",
+ "title": "Why it happens: four hypotheses",
+ "goal": "Describe the glycogen, cytokine, autonomic and hypothalamic-pituitary hypotheses, say how well each is supported, and explain why low energy availability may explain much of what looks like overtraining.",
+ "requires": [
+  "ot-continuum"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cytokine",
+    "hpa-axis",
+    "acth",
+    "prolactin"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "ot-glycogen",
+   "title": "Hypothesis 1: glycogen",
+   "text": "The cause of OTS is not known: the exact cause and how it develops are still being studied [[c:ot-unknown]]. Four main ideas compete, and they may overlap.\n\nThe first is the [glycogen](g:glycogen) idea. Many days of heavy training can run muscle glycogen down, and low glycogen causes fatigue [[c:ot-glyc-fatigue]]. Swimmers who did not respond to more training had low glycogen and ate too little energy and carbohydrate. But cyclists who raised their carbohydrate intake to keep glycogen up still met the criteria of overreaching over 2 weeks. The author concluded that some other mechanism must be at work too [[c:ot-glyc-limit]]. So glycogen can contribute, but it does not explain everything (see the glycogen lessons for the store itself).",
+   "claims": [
+    {
+     "id": "ot-unknown",
+     "text": "The exact cause and mechanism of OTS are unknown.",
+     "grade": "strong",
+     "sources": [
+      "kreher2016"
+     ],
+     "evidence": [
+      {
+       "source": "kreher2016",
+       "quote": "Overtraining syndrome is a condition of maladapted physiology in the setting of excessive exercise without adequate rest. The exact etiology and pathogenesis are unknown and being investigated.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-glyc-fatigue",
+     "text": "Low muscle glycogen after consecutive days of heavy exercise causes fatigue and lower performance.",
+     "grade": "strong",
+     "sources": [
+      "snyder1998"
+     ],
+     "evidence": [
+      {
+       "source": "snyder1998",
+       "quote": "Low muscle glycogen levels due to consecutive days of extensive exercise have been shown to cause fatigue and thus decrements in performance.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-glyc-limit",
+     "text": "Cyclists who kept glycogen up with extra carbohydrate were still overreached, so glycogen cannot be the only mechanism.",
+     "grade": "weak",
+     "sources": [
+      "snyder1998"
+     ],
+     "evidence": [
+      {
+       "source": "snyder1998",
+       "quote": "However, cyclists who increased their training load for 2 wk but also increased carbohydrate intake to maintain muscle glycogen levels still met the criteria of over-reaching (short-term overtraining) and might have met the criteria for overtraining had the subjects been followed for a longer period of time.",
+       "level": "abstract"
+      },
+      {
+       "source": "snyder1998",
+       "quote": "Thus, some other mechanism than reduced muscle glycogen levels must be responsible for the development and occurrence of overtraining.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-glyc-test"
+  },
+  {
+   "type": "question",
+   "item": "ot-unknown-recall"
+  },
+  {
+   "type": "concept",
+   "id": "ot-cytokine",
+   "title": "Hypothesis 2: cytokines and inflammation",
+   "text": "The cytokine hypothesis starts from tissue damage. High volume or intensity with too little rest injures muscle, bone or joints. Immune cells (monocytes) are switched on and release [cytokines](g:cytokine) such as IL-1β, IL-6 and TNF-α. That produces inflammation across the whole body [[c:ot-cytokine-chain]].\n\nThe cytokines then signal the brain, causing \"sickness\" behaviour (low mood, lack of drive), and shift the liver and immune system. In this view OTS is a protective shut-down: the third stage of Selye's general adaptation syndrome (an old model of the stress response: alarm, resistance, then exhaustion), aimed at survival, not adaptation [[c:ot-cytokine-protect]].\n\nIt is a hypothesis paper from 2000: it gives clear predictions to test, and the evidence is still thin.",
+   "claims": [
+    {
+     "id": "ot-cytokine-chain",
+     "text": "The cytokine hypothesis: heavy training with too little rest causes tissue trauma, and activated monocytes release IL-1β, IL-6 and TNF-α, causing systemic inflammation.",
+     "grade": "weak",
+     "sources": [
+      "smith2000"
+     ],
+     "evidence": [
+      {
+       "source": "smith2000",
+       "quote": "It is argued that high volume/intensity training, with insufficient rest, will produce muscle and/or skeletal and/or joint trauma. Circulating monocytes are then activated by injury-related cytokines, and in turn produce large quantities of proinflammatory IL-1beta, and/or IL-6, and/or TNF-alpha, producing systemic inflammation.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-cytokine-protect",
+     "text": "In the cytokine hypothesis, OTS is a protective response, the third stage of Selye's general adaptation syndrome.",
+     "grade": "weak",
+     "sources": [
+      "smith2000"
+     ],
+     "evidence": [
+      {
+       "source": "smith2000",
+       "quote": "Theoretically, OTS is viewed as the third stage of Selye's general adaptation syndrome, with the focus being on recovery/survival, and not adaptation, and is deemed to be \"protective,\" occurring in response to excessive physical/physiological stress.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-cyt-start"
+  },
+  {
+   "type": "concept",
+   "id": "ot-autonomic",
+   "title": "Hypothesis 3: autonomic balance",
+   "text": "The autonomic idea says overreaching shifts the balance between the [sympathetic](g:sympathetic) and [parasympathetic](g:parasympathetic) branches (see the nervous-system lessons), which [HRV](g:hrv) can show. But the data disagree.\n\nIn 21 triathletes, the weekly mean of daily HRV showed *more* parasympathetic activity in the 13 who were functionally overreached. A single reading per week missed it, because HRV varies a lot from day to day [[c:ot-hrv-le]]. A meta-analysis found that resting HRV is largely unaffected by overreaching, perhaps because of method problems [[c:ot-hrv-bell]].",
+   "claims": [
+    {
+     "id": "ot-hrv-le",
+     "text": "Daily HRV averaged over each week showed a rise in parasympathetic modulation in functionally overreached triathletes; one weekly reading could miss it.",
+     "grade": "weak",
+     "sources": [
+      "lemeur2013"
+     ],
+     "evidence": [
+      {
+       "source": "lemeur2013",
+       "quote": "Using daily HRV recordings averaged over each week, this study detected a progressive increase in the parasympathetic modulation of HR in endurance athletes led to F-OR.",
+       "level": "abstract"
+      },
+      {
+       "source": "lemeur2013",
+       "quote": "It also revealed that due to a wide day-to-day variability, isolated, once per week HRV recordings may not detect training-induced autonomic modulations in F-OR athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-hrv-bell",
+     "text": "A meta-analysis found resting HRV largely unaffected by overreaching, possibly because of methodological problems.",
+     "grade": "moderate",
+     "sources": [
+      "bellenger2016"
+     ],
+     "evidence": [
+      {
+       "source": "bellenger2016",
+       "quote": "Resting HRV is largely unaffected by overreaching, although this may be the result of methodological issues that warrant further investigation.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does overreaching change resting HRV?",
+    "sides": [
+     {
+      "position": "Yes: weekly averages of daily HRV rose in parasympathetic measures in overreached triathletes.",
+      "sources": [
+       "lemeur2013"
+      ]
+     },
+     {
+      "position": "Mostly no: across studies, resting HRV was largely unaffected, though methods may hide an effect.",
+      "sources": [
+       "bellenger2016"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ot-hrv-direction"
+  },
+  {
+   "type": "question",
+   "item": "ot-hrv-weekly"
+  },
+  {
+   "type": "concept",
+   "id": "ot-hp",
+   "title": "Hypothesis 4: the brain's stress chain",
+   "text": "The [HPA axis](g:hpa-axis) is the brain's stress chain: hypothalamus, then pituitary, then [ACTH](g:acth), then adrenal [cortisol](g:cortisol). The pituitary also releases [prolactin](g:prolactin).\n\nIn two maximal tests 4 h apart, an overtrained athlete's ACTH fell 7% and prolactin rose only 14% in the second test; healthy cyclists' hormones rose more [[c:ot-hp-case]]. In a larger study, men with OTS (n = 14) had a smaller cortisol and ACTH response to a stress test than healthy athletes (cortisol 17.9 vs 21.7 µg·dL⁻¹). The authors read this as an adaptation of healthy athletes that is partly lost in OTS [[c:ot-hp-eros]].",
+   "claims": [
+    {
+     "id": "ot-hp-case",
+     "text": "One overtrained athlete showed a blunted hormone response in a second maximal test, pointing to a hypothalamic-pituitary problem.",
+     "grade": "weak",
+     "sources": [
+      "meeusen2004"
+     ],
+     "evidence": [
+      {
+       "source": "meeusen2004",
+       "quote": "The results of the case presentation of an overtrained athlete provide evidence of an altered and dysfunctional hypothalamic-pituitary axis response to two bouts of maximal exercise.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-hp-eros",
+     "text": "Healthy athletes showed hormonal adaptation to exercise that was partly lost in men with OTS.",
+     "grade": "weak",
+     "sources": [
+      "cadegiani2017"
+     ],
+     "evidence": [
+      {
+       "source": "cadegiani2017",
+       "quote": "The findings of the present study showed that healthy athletes disclose adaptions to exercises that helped improve sport-specific performance, whereas this sort of hormonal conditioning was at least partially lost in OTS",
+       "level": "abstract"
+      },
+      {
+       "source": "cadegiani2017",
+       "quote": "Conversely, mean cortisol response during an ITT was significantly higher in ATL (21.7 μg/dL; increase = 9.2 μg/dL) compared to OTS (17.9 μg/dL; 6.3 μg/dL) and NCS (16.9 μg/dL; 6.0 μg/dL) (p ≤ 0.001; p = 0.01).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "ot-hp-pattern"
+  },
+  {
+   "type": "question",
+   "item": "ot-hp-eros-read"
+  },
+  {
+   "type": "concept",
+   "id": "ot-lea",
+   "title": "Overlap with low energy availability",
+   "text": "OTS and [relative energy deficiency in sport](g:reds) (REDs, see the REDs lessons) share many symptoms. A review argues that both start in the hypothalamic-pituitary region and are shaped by low carbohydrate and [energy availability](g:energy-availability) [[c:ot-lea-shared]]. Of 21 overload or OTS studies that measured intake, 18 (86%) showed a fall in energy or carbohydrate availability [[c:ot-lea-18]].\n\nSo some \"overtraining\" may be under-fuelling misread. This is a narrative review by authors who make that case. It shows overlap and a link, not that low energy causes OTS.",
+   "claims": [
+    {
+     "id": "ot-lea-shared",
+     "text": "OTS and REDs have significant symptom overlap, with a shared hypothalamic-pituitary origin that low carbohydrate and energy availability can influence.",
+     "grade": "weak",
+     "sources": [
+      "stellingwerff2021"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2021",
+       "quote": "The symptom similarities between training-overload (with or without an Overtraining Syndrome (OTS) diagnosis) and Relative Energy Deficiency in Sport (RED-S) are significant, with both initiating from a hypothalamic-pituitary origin, that can be influenced by low carbohydrate (CHO) and energy availability (EA).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ot-lea-18",
+     "text": "18 of 21 training-overload or OTS studies showed a fall in energy or carbohydrate availability.",
+     "grade": "weak",
+     "sources": [
+      "stellingwerff2021"
+     ],
+     "evidence": [
+      {
+       "source": "stellingwerff2021",
+       "quote": "Eighteen of the 21 studies (86%) that met our criteria showed indications of an EA decrease or difference between two cohorts within a given study (n = 14 studies) or CHO availability decrease (n = 4 studies) during the training-overload/OTS period, resulting in both training-overload/OTS and RED-S symptom outcomes compared to control conditions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Is overtraining mostly under-fuelling?",
+    "sides": [
+     {
+      "position": "Largely yes: many OTS cases may be misread REDs, as 18 of 21 studies showed lower energy or carbohydrate availability.",
+      "sources": [
+       "stellingwerff2021"
+      ]
+     },
+     {
+      "position": "Not only: cyclists who kept glycogen up with carbohydrate were still overreached, and the consensus lists low energy as one cause to exclude among several.",
+      "sources": [
+       "snyder1998",
+       "meeusen2013"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "ot-lea-why"
+  },
+  {
+   "type": "question",
+   "item": "ot-lea-case"
+  },
+  {
+   "type": "question",
+   "item": "ot-lea-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "No hypothesis is proven; the cause and mechanism of OTS are unknown.",
+    "Glycogen can contribute to fatigue, but cyclists with extra carbohydrate still became overreached.",
+    "The cytokine idea links tissue damage to whole-body inflammation and a protective shut-down; evidence is thin.",
+    "Autonomic findings conflict, and one HRV reading a week can miss a change; hormone findings point to a blunted hypothalamic-pituitary response.",
+    "OTS and low energy availability overlap, so check fuelling before calling it overtraining."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ot-glyc-test",
+   "concept": "ot-glycogen",
+   "bloom": "analyse",
+   "sources": [
+    "snyder1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Cyclists add extra carbohydrate to hold muscle glycogen up through 2 hard weeks, and are still overreached. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Low glycogen is not the only cause of overreaching",
+       "correct": true,
+       "why": "Right: glycogen may contribute, but another mechanism must be involved too."
+      },
+      {
+       "id": "b",
+       "text": "Carbohydrate has no role in recovery",
+       "why": "Low glycogen does cause fatigue; the finding only shows it is not the whole story."
+      },
+      {
+       "id": "c",
+       "text": "Overreaching is purely psychological",
+       "why": "Nothing here shows that; hormonal and other body changes are reported as well."
+      },
+      {
+       "id": "d",
+       "text": "Glycogen was never low in these cyclists",
+       "why": "Glycogen was kept up on purpose, which is why the result is informative."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A swimmer's coach says OTS is simply low glycogen, so more carbohydrate will always prevent it. Which finding argues against this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cyclists with extra carbohydrate and kept glycogen still became overreached",
+       "correct": true,
+       "why": "Right: overreaching occurred even when glycogen was protected."
+      },
+      {
+       "id": "b",
+       "text": "Low glycogen makes hard sessions feel harder",
+       "why": "True, but it supports the coach rather than arguing against it."
+      },
+      {
+       "id": "c",
+       "text": "Swimmers who did not adapt ate too little carbohydrate",
+       "why": "This supports a role for carbohydrate, not against the claim."
+      },
+      {
+       "id": "d",
+       "text": "Glycogen is stored in both muscle and liver",
+       "why": "True, but it says nothing about whether glycogen explains OTS."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-unknown-recall",
+   "concept": "ot-glycogen",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "kreher2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What does current research say about the cause of overtraining syndrome?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The exact cause and mechanism are unknown and still under study",
+       "correct": true,
+       "why": "Right: several hypotheses exist, none settled."
+      },
+      {
+       "id": "b",
+       "text": "It is a proven lack of muscle glycogen",
+       "why": "Glycogen is one hypothesis and does not explain all cases."
+      },
+      {
+       "id": "c",
+       "text": "It is proven to come from chronic inflammation",
+       "why": "The cytokine idea is a hypothesis, not a settled cause."
+      },
+      {
+       "id": "d",
+       "text": "It is a proven fault of the heart's rhythm",
+       "why": "No such cause is established; autonomic findings are mixed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-cyt-start",
+   "concept": "ot-cytokine",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "smith2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the cytokine hypothesis, what starts the chain that ends in OTS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hard training with little rest damages tissue and primes immune cells",
+       "correct": true,
+       "why": "Right: injury-related cytokines lead to whole-body inflammation."
+      },
+      {
+       "id": "b",
+       "text": "A fall in muscle glycogen below a set threshold in the muscle",
+       "why": "That is the glycogen hypothesis, a different idea."
+      },
+      {
+       "id": "c",
+       "text": "A fault in the brain's chain of stress hormone signals",
+       "why": "That is the hypothalamic-pituitary idea; the cytokine idea starts at the tissue."
+      },
+      {
+       "id": "d",
+       "text": "Too much parasympathetic activity at rest and in sleep",
+       "why": "That is the autonomic idea, a different one."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which sequence matches the cytokine hypothesis?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tissue trauma, then cytokines, then inflammation and sickness behaviour",
+       "correct": true,
+       "why": "Right: injury leads to cytokines, then to systemic inflammation and brain signals."
+      },
+      {
+       "id": "b",
+       "text": "Low glycogen, then low blood sugar, then low mood",
+       "why": "This follows the glycogen idea and has no cytokine step."
+      },
+      {
+       "id": "c",
+       "text": "High cortisol, then low ACTH, then low prolactin",
+       "why": "This describes a stress-chain pattern, not inflammation."
+      },
+      {
+       "id": "d",
+       "text": "High vagal tone, then low heart rate, then fatigue",
+       "why": "This is an autonomic pattern, not the cytokine chain."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hrv-direction",
+   "concept": "ot-autonomic",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "lemeur2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In overreached triathletes, daily HRV averaged over the week changed in which direction?",
+     "options": [
+      {
+       "id": "a",
+       "text": "More parasympathetic modulation",
+       "correct": true,
+       "why": "Right: the weekly mean showed a rise in parasympathetic indices."
+      },
+      {
+       "id": "b",
+       "text": "More sympathetic modulation",
+       "why": "Stress sounds sympathetic, but the study found the opposite in weekly means."
+      },
+      {
+       "id": "c",
+       "text": "No change at all",
+       "why": "Single weekly readings showed none, but the weekly mean showed a change."
+      },
+      {
+       "id": "d",
+       "text": "Lower HRV on every single day",
+       "why": "Day-to-day values varied widely; the change appeared only in the weekly average."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hrv-weekly",
+   "concept": "ot-autonomic",
+   "bloom": "evaluate",
+   "sources": [
+    "lemeur2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist records HRV once, on Sundays, through a 3-week overload block, sees no trend and concludes there is no overreaching. What is the flaw?",
+     "options": [
+      {
+       "id": "a",
+       "text": "HRV is noisy day to day, so one weekly reading can miss a change",
+       "correct": true,
+       "why": "Right: weekly means of daily values detected the change that Sunday-only readings missed."
+      },
+      {
+       "id": "b",
+       "text": "HRV can only be measured reliably after an easy taper period",
+       "why": "HRV is measured at any time; the issue is how often."
+      },
+      {
+       "id": "c",
+       "text": "Overreaching never leaves any trace in the autonomic nervous system",
+       "why": "Some studies show changes; the flaw is the sparse sampling."
+      },
+      {
+       "id": "d",
+       "text": "Sunday readings are always biased by hard weekend training",
+       "why": "Day-to-day noise is the problem, not a Sunday effect."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner's HRV was read once a week during 3 hard weeks and showed no change. A friend says the weekly average of daily readings could still have shifted. Is the friend right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: daily noise can hide a trend that the weekly mean shows",
+       "correct": true,
+       "why": "Right: this is what the triathlete study found."
+      },
+      {
+       "id": "b",
+       "text": "No: an average of several days always hides real changes",
+       "why": "Averaging reduces day-to-day noise; it is how the trend was found."
+      },
+      {
+       "id": "c",
+       "text": "No: HRV never changes with any overload, so it cannot help",
+       "why": "Some studies show HRV changes with overload; the point is how it is sampled."
+      },
+      {
+       "id": "d",
+       "text": "Yes: but only if the readings are taken after a taper",
+       "why": "The shift appeared during the overload weeks; no taper is needed to see it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hp-pattern",
+   "concept": "ot-hp",
+   "bloom": "apply",
+   "sources": [
+    "meeusen2004"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two maximal tests 4 h apart: healthy athletes' ACTH and prolactin rise in the second test. One athlete's barely rise. Which idea does this fit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A blunted response of the hypothalamic-pituitary chain",
+       "correct": true,
+       "why": "Right: the pituitary hormones fail to rise as they do in healthy athletes."
+      },
+      {
+       "id": "b",
+       "text": "Low muscle glycogen",
+       "why": "Glycogen is not measured by these hormones; the pattern is a stress-chain one."
+      },
+      {
+       "id": "c",
+       "text": "Too much inflammation from muscle damage",
+       "why": "Cytokines are not measured here; the signal is in pituitary hormones."
+      },
+      {
+       "id": "d",
+       "text": "Too much parasympathetic tone",
+       "why": "Autonomic tone is not what ACTH and prolactin show."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-hp-eros-read",
+   "concept": "ot-hp",
+   "bloom": "analyse",
+   "sources": [
+    "cadegiani2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the EROS study, healthy athletes had a bigger cortisol response to a stress test than men with OTS or non-active men. What does this suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Training builds a hormonal adaptation that OTS partly loses",
+       "correct": true,
+       "why": "Right: the authors read healthy athletes' bigger response as an adaptation."
+      },
+      {
+       "id": "b",
+       "text": "OTS is caused by too much cortisol",
+       "why": "The OTS group had a smaller cortisol response, not a bigger one."
+      },
+      {
+       "id": "c",
+       "text": "Athletes and non-athletes respond the same",
+       "why": "Healthy athletes responded more strongly than both other groups."
+      },
+      {
+       "id": "d",
+       "text": "A big cortisol response is a sign of disease",
+       "why": "In this study it was seen in the healthy athletes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-lea-why",
+   "concept": "ot-lea",
+   "bloom": "understand",
+   "sources": [
+    "stellingwerff2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why do OTS and REDs overlap so much?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shared symptoms and a shared origin, both shaped by low energy",
+       "correct": true,
+       "why": "Right: the review reports similar symptoms and a shared origin."
+      },
+      {
+       "id": "b",
+       "text": "They are the same disease, only with two different names",
+       "why": "They overlap but are not the same; REDs has a defined energy cause."
+      },
+      {
+       "id": "c",
+       "text": "Only female athletes can get either one of the two",
+       "why": "REDs and OTS occur in both women and men."
+      },
+      {
+       "id": "d",
+       "text": "Both are caused only by too little sleep and nothing else",
+       "why": "Sleep matters, but the shared pathway reported is energy and carbohydrate availability."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-lea-case",
+   "concept": "ot-lea",
+   "bloom": "apply",
+   "sources": [
+    "stellingwerff2021",
+    "meeusen2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist rides 25 h a week, eats little on purpose, has lost weight, is tired with low mood, and power is flat. What is the best first thought?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Check energy and carbohydrate intake before calling it overtraining",
+       "correct": true,
+       "why": "Right: under-fuelling can cause the same picture and must be ruled out."
+      },
+      {
+       "id": "b",
+       "text": "It is overtraining, so add intervals to push through",
+       "why": "More load with too little food makes under-recovery worse."
+      },
+      {
+       "id": "c",
+       "text": "It is a mental problem, so ignore the weight loss",
+       "why": "Weight loss with fatigue and low mood points to a fuelling problem to check."
+      },
+      {
+       "id": "d",
+       "text": "It needs a taper only; food is unrelated",
+       "why": "Food intake is on the list of causes the consensus asks to exclude."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner is training for a marathon on 55 km a week with a strict low-carbohydrate diet. Fatigue and slow runs for 6 weeks. What fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Check for low energy or carbohydrate availability first",
+       "correct": true,
+       "why": "Right: under-fuelling is one of the causes to exclude before OTS."
+      },
+      {
+       "id": "b",
+       "text": "It is OTS, since fatigue lasted over a month",
+       "why": "The label needs other causes excluded first."
+      },
+      {
+       "id": "c",
+       "text": "It is functional overreaching, so keep going",
+       "why": "FOR ends with a gain after rest; 6 weeks of slowness without recovery does not fit."
+      },
+      {
+       "id": "d",
+       "text": "Run more slowly and keep the same diet",
+       "why": "Slower pace does not fix a fuelling shortfall."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ot-lea-appraise",
+   "concept": "ot-lea",
+   "bloom": "evaluate",
+   "sources": [
+    "stellingwerff2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Eighteen of 21 overload or OTS studies showed lower energy or carbohydrate availability. Why can we not say low energy availability causes OTS?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is a narrative review by authors arguing a case, and a link is not a cause",
+       "correct": true,
+       "why": "Right: overlap and association do not prove cause."
+      },
+      {
+       "id": "b",
+       "text": "Eighteen of 21 is too few studies for any conclusion",
+       "why": "The count is not tiny; the issue is the design and what it can show."
+      },
+      {
+       "id": "c",
+       "text": "Studies on energy are never relevant to athletes",
+       "why": "They are relevant; the issue is what the design can show."
+      },
+      {
+       "id": "d",
+       "text": "Carbohydrate availability cannot be measured",
+       "why": "It can be estimated; the limit is the design, not measurement alone."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

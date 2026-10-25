@@ -18,3 +18,5 @@ Report under 300 words: issues (severity blocker/important/nit, where, what, fix
 - Read data/README.md and src/lib/content.ts once; read your module's files, but `grep`/`jq` other modules' data instead of opening them.
 - Check all quotes in one batch: one script that fetches each DOI's abstract from Europe PMC and prints, per claim, whether its quote appears word for word. Fetch a full text only for quotes the abstract doesn't contain.
 - Aim for under 40 tool calls for the whole module.
+
+- Never put Tom's email or any personal data in a request to an outside service. Do not use Unpaywall (it needs an email); find open full texts via Europe PMC or OpenAlex (`open_access.oa_url`).

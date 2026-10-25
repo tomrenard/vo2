@@ -19,7 +19,7 @@ Other writers are working on other modules at the same time. Never edit curricul
 - Items: 1–3 variants, 3–4 options, one correct, distractors are real misconceptions, a `why` for every option, Bloom tag, ≥40% apply/analyse/evaluate per module, scenarios from running, cycling and triathlon in turn, `recallFirst` on items with a short answer. Each module needs at least one appraisal question when the module has research content.
 - Key claims marked [[c:id]] with grade, sources and an exact quoted supporting sentence (level abstract or full-text). Live debates get a `debate` box.
 - The only diagram that exists is "energy-systems": don't add diagrams; use small tables in text where a picture would help.
-- `requires`: the previous lesson in the module (first lesson: the last lesson of the previous module if it exists in curriculum.json, else []). `lastReviewed`: today, 2026-10-16.
+- `requires`: the previous lesson in the module (first lesson: the last lesson of the previous module if it exists in curriculum.json, else []). `lastReviewed`: today's date (run `date +%F`).
 - Keep to your module's scope; other modules cover the neighbouring topics.
 
 ## Sources
@@ -34,3 +34,5 @@ Report under 250 words: lessons written with item counts and Bloom split, source
 - Read data/README.md and src/lib/content.ts once. Don't `cat` other data files: look up what you need with `jq` or `grep` (e.g. `grep -rho '"terms":\[[^]]*\]' data/lessons/`, `jq 'keys' data/glossary/*.json`). Open one example lesson, not both.
 - Research in one batch: one script that queries Europe PMC for all your candidate papers and prints only title, DOI, year, first author and the abstract sentences you'll quote. No paper-by-paper browsing.
 - Write each lesson in one go, run `pnpm content:check --module <id>` once per lesson, fix, move on. Aim for under 40 tool calls for the whole module.
+
+- Never put Tom's email or any personal data in a request to an outside service. Do not use Unpaywall (it needs an email); find open full texts via Europe PMC or OpenAlex (`open_access.oa_url`).

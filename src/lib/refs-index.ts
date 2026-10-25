@@ -39,6 +39,16 @@ import g_t4_protein_recovery from "../../data/glossary/t4-protein-recovery.json"
 import g_t4_red_s from "../../data/glossary/t4-red-s.json";
 import g_t4_supplements from "../../data/glossary/t4-supplements.json";
 import g_t4_ultra_fuel from "../../data/glossary/t4-ultra-fuel.json";
+import g_t5_female from "../../data/glossary/t5-female.json";
+import g_t5_health from "../../data/glossary/t5-health.json";
+import g_t5_heart from "../../data/glossary/t5-heart.json";
+import g_t5_hrv from "../../data/glossary/t5-hrv.json";
+import g_t5_immunity from "../../data/glossary/t5-immunity.json";
+import g_t5_injury from "../../data/glossary/t5-injury.json";
+import g_t5_masters from "../../data/glossary/t5-masters.json";
+import g_t5_overtraining from "../../data/glossary/t5-overtraining.json";
+import g_t5_sleep from "../../data/glossary/t5-sleep.json";
+import g_t5_sports_medicine from "../../data/glossary/t5-sports-medicine.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -79,6 +89,16 @@ import s_t4_protein_recovery from "../../data/sources/t4-protein-recovery.json";
 import s_t4_red_s from "../../data/sources/t4-red-s.json";
 import s_t4_supplements from "../../data/sources/t4-supplements.json";
 import s_t4_ultra_fuel from "../../data/sources/t4-ultra-fuel.json";
+import s_t5_female from "../../data/sources/t5-female.json";
+import s_t5_health from "../../data/sources/t5-health.json";
+import s_t5_heart from "../../data/sources/t5-heart.json";
+import s_t5_hrv from "../../data/sources/t5-hrv.json";
+import s_t5_immunity from "../../data/sources/t5-immunity.json";
+import s_t5_injury from "../../data/sources/t5-injury.json";
+import s_t5_masters from "../../data/sources/t5-masters.json";
+import s_t5_overtraining from "../../data/sources/t5-overtraining.json";
+import s_t5_sleep from "../../data/sources/t5-sleep.json";
+import s_t5_sports_medicine from "../../data/sources/t5-sports-medicine.json";
 import type { Glossary, Source } from "./content";
 
 export const GLOSSARY = {
@@ -121,6 +141,16 @@ export const GLOSSARY = {
   ...g_t4_red_s,
   ...g_t4_supplements,
   ...g_t4_ultra_fuel,
+  ...g_t5_female,
+  ...g_t5_health,
+  ...g_t5_heart,
+  ...g_t5_hrv,
+  ...g_t5_immunity,
+  ...g_t5_injury,
+  ...g_t5_masters,
+  ...g_t5_overtraining,
+  ...g_t5_sleep,
+  ...g_t5_sports_medicine,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -163,4 +193,14 @@ export const SOURCES = {
   ...s_t4_red_s,
   ...s_t4_supplements,
   ...s_t4_ultra_fuel,
+  ...s_t5_female,
+  ...s_t5_health,
+  ...s_t5_heart,
+  ...s_t5_hrv,
+  ...s_t5_immunity,
+  ...s_t5_injury,
+  ...s_t5_masters,
+  ...s_t5_overtraining,
+  ...s_t5_sleep,
+  ...s_t5_sports_medicine,
 } as Record<string, Source>;
