@@ -1,0 +1,920 @@
+{
+ "id": "env-pollution",
+ "module": "t6-pollution-travel",
+ "title": "Air pollution and training",
+ "goal": "Explain how ozone, PM2.5 and NO₂ affect endurance exercise, why a higher breathing rate means a higher dose, and when to move, shorten or cancel a session.",
+ "requires": [
+  "cold-water"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "ozone",
+    "particulate-matter",
+    "pm25",
+    "no2",
+    "air-quality-index",
+    "inhaled-dose"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "pol-what",
+   "title": "Three pollutants to know",
+   "text": "[Ozone](g:ozone) forms when sunlight acts on traffic fumes, so it peaks on hot, sunny afternoons. [PM2.5](g:pm25) is a kind of [particulate matter](g:particulate-matter): specks small enough to reach deep into the lungs, from traffic, wood fires and wildfire smoke. [Nitrogen dioxide](g:no2) (NO₂) comes mostly from diesel traffic and is highest beside busy roads.\n\nAll three irritate the airways, and air pollution strains the heart and blood vessels too [[c:pol-harm]]. It matters most in exercise, because that is when you breathe the most air.\n\n| Pollutant | Main source | Peaks |\n|---|---|---|\n| Ozone | sunlight on fumes | hot afternoons |\n| PM2.5 | traffic, fires, smoke | rush hour, near fires |\n| NO₂ | diesel traffic | beside busy roads |",
+   "claims": [
+    {
+     "id": "pol-harm",
+     "text": "Short- and long-term breathing of air pollution harms the respiratory and cardiovascular systems.",
+     "grade": "moderate",
+     "sources": [
+      "rundell2012",
+      "giles2014"
+     ],
+     "evidence": [
+      {
+       "source": "rundell2012",
+       "quote": "Unfavourable effects on the respiratory and the cardiovascular systems from short-term and long-term inhalation of air pollution are well documented.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pol-match"
+  },
+  {
+   "type": "concept",
+   "id": "pol-dose",
+   "title": "Higher ventilation, higher dose",
+   "text": "Your [inhaled dose](g:inhaled-dose) is the pollutant level in the air × the air you breathe ([minute ventilation](g:minute-ventilation)) × the time. Hard exercise multiplies the middle term. Elite cyclists at about 70% of VO₂max breathed 89 L·min⁻¹; at rest, an adult breathes far less (we use 8 L·min⁻¹ below). In one study, cycling raised the particles deposited in the lungs 4.5 times compared with rest [[c:pol-dose-up]].\n\nSo a hard session costs more dose than an easy one in the same air, and a long one more than a short one. The sum counts air *breathed*; only part of it stays in the lungs.\n\nUnit check: 1 m³ = 1000 L, and pollutant levels are per m³.",
+   "claims": [
+    {
+     "id": "pol-dose-up",
+     "text": "Exercise raises ventilation and so the inhaled dose of pollutants: cycling raised deposited particles 4.5 times versus rest, and elite cyclists at about 70% VO₂max breathed 89 L·min⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "wu2024",
+      "koehle2024",
+      "gong1986"
+     ],
+     "evidence": [
+      {
+       "source": "wu2024",
+       "quote": "For instance, cycling increases the minute ventilation and total number of deposited particles by 4.5 times compared to resting",
+       "level": "full-text"
+      },
+      {
+       "source": "koehle2024",
+       "quote": "some of the characteristics of exercise, such as increased ventilation and pulmonary diffusing capacity, also increase the inhaled dose of air pollutants and the potential for adverse effects",
+       "level": "full-text"
+      },
+      {
+       "source": "gong1986",
+       "quote": "During submaximal exercise, average minute ventilation (VE) (89 L/min), VO2 (51 ml/min/kg or 72% VO2max), work load (260 W), and work time (57 min) were similar across all exposures.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "pol-dose-ex",
+   "title": "Dose from a ride",
+   "problem": "You ride 2 h at 90 L·min⁻¹ in air with PM2.5 at 25 µg·m⁻³. How much PM2.5 do you breathe in, and how does that compare with sitting 2 h at 8 L·min⁻¹?",
+   "steps": [
+    "Air breathed on the ride: 90 L·min⁻¹ × 120 min = 10,800 L.",
+    "Convert to m³: 10,800 ÷ 1000 = 10.8 m³.",
+    "Dose: 10.8 m³ × 25 µg·m⁻³ = 270 µg.",
+    "Resting: 8 × 120 = 960 L = 0.96 m³, and 0.96 × 25 = 24 µg.",
+    "Ratio: 270 ÷ 24 ≈ 11, the same as 90 ÷ 8: the ventilation ratio carries straight into the dose."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pol-dose-calc"
+  },
+  {
+   "type": "question",
+   "item": "pol-dose-why"
+  },
+  {
+   "type": "concept",
+   "id": "pol-ozone",
+   "title": "Ozone in the lab: 17 elite cyclists",
+   "text": "In a chamber at 31 °C, 17 top endurance cyclists breathed filtered air, 0.12 or 0.20 ppm (parts per million) of ozone on separate days. They rode 60 min at about 70% of VO₂max, then to exhaustion [[c:pol-gong]].\n\n| | 0.12 ppm | 0.20 ppm |\n|---|---|---|\n| Ride time to exhaustion | like filtered air | 30% shorter |\n| Peak work rate | like filtered air | 8% lower |\n| Fall in [FEV₁](g:fev1) after riding | 5.6% | 21.6% |\n\nThe steady ride was unchanged. The loss showed at maximal effort, where ozone symptoms probably limited 13 riders at 0.20 ppm.",
+   "claims": [
+    {
+     "id": "pol-gong",
+     "text": "At 0.20 ppm ozone in 31 °C, elite cyclists had 30% shorter time to exhaustion and a 21.6% fall in FEV₁; 0.12 ppm changed little.",
+     "grade": "weak",
+     "sources": [
+      "gong1986"
+     ],
+     "evidence": [
+      {
+       "source": "gong1986",
+       "quote": "However, significant reductions in peak VE (18%), VO2 (16%), tidal volume (22%), work load (8%), and ride time (30%) occurred in 0.20 ppm O3 compared with those in FA.",
+       "level": "abstract"
+      },
+      {
+       "source": "gong1986",
+       "quote": "Postexercise decrements in forced expired volume in one second (FEV1) averaged 5.6% and 21.6% in 0.12 and 0.20 ppm O3, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pol-ozone-gong"
+  },
+  {
+   "type": "concept",
+   "id": "pol-races",
+   "title": "Real races: smaller and messier",
+   "text": "Lab doses are high; race-day air is usually cleaner. In seven US marathons, air pollution rarely exceeded health standards [[c:pol-marathon]]. After allowing for heat, only PM10 was linked to slower times, in women: 1.4% per 10 µg·m⁻³.\n\nIn 2.76 million finishers at six major marathons, each 1 µg·m⁻³ more NO₂ went with a finish 1.43 min slower in men and 1.56 min in women. PM2.5 showed no clear link. The NO₂ effect was larger in recreational runners (2.12 min) than in elite runners (0.34 min).\n\nThese are links between race-day averages and results, not trials. Cities and courses differ, and the pollution figures are modelled for the city, not measured on each runner.",
+   "claims": [
+    {
+     "id": "pol-marathon",
+     "text": "In marathon results, higher race-day NO₂ (and, in women, PM10) went with slower finishing times; the links are modest and observational.",
+     "grade": "weak",
+     "sources": [
+      "marr2010",
+      "donaldson2026"
+     ],
+     "evidence": [
+      {
+       "source": "marr2010",
+       "quote": "For every 10-microg x m(-3) increase in PM(10), performance can be expected to decrease by 1.4%.",
+       "level": "abstract"
+      },
+      {
+       "source": "marr2010",
+       "quote": "The concentrations of air pollution present during marathons rarely exceed health-based national standards and levels known to affect lung function in laboratory situations.",
+       "level": "abstract"
+      },
+      {
+       "source": "donaldson2026",
+       "quote": "Each 1 µg/m3 increase was associated with 1.43 min slower finishing time in men (95% confidence interval [CI] 0.66 to 2.21) and 1.56 min in women (95% CI 0.63 to 2.48).",
+       "level": "abstract"
+      },
+      {
+       "source": "donaldson2026",
+       "quote": "Recreational runners experienced NO₂ effects approximately six-fold larger than elite runners (2.12 vs 0.34 min per µg/m3)",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pol-race-appraise"
+  },
+  {
+   "type": "question",
+   "item": "pol-race-gap"
+  },
+  {
+   "type": "concept",
+   "id": "pol-balance",
+   "title": "Is it still worth going out?",
+   "text": "Exercise protects health, so the question is the trade. A model of all-cause deaths found that at the global average city PM2.5 (22 µg·m⁻³), the benefits of active travel far outweigh the pollution risk [[c:pol-balance]]. At 100 µg·m⁻³, harm passes benefit after about 1 h 30 min of cycling a day (a long-term daily average).\n\nHarder riding raises dose per kilometre, yet in one review the acute effects of diesel exhaust did not look worse at higher intensity. People also seem to acclimate to ozone, but not to other pollutants [[c:pol-koehle]].\n\nSo most days, train. On bad days, change the plan.",
+   "claims": [
+    {
+     "id": "pol-balance",
+     "text": "At typical city PM2.5 (22 µg·m⁻³) the benefit of activity far outweighs the pollution risk in a model; at 100 µg·m⁻³ harm passes benefit after about 1 h 30 min of cycling a day.",
+     "grade": "weak",
+     "sources": [
+      "tainio2016"
+     ],
+     "evidence": [
+      {
+       "source": "tainio2016",
+       "quote": "For the global average urban background PM2.5 concentration (22μg/m3) benefits of PA by far outweigh risks from air pollution even under the most extreme levels of active travel.",
+       "level": "abstract"
+      },
+      {
+       "source": "tainio2016",
+       "quote": "In areas with PM2.5 concentrations of 100μg/m3, harms would exceed benefits after 1h 30min of cycling per day or more than 10h of walking per day.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "pol-koehle",
+     "text": "Higher intensity raises the inhaled dose, but the acute effects of diesel exhaust do not look larger; people acclimate to ozone but not to other pollutants.",
+     "grade": "weak",
+     "sources": [
+      "koehle2024"
+     ],
+     "evidence": [
+      {
+       "source": "koehle2024",
+       "quote": "Although higher intensity exercise leads to an increase in the inhaled dose of pollutants for a given distance traveled, the acute effects of (diesel exhaust) air pollution do not appear to be more pronounced.",
+       "level": "abstract"
+      },
+      {
+       "source": "koehle2024",
+       "quote": "Third, humans appear to have an ability to acclimate to ground level ozone, but not other pollutants.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Should you train outdoors when the air is only moderately polluted?",
+    "sides": [
+     {
+      "position": "Yes: in a model, activity benefits outweigh the pollution risk at typical city levels, so skipping training costs more than it saves.",
+      "sources": [
+       "tainio2016"
+      ]
+     },
+     {
+      "position": "Be careful: dose rises with ventilation, and race results slow in a dose-dependent way as NO₂ rises, so adjust on bad days.",
+      "sources": [
+       "donaldson2026",
+       "giles2014"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "pol-balance-q"
+  },
+  {
+   "type": "question",
+   "item": "pol-intensity"
+  },
+  {
+   "type": "concept",
+   "id": "pol-act",
+   "title": "Using the air quality index",
+   "text": "The [air quality index](g:air-quality-index) is the quick check. On the US scale, 0–50 is good, 101–150 is 'unhealthy for sensitive groups' and above 150 some healthy people feel effects too [[c:pol-aqi-us]]. Other countries use other scales, so learn yours. One index cannot give personal advice [[c:pol-aqi-limit]], so pair it with these steps [[c:pol-advice]]:\n\n- **Move:** train early morning or late evening, away from rush hour and afternoon ozone; pick parks over main roads.\n- **Shorten:** keep planned sessions under 60 min when air is poor.\n- **Swap:** go indoors, or do strength work.\n- **Cancel:** in the worst bands (a sensible rule, not a tested cut-off).\n\nNo athlete cut-offs come from the sources used here.",
+   "claims": [
+    {
+     "id": "pol-aqi-us",
+     "text": "On the US AQI, 0–50 is good, 101–150 is unhealthy for sensitive groups, and from 151 some members of the general public may feel health effects.",
+     "grade": "strong",
+     "sources": [
+      "airnow2026"
+     ],
+     "evidence": [
+      {
+       "source": "airnow2026",
+       "quote": "Air quality is satisfactory, and air pollution poses little or no risk.",
+       "level": "full-text"
+      },
+      {
+       "source": "airnow2026",
+       "quote": "Members of sensitive groups may experience health effects. The general public is less likely to be affected.",
+       "level": "full-text"
+      },
+      {
+       "source": "airnow2026",
+       "quote": "Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pol-aqi-limit",
+     "text": "The air quality indices used in many countries are not enough for personal advice on physical activity.",
+     "grade": "weak",
+     "sources": [
+      "wu2024"
+     ],
+     "evidence": [
+      {
+       "source": "wu2024",
+       "quote": "The Air Quality Index (AQI) and Air Quality Health Index (AQHI) currently used in many countries are insufficient to provide individual/personalized physical activity advice to the general public.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "pol-advice",
+     "text": "When air quality is poor: limit planned exercise to under 60 min, run early morning or late evening, and use strength work indoors.",
+     "grade": "weak",
+     "sources": [
+      "cejudo2026"
+     ],
+     "evidence": [
+      {
+       "source": "cejudo2026",
+       "quote": "limiting planned exercise to less than 60 min when air quality is poor",
+       "level": "full-text"
+      },
+      {
+       "source": "cejudo2026",
+       "quote": "runners should prioritize early morning or late evening sessions to avoid peak traffic and high ozone levels",
+       "level": "full-text"
+      },
+      {
+       "source": "cejudo2026",
+       "quote": "strength training results in a lower burden on the impaired ventilatory system compared with endurance training",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "pol-act-run"
+  },
+  {
+   "type": "question",
+   "item": "pol-act-ride"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Ozone peaks on hot afternoons, PM2.5 near traffic and smoke, NO₂ beside diesel roads.",
+    "Inhaled dose = concentration × minute ventilation × time, so hard and long sessions take in the most.",
+    "Lab ozone at 0.20 ppm cut elite cyclists' ride time by 30%; race-day links to times are small and observational.",
+    "Most days training outside is worth it; on bad days move, shorten, swap or cancel."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pol-match",
+   "concept": "pol-what",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "giles2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which pollutant peaks on hot, sunny afternoons because sunlight acts on traffic fumes?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ozone",
+       "correct": true,
+       "why": "Right: ozone forms in sunlight from traffic fumes, so afternoons are worst."
+      },
+      {
+       "id": "b",
+       "text": "NO₂",
+       "why": "NO₂ is highest beside busy roads (diesel traffic), not made by afternoon sunlight."
+      },
+      {
+       "id": "c",
+       "text": "PM2.5",
+       "why": "PM2.5 peaks with traffic, fires and smoke, not with afternoon sun."
+      },
+      {
+       "id": "d",
+       "text": "Carbon dioxide",
+       "why": "Carbon dioxide is not one of the athlete's pollutants here and does not irritate the airways at outdoor levels."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which pollutant comes mostly from diesel traffic and is highest beside busy roads?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ozone",
+       "why": "Ozone forms later from sunlight and fumes, and peaks on hot afternoons."
+      },
+      {
+       "id": "b",
+       "text": "NO₂",
+       "correct": true,
+       "why": "Right: NO₂ is made when fuel burns at high heat, mostly diesel traffic."
+      },
+      {
+       "id": "c",
+       "text": "Water vapour",
+       "why": "Water vapour is not a pollutant."
+      },
+      {
+       "id": "d",
+       "text": "Pollen",
+       "why": "Pollen is an allergen, not a traffic pollutant."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-dose-calc",
+   "concept": "pol-dose",
+   "bloom": "apply",
+   "sources": [
+    "gong1986",
+    "wu2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner goes 3 h at an average of 70 L·min⁻¹ in air with PM2.5 at 40 µg·m⁻³. How much PM2.5 does she breathe in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "504 µg",
+       "correct": true,
+       "why": "Right: 70 × 180 = 12,600 L = 12.6 m³; 12.6 × 40 = 504 µg."
+      },
+      {
+       "id": "b",
+       "text": "504,000 µg",
+       "why": "You forgot to convert litres to m³ (÷ 1000)."
+      },
+      {
+       "id": "c",
+       "text": "8.4 µg",
+       "why": "You used 3 (hours) instead of 180 (minutes) for the time."
+      },
+      {
+       "id": "d",
+       "text": "5,040 µg",
+       "why": "You divided by 100 instead of 1000 when converting litres to m³."
+      }
+     ],
+     "solution": "Air breathed: 70 L·min⁻¹ × 180 min = 12,600 L. In m³: 12,600 ÷ 1000 = 12.6 m³. Dose: 12.6 × 40 = 504 µg."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist rides 1.5 h at an average of 90 L·min⁻¹ in air with PM2.5 at 20 µg·m⁻³. How much PM2.5 does he breathe in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "162 µg",
+       "correct": true,
+       "why": "Right: 90 × 90 = 8,100 L = 8.1 m³; 8.1 × 20 = 162 µg."
+      },
+      {
+       "id": "b",
+       "text": "162,000 µg",
+       "why": "You forgot to convert litres to m³ (÷ 1000)."
+      },
+      {
+       "id": "c",
+       "text": "2.7 µg",
+       "why": "You used 1.5 (hours) instead of 90 (minutes) for the time."
+      },
+      {
+       "id": "d",
+       "text": "1,620 µg",
+       "why": "You divided by 100 instead of 1000 when converting litres to m³."
+      }
+     ],
+     "solution": "Air breathed: 90 L·min⁻¹ × 90 min = 8,100 L. In m³: 8.1 m³. Dose: 8.1 × 20 = 162 µg."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete does a 45 min tempo run at an average of 100 L·min⁻¹ in air with PM2.5 at 30 µg·m⁻³. How much PM2.5 does he breathe in?",
+     "options": [
+      {
+       "id": "a",
+       "text": "135 µg",
+       "correct": true,
+       "why": "Right: 100 × 45 = 4,500 L = 4.5 m³; 4.5 × 30 = 135 µg."
+      },
+      {
+       "id": "b",
+       "text": "135,000 µg",
+       "why": "You forgot to convert litres to m³ (÷ 1000)."
+      },
+      {
+       "id": "c",
+       "text": "2.25 µg",
+       "why": "You used 0.75 (hours) instead of 45 (minutes) for the time."
+      },
+      {
+       "id": "d",
+       "text": "1,350 µg",
+       "why": "You divided by 100 instead of 1000 when converting litres to m³."
+      }
+     ],
+     "solution": "Air breathed: 100 L·min⁻¹ × 45 min = 4,500 L. In m³: 4.5 m³. Dose: 4.5 × 30 = 135 µg."
+    }
+   ]
+  },
+  {
+   "id": "pol-dose-why",
+   "concept": "pol-dose",
+   "bloom": "understand",
+   "sources": [
+    "wu2024",
+    "koehle2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A walker and a cyclist cover the same street at the same time of day. Why does the cyclist take in more pollutant?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She breathes much more air per minute, so the inhaled dose is higher.",
+       "correct": true,
+       "why": "Right: dose = concentration × ventilation × time, and exercise raises ventilation."
+      },
+      {
+       "id": "b",
+       "text": "Cyclists ride faster, so the air near them is dirtier.",
+       "why": "Speed does not change the street's pollutant level; what changes is the air breathed."
+      },
+      {
+       "id": "c",
+       "text": "Her lungs filter pollutants less well than a walker's.",
+       "why": "Lung filtering is not what differs; the volume of air breathed does."
+      },
+      {
+       "id": "d",
+       "text": "Cycling makes the street's air worse by stirring up dust.",
+       "why": "A cyclist does not meaningfully raise the street's pollution."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Two runners train in the same park air for 60 min, one easy and one at threshold. Which statement is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The threshold runner breathes in more pollutant, because ventilation is higher.",
+       "correct": true,
+       "why": "Right: same concentration and time, but higher ventilation gives a higher dose."
+      },
+      {
+       "id": "b",
+       "text": "Both take in the same dose, because the air is the same.",
+       "why": "The air is the same, but the air breathed is not."
+      },
+      {
+       "id": "c",
+       "text": "The easy runner takes in more, because she is out for longer per kilometre.",
+       "why": "Time was equal here (60 min), so ventilation decides."
+      },
+      {
+       "id": "d",
+       "text": "Dose depends only on pollutant level, not on the runner.",
+       "why": "Dose also depends on ventilation and time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-ozone-gong",
+   "concept": "pol-ozone",
+   "bloom": "analyse",
+   "sources": [
+    "gong1986"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Elite cyclists rode in filtered air, 0.12 and 0.20 ppm ozone at 31 °C. Which result fits the study?",
+     "options": [
+      {
+       "id": "a",
+       "text": "At 0.20 ppm, ride time to exhaustion fell 30% and FEV₁ fell 21.6%; at 0.12 ppm the changes were small.",
+       "correct": true,
+       "why": "Right: the harm showed at the higher dose and at maximal effort."
+      },
+      {
+       "id": "b",
+       "text": "Both ozone levels cut ride time to exhaustion by about 30% against filtered air.",
+       "why": "Only 0.20 ppm cut ride time; 0.12 ppm was similar to filtered air."
+      },
+      {
+       "id": "c",
+       "text": "The 60 min steady ride was much shorter at 0.12 ppm than in filtered air.",
+       "why": "Steady work time was similar across all exposures."
+      },
+      {
+       "id": "d",
+       "text": "Ozone left the lungs untouched, yet it still cut maximal performance a lot.",
+       "why": "FEV₁ fell after riding, so the airways were affected."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "In the ozone chamber study, what best describes how performance changed at 0.20 ppm?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The steady 60 min ride was unchanged, but maximal effort was cut.",
+       "correct": true,
+       "why": "Right: steady work was similar; the 0.20 ppm loss showed in the ride to exhaustion."
+      },
+      {
+       "id": "b",
+       "text": "Everything was slower, including the steady ride.",
+       "why": "Steady work, work time and VO₂ were similar across exposures."
+      },
+      {
+       "id": "c",
+       "text": "Maximal effort rose, because ozone widens the airways.",
+       "why": "Peak work, ride time and peak ventilation all fell."
+      },
+      {
+       "id": "d",
+       "text": "Nothing changed, but riders felt worse.",
+       "why": "Measured peak work, ride time and FEV₁ all got worse."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-race-appraise",
+   "concept": "pol-races",
+   "bloom": "evaluate",
+   "sources": [
+    "donaldson2026",
+    "marr2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 2.76 million marathon finishers links NO₂ on race day to slower times. What most limits the claim that NO₂ itself slowed them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is an association: city, course and year differ, and NO₂ is a modelled city average, not each runner's exposure.",
+       "correct": true,
+       "why": "Right: a cross-sectional link cannot show cause, and exposure is only estimated."
+      },
+      {
+       "id": "b",
+       "text": "2.76 million runners is still too few runners to find any real effect.",
+       "why": "The sample is very large; size is not the problem."
+      },
+      {
+       "id": "c",
+       "text": "It ignored weather completely, so heat alone could explain the whole result.",
+       "why": "The models adjusted for heat index and wind, so this is not the main limit."
+      },
+      {
+       "id": "d",
+       "text": "Marathon times cannot be compared across different races and cities at all.",
+       "why": "Random effects for each race-year allow comparison; the cause problem remains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-race-gap",
+   "concept": "pol-races",
+   "bloom": "analyse",
+   "sources": [
+    "donaldson2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Per 1 µg·m⁻³ of NO₂, recreational runners lost 2.12 min and elite runners 0.34 min (0.67% vs 0.18% of finishing time). What does the percentage tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Slower runners lose more even as a share of their time, so the gap is not only from longer races.",
+       "correct": true,
+       "why": "Right: the gradient persists after scaling to finishing time."
+      },
+      {
+       "id": "b",
+       "text": "The gap is only because recreational runners race for longer.",
+       "why": "Scaled to finishing time, the gap is still there (0.67% vs 0.18%)."
+      },
+      {
+       "id": "c",
+       "text": "Elite runners are not affected at all.",
+       "why": "Their effect is smaller (0.34 min), not zero."
+      },
+      {
+       "id": "d",
+       "text": "The percentage shows NO₂ causes the extra loss.",
+       "why": "It describes an association; it does not show cause."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-balance-q",
+   "concept": "pol-balance",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "tainio2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a model, at what daily cycling time does harm pass benefit in air with PM2.5 at 100 µg·m⁻³?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1 h 30 min a day",
+       "correct": true,
+       "why": "Right: that is the result for 100 µg·m⁻³."
+      },
+      {
+       "id": "b",
+       "text": "About 15 min a day",
+       "why": "Too low: even in heavy pollution the model found benefit up to 1 h 30 min."
+      },
+      {
+       "id": "c",
+       "text": "About 10 h a day",
+       "why": "That is the walking figure at 100 µg·m⁻³, not cycling."
+      },
+      {
+       "id": "d",
+       "text": "Never, at any time",
+       "why": "At 22 µg·m⁻³ that holds, but not at 100 µg·m⁻³."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A modelling study says that in city air with PM2.5 at 22 µg·m⁻³ the benefits of active travel far outweigh the risks. A rider at that level asks whether to stop commuting by bike. Best answer?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Keep riding: at typical city levels the modelled benefit far outweighs the risk.",
+       "correct": true,
+       "why": "Right: that is the finding at the global average city level."
+      },
+      {
+       "id": "b",
+       "text": "Stop: any PM2.5 outweighs the benefit of exercise.",
+       "why": "The model found the opposite at 22 µg·m⁻³."
+      },
+      {
+       "id": "c",
+       "text": "Stop for anything over 30 min a day, because of dose.",
+       "why": "The model's threshold was far above that, and only at 100 µg·m⁻³."
+      },
+      {
+       "id": "d",
+       "text": "Ride only at night, because of PM2.5.",
+       "why": "The model made no night-time claim."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-intensity",
+   "concept": "pol-balance",
+   "bloom": "remember",
+   "sources": [
+    "koehle2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review says higher intensity raises the inhaled dose for a given distance. What did it say about the acute effects of diesel exhaust?",
+     "options": [
+      {
+       "id": "a",
+       "text": "They did not appear to be more pronounced at higher intensity.",
+       "correct": true,
+       "why": "Right: dose rises, but the acute effects did not look larger."
+      },
+      {
+       "id": "b",
+       "text": "They rose in proportion to the dose.",
+       "why": "The review said they did not appear to be more pronounced."
+      },
+      {
+       "id": "c",
+       "text": "They only appear after a full day of rest.",
+       "why": "The review made no such claim."
+      },
+      {
+       "id": "d",
+       "text": "They disappear once you are fit.",
+       "why": "The review reported acclimation to ozone, not to other pollutants."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-act-run",
+   "concept": "pol-act",
+   "bloom": "apply",
+   "sources": [
+    "cejudo2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner plans a 90 min easy run at 15:00 on a hot, sunny day under an ozone warning. Best change?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Run at 06:00 or late evening, away from main roads, and cut it to under 60 min.",
+       "correct": true,
+       "why": "Right: avoid peak ozone and traffic, and shorten the run."
+      },
+      {
+       "id": "b",
+       "text": "Keep the 15:00 start but run faster, so the run is over sooner.",
+       "why": "Faster running raises ventilation and dose per minute."
+      },
+      {
+       "id": "c",
+       "text": "Keep the plan: ozone is usually at its lowest in the afternoon.",
+       "why": "Ozone peaks on hot afternoons."
+      },
+      {
+       "id": "d",
+       "text": "Wear thin clothes, because the clothes you wear decide the dose.",
+       "why": "Clothes do not change the dose."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pol-act-ride",
+   "concept": "pol-act",
+   "bloom": "evaluate",
+   "sources": [
+    "cejudo2026",
+    "wu2024"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The index in your city is in a bad band and smoke is heavy. You planned a 4 h endurance ride. Which choice best balances fitness and health?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Swap to an indoor session or strength work, or shorten the ride to under 60 min.",
+       "correct": true,
+       "why": "Right: keep some training while cutting dose; cutting to indoors is the safest."
+      },
+      {
+       "id": "b",
+       "text": "Ride the full 4 h but wear a headband and a hat to keep the dust out.",
+       "why": "Neither changes the inhaled dose."
+      },
+      {
+       "id": "c",
+       "text": "Ride the 4 h harder, to finish before the smoke gets any worse.",
+       "why": "Harder riding raises ventilation and dose per minute."
+      },
+      {
+       "id": "d",
+       "text": "Skip all training for the whole week until the smoke has gone.",
+       "why": "Too much: swapping or shortening keeps fitness with less dose."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Your phone shows a high index. Why should you not use the number alone to decide?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is a general warning and cannot give advice for your own session.",
+       "correct": true,
+       "why": "Right: reviews say the current indices are insufficient for individual activity advice."
+      },
+      {
+       "id": "b",
+       "text": "The index measures only pollen and no other kind of pollutant.",
+       "why": "The index covers pollutants such as ozone and PM."
+      },
+      {
+       "id": "c",
+       "text": "It is always wrong when the weather is hot, so it should be ignored.",
+       "why": "It is not always wrong; it just cannot be personal."
+      },
+      {
+       "id": "d",
+       "text": "It only matters for elite athletes who race in big city events.",
+       "why": "It is general-purpose."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

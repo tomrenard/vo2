@@ -36,3 +36,4 @@ Report under 250 words: lessons written with item counts and Bloom split, source
 - Write each lesson in one go, run `pnpm content:check --module <id>` once per lesson, fix, move on. Aim for under 40 tool calls for the whole module.
 
 - Never put Tom's email or any personal data in a request to an outside service. Do not use Unpaywall (it needs an email); find open full texts via Europe PMC or OpenAlex (`open_access.oa_url`).
+- Shared scratchpad: put your scripts in your own subfolder (`<scratchpad>/<module-id>/`); other writers run at the same time and use the same folder.

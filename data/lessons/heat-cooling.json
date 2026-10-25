@@ -1,0 +1,782 @@
+{
+ "id": "heat-cooling",
+ "module": "t6-heat",
+ "title": "Cooling before and during exercise in the heat",
+ "goal": "Compare pre-cooling and per-cooling methods, say how much they help and how sure we are, and plan their use after acclimation.",
+ "requires": [
+  "heat-training-tool"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "pre-cooling",
+    "per-cooling",
+    "ice-slurry",
+    "menthol",
+    "thermal-sensation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hcl-timing",
+   "title": "Cooling before and during",
+   "text": "Cooling can come before the effort ([pre-cooling](g:pre-cooling)) or during it ([per-cooling](g:per-cooling)). A pooled analysis of 28 trials in the heat (men only) found performance **6.7% better** overall: 5.7% with pre-cooling and 9.9% with per-cooling. A mix of methods worked best before exercise, and an ice vest best during it [[c:cool-pooled]].\n\nThe benefit did not follow core temperature. Finishing core temperature was lower after pre-cooling, yet core temperature and performance were not correlated [[c:cool-core]]. A review of per-cooling called the core temperature effect 'largely irrelevant': skin, cardiovascular and brain factors are likelier [[c:cool-core]].",
+   "claims": [
+    {
+     "id": "cool-pooled",
+     "text": "Pooled across 28 trials in men in the heat, cooling before or during exercise improved performance by 6.7%, with similar effects for pre-cooling and per-cooling.",
+     "grade": "moderate",
+     "sources": [
+      "bongers2015"
+     ],
+     "evidence": [
+      {
+       "source": "bongers2015",
+       "quote": "The overall effect of precooling and percooling interventions on exercise performance was +6.7±0.9% (effect size (ES)=0.43).",
+       "level": "abstract"
+      },
+      {
+       "source": "bongers2015",
+       "quote": "We found significant differences between cooling strategies, with a combination of multiple techniques being most effective for precooling (p<0.01) and ice vest for percooling (p=0.02).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cool-core",
+     "text": "Core temperature did not explain the performance gain from cooling: it was not correlated with performance in a pooled analysis, and a review judged its role in per-cooling largely irrelevant.",
+     "grade": "moderate",
+     "sources": [
+      "bongers2015",
+      "stevens2017"
+     ],
+     "evidence": [
+      {
+       "source": "bongers2015",
+       "quote": "No correlation between Tc and performance was found.",
+       "level": "abstract"
+      },
+      {
+       "source": "stevens2017",
+       "quote": "Based on current evidence, the effect of mid-cooling on core temperature appears largely irrelevant to any subsequent performance improvements, while cardiovascular, skin temperature, central nervous system function and psychophysiological factors are likely involved.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcl-pooled"
+  },
+  {
+   "type": "question",
+   "item": "hcl-core-link"
+  },
+  {
+   "type": "concept",
+   "id": "hcl-pre",
+   "title": "Before the start: cold bath or ice slurry",
+   "text": "Two common pre-cooling methods are a cold bath ([cold water immersion](g:cold-water-immersion)) and eating or drinking [ice slurry](g:ice-slurry), a drink of fine ice crystals at about −1 °C. Pooled data from 22 studies found that cold water immersion improved performance (effect size 0.53), while ice slurry or crushed ice had no clear effect (0.2, range −0.07 to 0.46) [[c:cwi-ice]].\n\nIn one trial, 10 men drank 7.5 g·kg⁻¹ of ice slurry or cold water, then ran to exhaustion at 34 °C. Ice slurry gave 50.2 min against 40.7 min, and a higher core temperature at the end (39.36 against 39.05 °C), as if it had made room for more heat [[c:siegel]].",
+   "claims": [
+    {
+     "id": "cwi-ice",
+     "text": "Pooled across 22 studies, cold water immersion before exercise improved performance, while ice slurry or crushed ice had no clear effect on performance.",
+     "grade": "moderate",
+     "sources": [
+      "choo2018"
+     ],
+     "evidence": [
+      {
+       "source": "choo2018",
+       "quote": "CWI improved performance measures (weighted average effect size in Hedges' g [95% confidence interval] + 0.53 [0.28; 0.77])",
+       "level": "abstract"
+      },
+      {
+       "source": "choo2018",
+       "quote": "ICE had no clear effect on performance measures (+0.2 [-0.07; 0.46])",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "siegel",
+     "text": "In 10 men running to exhaustion at 34 °C, ice slurry gave longer running time than cold water and a higher core temperature at exhaustion.",
+     "grade": "weak",
+     "sources": [
+      "siegel2010"
+     ],
+     "evidence": [
+      {
+       "source": "siegel2010",
+       "quote": "10 males ingested 7.5 g·kg(-1) of either ice slurry (-1°C) or cold water (4°C) before running to exhaustion at their first ventilatory threshold in a hot environment",
+       "level": "abstract"
+      },
+      {
+       "source": "siegel2010",
+       "quote": "Running time was longer (P = 0.001) after ice slurry (50.2 ± 8.5 min) versus cold water (40.7 ± 7.2 min) ingestion.",
+       "level": "abstract"
+      },
+      {
+       "source": "siegel2010",
+       "quote": "At exhaustion, however, rectal temperature was higher (P = 0.001) with ice slurry (39.36°C ± 0.41°C) versus cold water ingestion (39.05°C ± 0.37°C).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hcl-dose-example",
+   "title": "Ice slurry dose from body mass",
+   "problem": "A trial gave 7.5 g of ice slurry per kg of body mass. What mass is that for a 70 kg runner?",
+   "steps": [
+    "Dose = dose per kg × body mass.",
+    "7.5 g·kg⁻¹ × 70 kg = 525 g, about half a kilogram.",
+    "This is the dose one study used, not a guideline; the best dose is not settled."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcl-dose-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hcl-siegel-temp"
+  },
+  {
+   "type": "question",
+   "item": "hcl-cwi-ice"
+  },
+  {
+   "type": "concept",
+   "id": "hcl-per",
+   "title": "During the effort: drinks, ice, neck",
+   "text": "During exercise, options include cold drinks, ice slurry with or without [menthol](g:menthol), a cooling collar, and water poured on the head and face [[c:per-options]]. Menthol makes skin or mouth feel cool without cooling the body.\n\nHead, face and neck cooling works mostly on feel. A pooled analysis of 63 studies found better [thermal sensation](g:thermal-sensation) and comfort, but negligible effects on heart rate and core temperature. For performance the result was inconclusive: compatible with no effect or a medium gain, but not with harm [[c:hfn-pooled]].\n\nA narrative review said that neck cooling improves performance [[c:cao]].",
+   "claims": [
+    {
+     "id": "per-options",
+     "text": "Mid-exercise cooling options that were beneficial for endurance in the heat include cold fluids and ice slurry (with or without menthol), cooling collars and water on the head and face.",
+     "grade": "weak",
+     "sources": [
+      "stevens2017"
+     ],
+     "evidence": [
+      {
+       "source": "stevens2017",
+       "quote": "A range of mid-cooling strategies are beneficial for endurance performance in the heat, including the ingestion of cold fluids and ice slurry, both with and without menthol, as well as cooling of the neck and face region via a cooling collar or water poured on the head and face.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hfn-pooled",
+     "text": "Across 63 studies, head, face and neck cooling improved thermal sensation and comfort but not heart rate or core temperature, and its effect on performance was inconclusive.",
+     "grade": "moderate",
+     "sources": [
+      "stevens2025"
+     ],
+     "evidence": [
+      {
+       "source": "stevens2025",
+       "quote": "The effect of cooling on both self-paced and fixed-intensity exercise tasks was inconclusive; the 95% CI of the pooled effect was compatible with no effect and medium beneficial effects but not harmful effects.",
+       "level": "abstract"
+      },
+      {
+       "source": "stevens2025",
+       "quote": "Cooling reduced the skin temperature at the target site and improved thermal sensation and comfort.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cao",
+     "text": "A narrative review concluded that neck cooling during exercise in the heat improves athletic performance.",
+     "grade": "weak",
+     "sources": [
+      "cao2022"
+     ],
+     "evidence": [
+      {
+       "source": "cao2022",
+       "quote": "In the heat, neck cooling during exercise improves athletic performance in both endurance and team sports athletes.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does neck cooling during exercise improve performance in the heat?",
+    "sides": [
+     {
+      "position": "Yes: a narrative review concluded that neck cooling improves performance in endurance and team sport athletes.",
+      "sources": [
+       "cao2022"
+      ]
+     },
+     {
+      "position": "Unclear: a systematic review of 63 studies (87% male) found the effect inconclusive, though thermal sensation and comfort improved.",
+      "sources": [
+       "stevens2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hcl-meta-read"
+  },
+  {
+   "type": "question",
+   "item": "hcl-review-weight"
+  },
+  {
+   "type": "question",
+   "item": "hcl-triathlon"
+  },
+  {
+   "type": "concept",
+   "id": "hcl-use",
+   "title": "Putting it to use",
+   "text": "Cooling does not replace acclimation. The athlete consensus calls heat acclimatisation the most important step, and lists cooling, such as a vest, as an extra way to ease heat loss or raise heat storage capacity before training or competing [[c:cool-consensus]]. Events matter too: the IOC statement asks organisers to provide enough ice, shade and cooling [[c:ioc-cool]].\n\nThe reviews agree on one practical rule: try a range of methods, doses and timings in training or mock races, because the best one differs between athletes [[c:cool-experiment]]. Cooling as treatment for heat stroke is a separate case, covered in the heat illness lesson.",
+   "claims": [
+    {
+     "id": "cool-consensus",
+     "text": "The consensus statement says heat acclimatisation is the most important intervention and that cooling strategies can ease heat loss or raise heat storage capacity before training or competing.",
+     "grade": "strong",
+     "sources": [
+      "racinais2015"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2015",
+       "quote": "The most important intervention one can adopt to reduce physiological strain and optimise performance is to heat acclimatise.",
+       "level": "abstract"
+      },
+      {
+       "source": "racinais2015",
+       "quote": "athletes can implement cooling strategies to facilitate heat loss or increase heat storage capacity before training or competing in the heat",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ioc-cool",
+     "text": "The IOC consensus asks event organisers to provide sufficient ice, shading and cooling.",
+     "grade": "strong",
+     "sources": [
+      "racinais2023"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2023",
+       "quote": "to provide sufficient ice, shading and cooling",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cool-experiment",
+     "text": "Athletes should experiment with cooling methods, doses and timings to find what works for them.",
+     "grade": "moderate",
+     "sources": [
+      "stevens2025",
+      "stevens2017"
+     ],
+     "evidence": [
+      {
+       "source": "stevens2025",
+       "quote": "We recommend that athletes experiment with a range of head-, face-, and neck-cooling strategies, including using different doses and timings, to determine the optimal strategy for their individual and sport context.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hcl-priority"
+  },
+  {
+   "type": "question",
+   "item": "hcl-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Pooled trials in men in the heat show about 6.7% better performance with cooling before or during exercise; the effect was similar for pre-cooling and per-cooling.",
+    "The gain did not follow core temperature; skin temperature, cardiovascular and brain factors, and the way heat feels, are likelier routes.",
+    "Cold water immersion has stronger pooled support before exercise than ice slurry, though one small trial found a long run-time gain with ice slurry (7.5 g·kg⁻¹).",
+    "For head, face and neck cooling, comfort improves, but effects on performance are inconclusive and a narrative review disagrees with the pooled analysis.",
+    "Cooling adds to acclimatisation and does not replace it; rehearse any method in training."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hcl-pooled",
+   "concept": "hcl-timing",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bongers2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A pooled analysis of 28 trials in men tested cooling before or during exercise in the heat. By about how much did cooling improve performance overall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1%",
+       "why": "Too small: the overall gain was clearly larger."
+      },
+      {
+       "id": "b",
+       "text": "About 7%",
+       "correct": true,
+       "why": "Right: +6.7% overall, with similar effects before and during exercise."
+      },
+      {
+       "id": "c",
+       "text": "About 15%",
+       "why": "Too large for the pooled estimate."
+      },
+      {
+       "id": "d",
+       "text": "About 30%",
+       "why": "Far too large; no pooled estimate reaches this size."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Trials in the heat pooled two timings of cooling, before the effort and during it. What was the typical performance gain across all of them?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 2%",
+       "why": "The overall gain was larger than this."
+      },
+      {
+       "id": "b",
+       "text": "About 7%",
+       "correct": true,
+       "why": "Right: +6.7% with the two timings pooled."
+      },
+      {
+       "id": "c",
+       "text": "About 20%",
+       "why": "Too large for the overall estimate."
+      },
+      {
+       "id": "d",
+       "text": "There was no gain",
+       "why": "Cooling improved performance on average."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-core-link",
+   "concept": "hcl-timing",
+   "bloom": "analyse",
+   "sources": [
+    "bongers2015",
+    "stevens2017"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a pooled analysis, pre-cooling lowered finishing core temperature (38.9 against 39.1 °C), yet core temperature and performance were not correlated. Which conclusion fits best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cooling works only by lowering core temperature",
+       "why": "The missing correlation argues against this."
+      },
+      {
+       "id": "b",
+       "text": "Core temperature alone does not explain the gain; skin, circulation and feel may matter",
+       "correct": true,
+       "why": "Right: reviews point to skin temperature, cardiovascular, brain and perceptual factors."
+      },
+      {
+       "id": "c",
+       "text": "The performance gain is a placebo effect",
+       "why": "A missing correlation does not show placebo; the studies cannot tell."
+      },
+      {
+       "id": "d",
+       "text": "Core temperature does not matter for safety in the heat",
+       "why": "The finding is about performance gain, not about heat illness risk."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-dose-calc",
+   "concept": "hcl-pre",
+   "bloom": "apply",
+   "sources": [
+    "siegel2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A trial gave 7.5 g·kg⁻¹ of ice slurry before a hot run. What mass of slurry is that for a 60 kg runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8.0 g",
+       "why": "This divides body mass by the dose (60 ÷ 7.5) instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "60 g",
+       "why": "This is the body mass in kg written as grams; the dose per kg was left out."
+      },
+      {
+       "id": "c",
+       "text": "450 g",
+       "correct": true,
+       "why": "Right: 7.5 g·kg⁻¹ × 60 kg = 450 g."
+      },
+      {
+       "id": "d",
+       "text": "4,500 g",
+       "why": "This is ten times too large; a decimal slip."
+      }
+     ],
+     "solution": "Dose = 7.5 g·kg⁻¹ × 60 kg = 450 g."
+    },
+    {
+     "id": "b",
+     "stem": "A trial gave 7.5 g·kg⁻¹ of ice slurry before a hot run. What mass of slurry is that for a 72 kg runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "540 g",
+       "correct": true,
+       "why": "Right: 7.5 g·kg⁻¹ × 72 kg = 540 g."
+      },
+      {
+       "id": "b",
+       "text": "9.6 g",
+       "why": "This divides body mass by the dose (72 ÷ 7.5) instead of multiplying."
+      },
+      {
+       "id": "c",
+       "text": "72 g",
+       "why": "This is the body mass in kg written as grams; the dose per kg was left out."
+      },
+      {
+       "id": "d",
+       "text": "5,400 g",
+       "why": "This is ten times too large; a decimal slip."
+      }
+     ],
+     "solution": "Dose = 7.5 g·kg⁻¹ × 72 kg = 540 g."
+    },
+    {
+     "id": "c",
+     "stem": "A trial gave 7.5 g·kg⁻¹ of ice slurry before a hot run. What mass of slurry is that for an 84 kg runner?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11.2 g",
+       "why": "This divides body mass by the dose (84 ÷ 7.5) instead of multiplying."
+      },
+      {
+       "id": "b",
+       "text": "84 g",
+       "why": "This is the body mass in kg written as grams; the dose per kg was left out."
+      },
+      {
+       "id": "c",
+       "text": "6,300 g",
+       "why": "This is ten times too large; a decimal slip."
+      },
+      {
+       "id": "d",
+       "text": "630 g",
+       "correct": true,
+       "why": "Right: 7.5 g·kg⁻¹ × 84 kg = 630 g."
+      }
+     ],
+     "solution": "Dose = 7.5 g·kg⁻¹ × 84 kg = 630 g."
+    }
+   ]
+  },
+  {
+   "id": "hcl-siegel-temp",
+   "concept": "hcl-pre",
+   "bloom": "analyse",
+   "sources": [
+    "siegel2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After ice slurry, men ran longer than after cold water and ended with a higher rectal temperature (39.36 against 39.05 °C). What is the best explanation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ice slurry started them cooler, so they stored more heat before reaching their limit",
+       "correct": true,
+       "why": "Right: more heat storage capacity gave a longer run before the end temperature was reached."
+      },
+      {
+       "id": "b",
+       "text": "Ice slurry heats the body, which helps muscles work better",
+       "why": "Ice slurry lowered rectal temperature before the run."
+      },
+      {
+       "id": "c",
+       "text": "The slurry group sweated far less, so they had less cooling",
+       "why": "Sweat rate did not differ between conditions."
+      },
+      {
+       "id": "d",
+       "text": "The slurry group was more dehydrated, which raises core temperature",
+       "why": "The study did not show a difference in hydration; the heat storage data fit the cooler start."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-cwi-ice",
+   "concept": "hcl-pre",
+   "bloom": "evaluate",
+   "sources": [
+    "choo2018",
+    "siegel2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner wants ice slurry before a hot race because one trial found +19% running time. Pooled data found cold water immersion improved performance (0.53) and ice ingestion had no clear effect. What is the best weighing?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cold water immersion is better supported; ice slurry is plausible but less certain",
+       "correct": true,
+       "why": "Right: the pooled range for ice includes zero, and the single trial was small and compared with cold water."
+      },
+      {
+       "id": "b",
+       "text": "Ice slurry is proven best because it gave the biggest single result",
+       "why": "A single small trial cannot outweigh pooled data."
+      },
+      {
+       "id": "c",
+       "text": "Neither works, because the pooled ice effect is not exactly zero",
+       "why": "The ice range runs from a trivial harm to a near-medium benefit: uncertain, not shown to be zero."
+      },
+      {
+       "id": "d",
+       "text": "The pooled data should be ignored because they merge different methods",
+       "why": "Pooling is how evidence from many trials is weighed; it is not ignored."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-meta-read",
+   "concept": "hcl-per",
+   "bloom": "analyse",
+   "sources": [
+    "stevens2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A pooled analysis found the effect of head, face and neck cooling on performance 'compatible with no effect and medium beneficial effects but not harmful effects'. What does this mean for an athlete?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is unlikely to harm and may help a bit, but the size is unknown",
+       "correct": true,
+       "why": "Right: the range runs from zero to a medium gain and excludes harm."
+      },
+      {
+       "id": "b",
+       "text": "It is proven to give a medium gain in performance",
+       "why": "The range includes no effect, so a medium gain is not proven."
+      },
+      {
+       "id": "c",
+       "text": "It is proven to do nothing for performance",
+       "why": "The range also allows a medium gain, so 'nothing' is not proven."
+      },
+      {
+       "id": "d",
+       "text": "It is likely to hurt, because the range is so wide",
+       "why": "The range excludes harmful effects."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-review-weight",
+   "concept": "hcl-per",
+   "bloom": "evaluate",
+   "sources": [
+    "cao2022",
+    "stevens2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A narrative review says neck cooling improves performance. A systematic review of 63 studies says the effect is inconclusive. Which should carry more weight, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The systematic review, because it searched and pooled studies by set rules",
+       "correct": true,
+       "why": "Right: explicit search and pooling limits cherry-picking."
+      },
+      {
+       "id": "b",
+       "text": "The narrative review, because it reads as more practical",
+       "why": "Being practical does not make it more reliable."
+      },
+      {
+       "id": "c",
+       "text": "The narrative review, because it names more studies",
+       "why": "Naming studies is not the same as weighing them by rules."
+      },
+      {
+       "id": "d",
+       "text": "Neither, because reviews can never change what you believe",
+       "why": "Reviews are the best way to see the whole of the evidence."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-triathlon",
+   "concept": "hcl-per",
+   "bloom": "apply",
+   "sources": [
+    "stevens2017",
+    "stevens2025",
+    "bongers2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete faces the run of a hot half-distance race and wants to cool during it. Which advice fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Try cold drinks, ice, a wet cap or a neck wrap in training and keep what works best for you",
+       "correct": true,
+       "why": "Right: effects on performance are inconclusive for some methods, but feel improves, and responses differ."
+      },
+      {
+       "id": "b",
+       "text": "Use a neck collar, since reviews prove a large gain",
+       "why": "Reviews do not prove a large gain from neck cooling."
+      },
+      {
+       "id": "c",
+       "text": "Skip cooling, because it hurts performance",
+       "why": "The pooled range for head, face and neck cooling excludes harm."
+      },
+      {
+       "id": "d",
+       "text": "Only cool before the race, because cooling during exercise does not work",
+       "why": "Cooling during exercise showed a similar pooled gain to cooling before."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-priority",
+   "concept": "hcl-use",
+   "bloom": "apply",
+   "sources": [
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has a marathon in 32 °C heat in three weeks and owns an ice vest. What should come first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Start heat acclimatisation now and add cooling on top",
+       "correct": true,
+       "why": "Right: the consensus calls acclimatisation the most important step."
+      },
+      {
+       "id": "b",
+       "text": "Rely on the vest and skip heat sessions",
+       "why": "Cooling is an addition, not a replacement for acclimatisation."
+      },
+      {
+       "id": "c",
+       "text": "Train only in cool air and use the vest on race day",
+       "why": "This skips the most important step and tests the vest only once."
+      },
+      {
+       "id": "d",
+       "text": "Cool before every training run from now on",
+       "why": "Cooling before training removes the heat stimulus the body adapts to."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hcl-appraise",
+   "concept": "hcl-use",
+   "bloom": "evaluate",
+   "sources": [
+    "siegel2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The ice slurry trial used 10 men who ran to exhaustion at a fixed pace and compared slurry with cold water. What limits how far you can apply it to a race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Ten men and a fixed-pace run to exhaustion differ from a self-paced race, and men only",
+       "correct": true,
+       "why": "Right: a small male sample and an exhaustion test do not match race pacing."
+      },
+      {
+       "id": "b",
+       "text": "Rectal temperature cannot be measured in runners",
+       "why": "Rectal temperature is a standard measure; the limit is the design."
+      },
+      {
+       "id": "c",
+       "text": "A 10 min difference in running time is too small to matter",
+       "why": "The difference was about 10 min and statistically significant; the issue is generalising."
+      },
+      {
+       "id": "d",
+       "text": "Cold water as the comparison makes the result invalid",
+       "why": "A cold water comparison is reasonable; it just shows the gain over cold drinks, not over nothing."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

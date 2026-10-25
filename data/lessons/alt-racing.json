@@ -1,0 +1,600 @@
+{
+ "id": "alt-racing",
+ "module": "t6-altitude",
+ "title": "Racing at altitude: when to arrive and how to pace",
+ "goal": "Choose between arriving late and acclimatising first, and set a lower target power for a race at altitude.",
+ "requires": [
+  "alt-hb-response"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "pre-acclimatisation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "rac-curve",
+   "title": "Day 1 is the low point, then it climbs",
+   "text": "Eight elite cyclists were tested at sea level and again after 1, 7, 14 and 21 days at 2,340 m. On day 1, VO₂max was 12.8% below sea level and time to exhaustion 25.8% below [[c:rac-day1-claim]]. Then they came back:\n\n| Step | VO₂max | Time to exhaustion |\n|---|---|---|\n| Day 1 to 7 | +3.2% | +6.0% |\n| Day 7 to 14 | +4.8% | +5.7% |\n| Day 14 to 21 | +0.7% (not significant) | +1.4% (not significant) |\n\nMost of the gain came in the first two weeks, and little after [[c:rac-recover]]. The abstract does not say whether each % is a rise on the previous value or a share of sea level; here we treat it as a rise on the previous value. Either way, on day 14 VO₂max is still 5–6% below sea level (94.3% or 95.2%).",
+   "claims": [
+    {
+     "id": "rac-day1-claim",
+     "text": "On day 1 at 2,340 m, elite cyclists' VO₂max was 12.8% and time to exhaustion 25.8% below sea level.",
+     "grade": "weak",
+     "sources": [
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "schuler2007",
+       "quote": "On Day 1, VO(2max) and time to exhaustion (at 80% of sea-level maximal power output) decreased by 12.8% (P<0.05) and 25.8% (P<0.05), respectively, compared with the corresponding sea-level values.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rac-recover",
+     "text": "Most of the recovery came by day 14 (VO₂max +3.2% by day 7, +4.8% more by day 14, +0.7% not significant by day 21).",
+     "grade": "weak",
+     "sources": [
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "schuler2007",
+       "quote": "Subsequently, these parameters increased by 3.2% (P<0.05) and 6.0% (P<0.05) from Days 1 to 7, by 4.8% (P<0.05) and 5.7% (P<0.05) from Days 7 to 14, followed by 0.7% (P>0.05) and 1.4% (P>0.05) from Days 14 to 21, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rac-day1"
+  },
+  {
+   "type": "example",
+   "id": "rac-recover-example",
+   "title": "VO₂max on day 14",
+   "problem": "A cyclist has a sea-level VO₂max of 68 mL·kg⁻¹·min⁻¹. Using the 2,340 m data, what is VO₂max on day 14?",
+   "steps": [
+    "Day 1: 68 × (1 − 0.128) = 68 × 0.872 = 59.3.",
+    "Day 7: 59.3 × 1.032 = 61.2.",
+    "Day 14: 61.2 × 1.048 = 64.1 mL·kg⁻¹·min⁻¹, still about 6% below sea level."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rac-recovery-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "rac-timing",
+   "title": "Arrive late, or acclimatise first",
+   "text": "The data suggest two clean plans. **Acclimatise:** the cyclists' study concluded that athletes racing at around 2,340 m should be there at least 14 days before [[c:rac-14d]]. **Arrive late:** accept the day-1 deficit and arrive as close to the start as you can. Mountain sickness hits 10–30% of people at 2,500–3,000 m, so rest on arrival. If you must train there, a review advises waiting about 2 days, then starting gradually [[c:rac-wait]]. A third route is [pre-acclimatisation](g:pre-acclimatisation) at home, in a tent; a review covers arrival timing and these strategies [[c:rac-review]].",
+   "claims": [
+    {
+     "id": "rac-14d",
+     "text": "Endurance athletes competing around 2,340 m should expose themselves to that altitude at least 14 days before competition.",
+     "grade": "weak",
+     "sources": [
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "schuler2007",
+       "quote": "These data suggest that endurance athletes competing at altitudes around 2340 m should expose themselves to this altitude at least 14 days before competition.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rac-wait",
+     "text": "After travelling to 2,500–3,000 m, one review advises waiting 2 days before gradually starting to train.",
+     "grade": "weak",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "It is possible to travel to altitudes of 2500-3000 m a.s.l., wait for 2 days, and then gradually start to train.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rac-review",
+     "text": "A review gives data and advice on when to arrive at altitude and on sea-level pre-acclimatisation strategies.",
+     "grade": "weak",
+     "sources": [
+      "chapman2013"
+     ],
+     "evidence": [
+      {
+       "source": "chapman2013",
+       "quote": "This brief review will offer data and current advice on when to arrive at altitude and various potential sea level-based pre-acclimatization strategies in an effort to maximize performance and minimize the risk of altitude sickness.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rac-wait2"
+  },
+  {
+   "type": "question",
+   "item": "rac-late-choice"
+  },
+  {
+   "type": "question",
+   "item": "rac-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "rac-pace",
+   "title": "Pacing: lower the target, race by effort",
+   "text": "If aerobic power is down by the VO₂max loss, the sustainable target power falls by about the same share. A simple rule: **target power = sea-level power × (1 − 0.063 × km of altitude)**. It assumes the same share of VO₂max and the same efficiency, so it is a start, not a prediction.\n\nThe mistake is starting at sea-level pace: that pace now needs a bigger share of a smaller VO₂max, and a fixed hard speed becomes unsustainable much sooner (time to exhaustion fell 14.5% per 1,000 m in the chamber study). Heart rate also misleads: in acute exposure it is raised for a given effort [[c:rac-hr]]. Race by power or feel, with a lower first-half target.",
+   "claims": [
+    {
+     "id": "rac-hr",
+     "text": "In acute exposure to altitude, heart rate and ventilation are raised.",
+     "grade": "moderate",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "In acute exposure, ventilation and heart rate are elevated with a minimum reduction in stroke volume.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "rac-pace-example",
+   "title": "A lower target power",
+   "problem": "A rider holds 300 W for a sea-level time trial. Using 6.3% per 1,000 m, what target do you set at 1,000 m?",
+   "steps": [
+    "Loss = 6.3% × 1 = 6.3%.",
+    "300 × (1 − 0.063) = 281 W."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "rac-pace-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "rac-pace-error"
+  },
+  {
+   "type": "concept",
+   "id": "rac-drag",
+   "title": "Thin air also pushes back less",
+   "text": "Physics, not a study result: air drag is proportional to air density, and density falls with pressure. At 2,000 m the pressure is 596 ÷ 760 = 78% of sea level.\n\nOn a flat course, if drag were the only force, speed would follow (power ÷ density)^(1/3). With power down 12.6% (0.874) and density at 0.78: (0.874 ÷ 0.784)^(1/3) = 1.04, about 4% faster. Two things cut that: air higher up is usually colder and so denser (the standard atmosphere, 2 °C at 2,000 m, gives 82% and about +2%), and rolling resistance does not fall at all. So speed roughly holds.\n\nOn a climb gravity dominates, so the power loss shows in full. For runners, air drag is a smaller share of the cost, so there is less help.",
+   "claims": []
+  },
+  {
+   "type": "question",
+   "item": "rac-drag"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "On day 1 at 2,340 m, VO₂max was 12.8% below sea level; most of the recovery came in 2 weeks, little between weeks 2 and 3.",
+    "Pick a clear plan: arrive late and accept the deficit, or be there about 14 days before, with a 2-day wait before gentle training for mountain-sickness safety.",
+    "Target power at altitude about equals sea-level power × (1 − 0.063 × km); race by power or feel, not sea-level pace or heart rate.",
+    "Lower air density helps a rider on the flat but not on a climb.",
+    "The evidence is a few small studies at one altitude: treat the numbers as guides."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "rac-day1",
+   "concept": "rac-curve",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "schuler2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how far below sea level was elite cyclists' VO₂max on their first day at 2,340 m?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3%",
+       "why": "Too small: that is the day 1 to 7 gain."
+      },
+      {
+       "id": "b",
+       "text": "About 6%",
+       "why": "The loss per 1,000 m, not the day-1 total for 2,340 m."
+      },
+      {
+       "id": "c",
+       "text": "About 13%",
+       "why": "Correct: 12.8% below sea level.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "About 26%",
+       "why": "The fall in time to exhaustion, not in VO₂max."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rac-recovery-calc",
+   "concept": "rac-curve",
+   "bloom": "apply",
+   "sources": [
+    "schuler2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's sea-level VO₂max is 70 mL·kg⁻¹·min⁻¹. At 2,340 m it falls 12.8% on day 1, then rises 3.2% by day 7 and a further 4.8% by day 14 (each a rise on the previous value). What is VO₂max on day 14?",
+     "options": [
+      {
+       "id": "a",
+       "text": "70.0 mL·kg⁻¹·min⁻¹",
+       "why": "Assumed full recovery to the sea-level value."
+      },
+      {
+       "id": "b",
+       "text": "66.0 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 70 × 0.872 × 1.032 × 1.048.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "75.7 mL·kg⁻¹·min⁻¹",
+       "why": "Applied the two rises to the sea-level value and forgot the day-1 fall."
+      },
+      {
+       "id": "d",
+       "text": "61.0 mL·kg⁻¹·min⁻¹",
+       "why": "Stopped at the day-1 value."
+      }
+     ],
+     "solution": "Day 1: 70 × 0.872 = 61.0. Day 7: 61.0 × 1.032 = 63.0. Day 14: 63.0 × 1.048 = 66.0."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's sea-level VO₂max is 64 mL·kg⁻¹·min⁻¹. At 2,340 m it falls 12.8% on day 1, then rises 3.2% by day 7 and a further 4.8% by day 14 (each a rise on the previous value). What is VO₂max on day 14?",
+     "options": [
+      {
+       "id": "a",
+       "text": "64.0 mL·kg⁻¹·min⁻¹",
+       "why": "Assumed full recovery to the sea-level value."
+      },
+      {
+       "id": "b",
+       "text": "69.2 mL·kg⁻¹·min⁻¹",
+       "why": "Applied the two rises to the sea-level value and forgot the day-1 fall."
+      },
+      {
+       "id": "c",
+       "text": "60.4 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 64 × 0.872 × 1.032 × 1.048.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "55.8 mL·kg⁻¹·min⁻¹",
+       "why": "Stopped at the day-1 value."
+      }
+     ],
+     "solution": "Day 1: 64 × 0.872 = 55.8. Day 7: 55.8 × 1.032 = 57.6. Day 14: 57.6 × 1.048 = 60.4."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's sea-level VO₂max is 75 mL·kg⁻¹·min⁻¹. At 2,340 m it falls 12.8% on day 1, then rises 3.2% by day 7 (a rise on the day-1 value). What is VO₂max on day 7?",
+     "options": [
+      {
+       "id": "a",
+       "text": "75.0 mL·kg⁻¹·min⁻¹",
+       "why": "Assumed full recovery to the sea-level value."
+      },
+      {
+       "id": "b",
+       "text": "77.4 mL·kg⁻¹·min⁻¹",
+       "why": "Applied the rise to the sea-level value and forgot the day-1 fall."
+      },
+      {
+       "id": "c",
+       "text": "65.4 mL·kg⁻¹·min⁻¹",
+       "why": "Stopped at the day-1 value."
+      },
+      {
+       "id": "d",
+       "text": "67.5 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 75 × 0.872 × 1.032.",
+       "correct": true
+      }
+     ],
+     "solution": "Day 1: 75 × 0.872 = 65.4. Day 7: 65.4 × 1.032 = 67.5."
+    }
+   ]
+  },
+  {
+   "id": "rac-wait2",
+   "concept": "rac-timing",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After travelling to 2,500–3,000 m, how long does one review advise waiting before gradually starting to train?",
+     "options": [
+      {
+       "id": "a",
+       "text": "No wait: train as usual on day 1",
+       "why": "Ignores mountain-sickness risk and the day-1 deficit."
+      },
+      {
+       "id": "b",
+       "text": "About 2 days",
+       "why": "Correct: wait about 2 days, then ease in.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 7 days",
+       "why": "Longer than the review says."
+      },
+      {
+       "id": "d",
+       "text": "About 14 days",
+       "why": "That is the time suggested for racing at 2,340 m, not the wait before gentle training."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rac-late-choice",
+   "concept": "rac-timing",
+   "bloom": "evaluate",
+   "sources": [
+    "schuler2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Plan A: arrive at 2,340 m the day before the race. Plan B: arrive 3 weeks before. Which statement does the cyclists' study support?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Week 3 added little over week 2: the day 14 to 21 rise was not significant",
+       "why": "Correct: +0.7% VO₂max and +1.4% time to exhaustion, neither significant.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Plan A is best because VO₂max is highest on the first day there",
+       "why": "Day 1 was the lowest point: −12.8%."
+      },
+      {
+       "id": "c",
+       "text": "Plan B restores the exact sea-level value, as the full curve shows",
+       "why": "The study reports changes between days, not a full return to sea level."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rac-appraise",
+   "concept": "rac-timing",
+   "bloom": "evaluate",
+   "sources": [
+    "schuler2007",
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The advice 'be there 14 days before' came from 8 elite cyclists at 2,340 m. Does it fit a race at 3,500 m?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Yes: acclimatisation always takes exactly 14 days at any altitude",
+       "why": "Time courses differ with altitude and person; this is one small study."
+      },
+      {
+       "id": "b",
+       "text": "Not necessarily: it is one small study at one altitude",
+       "why": "Correct: eight athletes at one altitude cannot fix the plan for 3,500 m, where mountain sickness is also likelier.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "No: before day 14 nothing changes at any altitude at all",
+       "why": "Even in the study, gains appeared by day 7."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rac-pace-calc",
+   "concept": "rac-pace",
+   "bloom": "apply",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider holds 280 W in a sea-level time trial. Using 6.3% per 1,000 m, what target power do you set at 2,000 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "267 W",
+       "why": "Subtracted 12.6 as watts instead of a percentage."
+      },
+      {
+       "id": "b",
+       "text": "199 W",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      },
+      {
+       "id": "c",
+       "text": "245 W",
+       "why": "Correct: 280 × (1 − 0.063 × 2).",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "280 W",
+       "why": "Kept the sea-level power: that ignores the loss."
+      }
+     ],
+     "solution": "Loss = 12.6%. 280 × 0.874 = 244.7, about 245 W."
+    },
+    {
+     "id": "b",
+     "stem": "A rider holds 320 W in a sea-level time trial. Using 6.3% per 1,000 m, what target power do you set at 1,500 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "311 W",
+       "why": "Subtracted 9.45 as watts instead of a percentage."
+      },
+      {
+       "id": "b",
+       "text": "290 W",
+       "why": "Correct: 320 × (1 − 0.063 × 1.5).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "250 W",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      },
+      {
+       "id": "d",
+       "text": "320 W",
+       "why": "Kept the sea-level power: that ignores the loss."
+      }
+     ],
+     "solution": "Loss = 9.45%. 320 × 0.9055 = 289.8, about 290 W."
+    },
+    {
+     "id": "c",
+     "stem": "A rider holds 250 W in a sea-level time trial. Using 6.3% per 1,000 m, what target power do you set at 2,500 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "234 W",
+       "why": "Subtracted 15.75 as watts instead of a percentage."
+      },
+      {
+       "id": "b",
+       "text": "159 W",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      },
+      {
+       "id": "c",
+       "text": "250 W",
+       "why": "Kept the sea-level power: that ignores the loss."
+      },
+      {
+       "id": "d",
+       "text": "211 W",
+       "why": "Correct: 250 × (1 − 0.063 × 2.5).",
+       "correct": true
+      }
+     ],
+     "solution": "Loss = 15.75%. 250 × 0.8425 = 210.6, about 211 W."
+    }
+   ]
+  },
+  {
+   "id": "rac-pace-error",
+   "concept": "rac-pace",
+   "bloom": "analyse",
+   "sources": [
+    "wehrlin2006",
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner starts a 10 km race at 2,000 m at her sea-level pace and fades badly after 5 km. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The same speed needs a larger share of a smaller VO₂max, so she reached her limit sooner",
+       "why": "Correct: the pace was no longer sustainable at the lower aerobic power.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Dry mountain air dehydrated her within the first 5 km",
+       "why": "Dry air adds fluid loss over hours and days; it does not explain a fade at sea-level pace in one 10 km race."
+      },
+      {
+       "id": "c",
+       "text": "Her heart rate was lower than at sea level, so she ran too easily at first",
+       "why": "Heart rate is raised in acute exposure, not lower."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rac-drag",
+   "concept": "rac-drag",
+   "bloom": "apply",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's power on arrival at 2,000 m is about 12.6% below sea level. On a flat time trial, which result fits the physics of air drag?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Speed falls by 12.6%, the same as power",
+       "why": "Ignores that drag also falls with air density: speed follows the cube root of power over density."
+      },
+      {
+       "id": "b",
+       "text": "Speed falls by much less than power, and may even hold",
+       "why": "Correct: lower density cuts drag, which is most of the power cost on the flat.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Speed rises by 12.6%, because the air is thinner",
+       "why": "Overstates it: power still fell and rolling resistance is unchanged."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

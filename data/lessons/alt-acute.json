@@ -1,0 +1,770 @@
+{
+ "id": "alt-acute",
+ "module": "t6-altitude",
+ "title": "Thin air: pressure, blood and VO₂max",
+ "goal": "Explain why the oxygen pressure of the air falls with altitude, how that lowers SaO₂ and VO₂max, and roughly how much endurance performance you lose per 1,000 m.",
+ "requires": [
+  "heat-cooling"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "hypoxia",
+    "barometric-pressure",
+    "fio2",
+    "pio2",
+    "hypobaric-hypoxia",
+    "normobaric-hypoxia"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "alt-air",
+   "title": "Thin air, same oxygen share",
+   "text": "Climb and [barometric pressure](g:barometric-pressure) falls [[c:alt-pb-falls]]. Air is still 20.9% oxygen at every height ([FiO₂](g:fio2) 0.209), so the [partial pressure](g:partial-pressure) of oxygen falls in proportion [[c:alt-po2-proportional]]. That is [hypobaric hypoxia](g:hypobaric-hypoxia): real altitude. A tent or mask that removes oxygen at normal pressure gives [normobaric hypoxia](g:normobaric-hypoxia) instead.\n\nInside your airways the air is full of water vapour (47 mmHg), so the oxygen pressure that counts is [PIO₂](g:pio2):\n\n**PIO₂ = FiO₂ × (PB − 47 mmHg)**\n\n| Altitude | PB (mmHg) | PIO₂ (mmHg) |\n|---|---|---|\n| 0 m | 760 | 150 |\n| 2,000 m | 596 | 115 |\n| 2,500 m | 560 | 108 |\n| 3,000 m | 526 | 101 |\n| 4,000 m | 462 | 87 |\n\nStandard-atmosphere values: weather moves them a little. Being [hypoxic](g:hypoxia) at 2,500 m means breathing about 28% less oxygen pressure.",
+   "claims": [
+    {
+     "id": "alt-pb-falls",
+     "text": "Barometric pressure falls as altitude rises.",
+     "grade": "strong",
+     "sources": [
+      "parati2018"
+     ],
+     "evidence": [
+      {
+       "source": "parati2018",
+       "quote": "With increasing altitude, a progressive reduction in barometric pressure, air temperature and air humidity can be observed",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "alt-po2-proportional",
+     "text": "The share of oxygen in inspired air stays the same with altitude, so a lower barometric pressure gives a lower oxygen partial pressure.",
+     "grade": "strong",
+     "sources": [
+      "parati2018"
+     ],
+     "evidence": [
+      {
+       "source": "parati2018",
+       "quote": "In practice, at sea level, O2 constitutes 20.94% of total gas molecules in inspired air, which with a normal rate of alveolar ventilation leads to an alveolar partial O2 pressure of roughly 100 mmHg for a barometric pressure of roughly 760 mmHg.",
+       "level": "full-text"
+      },
+      {
+       "source": "parati2018",
+       "quote": "the same percentage of O2 in the inspired air, combined with a lower barometric pressure and higher rate of ventilation, results in an alveolar partial O2 pressure of roughly 67 mmHg",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "alt-fio2"
+  },
+  {
+   "type": "example",
+   "id": "alt-pio2-example",
+   "title": "PIO₂ at 2,000 m",
+   "problem": "At 2,000 m, PB is about 596 mmHg. What is PIO₂, and how far below sea level (150 mmHg) is it?",
+   "steps": [
+    "PIO₂ = FiO₂ × (PB − 47). Subtract water vapour first: 596 − 47 = 549 mmHg.",
+    "Multiply by the oxygen fraction: 0.21 × 549 = 115 mmHg.",
+    "Compare with sea level: 115 ÷ 150 = 0.77, so PIO₂ is about 23% lower."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "alt-pio2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "alt-pio2-pct",
+   "variant": "b"
+  },
+  {
+   "type": "concept",
+   "id": "alt-blood",
+   "title": "From thin air to thin blood",
+   "text": "Lower PIO₂ means lower oxygen pressure in the lung's air sacs, so the haemoglobin there loads less oxygen: [SaO₂](g:sao2) falls. A pulse oximeter reads it as SpO₂. On arrival your haemoglobin is unchanged, so [arterial O₂ content](g:cao2) (CaO₂ = Hb × 1.34 × SaO₂) falls by the same share as SaO₂.\n\nAt rest the loss is modest at moderate altitude, because the top of the O₂–haemoglobin curve is flat. Hard exercise is worse: blood passes the lungs too fast to load fully. In 8 endurance-trained athletes at maximal effort, SpO₂ fell from 89.0% at 300 m to 76.5% at 2,800 m [[c:alt-spo2]].",
+   "claims": [
+    {
+     "id": "alt-spo2",
+     "text": "In endurance-trained athletes, SpO₂ at the end of maximal exercise fell from 89.0% at 300 m to 76.5% at 2,800 m.",
+     "grade": "weak",
+     "sources": [
+      "wehrlin2006"
+     ],
+     "evidence": [
+      {
+       "source": "wehrlin2006",
+       "quote": "Arterial haemoglobin oxygen saturation at test cessation (SpO(2min)) declined from 89.0+/-2.9% at 300 m to 76.5+/-4.0% at 2,800 m (P=0.001).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "alt-spo2-why"
+  },
+  {
+   "type": "question",
+   "item": "alt-cao2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "alt-vo2",
+   "title": "Aerobic power falls in a straight line",
+   "text": "In 8 endurance-trained athletes tested in a chamber at six altitudes, [VO₂max](g:vo2max) fell from 66 to 55 mL·kg⁻¹·min⁻¹ between 300 and 2,800 m: a straight line, **6.3% per 1,000 m**, with a range of 4.6–7.5% between athletes [[c:alt-vo2-slope]]. Elite cyclists at 2,340 m lost 12.8% on their first day, inside what the line predicts for 2.34 thousand metres (2.34 × 6.3% = 14.7%, or 11–18% across the 4.6–7.5% range) [[c:alt-day1]].\n\nThe line was measured between 300 and 2,800 m only. Above that it is a guess, and any single athlete can sit anywhere in the 4.6–7.5% range. Small group, simulated altitude: treat the slope as a good rule of thumb, not a law.",
+   "claims": [
+    {
+     "id": "alt-vo2-slope",
+     "text": "In endurance-trained athletes, VO₂max falls linearly, about 6.3% per 1,000 m (range 4.6–7.5%) between 300 and 2,800 m.",
+     "grade": "weak",
+     "sources": [
+      "wehrlin2006"
+     ],
+     "evidence": [
+      {
+       "source": "wehrlin2006",
+       "quote": ".VO(2max) declined linearly from 66+/-1.6 ml kg(-1) min(-1) at 300 m to 55+/-1.6 ml kg(-1) min(-1) at 2,800 m corresponding to a 6.3% decrease per 1,000 m increasing altitude (range 4.6-7.5%).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "alt-day1",
+     "text": "On their first day at 2,340 m, elite cyclists' VO₂max was 12.8% below sea level.",
+     "grade": "weak",
+     "sources": [
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "schuler2007",
+       "quote": "On Day 1, VO(2max) and time to exhaustion (at 80% of sea-level maximal power output) decreased by 12.8% (P<0.05) and 25.8% (P<0.05), respectively, compared with the corresponding sea-level values.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "alt-vo2-example",
+   "title": "VO₂max at 2,000 m",
+   "problem": "An athlete has a sea-level VO₂max of 70 mL·kg⁻¹·min⁻¹. Using 6.3% per 1,000 m, what do you expect at 2,000 m?",
+   "steps": [
+    "Loss = 6.3% × 2 (thousands of metres) = 12.6%.",
+    "Remaining share = 100% − 12.6% = 87.4%, so 70 × 0.874 = 61.2 mL·kg⁻¹·min⁻¹.",
+    "This is the acute value, before any acclimatisation."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "alt-vo2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "alt-vo2-recall"
+  },
+  {
+   "type": "concept",
+   "id": "alt-perf",
+   "title": "Performance falls faster, and from low altitude",
+   "text": "The same athletes ran to exhaustion at one constant speed (107% of their sea-level VO₂max speed). Their time to exhaustion fell **14.5% per 1,000 m**, more than twice the fall in VO₂max [[c:alt-tte]]. A small loss of aerobic power cuts the time you can hold a fixed, hard speed by a much bigger share. Cyclists at 2,340 m lost 25.8% of time to exhaustion on day 1.\n\nThe loss does not wait for high mountains: both VO₂max and performance were already lower at 800 m than at 300 m [[c:alt-low]].\n\nA race is not a fixed-speed test: you slow down instead of dropping out. So the 14.5% is a lab number, not a race-time forecast (see the racing lesson).",
+   "claims": [
+    {
+     "id": "alt-tte",
+     "text": "Time to exhaustion at a constant speed fell about 14.5% per 1,000 m between 300 and 2,800 m in endurance-trained athletes.",
+     "grade": "weak",
+     "sources": [
+      "wehrlin2006"
+     ],
+     "evidence": [
+      {
+       "source": "wehrlin2006",
+       "quote": "Time to exhaustion (performance) at a constant velocity associated with 107% of sea level .VO(2max) decreased with 14.5% (P<0.001) per 1,000 m altitude between 300 and 2,800 m.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "alt-low",
+     "text": "In endurance-trained athletes, both VO₂max and performance were already lower at 800 m than at 300 m.",
+     "grade": "weak",
+     "sources": [
+      "wehrlin2006"
+     ],
+     "evidence": [
+      {
+       "source": "wehrlin2006",
+       "quote": "Both .VO(2max) and performance decreased from 300 to 800 m (P<0.01; P<0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "alt-low-start"
+  },
+  {
+   "type": "question",
+   "item": "alt-appraise-chamber"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Air is 20.9% oxygen at every altitude; pressure falls, so the oxygen pressure falls in proportion. PIO₂ = FiO₂ × (PB − 47 mmHg): about 150 mmHg at sea level, 108 at 2,500 m.",
+    "Lower PIO₂ lowers SaO₂ and so CaO₂ by the same share; maximal exercise pulls SpO₂ down further (89% to 76.5% from 300 to 2,800 m).",
+    "Endurance-trained athletes lose about 6.3% of VO₂max per 1,000 m (4.6–7.5%), already measurable at 800 m.",
+    "Time to exhaustion at a fixed speed falls about 14.5% per 1,000 m: a lab figure, not a race-time forecast.",
+    "These numbers come from small studies of 8 athletes; use them as rules of thumb."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "alt-fio2",
+   "concept": "alt-air",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "parati2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 3,000 m, what share of the air is oxygen?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 14%, falling in line with the lower pressure",
+       "why": "Confuses the fraction with the pressure: the pressure falls, the share does not (14% is the tent setting that copies 3,000 m)."
+      },
+      {
+       "id": "b",
+       "text": "20.9%, the same as at sea level",
+       "why": "Correct: only the total pressure falls, so the oxygen pressure falls with it.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 17%, falling less than the pressure does",
+       "why": "Invents a middle path: the fraction of oxygen is fixed in the whole lower atmosphere."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alt-pio2-calc",
+   "concept": "alt-air",
+   "bloom": "apply",
+   "sources": [
+    "parati2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 2,500 m, PB is about 560 mmHg. Using FiO₂ = 0.21, what is PIO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "118 mmHg",
+       "why": "Forgot the 47 mmHg of water vapour: 0.21 × 560."
+      },
+      {
+       "id": "b",
+       "text": "108 mmHg",
+       "why": "Correct: 0.21 × (560 − 47).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "513 mmHg",
+       "why": "Forgot to multiply by the oxygen fraction: 560 − 47."
+      },
+      {
+       "id": "d",
+       "text": "405 mmHg",
+       "why": "Used the nitrogen share (0.79) instead of oxygen."
+      }
+     ],
+     "solution": "PIO₂ = 0.21 × (560 − 47) = 0.21 × 513 = 107.7, about 108 mmHg."
+    },
+    {
+     "id": "b",
+     "stem": "At 3,000 m, PB is about 526 mmHg. Using FiO₂ = 0.21, what is PIO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "110 mmHg",
+       "why": "Forgot the 47 mmHg of water vapour: 0.21 × 526."
+      },
+      {
+       "id": "b",
+       "text": "479 mmHg",
+       "why": "Forgot to multiply by the oxygen fraction: 526 − 47."
+      },
+      {
+       "id": "c",
+       "text": "101 mmHg",
+       "why": "Correct: 0.21 × (526 − 47).",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "378 mmHg",
+       "why": "Used the nitrogen share (0.79) instead of oxygen."
+      }
+     ],
+     "solution": "PIO₂ = 0.21 × (526 − 47) = 0.21 × 479 = 100.6, about 101 mmHg."
+    },
+    {
+     "id": "c",
+     "stem": "At 4,000 m, PB is about 462 mmHg. Using FiO₂ = 0.21, what is PIO₂?",
+     "options": [
+      {
+       "id": "a",
+       "text": "328 mmHg",
+       "why": "Used the nitrogen share (0.79) instead of oxygen."
+      },
+      {
+       "id": "b",
+       "text": "97 mmHg",
+       "why": "Forgot the 47 mmHg of water vapour: 0.21 × 462."
+      },
+      {
+       "id": "c",
+       "text": "415 mmHg",
+       "why": "Forgot to multiply by the oxygen fraction: 462 − 47."
+      },
+      {
+       "id": "d",
+       "text": "87 mmHg",
+       "why": "Correct: 0.21 × (462 − 47).",
+       "correct": true
+      }
+     ],
+     "solution": "PIO₂ = 0.21 × (462 − 47) = 0.21 × 415 = 87.2, about 87 mmHg."
+    }
+   ]
+  },
+  {
+   "id": "alt-pio2-pct",
+   "concept": "alt-air",
+   "bloom": "apply",
+   "sources": [
+    "parati2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Sea-level PIO₂ is 150 mmHg; at 2,500 m it is 108 mmHg (PB 560 against 760). How much lower is the oxygen pressure you breathe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 72% lower",
+       "why": "Reads the ratio (108 ÷ 150 = 72%) as the fall."
+      },
+      {
+       "id": "b",
+       "text": "About 26% lower",
+       "why": "Used the pressure ratio (560 ÷ 760 = 74%): ignores the water vapour that makes the oxygen drop bigger."
+      },
+      {
+       "id": "c",
+       "text": "About 28% lower",
+       "why": "Correct: 1 − 108 ÷ 150 = 0.28.",
+       "correct": true
+      }
+     ],
+     "solution": "108 ÷ 150 = 0.72, so PIO₂ is 28% lower. The barometric pressure falls only 26% (560 ÷ 760 = 0.74), because the fixed 47 mmHg of water vapour takes a bigger share of thin air."
+    },
+    {
+     "id": "b",
+     "stem": "Sea-level PIO₂ is 150 mmHg; at 3,000 m it is 101 mmHg (PB 526 against 760). How much lower is the oxygen pressure you breathe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 67% lower",
+       "why": "Reads the ratio (101 ÷ 150 = 67%) as the fall."
+      },
+      {
+       "id": "b",
+       "text": "About 33% lower",
+       "why": "Correct: 1 − 101 ÷ 150 = 0.33.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 31% lower",
+       "why": "Used the pressure ratio (526 ÷ 760 = 69%): ignores the water vapour."
+      }
+     ],
+     "solution": "101 ÷ 150 = 0.67, so PIO₂ is 33% lower. Pressure alone would suggest 31%."
+    },
+    {
+     "id": "c",
+     "stem": "Sea-level PIO₂ is 150 mmHg; at 4,000 m it is 87 mmHg (PB 462 against 760). How much lower is the oxygen pressure you breathe?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 39% lower",
+       "why": "Used the pressure ratio (462 ÷ 760 = 61%): ignores the water vapour."
+      },
+      {
+       "id": "b",
+       "text": "About 58% lower",
+       "why": "Reads the ratio (87 ÷ 150 = 58%) as the fall."
+      },
+      {
+       "id": "c",
+       "text": "About 42% lower",
+       "why": "Correct: 1 − 87 ÷ 150 = 0.42.",
+       "correct": true
+      }
+     ],
+     "solution": "87 ÷ 150 = 0.58, so PIO₂ is 42% lower. Pressure alone would suggest 39%."
+    }
+   ]
+  },
+  {
+   "id": "alt-spo2-why",
+   "concept": "alt-blood",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "wehrlin2006",
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does SaO₂ fall on arrival at 2,500 m?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The air sacs hold a lower oxygen pressure, so haemoglobin loads less",
+       "why": "Correct: less pressure pushes less oxygen onto haemoglobin.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The blood has lost haemoglobin, so there is less to carry oxygen",
+       "why": "Haemoglobin mass is unchanged on arrival: saturation falls, not the amount of haemoglobin."
+      },
+      {
+       "id": "c",
+       "text": "The air holds a smaller share of oxygen, so each breath has less",
+       "why": "The share stays 20.9%: the pressure is what changes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alt-cao2-calc",
+   "concept": "alt-blood",
+   "bloom": "apply",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An athlete has Hb 150 g·L⁻¹. At altitude SaO₂ falls from 97% to 80%. What is CaO₂ now (Hb × 1.34 × SaO₂, in mL·L⁻¹)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "201 mL·L⁻¹",
+       "why": "Forgot SaO₂: Hb × 1.34 only."
+      },
+      {
+       "id": "b",
+       "text": "161 mL·L⁻¹",
+       "why": "Correct: 150 × 1.34 × 0.80.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "195 mL·L⁻¹",
+       "why": "Used the sea-level saturation (97%) again."
+      },
+      {
+       "id": "d",
+       "text": "120 mL·L⁻¹",
+       "why": "Forgot the 1.34 mL·g⁻¹: Hb × SaO₂."
+      }
+     ],
+     "solution": "150 × 1.34 = 201 mL·L⁻¹ if fully saturated; × 0.80 = 160.8, about 161. At sea level it was 201 × 0.97 = 195, so CaO₂ fell 17.5%."
+    },
+    {
+     "id": "b",
+     "stem": "An athlete has Hb 140 g·L⁻¹. At altitude SaO₂ falls from 98% to 85%. What is CaO₂ now (Hb × 1.34 × SaO₂, in mL·L⁻¹)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "188 mL·L⁻¹",
+       "why": "Forgot SaO₂: Hb × 1.34 only."
+      },
+      {
+       "id": "b",
+       "text": "184 mL·L⁻¹",
+       "why": "Used the sea-level saturation (98%) again."
+      },
+      {
+       "id": "c",
+       "text": "119 mL·L⁻¹",
+       "why": "Forgot the 1.34 mL·g⁻¹: Hb × SaO₂."
+      },
+      {
+       "id": "d",
+       "text": "159 mL·L⁻¹",
+       "why": "Correct: 140 × 1.34 × 0.85.",
+       "correct": true
+      }
+     ],
+     "solution": "140 × 1.34 = 187.6; × 0.85 = 159.5, about 159 mL·L⁻¹ (sea level: 187.6 × 0.98 = 184)."
+    },
+    {
+     "id": "c",
+     "stem": "An athlete has Hb 160 g·L⁻¹. At altitude SaO₂ falls from 97% to 78%. What is CaO₂ now (Hb × 1.34 × SaO₂, in mL·L⁻¹)?",
+     "options": [
+      {
+       "id": "a",
+       "text": "214 mL·L⁻¹",
+       "why": "Forgot SaO₂: Hb × 1.34 only."
+      },
+      {
+       "id": "b",
+       "text": "208 mL·L⁻¹",
+       "why": "Used the sea-level saturation (97%) again."
+      },
+      {
+       "id": "c",
+       "text": "167 mL·L⁻¹",
+       "why": "Correct: 160 × 1.34 × 0.78.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "125 mL·L⁻¹",
+       "why": "Forgot the 1.34 mL·g⁻¹: Hb × SaO₂."
+      }
+     ],
+     "solution": "160 × 1.34 = 214.4; × 0.78 = 167.2, about 167 mL·L⁻¹ (sea level: 214.4 × 0.97 = 208)."
+    }
+   ]
+  },
+  {
+   "id": "alt-vo2-calc",
+   "concept": "alt-vo2",
+   "bloom": "apply",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner has a sea-level VO₂max of 65 mL·kg⁻¹·min⁻¹. Using 6.3% per 1,000 m, what do you expect at 1,500 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "60.9 mL·kg⁻¹·min⁻¹",
+       "why": "Took 6.3% off once, whatever the height gained."
+      },
+      {
+       "id": "b",
+       "text": "58.9 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 65 × (1 − 0.063 × 1.5).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "55.6 mL·kg⁻¹·min⁻¹",
+       "why": "Treated 6.3 as mL·kg⁻¹·min⁻¹ per 1,000 m instead of a percentage."
+      },
+      {
+       "id": "d",
+       "text": "50.9 mL·kg⁻¹·min⁻¹",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      }
+     ],
+     "solution": "Loss = 6.3% × 1.5 = 9.45%. 65 × (1 − 0.0945) = 58.9 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist has a sea-level VO₂max of 72 mL·kg⁻¹·min⁻¹. Using 6.3% per 1,000 m, what do you expect at 2,500 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "67.5 mL·kg⁻¹·min⁻¹",
+       "why": "Took 6.3% off once, whatever the height gained."
+      },
+      {
+       "id": "b",
+       "text": "56.3 mL·kg⁻¹·min⁻¹",
+       "why": "Treated 6.3 as mL·kg⁻¹·min⁻¹ per 1,000 m instead of a percentage."
+      },
+      {
+       "id": "c",
+       "text": "60.7 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 72 × (1 − 0.063 × 2.5).",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "45.9 mL·kg⁻¹·min⁻¹",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      }
+     ],
+     "solution": "Loss = 6.3% × 2.5 = 15.75%. 72 × 0.8425 = 60.7 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete has a sea-level VO₂max of 60 mL·kg⁻¹·min⁻¹. Using 6.3% per 1,000 m, what do you expect at 3,000 m on arrival?",
+     "options": [
+      {
+       "id": "a",
+       "text": "56.2 mL·kg⁻¹·min⁻¹",
+       "why": "Took 6.3% off once, whatever the height gained."
+      },
+      {
+       "id": "b",
+       "text": "41.1 mL·kg⁻¹·min⁻¹",
+       "why": "Treated 6.3 as mL·kg⁻¹·min⁻¹ per 1,000 m instead of a percentage."
+      },
+      {
+       "id": "c",
+       "text": "33.9 mL·kg⁻¹·min⁻¹",
+       "why": "Used the 14.5% per 1,000 m of time to exhaustion, not the VO₂max slope."
+      },
+      {
+       "id": "d",
+       "text": "48.7 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 60 × (1 − 0.063 × 3).",
+       "correct": true
+      }
+     ],
+     "solution": "Loss = 6.3% × 3 = 18.9%. 60 × 0.811 = 48.7 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "alt-vo2-recall",
+   "concept": "alt-vo2",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "By roughly what share does VO₂max of endurance-trained athletes fall per 1,000 m of acute altitude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 1%",
+       "why": "Far too small: it would make altitude irrelevant to racing."
+      },
+      {
+       "id": "b",
+       "text": "About 6%",
+       "why": "Correct: 6.3% per 1,000 m in the chamber study (range 4.6–7.5%).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 15%",
+       "why": "The slope of time to exhaustion at a fixed speed (14.5%), not of VO₂max."
+      },
+      {
+       "id": "d",
+       "text": "About 25%",
+       "why": "The day-1 fall in time to exhaustion at 2,340 m, not the VO₂max slope."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alt-low-start",
+   "concept": "alt-perf",
+   "bloom": "analyse",
+   "sources": [
+    "wehrlin2006",
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's sea-level time trial takes 60 min. She races at 800 m and wonders if the altitude matters. What does the chamber study suggest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not below about 1,500 m: the air is thick enough",
+       "why": "In the chamber study, VO₂max and performance were already lower at 800 m than at 300 m."
+      },
+      {
+       "id": "b",
+       "text": "A small but measurable loss is plausible even at 800 m",
+       "why": "Correct: both measures fell between 300 and 800 m in trained athletes.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "A large loss, as big as at 2,800 m",
+       "why": "The fall is linear: 800 m costs far less than 2,800 m."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alt-appraise-chamber",
+   "concept": "alt-vo2",
+   "bloom": "evaluate",
+   "sources": [
+    "wehrlin2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The chamber study used 8 endurance-trained athletes in a double-blind design. What limits how far we can use its 6.3% per 1,000 m?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Double-blind designs are weaker than open ones",
+       "why": "Blinding reduces bias: it is a strength here."
+      },
+      {
+       "id": "b",
+       "text": "Only eight athletes in a chamber, and they ranged from 4.6% to 7.5%",
+       "why": "Correct: small sample, chamber exposure and wide individual range limit how precisely it applies to you.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "A straight-line fit proves that every athlete loses the same share",
+       "why": "The reported range (4.6–7.5%) shows athletes differ."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

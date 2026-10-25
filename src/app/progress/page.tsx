@@ -161,7 +161,10 @@ export default async function ProgressPage() {
               </li>
             ))}
           </ul>
-          <p className="muted text-xs">Recall now, lowest first. Review asks that module only.</p>
+          <p className="muted text-xs">
+            % = how much of what you've learnt there you'd recall now, lowest first. Review asks
+            that module only.
+          </p>
         </section>
       )}
 

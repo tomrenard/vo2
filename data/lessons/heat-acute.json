@@ -1,0 +1,820 @@
+{
+ "id": "heat-acute",
+ "module": "t6-heat",
+ "title": "Heat and endurance performance: how much, and why",
+ "goal": "Say how much heat cuts endurance performance, and explain the cardiovascular and core temperature causes and why wind and the sport change the effect.",
+ "requires": [
+  "health-too-much"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "skin-temperature",
+    "uncompensable-heat-stress",
+    "critical-core-temperature"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hx-how-much",
+   "title": "How much slower in the heat?",
+   "text": "When athletes set their own pace, heat slows them. Across 14 cycling [time trials](g:time-trial) at 30 °C or more, mean power was about **15% lower** on average [[c:tt-loss]]. One lab example, 40 km at 35 °C against 20 °C: **242 W** in 64.3 min, against **279 W** in 59.8 min [[c:tt-loss]]. A short 15 min test at 40 °C gave about 17% less work than at 21 °C, with core temperature near 38 °C in both [[c:ely-short]].\n\nRunning shows it too. Top male marathoners were slower than the course record by **1.7, 2.5, 3.3 and 4.5%** as [WBGT](g:wbgt) rose through four bands from 5 to 25 °C. Slower runners lost more [[c:marathon-wbgt]].",
+   "claims": [
+    {
+     "id": "tt-loss",
+     "text": "In cycling time trials at 30 °C or more, mean power is on average about 15% lower than in cooler conditions; in a 40 km trial it fell from 279 W to 242 W at 35 °C.",
+     "grade": "moderate",
+     "sources": [
+      "junge2016",
+      "periard2011"
+     ],
+     "evidence": [
+      {
+       "source": "junge2016",
+       "quote": "Mean power output during prolonged cycling time trials in the heat (≥30°C) was on average reduced by 15% in the 14 studies that fulfilled the inclusion criteria.",
+       "level": "abstract"
+      },
+      {
+       "source": "periard2011",
+       "quote": "Time trial duration was 64.3 ± 2.8 min (242.1 W) in the hot condition and 59.8 ± 2.6 min (279.4 W) in the thermoneutral condition (P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ely-short",
+     "text": "In a 15 min cycling time trial at 40 °C, eight men did about 17% less work than at 21 °C although core temperature stayed modest.",
+     "grade": "weak",
+     "sources": [
+      "ely2010"
+     ],
+     "evidence": [
+      {
+       "source": "ely2010",
+       "quote": "Total work performed in HOT (147.7 +/- 23.9 kJ) was approximately 17% less (P < 0.05) than TEMP (177.0 +/- 25.0 kJ).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "marathon-wbgt",
+     "text": "Marathon times slow progressively as WBGT rises from 5 to 25 °C, by 1.7% to 4.5% for the top men, and more for slower runners.",
+     "grade": "weak",
+     "sources": [
+      "ely2007"
+     ],
+     "evidence": [
+      {
+       "source": "ely2007",
+       "quote": "Marathon performances of top males were slower than the course record by 1.7 +/- 1.5, 2.5 +/- 2.1, 3.3 +/- 2.0, and 4.5 +/- 2.3% (mean +/- SD) for Q1-Q4, respectively.",
+       "level": "abstract"
+      },
+      {
+       "source": "ely2007",
+       "quote": "The 25th-, 50th-, 100th-, and 300th-place finishers slowed more than faster runners as WBGT increased.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hx-loss-example",
+   "title": "Percent loss in power",
+   "problem": "A cyclist averages 279.4 W in a 40 km time trial at 20 °C and 242.1 W at 35 °C. By what percent did power fall?",
+   "steps": [
+    "Percent fall = (cool value − hot value) ÷ cool value × 100. Always divide by the cool value, the starting point.",
+    "279.4 − 242.1 = 37.3 W.",
+    "37.3 ÷ 279.4 = 0.133, so power fell by about 13%.",
+    "The same trial took 7.5% longer (64.3 against 59.8 min). Time and power give different percents, so check which one a paper reports."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hx-tt-size"
+  },
+  {
+   "type": "question",
+   "item": "hx-loss-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hx-marathon",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hx-cardio",
+   "title": "Why: the heart has two jobs",
+   "text": "To lose heat, the body sends more blood to the skin ([skin blood flow](g:skin-blood-flow)). In the 40 km trial at 35 °C, heart rate was about **8 beats·min⁻¹ higher**. [Stroke volume](g:stroke-volume), cardiac output and blood pressure were lower than at 20 °C, and [skin temperature](g:skin-temperature) was about 7.5 °C higher. [Peak oxygen uptake](g:vo2max) at the end reached only **77%** of the control value in the heat, against 95% at 20 °C [[c:cv-strain]].\n\nA lower ceiling makes the same power a bigger share of what you can do. Effort feels harder, so a self-paced athlete slows. This is the same strain you met in cardiovascular drift [[c:cv-primary]].",
+   "claims": [
+    {
+     "id": "cv-strain",
+     "text": "In a hot 40 km time trial, heart rate was higher, stroke volume, cardiac output and blood pressure were lower, and peak oxygen uptake fell to 77% of control.",
+     "grade": "weak",
+     "sources": [
+      "periard2011",
+      "cheuvront2010"
+     ],
+     "evidence": [
+      {
+       "source": "periard2011",
+       "quote": "Heart rate was ~8 beats min(-1) higher throughout hot exercise, while stroke volume, cardiac output and mean arterial pressure were significantly depressed compared with the thermoneutral condition (P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "periard2011",
+       "quote": "Peak oxygen uptake measured during the final kilometre of exercise at maximal effort reached 77 (hot) and 95% (thermoneutral) of pre-experimental control values (P < 0.01).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cv-primary",
+     "text": "Heat lowers maximal oxygen uptake, so the same work is a higher relative intensity and aerobic performance falls steeply; cardiovascular strain is proposed as a primary cause.",
+     "grade": "moderate",
+     "sources": [
+      "cheuvront2010"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2010",
+       "quote": "The independent (T(sk)) and combined (T(sk) + T(c)) effects of hyperthermia reduce maximal oxygen uptake (Vo(2max)), which leads to higher relative exercise intensity and an exponential decline in aerobic performance at any given exercise workload.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hx-cv-pattern"
+  },
+  {
+   "type": "question",
+   "item": "hx-ceiling"
+  },
+  {
+   "type": "concept",
+   "id": "hx-core",
+   "title": "Why: a limit in core temperature?",
+   "text": "Seven trained cyclists rode at 60% VO₂max in 40 °C air they could not cool against ([uncompensable heat stress](g:uncompensable-heat-stress)). They started with core temperatures of about 36, 37 and 38 °C. All stopped at about 40 °C, a [critical core temperature](g:critical-core-temperature), and the coolest start lasted longest: **63, 46 and 28 min** [[c:critical-temp]]. Hyperthermia also limits how much muscle the brain can activate, a sign of [central fatigue](g:central-fatigue) [[c:central-hyper]].\n\nBut in self-paced exercise athletes slow *before* that point: in the 15 min test, core temperature stayed near 38 °C and work still fell 17%. Pace is set early, so core temperature cannot be the whole story.",
+   "claims": [
+    {
+     "id": "critical-temp",
+     "text": "Trained cyclists in 40 °C fatigued at the same core temperature (about 40 °C) whatever their start temperature, so a cooler start gave a longer ride.",
+     "grade": "weak",
+     "sources": [
+      "gonzalezalonso1999"
+     ],
+     "evidence": [
+      {
+       "source": "gonzalezalonso1999",
+       "quote": "Time to exhaustion was inversely related to the initial body temperature: 63 +/- 3, 46 +/- 3, and 28 +/- 2 min with initial Tes of approximately 36, 37, and 38 degrees C, respectively (all P < 0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "gonzalezalonso1999",
+       "quote": "These results demonstrate that high internal body temperature per se causes fatigue in trained subjects during prolonged exercise in uncompensable hot environments.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "central-hyper",
+     "text": "Exercise-induced hyperthermia is linked to central fatigue, seen as a reduced ability to sustain maximal muscle activation.",
+     "grade": "moderate",
+     "sources": [
+      "nybo2014"
+     ],
+     "evidence": [
+      {
+       "source": "nybo2014",
+       "quote": "Regardless, performance is markedly deteriorated and exercise-induced hyperthermia is associated with central fatigue as indicated by impaired ability to sustain maximal muscle activation during sustained contractions.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "What mainly limits performance in the heat: cardiovascular strain, or the brain's response to rising temperature?",
+    "sides": [
+     {
+      "position": "Cardiovascular strain from high skin and core temperature is the primary cause. It lowers VO₂max and raises relative intensity, and perceived effort follows.",
+      "sources": [
+       "cheuvront2010",
+       "periard2011"
+      ]
+     },
+     {
+      "position": "Central fatigue matters too: hot muscle, skin and core, plus feedback from breathing and the circulation, reduce the brain's drive, especially at submaximal intensity.",
+      "sources": [
+       "nybo2014",
+       "gonzalezalonso1999"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hx-start-temp"
+  },
+  {
+   "type": "question",
+   "item": "hx-pacing-read"
+  },
+  {
+   "type": "concept",
+   "id": "hx-numbers",
+   "title": "Which heat number to trust",
+   "text": "Air temperature alone predicts performance poorly. In the cycling review, neither WBGT nor another index (UTCI) predicted the effect well, because wind counts for too little in them. Trained, acclimatised cyclists held power outdoors up to 36 °C UTCI (28 °C WBGT). Indoors, power held up to at least 27 °C only when humidity was modest and a fan matched road speed. With little air movement it fell a lot. Running is slower and makes more heat per unit of effort, so it suffers at lower temperatures [[c:wind-matters]].\n\nCold is not best either. At about 70% VO₂max, men rode longest at **10.5 °C** (93.5 min) and shortest at 30.5 °C (51.6 min) [[c:inverted-u]]. Heat illness has its own lesson, in sports medicine.",
+   "claims": [
+    {
+     "id": "wind-matters",
+     "text": "Ambient temperature and common indices predict self-paced cycling poorly; air movement strongly changes the effect, and running is affected at lower temperatures than cycling.",
+     "grade": "moderate",
+     "sources": [
+      "junge2016"
+     ],
+     "evidence": [
+      {
+       "source": "junge2016",
+       "quote": "Ambient temperature per se was a poor predictor of the integrated environmental heat stress and 2 of the prevailing heat stress indices (WBGT and UTCI) failed to predict the environmental influence on performance.",
+       "level": "abstract"
+      },
+      {
+       "source": "junge2016",
+       "quote": "Power output during indoor trials may also be maintained with temperatures up to at least 27°C when humidity is modest and wind speed matches the movement speed generated during outdoor cycling, whereas marked reductions are observed when air movement is minimal.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "inverted-u",
+     "text": "Time to exhaustion at about 70% VO₂max follows an inverted U with air temperature, longest at 10.5 °C and shortest at 30.5 °C.",
+     "grade": "weak",
+     "sources": [
+      "galloway1997"
+     ],
+     "evidence": [
+      {
+       "source": "galloway1997",
+       "quote": "Time to exhaustion was significantly influenced by Ta (P = 0.001): exercise duration was shortest at 30.5 degrees C (51.6 +/- 3.7 min) and longest at 10.5 degrees C (93.5 +/- 6.2 min).",
+       "level": "abstract"
+      },
+      {
+       "source": "galloway1997",
+       "quote": "This study demonstrates that there is a clear effect of temperature on exercise capacity which appears to follow an inverted U relationship.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hx-wind"
+  },
+  {
+   "type": "question",
+   "item": "hx-inverted-u"
+  },
+  {
+   "type": "question",
+   "item": "hx-appraise"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Self-paced performance falls in heat: about 15% less mean power in cycling time trials at 30 °C or more, and marathon times 1.7–4.5% slower for top men as WBGT rises from 5 to 25 °C.",
+    "Heat adds strain to the heart: more blood goes to the skin, stroke volume and cardiac output fall, and peak oxygen uptake drops, so the same power is a higher share of your ceiling.",
+    "Cyclists in uncompensable heat stopped at about the same core temperature (about 40 °C); in self-paced efforts people slow earlier, so pacing and strain both matter.",
+    "Wind and air movement change the effect a lot; WBGT and air temperature alone predict it poorly, and running suffers at lower temperatures than cycling.",
+    "Always divide by the cool value when you work out a percent loss."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hx-tt-size",
+   "concept": "hx-how-much",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "junge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Across 14 cycling time trials at 30 °C or more, by about how much was mean power lower than in cooler conditions?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3%",
+       "why": "Too small. Small losses show up in mild warmth, but the pooled hot-trial figure is far larger."
+      },
+      {
+       "id": "b",
+       "text": "About 15%",
+       "correct": true,
+       "why": "Right: the review pooled 14 studies and found mean power about 15% lower."
+      },
+      {
+       "id": "c",
+       "text": "About 30%",
+       "why": "Too large: about double the pooled average of the 14 studies."
+      },
+      {
+       "id": "d",
+       "text": "About 45%",
+       "why": "Far too large: about three times the pooled average."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A review pooled cycling time trials done at 30 °C or more. The typical fall in mean power was closest to what?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 5%",
+       "why": "Too small compared with what pooled hot time trials show."
+      },
+      {
+       "id": "b",
+       "text": "About 10%",
+       "why": "Close, but the pooled average was higher than this."
+      },
+      {
+       "id": "c",
+       "text": "About 15%",
+       "correct": true,
+       "why": "Right: on average mean power was reduced by 15%."
+      },
+      {
+       "id": "d",
+       "text": "About 25%",
+       "why": "Too large; the average over 14 studies was lower."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-loss-calc",
+   "concept": "hx-how-much",
+   "bloom": "apply",
+   "sources": [
+    "junge2016",
+    "periard2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist holds 300 W in a cool time trial and 261 W in a hot one. By what percent did power fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "14.9%",
+       "why": "This divides the 39 W loss by the hot value (261 W). Divide by the cool value."
+      },
+      {
+       "id": "b",
+       "text": "13.0%",
+       "correct": true,
+       "why": "Right: (300 − 261) ÷ 300 = 39 ÷ 300 = 13.0%."
+      },
+      {
+       "id": "c",
+       "text": "87.0%",
+       "why": "This is the hot power as a share of cool power (261 ÷ 300), not the fall."
+      },
+      {
+       "id": "d",
+       "text": "39%",
+       "why": "This reads the 39 W loss as a percent."
+      }
+     ],
+     "solution": "Loss = 300 − 261 = 39 W. 39 ÷ 300 = 0.130, so 13.0%."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist holds 250 W in a cool time trial and 215 W in a hot one. By what percent did power fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "35%",
+       "why": "This reads the 35 W loss as a percent."
+      },
+      {
+       "id": "b",
+       "text": "16.3%",
+       "why": "This divides the 35 W loss by the hot value (215 W). Divide by the cool value."
+      },
+      {
+       "id": "c",
+       "text": "86.0%",
+       "why": "This is the hot power as a share of cool power, not the fall."
+      },
+      {
+       "id": "d",
+       "text": "14.0%",
+       "correct": true,
+       "why": "Right: (250 − 215) ÷ 250 = 35 ÷ 250 = 14.0%."
+      }
+     ],
+     "solution": "Loss = 250 − 215 = 35 W. 35 ÷ 250 = 0.140, so 14.0%."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist holds 320 W in a cool time trial and 272 W in a hot one. By what percent did power fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "15.0%",
+       "correct": true,
+       "why": "Right: (320 − 272) ÷ 320 = 48 ÷ 320 = 15.0%."
+      },
+      {
+       "id": "b",
+       "text": "17.6%",
+       "why": "This divides the 48 W loss by the hot value (272 W). Divide by the cool value."
+      },
+      {
+       "id": "c",
+       "text": "85.0%",
+       "why": "This is the hot power as a share of cool power, not the fall."
+      },
+      {
+       "id": "d",
+       "text": "48%",
+       "why": "This reads the 48 W loss as a percent."
+      }
+     ],
+     "solution": "Loss = 320 − 272 = 48 W. 48 ÷ 320 = 0.150, so 15.0%."
+    }
+   ]
+  },
+  {
+   "id": "hx-marathon",
+   "concept": "hx-how-much",
+   "bloom": "apply",
+   "sources": [
+    "ely2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Top male marathoners were on average 1.7% slower than the course record at WBGT 5–10 °C and 4.5% slower at WBGT 20–25 °C. A course record is 2:06:00. What time do you expect from a top man at WBGT 22 °C?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2:10:30",
+       "why": "This adds 4.5 minutes, not 4.5% of the time."
+      },
+      {
+       "id": "b",
+       "text": "2:00:20",
+       "why": "This subtracts 4.5%: heat makes runners slower, not faster."
+      },
+      {
+       "id": "c",
+       "text": "2:11:40",
+       "correct": true,
+       "why": "Right: 126 min × 1.045 = 131.7 min, which is 2:11:40."
+      },
+      {
+       "id": "d",
+       "text": "2:08:09",
+       "why": "This uses the 1.7% figure for cool conditions instead of 4.5%."
+      }
+     ],
+     "solution": "WBGT 22 °C falls in the 20–25 °C band: +4.5%. 2:06:00 = 126 min. 126 × 1.045 = 131.67 min = 2 h 11 min 40 s."
+    },
+    {
+     "id": "b",
+     "stem": "Top male marathoners were on average 1.7% slower than the course record at WBGT 5–10 °C and 4.5% slower at WBGT 20–25 °C. A course record is 2:04:00. What time do you expect from a top man at WBGT 8 °C?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2:01:54",
+       "why": "This subtracts 1.7%: even cool-band racing is slower than the record, not faster."
+      },
+      {
+       "id": "b",
+       "text": "2:05:42",
+       "why": "This adds 1.7 minutes, not 1.7% of the time."
+      },
+      {
+       "id": "c",
+       "text": "2:09:35",
+       "why": "This uses the 4.5% figure for the hottest band instead of 1.7%."
+      },
+      {
+       "id": "d",
+       "text": "2:06:06",
+       "correct": true,
+       "why": "Right: 124 min × 1.017 = 126.1 min, which is 2:06:06."
+      }
+     ],
+     "solution": "WBGT 8 °C falls in the 5–10 °C band: +1.7%. 2:04:00 = 124 min. 124 × 1.017 = 126.11 min = 2 h 6 min 6 s."
+    }
+   ]
+  },
+  {
+   "id": "hx-cv-pattern",
+   "concept": "hx-cardio",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "periard2011"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Compared with a 20 °C time trial, which pattern fits the same cyclist at 35 °C?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower heart rate and higher stroke volume, because warm muscle works better",
+       "why": "Heart rate was higher, not lower, and stroke volume fell."
+      },
+      {
+       "id": "b",
+       "text": "Higher heart rate and higher cardiac output, to carry more oxygen",
+       "why": "Cardiac output was lower, not higher; the heart could not fill as well."
+      },
+      {
+       "id": "c",
+       "text": "Higher heart rate, lower stroke volume and lower cardiac output",
+       "correct": true,
+       "why": "Right: more blood goes to the skin, so the heart fills less and output falls."
+      },
+      {
+       "id": "d",
+       "text": "Same heart rate, but lower skin temperature from sweating",
+       "why": "Skin temperature was about 7.5 °C higher, and heart rate was higher."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's heart rate is 8 beats·min⁻¹ higher in a hot 40 km trial than a cool one. What happened to stroke volume and cardiac output?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Both were lower than in the cool trial",
+       "correct": true,
+       "why": "Right: stroke volume, cardiac output and mean arterial pressure were all depressed."
+      },
+      {
+       "id": "b",
+       "text": "Both were higher, which is why heart rate rose",
+       "why": "They fell; the higher heart rate did not make up for the lower stroke volume."
+      },
+      {
+       "id": "c",
+       "text": "Stroke volume rose and cardiac output fell",
+       "why": "Stroke volume fell too."
+      },
+      {
+       "id": "d",
+       "text": "Both were unchanged, only heart rate moved",
+       "why": "Both fell significantly in the study."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-ceiling",
+   "concept": "hx-cardio",
+   "bloom": "apply",
+   "sources": [
+    "periard2011",
+    "cheuvront2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete rides the same 250 W on a trainer in a cool room and then in a 35 °C room. Heart rate and effort feel higher in the heat. Which explanation fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her muscles need much more oxygen at 250 W in heat",
+       "why": "At a fixed submaximal power, muscle oxygen use stays about the same in the heat."
+      },
+      {
+       "id": "b",
+       "text": "Her peak oxygen uptake is lower in the heat, so 250 W is a larger share of her ceiling",
+       "correct": true,
+       "why": "Right: a lower ceiling raises relative intensity and cardiovascular strain, and effort feels harder."
+      },
+      {
+       "id": "c",
+       "text": "Her ATP and phosphocreatine stores are smaller in the heat",
+       "why": "Nothing in the evidence shows smaller energy stores in the heat."
+      },
+      {
+       "id": "d",
+       "text": "Hot air holds less oxygen, so she takes in less per breath",
+       "why": "Oxygen fraction is the same in hot air; the issue is circulation, not air."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-start-temp",
+   "concept": "hx-core",
+   "bloom": "apply",
+   "sources": [
+    "gonzalezalonso1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a lab, a cyclist cools in water so core temperature starts at 36 °C instead of 38 °C, then rides at 60% VO₂max in 40 °C air to exhaustion. What does the seven-cyclist study predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She stops at a lower core temperature, since the cool start shocks the body",
+       "why": "Cyclists stopped at the same core temperature whatever the start."
+      },
+      {
+       "id": "b",
+       "text": "She rides about twice as long and stops at about the same core temperature",
+       "correct": true,
+       "why": "Right: about 63 min from a 36 °C start against 28 min from 38 °C, ending near 40 °C."
+      },
+      {
+       "id": "c",
+       "text": "She rides the same time, because the end of the ride sets the limit",
+       "why": "Time to exhaustion was clearly longer from the cooler start."
+      },
+      {
+       "id": "d",
+       "text": "She stops at a higher core temperature, near 41 °C, as the cool start allows more strain",
+       "why": "All stopped at 40.1–40.2 °C; the start did not move the end point."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-pacing-read",
+   "concept": "hx-core",
+   "bloom": "evaluate",
+   "sources": [
+    "ely2010",
+    "gonzalezalonso1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a 15 min time trial at 40 °C, eight men did 17% less work than at 21 °C. Peak core temperature was 38.2 °C in the heat and 38.1 °C in the cool. Which conclusion is best supported?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Heat only hurts performance once core temperature reaches about 40 °C",
+       "why": "These men slowed at about 38 °C, far below 40 °C."
+      },
+      {
+       "id": "b",
+       "text": "They slowed with only a modest core rise, so more than a core limit acts",
+       "correct": true,
+       "why": "Right: slowing came early, with modest core temperature, so skin, cardiovascular and pacing effects matter."
+      },
+      {
+       "id": "c",
+       "text": "Dehydration caused the loss, as it does in most heat studies",
+       "why": "The men were euhydrated at the start, so dehydration does not explain it."
+      },
+      {
+       "id": "d",
+       "text": "The result proves that the brain, not the heart, limits time trials",
+       "why": "The study did not measure the brain or heart, so it cannot show this."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-wind",
+   "concept": "hx-numbers",
+   "bloom": "apply",
+   "sources": [
+    "junge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete holds a power on an outdoor ride at 27 °C. On an indoor trainer at 27 °C with modest humidity and no fan, the same effort feels much harder. What fits the cycling review?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Air movement matters: a fan matched to road speed would restore much of the lost power",
+       "correct": true,
+       "why": "Right: power is held indoors only when wind matches movement speed; with little air movement it falls a lot."
+      },
+      {
+       "id": "b",
+       "text": "WBGT should predict the difference well, so the room must be more humid",
+       "why": "WBGT failed to predict the effect; here humidity is modest and wind is the difference."
+      },
+      {
+       "id": "c",
+       "text": "Indoor air is thinner, so oxygen is short",
+       "why": "Indoor air has the same oxygen as outdoor air."
+      },
+      {
+       "id": "d",
+       "text": "The effect is imagined; room temperature is equal in both",
+       "why": "Equal temperature does not mean equal heat loss; airflow changes it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-inverted-u",
+   "concept": "hx-numbers",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "galloway1997"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Eight men rode at about 70% VO₂max at 3.6, 10.5, 20.6 and 30.5 °C. At which air temperature did they ride longest?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3.6 °C",
+       "why": "The coldest condition was not best; time was shorter than at 10.5 °C."
+      },
+      {
+       "id": "b",
+       "text": "10.5 °C",
+       "correct": true,
+       "why": "Right: 93.5 min, with the shortest ride at 30.5 °C (51.6 min)."
+      },
+      {
+       "id": "c",
+       "text": "20.6 °C",
+       "why": "Room temperature was worse than 10.5 °C."
+      },
+      {
+       "id": "d",
+       "text": "30.5 °C",
+       "why": "This gave the shortest time, 51.6 min."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hx-appraise",
+   "concept": "hx-numbers",
+   "bloom": "evaluate",
+   "sources": [
+    "ely2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A coach reads one study (eight men, a 15 min lab time trial, 40 °C against 21 °C, 17% less work) and says: 'In a hot half marathon you will lose 17% of your pace.' What is the best critique?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Eight men and 15 min are too few and too short to size a road race loss",
+       "correct": true,
+       "why": "Right: the sample is small, all male, and the task and conditions differ from a half marathon."
+      },
+      {
+       "id": "b",
+       "text": "The men were dehydrated, which explains the 17% drop",
+       "why": "They were euhydrated, so this is not a flaw of the study."
+      },
+      {
+       "id": "c",
+       "text": "A 17% difference in work is too small to be statistically significant",
+       "why": "The study reports P < 0.05 for this difference."
+      },
+      {
+       "id": "d",
+       "text": "Time trials cannot measure endurance performance in any useful way",
+       "why": "Time trials are a standard performance measure; the problem is how far this one generalises."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

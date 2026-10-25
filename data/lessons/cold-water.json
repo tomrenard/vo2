@@ -1,0 +1,984 @@
+{
+ "id": "cold-water",
+ "module": "t6-cold",
+ "title": "Cold-water swimming",
+ "goal": "Describe cold shock, swim failure, the hypothermia timeline, wetsuit benefits and rules, and what is known about deaths in triathlon swims.",
+ "requires": [
+  "cold-performance"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "cold-shock-response",
+    "swim-failure",
+    "afterdrop",
+    "autonomic-conflict"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cw-shock",
+   "title": "Cold shock: the first two minutes",
+   "text": "Falling into cold water sets off the [cold shock response](g:cold-shock-response): a gasp, fast uncontrollable breathing, a racing heart and a jump in blood pressure. It peaks in the first 30 s and fades over about 2 min [[c:shock-time]]. For someone naked or lightly clad it is strongest in water of 10–15 °C, so cold shock, not hypothermia, is the first danger [[c:shock-range]]. Losing control of breathing can lead to drowning [[c:shock-drown]].\n\nIt can be trained down. After six 3-min dips at 15 °C, men's breathing rate over the first 30 s in 10 °C water fell from 47.3 to 24.0 breaths·min⁻¹ [[c:habituate]]. Dips in warmer water protect against colder water. In practice: enter slowly and let breathing settle before swimming off.",
+   "claims": [
+    {
+     "id": "shock-time",
+     "text": "Cold shock peaks in the first 30 s of immersion and adapts over the first 2 min.",
+     "grade": "strong",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "it peaks in the first 30 s of immersion and adapts over the first 2 min.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "shock-range",
+     "text": "The most dangerous responses to cold water immersion peak between 10 °C and 15 °C in naked or lightly clad people.",
+     "grade": "moderate",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "the most dangerous responses to immersion in cold water (‘cold shock’; see below) peak between 10°C and 15°C in naked or lightly clad individuals",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "shock-drown",
+     "text": "Loss of control of breathing on immersion can be a precursor to drowning.",
+     "grade": "moderate",
+     "sources": [
+      "datta2006"
+     ],
+     "evidence": [
+      {
+       "source": "datta2006",
+       "quote": "The respiratory responses to skin cooling override both conscious and other autonomic respiratory controls and may act as a precursor to drowning.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "habituate",
+     "text": "Six 3-min dips at 15 °C cut the cold shock response in 10 °C water, so habituation works with warmer water.",
+     "grade": "weak",
+     "sources": [
+      "tipton1998"
+     ],
+     "evidence": [
+      {
+       "source": "tipton1998",
+       "quote": "It is concluded that habituation of the cold shock response can be achieved by immersion in warmer water than that for which protection is required.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cw-habit-ex",
+   "title": "How big was the drop?",
+   "problem": "In 10 °C water, the breathing rate in the first 30 s fell from 47.3 to 24.0 breaths·min⁻¹ after repeated dips. What is the percent fall?",
+   "steps": [
+    "Fall: 47.3 − 24.0 = 23.3 breaths·min⁻¹.",
+    "Divide by the starting value: 23.3 ÷ 47.3 = 0.493.",
+    "A fall of about 49%. (The remaining 51% is what is left, not the fall.)"
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cw-shock-time"
+  },
+  {
+   "type": "question",
+   "item": "cw-entry"
+  },
+  {
+   "type": "question",
+   "item": "cw-habit-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "cw-failure",
+   "title": "Swim failure: cold limbs, not a cold core",
+   "text": "Cold arms and legs fail long before the core is dangerously cold. Muscle force is clearly weaker when muscle is below 27 °C, a level the forearm reaches after about 20 min at rest in 12 °C water or 40 min in 20 °C water [[c:muscle-27]].\n\nIn a flume, 10 volunteers swam breaststroke for up to 90 min at 10 °C. One reached [swim failure](g:swim-failure) at 61 min, and four were taken out near failure with rectal temperatures of 35 °C. Stroke length fell, and stroke rate and body angle rose [[c:flume]]. Impaired swimming and the first-minutes response are probably the main dangers, more than deep hypothermia [[c:failure-danger]].",
+   "claims": [
+    {
+     "id": "muscle-27",
+     "text": "Muscle contractile force is clearly impaired below 27 °C; forearm muscle can reach this after about 20 min at rest in 12 °C water or 40 min in 20 °C water.",
+     "grade": "moderate",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "The contractile force of muscle is significantly impaired when its temperature falls below 27°C",
+       "level": "full-text"
+      },
+      {
+       "source": "tipton2014",
+       "quote": "The deep muscles of the forearm can reach this temperature after about 20 min at rest in 12°C or 40 min in 20°C water",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "flume",
+     "text": "At 10 °C, one of 10 swimmers reached swim failure at 61 min; efficiency and stroke length fell, and stroke rate and swim angle rose.",
+     "grade": "weak",
+     "sources": [
+      "tipton1999"
+     ],
+     "evidence": [
+      {
+       "source": "tipton1999",
+       "quote": "In 10 degrees C water, one swimmer reached swim failure after 61 min and four were withdrawn before 90 min with rectal temperatures of 35 degrees C when they were close to swim failure.",
+       "level": "abstract"
+      },
+      {
+       "source": "tipton1999",
+       "quote": "Swimming efficiency and length of stroke decreased more and rate of stroke and swim angle increased more in 10 degrees C water than in warmer water.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "failure-danger",
+     "text": "Impaired performance and the initial responses to immersion are probably the major dangers to immersion victims.",
+     "grade": "weak",
+     "sources": [
+      "tipton1999"
+     ],
+     "evidence": [
+      {
+       "source": "tipton1999",
+       "quote": "Impaired performance and initial cardiorespiratory responses to immersion probably represent the major dangers to immersion victims.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cw-failure-signs"
+  },
+  {
+   "type": "question",
+   "item": "cw-failure-act"
+  },
+  {
+   "type": "concept",
+   "id": "cw-timeline",
+   "title": "A timeline: the 1-10-1 rule",
+   "text": "Water-safety teaching uses a rule of thumb, \"1-10-1\": about 1 minute for cold shock to pass, about 10 minutes of useful movement, about 1 hour before hypothermia takes consciousness. It is a teaching aid, not a measured law, and it is built for people who fall in dressed. Swimmers can last longer: in a flume at 10 °C the first swim failure came at 61 min, though only 5 of 10 lasted the full 90 min.\n\nThe pattern is real: cold shock first, weak arms and legs after tens of minutes, deep cooling later. In an 11.7 °C swim without wetsuits, 10 of 11 swimmers kept cooling after exit ([afterdrop](g:afterdrop)), and 5 of 11 fell below 36.0 °C but only 1 below 35.0 °C [[c:alcatraz]].",
+   "claims": [
+    {
+     "id": "alcatraz",
+     "text": "In an 11.7 °C swim without wetsuits, 10 of 11 swimmers showed afterdrop; 5 of 11 fell below 36.0 °C but only 1 below 35.0 °C.",
+     "grade": "weak",
+     "sources": [
+      "nuckton2000"
+     ],
+     "evidence": [
+      {
+       "source": "nuckton2000",
+       "quote": "Afterdrop, defined as continued cooling following removal from cold stress, was seen in 10 of the 11 subjects.",
+       "level": "abstract"
+      },
+      {
+       "source": "nuckton2000",
+       "quote": "Applying the American Heart Association definition of hypothermia (less than 36.0 C [96.8 degrees F]), hypothermia was seen in 5 of the 11 subjects.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cw-rule-logic"
+  },
+  {
+   "type": "question",
+   "item": "cw-afterdrop"
+  },
+  {
+   "type": "question",
+   "item": "cw-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "cw-wetsuit",
+   "title": "Wetsuits: warmth, buoyancy and speed",
+   "text": "A wetsuit insulates and lifts you higher. In 30 min swims in 20.1–25.6 °C water, trunk skin was 3.2–4.3 °C warmer in a wetsuit than in a swimsuit [[c:trunk]]. Triathletes also swam at a lower energy cost: 14.4% less at 60% of [vVO₂max](g:vvo2max) and 7.5% less at 80% [[c:wetsuit-cost]] (see the swimming economy lesson).\n\nRules differ by event. British Triathlon's rules, as reported in a 2014 review: wetsuit optional from 14 °C; no swimming advised below 11 °C; maximum 2,000 m at 13 °C, 1,000 m at 12 °C, 500 m at 11 °C. Under 1,500 m a wetsuit is mandatory below 14 °C and forbidden above 22 °C; for 1,501–3,000 m the limits are 15 °C and 23 °C [[c:rules]]. The review calls the evidence behind them limited [[c:rules-weak]].",
+   "claims": [
+    {
+     "id": "trunk",
+     "text": "In 20.1–25.6 °C water, trunk temperature was 3.2–4.3 °C warmer in a wetsuit than in a swimsuit.",
+     "grade": "weak",
+     "sources": [
+      "trappe1995"
+     ],
+     "evidence": [
+      {
+       "source": "trappe1995",
+       "quote": "Mean trunk temperatures (Ttr) during swimming in the WS trials were 4.32 +/- 0.16 (20.1 degrees C), 3.90 +/- 0.25 (22.7 degrees C), and 3.21 +/- 0.20 (25.6 degrees C) degrees C warmer than in the SS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "wetsuit-cost",
+     "text": "In 13 triathletes, a wetsuit cut the energy cost of swimming by 14.4% at 60% of vVO₂max and 7.5% at 80%.",
+     "grade": "weak",
+     "sources": [
+      "tomikawa2008"
+     ],
+     "evidence": [
+      {
+       "source": "tomikawa2008",
+       "quote": "Cs with a WS was lower by 14.4% at V(60%) and 7.5% at V(80%) than with a SS.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "rules",
+     "text": "British Triathlon rules: wetsuit optional from 14 °C; no open-water swimming advised below 11 °C; set maximum distances at 11–13 °C.",
+     "grade": "weak",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "The minimum water temperature at which wetsuits are optional is 14°C.",
+       "level": "full-text"
+      },
+      {
+       "source": "tipton2014",
+       "quote": "At temperatures less than 11°C, it is recommended that no OWS takes place.",
+       "level": "full-text"
+      },
+      {
+       "source": "tipton2014",
+       "quote": "The use of wetsuits is forbidden / mandatory if the following combinations of distance and water temperature are attained: <1,500 m, > 22 °C/ <14 °C 1,501–3,000 m, > 23 °C/ <15 °C",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "rules-weak",
+     "text": "The evidence base for these swim regulations is limited.",
+     "grade": "weak",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "Although well intentioned, the evidence base for these regulations is limited",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cw-wetsuit-rule",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cw-wetsuit-cost"
+  },
+  {
+   "type": "concept",
+   "id": "cw-deaths",
+   "title": "Deaths in triathlon swims",
+   "text": "In US triathlons in 2003–2011, 79% of deaths happened in the swim, and unexplained sudden cardiac death, rather than hypothermia or heat, was the likely cause in most [[c:swim-79]]. The sudden cardiac death lesson covers rates and causes.\n\nCold water may still play a part. The \"[autonomic conflict](g:autonomic-conflict)\" theory says cold, breath-holding and anger can drive both nerve systems to the heart at once, which may provoke arrhythmias in people with a heart condition [[c:conflict]]. Most incidents come in the first 400 m, so organisers are advised to limit wave size and add safety cover there, on weak evidence [[c:first-400]].\n\nHypothermia is still common in long swims: in a 19.2 km race it was the most common illness [[c:perth]].",
+   "claims": [
+    {
+     "id": "swim-79",
+     "text": "79% of US triathlon deaths in 2003–2011 happened during the swim, most likely from unexplained sudden cardiac death rather than hypothermia or hyperthermia.",
+     "grade": "moderate",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "the USA Triathlon Fatality Incidents Study [ 1 ] reported that 79% of deaths in triathlons in the USA between 2003 and 2011 occurred during the swim, with unexplained sudden cardiac death, rather than hypothermia or hyperthermia, being the most likely cause of death in most cases.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "conflict",
+     "text": "Autonomic conflict may provoke arrhythmias in people with predisposing conditions; it is a theory.",
+     "grade": "weak",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "may provoke cardiac arrhythmias which, in individuals with predisposing conditions, can descend into fatal arrhythmias.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "first-400",
+     "text": "Most general incidents happen in the first 400 m; advice such as smaller waves and more safety cover there rests on weak, hypothetical evidence.",
+     "grade": "weak",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "the first part of a swim (up to 400 m) is where the greatest number of general incidents occur",
+       "level": "full-text"
+      },
+      {
+       "source": "tipton2014",
+       "quote": "The level of evidence underpinning these recommendations is weak/hypothetical",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "perth",
+     "text": "In a 19.2 km race, hypothermia was the most common race-related illness; longer swims raised the risk and higher BMI protected.",
+     "grade": "weak",
+     "sources": [
+      "brannigan2009"
+     ],
+     "evidence": [
+      {
+       "source": "brannigan2009",
+       "quote": "Hypothermia was the most common race-related illness, identified in 26 of 35 swimmers screened as requiring temperature measurement, including 5 who required short-stay hospital care and 2 who required critical care transfer.",
+       "level": "abstract"
+      },
+      {
+       "source": "brannigan2009",
+       "quote": "Increased BMI appears to be protective against hypothermia, while prolonged duration of the swim predicts an increased risk of hypothermia.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cw-cause"
+  },
+  {
+   "type": "question",
+   "item": "cw-risk"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Cold shock peaks in the first 30 s and fades over about 2 min; it is worst at 10–15 °C and can be trained down with dips in warmer water.",
+    "Cold limbs cause swim failure (short strokes, high rate) long before the core is very cold.",
+    "1-10-1 is a teaching rule of thumb; fit moving swimmers last longer, and cooling goes on after leaving the water (afterdrop).",
+    "Wetsuits warm the trunk, lower swim energy cost and follow event rules, which rest on limited evidence.",
+    "Most triathlon swim deaths are sudden cardiac death, but long cold swims still bring hypothermia."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cw-shock-time",
+   "concept": "cw-shock",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tipton2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "When does the cold shock response peak after falling into cold water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "After about 20 min, as the muscles cool",
+       "why": "That is when cooling muscles weaken, a later phase."
+      },
+      {
+       "id": "b",
+       "text": "After about 1 hour, as the core cools",
+       "why": "That is the hypothermia phase, not cold shock."
+      },
+      {
+       "id": "c",
+       "text": "Only when the head goes under",
+       "why": "Cold shock starts with skin cooling, whether or not the head is under."
+      },
+      {
+       "id": "d",
+       "text": "In the first 30 s, fading over about 2 min",
+       "why": "Cold shock is quick: it peaks at about 30 s and adapts within 2 min.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-entry",
+   "concept": "cw-shock",
+   "bloom": "apply",
+   "sources": [
+    "tipton2014",
+    "datta2006"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete enters a 12 °C lake and gasps with a racing heart. What is the best next move?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Dive under to get used to it",
+       "why": "Diving risks breath-holding during the gasp reflex."
+      },
+      {
+       "id": "b",
+       "text": "Leave the water and never return",
+       "why": "Habituation makes the response smaller, so leaving forever is unnecessary."
+      },
+      {
+       "id": "c",
+       "text": "Hold a buoy until breathing settles, then swim",
+       "why": "Cold shock fades in about 2 min, and calm breathing avoids panic and water in the airway.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Swim off at full pace to warm up",
+       "why": "Fast swimming with uncontrolled breathing risks drowning."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A swimmer jumps into a 10 °C lake for her first open-water swim and her breathing races. What is the best action?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Take off her goggles to see better",
+       "why": "Goggles do not change the cold shock response."
+      },
+      {
+       "id": "b",
+       "text": "Rest at the edge until breathing calms",
+       "why": "The response fades in about 2 min, and waiting avoids panic.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Start sprinting to beat the cold",
+       "why": "Uncontrolled breathing makes hard swimming unsafe."
+      },
+      {
+       "id": "d",
+       "text": "Hold her breath to slow her heart",
+       "why": "Breath-holding fights the reflex and risks aspirating water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-habit-calc",
+   "concept": "cw-shock",
+   "bloom": "apply",
+   "sources": [
+    "tipton1998"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 10 °C water, breathing rate in the first 30 s fell from 47.3 to 24.0 breaths·min⁻¹ after repeated dips. What is the percent fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "51%",
+       "why": "That is the share left (24.0 ÷ 47.3), not the fall."
+      },
+      {
+       "id": "b",
+       "text": "97%",
+       "why": "That divides the fall by the end value, 24.0."
+      },
+      {
+       "id": "c",
+       "text": "49%",
+       "why": "(47.3 − 24.0) ÷ 47.3 = 49%.",
+       "correct": true
+      }
+     ],
+     "solution": "Fall: 47.3 − 24.0 = 23.3 breaths·min⁻¹. Percent: 23.3 ÷ 47.3 = 0.493, about 49%."
+    },
+    {
+     "id": "b",
+     "stem": "In 10 °C water, heart rate in the first 30 s fell from 128 to 109 beats·min⁻¹ after repeated dips. What is the percent fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "85%",
+       "why": "That is the share left (109 ÷ 128), not the fall."
+      },
+      {
+       "id": "b",
+       "text": "15%",
+       "why": "(128 − 109) ÷ 128 = 14.8%, about 15%.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "17%",
+       "why": "That divides the fall by the end value, 109."
+      }
+     ],
+     "solution": "Fall: 128 − 109 = 19 beats·min⁻¹. Percent: 19 ÷ 128 = 0.148, about 15%."
+    },
+    {
+     "id": "c",
+     "stem": "In 15 °C water, breathing rate in the first 30 s fell from 33.3 to 19.8 breaths·min⁻¹ after repeated dips. What is the percent fall?",
+     "options": [
+      {
+       "id": "a",
+       "text": "41%",
+       "why": "(33.3 − 19.8) ÷ 33.3 = 40.5%, about 41%.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "59%",
+       "why": "That is the share left (19.8 ÷ 33.3), not the fall."
+      },
+      {
+       "id": "c",
+       "text": "68%",
+       "why": "That divides the fall by the end value, 19.8."
+      }
+     ],
+     "solution": "Fall: 33.3 − 19.8 = 13.5 breaths·min⁻¹. Percent: 13.5 ÷ 33.3 = 0.405, about 41%."
+    }
+   ]
+  },
+  {
+   "id": "cw-failure-signs",
+   "concept": "cw-failure",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "tipton1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which changes in a cold-water swimmer's stroke point to impending swim failure?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Longer strokes and a slower rate",
+       "why": "That is better efficiency, the opposite of failure."
+      },
+      {
+       "id": "b",
+       "text": "A flatter body angle and higher speed",
+       "why": "Failing swimmers sink lower, not rise higher."
+      },
+      {
+       "id": "c",
+       "text": "Shivering that stops completely",
+       "why": "Shivering can stop at low core temperature, but it is not a stroke sign."
+      },
+      {
+       "id": "d",
+       "text": "Shorter strokes, a faster rate and a steeper body angle",
+       "why": "These variables characterised impending swim failure in the flume.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-failure-act",
+   "concept": "cw-failure",
+   "bloom": "evaluate",
+   "sources": [
+    "tipton1999",
+    "tipton2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete 20 min into a 12 °C swim sees her strokes shorten and rate climb. She still feels fine. What should she do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Speed up to warm herself",
+       "why": "Sprinting with weak arms can speed up failure."
+      },
+      {
+       "id": "b",
+       "text": "Stop and tread water until she feels cold",
+       "why": "The alert may not come; treading water also costs energy."
+      },
+      {
+       "id": "c",
+       "text": "Signal for help or head for safety now",
+       "why": "These are signs of impending swim failure, and feeling fine proves little.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Keep going, since her core is warm",
+       "why": "Swim failure can come while the core is still near normal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-rule-logic",
+   "concept": "cw-timeline",
+   "bloom": "understand",
+   "sources": [
+    "tipton2014",
+    "tipton1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does the 1-10-1 rule put cold shock first, ahead of hypothermia?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cold shock lasts the longest",
+       "why": "It fades in about 2 min."
+      },
+      {
+       "id": "b",
+       "text": "Hypothermia never happens in cold water",
+       "why": "It can, but it takes longer."
+      },
+      {
+       "id": "c",
+       "text": "Cold shock is only a problem for weak swimmers",
+       "why": "It affects most people in cold water, strongest at 10–15 °C."
+      },
+      {
+       "id": "d",
+       "text": "Cold shock comes in the first minutes and can drown a person",
+       "why": "Breathing control is lost early, so it is the first danger.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-afterdrop",
+   "concept": "cw-timeline",
+   "bloom": "analyse",
+   "sources": [
+    "nuckton2000"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A swimmer leaves 11.7 °C water with a core of 36.5 °C, then shivers in a car and her core falls to 35.8 °C. Why did it fall further?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Afterdrop: her cold arms, legs and outer tissues kept drawing heat from the core",
+       "why": "Cooling goes on after exit as the cold outer tissues keep taking heat from the core.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Her core was made cold by the car's air",
+       "why": "Car air is warmer than the water."
+      },
+      {
+       "id": "c",
+       "text": "Her body stopped making heat after leaving the water",
+       "why": "Shivering was making heat; the fall comes from heat moving into cold tissues."
+      },
+      {
+       "id": "d",
+       "text": "Cold shock came back in the car",
+       "why": "Cold shock is a first-minutes response to water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-appraise",
+   "concept": "cw-timeline",
+   "bloom": "evaluate",
+   "sources": [
+    "tipton1999"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A flume study had 10 volunteers swim breaststroke in 25, 18 and 10 °C water. What most limits its use for race planning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Swim failure was not defined",
+       "why": "It was defined as feet touching the bottom."
+      },
+      {
+       "id": "b",
+       "text": "It found cold water is harmless",
+       "why": "It found swim failure and withdrawals at 10 °C."
+      },
+      {
+       "id": "c",
+       "text": "Few swimmers, in a flume, withdrawn at 35 °C",
+       "why": "Small and controlled; it cannot show how many race swimmers fail.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "It used only one water temperature",
+       "why": "It used three."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-wetsuit-rule",
+   "concept": "cw-wetsuit",
+   "bloom": "apply",
+   "sources": [
+    "tipton2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "By the national rules above, what applies to a 1,200 m swim in 13 °C water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wetsuit is mandatory",
+       "why": "Under 1,500 m a wetsuit is mandatory below 14 °C.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "A wetsuit is optional",
+       "why": "It is optional from 14 °C and up."
+      },
+      {
+       "id": "c",
+       "text": "A wetsuit is forbidden",
+       "why": "It is forbidden only above 22 °C for this distance."
+      },
+      {
+       "id": "d",
+       "text": "The swim is banned",
+       "why": "13 °C allows up to 2,000 m, so 1,200 m is allowed."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "By the same rules, what applies to a 2,000 m swim in 17 °C water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wetsuit is mandatory",
+       "why": "That applies below 15 °C."
+      },
+      {
+       "id": "b",
+       "text": "A wetsuit is forbidden",
+       "why": "That applies above 23 °C."
+      },
+      {
+       "id": "c",
+       "text": "The swim is banned",
+       "why": "Swims are advised against only below 11 °C."
+      },
+      {
+       "id": "d",
+       "text": "A wetsuit is optional",
+       "why": "For 1,501–3,000 m it is mandatory below 15 °C and forbidden above 23 °C; 17 °C is between.",
+       "correct": true
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "stem": "By the same rules, what applies to an 800 m swim in 24 °C water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A wetsuit is optional",
+       "why": "It is optional only between 14 °C and 22 °C."
+      },
+      {
+       "id": "b",
+       "text": "The swim is banned",
+       "why": "Only water below 11 °C is advised against."
+      },
+      {
+       "id": "c",
+       "text": "A wetsuit is forbidden",
+       "why": "Under 1,500 m a wetsuit is forbidden above 22 °C.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "A wetsuit is mandatory",
+       "why": "That applies below 14 °C."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-wetsuit-cost",
+   "concept": "cw-wetsuit",
+   "bloom": "analyse",
+   "sources": [
+    "tomikawa2008",
+    "trappe1995"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete swims 5 min at 60% of vVO₂max with and without a wetsuit. What does the 13-triathlete study predict?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A lower energy cost, about 14% less, in the wetsuit",
+       "why": "Cost was 14.4% lower at 60% of vVO₂max.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "No change in energy cost, only warmth",
+       "why": "Energy cost fell as well as warmth rising."
+      },
+      {
+       "id": "c",
+       "text": "A higher energy cost, from the extra drag",
+       "why": "Cost fell, so drag did not cancel the gain."
+      },
+      {
+       "id": "d",
+       "text": "A lower vVO₂max in the wetsuit",
+       "why": "vVO₂max was 5.4% higher with the wetsuit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-cause",
+   "concept": "cw-deaths",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tipton2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which cause was most likely in most US triathlon swim deaths from 2003 to 2011?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hyperthermia",
+       "why": "Heat was not the likely cause in most."
+      },
+      {
+       "id": "b",
+       "text": "Wetsuit failure",
+       "why": "The study gave no such cause."
+      },
+      {
+       "id": "c",
+       "text": "Sudden cardiac death",
+       "why": "This was the most likely cause in most cases.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Hypothermia",
+       "why": "Hypothermia was not the likely cause in most."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cw-risk",
+   "concept": "cw-deaths",
+   "bloom": "analyse",
+   "sources": [
+    "brannigan2009",
+    "tipton2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two swimmers start a 19.2 km race. One is lean and slow (about 7 h), the other has a higher BMI and is faster (about 5 h). Who is more at risk of hypothermia?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The faster swimmer, who works harder",
+       "why": "Longer duration, not faster pace, raised risk."
+      },
+      {
+       "id": "b",
+       "text": "Both the same, because the water was the same",
+       "why": "Time and body size changed the risk."
+      },
+      {
+       "id": "c",
+       "text": "The higher BMI swimmer, who is heavier",
+       "why": "Higher BMI was protective."
+      },
+      {
+       "id": "d",
+       "text": "The lean, slower swimmer: longer time and lower BMI",
+       "why": "Longer duration raised risk and higher BMI protected.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

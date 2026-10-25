@@ -1,0 +1,746 @@
+{
+ "id": "env-jet-lag",
+ "module": "t6-pollution-travel",
+ "title": "Jet lag: the clock, light and melatonin",
+ "goal": "Explain why crossing time zones makes the body clock mistimed, why east is slower than west, when light helps or hurts, and what melatonin trials show.",
+ "requires": [
+  "env-pollution"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "zeitgeber",
+    "phase-shift",
+    "jet-lag",
+    "melatonin",
+    "core-temp-minimum"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "jl-what",
+   "title": "What jet lag is",
+   "text": "Your [circadian rhythm](g:circadian-rhythm) (see the sleep lessons) is set by [zeitgebers](g:zeitgeber), mostly light. Fly across time zones and the clock stays on home time for days. That mismatch is [jet lag](g:jet-lag), and it follows a journey across three or more time zones [[c:jl-def]].\n\nExample: London to Los Angeles, 8 h west. When your clock says 23:00 (bedtime), it is 15:00 local. Your [core temperature minimum](g:core-temp-minimum), the low point of the clock, still falls at 04:00 London time, which is 20:00 in Los Angeles. You feel sleepy in the evening and struggle to stay asleep until morning [[c:jl-clock]].",
+   "claims": [
+    {
+     "id": "jl-def",
+     "text": "Jet lag is caused mainly by the body clock being mistimed in the new time zone, and follows a journey across three or more time zones.",
+     "grade": "strong",
+     "sources": [
+      "waterhouse2007",
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "waterhouse2007",
+       "quote": "Since jet lag is caused mainly by inappropriate timing of the body clock in the new time zone, the pertinent properties of the body clock are outlined, with a description of how the body clock can be adjusted.",
+       "level": "abstract"
+      },
+      {
+       "source": "janse2021",
+       "quote": "Jet lag follows any journey rapidly crossing three or more time-zones, is episodic and implies full recovery after resynchronisation",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "jl-clock",
+     "text": "After westward flight the clock runs ahead of local time, and the first evenings bring sleepiness and trouble staying asleep.",
+     "grade": "strong",
+     "sources": [
+      "roach2019"
+     ],
+     "evidence": [
+      {
+       "source": "roach2019",
+       "quote": "Immediately after westward flight, the circadian system will be running ahead of the local time zone.",
+       "level": "full-text"
+      },
+      {
+       "source": "roach2019",
+       "quote": "Consequently, at least initially in Los Angeles, a person will feel sleepy in the evening and they will have difficulty staying asleep until their normal wake time in the morning.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "jl-mismatch"
+  },
+  {
+   "type": "question",
+   "item": "jl-offset"
+  },
+  {
+   "type": "concept",
+   "id": "jl-direction",
+   "title": "East versus west",
+   "text": "After flying west the clock runs ahead and must move later, a delay. After flying east it runs behind and must move earlier, an advance. Both are a [phase shift](g:phase-shift).\n\nRule of thumb: the clock re-aligns at about **0.5 day per time zone** flying west (2 h per day) and **1 day per time zone** flying east (1 h per day) [[c:jl-rate]]. So the same number of zones costs about twice as many days eastward.",
+   "claims": [
+    {
+     "id": "jl-rate",
+     "text": "The body clock re-aligns at about 0.5 day per zone westward (2 h per day) and 1 day per zone eastward (1 h per day).",
+     "grade": "moderate",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "As a rule of thumb, the duration of natural alignment is 0.5 days per time-zone crossed in a westerly direction, i.e. 2 h per day, and 1 day per time zone crossed in an easterly direction, i.e. 1 h per day",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "jl-days-ex",
+   "title": "Days to re-align",
+   "problem": "Berlin to Boston is 6 h west. Berlin to Dubai is 3 h east. About how many days until the clock has re-aligned in each case?",
+   "steps": [
+    "Westward: 0.5 day per zone × 6 zones = 3 days.",
+    "Eastward: 1 day per zone × 3 zones = 3 days.",
+    "Same 3 days, though the eastward trip crossed only half as many zones: each zone east costs twice the time."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "jl-days"
+  },
+  {
+   "type": "question",
+   "item": "jl-direction"
+  },
+  {
+   "type": "concept",
+   "id": "jl-light",
+   "title": "Light: right time, wrong time",
+   "text": "Light is the strongest zeitgeber, but its effect depends on *when on your body clock* it arrives. Light in the ~12 h before your core temperature minimum delays the clock, and light in the ~12 h after it advances it [[c:jl-prc]].\n\nAfter 8 h west (London to Los Angeles) your minimum falls at 20:00 local, so daytime light comes before it: a delay, the right way. After 8 h east (Los Angeles to London) your minimum falls at midday local, so morning light comes before it too: a delay, the wrong way [[c:jl-light]]. Sun-seeking works well after westward travel and can backfire after eastward travel. The question is not 'is it bright?' but 'where is my clock?'.",
+   "claims": [
+    {
+     "id": "jl-prc",
+     "text": "Light in the ~12 h before the core temperature minimum delays the clock; light in the ~12 h after it advances it.",
+     "grade": "moderate",
+     "sources": [
+      "roach2019"
+     ],
+     "evidence": [
+      {
+       "source": "roach2019",
+       "quote": "Light exposure in the ~12 h prior to CBTmin shifts the circadian system backward/later, or causes a phase delay; light exposure in the ~12 h after CBTmin shifts the circadian system forward/earlier, or causes a phase advance",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "jl-light",
+     "text": "Seeking sunlight indiscriminately helps after westward travel but may be counterproductive after eastward travel.",
+     "grade": "moderate",
+     "sources": [
+      "roach2019"
+     ],
+     "evidence": [
+      {
+       "source": "roach2019",
+       "quote": "In general, this approach will work quite well after westward travel, but it may actually be counterproductive after eastward travel.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "jl-light-dir"
+  },
+  {
+   "type": "concept",
+   "id": "jl-mel",
+   "title": "Melatonin: what the trials show",
+   "text": "A Cochrane review pooled 10 randomised trials of [melatonin](g:melatonin) in travellers. Nine found that melatonin taken near the target bedtime at the destination (10 pm to midnight) eased jet lag after flights over five or more zones [[c:jl-mel]]. Doses of 0.5 to 5 mg worked about the same; 5 mg helped people fall asleep faster. Taken early in the local day it can cause sleepiness and slow adaptation. The benefit was likely larger with more zones and smaller for westward flights.\n\nLimits: the outcomes were mostly ratings of how people felt, in ordinary travellers, not race results. Epilepsy and warfarin use were flagged as concerns.",
+   "claims": [
+    {
+     "id": "jl-mel",
+     "text": "Melatonin taken close to the target bedtime at the destination reduced jet lag on flights over five or more zones; wrong timing delays adaptation.",
+     "grade": "moderate",
+     "sources": [
+      "herxheimer2002"
+     ],
+     "evidence": [
+      {
+       "source": "herxheimer2002",
+       "quote": "Nine of the ten trials found that melatonin, taken close to the target bedtime at the destination (10pm to midnight), decreased jet-lag from flights crossing five or more time zones.",
+       "level": "abstract"
+      },
+      {
+       "source": "herxheimer2002",
+       "quote": "The timing of the melatonin dose is important: if it is taken at the wrong time, early in the day, it is liable to cause sleepiness and delay adaptation to local time.",
+       "level": "abstract"
+      },
+      {
+       "source": "herxheimer2002",
+       "quote": "Daily doses of melatonin between 0.5 and 5mg are similarly effective, except that people fall asleep faster and sleep better after 5mg than 0.5mg.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "jl-mel-time"
+  },
+  {
+   "type": "question",
+   "item": "jl-mel-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "jl-recovery",
+   "title": "How long are you affected?",
+   "text": "The clock rule gives the days: about 8 days after 8 h east, 4 after 8 h west. Until then, sleep and the body functions tied to the clock stay off. A review of 89 athlete studies found that eastward travel went with stronger clock disruption and weaker aerobic capacity and coordination, while westward travel brought more fatigue and hurt team-sport results [[c:jl-benito]]. Size depends on direction, zones crossed and the person.\n\nThe evidence is thin: the consensus panel says lack of evidence limits how strong its advice can be [[c:jl-thin]]. Treat the rules as plans to test in training trips.",
+   "claims": [
+    {
+     "id": "jl-benito",
+     "text": "Eastward travel went with stronger circadian disruption and weaker aerobic capacity and coordination; westward travel with more fatigue and worse team-sport results.",
+     "grade": "weak",
+     "sources": [
+      "benito2026"
+     ],
+     "evidence": [
+      {
+       "source": "benito2026",
+       "quote": "Eastward travel is generally associated with stronger circadian disruption and impaired aerobic capacity, coordination, and technical performance, whereas westward travel often induces greater fatigue and adversely affects team-sport outcomes.",
+       "level": "abstract"
+      },
+      {
+       "source": "benito2026",
+       "quote": "Risk of bias was low in 49%, moderate in 17%, and high in 34% of studies.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "jl-thin",
+     "text": "Evidence on managing jet lag in athletes is lacking, which limits how strong the recommendations can be.",
+     "grade": "strong",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "The lack of evidence restricts the strength of recommendations that are possible but the consensus group identified the fundamental principles and interventions to consider for both the assessment and management of travel fatigue and jet lag.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "jl-benito-appraise"
+  },
+  {
+   "type": "question",
+   "item": "jl-plan"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Jet lag is the body clock out of step with local time after three or more zones.",
+    "The clock re-aligns at about 0.5 day per zone west and 1 day per zone east.",
+    "Light moves the clock by your body-clock time: it can push the wrong way, especially after eastward travel.",
+    "Melatonin near target bedtime helped in trials of travellers; evidence for athletes' performance is thin."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "jl-mismatch",
+   "concept": "jl-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "waterhouse2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What mainly causes jet lag?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The body clock is still timed for home while local time has moved on.",
+       "correct": true,
+       "why": "Right: it is a timing mismatch between clock and local day."
+      },
+      {
+       "id": "b",
+       "text": "Dehydration from the flight itself and the dry cabin air.",
+       "why": "Dehydration can add to tiredness but is not the main cause of jet lag."
+      },
+      {
+       "id": "c",
+       "text": "Sitting still in a cramped seat for many hours.",
+       "why": "That is part of travel fatigue, and it happens without time-zone change."
+      },
+      {
+       "id": "d",
+       "text": "Cabin air lowering oxygen in the blood on the flight.",
+       "why": "Not the main cause; jet lag needs a time-zone change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-offset",
+   "concept": "jl-what",
+   "bloom": "apply",
+   "sources": [
+    "roach2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner flies Berlin to Chicago, 7 h west. Her body clock says 23:00 (bedtime). What is the local time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16:00",
+       "correct": true,
+       "why": "Right: apply the zone difference to the clock time."
+      },
+      {
+       "id": "b",
+       "text": "06:00",
+       "why": "You added 7 h, but flying west the local time is earlier than home time."
+      },
+      {
+       "id": "c",
+       "text": "23:00",
+       "why": "You ignored the 7 h zone difference."
+      },
+      {
+       "id": "d",
+       "text": "18:00",
+       "why": "You subtracted 5 h; the difference is 7 h."
+      }
+     ],
+     "solution": "Westward means local time is earlier: 23:00 − 7 h = 16:00."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist flies London to Tokyo, 9 h east. His body clock says 23:00. What is the local time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "08:00",
+       "correct": true,
+       "why": "Right: apply the zone difference to the clock time."
+      },
+      {
+       "id": "b",
+       "text": "14:00",
+       "why": "You subtracted 9 h, but flying east the local time is later than home time."
+      },
+      {
+       "id": "c",
+       "text": "23:00",
+       "why": "You ignored the 9 h zone difference."
+      },
+      {
+       "id": "d",
+       "text": "20:00",
+       "why": "You added 6 h; the difference is 9 h."
+      }
+     ],
+     "solution": "Eastward means local time is later: 23:00 + 9 h = 08:00 the next day."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete flies Frankfurt to New York, 6 h west. His body clock says 22:00. What is the local time?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16:00",
+       "correct": true,
+       "why": "Right: apply the zone difference to the clock time."
+      },
+      {
+       "id": "b",
+       "text": "04:00",
+       "why": "You added 6 h, but flying west the local time is earlier than home time."
+      },
+      {
+       "id": "c",
+       "text": "22:00",
+       "why": "You ignored the 6 h zone difference."
+      },
+      {
+       "id": "d",
+       "text": "18:00",
+       "why": "You subtracted 4 h; the difference is 6 h."
+      }
+     ],
+     "solution": "Westward means local time is earlier: 22:00 − 6 h = 16:00."
+    }
+   ]
+  },
+  {
+   "id": "jl-days",
+   "concept": "jl-direction",
+   "bloom": "apply",
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A team flies 6 h west for a race. About how many days until their clock has re-aligned?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 days",
+       "correct": true,
+       "why": "Right: zones × 0.5 day west or × 1 day east."
+      },
+      {
+       "id": "b",
+       "text": "6 days",
+       "why": "You used the eastward rate (1 day per zone)."
+      },
+      {
+       "id": "c",
+       "text": "12 days",
+       "why": "You multiplied by 2 instead of 0.5."
+      },
+      {
+       "id": "d",
+       "text": "1 day",
+       "why": "You assumed the clock re-aligns within a day, whatever the zones."
+      }
+     ],
+     "solution": "Westward: 6 zones × 0.5 day = 3 days."
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist flies 8 h east for a stage race. About how many days until the clock has re-aligned?",
+     "options": [
+      {
+       "id": "a",
+       "text": "8 days",
+       "correct": true,
+       "why": "Right: zones × 0.5 day west or × 1 day east."
+      },
+      {
+       "id": "b",
+       "text": "4 days",
+       "why": "You used the westward rate (0.5 day per zone)."
+      },
+      {
+       "id": "c",
+       "text": "16 days",
+       "why": "You multiplied by 2 instead of 1."
+      },
+      {
+       "id": "d",
+       "text": "1 day",
+       "why": "You assumed the clock re-aligns within a day, whatever the zones."
+      }
+     ],
+     "solution": "Eastward: 8 zones × 1 day = 8 days."
+    },
+    {
+     "id": "c",
+     "stem": "A runner flies 8 h west to a marathon. About how many days until her clock has re-aligned?",
+     "options": [
+      {
+       "id": "a",
+       "text": "4 days",
+       "correct": true,
+       "why": "Right: zones × 0.5 day west or × 1 day east."
+      },
+      {
+       "id": "b",
+       "text": "8 days",
+       "why": "You used the eastward rate (1 day per zone)."
+      },
+      {
+       "id": "c",
+       "text": "16 days",
+       "why": "You multiplied by 2 instead of 0.5."
+      },
+      {
+       "id": "d",
+       "text": "2 days",
+       "why": "You used 0.25 day per zone, half the westward rate."
+      }
+     ],
+     "solution": "Westward: 8 zones × 0.5 day = 4 days."
+    }
+   ]
+  },
+  {
+   "id": "jl-direction",
+   "concept": "jl-direction",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a flight east, what must the body clock do, and is it quicker or slower than after a flight west?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Advance (move earlier); slower, about 1 day per zone.",
+       "correct": true,
+       "why": "Right: eastward needs an advance, at about 1 h per day."
+      },
+      {
+       "id": "b",
+       "text": "Delay (move later); slower, about 1 day per zone.",
+       "why": "A delay is what westward travel needs."
+      },
+      {
+       "id": "c",
+       "text": "Advance (move earlier); quicker, about 0.5 day per zone.",
+       "why": "Advance is right, but 0.5 day per zone is the westward rate."
+      },
+      {
+       "id": "d",
+       "text": "Delay (move later); quicker, about 0.5 day per zone.",
+       "why": "That describes westward travel, not eastward."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-light-dir",
+   "concept": "jl-light",
+   "bloom": "analyse",
+   "sources": [
+    "roach2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist flies 8 h east. On the first morning he walks for an hour in bright sun at 08:00 local. His core temperature minimum is still near midday local. What does the light do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Delays his clock, the wrong way for eastward travel.",
+       "correct": true,
+       "why": "Right: light before the minimum delays the clock, but eastward travel needs an advance."
+      },
+      {
+       "id": "b",
+       "text": "Advances his clock, the right way.",
+       "why": "Light advances only when it falls after the minimum."
+      },
+      {
+       "id": "c",
+       "text": "Nothing: morning light only matters in winter.",
+       "why": "Light shifts the clock at any season when it hits the right phase."
+      },
+      {
+       "id": "d",
+       "text": "Speeds up re-alignment by about 8 h.",
+       "why": "Light shifts the clock by about an hour or two a day at most, and here in the wrong direction."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner flies 8 h west. In the first days she is outside in the afternoon sun. Her minimum falls near 20:00 local. What does the light do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It comes before her minimum, so it delays the clock, which is the right way.",
+       "correct": true,
+       "why": "Right: westward travel needs a delay, and afternoon light before the minimum gives one."
+      },
+      {
+       "id": "b",
+       "text": "It comes after her minimum, so it advances the clock.",
+       "why": "The minimum is at 20:00, after the afternoon, so the light comes before it."
+      },
+      {
+       "id": "c",
+       "text": "It has no effect on the clock.",
+       "why": "Light is the strongest zeitgeber."
+      },
+      {
+       "id": "d",
+       "text": "It hurts, since westward travel needs an advance.",
+       "why": "Westward travel needs a delay, not an advance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-mel-time",
+   "concept": "jl-mel",
+   "bloom": "apply",
+   "recallFirst": true,
+   "sources": [
+    "herxheimer2002"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider flies 7 h east and will take melatonin on the first evenings. When fits the review's finding best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Close to the target bedtime at the destination, 10 pm to midnight.",
+       "correct": true,
+       "why": "Right: that timing decreased jet lag in nine of ten trials."
+      },
+      {
+       "id": "b",
+       "text": "On waking in the morning at the destination.",
+       "why": "Early-day doses can cause sleepiness and delay adaptation."
+      },
+      {
+       "id": "c",
+       "text": "Any time, as timing does not matter.",
+       "why": "The review says timing is important."
+      },
+      {
+       "id": "d",
+       "text": "At the bedtime of the home time zone.",
+       "why": "The review ties the dose to the destination bedtime."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-mel-appraise",
+   "concept": "jl-mel",
+   "bloom": "evaluate",
+   "sources": [
+    "herxheimer2002",
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A sprinter reads that melatonin cut jet lag in nine of ten trials and plans to use it before a final. What most limits the claim for her race?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The trials rated how travellers felt; none measured race performance.",
+       "correct": true,
+       "why": "Right: the outcomes were subjective jet-lag scores, not athletic results."
+      },
+      {
+       "id": "b",
+       "text": "Too few trials were randomised.",
+       "why": "All ten were randomised trials."
+      },
+      {
+       "id": "c",
+       "text": "Melatonin worked only in the single trial that used it with zolpidem.",
+       "why": "One trial compared it with zolpidem; most compared with placebo."
+      },
+      {
+       "id": "d",
+       "text": "It only works after westward flights.",
+       "why": "The review found more benefit with eastward flights."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-benito-appraise",
+   "concept": "jl-recovery",
+   "bloom": "evaluate",
+   "sources": [
+    "benito2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A review of 89 athlete studies on travel found eastward trips were worse for aerobic capacity. Risk of bias was high in 34% of the studies. What is the fair reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A useful pattern, but the evidence is mixed in quality, so hold it loosely.",
+       "correct": true,
+       "why": "Right: a third of the studies were high risk of bias."
+      },
+      {
+       "id": "b",
+       "text": "Proof that eastward travel lowers VO₂max by a fixed amount.",
+       "why": "The review is narrative and gives no fixed size."
+      },
+      {
+       "id": "c",
+       "text": "Worthless, because narrative reviews cannot find patterns.",
+       "why": "It found a pattern; the quality limits how firmly to hold it."
+      },
+      {
+       "id": "d",
+       "text": "Proof that westward travel is harmless.",
+       "why": "It reported more fatigue and worse team results westward."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jl-plan",
+   "concept": "jl-recovery",
+   "bloom": "analyse",
+   "sources": [
+    "janse2021",
+    "benito2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete flies 9 h east to a race that starts 5 days after landing. By the clock rule, where is her clock on race morning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 4 h behind local time, so expect poor sleep and weaker aerobic work.",
+       "correct": true,
+       "why": "Right: 9 h − 5 days × 1 h per day = 4 h still to go."
+      },
+      {
+       "id": "b",
+       "text": "Fully re-aligned, since she has had five days.",
+       "why": "Eastward needs about 9 days for 9 zones."
+      },
+      {
+       "id": "c",
+       "text": "About 9 h behind, since nothing shifts in a week.",
+       "why": "About 1 h shifts per day, so 5 h are gone."
+      },
+      {
+       "id": "d",
+       "text": "Ahead of local time, since she travelled east.",
+       "why": "Flying east leaves the clock behind local time."
+      }
+     ],
+     "solution": "Eastward rate is 1 h per day. After 5 days: 9 − 5 = 4 h still behind."
+    }
+   ]
+  }
+ ]
+}

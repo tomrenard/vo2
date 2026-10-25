@@ -1,0 +1,715 @@
+{
+ "id": "alt-hb-response",
+ "module": "t6-altitude",
+ "title": "Haemoglobin mass: how much, for whom, and does it help?",
+ "goal": "Estimate the Hb mass gain from a camp, judge what shapes the response, and weigh the placebo-controlled evidence on sea-level performance.",
+ "requires": [
+  "alt-models"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "neocytolysis",
+    "prediction-interval"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hb-rate",
+   "title": "About 1% per 100 hours",
+   "text": "The best single number comes from a [meta-analysis](g:meta-analysis) of 17 studies that measured [haemoglobin mass](g:haemoglobin-mass) by [CO rebreathing](g:co-rebreathing) before, during and after altitude: about **+1.1% per 100 h** of exposure, for both classic altitude and LHTL [[c:hb-rate-claim]]. After the camp, Hb mass stayed about 3.3% above baseline for up to 20 days. The authors judged that camps as short as 2 weeks quite likely raise Hb mass and most athletes can expect benefit [[c:hb-camp]].\n\nThe unit is hours, not days: dose counts. The straight-line rule describes the camps that were studied; it is not a promise for any single athlete (see the card on noise).",
+   "claims": [
+    {
+     "id": "hb-rate-claim",
+     "text": "During altitude exposure, haemoglobin mass rises about 1.1% per 100 h (LHTL and classic altitude), and was 3.3% above baseline for up to 20 days afterwards.",
+     "grade": "moderate",
+     "sources": [
+      "gore2013"
+     ],
+     "evidence": [
+      {
+       "source": "gore2013",
+       "quote": "During-altitude Hbmass was estimated to increase by ∼1.1%/100 h for LHTL and classic altitude. Postaltitude Hbmass was estimated to be 3.3% higher than prealtitude values for up to 20 days.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-camp",
+     "text": "Camps as short as 2 weeks of classic altitude or LHTL will quite likely raise Hb mass.",
+     "grade": "moderate",
+     "sources": [
+      "gore2013"
+     ],
+     "evidence": [
+      {
+       "source": "gore2013",
+       "quote": "Camps as short as 2 weeks of classic and LHTL altitude will quite likely increase Hbmass and most athletes can expect benefit.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hb-gain-example",
+   "title": "Hb mass after a camp",
+   "problem": "An athlete has 800 g of Hb mass. He spends 12 h·day⁻¹ in a tent for 28 days. How much Hb mass do you expect at the end?",
+   "steps": [
+    "Total exposure = 12 × 28 = 336 h.",
+    "Gain = 1.1% per 100 h × 3.36 = 3.7%.",
+    "800 × 1.037 = 829.6 g, about 830 g (a gain of about 30 g)."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-gain-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hb-vo2",
+   "title": "From grams to VO₂max",
+   "text": "What does a gain in Hb mass buy? Changing Hb mass by 1 g changes VO₂max by about 4 mL·min⁻¹ [[c:hb-slope]] (estimates run from 3 to 4). Divide by body mass to get the number athletes quote.\n\nFor 30 g in a 70 kg athlete: 30 × 4 = 120 mL·min⁻¹; 120 ÷ 70 = 1.7 mL·kg⁻¹·min⁻¹. That is about 2–3% of a VO₂max of 65, the same order as the 2.2 mL·kg⁻¹·min⁻¹ average LHTL gain in athletes in the paper of 21 October 2026. Real results vary because VO₂max also depends on the heart, muscle and, at altitude, on what you lose from the thin air.",
+   "claims": [
+    {
+     "id": "hb-slope",
+     "text": "Changing Hb mass by 1 g alters VO₂max by about 4 mL·min⁻¹.",
+     "grade": "moderate",
+     "sources": [
+      "schmidt2010"
+     ],
+     "evidence": [
+      {
+       "source": "schmidt2010",
+       "quote": "Changes in hemoglobin mass by 1g alter V˙O2max by ∼4mL·mn-1 due to changes in blood volume or hemoglobin concentration.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hb-vo2-example",
+   "title": "Grams to mL·kg⁻¹·min⁻¹",
+   "problem": "An athlete of 70 kg gains 30 g of Hb mass. Using 4 mL·min⁻¹ per g, what is the VO₂max gain?",
+   "steps": [
+    "Absolute gain = 30 × 4 = 120 mL·min⁻¹.",
+    "Per kg: 120 ÷ 70 = 1.7 mL·kg⁻¹·min⁻¹."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-vo2-calc",
+   "variant": "a"
+  },
+  {
+   "type": "concept",
+   "id": "hb-dose-iron",
+   "title": "Dose and iron decide the response",
+   "text": "More altitude is not always better. In 48 runners living at 1,780 to 2,800 m, [red-cell volume](g:red-cell-volume) rose in all four groups and did not differ between groups, yet 3,000-m time improved only at the two middle altitudes [[c:hb-chapman]].\n\nIron is the other limit: red cells need it. A review reports a study in which pre-altitude iron deficiency ([ferritin](g:ferritin) below 30 ng·mL⁻¹ in men, 20 in women) led to no gain in red cell volume [[c:hb-iron]], and says ferritin should be checked before and during the camp. Take iron only on the advice of a doctor, guided by blood tests.",
+   "claims": [
+    {
+     "id": "hb-chapman",
+     "text": "In 48 runners at four living altitudes, red-cell volume rose in every group, equally, but time-trial gains appeared only at 2,085 and 2,454 m.",
+     "grade": "weak",
+     "sources": [
+      "chapman2014"
+     ],
+     "evidence": [
+      {
+       "source": "chapman2014",
+       "quote": "Erythrocyte volume was significantly higher within all groups after return from altitude and was not different between groups.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-iron",
+     "text": "Pre-altitude iron deficiency (ferritin below 30 ng·mL⁻¹ in men, 20 in women) was followed by no gain in red cell volume at altitude.",
+     "grade": "weak",
+     "sources": [
+      "ploszczyca2018"
+     ],
+     "evidence": [
+      {
+       "source": "ploszczyca2018",
+       "quote": "pre-altitude iron deficiency (serum ferritin <30 ng/ml in men and <20 ng/ml in women) led to no improvements in RCV in responses to altitude exposure.",
+       "level": "full-text"
+      },
+      {
+       "source": "ploszczyca2018",
+       "quote": "Therefore, ferritin levels must be monitored on a regular basis before and during the hypoxic exposure if the aim of altitude training is to improve blood oxygen-carrying capacity.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-dose-response"
+  },
+  {
+   "type": "question",
+   "item": "hb-iron-plan"
+  },
+  {
+   "type": "concept",
+   "id": "hb-noise",
+   "title": "Responders, noise and the fade",
+   "text": "Averages hide people. For an athlete exposed to 300 h, the meta-analysis gave a 95% [prediction interval](g:prediction-interval) of 1.1–6% for the true Hb mass response [[c:hb-pi]]. The test itself is noisy: the within-person SD was about 2% over a week, which the authors call analytical error. So a measured +2% in one athlete is within the noise [[c:hb-noise-claim]].\n\nThe EPO response differs too: a review reports a study in which runners who did not improve their 5,000 m time had smaller EPO rises after 30 h of hypoxia than those who did [[c:hb-epo-resp]]. And gains fade: after coming down, the youngest red cells may be broken down quickly ([neocytolysis](g:neocytolysis)) [[c:hb-neo]].",
+   "claims": [
+    {
+     "id": "hb-pi",
+     "text": "For 300 h of altitude, the 95% prediction interval for an athlete's true Hb mass response was 1.1–6%.",
+     "grade": "moderate",
+     "sources": [
+      "gore2013"
+     ],
+     "evidence": [
+      {
+       "source": "gore2013",
+       "quote": "A 95% prediction interval for the 'true' response of an athlete exposed to 300 h of altitude was estimated to be 1.1-6%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-noise-claim",
+     "text": "The within-subject SD of Hb mass measurements was about 2% for up to 7 days, indicating analytical error.",
+     "grade": "moderate",
+     "sources": [
+      "gore2013"
+     ],
+     "evidence": [
+      {
+       "source": "gore2013",
+       "quote": "The within-subject SD was constant at ∼2% for up to 7 days between observations, indicative of analytical error.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-epo-resp",
+     "text": "In a study reported in a review, runners who improved their 5,000 m time had larger EPO rises after 30 h of hypoxia than those who did not.",
+     "grade": "weak",
+     "sources": [
+      "ploszczyca2018"
+     ],
+     "evidence": [
+      {
+       "source": "ploszczyca2018",
+       "quote": "It was found that the responders had significantly larger increases in mean EPO concentration after 30 h of hypoxia compared to the non-responders.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "hb-neo",
+     "text": "Some athletes showed signs of rapid red blood cell destruction after LHTL.",
+     "grade": "weak",
+     "sources": [
+      "gore2013"
+     ],
+     "evidence": [
+      {
+       "source": "gore2013",
+       "quote": "concluded that there was evidence of rapid red blood cell destruction, at least in some athletes.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hb-noise-read"
+  },
+  {
+   "type": "question",
+   "item": "hb-post-recall"
+  },
+  {
+   "type": "concept",
+   "id": "hb-debate",
+   "title": "Does it work at sea level? The placebo problem",
+   "text": "Hb mass rises, but does race performance? Most studies could not blind athletes to altitude, and a meta-analysis found that effects were mediated at least partly by [placebo](g:placebo), nocebo and training-camp effects [[c:hb-bonetti]].\n\nOne team ran a [double-blind](g:blinding) test: 16 cyclists slept 16 h·day⁻¹ for 4 weeks in rooms with either normal air (placebo, n = 6) or normobaric hypoxia simulating 3,000 m (n = 10). They did not know their group; Hb mass, VO₂max and time-trial power stayed unchanged in both groups [[c:hb-sieb]]. A review notes the gold-standard design has never been done as a [crossover](g:crossover-study) [[c:hb-lundby]].",
+   "claims": [
+    {
+     "id": "hb-bonetti",
+     "text": "Meta-analysed effects of altitude protocols were mediated partly by placebo, nocebo and training-camp effects, with natural LHTL the best protocol.",
+     "grade": "moderate",
+     "sources": [
+      "bonetti2009"
+     ],
+     "evidence": [
+      {
+       "source": "bonetti2009",
+       "quote": "There was evidence that these effects were mediated at least partly by substantial placebo, nocebo and training-camp effects with some protocols.",
+       "level": "abstract"
+      },
+      {
+       "source": "bonetti2009",
+       "quote": "In summary, natural LHTL currently provides the best protocol for enhancing endurance performance in elite and subelite athletes, while some artificial protocols are effective in subelite athletes.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-sieb",
+     "text": "In a double-blind, placebo-controlled study (16 cyclists, 4 weeks, 16 h·day⁻¹ at a simulated 3,000 m), LHTL changed neither Hb mass nor time-trial power.",
+     "grade": "disputed",
+     "sources": [
+      "siebenmann2012",
+      "lundby2012",
+      "bonetti2009"
+     ],
+     "evidence": [
+      {
+       "source": "siebenmann2012",
+       "quote": "Hb mass, maximal oxygen uptake (VO(2)) in normoxia, and at a simulated altitude of 2,500 m and mean power output in a simulated, 26.15-km time trial remained unchanged in both groups throughout the study.",
+       "level": "abstract"
+      },
+      {
+       "source": "siebenmann2012",
+       "quote": "Questionnaires revealed that subjects were unaware of group classification.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "hb-lundby",
+     "text": "A double-blind, placebo-controlled, crossover trial of altitude training has never been conducted.",
+     "grade": "moderate",
+     "sources": [
+      "lundby2012"
+     ],
+     "evidence": [
+      {
+       "source": "lundby2012",
+       "quote": "For example, the scientific gold-standard design of a double-blind, placebo-controlled, cross-over trial has never been conducted on altitude training.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does LHTL improve sea-level performance beyond placebo and training-camp effects?",
+    "sides": [
+     {
+      "position": "Yes: natural LHTL gave the best gains in a 51-study meta-analysis, and Hb mass rises about 1.1% per 100 h; the open trials still leave placebo effects unmeasured.",
+      "sources": [
+       "bonetti2009",
+       "gore2013"
+      ]
+     },
+     {
+      "position": "Not shown: the one double-blind placebo-controlled study found no change in Hb mass or performance, and a review urges more scepticism. Its small groups and 16 h·day⁻¹ dose limit what it can rule out.",
+      "sources": [
+       "siebenmann2012",
+       "lundby2012"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hb-placebo-why"
+  },
+  {
+   "type": "question",
+   "item": "hb-sieb-limits"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Hb mass rises about 1.1% per 100 h of altitude (LHTL or classic), about 3.3% above baseline for up to 20 days after; 1 g of Hb mass is worth about 4 mL·min⁻¹ of VO₂max.",
+    "The response depends on dose and on iron status: low ferritin before the camp means little or no red-cell gain.",
+    "Individual true responses vary (1.1–6% for 300 h) and the test's noise is about 2%, so one athlete's small change is not proof.",
+    "Whether LHTL beats placebo at sea level is disputed: open trials and a meta-analysis say yes; the one double-blind study found nothing, with small groups and a lower dose."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hb-gain-calc",
+   "concept": "hb-rate",
+   "bloom": "apply",
+   "sources": [
+    "gore2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An athlete has 900 g of Hb mass and spends 14 h·day⁻¹ in a tent for 21 days. Using 1.1% per 100 h, what Hb mass do you expect at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "910 g",
+       "why": "Applied 1.1% once, ignoring the hours of exposure."
+      },
+      {
+       "id": "b",
+       "text": "929 g",
+       "why": "Correct: 900 × (1 + 0.011 × 2.94).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "1,108 g",
+       "why": "Read 1.1% as per day (21 days): 900 × 1.231."
+      },
+      {
+       "id": "d",
+       "text": "29 g",
+       "why": "Gave the gain, not the final Hb mass."
+      }
+     ],
+     "solution": "Total exposure = 14 × 21 = 294 h. Gain = 1.1% × 2.94 = 3.2%. 900 × 1.032 = 929 g."
+    },
+    {
+     "id": "b",
+     "stem": "An athlete has 1,100 g of Hb mass and spends 12 h·day⁻¹ in a tent for 28 days. Using 1.1% per 100 h, what Hb mass do you expect at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,112 g",
+       "why": "Applied 1.1% once, ignoring the hours of exposure."
+      },
+      {
+       "id": "b",
+       "text": "1,439 g",
+       "why": "Read 1.1% as per day (28 days)."
+      },
+      {
+       "id": "c",
+       "text": "41 g",
+       "why": "Gave the gain, not the final Hb mass."
+      },
+      {
+       "id": "d",
+       "text": "1,141 g",
+       "why": "Correct: 1,100 × (1 + 0.011 × 3.36).",
+       "correct": true
+      }
+     ],
+     "solution": "Total exposure = 12 × 28 = 336 h. Gain = 1.1% × 3.36 = 3.7%. 1,100 × 1.037 = 1,141 g."
+    },
+    {
+     "id": "c",
+     "stem": "An athlete has 750 g of Hb mass and spends 16 h·day⁻¹ in a tent for 14 days. Using 1.1% per 100 h, what Hb mass do you expect at the end?",
+     "options": [
+      {
+       "id": "a",
+       "text": "758 g",
+       "why": "Applied 1.1% once, ignoring the hours of exposure."
+      },
+      {
+       "id": "b",
+       "text": "768 g",
+       "why": "Correct: 750 × (1 + 0.011 × 2.24).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "866 g",
+       "why": "Read 1.1% as per day (14 days)."
+      },
+      {
+       "id": "d",
+       "text": "18 g",
+       "why": "Gave the gain, not the final Hb mass."
+      }
+     ],
+     "solution": "Total exposure = 16 × 14 = 224 h. Gain = 1.1% × 2.24 = 2.5%. 750 × 1.025 = 768 g."
+    }
+   ]
+  },
+  {
+   "id": "hb-vo2-calc",
+   "concept": "hb-vo2",
+   "bloom": "apply",
+   "sources": [
+    "schmidt2010",
+    "gore2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 70 kg athlete gains 29 g of Hb mass. Using 4 mL·min⁻¹ per g, what is the VO₂max gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "116 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot to divide by body mass."
+      },
+      {
+       "id": "b",
+       "text": "1.7 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 29 × 4 ÷ 70.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "0.41 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot the 4 mL·min⁻¹ per g: 29 ÷ 70."
+      }
+     ],
+     "solution": "29 × 4 = 116 mL·min⁻¹. 116 ÷ 70 = 1.66, about 1.7 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A 75 kg athlete gains 41 g of Hb mass. Using 4 mL·min⁻¹ per g, what is the VO₂max gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "164 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot to divide by body mass."
+      },
+      {
+       "id": "b",
+       "text": "0.55 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot the 4 mL·min⁻¹ per g: 41 ÷ 75."
+      },
+      {
+       "id": "c",
+       "text": "2.2 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 41 × 4 ÷ 75.",
+       "correct": true
+      }
+     ],
+     "solution": "41 × 4 = 164 mL·min⁻¹. 164 ÷ 75 = 2.19, about 2.2 mL·kg⁻¹·min⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A 60 kg athlete gains 18 g of Hb mass. Using 4 mL·min⁻¹ per g, what is the VO₂max gain?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1.2 mL·kg⁻¹·min⁻¹",
+       "why": "Correct: 18 × 4 ÷ 60.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "72 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot to divide by body mass."
+      },
+      {
+       "id": "c",
+       "text": "0.30 mL·kg⁻¹·min⁻¹",
+       "why": "Forgot the 4 mL·min⁻¹ per g: 18 ÷ 60."
+      }
+     ],
+     "solution": "18 × 4 = 72 mL·min⁻¹. 72 ÷ 60 = 1.2 mL·kg⁻¹·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hb-dose-response",
+   "concept": "hb-dose-iron",
+   "bloom": "analyse",
+   "sources": [
+    "chapman2014"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 48 runners, red cell volume rose equally at living altitudes of 1,780, 2,085, 2,454 and 2,800 m, but 3,000-m time improved only at 2,085 and 2,454 m. What does this show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Red cell volume alone does not explain who got faster",
+       "why": "Correct: the red cell gain was the same in all groups, so something else differed.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Altitudes above 2,500 m stop red cells forming",
+       "why": "Red cell volume rose in the 2,800 m group as much as in the others."
+      },
+      {
+       "id": "c",
+       "text": "The 1,780 m group did not acclimatise at all",
+       "why": "Its red cell volume rose, though its EPO was back to baseline after 72 h."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-iron-plan",
+   "concept": "hb-dose-iron",
+   "bloom": "apply",
+   "sources": [
+    "ploszczyca2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A female runner's ferritin is 15 ng·mL⁻¹ six weeks before an altitude camp. What is the sensible step?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Tell her doctor and treat the low iron stores before the camp",
+       "why": "Correct: low stores before altitude were linked to no red-cell gain; treatment goes through a doctor.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Go as planned: altitude itself will fix the iron",
+       "why": "Altitude raises demand for iron; it does not fill the stores."
+      },
+      {
+       "id": "c",
+       "text": "Take a large iron dose without a test, to be safe",
+       "why": "Iron without testing or advice can harm; check and follow a doctor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-noise-read",
+   "concept": "hb-noise",
+   "bloom": "evaluate",
+   "sources": [
+    "gore2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After a 300 h camp an athlete's Hb mass is measured 2.0% higher than before. The test's within-person SD is about 2%. What do you conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She responded: any rise proves it",
+       "why": "A 2% change equals the test's own noise."
+      },
+      {
+       "id": "b",
+       "text": "The change is within test noise: it neither proves nor rules out a response",
+       "why": "Correct: with 2% noise, one small change cannot be read as real.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "She is a non-responder because the rise is under 3.3%",
+       "why": "3.3% is an average; the true individual range is 1.1–6%, and 2% sits inside it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-post-recall",
+   "concept": "hb-noise",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "gore2013"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Per the meta-analysis, about how far above baseline was Hb mass after descent, and for how long?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 3.3% above, for up to 20 days",
+       "why": "Correct: the post-altitude estimate.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 10% above, for up to 3 months",
+       "why": "Far above the estimate: the gain fades within weeks."
+      },
+      {
+       "id": "c",
+       "text": "About 1.1% above, for up to a year",
+       "why": "Mixes the per-100 h rate with the post-camp level and duration."
+      },
+      {
+       "id": "d",
+       "text": "Back to baseline on the day of descent",
+       "why": "Hb mass stays raised for some weeks, though it may fade quickly in some athletes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-placebo-why",
+   "concept": "hb-debate",
+   "bloom": "understand",
+   "sources": [
+    "siebenmann2012",
+    "bonetti2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Why does a double-blind, placebo-controlled LHTL study matter?",
+     "options": [
+      {
+       "id": "a",
+       "text": "A blinded placebo group separates belief from physiology",
+       "why": "Correct: a group in the same rooms with normal air removes expectation and camp effects.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "It makes the two groups the same size and load",
+       "why": "Blinding does not set group size (here 10 against 6)."
+      },
+      {
+       "id": "c",
+       "text": "It measures Hb mass with less test error",
+       "why": "Blinding affects bias, not measurement error."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hb-sieb-limits",
+   "concept": "hb-debate",
+   "bloom": "evaluate",
+   "sources": [
+    "siebenmann2012",
+    "wilber2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The double-blind LHTL study found no change in Hb mass or performance. What limits how far it settles the question?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Athletes knew which group they were in, so results are biased",
+       "why": "Questionnaires showed they were unaware of their group."
+      },
+      {
+       "id": "b",
+       "text": "Small groups (10 and 6) and 16 h·day⁻¹, below the 22 h·day⁻¹ one group recommends",
+       "why": "Correct: small numbers and a lower dose mean it cannot rule out a benefit at other doses.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Placebo-controlled studies are never valid for altitude",
+       "why": "They are the gold-standard way to separate belief from physiology."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

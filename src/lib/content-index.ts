@@ -6,6 +6,11 @@ import l_ad_mitochondria from "../../data/lessons/ad-mitochondria.json";
 import l_ad_signals from "../../data/lessons/ad-signals.json";
 import l_ad_timeline from "../../data/lessons/ad-timeline.json";
 import l_ad_vessels_blood from "../../data/lessons/ad-vessels-blood.json";
+import l_alt_acclimatisation from "../../data/lessons/alt-acclimatisation.json";
+import l_alt_acute from "../../data/lessons/alt-acute.json";
+import l_alt_hb_response from "../../data/lessons/alt-hb-response.json";
+import l_alt_models from "../../data/lessons/alt-models.json";
+import l_alt_racing from "../../data/lessons/alt-racing.json";
 import l_anat_blood from "../../data/lessons/anat-blood.json";
 import l_anat_heart from "../../data/lessons/anat-heart.json";
 import l_anat_lungs from "../../data/lessons/anat-lungs.json";
@@ -31,6 +36,9 @@ import l_cell_enzymes from "../../data/lessons/cell-enzymes.json";
 import l_cell_membranes from "../../data/lessons/cell-membranes.json";
 import l_cell_molecules from "../../data/lessons/cell-molecules.json";
 import l_cell_structure from "../../data/lessons/cell-structure.json";
+import l_cold_performance from "../../data/lessons/cold-performance.json";
+import l_cold_physiology from "../../data/lessons/cold-physiology.json";
+import l_cold_water from "../../data/lessons/cold-water.json";
 import l_cp_calc from "../../data/lessons/cp-calc.json";
 import l_cp_model from "../../data/lessons/cp-model.json";
 import l_cp_running from "../../data/lessons/cp-running.json";
@@ -59,6 +67,9 @@ import l_endo_basics from "../../data/lessons/endo-basics.json";
 import l_endo_catecholamines from "../../data/lessons/endo-catecholamines.json";
 import l_endo_fluid from "../../data/lessons/endo-fluid.json";
 import l_endo_fuel_hormones from "../../data/lessons/endo-fuel-hormones.json";
+import l_env_jet_lag from "../../data/lessons/env-jet-lag.json";
+import l_env_pollution from "../../data/lessons/env-pollution.json";
+import l_env_travel from "../../data/lessons/env-travel.json";
 import l_ev_effect_size from "../../data/lessons/ev-effect-size.json";
 import l_ev_pyramid from "../../data/lessons/ev-pyramid.json";
 import l_ev_samples from "../../data/lessons/ev-samples.json";
@@ -86,6 +97,10 @@ import l_heart_af from "../../data/lessons/heart-af.json";
 import l_heart_coronary from "../../data/lessons/heart-coronary.json";
 import l_heart_grey_zone from "../../data/lessons/heart-grey-zone.json";
 import l_heart_scd from "../../data/lessons/heart-scd.json";
+import l_heat_acclimation from "../../data/lessons/heat-acclimation.json";
+import l_heat_acute from "../../data/lessons/heat-acute.json";
+import l_heat_cooling from "../../data/lessons/heat-cooling.json";
+import l_heat_training_tool from "../../data/lessons/heat-training-tool.json";
 import l_hiit_acute from "../../data/lessons/hiit-acute.json";
 import l_hiit_adaptations from "../../data/lessons/hiit-adaptations.json";
 import l_hiit_dose from "../../data/lessons/hiit-dose.json";
@@ -228,6 +243,11 @@ export const LESSONS = [
   l_ad_signals,
   l_ad_timeline,
   l_ad_vessels_blood,
+  l_alt_acclimatisation,
+  l_alt_acute,
+  l_alt_hb_response,
+  l_alt_models,
+  l_alt_racing,
   l_anat_blood,
   l_anat_heart,
   l_anat_lungs,
@@ -253,6 +273,9 @@ export const LESSONS = [
   l_cell_membranes,
   l_cell_molecules,
   l_cell_structure,
+  l_cold_performance,
+  l_cold_physiology,
+  l_cold_water,
   l_cp_calc,
   l_cp_model,
   l_cp_running,
@@ -281,6 +304,9 @@ export const LESSONS = [
   l_endo_catecholamines,
   l_endo_fluid,
   l_endo_fuel_hormones,
+  l_env_jet_lag,
+  l_env_pollution,
+  l_env_travel,
   l_ev_effect_size,
   l_ev_pyramid,
   l_ev_samples,
@@ -308,6 +334,10 @@ export const LESSONS = [
   l_heart_coronary,
   l_heart_grey_zone,
   l_heart_scd,
+  l_heat_acclimation,
+  l_heat_acute,
+  l_heat_cooling,
+  l_heat_training_tool,
   l_hiit_acute,
   l_hiit_adaptations,
   l_hiit_dose,
@@ -484,6 +514,47 @@ export const HASHES: Record<string, string> = {
   "vb-vegf-weeks": "937b21f4ea6393aa",
   "vb-rbc-timing": "358303d129d99fd3",
   "vb-hct-calc": "0a36ef8a7be0d7a8",
+  "acc-vent": "1422536aee03c931",
+  "acc-epo-timing": "3d80666b18a2b2f6",
+  "acc-pv-calc": "2f4970b72ff27bbb",
+  "acc-pv-interpret": "561dde45fe3f04f8",
+  "acc-plateau": "36da4f0a862b7530",
+  "acc-ams-prev": "6efa30469340697f",
+  "acc-ams-plan": "2c576736732d51d7",
+  "acc-ascent-calc": "6acf53ba1983bfe2",
+  "alt-fio2": "05d10bf394ac5882",
+  "alt-pio2-calc": "39c8f156489d8030",
+  "alt-pio2-pct": "c03ba41b365134d1",
+  "alt-spo2-why": "2e140c3863aef885",
+  "alt-cao2-calc": "a298ea1d4b2fc665",
+  "alt-vo2-calc": "3b31d42d41330d76",
+  "alt-vo2-recall": "49f95d9dd9f9d8f8",
+  "alt-low-start": "2d8e16a21265085d",
+  "alt-appraise-chamber": "deba2cf200fde5e9",
+  "hb-gain-calc": "3a1585896b31dcfc",
+  "hb-vo2-calc": "6e4840488edc567d",
+  "hb-dose-response": "9cde02282ff78f09",
+  "hb-iron-plan": "c39cfbb168c9cdfa",
+  "hb-noise-read": "50bf972aa13162ba",
+  "hb-post-recall": "d46cf30cae36e653",
+  "hb-placebo-why": "43293d33eb25d742",
+  "hb-sieb-limits": "3eff604fa6078b17",
+  "mod-classify": "6589b4e336473df8",
+  "mod-why-lhtl": "48ae74ececf9e46e",
+  "mod-levine-read": "af5469e6fc64e959",
+  "mod-dose-recall": "c18e4479a1d8a37f",
+  "mod-kmh-calc": "36f89b1ec51fb0f8",
+  "mod-fio2-calc": "9e30df4a7ead7603",
+  "mod-iht-rsh": "a31cb5365579c2d5",
+  "mod-rsh-appraise": "1a77d7b192bb5dd5",
+  "rac-day1": "0af342a7e4583855",
+  "rac-recovery-calc": "f03971519596b85a",
+  "rac-wait2": "4a666975b621ca2e",
+  "rac-late-choice": "18e56aaabbab5e6c",
+  "rac-appraise": "c68f06665790fe58",
+  "rac-pace-calc": "11c97533babcdc4f",
+  "rac-pace-error": "07ec8a84437e9a19",
+  "rac-drag": "f2a500f0aac2844f",
   "bld-hct-def": "94dffa0587c9ef11",
   "bld-rbc-o2-calc": "7929c1ae624b0f78",
   "bld-rbc-nucleus": "f9f75cc645a44ff9",
@@ -731,6 +802,38 @@ export const HASHES: Record<string, string> = {
   "cs-mito-training": "a63f2e5cbe43955c",
   "cs-sr-trigger": "51c3072849db3e31",
   "cs-sr-relax": "878b91999b9bddef",
+  "cf-muscle-calc": "d43a396a7293bc67",
+  "cf-warm-start": "0d26533c2900d2fe",
+  "cf-shiver-fuel": "89a6727404713b55",
+  "cf-slowing": "a82cfb4b640b2cbf",
+  "cf-appraise": "5fb6dddf40b9d68e",
+  "cf-eib-cause": "8e8ed656a05858bb",
+  "cf-fev-calc": "759d713aa2a8d1cb",
+  "cf-eib-apply": "68860726be8ef473",
+  "cf-stage": "186bfe3edf5da048",
+  "cf-numb": "8c7ef595388833d5",
+  "cf-layers": "2d4d3f01252ff87e",
+  "cp-windchill-meaning": "f93665582f351e3e",
+  "cp-flask": "4edb1ac28f652868",
+  "cp-water-air": "dacee2c0a7dda8d9",
+  "cp-vaso-effect": "046222197eb5c8da",
+  "cp-hands": "af443af9178882c8",
+  "cp-heat-sources": "6d2ca2165e858e57",
+  "cp-bat-scan": "38d8ac288db747c3",
+  "cp-habit-pattern": "cad5fc339b6545cf",
+  "cp-comfort": "1cd0032f222d4e14",
+  "cw-shock-time": "5e33e5d17b63ff03",
+  "cw-entry": "46e85589103e1d54",
+  "cw-habit-calc": "77c07ea6314e2011",
+  "cw-failure-signs": "7c86f77f7dfb0112",
+  "cw-failure-act": "5ef720053ae02eb8",
+  "cw-rule-logic": "9b7a0e2e27bc938b",
+  "cw-afterdrop": "83f330460ca1a394",
+  "cw-appraise": "56bdc13cadb67357",
+  "cw-wetsuit-rule": "4dbe225db309e593",
+  "cw-wetsuit-cost": "a62c5bab540965de",
+  "cw-cause": "496c111f0915a2c8",
+  "cw-risk": "b0bcdf0fcd61645f",
   "cpc-why-range": "67ebad1e15e6f2f7",
   "cpc-worktime-calc": "fe5f588324cf8a82",
   "cpc-wprime-calc": "6b7ef136b498da2b",
@@ -992,6 +1095,32 @@ export const HASHES: Record<string, string> = {
   "ef-cortisol-intensity": "a846bc209f63f92c",
   "ef-gh-session": "04a54a676ac14f90",
   "ef-coach-claim": "b6e8863969dd3b30",
+  "jl-mismatch": "78b1d2791c4da114",
+  "jl-offset": "6ab7b5c5ccb943e5",
+  "jl-days": "7b3258ccd47f8033",
+  "jl-direction": "baa78703c8168ac7",
+  "jl-light-dir": "ee4bdad501abefa0",
+  "jl-mel-time": "2545c131b357c0cb",
+  "jl-mel-appraise": "6aacb52f17099afa",
+  "jl-benito-appraise": "2a6d18fadf04b7a1",
+  "jl-plan": "eea51dba9979af57",
+  "pol-match": "0a4e3b038094e5bb",
+  "pol-dose-calc": "136b21a85843d0be",
+  "pol-dose-why": "76620ce4b64a4b9c",
+  "pol-ozone-gong": "2a369376505fb5e8",
+  "pol-race-appraise": "c7debd438dad192e",
+  "pol-race-gap": "a4a916c26e6ee65a",
+  "pol-balance-q": "7cb41fdc11d097d6",
+  "pol-intensity": "f277bf0a29b25735",
+  "pol-act-run": "1e6f00f52b49c57d",
+  "pol-act-ride": "165cfb9e982085ad",
+  "tr-def": "54180438b6882ff3",
+  "tr-which": "9ed329cdf74b8e72",
+  "tr-rate-calc": "85b06c2d4a2b9a27",
+  "tr-illness-appraise": "863ce219ea1423b2",
+  "tr-flight-plan": "b9e14990f4f552b5",
+  "tr-offset-calc": "cf969b5dff5c023b",
+  "tr-offset-decide": "3d7282dc0818ce5c",
   "es-p-meaning": "72951ac77dcee8fc",
   "es-p-size": "8c5bb4db0a224d9a",
   "es-d-label": "83bdb6673106ec97",
@@ -1264,6 +1393,47 @@ export const HASHES: Record<string, string> = {
   "hscd-nns": "fe8f7eff2606ed25",
   "hscd-policy": "084b3d33a234f124",
   "hscd-survival": "ff729f0e7e2af868",
+  "hacl-adapt-list": "4eb99700404b132e",
+  "hacl-sweat-sodium": "3b5ba613408cfd06",
+  "hacl-duration": "595b822d1f31cc87",
+  "hacl-plan": "7a4d42bc77cb853e",
+  "hacl-iso-compare": "97ed1a62247b8d2f",
+  "hacl-iso-reconcile": "33083cb70d54fdfd",
+  "hacl-passive-read": "1f74c80b4f77f13b",
+  "hacl-passive-appraise": "42e5720a612844d6",
+  "hacl-decay-calc": "2b554fbeca05d121",
+  "hacl-decay-sr": "bbb69396d2059b47",
+  "hacl-reacclimate": "220f614f22c66689",
+  "hx-tt-size": "c5f9f0c21c6647bd",
+  "hx-loss-calc": "e55b58563cc8c016",
+  "hx-marathon": "2b6934bf331d9357",
+  "hx-cv-pattern": "fde0a8ece60900c5",
+  "hx-ceiling": "4e706066bf0e79af",
+  "hx-start-temp": "41899a99f3ef5615",
+  "hx-pacing-read": "7f200d3fc8f98ed7",
+  "hx-wind": "16c98889e0e9df2b",
+  "hx-inverted-u": "30c08cb46b20ac1a",
+  "hx-appraise": "2483ac91d3c5fb2a",
+  "hcl-pooled": "e2d840d47443d0a8",
+  "hcl-core-link": "0d7f763883cb8f10",
+  "hcl-dose-calc": "208eaa45e824abaf",
+  "hcl-siegel-temp": "75c8b51823b59bb9",
+  "hcl-cwi-ice": "0cafca41191208ed",
+  "hcl-meta-read": "85b319f8a1c4482a",
+  "hcl-review-weight": "af3496e566fc42fa",
+  "hcl-triathlon": "d40b837fb70ea4ea",
+  "hcl-priority": "11967dc6b65acc90",
+  "hcl-appraise": "2a65e9232e4c3586",
+  "htt-chain": "51aede4f6e02fcf6",
+  "htt-clocks": "832c3e5fcbaadd45",
+  "htt-lorenzo-recall": "7daaf057a1b4fb54",
+  "htt-lorenzo-design": "715b764a16c478cb",
+  "htt-did-calc": "839cd15a2d960cd7",
+  "htt-mikkelsen-read": "c7fc2bb7cac995b7",
+  "htt-conflict": "17cee0798679e06e",
+  "htt-pv-both": "4d5143d55ec251e1",
+  "htt-hb-skiers": "49ac39a5553da81b",
+  "htt-keiser-limit": "3a78c01b257495d4",
   "acute-red-zone-def": "7c75aa667840f6ca",
   "acute-odden-appraisal": "c6aa87ec12bd01db",
   "acute-billat-choose": "7ee63ee37c7f2495",

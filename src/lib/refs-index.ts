@@ -49,6 +49,10 @@ import g_t5_masters from "../../data/glossary/t5-masters.json";
 import g_t5_overtraining from "../../data/glossary/t5-overtraining.json";
 import g_t5_sleep from "../../data/glossary/t5-sleep.json";
 import g_t5_sports_medicine from "../../data/glossary/t5-sports-medicine.json";
+import g_t6_altitude from "../../data/glossary/t6-altitude.json";
+import g_t6_cold from "../../data/glossary/t6-cold.json";
+import g_t6_heat from "../../data/glossary/t6-heat.json";
+import g_t6_pollution_travel from "../../data/glossary/t6-pollution-travel.json";
 import s_papers from "../../data/sources/papers.json";
 import s_t0_anatomy from "../../data/sources/t0-anatomy.json";
 import s_t0_cell_biochem from "../../data/sources/t0-cell-biochem.json";
@@ -99,6 +103,10 @@ import s_t5_masters from "../../data/sources/t5-masters.json";
 import s_t5_overtraining from "../../data/sources/t5-overtraining.json";
 import s_t5_sleep from "../../data/sources/t5-sleep.json";
 import s_t5_sports_medicine from "../../data/sources/t5-sports-medicine.json";
+import s_t6_altitude from "../../data/sources/t6-altitude.json";
+import s_t6_cold from "../../data/sources/t6-cold.json";
+import s_t6_heat from "../../data/sources/t6-heat.json";
+import s_t6_pollution_travel from "../../data/sources/t6-pollution-travel.json";
 import type { Glossary, Source } from "./content";
 
 export const GLOSSARY = {
@@ -151,6 +159,10 @@ export const GLOSSARY = {
   ...g_t5_overtraining,
   ...g_t5_sleep,
   ...g_t5_sports_medicine,
+  ...g_t6_altitude,
+  ...g_t6_cold,
+  ...g_t6_heat,
+  ...g_t6_pollution_travel,
 } as Glossary;
 export const SOURCES = {
   ...s_papers,
@@ -203,4 +215,8 @@ export const SOURCES = {
   ...s_t5_overtraining,
   ...s_t5_sleep,
   ...s_t5_sports_medicine,
+  ...s_t6_altitude,
+  ...s_t6_cold,
+  ...s_t6_heat,
+  ...s_t6_pollution_travel,
 } as Record<string, Source>;

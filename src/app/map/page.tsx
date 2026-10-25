@@ -9,8 +9,8 @@ import { TabBar } from "../TabBar";
 export const dynamic = "force-dynamic";
 
 /**
- * The course as a map: tiers, then modules. Each module shows lessons done and how much you'd
- * recall now (mean FSRS retrievability of its started questions), not just "done".
+ * The course as a map: tiers, then modules. Each module shows lessons done (the bar) and how much
+ * of what you've learnt you'd recall now (mean FSRS retrievability of its started questions).
  */
 export default async function MapPage() {
   const userId = await requireUser();
@@ -56,14 +56,18 @@ export default async function MapPage() {
                         {lessons.length
                           ? `${doneCount}/${module.lessons.length} lessons`
                           : "coming soon"}
-                        {mean !== null && ` · recall ${mean}%`}
+                        {mean !== null && ` · you'd recall ${mean}% of it now`}
                       </span>
                     </span>
-                    {mean !== null && (
-                      <span className="h-1.5 w-12 overflow-hidden rounded-full bg-[var(--line)]">
+                    {doneCount > 0 && (
+                      // Inside <summary> a progressbar isn't read out; the "N/M lessons" text says it.
+                      <span
+                        aria-hidden="true"
+                        className="h-1.5 w-12 overflow-hidden rounded-full bg-[var(--line)]"
+                      >
                         <span
                           className="block h-full bg-[var(--right)]"
-                          style={{ width: `${mean}%` }}
+                          style={{ width: `${(100 * doneCount) / module.lessons.length}%` }}
                         />
                       </span>
                     )}

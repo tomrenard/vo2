@@ -1,0 +1,912 @@
+{
+ "id": "heat-acclimation",
+ "module": "t6-heat",
+ "title": "Heat acclimation: what adapts, how, and how long it lasts",
+ "goal": "Describe what adapts with heat acclimation, compare protocols, and estimate how fast the gain fades and returns.",
+ "requires": [
+  "heat-acute"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "sweat-onset-threshold",
+    "constant-work-rate",
+    "controlled-hyperthermia",
+    "passive-heat-acclimation",
+    "acclimation-decay"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "hacl-what",
+   "title": "What changes with acclimation",
+   "text": "Repeated exercise in the heat ([heat acclimation](g:heat-acclimation)) changes many things at once: better sweating and skin blood flow, lower body temperatures, less cardiovascular strain, better fluid balance [[c:ha-list]]. Pooled data from 211 papers show an average fall of about **17 beats·min⁻¹** in end-exercise heart rate, **0.43 °C** in end-exercise core temperature, and a rise of about **5.6%** in [plasma volume](g:plasma-volume) [[c:ha-numbers]].\n\nSweating starts at a lower core temperature (a lower [sweat onset threshold](g:sweat-onset-threshold)) and sweat output rises. Sweat also gets less salty: in one crossover study output rose 26% and [sodium concentration](g:sweat-sodium-concentration) fell 19% [[c:ha-sweat]].",
+   "claims": [
+    {
+     "id": "ha-list",
+     "text": "Heat acclimation improves sweating and skin blood flow, lowers body temperatures, reduces cardiovascular strain, improves fluid balance, alters metabolism and enhances cellular protection.",
+     "grade": "strong",
+     "sources": [
+      "periard2015",
+      "tyler2016"
+     ],
+     "evidence": [
+      {
+       "source": "periard2015",
+       "quote": "The adaptations include improved sweating, improved skin blood flow, lowered body temperatures, reduced cardiovascular strain, improved fluid balance, altered metabolism, and enhanced cellular protection.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ha-numbers",
+     "text": "Across 211 papers, heat acclimation lowered end-exercise heart rate by about 17 beats·min⁻¹ and core temperature by about 0.43 °C, and expanded plasma volume by about 5.6%.",
+     "grade": "strong",
+     "sources": [
+      "mcdonald2025"
+     ],
+     "evidence": [
+      {
+       "source": "mcdonald2025",
+       "quote": "HA decreased resting (-5 beats·min⁻¹ [-7, -3]) and end-exercise heart rate (-17 beats·min⁻¹ [-19, -14]), resting (-0.19°C [-0.23, -0.14]) and end-exercise core temperature (-0.43°C [-0.48, -0.36]), and expanded plasma volume (5.6% [3.8, 7.0]).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ha-sweat",
+     "text": "After heat training, sweat output rose, sweat sodium fell and core temperature at sweat onset was lower.",
+     "grade": "weak",
+     "sources": [
+      "keiser2015",
+      "zurawlew2016"
+     ],
+     "evidence": [
+      {
+       "source": "keiser2015",
+       "quote": "As expected, heat training augmented plasma volume (6 ± 2%) and mean sweat output (26 ± 6%), whereas sweat [Na(+)] became reduced by 19 ± 7%.",
+       "level": "abstract"
+      },
+      {
+       "source": "zurawlew2016",
+       "quote": "Skin temperature, Tre at sweating onset and RPE were lower during submaximal exercise in 18 °C and 33 °C after 6 days in HWI (P < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hacl-adapt-list"
+  },
+  {
+   "type": "question",
+   "item": "hacl-sweat-sodium"
+  },
+  {
+   "type": "concept",
+   "id": "hacl-length",
+   "title": "How long does it take?",
+   "text": "A meta-analysis of 96 articles found many benefits from regimens under 14 days, and the largest changes from regimens over 14 days [[c:ha-duration]]. The athlete consensus asks for repeated exercise-heat exposures over 1–2 weeks [[c:ha-consensus]].\n\nIn one trial, five 90 min sessions cut exercising heart rate by 10 beats·min⁻¹ and core temperature by 0.2 °C. Five more sessions added no further gain on those measures [[c:ha-short]].\n\nHow you split the dose matters too. Over 7 days, one 90 min session a day lowered rectal temperature, but three 30 min sessions spread through the day did not [[c:ha-split]].",
+   "claims": [
+    {
+     "id": "ha-duration",
+     "text": "Regimens under 14 days give many adaptations and improve performance in the heat, but the gain is largest with regimens over 14 days.",
+     "grade": "moderate",
+     "sources": [
+      "tyler2016"
+     ],
+     "evidence": [
+      {
+       "source": "tyler2016",
+       "quote": "HA regimens lasting <14 days induce many beneficial physiological and perceptual adaptations to high ambient temperatures, and improve subsequent exercise performance and capacity in the heat; however, the extent of the adaptations is greatest when HA regimens lasting longer than 14 days are adopted.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ha-consensus",
+     "text": "The athlete consensus recommends heat acclimatisation of repeated exercise-heat exposures over 1–2 weeks.",
+     "grade": "strong",
+     "sources": [
+      "racinais2015"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2015",
+       "quote": "Heat acclimatisation should comprise repeated exercise-heat exposures over 1-2 weeks.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ha-short",
+     "text": "Five 90 min sessions lowered heart rate by 10 beats·min⁻¹ and core temperature by 0.2 °C; five more added no further benefit on those measures.",
+     "grade": "weak",
+     "sources": [
+      "gibson2015"
+     ],
+     "evidence": [
+      {
+       "source": "gibson2015",
+       "quote": "STHA decreased exercising heart rate (-10 b min(-1)), core (-0.2 °C) and skin temperature (-0.51 °C), with sweat losses increasing (+0.36 Lh(-1)) (p<0.05).",
+       "level": "abstract"
+      },
+      {
+       "source": "gibson2015",
+       "quote": "No difference between heat acclimation methods, and no further benefit of LTHA was observed (p > 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "ha-split",
+     "text": "With matched time, three 30 min exposures a day were not as effective as one 90 min exposure a day.",
+     "grade": "weak",
+     "sources": [
+      "rosales2026"
+     ],
+     "evidence": [
+      {
+       "source": "rosales2026",
+       "quote": "Thrice-daily exposures are not as effective at inducing heat adaptations compared to once-daily exposures.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hacl-duration"
+  },
+  {
+   "type": "question",
+   "item": "hacl-plan"
+  },
+  {
+   "type": "concept",
+   "id": "hacl-method",
+   "title": "How to heat up: fixed work or fixed temperature",
+   "text": "In [constant work rate](g:constant-work-rate) acclimation you do the same workload each session, and core temperature climbs less as you adapt. In [controlled hyperthermia](g:controlled-hyperthermia) (isothermic) you change the work rate to hold core temperature at a target such as 38.5 °C.\n\nIn a trial of 24 men all methods gave equal adaptation, but isothermic sessions needed 66–72% less exercise time and were less intense [[c:iso-equal]]. Pooled data agree: heart rate and core temperature fell by about the same amount either way [[c:iso-pooled]]. An earlier review had said controlled hyperthermia works faster and more completely.",
+   "claims": [
+    {
+     "id": "iso-equal",
+     "text": "Fixed-intensity and isothermic acclimation gave equal adaptation, but isothermic sessions were much shorter and less intense.",
+     "grade": "weak",
+     "sources": [
+      "gibson2015"
+     ],
+     "evidence": [
+      {
+       "source": "gibson2015",
+       "quote": "All methods induced equal adaptation from baseline however isothermic methods induced adaptation and reduced exercise durations (STHA = -66% and LTHA = -72%) and mean session intensity (STHA = -13% VO2peak and LTHA = -9% VO2peak) in comparison to fixed (p < 0.05).",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "iso-pooled",
+     "text": "End-exercise heart rate and core temperature fell by about the same amount after controlled hyperthermia and constant work rate acclimation.",
+     "grade": "moderate",
+     "sources": [
+      "mcdonald2025"
+     ],
+     "evidence": [
+      {
+       "source": "mcdonald2025",
+       "quote": "End-exercise heart rate and core temperature decreased similarly following controlled hyperthermia",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does controlled hyperthermia give faster or bigger heat adaptation than constant work rate?",
+    "sides": [
+     {
+      "position": "Yes: keeping core temperature at a target may give more rapid and complete adaptation. This was described as emerging evidence.",
+      "sources": [
+       "periard2015"
+      ]
+     },
+     {
+      "position": "No: head-to-head and pooled data show similar falls in heart rate and core temperature; the main gain is shorter, easier sessions.",
+      "sources": [
+       "gibson2015",
+       "mcdonald2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hacl-iso-compare"
+  },
+  {
+   "type": "question",
+   "item": "hacl-iso-reconcile"
+  },
+  {
+   "type": "concept",
+   "id": "hacl-passive",
+   "title": "Hot baths and saunas",
+   "text": "You can add heat without more hard training: a hot bath or sauna after a normal session ([passive heat acclimation](g:passive-heat-acclimation)). In one trial, 17 men ran 40 min a day for 6 days, then sat 40 min in 40 °C water (10 men) or 34 °C water (7 controls). In the hot water group, resting core temperature fell 0.27 °C, and a 5 km time trial in 33 °C improved 4.9%, but not at 18 °C [[c:hwi-trial]]. Seven cyclists who used a sauna after training had about 18% more plasma volume after four sessions [[c:sauna-pv]].\n\nBut pooling 10 studies (199 people) found only a trivial gain in performance in the heat, with low certainty [[c:passive-pooled]].",
+   "claims": [
+    {
+     "id": "hwi-trial",
+     "text": "Six days of hot water immersion after running lowered resting core temperature and improved a 5 km time trial in 33 °C by 4.9%, but not in 18 °C.",
+     "grade": "weak",
+     "sources": [
+      "zurawlew2016"
+     ],
+     "evidence": [
+      {
+       "source": "zurawlew2016",
+       "quote": "HWI induced heat acclimation demonstrated by lower resting rectal temperature (Tre , mean, -0.27 °C, P < 0.01), and final Tre during submaximal exercise in 18 °C (-0.28 °C, P < 0.01) and 33 °C (-0.36 °C, P < 0.01).",
+       "level": "abstract"
+      },
+      {
+       "source": "zurawlew2016",
+       "quote": "HWI improved TT performance in 33 °C (4.9%, P < 0.01) but not in 18 °C.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "sauna-pv",
+     "text": "Sauna bathing after normal training expanded plasma volume in well-trained cyclists after four exposures.",
+     "grade": "weak",
+     "sources": [
+      "stanley2015"
+     ],
+     "evidence": [
+      {
+       "source": "stanley2015",
+       "quote": "Sauna bathing following normal training largely expanded PV in well-trained cyclists after just four exposures.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "passive-pooled",
+     "text": "Across 10 studies, post-exercise heat exposure had a trivial effect on performance in hot conditions, with low to very low certainty.",
+     "grade": "weak",
+     "sources": [
+      "solomon2025"
+     ],
+     "evidence": [
+      {
+       "source": "solomon2025",
+       "quote": "The effect of post-exercise heat exposure on performance in hot conditions (33-40 °C) was trivial (ratio of means = 1.04) with poor precision (95%CI 0.94-1.15, P = 0.46) and low predictive certainty (95%PI 0.81-1.33).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does a hot bath or sauna after training improve performance in the heat?",
+    "sides": [
+     {
+      "position": "It can: a trial of hot water immersion after running improved a 33 °C time trial by 4.9%, and sauna raised plasma volume quickly.",
+      "sources": [
+       "zurawlew2016",
+       "stanley2015"
+      ]
+     },
+     {
+      "position": "Not shown: pooled studies found a trivial effect with low certainty, because trials are small and often at risk of bias.",
+      "sources": [
+       "solomon2025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "hacl-passive-read"
+  },
+  {
+   "type": "question",
+   "item": "hacl-passive-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "hacl-decay",
+   "title": "It fades: decay and re-acclimation",
+   "text": "Heat adaptations fade when you stop ([acclimation decay](g:acclimation-decay)). In a pooled analysis of 12 studies, the gain in end-exercise heart rate shrank by 2.3% for every day away from heat, and the gain in core temperature by 2.6% [[c:decay-rate]]. Sweat rate was different: its decay was not related to the number of days away [[c:decay-sr]].\n\nGetting it back is faster than building it: re-acclimation was 8–12 times faster than decay for heart rate and core temperature [[c:reacclim-fast]]. So a short block before a race can top up what time away has taken, with less disruption to a taper.",
+   "claims": [
+    {
+     "id": "decay-rate",
+     "text": "The gain in end-exercise heart rate fell by 2.3% per day without heat, and the gain in core temperature by 2.6% per day.",
+     "grade": "moderate",
+     "sources": [
+      "daanen2018"
+     ],
+     "evidence": [
+      {
+       "source": "daanen2018",
+       "quote": "Adaptations in end-exercise HR decreased by 2.3% (P < 0.001) for every day of HAD.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "decay-sr",
+     "text": "The decay in sweat rate was not related to the number of days without heat.",
+     "grade": "moderate",
+     "sources": [
+      "daanen2018"
+     ],
+     "evidence": [
+      {
+       "source": "daanen2018",
+       "quote": "The decay in SR was not related to the number of decay days.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "reacclim-fast",
+     "text": "Re-acclimation of heart rate and core temperature was 8–12 times faster than their decay.",
+     "grade": "moderate",
+     "sources": [
+      "daanen2018"
+     ],
+     "evidence": [
+      {
+       "source": "daanen2018",
+       "quote": "HRA was 8-12 times faster than HAD",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "hacl-decay-example",
+   "title": "How much is left after time away",
+   "problem": "A runner's end-exercise heart rate fell 16 beats·min⁻¹ with acclimation. She then spends 10 days away from heat. Heart rate adaptation fades 2.3% per day. How much of the 16 beats·min⁻¹ is left?",
+   "steps": [
+    "Share lost = 2.3% × 10 days = 23%.",
+    "Share left = 100% − 23% = 77%.",
+    "16 × 0.77 = 12.3 beats·min⁻¹ left.",
+    "This straight-line rule is a pooled average over short breaks; individuals differ, and it is not meant for very long breaks."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "hacl-decay-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "hacl-decay-sr"
+  },
+  {
+   "type": "question",
+   "item": "hacl-reacclimate"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Heat acclimation lowers heart rate (about 17 beats·min⁻¹) and core temperature (about 0.43 °C), expands plasma volume (about 5.6%), raises sweat output and lowers its sodium.",
+    "Many benefits come in under 14 days; the largest come with longer regimens; the athlete consensus is repeated exposures over 1–2 weeks.",
+    "Controlled hyperthermia and constant work rate give similar adaptation; the controlled method mostly makes sessions shorter and easier.",
+    "Hot baths and saunas after training may help, but pooled evidence is weak and certainty is low.",
+    "About 2.3–2.6% of the heart rate and core temperature gain fades per day away from heat, and re-acclimation is much faster than the first build."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "hacl-adapt-list",
+   "concept": "hacl-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "periard2015",
+    "mcdonald2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which set describes typical changes after heat acclimation?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Lower heart rate and core temperature, larger plasma volume, more sweat",
+       "correct": true,
+       "why": "Right: these are the main pooled changes."
+      },
+      {
+       "id": "b",
+       "text": "Higher heart rate and core temperature, smaller plasma volume, less sweat",
+       "why": "This is the opposite of the adaptation; it describes someone not acclimated."
+      },
+      {
+       "id": "c",
+       "text": "Lower heart rate, smaller plasma volume, less sweat",
+       "why": "Plasma volume expands and sweat output rises with acclimation."
+      },
+      {
+       "id": "d",
+       "text": "Higher heart rate, larger plasma volume, more sweat",
+       "why": "Heart rate falls with acclimation, not rises."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-sweat-sodium",
+   "concept": "hacl-what",
+   "bloom": "understand",
+   "sources": [
+    "keiser2015",
+    "mikkelsen2019"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 10 days of heat training, what happened to sweat output and to sodium concentration in sweat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Output rose and sodium concentration fell",
+       "correct": true,
+       "why": "Right: sweat output rose by about 26% and sodium fell by about 19%."
+      },
+      {
+       "id": "b",
+       "text": "Output rose and sodium concentration rose",
+       "why": "Sweat gets less salty, not more, after acclimation."
+      },
+      {
+       "id": "c",
+       "text": "Output fell and sodium concentration fell",
+       "why": "Output rises, so the body can cool more."
+      },
+      {
+       "id": "d",
+       "text": "Neither changed, only heart rate did",
+       "why": "Both changed in the trial."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist's sweat tastes less salty after five weeks of training in 40 °C heat. What is the best reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It fits acclimation: sodium concentration in sweat falls as sweat output rises",
+       "correct": true,
+       "why": "Right: lower sweat sodium was one marker that acclimation had occurred."
+      },
+      {
+       "id": "b",
+       "text": "He is drinking too much water and diluting his sweat",
+       "why": "Drinking does not change sweat sodium concentration this way; acclimation does."
+      },
+      {
+       "id": "c",
+       "text": "He is losing less sweat, so there is less salt to taste",
+       "why": "Sweat output rises with acclimation."
+      },
+      {
+       "id": "d",
+       "text": "It shows he lost his acclimation",
+       "why": "Lower sweat sodium is a sign of acclimation, not of loss."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-duration",
+   "concept": "hacl-length",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "tyler2016",
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A meta-analysis of 96 articles compared heat acclimation regimens. What did it find about length?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Regimens under 14 days gave nothing; only longer ones worked",
+       "why": "Under 14 days many benefits were found."
+      },
+      {
+       "id": "b",
+       "text": "Regimens under 14 days gave many benefits, and longer regimens gave the largest",
+       "correct": true,
+       "why": "Right: benefits start early and grow with longer regimens."
+      },
+      {
+       "id": "c",
+       "text": "Length made no difference to any measure",
+       "why": "The extent of adaptation was greatest with regimens over 14 days."
+      },
+      {
+       "id": "d",
+       "text": "Regimens over 14 days were worse because of fatigue",
+       "why": "Longer regimens gave the largest adaptation."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-plan",
+   "concept": "hacl-length",
+   "bloom": "apply",
+   "sources": [
+    "gibson2015",
+    "rosales2026",
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete lands in a hot city 8 days before a race. Which plan fits the evidence best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "One 90 min exposure a day from day one, since five sessions already lower heart rate and core temperature",
+       "correct": true,
+       "why": "Right: daily sessions fit the 1–2 week consensus, and five sessions already show most gains."
+      },
+      {
+       "id": "b",
+       "text": "Wait until two days before the race, then do one very long session",
+       "why": "One late session cannot produce the adaptations; they build over days."
+      },
+      {
+       "id": "c",
+       "text": "Three 30 min exposures a day, since splitting is easier to fit in",
+       "why": "With matched time, thrice-daily exposures were less effective than once-daily ones."
+      },
+      {
+       "id": "d",
+       "text": "Do nothing and rely on drinking more",
+       "why": "Drinking does not give the adaptations that acclimation does."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-iso-compare",
+   "concept": "hacl-method",
+   "bloom": "analyse",
+   "sources": [
+    "gibson2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In a trial with 24 men, fixed-intensity and isothermic acclimation both raised heat tolerance. How did they differ?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Adaptation was larger with the fixed method, as it uses more work",
+       "why": "All methods gave equal adaptation."
+      },
+      {
+       "id": "b",
+       "text": "Adaptation was larger with the isothermic method, as it holds temperature",
+       "why": "Adaptation did not differ between methods."
+      },
+      {
+       "id": "c",
+       "text": "Equal adaptation, but isothermic sessions were shorter and easier",
+       "correct": true,
+       "why": "Right: isothermic sessions cut exercise time by 66–72% and intensity by 9–13% of VO₂peak."
+      },
+      {
+       "id": "d",
+       "text": "Only fixed sessions lowered heart rate",
+       "why": "All methods lowered heart rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-iso-reconcile",
+   "concept": "hacl-method",
+   "bloom": "evaluate",
+   "sources": [
+    "periard2015",
+    "gibson2015",
+    "mcdonald2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A 2015 review called controlled hyperthermia faster and more complete. Pooled data from 211 papers later showed similar falls in heart rate and core temperature with both methods. What is the best summary?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The faster claim was early evidence and is not confirmed for these measures",
+       "correct": true,
+       "why": "Right: the review called the evidence 'emerging', and pooled data did not show a difference."
+      },
+      {
+       "id": "b",
+       "text": "The 2015 review was fraudulent and should be ignored",
+       "why": "Nothing suggests fraud; evidence grew and the picture changed."
+      },
+      {
+       "id": "c",
+       "text": "Pooled data are always right and single trials never matter",
+       "why": "Pooled data can hide differences, so both kinds of evidence count."
+      },
+      {
+       "id": "d",
+       "text": "Both are right because isothermic sessions last longer",
+       "why": "Isothermic sessions were shorter, not longer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-passive-read",
+   "concept": "hacl-passive",
+   "bloom": "evaluate",
+   "sources": [
+    "zurawlew2016",
+    "solomon2025"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "One trial found 4.9% faster 5 km times in 33 °C after hot water immersion. A pooled analysis of 10 studies found a trivial effect with low certainty. What is the best conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Hot baths work, so the pooled analysis must be wrong",
+       "why": "One trial of 17 men cannot overrule a pooled analysis."
+      },
+      {
+       "id": "b",
+       "text": "Hot baths do nothing, so the trial was a fluke",
+       "why": "The pooled confidence range includes real benefit, so 'nothing' is too strong."
+      },
+      {
+       "id": "c",
+       "text": "Possible but not shown; larger trials are needed to settle it",
+       "correct": true,
+       "why": "Right: the pooled range (0.94–1.15) spans small harm to a clear benefit, with low certainty."
+      },
+      {
+       "id": "d",
+       "text": "The trial proves hot baths also help in cool-weather races",
+       "why": "The trial showed no gain at 18 °C."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-passive-appraise",
+   "concept": "hacl-passive",
+   "bloom": "evaluate",
+   "sources": [
+    "stanley2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Seven cyclists did 10 sauna sessions after training and had about 18% more plasma volume after four sessions. There was no control group. What is the main limit?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It cannot separate the sauna from training or from day-to-day variation",
+       "correct": true,
+       "why": "Right: without a control group the change cannot be credited to the sauna."
+      },
+      {
+       "id": "b",
+       "text": "Plasma volume cannot be measured well in trained cyclists",
+       "why": "Plasma volume is measured routinely; the problem is design, not measurement."
+      },
+      {
+       "id": "c",
+       "text": "Sauna is too hot for a valid study",
+       "why": "Heat dose does not make a study invalid."
+      },
+      {
+       "id": "d",
+       "text": "A result from 7 people is always wrong, whatever the design",
+       "why": "Small studies are weak, but not always wrong; the missing control is the larger limit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-decay-calc",
+   "concept": "hacl-decay",
+   "bloom": "apply",
+   "sources": [
+    "daanen2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's end-exercise heart rate fell 20 beats·min⁻¹ with acclimation. After 12 days away from heat, with a 2.3% loss per day, how much of the fall is left?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5.5 beats·min⁻¹",
+       "why": "This is the amount lost (20 × 0.276), not what is left."
+      },
+      {
+       "id": "b",
+       "text": "8.0 beats·min⁻¹",
+       "why": "This subtracts the number of days (20 − 12) instead of a percent."
+      },
+      {
+       "id": "c",
+       "text": "14.5 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 12 × 2.3% = 27.6% lost, so 72.4% of 20 is left."
+      },
+      {
+       "id": "d",
+       "text": "19.5 beats·min⁻¹",
+       "why": "This applies the loss for one day only."
+      }
+     ],
+     "solution": "Lost = 12 × 2.3% = 27.6%. Left = 100% − 27.6% = 72.4%. 20 × 0.724 = 14.5 beats·min⁻¹."
+    },
+    {
+     "id": "b",
+     "stem": "A runner's end-exercise core temperature fell 0.50 °C with acclimation. After 10 days away from heat, with a 2.6% loss per day, how much of the fall is left?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0.13 °C",
+       "why": "This is the amount lost (0.50 × 0.26), not what is left."
+      },
+      {
+       "id": "b",
+       "text": "0.24 °C",
+       "why": "This takes 26% as 0.26 °C and subtracts it from 0.50."
+      },
+      {
+       "id": "c",
+       "text": "0.49 °C",
+       "why": "This applies the loss for one day only."
+      },
+      {
+       "id": "d",
+       "text": "0.37 °C",
+       "correct": true,
+       "why": "Right: 10 × 2.6% = 26% lost, so 74% of 0.50 is left."
+      }
+     ],
+     "solution": "Lost = 10 × 2.6% = 26%. Left = 74%. 0.50 × 0.74 = 0.37 °C."
+    },
+    {
+     "id": "c",
+     "stem": "A cyclist's end-exercise heart rate fell 15 beats·min⁻¹ with acclimation. After 7 days away from heat, with a 2.3% loss per day, how much of the fall is left?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12.6 beats·min⁻¹",
+       "correct": true,
+       "why": "Right: 7 × 2.3% = 16.1% lost, so 83.9% of 15 is left."
+      },
+      {
+       "id": "b",
+       "text": "2.4 beats·min⁻¹",
+       "why": "This is the amount lost (15 × 0.161), not what is left."
+      },
+      {
+       "id": "c",
+       "text": "14.7 beats·min⁻¹",
+       "why": "This applies the loss for one day only."
+      },
+      {
+       "id": "d",
+       "text": "8.0 beats·min⁻¹",
+       "why": "This subtracts the number of days (15 − 7) instead of a percent."
+      }
+     ],
+     "solution": "Lost = 7 × 2.3% = 16.1%. Left = 83.9%. 15 × 0.839 = 12.6 beats·min⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "hacl-decay-sr",
+   "concept": "hacl-decay",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "daanen2018"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which adaptation did a pooled analysis find was not related to the number of days away from heat?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Sweat rate",
+       "correct": true,
+       "why": "Right: its decay was not related to the number of decay days."
+      },
+      {
+       "id": "b",
+       "text": "End-exercise heart rate",
+       "why": "Heart rate fell back by 2.3% for every day away."
+      },
+      {
+       "id": "c",
+       "text": "End-exercise core temperature",
+       "why": "Core temperature fell back by 2.6% for every day away."
+      },
+      {
+       "id": "d",
+       "text": "All three faded at the same speed",
+       "why": "They did not: sweat rate behaved differently."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hacl-reacclimate",
+   "concept": "hacl-decay",
+   "bloom": "apply",
+   "sources": [
+    "daanen2018",
+    "racinais2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist was acclimatised in June, then spent three weeks in a cool climate. A hot race is in 10 days. Which plan fits the evidence?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Restart a full 14 day programme, since the earlier adaptation is gone",
+       "why": "Not all is gone, and re-acclimation is fast: 8–12 times faster than the decay."
+      },
+      {
+       "id": "b",
+       "text": "Use a short block of heat sessions to top up, since re-acclimation is fast",
+       "correct": true,
+       "why": "Right: re-induction is quicker than decay, so a short block can restore much of the gain."
+      },
+      {
+       "id": "c",
+       "text": "Do nothing, since acclimation never fades",
+       "why": "Heart rate and core temperature gains fade by about 2.5% per day."
+      },
+      {
+       "id": "d",
+       "text": "Do one long session the day before the race",
+       "why": "One session cannot rebuild adaptations that build over days."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,656 @@
+{
+ "id": "env-travel",
+ "module": "t6-pollution-travel",
+ "title": "Travel, illness and race-week planning",
+ "goal": "Tell travel fatigue from jet lag, explain what the illness data show for athletes crossing time zones, and plan a trip to a race by working out the clock offset on race morning.",
+ "requires": [
+  "env-jet-lag"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "travel-fatigue"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "tr-what",
+   "title": "Travel fatigue is not jet lag",
+   "text": "[Travel fatigue](g:travel-fatigue) is the tiredness from any long journey: bus, rail or plane, east, west or north-south, and it can build up over a season of trips [[c:tr-def]]. [Jet lag](g:jet-lag) needs a change of three or more time zones, comes in episodes and clears fully once the clock re-aligns.\n\n| | Travel fatigue | Jet lag |\n|---|---|---|\n| Needs time-zone change | no | yes (3 or more) |\n| Cause | long, tiring journey | clock out of step |\n| Course | can accumulate | episodic, clears |\n\nThey can occur together. Both share tiredness, poor concentration, broken sleep and gut upset, and can raise illness and injury risk [[c:tr-risk]].",
+   "claims": [
+    {
+     "id": "tr-def",
+     "text": "Travel fatigue follows any long journey in any direction and can accumulate; jet lag follows three or more time zones and clears after re-alignment.",
+     "grade": "strong",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "Travel fatigue refers to exhaustion and tiredness associated with any long journey",
+       "level": "full-text"
+      },
+      {
+       "source": "janse2021",
+       "quote": "Jet lag follows any journey rapidly crossing three or more time-zones, is episodic and implies full recovery after resynchronisation",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tr-risk",
+     "text": "Travel fatigue and jet lag share symptoms and can raise illness and injury risk and harm performance.",
+     "grade": "strong",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "These can lead to increased illness and injury risk as well as adverse effects on athletic performance",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-def"
+  },
+  {
+   "type": "question",
+   "item": "tr-which"
+  },
+  {
+   "type": "concept",
+   "id": "tr-illness",
+   "title": "Illness after crossing time zones",
+   "text": "In the 2010 Super 14 rugby tournament, team doctors logged illness in 259 elite players for 16 weeks (22,676 player-days). Illness [incidence rate](g:incidence-rate), per 1000 player-days [[c:tr-illness]]:\n\n| Where | Illnesses per 1000 player-days |\n|---|---|\n| At home, before travel (baseline) | 15.4 |\n| Abroad, more than 5 h time difference | 32.6 |\n| Back home after the trip | 10.6 |\n\nAbroad, the rate was about twice baseline, and it fell back at home. The study did not test why, and 5 h or more of time difference came with long flights, new places and match schedules. Compare the [open window](g:open-window): hard training, poor sleep and travel can stack up.",
+   "claims": [
+    {
+     "id": "tr-illness",
+     "text": "Elite rugby players had about twice the illness incidence while abroad (>5 h time difference) as at baseline, and it fell again on return.",
+     "grade": "weak",
+     "sources": [
+      "schwellnus2012"
+     ],
+     "evidence": [
+      {
+       "source": "schwellnus2012",
+       "quote": "For all teams, the incidence of illness according to location and travelling was significantly higher in the time period following international travel (32.6; 95% CI 19.6 to 53.5) compared with the baseline (15.4; 95% CI 8.7 to 27.0) or after returning to their home country (10.6; 95% CI 6.1 to 18.2).",
+       "level": "abstract"
+      },
+      {
+       "source": "schwellnus2012",
+       "quote": "There is a higher incidence of illness in athletes following international travel to a foreign country that is >5 h time difference and this returns to baseline on return to the home country.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tr-rate-ex",
+   "title": "Illness per 1000 player-days",
+   "problem": "A squad of 25 players spends 16 days abroad and logs 13 illnesses. What is the rate per 1000 player-days, and how does it compare with a baseline of 15.4?",
+   "steps": [
+    "Player-days: 25 players × 16 days = 400.",
+    "Rate: 13 ÷ 400 = 0.0325 per player-day.",
+    "Per 1000: 0.0325 × 1000 = 32.5.",
+    "Compare: 32.5 ÷ 15.4 ≈ 2.1, about twice the baseline."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-rate-calc"
+  },
+  {
+   "type": "question",
+   "item": "tr-illness-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "tr-flight",
+   "title": "Before and during the flight",
+   "text": "The consensus panel's toolbox is mostly common sense, with thin trial evidence behind it [[c:tr-toolbox]]. Before: make sure vaccinations are up to date, and plan training to allow for the rest travel brings. Swap long, high-volume sessions, which can suppress immunity, for shorter, harder ones. During: follow a hydration plan with regular sips of non-alcoholic drinks, keep screens from cutting into sleep or naps, and wipe the tray table and headrest, which carry germs.\n\nThese cut risk; they do not remove it. Treat a first sore throat on a trip as a reason to back off, not to push through (see the immune lessons).",
+   "claims": [
+    {
+     "id": "tr-toolbox",
+     "text": "Expert consensus advises up-to-date vaccinations, replacing long immunosuppressive sessions with shorter high-intensity ones, regular sips of drink, and wiping surfaces on the flight.",
+     "grade": "moderate",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "Ensure vaccinations are up to date",
+       "level": "full-text"
+      },
+      {
+       "source": "janse2021",
+       "quote": "Replace long duration, high volume training which can be immuno-suppressive with shorter duration, high intensity sessions",
+       "level": "full-text"
+      },
+      {
+       "source": "janse2021",
+       "quote": "Avoid touching areas commonly infested with micro-organisms (e.g. tray tables, chair headrest, etc.); frequently wipe these areas clean",
+       "level": "full-text"
+      },
+      {
+       "source": "janse2021",
+       "quote": "Follow a hydration plan configured pre-travel; regular sips of non-alcoholic and non-carbonated drinks",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-flight-plan"
+  },
+  {
+   "type": "concept",
+   "id": "tr-race",
+   "title": "Race-week planning",
+   "text": "Count the zones first. Under three, you have travel fatigue only: arrive rested. Three or more, you also have jet lag, and the clock rule gives the days: 0.5 per zone west, 1 per zone east [[c:tr-rate]].\n\nThen work back from race day. Hours still to go on race morning = zones − (days since landing × hours per day), where the rate is 2 h per day west and 1 h per day east. If that is above zero, plan for poor sleep and weaker aerobic work, and keep hard sessions away from your clock's low point.\n\nThe size depends on direction, zones and the person, so test your own response on a training trip [[c:tr-person]].",
+   "claims": [
+    {
+     "id": "tr-rate",
+     "text": "Re-alignment takes about 0.5 day per zone west and 1 day per zone east.",
+     "grade": "moderate",
+     "sources": [
+      "janse2021"
+     ],
+     "evidence": [
+      {
+       "source": "janse2021",
+       "quote": "As a rule of thumb, the duration of natural alignment is 0.5 days per time-zone crossed in a westerly direction, i.e. 2 h per day, and 1 day per time zone crossed in an easterly direction, i.e. 1 h per day",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "tr-person",
+     "text": "The size of travel effects depends on direction, time zones crossed and individual susceptibility.",
+     "grade": "weak",
+     "sources": [
+      "benito2026"
+     ],
+     "evidence": [
+      {
+       "source": "benito2026",
+       "quote": "The magnitude of these effects seems to be influenced by travel direction, number of time zones crossed, and individual susceptibility.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "tr-offset-ex",
+   "title": "Clock offset on race morning",
+   "problem": "A runner lands 8 h east and races 5 full days later. How far behind is her clock on race morning?",
+   "steps": [
+    "Eastward rate: 1 h per day, so 5 days shifts 5 h.",
+    "Remaining: 8 h − 5 h = 3 h behind local time.",
+    "Race morning at 08:00 feels like 05:00: expect a slow start, so warm up longer."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "tr-offset-calc"
+  },
+  {
+   "type": "question",
+   "item": "tr-offset-decide"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Travel fatigue comes from any long trip; jet lag needs three or more time zones.",
+    "Elite rugby players had about twice the illness rate abroad (32.6 vs 15.4 per 1000 player-days), observational data.",
+    "Pre-trip vaccinations, shorter hard sessions, drinks and clean surfaces cut risk a little.",
+    "Hours left on race morning = zones − days × rate (2 h per day west, 1 h per day east)."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "tr-def",
+   "concept": "tr-what",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's team spends 14 h on a coach to a race in the same time zone. What does she get?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Travel fatigue, with no jet lag.",
+       "correct": true,
+       "why": "Right: a long journey causes travel fatigue; jet lag needs a clock change of three or more zones."
+      },
+      {
+       "id": "b",
+       "text": "Jet lag, because the trip was long.",
+       "why": "Jet lag needs a time-zone change, not length alone."
+      },
+      {
+       "id": "c",
+       "text": "Neither: only flights cause travel problems.",
+       "why": "Travel fatigue follows bus, rail or plane."
+      },
+      {
+       "id": "d",
+       "text": "Both, because long trips always shift the clock.",
+       "why": "The clock moves with time zones, not hours spent travelling."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-which",
+   "concept": "tr-what",
+   "bloom": "apply",
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Which trip causes jet lag, not just travel fatigue?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Berlin to Chicago, 7 h west.",
+       "correct": true,
+       "why": "Right: seven time zones crossed."
+      },
+      {
+       "id": "b",
+       "text": "Munich to Cape Town, a 12 h flight south, 0–1 h shift.",
+       "why": "A north-south flight brings travel fatigue; under three zones, so no jet lag."
+      },
+      {
+       "id": "c",
+       "text": "London to Paris by train, 1 h shift.",
+       "why": "Only one zone: too few for jet lag."
+      },
+      {
+       "id": "d",
+       "text": "Rome to Madrid, 2 h flight, 0 h shift.",
+       "why": "Same time zone: no clock change."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Which trip gives travel fatigue only?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Frankfurt to Johannesburg, 11 h flight south.",
+       "correct": true,
+       "why": "Right: long journey but a 0–1 h shift, so no jet lag."
+      },
+      {
+       "id": "b",
+       "text": "Frankfurt to Tokyo, 8 h east.",
+       "why": "Eight zones crossed: jet lag too."
+      },
+      {
+       "id": "c",
+       "text": "Berlin to Vancouver, 9 h west.",
+       "why": "Nine zones crossed: jet lag too."
+      },
+      {
+       "id": "d",
+       "text": "Madrid to Los Angeles, 9 h west.",
+       "why": "Nine zones crossed: jet lag too."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-rate-calc",
+   "concept": "tr-illness",
+   "bloom": "apply",
+   "sources": [
+    "schwellnus2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A squad of 30 players spends 20 days abroad and logs 12 illnesses. What is the incidence per 1000 player-days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "20.0",
+       "correct": true,
+       "why": "Right: illnesses ÷ player-days × 1000."
+      },
+      {
+       "id": "b",
+       "text": "0.02",
+       "why": "You forgot to multiply by 1000."
+      },
+      {
+       "id": "c",
+       "text": "400",
+       "why": "You divided by players only (12 ÷ 30 × 1000)."
+      },
+      {
+       "id": "d",
+       "text": "600",
+       "why": "You divided by days only (12 ÷ 20 × 1000)."
+      }
+     ],
+     "solution": "Player-days: 30 × 20 = 600. Rate: 12 ÷ 600 × 1000 = 20.0."
+    },
+    {
+     "id": "b",
+     "stem": "A squad of 50 players spends 14 days abroad and logs 21 illnesses. What is the incidence per 1000 player-days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "30.0",
+       "correct": true,
+       "why": "Right: illnesses ÷ player-days × 1000."
+      },
+      {
+       "id": "b",
+       "text": "0.03",
+       "why": "You forgot to multiply by 1000."
+      },
+      {
+       "id": "c",
+       "text": "420",
+       "why": "You divided by players only (21 ÷ 50 × 1000)."
+      },
+      {
+       "id": "d",
+       "text": "1,500",
+       "why": "You divided by days only (21 ÷ 14 × 1000)."
+      }
+     ],
+     "solution": "Player-days: 50 × 14 = 700. Rate: 21 ÷ 700 × 1000 = 30.0."
+    },
+    {
+     "id": "c",
+     "stem": "A squad of 40 players spends 10 days abroad and logs 14 illnesses. What is the incidence per 1000 player-days?",
+     "options": [
+      {
+       "id": "a",
+       "text": "35.0",
+       "correct": true,
+       "why": "Right: illnesses ÷ player-days × 1000."
+      },
+      {
+       "id": "b",
+       "text": "0.035",
+       "why": "You forgot to multiply by 1000."
+      },
+      {
+       "id": "c",
+       "text": "350",
+       "why": "You divided by players only (14 ÷ 40 × 1000)."
+      },
+      {
+       "id": "d",
+       "text": "1,400",
+       "why": "You divided by days only (14 ÷ 10 × 1000)."
+      }
+     ],
+     "solution": "Player-days: 40 × 10 = 400. Rate: 14 ÷ 400 × 1000 = 35.0."
+    }
+   ]
+  },
+  {
+   "id": "tr-illness-appraise",
+   "concept": "tr-illness",
+   "bloom": "evaluate",
+   "sources": [
+    "schwellnus2012"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The rugby study found about twice the illness rate abroad. Which limit matters most before you blame time zones for it?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It is observational: travel, new places and the match schedule all changed together.",
+       "correct": true,
+       "why": "Right: the design cannot separate time zones from the rest of the trip."
+      },
+      {
+       "id": "b",
+       "text": "Illness was reported by the players, not by doctors.",
+       "why": "Team physicians logged illness daily, with 100% compliance."
+      },
+      {
+       "id": "c",
+       "text": "The sample of 22,676 player-days is too small for any rate.",
+       "why": "The data are large enough for the rates; cause is the problem."
+      },
+      {
+       "id": "d",
+       "text": "The rate fell on return, which proves it was not travel.",
+       "why": "The fall on return fits a travel link; it does not remove other explanations."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-flight-plan",
+   "concept": "tr-flight",
+   "bloom": "apply",
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A triathlete usually does a 4 h ride two days before flying 10 h to a race. Which change fits the consensus toolbox?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Replace it with a shorter, harder session before the trip.",
+       "correct": true,
+       "why": "Right: shorter, high-intensity sessions replace long, possibly immunosuppressive ones."
+      },
+      {
+       "id": "b",
+       "text": "Do an even longer ride to be tired for the flight.",
+       "why": "Long, high-volume work can be immunosuppressive before travel."
+      },
+      {
+       "id": "c",
+       "text": "Skip fluids on the flight to avoid toilet trips.",
+       "why": "The toolbox advises a hydration plan with regular sips."
+      },
+      {
+       "id": "d",
+       "text": "Keep screens on all flight to avoid dozing off.",
+       "why": "The toolbox says screens should not cut into napping or sleep."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On a long flight, which habit fits the consensus toolbox?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wipe the tray table and headrest, and take regular sips of water.",
+       "correct": true,
+       "why": "Right: both are in the consensus toolbox."
+      },
+      {
+       "id": "b",
+       "text": "Drink only carbonated or alcoholic drinks to relax.",
+       "why": "The toolbox advises non-alcoholic, non-carbonated drinks."
+      },
+      {
+       "id": "c",
+       "text": "Touch the seat-back as little as needed, but never clean.",
+       "why": "It advises frequent wiping of commonly touched areas."
+      },
+      {
+       "id": "d",
+       "text": "Stay up the whole flight to sleep on arrival.",
+       "why": "The toolbox supports napping and sleep, not staying awake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tr-offset-calc",
+   "concept": "tr-race",
+   "bloom": "apply",
+   "sources": [
+    "janse2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist lands 9 h east and races 4 full days later. By the rule of thumb (1 h per day east), how far behind is his clock on race morning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "5 h",
+       "correct": true,
+       "why": "Right: zones − days × rate."
+      },
+      {
+       "id": "b",
+       "text": "0 h",
+       "why": "You assumed the clock fully aligns after the days."
+      },
+      {
+       "id": "c",
+       "text": "13 h",
+       "why": "You added the days to the zones."
+      },
+      {
+       "id": "d",
+       "text": "36 h",
+       "why": "You multiplied zones by days."
+      }
+     ],
+     "solution": "9 − 4 × 1 = 5 h still behind."
+    },
+    {
+     "id": "b",
+     "stem": "A runner lands 6 h west and races 2 full days later. By the rule of thumb (2 h per day west), how far ahead is her clock on race morning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "2 h",
+       "correct": true,
+       "why": "Right: zones − days × rate."
+      },
+      {
+       "id": "b",
+       "text": "4 h",
+       "why": "You used 1 h per day, the eastward rate."
+      },
+      {
+       "id": "c",
+       "text": "8 h",
+       "why": "You added the days to the zones."
+      },
+      {
+       "id": "d",
+       "text": "0 h",
+       "why": "You assumed the clock fully aligns within the 2 days."
+      }
+     ],
+     "solution": "6 − 2 × 2 = 2 h still ahead."
+    },
+    {
+     "id": "c",
+     "stem": "A triathlete lands 10 h east and races 7 full days later. By the rule of thumb (1 h per day east), how far behind is her clock on race morning?",
+     "options": [
+      {
+       "id": "a",
+       "text": "3 h",
+       "correct": true,
+       "why": "Right: zones − days × rate."
+      },
+      {
+       "id": "b",
+       "text": "0 h",
+       "why": "You assumed the clock fully aligns after the days."
+      },
+      {
+       "id": "c",
+       "text": "17 h",
+       "why": "You added the days to the zones."
+      },
+      {
+       "id": "d",
+       "text": "70 h",
+       "why": "You multiplied zones by days."
+      }
+     ],
+     "solution": "10 − 7 × 1 = 3 h still behind."
+    }
+   ]
+  },
+  {
+   "id": "tr-offset-decide",
+   "concept": "tr-race",
+   "bloom": "evaluate",
+   "sources": [
+    "janse2021",
+    "benito2026"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist can land 9 h east either 3 or 9 days before a stage race. Which choice best balances travel cost against clock alignment?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Land 9 days before if she can, since eastward travel needs about a day per zone.",
+       "correct": true,
+       "why": "Right: at 1 h per day the clock needs about 9 days; 3 days leaves 6 h to go."
+      },
+      {
+       "id": "b",
+       "text": "Land 3 days before: eastward travel re-aligns in about 3 days.",
+       "why": "3 days is the westward figure for 6 zones; 9 zones east need about 9 days."
+      },
+      {
+       "id": "c",
+       "text": "Land 3 days before, because time zones do not affect aerobic work.",
+       "why": "Eastward travel is linked to weaker aerobic capacity."
+      },
+      {
+       "id": "d",
+       "text": "Land 9 days before only if she is a night owl.",
+       "why": "The rule gives days by zones; chronotype only changes the response size."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1048 @@
+{
+ "id": "cold-performance",
+ "module": "t6-cold",
+ "title": "Cold and performance",
+ "goal": "Explain how cold changes muscle power, fuel use, endurance and breathing, and name the basics of hypothermia, frostbite and clothing.",
+ "requires": [
+  "cold-physiology"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "exercise-induced-bronchoconstriction",
+    "fev1",
+    "hypothermia",
+    "frostbite"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cf-muscle",
+   "title": "Cold muscle makes less power",
+   "text": "Muscle works best warm. In one study, four people did 20 s cycle sprints after 45 min with their legs in water at 44, 18 or 12 °C. Muscle temperature was 39.3, 31.9 and 29.0 °C, against 36.6 °C at rest. Peak power rose about 11% after warming and fell about 12% and 21% after the cold baths [[c:sargeant]].\n\nA review puts the loss at about 3% of maximal power for each °C fall in muscle temperature [[c:power-degree]]. For short efforts, each °C of warming adds 2–5%, until the core gets too hot [[c:racinais]].\n\nSo a cold, slow stretch before a sprint, a crit or a short climb costs power. Warm up, and keep the legs covered until the start.",
+   "claims": [
+    {
+     "id": "sargeant",
+     "text": "Cooling the legs cut peak sprint power by about 12% (18 °C bath) and 21% (12 °C bath); warming raised it about 11%.",
+     "grade": "weak",
+     "sources": [
+      "sargeant1987"
+     ],
+     "evidence": [
+      {
+       "source": "sargeant1987",
+       "quote": "After warming the legs in a 44 degrees C water bath there was an increase of approximately 11% in maximal peak force and power (PPmax) compared with normal rest while cooling the legs in 18 and 12 degrees C water baths resulted in reductions of approximately 12% and 21% respectively.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "power-degree",
+     "text": "Maximal power output falls by about 3% per °C fall in muscle temperature.",
+     "grade": "moderate",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "maximum power output falls by about 3% per degree Celsius fall in muscle temperature",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "racinais",
+     "text": "In short efforts performance improves 2–5% per °C rise in muscle temperature, until central temperature rises too.",
+     "grade": "moderate",
+     "sources": [
+      "racinais2010"
+     ],
+     "evidence": [
+      {
+       "source": "racinais2010",
+       "quote": "During short duration exercise, performance improves from 2% to 5% with a 1 °C increase in muscle temperature.",
+       "level": "abstract"
+      },
+      {
+       "source": "racinais2010",
+       "quote": "However, if central temperature increases (i.e., hyperthermia), this positive relation ceases and performance becomes impaired.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cf-muscle-ex",
+   "title": "How much power does a cold leg lose?",
+   "problem": "A cyclist's peak sprint power is 1,100 W with muscle at 36.5 °C. After a long cold descent muscle is at 32.5 °C. Estimate peak power with 3% per °C.",
+   "steps": [
+    "Fall in muscle temperature: 36.5 − 32.5 = 4 °C.",
+    "Power lost: 4 × 3% = 12%.",
+    "Peak power: 1,100 × (1 − 0.12) = 1,100 × 0.88 = 968 W, about 970 W. It is a straight-line estimate, good for small falls only."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cf-muscle-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cf-warm-start"
+  },
+  {
+   "type": "concept",
+   "id": "cf-fuel",
+   "title": "Fuel in the cold",
+   "text": "Shivering is hungry work. In non-acclimatised men shivering hard, carbohydrate supplied 33–78% of the heat and fat 14–60%. Carbohydrate use rose 2- to 8-fold, and how much depended on the person [[c:haman]].\n\nMoving in the cold also shifts fuel. At 0 to −10 °C the [RER](g:rer) is higher than at 10–20 °C (with core temperature held), a sign of more carbohydrate use [[c:cold-rer]].\n\nShivering at the start in thin kit can use up glycogen before the race begins [[c:shiver-glycogen]]. So fill glycogen stores before a long cold event, dress to avoid shivering, and eat on schedule: low fuel means a lower pace, less heat made, and a colder athlete.",
+   "claims": [
+    {
+     "id": "haman",
+     "text": "In shivering men, carbohydrate supplied 33–78% of heat production (a 2- to 8-fold rise), with big differences between people.",
+     "grade": "weak",
+     "sources": [
+      "haman2004"
+     ],
+     "evidence": [
+      {
+       "source": "haman2004",
+       "quote": "Depending on the subject, the cold-induced increase in carbohydrate (CHO) oxidation ranged between 2- and 8-fold, with CHO accounting for 33-78% of total heat production, and lipids for 14-60%.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cold-rer",
+     "text": "At 0 to −10 °C the respiratory exchange ratio rises compared with 10–20 °C, showing a shift to carbohydrate.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "where increased respiratory exchange ratio (RER) at moderate sub-zero temperatures between 0 and −10 °C reflects a shift to carbohydrate metabolism compared with 10 to 20 °C, when core temperature is maintained",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "shiver-glycogen",
+     "text": "Shivering from inadequate clothing before a competition can reduce glycogen availability.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "shivering due to inadequate clothing pre competition can reduce glycogen availability",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cf-shiver-fuel"
+  },
+  {
+   "type": "concept",
+   "id": "cf-endurance",
+   "title": "Endurance in cold air",
+   "text": "Cool is fast. Endurance is likely best at 20 °C or below, and suffers when cold, wetness and wind outrun your heat production and cool muscle and body [[c:endurance-opt]]. A review of the few aerobic studies found performance was degraded in the cold [[c:aerobic-degraded]].\n\nBut the evidence is thin and mixed. In one small study, 30-min time trials in 2 °C and 20 °C air gave the same work [[c:cold-not-per-se]].\n\nThe real risk is slowing down. When intensity falls (a puncture, a flat spell, fatigue), heat production falls, but heat loss stays high, so core temperature can sink [[c:slowing]].",
+   "claims": [
+    {
+     "id": "endurance-opt",
+     "text": "Endurance is likely best at 20 °C or below, and falls once cold, wet and wind overwhelm heat production.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "In summary, endurance exercise is likely optimized in cool environments ≤20 °C; however, as external cold stressors (air, wetness, wind speed) overwhelm metabolic heat production to maintain body temperature and muscle temperature, endurance performance can be negatively affected",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "aerobic-degraded",
+     "text": "The few studies on aerobic performance in the cold suggest it is degraded.",
+     "grade": "weak",
+     "sources": [
+      "castellani2015"
+     ],
+     "evidence": [
+      {
+       "source": "castellani2015",
+       "quote": "The few studies that have been done suggest that aerobic performance is degraded in cold environments.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "cold-not-per-se",
+     "text": "In 8 people, a 30-min time trial gave the same work in 2 °C and 20 °C air: cold itself did not cut performance.",
+     "grade": "weak",
+     "sources": [
+      "cheuvront2005"
+     ],
+     "evidence": [
+      {
+       "source": "cheuvront2005",
+       "quote": "These data demonstrate that 1) HYP impairs endurance exercise performance in temperate but not cold air but 2) cold stress per se does not.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "slowing",
+     "text": "When exercise intensity falls, heat production falls while heat loss stays high, so hypothermia may develop.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "With decreased exercise intensity, heat production is reduced and since during exercise, peripheral vasoconstriction and related insulation does not become maximal, heat loss remains high and hypothermia may develop",
+       "level": "full-text"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does cold air itself slow endurance performance?",
+    "sides": [
+     {
+      "position": "Yes: aerobic performance is degraded in the cold, through cooler muscle and body and a higher metabolic load.",
+      "sources": [
+       "castellani2015",
+       "gatterer2021"
+      ]
+     },
+     {
+      "position": "Not by itself: in a 2 °C versus 20 °C time trial the work done was the same.",
+      "sources": [
+       "cheuvront2005"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "cf-slowing"
+  },
+  {
+   "type": "question",
+   "item": "cf-appraise"
+  },
+  {
+   "type": "concept",
+   "id": "cf-eib",
+   "title": "Breathing cold, dry air",
+   "text": "Cold air holds almost no water, so every breath must be warmed and moistened. At high [ventilation](g:minute-ventilation) the airway lining dries faster than it recovers [[c:dry-air]]. That water loss is the main cause of [exercise-induced bronchoconstriction](g:exercise-induced-bronchoconstriction) (EIB): the airways narrow, with cough, wheeze or a tight chest [[c:eib-water]]. It worsens as air gets colder (0 to −20 °C) and can start after 8 min of all-out effort [[c:eib-colder]].\n\nA test measures [FEV₁](g:fev1) before and 5–30 min after hard exercise. A fall of 10% or more counts as EIB [[c:eib-criterion]].",
+   "claims": [
+    {
+     "id": "dry-air",
+     "text": "Cold air is always dry air; breathing a lot of it dries the airway surface liquid and cools the lining.",
+     "grade": "moderate",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "It should be mentioned that cold air (close to zero °C) always means dry air.",
+       "level": "full-text"
+      },
+      {
+       "source": "gatterer2021",
+       "quote": "hyperpnea of cold air makes the airway surface fluid (ASF) evaporate faster than it can be restored, causing drying and hypertonicity of the ASF and cooling of the mucosa",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "eib-water",
+     "text": "EIB is a result of evaporative water loss while conditioning the inspired air.",
+     "grade": "moderate",
+     "sources": [
+      "anderson2008"
+     ],
+     "evidence": [
+      {
+       "source": "anderson2008",
+       "quote": "Exercise-induced bronchoconstriction (EIB) is a consequence of evaporative water loss in conditioning the inspired air.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "eib-colder",
+     "text": "EIB can follow 8 min of all-out exercise and worsens with colder air (0 to −20 °C).",
+     "grade": "moderate",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "This acute airway constriction can be caused by intense exercise in as little as 8 min of all out exercise, where the EIB worsens with progressively colder temperatures (0 to −20 °C)",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "eib-criterion",
+     "text": "A fall in FEV₁ of 10% or more in the 30 min after exercise is a common criterion for EIB.",
+     "grade": "moderate",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "A commonly applied criterion for the percent fall in FEV1 during the 30 min post-exercise period (compared with pre-exercise FEV1) to diagnose EIB is ≥10%.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "cf-fev-ex",
+   "title": "Does this fall count as EIB?",
+   "problem": "Before a hard effort an athlete's FEV₁ is 4.20 L. Readings 5, 10 and 15 min after are 3.90, 3.70 and 3.80 L. Is it a fall of 10% or more?",
+   "steps": [
+    "Use the lowest reading: 3.70 L.",
+    "Fall = (4.20 − 3.70) ÷ 4.20 = 0.50 ÷ 4.20 = 0.119, about 12%.",
+    "Divide by the before value, not the after value. 12% is above 10%, so it meets the criterion."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cf-eib-cause"
+  },
+  {
+   "type": "question",
+   "item": "cf-fev-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "cf-eib-apply"
+  },
+  {
+   "type": "concept",
+   "id": "cf-injury",
+   "title": "Hypothermia and frostbite basics",
+   "text": "[Hypothermia](g:hypothermia) means a core temperature below 35 °C. Stages: mild 32–35 °C (more shivering, withdrawn, clumsy); moderate 28–32 °C (shivering stops, confusion, heart rhythm problems); severe below 28 °C (unconscious, cardiac arrest likely) [[c:stages]]. Mild cases: dry clothes, shelter, let shivering go on.\n\n[Frostbite](g:frostbite) is freezing of tissue. Skin feels cool near 28 °C, hurts near 20 °C and goes numb below 10 °C [[c:skin-feel]]. Numb fingers are a warning, not a sign of relief.\n\nCold injury can impair performance or cause lasting harm or death [[c:acsm]].",
+   "claims": [
+    {
+     "id": "stages",
+     "text": "Mild hypothermia is 32–35 °C, moderate 28–32 °C, severe below 28 °C core temperature.",
+     "grade": "strong",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "Mild hypothermia ranges from a core temperature of 32°C to 35°C (89.6°F-95°F) and can be recognized by increased shivering, social withdrawal, and other behavior changes.",
+       "level": "full-text"
+      },
+      {
+       "source": "fudge2016",
+       "quote": "In severe hypothermia, with core body temperatures below 28°C (86°F), severe bradycardia and ventricular fibrillation become more likely, along with the loss of deep tendon reflexes and voluntary motion.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "skin-feel",
+     "text": "Skin feels cool at about 28 °C, painful at about 20 °C and numb below 10 °C.",
+     "grade": "moderate",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "Athletes will feel a sense of skin cooling at skin temperatures of 28°C, pain at approximately 20°C, and numbness as skin temperatures drop below 10°C.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "acsm",
+     "text": "Cold injury can impair exercise performance or cause lifelong debility or death.",
+     "grade": "strong",
+     "sources": [
+      "castellani2021"
+     ],
+     "evidence": [
+      {
+       "source": "castellani2021",
+       "quote": "Cold injury can result from exercising at low temperatures and can impair exercise performance or cause lifelong debility or death.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cf-stage"
+  },
+  {
+   "type": "question",
+   "item": "cf-numb"
+  },
+  {
+   "type": "concept",
+   "id": "cf-clothing",
+   "title": "Clothing: layers and wetness",
+   "text": "Layers work better than one thick coat [[c:layers]]: a wicking base layer, an insulating middle layer and a wind- and water-proof shell. You can then add or remove a layer as the weather and your effort change.\n\nSweat is the enemy. It wets clothing and speeds cooling, so open up before you sweat hard and add dry layers at stops and before descents [[c:sweat]]. Merino wool base layers and breathable insulation help.\n\nRacing kit such as lycra suits gives little protection, so wear warm layers over it until the start. Cover the hands, feet, ears and nose first, as vasoconstriction cools them first.",
+   "claims": [
+    {
+     "id": "layers",
+     "text": "A layered approach to clothing is the best way to prevent cold injury and respond to weather changes.",
+     "grade": "moderate",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "A layered approach to clothing is the best way to prevent injury and respond to weather changes.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "sweat",
+     "text": "Sweating speeds cooling of tissue and core, so base layers should wick and outer layers be breathable.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "the influence of sweating on accelerating tissue and core temperature highlights the importance of merino wool base layers, with subsequent layers that are insulative and highly breathable to water vapour",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cf-layers"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Muscle loses about 3% of maximal power per °C of cooling: warm up and stay covered until the start.",
+    "Shivering burns carbohydrate; arrive with full glycogen and avoid pre-race shivering.",
+    "Cold itself may not slow a steady effort, but slowing down in the cold raises the risk of hypothermia.",
+    "Cold, dry air dries the airways and can trigger EIB: a fall in FEV₁ of 10% or more after exercise.",
+    "Mild hypothermia is 32–35 °C; numb skin is a warning. Dress in layers and keep dry."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cf-muscle-calc",
+   "concept": "cf-muscle",
+   "bloom": "apply",
+   "sources": [
+    "tipton2014",
+    "sargeant1987"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist's peak sprint power is 1,000 W with muscle at 36 °C. After a cold ride, muscle is at 33 °C. Using 3% per °C, what is the estimated peak power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,090 W",
+       "why": "That adds the 9% instead of subtracting it."
+      },
+      {
+       "id": "b",
+       "text": "910 W",
+       "why": "3 °C × 3% = 9%; 1,000 × 0.91 = 910 W.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "970 W",
+       "why": "That takes 3% off once, not 3% for each of the 3 °C."
+      }
+     ],
+     "solution": "Fall: 36 − 33 = 3 °C. Loss: 3 × 3% = 9%. Power: 1,000 × (1 − 0.09) = 910 W."
+    },
+    {
+     "id": "b",
+     "stem": "A triathlete's peak power on the bike is 900 W with muscle at 37 °C. After a cold open-water swim, muscle is at 33 °C. Using 3% per °C, what is the estimated peak power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "792 W",
+       "why": "4 °C × 3% = 12%; 900 × 0.88 = 792 W.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "873 W",
+       "why": "That takes 3% off once, not 3% for each of the 4 °C."
+      },
+      {
+       "id": "c",
+       "text": "1,008 W",
+       "why": "That adds the 12% instead of subtracting it."
+      }
+     ],
+     "solution": "Fall: 37 − 33 = 4 °C. Loss: 4 × 3% = 12%. Power: 900 × 0.88 = 792 W."
+    },
+    {
+     "id": "c",
+     "stem": "A track sprinter's peak power is 1,500 W with muscle at 36.5 °C. After waiting in a cold hall, muscle is at 34.5 °C. Using 3% per °C, what is the estimated peak power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "1,455 W",
+       "why": "That takes 3% off once, not 3% for each of the 2 °C."
+      },
+      {
+       "id": "b",
+       "text": "1,590 W",
+       "why": "That adds the 6% instead of subtracting it."
+      },
+      {
+       "id": "c",
+       "text": "1,410 W",
+       "why": "2 °C × 3% = 6%; 1,500 × 0.94 = 1,410 W.",
+       "correct": true
+      }
+     ],
+     "solution": "Fall: 36.5 − 34.5 = 2 °C. Loss: 2 × 3% = 6%. Power: 1,500 × 0.94 = 1,410 W."
+    }
+   ]
+  },
+  {
+   "id": "cf-warm-start",
+   "concept": "cf-muscle",
+   "bloom": "apply",
+   "sources": [
+    "sargeant1987",
+    "racinais2010"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A rider waits 30 min in a 5 °C start pen in thin kit before a short, hard criterium. Which step best protects her power?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skip the warm-up to save energy for the race",
+       "why": "Cold muscle loses about 3% of power per °C; saving energy does not offset that."
+      },
+      {
+       "id": "b",
+       "text": "Stand still so she does not lose heat",
+       "why": "Standing still in cold air cools the legs further."
+      },
+      {
+       "id": "c",
+       "text": "Drink cold water to stay alert",
+       "why": "Cold fluid does not help muscle temperature."
+      },
+      {
+       "id": "d",
+       "text": "Warm up, then keep legs covered until the start",
+       "why": "It keeps muscle temperature up, which keeps peak power up.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-shiver-fuel",
+   "concept": "cf-fuel",
+   "bloom": "apply",
+   "sources": [
+    "haman2004",
+    "gatterer2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist shivers for 40 min at the start of a 160 km cold race in thin kit. What is the most likely cost?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her muscle temperature rises, so she is faster",
+       "why": "Shivering is not the same as a warm-up for power."
+      },
+      {
+       "id": "b",
+       "text": "Nothing, because shivering only uses fat",
+       "why": "Carbohydrate supplied 33–78% of shivering heat in the study."
+      },
+      {
+       "id": "c",
+       "text": "Some glycogen is used before the race starts",
+       "why": "Shivering burns a lot of carbohydrate (33–78% of its heat in one study), so the store is lower at the start.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Her fat stores run out early",
+       "why": "Shivering uses fat too, but the issue is the smaller carbohydrate store."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-slowing",
+   "concept": "cf-endurance",
+   "bloom": "analyse",
+   "sources": [
+    "gatterer2021",
+    "castellani2015"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner in 4 °C rain is on pace for 3 h, but in the last 10 km she slows to a walk with cramps and starts to shiver. Why does she get colder now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her core temperature was already below 35 °C at the start",
+       "why": "Nothing says that; the change happened when she slowed."
+      },
+      {
+       "id": "b",
+       "text": "Walking increases sweating, which cools her",
+       "why": "She was sweating more when running fast."
+      },
+      {
+       "id": "c",
+       "text": "Cold air only slows muscles, not heat balance",
+       "why": "Muscle slowing is real, but the new chill comes from the heat balance."
+      },
+      {
+       "id": "d",
+       "text": "Heat production fell but heat loss in the wet and cold did not",
+       "why": "Slower movement makes less heat; wet and wind keep the loss high.",
+       "correct": true
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A gravel rider in 3 °C drizzle stops for a 20 min puncture repair after a hard ride. Why does she cool quickly?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Vasoconstriction is complete, so she cannot feel cold",
+       "why": "She is losing heat; the narrowing only cuts it."
+      },
+      {
+       "id": "b",
+       "text": "Brown fat takes over as she stops",
+       "why": "BAT cannot replace the heat of hard exercise."
+      },
+      {
+       "id": "c",
+       "text": "Heat production drops at once while heat loss stays high",
+       "why": "Standing still makes little heat; damp clothes and wind keep taking it.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Her sweat stops her from losing heat",
+       "why": "Damp clothing speeds loss, so sweat adds to it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-appraise",
+   "concept": "cf-endurance",
+   "bloom": "evaluate",
+   "sources": [
+    "cheuvront2005"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A study of 8 people found the same 30-min time-trial work in 2 °C and 20 °C air. What most limits the claim that cold does not hurt endurance?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It compared two temperatures, which is too few",
+       "why": "Two temperatures are fine for a first test; the size of the sample is the weak point."
+      },
+      {
+       "id": "b",
+       "text": "Cold always lowers performance, so the study is wrong",
+       "why": "That assumes the answer instead of judging the study."
+      },
+      {
+       "id": "c",
+       "text": "Only 8 people and one short, controlled effort",
+       "why": "Few people and one short task cannot speak for long, wet, windy races.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "The study used time trials, which cannot show performance",
+       "why": "A time trial is a fair performance measure."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-eib-cause",
+   "concept": "cf-eib",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "anderson2008",
+    "gatterer2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "What mainly causes airway narrowing when an athlete trains hard in cold air?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Water loss from the airway lining",
+       "why": "Evaporation of water as dry air is humidified dries the surface and triggers the muscle around the airway to tighten.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Lung tissue freezing",
+       "why": "Lung tissue does not freeze at these air temperatures."
+      },
+      {
+       "id": "c",
+       "text": "A build-up of lactate in the lungs",
+       "why": "Lactate is not what narrows the airways."
+      },
+      {
+       "id": "d",
+       "text": "An infection triggered by cold",
+       "why": "Cold alone is not an infection; the cause here is drying."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-fev-calc",
+   "concept": "cf-eib",
+   "bloom": "apply",
+   "sources": [
+    "gatterer2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Before a hard effort an athlete's FEV₁ is 4.50 L. The lowest later reading is 3.80 L. What is the fall, and does it meet the 10% criterion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 16%: it is below the criterion",
+       "why": "The number is right but 16% is above 10%."
+      },
+      {
+       "id": "b",
+       "text": "About 16%: it meets the criterion",
+       "why": "(4.50 − 3.80) ÷ 4.50 = 15.6%, above 10%.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About 18%: it meets the criterion",
+       "why": "That divides by the after value, 3.80, not the before value."
+      }
+     ],
+     "solution": "Fall: 4.50 − 3.80 = 0.70 L. Percent: 0.70 ÷ 4.50 = 0.156, about 16%. It is above 10%, so it meets the criterion."
+    },
+    {
+     "id": "b",
+     "stem": "An athlete's FEV₁ is 3.60 L before exercise and the lowest later reading is 3.30 L. What is the fall, and does it meet the 10% criterion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "About 8%: it is below the criterion",
+       "why": "(3.60 − 3.30) ÷ 3.60 = 8.3%, below 10%.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "About 9%: it is below the criterion",
+       "why": "That divides by the after value, 3.30, not the before value."
+      },
+      {
+       "id": "c",
+       "text": "About 8%: it meets the criterion",
+       "why": "The number is right but 8% is below 10%."
+      }
+     ],
+     "solution": "Fall: 3.60 − 3.30 = 0.30 L. Percent: 0.30 ÷ 3.60 = 0.083, about 8%. It is below 10%, so it does not meet the criterion."
+    },
+    {
+     "id": "c",
+     "stem": "A runner's FEV₁ is 5.00 L before a cold-air test and the lowest later reading is 4.30 L. What is the fall, and does it meet the 10% criterion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "16%: it meets the criterion",
+       "why": "That divides by the after value, 4.30, not the before value."
+      },
+      {
+       "id": "b",
+       "text": "14%: it is below the criterion",
+       "why": "The number is right but 14% is above 10%."
+      },
+      {
+       "id": "c",
+       "text": "14%: it meets the criterion",
+       "why": "(5.00 − 4.30) ÷ 5.00 = 14%, above 10%.",
+       "correct": true
+      }
+     ],
+     "solution": "Fall: 5.00 − 4.30 = 0.70 L. Percent: 0.70 ÷ 5.00 = 0.14, or 14%. It is above 10%, so it meets the criterion."
+    }
+   ]
+  },
+  {
+   "id": "cf-eib-apply",
+   "concept": "cf-eib",
+   "bloom": "analyse",
+   "sources": [
+    "anderson2008",
+    "gatterer2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A skier coughs and wheezes after intervals at −15 °C, but not after the same intervals indoors at 20 °C. What best explains the difference?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Cold air is dry, so her airways dry out",
+       "why": "Same effort and ventilation, but dry air takes more water from the airways.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "The intervals were harder outdoors",
+       "why": "The stem says the same intervals."
+      },
+      {
+       "id": "c",
+       "text": "Outdoor air holds more pollen",
+       "why": "Pollen is scarce at −15 °C; what changed is temperature and dryness."
+      },
+      {
+       "id": "d",
+       "text": "Her heart works harder in the cold",
+       "why": "Heart load does not explain coughing and wheeze."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner needs her inhaler after winter runs at −10 °C but not in summer at the same effort. What best explains this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "She is less fit in winter",
+       "why": "Fitness would not explain cough only in cold."
+      },
+      {
+       "id": "b",
+       "text": "Her lungs shrink in the cold",
+       "why": "Lung size does not change with air temperature."
+      },
+      {
+       "id": "c",
+       "text": "She sweats more in winter",
+       "why": "Sweating has no link to the airway narrowing here."
+      },
+      {
+       "id": "d",
+       "text": "Cold, dry air dries her airways",
+       "why": "At high ventilation, breathing a lot of dry air dries the lining and triggers narrowing.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-stage",
+   "concept": "cf-injury",
+   "bloom": "apply",
+   "sources": [
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cold, wet runner is clumsy, withdrawn and shivering hard. Her core temperature is 33.5 °C. Which stage is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Severe hypothermia (below 28 °C)",
+       "why": "Severe means unconsciousness, with a core below 28 °C."
+      },
+      {
+       "id": "b",
+       "text": "Not hypothermia, since it is above 35 °C",
+       "why": "33.5 °C is below 35 °C, so it is hypothermia."
+      },
+      {
+       "id": "c",
+       "text": "Mild hypothermia (32–35 °C)",
+       "why": "Hard shivering, clumsiness and withdrawal fit the mild stage.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Moderate hypothermia (28–32 °C)",
+       "why": "Moderate starts below 32 °C, and shivering would fade."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A cyclist after a wet descent stops shivering, is confused and has a core temperature of 30 °C. Which stage is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Not hypothermia: shivering stopped, so she warmed up",
+       "why": "Shivering stops at lower core temperatures; it is a bad sign."
+      },
+      {
+       "id": "b",
+       "text": "Moderate hypothermia (28–32 °C)",
+       "why": "Loss of shivering and confusion fit the moderate stage.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Mild hypothermia (32–35 °C)",
+       "why": "Mild is warmer, and shivering continues."
+      },
+      {
+       "id": "d",
+       "text": "Severe hypothermia (below 28 °C)",
+       "why": "30 °C is above 28 °C, and she is still conscious."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-numb",
+   "concept": "cf-injury",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A skier's fingers hurt in the cold, and later stop hurting and feel numb. What should she conclude?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The cold has passed, so the fingers are safe",
+       "why": "Numbness is deeper cooling, not recovery."
+      },
+      {
+       "id": "b",
+       "text": "The fingers are warming up through exercise",
+       "why": "Numb skin means a lower skin temperature than painful skin."
+      },
+      {
+       "id": "c",
+       "text": "She has frostbite only if the skin turns black",
+       "why": "Damage can start before any colour change."
+      },
+      {
+       "id": "d",
+       "text": "The tissue is colder, so she must warm it and cover it",
+       "why": "Numbness comes at skin below about 10 °C and is a warning.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cf-layers",
+   "concept": "cf-clothing",
+   "bloom": "apply",
+   "sources": [
+    "fudge2016",
+    "gatterer2021"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "On a 2 °C ride you sweat hard on a long climb, and the summit is followed by a 25 min descent. What is the best plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Open the jacket on the climb, then add a dry layer and shell before descending",
+       "why": "It limits sweat and keeps dry clothing for the cooling descent.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Keep every layer closed to stay warm on the climb",
+       "why": "Heavy sweating wets the clothes, and wet clothing speeds cooling later."
+      },
+      {
+       "id": "c",
+       "text": "Take off the base layer at the top to cool down",
+       "why": "Removing the base layer at the top leaves you cold and exposed for the descent."
+      },
+      {
+       "id": "d",
+       "text": "Wear one thick coat the whole ride",
+       "why": "One coat cannot be adjusted to changing effort."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

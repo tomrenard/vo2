@@ -1,0 +1,709 @@
+{
+ "id": "alt-acclimatisation",
+ "module": "t6-altitude",
+ "title": "Acclimatisation: minutes, days, weeks",
+ "goal": "Describe what the body changes in the first minutes, days and weeks at altitude, what is still disputed, and how mountain sickness is avoided.",
+ "requires": [
+  "alt-acute"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "altitude-acclimatisation",
+    "hypoxic-ventilatory-response",
+    "respiratory-alkalosis",
+    "acute-mountain-sickness",
+    "hape",
+    "hace"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "acc-fast",
+   "title": "Minutes: breathe more, heart faster",
+   "text": "The first response takes minutes. Sensors in the neck arteries ([peripheral chemoreceptors](g:peripheral-chemoreceptor)) notice the low oxygen pressure and drive [minute ventilation](g:minute-ventilation) up: the [hypoxic ventilatory response](g:hypoxic-ventilatory-response). Heart rate rises too, and [stroke volume](g:stroke-volume) falls very little [[c:acc-acute]].\n\nExtra breathing blows off CO₂, which makes the blood too alkaline ([respiratory alkalosis](g:respiratory-alkalosis)). Over the next days the kidneys correct that, and breathing can rise further. All these adjustments together are [altitude acclimatisation](g:altitude-acclimatisation), the same idea as the heat version you met earlier: a few days for the fast changes, weeks for the slow ones.",
+   "claims": [
+    {
+     "id": "acc-acute",
+     "text": "In acute exposure to altitude, ventilation and heart rate rise with a minimal fall in stroke volume.",
+     "grade": "moderate",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "In acute exposure, ventilation and heart rate are elevated with a minimum reduction in stroke volume.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acc-vent"
+  },
+  {
+   "type": "concept",
+   "id": "acc-epo",
+   "title": "Hours: EPO. Weeks: red cells",
+   "text": "The signal for new red cells starts fast. In six volunteers at a simulated 3,000 m, [EPO](g:epo) was already raised after 114 minutes and kept rising; the calculated production rate was 1.8 times higher at 3,000 m and 3.0 times higher at 4,000 m [[c:acc-epo-fast]].\n\nBut [red cell production](g:red-cell-production) (erythropoiesis) is slow: new cells take days to appear and weeks to add up. In a trial of 39 runners, 4 weeks at 2,500 m raised red cell mass by 9% and VO₂max by 5% [[c:acc-rcm-weeks]]. The EPO rise can fade while you stay: in runners at 1,780 m it was back to baseline after 72 h [[c:acc-epo-fade]].",
+   "claims": [
+    {
+     "id": "acc-epo-fast",
+     "text": "EPO rises within about 2 hours of simulated altitude, with production rising about 1.8 times at 3,000 m and 3.0 times at 4,000 m.",
+     "grade": "weak",
+     "sources": [
+      "eckardt1989"
+     ],
+     "evidence": [
+      {
+       "source": "eckardt1989",
+       "quote": "EPO levels during hypoxia were significantly elevated after 114 and 84 min (3,000 and 4,000 m), rising thereafter continuously for the period investigated.",
+       "level": "abstract"
+      },
+      {
+       "source": "eckardt1989",
+       "quote": "This rise in EPO levels corresponds to 1.8-fold (3,000 m) and 3.0-fold (4,000 m) increases in the calculated production rate of the hormone.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acc-epo-fade",
+     "text": "In runners living at 1,780 m, EPO was raised at 24 and 48 h but back to sea-level baseline after 72 h.",
+     "grade": "weak",
+     "sources": [
+      "chapman2014"
+     ],
+     "evidence": [
+      {
+       "source": "chapman2014",
+       "quote": "EPO was significantly higher in all groups at 24 and 48 h, but returned to sea level baseline after 72 h in the 1,780-m group.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acc-rcm-weeks",
+     "text": "Four weeks of living at 2,500 m raised red cell mass by about 9% and VO₂max by about 5% in runners.",
+     "grade": "weak",
+     "sources": [
+      "levine1997",
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "levine1997",
+       "quote": "Both altitude groups significantly increased VO2 max (5%) in direct proportion to an increase in red cell mass volume (9%; r = 0.37, P < 0.05), neither of which changed in the control.",
+       "level": "abstract"
+      },
+      {
+       "source": "bartsch2008",
+       "quote": "In addition, plasma volume is reduced over 24-48 h to improve the oxygen-carrying capacity of the blood, and is further improved during a prolonged sojourn at altitude through an enhanced erythropoiesis and larger Hb mass, allowing for a partial or full restoration of the blood volume and arterial oxygen content.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acc-epo-timing"
+  },
+  {
+   "type": "concept",
+   "id": "acc-pv",
+   "title": "Days: plasma shrinks first",
+   "text": "Within 24–48 h [plasma volume](g:plasma-volume) falls [[c:acc-pv-fall]]. Red cells are not added yet, but the same haemoglobin sits in less fluid, so the concentration of haemoglobin rises and each litre of blood carries more oxygen. In 8 elite cyclists at 2,340 m, haemoglobin concentration and arterial O₂ content rose during acclimatisation [[c:acc-hb-conc]].\n\nSo an early rise in haemoglobin *concentration* is not a rise in haemoglobin *mass*. Blood volume = plasma + red cells; concentration = Hb mass ÷ blood volume.",
+   "claims": [
+    {
+     "id": "acc-pv-fall",
+     "text": "Plasma volume falls over the first 24–48 h at altitude, raising the oxygen-carrying capacity of each litre of blood.",
+     "grade": "moderate",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "In addition, plasma volume is reduced over 24-48 h to improve the oxygen-carrying capacity of the blood, and is further improved during a prolonged sojourn at altitude through an enhanced erythropoiesis and larger Hb mass, allowing for a partial or full restoration of the blood volume and arterial oxygen content.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acc-hb-conc",
+     "text": "In elite cyclists at 2,340 m, acclimatisation raised haemoglobin concentration and arterial O₂ content.",
+     "grade": "weak",
+     "sources": [
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "schuler2007",
+       "quote": "Acclimatization increased hemoglobin concentration and arterial oxygen content.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "example",
+   "id": "acc-pv-example",
+   "title": "Haemoglobin concentration after plasma loss",
+   "problem": "A man has 800 g of haemoglobin in 5.0 L of blood (3.0 L plasma, 2.0 L red cells): 160 g·L⁻¹. His plasma volume falls 10% and his haemoglobin mass is unchanged. What is the new concentration?",
+   "steps": [
+    "Plasma falls 10%: 3.0 × 0.90 = 2.7 L. Red cells stay at 2.0 L.",
+    "New blood volume = 2.7 + 2.0 = 4.7 L.",
+    "Concentration = 800 ÷ 4.7 = 170 g·L⁻¹, up 6%, with no new red cells. A 10% plasma loss gives a 6% rise, not 10%, because plasma is only part of the blood."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acc-pv-calc",
+   "variant": "a"
+  },
+  {
+   "type": "question",
+   "item": "acc-pv-interpret"
+  },
+  {
+   "type": "concept",
+   "id": "acc-plateau",
+   "title": "Weeks: does VO₂max come back?",
+   "text": "After 4 or more weeks the blood's oxygen content is back to normal. A review of the field adds that at higher altitudes maximal heart rate and so peak cardiac output also fall [[c:acc-plateau-claim]]. The sources disagree on what that means for VO₂max measured at altitude.",
+   "claims": [
+    {
+     "id": "acc-plateau-claim",
+     "text": "After 4 or more weeks above about 2,000 m, arterial O₂ content is normalised; whether VO₂max at altitude recovers is disputed (essentially unchanged in a review, up about 8% from the day-1 value in 14 days in one study).",
+     "grade": "disputed",
+     "sources": [
+      "bartsch2008",
+      "schuler2007"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "At these higher altitudes additional adaptations occur, one being a reduction in the maximal heart rate response and consequently a lower peak cardiac output.",
+       "level": "abstract"
+      },
+      {
+       "source": "bartsch2008",
+       "quote": "Thus, in spite of a normalization of the arterial oxygen content after 4 or more weeks at altitude, the peak oxygen uptake reached after a long acclimatization period is essentially unaltered compared with acute exposure.",
+       "level": "abstract"
+      },
+      {
+       "source": "schuler2007",
+       "quote": "Subsequently, these parameters increased by 3.2% (P<0.05) and 6.0% (P<0.05) from Days 1 to 7, by 4.8% (P<0.05) and 5.7% (P<0.05) from Days 7 to 14, followed by 0.7% (P>0.05) and 1.4% (P>0.05) from Days 14 to 21, respectively.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ],
+   "debate": {
+    "question": "Does acclimatisation win back VO₂max measured at altitude?",
+    "sides": [
+     {
+      "position": "Partly: elite cyclists at 2,340 m raised VO₂max about 8% above their day-1 value in 14 days (+3.2% by day 7, +4.8% more by day 14), still about 5–6% below sea level, then little more.",
+      "sources": [
+       "schuler2007"
+      ]
+     },
+     {
+      "position": "No: after a long stay, peak VO₂ at altitude is essentially the same as on arrival, because lower peak heart rate and cardiac output offset the better blood oxygen content.",
+      "sources": [
+       "bartsch2008"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "item": "acc-plateau"
+  },
+  {
+   "type": "concept",
+   "id": "acc-ams",
+   "title": "The cost: mountain sickness",
+   "text": "[Acute mountain sickness](g:acute-mountain-sickness) (AMS) is headache with nausea and loss of appetite. It is mild and temporary in 10–30% of people at 2,500–3,000 m [[c:acc-ams-prev]]. Lung fluid ([HAPE](g:hape)) is rare below 3,000 m and brain swelling ([HACE](g:hace)) is not seen below 4,000 m; both are emergencies that need descent and a doctor.\n\nThe main protection is a slow ascent. One review gives an average of 300 m per day of sleeping altitude above 2,000 m, and for a stay at 2,500–3,000 m, waiting 2 days before easing into training [[c:acc-ascent]]. Symptoms that get worse mean going down, not pushing on.",
+   "claims": [
+    {
+     "id": "acc-ams-prev",
+     "text": "Transient AMS (headache, anorexia, nausea) occurs in 10–30% of people at 2,500–3,000 m; pulmonary oedema is rare below 3,000 m and brain oedema is not seen below 4,000 m.",
+     "grade": "moderate",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "Transient acute mountain sickness (headache, anorexia, and nausea) is present in 10-30% of subjects at altitudes between 2500 and 3000 m a.s.l.",
+       "level": "abstract"
+      },
+      {
+       "source": "bartsch2008",
+       "quote": "Pulmonary edema is rarely seen below 3000 m a.s.l. and brain edema is not seen below 4000 m a.s.l.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acc-ascent",
+     "text": "One review advises about 300 m per day of ascent above 2,000 m, and waiting 2 days at 2,500–3,000 m before gradually training.",
+     "grade": "weak",
+     "sources": [
+      "bartsch2008"
+     ],
+     "evidence": [
+      {
+       "source": "bartsch2008",
+       "quote": "At higher altitudes, one should consider a staged ascent (average ascent rate 300 m/day above 2000 m a.s.l.), primarily in order to sleep and feel well, and minimize the risk of mountain sickness.",
+       "level": "abstract"
+      },
+      {
+       "source": "bartsch2008",
+       "quote": "It is possible to travel to altitudes of 2500-3000 m a.s.l., wait for 2 days, and then gradually start to train.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acc-ams-prev"
+  },
+  {
+   "type": "question",
+   "item": "acc-ams-plan"
+  },
+  {
+   "type": "example",
+   "id": "acc-ascent-example",
+   "title": "Days for a staged ascent",
+   "problem": "You sleep at 2,000 m and want to reach a sleeping altitude of 3,200 m. At an average of 300 m per day, how many days?",
+   "steps": [
+    "Only the height gained above 2,000 m counts: 3,200 − 2,000 = 1,200 m.",
+    "Days = 1,200 ÷ 300 = 4 days."
+   ]
+  },
+  {
+   "type": "question",
+   "item": "acc-ascent-calc",
+   "variant": "a"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Within minutes breathing and heart rate rise; EPO starts to climb within about 2 hours; plasma volume falls over 24–48 h, raising haemoglobin concentration with no new red cells.",
+    "Red cell mass needs weeks: about 9% more after 4 weeks at 2,500 m in one trial.",
+    "Concentration = Hb mass ÷ blood volume, so a rising concentration in the first days is a plasma effect, not more red cells.",
+    "Whether VO₂max at altitude comes back with acclimatisation is disputed: up about 8% from the day-1 low in 2 weeks at 2,340 m in one study, essentially none after long stays at higher altitude in a review.",
+    "AMS affects 10–30% at 2,500–3,000 m; ascend about 300 m per day above 2,000 m and go down if symptoms worsen."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "acc-vent",
+   "concept": "acc-fast",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "An athlete flies to 2,500 m. Which change shows up first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Breathing and heart rate rise within minutes",
+       "why": "Correct: the ventilatory and heart-rate responses are the fast ones.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Red cell mass rises within a day",
+       "why": "New red cells take days to appear and weeks to add up."
+      },
+      {
+       "id": "c",
+       "text": "Haemoglobin mass rises within hours",
+       "why": "Haemoglobin mass takes weeks to rise; only plasma volume changes within 1–2 days."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-epo-timing",
+   "concept": "acc-epo",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "eckardt1989"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "About how soon after reaching a simulated 3,000 m did EPO start to rise?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Within about 2 hours",
+       "why": "Correct: significantly raised after 114 minutes.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "After about 1 day",
+       "why": "Too slow: the signal starts within hours."
+      },
+      {
+       "id": "c",
+       "text": "After about 1 week",
+       "why": "Confuses EPO with the red cell mass, which takes weeks."
+      },
+      {
+       "id": "d",
+       "text": "Only once red cell mass had risen",
+       "why": "Backwards: EPO is the signal that makes red cells."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-pv-calc",
+   "concept": "acc-pv",
+   "bloom": "apply",
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A man has 700 g of haemoglobin in 5.0 L of blood (3.2 L plasma, 1.8 L red cells): 140 g·L⁻¹. After 3 days at 2,500 m his plasma volume is 10% lower and his haemoglobin mass is unchanged. What is his haemoglobin concentration now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "154 g·L⁻¹",
+       "why": "Raised the concentration by the same 10%: but plasma is only part of the blood, so blood volume falls less than 10%."
+      },
+      {
+       "id": "b",
+       "text": "150 g·L⁻¹",
+       "why": "Correct: 700 ÷ (1.8 + 3.2 × 0.9).",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "243 g·L⁻¹",
+       "why": "Divided by the new plasma volume alone, forgetting the red cells."
+      },
+      {
+       "id": "d",
+       "text": "140 g·L⁻¹",
+       "why": "Assumed nothing changed: the haemoglobin is the same, but it now sits in less blood."
+      }
+     ],
+     "solution": "New plasma = 3.2 × 0.9 = 2.88 L. New blood volume = 1.8 + 2.88 = 4.68 L. 700 ÷ 4.68 = 149.6, about 150 g·L⁻¹ (up 7%)."
+    },
+    {
+     "id": "b",
+     "stem": "A man has 900 g of haemoglobin in 5.6 L of blood (3.4 L plasma, 2.2 L red cells): 161 g·L⁻¹. After 3 days at altitude his plasma volume is 8% lower and his haemoglobin mass is unchanged. What is his haemoglobin concentration now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "174 g·L⁻¹",
+       "why": "Raised the concentration by the same 8%: plasma is only part of the blood."
+      },
+      {
+       "id": "b",
+       "text": "288 g·L⁻¹",
+       "why": "Divided by the new plasma volume alone, forgetting the red cells."
+      },
+      {
+       "id": "c",
+       "text": "161 g·L⁻¹",
+       "why": "Assumed nothing changed: the same haemoglobin now sits in less blood."
+      },
+      {
+       "id": "d",
+       "text": "169 g·L⁻¹",
+       "why": "Correct: 900 ÷ (2.2 + 3.4 × 0.92).",
+       "correct": true
+      }
+     ],
+     "solution": "New plasma = 3.4 × 0.92 = 3.128 L. New blood volume = 2.2 + 3.128 = 5.328 L. 900 ÷ 5.328 = 168.9, about 169 g·L⁻¹."
+    },
+    {
+     "id": "c",
+     "stem": "A woman has 800 g of haemoglobin in 5.0 L of blood (3.0 L plasma, 2.0 L red cells): 160 g·L⁻¹. After 3 days at altitude her plasma volume is 12% lower and her haemoglobin mass is unchanged. What is her haemoglobin concentration now?",
+     "options": [
+      {
+       "id": "a",
+       "text": "179 g·L⁻¹",
+       "why": "Raised the concentration by the same 12%: plasma is only part of the blood."
+      },
+      {
+       "id": "b",
+       "text": "303 g·L⁻¹",
+       "why": "Divided by the new plasma volume alone, forgetting the red cells."
+      },
+      {
+       "id": "c",
+       "text": "172 g·L⁻¹",
+       "why": "Correct: 800 ÷ (2.0 + 3.0 × 0.88).",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "160 g·L⁻¹",
+       "why": "Assumed nothing changed: the same haemoglobin now sits in less blood."
+      }
+     ],
+     "solution": "New plasma = 3.0 × 0.88 = 2.64 L. New blood volume = 2.0 + 2.64 = 4.64 L. 800 ÷ 4.64 = 172.4, about 172 g·L⁻¹."
+    }
+   ]
+  },
+  {
+   "id": "acc-pv-interpret",
+   "concept": "acc-pv",
+   "bloom": "analyse",
+   "sources": [
+    "bartsch2008",
+    "schuler2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After 3 days at 2,500 m, a cyclist's haemoglobin concentration is 6% higher than at home. What is the most likely reading?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Her plasma volume fell; haemoglobin mass has probably not changed yet",
+       "why": "Correct: concentration rises when plasma shrinks, within 1–2 days.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "She has made 6% more red cells in 3 days",
+       "why": "Red cell mass needs weeks; EPO only started the process."
+      },
+      {
+       "id": "c",
+       "text": "Her SaO₂ is back to sea-level values, so she is fully acclimatised",
+       "why": "A higher concentration offsets some of the loss, but SaO₂ is still low and the slower changes are still to come."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-plateau",
+   "concept": "acc-plateau",
+   "bloom": "evaluate",
+   "sources": [
+    "bartsch2008",
+    "schuler2007"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You will race at 2,340 m. In one study VO₂max rose about 8% above its day-1 value within 14 days there; a review says peak VO₂ at altitude is essentially unchanged after long stays. What do you check first?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Which source is newer, since newer evidence always wins",
+       "why": "Date alone does not decide: design, altitude and athletes do."
+      },
+      {
+       "id": "b",
+       "text": "The altitude, stay length and athletes each statement covers",
+       "why": "Correct: the review speaks of higher altitudes and long stays; the study of 8 elite cyclists at 2,340 m.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Nothing: a review always overrules one study",
+       "why": "A review summarises, but may not cover your altitude; a small study can still fit your case better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-ams-prev",
+   "concept": "acc-ams",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "At 2,500–3,000 m, about what share of people get transient acute mountain sickness?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Under 1%",
+       "why": "Far too low: it is common."
+      },
+      {
+       "id": "b",
+       "text": "10–30%",
+       "why": "Correct, per a review of altitude adaptation.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Around 50–70%",
+       "why": "Too high for these moderate altitudes."
+      },
+      {
+       "id": "d",
+       "text": "Nearly everyone",
+       "why": "Most people at moderate altitude do not get it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-ams-plan",
+   "concept": "acc-ams",
+   "bloom": "apply",
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A runner reaches a camp at 2,600 m. That night she has a headache and nausea. Her plan for tomorrow is a hard interval session. What is the better plan?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Rest or train easy at this height; go down if it worsens",
+       "why": "Correct: mild AMS is usually temporary; worsening symptoms mean descent.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Do the intervals: sweating it out speeds up acclimatisation",
+       "why": "Hard exercise on top of AMS does not clear it and can make it worse."
+      },
+      {
+       "id": "c",
+       "text": "Move up 500 m to sleep so the body adapts faster",
+       "why": "Going higher with symptoms raises the risk; ascent should be staged."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acc-ascent-calc",
+   "concept": "acc-ams",
+   "bloom": "apply",
+   "sources": [
+    "bartsch2008"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "You sleep at 2,000 m and want to sleep at 3,500 m. At an average of 300 m per day above 2,000 m, how many days of ascent?",
+     "options": [
+      {
+       "id": "a",
+       "text": "12 days",
+       "why": "Divided the whole altitude (3,500 ÷ 300), not the height gained above 2,000 m."
+      },
+      {
+       "id": "b",
+       "text": "2 days",
+       "why": "Mixed up with the 'wait 2 days' advice after arrival."
+      },
+      {
+       "id": "c",
+       "text": "5 days",
+       "why": "Correct: (3,500 − 2,000) ÷ 300.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "8 days",
+       "why": "Used 200 m per day by mistake (1,500 ÷ 200 = 7.5, so 8)."
+      }
+     ],
+     "solution": "Height gained above 2,000 m = 1,500 m. 1,500 ÷ 300 = 5 days."
+    },
+    {
+     "id": "b",
+     "stem": "You sleep at 2,000 m and want to sleep at 3,200 m. At an average of 300 m per day above 2,000 m, how many days of ascent?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11 days",
+       "why": "Divided the whole altitude (3,200 ÷ 300), not the height gained."
+      },
+      {
+       "id": "b",
+       "text": "2 days",
+       "why": "Mixed up with the 'wait 2 days' advice after arrival."
+      },
+      {
+       "id": "c",
+       "text": "6 days",
+       "why": "Used 200 m per day by mistake."
+      },
+      {
+       "id": "d",
+       "text": "4 days",
+       "why": "Correct: (3,200 − 2,000) ÷ 300.",
+       "correct": true
+      }
+     ],
+     "solution": "Height gained = 1,200 m. 1,200 ÷ 300 = 4 days."
+    },
+    {
+     "id": "c",
+     "stem": "You sleep at 2,500 m and want to sleep at 3,400 m. At an average of 300 m per day above 2,000 m, how many days of ascent?",
+     "options": [
+      {
+       "id": "a",
+       "text": "11 days",
+       "why": "Divided the whole altitude (3,400 ÷ 300), not the height gained."
+      },
+      {
+       "id": "b",
+       "text": "3 days",
+       "why": "Correct: (3,400 − 2,500) ÷ 300.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "2 days",
+       "why": "Mixed up with the 'wait 2 days' advice after arrival."
+      },
+      {
+       "id": "d",
+       "text": "5 days",
+       "why": "Used 200 m per day by mistake."
+      }
+     ],
+     "solution": "Height gained = 900 m. 900 ÷ 300 = 3 days."
+    }
+   ]
+  }
+ ]
+}

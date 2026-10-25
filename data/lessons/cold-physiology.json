@@ -1,0 +1,762 @@
+{
+ "id": "cold-physiology",
+ "module": "t6-cold",
+ "title": "Cold physiology: losing and making heat",
+ "goal": "Explain how cold air and water take heat from the body, and how vasoconstriction, shivering, brown fat and cold habituation respond.",
+ "requires": [
+  "alt-racing"
+ ],
+ "lastReviewed": "2026-10-25",
+ "steps": [
+  {
+   "type": "terms",
+   "terms": [
+    "wind-chill",
+    "vasoconstriction",
+    "shivering",
+    "nonshivering-thermogenesis",
+    "brown-adipose-tissue",
+    "cold-habituation"
+   ]
+  },
+  {
+   "type": "concept",
+   "id": "cp-heat-loss",
+   "title": "Cold air, wind and water",
+   "text": "In the cold the body loses heat by the same routes as in the heat: [convection](g:convection), [conduction](g:conduction) and [thermal radiation](g:thermal-radiation). What changes is the speed.\n\nMoving air or water strips away the thin warm layer next to the skin. That is why wind feels cold: the [wind chill](g:wind-chill) is the calm-air temperature that would take heat from bare skin at the same rate [[c:windchill]]. It is about heat loss from skin, not the real air temperature.\n\nWater is far harsher. It takes heat from the skin much faster than air does [[c:water-transfer]] and holds about 3,400 times more heat per volume [[c:water-heat]]. So 15 °C water chills you much faster than 15 °C air. Cold, wet and wind together are the worst mix for freezing injury [[c:cold-wet-wind]].",
+   "claims": [
+    {
+     "id": "windchill",
+     "text": "Wind chill is the calm-air temperature that gives the same heat loss rate from the face as the real wind.",
+     "grade": "strong",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "The wind-chill temperature estimates the temperature felt at the average human face that would result in the same heat loss rate in calm wind conditions.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "water-transfer",
+     "text": "Immersion in water gives greater convective heat transfer than air, so wet athletes lose more heat.",
+     "grade": "strong",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "Water immersion and exposure results in a greater convective heat transfer than air, so swimmers and athletes exposed to rain are at risk for greater heat loss",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "water-heat",
+     "text": "At 37 °C, water holds 3,431 times more heat per volume than air.",
+     "grade": "strong",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "At 37°C, the volume-specific heat capacity of water is 3,431 times that of air.",
+       "level": "full-text"
+      }
+     ]
+    },
+    {
+     "id": "cold-wet-wind",
+     "text": "Cold, wet and wind together are most likely to cause freezing injury.",
+     "grade": "moderate",
+     "sources": [
+      "fudge2016"
+     ],
+     "evidence": [
+      {
+       "source": "fudge2016",
+       "quote": "The weather combination of cold, wet, and wind is most likely to predispose an athlete to freezing injury.",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cp-windchill-meaning"
+  },
+  {
+   "type": "question",
+   "item": "cp-flask"
+  },
+  {
+   "type": "question",
+   "item": "cp-water-air"
+  },
+  {
+   "type": "concept",
+   "id": "cp-vaso",
+   "title": "Vasoconstriction: shrinking the heat leak",
+   "text": "The first defence is automatic. Cold on the skin, and a cooling core, make the small arteries of the skin narrow ([vasoconstriction](g:vasoconstriction)), the opposite of the [vasodilation](g:vasodilation) used in the heat. [Skin blood flow](g:skin-blood-flow) falls, the skin cools towards the air, and less heat leaves the body [[c:vaso-shiver]]. It works through a reflex from the core and through local cooling of the skin [[c:vaso-reflex]].\n\nThe price is paid at the ends: fingers, toes, ears and nose get cold first and lose feel and grip.\n\nDuring exercise the saving is smaller. Working muscles keep limbs warmer, and vasoconstriction in a working body is not complete, so heat loss stays high [[c:vaso-exercise]].",
+   "claims": [
+    {
+     "id": "vaso-shiver",
+     "text": "Skin vasoconstriction cuts heat loss and shivering raises heat production in the cold.",
+     "grade": "strong",
+     "sources": [
+      "castellani2016"
+     ],
+     "evidence": [
+      {
+       "source": "castellani2016",
+       "quote": "Acute physiological responses to cold exposure include cutaneous vasoconstriction and shivering thermogenesis which, respectively, decrease heat loss and increase metabolic heat production.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vaso-reflex",
+     "text": "Vasoconstriction is triggered by a reflex and by local skin cooling.",
+     "grade": "strong",
+     "sources": [
+      "castellani2016"
+     ],
+     "evidence": [
+      {
+       "source": "castellani2016",
+       "quote": "Vasoconstriction is elicited through reflex and local cooling.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "vaso-exercise",
+     "text": "During exercise, vasoconstriction does not become maximal, so heat loss stays high.",
+     "grade": "weak",
+     "sources": [
+      "gatterer2021"
+     ],
+     "evidence": [
+      {
+       "source": "gatterer2021",
+       "quote": "since during exercise, peripheral vasoconstriction and related insulation does not become maximal, heat loss remains high and hypothermia may develop",
+       "level": "full-text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cp-vaso-effect"
+  },
+  {
+   "type": "question",
+   "item": "cp-hands"
+  },
+  {
+   "type": "concept",
+   "id": "cp-make-heat",
+   "title": "Making heat: shivering and brown fat",
+   "text": "When saving heat is not enough, the body makes more. [Shivering](g:shivering) is fast, involuntary muscle contraction: the energy ends up as heat, not movement. It is effective, but it burns fuel fast (more in the next lesson).\n\nThe second route makes heat without movement: [nonshivering thermogenesis](g:nonshivering-thermogenesis), mostly in [brown adipose tissue](g:brown-adipose-tissue) (BAT). Brown fat burns fuel as heat instead of making ATP.\n\nAdults have it. In 24 young men, PET scans showed active BAT in 23 of them in mild cold (16 °C) but in none at 22 °C [[c:bat-adult]]. Activity was lower in overweight men [[c:bat-lean]].",
+   "claims": [
+    {
+     "id": "bat-adult",
+     "text": "Brown fat was active in 23 of 24 men in mild cold (16 °C) and not at 22 °C.",
+     "grade": "weak",
+     "sources": [
+      "vanmarkenlichtenbelt2009"
+     ],
+     "evidence": [
+      {
+       "source": "vanmarkenlichtenbelt2009",
+       "quote": "Brown-adipose-tissue activity was observed in 23 of the 24 subjects (96%) during cold exposure but not under thermoneutral conditions.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "bat-lean",
+     "text": "Brown fat activity was lower in overweight or obese men than in lean men.",
+     "grade": "weak",
+     "sources": [
+      "vanmarkenlichtenbelt2009"
+     ],
+     "evidence": [
+      {
+       "source": "vanmarkenlichtenbelt2009",
+       "quote": "The activity was significantly lower in the overweight or obese subjects than in the lean subjects (P=0.007).",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cp-heat-sources"
+  },
+  {
+   "type": "question",
+   "item": "cp-bat-scan"
+  },
+  {
+   "type": "concept",
+   "id": "cp-adapt",
+   "title": "Cold habituation and other changes",
+   "text": "With repeated cold the body can change in three main ways [[c:three-patterns]]: [habituation](g:cold-habituation) (a weaker response to the same cold, such as less shivering), metabolic adjustment (more heat made) and insulative adjustment (more heat kept). Which one appears depends on how far skin and core temperatures fall and for how long.\n\nAfter 10 days of cold acclimation, adults had more active BAT and more nonshivering heat. They judged the room warmer and reported less shivering [[c:acclim-bat]].\n\nTake care: acclimatisation can separate how cold you feel from how cold you are, so feeling fine is no proof of safety [[c:comfort-gap]].",
+   "claims": [
+    {
+     "id": "three-patterns",
+     "text": "Humans show three patterns of cold acclimatisation: habituation, metabolic adjustment and insulative adjustment.",
+     "grade": "strong",
+     "sources": [
+      "castellani2016"
+     ],
+     "evidence": [
+      {
+       "source": "castellani2016",
+       "quote": "Three primary patterns of cold acclimatization have been observed, a) habituation, b) metabolic adjustment, and c) insulative adjustment.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "acclim-bat",
+     "text": "Ten days of cold acclimation raised BAT activity and nonshivering thermogenesis, and people shivered less.",
+     "grade": "weak",
+     "sources": [
+      "vanderlans2013"
+     ],
+     "evidence": [
+      {
+       "source": "vanderlans2013",
+       "quote": "Here, we show that a 10-day cold acclimation protocol in humans increases BAT activity in parallel with an increase in nonshivering thermogenesis (NST).",
+       "level": "abstract"
+      },
+      {
+       "source": "vanderlans2013",
+       "quote": "upon cold acclimation, the subjects judged the environment warmer, felt more comfortable in the cold, and reported less shivering.",
+       "level": "abstract"
+      }
+     ]
+    },
+    {
+     "id": "comfort-gap",
+     "text": "Acclimatisation can separate thermal sensation and comfort from thermal state.",
+     "grade": "moderate",
+     "sources": [
+      "tipton2014"
+     ],
+     "evidence": [
+      {
+       "source": "tipton2014",
+       "quote": "due to factors such as acclimatisation, which disassociates thermal sensation and comfort from thermal state, individuals cannot be left to monitor their own physical condition during swims.",
+       "level": "abstract"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "item": "cp-habit-pattern"
+  },
+  {
+   "type": "question",
+   "item": "cp-comfort"
+  },
+  {
+   "type": "recap",
+   "points": [
+    "Wind and water take heat by convection and conduction; wind chill is the calm-air temperature with the same skin heat loss, and water pulls heat far faster than air.",
+    "Vasoconstriction cuts skin blood flow and saves heat, at the price of cold hands, feet, ears and nose.",
+    "Shivering and brown fat make heat; BAT is active in most young men in mild cold, less so when overweight.",
+    "Habituation turns down the response to cold; it can hide how cold you really are."
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cp-windchill-meaning",
+   "concept": "cp-heat-loss",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "The forecast says 0 °C air with a wind chill of −10 °C. What does −10 °C tell you?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Skin will reach −10 °C within minutes",
+       "why": "Skin cannot cool below the air temperature, and wind chill gives a rate, not a skin temperature."
+      },
+      {
+       "id": "b",
+       "text": "Wet clothing will freeze at −10 °C",
+       "why": "Wind chill describes bare skin; objects never cool below the air temperature."
+      },
+      {
+       "id": "c",
+       "text": "Bare skin loses heat as fast as in calm air at −10 °C",
+       "why": "That is the definition: same skin heat loss rate as in calm air.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "The air has cooled to −10 °C in the wind",
+       "why": "Wind does not change the air temperature; it speeds heat loss from skin."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "Air is 5 °C, wind chill is −3 °C. Which statement is right?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Wind chill only matters below −20 °C",
+       "why": "It applies at any temperature below skin temperature; it just matters more as it gets colder."
+      },
+      {
+       "id": "b",
+       "text": "Exposed skin cools as if in calm air at −3 °C",
+       "why": "Right: wind chill is the calm-air equivalent for skin heat loss.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "A thermometer in the wind reads −3 °C",
+       "why": "A thermometer reads the air temperature, 5 °C, wind or not."
+      },
+      {
+       "id": "d",
+       "text": "Skin is safe because the air is above freezing",
+       "why": "Skin can still lose heat fast enough to cool dangerously in wind."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-flask",
+   "concept": "cp-heat-loss",
+   "bloom": "apply",
+   "sources": [
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist leaves a water bottle on the bike at 3 °C air in a 40 km·h⁻¹ wind. Wind chill is −4 °C. What happens to the water?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It freezes solid within the hour in this wind",
+       "why": "A faster rate does not push an object below 3 °C air temperature."
+      },
+      {
+       "id": "b",
+       "text": "It stays warm because wind carries heat to it",
+       "why": "Wind carries heat away from a warmer object, not towards it."
+      },
+      {
+       "id": "c",
+       "text": "It cools to 3 °C at best and does not freeze",
+       "why": "Wind speeds up cooling but an object never goes below the air temperature.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "It freezes because the wind chill is below 0 °C",
+       "why": "Wind chill is for skin heat loss; objects cool only to the air temperature."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner leaves a filled bottle on a bench in 6 °C air, wind chill −2 °C. What is the lowest it can reach?",
+     "options": [
+      {
+       "id": "a",
+       "text": "0 °C, where water freezes",
+       "why": "Water freezes only if the air itself is at or below 0 °C."
+      },
+      {
+       "id": "b",
+       "text": "About 6 °C, the air temperature",
+       "why": "Wind chill does not cool objects below the air temperature.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "About −2 °C, the wind chill",
+       "why": "Wind chill is the skin equivalent, not a temperature objects reach."
+      },
+      {
+       "id": "d",
+       "text": "Below −2 °C, as wind keeps cooling it",
+       "why": "No: cooling stops when it matches the air."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-water-air",
+   "concept": "cp-heat-loss",
+   "bloom": "apply",
+   "sources": [
+    "tipton2014",
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Two triathletes stand still for 10 min in 15 °C. One is on the shore in calm air, one is waist-deep in a lake at 15 °C. Who loses more heat, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The one in the lake: water conducts heat far better",
+       "why": "Water takes heat from the skin much faster than air and holds far more heat per volume.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Both the same, because both are at 15 °C",
+       "why": "Same temperature does not mean the same heat loss; the medium sets the rate."
+      },
+      {
+       "id": "c",
+       "text": "The one on shore, because air moves more",
+       "why": "Calm air is a poor conductor; even moving air loses to water."
+      },
+      {
+       "id": "d",
+       "text": "The one on shore, because air touches more of her skin",
+       "why": "More skin is in air, but water takes heat so much faster that the lake still wins."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "A runner in 12 °C calm air wears a jacket and a cyclist falls into a 12 °C canal. Who cools faster, and why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "The runner, because running adds wind",
+       "why": "Running wind adds convection but air still takes heat much more slowly than water."
+      },
+      {
+       "id": "b",
+       "text": "Both equally, because both are at 12 °C",
+       "why": "Temperature alone does not set heat loss."
+      },
+      {
+       "id": "c",
+       "text": "The runner, because jackets trap sweat",
+       "why": "A jacket cuts heat loss; it does not raise it above immersion."
+      },
+      {
+       "id": "d",
+       "text": "The cyclist: water takes heat much faster",
+       "why": "Water takes heat from the skin much faster than air, so the same temperature is far colder.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-vaso-effect",
+   "concept": "cp-vaso",
+   "bloom": "understand",
+   "recallFirst": true,
+   "sources": [
+    "castellani2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In the cold, skin blood flow falls. What does this do?",
+     "options": [
+      {
+       "id": "a",
+       "text": "It sends more blood to the skin to warm it",
+       "why": "That is the opposite: vasodilation sends more blood to the skin."
+      },
+      {
+       "id": "b",
+       "text": "It helps sweat evaporate faster",
+       "why": "Sweating is not the aim in the cold and needs more skin blood flow, not less."
+      },
+      {
+       "id": "c",
+       "text": "Less warm blood reaches the skin, so less heat is lost",
+       "why": "That is the point of skin vasoconstriction: saving heat.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "It makes extra heat in the skin",
+       "why": "Vasoconstriction makes no heat; shivering and brown fat do."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-hands",
+   "concept": "cp-vaso",
+   "bloom": "apply",
+   "sources": [
+    "castellani2016",
+    "fudge2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A cyclist stops at 0 °C. Her fingers lose feel and grip while her trunk is warm. Which response explains this best?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Brown fat switching off in the hands",
+       "why": "Brown fat is not a cause of cold fingers."
+      },
+      {
+       "id": "b",
+       "text": "Vasodilation losing heat from the fingers",
+       "why": "Vasodilation would warm the fingers, not cool them."
+      },
+      {
+       "id": "c",
+       "text": "Vasoconstriction cutting blood flow to the hands",
+       "why": "The skin vessels narrow to save core heat, so the ends cool first.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Shivering in the hand muscles",
+       "why": "Shivering makes heat; it would not cool the fingers."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "On a 2 °C winter run, a runner's ears and nose feel numb but her legs are warm. Why?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Shivering warms her legs but not her face",
+       "why": "She is running, so heat from exercise matters, not shivering."
+      },
+      {
+       "id": "b",
+       "text": "Skin vasoconstriction, and the working legs make their own heat",
+       "why": "Skin vessels narrow in cold, and exercising muscle warms the legs.",
+       "correct": true
+      },
+      {
+       "id": "c",
+       "text": "Her legs have more brown fat than her face",
+       "why": "Brown fat is not the explanation for warm legs."
+      },
+      {
+       "id": "d",
+       "text": "Her ears have too much blood flow",
+       "why": "Cold skin has less, not more, blood flow."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-heat-sources",
+   "concept": "cp-make-heat",
+   "bloom": "remember",
+   "recallFirst": true,
+   "sources": [
+    "castellani2016",
+    "vanmarkenlichtenbelt2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "Name the way the body makes heat in the cold without moving muscles.",
+     "options": [
+      {
+       "id": "a",
+       "text": "Nonshivering thermogenesis, mainly in brown fat",
+       "why": "Brown fat burns fuel as heat instead of making ATP.",
+       "correct": true
+      },
+      {
+       "id": "b",
+       "text": "Shivering thermogenesis in the leg muscles",
+       "why": "Shivering is muscle movement, even if you cannot see it."
+      },
+      {
+       "id": "c",
+       "text": "Vasoconstriction in the skin",
+       "why": "Vasoconstriction saves heat; it does not make any."
+      },
+      {
+       "id": "d",
+       "text": "Evaporation of sweat from the skin",
+       "why": "Evaporation removes heat from the body."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-bat-scan",
+   "concept": "cp-make-heat",
+   "bloom": "analyse",
+   "sources": [
+    "vanmarkenlichtenbelt2009"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "In 24 men, brown fat showed on scans in 23 at 16 °C but in none at 22 °C. What does this comparison show?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Brown fat is needed for survival in the cold",
+       "why": "The study shows presence and activity, not that it is needed."
+      },
+      {
+       "id": "b",
+       "text": "Brown fat made shivering stop",
+       "why": "Shivering was not what the scans measured."
+      },
+      {
+       "id": "c",
+       "text": "Cold switches brown fat on in most young men",
+       "why": "Same men, two temperatures: the cold, not the person, explains the difference.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Brown fat is present only in cold climates",
+       "why": "Both scans were of the same men in one place."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-habit-pattern",
+   "concept": "cp-adapt",
+   "bloom": "analyse",
+   "sources": [
+    "castellani2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "A swimmer's gasp and heart rate response to a 10 °C dip are much smaller after six dips, but her core cools just as fast. Which pattern is this?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Metabolic adjustment: she makes more heat",
+       "why": "More heat made would slow her core cooling."
+      },
+      {
+       "id": "b",
+       "text": "Insulative adjustment: she keeps more heat",
+       "why": "More heat kept would slow her core cooling."
+      },
+      {
+       "id": "c",
+       "text": "No adaptation, because her core cooled as fast",
+       "why": "The response changed, so adaptation happened: it is habituation."
+      },
+      {
+       "id": "d",
+       "text": "Habituation: a weaker response to the same cold",
+       "why": "The alarm response got smaller; heat loss did not change.",
+       "correct": true
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "stem": "After a cold winter week a runner shivers much less at 4 °C, but her core temperature drops just as much. Which pattern fits?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Insulative adjustment: she keeps more heat",
+       "why": "Core cooling is unchanged, so she keeps no more heat."
+      },
+      {
+       "id": "b",
+       "text": "Brown fat has replaced shivering fully",
+       "why": "Her core cools as much, so heat production did not rise."
+      },
+      {
+       "id": "c",
+       "text": "Habituation: a weaker response, same heat loss",
+       "why": "She shivers less because the response is turned down, not because she loses less heat.",
+       "correct": true
+      },
+      {
+       "id": "d",
+       "text": "Metabolic adjustment: she makes more heat",
+       "why": "She makes less shivering heat, not more."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp-comfort",
+   "concept": "cp-adapt",
+   "bloom": "evaluate",
+   "sources": [
+    "tipton2014",
+    "castellani2016"
+   ],
+   "variants": [
+    {
+     "id": "a",
+     "stem": "After weeks of cold-water swims, a swimmer shivers little and feels fine in 12 °C water. What is the safest conclusion?",
+     "options": [
+      {
+       "id": "a",
+       "text": "Less shivering means she keeps heat better",
+       "why": "Less shivering can mean a turned-down response, not better heat keeping."
+      },
+      {
+       "id": "b",
+       "text": "She no longer needs to watch the time",
+       "why": "Comfort is not a reliable alarm after acclimatisation."
+      },
+      {
+       "id": "c",
+       "text": "She can stay in until she feels cold",
+       "why": "The warning feeling may no longer come in time."
+      },
+      {
+       "id": "d",
+       "text": "Feeling fine does not show her core temperature is safe",
+       "why": "Habituation can hide how cold she is, so time and temperature limits still apply.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
