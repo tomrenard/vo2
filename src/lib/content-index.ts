@@ -234,6 +234,8 @@ import p_0 from "../../data/papers/2026-10-16-carb-loading-glycogen.json";
 import p_1 from "../../data/papers/2026-10-16-cold-water-recovery.json";
 import p_2 from "../../data/papers/2026-10-21-carb-100-vs-60-durability.json";
 import p_3 from "../../data/papers/2026-10-21-hypoxic-training-vo2max.json";
+import p_4 from "../../data/papers/2026-10-25-placebo-caffeine-performance.json";
+import p_5 from "../../data/papers/2026-10-25-t-wave-inversion-athletes.json";
 import type { Curriculum, Lesson, Paper } from "./content";
 
 export const CURRICULUM = curriculum as Curriculum;
@@ -468,7 +470,7 @@ export const LESSONS = [
   l_vo2_sex_age,
   l_vo2_trainability,
 ] as Lesson[];
-export const PAPERS = [p_3, p_2, p_1, p_0] as Paper[];
+export const PAPERS = [p_5, p_4, p_3, p_2, p_1, p_0] as Paper[];
 export const HASHES: Record<string, string> = {
   "heart-load-type": "9322f53a5864c9a7",
   "heart-rower": "1a8bbebe4c859f57",
@@ -2653,4 +2655,10 @@ export const HASHES: Record<string, string> = {
   "p-iht-method": "901b9ae5eb40127e",
   "p-iht-population": "be65f0b9a798ae2e",
   "p-iht-limits": "5ff2e75647bd23a7",
+  "p-pcaf-meaning": "2e14c2d34d4977eb",
+  "p-pcaf-limits": "4099da12fb59bb0d",
+  "p-pcaf-blind": "54abc1a0c735285b",
+  "p-twi-prev": "25005569a0062c1e",
+  "p-twi-meaning": "06b46aa055393cb9",
+  "p-twi-limits": "88a8e18709300fc1",
 };
