@@ -59,7 +59,7 @@ export default async function StudyPage() {
         ) : (
           <p className="font-serif text-2xl leading-snug">No reviews waiting.</p>
         )}
-        {c.next7 > 0 && <p className="muted text-sm">{c.next7} due in the next 7 days.</p>}
+        {c.next7 > 0 && <p className="muted text-sm">{c.next7} more due in the next 7 days.</p>}
         {lesson && (
           <Go
             href={`/lesson/${lesson.id}`}

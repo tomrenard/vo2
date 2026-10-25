@@ -27,32 +27,21 @@ export default async function ExamPage({ params }: { params: Promise<{ module: s
     ? scope.groups.map((g) => g.filter((p) => done.has(p.lessonId))).filter((g) => g.length)
     : scope.groups;
   const missing = lessons.filter((l) => !done.has(l.id));
-  if (course && lessons.length < COURSE_MIN) {
-    return (
-      <main className="screen justify-center">
-        <p className="eyebrow">Course exam</p>
-        <h1 className="font-serif text-3xl">{title}</h1>
-        <p className="prose-text">
-          It opens after {COURSE_MIN} lessons. You've done {lessons.length}.
-        </p>
-        <Go href="/progress" className="btn">
-          Back to Progress
-        </Go>
-      </main>
-    );
-  }
-  if (!complete || missing.length) {
+  const locked = course
+    ? lessons.length < COURSE_MIN &&
+      `It opens after ${COURSE_MIN} lessons. You've done ${lessons.length}.`
+    : !complete
+      ? `Some lessons of this ${kind.toLowerCase()} aren't written yet. The exam opens when they are.`
+      : missing.length > 0 &&
+        `Finish every lesson first: ${missing.map((l) => l.title).join(", ")}.`;
+  if (locked) {
     return (
       <main className="screen justify-center">
         <p className="eyebrow">{kind} exam</p>
         <h1 className="font-serif text-3xl">{title}</h1>
-        <p className="prose-text">
-          {complete
-            ? `Finish every lesson first: ${missing.map((l) => l.title).join(", ")}.`
-            : `Some lessons of this ${kind.toLowerCase()} aren't written yet. The exam opens when they are.`}
-        </p>
-        <Go href="/map" className="btn">
-          Back to the map
+        <p className="prose-text">{locked}</p>
+        <Go href={course ? "/progress" : "/map"} className="btn">
+          {course ? "Back to Progress" : "Back to the map"}
         </Go>
       </main>
     );

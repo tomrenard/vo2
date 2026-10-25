@@ -19,8 +19,9 @@ export const BACKLOG = 100;
 /** The study day starts at 4:00 Berlin time. */
 const DAY_START = sql`((date_trunc('day', (now() at time zone 'Europe/Berlin') - interval '4 hours') + interval '4 hours') at time zone 'Europe/Berlin')`;
 
-/** The study week starts on Monday at 4:00 Berlin time. */
-const WEEK_START = sql`((date_trunc('week', (now() at time zone 'Europe/Berlin') - interval '4 hours') + interval '4 hours') at time zone 'Europe/Berlin')`;
+/** This study week's Monday, Berlin local time (the week starts on Monday at 4:00). */
+const WEEK = sql`date_trunc('week', (now() at time zone 'Europe/Berlin') - interval '4 hours')`;
+const WEEK_START = sql`((${WEEK} + interval '4 hours') at time zone 'Europe/Berlin')`;
 
 /** Answers a week to fill the ring on Study. */
 export const WEEK_GOAL = 150;
@@ -112,6 +113,7 @@ const CONFIDENT_MISS = sql`coalesce((select not a.correct and a.sure from answer
  * the ones due soonest (least likely recalled) first.
  */
 export async function dueItems(userId: string, only?: string[]) {
+  if (only && !only.length) return [];
   const rows = await db()
     .select({
       itemId: itemStates.itemId,
@@ -122,9 +124,7 @@ export async function dueItems(userId: string, only?: string[]) {
     .where(
       and(
         eq(itemStates.userId, userId),
-        only
-          ? inArray(itemStates.itemId, only.length ? only : [""])
-          : lte(itemStates.due, LEARN_AHEAD),
+        only ? inArray(itemStates.itemId, only) : lte(itemStates.due, LEARN_AHEAD),
         CURRENT,
       ),
     )
@@ -151,9 +151,21 @@ export const nextLesson = (done: Set<string>) =>
   COURSE_ORDER.find((lesson) => !done.has(lesson.id));
 
 /**
+ * Questions whose latest answer in the last 14 days was wrong while sure (`item_id`, `at`): the
+ * mistakes most worth fixing. Study counts them, Progress lists them.
+ */
+const sureMisses = (userId: string) => sql`(
+  select item_id, at from (
+    select distinct on (item_id) item_id, correct, sure, at from answers
+    where user_id = ${userId} and at >= now() - interval '14 days' and context <> 'pretest' and item_id in ${ITEM_IDS}
+    order by item_id, at desc
+  ) latest where not correct and sure
+) misses`;
+
+/**
  * `due`: questions to review now. `confidentMisses`: answered wrong while sure in the last 14
  * days and not yet answered right since: the mistakes most worth fixing. `today`: answers today.
- * `week`: answers since Monday. `newToday`: questions started today. `next7`: due within a week.
+ * `week`: answers since Monday. `newToday`: questions started today. `next7`: due later this week (not yet due now).
  */
 export async function counts(userId: string) {
   const result = await db().execute(sql`
@@ -162,12 +174,8 @@ export async function counts(userId: string) {
       (select count(*) from answers where user_id = ${userId} and at >= ${DAY_START})::int as today,
       (select count(*) from answers where user_id = ${userId} and at >= ${WEEK_START})::int as week,
       (select count(*) from item_states where user_id = ${userId} and introduced_at >= ${DAY_START})::int as "newToday",
-      (select count(*) from item_states where user_id = ${userId} and due <= now() + interval '7 days' and ${CURRENT})::int as next7,
-      (select count(*) from (
-        select distinct on (item_id) item_id, correct, sure from answers
-        where user_id = ${userId} and at >= now() - interval '14 days' and context <> 'pretest' and item_id in ${ITEM_IDS}
-        order by item_id, at desc
-      ) last where not correct and sure)::int as "confidentMisses"`);
+      (select count(*) from item_states where user_id = ${userId} and due > ${LEARN_AHEAD} and due <= now() + interval '7 days' and ${CURRENT})::int as next7,
+      (select count(*) from ${sureMisses(userId)})::int as "confidentMisses"`);
   const [row] = rowsOf<{
     due: number;
     today: number;
@@ -188,7 +196,6 @@ export const LEECH = 4;
 
 /** For the Progress page: how sure-ness matches being right, weekly answers, what keeps failing. */
 export async function progress(userId: string) {
-  const week = sql`date_trunc('week', (now() at time zone 'Europe/Berlin') - interval '4 hours')`;
   const [calibration, weeks, misses, leeches, exams, flagged] = await Promise.all([
     db().execute(sql`
       select sure, count(*)::int as n, (count(*) filter (where correct))::int as "right"
@@ -196,16 +203,13 @@ export async function progress(userId: string) {
       group by sure`),
     db().execute(sql`
       select w.week::date::text as week, count(a.id)::int as n
-      from generate_series(${week} - interval '11 weeks', ${week}, interval '1 week') w(week)
+      from generate_series(${WEEK} - interval '11 weeks', ${WEEK}, interval '1 week') w(week)
       left join answers a on a.user_id = ${userId}
+        and a.at >= ((${WEEK} - interval '11 weeks' + interval '4 hours') at time zone 'Europe/Berlin')
         and date_trunc('week', (a.at at time zone 'Europe/Berlin') - interval '4 hours') = w.week
       group by w.week order by w.week`),
     db().execute(sql`
-      select item_id as "itemId" from (
-        select distinct on (item_id) item_id, correct, sure, at from answers
-        where user_id = ${userId} and at >= now() - interval '14 days' and context <> 'pretest' and item_id in ${ITEM_IDS}
-        order by item_id, at desc
-      ) last where not correct and sure order by at desc limit 20`),
+      select item_id as "itemId" from ${sureMisses(userId)} order by at desc limit 20`),
     db()
       .select({
         itemId: itemStates.itemId,

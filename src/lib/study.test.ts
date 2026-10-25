@@ -133,7 +133,10 @@ describe("answer", () => {
     const c = await counts("u1");
     expect(c.week).toBe(1);
     expect(c.newToday).toBe(1);
+    // Due in a few days: counted in next7. Missed now (due in 10 minutes): due, not next7.
     expect(c.next7).toBe(1);
+    await answer("u1", { ...base, itemId: "p1", optionId: "b", sure: true, context: "lesson" });
+    expect(await counts("u1")).toMatchObject({ due: 1, next7: 1 });
   });
 
   it("reports calibration, 12 weeks and confident misses", async () => {

@@ -108,7 +108,7 @@ export default async function ProgressPage() {
           ))}
         </div>
         <p className="muted flex justify-between font-mono text-xs">
-          <span>12 weeks ago</span>
+          <span>11 weeks ago</span>
           <span>this week</span>
         </p>
       </section>
