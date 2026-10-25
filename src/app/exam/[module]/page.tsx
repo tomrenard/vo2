@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { reviewVariant } from "@/lib/course";
-import { drawEvenly, examScope, PASS } from "@/lib/exams";
+import { COURSE_MIN, drawEvenly, examScope, PASS } from "@/lib/exams";
 import { requireUser } from "@/lib/session";
 import { lessonsDone, repsOf } from "@/lib/study";
 import { Go } from "../../Nav";
@@ -9,18 +9,38 @@ import { Exam } from "./Exam";
 export const dynamic = "force-dynamic";
 
 /**
- * A module or tier exam (the route param is either id): questions from all its lessons, in a
+ * A module, tier or course exam (the route param is the id): questions from its lessons, in a
  * wording other than the next review's when there are 3+, no feedback until the end. Open once
- * every lesson it covers is done.
+ * every lesson it covers is done (the course exam: after a few lessons, asking only those).
  */
 export default async function ExamPage({ params }: { params: Promise<{ module: string }> }) {
   const userId = await requireUser();
   const scopeId = (await params).module;
   const scope = examScope(scopeId);
   if (!scope?.lessons.length) notFound();
-  const { kind, title, lessons, complete, size } = scope;
+  const { kind, title, complete, size } = scope;
   const done = await lessonsDone(userId);
+  const course = kind === "Course";
+  // The course exam asks only what you've learnt; the others open once all of theirs is done.
+  const lessons = course ? scope.lessons.filter((l) => done.has(l.id)) : scope.lessons;
+  const groups = course
+    ? scope.groups.map((g) => g.filter((p) => done.has(p.lessonId))).filter((g) => g.length)
+    : scope.groups;
   const missing = lessons.filter((l) => !done.has(l.id));
+  if (course && lessons.length < COURSE_MIN) {
+    return (
+      <main className="screen justify-center">
+        <p className="eyebrow">Course exam</p>
+        <h1 className="font-serif text-3xl">{title}</h1>
+        <p className="prose-text">
+          It opens after {COURSE_MIN} lessons. You've done {lessons.length}.
+        </p>
+        <Go href="/progress" className="btn">
+          Back to Progress
+        </Go>
+      </main>
+    );
+  }
   if (!complete || missing.length) {
     return (
       <main className="screen justify-center">
@@ -37,7 +57,7 @@ export default async function ExamPage({ params }: { params: Promise<{ module: s
       </main>
     );
   }
-  const picked = drawEvenly(scope.groups, size);
+  const picked = drawEvenly(groups, size);
   const reps = await repsOf(
     userId,
     picked.map((p) => p.item.id),

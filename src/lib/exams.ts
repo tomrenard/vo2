@@ -2,17 +2,38 @@ import { and, eq, max } from "drizzle-orm";
 import { db } from "../db/client.ts";
 import { activityLogs } from "../db/schema.ts";
 import { CURRICULUM } from "./content-index.ts";
-import { lessonById, moduleOf } from "./course.ts";
+import { COURSE_ORDER, lessonById, moduleOf } from "./course.ts";
 import { shuffled } from "./shuffle.ts";
 
 /** Percent needed to pass. */
 export const PASS = 70;
 
+/** The course exam's id: everything you've done so far, one group per tier. */
+export const COURSE = "course";
+
+/** Lessons done before the course exam opens. */
+export const COURSE_MIN = 10;
+
 /**
- * What an exam covers: a module (15 questions) or a whole tier (30, cumulative: every module of
- * the tier). `complete` is false while some of its lessons aren't written yet.
+ * What an exam covers: a module (15 questions), a whole tier (30, cumulative: every module of
+ * the tier) or the course (40, every tier; the exam page keeps only lessons you've done).
+ * `complete` is false while some of its lessons aren't written yet.
  */
 export function examScope(id: string) {
+  if (id === COURSE) {
+    return {
+      kind: "Course" as const,
+      title: "Everything so far",
+      lessons: COURSE_ORDER,
+      groups: CURRICULUM.map((tier) =>
+        COURSE_ORDER.filter((l) => moduleOf(l.module)?.tier.id === tier.id).flatMap((lesson) =>
+          lesson.items.map((item) => ({ item, lessonId: lesson.id })),
+        ),
+      ),
+      size: 40,
+      complete: true,
+    };
+  }
   const tier = CURRICULUM.find((t) => t.id === id);
   const module = moduleOf(id)?.module;
   const modules = tier?.modules ?? (module ? [module] : []);

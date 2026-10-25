@@ -32,6 +32,13 @@ it("scopes a tier exam to every module, complete only when all lessons are writt
   expect(examScope("t1-b")?.complete).toBe(false);
 });
 
+it("scopes the course exam to every written lesson, one group per tier", () => {
+  const course = examScope("course");
+  expect(course).toMatchObject({ kind: "Course", size: 40, complete: true });
+  expect(course?.lessons.map((l) => l.id)).toEqual(["a1", "a2", "b1"]);
+  expect(course?.groups).toHaveLength(1);
+});
+
 it("knows no exam for an unknown id", () => {
   expect(examScope("nope")).toBeUndefined();
 });

@@ -26,6 +26,7 @@ export function Question({
   mode,
   reps,
   conceptHref,
+  leech,
   onDone,
   onSaveError,
 }: {
@@ -36,6 +37,8 @@ export function Question({
   reps: number;
   /** Where the concept this question tests can be read again. */
   conceptHref?: string;
+  /** Missed again and again: a miss sends you back to the concept card. */
+  leech?: boolean;
   onDone: (result: Result) => void;
   /** Exam mode moves on at once, so this screen can't show a failed save: the caller does. */
   onSaveError?: () => void;
@@ -166,6 +169,7 @@ export function Question({
           letters={Object.fromEntries(options.map((o, i) => [o.id, LETTERS[i] as string]))}
           result={result}
           conceptHref={conceptHref}
+          leech={leech}
           onContinue={() => onDone(result)}
           right={right?.id ?? ""}
         />
@@ -190,6 +194,7 @@ function Feedback({
   letters,
   result,
   conceptHref,
+  leech,
   onContinue,
 }: {
   item: Item;
@@ -199,6 +204,7 @@ function Feedback({
   letters: Record<string, string>;
   result: Result;
   conceptHref?: string;
+  leech?: boolean;
   onContinue: () => void;
 }) {
   const chosen = variant.options.find((o) => o.id === picked);
@@ -232,6 +238,19 @@ function Feedback({
           <p className="text-sm">It comes back sooner than a sure answer would.</p>
         )}
       </div>
+
+      {!result.correct && leech && conceptHref && (
+        <Go
+          href={conceptHref}
+          className="card flex flex-col gap-1 border-l-4 border-l-[var(--wrong)]"
+        >
+          <span className="font-semibold">You keep missing this one</span>
+          <span className="muted text-sm">
+            Repeating the question isn't working. Reread the concept card before it comes back.
+          </span>
+          <span className="text-sm text-[var(--brand)] underline">Read the concept card</span>
+        </Go>
+      )}
 
       {!result.correct && chosen && (
         <OptionWhy letter={letters[chosen.id]} text={chosen.text} why={chosen.why} tone="wrong" />

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { itemStates } from "@/db/schema";
 import { testDb } from "@/test/db";
-import { answer, counts, dueItems } from "./study";
+import { answer, counts, dueItems, progress } from "./study";
 
 vi.mock("./content-index", () => {
   const options = [
@@ -119,5 +119,32 @@ describe("answer", () => {
     await expect(
       answer("u1", { ...base, optionId: "d", sure: true, context: "lesson" }),
     ).rejects.toThrow();
+  });
+
+  it("practises a module's started questions even when none is due", async () => {
+    await answer("u1", { ...base, optionId: "a", sure: true, context: "lesson" });
+    expect(await dueItems("u1")).toEqual([]);
+    expect((await dueItems("u1", ["q1", "p1"])).map((d) => d.itemId)).toEqual(["q1"]);
+    expect(await dueItems("u1", [])).toEqual([]);
+  });
+
+  it("counts the week, new questions today and the next 7 days", async () => {
+    await answer("u1", { ...base, optionId: "a", sure: true, context: "lesson" });
+    const c = await counts("u1");
+    expect(c.week).toBe(1);
+    expect(c.newToday).toBe(1);
+    expect(c.next7).toBe(1);
+  });
+
+  it("reports calibration, 12 weeks and confident misses", async () => {
+    await answer("u1", { ...base, optionId: "a", sure: true, context: "lesson" });
+    await answer("u1", { ...base, itemId: "p1", optionId: "b", sure: true, context: "lesson" });
+    const p = await progress("u1");
+    expect(p.sure).toEqual({ sure: true, n: 2, right: 1 });
+    expect(p.unsure).toEqual({ n: 0, right: 0 });
+    expect(p.weeks).toHaveLength(12);
+    expect(p.weeks.at(-1)?.n).toBe(2);
+    expect(p.misses).toEqual(["p1"]);
+    expect(p.leeches).toEqual([]);
   });
 });

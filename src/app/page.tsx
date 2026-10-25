@@ -1,8 +1,17 @@
 import { COURSE_ORDER, moduleOf } from "@/lib/course";
 import { requireUser } from "@/lib/session";
-import { BACKLOG, counts, lessonsDone, nextLesson, SESSION_SIZE } from "@/lib/study";
+import {
+  BACKLOG,
+  counts,
+  lessonsDone,
+  NEW_PER_DAY,
+  nextLesson,
+  SESSION_SIZE,
+  WEEK_GOAL,
+} from "@/lib/study";
 import { Go } from "./Nav";
 import { TabBar } from "./TabBar";
+import { Ring } from "./ui/Ring";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +30,14 @@ export default async function StudyPage() {
         <h1 className="font-serif text-3xl text-[var(--brand)]">
           V̇O<sub className="text-lg">2</sub>
         </h1>
-        <span className="muted font-mono text-xs tabular-nums">{c.week} answers this week</span>
+        <Go
+          href="/progress"
+          className="muted flex items-center gap-2 font-mono text-xs tabular-nums"
+          aria-label={`${c.week} of ${WEEK_GOAL} answers this week. Progress`}
+        >
+          <Ring value={c.week} goal={WEEK_GOAL} />
+          {c.week}/{WEEK_GOAL} this week
+        </Go>
       </header>
 
       <section className="card flex flex-col gap-4">
@@ -43,6 +59,7 @@ export default async function StudyPage() {
         ) : (
           <p className="font-serif text-2xl leading-snug">No reviews waiting.</p>
         )}
+        {c.next7 > 0 && <p className="muted text-sm">{c.next7} due in the next 7 days.</p>}
         {lesson && (
           <Go
             href={`/lesson/${lesson.id}`}
@@ -54,6 +71,12 @@ export default async function StudyPage() {
             </span>
             <span className="font-serif text-lg leading-snug">{lesson.title}</span>
           </Go>
+        )}
+        {lesson && c.newToday >= NEW_PER_DAY && (
+          <p className="muted text-sm">
+            You've started {c.newToday} new questions today. Each comes back for review over the
+            next days: stopping here keeps next week manageable.
+          </p>
         )}
         {!lesson && COURSE_ORDER.length > 0 && (
           <p className="muted text-sm">

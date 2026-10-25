@@ -6,7 +6,7 @@ import { sessionFinished } from "../actions";
 import { Go } from "../Nav";
 import { Question, type Result } from "../ui/Question";
 
-type Entry = { item: Item; href: string; reps: number; variantId: string };
+type Entry = { item: Item; href: string; reps: number; variantId: string; leech: boolean };
 
 /**
  * Reviews one by one. A missed question goes to the end of the queue in its next wording, so
@@ -78,6 +78,7 @@ export function Session({
         mode="review"
         reps={entry.reps}
         conceptHref={entry.href}
+        leech={entry.leech}
         onDone={(result) => {
           setResults((r) => [...r, result]);
           if (!result.correct) {
